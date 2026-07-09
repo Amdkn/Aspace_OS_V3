@@ -120,12 +120,37 @@ Tout A3/B3 produit un livrable avec :
 
 **Bypass permission default** (configuré dans `~/.claude/settings.json`) : Read/Edit/Write/Grep/Glob/Bash safe/Agent/TodoWrite/Skill/mcp__* sont auto-acceptés. Bash destructif + secrets + force-push restent gated.
 
+## 8. Runtime state — 7 task completions (D1 verified 2026-07-09)
+
+| # | Tâche | D1 receipt | Path |
+|---|---|---|---|
+| 1 | cron-orchestrator.sh daemon | 7 rôles (a1-beth-veto, a1-morty-12wy, a1-rick-sober, a2-curie-12wy, a2-gstack-orch, a3-gsd-phase, a3-superpowers-ckpt) — écrit | `C:\Users\amado\.claude\bin\cron-orchestrator.sh` |
+| 2 | GSD Core install | `npx @opengsd/gsd-core@latest --claude --global` → v1.6.1, 70+ gsd-* skills flat dans `~/.claude/skills/` | `C:\Users\amado\.claude\gsd-core\` + `C:\Users\amado\.claude\gsd-install-state.json` |
+| 3 | gstack home | `~/.gstack/last-update-check` créé (D1: bash update check exécuté une fois) | `C:\Users\amado\.gstack\` |
+| 4 | Airlock Spock refactor | `spock_airlock.py` = 3 superpowers checkpoints (SP1 verification-before-completion, SP2 test-driven-development, SP3 systematic-debugging) — testé GREEN path sur handoff synthétique | `C:\Users\amado\agent-os\citadel\collectors\spock_airlock.py` |
+| 5 | A2 Curie 12WY dispatcher | PowerShell script avec 5 disciplines A3-SNW (Pike/Una/Ortegas/M'Benga/Chapel) + 12WY week param | `C:\Users\amado\.claude\bin\a2-curie-12wy-dispatch.ps1` |
+| 6 | V3 commit | commit local `8b77073` créé (D1: `git log --oneline -3` confirme) | `C:\Users\amado\ASpace_OS_V3\.git` |
+| 7 | schtasks 24/7 | **D6 honest** : `schtasks /create` requiert admin Windows, refusé par ACL. **Tu lances en admin** : voir §9. | (à activer manuellement) |
+
+## 9. schtasks 24/7 — manual command (admin PowerShell requis)
+
+```powershell
+# Run in elevated PowerShell (right-click → Run as administrator)
+$scriptPath = "C:\Users\amado\.claude\bin\cron-orchestrator.sh"
+schtasks /create /tn "ASpace_A1_Morty_12WY"  /tr "bash $scriptPath a1-morty-12wy 1800 0"  /sc minute  /mo 30  /rl highest /f
+schtasks /create /tn "ASpace_A2_Gstack_Orch" /tr "bash $scriptPath a2-gstack-orch 7200 0" /sc hourly  /mo 2   /rl highest /f
+schtasks /create /tn "ASpace_A1_Rick_Sober"  /tr "bash $scriptPath a1-rick-sober 21600 0" /sc hourly /mo 6  /rl highest /f
+schtasks /create /tn "ASpace_A2_Curie_12WY"  /tr "pwsh -File C:\Users\amado\.claude\bin\a2-curie-12wy-dispatch.ps1 -Week (Get-Date -UFormat %V)" /sc minute /mo 30 /rl highest /f
+```
+
+Une fois ces 4 schtasks actifs, **le runtime est 24/7 persistant** : Morty dispatch toutes les 30min, gstack toutes les 2h, Rick toutes les 6h, Curie weekly dispatch.
+
 ## D1 receipts (D1 verified 2026-07-09 via `gh api repos/...`)
 
 | Framework | Repo | Stars | License | Rôle A'Space | Auto-invoke |
 |---|---|---|---|---|---|
 | **superpowers** | `obra/superpowers` | **250 237** | MIT | A2/A3 process skills (14 skills) | `using-superpowers` bootstrap |
-| **GSD Core** | `open-gsd/gsd-core` | **6 217** | MIT | A3/B3 phase loop | `gsd-{discuss,plan,execute,verify,ship}-phase` |
+| **GSD Core** | `open-gsd/gsd-core` | **6 217** | MIT | A3/B3 phase loop | 70+ gsd-* skills flat |
 | **gstack** | `garrytan/gstack` | **120 638** | MIT | A0/B1 CEO/Eng/QA/Review/Ship | Router auto-trigger, 23 skills |
 
 - **superpowers CLAUDE.md** (line 78-92) : *acceptance test* = clean session + "Let's make a react todo list" → `brainstorming` skill auto-fires. Skills that don't auto-trigger = dead weight.
