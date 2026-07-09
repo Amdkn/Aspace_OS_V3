@@ -1,0 +1,154 @@
+[
+  {
+    "video_id": "y4qt8EQeLG0",
+    "status": "ok",
+    "label": "STRONG",
+    "score": 8,
+    "hits": [
+      "share",
+      "payment",
+      "money",
+      "million",
+      "millionaire",
+      "billion",
+      "wealth",
+      "fortune"
+    ],
+    "chars": 2783,
+    "transcript_path": "C:/Users/amado/ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/youtube_ingest_2026-06-15_Saru_LD02_watch_history\\transcripts\\y4qt8EQeLG0.txt"
+  },
+  {
+    "video_id": "GvhwLGlJRUs",
+    "status": "ok",
+    "label": "STRONG",
+    "score": 7,
+    "hits": [
+      "arr",
+      "invest",
+      "investment",
+      "vente",
+      "million",
+      "billion",
+      "job"
+    ],
+    "chars": 27079,
+    "transcript_path": "C:/Users/amado/ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/youtube_ingest_2026-06-15_Saru_LD02_watch_history\\transcripts\\GvhwLGlJRUs.txt"
+  },
+  {
+    "video_id": "XxyQHsp5Rsw",
+    "status": "ok",
+    "label": "NON-LD02",
+    "score": 0,
+    "hits": [],
+    "chars": 633,
+    "transcript_path": "C:/Users/amado/ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/youtube_ingest_2026-06-15_Saru_LD02_watch_history\\transcripts\\XxyQHsp5Rsw.txt"
+  },
+  {
+    "video_id": "_Zupr_jINXw",
+    "status": "transcripts-disabled",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "WutFqKPqtHg",
+    "status": "ok",
+    "label": "NON-LD02",
+    "score": 0,
+    "hits": [],
+    "chars": 755,
+    "transcript_path": "C:/Users/amado/ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/youtube_ingest_2026-06-15_Saru_LD02_watch_history\\transcripts\\WutFqKPqtHg.txt"
+  },
+  {
+    "video_id": "GSkySDNmjV8",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=G",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "dEhgTh8E9fA",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=d",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "0Stdz6H1Fqk",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=0",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "m2eFV82mZ_M",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=m",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "81BFZwqml8s",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=8",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "q75dJ8wlqeg",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=q",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "yevHSzCfk7I",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=y",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "jbg98fweLnY",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=j",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "jbg98fweLnY",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=j",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  },
+  {
+    "video_id": "jbg98fweLnY",
+    "status": "could-not-retrieve: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=j",
+    "label": "SKIPPED",
+    "score": 0,
+    "hits": [],
+    "chars": 0,
+    "transcript_path": null
+  }
+]

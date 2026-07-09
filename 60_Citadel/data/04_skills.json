@@ -1,0 +1,803 @@
+{
+  "collector": "04_skills",
+  "pillar": 4,
+  "pillar_name": "Skills",
+  "generated_at": "2026-07-04T20:07:24-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §2",
+  "doctrine": "lecture seule — pas de mutation de skills — ROI via RUNS.log + LESSONS.md",
+  "skills": [
+    {
+      "name": "_TRASH",
+      "harness": "claude_code",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": true
+    },
+    {
+      "name": "a0l-grill",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "aaas-dashboard-port-audit",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "abc-os-backend-delegation",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "abc-os-backend-delegation-workspace",
+      "harness": "claude_code",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "abc-os-write-back-protocol",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "airtable-enrich",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "area-domain-doctrine-distill",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "aspace-supabase-mastery",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "bridge-12wy-plane-gtd",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "canon-batch-spawn",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "cloud-bootstrap",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "configure-ecc",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "context-bloat-detector",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "context7-mcp",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "ecc",
+      "harness": "claude_code",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "find-docs",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "github-cli-orchestration",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "graphify-swarm-burst",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "graphify-viewer",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "guide-cross-search",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "guide-domain-stats",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "guide-index-builder",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "guide-search",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "guide-trim-large",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "hostinger-dns-orchestration",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l0-deploy-verify",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l0-watchdog-scrape",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l1-research-pulse",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l1-weekly-snapshot",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l2-competitor-pulse",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l2-e2e-pr",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "l2-linkedin-prospect",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "learned",
+      "harness": "claude_code",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "market-study-derive",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "mcp-mastery",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "multi-backend",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "multi-goal",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "multi-loop-karpathy",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "multi-routines-12wy",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "multistream-deliver",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "notebooklm-bridge",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "openspec-apply-change",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "openspec-archive-change",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "openspec-explore",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "openspec-propose",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "picard-audit-and-prod-workflow",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "picard-growth-jtbd-launch",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "picard-repo-home",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "pp-cli-install",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "premortem-fill",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "pricing-canon-derive",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "ratify-adr",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "replicate-squads",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "sessions-archive",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "skill-creator",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "strategy-session-meta",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": true,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "supabase-cloud-mcp-orchestration",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "swarm-chunk-transcript",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "swarm-orchestrator",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "sym_supabase_drain",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "symphony-fabuleux-discipline",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "symphony-phase2-batch",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "symphony-pilot",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "symphony-pilot-runtime",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "takeout-delta-ingest",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": true,
+      "has_runs_log": true,
+      "trash": false
+    },
+    {
+      "name": "test-a1-profiles",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "tilly-fable-rhythm",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "transcript-swarm-chunks",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "vercel-deploy-from-github",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "youtube-takeout-to-lifeos",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "youtube-to-guide",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "youtube-to-para",
+      "harness": "claude_code",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": ".archive",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "apple",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "autonomous-ai-agents",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "creative",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "data-science",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "devops",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "diagramming",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "dogfood",
+      "harness": "hermes",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "domain",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "email",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "gaming",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "gifs",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "github",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "inference-sh",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "mcp",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "media",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "mlops",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "note-taking",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "productivity",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "red-teaming",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "research",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "smart-home",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "social-media",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "software-development",
+      "harness": "hermes",
+      "has_skill_md": false,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    },
+    {
+      "name": "yuanbao",
+      "harness": "hermes",
+      "has_skill_md": true,
+      "has_lessons": false,
+      "has_runs_log": false,
+      "trash": false
+    }
+  ],
+  "summary": {
+    "total": 98,
+    "claude_code_count": 73,
+    "hermes_count": 25,
+    "with_lessons_count": 2,
+    "with_runs_log_count": 1,
+    "with_skill_md_count": 71,
+    "trash_count": 1
+  }
+}

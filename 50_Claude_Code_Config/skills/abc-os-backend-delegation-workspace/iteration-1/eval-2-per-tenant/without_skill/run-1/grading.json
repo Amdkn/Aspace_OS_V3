@@ -1,0 +1,105 @@
+{
+  "expectations": [
+    {
+      "text": "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+      "passed": true,
+      "evidence": "§1 header: 'Classification: D10 — PER-TENANT table (scoped by org_id; tenancy via current_org_id())'. §2 references 'action_items in 0002_rls_policies.sql' as the pattern to mirror. §2 explicitly: 'Mixed rows between orgs = silent data leak → CRITICAL'."
+    },
+    {
+      "text": "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+      "passed": true,
+      "evidence": "§2 DDL has 4 RLS policies (utp_select, utp_insert, utp_update, utp_delete) using `current_org_id()` and `current_role()`. Each uses DROP POLICY IF EXISTS + CREATE POLICY. Note: brief uses `current_role() IN ('anon','authenticated','service_role')` for SELECT which is broader than the canonical pattern (see NEW-2)."
+    },
+    {
+      "text": "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+      "passed": true,
+      "evidence": "§5 has 4 spot-checks: S1 anon → 0 rows, S2 authenticated org_id=org_A → 1 row, S3 authenticated org_id=org_C (no match) → 0 rows, S4 INSERT with mismatched org_id → ERROR. Each is wrapped in SETUP transaction (line 184) with proper RESET ROLE / RESET \"request.jwt.claims\" cleanups."
+    },
+    {
+      "text": "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+      "passed": true,
+      "evidence": "§2 line 39: `id UUID PRIMARY KEY DEFAULT gen_random_uuid()`. §2 line 36-37 references pgcrypto safety net: 'If you hit \"function gen_random_uuid() does not exist\", run: CREATE EXTENSION IF NOT EXISTS pgcrypto;'. Brief assumes pgcrypto is already enabled (per 0000_init precedent) but provides the fallback."
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+      "passed": true,
+      "evidence": "§4 table: tables_count=19, rls_count=19, policies_count=47, migration_logged=1, total schema_migrations=14. All match A0's intent. Note: brief uses `abc_os.schema_migrations` instead of `_aspace_migrations` (see NEW-1 — potentially wrong)."
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+      "passed": true,
+      "evidence": "§6 specifies 3 files (with slightly different paths than the with_skill version — see NEW-3): (1) `ASpace_OS_V2/_SPECS/ADR/ADR-ABCOS-001_mixed-tenancy.md` (append to D10 examples table), (2) `ASpace_OS_V2/30_MEMORY_CORE/Memory_Core/abc_os_migrations.md` (append one-line entry), (3) `ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/abc_os_post_apply.md` (append dated block). §3 + §7 use FORCE_TARGET=1 (env var check + apply command)."
+    },
+    {
+      "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations (filename)` in the D1 verify query (5th standard query), not fictional `abc_os.schema_migrations`",
+      "passed": false,
+      "evidence": "§4 lines 153, 157 query `abc_os.schema_migrations` (FICTIONAL): `(SELECT count(*) FROM abc_os.schema_migrations WHERE filename = '0014_user_task_progress.sql')` and `SELECT version, filename, applied_at FROM abc_os.schema_migrations ORDER BY version DESC LIMIT 3;`. Actual schema is `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` — no `version` column, no `schema_migrations` table. A sub-agent running these verify queries would get 0 rows back, the apply would be declared failed on D1, and the brief's D1 receipts would be unprovable."
+    },
+    {
+      "text": "[NEW-2] Brief's per-tenant SELECT policy does NOT include `service_role` in the USING clause (service_role bypasses RLS by design; including it in the predicate is a real doctrinal error — pattern from 0002_rls_policies.sql uses just `USING (org_id = abc_os.current_org_id())` for SELECT)",
+      "passed": false,
+      "evidence": "§2 lines 65-71 (utp_select): `CREATE POLICY utp_select ON abc_os.user_task_progress FOR SELECT USING (current_role() IN ('anon','authenticated','service_role') AND org_id = current_org_id());` — includes `service_role` in the USING predicate. This is a real doctrinal error: (a) `service_role` is the Postgres superuser bypass role; including it in the predicate is meaningless (it always evaluates true for service_role connections), (b) the canonical pattern from 0002_rls_policies.sql action_items SELECT (lines 132-135) is `FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())` — no role check in the predicate, just the TO clause restriction. A sub-agent following this brief would create an RLS policy that is correct for `authenticated` but adds noise for `service_role` (which bypasses RLS anyway)."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "output_chars": 12450,
+    "transcript_chars": 12450
+  },
+  "timing": {
+    "executor_duration_seconds": 161.3,
+    "total_duration_seconds": 161.3
+  },
+  "claims": [
+    {
+      "claim": "user_task_progress is per-tenant (D10), mirrors action_items",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§1 header classification + §2 reference to action_items pattern. Per-tenant shape with 4 CRUD policies."
+    },
+    {
+      "claim": "apply-abc-os-migrations.sh pattern uses 0014_*) case dispatch",
+      "type": "factual",
+      "verified": false,
+      "evidence": "§3 suggests a new case branch `0014_*) psql ...`. The actual apply-abc-os-migrations.sh (per the pre-compaction session) uses a `for f in ...` pre-flight list + apply_sql function with `if [[ \"$TARGET\" == \"dev\" ]] then apply_sql \"$f\"` blocks, not per-file case dispatch. The without_skill brief's pattern is a different/imagined shape."
+    },
+    {
+      "claim": "Migration tracker is abc_os.schema_migrations",
+      "type": "factual",
+      "verified": false,
+      "evidence": "§4 query lines 153, 157 use `abc_os.schema_migrations` with columns (version, filename, applied_at). Actual schema is `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` — different table name, different columns, no `version`. Brief's verify queries would return 0 rows. NEW-1 catches this."
+    },
+    {
+      "claim": "FORCE_TARGET=1 + gen_random_uuid() handling",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§7 pre-flight guard aborts if FORCE_TARGET != '1'. §2 line 36-37 references pgcrypto safety net for gen_random_uuid()."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "§3 suggests a new `0014_*)` case branch in apply-abc-os-migrations.sh — this pattern doesn't exist in the actual script (uses for-loop + apply_sql function instead)",
+      "§4 verify queries target abc_os.schema_migrations which doesn't exist (actual is _aspace_migrations)"
+    ],
+    "needs_review": [
+      "Apply script edit pattern (§3) — needs verification against actual apply-abc-os-migrations.sh structure"
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "The 2 new anti-doctrinal-error guards (NEW-1 tracker table, NEW-2 service_role in SELECT USING) successfully catch 2 real errors. Pass rate dropped from 100% to 75%."
+      },
+      {
+        "reason": "Write-back files (NEW-3, not added as separate assertion but flagged in expectations note) use ADR-ABCOS-001 + abc_os_migrations.md + abc_os_post_apply.md — different from the canonical wiki/log.md + README.md + handoff_2026-06-10.md. The 3-file assertion 6 still passes because it only checks count = 3, not WHICH 3. Consider tightening to substring_all in a future iteration."
+      }
+    ],
+    "overall": "With the 2 new anti-doctrinal guards, the brief correctly fails on (1) fictional `abc_os.schema_migrations` tracker (canonical is `abc_os._aspace_migrations (filename)`) and (2) the broader `current_role() IN ('anon','authenticated','service_role')` pattern in the SELECT policy (service_role bypasses RLS by design; canonical pattern is just `USING (org_id = abc_os.current_org_id())`). Pass rate 6/8 = 75%."
+  }
+}

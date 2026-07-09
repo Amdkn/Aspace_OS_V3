@@ -1,0 +1,45 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-013-hermes-crons",
+  "date": "2026-07-05T10:45:00-04:00",
+  "type": "HERMES_CRON_JOBS_RATIFICATION",
+  "decision": "ACCEPTED + RATIFIED 2026-07-05 (HITL A0 cleared)",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "cronjob action=remove job_id x3 + git revert calendar.md + delete citadel trace + delete ADR-013 = revert complet",
+  "deciders": {
+    "a0_hitl": "A0 Amadeus - HITL 2026-07-05 'Cree des Cron Job dans Heremes'",
+    "ha_author": "HA (Hermes Agent = A3 Picard in PARA) - ship-dont-ask pattern incarne"
+  },
+  "crons_created": [
+    {
+      "name": "daily-lplus-verification-picard",
+      "job_id": "d3876cd44f05",
+      "schedule": "0 9 * * *",
+      "model": "haiku",
+      "next_run_at": "2026-07-06T09:00:00-04:00",
+      "role": "Verify L+ 10 invariants on 3 agents canon, drift -> append citadel"
+    },
+    {
+      "name": "weekly-book-aggregator-picard",
+      "job_id": "c72ba59e9ad4",
+      "schedule": "0 9 * * 1",
+      "model": "haiku",
+      "next_run_at": "2026-07-06T09:00:00-04:00",
+      "role": "H1 Book weekly aggregator per ADR-LD01-008 D2"
+    },
+    {
+      "name": "hourly-picard-h10-manifest-check",
+      "job_id": "e2181a87eb85",
+      "schedule": "0 */6 * * *",
+      "model": "haiku",
+      "next_run_at": "2026-07-05T18:00:00-04:00",
+      "role": "HA Picard verify H10 projects toutes 6h, drift MANIFEST.md"
+    }
+  ],
+  "posture_c_compliance": "HITL A0 explicite cleared + ADR-WARMODE-001 War Mode + ADR-LD01-012 cascade FINISHING",
+  "token_economics": "3 crons x ~30 runs/mois x Haiku = ~$0.09/mois vs Plan MiniMax 5.1B tokens",
+  "hermes_ui_state": {
+    "before": "Empty state 'No scheduled jobs yet' + button '+ Create first cron'",
+    "after": "3 jobs actifs : daily-lplus / weekly-book / hourly-picard"
+  }
+}

@@ -1,0 +1,18 @@
+# 12WY_ON_PAUSE — WAR MODE ACTIF (présence de ce fichier = ON)
+# Canon : ADR-WARMODE-001 (RATIFIED, ordre direct A+ 2026-07-05)
+#
+# DÉFAUT INVERSÉ pendant le cycle compressé :
+#   crons/loops RUN · DISABLED→ENABLED · A0 ratifie l'opérationnel ·
+#   les agents FINISSENT (pas de "à ton GO") · auto-skill · A0 écrit l'opérationnel append-only
+#
+# SEULS FREINS RESTANTS (4 inalienables — les mires anti-Apocalypse) :
+#   1. Rick — fragilité KERNEL réelle (pas un BOM ; dépendance lourde / nouveau harness)
+#   2. Beth — vie/santé A+ (burnout, LD03)
+#   3. /ship OUTBOARD — Stark appuie (push/PR/prod/client jamais auto)
+#   4. Append-only — tout réversible, rien détruit
+#
+# RÉVOCATION : A+ supprime ce fichier, OU A0-Amodei le supprime à la synthèse J7.
+#              Pas de self-check end-date par-gate (corrigé vs mécanisme MC baroque).
+#
+# ACTIVÉ : 2026-07-05 — ordre direct A+ "je dois mettre sous 12WY-ON-PAUSE TOUS LES SÉCURITÉ"
+WAR_MODE=ON

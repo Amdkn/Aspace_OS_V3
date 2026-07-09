@@ -1,0 +1,57 @@
+{
+  "collector": "13_harnesses_live",
+  "pillar": 13,
+  "pillar_name": "Harnesses live (🛰️ runtime state — page contrôle sessions)",
+  "generated_at": "2026-07-04T22:29:07-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 page Harnesses",
+  "doctrine": "lecture seule — runtime state — dormants affichés DORMANT en gris",
+  "harnesses": {
+    "claude_code": {
+      "label": "Claude Code (Mavis runtime + Fable 5)",
+      "status": "active",
+      "sessions": {
+        "count": 390,
+        "last_modified": "2026-07-04T22:28:55",
+        "last_path": "9b0dfb5a-4476-4047-bff0-61df4d4d44de.jsonl"
+      },
+      "settings_path": "C:\\Users\\amado\\.claude\\settings.json"
+    },
+    "hermes": {
+      "label": "Hermes (Desktop + VPS)",
+      "status": "active",
+      "sessions": {
+        "count": 2,
+        "last_modified": "2026-05-31T21:37:51",
+        "last_path": "request_dump_20260531_213539_da0df2_20260531_213751_879956.j"
+      },
+      "processes_count": 0
+    },
+    "mavis": {
+      "label": "MiniMax Code (Mavis runtime + 22 agents)",
+      "status": "active",
+      "sessions": {
+        "count": 99,
+        "last_modified": "2026-07-04T17:04:15",
+        "last_path": "mvs_7c9558ac3ced43738b427cb6d3e32ea2"
+      },
+      "agent_count": 22
+    },
+    "paperclip_ai": {
+      "label": "Paperclip AI",
+      "status": "dormant",
+      "doctrine": "DORMANT per Plan §1 + §9 Gate #6. Anti-Ultron structurel.",
+      "wake_unlock": "jamais sans nouveau plan + gate Rick"
+    },
+    "multica": {
+      "label": "Multica",
+      "status": "dormant",
+      "doctrine": "DORMANT per Plan §1 + §9 Gate #6.",
+      "wake_unlock": "jamais sans nouveau plan + gate Rick"
+    }
+  },
+  "summary": {
+    "active_count": 3,
+    "dormant_count": 2,
+    "total_sessions": 491
+  }
+}

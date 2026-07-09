@@ -1,0 +1,11 @@
+{
+  "id": "6a9de488",
+  "adr_id": "ADR-LD01-007",
+  "decision": "ratify",
+  "rationale": "Test P1 ratification 1-clic par A0 (in-block, no GATEFLAG enabled yet — append-only decision file). Doctrine anti-Ultron: canonic edit gated by enable_write_canonic.flag (A0 HITL). Frein à main actif.",
+  "decided_by": "A0",
+  "decided_at": "2026-07-04T21:54:25.040996",
+  "gate_2_P1": true,
+  "canonic_writes_enabled_at_decide_time": false,
+  "status": "DECIDED"
+}

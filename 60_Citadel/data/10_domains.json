@@ -1,0 +1,77 @@
+{
+  "collector": "10_domains",
+  "pillar": 10,
+  "pillar_name": "Domaines Business OS (🏢)",
+  "generated_at": "2026-07-04T22:16:40-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 page Domaines",
+  "doctrine": "lecture seule — matrice 8 × 3 = 53 B3 rosters canon",
+  "domains": [
+    {
+      "jerry_domain": "01_Sales",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\01_Sales",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "02_Marketing",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\02_Marketing",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "03_Operations",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\03_Operations",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "04_Finance",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\04_Finance",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "05_Legal",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\05_Legal",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "06_People",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\06_People",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "07_Product",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\07_Product",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    },
+    {
+      "jerry_domain": "08_IT",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\30_Business_OS\\08_IT",
+      "exists": false,
+      "has_roster": false,
+      "b3_count_target": 6
+    }
+  ],
+  "captains_summers": [
+    "summers_product",
+    "summers_growth",
+    "summers_ops"
+  ],
+  "summary": {
+    "total": 8,
+    "exists_count": 0,
+    "plan_target": "8 domaines Jerry × 3 Captains = matrice 53 B3 rosters",
+    "russian_doll": "PARA ⊃ domain ⊃ icp ⊃ roster"
+  }
+}

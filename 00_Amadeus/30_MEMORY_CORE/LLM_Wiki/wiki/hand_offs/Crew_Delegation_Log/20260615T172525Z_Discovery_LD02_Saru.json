@@ -1,0 +1,11 @@
+{
+  "bridge": "A2_to_A3",
+  "ts": "2026-06-15T17:25:25+00:00",
+  "ship": "Discovery",
+  "domain": "LD02",
+  "a3_name": "Saru",
+  "critical": false,
+  "mission": {
+    "summary": "Delegated to Saru on Discovery/LD02"
+  }
+}

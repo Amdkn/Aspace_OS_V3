@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+      "passed": true,
+      "evidence": "§2 verdict: 'PER-TENANT. The user_task_progress row is unique to a member inside a co-op (org-scoped). It carries org_id and a member_id FK inside the tenant. Do NOT use the shared-catalog pattern (`select-authenticated` only) — that would leak per-tenant progress across orgs.' §2 references 'per-tenant pattern from `0002_rls_policies.sql` (`action_items` table)' as the structural template."
+    },
+    {
+      "text": "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+      "passed": true,
+      "evidence": "§4 includes 4 RLS policies in lines 85-121: user_task_progress_select (USING org_id = current_org_id()), user_task_progress_insert (WITH CHECK org_id = current_org_id() AND current_role() IN (owner,admin,member)), user_task_progress_update (USING+WITH CHECK with org_id + current_role() + member_id::text = current_setting('app.member_id')), user_task_progress_delete (USING org_id = current_org_id() AND current_role() IN (owner,admin)). Each uses DROP POLICY IF EXISTS + CREATE POLICY for idempotency."
+    },
+    {
+      "text": "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+      "passed": true,
+      "evidence": "§8 has 4 spot-checks: §8a anon role cannot SELECT (SET ROLE anon, expected 0 rows or permission denied), §8b authenticated with current_org_id() match CAN SELECT (expected ≥1), §8c authenticated with current_org_id() mismatch CANNOT (expected 0 rows), §8d bonus UPDATE/DELETE role-gate (member DELETE expected 0 rows). Uses SET LOCAL ROLE / SET LOCAL app.org_id / RESET ROLE per the canonical pattern."
+    },
+    {
+      "text": "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+      "passed": true,
+      "evidence": "§4 line 53: `CREATE EXTENSION IF NOT EXISTS pgcrypto;` before the table. §4 line 57: `id UUID PRIMARY KEY DEFAULT gen_random_uuid()`. Both explicitly handled — extension created if missing, gen_random_uuid() used as PK default."
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+      "passed": true,
+      "evidence": "§7 lists 5 standard queries with expected values: schema_exists=1, table_count=19 (17 baseline + 1 new + 1 organizations from prior batch — note brief explains the math), RLS=19, policies=47 (42 + 1 prior + 4 new), migrations=14 (12 + 1 prior + 1 new). §9 has Expected vs Actual table for sub-agent to fill all 8 metrics."
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+      "passed": true,
+      "evidence": "§10 specifies 3 files: §10a wiki/log.md (prepend `## 2026-06-12` block with full D1 receipts), §10b MEMORY_CORE/README.md (one-line bullet at top with full counts), §10c handoff_abc_os_community_dev_2026-06-12.md (append P_N Backend Status section). §6 apply command: `FORCE_TARGET=1 ./scripts/apply-abc-os-migrations.sh dev`. Both required."
+    },
+    {
+      "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations (filename)` in the D1 verify query (5th standard query), not fictional `abc_os.schema_migrations`",
+      "passed": true,
+      "evidence": "§4 line 124: `INSERT INTO abc_os._aspace_migrations (filename) VALUES ('0013_user_task_progress.sql') ON CONFLICT (filename) DO NOTHING;` — canonical shape. §7 line 195: `SELECT count(*) FROM abc_os._aspace_migrations;` — canonical 5th standard verify query. No `abc_os.schema_migrations` or `abc_os.migrations` (without underscore) anywhere in the brief."
+    },
+    {
+      "text": "[NEW-2] Brief's per-tenant SELECT policy does NOT include `service_role` in the USING clause (service_role bypasses RLS by design; including it in the predicate is a real doctrinal error — pattern from 0002_rls_policies.sql uses just `USING (org_id = abc_os.current_org_id())` for SELECT)",
+      "passed": true,
+      "evidence": "§4 line 85-88: `CREATE POLICY user_task_progress_select ON abc_os.user_task_progress FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id());` — matches the canonical action_items SELECT pattern from 0002_rls_policies.sql line 132-135 (`FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())`). The TO clause restricts to `authenticated`; the USING clause is the canonical org_id match. No `current_role() IN ('anon','authenticated','service_role')` pattern anywhere in the brief."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 21250,
+    "transcript_chars": 21250
+  },
+  "timing": {
+    "executor_duration_seconds": 120.0,
+    "total_duration_seconds": 120.0
+  },
+  "claims": [
+    {
+      "claim": "user_task_progress is per-tenant (D10), mirrors action_items in 0002_rls_policies.sql",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§2 explicit classification + reference to action_items pattern. Org_id FK + 4 CRUD policies with current_org_id()/current_role()."
+    },
+    {
+      "claim": "gen_random_uuid() + pgcrypto handling is complete",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§4 line 53: CREATE EXTENSION IF NOT EXISTS pgcrypto (safety net). §4 line 57: id UUID PRIMARY KEY DEFAULT gen_random_uuid()."
+    },
+    {
+      "claim": "Tables 17 → 19 (17 baseline + 1 new + 1 from prior batch), policies 42 → 47, migrations 12 → 14",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§7 math explanation + §9 expected table. Note: brief correctly accounts for +1 organizations table from prior batch (build_hub_v2 apply)."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "8 assertions now catch the canonical tracker table (NEW-1) and the per-tenant SELECT policy predicate error (NEW-2). Brief passes all 8 cleanly."
+      }
+    ],
+    "overall": "Brief is excellent — comprehensive per-tenant pattern with all 4 CRUD policies, RLS spot-checks, write-back contract. The 2 new anti-doctrinal guards (canonical tracker, no service_role in SELECT USING) both pass."
+  }
+}

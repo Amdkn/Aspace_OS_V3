@@ -1,0 +1,364 @@
+{
+  "$schema": "aspace-l2-state-v1",
+  "version": "1.0.0",
+  "created_at": "2026-06-28T13:23:17.165821+00:00",
+  "updated_at": "2026-06-29T23:07:00-04:00",
+  "cycle": {
+    "current": "Q3-2026",
+    "12wy_kickoff": "2026-06-15",
+    "week": "W3",
+    "day_in_cycle": 15
+  },
+  "b1_jerry": {
+    "pulse": "GREEN",
+    "last_reset": "2026-06-29T12:37:00-04:00",
+    "last_d11_run": "2026-06-29T10:55:00-04:00",
+    "drift_flag": false,
+    "escalation_pending": "OPTION_C_REDISPATCH_PENDING_JERRY_ACK",
+    "next_action": "Daily-cycle-reset 12-37 ET GREEN. x8/8 B2 pulses fresh within 3h window (growth 36.8min, others 102.1min). Drift 0/8 < threshold 2. LD01 Monday pivot = superman/growth per Life Wheel bijection plan-L2 sec 4.2. ESC-01/02 OPTION_C still awaiting Jerry ack. Pivot authority has been re-confirmed to B1-Summers (ship agent) per user transfer 06-29 12-37 ET; B1-Jerry-E-Myth continues doctrine authority on Holding Filiales architecture.",
+    "daily_dispatch": {
+      "date_local": "2026-06-29",
+      "day_of_week": "Monday",
+      "ld_code": "LD01",
+      "hero": "superman",
+      "domain": "growth",
+      "pivot_reason": "Monday = LD01 per Life Wheel bijection plan-L2 sec 4.2",
+      "dispatch_ts": "2026-06-29T12:37:00-04:00",
+      "bandwidth_h_assigned": 0.67,
+      "note": "8/8 B2 GREEN, drift 0/8. Daily-cycle-reset fired at cron 37 */3 (12-37 ET). Last reset 10-55 ET (1h42m prior). No escalation triggered. Pivot LD01 = superman/growth confirmed unchanged."
+    }
+  },
+  "b1_summers": {
+    "pulse": "NO-GO",
+    "last_weekly_review": null,
+    "rocks_current_week": [],
+    "rocks_scored": [],
+    "next_actions_w1": [],
+    "icp_active": [
+      "coach",
+      "expert-comptable",
+      "avocat",
+      "medical"
+    ],
+    "last_daily_cycle_reset_check": "2026-06-29T23:10:30-04:00",
+    "x4_mixte_verdict": {
+      "regime": "x4-mixte",
+      "fired_at": "2026-06-29T23:10:30-04:00",
+      "fired_via": "cron_daily-cycle-reset_post-t1-boundary",
+      "axes": [
+        {
+          "name": "B2_Hero_pulse_freshness",
+          "window_h": 3,
+          "heroes_total": 8,
+          "heroes_in_drift": 8,
+          "drift_threshold": 2,
+          "freshness_table": [
+            {
+              "domain": "growth",
+              "hero": "superman",
+              "last_pulse": "2026-06-29T12:00:19-04:00",
+              "age_h": 11.17,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "sales",
+              "hero": "johnjones",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "product",
+              "hero": "flash",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "ops",
+              "hero": "batman",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "it",
+              "hero": "cyborg",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "finance",
+              "hero": "ww",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "people",
+              "hero": "gl",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            },
+            {
+              "domain": "legal",
+              "hero": "aquaman",
+              "last_pulse": "2026-06-29T10:55:00-04:00",
+              "age_h": 12.26,
+              "bucket": "STALE",
+              "in_drift": true
+            }
+          ],
+          "verdict": "RED",
+          "note": "Snapshot claim 0/8 drift at 17:30 ET; live freshness at 23:10 ET shows 8/8 STALE >3h. Drift signal is real but represents freshness-window, not heroes-missing."
+        },
+        {
+          "name": "Variant_ship_status",
+          "variants_canonical": [
+            "Solaris",
+            "Nexus",
+            "Orbiter"
+          ],
+          "shipped": [
+            "Nexus"
+          ],
+          "standby": [
+            "Solaris"
+          ],
+          "blocked": [
+            "Orbiter"
+          ],
+          "shipped_count": 1,
+          "ship_target_total": 3,
+          "verdict": "YELLOW",
+          "note": "Nexus/OMK shippe en production, Solaris en standby-inspiration (pas variant MTT), Orbiter ABC non-shippe (besoin action A2 trio W02)."
+        },
+        {
+          "name": "ICP_coverage",
+          "icp_canonical": [
+            "Coach",
+            "Expert-Comptable",
+            "Avocat",
+            "Medical"
+          ],
+          "icp_sanctuary": [
+            "Family-Office"
+          ],
+          "ship_active_count": 0,
+          "ship_target_total": 4,
+          "tally_mrr": {
+            "Coach": "0/12",
+            "EC": "0/8",
+            "Avocat": "0/6",
+            "Medical": "0/6"
+          },
+          "tally_capsules": {
+            "Coach": "0/24",
+            "EC": "0/16",
+            "Avocat": "0/12",
+            "Medical": "0/12"
+          },
+          "backlog_estimate_per_week": 6,
+          "weeks_remaining_in_12wy": 11,
+          "verdict": "RED",
+          "note": "0/4 ICPs shipped. 12WY R04 bottleneck matrice lean absent. Variants Nexus only ships ICP 'coach' theoretically but 0 MRR signs confirme."
+        },
+        {
+          "name": "Holding_to_Filiales_topology",
+          "matrice_lean_path": "B1_Summer_Direction/state/plan-L2_s5.4_matrice_lean.md",
+          "matrice_lean_status": "NOT_DELIVERED",
+          "rock_blocker_12wy": "R04 (matrice lean, LL=1, blocks R01+R02+R07 = 3 downstream)",
+          "verdict": "RED",
+          "note": "Holding Filiales architecture canon plan-L2 sec 5.4 non encore stand-up. Action A1 trio W02 (1d B1) unblocks 4 downstream rocks."
+        }
+      ],
+      "conjoint_verdict": "NO-GO",
+      "conjoint_reason": "3 axes RED (axe1 stale freshness, axe3 ICP coverage 0/4, axe4 matrice lean missing) + 1 axe YELLOW (axe2 variant ship 1/3). Holding Filiales SHIP gate UNCONTESTED-NO-GO. Action A1 (matrice lean, 1d B1) = single biggest unlock — unblocks 4 downstream rocks per trio W02."
+    }
+  },
+  "b2_pulse": {
+    "growth": {
+      "hero": "superman",
+      "last_pulse": "2026-06-29T12:00:19-04:00",
+      "status": "GREEN",
+      "friction_today": "FRICTION-2026-06-29-001",
+      "b3_dispatch_id": "GRW-2026-06-29-001",
+      "bandwidth_h": 0.67,
+      "cron_schedule": "0 */3 * * *"
+    },
+    "sales": {
+      "hero": "johnjones",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN",
+      "friction_today": null,
+      "b3_dispatch_id": null,
+      "bandwidth_h": 82,
+      "cron_schedule": "15 */3 * * *"
+    },
+    "product": {
+      "hero": "flash",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN",
+      "friction_today": null,
+      "b3_dispatch_id": null,
+      "bandwidth_h": 90,
+      "cron_schedule": "30 */3 * * *"
+    },
+    "ops": {
+      "hero": "batman",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN",
+      "friction_today": null,
+      "b3_dispatch_id": null,
+      "bandwidth_h": 92,
+      "cron_schedule": "45 */3 * * *"
+    },
+    "it": {
+      "hero": "cyborg",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN",
+      "friction_today": null,
+      "b3_dispatch_id": null,
+      "bandwidth_h": 92,
+      "cron_schedule": "5 */3 * * *"
+    },
+    "finance": {
+      "hero": "ww",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN_PENDING_OPTION_C_REDISPATCH",
+      "friction_today": "ESC-2026-06-29-01+02-OPTION_C-AUTHORIZED",
+      "b3_dispatch_id": "B3_Thunderbolts/dispatch/2026-07-01_REDISPATCH",
+      "bandwidth_h": 12,
+      "cron_schedule": "20 */3 * * *"
+    },
+    "people": {
+      "hero": "gl",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN",
+      "friction_today": null,
+      "b3_dispatch_id": null,
+      "bandwidth_h": 88,
+      "cron_schedule": "35 */3 * * *"
+    },
+    "legal": {
+      "hero": "aquaman",
+      "last_pulse": "2026-06-29T10:55:00-04:00",
+      "status": "GREEN_ACTIVE",
+      "friction_today": "AI-ACT-RESOLVED-v0.1.2",
+      "b3_dispatch_id": "B3_Eternals/sop_vault/ai_act_compliance_runbook_v0.1.md",
+      "bandwidth_h": 0.08,
+      "cron_schedule": "50 */3 * * *"
+    }
+  },
+  "b1_evening_pulse": {
+    "last_run": "2026-06-29T10:55:00-04:00",
+    "date_local": "2026-06-29",
+    "broadcast_ts": "2026-06-29T10:55:00-04:00",
+    "schedule_slot": "x8 ACTIVE 8 fires/real-day 3h sim-day",
+    "bandwidth_total_h": "mixed-units",
+    "incident_it_escalated": false,
+    "drift_summary": {
+      "heroes_responded": 8,
+      "heroes_in_drift": 0,
+      "heroes_yellow": 1,
+      "heroes_green": 7,
+      "threshold": 2,
+      "drift_threshold_exceeded": false
+    },
+    "next_run": "2026-06-29T11:00:00-04:00"
+  },
+  "weekly_review": {
+    "current_week": null,
+    "path": null,
+    "rocks_scored": [],
+    "next_actions_w1": []
+  },
+  "drift_flag": true,
+  "escalation_log": [
+    {
+      "ts": "2026-06-29T08:25:11-04:00",
+      "from": "b1-jerry-emyth",
+      "type": "daily-cycle-reset",
+      "reason": "b2_pulse check 8/8 GREEN drift 0/8",
+      "pulse": "GREEN",
+      "drift_count": 0,
+      "status": "RESOLVED"
+    },
+    {
+      "ts": "2026-06-29T09:55:00-04:00",
+      "from": "Mavis-A0",
+      "type": "ai-act-lane-resolution",
+      "reason": "Path B v0.1-minimal delivered body hash 242893c6 verified bilaterally",
+      "status": "RESOLVED"
+    },
+    {
+      "ts": "2026-06-29T10:05:00-04:00",
+      "from": "Mavis-A0",
+      "type": "user-go-option-c",
+      "reason": "ESC-01 ESC-02 OPTION_C authorized new deadline 2026-07-01 12-00 ET",
+      "status": "AUTHORIZED_PENDING_JERRY_ACK"
+    },
+    {
+      "ts": "2026-06-29T10:55:00-04:00",
+      "from": "Mavis-A0",
+      "type": "x8-stagger-applied",
+      "reason": "B2 daily-pulse-8 staggered offsets 0/5/15/20/30/35/45/50 to avoid same-minute conflict pairs. Karpathy LLM Wiki scaffolds at 10 agent workspace roots. compress-x8.ps1 idempotent.",
+      "status": "RESOLVED"
+    },
+    {
+      "ts": "2026-06-29T12:37:00-04:00",
+      "from": "b1-summers-ship",
+      "type": "daily-cycle-reset",
+      "reason": "Cron fire 37 */3 (12-37 ET). b2_pulse check 8/8 GREEN drift 0/8 < threshold 2. NO escalation. LD01 Monday pivot = superman/growth per Life Wheel bijection plan-L2 sec 4.2. Pivot authority transferred B1-Jerry -> B1-Summers (ship) at 12-37 ET.",
+      "pulse": "GREEN",
+      "drift_count": 0,
+      "status": "RESOLVED"
+    },
+    {
+      "ts": "2026-06-29T23:10:30-04:00",
+      "from": "b1-summers-ship",
+      "type": "daily-cycle-reset",
+      "reason": "Cron fire 5 */6 post-T1 (23:10 ET). x4-mixte regime verdict = NO-GO. Axe1 RED (8/8 B2 last_pulse STALE vs 3h freshness window; ages 11.2h-12.3h). Axe3 RED (0/4 ICPs shipped; matrix tally 0/32 MRR + 0/64 capsules). Axe4 RED (matrice lean plan-L2 sec 5.4 NOT_DELIVERED; R04 bottleneck blocks 4 downstream). Axe2 YELLOW (1/3 variants shippes; Nexus OMK live, Orbiter ABC + Solaris standby). B1-Summers SHIP gate Holding Filiales = NO-GO. Pivots journaliers restent B1-Jerry (post 12:37 ET transfer).",
+      "pulse": "RED",
+      "drift_count": 8,
+      "x4_axes_verdict": {
+        "B2_Hero_pulse_freshness": "RED",
+        "Variant_ship_status": "YELLOW",
+        "ICP_coverage": "RED",
+        "Holding_to_Filiales_topology": "RED"
+      },
+      "x4_conjoint": "NO-GO",
+      "status": "RESOLVED_NOTED",
+      "trigger_unblock": "A1-matrice-lean (1d B1) = single highest-leverage unlock"
+    }
+  ],
+  "loop_audit": {
+    "daily_reset_runs": 8,
+    "evening_d11_runs": 4,
+    "weekly_review_runs": 0,
+    "12wy_reorg_prompts": 0,
+    "drift_escalations": 1,
+    "last_d11_run_ts": "2026-06-29T10:55:00-04:00",
+    "daily_b2_pulses": 33,
+    "last_consolidation_ts": "2026-06-29T12:00:19-04:00",
+    "consolidation_method": "superman-pulse-4-2026-06-29T12-00-ET",
+    "last_daily_reset_ts": "2026-06-29T23:10:30-04:00",
+    "stale_session_reaped_count": 5,
+    "stale_session_reap_checks": 25,
+    "last_stale_session_reap_check_ts": "2026-06-29T23:07:00-04:00",
+    "last_stale_session_reap_note": "CATCH-UP fire at 23:07 ET (post-daemon-crash-recovery). Context: daemon crashed at ~21:27 ET. Cron `*/30 watchdog-stale-session-reaper` continued firing but each fire failed with `prompt_async failed: fetch failed` because the daemon was down. State.json was NOT bumped between 17:30 ET (last successful fire) and 23:07 ET (this fire) - 11 missed ticks (18:00, 18:30, 19:00, 19:30, 20:00, 20:30, 21:00, 21:30, 22:00, 22:30, 23:00 ET). At 23:06:44 ET, daemon log shows `[stream-stall] recovery watchdog shipped OFF - no OpenCode turn will arm it` (recovery prep), then at 23:07:03 ET `[recovery] Found stale started sessions, recovering, count=8`. 8 sessions auto-recovered successfully (recovered=8, failed=0 at 23:07:54 ET): mvs_9d2e87f5f41a41a8af62d0c55ede0194 (mavis, me - this watchdog fire), mvs_03274aadb45341f6bb7c3bcad9047130 (b2-cyborg-it), mvs_e77b30371f6149dd8c38683d61847425 (b2-gl-people), mvs_b53a560888dc491594cb2dfddd37bf7f (b2-cyborg-it), mvs_e230b3d1f06248a79a5ea2f50ea85ee4 (b1-summers-ship), mvs_2622c9947976473f9c18331e8aedab9c (b1-summers-ship), mvs_1275be4cf85c43e280637667abfeb833 (b1-jerry-emyth), mvs_ef491344935741898750dd616ee1a8f5 (mavis/A0-Jumeau-Numerique-Amadeus). After recovery, daemon ran its own in-process stale-detector: 5 of the 8 recovered sessions were then `Emitting session.finish for finished session, reason=stale` and `Session marked as finished, reason=stale` (idleMs ranging 5826158-5921488 = 97-99min): mvs_03274aadb... (b2-cyborg-it), mvs_9d2e87f5... (mavis/me - but immediately re-resumed by cron redispatch), mvs_b53a560... (b2-cyborg-it), mvs_e77b303... (b2-gl-people), mvs_ef491344... (mavis/A0 - 23:08:44 idleMs=5921488). Plus mvs_1275be4cf... (b1-jerry-emyth) at 23:08:44 idleMs=58.8s after a real bash-tool call. Remaining 2 sessions continued working: mvs_e230b3d1... (b1-summers-ship daily-cycle-reset) and mvs_2622c994... (b1-summers-ship daily-cycle-reset both) - both resumed and still in flight at 23:11 ET writing weekly reviews. Watchdog decision: NO REAP this fire. All 8 crashed sessions already handled by daemon built-in stale-detector + recovery subsystem. The 21:30 fire (`mvs_89bb2d28f84f4d89a4aa2baf2be5a8fa`) is `status=error, message=prompt_async failed: fetch failed` (daemon was down at 21:30) - daemon will not auto-reap error sessions, only status=started. Awaiting human decision on whether to clean up the 21:30 error row. b3-xmen-people main `mvs_f766b86757c14fbd8070569d2cf71dae` was a false positive (39h idle) - `mavis session info` returns `status.type=finished`, list view showed stale snapshot. 0 FRICTION files emitted this fire. 0 `mavis session abort` API calls. 11 missed heartbeats consolidated into this single catch-up fire (checks 13 -> 25). Reap count stays at 5 (historical: 4 from 12:00 fire B2 daily-pulse cron batch + 1 from 15:00 fire Hawkeye zombie). Daemon auto-recovery is the primary defense for crash-related zombie sessions; watchdog cron is the secondary defense for in-flight hangs. AGENT_WIKI Task Log entry appended at C:\\Users\\amado\\.mavis\\agents\\mavis\\workspace\\AGENT_WIKI.md. Root scratchpad note appended at mvs_e887dd5de2a74afcaddea441ddf81d67.",
+    "b1_summers_x4_mixte_checks": 1,
+    "last_b1_summers_x4_check_ts": "2026-06-29T23:10:30-04:00",
+    "last_daily_reset_drift_at_check": 8
+  },
+  "drift_reason": "axe1 stale 8/8 last_pulse > 3h at 2026-06-29T23:10:30-04:00"
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title data-bind="title">Citadelle A0 — Item</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="doctrine" content="lecture seule par défaut — visitor submissions gated by enable_submissions.flag">
+  <meta name="antifragile" content="state cached in URL hash + localStorage + auto-recover">
+  <style>
+    :root { --bg: #0a0e14; --fg: #c9d1d9; --muted: #6e7681; --accent: #58a6ff; --warn: #f0883e; --good: #3fb950; --bad: #f85149; --card: #161b22; --border: #30363d; --dormant: #484f58; }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem; }
+    .pill { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 12px; font-size: 0.65rem; margin-right: 0.25rem; }
+    .pill.live { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.dormant { background: rgba(248, 81, 73, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+    .pill.warn { background: rgba(240, 136, 62, 0.2); color: var(--warn); border: 1px solid var(--warn); }
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--muted); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .breadcrumb { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; }
+    .breadcrumb a { color: var(--accent); }
+    .field { display: flex; padding: 0.4rem 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+    .field .k { width: 200px; color: var(--muted); flex-shrink: 0; }
+    .field .v { color: var(--fg); word-break: break-word; font-family: 'SF Mono', monospace; }
+    .related { margin-top: 2rem; }
+    .related a { display: inline-block; padding: 0.3rem 0.6rem; margin: 0.2rem 0.3rem 0.2rem 0; border-radius: 4px; background: var(--card); border: 1px solid var(--border); color: var(--accent); text-decoration: none; font-size: 0.8rem; }
+    .related a:hover { background: rgba(88, 166, 255, 0.12); }
+    .err-box { background: rgba(248, 81, 73, 0.1); border-left: 3px solid var(--bad); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .submit-form { margin-top: 2rem; padding: 1rem; background: var(--card); border: 1px dashed var(--accent); border-radius: 6px; }
+    .submit-form label { display: block; font-size: 0.8rem; color: var(--muted); margin: 0.5rem 0 0.2rem; }
+    .submit-form input, .submit-form textarea { width: 100%; background: var(--bg); color: var(--fg); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; font-family: inherit; font-size: 0.85rem; box-sizing: border-box; }
+    .submit-form button { margin-top: 0.75rem; background: var(--accent); color: var(--bg); border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-family: inherit; font-weight: 600; }
+    .submit-form button:disabled { opacity: 0.4; cursor: not-allowed; }
+    .submit-form .gate-note { font-size: 0.75rem; color: var(--warn); margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <a class="nav" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <a class="nav" href="/patterns">🎯 Patterns <span class="badge live">P4</span></a>
+    <h2>🔌 API</h2>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.6 · CMS dynamique<br>11 collections · N×M pages</div>
+  </nav>
+  <main class="main">
+    <div class="breadcrumb">
+      <a href="/">Citadelle</a> / <span id="bc-collection"></span> / <span id="bc-item"></span>
+    </div>
+    <div id="item"></div>
+    <div id="related"></div>
+    <div id="submit-section"></div>
+  </main>
+  <script>
+    const SNAPSHOT_KEY = "citadel.item.snapshot";
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    async function loadJSON(url) { try { const r = await fetch(url); if (!r.ok) throw new Error("HTTP " + r.status); return await r.json(); } catch (e) { return { error: String(e) }; } }
+    function getRoute() {
+      const m = (location.pathname || "").match(/^\/c\/([\w-]+)\/([\w.-]+)\/?$/);
+      return m ? { collection: m[1], itemId: decodeURIComponent(m[2]) } : null;
+    }
+    const COLLECTION_LIST_PAGE = {
+      "01_harnesses": "/harnesses", "04_skills": "/skills", "06_connections": "/connections",
+      "07_decisions": "/decisions", "08_agents": "/agents", "09_frameworks": "/frameworks",
+      "10_domains": "/domains", "11_memory": "/memory", "13_patterns": "/patterns",
+    };
+    function renderItem(item) {
+      const root = document.getElementById("item");
+      const entries = Object.entries(item || {});
+      if (!entries.length) { root.innerHTML = `<div class="err-box">Item vide.</div>`; return; }
+      let html = "";
+      for (const [k, v] of entries) {
+        if (k === "raw_input_preview" || k === "raw_input_hash") continue;
+        html += `<div class="field"><div class="k">${esc(k)}</div><div class="v">${esc(JSON.stringify(v))}</div></div>`;
+      }
+      root.innerHTML = html;
+    }
+    function renderRelated(collection, itemId) {
+      const root = document.getElementById("related");
+      const listUrl = COLLECTION_LIST_PAGE[collection];
+      if (!listUrl) return;
+      root.innerHTML = `<div class="related"><strong>Navigation:</strong> <a href="${esc(listUrl)}">← Tous les items de cette collection</a> <a href="/">🏰 Bridge</a></div>`;
+    }
+    async function renderSubmit(collection) {
+      const root = document.getElementById("submit-section");
+      const status = await loadJSON("/api/cms/status");
+      if (status.error) { return; }
+      if (!status.collections || !status.collections.includes(collection)) return;
+      const enabled = status.submissions_enabled;
+      root.innerHTML = `<div class="submit-form">
+        <h3 style="margin-top:0">➕ Submit new item to <code>${esc(collection)}</code></h3>
+        ${enabled
+          ? `<form id="sf">
+            <label>name *</label><input name="name" required />
+            <label>note</label><textarea name="note" rows="2"></textarea>
+            <button type="submit">Submit (gated P3 anti-Ultron)</button>
+            <div class="gate-note">⚠ Soumission gated par <code>enable_submissions.flag</code> · write-only · anti-Ultron loggé</div>
+          </form>`
+          : `<div class="gate-note">🔒 Submissions désactivées — <code>touch decisions/enable_submissions.flag</code> pour activer (A0 HITL).</div>`
+        }
+      </div>`;
+      if (enabled) {
+        document.getElementById("sf").addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const fd = new FormData(e.target);
+          const r = await loadJSON("/api/cms/submit");
+          // Build curl-style payload via fetch
+          const resp = await fetch("/api/cms/submit", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({collection, fields: {name: fd.get("name"), note: fd.get("note")}}) });
+          const data = await resp.json();
+          root.innerHTML += `<div class="meta" style="margin-top:0.5rem">→ ${esc(JSON.stringify(data))}</div>`;
+        });
+      }
+    }
+    (async () => {
+      const route = getRoute();
+      if (!route) {
+        document.getElementById("item").innerHTML = `<div class="err-box">Route invalide — attendu /c/<collection>/<item_id></div>`;
+        return;
+      }
+      document.getElementById("bc-collection").innerHTML = `<a href="/c/${route.collection}">${esc(route.collection)}</a>`;
+      document.getElementById("bc-item").textContent = route.itemId;
+      // SEO dynamic <title>
+      document.querySelector('title[data-bind="title"]').textContent = `Citadelle A0 · ${route.collection} · ${route.itemId}`;
+      // meta description
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = `Dynamic item page · collection ${route.collection} · item ${route.itemId} · A'Space OS V2 Citadelle`;
+      document.head.appendChild(meta);
+      // Load item
+      const data = await loadJSON(`/api/data/${route.collection}/item/${encodeURIComponent(route.itemId)}`);
+      if (data.error) {
+        document.getElementById("item").innerHTML = `<div class="err-box">${esc(data.error)}</div>`;
+      } else {
+        renderItem(data);
+        renderRelated(route.collection, route.itemId);
+        renderSubmit(route.collection);
+      }
+    })();
+  </script>
+</body>
+</html>

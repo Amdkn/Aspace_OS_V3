@@ -1,0 +1,13 @@
+{
+    "name": "a0-windows-bridge",
+    "version": "1.0.0",
+    "description": "Neural Link bridge between Docker and Windows for desktop control",
+    "main": "bridge_server.js",
+    "scripts": {
+        "start": "node bridge_server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "screenshot-desktop": "^1.15.0"
+    }
+}

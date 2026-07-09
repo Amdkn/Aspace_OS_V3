@@ -1,0 +1,65 @@
+---
+name: agent-os-standards-l1-index
+layer: L1
+domain: life-os
+title: Agent OS Standards Index — L1 Life OS
+version: 1.0
+created: 2026-06-07
+anchor: ADR-SYMPH-003 (Agent OS = standards injection + observability for Symphony ticks)
+parent_install: ~/agent-os/  (BuilderMethods Agent OS v3.0)
+twin_canon: 20_Life_OS/  (A'Space OS V2 canon)
+twin_runtime: 05_OSS_TSTwin/symphony/L1/lane_C_capsules/  (Shadow Life OS runtime, 215 capsules)
+---
+
+# Agent OS — Standards Index (L1 Life OS)
+
+> 11 standards discoverées depuis le canon Life OS + le runtime Shadow L1.
+> Couverture : gouvernance A1/A2/A3 (4 standards) + 4 trackers SoR (4 standards) +
+> interop Symphony (3 standards). Distinct du package L2 (workflow d'exécution).
+
+## Gouvernance agents (4)
+
+| # | Standard | Phase Symphony qui l'invoque | Périmètre |
+|---|---|---|---|
+| 01 | `agent-hierarchy-contract.md` | WAKE + SIGNAL | A0/A1/A2/A3 interfaces, hand-offs, escalation |
+| 02 | `beth-5-states-machine.md` | WAKE + OBSERVE + SIGNAL | A1 Beth (5 états) + Morty (intake shadow) |
+| 03 | `vessel-captain-protocol.md` | DECIDE + EXECUTE | A2 captain par vaisseau (6 ships) |
+| 04 | `crew-bridge-protocol.md` | EXECUTE + OBSERVE | A3 crew par framework (Pillars/Domaines/12WY/PARA/GTD/DEAL) |
+
+## Trackers SoR Symphony (4)
+
+| # | Standard | Phase Symphony | Tracker |
+|---|---|---|---|
+| 05 | `baserow-lifedb-schema.md` | PROBE + WRITE-BACK | Baserow — 8 Life Domains + Ikigai Pillars |
+| 06 | `obsidian-vault-linkage.md` | LEARN | Obsidian — knowledge graph des capsules |
+| 07 | `plane-12wy-cycle.md` | DECIDE + EXECUTE | Plane — 12 Weeks Year sprint cycle |
+| 08 | `affine-kanban-gtd.md` | EXECUTE | Affine — GTD/DEAL kanban (Clarify→Engage) |
+
+## Interop Symphony L1 (3)
+
+| # | Standard | Phase Symphony | Effet |
+|---|---|---|---|
+| 09 | `stop-authority-protocol.md` | OBSERVE (toutes) | Culber LD03 + Tilly LD04 STOP authority |
+| 10 | `handoff-json-outbox-l1.md` | SIGNAL | Format A1↔A2↔A3 inter-agent (outbox JSONL) |
+| 11 | `canon-vs-runtime-drift.md` | LEARN | Réconciliation canon `20_Life_OS/` ↔ twin runtime `L1/lane_C_capsules/` |
+
+## Schema observabilité
+
+`schema-pulse-log-l1.md` — 14 champs (repris de L2) + 4 champs L1-specific :
+- `vessel_id` (string|null) — Orville | Discovery | SNW | Enterprise | Cerritos | Protostar
+- `crew_id` (string|null) — identifiant crew A3 (Boimler, Tendi, Tilly, etc.)
+- `ld_id` (string|null) — LD01..LD08 (life domain impacté)
+- `agent_state` (string|null) — Beth 5-state (GREEN/ORANGE/RED/HALT_LD03/HALT_LD04)
+
+## Mapping tick ↔ Life OS
+
+| Phase Symphony | Phase Life OS (rhum matinale) | Crews A3 typiques |
+|---|---|---|
+| WAKE | Morning brief | Beth (A1) check 5 états |
+| PROBE | Clarify incoming | Boimler (Cerritos) triage 2-min |
+| DECIDE | Route to vessel | A2 captain du vaisseau |
+| EXECUTE | Engage crew | Crews A3 du vaisseau routé |
+| OBSERVE | Reflect | Tilly (LD04) + Culber (LD03) si santé |
+| LEARN | Weekly review | 12WY captain (SNW) |
+| SIGNAL | Report to Beth | A1 Beth update |
+| SLEEP | Evening close | A0 Amadeus check |

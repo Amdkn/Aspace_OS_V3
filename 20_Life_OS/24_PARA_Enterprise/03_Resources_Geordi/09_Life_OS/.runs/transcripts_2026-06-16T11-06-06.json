@@ -1,0 +1,30 @@
+{
+  "run_tag": "2026-06-01_2026-06-30",
+  "started_at": "2026-06-16T11:06:06",
+  "elapsed_s": 0.1,
+  "takeout": "C:\\Users\\amado\\Downloads\\watch-history.html",
+  "date_range": [
+    "2026-06-01",
+    "2026-06-30"
+  ],
+  "limit_per_ld": 10,
+  "lang_pref": [
+    "fr"
+  ],
+  "total_unique_videos_in_range": 942,
+  "shorts_skipped": 129,
+  "already_processed": 63,
+  "cap_skipped": 738,
+  "transcript_failures": 0,
+  "newly_written_guides": 0,
+  "by_ld_after_run": {
+    "LD04_Cognition_Tilly": 11,
+    "LD07_Creativity_Reno": 11,
+    "LD02_Finance_Saru": 11,
+    "LD01_Business_Picard": 11,
+    "LD06_Family_Burnham": 11,
+    "LD03_Health_Culber": 11,
+    "LD05_Social_Stamets": 11,
+    "LD08_Impact_Georgiou": 11
+  }
+}

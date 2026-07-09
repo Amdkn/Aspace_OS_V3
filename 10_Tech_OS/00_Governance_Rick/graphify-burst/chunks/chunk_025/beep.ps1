@@ -1,0 +1,1 @@
+[console]::beep(880, 200); [console]::beep(440, 300)

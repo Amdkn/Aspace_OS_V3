@@ -1,0 +1,9 @@
+{
+  "id": "2026-07-08_w28_m1_veto_decorrele_sommeil",
+  "ordre_a_plus": "GO W28 M1 : scinder le veto Beth du corps d A0",
+  "change": "spock_airlock.py : b1_sleep() sorti du gating -> nourrit beth_repos.flag SEUL (rest-guard). b1_replication() (UNKNOWN, non-gating, W28 M2 stub) prend le slot B1 du gating. JSON: B1_replication + rest_sommeil_a0.",
+  "preuve": "airlock run: B1 ? (UNKNOWN) au lieu de B1 X (sommeil RED); rest_sommeil_a0=RED -> beth_repos.flag ecrit; global=GREEN; consec=20 (hysteresis intacte, 4 invariants).",
+  "decorrele": "le sommeil d A0 ne gate PLUS le systeme; il protege A0 via rest-guard uniquement",
+  "reste": "W28 M2 = 4 sondes reelles de replication + calibration 7j avant que B1 gate (abort #3). Extraction rest_guard.py = suivi.",
+  "reversible": "restaurer b1 = b1_sleep() + if b1==RED dans main()"
+}

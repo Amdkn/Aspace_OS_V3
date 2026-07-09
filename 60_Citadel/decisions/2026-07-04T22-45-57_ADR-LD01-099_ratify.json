@@ -1,0 +1,11 @@
+{
+  "id": "47bdf003",
+  "adr_id": "ADR-LD01-099",
+  "decision": "ratify",
+  "rationale": "test passoire",
+  "decided_by": "A0",
+  "decided_at": "2026-07-04T22:45:57.301426",
+  "gate_2_P1": true,
+  "canonic_writes_enabled_at_decide_time": false,
+  "status": "DECIDED"
+}

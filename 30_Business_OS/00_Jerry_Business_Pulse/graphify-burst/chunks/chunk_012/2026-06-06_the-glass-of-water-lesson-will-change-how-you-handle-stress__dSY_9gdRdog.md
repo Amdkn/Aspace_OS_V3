@@ -1,0 +1,35 @@
+---
+source: youtube-takeout-to-lifeos
+date: 2026-06-06
+type: video-resource
+ld: LD03_Health_Culber
+ld_domain: Health
+a3_owner: Culber
+video_id: dSY_9gdRdog
+title: "The Glass Of Water Lesson Will Change How You Handle Stress #shorts #stressrelief #inspiration #usa"
+channel: "Thinknomy®"
+watch_url: https://www.youtube.com/watch?v=dSY_9gdRdog
+raw_date: "6 juin 2026"
+status: CAPTURED
+tags: [#youtube, #geordi, #ld03, #life-wheel]
+---
+
+# The Glass Of Water Lesson Will Change How You Handle Stress #shorts #stressrelief #inspiration #usa
+
+> **Channel**: Thinknomy®
+> **Watched**: 6 juin 2026 (2026-06-06)
+> **LDxx**: LD03_Health_Culber
+> **URL**: https://www.youtube.com/watch?v=dSY_9gdRdog
+
+## Why this is in LD03_Health_Culber
+
+Auto-categorized by `youtube-takeout-to-lifeos` skill (2026-06-16). Keyword match on title + channel.
+
+## Notes
+
+_Add transcript, summary, or A0's reaction here. Use `youtube-transcript-api` to fetch the transcript when ready._
+
+## See also
+
+- Geordi 09_Life_OS/ cartography (`.claude/memory/userspace-cartography.md`)
+- CLAUDE.md §"User-Space Cartography" — anti-pattern guard

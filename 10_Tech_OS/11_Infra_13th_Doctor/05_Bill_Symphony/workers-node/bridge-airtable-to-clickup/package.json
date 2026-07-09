@@ -1,0 +1,18 @@
+{
+  "name": "aspace-bridge-airtable-to-clickup",
+  "version": "1.0.0",
+  "description": "Symphony Phase 2 bridge — Airtable Briefs 'Approuvé' -> ClickUp S2-4 Fast-Track task chain (hourly cron via PM2, +10min offset)",
+  "main": "bridge-airtable-to-clickup.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node bridge-airtable-to-clickup.js",
+    "dry": "DRY_RUN=1 node bridge-airtable-to-clickup.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

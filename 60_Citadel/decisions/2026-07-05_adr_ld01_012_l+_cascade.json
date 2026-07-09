@@ -1,0 +1,72 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-012-l+-cascade",
+  "date": "2026-07-05T10:40:00-04:00",
+  "type": "ADR_LD01_012_CASCADE",
+  "title": "L+ Skill Standard ratification cascade - HA Picard L0 CEO Bench + Jerry L+ Lighting + Summers L+ Verse + calque PARA + CLAUDE.md consumed_by + 3 audits OMK",
+  "decision": "ACCEPTED + RATIFIED 2026-07-05 (cascade post-ratification, War Mode)",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "git checkout calque + CLAUDE.md + 3 agents + delete ADR-012 + delete 3 audits + git checkout calendar.md + delete citadel trace = revert complet",
+  "deciders": {
+    "a0_go": "A0 Amadeus - GO 2026-07-05T10:30 ratification L+ Skill Standard canon",
+    "ha_execution": "HA (Hermes Agent = A3 Picard in PARA) execute cascade War Mode post-ratification + HITL captain ship-dont-ask",
+    "pattern_doctrine": "ship-dont-ask (Murderbot anti-impuissance-acquise)"
+  },
+  "cascade_6_actes": {
+    "A1_agents_alignes": {
+      "Picard": {
+        "size_before": 6143,
+        "size_after": 9956,
+        "l_plus_role": "L0 CEO Bench sister + H10 projects owner input"
+      },
+      "Jerry": {
+        "size_before": 3906,
+        "size_after": 7580,
+        "l_plus_role": "L+ Lighting keeper transversal"
+      },
+      "Summers": {
+        "size_before": 1777,
+        "size_after": 5528,
+        "l_plus_role": "L+ Verse singer transversal"
+      }
+    },
+    "A2_calque_etendu": {
+      "path": ".hermes/book_dev_runtime.md",
+      "section_ajoutee": "PARA Section Canonique (2026-07-05 ratification)"
+    },
+    "A3_claude_md_updated": {
+      "path": "LD01_Business_Book/CLAUDE.md",
+      "champ": "consumed_by",
+      "ha_role": "A3 Picard in PARA",
+      "mc_role": "A3 Book in Life Wheel"
+    },
+    "A4_3_audits": {
+      "Picard_audit": "agent-os/citadel/audits/2026-07-05_omk_phase1_lplus_audit_picard.md (4965b, 73/110 invariants pass)",
+      "Jerry_audit": "agent-os/citadel/audits/2026-07-05_omk_phase2_lighting_audit_jerry.md (1666b, Lights 3/4, DLP 2/7)",
+      "Summers_verse": "agent-os/citadel/audits/2026-07-05_omk_phase2_verse_summers.md (2430b, 5/5 verses)"
+    },
+    "A5_ADR_LD01_012": {
+      "path": "30_decisions/ADR-LD01-012_l+_skill_standard_cascade_ratification.md",
+      "size": 17702,
+      "lines": 285
+    },
+    "A6_calendar_citadel": {
+      "calendar": "LD01_Business_Book/99_meta/calendar.md (101 lines, +1 row episode 10:40)",
+      "citadel": "agent-os/citadel/decisions/2026-07-05_adr_ld01_012_l+_cascade.json"
+    }
+  },
+  "files_modified_or_created": 10,
+  "files_unchanged_intentionally": [
+    "ADR-LD01-008 (loop engineering coaching)",
+    "ADR-LD01-009 (DRAFT, sister scope)",
+    "ADR-LD01-010 (HA promotion)",
+    "ADR-LD01-011 (OMK PoC initiation)",
+    "plan-lightning-l+-skill-standard-transversal.md (L+ Skill Standard canon source)",
+    "handoff_meta_memoire_idempotent_antifragile_h1h3h10_2026-07-03.md",
+    "fable_testament_loop_meta_engineering_2026-07-05.md",
+    "8 plans soeurs (.claude/plans/)",
+    "Twins Book + Picard",
+    "Calque MC .minimax/STANDBY.md"
+  ],
+  "next_action": "Phase 2 OMK gated HITL A0 sur 3 beta-coachs (L+ invariants 5-6-8 explicites dans Phase 2 deliverables)"
+}

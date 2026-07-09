@@ -1,0 +1,64 @@
+{
+  "collector": "09_frameworks",
+  "pillar": 9,
+  "pillar_name": "Frameworks Life OS (🎡 — russian doll)",
+  "generated_at": "2026-07-04T22:16:40-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 page Frameworks Life OS",
+  "doctrine": "lecture seule — russian doll parent ⊃ child — pas de duplication",
+  "frameworks": [
+    {
+      "name": "12WY (12 Week Year)",
+      "description": "Objectif: Execution 12 semaines. Source canon: Life OS V0.6.2.",
+      "paths": [
+        "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_PARA\\12_Week_Year"
+      ],
+      "present": false
+    },
+    {
+      "name": "PARA",
+      "description": "Projects · Areas · Resources · Archives. Russian doll parent.",
+      "paths": [
+        "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_PARA"
+      ],
+      "present": false
+    },
+    {
+      "name": "DEAL",
+      "description": "Direction · Execution · Analytics · Learning. Cynefin-aware.",
+      "paths": [
+        "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\21_DEAL"
+      ],
+      "present": false
+    },
+    {
+      "name": "GTD (Getting Things Done)",
+      "description": "Capture · Clarify · Organize · Reflect · Engage.",
+      "paths": [
+        "C:\\Users\\amado\\.claude\\skills\\multi-routines-12wy",
+        "C:\\Users\\amado\\.claude\\skills\\multi-goal"
+      ],
+      "present": true
+    },
+    {
+      "name": "Ikigai",
+      "description": "Purpose · Vocation · Profession · Passion intersection.",
+      "paths": [
+        "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery"
+      ],
+      "present": true
+    },
+    {
+      "name": "Life Wheel (Morty/Beth Russian doll)",
+      "description": "Wheel-of-Life 9-cell matrix : Health · Work · Relationships × 3 sub-scores each.",
+      "paths": [
+        "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\20_skeleton"
+      ],
+      "present": true
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "present": 3,
+    "russian_doll_chain": "12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel"
+  }
+}

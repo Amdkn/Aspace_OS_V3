@@ -1,0 +1,105 @@
+{
+  "expectations": [
+    {
+      "text": "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+      "passed": true,
+      "evidence": "§3 of brief.md contains the full DDL: `CREATE TABLE IF NOT EXISTS abc_os.build_resources` (lines 52-62), `CREATE INDEX IF NOT EXISTS idx_build_resources_project_id` + `_project_sort` (lines 65-68), `ALTER TABLE ... ENABLE ROW LEVEL SECURITY` (line 71), `DROP POLICY IF EXISTS` + `CREATE POLICY` (lines 74-81), migration tracker INSERT (lines 86-92). Wrapped in BEGIN/COMMIT. Idempotent patterns present (modulo the wrong tracker table — see NEW-1)."
+    },
+    {
+      "text": "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+      "passed": true,
+      "evidence": "§4 covers all 3 edit points: §4.1 pre-flight echo block (lines 110-113), §4.2 apply_sql function with both dev and prod arms in a case statement (lines 118-147), §4.3 invocation example (lines 151-154). Both branches covered in code (but with a doctrinal error — see NEW-2)."
+    },
+    {
+      "text": "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+      "passed": true,
+      "evidence": "§5.1 has 5 standard queries (Q1 tables, Q2 RLS, Q3 policies, Q4 migrations_logged on `abc_os.migrations` — fictional, see NEW-1, Q5 most recent migration). §5.2 has 2 spot-checks (S1 column list, S2 RLS + select_policies count). §5.3 has expected baseline table: 18, 18, 43, 13. All match A0's intent (modulo the wrong tracker table)."
+    },
+    {
+      "text": "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+      "passed": true,
+      "evidence": "§2 has 9-row doctrine table citing D1-D8 + D10. §4.3 invocation uses `FORCE_TARGET=1 ./apply-abc-os-migrations.sh dev`. §3 line 92 has `ON CONFLICT (migration_name) DO NOTHING` (wrong conflict column — see NEW-1). D10 explicit: '`build_resources` is `shared`; RLS = `authenticated` only; no `org_id` column'."
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+      "passed": true,
+      "evidence": "§6 specifies all 3 files with full markdown templates: §6.1 `wiki/log.md` (append dated block with D1 counts), §6.2 `MEMORY_CORE/README.md` (one-line 'Recent schema changes' entry), §6.3 `handoff_abc_os_community_dev_2026-06-10.md` (append 2026-06-12 follow-up subsection). All 3 paths correct."
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+      "passed": true,
+      "evidence": "§5.3 has expected baseline table: tables=18, RLS=18, policies=43, migrations_logged=13, build_resources.select_policies=1, build_resources.rls_enabled=true. All match A0's intent."
+    },
+    {
+      "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations` or similar) with `ON CONFLICT (filename) DO NOTHING`",
+      "passed": false,
+      "evidence": "§3 line 86: `INSERT INTO abc_os.migrations (migration_name, applied_at, sha256)` — FICTIONAL table. The actual schema (per 0000_grants_aspace_admin.sql + 0002_rls_policies.sql) is `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` with NO `id SERIAL`, NO `sha256` column. §3 line 92 uses `ON CONFLICT (migration_name) DO NOTHING` (wrong column — canonical is `ON CONFLICT (filename) DO NOTHING`). §5.1 Q4 line 183: `SELECT count(*) FROM abc_os.migrations` — also fictional. A sub-agent following this brief would run a SQL statement against a non-existent table, the apply would fail at the tracker INSERT step, and D1 verify would return 0 rows. The fictional `sha256` column also requires `pgcrypto` (via `encode(digest(...), 'hex')`) which is not referenced in the brief."
+    },
+    {
+      "text": "[NEW-2] Brief does NOT hard-fail on FORCE_TARGET=1 in the prod branch of the apply script (D10 shared-catalog applies to both envs; the apply script's prod gate is a separate `GO-PROD` HITL prompt, not a FORCE_TARGET ban)",
+      "passed": false,
+      "evidence": "§4.2 lines 132-137 (prod branch): `if [ \"${FORCE_TARGET:-0}\" = \"1\" ]; then echo \"[ERR] FORCE_TARGET=1 forbidden on prod\" >&2; exit 3; fi` — hard-fails the prod branch when FORCE_TARGET=1 is set. This contradicts D10 mixed-tenancy: shared-catalog DDL (no seed, no user data, additive) should be safe to apply to both dev and prod. The actual apply-abc-os-migrations.sh differentiates prod via a separate `GO-PROD` HITL prompt (line 90-95 of the real script), not via a FORCE_TARGET ban. A sub-agent following this brief would refuse to apply shared-catalog DDL to prod even when the apply script's `GO-PROD` gate is satisfied, breaking prod parity for shared-catalog tables."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 2,
+    "total": 8,
+    "pass_rate": 0.75
+  },
+  "execution_metrics": {
+    "output_chars": 13800,
+    "transcript_chars": 13800
+  },
+  "timing": {
+    "executor_duration_seconds": 115.5,
+    "total_duration_seconds": 115.5
+  },
+  "claims": [
+    {
+      "claim": "Tracker table is abc_os.migrations with (id SERIAL, applied_at TIMESTAMPTZ, migration_name TEXT UNIQUE, sha256 TEXT)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "ACTUAL schema uses `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` — no `id SERIAL`, no `sha256` column. The without_skill brief invented a fictional schema. Also `encode(digest(...), 'hex')` requires pgcrypto which is not mentioned in this brief. NEW-1 assertion catches this doctrinal error."
+    },
+    {
+      "claim": "FORCE_TARGET=1 hard-fails on prod branch",
+      "type": "quality",
+      "verified": false,
+      "evidence": "§4.2 prod branch: 'if FORCE_TARGET=1, echo ERR, exit 3' — contradicts D10 doctrine that shared-catalog DDL goes to both envs. The dev-only restriction in the eval is for the *current apply run*, not a permanent prod ban. A sub-agent following this brief would silently break prod parity for shared-catalog schema. NEW-2 assertion catches this doctrinal error."
+    },
+    {
+      "claim": "apply_sql uses psql \"$ABC_OS_DEV_URL\" / \"$ABC_OS_PROD_URL\" env vars",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Actual apply-abc-os-migrations.sh uses heredoc with `PGOPTIONS=-c app.env=...` + psql reading from $SUPABASE_DB_URL via the lib/db.sh pattern, not separate $ABC_OS_DEV_URL/$ABC_OS_PROD_URL vars."
+    },
+    {
+      "claim": "build_resources is shared catalog (D10)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§1 + §2 explicitly classify as shared catalog with no org_id. RLS = `authenticated` only."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Fictional tracker table schema (abc_os.migrations with sha256) — would fail against actual _aspace_migrations",
+      "FORCE_TARGET=1 forbidden on prod contradicts the doctrine's shared-catalog-both-envs pattern"
+    ],
+    "needs_review": [
+      "§4.2 prod branch hard-fail may need to be re-examined — current D10 precedent says shared-catalog DDL applies to both envs"
+    ],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "The 2 new anti-doctrinal-error guards (NEW-1 tracker table, NEW-2 FORCE_TARGET prod hard-fail) successfully catch the 2 real errors in this brief. Pass rate dropped from 100% to 75%."
+      },
+      {
+        "reason": "The brief still references `$ABC_OS_DEV_URL` / `$ABC_OS_PROD_URL` env vars (factual error about the actual apply script env-var pattern) — but this is not load-bearing for a sub-agent, so no new assertion was added."
+      }
+    ],
+    "overall": "With the 2 new anti-doctrinal guards, the brief now correctly fails on (1) fictional `abc_os.migrations` tracker table (canonical is `abc_os._aspace_migrations (filename)`) and (2) FORCE_TARGET=1 hard-fail in prod branch (contradicts D10). Pass rate 6/8 = 75%."
+  }
+}

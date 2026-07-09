@@ -1,0 +1,31 @@
+{
+  "_schema": "wf0-spock airlock state, wargame 26 §M1 chemin canon",
+  "go_until": "2029-07-05T00:00:00Z",
+  "go_issued_at": "2026-07-06T01:00:00-04:00",
+  "go_issued_by": "A+ (ordre direct, GO Spock LANCE — ADR-WARMODE-003 Fenetre Fable)",
+  "amendments": [
+    {
+      "date": "2026-07-07",
+      "amendment": "GO perpetual CORRECTED perpetual->3y renewable",
+      "rationale": "compression temporelle 1wk L1=1day L2 (wargame 15 AMENDED)",
+      "by": "wargame 26 audit correction"
+    }
+  ],
+  "capacity_green": true,
+  "evaluator_ok": true,
+  "budget_pct_remaining": 100.0,
+  "airlock_enabled_flags": {
+    "enable_wf0": true,
+    "enable_wf1": true,
+    "enable_wf3": true
+  },
+  "scope": "WF0 + WF1 + WF3 + ship_internal (outboard gated par 3 cycles verts)",
+  "revocation": "rm agent-os/citadel/decisions/GO_SPOCK_UNIQUE.md = kill-switch immediat",
+  "source_decisions": [
+    "agent-os/citadel/decisions/GO_SPOCK_UNIQUE.md",
+    "agent-os/citadel/decisions/2026-07-06_fenetre_fable_go_spock_lance.json"
+  ],
+  "patch_level_runner": "PS-2 (wargame 26 idempotence run-id)",
+  "last_verified": "2026-07-07T22:55:00-04:00",
+  "verified_by": "Opus 4.8 — Catégorie 1 audit wargame 26"
+}

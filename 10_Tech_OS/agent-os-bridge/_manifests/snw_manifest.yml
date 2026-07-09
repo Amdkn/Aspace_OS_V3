@@ -1,0 +1,16 @@
+# Agent OS standards manifest for ship: snw
+# Generated 2026-06-19T06:02:00Z by agent-os-to-symphony.sh
+# Source: C:/Users/amado/agent-os/standards/index.yml
+
+agent_os_standards:
+  source: agent-os-bridge (Brian Casel v3.0)
+  injected_at: 2026-06-19T06:02:00Z
+  standards:
+    - folder: api
+      file: error-handling
+      description: "Error codes, exception handling, error response format (AUTH/DB/VAL/NET/INT)"
+      ref: C:/Users/amado/agent-os/standards/api/error-handling.md
+    - folder: api
+      file: response-format
+      description: "API response envelope structure with success/data/error fields"
+      ref: C:/Users/amado/agent-os/standards/api/response-format.md

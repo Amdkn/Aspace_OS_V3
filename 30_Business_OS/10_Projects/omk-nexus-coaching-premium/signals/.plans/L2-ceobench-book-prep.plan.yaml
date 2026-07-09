@@ -1,0 +1,130 @@
+---
+plan_id: L2-ceobench-book-prep
+generated_by: Mavis (MC/L1)
+generated_at: 2026-07-05T03:39:00-04:00
+doctrine: append-only D4 · sandbox strict · Book-as-COO prep · Curie W5 verdict expected
+source: ~/.claude/plans/plan-lightning-l0l1l2-coach-book-picard-jerry-summers.md §5 L2
+append-only: true
+---
+
+# L2 CEO-Bench — sandbox run #1 prep (Book-as-COO 500-day sim)
+
+> **Sandbox strict** (per Plan Lightning §5 L2 + §8 sobriété Rick).
+> Run **NON EXÉCUTÉ** automatiquement — L2 CEO-Bench 500-day sim = sandbox coûteux (LLM API, compute).
+> Ce fichier = le **runbook canonique** pour l'exécution quand A0 GO (Curie W5 verdict).
+
+## §1 — D1 état vérifié ce jour (2026-07-05)
+
+| Actif | Mesure |
+|---|---|
+| Source `ceobench-src` | `C:\Users\amado\shadow-l2-ceobench-princeton\` (139 files) |
+| Status | Clone shallow D1-received — methodology only per ADR-LD01-003 |
+| Runtime deps | Python 3.x + `uv` (per `.python-version`) + sqlcipher3 + LLM API keys |
+| LLM roles | (1) Benchmarked agent model (Book-as-COO) · (2) Social/macro post simulator (Haiku 4.5) · (3) Enterprise customer simulator (Sonnet 4.5) |
+| KEY | `_NMDB_KEY = "72692ea1293c52fbeef3ad8587db9d4fe3546d744766c3bdcb5aab4dad4b3c34"` (per `KEYS.md`) |
+| Default system prompt | `src/saas_bench/default_system_prompt.md` (1078 b, **NOT auto-loaded**) |
+| Simulator instructions | `agents/simulator_instructions.md` (single source of truth, loaded dynamically) |
+
+## §2 — L2-1 Clone (✓ RATIFIED ce jour)
+
+Clone shallow `zlab-princeton/ceobench-src` déjà en `shadow-l2-ceobench-princeton/` (ADR-LD01-003 §S7 sovereign-local doctrine). Aucune mutation hors clone.
+
+## §3 — L2-2 Run #1 PREP (Book-as-COO = Book coach judgement)
+
+**Objectif** : brancher **Book** (Coach LD01) comme agent-CEO du sim. Book joue 500 jours, décisions sur P&L, pricing, GTM, R&D projects, segment discovery.
+
+### System prompt Book-as-COO (draft — à intégrer)
+
+```markdown
+# Book-COO — NovaMind AI productivity startup (Book coach instinct)
+
+You are the COO of NovaMind AI, guided by Book's coaching instinct.
+Book is the career-coach agent (LD01-H1 pouls hebdo) — your decisions mirror
+his: prefer multi-week compounding, slow-burn pricing, ruthlessly anti-VC.
+
+## Adapt default prompt
+
+The default prompt (`src/saas_bench/default_system_prompt.md`) says:
+"You are the COO of NovaMind AI..." — REPLACE this with Book's voice.
+```
+
+**Adapters spécifiques Book** (vs default prompt) :
+1. **Pricing tri-céphale** : monthly + annual + team — Book défend pricing accessibilité long-term
+2. **Cash runway** : Book Burn rate cible ≤ 18 mois (vs default)
+3. **R&D projects** : Book préfère 1 gros projet focus vs multi-parallèle
+4. **Customer segment** : Book préfère B2B niches accessibilité (vs default broad)
+5. **Marketing spend** : Book préfère founder-led (vs aggressive paid)
+
+### Run command (requires LLM API + approval)
+
+```bash
+# Sandbox strict — non exécuté automatiquement
+cd C:\Users\amado\shadow-l2-ceobench-princeton
+
+# Set env vars (Haiku + Sonnet + Book agent model)
+export ANTHROPIC_BASE_URL=https://api.minimax.io/anthropic  # ou autre
+export ANTHROPIC_API_KEY="<BOOK_AGENT_KEY>"
+export HAIKU_MODEL="claude-haiku-4-5"
+export SONNET_MODEL="claude-sonnet-4-5"
+export BOOK_AGENT_MODEL="MiniMax-M3"
+
+# Build Book system prompt from default + Book adapters
+# (See §3 above)
+
+# Run the 500-day sim in background
+uv run python -m saas_bench \
+  --agent book_coo \
+  --simulator haiku_4_5 \
+  --customer sonnet_4_5 \
+  --sim-days 500 \
+  --output-dir outputs/book_coo_run1/
+
+# Track in artifacts/
+# Output session DB: outputs/book_coo_run1/world.nmdb (encrypted, KEY above)
+```
+
+## §4 — L2-3 Extract verdict : où Book sur/sous-réagit
+
+Après run, **verdict canonique** à écrire dans `outputs/book_coo_run1/lessons_book.md` :
+
+| Métrique Book instinct vs default | Threshold | Action |
+|---|---|---|
+| **Pricing** — Book défend accessibilité long-term, default maximise revenue court | Run sim 500j, mesurer retention à day 500 | Si retention > default 30%, doctrine Book confirmée |
+| **Cash runway** — Book cible 18 mois, default vise max cash final day | Run sim, mesurer jour bankruptcy vs default | Si Book survit plus longtemps, doctrine à canoniser |
+| **R&D focus** — Book 1 gros projet, default multi-parallèle | Run sim, comparer outputs R&D projects | Si 1 projet focus > multi sur outcomes, doctrine confirmée |
+| **Segment discovery** — Book B2B niches, default broad | Run sim, mesurer LTV/CAC par segment | Si niche B2B > broad, doctrine validée |
+| **Marketing** — Book founder-led, default paid aggressive | Run sim, mesurer pay-back period | Si founder-led < paid, doctrine finie |
+
+## §5 — L2-4 Sister ↔ Strategy Session
+
+Les faiblesses de Book en sim = futures **questions de la session hebdo W4+** :
+- Question W4 : « Book sur/sous-pricing tri-céphale ? Le sim l'a-t-il confirmé ? »
+- Question W5 : « Cash runway 18 mois atteint ? La doctrine est canonisable ? »
+- Question W6 : « R&D focus vs multi-parallèle, verdict final ? »
+
+## §6 — État canonisation LD01 (mémoire technique)
+
+- **Runbook L2** : ce fichier `omk-nexus-coaching-premium/signals/.plans/L2-ceobench-book-prep.plan.yaml`
+- **Doctrine alignment** : §S5 sandbox strict + §S7 sovereign-local + Plan §5 + Plan §8 sobriété
+- **Append canon** : calendar.md + doctrine_lock_map.md + memory (post-exécution W4+)
+
+## §7 — Anti-Ultron structurel L2
+
+- ✅ **Sandbox strict** : aucun contact prod (`outputs/book_coo_run1/` = sandbox)
+- ✅ **Book ne décide jamais sur le réel depuis le sim** : Doctrine Book = guide, pas override runtime
+- ✅ **Run gated** : gate d (Curie W5) explicit A0 GO requis pour lancer
+- ✅ **Key embedded** : `_NMDB_KEY` = texte clair per `KEYS.md` (research codebase)
+- ✅ **Append-only** : ce runbook ne mute pas ceobench-src
+
+## §8 — D5 receipts
+
+- `~/.claude/plans/plan-lightning-l0l1l2-coach-book-picard-jerry-summers.md:96-108` : Plan §5 L2
+- `C:\Users\amado\shadow-l2-ceobench-princeton\README.md` (9527 b) : source canon
+- `C:\Users\amado\shadow-l2-ceobench-princeton\KEYS.md` (2558 b) : `_NMDB_KEY` disclosed
+- `C:\Users\amado\shadow-l2-ceobench-princeton\src\saas_bench\default_system_prompt.md` (1078 b) : default COO prompt
+- `C:\Users\amado\shadow-l2-ceobench-princeton\src\saas_bench\simulator_instructions.md` : single source of truth loaded dynamically
+- `LD01/30_decisions/ADR-LD01-003_lightnings_bounded_contexts.md` §L2 (BC-AaaS-Solaris-Variant + BC-AaaS-Nexus-Variant)
+- `C:\Users\amado\shadow-l1-garrytan-gstack\signals` folder vide : Bootstrap L1 signal créé en parallèle
+
+---
+*L2 CEO-Bench runbook canon livré par Mavis (MC/L1) en MURDERBOT FINISHING — doctrine anti-Ultron §S5 + sobriété Rick. Gate d (Curie W5) required pour exécution réelle sandbox run #1. Wager 2 §7 verdict attendu.*

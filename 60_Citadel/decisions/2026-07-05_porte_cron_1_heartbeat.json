@@ -1,0 +1,15 @@
+{
+  "action": "decision",
+  "date": "2026-07-05",
+  "title": "Porte cron #1 ouverte — War Room heartbeat (le système prend vie)",
+  "a0_intent_verbatim": "Let's go mon Bro (GO sur Porte cron #1, ADR-WARMODE-002 Portes over Freins)",
+  "decision": "Première sortie de Posture C (0 cron). Cron durable e7339ac5 armé : toutes les 4h à :17, régénère collector_14_warmode + push Telegram digest. OBSERVATION ONLY, append-only, Beth seul veto.",
+  "cron_id": "e7339ac5",
+  "cron_schedule": "17 */4 * * * (toutes les 4h, off-minute, ~6 fires/jour)",
+  "durable": true,
+  "auto_expires": "7 jours (re-armer = rituel hebdo, aligné cadence 12WY)",
+  "why_this_door_first": "HxH: la porte s'ouvre selon la force apportée. L'observabilité est la porte de fondation — on ne laisse pas Book (loop LD01-008) courir en autonomie avant de pouvoir le regarder respirer. NO-HITL != NO-VISIBILITY.",
+  "d1_proof": "CronList avant = 'No scheduled jobs' (0 cron confirmé). Les 2 chemins vérifiés existants (collector 6570b + telegram_warmode_push 4965b). CronCreate -> job e7339ac5 persisté .claude/scheduled_tasks.json.",
+  "reversible": "CronDelete e7339ac5",
+  "next_doors": ["/ship outward safe-to-open", "Book loop tick (LD01-008)", "Rick-levier"]
+}

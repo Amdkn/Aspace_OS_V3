@@ -1,0 +1,26 @@
+/* Sovereign Typography Hosting - Zero Third-Party Tracking */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter-var.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('/fonts/cinzel-var.woff2') format('woff2');
+}
+
+/* Fallbacks for internal monospaced data rendering */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-var.woff2') format('woff2');
+}

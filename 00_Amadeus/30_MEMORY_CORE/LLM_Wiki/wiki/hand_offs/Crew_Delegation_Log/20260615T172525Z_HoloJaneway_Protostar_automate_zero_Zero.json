@@ -1,0 +1,11 @@
+{
+  "bridge": "A2_to_A3",
+  "ts": "2026-06-15T17:25:25+00:00",
+  "ship": "HoloJaneway_Protostar",
+  "domain": "automate_zero",
+  "a3_name": "Zero",
+  "critical": false,
+  "mission": {
+    "summary": "Delegated to Zero on HoloJaneway_Protostar/automate_zero"
+  }
+}

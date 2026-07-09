@@ -1,0 +1,14 @@
+# Coolify PaaS Configuration
+version: "1"
+settings:
+  build_pack: docker-compose
+  ports: "3000"
+  destinations:
+    - type: standalone
+  env_vars:
+    - key: VITE_SUPABASE_URL
+      required: true
+      is_build_time: true
+    - key: VITE_SUPABASE_ANON_KEY
+      required: true
+      is_build_time: true

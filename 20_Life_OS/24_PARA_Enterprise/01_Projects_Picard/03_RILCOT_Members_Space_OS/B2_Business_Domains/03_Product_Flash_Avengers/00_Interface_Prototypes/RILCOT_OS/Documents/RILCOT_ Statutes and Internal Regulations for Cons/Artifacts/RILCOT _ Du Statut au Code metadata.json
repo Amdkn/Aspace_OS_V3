@@ -1,0 +1,18 @@
+{
+  "title": "RILCOT : Du Statut au Code",
+  "type": "ARTIFACT_TYPE_EXPLAINER_VIDEO",
+  "sources": [{
+    "sourceId": {
+      "id": "edd307c7-fe64-47e2-8cdb-364808c33af5"
+    }
+  }, {
+    "sourceId": {
+      "id": "e700cb72-91db-4c24-95cd-b05e4e2196f1"
+    }
+  }, {
+    "sourceId": {
+      "id": "640321f2-e679-4e90-b89d-f5b0b407c32b"
+    }
+  }],
+  "status": "ARTIFACT_STATUS_READY"
+}

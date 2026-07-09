@@ -1,0 +1,8 @@
+{
+  "action": "decision",
+  "date": "2026-07-06",
+  "title": "FULL HOUSE 10/10 wargames Fable bankes + correction Picard (2 proxy-booleans) + skill diagnose-proxy-boolean",
+  "decision": "Banque Fable complete avant fermeture fenetre: 10 wargames 12/12. Correction Picard (Hermes): hunt proxy-boolean L2 -> proie #1 consumer L2 ABSENT (gstack_loop a creer, exit_condition pre-cablee lights 4/4 x2WK), proie #2 cadence_alive presence-forever CUREE (cadence_fresh <48h, dry-run true). Skill /diagnose-proxy-boolean gravee (4 phases, battle-tested x2) pour les 7 Picard variants. Wargame 10: verite machine (pas de GPU dedie, 32GB/8CPU) -> local-first = cache semantique + deterministe + plan fixe, PAS un LLM local; deux politiques de routage (notre flat-rate vs client API-variable = argument Jevons du Quiz).",
+  "d5_proofs": "LEDGER 10/10 a 12/12 · cadence_fresh dry-run true · addendum v2 wargame 09 · skill enregistree live · recon machine collee",
+  "reversible": true
+}

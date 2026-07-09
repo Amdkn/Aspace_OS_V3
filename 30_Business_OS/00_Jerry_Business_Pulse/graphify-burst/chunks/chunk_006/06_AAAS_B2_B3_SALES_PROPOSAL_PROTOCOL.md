@@ -1,0 +1,43 @@
+# AAAS B2/B3 Sales Proposal Protocol
+
+## Sales Packet
+
+Every Sales task that touches diagnostic, proposal, quote, client commitment, or revenue handoff must carry this packet:
+
+```yaml
+project: "00 Agency as a Service"
+b2_owner: "Martian Manhunter"
+b3_swarm: "Illuminati"
+lead_source:
+diagnostic_evidence:
+pain:
+icp_or_fit:
+offer_scope:
+exclusions:
+price_or_terms:
+delivery_feasibility:
+legal_boundary:
+handoff_owner:
+proof_required:
+decision:
+```
+
+## Refusal Conditions
+
+Sales blocks execution when:
+
+- diagnostic evidence is weak;
+- authority or decision path is unclear;
+- scope/exclusions are missing;
+- price/payment is unapproved;
+- delivery feasibility is unknown;
+- legal terms or claims are unsafe;
+- handoff owner is missing.
+
+## Output
+
+Sales emits one of three states:
+
+- `SALES_READY`
+- `NEEDS_QUALIFICATION`
+- `BLOCKED_COMMITMENT`

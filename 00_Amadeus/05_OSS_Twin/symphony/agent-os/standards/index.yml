@@ -1,0 +1,28 @@
+# Agent OS Standards Index — Symphony (L0/L1/L2)
+# Auto-generated 2026-06-06 by /discover-standards (batch, on WORKFLOW.solaris-airtable-clients).
+# Real descriptions — no "Needs description" placeholders.
+# 11 standards, all flat at root (single WORKFLOW pilot; per-layer subdirs come when more workflows are onboarded).
+
+root:
+  mission-contract:
+    description: "The ONLY payload shape a Symphony tick may emit to Hermes. 13 required fields, mission_contract_version pinned to 1.0, validated by Zod at before_dispatch. Missing field = tick refused."
+  soa-routing:
+    description: "8 SOA sectors → B2 DC manager + B3 Marvel squad. Orchestrator ALWAYS first. Growth/Sales/Finance = L2-Airtable slot; Ops/Product/IT = L2-ClickUp; People/Legal = L2-Notion."
+  gate-decisions:
+    description: "Every tick ends with EXACTLY ONE of PASS / BLOCKED / CONDITIONAL. Strict semantics, named blockers required, re-trigger condition required for CONDITIONAL. A0 reads in 90s to act/wait/intervene."
+  forbidden-words:
+    description: "Lexique guard. Global (synergie, disrupter, innover…) + per-workflow (Airtable Forbidden Words field). Output scope = hard fail BLOCKED. Reasoning scope = soft warn CONDITIONAL."
+  sla-triple:
+    description: "SDD-009 §2.3 triade: max_minutes (axe temporel) + max_cost_usd (axe financier, per-turn check) + max_retries (axe qualitatif, → Donna DLQ). Default rates: MiniMax 2.7 + GLM 4.7 Flash."
+  candidate-record-rule:
+    description: "9-criterion filter applied at PROBE phase. Status + SOA + Name + Description + Build Gate + Context Pack + SLA triple. One miss = skip (not_eligible in pulse.log), no Donna escalation."
+  airtable-specifics:
+    description: "L2 adapter: REST v0 + Bearer PAT + 5 req/s/base + 7-day webhook expiration + offset pagination. Webhooks primary, polling (5min) safety net. Field-type gotchas: Single Select lowercase, Attachment URL only, etc."
+  expected-proof:
+    description: "4 canonical proof types: (1) summary, (2) recommendation, (3) risks+blockers (or 'no risks identified'), (4) gate_decision. No proof, no PASS. Each parseable separately for downstream automation."
+  writeback-policy:
+    description: "Default read-only. 4 allowed_draft_outputs (airtable_update_draft, clickup_task_draft, proof_summary, status_recommendation). No direct writes — A0 reviews drafts. greenlight_required by default."
+  tick-handoff:
+    description: "4-zone boundary: Symphony (orchestrator) ↔ Hermes (proof) ↔ Tracker (read-only source) ↔ ClickUp (ops downstream). 8 phases (WAKE→SLEEP) with clear handoff at each transition. Violations = misrouted work."
+  schema-pulse-log:
+    description: "Observability schema for 8-phase ticks. 1 JSON line per phase, append-only, UTC. Per-phase duration_ms + standards_injected + cost_delta + error. A0 reads pulse.log to see what each tick actually did."

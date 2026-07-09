@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.25",
+    "lastTouchedAt": "2026-03-01T23:55:37.276Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-01T23:55:37.206Z",
+    "lastRunVersion": "2026.2.25",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "google-antigravity:amdkn777@gmail.com": {
+        "provider": "google-antigravity",
+        "mode": "oauth",
+        "email": "amdkn777@gmail.com"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.2-codex",
+        "fallbacks": [
+          "google-antigravity/claude-sonnet-4-5",
+          "google-antigravity/claude-opus-4-5-thinking"
+        ]
+      },
+      "models": {
+        "google-antigravity/gemini-3-flash": {
+          "alias": "flash"
+        },
+        "google-antigravity/gemini-3-pro-low": {
+          "alias": "low"
+        },
+        "google-antigravity/gemini-3-pro-high": {
+          "alias": "pro"
+        },
+        "google-antigravity/claude-sonnet-4-5": {
+          "alias": "sonnet"
+        },
+        "google-antigravity/claude-sonnet-4-5-thinking": {
+          "alias": "think"
+        },
+        "google-antigravity/claude-opus-4-5-thinking": {
+          "alias": "opus"
+        },
+        "google-antigravity/gpt-oss-120b-medium": {
+          "alias": "oss"
+        },
+        "openai-codex/gpt-5.3-codex-spark": {},
+        "openai-codex/gpt-5.2-codex": {}
+      },
+      "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\01_Identity_Core",
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "rick",
+        "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\03_OpenClaw_Body\\openclaw\\.openclaw\\workspace\\agents_runtime\\rick"
+      },
+      {
+        "id": "doctor13",
+        "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\03_OpenClaw_Body\\openclaw\\.openclaw\\workspace\\agents_runtime\\doctor13"
+      },
+      {
+        "id": "yaz",
+        "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\03_OpenClaw_Body\\openclaw\\.openclaw\\workspace\\agents_runtime\\yaz"
+      },
+      {
+        "id": "ryan",
+        "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\03_OpenClaw_Body\\openclaw\\.openclaw\\workspace\\agents_runtime\\ryan"
+      },
+      {
+        "id": "graham",
+        "workspace": "c:\\Aspace00\\aspace_a0_amadeus\\00_Amadeus\\03_OpenClaw_Body\\openclaw\\.openclaw\\workspace\\agents_runtime\\graham"
+      }
+    ]
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "botToken": "8486689692:AAFn0ScoG0Rw5o5VOHr7Z8inFg31cikInGA",
+      "allowFrom": [
+        "8466501613"
+      ],
+      "groupPolicy": "allowlist"
+    },
+    "googlechat": {
+      "enabled": false,
+      "groupPolicy": "allowlist"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "510b36030a388d2697938e7e05769141e62160bf2478b6b9"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "google-antigravity-auth": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "googlechat": {
+        "enabled": true
+      }
+    }
+  }
+}

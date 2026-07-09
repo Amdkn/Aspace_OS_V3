@@ -1,0 +1,93 @@
+{
+  "id": "citadel-decision-2026-07-05-plan-lightning-l+-skill-standard-ratified",
+  "date": "2026-07-05T10:30:00-04:00",
+  "type": "PLAN_RATIFICATION",
+  "plan_path": "C:\\Users\\amado\\.claude\\plans\\plan-lightning-l+-skill-standard-transversal.md",
+  "plan_title": "Lightning L+ Skill Standard transversal - renumerotation L0/L1/L2 (CEO Bench / Miro Fish / gstack) + Skill Standard canon",
+  "decision": "ACCEPTED + RATIFIED",
+  "decision_status_before": "PROPOSED",
+  "decision_status_after": "ACCEPTED + RATIFIED 2026-07-05",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "del plan + git revert -- calendar.md + delete citadel trace + memory revert",
+  "deciders": {
+    "a0_go": "A0 Amadeus - GO 2026-07-05T10:30 'gated A0 : valider le statut PROPOSED -> ACCEPTED sur ce plan'",
+    "ha_author": "Hermes Agent - A3 Picard in PARA, projets owner H10, premier projet canonique post-promotion"
+  },
+  "ratification_pattern": "ADR-INFRA-003 amended_by (status update + sign_off_a0 + date_ratified + ratification_log)",
+  "frontmatter_patches": {
+    "status": "PROPOSED -> ACCEPTED + RATIFIED 2026-07-05 (A0 gated HITL cleared, plan canon War Mode active)",
+    "sign_off_a0_added": "A0 Amadeus - GO 2026-07-05T10:30 'gated A0 : valider le statut PROPOSED -> ACCEPTED sur ce plan'",
+    "date_ratified_added": "2026-07-05T10:30:00-04:00",
+    "sign_off_pending_amendment_added": "false",
+    "ratification_log_2026-07-05_added": "A0 verbal/explicit GO, War Mode continue, append-only strict, 10 invariants L+ operants, application OMK Phase 2/3 gated HITL A0"
+  },
+  "doctrine_postee": {
+    "renumerotation_L0_L1_L2": {
+      "L0_ceo_bench_book": "Book dojo, fondation ontologique, simulation 500 jours",
+      "L1_miro_fish_picard": "Quality measurement, scoring AAARR, quality gate inter-Lightning",
+      "L2_gstack_b1": "B1 Jerry/Summers factory ship, /plan-ceo-review /cso /ship /retro /autoplan",
+      "L+_skill_standard_transversal": "Meta-couche au-dessus des 3 Lightning, 10 invariants obligatoires"
+    },
+    "10_invariants_L_plus": [
+      "1. Frontmatter YAML sur tout .md",
+      "2. type: top-level (OKF v0.1)",
+      "3. Append-only strict (D4)",
+      "4. Idempotency key (sha256)",
+      "5. D1 receipts sur toute action",
+      "6. Anti-Ultron check (lecture seule par defaut)",
+      "7. Wager mesurable (ADR-LOOP-003)",
+      "8. HITL queue visible (ADR-LOOP-002)",
+      "9. Verify-first (ADR-LOOP-001)",
+      "10. OKF v0.1 conformant"
+    ]
+  },
+  "files_unchanged_intentionally": [
+    "C:\\Users\\amado\\.claude\\plans\\plan-meta-memoire-okf-wiki-graphify-dox.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-lightning-l0l1l2-coach-book-picard-jerry-summers.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-l2-dark-factory-book-coo-compression-12wy.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-L0-kernel-os.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-minimax-l1-book-lune.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-strategie-cc-l1-zora-macro.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-L2-business-os.md",
+    "C:\\Users\\amado\\.claude\\plans\\plan-L1-life-os.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_meta_memoire_idempotent_antifragile_h1h3h10_2026-07-03.md"
+  ],
+  "files_modified": [
+    {
+      "path": "C:\\Users\\amado\\.claude\\plans\\plan-lightning-l+-skill-standard-transversal.md",
+      "size_before": 20311,
+      "size_after": 21041,
+      "operation": "frontmatter_patch_status+sign_off+ratification_log",
+      "ratifiable": true
+    },
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\99_meta\\calendar.md",
+      "operation": "append",
+      "episode_timestamp": "2026-07-05T10:30:00-04:00"
+    }
+  ],
+  "files_created": [
+    {
+      "path": "C:\\Users\\amado\\agent-os\\citadel\\decisions\\2026-07-05_plan_lightning_l+_skill_standard_ratified.json",
+      "operation": "create"
+    }
+  ],
+  "application_omk_nexus_bos": {
+    "phase_2_gated_hitl_a0": [
+      "DLP-light middleware Python (L+ invariant #5 D1 receipts)",
+      "Cache semantique local SQLite/OPFS setup (L1 Miro Fish quality)",
+      "3 beta-coachs early access onboarding (L0 CEO Bench)",
+      "Premier Quiz d'Acquisition live (L2 gstack /autoplan derivation)",
+      "11 prompts AAARR testes sur 100 signaux (L1 Miro Fish AAARR scoring)"
+    ],
+    "phase_3_gated_hitl_a0": [
+      "DLP complet Supabase 9 patterns (L+ invariant #6 Anti-Ultron)",
+      "EU AI Act compliance (L+ #8 HITL queue)",
+      "SOC2 readiness optionnel (L+ #10 OKF conformant)",
+      "100 clients signes (L2 gstack /ship gated)",
+      "ROI reel valide (L1 Miro Fish quality measurement continue)"
+    ]
+  },
+  "remote_commit_gate": "diff complet presente a A0 avant tout push vers un remote (ruling A0 2026-07-05)"
+}

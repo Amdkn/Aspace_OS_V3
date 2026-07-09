@@ -1,0 +1,19 @@
+{
+  "action": "decision",
+  "date": "2026-07-06",
+  "adr": "ADR-WARMODE-003",
+  "title": "Fenetre Fable RATIFIED + GO Spock LANCE + 7/7 wargames + plans L0/L1 + /go-spock /go-picard",
+  "a0_intent_verbatim": "go wargames 05-07, ADR Ratification Urgente Fenetre Fable bypass Beth jusqu'au 07/08, lancer le Go Spock sans aucun frein en wargame+simulation, renommer plan en L0 Amodei Murderbot, creer plan L1 Morty design-shotgun 4 variants Curie, slash commands Go-Spock/Go-Picard agnostiques, Omnigent dormant Q3 manuel Q4 activation",
+  "shipped": [
+    "wargames 05 DLP + 06 AARRR + 07 Quiz (12/12 chacun, LEDGER 7/7)",
+    "ADR-WARMODE-003 RATIFIED: bypass B1 scope wargame+sim, auto-expire 2026-07-08 EOD, judas ouvert",
+    "spock_airlock.py amende (fable_window: B1 mesure non-gatant, hysteresis levee)",
+    "GO_SPOCK_UNIQUE.md POSE + FABLE_WINDOW.flag -> CASCADE OUVERTE: enable_wf0/wf1/wf3/ship_internal",
+    "WF3 premier run reel: sim-cadence-x4 (SOUTENABLE) + sim-cadence-x8 (RISQUE) dans artifacts/signals/",
+    "plan-L0-amodei-murderbot.md (renomme, stub pointeur laisse) + plan-L1-morty-design-shotgun.md (B1..I1+J1, HZ=4x12WY, selection 4 domaines par Zora scan, confrontation 10 kits Geordi -> Agent OS Fable-myth)",
+    ".claude/commands/go-spock.md + go-picard.md (agnostiques CC/HA/MC/Codex, Omnigent-dormant) + loops/GO_PICARD.template.md"
+  ],
+  "d5_proofs": "airlock global=GREEN sous fenetre (B1 encore RED, mesure) · flags cascade poses (ls) · wf3 exit 0 + 2 signals · commands enregistrees live",
+  "omnigent": "DORMANT — hyper-orchestration A0 manuelle jusqu'a fin Q3 2026, activation Amodei-en-Omnigent = decision Q4",
+  "reversible": "rm GO_SPOCK_UNIQUE.md (cascade tombe) · rm FABLE_WINDOW.flag (Beth full) · auto-expire 07/08"
+}

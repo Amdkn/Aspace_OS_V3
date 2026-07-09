@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — ⚖️ Décisions (LE CŒUR)</title>
+  <meta name="doctrine" content="lecture seule — append-only — pas d'auto-approval — A0 HITL explicite — anti-Ultron">
+  <meta name="source" content="~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 + §9 Gate #2">
+  <meta name="generated" content="2026-07-04T21:48 ET">
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --fg: #c9d1d9;
+      --muted: #6e7681;
+      --accent: #58a6ff;
+      --warn: #f0883e;
+      --good: #3fb950;
+      --bad: #f85149;
+      --card: #161b22;
+      --border: #30363d;
+      --dormant: #484f58;
+      --draft: #d29922;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace;
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.5;
+    }
+    h1, h2, h3 { font-weight: 600; margin-top: 0; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+    .card.proposed { border-left: 4px solid var(--warn); }
+    .card.ratified { border-left: 4px solid var(--good); opacity: 0.65; }
+    .card h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.7rem; margin-right: 0.25rem; }
+    .pill.proposed { background: rgba(240, 136, 62, 0.2); color: var(--warn); border: 1px solid var(--warn); }
+    .pill.ratified { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.gate-locked { background: rgba(72, 79, 88, 0.4); color: var(--muted); border: 1px solid var(--muted); font-style: italic; }
+    .stat { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .stat-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
+    button {
+      background: var(--accent);
+      color: #0a0e14;
+      border: none;
+      padding: 0.45rem 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+    button.reject { background: var(--bad); color: white; }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button:hover:not(:disabled) { opacity: 0.85; }
+    .warn-box { background: rgba(240, 136, 62, 0.1); border-left: 3px solid var(--warn); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; }
+    .modal.active { display: flex; align-items: center; justify-content: center; }
+    .modal-content { background: var(--card); padding: 1.5rem; border-radius: 8px; max-width: 480px; width: 90%; border: 1px solid var(--accent); }
+    textarea { width: 100%; min-height: 80px; background: var(--bg); color: var(--fg); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; font-family: inherit; font-size: 0.85rem; }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background: #06090d;
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1rem;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    .sidebar h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1rem 0 0.4rem 0;
+      border: none;
+      padding: 0;
+    }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 0.6rem;
+      border-radius: 4px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 0.15rem;
+      border: 1px solid transparent;
+    }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    #decisions-history { margin-top: 1rem; }
+    .history-entry { background: rgba(63, 185, 80, 0.08); border-left: 3px solid var(--good); padding: 0.5rem; margin-bottom: 0.5rem; border-radius: 4px; font-size: 0.85rem; }
+    .history-entry.reject { background: rgba(248, 81, 73, 0.08); border-left-color: var(--bad); }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">Bridge <span class="badge">P0</span></a>
+    <a class="nav active" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>Pages</h2>
+    <a class="nav" href="/api/data/01_harnesses">Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/api/data/04_skills">Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/api/data/06_connections">Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">Decisions log <span class="badge">P1</span></a>
+    <h2>API</h2>
+    <a class="nav" href="/api/health">Health <span class="badge live">live</span></a>
+    <h2>Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">
+      v0.2 · anti-Ultron<br>
+      append-only D4<br>
+      A0 HITL = enable_write_canonic.flag
+    </div>
+  </nav>
+  <main class="main">
+  <h1>⚖️ Citadelle A0 — Décisions (LE CŒUR)</h1>
+  <p class="subtitle">A0 = Stark décide. Mavis = Jarvis prépare. Ultron = anti-pattern nommé.</p>
+  <p class="meta">Page Décisions · 19 ADR PROPOSED + 13 GOs chargés · ratification 1-clic · append-only D4 · canonic edits gated by <code>enable_write_canonic.flag</code> (A0 HITL)</p>
+
+  <div class="warn-box">
+    <strong>Doctrine anti-Ultron :</strong>
+    <ol style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
+      <li>Click « Ratifier » crée un <code>decision file</code> append-only dans <code>decisions/</code>. Loggé, jamais batché, jamais auto-approuvé.</li>
+      <li>Édition du statut ADR canonique (PROPOSED → RATIFIED) est <strong>gated</strong> par le flag <code>decisions/enable_write_canonic.flag</code> posé par A0 HITL séparé.</li>
+      <li>Tant que le flag est absent (par défaut) : décision = intention loggée. L'ADR reste PROPOSED.</li>
+      <li>Pour activer l'édition canonique : <code>touch decisions/enable_write_canonic.flag</code> puis POST <code>/api/decisions/apply</code>.</li>
+    </ol>
+  </div>
+
+  <div id="status"></div>
+
+  <h2>📜 ADR (Architecture Decision Records)</h2>
+  <div id="adrs" class="grid"></div>
+
+  <h2>🎯 GOs (13 décisions a→m)</h2>
+  <div id="gos" class="grid"></div>
+
+  <h2>📜 Décisions enregistrées (append-only <code>decisions/</code>)</h2>
+  <div id="decisions-history"></div>
+
+  <div class="footer">
+    <p><a href="/">← Bridge</a> · <a href="/api/decisions">Raw JSON</a> · <a href="/api/decisions/list">List decisions</a> · <a href="/api/decisions/status">Status</a></p>
+    <p>Citadelle A0 · Plan source <code>~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md</code></p>
+    <p>Construite 2026-07-04 · P0+P1 · Gate #2 (GO P1 écriture décisions) — A0 HITL requis pour activation canonic edits</p>
+  </div>
+
+  <!-- Modal for ratification -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3 id="modal-title">Ratifier</h3>
+      <p id="modal-desc" class="meta"></p>
+      <label class="meta" style="display:block; margin-top: 0.75rem;">Rationale (A0 HITL explicite, append-only, jamais paraphrasé) :</label>
+      <textarea id="modal-rationale" placeholder="Pourquoi cette ratification maintenant ?"></textarea>
+      <div style="margin-top: 1rem; display: flex; gap: 0.5rem;">
+        <button id="modal-confirm">Confirmer (append-only decision file)</button>
+        <button onclick="closeModal()" style="background: var(--muted);">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    let pendingDecision = null;
+
+    async function loadJSON(url) {
+      const r = await fetch(url);
+      if (!r.ok) return { error: "HTTP " + r.status };
+      return await r.json();
+    }
+
+    function showModal(adrId, decision) {
+      pendingDecision = { adr_id: adrId, decision };
+      document.getElementById("modal-title").textContent = `${decision === "ratify" ? "✅ Ratifier" : "❌ Rejeter"} ${adrId}`;
+      document.getElementById("modal-desc").textContent = `Action A+ explicite — append-only D4 — canonic edit gated by enable_write_canonic.flag`;
+      document.getElementById("modal-rationale").value = "";
+      modal.classList.add("active");
+    }
+
+    function closeModal() {
+      modal.classList.remove("active");
+      pendingDecision = null;
+    }
+
+    document.getElementById("modal-confirm").onclick = async () => {
+      const rationale = document.getElementById("modal-rationale").value.trim();
+      if (!rationale) { alert("rationale requis — append-only D4"); return; }
+      const body = { ...pendingDecision, rationale, decided_by: "A0" };
+      const r = await fetch("/api/decisions/ratify", {
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body)
+      });
+      const data = await r.json();
+      closeModal();
+      if (r.ok) {
+        alert(`Decision file créé : ${data.decision_file}\nCanonic writes enabled: ${data.canonic_writes_enabled}\nNext: ${data.next_step}`);
+        renderAll();
+      } else {
+        alert("Erreur: " + JSON.stringify(data));
+      }
+    };
+
+    function renderADRs(data) {
+      const root = document.getElementById("adrs");
+      let html = "";
+      const s = data.summary || {};
+      html += `<div class="card"><div class="stat-label">ADR total</div><div class="stat">${s.adr_total || 0}</div><div class="meta">PROPOSED: ${s.adr_proposed || 0} · RATIFIED: ${s.adr_ratified || 0}</div></div>`;
+      for (const a of (data.adrs || [])) {
+        const cls = a.status === "RATIFIED" ? "ratified" : "proposed";
+        const pillCls = a.status === "RATIFIED" ? "ratified" : "proposed";
+        html += `<div class="card ${cls}">
+          <h3>${a.id} <span class="pill ${pillCls}">${a.status}</span></h3>
+          <div style="font-size: 0.85rem; margin: 0.5rem 0;">${a.title}</div>
+          <div class="meta">slug: ${a.slug}</div>
+          ${a.status === "PROPOSED" ? `<button onclick='showModal("${a.id}","ratify")'>✅ Ratifier 1-clic</button> <button class="reject" onclick='showModal("${a.id}","reject")'>Rejeter</button>` : `<span class="meta">— déjà RATIFIED —</span>`}
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    function renderGOs(data) {
+      const root = document.getElementById("gos");
+      let html = `<div class="card"><div class="stat-label">Total GOs</div><div class="stat">${data.summary.go_total || 0}</div><div class="meta">13 décisions a→m (W3 baseline)</div></div>`;
+      for (const g of (data.gos || [])) {
+        html += `<div class="card">
+          <h3>${g.id} <span class="pill gate-locked">gate-gated</span></h3>
+          <div style="font-size: 0.85rem; margin: 0.5rem 0;">${g.label}</div>
+          <div class="meta">from: ${g.from}</div>
+          <button onclick='alert("GO ${g.id} prêt à ratifier via page Décisions — création decision file (non ADR)")'>⚙️ Activer</button>
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    async function renderHistory() {
+      const data = await loadJSON("/api/decisions/list");
+      const root = document.getElementById("decisions-history");
+      if (!data.decision_files || data.decision_files.length === 0) {
+        root.innerHTML = `<div class="meta">Aucune décision enregistrée — append-only <code>decisions/</code> vide.</div>`;
+        return;
+      }
+      let html = "";
+      for (const d of data.decision_files) {
+        if (d.error) continue;
+        const isReject = d.decision === "reject";
+        html += `<div class="history-entry${isReject ? " reject" : ""}">
+          <strong>${d.adr_id}</strong> · ${d.decision === "ratify" ? "✅ RATIFY" : "❌ REJECT"} · by ${d.decided_by} · ${d.decided_at}
+          <div class="meta">rationale: ${d.rationale}</div>
+          <div class="meta">file: <code>${d.filename}</code> · canonic_writes_enabled_at_decide_time: ${d.canonic_writes_enabled_at_decide_time}</div>
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    async function renderStatus() {
+      const data = await loadJSON("/api/decisions/status");
+      const root = document.getElementById("status");
+      const canonic = data.canonic_writes_enabled ? "✅ ENABLED" : "❌ DISABLED (default)";
+      root.innerHTML = `<div class="card">
+        <div class="stat-label">Canonic writes</div>
+        <div class="stat" style="color: ${data.canonic_writes_enabled ? "var(--good)" : "var(--draft)"}">${canonic}</div>
+        <div class="meta">decision files: ${data.decision_count} · ${data.timestamp}</div>
+        <div class="meta">Pour activer : <code>touch "${data.decision_dir}\\enable_write_canonic.flag"</code></div>
+      </div>`;
+    }
+
+    async function renderAll() {
+      await renderStatus();
+      const d = await loadJSON("/api/decisions");
+      renderADRs(d);
+      renderGOs(d);
+      await renderHistory();
+    }
+    renderAll();
+  </script>
+  </main>
+</body>
+</html>

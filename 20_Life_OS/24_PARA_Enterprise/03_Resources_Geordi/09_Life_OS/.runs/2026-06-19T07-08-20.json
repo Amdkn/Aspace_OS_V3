@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-06-19T07:08:20",
+  "elapsed_s": 0.0,
+  "takeout": "C:\\Users\\amado\\Downloads\\_yt_takeout_latest\\watch-history.html",
+  "date_range": [
+    "2026-06-18",
+    "2026-06-18"
+  ],
+  "limit_per_ld": 1000,
+  "total_unique_videos": 12,
+  "newly_categorized": 11,
+  "skipped_already_processed": 1,
+  "by_ld": {
+    "LD04_Cognition_Tilly": 648,
+    "LD07_Creativity_Reno": 143,
+    "LD02_Finance_Saru": 49,
+    "LD01_Business_Picard": 61,
+    "LD06_Family_Burnham": 32,
+    "LD03_Health_Culber": 11,
+    "LD05_Social_Stamets": 11,
+    "LD08_Impact_Georgiou": 11
+  }
+}

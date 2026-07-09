@@ -1,0 +1,11 @@
+{
+  "action": "decision",
+  "date": "2026-07-06",
+  "adr": "ADR-L1-WF-001",
+  "title": "Workflow Morty WF0-WF3 + Unique GO + Loop Engineering 24/7 — SHIPPED+VERIFIED",
+  "decision": "Topologie WF0 Spock airlock / WF1 Morty poupee russe / WF2 Book CEO-Bench / WF3 MiroFish sim. Unique GO A+ -> Spock = HITL max a droite (GO_SPOCK_UNIQUE, revocation=suppression). Portes gagnees: ship interne au GO, outboard a 3 cycles verts. Beth seul veto chiffre (spock_airlock B1-B4).",
+  "d5_proofs": "airlock exit0 B1=RED reel · heartbeat_os chain exit0 telegram sent · wf3 gate exit2 sans flag · simulate x4=SOUTENABLE x8=RISQUE · book_loop exit0 J2 T2 7/7 · 4 schtasks Aspace* state=Ready · skill /wargame enregistre live",
+  "amends": "ADR-LD01-004 gate 'Rick S1' -> 'Unique GO + airlock' (append-only). Ratifie ADR-LOOP-002 amende.",
+  "next_a_plus": "Poser decisions/GO_SPOCK_UNIQUE.md (copier loops/GO_SPOCK_UNIQUE.template.md) = ouvrir la cascade. B1 doit repasser GREEN x2 d'abord (dormir).",
+  "reversible": "install-loops.ps1 -Uninstall + suppression GO + flags jetables"
+}

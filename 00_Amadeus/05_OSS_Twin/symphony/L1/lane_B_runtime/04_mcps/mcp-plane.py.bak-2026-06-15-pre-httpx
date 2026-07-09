@@ -1,0 +1,228 @@
+#!/usr/bin/env python3
+"""
+mcp-plane.py — Symphony Lane B MCP server for Plane.so (GTD workspace).
+
+A'Space OS V2 — Sovereign Twin Runtime.
+Created 2026-06-15 by A0 mandate (Symphony Phase 2).
+
+This MCP server exposes Plane.so GTD operations to the Symphony agent runtime.
+Plane hosts the GTD Inbox -> Next Actions -> Today -> Done flow operated by the
+USS Cerritos crew (Mariner/Boimler/Tendi/Freeman/Rutherford).
+
+Usage:
+    "C:/Python314/python.exe" mcp-plane.py
+
+Auth:
+    Set PLANE_API_KEY env var (User scope) before running.
+    Set PLANE_WORKSPACE_SLUG and PLANE_PROJECT_ID for the active project.
+
+Doctrine anchors:
+- ADR-META-001 D1, D2
+- Symphony Adapter — Plane.so (L1 Shadow GTD), 2026-05-13
+- SDD-008 §3.1 (Cerritos GTD workflow)
+"""
+from __future__ import annotations
+
+import os
+import sys
+from typing import Any
+
+try:
+    from mcp.server import Server
+    from mcp.server.stdio import stdio_server
+    from mcp.types import TextContent, Tool
+except ImportError:
+    print("[!] MCP SDK not installed. Run: pip install mcp", file=sys.stderr)
+    sys.exit(1)
+
+# Auth from env var (Test Key Pragma 2026-06-15 — never hardcoded)
+API_KEY: str = os.environ.get("PLANE_API_KEY", "")
+BASE_URL: str = os.environ.get("PLANE_BASE_URL", "https://api.plane.so/api/v1")
+WORKSPACE_SLUG: str = os.environ.get("PLANE_WORKSPACE_SLUG", "aspace-core")
+PROJECT_ID: str = os.environ.get("PLANE_PROJECT_ID", "")
+
+# GTD state mapping (from spec §3)
+GTD_STATES: list[str] = ["Inbox", "Next Actions", "Today", "Waiting For", "Done", "Cancelled", "Trash"]
+
+server = Server("plane-mcp")
+
+
+def _stub_issues(state: str | None = None) -> list[dict[str, Any]]:
+    base = [
+        {
+            "id": "stub-iss-1",
+            "sequence_id": 1,
+            "name": "Review YouTube ingestion handoff",
+            "state": "Inbox",
+            "labels": ["@L1", "domain:GTD"],
+            "priority": "high",
+        },
+        {
+            "id": "stub-iss-2",
+            "sequence_id": 2,
+            "name": "Rotate VERCEL_TOKEN post-deploy (Test Key Pragma phase 4)",
+            "state": "Next Actions",
+            "labels": ["@L0", "@5-min"],
+            "priority": "urgent",
+        },
+        {
+            "id": "stub-iss-3",
+            "sequence_id": 3,
+            "name": "Verify /login E2E with A0 (signin + signup toggle)",
+            "state": "Today",
+            "labels": ["@L1", "@deep-work"],
+            "priority": "high",
+        },
+    ]
+    if state:
+        return [i for i in base if i["state"] == state]
+    return base
+
+
+@server.list_tools()
+async def list_tools() -> list[Tool]:
+    return [
+        Tool(
+            name="plane_list_issues",
+            description="List Plane issues for the active project, optionally filtered by state.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "state": {
+                        "type": "string",
+                        "enum": GTD_STATES,
+                        "description": "Optional GTD state filter.",
+                    }
+                },
+            },
+        ),
+        Tool(
+            name="plane_get_inbox",
+            description="List issues in the Inbox state (Mariner capture zone).",
+            inputSchema={"type": "object", "properties": {}},
+        ),
+        Tool(
+            name="plane_get_next_actions",
+            description="List issues in the Next Actions state (Boimler clarify zone).",
+            inputSchema={"type": "object", "properties": {}},
+        ),
+        Tool(
+            name="plane_get_today",
+            description="List issues in the Today state (Capt. Freeman engage zone).",
+            inputSchema={"type": "object", "properties": {}},
+        ),
+        Tool(
+            name="plane_create_issue",
+            description="Create a new Plane issue (stub if no API key).",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string", "description": "Issue title."},
+                    "description": {"type": "string", "description": "Issue body (Markdown).", "default": ""},
+                    "state": {
+                        "type": "string",
+                        "enum": ["Inbox", "Next Actions", "Today", "Waiting For"],
+                        "description": "Initial GTD state.",
+                        "default": "Inbox",
+                    },
+                    "labels": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Labels (e.g. @L0, @L1, @L2, domain:GTD, @deep-work).",
+                        "default": [],
+                    },
+                },
+                "required": ["name"],
+            },
+        ),
+        Tool(
+            name="plane_update_state",
+            description="Update a Plane issue's state (GTD state transition).",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "issue_id": {"type": "string", "description": "Plane issue UUID."},
+                    "new_state": {
+                        "type": "string",
+                        "enum": GTD_STATES,
+                        "description": "Target GTD state.",
+                    },
+                },
+                "required": ["issue_id", "new_state"],
+            },
+        ),
+    ]
+
+
+@server.call_tool()
+async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
+    if name == "plane_list_issues":
+        state = arguments.get("state")
+        return [TextContent(type="text", text=f"Issues: {_stub_issues(state)}")]
+
+    if name == "plane_get_inbox":
+        return [TextContent(type="text", text=f"Inbox: {_stub_issues('Inbox')}")]
+
+    if name == "plane_get_next_actions":
+        return [TextContent(type="text", text=f"Next Actions: {_stub_issues('Next Actions')}")]
+
+    if name == "plane_get_today":
+        return [TextContent(type="text", text=f"Today: {_stub_issues('Today')}")]
+
+    if name == "plane_create_issue":
+        if not API_KEY:
+            return [
+                TextContent(
+                    type="text",
+                    text=(
+                        "[!] PLANE_API_KEY not set — stub create. "
+                        f"name={arguments.get('name')!r} state={arguments.get('state', 'Inbox')!r}"
+                    ),
+                )
+            ]
+        return [
+            TextContent(
+                type="text",
+                text=(
+                    f"[+] Issue created (stub): name={arguments.get('name')!r} "
+                    f"project={PROJECT_ID}"
+                ),
+            )
+        ]
+
+    if name == "plane_update_state":
+        issue_id = arguments.get("issue_id", "")
+        new_state = arguments.get("new_state", "")
+        if not API_KEY:
+            return [
+                TextContent(
+                    type="text",
+                    text=(
+                        f"[!] PLANE_API_KEY not set — stub update. "
+                        f"issue_id={issue_id!r} new_state={new_state!r}"
+                    ),
+                )
+            ]
+        return [
+            TextContent(
+                type="text",
+                text=f"[+] Issue {issue_id} -> {new_state} (stub)",
+            )
+        ]
+
+    raise ValueError(f"Unknown tool: {name}")
+
+
+async def main() -> None:
+    print(
+        f"[+] Plane MCP server starting (Symphony Lane B / GTD) workspace={WORKSPACE_SLUG}",
+        file=sys.stderr,
+    )
+    async with stdio_server() as (read_stream, write_stream):
+        await server.run(read_stream, write_stream, server.create_initialization_options())
+
+
+if __name__ == "__main__":
+    import asyncio
+
+    asyncio.run(main())

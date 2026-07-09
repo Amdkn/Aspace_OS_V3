@@ -1,0 +1,93 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-011",
+  "date": "2026-07-05T09:45:00-04:00",
+  "type": "ADR-LD01-011",
+  "title": "OMK Nexus BOS PoC Initiation - specs/demo/AAARR Growth prompts (Tier T1, Enterprise_OS_Blueprint_Kit)",
+  "decision": "ACCEPTED",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "suppression des 11 fichiers livrables (6 specs + 4 demo + 1 prompts) + revert append calendar.md + delete citadel trace = revert complet. BLUEPRINT.md et autres fichiers canon Enterprise_OS_Blueprint_Kit restent intacts par construction.",
+  "scope_decision": {
+    "Q1_priority": "Growth 11 prompts AAARR prioritaire + DLP-light 7 patterns subset PII/credentials en parallele (pas Supabase scripts lourds)",
+    "Q2_tier": "T1 (entre solo et law firm, 2-10 personnes, $200-1000/mois infra)",
+    "Q3_append_only": "Append-only strict dans 02_Templates/Enterprise_OS_Blueprint_Kit/, zero mutation BLUEPRINT.md ni 11 prompts canon ni 8 specs templates ni 3 exemples canoniques"
+  },
+  "architecture_canon": {
+    "triptyque_1_backbone": [
+      "PEOPLE_PARTITION",
+      "IT_CACHE_SEMANTIC",
+      "OPS_MARKDOWN_SKILLS"
+    ],
+    "triptyque_2_gtm": [
+      "PRODUCT_SEGMENTATION",
+      "GROWTH_SIGNAL_AAARR",
+      "SALES_DIAGNOSTIC_QUIZ"
+    ],
+    "duo_guardrails": [
+      "LEGAL_DLP_PROXY",
+      "FINANCE_MINIMAX_FIXED_PLAN"
+    ],
+    "tier": "T1",
+    "cible": "100 clients premium x $1k/mois = $1.2M ARR",
+    "niche": "BUSINESS_COACHING_AND_DEV_AGENCIES"
+  },
+  "deliverables_11": {
+    "specs_overrides_6": [
+      "Enterprise_OS_Blueprint_Kit/specs/system_spec_omk_nexus.md",
+      "Enterprise_OS_Blueprint_Kit/specs/architecture_spec_omk_nexus.md",
+      "Enterprise_OS_Blueprint_Kit/specs/security_spec_omk_nexus.md",
+      "Enterprise_OS_Blueprint_Kit/specs/cost_spec_omk_nexus.md",
+      "Enterprise_OS_Blueprint_Kit/specs/agent_spec_omk_nexus.md",
+      "Enterprise_OS_Blueprint_Kit/specs/build_plan_omk_nexus.md"
+    ],
+    "demo_files_4": [
+      "Enterprise_OS_Blueprint_Kit/examples/omk-nexus-coaching-agency/README.md",
+      "Enterprise_OS_Blueprint_Kit/examples/omk-nexus-coaching-agency/01_onboarding_walkthrough.md",
+      "Enterprise_OS_Blueprint_Kit/examples/omk-nexus-coaching-agency/02_first_session_runbook.md",
+      "Enterprise_OS_Blueprint_Kit/examples/omk-nexus-coaching-agency/03_quiz_acquisition_integration.md"
+    ],
+    "prompts_pack_1": [
+      "Enterprise_OS_Blueprint_Kit/prompts/aaarr_growth_signal_pack.md"
+    ]
+  },
+  "deciders": {
+    "a0_go": "A0 Amadeus - GO 2026-07-05 'Un GO groupe' (3 axes simultanement valides)",
+    "ha_author": "Hermes Agent - A3 Picard in PARA, projets owner H10, capitaine USS Enterprise (premier projet post-promotion)"
+  },
+  "files_created_or_appended": [
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-011_omk_nexus_bos_poc_initiation.md",
+      "size_bytes": 17602,
+      "lines": 276,
+      "operation": "create"
+    },
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\99_meta\\calendar.md",
+      "operation": "append",
+      "episode_timestamp": "2026-07-05T09:45:00-04:00"
+    },
+    {
+      "path": "C:\\Users\\amado\\agent-os\\citadel\\decisions\\2026-07-05_adr_ld01_011_omk_nexus_poc.json",
+      "operation": "create"
+    }
+  ],
+  "files_unchanged_intentionally": [
+    "Enterprise_OS_Blueprint_Kit/BLUEPRINT.md",
+    "Enterprise_OS_Blueprint_Kit/QUICKSTART.md",
+    "Enterprise_OS_Blueprint_Kit/README.md",
+    "Enterprise_OS_Blueprint_Kit/CHECKLIST.md",
+    "Enterprise_OS_Blueprint_Kit/COMMANDS.md",
+    "Enterprise_OS_Blueprint_Kit/GLOSSARY.md",
+    "Enterprise_OS_Blueprint_Kit/TROUBLESHOOTING.md",
+    "Enterprise_OS_Blueprint_Kit/FIRST_SESSION.md",
+    "Enterprise_OS_Blueprint_Kit/FAQ.md",
+    "Enterprise_OS_Blueprint_Kit/prompts/01..11_*.txt (11 prompts canon)",
+    "Enterprise_OS_Blueprint_Kit/specs/{SETUP,SYSTEM,ARCHITECTURE,SECURITY,COST,READINESS,AGENT,BUILD_PLAN}.md (8 specs templates)",
+    "Enterprise_OS_Blueprint_Kit/examples/{solo-consultant,northgate-law,riverside-clinic}/ (3 exemples canoniques)",
+    "20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/A3_Geordi_Resources_Spec.md",
+    "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md",
+    "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-008_coaching-loop-picard-jerry-summers.md",
+    "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-010_hermes_promotion_a3_picard_in_para.md"
+  ],
+  "remote_commit_gate": "diff complet presente a A0 avant tout push vers un remote (ruling A0 2026-07-05)"
+}

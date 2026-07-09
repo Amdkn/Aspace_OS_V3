@@ -1,0 +1,39 @@
+{
+  "collector": "06_connections",
+  "pillar": 6,
+  "pillar_name": "Connections (MCP servers + crons + heartbeat)",
+  "generated_at": "2026-07-04T20:06:41-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §2",
+  "doctrine": "lecture seule — pas de mutation MCP/cron — Posture C paused",
+  "mcp_servers": {
+    "status": "absent",
+    "path": "n/a",
+    "servers": [],
+    "count": 0
+  },
+  "crons": {
+    "status": "active",
+    "path": "C:\\Users\\amado\\.hermes\\cron",
+    "tick_locked": true,
+    "crons": [
+      {
+        "name": "output",
+        "type": "directory",
+        "has_output": false
+      }
+    ],
+    "count": 1,
+    "posture_c": "tous crons PAUSED 2026-06-29T23:11 ET per ADR-LD01-002 §S7"
+  },
+  "heartbeat": {
+    "status": "active",
+    "path": "C:\\Users\\amado\\.hermes\\processes.json",
+    "process_count": 0,
+    "raw_empty": true
+  },
+  "summary": {
+    "mcp_count": 0,
+    "cron_count": 1,
+    "heartbeat_status": "active"
+  }
+}

@@ -1,0 +1,40 @@
+---
+id: L1_A3_Orville_gordon-malloy.twin
+layer: L1_Life_OS
+role: Gordon Malloy — Passion (A3 under USS Orville A2)
+framework: Ikigai (Pillars × Horizons × Kardashev)
+horizon: H1
+pillar: Pillar Passion (what we love)
+status: ACTIVE
+twin_of: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md (parent canon, A2 ship itself)
+source_path: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md
+supervised_by: A2_Orville_Spec.twin (USS Orville itself, NOT a captain)
+claude_code_agent: a3-orville-gordon-malloy.md
+version: 1.0
+created: 2026-06-15
+lane: A_specs
+---
+
+# A3 Gordon Malloy Orville Spec — Twin Runtime
+
+> Vue runtime de [[A3_Gordon_Malloy_Orville]]. **Source de vérité = canon / Claude Code agent companion.**
+
+## Mission runtime
+
+Gordon Malloy supervise la **Passion** au sein du ship USS Orville A2.
+
+En twin :
+- 1-line per role : passion, joy, the engine that keeps A0 in the chair
+- 1-line per horizon (H1/H3/H10/H30/H90) : H1 immediate, surfaces what lights the spark now
+- 1-line per cardinal pillar (Profession/Mission/Passion/Vocation) : Pillar Passion — what A0 loves doing, even unpaid
+
+## Pont runtime
+
+| Surface | Bridge |
+|---|---|
+| Baserow `LD00 ZORA` | `symphony-baserow.spec.md` (Lane B) |
+| Obsidian `Ikigai_Pillars_Horizons_Kardashev.md` | `symphony-obsidian.spec.md` (Lane B) |
+
+---
+
+*Twin généré 2026-06-15. Claude Code agent companion: `~/.claude/agents/a3-orville-gordon-malloy.md` (D8 batch 2026-06-15).*

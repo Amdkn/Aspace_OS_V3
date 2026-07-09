@@ -1,0 +1,77 @@
+﻿{
+    "_schema":  "loops/STATE.json racine = etat global de la boucle WF1 Morty (wargame 26 cat.2 #2)",
+    "_note":  "Different de wf0-spock/STATE.json : celui-ci = cascade GO (Airlock), celui-la = runner state.",
+    "_do_not_dup":  "Ne PAS dupliquer go_until / capacity_green ici si identiques a wf0-spock. Ce fichier-ci etend : il pointe vers wf0-spock/STATE.json en source.",
+    "runner_alive":  true,
+    "last_runner_iter_observed":  58,
+    "last_runner_iter_at":  "2026-07-07T23:18:43-04:00",
+    "patch_level_runner":  "PS-2 (wargame 26 idempotence run-id, 2026-07-07)",
+    "patch_level_runner_subfindings":  [
+                                           {
+                                               "id":  "D6-PS2-persist-absent",
+                                               "date":  "2026-07-07T23:18",
+                                               "finding":  "WF1_LAST_RUNID.txt absent du filesystem malgre 58 iterations completees",
+                                               "hypothesis":  "WriteAllText silencieusement en echec OU proc null au sub-block ligne 145",
+                                               "impact":  "Pas bloquant - dedup ne fire jamais car fichier absent = condition Test-Path false",
+                                               "next":  "A investiguer post-categorie-2 (nouveau patch PS-3 si necessaire, hors C2)"
+                                           }
+                                       ],
+    "idempotence_status":  "wired-but-persist-unverified",
+    "wf0_spock_state_path":  "agent-os/citadel/loops/domains/wf0-spock/STATE.json",
+    "go_until_source":  "wf0-spock/STATE.json (GO triennal 2026-07-05 -\u003e 2029-07-05, AMENDEMENT perpetuel-\u003e3y renewable 2026-07-07)",
+    "capacity_green":  true,
+    "capacity_green_source":  "wf0-spock/STATE.json + worklog recent (\u003e5 entries/jour 2026-07-06-\u003e07-07)",
+    "evaluator_ok":  true,
+    "evaluator_ok_source":  "wargame 19 (chaine delegation standard Fable, 12/12) + 4 wargames supplements (20, 22, 25, 26) audit-echantillon",
+    "budget_pct_remaining":  100.0,
+    "budget_pct_remaining_source":  "aucune mesure reelle dispo (pas d\u0027API usage MiniMax publique) - valeur conventionnelle post-reset",
+    "budget_proxy_pending":  "Collecteur (#3) = proxy worklog + RAM + GPU, gated A+ decision",
+    "categorie_2_progress":  {
+                                 "cat1_verified":  true,
+                                 "cat1_at":  "2026-07-07T23:09:48-04:00",
+                                 "cat1_worklog_entry":  "[wf1-cat1-EXEC] CatÃ©gorie 1 VERTE (3/3)",
+                                 "cat2_done":  [
+                                                   "#2 STATE.json racine"
+                                               ],
+                                 "cat2_pending":  [
+                                                      "#3 Collecteur Beth-capacitÃ© (gated A+)",
+                                                      "#7 Contrat ticket (en cours)",
+                                                      "#4 Feeder Boimler",
+                                                      "#9 Ã‰chelle de dÃ©cision cÃ¢blÃ©e",
+                                                      "#10 Gouverneur de budget"
+                                                  ]
+                             },
+    "last_verified":  "2026-07-07T23:18:43-04:00",
+    "verified_by":  "Opus 4.8 audit CatÃ©gorie 2 exÃ©cution (wargame 26 ordre corrigÃ©)",
+    "capacity_verdict":  "GREEN",
+    "capacity_verdict_reasons":  [
+
+                                 ],
+    "capacity_provenance":  {
+                                "gpu":  {
+                                            "available":  false,
+                                            "free_gb":  0,
+                                            "note":  "no-nvidia-smi or Intel UHD (CPU_only)"
+                                        },
+                                "tokens":  {
+                                               "source":  "usage-log.md (A+ manuel depuis platform.minimax.io/console/usage)",
+                                               "last_log_iso":  "2026-07-07T23:32:00-04:00",
+                                               "age_minutes":  27,
+                                               "pct_5h":  4,
+                                               "pct_weekly":  9,
+                                               "pct_monthly":  81
+                                           },
+                                "last_collected":  "2026-07-07T23:58:52.3487075-04:00",
+                                "ram":  {
+                                            "total_gb":  31.8,
+                                            "free_gb":  11.8,
+                                            "used_pct":  62.9
+                                        },
+                                "burn":  {
+                                             "source":  "worklog.md lines / 24h vs baseline 30j",
+                                             "worklog_24h":  23,
+                                             "baseline_30j":  48,
+                                             "ratio":  14.38
+                                         }
+                            }
+}

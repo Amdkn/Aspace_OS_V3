@@ -1,0 +1,67 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-014-gstack-sober",
+  "date": "2026-07-05T10:50:00-04:00",
+  "type": "GSTACK_SOBER_INSTALL",
+  "decision": "ACCEPTED + RATIFIED 2026-07-05 (HITL A0 cleared)",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "3 rm shims + git revert calendar.md + delete citadel trace + delete ADR-014 = revert complet",
+  "deciders": {
+    "a0_hitl": "A0 Amadeus - HITL 2026-07-05 'Go sur l'instalation et la Configuration de GStack dans les Lighting du plan L1-Book-Lune de .claude'",
+    "ha_author": "HA (Hermes Agent = A3 Picard in PARA) - ship-dont-ask pattern incarne"
+  },
+  "shims_created": [
+    {
+      "name": "gstack-ship.md",
+      "size_bytes": 2962,
+      "wraps": "/ship (Summers SHIP gated)"
+    },
+    {
+      "name": "gstack-cso.md",
+      "size_bytes": 3031,
+      "wraps": "/cso (Aquaman Legal + Cyborg IT security)"
+    },
+    {
+      "name": "gstack-autoplan.md",
+      "size_bytes": 3481,
+      "wraps": "/autoplan (CEO->design->eng->DX pipeline)"
+    }
+  ],
+  "clone_status": {
+    "path": "C:\\Users\\amado\\shadow-l1-garrytan-gstack\\",
+    "items": 98,
+    "home_court_isole": true,
+    "hors_claude": true
+  },
+  "three_clauses_respected": {
+    "c1_no_CLAUDE_md_patch": "RESPECTED (setup gstack NON execute, git diff CLAUDE.md = vide)",
+    "c2_browse_optional": "RESPECTED (zero dependance mcp__claude-in-chrome__* dans les 3 shims)",
+    "c3_auto_update_off": "RESPECTED (sobriete Rick preservee, zero reseau par defaut)"
+  },
+  "mapping_e_myth_to_gstack": {
+    "Jerry_cadrage": "/plan-ceo-review (route native, pas de shim)",
+    "B2_Flash_Product_review": "/review (route native, pas de shim)",
+    "B2_Aquaman_Cyborg_security": "/cso (SHIM gstack-cso.md)",
+    "Summers_SHIP_gated": "/ship (SHIM gstack-ship.md)",
+    "Cerritos_review_retro": "/retro (route native, pas de shim)",
+    "Loop_engineering_signal_to_plan": "/autoplan (SHIM gstack-autoplan.md)"
+  },
+  "anti_ultron_4_inalienables": {
+    "Rick_kernel": "Aucune modif etat systeme affectant Claude Code natif",
+    "Beth_vie": "Zero crons sur les shims, invocables a la demande seulement",
+    "ship_outboard_Stark": "gstack-ship prepare l'artefact mais JAMAIS push externe sans GO A+",
+    "append_only": "Les 3 shims append-only dans .claude/commands/"
+  },
+  "files_created": [
+    "C:\\Users\\amado\\.claude\\commands\\gstack-ship.md",
+    "C:\\Users\\amado\\.claude\\commands\\gstack-cso.md",
+    "C:\\Users\\amado\\.claude\\commands\\gstack-autoplan.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-014_gstack_sober_install_lighting_l1_book_lune.md",
+    "C:\\Users\\amado\\agent-os\\citadel\\decisions\\2026-07-05_adr_ld01_014_gstack_sober.json"
+  ],
+  "files_unchanged_intentionally": [
+    "C:\\Users\\amado\\.claude\\CLAUDE.md (c1 sacred P4, JAMAIS de patch)",
+    "C:\\Users\\amado\\shadow-l1-garrytan-gstack\\setup (66 504b, NON execute)",
+    "ADR-LD01-008/009/010/011/012/013 (intouchables)"
+  ]
+}

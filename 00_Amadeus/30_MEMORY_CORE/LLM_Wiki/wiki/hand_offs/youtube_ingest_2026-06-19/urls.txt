@@ -1,0 +1,28 @@
+# Batch curated 17-19 juin 2026 (10 vidéos, alignées LD04_Cognition + LD01_Business)
+# Source : takeout HTML grep direct (D1 verify)
+
+# === 2026-06-17 (AI/biz canon) ===
+# Google's OKF - Knowledge for Agents (Marie Haynes, EN, AI)
+https://www.youtube.com/watch?v=MY9F9K7wWX4
+# Claude Second Brain Explained (Nate Herk, EN, AI workflow)
+https://www.youtube.com/watch?v=DTCyvo6cC54
+# Codie Sanchez - Make Money Using AI (EN, business)
+https://www.youtube.com/watch?v=ksRcFGLPoSk
+# Loop Engineering 10x Hermes agents (AI LABS, EN, AI)
+https://www.youtube.com/watch?v=AQRDjI5owZI
+# Sandeep Swadia - Think SO CLEARLY (productivity)
+https://www.youtube.com/watch?v=mjTgkm-h__M
+
+# === 2026-06-18 (AI/agents/productivity) ===
+# NotebookLM Agentic AI Update (WorldofAI, EN, AI)
+https://www.youtube.com/watch?v=57L3vmQLzwQ
+# Antigravity SDK digital simulated world (Google Antigravity, EN, AI)
+https://www.youtube.com/watch?v=xlALU-kyFdw
+# ByteMonk Caching Problem AI Agents (EN, AI tech)
+https://www.youtube.com/watch?v=4Afvll6TQXA
+
+# === 2026-06-19 (AI workflow canon) ===
+# Ponytail Inside Claude Code (Kacper Rutkiewicz, EN, AI workflow)
+https://www.youtube.com/watch?v=iwmsnwclc-M
+# /teach 10x'd Ability To Learn (Kacper Rutkiewicz, EN, AI workflow)
+https://www.youtube.com/watch?v=lw6Ld1ZgpV8

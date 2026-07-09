@@ -1,0 +1,11 @@
+{
+  "id": "6640811f",
+  "adr_id": "ADR-LD01-007",
+  "decision": "ratify",
+  "rationale": "canon test",
+  "decided_by": "A0",
+  "decided_at": "2026-07-04T22:46:24.781252",
+  "gate_2_P1": true,
+  "canonic_writes_enabled_at_decide_time": false,
+  "status": "DECIDED"
+}

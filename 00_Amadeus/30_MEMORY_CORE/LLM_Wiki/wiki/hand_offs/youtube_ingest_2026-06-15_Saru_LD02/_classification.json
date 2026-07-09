@@ -1,0 +1,67 @@
+[
+  {
+    "idx": 1,
+    "id": "s-m73ghOZLI",
+    "title": "Journal de Bord S01E00 : Construire une Infrastructure Souveraine en Silence (12WY Review)",
+    "published": "2026-01-09",
+    "duration_s": 447,
+    "channel_id": "UC3KOYDdt9G4OjHgUiVKB9ew",
+    "chapters_count": 4,
+    "classification": "LD02_STRONG",
+    "strong_signals": 5,
+    "tangent_signals": 6,
+    "slug": "journal_de_bord_s01e00_construire_une_infrastructu"
+  },
+  {
+    "idx": 2,
+    "id": "mtdK8A1Qw2Y",
+    "title": "Journal de Bord S01E01 : État Système & Ouverture du Cycle W1 (12 Week Year)",
+    "published": "2026-01-10",
+    "duration_s": 381,
+    "channel_id": "UC3KOYDdt9G4OjHgUiVKB9ew",
+    "chapters_count": 7,
+    "classification": "LD02_STRONG",
+    "strong_signals": 9,
+    "tangent_signals": 1,
+    "slug": "journal_de_bord_s01e01_état_système_ouverture_du_c"
+  },
+  {
+    "idx": 3,
+    "id": "3Jepi9uyOLc",
+    "title": "FRIDAY REPORT S01E02 — LE HARD FORK ONTOLOGIQUE (T.A.R.D.I.S. GENESIS)",
+    "published": "2026-01-17",
+    "duration_s": 428,
+    "channel_id": "UC3KOYDdt9G4OjHgUiVKB9ew",
+    "chapters_count": 0,
+    "classification": "LD02_STRONG",
+    "strong_signals": 5,
+    "tangent_signals": 0,
+    "slug": "friday_report_s01e02_le_hard_fork_ontologique_tard"
+  },
+  {
+    "idx": 4,
+    "id": "Ds5TCXm9K9A",
+    "title": "Journal de Bord S01 FINAL : J'ai failli tuer mon IA (Le Protocole Genesis)",
+    "published": "2026-02-09",
+    "duration_s": 404,
+    "channel_id": "UC3KOYDdt9G4OjHgUiVKB9ew",
+    "chapters_count": 0,
+    "classification": "LD02_TANGENT",
+    "strong_signals": 1,
+    "tangent_signals": 8,
+    "slug": "journal_de_bord_s01_final_jai_failli_tuer_mon_ia_l"
+  },
+  {
+    "idx": 5,
+    "id": "t05ylnQUcck",
+    "title": "S02E01 : A0 VERSE - \"Trillion ou Rien\" (L'Architecture de l'Empire)",
+    "published": "2026-02-09",
+    "duration_s": 346,
+    "channel_id": "UC3KOYDdt9G4OjHgUiVKB9ew",
+    "chapters_count": 0,
+    "classification": "LD02_STRONG",
+    "strong_signals": 4,
+    "tangent_signals": 2,
+    "slug": "s02e01_a0_verse_-_trillion_ou_rien_larchitecture_d"
+  }
+]

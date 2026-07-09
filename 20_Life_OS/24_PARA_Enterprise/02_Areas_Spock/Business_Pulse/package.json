@@ -1,0 +1,13 @@
+{
+  "name": "agency-as-a-service",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AaaS — Autonomous Agency Operating System. Monorepo with Dashboard + Marketing Site.",
+  "scripts": {
+    "dev:dashboard": "cd apps/dashboard && npm run dev",
+    "dev:marketing": "cd apps/marketing && npm run dev",
+    "build:dashboard": "cd apps/dashboard && npm run build",
+    "build:marketing": "cd apps/marketing && npm run build",
+    "install:all": "cd apps/dashboard && npm install && cd ../marketing && npm install"
+  }
+}

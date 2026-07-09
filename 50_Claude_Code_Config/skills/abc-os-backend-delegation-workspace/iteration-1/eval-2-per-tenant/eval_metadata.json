@@ -1,0 +1,37 @@
+{
+  "eval_id": 2,
+  "eval_name": "add-per-tenant-table",
+  "prompt": "Add a new 'user_task_progress' per-tenant table to abc_os on the VPS Supabase. Columns: id UUID PRIMARY KEY default gen_random_uuid(), org_id TEXT NOT NULL REFERENCES abc_os.organizations(id) ON DELETE CASCADE, member_id UUID NOT NULL REFERENCES abc_os.members(id) ON DELETE CASCADE, task_id TEXT NOT NULL REFERENCES abc_os.build_tasks(id) ON DELETE CASCADE, status TEXT NOT NULL CHECK (status IN ('pending', 'in_progress', 'done')), started_at TIMESTAMPTZ, completed_at TIMESTAMPTZ, created_at TIMESTAMPTZ NOT NULL default now(). Per-tenant RLS: SELECT/INSERT/UPDATE/DELETE using abc_os.current_org_id() and abc_os.current_role() patterns. Apply to dev with FORCE_TARGET=1. After applying, run D1 verify and write back to the 3 memory files.",
+  "assertions": [
+    {
+      "text": "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+      "passed": false,
+      "evidence": ""
+    }
+  ]
+}

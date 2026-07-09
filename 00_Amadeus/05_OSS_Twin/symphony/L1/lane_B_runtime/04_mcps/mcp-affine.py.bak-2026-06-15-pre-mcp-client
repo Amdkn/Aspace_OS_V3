@@ -1,0 +1,231 @@
+#!/usr/bin/env python3
+"""
+mcp-affine.py — Symphony Lane B MCP server for Affine (DEAL workspace).
+
+A'Space OS V2 — Sovereign Twin Runtime.
+Created 2026-06-15 by A0 mandate (Symphony Phase 2).
+
+This MCP server exposes Affine DEAL (Define/Eliminate/Automate/Liberate) workspace
+operations to the Symphony agent runtime. Affine is the document-first canvas with
+infinite Edgeless mode for DEAL Blueprints (Holo Janeway / USS Protostar).
+
+Usage:
+    "C:/Python314/python.exe" mcp-affine.py
+
+Auth:
+    Set AFFINE_API_KEY env var (User scope) before running.
+    For self-hosted instances, set AFFINE_BASE_URL accordingly.
+
+Doctrine anchors:
+- ADR-META-001 D1 (verify before assert), D2 (research-first)
+- Symphony Adapter — Affine (L1 Shadow Life OS), 2026-05-14
+- SDD-008 §2 Pilier 4 (Affine = DEAL)
+"""
+from __future__ import annotations
+
+import os
+import sys
+from pathlib import Path
+from typing import Any
+
+try:
+    from mcp.server import Server
+    from mcp.server.stdio import stdio_server
+    from mcp.types import TextContent, Tool
+except ImportError:
+    print("[!] MCP SDK not installed. Run: pip install mcp", file=sys.stderr)
+    sys.exit(1)
+
+# Auth from env var (Test Key Pragma 2026-06-15 — never hardcoded)
+API_KEY: str = os.environ.get("AFFINE_API_KEY", "")
+BASE_URL: str = os.environ.get("AFFINE_BASE_URL", "https://app.affine.pro/graphql")
+WORKSPACE_ID: str = os.environ.get(
+    "AFFINE_WORKSPACE_ID", "ef927d3a-5be0-41ed-b639-829b7f74939b"
+)
+# Local fallback for DEAL drafts (Geordi Guides -> Affine DEAL pipeline)
+DEAL_DRAFTS_PATH: Path = Path(
+    os.environ.get(
+        "AFFINE_DEAL_DRAFTS_PATH",
+        str(Path.home() / "ASpace_OS_V2" / "20_Life_OS" / "24_PARA_Enterprise"
+            / "03_Resources_Geordi" / "01_Guides" / "affine_deal_drafts.md"),
+    )
+)
+
+server = Server("affine-mcp")
+
+
+def _stub_workspaces() -> list[dict[str, Any]]:
+    """Stub workspace list — no real API call without AFFINE_API_KEY."""
+    return [
+        {
+            "id": WORKSPACE_ID,
+            "name": "A'Space DEAL Workspace",
+            "kind": "DEAL",
+            "url": f"https://app.affine.pro/workspace/{WORKSPACE_ID}",
+            "edgeless": True,
+        }
+    ]
+
+
+def _stub_deal_drafts() -> list[dict[str, Any]]:
+    """Stub DEAL drafts read from local file or fallback mock."""
+    if DEAL_DRAFTS_PATH.exists():
+        try:
+            content = DEAL_DRAFTS_PATH.read_text(encoding="utf-8")
+            return [
+                {
+                    "id": "local-draft-1",
+                    "title": "DEAL Drafts (local file)",
+                    "source": str(DEAL_DRAFTS_PATH),
+                    "content_excerpt": content[:500],
+                    "state": "Define",
+                }
+            ]
+        except OSError as exc:
+            return [{"error": f"Failed to read {DEAL_DRAFTS_PATH}: {exc}"}]
+    return [
+        {
+            "id": "stub-draft-1",
+            "title": "Task Capture -> Plane (Blueprint)",
+            "state": "Automate",
+            "blueprint_type": "cli",
+            "target_ryan": True,
+        },
+        {
+            "id": "stub-draft-2",
+            "title": "Email Triage -> Inbox Zero",
+            "state": "Eliminate",
+            "blueprint_type": "manual",
+            "target_ryan": False,
+        },
+    ]
+
+
+@server.list_tools()
+async def list_tools() -> list[Tool]:
+    return [
+        Tool(
+            name="affine_list_workspaces",
+            description="List Affine workspaces accessible to the configured API key.",
+            inputSchema={"type": "object", "properties": {}},
+        ),
+        Tool(
+            name="affine_get_deal_draft",
+            description="Fetch a DEAL (Define/Eliminate/Automate/Liberate) draft by ID from the workspace.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "draft_id": {
+                        "type": "string",
+                        "description": "DEAL draft identifier (AF-XXXXXXXX or full UUID).",
+                    }
+                },
+                "required": ["draft_id"],
+            },
+        ),
+        Tool(
+            name="affine_create_deal_draft",
+            description="Create a new DEAL draft in the workspace. Returns the new draft ID and URL.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "title": {"type": "string", "description": "DEAL draft title."},
+                    "stage": {
+                        "type": "string",
+                        "enum": ["Define", "Eliminate", "Automate", "Liberated"],
+                        "description": "Initial DEAL stage.",
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Long-form description (Markdown).",
+                        "default": "",
+                    },
+                    "blueprint_type": {
+                        "type": "string",
+                        "enum": ["iframe", "cli", "agent", "manual"],
+                        "description": "Type of Blueprint this draft represents (Edgeless canvas).",
+                        "default": "manual",
+                    },
+                    "target_ryan": {
+                        "type": "boolean",
+                        "description": "Flag ready for 13th Doctor (Ryan) codification.",
+                        "default": False,
+                    },
+                },
+                "required": ["title", "stage"],
+            },
+        ),
+        Tool(
+            name="affine_list_deal_drafts",
+            description="List all DEAL drafts in the workspace (active stages only by default).",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "stage_filter": {
+                        "type": "string",
+                        "enum": ["Define", "Eliminate", "Automate", "Liberated", "Kept Manual"],
+                        "description": "Optional: filter by DEAL stage.",
+                    }
+                },
+            },
+        ),
+    ]
+
+
+@server.call_tool()
+async def call_tool(name: str, arguments: dict[str, Any]) -> list[TextContent]:
+    if name == "affine_list_workspaces":
+        workspaces = _stub_workspaces()
+        return [TextContent(type="text", text=f"Workspaces: {workspaces}")]
+
+    if name == "affine_get_deal_draft":
+        draft_id = arguments.get("draft_id", "")
+        drafts = _stub_deal_drafts()
+        match = next((d for d in drafts if d.get("id") == draft_id), None)
+        if match is None:
+            return [TextContent(type="text", text=f"[!] DEAL draft '{draft_id}' not found")]
+        return [TextContent(type="text", text=f"DEAL draft: {match}")]
+
+    if name == "affine_create_deal_draft":
+        if not API_KEY:
+            return [
+                TextContent(
+                    type="text",
+                    text=(
+                        "[!] AFFINE_API_KEY not set — stub create. "
+                        "Set env var to enable real API calls."
+                    ),
+                )
+            ]
+        title = arguments.get("title", "Untitled")
+        stage = arguments.get("stage", "Define")
+        return [
+            TextContent(
+                type="text",
+                text=(
+                    f"[+] DEAL draft created (stub): title={title!r} stage={stage!r} "
+                    f"workspace={WORKSPACE_ID}"
+                ),
+            )
+        ]
+
+    if name == "affine_list_deal_drafts":
+        stage_filter = arguments.get("stage_filter")
+        drafts = _stub_deal_drafts()
+        if stage_filter:
+            drafts = [d for d in drafts if d.get("state") == stage_filter]
+        return [TextContent(type="text", text=f"DEAL drafts: {drafts}")]
+
+    raise ValueError(f"Unknown tool: {name}")
+
+
+async def main() -> None:
+    print("[+] Affine MCP server starting (Symphony Lane B / DEAL workspace)", file=sys.stderr)
+    async with stdio_server() as (read_stream, write_stream):
+        await server.run(read_stream, write_stream, server.create_initialization_options())
+
+
+if __name__ == "__main__":
+    import asyncio
+
+    asyncio.run(main())

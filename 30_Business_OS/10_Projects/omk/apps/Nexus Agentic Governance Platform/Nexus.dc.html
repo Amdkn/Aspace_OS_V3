@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#0A0E16;color:#F5EFE0;font-family:'Hanken Grotesk',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:#C8A55C;color:#0A0E16}
+  @keyframes nx-sweep{to{transform:rotate(360deg)}}
+  @keyframes nx-pulse{0%,100%{opacity:.35;transform:scale(1)}50%{opacity:.9;transform:scale(1.08)}}
+  @keyframes nx-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+  @keyframes nx-scan{0%{transform:translateX(-100%)}100%{transform:translateX(220%)}}
+  @keyframes nx-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes nx-orbit{to{transform:rotate(-360deg)}}
+  .nx-grain{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;mix-blend-mode:overlay;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.02),transparent 60%)}
+</style>
+</helmet>
+
+<div style="position:relative;z-index:2">
+<!-- ===== HEADER ===== -->
+<header style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 40px;background:rgba(10,14,22,.72);backdrop-filter:blur(14px);border-bottom:1px solid rgba(200,165,92,.16)">
+  <div style="display:flex;align-items:baseline;gap:14px;flex-shrink:0">
+    <span style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;letter-spacing:.02em;color:#F5EFE0">Nexus</span>
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(200,165,92,.7)">the ghost cabinet · vault / sove</span>
+  </div>
+  <nav style="display:flex;gap:22px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.55)">
+    <a href="#s01" style="color:inherit;text-decoration:none">01 Manifeste</a>
+    <a href="#s02" style="color:inherit;text-decoration:none">02 Anatomy</a>
+    <a href="#s03" style="color:inherit;text-decoration:none">03 Trust</a>
+    <a href="#s04" style="color:inherit;text-decoration:none">04 Cabinets</a>
+    <a href="#s05" style="color:inherit;text-decoration:none">05 Profiles</a>
+    <a href="#s06" style="color:inherit;text-decoration:none">06 Levers</a>
+    <a href="#s07" style="color:inherit;text-decoration:none">07 Onboarding</a>
+  </nav>
+  <button onClick="{{ scrollToForm }}" style="flex-shrink:0;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#0A0E16;background:#C8A55C;border:none;padding:11px 18px;cursor:pointer;font-weight:500">Soumettre un cabinet</button>
+</header>
+
+<!-- ===== HERO ===== -->
+<section style="position:relative;padding:88px 40px 96px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;min-height:86vh">
+  <div>
+    <div style="display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#C8A55C;border:1px solid rgba(200,165,92,.3);padding:8px 14px;border-radius:2px;margin-bottom:30px">
+      <span style="width:6px;height:6px;border-radius:50%;background:#C8A55C;display:inline-block;animation:nx-pulse 2.4s infinite"></span>
+      Nexus · Agentic Governance · <span style="{{ profileTag }}">profile detected · {{ persona.short }}</span> · Cabinet
+    </div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(48px,6vw,88px);line-height:.98;letter-spacing:-.01em;color:#F5EFE0;margin-bottom:26px">
+      Stop juggling cabinets.<br>
+      <span style="font-style:italic;color:#C8A55C">Switch to Zero-PII Agentic Governance.</span>
+    </h1>
+    <p style="font-family:'Hanken Grotesk',sans-serif;font-size:19px;line-height:1.66;color:rgba(245,239,224,.66);max-width:560px;margin-bottom:36px">
+      Vous signez le mandat. Nous exécutons en silence dans votre vault privé. <span style="color:#F5EFE0">Zero-PII by default. AI-Act ready. Sober 1an+.</span>
+    </p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:46px">
+      <button onClick="{{ scrollToForm }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#0A0E16;background:#C8A55C;border:none;padding:15px 26px;cursor:pointer;font-weight:500">Soumettre mon cabinet →</button>
+      <button onClick="{{ scrollToAnatomy }}" style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#F5EFE0;background:transparent;border:1px solid rgba(245,239,224,.28);padding:15px 26px;cursor:pointer">Rencontrer mon équipe</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;border-top:1px solid rgba(200,165,92,.16);padding-top:24px">
+      <sc-for list="{{ heroStats }}" as="stat" hint-placeholder-count="4">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#C8A55C;line-height:1">{{ stat.k }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,239,224,.5);margin-top:7px">{{ stat.l }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ORBITAL DIAGRAM -->
+  <div style="position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:1/1;width:100%;max-width:480px;margin:0 auto">
+    <div style="position:absolute;inset:6%;border:1px solid rgba(200,165,92,.14);border-radius:50%"></div>
+    <div style="position:absolute;inset:20%;border:1px dashed rgba(200,165,92,.18);border-radius:50%"></div>
+    <div style="position:absolute;inset:6%;border-radius:50%;background:conic-gradient(from 0deg,rgba(200,165,92,.22),transparent 22%);animation:nx-sweep 12s linear infinite"></div>
+    <!-- 8 cabinet nodes -->
+    <sc-for list="{{ orbitNodes }}" as="node" hint-placeholder-count="8">
+      <div style="{{ node.style }}">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.04em;color:#0A0E16;background:#C8A55C;padding:4px 8px;white-space:nowrap;font-weight:700">{{ node.hero }}</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:rgba(245,239,224,.6);margin-top:3px;white-space:nowrap;text-align:center">{{ node.domain }}</div>
+      </div>
+    </sc-for>
+    <!-- center -->
+    <div style="position:relative;z-index:5;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#15203a,#0A0E16);border:1px solid rgba(200,165,92,.45);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:0 0 60px rgba(200,165,92,.12)">
+      <div style="position:absolute;inset:-10px;border-radius:50%;border:1px solid rgba(200,165,92,.2);animation:nx-pulse 3s infinite"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:#C8A55C">B1</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:#F5EFE0;line-height:1.05;margin-top:2px">Practice<br>Owner</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.45);margin-top:5px">24/7 routing</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ===== 01 POSITIONING ===== -->
+<section id="s01" style="position:relative;z-index:2;padding:110px 40px;background:#08090C;border-top:1px solid rgba(200,165,92,.12)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">01 · le manifeste</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5vw,68px);line-height:1.02;color:#F5EFE0;max-width:880px;margin-bottom:56px">
+      Vous signez le mandat. <span style="font-style:italic;color:#C8A55C">Nous exécutons dans votre vault privé.</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+      <div style="border:1px solid rgba(245,239,224,.12);padding:34px 32px;background:rgba(255,255,255,.012)">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,239,224,.42);margin-bottom:24px">L'ancien modèle</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:18px">
+          <sc-for list="{{ oldModel }}" as="row" hint-placeholder-count="3">
+            <li style="display:flex;gap:14px;align-items:flex-start;font-family:'Hanken Grotesk',sans-serif;font-size:17px;color:rgba(245,239,224,.55)">
+              <span style="font-family:'JetBrains Mono',monospace;color:rgba(245,239,224,.3);font-size:14px;flex-shrink:0">✕</span>{{ row }}
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+      <div style="border:1px solid rgba(200,165,92,.4);padding:34px 32px;background:linear-gradient(160deg,rgba(200,165,92,.06),rgba(200,165,92,.01))">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C8A55C;margin-bottom:24px">Vous · sur Nexus</div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:18px">
+          <sc-for list="{{ newModel }}" as="row" hint-placeholder-count="3">
+            <li style="display:flex;gap:14px;align-items:flex-start;font-family:'Hanken Grotesk',sans-serif;font-size:17px;color:#F5EFE0">
+              <span style="color:#C8A55C;font-size:15px;flex-shrink:0">◆</span>{{ row }}
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 02 ANATOMY ===== -->
+<section id="s02" style="position:relative;z-index:2;padding:110px 40px;background:#0A0E16">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">02 · l'anatomie de votre cabinet fantôme</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(36px,4.6vw,62px);line-height:1.03;color:#F5EFE0;max-width:820px;margin-bottom:18px">
+      Oubliez les juniors. <span style="font-style:italic;color:#C8A55C">Rencontrez votre escouade fantôme.</span>
+    </h2>
+    <p style="font-family:'Hanken Grotesk',sans-serif;font-size:18px;color:rgba(245,239,224,.6);max-width:620px;margin-bottom:54px">B1 délègue à B2 → B2 délègue à B3 → B3 ships to you. Vous ne managez rien.</p>
+
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start">
+      <!-- B1 -->
+      <div style="border:1px solid rgba(200,165,92,.4);padding:28px 24px;background:linear-gradient(160deg,rgba(200,165,92,.08),transparent);position:sticky;top:90px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C8A55C;margin-bottom:12px">B1 · le chef</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#F5EFE0;line-height:1.05;margin-bottom:14px">Practice Owner</div>
+        <p style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:rgba(245,239,224,.6);line-height:1.6;margin-bottom:18px">1 agent. 24/7 routing. Reçoit vos mandats et les distribue. Vous lui parlez, il s'occupe du reste.</p>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(245,239,224,.5)"><span>agents</span><span style="color:#C8A55C">1</span></div>
+          <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(245,239,224,.5)"><span>uptime</span><span style="color:#C8A55C">99.94%</span></div>
+          <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(245,239,224,.5)"><span>routing</span><span style="color:#C8A55C">24/7</span></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <!-- B2 -->
+        <div style="border:1px solid rgba(245,239,224,.12);padding:26px 24px;background:rgba(255,255,255,.012)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C8A55C">B2 · 8 cabinets</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(245,239,224,.4)">délègue ↓</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+            <sc-for list="{{ b2 }}" as="c" hint-placeholder-count="8">
+              <div style="border:1px solid rgba(200,165,92,.18);padding:14px 12px;background:rgba(200,165,92,.03)" style-hover="border-color:rgba(200,165,92,.5);background:rgba(200,165,92,.08)">
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(245,239,224,.35);margin-bottom:6px">{{ c.n }}</div>
+                <div style="font-family:'Hanken Grotesk',sans-serif;font-size:14px;font-weight:600;color:#F5EFE0;line-height:1.15">{{ c.hero }}</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:#C8A55C;margin-top:5px">{{ c.domain }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+        <!-- B3 -->
+        <div style="border:1px solid rgba(245,239,224,.12);padding:26px 24px;background:rgba(255,255,255,.012)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C8A55C">B3 · 32 squads Zero-PII</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(245,239,224,.4)">ships to you ↓</div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:9px">
+            <sc-for list="{{ b3 }}" as="sq" hint-placeholder-count="12">
+              <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(245,239,224,.7);border:1px solid rgba(245,239,224,.14);padding:6px 11px;background:rgba(255,255,255,.02)">{{ sq }}</span>
+            </sc-for>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#C8A55C;border:1px dashed rgba(200,165,92,.4);padding:6px 11px">+ 20 squads</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 TRUST VAULT ===== -->
+<section id="s03" style="position:relative;z-index:2;padding:110px 40px;background:#08090C;border-top:1px solid rgba(200,165,92,.12)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:48px">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">03 · trust, locked in</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(36px,4.6vw,62px);line-height:1.03;color:#F5EFE0;max-width:640px">
+          Votre conformité est <span style="font-style:italic;color:#C8A55C">un input fixe.</span>
+        </h2>
+      </div>
+      <!-- mode toggle -->
+      <div style="display:flex;border:1px solid rgba(200,165,92,.3);padding:4px;gap:4px">
+        <button onClick="{{ setShield }}" style="{{ shieldBtn }}">SHIELD</button>
+        <button onClick="{{ setBrute }}" style="{{ bruteBtn }}">FORCE BRUTE</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:stretch">
+      <!-- Trust Shield telemetry -->
+      <div style="border:1px solid {{ shieldBorder }};padding:30px 28px;background:{{ shieldBg }};display:flex;flex-direction:column;gap:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,239,224,.5)">Trust Shield · télémétrie live</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:{{ statusColor }};display:flex;align-items:center;gap:7px">
+            <span style="width:7px;height:7px;border-radius:50%;background:{{ statusColor }};animation:nx-pulse 2s infinite"></span>{{ statusLabel }}
+          </div>
+        </div>
+        <sc-for list="{{ telemetry }}" as="m" hint-placeholder-count="4">
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
+              <span style="font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:rgba(245,239,224,.75)">{{ m.label }}</span>
+              <span style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:{{ m.color }}">{{ m.value }}</span>
+            </div>
+            <div style="height:5px;background:rgba(255,255,255,.06);overflow:hidden">
+              <div style="height:100%;width:{{ m.pct }};background:{{ m.color }};transition:width .5s"></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Terminal log -->
+      <div style="border:1px solid rgba(245,239,224,.12);background:#050608;padding:0;display:flex;flex-direction:column;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:8px;padding:13px 18px;border-bottom:1px solid rgba(245,239,224,.08);background:rgba(255,255,255,.015)">
+          <span style="width:9px;height:9px;border-radius:50%;background:#C8A55C;opacity:.7"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(245,239,224,.25)"></span>
+          <span style="width:9px;height:9px;border-radius:50%;background:rgba(245,239,224,.25)"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-left:8px">vault://audit-log · append-only</span>
+        </div>
+        <div style="padding:20px 18px;display:flex;flex-direction:column;gap:11px;flex:1;min-height:240px;font-family:'JetBrains Mono',monospace">
+          <sc-for list="{{ logLines }}" as="line" hint-placeholder-count="6">
+            <div style="{{ line.style }}">
+              <span style="color:rgba(245,239,224,.3);font-size:11px">{{ line.t }}</span>
+              <span style="color:{{ line.metaColor }};font-size:10px;text-transform:uppercase;letter-spacing:.06em;border:1px solid currentColor;padding:1px 6px">{{ line.meta }}</span>
+              <span style="font-size:12.5px;color:{{ line.textColor }}">{{ line.msg }}</span>
+            </div>
+          </sc-for>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#C8A55C;margin-top:4px">vault $ <span style="border-bottom:2px solid #C8A55C;animation:nx-blink 1.1s infinite">&nbsp;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 9-DOMAIN ===== -->
+<section id="s04" style="position:relative;z-index:2;padding:110px 40px;background:#0A0E16">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">04 · les 9 cabinets</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);line-height:1.04;color:#F5EFE0;max-width:880px;margin-bottom:56px">
+      Neuf chiefs. Trente-deux squads. <span style="font-style:italic;color:#C8A55C">Un seul vault à ouvrir.</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center">
+      <!-- wheel -->
+      <div style="position:relative;aspect-ratio:1/1;width:100%;max-width:500px;margin:0 auto">
+        <div style="position:absolute;inset:14%;border:1px dashed rgba(200,165,92,.16);border-radius:50%"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:6;width:118px;height:118px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#15203a,#0A0E16);border:1px solid rgba(200,165,92,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:#C8A55C">vault</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#F5EFE0">9 / 32</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.45)">chiefs / squads</div>
+        </div>
+        <sc-for list="{{ wheelNodes }}" as="w" hint-placeholder-count="9">
+          <button onClick="{{ w.onClick }}" style="{{ w.style }}">{{ w.name }}</button>
+        </sc-for>
+      </div>
+      <!-- detail panel -->
+      <div style="border:1px solid rgba(200,165,92,.3);background:linear-gradient(160deg,rgba(200,165,92,.05),transparent);padding:32px 30px;min-height:360px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C8A55C">cabinet · {{ activeCabPad }}</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6FA98A;display:flex;align-items:center;gap:6px"><span style="width:6px;height:6px;border-radius:50%;background:#6FA98A"></span>{{ activeCab.status }}</div>
+        </div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:600;color:#F5EFE0;line-height:1.05;margin-bottom:24px">{{ activeCab.name }}</div>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-bottom:6px">ICP signal</div>
+            <div style="font-family:'Hanken Grotesk',sans-serif;font-size:16px;color:#F5EFE0">{{ activeCab.icp }}</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-bottom:6px">B2 cabinet</div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:14px;color:#C8A55C">{{ activeCab.b2 }}</div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-bottom:8px">B3 squads Zero-PII</div>
+            <div style="display:flex;flex-wrap:wrap;gap:7px">
+              <sc-for list="{{ activeCab.squads }}" as="sq" hint-placeholder-count="3">
+                <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(245,239,224,.72);border:1px solid rgba(245,239,224,.14);padding:5px 9px">{{ sq }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(200,165,92,.18);padding-top:16px;margin-top:4px">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.4)">trust pulse</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:#C8A55C">{{ activeCab.pulse }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 05 PROFILES ===== -->
+<section id="s05" style="position:relative;z-index:2;padding:110px 40px;background:#08090C;border-top:1px solid rgba(200,165,92,.12)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">05 · profiles</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);line-height:1.04;color:#F5EFE0;max-width:760px;margin-bottom:14px">
+      Chaque cabinet a ses fuites. <span style="font-style:italic;color:#C8A55C">Trouvez le vôtre.</span>
+    </h2>
+    <p style="font-family:'Hanken Grotesk',sans-serif;font-size:17px;color:rgba(245,239,224,.55);max-width:560px;margin-bottom:48px">Cliquez un profil pour rethèmer le site sur votre cabinet.</p>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ personaCards }}" as="p" hint-placeholder-count="5">
+        <button onClick="{{ p.onClick }}" style="{{ p.style }}">
+          <div style="display:grid;grid-template-columns:120px 1.4fr 1fr 1fr 160px;gap:24px;align-items:center;width:100%;text-align:left">
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.06em;color:{{ p.codeColor }};font-weight:700">{{ p.code }}</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:{{ p.priorityColor }};margin-top:5px">{{ p.priorityLabel }}</div>
+            </div>
+            <div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:600;color:#F5EFE0;line-height:1.05">{{ p.name }}</div>
+              <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;color:rgba(245,239,224,.55);margin-top:4px">Pain · {{ p.pain }}</div>
+            </div>
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-bottom:4px">Remedy</div>
+              <div style="font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:#C8A55C;font-weight:600">{{ p.remedy }}</div>
+            </div>
+            <div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:rgba(245,239,224,.4);margin-bottom:4px">Signal</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(245,239,224,.7)">{{ p.signal }}</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:600;color:#F5EFE0;line-height:1.1">{{ p.ticket }}</div>
+              <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(245,239,224,.45);margin-top:3px">{{ p.lead }}</div>
+            </div>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+    <!-- pricing canon strip -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(200,165,92,.16);border:1px solid rgba(200,165,92,.16);margin-top:32px">
+      <sc-for list="{{ pricing }}" as="t" hint-placeholder-count="4">
+        <div style="background:#08090C;padding:22px 20px">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.45);margin-bottom:8px">{{ t.tier }}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#C8A55C;line-height:1">{{ t.price }}</div>
+          <div style="font-family:'Hanken Grotesk',sans-serif;font-size:13px;color:rgba(245,239,224,.55);margin-top:8px">{{ t.note }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 06 LEVIERS ===== -->
+<section id="s06" style="position:relative;z-index:2;padding:110px 40px;background:#0A0E16">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">06 · les 3 leviers 2026</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);line-height:1.04;color:#F5EFE0;max-width:820px;margin-bottom:56px">
+      Les cabinets ne croient plus <span style="font-style:italic;color:#C8A55C">aux outils SaaS publics.</span>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <sc-for list="{{ leviers }}" as="l" hint-placeholder-count="3">
+        <div style="border:1px solid rgba(245,239,224,.12);padding:34px 30px;background:rgba(255,255,255,.012);display:flex;flex-direction:column;min-height:300px" style-hover="border-color:rgba(200,165,92,.4)">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:600;color:rgba(200,165,92,.35);line-height:1;margin-bottom:24px">{{ l.n }}</div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:rgba(245,239,224,.45);text-decoration:line-through">{{ l.from }}</span>
+            <span style="color:#C8A55C">→</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:#C8A55C;font-weight:700">{{ l.to }}</span>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6FA98A;border:1px solid rgba(111,169,138,.3);padding:5px 10px;align-self:flex-start;margin-bottom:18px">{{ l.tag }}</div>
+          <p style="font-family:'Hanken Grotesk',sans-serif;font-size:15.5px;line-height:1.62;color:rgba(245,239,224,.62)">{{ l.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 07 ONBOARDING ===== -->
+<section id="s07" style="position:relative;z-index:2;padding:110px 40px;background:#08090C;border-top:1px solid rgba(200,165,92,.12)">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#C8A55C;margin-bottom:22px">07 · onboarding · zero friction, zero calls</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(34px,4.4vw,58px);line-height:1.04;color:#F5EFE0;max-width:780px;margin-bottom:18px">
+      On ne vend pas en call. <span style="font-style:italic;color:#C8A55C">Le vault parle pour vous.</span>
+    </h2>
+    <p style="font-family:'Hanken Grotesk',sans-serif;font-size:18px;color:rgba(245,239,224,.6);max-width:600px;margin-bottom:54px">Demo Vault · async closing preview. Vous droppez une URL, on chiffre, on active. Pas de démo, pas de pipeline.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <sc-for list="{{ steps }}" as="st" hint-placeholder-count="3">
+        <div style="border:1px solid rgba(200,165,92,.22);padding:30px 28px;background:linear-gradient(160deg,rgba(200,165,92,.04),transparent);position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;height:2px;width:100%;background:linear-gradient(90deg,transparent,rgba(200,165,92,.6),transparent)"></div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#C8A55C;margin-bottom:18px">{{ st.n }}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#F5EFE0;line-height:1.1;margin-bottom:12px">{{ st.title }}</div>
+          <p style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;line-height:1.6;color:rgba(245,239,224,.6);margin-bottom:18px">{{ st.body }}</p>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6FA98A;border-top:1px solid rgba(200,165,92,.14);padding-top:14px">{{ st.meta }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section id="cta" style="position:relative;z-index:2;padding:120px 40px;background:#0A0E16;border-top:1px solid rgba(200,165,92,.16)">
+  <div style="max-width:880px;margin:0 auto;text-align:center">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(40px,5.4vw,76px);line-height:1.02;color:#F5EFE0;margin-bottom:18px">
+      Soumettez votre cabinet.<br><span style="font-style:italic;color:#C8A55C">Audit vault sous 48h.</span>
+    </h2>
+    <p style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,239,224,.45);margin-bottom:48px">async · zero calls · vault chiffré</p>
+    <sc-if value="{{ formDone }}" hint-placeholder-val="{{ false }}">
+      <div style="border:1px solid rgba(111,169,138,.45);background:rgba(111,169,138,.07);padding:48px 40px;max-width:560px;margin:0 auto">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#6FA98A;margin-bottom:14px">✓ mandat reçu · vault en queue</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:#F5EFE0">Votre audit silencieux a démarré.</div>
+        <div style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:rgba(245,239,224,.6);margin-top:12px">Activation sous 48h. Aucun appel. On vous écrit depuis le vault.</div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ formOpen }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submitForm }}" style="max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px;text-align:left">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <input placeholder="Nom" style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#F5EFE0;background:rgba(255,255,255,.03);border:1px solid rgba(245,239,224,.16);padding:14px 16px;outline:none">
+          <input placeholder="Cabinet" style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#F5EFE0;background:rgba(255,255,255,.03);border:1px solid rgba(245,239,224,.16);padding:14px 16px;outline:none">
+        </div>
+        <input placeholder="Email" type="email" style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#F5EFE0;background:rgba(255,255,255,.03);border:1px solid rgba(245,239,224,.16);padding:14px 16px;outline:none">
+        <select style="font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:#F5EFE0;background:rgba(255,255,255,.03);border:1px solid rgba(245,239,224,.16);padding:14px 16px;outline:none">
+          <option style="background:#0A0E16">Spécialité — Expert-Comptable</option>
+          <option style="background:#0A0E16">Spécialité — Avocat</option>
+          <option style="background:#0A0E16">Spécialité — Family-Office</option>
+          <option style="background:#0A0E16">Spécialité — Coach</option>
+          <option style="background:#0A0E16">Spécialité — Cabinet-Médical</option>
+        </select>
+        <button type="submit" style="font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#0A0E16;background:#C8A55C;border:none;padding:17px;cursor:pointer;font-weight:700;margin-top:6px">Soumettre mon cabinet →</button>
+      </form>
+    </sc-if>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer style="position:relative;z-index:2;padding:40px;background:#050608;border-top:1px solid rgba(200,165,92,.12)">
+  <div style="max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(245,239,224,.5)">nexus.cabinet · the ghost cabinet · vault / sovereign · async</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:rgba(200,165,92,.6);display:flex;align-items:center;gap:8px"><span style="width:6px;height:6px;border-radius:50%;background:#6FA98A;animation:nx-pulse 2s infinite"></span>wave 01 · 2026 · uptime 99.94 · factory online</div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:860},&quot;persona&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;expert-comptable&quot;,&quot;options&quot;:[&quot;expert-comptable&quot;,&quot;avocat&quot;,&quot;family-office&quot;,&quot;coach&quot;,&quot;cabinet-medical&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;vaultDefault&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;shield&quot;,&quot;options&quot;:[&quot;shield&quot;,&quot;brute&quot;],&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { persona: 'avocat', vaultMode: 'shield', activeCabinet: 1, reveal: 1, formDone: false };
+
+  componentDidMount(){
+    this.setState({ persona: this.props.persona || 'avocat', vaultMode: this.props.vaultDefault || 'shield' });
+    this._t = setInterval(()=> this.setState(s=>({ reveal: (s.reveal % 6) + 1 })), 1600);
+  }
+  componentWillUnmount(){ clearInterval(this._t); }
+
+  scrollTo(id){ const el = document.getElementById(id); if(el) el.scrollIntoView ? window.scrollTo({top: el.getBoundingClientRect().top + window.scrollY - 70, behavior:'smooth'}) : null; }
+
+  get personasData(){
+    return [
+      { id:'expert-comptable', code:'AR/01', short:'Expert-Comptable', name:'Expert-Comptable', pain:'Facturation manuelle multi-dossiers', remedy:'Zero-PII Facturation Auto', signal:'Pennylane + Excel', lead:'30–50 leads / mois', ticket:'$750 /mo · self-host', accent:'#C8A55C', priority:true },
+      { id:'avocat', code:'AR/02', short:'Avocat', name:'Avocat', pain:'Conflict check manuel + CNIL', remedy:'AI-Act Conflict Scanner', signal:'Dossiers papier + Gmail', lead:'conflict, en continu', ticket:'$1 500–2 000 /mo', accent:'#C49A52', priority:false },
+      { id:'family-office', code:'AR/03', short:'Family-Office', name:'Family-Office', pain:'Agrégation Excel multi-patrimoines', remedy:'Vault Privé Souverain', signal:'> $10M patrimoine', lead:'sanctuary, sur invitation', ticket:'$5K–50K MRR', accent:'#CFB678', priority:false },
+      { id:'coach', code:'AR/04', short:'Coach', name:'Coach', pain:'Onboarding client manuel', remedy:'SOP Vault Mémoire', signal:'Notion + Zoom', lead:'queue, wave 02', ticket:'$1 000–1 500 /mo', accent:'#BE9A5E', priority:false },
+      { id:'cabinet-medical', code:'AR/05', short:'Cabinet-Médical', name:'Cabinet-Médical', pain:'Dossiers patients sensibles', remedy:'Zero-PII Health Vault', signal:'Doctolib + papier', lead:'wave 01, conformité', ticket:'$1 500–2 000 /mo', accent:'#B9A472', priority:false }
+    ];
+  }
+
+  get b2Data(){
+    return [
+      { hero:'Batman', domain:'Vault-Audit' },
+      { hero:'Aquaman', domain:'AI-Act' },
+      { hero:'Wonder Woman', domain:'Zero-PII' },
+      { hero:'Green Lantern', domain:'Sober-Compliance' },
+      { hero:'Superman', domain:'Migration' },
+      { hero:'Flash', domain:'Reconciliations' },
+      { hero:'Cyborg', domain:'Workflows' },
+      { hero:'Martian Manhunter', domain:'Mémoire' }
+    ];
+  }
+
+  get b3Data(){
+    return ['Zero-PII-Remediator','Audit-Log-Immutable','Paperclip-Killer','Sober-Watcher','Vault-Redactor','Conflict-Scanner','Deps-Cleaner','Reconcile-Bot','Migrate-Bot','SOP-Vault','Health-Vault','Mémoire-Sync'];
+  }
+
+  get cabinetsData(){
+    return [
+      { name:'Expert-Comptable', icp:'30–50 dossiers / mois', b2:'Flash · Reconciliations', squads:['Zero-PII-Facturation','Reconcile-Bot','Audit-Log-Immutable'], pulse:'94%', status:'wave 01 · live' },
+      { name:'Avocat', icp:'conflict check + CNIL', b2:'Aquaman · AI-Act', squads:['Conflict-Scanner','Vault-Redactor','Audit-Log-Immutable'], pulse:'91%', status:'wave 01 · live' },
+      { name:'Family-Office', icp:'> $10M patrimoine', b2:'M. Manhunter · Mémoire', squads:['Vault-Redactor','Sober-Watcher','Deps-Cleaner'], pulse:'97%', status:'sanctuary' },
+      { name:'Coach', icp:'Notion + Zoom', b2:'Cyborg · Workflows', squads:['SOP-Vault','Mémoire-Sync','Paperclip-Killer'], pulse:'88%', status:'queue · wave 02' },
+      { name:'Cabinet-Médical', icp:'dossiers patients', b2:'Wonder Woman · Zero-PII', squads:['Zero-PII-Remediator','Health-Vault','Audit-Log-Immutable'], pulse:'96%', status:'wave 01' },
+      { name:'Notaire', icp:'actes authentiques', b2:'Batman · Vault-Audit', squads:['Vault-Redactor','Conflict-Scanner','Audit-Log-Immutable'], pulse:'90%', status:'queue' },
+      { name:'Patrimoine', icp:'agrégation multi-actifs', b2:'Superman · Migration', squads:['Migrate-Bot','Reconcile-Bot','Sober-Watcher'], pulse:'92%', status:'queue' },
+      { name:'RH', icp:'données salariés', b2:'Green Lantern · Sober', squads:['Zero-PII-Remediator','Sober-Watcher','Deps-Cleaner'], pulse:'89%', status:'queue' },
+      { name:'Direction', icp:'pilotage cabinet', b2:'Practice Owner · Routing', squads:['Audit-Log-Immutable','Sober-Watcher','Deps-Cleaner'], pulse:'99%', status:'command' }
+    ];
+  }
+
+  get leviersData(){
+    return [
+      { n:'01', from:'SaaS public', to:'Vault privé', tag:'Souveraineté', body:'Vos données ne quittent jamais votre périmètre. Pas de SaaS public, pas de tenant partagé. Le vault est à vous.' },
+      { n:'02', from:'Greenwashing', to:'Conformité-by-default', tag:'Zero-PII by design', body:'On ne coche pas une case « RGPD ». La redaction Zero-PII est dans le chemin d\u2019exécution. La preuve est l\u2019audit log, pas le badge.' },
+      { n:'03', from:'Junior lawyer', to:'3 superhumans + 32 squads', tag:'Zero-management', body:'Vous ne managez personne. Practice Owner route, 8 cabinets exécutent, 32 squads Zero-PII livrent. Vous signez, c\u2019est tout.' }
+    ];
+  }
+
+  get logData(){
+    return [
+      { t:'00.000', msg:'Practice Owner → B2.Vault-Auditor', meta:'route' },
+      { t:'00.114', msg:'B2.Vault-Auditor → zero-PII redaction', meta:'scan' },
+      { t:'00.231', msg:'B3.Vault-Redactor · 14 PII masqués', meta:'redact' },
+      { t:'00.402', msg:'B3.Audit-Log-Immutable · write append-only', meta:'commit' },
+      { t:'00.518', msg:'AI-Act gate · classification low-risk', meta:'gate' },
+      { t:'00.640', msg:'coût $0.0012 · trust +94% · ships to you', meta:'done' }
+    ];
+  }
+
+  setPersona(id){ this.setState({ persona: id, activeCabinet: this.cabinetsData.findIndex(c=>c.name===this.personasData.find(p=>p.id===id).name) }); }
+
+  wheelGeometry(i,active){
+    const r = 43, cx = 50, cy = 50;
+    const ang = (i/9)*2*Math.PI - Math.PI/2;
+    const x = cx + r*Math.cos(ang), y = cy + r*Math.sin(ang);
+    return `position:absolute;left:${x}%;top:${y}%;transform:translate(-50%,-50%);z-index:5;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.03em;white-space:nowrap;cursor:pointer;padding:9px 12px;border-radius:2px;transition:all .25s;border:1px solid ${active?'#C8A55C':'rgba(245,239,224,.16)'};background:${active?'#C8A55C':'rgba(10,14,22,.85)'};color:${active?'#0A0E16':'rgba(245,239,224,.72)'};font-weight:${active?700:400};box-shadow:${active?'0 0 24px rgba(200,165,92,.35)':'none'}`;
+  }
+  orbitGeometry(i){
+    const pts = [[50,7],[80,20],[93,50],[80,80],[50,93],[20,80],[7,50],[20,20]];
+    const [x,y] = pts[i];
+    return `position:absolute;left:${x}%;top:${y}%;transform:translate(-50%,-50%);z-index:4;display:flex;flex-direction:column;align-items:center`;
+  }
+
+  renderVals(){
+    const personas = this.personasData;
+    const persona = personas.find(p=>p.id===this.state.persona) || personas[0];
+    const b2 = this.b2Data, b3 = this.b3Data;
+    const cabinets = this.cabinetsData.map((c,i)=>({ ...c, idx:i, isActive: i===this.state.activeCabinet }));
+    const activeCab = cabinets[this.state.activeCabinet] || cabinets[0];
+    const wheelNodes = cabinets.map((c,i)=>({ name:c.name, style:this.wheelGeometry(i,i===this.state.activeCabinet), onClick:()=>this.setState({activeCabinet:i}) }));
+    const orbitNodes = b2.map((n,i)=>({ ...n, style: this.orbitGeometry(i) }));
+    const shield = this.state.vaultMode === 'shield';
+    const metaColors = { route:'#7E93B8', scan:'#C8A55C', redact:'#C8A55C', commit:'#6FA98A', gate:'#C8A55C', done:'#6FA98A' };
+    const logLines = this.logData.map((l,i)=>{
+      const on = i < this.state.reveal;
+      const cur = i === this.state.reveal-1;
+      return {
+        ...l,
+        metaColor: shield ? (metaColors[l.meta]||'#C8A55C') : (l.meta==='redact'||l.meta==='scan'?'#C16B5A':'#9AA0AA'),
+        textColor: on ? (shield ? (cur?'#F5EFE0':'rgba(245,239,224,.7)') : 'rgba(245,239,224,.45)') : 'rgba(245,239,224,.12)',
+        style: `display:flex;align-items:center;gap:10px;opacity:${on?1:.4};transition:opacity .4s;${cur?'transform:translateX(2px)':''}`
+      };
+    });
+
+    const telShield = [
+      { label:'Audit log immutable', value:'append-only', pct:'100%', color:'#6FA98A' },
+      { label:'Zero-PII scan', value:'100%', pct:'100%', color:'#C8A55C' },
+      { label:'AI-Act compliance', value:'94%', pct:'94%', color:'#C8A55C' },
+      { label:'Sober score · 1an+', value:'A+', pct:'92%', color:'#6FA98A' }
+    ];
+    const telBrute = [
+      { label:'Audit log immutable', value:'OFF', pct:'18%', color:'#C16B5A' },
+      { label:'Zero-PII scan', value:'leaking', pct:'34%', color:'#C16B5A' },
+      { label:'AI-Act compliance', value:'unknown', pct:'22%', color:'#C16B5A' },
+      { label:'Sober score · 1an+', value:'D — burn', pct:'14%', color:'#C16B5A' }
+    ];
+
+    return {
+      persona, personas,
+      profileTag: `color:${persona.accent};font-weight:700`,
+      personaCards: personas.map(p=>{
+        const active = p.id === this.state.persona;
+        return {
+          ...p,
+          onClick: ()=> this.setPersona(p.id),
+          codeColor: active ? '#0A0E16' : p.accent,
+          priorityColor: p.priority ? (active?'rgba(10,14,22,.7)':'#6FA98A') : (active?'rgba(10,14,22,.55)':'rgba(245,239,224,.35)'),
+          priorityLabel: p.priority ? 'priority · wave 01' : 'queue',
+          style: `display:block;width:100%;cursor:pointer;padding:22px 26px;text-align:left;transition:all .25s;border:1px solid ${active?'#C8A55C':'rgba(245,239,224,.12)'};background:${active?'linear-gradient(120deg,rgba(200,165,92,.14),rgba(200,165,92,.04))':'rgba(255,255,255,.012)'}`
+        };
+      }),
+      pricing: [
+        { tier:'self-host', price:'$750', note:'Expert-Comptable · /mo' },
+        { tier:'pro', price:'$2K', note:'Avocat · Médical · /mo' },
+        { tier:'sovereign', price:'$5K', note:'Family-Office · MRR' },
+        { tier:'sanctuary', price:'$50K', note:'multi-vault · MRR' }
+      ],
+      oldModel: ['SaaS publics multi-tenant, vos données ailleurs','Greenwashing « RGPD compliant » non vérifié','Excel + juniors + facturation manuelle'],
+      newModel: ['Vault privé souverain, périmètre à vous','Zero-PII by design, prouvé par l\u2019audit log','Sober 1an+, 3 superhumans + 32 squads'],
+      heroStats: [
+        { k:'100%', l:'Zero-PII' }, { k:'0', l:'SaaS public' },
+        { k:'AI-Act', l:'ready' }, { k:'48h', l:'audit delivered' }
+      ],
+      orbitNodes,
+      b2: b2.map((n,i)=>({ ...n, n: String(i+1).padStart(2,'0') })),
+      b3,
+      leviers: this.leviersData,
+      steps: [
+        { n:'STEP 01', title:'L\u2019audit silencieux', body:'Vous droppez une URL. Practice Owner scanne votre stack, détecte les fuites PII, classe le risque AI-Act. Aucun call.', meta:'~ 6 min · async' },
+        { n:'STEP 02', title:'Le sanctuary', body:'Vault privé chiffré provisionné. Audit log immutable activé. Vos données ne sortent jamais du périmètre. Zero-PII by default.', meta:'vault chiffré · sovereign' },
+        { n:'STEP 03', title:'Activation', body:'8 cabinets + 32 squads bootés sur votre mandat. Le vault tourne. Vous signez, ça ships. Sober 1an+ garanti.', meta:'live sous 48h' }
+      ],
+      formOpen: !this.state.formDone,
+      cabinets,
+      wheelNodes,
+      activeCab,
+      activeCabPad: String(this.state.activeCabinet+1).padStart(2,'0') + ' / 09',
+      logLines,
+      telemetry: shield ? telShield : telBrute,
+      vaultMode: this.state.vaultMode,
+      isShield: shield,
+      statusColor: shield ? '#6FA98A' : '#C16B5A',
+      statusLabel: shield ? 'secured' : 'exposed',
+      shieldBorder: shield ? 'rgba(200,165,92,.4)' : 'rgba(193,107,90,.45)',
+      shieldBg: shield ? 'linear-gradient(160deg,rgba(200,165,92,.05),transparent)' : 'linear-gradient(160deg,rgba(193,107,90,.07),transparent)',
+      shieldBtn: `font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;padding:9px 16px;cursor:pointer;border:none;background:${shield?'#C8A55C':'transparent'};color:${shield?'#0A0E16':'rgba(245,239,224,.6)'};font-weight:${shield?700:400}`,
+      bruteBtn: `font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.08em;padding:9px 16px;cursor:pointer;border:none;background:${!shield?'#C16B5A':'transparent'};color:${!shield?'#0A0E16':'rgba(245,239,224,.6)'};font-weight:${!shield?700:400}`,
+      setShield: ()=> this.setState({ vaultMode:'shield' }),
+      setBrute: ()=> this.setState({ vaultMode:'brute' }),
+      formDone: this.state.formDone,
+      setPersona: (id)=> this.setPersona(id),
+      setCabinet: (i)=> this.setState({ activeCabinet: i }),
+      toggleVault: (m)=> this.setState({ vaultMode: m }),
+      submitForm: (e)=>{ e && e.preventDefault && e.preventDefault(); this.setState({ formDone:true }); },
+      scrollToForm: ()=> this.scrollTo('cta'),
+      scrollToAnatomy: ()=> this.scrollTo('s02')
+    };
+  }
+}
+</script>
+</body>
+</html>

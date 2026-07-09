@@ -1,0 +1,12 @@
+@echo off
+rem OpenClaw Gateway (v2026.2.25)
+set "HOME=C:\Users\amado"
+set "TMPDIR=C:\Users\amado\AppData\Local\Temp"
+set "PATH=C:\Program Files\PowerShell\7;C:\Python314\Scripts\;C:\Python314\;C:\Python313\Scripts\;C:\Python313\;c:\Users\amado\AppData\Local\Programs\cursor\resources\app\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\amado\AppData\Local\Microsoft\WindowsApps;c:\Users\amado\AppData\Local\Programs\cursor\resources\app\bin;c:\Users\amado\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\ProgramData\chocolatey\bin;C:\Users\amado\AppData\Roaming\Python\Python313\Scripts;C:\Program Files\PuTTY\;C:\Program Files\RedHat\Podman\;C:\Program Files\Void\bin;C:\Program Files (x86)\cloudflared\;C:\Program Files\PowerShell\7-preview\preview;C:\Program Files\PowerShell\7\;C:\Program Files\nodejs\;C:\Program Files\GitHub CLI\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\amado\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\amado\AppData\Local\Programs\Python\Python312\;C:\Users\amado\AppData\Local\Programs\Automa;C:\Users\amado\.local\bin;C:\Users\amado\AppData\Local\Microsoft\WindowsApps;C:\Users\amado\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\amado\.dotnet\tools;C:\Users\amado\AppData\Local\Programs\Ollama;C:\Users\amado\AppData\Local\GitHubDesktop\bin;C:\Users\amado\AppData\Local\Programs\cursor\resources\app\bin;C:\Users\amado\.lmstudio\bin;c:\users\amado\.local\bin;c:\users\amado\appdata\roaming\python\python313\scripts;C:\Users\amado\AppData\Local\Programs\Antigravity\bin;C:\Users\amado\AppData\Roaming\npm;C:\Users\amado\.dotnet\tools;C:\Users\amado\AppData\Local\PowerToys\DSCModules\"
+set "OPENCLAW_GATEWAY_PORT=18789"
+set "OPENCLAW_GATEWAY_TOKEN=510b36030a388d2697938e7e05769141e62160bf2478b6b9"
+set "OPENCLAW_SYSTEMD_UNIT=openclaw-gateway.service"
+set "OPENCLAW_SERVICE_MARKER=openclaw"
+set "OPENCLAW_SERVICE_KIND=gateway"
+set "OPENCLAW_SERVICE_VERSION=2026.2.25"
+"C:\Program Files\nodejs\node.exe" C:\Aspace00\aspace_a0_amadeus\00_Amadeus\03_OpenClaw_Body\openclaw\dist\index.js gateway --port 18789

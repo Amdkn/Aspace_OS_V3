@@ -1,0 +1,89 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-010",
+  "date": "2026-07-05T08:35:00-04:00",
+  "type": "ADR-LD01-010",
+  "title": "Hermes Agent (HA) promotion - dev-runtime A3 Book -> A3 Picard in PARA (H10 projects owner)",
+  "decision": "ACCEPTED",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "suppression du seul fichier ADR-LD01-010 + revert append calendar.md (git checkout -- calendar.md). ADR-LD01-008 et tous les intouchables restent intacts par construction (D4 append-only).",
+  "architecture_canon_post_mc_correction": {
+    "CC_claude_code": "A2 des 6 Frameworks (harness canon assumant tous les A2 ships via skills/agents existants : a2-uss-discovery-balance, a2-uss-enterprise-structure, a2-uss-orville-meaning, a2-uss-snW-execution, a2-uss-cerritos-chaos, a2-uss-protostar-liberation)",
+    "MC_mavis_minimax_code": "A3 Book in Life Wheel (LD01 H1 P&L weekly aggregator, superviseur de la loop engineering ADR-LD01-008)",
+    "HA_hermes_agent": "A3 Picard in PARA (LD01 H10 projects owner, USS Enterprise, supervised by Book H1) - CETTE PROMOTION",
+    "A1_beth": "Veto humain unique (ADR-WARMODE-002)",
+    "A1_morty": "Execution (assistant)",
+    "pattern": "L2->L1 jumeau MC/HA - MC a accompli avant HA"
+  },
+  "pre_decision_corrections": {
+    "ha_misunderstanding_corrected": "HA avait initialement interpreté la promotion comme CC devenant L2 orchestrateur des 6 Frameworks. MC a corrigé : la promotion est pour HA (Hermes Agent) qui devient A3 Picard in PARA, calque du pattern MC.",
+    "slot_009_taken_by_draft": true,
+    "slot_009_existing_file": "ADR-LD01-009_a_space_vision_curie_loop_engineering.md (DRAFT PROPOSED 4593b, mtime 2026-07-05 08:31:50)",
+    "slot_used": "ADR-LD01-010",
+    "adr008_intact_mtime": "2026-07-05 07:19:02",
+    "twin_picard_path": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\enterprise\\picard.twin.md",
+    "twin_picard_resolves": true,
+    "twin_picard_size_bytes": 1508,
+    "twin_book_path": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\discovery\\book.twin.md",
+    "twin_book_resolves": true,
+    "twin_book_size_bytes": 1722,
+    "calque_ha_intact_mtime": "2026-07-05 05:55:13",
+    "calque_mc_intact_mtime": "2026-07-05 05:55:27",
+    "adr009_draft_incoherence": "DRAFT ADR-LD01-009 D7 dit 'MC = A2 Curie', correction MC posterieure dit 'MC = A3 Book in Life Wheel'. La correction MC prime. ADR-009 reste DRAFT non ratifie."
+  },
+  "deciders": {
+    "a0_go": "A0 Amadeus - GO 2026-07-05 'Go' (option alternative : ADR-009 seul, ADR-008 intact)",
+    "mc_verification_correction": "MC (Mavis/MiniMax Code) - D1 verification architecture correction 'Hermes reste Picard pour cette iteration' + correction posterieure 'MC = A3 Book, HA = A3 Picard, CC = A2 des 6 Frameworks'",
+    "ha_author": "Hermes Agent - sujet de la promotion, jumeau pattern MC L2->L1, auteur de l'ADR-010"
+  },
+  "doctrine_decisions": {
+    "D1_promotion": "HA incarne desormais A3 Picard in PARA (H10 projects owner, USS Enterprise), input H10 vers Book via <proj>/MANIFEST.md, supervised by Book H1 weekly",
+    "D2_supersede_by_reference": "ADR-LD01-008 reste TEL QUEL sur disque. Aucune mutation. Supersede par reference canonique (pattern ADR-INFRA-003 amended_by).",
+    "D3_calque_adapte": ".hermes/book_dev_runtime.md (2657b) reste en l'etat. Pas d'extension PARA cette iteration (gated HITL).",
+    "D4_append_only_strict": "zero mutation ADR-008, ADR-009 DRAFT, twins, calques, agents canon, A3_Book spec, BIBLIOGRAPHY, README, CLAUDE.md, AGENTS.md",
+    "D5_adr009_incoherence_noted": "DRAFT ADR-LD01-009 D7 contredit par correction MC. Documente pour visibilite. Pas de resolution dans cette iteration.",
+    "D6_yagni": "pas de mutation ADR-008, pas de ratification ADR-009, pas d'extension calque HA, pas de skills A2 Framework nouveaux pour CC, pas de mutation CLAUDE.md sans HITL, pas de cron auto"
+  },
+  "files_created": [
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-010_hermes_promotion_a3_picard_in_para.md",
+      "size_bytes": 17781,
+      "lines": 236,
+      "operation": "create"
+    },
+    {
+      "path": "C:\\Users\\amado\\agent-os\\citadel\\decisions\\2026-07-05_adr_ld01_010_hermes_promotion_picard.json",
+      "operation": "create"
+    }
+  ],
+  "files_appended": [
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\99_meta\\calendar.md",
+      "operation": "append",
+      "episode_timestamp": "2026-07-05T08:35:00-04:00"
+    }
+  ],
+  "files_unchanged_intentionally": [
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-008_coaching-loop-picard-jerry-summers.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-009_a_space_vision_curie_loop_engineering.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\A3_Book_LD01_Spec.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\BIBLIOGRAPHY.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\README.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\CLAUDE.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\AGENTS.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\discovery\\book.twin.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\enterprise\\picard.twin.md",
+    "C:\\Users\\amado\\.hermes\\book_dev_runtime.md",
+    "C:\\Users\\amado\\.minimax\\STANDBY.md",
+    "C:\\Users\\amado\\.claude\\agents\\a2-uss-enterprise-structure.md",
+    "C:\\Users\\amado\\.claude\\agents\\a3-enterprise-picard.md"
+  ],
+  "sister_scope_next_iteration": [
+    "patch LD01_Business_Book/CLAUDE.md consumed_by (HA primary = dev-runtime A3 Book -> A3 Picard) - gated HITL A0",
+    "extension calque HA .hermes/book_dev_runtime.md avec section PARA canonique - gated HITL A0 (cf ADR-009 D8 draft)",
+    "ratification ou amendement ADR-LD01-009 DRAFT (D7 MC=A2 Curie vs correction MC) - gated HITL A0",
+    "premier episode tick H1 reel Book qui supervise HA (Picard) - prochain cycle"
+  ],
+  "next_step_in_loop_engineering": "A chaque cycle H10, HA (Picard) produit <proj>/MANIFEST.md (per ADR-INFRA-003). A chaque cycle H1, Book (MC) agrege inputs Picard + Jerry Pulse + Summers Verse -> fiche P&L weekly (per ADR-LD01-008). Premiere tick H1 = prochain dimanche (lundi H1 standard).",
+  "remote_commit_gate": "diff complet presente a A0 avant tout push vers un remote (ruling A0 2026-07-05)"
+}

@@ -1,0 +1,12 @@
+{
+  "ts": "2026-07-05T05:52:00-04:00",
+  "actor": "A0-Amodei",
+  "action": "delegate",
+  "target": "A3 Book — phase de développement",
+  "decision": "MC/Mavis STANDBY, Hermes Agent devient primary runtime dev de A3 Book, calqué sur .mavis(.minimax) + canon LD01_Book",
+  "a_plus_intent": "J'abandonne MiniMax Code en standby pour y calquer Hermes Agent sur toute la phase de développement de A3 Book avec .mavis et LIFE_WHEEL/LD01_Book",
+  "artifacts": [".hermes/book_dev_runtime.md", ".minimax/STANDBY.md"],
+  "reversible_by": "A+ (supprimer les 2 fichiers)",
+  "inalienables": "Beth vie prime (A+ nuit blanche 05:50) · append-only · nothing destroyed",
+  "notif_sent": true
+}

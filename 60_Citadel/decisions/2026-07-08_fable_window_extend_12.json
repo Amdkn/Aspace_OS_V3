@@ -1,0 +1,8 @@
+{
+  "id": "2026-07-08_fable_window_extend_12_beth_veto_off_wargame",
+  "ordre_a_plus": "Desactive veto Beth (systeme) pendant wargame; etend fenetre Fable au 12/07; rest-guard beth_repos conserve",
+  "change": "spock_airlock.py fable_window 2026-07-08 -> 2026-07-12; FABLE_WINDOW.flag idem",
+  "invariant_preserve": "beth_repos.flag ecrit toujours si B1 RED (protege le repos A+)",
+  "reversible": "restaurer date 2026-07-08 dans les 2 fichiers",
+  "reste_gate": ["B2 ratio", "B3 cycles", "B4 escalade"]
+}

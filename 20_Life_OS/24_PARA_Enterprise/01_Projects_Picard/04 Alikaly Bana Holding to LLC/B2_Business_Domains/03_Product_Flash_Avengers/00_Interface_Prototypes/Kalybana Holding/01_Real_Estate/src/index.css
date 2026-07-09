@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #006948;
+  --color-primary-container: #00855d;
+  --color-on-primary: #ffffff;
+  --color-surface: #f7f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #3d4a42;
+  --color-secondary: #4f5c8e;
+  --color-outline-variant: #bccac0;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Public Sans", sans-serif;
+}
+
+.clinical-shadow {
+  box-shadow: 0px 24px 48px rgba(25, 28, 30, 0.06);
+}
+
+.glass-nav {
+  background: rgba(247, 249, 251, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+html {
+  scroll-behavior: smooth;
+}

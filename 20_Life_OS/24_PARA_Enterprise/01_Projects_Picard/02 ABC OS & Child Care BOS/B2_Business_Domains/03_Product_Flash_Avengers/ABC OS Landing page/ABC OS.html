@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ABC OS — African Business Cooperatives Operating System</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  html,body{ margin:0; padding:0; background: #0b0a09; font-family: 'Manrope', -apple-system, sans-serif; -webkit-font-smoothing:antialiased; }
+  .font-serif { font-family: 'Instrument Serif', 'Cormorant Garamond', serif; }
+  .scrollbar-hide::-webkit-scrollbar{ display:none; }
+  .scrollbar-hide{ -ms-overflow-style:none; scrollbar-width:none; }
+  /* Soft grain on the page background */
+  body::before{
+    content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+    background-image:
+      radial-gradient(1200px 600px at 20% -10%, rgba(225,95,65,0.08), transparent 60%),
+      radial-gradient(900px 700px at 110% 120%, rgba(16,185,129,0.07), transparent 55%);
+  }
+  /* Mobile screen fonts inherit */
+  .abc-screen{ font-family: 'Manrope', sans-serif; }
+
+  /* Subtle weave/agri textures rendered in pure CSS so we never look like AI slop */
+  .tex-field{
+    background:
+      radial-gradient(120% 60% at 50% 110%, rgba(0,0,0,0.55), transparent 70%),
+      repeating-linear-gradient(110deg, rgba(0,0,0,0.18) 0 1px, transparent 1px 6px),
+      linear-gradient(180deg, #1f3a2b 0%, #2c5a3a 38%, #3d7a47 70%, #5a9a4f 100%);
+  }
+  .tex-solar{
+    background:
+      linear-gradient(180deg, rgba(0,0,0,0.0) 55%, rgba(0,0,0,0.5) 100%),
+      repeating-linear-gradient(70deg, #0d2538 0 14px, #163654 14px 15px, #0d2538 15px 28px),
+      linear-gradient(180deg, #2a5e88 0%, #1a3f5b 60%, #0a2030 100%);
+  }
+  .tex-weave{
+    background:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 7px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 8px),
+      linear-gradient(135deg, #7a3d22 0%, #b15a32 50%, #d9824a 100%);
+  }
+  .tex-garden{
+    background:
+      radial-gradient(60% 70% at 30% 80%, rgba(0,0,0,0.5), transparent 70%),
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.15) 0 2px, transparent 2px 9px),
+      linear-gradient(160deg, #2d4a1f 0%, #4d7a36 55%, #8baf5a 100%);
+  }
+  .tex-loom{
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,0.22) 0 1px, transparent 1px 5px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 6px),
+      linear-gradient(135deg, #5c2a18 0%, #8a3e22 60%, #d4824a 100%);
+  }
+
+  /* Custom animations */
+  @keyframes fadeUp { from { opacity:0; transform: translateY(8px); } to { opacity:1; transform:none; } }
+  .anim-fade-up{ animation: fadeUp .35s ease-out both; }
+  @keyframes pulseGlow { 0%,100%{ box-shadow: 0 0 0 0 rgba(225,95,65,0.45);} 50%{ box-shadow: 0 0 0 14px rgba(225,95,65,0);} }
+  .anim-pulse{ animation: pulseGlow 2.2s ease-out infinite; }
+  @keyframes ringDraw { from { stroke-dashoffset: var(--circ); } to { stroke-dashoffset: var(--off); } }
+
+  /* Sub-tab pill underline */
+  .tab-underline{ position:relative; }
+  .tab-underline.active::after{
+    content:''; position:absolute; left:8px; right:8px; bottom:-9px;
+    height:2px; border-radius:2px; background: #e15f41;
+  }
+</style>
+</head>
+<body>
+<div id="root" style="min-height:100vh; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; padding:40px 16px;"></div>
+
+<script type="text/babel" src="ios-frame.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="abc/icons.jsx"></script>
+<script type="text/babel" src="abc/screens.jsx"></script>
+<script type="text/babel" src="abc/app.jsx"></script>
+</body>
+</html>

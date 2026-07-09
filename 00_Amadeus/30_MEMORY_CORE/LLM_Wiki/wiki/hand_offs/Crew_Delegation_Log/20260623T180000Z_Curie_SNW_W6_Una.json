@@ -1,0 +1,11 @@
+{
+  "bridge": "A2_to_A3",
+  "ts": "2026-06-23T18:00:00+00:00",
+  "ship": "Curie_SNW",
+  "domain": "W6",
+  "a3_name": "Una",
+  "critical": false,
+  "mission": {
+    "summary": "W6 Rock livrable shipped: A3 Life OS org chart (35 L1 twins + 9 L0 companions mapped to 6 A2 ships, with LD/GTD/PARA/Ikigai/DEAL coverage matrices) + A3 delegation matrix (trigger-phrase -> A3 twin routing for all 6 ships, A1 escalation rules, 24 canonical routing examples, D1-D8 anti-paresse checks). DoD: 8/8 LD domains, 5/5 GTD stages, 4/4 PARA tiers, 4/4 Ikigai pillars, 4/4 DEAL stages all covered with named twin owner. State-bus.v1 envelope honored. Sister docs: wiki/hand_offs/W6_life_os_org_chart_2026-06-23.md + wiki/hand_offs/W6_a3_delegation_matrix_2026-06-23.md. Log pointer appended to wiki/log.md per D4 append-only."
+  }
+}

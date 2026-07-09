@@ -1,0 +1,36 @@
+{
+  "guide_id": "resource_bfmbusiness_empire_milliard_ia",
+  "guide_title": "Empire a un Milliard en Solo - One-Person Billion-Dollar Companies",
+  "guide_size_chars": 8050,
+  "pilier_numero": 5,
+  "pilier_titre_canon": "Empire IA Sober Orchestration",
+  "insight_canon_verbatim": "La valeur de l'entreprise n'est plus dans le nombre de salaries, mais dans la capacite du createur a orchestrer les intelligences artificielles. Le fondateur a agi en tant que A0/A1 (Vision et Produit), laissant les LLMs rediger les ADR (Architecture) et implementer le DDD (Domain-Driven Design).",
+  "concept_cles": [
+    "Scalabilite sans Inertie: zero friction RH, iteration quasi-instantanee",
+    "Propriete Totale IronClaw: 100% capital, 100% souverainete, 100% pouvoir decisionnel",
+    "Asymetrie de Coordination: cle = assembler briques IA specialisees",
+    "Idempotence du Pipeline: meme architecture 1 ou 250 000 clients",
+    "Pivot de Legalisation: IA conquiert, humain pacifie et legitime"
+  ],
+  "outils_souverains_alignment": [
+    "Claude/ChatGPT (codage) vers Symphony A3 + SKILL canon-batch-spawn",
+    "Midjourney + Runway vers A3 Enterprise-Data + Geordi canon",
+    "ElevenLabs vers SAPI Hortense TTS path voix souveraine",
+    "Master BMAD Cycle vers A2 USS SNW Pike + Una 7-day rhythm",
+    "OpenClaw Fleet vers A2 USS Cerritos Holo Deck capture+engage"
+  ],
+  "anti_paperclip_check_pass": false,
+  "anti_paperclip_rationale": "Le guide documente explicitement la generation de faux profils medecins et fausses images Avant/Apres (greenwashing publicitaire) et l'absence de disclosure LTV:CAC. Etude de cas viole ADR-SOBER-002 §3. Le guide FLAGGUE la dette toxique en §3.A et §4.C mais ne propose pas de garde-fou opex<15%MR chiffre. Check_pass=false car le pilier etudie un anti-pattern comme miroir negatif du souverain ASpace.",
+  "sister_canon_refs": [
+    "ADR-AAAS-ACQUISITION-DOCTRINE-001",
+    "ADR-AAAS-PRICING-001",
+    "ADR-MARKET-STUDY-001",
+    "ADR-SOBER-002",
+    "ADR-ICP-SOLARIS-001"
+  ],
+  "a3_twin_sisters": [
+    "a3-cerritos-freeman",
+    "a3-discovery-saru",
+    "a3-orville-isaac"
+  ]
+}

@@ -1,0 +1,211 @@
+<p>Magistral, Capitaine. Tes maquettes Stitch posent déjà l’ossature du <strong>RILCOT OS</strong> : accueil public, dashboard membre, gouvernance, portefeuille projets, réseau universitaire, finances. Ça colle proprement au SOB que nous avons formalisé.</p>
+<p>Voici un plan d’attaque ultra-opérationnel pour passer du proto au produit :</p>
+<h1 id="1-architecture-produit-vue-d-ensemble">1) Architecture produit (vue d’ensemble)</h1>
+<ul>
+<li><strong>Apps</strong> :</li>
+</ul>
+<ol>
+<li>
+<p><strong>Public</strong> (site RILCOT) → Mission, Structure, Domaines, Adhésion, Contact.</p>
+</li>
+<li>
+<p><strong>Membres</strong> (Dashboard) → Adhésion (Demande/Paiement/Statut), Profil, Agenda, Documents.</p>
+</li>
+<li>
+<p><strong>Admin/CC</strong> → Gouvernance (AG/CC/CF), Projets, Réseau universitaire, Finances/KPI.</p>
+</li>
+</ol>
+<ul>
+<li><strong>Rôles/RBAC</strong> : Public, Membre, Secrétaire Exécutif, Trésorier, Coordonnateur, CF. (Audit log + consentements).</li>
+</ul>
+<h1 id="2-parcours-critiques-align-s-sop">2) Parcours critiques (alignés SOP)</h1>
+<ul>
+<li><strong>SOP-01 – Adhésion</strong> (tes onglets <em>Demande / Paiement / Statut</em> sont parfaits) :</li>
+</ul>
+<ol>
+<li>Saisie → 2) Paiement → 3) Validation CC → 4) ID + Carte → 5) Onboarding → 6) Cotisation mensuelle.</li>
+</ol>
+<p>UX à ajouter : barre de progression, validations live, récap PDF, reçus, relances auto J+3/J+30.</p>
+<ul>
+<li>
+<p><strong>SOP-02 – AG</strong> : calendrier, quorum, PV signé, publication décisions (liste consultable + filtres).</p>
+</li>
+<li>
+<p><strong>SOP-03 – Dépenses</strong> : double signature, pièces jointes, rapprochement, variance budget. (Widgets “exécution budgétaire” déjà dans ta planche).</p>
+</li>
+<li>
+<p><strong>SOP-05 – Portefeuille projets</strong> : cartes “idée→cadrage→exécution→revue→clôture”, KPI impact et ODD visibles.</p>
+</li>
+<li>
+<p><strong>SOP-08 – Réseau universitaire</strong> : fiches points focaux, feuilles de route trimestrielles, kits d’essaimage téléchargeables.</p>
+</li>
+</ul>
+<h1 id="3-mod-le-de-donn-es-minimal-db">3) Modèle de données minimal (DB)</h1>
+<ul>
+<li>
+<p><strong>Members</strong>(id, nom, email, tel, campus, statut, roles)</p>
+</li>
+<li>
+<p><strong>Applications</strong>(id, member_id, formulaire_json, statut, date)</p>
+</li>
+<li>
+<p><strong>Payments</strong>(id, member_id, type: adhesion|cotisation, montant, devise, reçu_url, date)</p>
+</li>
+<li>
+<p><strong>Projects</strong>(id, titre, phase, budget, depense, kpi_cle, responsable_id)</p>
+</li>
+<li>
+<p><strong>Meetings</strong>(id, type: AG|CC|CF|CR, date, quorum, pv_url, decisions[])</p>
+</li>
+<li>
+<p><strong>Decisions</strong>(id, meeting_id, objet, vote, resultat, lien_preuve)</p>
+</li>
+<li>
+<p><strong>Universities</strong>(id, nom, ville, pays) ; <strong>Representatives</strong>(member_id, university_id, mandat_debut/fin)</p>
+</li>
+<li>
+<p><strong>Documents</strong>(id, type, url, access_level)</p>
+</li>
+<li>
+<p><strong>AuditLogs</strong>(id, actor_id, action, entity, timestamp)</p>
+</li>
+</ul>
+<h1 id="4-api-endpoints-extrait">4) API/Endpoints (extrait)</h1>
+<ul>
+<li>
+<p><code>POST /applications</code> (création adhésion) → <code>GET /applications/:id/status</code></p>
+</li>
+<li>
+<p><code>POST /payments</code> (webhook PSP) ; <code>GET /members/:id/payments</code></p>
+</li>
+<li>
+<p><code>GET /projects?phase=…</code> ; <code>POST /meetings</code> ; <code>POST /decisions</code></p>
+</li>
+<li>
+<p><code>GET /kpi/summary?period=YYYY-MM</code> (alimente les cartes KPI).</p>
+</li>
+</ul>
+<h1 id="5-composants-ui-librairie">5) Composants UI (librairie)</h1>
+<ul>
+<li>
+<p><strong>Atoms</strong> : Badge Statut (Actif/Suspendu/En révision), Tag Domaine, ProgressBar % budget.</p>
+</li>
+<li>
+<p><strong>Molecules</strong> : Card Projet (phase + %), Item Finance (montant + double signature OK/NOK).</p>
+</li>
+<li>
+<p><strong>Organisms</strong> : Wizard Adhésion (3 étapes), Tableau Décisions (filtre AG/CC/CF), Feuille de Route Campus.</p>
+</li>
+<li>
+<p><strong>Templates</strong> : Dashboard Membre (header + tabs), Console Admin (nav latérale + sections Gouvernance/Projets/Finances).</p>
+</li>
+</ul>
+<p>Ces blocs recouvrent précisément tes écrans de “Gouvernance / Portefeuille / Réseau universitaire / Finance Overview”.</p>
+<h1 id="6-mesure-kpi-widgets-impl-menter">6) Mesure &amp; KPI (widgets à implémenter)</h1>
+<ul>
+<li>
+<p><strong>Gouvernance</strong> : AG tenues (4/an), quorum (%), délai PV (jours).</p>
+</li>
+<li>
+<p><strong>Communauté</strong> : membres actifs, rétention, ratio genre/jeunes.</p>
+</li>
+<li>
+<p><strong>Projets</strong> : livrés/phase, % livrables atteints, bénéficiaires.</p>
+</li>
+<li>
+<p><strong>Finances</strong> : exécution budgétaire %, fonds levés, conformité double signature.</p>
+</li>
+<li>
+<p><strong>Campus</strong> : # actifs, événements/trimestre, adhésions étudiantes.</p>
+</li>
+</ul>
+<h1 id="7-s-curit-conformit">7) Sécurité &amp; conformité</h1>
+<ul>
+<li>
+<p><strong>Double signature</strong> en workflow (décision + paiement ≠ même personne).</p>
+</li>
+<li>
+<p><strong>Journalisation</strong> (AuditLogs) par action sensible.</p>
+</li>
+<li>
+<p><strong>Charte veto</strong> : pop-in informative + log “motif + durée + réversibilité” (revu par CF).</p>
+</li>
+</ul>
+<h1 id="8-qualit-d-ex-cution-checklist-design-tech">8) Qualité d’exécution (checklist design/tech)</h1>
+<ul>
+<li>
+<p>Accessibilité (contrastes AA, focus, labels).</p>
+</li>
+<li>
+<p>Mobile-first (tes écrans y sont déjà, garde les boutons d’action “thumb reachable”).</p>
+</li>
+<li>
+<p>I18N (fr/en) dès le design system.</p>
+</li>
+<li>
+<p>États vides / erreurs / skeleton loaders.</p>
+</li>
+<li>
+<p>Pièces jointes : prévisualisation + vérif taille/type.</p>
+</li>
+</ul>
+<h1 id="9-backlog-semaine-0-semaine-4">9) Backlog “Semaine 0 → Semaine 4”</h1>
+<ol>
+<li>
+<p><strong>Découper</strong> tes écrans Stitch en composants (atoms→organisms).</p>
+</li>
+<li>
+<p><strong>Implémenter</strong> le <strong>Wizard d’Adhésion</strong> (3 étapes) + reçu PDF.</p>
+</li>
+<li>
+<p><strong>Paiement</strong> : intégrer un PSP local (Mobile Money) + webhook <code>POST /payments</code>.</p>
+</li>
+<li>
+<p><strong>Ecran Admin &gt; Gouvernance</strong> : créer/répertorier AG/CC/CF, charger PV, créer décisions.</p>
+</li>
+<li>
+<p><strong>Portefeuille Projets</strong> : CRUD + phases + KPI clé.</p>
+</li>
+<li>
+<p><strong>Finance Overview</strong> : budget vs dépense + alertes variance.</p>
+</li>
+<li>
+<p><strong>Réseau Universitaire</strong> : annuaire + feuille de route trimestrielle + export.</p>
+</li>
+<li>
+<p><strong>KPI Dashboard</strong> : brancher 6–8 indicateurs phares.</p>
+</li>
+<li>
+<p><strong>RBAC + Audit log</strong>.</p>
+</li>
+<li>
+<p><strong>Tests</strong> e2e des SOP-01/02/03/05.</p>
+</li>
+</ol>
+<h1 id="10-copy-micro-interactions-quick-wins">10) Copy &amp; micro-interactions (quick wins)</h1>
+<ul>
+<li>
+<p>Accueil : bouton primaire “<strong>Devenir Membre</strong>”, secondaire “Découvrir nos projets”.</p>
+</li>
+<li>
+<p>Statuts de dossier : “Reçu → En revue CC → Accepté → Carte prête → Actif”.</p>
+</li>
+<li>
+<p>Finance : badge <strong>“Double signature validée”</strong> / <strong>“En attente 2/2”</strong>.</p>
+</li>
+<li>
+<p>Réseau Universitaire : CTA “Télécharger le Kit d’essaimage”.</p>
+</li>
+</ul>
+<p>Si tu veux, je peux te livrer maintenant :</p>
+<ul>
+<li>
+<p>une <strong>spec API concise</strong> (OpenAPI .yaml) basée sur le modèle ci-dessus,</p>
+</li>
+<li>
+<p>un <strong>Design Tokens JSON</strong> (typographies, espacements, états),</p>
+</li>
+<li>
+<p>et un <strong>board de tickets</strong> (Semaine 0→4) prêt à importer.</p>
+</li>
+</ul>

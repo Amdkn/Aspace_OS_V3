@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.1",
+    "lastTouchedAt": "2026-02-03T16:44:14.666Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-02-03T16:44:14.635Z",
+    "lastRunVersion": "2026.2.1",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "google-antigravity/gemini-3-flash",
+        "fallbacks": [
+          "google-antigravity/claude-sonnet-4-5",
+          "google-antigravity/claude-opus-4-5-thinking"
+        ]
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "workspace": "../../01_Identity_Core",
+      "models": {
+        "google-antigravity/gemini-3-flash": {
+          "alias": "flash"
+        },
+        "google-antigravity/gemini-3-pro-low": {
+          "alias": "low"
+        },
+        "google-antigravity/gemini-3-pro-high": {
+          "alias": "pro"
+        },
+        "google-antigravity/claude-sonnet-4-5": {
+          "alias": "sonnet"
+        },
+        "google-antigravity/claude-sonnet-4-5-thinking": {
+          "alias": "think"
+        },
+        "google-antigravity/claude-opus-4-5-thinking": {
+          "alias": "opus"
+        },
+        "google-antigravity/gpt-oss-120b-medium": {
+          "alias": "oss"
+        }
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "groupPolicy": "allowlist",
+      "streamMode": "partial",
+      "botToken": "YOUR_BOT_TOKEN",
+      "allowFrom": [
+        "8466501613"
+      ]
+    },
+    "googlechat": {
+      "enabled": false,
+      "groupPolicy": "allowlist"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "YOUR_AUTH_TOKEN"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "google-antigravity-auth": {
+        "enabled": true
+      },
+      "telegram": {
+        "enabled": true
+      },
+      "googlechat": {
+        "enabled": true
+      }
+    }
+  },
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "auth": {
+    "profiles": {
+      "google-antigravity:amdkn777@gmail.com": {
+        "provider": "google-antigravity",
+        "mode": "oauth",
+        "email": "amdkn777@gmail.com"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    }
+  }
+}

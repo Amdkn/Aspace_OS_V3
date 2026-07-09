@@ -1,0 +1,53 @@
+{
+  "name": "book_loop",
+  "version": "0.1",
+  "doctrine": "Loop Engineering / Meta Harness Engineering per Plan L2 Dark Factory §3.4 + §6 MiroFish gouverneur. Lecture seule sur sources canoniques + append-only output. Pas d'auto-approval. /ship JAMAIS automatique.",
+  "schedule": {
+    "type": "interval",
+    "frequency": "every 4 hours (boundary MiroFish + intraday heartbeat)",
+    "cadence_role": "wake Book COO sur chaque boundary Triptyque + maintenir Loop Engineering Report visible",
+    "gating": "decisions/enable_book_loop.flag (A0 HITL required per Posture C)"
+  },
+  "input": {
+    "decision_canon": "plan-l2-dark-factory-book-coo-compression-12wy.md",
+    "sister_LD01": "LD01/99_meta/plan_l2_dark_factory_sister.md",
+    "agents_root": "C:\\Users\\amado\\.mavis\\agents\\",
+    "decision_files_root": "C:\\Users\\amado\\agent-os\\citadel\\decisions\\",
+    "LD01_calendar": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\99_meta\\calendar.md"
+  },
+  "output_format": {
+    "path": "cron/output/book-loop-YYYYMMDD-HHMMSS.json",
+    "schema": {
+      "ran_at": "ISO timestamp",
+      "cron_id": "book-loop-<timestamp>",
+      "day_in_cycle": "J1..J7 inféré de la date (start=2026-07-05)",
+      "triptyque_active": "T1/T2/Duo + pass-(1|2)",
+      "agents_state": {"total": 22, "B1_count": 2, "B2_count": 8, "B3_count": 8, "utilitaires_count": 4},
+      "cadence_alive": "boolean (decision files présents)",
+      "mirofish_attached": "boolean (MiroFish trace dans calendar)",
+      "risk_flags": {"kernel_Rick": false, "vie_Beth": false, "ship_outboard": false},
+      "loop_engineering_note": "human-readable narration Book COO",
+      "next_boundary": {"trigger": "J<n> → J<n+1>", "rule": "MiroFish cadence"},
+      "doctrine_check": "8 invariants anti-Ultron",
+      "auto_ratify": "false — Book ne s'auto-ratifie JAMAIS"
+    }
+  },
+  "anti_ultron": {
+    "lecture_seule_canons": true,
+    "append_only_output": true,
+    "no_writes_to_canon": true,
+    "no_writes_to_adr": true,
+    "no_writes_to_decisions": true,
+    "output_only": "cron/output/ append-only",
+    "no_auto_apply": true,
+    "no_ship_outboard": "INALIÉNABLE per A0 Murderbot §4",
+    "hook_exit_0_always": true,
+    "posture_C_flag_gated": true
+  },
+  "frequency_choices": {
+    "every_4_hours": "intraday heartbeat (default)",
+    "every_6_hours": "reduced noise",
+    "every_morning_02_et": "post-Zora compatibility (gate d default)",
+    "boundary_only": "triptyque_pass1_end + triptyque_pass2_end + J7_synthese"
+  }
+}

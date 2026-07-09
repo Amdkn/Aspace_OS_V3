@@ -1,0 +1,133 @@
+{
+  "collector": "07_decisions",
+  "pillar": 0,
+  "pillar_name": "Décisions (LE CŒUR de la Citadelle)",
+  "generated_at": "2026-07-04T22:13:55-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 + §9 Gate #2",
+  "doctrine": "lecture seule — anti-Ultron — append-only D4 — pas d'auto-approval — A0 HITL explicite",
+  "adrs": [
+    {
+      "id": "ADR-LD01-001",
+      "slug": "organigramme_doctrine",
+      "title": "ADR-LD01-001 — Organigramme Doctrine (folder-based) au lieu de plans markdown plats",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-001_organigramme_doctrine.md"
+    },
+    {
+      "id": "ADR-LD01-002",
+      "slug": "mavis_runtime_binding",
+      "title": "ADR-LD01-002 — Mavis Runtime binding canonique pour LD01",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-002_mavis_runtime_binding.md"
+    },
+    {
+      "id": "ADR-LD01-003",
+      "slug": "lightnings_bounded_contexts",
+      "title": "ADR-LD01-003 — Les 3 Lightning MC bindés aux bounded contexts LD01",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-003_lightnings_bounded_contexts.md"
+    },
+    {
+      "id": "ADR-LD01-004",
+      "slug": "true_agent_autonomy",
+      "title": "ADR-LD01-004 — True Agent Autonomy × Dark Factory Level 5 pour Book LD01",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-004_true_agent_autonomy.md"
+    },
+    {
+      "id": "ADR-LD01-005",
+      "slug": "budget_collapse_phase3_economical",
+      "title": "ADR-LD01-005 — Cost Collapse Reality (MiniMax $50/mo = 5.1B tokens)",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-005_budget_collapse_phase3_economical.md"
+    },
+    {
+      "id": "ADR-LD01-006",
+      "slug": "strategy_session_meta_skill_canon",
+      "title": "ADR-LD01-006 — Strategy Session Meta-Skill canon ratification",
+      "status": "RATIFIED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-006_strategy_session_meta_skill_canon.md"
+    },
+    {
+      "id": "ADR-LD01-007",
+      "slug": "citadelle_agent_os_jarvis_pattern",
+      "title": "ADR-LD01-007 — Citadelle Agent OS (Jarvis pattern + anti-Ultron structurel)",
+      "status": "PROPOSED",
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-007_citadelle_agent_os_jarvis_pattern.md"
+    }
+  ],
+  "gos": [
+    {
+      "id": "GO-a",
+      "label": "GO-A · Lifecycle hook install (notifications push)",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-b",
+      "label": "GO-B · Hermès desktop gateway remote-launch",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-c",
+      "label": "GO-C · Mavis skill-evolve nightly activation",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-d",
+      "label": "GO-D · Cal.com Calendar full integration",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-e",
+      "label": "GO-E · Discord channel adapter plug",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-f",
+      "label": "GO-F · Telegram HITL fallback activation",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-g",
+      "label": "GO-G · Burst Audio Transcript swarm plug",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-h",
+      "label": "GO-H · Knowledge wiki 124 pages refresh",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-i",
+      "label": "GO-I · Phase 1 sandbox L5 mini dark factory launch (b2-cyborg-it)",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-j",
+      "label": "GO-J · Cardia migration Plan-L (Wiki + Zora macro)",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-k",
+      "label": "GO-K · L1 gstack install (gated Rick S1)",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-l",
+      "label": "GO-L · L2 ceobench 500j run (gated Rick S1)",
+      "from": "TODO-W3 baseline"
+    },
+    {
+      "id": "GO-m",
+      "label": "GO-M · Muse DEAL launch (W13 phase ramp)",
+      "from": "TODO-W3 baseline"
+    }
+  ],
+  "summary": {
+    "adr_total": 7,
+    "adr_proposed": 1,
+    "adr_ratified": 6,
+    "go_total": 13,
+    "decision_files_existing": 1
+  }
+}

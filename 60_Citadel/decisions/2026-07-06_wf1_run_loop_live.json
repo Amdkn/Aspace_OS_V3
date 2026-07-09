@@ -1,0 +1,13 @@
+{
+  "action": "decision",
+  "date": "2026-07-06",
+  "title": "CORRECTION A+ : collectors != workers. RUN LOOP WF1 arme et LIVE (True Agent Autonomy option 1)",
+  "a0_verbatim": "des cron jobs qui se reveillent a heures fixes pour une vie de quelques secondes - comment appeler ca des employes AI - tu n'as toujours pas integre le concept de Loop 24/7",
+  "d1_admission": "WF1 avait produit RIEN: 0 Pass, 0/2 queue, 0 worklog agent, 0 verse, 0 office-hours. Les schtasks 4h/12h/24h = des scripts Python de 3 secondes (telemetrie), pas des agents. Le plan M3 5.1B dormait a 1%.",
+  "fix": "wf1_runner.ps1 = while(true) sans heures fixes: worker claude -p headless (backend M3 env User) -> 1 iteration = 1 item + preuve + worklog -> 45s -> worker suivant. Timeout worker = AUCUN. Etat = filesystem (run loop video canon). WORKER_PROMPT.md = le /goal persistant (queue -> backlogs contrats -> builds rails wargames 05/07/06).",
+  "kill_switches": "decisions/STOP_WF1_RUNNER.flag (urgence) · retirer enable_wf1.flag (GO revoque) · Beth repos hors fenetre = pause 30min",
+  "persistence": "schtask AspaceWF1Runner ONLOGON + ExecutionTimeLimit=UNLIMITED + RestartCount 999/5min — survit aux reboots",
+  "d5_proofs": "pass_wf1_WK04.json emis (1er de l'histoire) · test worker: auth M3 OK, 290s de travail reel (tue par MON timeout de test, pas par echec) · runner log: RUN LOOP start + iteration 1 spawn 07:04:38 · process claude worker vivant",
+  "gstack_answer": "meme organe pour le Conductor L2: le runner pattern EST le conducteur - office-hours sims en priorite 2 du WORKER_PROMPT",
+  "reversible": "STOP flag ou Unregister-ScheduledTask AspaceWF1Runner"
+}

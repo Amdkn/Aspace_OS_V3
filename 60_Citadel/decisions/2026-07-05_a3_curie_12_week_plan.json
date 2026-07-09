@@ -1,0 +1,90 @@
+{
+  "ts": "2026-07-05T16:56:00-04:00",
+  "agent": "Mavis + A3 Curie + A0 Amodei (méta-coach)",
+  "action": "vision_ratified_planning_drafted_4sessions_spawned",
+  "summary": "A0 GO 'ok les 2 Go' valide : (a) Vision D1 RATIFIED + (b) 4 sessions Hero spawned. Discipline #2 Planning DRAFT PROPOSED pour ratification.",
+  "a0_demand_verbatim": "ok les 2 Go",
+  "vision_D1_ratified": {
+    "ADR-LD01-010": "DRAFT PROPOSED → RATIFIED 2026-07-05T16:56 ET par A0 GO",
+    "3_questions": {
+      "Q1_purpose": "Orchestrer L1 gstack + L2 CEO-Bench + MiroFish pour A3 Book/Picard/Jerry/Summers sans dependance humaine autre que Beth",
+      "Q2_3ans_great_2029": "Toutes Lightning installees + Phase 3 L5 continuous + 27 agents actifs + cadence 7-jours Triptyque + fiches P&L hebdo",
+      "Q3_ONE_thing_12sem": "L0 Pocock ship + L1 gstack sobre installe + L2 CEO-Bench run #1 reel"
+    }
+  },
+  "planning_D2_draft": {
+    "ADR-LD01-011": "DRAFT PROPOSED en attente A0 ratification",
+    "12_week_plan": "S1->S12 Lead Measures par Triptyque (T1 People·Op·IT, T2 Product·Growth·Sales, Duo Finance·Legal)",
+    "5_weekly_rocks": [
+      "R1 audit reflex L0 / sem (A0 Amodei)",
+      "R2 /autoplan run L1 / sem (A3 Book COO)",
+      "R3 CEO-Bench run L2 / sem (A2 Curie)",
+      "R4 fiche P&L hebdo / J7 (A3 Book)",
+      "R5 synthese J7 / sem (A0 Amodei)"
+    ],
+    "scorecard_cadence": "Daily / Weekly / Monthly / Cycle",
+    "tactics_D3_preview": "Anti-drift + Quadrantic mode + E-Myth SYSTEMIZE + Beth veto"
+  },
+  "4_sessions_spawned_under_war_mode": [
+    {
+      "agent": "a3-book-coo",
+      "sessionId": "mvs_13e4c72b96d8412f87f8a7ce08faf823",
+      "parentSessionId": "mvs_e887dd5de2a74afcaddea441ddf81d67",
+      "tier": "A3",
+      "role": "H1 P&L aggregator LD01 CEO Perso",
+      "title": "a3-book-coo 12WY V1"
+    },
+    {
+      "agent": "a2-zora-discovery",
+      "sessionId": "mvs_a4b31284f8c44ac0a0f9d6db24bb9f12",
+      "parentSessionId": "mvs_e887dd5de2a74afcaddea441ddf81d67",
+      "tier": "A2",
+      "role": "A2 Discovery 8 dims Jack Roberts nightly dreaming",
+      "title": "a2-zora-discovery 12WY V1"
+    },
+    {
+      "agent": "a1-morty-assistant",
+      "sessionId": "mvs_23cd1b43b06f4bf88512237a90e9d47f",
+      "parentSessionId": "mvs_e887dd5de2a74afcaddea441ddf81d67",
+      "tier": "A1",
+      "role": "Junior assistant B2/B3 audit",
+      "title": "a1-morty-assistant 12WY V1"
+    },
+    {
+      "agent": "a0-amodei-meta-coach",
+      "sessionId": "mvs_a80dbbf6509549b892d85df00f6b21a7",
+      "parentSessionId": "mvs_e887dd5de2a74afcaddea441ddf81d67",
+      "tier": "A0",
+      "role": "Meta-coach canon Murderbot FINIR",
+      "title": "a0-amodei-meta-coach 12WY V1"
+    }
+  ],
+  "agents_Beth_humain_exclue": "AUCUN session pour a1-beth-vie-sante (humain, veto unique, non-automatisable per ADR-WARMODE-002 §5)",
+  "agents_registered_in_daemon": [
+    "a0-amodei-meta-coach (44-char desc)",
+    "a1-morty-assistant (52-char desc)",
+    "a2-zora-discovery (56-char desc)",
+    "a3-book-coo (68-char desc)"
+  ],
+  "agents_canon_preserved_20_in_daemon": [
+    "b1-jerry-emyth", "b1-summers-ship",
+    "b2-aquaman-legal", "b2-batman-ops", "b2-cyborg-it", "b2-flash-product",
+    "b2-gl-people", "b2-johnjones-sales", "b2-superman-growth", "b2-ww-finance",
+    "b3-avengers-product", "b3-eternals-legal", "b3-ff-ops", "b3-guardians-growth",
+    "b3-illuminati-sales", "b3-kangdyn-it", "b3-thunderbolts-fin", "b3-xmen-people",
+    "coder", "verifier"
+  ],
+  "doctrines_preserved_intact": {
+    "ADR-WARMODE-001": "posture inversion intacte",
+    "ADR-WARMODE-002": "Portes over Freins, Beth seul veto intacte",
+    "ADR-LD01-010_RATIFIED": "Vision D1 lockée 2026-07-05T16:56",
+    "ADR-LD01-011_DRAFT_PROPOSED": "Planning D2",
+    "append_only_D4": "Planning append-only",
+    "war_room_bypass_beth_only": "Planning respecte",
+    "27_agents_22_canon_5_hero": "Organigramme complet",
+    "4_hero_sessions_live": "Book/Zora/Morty/Amodei spawnées"
+  },
+  "sister_canon_LD01": "LD01/99_meta/a3_curie_12_week_plan_sister.md (10 sections)",
+  "ADR_LD01_011_DRAFT": "PROPOSED en attente A0 ratification sur §2 §3 §4",
+  "war_room_state": "WAR MODE ON, veto Beth, 4 portes, 4 Hero sessions visibles sidebar UI"
+}

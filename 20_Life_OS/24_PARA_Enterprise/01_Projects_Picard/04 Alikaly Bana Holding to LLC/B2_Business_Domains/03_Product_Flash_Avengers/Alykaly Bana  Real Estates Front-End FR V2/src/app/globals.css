@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────
+   Alykaly Holding — Design Tokens (Slate & Emerald)
+   ───────────────────────────────────────────── */
+:root {
+  --bg: #020617;
+  --bg-2: #0a1124;
+  --line: #1e293b;
+  --line-soft: #14213a;
+  --cream: #fffaf0;
+  --cream-dim: #e8e2d4;
+  --emerald: #10b981;
+  --emerald-glow: rgba(16, 185, 129, 0.35);
+}
+
+@theme inline {
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-cream: #fffaf0;
+}
+
+/* ─────────────────────────────────────────────
+   Base
+   ───────────────────────────────────────────── */
+html, body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ─────────────────────────────────────────────
+   Background Patterns
+   ───────────────────────────────────────────── */
+.ambient-bg {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(16,185,129,0.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 30%, rgba(16,185,129,0.04), transparent 60%),
+    linear-gradient(to right, rgba(30,41,59,0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30,41,59,0.45) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(30,41,59,0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30,41,59,0.35) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ─────────────────────────────────────────────
+   Emerald Glows
+   ───────────────────────────────────────────── */
+.emerald-glow {
+  box-shadow: 0 0 0 1px rgba(16,185,129,0.4), 0 0 30px -6px var(--emerald-glow);
+}
+
+.emerald-glow-strong {
+  box-shadow: 0 0 0 1px rgba(16,185,129,0.6), 0 0 40px -4px var(--emerald-glow), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ─────────────────────────────────────────────
+   Hairlines
+   ───────────────────────────────────────────── */
+.hairline-v {
+  background: linear-gradient(180deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent);
+}
+
+.hairline-h {
+  background: linear-gradient(90deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent);
+}
+
+/* ─────────────────────────────────────────────
+   Marquee Animation
+   ───────────────────────────────────────────── */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 60s linear infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Pulse Dot
+   ───────────────────────────────────────────── */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.pulse-dot {
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────
+   Expertise Card Hover
+   ───────────────────────────────────────────── */
+.expertise-card {
+  transition: border-color 240ms ease, transform 240ms ease, background-color 240ms ease;
+}
+
+.expertise-card:hover {
+  border-color: rgba(16,185,129,0.55);
+  background-color: rgba(16,185,129,0.025);
+  transform: translateY(-2px);
+}
+
+.expertise-card:hover .card-arrow {
+  transform: translate(4px, -4px);
+  color: var(--emerald);
+}
+
+/* ─────────────────────────────────────────────
+   Focus Ring
+   ───────────────────────────────────────────── */
+.focus-emerald:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(16,185,129,0.7), 0 0 40px -6px var(--emerald-glow);
+}
+
+/* ─────────────────────────────────────────────
+   Step Rule
+   ───────────────────────────────────────────── */
+.step-rule {
+  background: linear-gradient(180deg, var(--emerald) 0%, rgba(16,185,129,0.0) 100%);
+}
+
+/* ─────────────────────────────────────────────
+   Selection
+   ───────────────────────────────────────────── */
+::selection {
+  background: rgba(16,185,129,0.35);
+  color: #fff;
+}
+
+/* ─────────────────────────────────────────────
+   Lucide Icon Defaults
+   ───────────────────────────────────────────── */
+[data-lucide] {
+  stroke-width: 1.5;
+}
+
+/* ─────────────────────────────────────────────
+   Scrollbar
+   ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050a18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ─────────────────────────────────────────────
+   Custom Utility Classes
+   ───────────────────────────────────────────── */
+.text-cream {
+  color: var(--cream);
+}
+
+.bg-cream\/5 {
+  background-color: rgba(255, 250, 240, 0.05);
+}

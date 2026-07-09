@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>graphify corpus viewer</title>
+<script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+  body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: #0e1116; color: #e6e6e6; }
+  header { padding: 10px 14px; background: #161b22; border-bottom: 1px solid #2d333b; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 14px; margin: 0; color: #58a6ff; }
+  header input, header select, header button { background: #0d1117; color: #e6e6e6; border: 1px solid #30363d; padding: 5px 8px; border-radius: 4px; font: inherit; }
+  header input { width: 200px; }
+  header button { cursor: pointer; }
+  header button:hover { background: #1f6feb; border-color: #1f6feb; }
+  header .stats { font-size: 12px; color: #8b949e; }
+  #container { display: flex; height: calc(100vh - 50px); }
+  #graph { flex: 1; background: #0d1117; }
+  #sidebar { width: 360px; background: #161b22; border-left: 1px solid #2d333b; padding: 12px; overflow-y: auto; }
+  #sidebar h2 { font-size: 13px; margin: 0 0 8px; color: #58a6ff; }
+  #sidebar pre { background: #0d1117; padding: 8px; border-radius: 4px; overflow-x: auto; font-size: 11px; }
+  #sidebar .meta { color: #8b949e; font-size: 12px; }
+  #sidebar ul { padding-left: 18px; margin: 6px 0; }
+  #sidebar li { cursor: pointer; padding: 2px 0; }
+  #sidebar li:hover { color: #58a6ff; }
+  #status { font-size: 11px; color: #8b949e; padding: 4px 12px; background: #161b22; border-top: 1px solid #2d333b; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; background: #1f6feb33; color: #58a6ff; margin-right: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>graphify corpus</h1>
+  <span class="stats" id="stats">loading…</span>
+  <input type="text" id="search" placeholder="search keyword…" />
+  <button onclick="doSearch()">search</button>
+  <select id="community"><option value="">community…</option></select>
+  <select id="source"><option value="">source…</option></select>
+  <button onclick="loadCommunity()">load</button>
+  <button onclick="resetView()">reset</button>
+</header>
+<div id="container">
+  <div id="graph"></div>
+  <div id="sidebar">
+    <h2>Click a node</h2>
+    <div id="details" class="meta">—</div>
+  </div>
+</div>
+<div id="status">ready</div>
+
+<script>
+const API = "";  // same origin
+let network = null;
+let nodes = new vis.DataSet();
+let edges = new vis.DataSet();
+let allNodes = {};
+let allEdges = {};
+
+const palette = [
+  "#58a6ff","#f78166","#3fb950","#d2a8ff","#f0883e","#56d4dd",
+  "#db61a2","#a371f7","#ff7b72","#7ee787","#ffa657","#79c0ff",
+];
+function colorForCommunity(c) {
+  const h = String(c).split("").reduce((a,ch)=>a + ch.charCodeAt(0), 0);
+  return palette[h % palette.length];
+}
+
+function setStatus(msg) { document.getElementById("status").textContent = msg; }
+
+async function loadStats() {
+  const r = await fetch(API + "/api/stats");
+  const s = await r.json();
+  document.getElementById("stats").textContent =
+    `${s.nodes.toLocaleString()} nodes · ${s.links.toLocaleString()} edges · ${s.communities} communities · ${s.sources} sources`;
+  const cs = document.getElementById("community");
+  s.top_communities.forEach(([cid, n]) => {
+    const o = document.createElement("option");
+    o.value = cid; o.textContent = `community ${cid} (${n.toLocaleString()})`;
+    cs.appendChild(o);
+  });
+  const ss = document.getElementById("source");
+  s.top_sources.forEach(([src, n]) => {
+    const o = document.createElement("option");
+    o.value = src; o.textContent = `${src} (${n.toLocaleString()})`;
+    ss.appendChild(o);
+  });
+}
+
+async function doSearch() {
+  const q = document.getElementById("search").value.trim();
+  if (!q) return;
+  setStatus(`searching "${q}"…`);
+  const r = await fetch(`${API}/api/search?q=${encodeURIComponent(q)}&limit=100`);
+  const d = await r.json();
+  renderSubset(d);
+  setStatus(`search "${q}": ${d.nodes.length} nodes, ${d.links.length} edges`);
+}
+
+async function loadCommunity() {
+  const cid = document.getElementById("community").value;
+  if (cid) {
+    setStatus(`loading community ${cid}…`);
+    const r = await fetch(`${API}/api/community/${encodeURIComponent(cid)}?limit=300`);
+    const d = await r.json();
+    renderSubset(d);
+    setStatus(`community ${cid}: ${d.nodes.length} nodes (${d.truncated ? "truncated" : "full"})`);
+    return;
+  }
+  const src = document.getElementById("source").value;
+  if (src) {
+    setStatus(`loading source ${src}…`);
+    const r = await fetch(`${API}/api/source/${encodeURIComponent(src)}?limit=300`);
+    const d = await r.json();
+    renderSubset(d);
+    setStatus(`source ${src}: ${d.nodes.length} nodes (${d.truncated ? "truncated" : "full"})`);
+  }
+}
+
+function renderSubset(d) {
+  nodes.clear(); edges.clear();
+  allNodes = {}; allEdges = {};
+  d.nodes.forEach(n => {
+    const id = n.id;
+    allNodes[id] = n;
+    nodes.add({
+      id, label: (n.label || n.name || n.id || "?").slice(0, 30),
+      title: `${n.label || n.name || ""} — ${n.app_source || ""}`,
+      color: { background: colorForCommunity(n.community), border: "#222" },
+      group: n.community,
+    });
+  });
+  d.links.forEach(l => {
+    const eid = `${l.source}__${l.target}`;
+    if (!allNodes[l.source] || !allNodes[l.target]) return;
+    allEdges[eid] = l;
+    edges.add({ id: eid, from: l.source, to: l.target, arrows: "to", color: { color: "#444", opacity: 0.4 } });
+  });
+  document.getElementById("details").innerHTML = `<div class="meta">${d.nodes.length} nodes, ${d.links.length} edges loaded. Click any node for details.</div>`;
+}
+
+function resetView() {
+  nodes.clear(); edges.clear();
+  allNodes = {}; allEdges = {};
+  document.getElementById("details").innerHTML = "—";
+  setStatus("ready");
+}
+
+function showDetails(node) {
+  const n = allNodes[node.id];
+  if (!n) return;
+  const incoming = Object.values(allEdges).filter(l => l.target === node.id);
+  const outgoing = Object.values(allEdges).filter(l => l.source === node.id);
+  let html = `<h2>${n.label || n.name || n.id}</h2>`;
+  html += `<div class="meta">`;
+  if (n.id) html += `<span class="pill">id: ${n.id}</span>`;
+  if (n.community !== undefined) html += `<span class="pill">community: ${n.community}</span>`;
+  if (n.app_source) html += `<span class="pill">${n.app_source}</span>`;
+  html += `</div>`;
+  html += `<pre>${JSON.stringify(n, null, 2)}</pre>`;
+  if (outgoing.length) {
+    html += `<h2>Outgoing (${outgoing.length})</h2><ul>`;
+    outgoing.slice(0, 20).forEach(l => {
+      const t = allNodes[l.target];
+      html += `<li onclick="focusNode('${l.target}')">${t ? (t.label || t.id) : l.target}</li>`;
+    });
+    if (outgoing.length > 20) html += `<li class="meta">… +${outgoing.length - 20} more</li>`;
+    html += `</ul>`;
+  }
+  if (incoming.length) {
+    html += `<h2>Incoming (${incoming.length})</h2><ul>`;
+    incoming.slice(0, 20).forEach(l => {
+      const t = allNodes[l.source];
+      html += `<li onclick="focusNode('${l.source}')">${t ? (t.label || t.id) : l.source}</li>`;
+    });
+    if (incoming.length > 20) html += `<li class="meta">… +${incoming.length - 20} more</li>`;
+    html += `</ul>`;
+  }
+  document.getElementById("details").innerHTML = html;
+}
+
+function focusNode(id) {
+  if (!allNodes[id]) {
+    fetch(`${API}/api/node/${encodeURIComponent(id)}`).then(r => r.json()).then(d => {
+      if (d.node) {
+        nodes.add({
+          id, label: (d.node.label || d.node.name || d.node.id).slice(0, 30),
+          color: { background: "#f78166", border: "#fff" },
+        });
+        d.links.forEach(l => {
+          const other = l.source === id ? l.target : l.source;
+          if (!allNodes[other]) {
+            fetch(`${API}/api/node/${encodeURIComponent(other)}`).then(r => r.json()).then(dd => {
+              if (dd.node) {
+                nodes.add({
+                  id: other, label: (dd.node.label || dd.node.name || other).slice(0, 30),
+                  color: { background: colorForCommunity(dd.node.community), border: "#222" },
+                });
+                allNodes[other] = dd.node;
+              }
+            });
+          }
+        });
+        allNodes[id] = d.node;
+        network.focus(id, { scale: 1.2 });
+      }
+    });
+  } else {
+    network.focus(id, { scale: 1.2 });
+  }
+}
+
+loadStats().then(() => {
+  setStatus("ready — pick a community/source or search");
+  // D6 (2026-06-16): auto-load community 0 (largest) so the page isn't empty.
+  document.getElementById("community").value = "0";
+  loadCommunity();
+});
+const container = document.getElementById("graph");
+network = new vis.Network(container, { nodes, edges }, {
+  physics: { stabilization: { iterations: 100 }, barnesHut: { gravitationalConstant: -3000 } },
+  interaction: { hover: true, tooltipDelay: 200 },
+  nodes: { shape: "dot", size: 8, font: { color: "#e6e6e6", size: 10 } },
+  edges: { smooth: { type: "continuous" } },
+});
+network.on("click", e => { if (e.nodes.length) showDetails({ id: e.nodes[0] }); });
+document.getElementById("search").addEventListener("keydown", e => { if (e.key === "Enter") doSearch(); });
+</script>
+</body>
+</html>

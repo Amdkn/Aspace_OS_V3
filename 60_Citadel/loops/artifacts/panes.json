@@ -1,0 +1,23 @@
+{
+  "repo": "Aspace OS",
+  "panes": [
+    {
+      "name": "airlock-veto",
+      "tool": {
+        "command": "powershell -NoProfile -Command \"Get-Content -Wait 'C:\\Users\\amado\\agent-os\\citadel\\data\\airlock_line.txt'\""
+      }
+    },
+    {
+      "name": "wf1-morty",
+      "tool": {
+        "command": "powershell -NoProfile -Command \"Get-Content -Wait 'C:\\Users\\amado\\agent-os\\citadel\\worklog.md'\""
+      }
+    },
+    {
+      "name": "heartbeat-warmode",
+      "tool": {
+        "command": "powershell -NoProfile -Command \"Get-Content -Wait 'C:\\Users\\amado\\.claude\\logs\\turn-journal.md'\""
+      }
+    }
+  ]
+}

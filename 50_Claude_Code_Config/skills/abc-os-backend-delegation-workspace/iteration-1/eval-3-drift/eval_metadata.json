@@ -1,0 +1,37 @@
+{
+  "eval_id": 3,
+  "eval_name": "reconcile-doc-seed-drift",
+  "prompt": "There's a known doc/seed drift in the build_hub_v2 apply from 2026-06-12. The handoff file at ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/handoff_abc_os_community_dev_2026-06-10.md (look at the P3 section) says: column 'name' (actual schema has 'title'); phase id 'complete-offgrid-system-p1' (actual is 'og-p1'); category 'self-sufficiency' (actual is 'homesteading'). Reconcile the docs to match the actual schema. First run a verification query against abc_os on the VPS to confirm the actual state of these 3 things. Then edit the handoff file to use the correct names/ids. Write back to wiki/log.md noting the reconciliation. Do NOT touch the schema or seed files — only the docs.",
+  "assertions": [
+    {
+      "text": "Brief runs verification queries FIRST to confirm the actual state of the 3 drift items (column name, phase id, category id) before editing docs",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes the 3 verification queries (e.g. SELECT column_name FROM information_schema.columns WHERE table_schema='abc_os' AND table_name='build_projects' AND column_name IN ('name', 'title'))",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief specifies Edit operations on handoff_abc_os_community_dev_2026-06-10.md with string-for-string old_string/new_string (not paraphrased)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief cites D3 (adapt docs to schema, not the reverse) and D1 (verify drift exists before fixing)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief explicitly states: do NOT touch the schema or seed files — only the docs",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes the wiki/log.md write-back entry with the reconciliation note",
+      "passed": false,
+      "evidence": ""
+    }
+  ]
+}

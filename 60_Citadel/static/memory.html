@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — 📚 Memory</title>
+  <meta name="doctrine" content="lecture seule — Memristor observational memory — Kill switch E3 wiki-lint">
+  <meta name="source" content="~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 + data/11_memory.json">
+  <meta name="antifragile" content="state cached in URL hash + localStorage + auto-recover">
+  <style>
+    :root { --bg: #0a0e14; --fg: #c9d1d9; --muted: #6e7681; --accent: #58a6ff; --warn: #f0883e; --good: #3fb950; --bad: #f85149; --card: #161b22; --border: #30363d; --dormant: #484f58; }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem; }
+    .card.exists { border-left: 4px solid var(--good); }
+    .card.absent { border-left: 4px solid var(--bad); opacity: 0.85; }
+    .card.partial { border-left: 4px solid var(--warn); }
+    .pill { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 12px; font-size: 0.65rem; margin-right: 0.25rem; }
+    .pill.exists { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.absent { background: rgba(248, 81, 73, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+    .pill.partial { background: rgba(240, 136, 62, 0.2); color: var(--warn); border: 1px solid var(--warn); }
+    .pill.kit { background: rgba(88, 166, 255, 0.2); color: var(--accent); border: 1px solid var(--accent); }
+    code { background: rgba(110, 118, 129, 0.15); padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--muted); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1200px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .summary-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem; margin-top: 0.5rem; }
+    .summary-bar .stat { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; text-align: center; }
+    .summary-bar .stat .v { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+    .summary-bar .stat .l { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
+    .principles { background: rgba(88, 166, 255, 0.08); border: 1px dashed var(--accent); border-radius: 6px; padding: 0.85rem; margin: 1rem 0; }
+    .principles h3 { margin: 0 0 0.5rem 0; color: var(--accent); font-size: 1rem; }
+    .principles ul { margin: 0; padding-left: 1.2rem; }
+    .principles li { font-size: 0.85rem; padding: 0.2rem 0; color: var(--fg); }
+    .err-box { background: rgba(248, 81, 73, 0.1); border-left: 3px solid var(--bad); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .path-list { list-style: none; padding-left: 0; margin: 0.4rem 0; }
+    .path-list li { font-size: 0.72rem; padding: 0.15rem 0; color: var(--muted); word-break: break-all; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Mavis captain · 22 agents runtime · tiers A1-A3/B1-B3/SYS</div>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel</div>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">8 domaines Jerry × 3 Captains Summers = 53 B3 rosters</div>
+    <a class="nav active" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Wiki 124 pages · MEMORY.md · graphify · Memory Architect Kit</div>
+    <h2>🔌 API</h2>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.4 · anti-Ultron<br>append-only D4</div>
+  </nav>
+  <main class="main">
+    <h1>📚 Memory (Pilier 11 — carte mémoire)</h1>
+    <p class="subtitle">5 entités : wiki 124 pages · MEMORY.md 21KB · graphify master · Memory Architect Kit. Doctrine : <strong>Memristor observational memory</strong> — append-only, jamais de mutation silencieuse.</p>
+    <div id="summary"></div>
+    <div id="principles"></div>
+    <div id="status"></div>
+    <h2>Entités</h2>
+    <div id="entities" class="grid"></div>
+    <div class="footer">Citadelle A0 · <a href="/api/memory">/api/memory JSON</a> · auto-recover localStorage</div>
+  </main>
+  <script>
+    const SNAPSHOT_KEY = "citadel.memory.snapshot";
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    async function loadJSON(url) { try { const r = await fetch(url); if (!r.ok) throw new Error("HTTP " + r.status); return await r.json(); } catch (e) { return { error: String(e) }; } }
+    const ENTITY_LABELS = {
+      wiki_pages: { icon: "📚", title: "Wiki pages" },
+      memory_md: { icon: "📝", title: "MEMORY.md" },
+      graphify_master_M: { icon: "🕸️", title: "Graphify master graph" },
+      memory_arch_kit: { icon: "🧰", title: "Memory Architect Kit" },
+    };
+    function renderSummary(s, e) {
+      const sb = document.getElementById("summary");
+      const wikiCount = e?.wiki_pages?.count ?? 0;
+      const wikiTarget = e?.wiki_pages?.target_124 ?? 124;
+      const memSize = e?.memory_md?.size_bytes ?? 0;
+      sb.innerHTML = `<div class="summary-bar">
+        <div class="stat"><div class="v">${wikiCount} / ${wikiTarget}</div><div class="l">wiki pages</div></div>
+        <div class="stat"><div class="v">${(memSize/1024).toFixed(1)} KB</div><div class="l">MEMORY.md</div></div>
+        <div class="stat"><div class="v">${e?.graphify_master_M?.exists ? "✓" : "✗"}</div><div class="l">graphify</div></div>
+        <div class="stat"><div class="v">${e?.memory_arch_kit?.exists ? "✓" : "✗"}</div><div class="l">Memory Arch Kit</div></div>
+      </div>`;
+    }
+    function renderPrinciples(p) {
+      const root = document.getElementById("principles");
+      if (!p || !p.length) return;
+      root.innerHTML = `<div class="principles"><h3>Memory principles (${p.length})</h3><ul>` +
+        p.map(x => `<li>${esc(x)}</li>`).join("") +
+        `</ul></div>`;
+    }
+    function renderEntities(e) {
+      const root = document.getElementById("entities");
+      if (!e) { root.innerHTML = `<div class="err-box">Aucune donnée.</div>`; return; }
+      let html = "";
+      for (const [k, v] of Object.entries(e)) {
+        const meta = ENTITY_LABELS[k] || { icon: "📦", title: k };
+        const exists = v.exists !== false;
+        const cls = exists ? "exists" : "absent";
+        const badge = exists ? "exists" : "absent";
+        let info = "";
+        if (v.count !== undefined) info = `<div class="meta">count: ${v.count}${v.target_124 ? ` / ${v.target_124} cible` : ""}</div>`;
+        if (v.size_bytes !== undefined) info += `<div class="meta">size: ${(v.size_bytes/1024).toFixed(1)} KB</div>`;
+        html += `<a class="card ${cls}" href="/c/11_memory/${encodeURIComponent(k)}" style="text-decoration:none;color:inherit;display:block">
+          <h3 style="margin-top:0;font-size:0.95rem">${meta.icon} ${esc(meta.title)} <span class="pill ${badge}">${exists ? "✓ présent" : "✗ absent"}</span></h3>
+          <ul class="path-list"><li>📁 <code>${esc(v.path || "")}</code></li></ul>
+          ${info}
+          <div class="meta">→ voir la fiche</div>
+        </a>`;
+      }
+      root.innerHTML = html;
+    }
+    (async () => {
+      const data = await loadJSON("/api/memory");
+      const status = document.getElementById("status");
+      if (data.error) {
+        status.innerHTML = `<div class="err-box">API error: ${esc(data.error)} — fallback cache localStorage.</div>`;
+        try { window.__lastMemory = JSON.parse(localStorage.getItem(SNAPSHOT_KEY) || "null"); } catch {}
+      } else {
+        window.__lastMemory = data;
+        try { localStorage.setItem(SNAPSHOT_KEY, JSON.stringify(data)); } catch {}
+        renderSummary(data.summary || {}, data.entities || {});
+        renderPrinciples(data.memory_principles || []);
+      }
+      renderEntities((window.__lastMemory || {}).entities || {});
+    })();
+  </script>
+</body>
+</html>

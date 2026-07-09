@@ -1,0 +1,90 @@
+{
+  "guides": [
+    {
+      "slug": "design-skills-that-actually-work-Ot582-E61ac",
+      "domaine": "01_Product",
+      "pilier_titre_canon": "Skill Design That Actually Works",
+      "insight_verbatim": "Skills should be designed for agent discoverability and predictability, not human readability. The skill's description is the trigger surface - if the model can't pattern-match it to a user request, the skill effectively doesn't exist.",
+      "concept_cles": [
+        "discoverability",
+        "trigger surface",
+        "description-as-API",
+        "progressive disclosure"
+      ],
+      "sisters": [
+        "ADR-AAAS-OPERATIONS-CANON-001",
+        "ADR-AAAS-PRICING-001",
+        "ADR-META-001"
+      ]
+    },
+    {
+      "slug": "ops-framework-yP4p3reZUcU",
+      "domaine": "02_Ops",
+      "pilier_titre_canon": "Operational Framework Discipline",
+      "insight_verbatim": "Operational frameworks succeed when they encode irreversibility gates at the right cadence: daily actions reversible, weekly commitments reviewable, quarterly pivots expensive. The framework's value is making cost-of-change explicit at each layer.",
+      "concept_cles": [
+        "irreversibility gates",
+        "cadence layering",
+        "cost-of-change",
+        "review loops"
+      ],
+      "sisters": [
+        "ADR-AAAS-OPERATIONS-CANON-001",
+        "ADR-META-001",
+        "ADR-SOBER-002"
+      ]
+    },
+    {
+      "slug": "13-business-finance-lessons-after-losing-money-FvtskCSwbxc",
+      "domaine": "04_Finance",
+      "pilier_titre_canon": "Le capital survit aux erreurs",
+      "insight_verbatim": "La chose la plus importante dans les affaires c'est pas d'etre intelligent c'est d'avoir du cash. Tu peux etre tres mauvais dans tes decisions mais tant que t'as du cash tu survis.",
+      "concept_cles": [
+        "runway-cash",
+        "survie-primer",
+        "anti-burnout",
+        "decision-reversible"
+      ],
+      "sisters": [
+        "ADR-AAAS-FINANCE-CANON-001",
+        "ADR-AAAS-PRICING-001",
+        "ADR-SOBER-002"
+      ]
+    },
+    {
+      "slug": "21-business-lessons-i-wish-i-learned-10-years-earlier-bPmhfM1HRWI",
+      "domaine": "04_Finance",
+      "pilier_titre_canon": "Loueurs ou proprietaires mindset",
+      "insight_verbatim": "Dans la vie t'as deux choix soit tu es locataire soit tu es proprietaire. Si tu es locataire de ta sante de tes finances de tes relations tu paies toujours quelqu'un d'autre paie a ta place.",
+      "concept_cles": [
+        "mindset-proprietaire",
+        "ownership-actif",
+        "anti-dependance",
+        "valeur-locative"
+      ],
+      "sisters": [
+        "ADR-AAAS-FINANCE-CANON-001",
+        "ADR-AAAS-PRICING-001",
+        "ADR-AAAS-OPERATIONS-CANON-001"
+      ]
+    },
+    {
+      "slug": "boring-businesses-highest-survival-rates-5fS-lD1nFxM",
+      "domaine": "07_Growth",
+      "pilier_titre_canon": "Boring Businesses Highest Survival Rates",
+      "insight_verbatim": "Boring businesses survive because they solve essential, recurring needs. Predictable demand, low competition from disruptors, and steady cash flow make them resilient through economic cycles.",
+      "concept_cles": [
+        "recurring demand",
+        "low disruption",
+        "steady cashflow",
+        "economic resilience",
+        "essential services"
+      ],
+      "sisters": [
+        "ADR-AAAS-ACQUISITION-DOCTRINE-001",
+        "ADR-AAAS-PRICING-001",
+        "ADR-SOBER-002"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Next.js
+.next/
+out/
+
+# Supabase local
+supabase/.branches
+supabase/.temp
+supabase/.env
+supabase/logs
+supabase/seed_local_*.sql
+
+# TypeScript generated types (optional commit)
+# src/lib/supabase/database.types.ts
+
+# Editor
+.vscode/
+.idea/
+
+.vercel

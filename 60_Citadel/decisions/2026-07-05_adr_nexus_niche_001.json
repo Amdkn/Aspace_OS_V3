@@ -1,0 +1,14 @@
+{
+  "action": "decision",
+  "date": "2026-07-05",
+  "adr": "ADR-NEXUS-NICHE-001",
+  "title": "Niches Coaching B2B — arbitrage Coaching Premium x Agences Business Development",
+  "a0_intent_verbatim": "creons l'ADR des Niches de l'industrie du Coaching (rejet medical/psy HIPAA/FDA, recentrage B2B Coaching+BizDev, PoC tri-axial Medvi assaini)",
+  "decision": "Niche verrouillée = intersection Cabinets Coaching Premium x Agences Business Development. Pricing 1000$/mo x 100 = 1.2M ARR, marge >90% via MiniMax fixed plan + inference locale. PoC tri-axial (T1 People/Ops/IT, T2 Product/Growth/Sales, Duo Finance/Legal) mapping canon.",
+  "d4_correction": "Deep Research avait melange les tags LDxx sur domaines Business (erreur de categorie axe Life-Wheel vs axe 8-domaines). Corrige au mapping ADR-CANON-001. Les 8 domaines vivent tous sous LD01.",
+  "d1_note": "Chiffres Watchgang/Medvi = source Deep Research, NON verifies A'Space, traites comme narratif de cas. MiniMax 5.1Md/50$ = verifie canon (ADR-LLM-COST-COMPARE-001).",
+  "sisters": ["ADR-ICP-NEXUS-001", "ADR-MARKET-STUDY-001", "ADR-OMK-NEXUS-TRANSFORM-001", "ADR-AAAS-PRICING-001", "ADR-LD01-011_omk_nexus_bos_poc_initiation"],
+  "status": "RATIFIED (niche) + fork build ouvert",
+  "open_fork": ["A: DLP Legal Supabase redaction scripts", "B: 11 prompts signal acquisition Growth AARRR"],
+  "reversible": true
+}

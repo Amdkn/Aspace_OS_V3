@@ -1,0 +1,58 @@
+context_pack:
+  id: L1-CTX-YYYYMMDD-001
+  created_at: 2026-05-20T00:00:00-04:00
+  requester: A0_Amadeus
+  beth_clearance: ORANGE
+  beth_clearance_reason: "Evidence complete enough for draft; write action still needs signoff."
+
+  ship: USS_SNW
+  framework: 12WY
+  crew_member: Una
+  domain_impact:
+    zora_domain: LD04_Cognition_Formation
+    health_sensitive: true
+    cognition_sensitive: true
+
+  next_action:
+    verb: "draft"
+    object: "one Baserow 12WY Rock proposal"
+    done_when: "A markdown dry-run exists with field mapping and no API mutation."
+
+  tool_surface:
+    primary: Baserow
+    adapter_spec: "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-baserow.spec.md"
+    mode: dry_run
+    external_write_requires_signoff: true
+
+  l0_skill_required:
+    - knowledge-ops
+    - skill-reflex-orchestrator
+
+  evidence_paths:
+    - "C:\\Users\\amado\\ASpace_OS_V2\\10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-005_life-os-l1-integration.md"
+    - "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\03_life-os-baserow-database-analysis-20260517.md"
+
+  output_artifact:
+    path: "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\00_Gatekeepers_Beth_Morty\\Morty_Global_Queue\\L1-CTX-YYYYMMDD-001.md"
+    format: markdown
+
+  residual_risk:
+    - "Baserow schema may have changed after last read-only analysis."
+    - "No write should happen until Beth/A0 signoff."
+
+# --- Alignement Plan fancy-hugging-bengio.md §3.7 (2026-06-21) ---
+# Champs canon state.json bus (snake_case + ISO-8601, cohérent avec
+# C:\Users\amado\ASpace_OS_V2\00_Amadeus\40_SYMPHONY_BUS\state.json) :
+#   - cycle: "Q3-2026" (verrouillé plan §4)
+#   - week: "W<n>" (1..4, voir plan §4 cadence)
+#   - 12wy_discipline: Pike|Vision|Una|Planning|Chapel|Measure|M'Benga|Focus|Ortegas|Execution
+#   - life_wheel_domain: LD01..LD08 (Book H1 / Saru H3 / Culber H10 / Tilly H30 / Stamets H30 / Burnham H10 / Reno H10 / Georgiou H90)
+#   - tokens_used: int (incrémenté par chaque agent)
+#   - tokens_budget: 15000 (plan §3.7 + §9.2 garde-fou 80%)
+#   - drift_flag: bool (true si tokens_used > 80% OU escalation Beth → A0 demandée)
+#   - raw_input_hash: "sha256:..." (calculé par hook mariner-capture.ps1)
+#   - raw_input_preview: "first 80 chars..." (snapshot intention A0)
+#   - next_step: "A3:<crew>" (routing deterministe par state.json bus)
+#
+# Ces champs sont **recommandés** pour tout Context Pack créé en cycle 12WY Q3 2026.
+# L'alignement strict du YAML complet est un workstream à part (post-cycle foundering).

@@ -1,0 +1,35 @@
+# LEDGER — fable-last-week-aspace
+
+Une entrée par mission. Localisation du draft, self-grade point-par-point contre SUCCESS-ASPACE.md (12 pts), et chaque patch de la refine loop. Variables bloquées = `(( input requis : ... ))`.
+
+| # | Mission | Draft | Grade /12 | Red-team | Patches | Blocked inputs |
+|---|---|---|---|---|---|---|
+| 01 | wf0-spock | wargames/01-wf0-spock.md | 12/12 | 1 échouée · 1 patch (placeholders→Rutherford drain) | v1 | aucun |
+| 02 | wf1-morty | wargames/02-wf1-morty.md | 12/12 | 1 échouée · 1 patch (item mort 2WK→Donna DLQ) | v1 | aucun |
+| 03 | wf2-book-ceo-bench | wargames/03-wf2-book-ceo-bench.md | 12/12 | 1 échouée · 1 patch (métriques d'amorçage tant que MRR=0) | v1 | aucun |
+| 04 | airlock-beth | wargames/04-airlock-beth.md | 12/12 | 1 échouée · 1 patch (B1 cross-harness via mtimes decisions) | v1 | aucun |
+| 05 | legal-dlp | wargames/05-legal-dlp.md | 12/12 | 1 échouée · 1 patch (secret multi-lignes → normalisation pré-scan) | v1 | NER phase 2 |
+| 06 | growth-aaarr | wargames/06-growth-aaarr.md | 12/12 | 1 échouée · 1 patch (quota 50% par type de signal) | v1 | Apollo auth au run |
+| 07 | sales-quiz | wargames/07-sales-quiz.md | 12/12 | 1 échouée · 1 patch (route managée pour la peur technique) | v1 | fourchette EU AI Act sourcée |
+| 08 | picard-mirofish | wargames/08-picard-mirofish.md | 12/12 **(vécu en prod)** | 1 échouée · 1 patch (absorption exige exit_condition chiffrée) | v1 | aucun |
+| 09 | gstack-jerry-summers | wargames/09-gstack-jerry-summers.md | 12/12 | 1 échouée · 1 patch (dispatch cosmétique → artefact enfant horodaté obligatoire) | v1 | config ~/.gstack au run |
+| 10 | localai-minimax | wargames/10-localai-minimax.md | 12/12 | 1 échouée · 1 patch (exact-match → normalisation + fork embeddings sur hit-rate<20%) | v1 | dxdiag GPU check |
+| 11 | second-brain-sidebar | wargames/11-second-brain-sidebar.md | 12/12 | 1 échouée · 1 patch (brain-drift gouverneur : hit-rate<40%/7j → re-index) | v2 (interview OK, redesign 5 overviews) | aucun — exécutable blind |
+
+*Instance créée 2026-07-05 (J-2 avant sortie Fable des abonnements). Template source intouché : Geordi/02_Templates/fable-wargame-kit.*
+| 13 | mirofish-persistence-antifragile-multiharness | wargames/13-mirofish-persistence-antifragile-multiharness.md | 12/12 | 1 echouee (flag-delete mid-run) - 1 patch (lock atomic + run_id dedupe vs timeline garblee faux-vert) | v1 | GAP3 schtask UAC (RECON NEEDED, 2 min A+ eleve) |
+| 14 | workadventure-agents-world | wargames/14-workadventure-agents-world.md | 12/12 | 1 echouee (tmj-expose) - 1 patch (vue RLS 3 colonnes + poll>=60s vs fuite worklog + rate blowup) | v1 | RECON: starter-kit structure + URL register staging - v2 bots gated (SaaS beta frais) |
+| 15 | airlock4-go-perpetuel | wargames/15-airlock4-go-perpetuel.md | 12/12 | 1 echouee (paperclip-brule-le-plan) - 1 patch (ancrage exogene hebdo vs boucle auto-satisfaction) | v1 | greffe evaluator (M4) + collector capacite (M1) a executer |
+| 16 | meta-audit-cc-skills-agent-zero | wargames/16-meta-audit-cc-skills-agent-zero.md | 12/12 | 1 echouee (registre SPOF) - 1 patch (menu INDEX-ONLY max 8/domaine vs context-bloat 24/7) | v1 | D1: 2/77 skills tracees runtime - Agent Zero 186ca2f dormant localise - RECON: port webui + hooks actifs |
+| 17 | manifest-dispatch-a2-a3-lifeos | wargames/17-manifest-dispatch-a2-a3-lifeos.md | 12/12 | 1 echouee (bloat, tue par lazy-load) - 1 patch (partition juridictions A1 inter-ships / A2 intra-ship) | v1 | EXECUTE 2026-07-07: 7/7 fichiers + 6 agents cables + roster 35/35 verifie |
+| 18 | ade-pane-cockpit-multiplex | wargames/18-ade-pane-cockpit-multiplex.md | 12/12 | 1 echouee (AGPL) - 1 patch (Auto Secrets Copy -> no-.env doctrine + sweep worktrees orphelins) | v1 | VERDICT: Pane = vrai cockpit Windows (pas harness, pas dormant-par-defaut) - trial 7j critere de mort <3 sessions - Cmux/Conductor/Superset = Mac only prouve |
+| 19 | delegation-chaine-cc-m3-standard-fable | wargames/19-delegation-chaine-cc-m3-standard-fable.md | 12/12 | 1 echouee (hallucination, triple couche) - 1 patch (auto-certification evaluator -> audit-echantillon Fable hebdo, evaluator_drift metric) | v1 | objectif chiffre: real-test M3 33->55% M+1 - Fable = etalon <=15%/sem, jamais ouvrier |
+| 20 | mirofish-acceleration-1000t-kardashev | wargames/20-mirofish-acceleration-1000t-kardashev.md | 12/12 | 1 echouee (megalomanie, North Star classe) - 1 patch (GIGO -> loi de provenance receipt/assumed + sensibilite +-50%, verdict UNSTABLE interdit de decision) | v1 | echelle B0-B5 - amendement pricing M3 GATED ratification A+ - B4/L3 jetables + RH&A X-Men speces |
+| 21 | fable-mode-standard-agnostique | 12/12 | 2026-07-07 | /fable-mode créé (M1 exécuté), standard agnostique M3-first, marqueur substantiel anti-proxy-boolean |
+| 22 | dernier-jour-fable-5-use-cases | 12/12 | 2026-07-07 | 5 prompts Chase AI confrontés au différentiel A'Space : #4 skills-tribunal (58→77 dérive) = différentiel plein, partition Fable-juge/M3-ouvrier, patch juge-et-partie preuves externes |
+| 23 | distillation-fable-opensource-hf | 12/12 | 2026-07-07 | Pyramide N1-harnais(FAIT)/N2-dataset-souverain(1504 beats)/N3-LoRA-cloud(gated). Fait brutal: PAS de GPU NVIDIA local. Skill-to-LoRA=cas d'usage, mini-Fable=B4 jamais juge, triple verrou gestes-sans-jugement |
+| 24 | dreaming-beth-self-learning | 12/12 | 2026-07-07 | Rêve 3 étages: nightly M3 / mensuel Beth / méta-rêve 4-cycles gated. Anti-collapse Karpathy = budget entropie ≥30% compté + jamais rêver-sur-rêves + compteur diversité. Dette découverte: MEMORY.md sans verrou optimiste |
+| 25 | boucle-evolution-wargames-unknowns | 12/12 | 2026-07-07 | CLÔTURE DE FENÊTRE. 4 boîtes Kashef mappées: KK=banque, KU=UNKNOWNS-REGISTER, UK=rêves Beth→candidats, UU=tripwires+latence (AVEU: pas de registre de l'invisible). Évolution ⚡ par cycle à W13, WF0 jamais interrompu, méta plafonné 15% |
+| 26 | audit-rails-ouverts-correction-ordre | 12/12 | 2026-07-07 | AUDIT 42 rails+3 gated, ordre corrigé par dépendances (#1 WF1 runner manque dans ranking, #5 Idempotence avant #4 Feeder). 4 angles morts du handoff Opus comblés (CHEMINS fixés: STATE.json, RAM, GPU, format run-id). Skill /audit-rails-ouverts livré CE run.
+| 28 | runpane-orchestration-paperclip-killswitch-decorrele | 12/12 | 2026-07-08 | Scission veto : B1-sommeil (corps A0) -> B1-replication-bornee (runaway systeme). E-Myth franchise : killswitch-prototype herite par noeud, defaut-ON. Asymetrie corrigibilite : autonome-STOP / humain-RELEASE (patch red-team Omohundro/Bostrom). Migration cron->cockpit RunPane visible (N8N-style), rest-guard separe, reve W24 recale event-based. RECON: runpane doctor vide (daemon WSL/Windows). |
+| 29 | mirofish-chain-wf0-wf1-wf2-l2 | 12/12 | 2026-07-08 | W28 M2 amendé : b1_replication lit chain verdict (wf0+wf1+wf2_l2 AND) au lieu de L2 tail. Mirofish étendu à 3 layer natifs : state machine (WF0), schedule-déterministe (WF1), queue (WF2/L2). Pane airlock-veto montre la décomposition. M7 validation post-Fable window 2026-07-12 (B1 devient gating, jamais testé en 23 ticks GREEN). |

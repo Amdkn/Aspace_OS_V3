@@ -1,0 +1,37 @@
+{
+  "name": "zora-nightly",
+  "version": "0.1",
+  "doctrine": "lecture seule — append-only — 4 recos max/nuit discipline Gwyn D11 — pas d'auto-approval",
+  "trigger": {
+    "type": "schedule",
+    "frequency": "1x/nuit (default 02:00 ET)",
+    "gating": "enable_zora.flag A0 HITL required"
+  },
+  "input_dimensions": [
+    "1_conversation_analysis",
+    "2_cost_intelligence",
+    "3_skill_performance",
+    "4_memory_health",
+    "5_session_hygiene",
+    "6_workflow_patterns",
+    "7_external_opportunities",
+    "8_business_outcomes"
+  ],
+  "output_format": {
+    "path": "cron/output/zora-YYYYMMDD-HHMM.json",
+    "max_recos": 4,
+    "schema": {
+      "ran_at": "ISO timestamp",
+      "recos": "array of { id, label, payload, source_dimension, roi_estimate }",
+      "stats": "8-dimension snapshot read-only"
+    }
+  },
+  "anti_ultron": {
+    "no_writes_to_canon": true,
+    "no_writes_to_adr": true,
+    "no_writes_to_decisions": true,
+    "output_only": "cron/output/ append-only",
+    "no_auto_apply": true,
+    "always_hitl": "1 utilisateur A0 doit marquer 'fait' ou 'ignorer'"
+  }
+}

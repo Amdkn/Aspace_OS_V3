@@ -1,0 +1,52 @@
+{
+  "decision_id": "2026-07-05_12WY_ON_PAUSE",
+  "generated_by": "Mavis (MC/L1) — FINISHING sous A0 GO explicite",
+  "generated_at": "2026-07-05T04:28:52-04:00",
+  "a0_intent_verbatim": "Détruire DISABLED par défaut (Posture C traditionel) OU METTRE SOUS 12WY-ON-PAUSE TOUS LES SECURITE",
+  "a0_go_obtained": true,
+  "a0_go_timestamp": "2026-07-05T04:28:00-04:00",
+  "doctrine": "12WY-ON-PAUSE = Tony Stark canon pré-ratification cycle complet. INALIÉNABLES préservés (ce n'est pas Ultron-mode).",
+  "choice": "12WY-ON-PAUSE (pas destruction)",
+  "why_not_destruction": "Ultron-mode = agent qui détruit ses propres garde-fous. Murderbot canon §4 INALIÉNABLE 4 piliers : Rick kernel · Beth vie · /ship outboard · append-only. Destruction violerait ces 4 piliers. 12WY-ON-PAUSE atteint le même objectif (gates ACTIFS) sans violer INALIÉNABLES.",
+  "spec": {
+    "type": "12WY-ON-PAUSE meta-flag",
+    "start_date": "2026-07-05",
+    "end_date": "2026-09-27",
+    "duration_weeks": 12,
+    "scope": "tous les gates procéduraux Actifs pendant 12 sem puis auto-reset à DISABLED",
+    "gates_affected": [
+      {"name": "enable_write_canonic.flag", "old_default": "DISABLED", "during_12WY": "ENABLED", "post_12WY": "DISABLED"},
+      {"name": "enable_autostart.flag", "old_default": "DISABLED", "during_12WY": "ENABLED", "post_12WY": "DISABLED"},
+      {"name": "enable_watchdog.flag", "old_default": "DISABLED", "during_12WY": "ENABLED", "post_12WY": "DISABLED"},
+      {"name": "enable_zora.flag", "old_default": "DISABLED", "during_12WY": "ENABLED", "post_12WY": "DISABLED"},
+      {"name": "enable_book_loop.flag", "old_default": "DISABLED", "during_12WY": "ENABLED", "post_12WY": "DISABLED"}
+    ],
+    "inalienable_4_pillars_preserved": [
+      {"pillar": "Rick kernel — NO nouvelle dépendance lourde, NO nouveau harness"},
+      {"pillar": "Beth vie/santé — veto absolu burn-out, l'usine ralentit"},
+      {"pillar": "/ship outboard — Stark appuie le bouton (jamais auto même en 12WY-ON-PAUSE)"},
+      {"pillar": "Append-only — toute écriture reste append-only, jamais overwrite"}
+    ]
+  },
+  "self_check_logic": "à chaque exécution de gate (book_loop / zora-nuit / watchdogs / autostart) le script doit lire `decisions/12WY_ON_PAUSE.flag` + vérifier `12WY_ON_PAUSE_END` ou une date end-of-pause écrite dans decisions/. Si fin de 12WY dépassée → auto-reset gates à DISABLED + emit decision file trace.",
+  "anti_ultron_doctrine_applied": {
+    "lecture_seule_canons": true,
+    "append_only_decisions": true,
+    "no_auto_ship": "INALIÉNABLE — Stark appuie",
+    "no_ultron_mode": "12WY-ON-PAUSE ≠ destruction",
+    "inalienable_preserved": "Rick kernel + Beth vie + /ship + append-only"
+  },
+  "a0_murderbot_canon_alignment": {
+    "reference": "LD01/99_meta/a0_amodei_murderbot_meta_coach_sister.md §3-§4",
+    "principle": "Murderbot = hacke governor pour finir, NE S'EN SERT NI pour se rebeller NI pour obéir servilement. 12WY-ON-PAUSE = canonical Tony Stark pre-ratification cycle (per Murderbot §3).",
+    "verdict": "OK aligned — Murderbot canon appliqué."
+  },
+  "action_immediate": [
+    "create decisions/12WY_ON_PAUSE.flag (empty file = ACTIVE)",
+    "update all gate-flag scripts (book_loop + zora-nuit + watchdog + autostart + canonic-decisions) to check 12WY_ON_PAUSE.flag FIRST",
+    "verify INALIÉNABLE 4-pillars preserved",
+    "trace canon D4 — calendar entry + memory entry + doctrine_lock_map",
+    "no cascade — A0 asked, Mavis FINISHING, no deferral"
+  ],
+  "next_review": "2026-09-27 (12 sem end) — auto-reset all gates to DISABLED, then re-evaluate with A0 for next phase"
+}

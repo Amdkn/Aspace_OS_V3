@@ -1,0 +1,16 @@
+{
+  "action": "decision",
+  "date": "2026-07-05",
+  "adr": "ADR-WARMODE-002",
+  "title": "Portes over Freins — Beth seul veto",
+  "a0_intent_verbatim": "l'idée de Frein est déjà Trop, on ne garde que Beth. Rick dégage. Stark inexistant (B3, jamais table A0). Au lieu de fermer les portes avec des freins, développer des stratégies pour en ouvrir comme les Portes dans Hunter X Hunter.",
+  "decision": "Un seul veto inaliénable = Beth (vie/santé). Rick sort des freins War Room (reste agent S1 kernel). Stark quitte la table A0 (=B3 Illuminati/Iron Man). append-only reclassé infra (fenêtre d'observation, pas frein). Bypass par défaut = anti-panique confirmé.",
+  "changed": [
+    "collector_14_warmode.py: inalienables_4 -> veto_unique + portes_a_ouvrir (4)",
+    "warmode.html: 'Freins actifs (4 mires)' -> 'Portes à ouvrir (HxH), 1 seul veto Beth'; Stark retiré du cockpit; 'Tony pré-ratifié' -> 'A+ pré-ratifié'",
+    "ADR-WARMODE-002 créé (ampute clause '4 freins' de 001 sans le réécrire, Règle d'Or #3)"
+  ],
+  "d1_proof": "warmode HTTP 200 11718b — FOUND 'Portes à ouvrir' + 'Beth seul veto' + 'pas de Stark' ; ABSENT 'Freins actifs (4 mires'. Collector: veto_unique set, portes=4, inalienables_4 gone.",
+  "reversible": true,
+  "doctrine": "Portes over Freins (HxH Testing Gates) — capacités s'ouvrent selon la force apportée, pas fermées par défaut."
+}

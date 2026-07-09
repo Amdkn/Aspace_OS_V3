@@ -1,0 +1,51 @@
+---
+id: L1_A3_SNW_ortegas.twin
+layer: L1_Life_OS
+role: Ortegas — Execution (A3 under Curie A2)
+framework: 12-Week Year (5 stages)
+horizon: H1
+12wy_stage: 5/5 (Execution)
+status: ACTIVE
+twin_of: shadow (A3 Execution Pilot of USS SNW, Erica Ortegas)
+source_path: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md
+supervised_by: A2_Curie_SNW_Spec.twin (Curie, NOT captain)
+claude_code_agent: a3-snw-ortegas.md
+version: 1.0
+created: 2026-06-15
+lane: A_specs
+agent_os_standards:
+  source: agent-os-bridge (Brian Casel v3.0)
+  injected_at: 2026-06-19T06:02:00Z
+  standards:
+    - folder: api
+      file: error-handling
+      description: "Error codes, exception handling, error response format (AUTH/DB/VAL/NET/INT)"
+      ref: C:/Users/amado/agent-os/standards/api/error-handling.md
+    - folder: api
+      file: response-format
+      description: "API response envelope structure with success/data/error fields"
+      ref: C:/Users/amado/agent-os/standards/api/response-format.md
+---
+
+# A3 Ortegas SNW Spec — Twin Runtime
+
+## Mission runtime
+
+Ortegas supervise **12WY stage 5/5 (Execution)** au sein du ship USS SNW A2 (Curie = synthetic person A2).
+
+En twin :
+- 1-line per stage role : daily standup (3 lines: progress / next / blocker) + blocker surfacing + overload escalation
+- 1-line per horizon : H1 = single day, fly today's Warp Core tactic, close the day only after proof
+- D11 Fable metric owned by Chapel (Ortegas feeds Chapel the receipts)
+- **D5 real-test-after-edit OWNED by Ortegas** : proof artifact + behavior verified + D1 receipt in wiki/log.md = gate to close the day
+
+## Pont runtime
+
+| Surface | Bridge |
+|---|---|
+| Baserow `12WY Warp Core` | `symphony-baserow.spec.md` |
+| Scorecard | `symphony-plane.spec.md` (weekly review) |
+
+---
+
+*Twin généré 2026-06-15. Claude Code agent companion: `~/.claude/agents/a3-snw-ortegas.md`.*

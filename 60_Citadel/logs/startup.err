@@ -1,0 +1,32 @@
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Python314\Lib\logging\__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 62: character maps to <undefined>
+Call stack:
+  File "C:\Python314\Lib\threading.py", line 1044, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Python314\Lib\threading.py", line 1082, in _bootstrap_inner
+    self._context.run(self.run)
+  File "C:\Python314\Lib\threading.py", line 1024, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Python314\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Python314\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Python314\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+  File "C:\Python314\Lib\http\server.py", line 496, in handle
+    self.handle_one_request()
+  File "C:\Python314\Lib\http\server.py", line 484, in handle_one_request
+    method()
+  File "C:\Users\amado\agent-os\citadel\serve.py", line 281, in do_POST
+    return self._handle_submit()
+  File "C:\Users\amado\agent-os\citadel\serve.py", line 505, in _handle_submit
+    log.info("CMS SUBMIT to %s by visitor \u2192 %s", collection, path.name)
+Message: 'CMS SUBMIT to %s by visitor \u2192 %s'
+Arguments: ('08_agents', '2026-07-05T00-01-10_test-avec-flag.json')

@@ -1,0 +1,33 @@
+{
+  "guide_id": "resource_claude_business_blueprint",
+  "guide_title": "Claude Business Blueprint",
+  "guide_size_chars": 12029,
+  "pilier_numero": 4,
+  "pilier_titre_canon": "AI-Native Business Operating System",
+  "insight_canon_verbatim": "Building a business in the age of AI means treating every workflow as code, every customer interaction as data, and every decision as a prompt. The winners won't be those who automate tasks. They'll be those who rebuild their operating model around what AI makes newly possible, compounding their advantages.",
+  "concept_cles": [
+    "AI-Native Operating Model: rebuilding the business around AI capabilities",
+    "Workflow-as-Code: treating every repeatable process as programmable",
+    "Compounding Advantage: AI integration generates data improving next iteration",
+    "Decision-as-Prompt: encoding strategic decisions as structured prompts",
+    "Customer Interaction Data Loop: capturing touchpoints as structured data"
+  ],
+  "outils_souverains_alignment": [
+    "Claude/Anthropic + AaaS Doctrine 3 Variants Solaris/Nexus/Orbiter sovereign abstraction",
+    "Airtable + PARA Enterprise sovereign tables in Supabase Cloud Life OS",
+    "Notion + L2 Business OS canon _SPECS/ADR/L2_Business_OS ADRs as single source of truth"
+  ],
+  "anti_paperclip_check_pass": false,
+  "anti_paperclip_rationale": "Guide is conceptual/strategic with no quantitative unit economics. Cannot verify opex<15%MR or LTV:CAC>=3:1 - financial discipline lives in sister ADR-AAAS-PRICING-001. No greenwashing or autonomous-dumping red flags detected, but D1 verification of sobriety metrics requires sister ADRs.",
+  "sister_canon_refs": [
+    "ADR-AAAS-PRICING-001",
+    "ADR-L2-AAAS-001",
+    "ADR-ICP-SOLARIS-001",
+    "ADR-MARKET-STUDY-001",
+    "ADR-SOBER-002"
+  ],
+  "a3_twin_sisters": [
+    "Bradward Boimler (Cerritos GTD clarify)",
+    "Riker (Enterprise PARA steward)"
+  ]
+}

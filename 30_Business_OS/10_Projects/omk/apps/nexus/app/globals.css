@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Nexus · Agentic Governance
+   Design tokens — verbatim from Nexus.dc.html palette
+   ============================================================ */
+
+:root {
+  --nx-bg: #0A0E16;
+  --nx-bg-alt: #08090C;
+  --nx-bg-deep: #050608;
+  --nx-gold: #C8A55C;
+  --nx-gold-deep: #A88840;
+  --nx-cream: #F5EFE0;
+  --nx-secured: #6FA98A;
+  --nx-exposed: #C16B5A;
+  --nx-meta: #7E93B8;
+
+  --font-cormorant: var(--font-cormorant), "Cormorant Garamond", serif;
+  --font-hanken: var(--font-hanken), "Hanken Grotesk", system-ui, sans-serif;
+  --font-jetbrains: var(--font-jetbrains), "JetBrains Mono", ui-monospace,
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: #C8A55C;
+  color: #0A0E16;
+}
+
+html,
+body {
+  background: #0A0E16;
+  color: #F5EFE0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   6 keyframes — verbatim from Nexus.dc.html lines 18-23
+   ============================================================ */
+
+@keyframes nx-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes nx-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes nx-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes nx-scan {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes nx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nx-orbit {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ============================================================
+   Grain overlay — verbatim from Nexus.dc.html line 24
+   ============================================================ */
+
+.nx-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.02),
+    transparent 60%
+  );
+}
+
+/* ============================================================
+   Scrollbar (subtle, on-brand)
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050608;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 165, 92, 0.25);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 165, 92, 0.45);
+}
+
+/* ============================================================
+   Nexus custom utility classes — verbatim gradients from Nexus.dc.html
+   Use these to bypass Tailwind v4 specificity for critical visual elements
+   ============================================================ */
+
+@layer utilities {
+  /* Hero orbital sweep — animated conic gold ring */
+  .bg-nx-orbital-conic {
+    background: conic-gradient(
+      from 0deg,
+      rgba(200, 165, 92, 0.35),
+      transparent 22%
+    );
+    animation: nx-sweep 12s linear infinite;
+  }
+
+  /* Practice Owner center sphere — radial navy glow */
+  .bg-nx-vault-sphere {
+    background: radial-gradient(
+      circle at 40% 35%,
+      #15203a,
+      #0A0E16
+    );
+  }
+
+  /* Cabinet wheel center — vault radial glow (same as Practice Owner) */
+  .bg-nx-vault-radial {
+    background: radial-gradient(
+      circle at 40% 35%,
+      #15203a,
+      #0A0E16
+    );
+  }
+}

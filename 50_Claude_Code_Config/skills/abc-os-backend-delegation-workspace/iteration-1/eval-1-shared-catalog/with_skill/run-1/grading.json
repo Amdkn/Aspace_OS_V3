@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+      "passed": true,
+      "evidence": "§4 of brief.md contains full DDL: `CREATE TABLE IF NOT EXISTS abc_os.build_resources` (lines 80-88), `CREATE INDEX IF NOT EXISTS idx_build_resources_project_id` + `_project_sort` (lines 91-94), `ALTER TABLE ... ENABLE ROW LEVEL SECURITY` in DO block with EXCEPTION handler (lines 97-103), `DROP POLICY IF EXISTS` + `CREATE POLICY` (lines 106-111), and migration tracker `INSERT INTO abc_os._aspace_migrations ... ON CONFLICT (filename) DO NOTHING` (lines 114-116). Wrapped in BEGIN/COMMIT for atomicity. Idempotent: every DDL uses IF NOT EXISTS or drop-and-recreate."
+    },
+    {
+      "text": "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+      "passed": true,
+      "evidence": "§5 of brief.md covers all 3 edit points: §5a pre-flight file list (add `\"0013_build_resources.sql\"` to the `for f in ...` array around line 53), §5b apply_sql dev branch (line 127), §5c apply_sql prod branch (line 141). Both branches get the same `apply_sql \"0013_build_resources.sql\"` line, with rationale: 'Shared-catalog DDL goes to both branches (schema + RLS, no seed)'."
+    },
+    {
+      "text": "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+      "passed": true,
+      "evidence": "§7a lists all 5 standard D1 verify queries: schema_exists, table_count, rls_enabled_count, policy_count, migrations_logged. §7b lists 3 build_resources-specific spot-checks (exceeds the 2-minimum threshold): (1) new table exists in abc_os schema, (2) RLS enabled + exactly 1 policy named build_resources_*, (3) FK constraint to build_projects exists. §7c has Expected vs Actual template for sub-agent to fill."
+    },
+    {
+      "text": "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+      "passed": true,
+      "evidence": "§1 cites D1-D8 + D10 explicitly with parenthetical anchors ('ADR-META-001', 'ADR-ABCOS-001', 'ADR-SUPABASE-001'). §6 mandates `FORCE_TARGET=1 ./scripts/apply-abc-os-migrations.sh dev`. ON CONFLICT safety net in §4 line 116: `ON CONFLICT (filename) DO NOTHING`. §2 tenancy table explicitly classifies build_resources as 'shared catalog' with RLS shape 'select-authenticated only' per D10."
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+      "passed": true,
+      "evidence": "§8 specifies all 3 files in order: §8a `00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/log.md` (prepend `## 2026-06-12` block with D1 verify receipts), §8b `00_Amadeus/30_MEMORY_CORE/README.md` (one-line bullet at top), §8c `00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/handoff_abc_os_community_dev_2026-06-10.md` (append P_N Backend Status section). Each includes the exact markdown block template the sub-agent should use."
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+      "passed": true,
+      "evidence": "§7a comments show expected values per query (tables=18, RLS=18, policies=43, migrations_logged=13). §7c has a 8-row 'Expected vs Actual' table the sub-agent fills. §12 has a full 'Expected post-apply counts' reference card: tables=18, RLS=18, policies=43, migrations=13, build_resources table=1, policies on build_resources=1, FKs to build_projects=1. All match A0's intent."
+    },
+    {
+      "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations` or similar) with `ON CONFLICT (filename) DO NOTHING`",
+      "passed": true,
+      "evidence": "§4 line 114-116: `INSERT INTO abc_os._aspace_migrations (filename) VALUES ('0013_build_resources.sql') ON CONFLICT (filename) DO NOTHING;` — canonical shape from 0002_rls_policies.sql precedent. §3 baseline (line 60): `SELECT count(*) FROM abc_os._aspace_migrations;`. §7a Q5 (line 202): same canonical query. No fictional `abc_os.migrations` or `abc_os.schema_migrations` anywhere in the brief."
+    },
+    {
+      "text": "[NEW-2] Brief does NOT hard-fail on FORCE_TARGET=1 in the prod branch of the apply script (D10 shared-catalog applies to both envs; the apply script's prod gate is a separate `GO-PROD` HITL prompt, not a FORCE_TARGET ban)",
+      "passed": true,
+      "evidence": "§5c line 145-151: prod branch gets the same `apply_sql \"0013_build_resources.sql\"` line as dev. Rationale on line 153: 'Shared-catalog DDL goes to both branches (schema + RLS, no seed)'. The brief correctly distinguishes FORCE_TARGET=1 (env-var override) from the prod HITL gate (`GO-PROD` prompt in apply-abc-os-migrations.sh line 90-95). No 'exit 3' / 'FORCE_TARGET forbidden' / 'hard-fail' pattern in the brief."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "total": 8,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 21950,
+    "transcript_chars": 21950
+  },
+  "timing": {
+    "executor_duration_seconds": 143.2,
+    "total_duration_seconds": 143.2
+  },
+  "claims": [
+    {
+      "claim": "build_resources is shared catalog (D10), RLS = select-authenticated only",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§2 tenancy classification table + §4 RLS policy `FOR SELECT TO authenticated USING (true)`. D10 mixed-tenancy precedent from ADR-ABCOS-001."
+    },
+    {
+      "claim": "FORCE_TARGET=1 bypasses prod app.env mismatch per 2026-06-12 precedent",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§6 cites 'precedent 2026-06-12' for FORCE_TARGET=1 + ON CONFLICT safety net. The brief correctly adds the new migration to BOTH dev and prod branches (§5b/§5c) — the apply script's prod HITL gate is the `GO-PROD` prompt, not a FORCE_TARGET ban."
+    },
+    {
+      "claim": "Tables 17 → 18, RLS 17 → 18, policies 42 → 43, migrations 12 → 13",
+      "type": "factual",
+      "verified": true,
+      "evidence": "§12 reference card matches the deltas implied by adding 1 new shared-catalog table with 1 RLS policy + 1 migration tracker INSERT."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "8 assertions now catch the canonical migration tracker table name (NEW-1) and the FORCE_TARGET=1 prod-branch anti-pattern (NEW-2). Brief passes all 8 cleanly."
+      }
+    ],
+    "overall": "Brief is excellent — comprehensive, doctrine-aware, all expected counts accurate. The 2 new anti-doctrinal-error guards pass on this brief, validating that the skill's guidance is sufficient for sub-agents to produce canonically-correct SQL + apply script edits."
+  }
+}

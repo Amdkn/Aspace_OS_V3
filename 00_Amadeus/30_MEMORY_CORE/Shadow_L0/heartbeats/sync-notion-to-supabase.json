@@ -1,0 +1,10 @@
+{
+  "status": "ok",
+  "timestamp": "2026-05-27T21:00:34.7904801-04:00",
+  "extra": {
+    "duration_sec": 4,
+    "tenant": "tenant_aspace_solaris",
+    "rows": 38
+  },
+  "agent": "sync-notion-to-supabase"
+}

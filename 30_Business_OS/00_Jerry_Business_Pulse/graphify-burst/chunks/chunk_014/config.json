@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "projectName": "ClaudeClaw Agent",
+  "createdAt": "2026-03-30T09:31:11.588Z",
+  "streaming": {
+    "enabled": true,
+    "format": "jsonl",
+    "cursorIntegration": true
+  },
+  "ui": {
+    "autoShowMoat": true,
+    "confirmBeforeSend": false
+  }
+}

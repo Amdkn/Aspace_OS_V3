@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alykaly Holding — Récupération de Fonds Excédentaires | Hamilton County, OH</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<!-- lucide icons (UMD, exposes window.lucide) -->
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+
+<style>
+  :root {
+    --bg: #020617;          /* slate-950 */
+    --bg-2: #0a1124;        /* slightly raised */
+    --line: #1e293b;        /* slate-800 */
+    --line-soft: #14213a;
+    --cream: #fffaf0;
+    --cream-dim: #e8e2d4;
+    --emerald: #10b981;
+    --emerald-glow: rgba(16, 185, 129, 0.35);
+  }
+
+  html, body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
+
+  /* Subtle ambient grid + radial glow */
+  .ambient-bg {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(16,185,129,0.10), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 30%, rgba(16,185,129,0.04), transparent 60%),
+      linear-gradient(to right, rgba(30,41,59,0.45) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30,41,59,0.45) 1px, transparent 1px);
+    background-size: auto, auto, 56px 56px, 56px 56px;
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(30,41,59,0.35) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(30,41,59,0.35) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .emerald-glow {
+    box-shadow: 0 0 0 1px rgba(16,185,129,0.4), 0 0 30px -6px var(--emerald-glow);
+  }
+  .emerald-glow-strong {
+    box-shadow: 0 0 0 1px rgba(16,185,129,0.6), 0 0 40px -4px var(--emerald-glow), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  /* Vertical hairline */
+  .hairline-v { background: linear-gradient(180deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent); }
+  .hairline-h { background: linear-gradient(90deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent); }
+
+  /* Marquee ticker */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track { animation: marquee 60s linear infinite; }
+
+  /* Tiny pulse for live indicator */
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+  }
+  .pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
+  /* progress bar fill animation */
+  @keyframes fill {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+
+  /* Card hover */
+  .expertise-card {
+    transition: border-color 240ms ease, transform 240ms ease, background-color 240ms ease;
+  }
+  .expertise-card:hover {
+    border-color: rgba(16,185,129,0.55);
+    background-color: rgba(16,185,129,0.025);
+    transform: translateY(-2px);
+  }
+  .expertise-card:hover .card-arrow {
+    transform: translate(4px, -4px);
+    color: var(--emerald);
+  }
+
+  /* Focus ring */
+  .focus-emerald:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(16,185,129,0.7), 0 0 40px -6px var(--emerald-glow);
+  }
+
+  /* Step number caret */
+  .step-rule {
+    background: linear-gradient(180deg, var(--emerald) 0%, rgba(16,185,129,0.0) 100%);
+  }
+
+  /* Selection */
+  ::selection { background: rgba(16,185,129,0.35); color: #fff; }
+
+  /* Lucide icon default */
+  [data-lucide] { stroke-width: 1.5; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: #050a18; }
+  ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 8px; }
+  ::-webkit-scrollbar-thumb:hover { background: #334155; }
+</style>
+</head>
+<body class="bg-[#020617]">
+  <div id="root"></div>
+
+  <script type="text/babel" data-presets="env,react">
+const { useState, useEffect, useRef, useMemo } = React;
+
+/* ─────────────────────────────────────────────
+   Icon helper — render lucide SVGs by name
+   ───────────────────────────────────────────── */
+function Icon({ name, className = "", size = 18, strokeWidth = 1.5 }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current && window.lucide && window.lucide.icons) {
+      // empty container first
+      ref.current.innerHTML = "";
+      const iconName = name; // PascalCase
+      const node = window.lucide.createElement(window.lucide.icons[iconName]);
+      if (node) {
+        node.setAttribute("width", size);
+        node.setAttribute("height", size);
+        node.setAttribute("stroke-width", strokeWidth);
+        node.setAttribute("class", className);
+        ref.current.appendChild(node);
+      }
+    }
+  }, [name, className, size, strokeWidth]);
+  return <span ref={ref} className="inline-flex" aria-hidden="true" />;
+}
+
+/* ─────────────────────────────────────────────
+   Top utility bar
+   ───────────────────────────────────────────── */
+function TopBar() {
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    const tick = () => {
+      const d = new Date();
+      const hh = String(d.getHours()).padStart(2, "0");
+      const mm = String(d.getMinutes()).padStart(2, "0");
+      const ss = String(d.getSeconds()).padStart(2, "0");
+      setTime(`${hh}:${mm}:${ss} EST`);
+    };
+    tick();
+    const i = setInterval(tick, 1000);
+    return () => clearInterval(i);
+  }, []);
+
+  return (
+    <div className="border-b border-slate-800/70 bg-[#020617]/80 backdrop-blur-sm relative z-30">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-2 flex items-center justify-between text-[11px] uppercase tracking-[0.18em] text-slate-500 font-mono">
+        <div className="flex items-center gap-4">
+          <span className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+            <span className="text-slate-400">Cabinet ouvert</span>
+          </span>
+          <span className="hidden sm:inline text-slate-700">|</span>
+          <span className="hidden sm:inline">Cincinnati · Hamilton County · OH</span>
+        </div>
+        <div className="hidden md:flex items-center gap-4">
+          <span>Greffe en session</span>
+          <span className="text-slate-700">|</span>
+          <span className="text-slate-400">{time}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Header
+   ───────────────────────────────────────────── */
+function Header() {
+  return (
+    <header className="border-b border-slate-800/70 bg-[#020617]/85 backdrop-blur-md sticky top-0 z-20">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-3 group">
+          <div className="relative">
+            <div className="w-10 h-10 border border-slate-700 rounded-sm flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-950 group-hover:border-emerald-500/60 transition-colors">
+              <span className="font-display font-bold text-emerald-500 text-lg leading-none">A</span>
+            </div>
+            <div className="absolute -top-1 -right-1 w-2 h-2 bg-emerald-500 rounded-full pulse-dot"></div>
+          </div>
+          <div className="leading-tight">
+            <div className="font-display font-semibold tracking-[0.08em] text-cream text-[15px] uppercase" style={{color: 'var(--cream)'}}>
+              Alykaly Holding
+            </div>
+            <div className="text-[10px] uppercase tracking-[0.22em] text-slate-500 font-mono">
+              Real Estate &middot; Legal Audits
+            </div>
+          </div>
+        </a>
+
+        {/* Nav */}
+        <nav className="hidden lg:flex items-center gap-9 text-[13px] text-slate-400 font-medium tracking-wide">
+          <a href="#expertises" className="hover:text-cream transition-colors" style={{'--tw-text-opacity': 1}}>Expertises</a>
+          <a href="#methode" className="hover:text-cream transition-colors">La Méthode</a>
+          <a href="#promesse" className="hover:text-cream transition-colors">Garanties</a>
+          <a href="#contact" className="hover:text-cream transition-colors">Cabinet</a>
+        </nav>
+
+        {/* CTA */}
+        <div className="flex items-center gap-3">
+          <a href="tel:+15135550101" className="hidden md:flex items-center gap-2 text-[12px] text-slate-400 hover:text-cream font-mono">
+            <Icon name="Phone" size={14} />
+            <span>+1 (513) 555&middot;0101</span>
+          </a>
+          <a href="#hero-widget"
+             className="group relative inline-flex items-center gap-2 px-4 lg:px-5 py-2.5 border border-emerald-500/70 text-emerald-400 hover:text-white hover:bg-emerald-500/10 transition-all text-[12.5px] font-medium uppercase tracking-[0.12em] rounded-sm emerald-glow">
+            <span>Vérifier mon éligibilité</span>
+            <Icon name="ArrowUpRight" size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Hero
+   ───────────────────────────────────────────── */
+function Hero() {
+  return (
+    <section className="relative ambient-bg border-b border-slate-800/70 overflow-hidden">
+      {/* Decorative side rulers */}
+      <div className="absolute inset-y-0 left-6 lg:left-10 w-px hairline-v opacity-60 hidden md:block"></div>
+      <div className="absolute inset-y-0 right-6 lg:right-10 w-px hairline-v opacity-60 hidden md:block"></div>
+
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-16 pt-16 pb-20 lg:pt-24 lg:pb-28 relative">
+
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-10">
+          <span className="h-px w-10 bg-emerald-500/70"></span>
+          <span className="text-[11px] uppercase tracking-[0.28em] text-emerald-400 font-mono">
+            File N° AB&middot;OH&middot;2026 / Récupération Excédentaire
+          </span>
+        </div>
+
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* LEFT: title + widget */}
+          <div className="lg:col-span-7">
+            <h1 className="font-display font-medium text-[40px] sm:text-[52px] lg:text-[68px] leading-[1.02] tracking-[-0.035em] text-white">
+              L'État détient<br/>
+              <span className="text-slate-500">votre argent.</span><br/>
+              Nous forçons<br/>
+              sa <span className="relative inline-block text-emerald-400">
+                restitution.
+                <svg className="absolute -bottom-2 left-0 w-full" height="10" viewBox="0 0 300 10" preserveAspectRatio="none">
+                  <path d="M2 6 Q 75 1, 150 5 T 298 4" stroke="#10b981" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.7"/>
+                </svg>
+              </span>
+            </h1>
+
+            <p className="mt-8 text-[16px] lg:text-[17px] leading-relaxed text-slate-400 max-w-xl">
+              Nous rapatrions vos <span className="text-cream" style={{color:'var(--cream)'}}>fonds excédentaires</span> bloqués au tribunal civil du
+              comté de Hamilton. <span className="text-emerald-400">Zéro frais avancés.</span> Rémunération exclusivement
+              au succès.
+            </p>
+
+            {/* Stitch Widget */}
+            <div id="hero-widget" className="mt-10">
+              <StitchWidget />
+            </div>
+
+            {/* Tiny legal print */}
+            <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-[11px] text-slate-500 font-mono uppercase tracking-[0.14em]">
+              <span className="flex items-center gap-1.5"><Icon name="Lock" size={12} /> Connexion chiffrée</span>
+              <span className="flex items-center gap-1.5"><Icon name="ShieldCheck" size={12} /> Données scellées 30j</span>
+              <span className="flex items-center gap-1.5"><Icon name="FileSearch" size={12} /> Audit en moins de 48h</span>
+            </div>
+          </div>
+
+          {/* RIGHT: Authority panel */}
+          <div className="lg:col-span-5 relative">
+            <AuthorityPanel />
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom recent recoveries ticker */}
+      <RecoveryTicker />
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   StitchWidget — Case Number Audit Input
+   ───────────────────────────────────────────── */
+function StitchWidget() {
+  const [val, setVal] = useState("");
+  const [state, setState] = useState("idle"); // idle, validating, found, notfound, invalid
+  const [progress, setProgress] = useState(0);
+
+  // Hamilton County case format: Letter + space + digits, e.g. A 2403702
+  const formatCase = (raw) => {
+    const cleaned = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+    if (!cleaned) return "";
+    const letter = cleaned.charAt(0);
+    const digits = cleaned.slice(1).replace(/\D/g, "").slice(0, 7);
+    return digits ? `${letter} ${digits}` : letter;
+  };
+
+  const onChange = (e) => {
+    const formatted = formatCase(e.target.value);
+    setVal(formatted);
+    if (state !== "idle") setState("idle");
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const m = val.match(/^[A-Z]\s\d{7}$/);
+    if (!m) { setState("invalid"); return; }
+    setState("validating");
+    setProgress(0);
+    const start = Date.now();
+    const duration = 2400;
+    const i = setInterval(() => {
+      const p = Math.min(100, ((Date.now() - start) / duration) * 100);
+      setProgress(p);
+      if (p >= 100) {
+        clearInterval(i);
+        // Determine outcome from case number — deterministic mock
+        const num = parseInt(val.slice(2), 10);
+        if (num % 7 === 3) setState("notfound");
+        else setState("found");
+      }
+    }, 40);
+  };
+
+  const reset = () => { setState("idle"); setVal(""); setProgress(0); };
+
+  // mock surplus amount derived from input
+  const surplus = useMemo(() => {
+    if (state !== "found") return null;
+    const num = parseInt(val.slice(2), 10) || 0;
+    const base = 12000 + (num % 97) * 873;
+    return base;
+  }, [state, val]);
+
+  return (
+    <div className={`relative border bg-gradient-to-br from-slate-900/70 to-slate-950/90 backdrop-blur-sm rounded-sm transition-all duration-300 ${
+      state === "found" ? "border-emerald-500/60 emerald-glow-strong"
+      : state === "validating" ? "border-emerald-500/40"
+      : state === "invalid" || state === "notfound" ? "border-rose-500/40"
+      : "border-slate-800 hover:border-slate-700"
+    }`}>
+
+      <div className="flex items-center justify-between px-5 pt-4 pb-2 border-b border-slate-800/70">
+        <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] font-mono text-slate-500">
+          <Icon name="ScanLine" size={13} className="text-emerald-500" />
+          <span>Module d'Audit Sécurisé</span>
+        </div>
+        <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">v2.6 · SHA-256</div>
+      </div>
+
+      <form onSubmit={onSubmit} className="p-5">
+        <label className="block text-[11px] uppercase tracking-[0.2em] text-slate-500 font-mono mb-3">
+          Numéro de dossier — Hamilton County Common Pleas
+        </label>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex-1 relative">
+            <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-600 font-mono text-[13px]">
+              <Icon name="Search" size={16} />
+            </span>
+            <input
+              type="text"
+              value={val}
+              onChange={onChange}
+              disabled={state === "validating"}
+              placeholder="A 2403702"
+              autoComplete="off"
+              spellCheck="false"
+              className="w-full bg-slate-950/80 border border-slate-800 hover:border-slate-700 focus-emerald rounded-sm pl-11 pr-4 py-3.5 text-[17px] font-mono tracking-wider text-white placeholder-slate-700 transition-all"
+            />
+            {val && state === "idle" && (
+              <button type="button" onClick={() => setVal("")}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-600 hover:text-slate-400">
+                <Icon name="X" size={14} />
+              </button>
+            )}
+          </div>
+          <button
+            type="submit"
+            disabled={state === "validating" || !val}
+            className="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 disabled:bg-slate-800 disabled:text-slate-600 disabled:cursor-not-allowed text-slate-950 font-semibold text-[13px] uppercase tracking-[0.14em] rounded-sm transition-all emerald-glow-strong disabled:shadow-none">
+            {state === "validating" ? (
+              <>
+                <Icon name="Loader" size={15} className="animate-spin" />
+                <span>Audit...</span>
+              </>
+            ) : (
+              <>
+                <Icon name="ShieldCheck" size={15} />
+                <span>Lancer l'Audit</span>
+              </>
+            )}
+          </button>
+        </div>
+
+        {/* Progress / result tray */}
+        <div className="mt-4 min-h-[28px] text-[12px] font-mono">
+          {state === "idle" && (
+            <div className="flex items-center justify-between text-slate-500">
+              <span className="flex items-center gap-2">
+                <Icon name="Info" size={12} />
+                Format Ohio: 1 lettre + 7 chiffres (ex. <span className="text-slate-300">A 2403702</span>)
+              </span>
+              <button type="button" onClick={() => { setVal("A 2403702"); setState("idle"); }}
+                      className="text-emerald-500/80 hover:text-emerald-400 uppercase tracking-[0.18em] text-[10px]">
+                ↳ Exemple
+              </button>
+            </div>
+          )}
+
+          {state === "validating" && (
+            <div>
+              <div className="flex justify-between text-slate-400 text-[11px] uppercase tracking-[0.18em]">
+                <span>Connexion au Clerk of Courts…</span>
+                <span className="text-emerald-400">{Math.floor(progress)}%</span>
+              </div>
+              <div className="mt-2 h-[2px] w-full bg-slate-800 rounded-full overflow-hidden">
+                <div className="h-full bg-emerald-500 transition-all" style={{ width: `${progress}%` }}></div>
+              </div>
+              <div className="mt-2 text-slate-600 text-[10.5px] uppercase tracking-[0.22em] flex gap-4 flex-wrap">
+                <span className={progress > 20 ? "text-emerald-500" : ""}>● Localisation</span>
+                <span className={progress > 50 ? "text-emerald-500" : ""}>● Vérification fonds</span>
+                <span className={progress > 80 ? "text-emerald-500" : ""}>● Audit légal</span>
+              </div>
+            </div>
+          )}
+
+          {state === "invalid" && (
+            <div className="flex items-center justify-between gap-2 text-rose-400">
+              <span className="flex items-center gap-2"><Icon name="AlertCircle" size={13} /> Format invalide — utilisez 1 lettre suivie de 7 chiffres.</span>
+              <button type="button" onClick={reset} className="text-slate-500 hover:text-slate-300 text-[10px] uppercase tracking-[0.18em]">Réessayer</button>
+            </div>
+          )}
+
+          {state === "notfound" && (
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-rose-300/90">
+              <span className="flex items-center gap-2"><Icon name="FileX" size={13} /> Aucun fonds excédentaire détecté pour <span className="text-white">{val}</span>.</span>
+              <button type="button" onClick={reset} className="text-emerald-500/80 hover:text-emerald-400 text-[10px] uppercase tracking-[0.18em]">↳ Nouveau dossier</button>
+            </div>
+          )}
+
+          {state === "found" && (
+            <div className="border border-emerald-500/40 bg-emerald-500/[0.06] rounded-sm p-4 mt-1">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div>
+                  <div className="flex items-center gap-2 text-emerald-400 uppercase tracking-[0.2em] text-[10.5px]">
+                    <Icon name="CheckCircle2" size={13} /> Fonds détectés &middot; Dossier {val}
+                  </div>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="font-display text-[34px] text-white tracking-tight">
+                      ${surplus.toLocaleString('en-US')}
+                    </span>
+                    <span className="text-[11px] text-slate-400 uppercase tracking-[0.18em]">excédent vérifié</span>
+                  </div>
+                  <div className="mt-1 text-[11px] text-slate-500">
+                    Détenu par le Clerk of Courts &middot; Statut : <span className="text-cream" style={{color:'var(--cream)'}}>Réclamable</span>
+                  </div>
+                </div>
+                <button type="button"
+                        className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-[12px] uppercase tracking-[0.14em] rounded-sm whitespace-nowrap">
+                  <span>Mandater le cabinet</span>
+                  <Icon name="ArrowRight" size={14} />
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   AuthorityPanel — stat block on the right of hero
+   ───────────────────────────────────────────── */
+function AuthorityPanel() {
+  return (
+    <div className="relative border border-slate-800 bg-slate-950/60 backdrop-blur-sm rounded-sm overflow-hidden">
+      {/* Header band */}
+      <div className="border-b border-slate-800 px-5 py-3 flex items-center justify-between bg-slate-900/40">
+        <div className="flex items-center gap-2 text-[10.5px] uppercase tracking-[0.22em] font-mono text-slate-400">
+          <Icon name="Landmark" size={13} className="text-emerald-500" />
+          <span>Cabinet · Bilan public 2024</span>
+        </div>
+        <span className="text-[10px] text-emerald-400/80 font-mono uppercase tracking-[0.2em] flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full pulse-dot"></span>
+          Live
+        </span>
+      </div>
+
+      {/* Big number */}
+      <div className="p-6 border-b border-slate-800/70">
+        <div className="text-[11px] uppercase tracking-[0.22em] text-slate-500 font-mono">Restitué aux ayants droit</div>
+        <div className="mt-2 font-display text-[54px] leading-none tracking-tight text-white">
+          $4.72<span className="text-emerald-400">M</span>
+        </div>
+        <div className="mt-2 text-[12px] text-slate-400">depuis l'ouverture du cabinet · OH only</div>
+      </div>
+
+      {/* Mini grid */}
+      <div className="grid grid-cols-2">
+        <Stat label="Dossiers clos" value="187" sub="+12 ce mois" />
+        <Stat label="Taux de succès" value="94%" sub="2022 → 2026" borderLeft />
+        <Stat label="Délai moyen" value="11 sem." sub="audit → décaiss." borderTop />
+        <Stat label="Frais avancés" value="$0" sub="contingence 100%" borderLeft borderTop accent />
+      </div>
+
+      {/* Footer trust strip */}
+      <div className="border-t border-slate-800 px-5 py-3.5 bg-slate-900/40">
+        <div className="text-[10px] uppercase tracking-[0.22em] text-slate-500 font-mono mb-2">Partenaires Barreau OH</div>
+        <div className="flex items-center gap-4 flex-wrap text-slate-400 text-[12px] font-display">
+          <span className="flex items-center gap-1.5"><Icon name="Scale" size={13} className="text-emerald-500/70"/> Reyes &amp; Hall LLP</span>
+          <span className="text-slate-800">·</span>
+          <span className="flex items-center gap-1.5"><Icon name="Scale" size={13} className="text-emerald-500/70"/> Whitford Probate</span>
+          <span className="text-slate-800">·</span>
+          <span className="flex items-center gap-1.5"><Icon name="Scale" size={13} className="text-emerald-500/70"/> M. Bradbury Esq.</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Stat({ label, value, sub, borderLeft, borderTop, accent }) {
+  return (
+    <div className={`px-5 py-4 ${borderLeft ? "border-l border-slate-800/70" : ""} ${borderTop ? "border-t border-slate-800/70" : ""}`}>
+      <div className="text-[10.5px] uppercase tracking-[0.2em] text-slate-500 font-mono">{label}</div>
+      <div className={`mt-1 font-display text-[26px] leading-none tracking-tight ${accent ? "text-emerald-400" : "text-white"}`}>{value}</div>
+      <div className="mt-1 text-[10.5px] text-slate-500">{sub}</div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Recovery ticker
+   ───────────────────────────────────────────── */
+function RecoveryTicker() {
+  const items = [
+    { case: "A 2401114", amt: "$32,418", county: "Hamilton" },
+    { case: "B 2308972", amt: "$87,200", county: "Hamilton" },
+    { case: "A 2406302", amt: "$14,750", county: "Hamilton" },
+    { case: "C 2305501", amt: "$129,840", county: "Butler" },
+    { case: "A 2407108", amt: "$8,920", county: "Hamilton" },
+    { case: "A 2402840", amt: "$54,610", county: "Hamilton" },
+    { case: "B 2310014", amt: "$22,300", county: "Warren" },
+    { case: "A 2406641", amt: "$71,205", county: "Hamilton" },
+  ];
+  const doubled = [...items, ...items];
+
+  return (
+    <div className="border-y border-slate-800/70 bg-[#040a1c] overflow-hidden relative">
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#040a1c] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#040a1c] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 flex items-center gap-2 text-[10.5px] uppercase tracking-[0.22em] font-mono text-emerald-400 bg-[#040a1c] pr-4">
+        <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full pulse-dot"></span>
+        Restitutions récentes
+      </div>
+      <div className="py-3 marquee-track flex gap-10 whitespace-nowrap pl-[260px]">
+        {doubled.map((it, i) => (
+          <div key={i} className="flex items-center gap-3 text-[12.5px] text-slate-400 font-mono">
+            <span className="text-slate-600">▸</span>
+            <span className="text-slate-500">{it.county} County · </span>
+            <span className="text-cream tracking-wider" style={{color:'var(--cream)'}}>{it.case}</span>
+            <span className="text-slate-700">—</span>
+            <span className="text-emerald-400 font-semibold">{it.amt}</span>
+            <span className="text-slate-600">restitué</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Promise bar
+   ───────────────────────────────────────────── */
+function PromiseBar() {
+  const items = [
+    { icon: "Shield", title: "Zéro Risque Financier", sub: "Pas de fonds récupérés, pas d'honoraires. Garantie écrite." },
+    { icon: "Scale", title: "Frais d'Avocats Inclus", sub: "Nous mandatons et payons les avocats du Barreau de l'Ohio." },
+    { icon: "Lock", title: "Confidentialité Absolue", sub: "Données scellées. Procédure menée discrètement, hors audience publique." },
+  ];
+  return (
+    <section id="promesse" className="border-b border-slate-800/70 bg-[#020617]">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 grid md:grid-cols-3">
+        {items.map((it, i) => (
+          <div key={i} className={`flex items-start gap-5 py-10 lg:py-14 px-2 lg:px-8 ${i > 0 ? "md:border-l border-slate-800/70" : ""}`}>
+            <div className="flex-shrink-0 w-12 h-12 border border-emerald-500/40 rounded-sm flex items-center justify-center bg-emerald-500/[0.04]">
+              <Icon name={it.icon} size={22} className="text-emerald-400" strokeWidth={1.4} />
+            </div>
+            <div>
+              <div className="font-display text-[18px] text-white tracking-tight">{it.title}</div>
+              <div className="mt-1.5 text-[13.5px] text-slate-400 leading-relaxed">{it.sub}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Expertises
+   ───────────────────────────────────────────── */
+function Expertises() {
+  const cards = [
+    {
+      tag: "01 / Foreclosure Surplus",
+      icon: "Home",
+      title: "Saisies Bancaires",
+      desc: "Lorsqu'une maison est vendue aux enchères pour plus que la dette hypothécaire, l'excédent vous revient — pas à la banque. Nous l'extrayons du greffe.",
+      kpi: "Médiane: $42K",
+      kpiSub: "par dossier récupéré"
+    },
+    {
+      tag: "02 / Tax Lien Overages",
+      icon: "Landmark",
+      title: "Excédents Fiscaux",
+      desc: "Après une saisie pour impôts fonciers impayés, le Trésorier garde l'excédent. Trois ans plus tard, il est versé au comté. Nous le réclamons avant prescription.",
+      kpi: "Prescription: 3 ans",
+      kpiSub: "à compter de la vente"
+    },
+    {
+      tag: "03 / Ghost Probate",
+      icon: "FileSearch",
+      title: "Successions Bloquées",
+      desc: "Un parent est décédé en laissant des fonds non réclamés. Sans succession ouverte, l'argent dort. Nous initions la probate et reconstituons la chaîne d'héritiers.",
+      kpi: "12 héritiers/an",
+      kpiSub: "identifiés en moyenne"
+    }
+  ];
+
+  return (
+    <section id="expertises" className="border-b border-slate-800/70 grid-bg relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#020617] via-transparent to-[#020617] pointer-events-none"></div>
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20 lg:py-28 relative">
+        {/* Section head */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <span className="h-px w-10 bg-emerald-500/70"></span>
+              <span className="text-[11px] uppercase tracking-[0.28em] text-emerald-400 font-mono">Nos Expertises</span>
+            </div>
+            <h2 className="font-display font-medium text-[34px] lg:text-[46px] leading-[1.05] tracking-[-0.03em] text-white max-w-2xl">
+              Trois territoires juridiques.<br/>
+              <span className="text-slate-500">Un seul réflexe :</span> rapatrier vos fonds.
+            </h2>
+          </div>
+          <p className="text-[14px] text-slate-400 max-w-sm leading-relaxed">
+            Chaque dossier est traité par un binôme auditeur juridique + avocat du Barreau de l'Ohio. Aucune intervention n'est délégée à un tiers non agréé.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-3 gap-5">
+          {cards.map((c, i) => (
+            <article key={i} className="expertise-card relative border border-slate-800 bg-slate-950/50 rounded-sm p-7 flex flex-col group cursor-pointer">
+              {/* tag */}
+              <div className="flex items-center justify-between mb-7">
+                <span className="text-[10.5px] uppercase tracking-[0.22em] font-mono text-slate-500">{c.tag}</span>
+                <Icon name="ArrowUpRight" size={16} className="card-arrow text-slate-600 transition-all" />
+              </div>
+
+              {/* icon */}
+              <div className="w-11 h-11 border border-slate-800 group-hover:border-emerald-500/50 rounded-sm flex items-center justify-center bg-slate-950 mb-6 transition-colors">
+                <Icon name={c.icon} size={20} className="text-emerald-400" strokeWidth={1.4} />
+              </div>
+
+              <h3 className="font-display text-[22px] text-white tracking-tight mb-3">{c.title}</h3>
+              <p className="text-[13.5px] text-slate-400 leading-relaxed mb-7">{c.desc}</p>
+
+              <div className="mt-auto pt-5 border-t border-slate-800/80">
+                <div className="text-[10.5px] uppercase tracking-[0.2em] text-slate-500 font-mono">{c.kpiSub}</div>
+                <div className="mt-1 font-display text-[20px] text-emerald-400 tracking-tight">{c.kpi}</div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Méthode — 3 steps
+   ───────────────────────────────────────────── */
+function Methode() {
+  const steps = [
+    {
+      num: "I",
+      title: "Audit & Localisation",
+      sub: "Nous identifions les fonds.",
+      desc: "Croisement de votre numéro de dossier avec les bases du Clerk of Courts et du Treasurer. Confirmation écrite de l'excédent et de votre éligibilité légale.",
+      time: "24-48h",
+      icon: "ScanLine",
+      tasks: ["Vérification dossier", "Confirmation excédent", "Lettre d'éligibilité"]
+    },
+    {
+      num: "II",
+      title: "Assemblage Légal",
+      sub: "Nous mandatons et payons les avocats locaux.",
+      desc: "Nos avocats du Barreau de l'Ohio préparent le Motion to Disburse, gèrent les notifications légales et plaident à votre place. Vous ne mettez pas un pied au tribunal.",
+      time: "4-8 semaines",
+      icon: "FilePen",
+      tasks: ["Motion to disburse", "Notifications créanciers", "Audience programmée"]
+    },
+    {
+      num: "III",
+      title: "Décaissement",
+      sub: "Le juge libère les fonds directement vers vous.",
+      desc: "Une fois la motion accordée, le chèque du Clerk est émis à votre nom. Nous prélevons notre commission de succès. Aucune avance n'a jamais quitté votre poche.",
+      time: "2-3 semaines",
+      icon: "CircleDollarSign",
+      tasks: ["Order signed", "Chèque émis", "Solde versé"]
+    }
+  ];
+
+  return (
+    <section id="methode" className="border-b border-slate-800/70 bg-[#040818] relative">
+      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none"></div>
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20 lg:py-28 relative">
+        <div className="flex items-center gap-3 mb-5">
+          <span className="h-px w-10 bg-emerald-500/70"></span>
+          <span className="text-[11px] uppercase tracking-[0.28em] text-emerald-400 font-mono">Processus Asynchrone</span>
+        </div>
+        <h2 className="font-display font-medium text-[34px] lg:text-[46px] leading-[1.05] tracking-[-0.03em] text-white max-w-3xl mb-16">
+          Vous signez une fois.<br/>
+          <span className="text-slate-500">Nous orchestrons le reste.</span>
+        </h2>
+
+        <div className="relative grid lg:grid-cols-3 gap-px bg-slate-800/70 border border-slate-800/70 rounded-sm overflow-hidden">
+          {steps.map((s, i) => (
+            <div key={i} className="relative bg-[#040818] p-8 lg:p-10 group hover:bg-[#06112a] transition-colors">
+              {/* Roman number */}
+              <div className="flex items-start justify-between mb-8">
+                <div className="font-display text-emerald-500/30 group-hover:text-emerald-500/70 text-[80px] leading-none transition-colors">
+                  {s.num}
+                </div>
+                <div className="flex flex-col items-end gap-2">
+                  <div className="w-11 h-11 border border-slate-800 group-hover:border-emerald-500/50 rounded-sm flex items-center justify-center transition-colors">
+                    <Icon name={s.icon} size={18} className="text-emerald-400" strokeWidth={1.4} />
+                  </div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] font-mono text-slate-500">{s.time}</span>
+                </div>
+              </div>
+
+              <h3 className="font-display text-[24px] text-white tracking-tight mb-1">{s.title}</h3>
+              <p className="text-[13px] text-emerald-400/90 mb-5 italic">{s.sub}</p>
+              <p className="text-[13.5px] text-slate-400 leading-relaxed mb-7">{s.desc}</p>
+
+              <ul className="space-y-2 pt-5 border-t border-slate-800/70">
+                {s.tasks.map((t, j) => (
+                  <li key={j} className="flex items-center gap-3 text-[12.5px] text-slate-400 font-mono">
+                    <Icon name="Check" size={13} className="text-emerald-500" strokeWidth={2} />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom assurance line */}
+        <div className="mt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border border-slate-800 rounded-sm bg-slate-950/60 p-6">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 border border-emerald-500/40 bg-emerald-500/[0.05] rounded-sm flex items-center justify-center">
+              <Icon name="HandCoins" size={18} className="text-emerald-400" />
+            </div>
+            <div>
+              <div className="font-display text-[15px] text-white">Honoraires uniquement au succès.</div>
+              <div className="text-[12.5px] text-slate-400">Si rien n'est récupéré, vous ne devez rien. Aucune exception, aucun frais caché.</div>
+            </div>
+          </div>
+          <a href="#hero-widget" className="inline-flex items-center gap-2 px-5 py-3 border border-emerald-500/70 text-emerald-400 hover:bg-emerald-500/10 hover:text-white transition-all text-[12px] uppercase tracking-[0.14em] rounded-sm font-medium emerald-glow self-start md:self-auto">
+            <span>Démarrer mon audit</span>
+            <Icon name="ArrowRight" size={14} />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Closing CTA
+   ───────────────────────────────────────────── */
+function ClosingCTA() {
+  return (
+    <section className="border-b border-slate-800/70 ambient-bg relative">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-20 lg:py-28 relative">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <div className="flex items-center gap-3 mb-5">
+              <span className="h-px w-10 bg-emerald-500/70"></span>
+              <span className="text-[11px] uppercase tracking-[0.28em] text-emerald-400 font-mono">Dernière chose</span>
+            </div>
+            <h2 className="font-display font-medium text-[36px] lg:text-[54px] leading-[1.02] tracking-[-0.035em] text-white">
+              Chaque jour qui passe<br/>
+              <span className="text-slate-500">rapproche vos fonds</span><br/>
+              de la <span className="text-emerald-400">prescription.</span>
+            </h2>
+            <p className="mt-7 text-[15.5px] text-slate-400 leading-relaxed max-w-xl">
+              L'Ohio dispose d'un délai légal au-delà duquel les fonds excédentaires sont définitivement transférés au comté. Une vérification prend 90 secondes.
+            </p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="border border-slate-800 bg-slate-950/60 rounded-sm p-7">
+              <div className="text-[11px] uppercase tracking-[0.22em] text-slate-500 font-mono mb-5">Audit gratuit · 48h</div>
+              <ol className="space-y-4">
+                {[
+                  "Entrez votre numéro de dossier ou votre nom",
+                  "Recevez la fiche d'éligibilité signée",
+                  "Mandatez le cabinet si vous le souhaitez"
+                ].map((t, i) => (
+                  <li key={i} className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-7 h-7 border border-slate-700 rounded-sm font-mono text-[12px] text-emerald-400 flex items-center justify-center">{i+1}</span>
+                    <span className="text-[14px] text-slate-300 leading-snug pt-1">{t}</span>
+                  </li>
+                ))}
+              </ol>
+              <a href="#hero-widget"
+                 className="mt-7 w-full inline-flex items-center justify-center gap-2 px-5 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-[13px] uppercase tracking-[0.14em] rounded-sm transition-all emerald-glow-strong">
+                <Icon name="ShieldCheck" size={15} />
+                <span>Vérifier mon éligibilité maintenant</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   Footer
+   ───────────────────────────────────────────── */
+function Footer() {
+  return (
+    <footer id="contact" className="bg-[#020617]">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-10 pt-16 pb-10">
+        <div className="grid lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800/70">
+          {/* Brand */}
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-10 h-10 border border-slate-700 rounded-sm flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-950">
+                <span className="font-display font-bold text-emerald-500 text-lg leading-none">A</span>
+              </div>
+              <div>
+                <div className="font-display font-semibold tracking-[0.08em] text-white text-[15px] uppercase">Alykaly Holding</div>
+                <div className="text-[10px] uppercase tracking-[0.22em] text-slate-500 font-mono">Real Estate &middot; Legal Audits</div>
+              </div>
+            </div>
+            <p className="text-[13.5px] text-slate-400 leading-relaxed max-w-md">
+              Cabinet d'audit juridique privé dédié à la récupération des fonds excédentaires post-saisie. Opérations cadrées par les statuts ORC §2329.44 et ORC §5721.20 de l'Ohio.
+            </p>
+
+            <div className="mt-7 space-y-2.5 text-[12.5px] font-mono text-slate-400">
+              <div className="flex items-center gap-3">
+                <Icon name="MapPin" size={13} className="text-emerald-500/80" />
+                <span>312 Walnut St &middot; Cincinnati, OH 45202</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Icon name="Phone" size={13} className="text-emerald-500/80" />
+                <span>+1 (513) 555&middot;0101</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Icon name="Mail" size={13} className="text-emerald-500/80" />
+                <span>audit@alykaly-holding.com</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Links */}
+          <div className="lg:col-span-2">
+            <div className="text-[10.5px] uppercase tracking-[0.22em] text-slate-500 font-mono mb-4">Cabinet</div>
+            <ul className="space-y-2.5 text-[13px] text-slate-400">
+              <li><a href="#" className="hover:text-cream">À propos</a></li>
+              <li><a href="#" className="hover:text-cream">Équipe juridique</a></li>
+              <li><a href="#" className="hover:text-cream">Bilan public</a></li>
+              <li><a href="#" className="hover:text-cream">Presse</a></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-2">
+            <div className="text-[10.5px] uppercase tracking-[0.22em] text-slate-500 font-mono mb-4">Expertises</div>
+            <ul className="space-y-2.5 text-[13px] text-slate-400">
+              <li><a href="#" className="hover:text-cream">Foreclosure Surplus</a></li>
+              <li><a href="#" className="hover:text-cream">Tax Lien Overages</a></li>
+              <li><a href="#" className="hover:text-cream">Ghost Probate</a></li>
+              <li><a href="#" className="hover:text-cream">Unclaimed Property</a></li>
+            </ul>
+          </div>
+
+          <div className="lg:col-span-3">
+            <div className="text-[10.5px] uppercase tracking-[0.22em] text-slate-500 font-mono mb-4">Juridictions</div>
+            <ul className="space-y-2.5 text-[13px] text-slate-400">
+              <li className="flex items-center justify-between"><span>Hamilton County</span><span className="text-emerald-500 text-[11px] font-mono">ACTIF</span></li>
+              <li className="flex items-center justify-between"><span>Butler County</span><span className="text-emerald-500 text-[11px] font-mono">ACTIF</span></li>
+              <li className="flex items-center justify-between"><span>Warren County</span><span className="text-emerald-500 text-[11px] font-mono">ACTIF</span></li>
+              <li className="flex items-center justify-between"><span>Franklin County</span><span className="text-slate-500 text-[11px] font-mono">Q3 2026</span></li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="py-8 border-b border-slate-800/70">
+          <div className="flex items-start gap-4 max-w-4xl">
+            <Icon name="AlertTriangle" size={16} className="text-amber-500/80 mt-0.5 flex-shrink-0" />
+            <p className="text-[12px] text-slate-500 leading-relaxed font-mono">
+              <span className="text-slate-300 uppercase tracking-[0.14em]">Disclaimer —</span> Alykaly Holding est un cabinet d'audit privé et n'est pas affilié à une agence gouvernementale, à l'Ohio Department of Commerce, au Hamilton County Clerk of Courts ni à aucun bureau du Treasurer. Les services juridiques sont rendus par des avocats indépendants licenciés au Barreau de l'Ohio. Les résultats passés ne préjugent pas des résultats futurs. La signature d'un mandat est requise avant toute démarche.
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom strip */}
+        <div className="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5 text-[11.5px] text-slate-500 font-mono uppercase tracking-[0.18em]">
+          <div>© 2024–2026 Alykaly Holding LLC &middot; OH&middot;BL2024&middot;887401</div>
+          <div className="flex items-center gap-5">
+            <a href="#" className="hover:text-cream">Mentions légales</a>
+            <a href="#" className="hover:text-cream">Confidentialité</a>
+            <a href="#" className="hover:text-cream">Cookies</a>
+            <a href="#" className="hover:text-cream">Plan du site</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/* ─────────────────────────────────────────────
+   App
+   ───────────────────────────────────────────── */
+function App() {
+  // Initialize lucide once
+  useEffect(() => {
+    if (window.lucide && window.lucide.createIcons) {
+      window.lucide.createIcons();
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen text-[15px] antialiased" style={{color:'var(--cream)'}}>
+      <TopBar />
+      <Header />
+      <main>
+        <Hero />
+        <PromiseBar />
+        <Expertises />
+        <Methode />
+        <ClosingCTA />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

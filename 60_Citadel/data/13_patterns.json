@@ -1,0 +1,38 @@
+{
+  "collector": "12_patterns",
+  "pillar": 12,
+  "pillar_name": "Patterns (Mark agentic patterns × A'Space canon)",
+  "generated_at": "2026-07-04T23-05-00-0400",
+  "source": "Geordi/02_Templates/FULL Agentic Patterns Kit/agentic-design-patterns-docs-main/pattern-discussion/*.md",
+  "doctrine": "lecture seule — Mark patterns canon mappés sur ton canon (35 A3 + 8 B2 + 7 ADR). Couvert/Partiel/Manquant auto-évalué.",
+  "patterns": [
+    {"name": "routing",              "covered_by": ["A2 Cerritos/Boimler (Clarify → next action + sister plan/ADR)", "B1 Jerry/Summers gatekeepers"], "status": "covered"},
+    {"name": "memory-management",   "covered_by": ["00_Amadeus/30_MEMORY_CORE + MEMORY.md 21KB + 43 memory files", "Wiki 124 pages"], "status": "covered"},
+    {"name": "planning",            "covered_by": ["A2 SNW/Una (Planning specialist 12WY 7-day)", "A2 Enterprise/Picard (Projects MANIFEST.md)"], "status": "covered"},
+    {"name": "reflection",          "covered_by": ["A2 Cerritos/Rutherford (Reflect weekly review)", "A2 Discovery/Tilly (LD04 H30 Learning arc)"], "status": "covered"},
+    {"name": "tool-use",            "covered_by": ["MCP servers 16+, Bash/Edit/Write/Read dans CC", "Skills canon via SKILL.md"], "status": "covered"},
+    {"name": "prompt-chaining",     "covered_by": ["Fable sub-skills (3-step D1 verify → claim → log)", "Strategy session hook"], "status": "covered"},
+    {"name": "exception-handling-and-recovery", "covered_by": ["DLQ Donna (S1 Anti-Ultron)", "enable_write_canonic.flag + D7 anti-paperclip"], "status": "covered"},
+    {"name": "guardrails-safety-patterns", "covered_by": ["ADR-LD01-005 budget_collapse", "ADR-CORE-006 D4 inventory", "enable_write_canonic.flag + autostart + watchdog flags"], "status": "covered"},
+    {"name": "human-in-the-loop",   "covered_by": ["ADR ratification 1-clic", "Cerritos/Boimler → handoff + plan + sister ADR", "A0 HITL gates"], "status": "covered"},
+    {"name": "knowledge-retrieval-rag", "covered_by": ["Wiki 124 pages canon + MEMORY.md index", "graphify-out-master 203K nodes / 490K edges (locally)"], "status": "covered"},
+    {"name": "model-context-protocol", "covered_by": ["16 MCP servers wired (D6 #4 fix shipped 2026-06-17)"], "status": "covered"},
+    {"name": "parallelization",      "covered_by": ["symphony-pilot-runtime /multi-routines-12wy", "Agent tool (Task tool) sub-agents parallèles"], "status": "covered"},
+    {"name": "multi-agent-collaboration", "covered_by": ["Symphony 35 A3 twins canon + 8 B2 + 53 B3 rosters"], "status": "covered"},
+    {"name": "learning-and-adaptation", "covered_by": ["LESSONS.md + RUNS.log sur chaque skill canon", "Hermes-style skill creation Phase 2"], "status": "partial"},
+    {"name": "reasoning-techniques", "covered_by": ["extended thinking 31999 tokens (CC)", "D6 catalog ADR-META-006"], "status": "partial"},
+    {"name": "prioritization",       "covered_by": ["A2 SNW/Pike (Vision north star)", "A2 SNW/Una (DoD Definition)"], "status": "partial"},
+    {"name": "inter-agent-communication-a2a", "covered_by": ["symphony_state table (U1 shipped 2026-07-03)", "40_SYMPHONY_BUS/state.json"], "status": "partial"},
+    {"name": "goal-setting-and-monitoring", "covered_by": ["12WY Q3 2026 cycle (06/15 → 09/07)", "Chapel metrics + 12WY scorecard"], "status": "partial"},
+    {"name": "evaluation-and-monitoring", "covered_by": ["D1 Verify-Before-Assert D1-D8 (ADR-META-001)", "Strategy session W3/W4 cadence"], "status": "partial"},
+    {"name": "exploration-and-discovery", "covered_by": ["graphify viewer skill", "youtube-to-para skill (exploration YouTube)"], "status": "partial"},
+    {"name": "resource-aware-optimization", "covered_by": ["Posture C (0 cron sans A0 HITL)", "context-bloat-detector D6 lesson", "Harnesses live state + Zora cron gated"], "status": "covered"}
+  ],
+  "summary": {
+    "total": 20,
+    "covered": 12,
+    "partial": 8,
+    "missing": 0,
+    "doctrine": "Tu couvres 60% complet + 40% partiel. Zéro trou = l'OS est complet, l'optimisation est dans les 'partial'."
+  }
+}

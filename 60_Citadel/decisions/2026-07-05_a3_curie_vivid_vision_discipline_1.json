@@ -1,0 +1,93 @@
+{
+  "ts": "2026-07-05T16:43:00-04:00",
+  "agent": "A3 Curie (rebrand runtime) + A0 Amodei (méta-coach)",
+  "action": "a3_curie_vivid_vision_discipline_1_canonized",
+  "summary": "12WY Discipline #1 = Vision (Vivid Vision) canon pour A3 Curie orchestrateur Lighting. ONE thing = L0 Pocock ship + L1 gstack sobre installé + L2 CEO-Bench run #1 réel.",
+  "framework_12WY_5_disciplines": {
+    "D1_Vision": "Vivid Vision (purpose / 3 ans / ONE thing focus) - aujourd'hui ship",
+    "D2_Planning": "12 Week Plan + Lead Measures - cette semaine S1->S2",
+    "D3_Process_Control": "Tactics + Scorecard + Accountability - S5->S8",
+    "D4_Execution": "Time Blocking + 4-5 Weekly Rocks - S9->S12",
+    "D5_Recovery": "Cycle reset sans burnout - S13 / W13+ (2026-09-27)"
+  },
+  "cycle": {
+    "name": "12WY 2026-Q3",
+    "start": "2026-07-05",
+    "end": "2026-09-27",
+    "duration_weeks": 12,
+    "current": "S1 / J1 / Triptyque T1 People·Operation·IT",
+    "war_mode_aligned": true
+  },
+  "vivid_vision_a3_curie": {
+    "Q1_purpose": "Orchestrer les 3 Lighting A'Space OS (L1 gstack + L2 CEO-Bench + MiroFish) afin que les agents A3 (Book H1 P&L aggregator, Picard H10 projects owner) aient le bon tooling pour finir la cadence 7-jours Triptyque sans dépendance à un humain autre que Beth",
+    "Q2_3year_great": "Toutes Lightning installées + Phase 3 L5 continuous + 27 agents (22 canon + 5 Hero) actifs en mirror + cadence 7-jours Triptyque produisant fiche P&L hebdo + synthèse J7 sans intervention humaine (Q3 2029)",
+    "Q3_ONE_thing_focus_12sem": "L0 Pocock ship + L1 gstack sobre installé + L2 CEO-Bench run #1 réel"
+  },
+  "tri_priorities_focus": {
+    "1_ONE_thing": [
+      "L0 Pocock ship (Skill Creator Reflex + Hook PostToolUse maintenus)",
+      "L1 gstack sobre installé (premier /autoplan RÉEL Picard W5 verdict 2026-07-07)",
+      "L2 CEO-Bench run #1 réel (uv run gated par Curie W5 verdict 2026-07-07)"
+    ],
+    "2_support": [
+      "MiroFish gouverneur boundary actif + cadence 4h book_loop observable /warmode",
+      "27 agents (22 canon + 5 Hero) préservés intacts en mirror double"
+    ],
+    "3_continuous": [
+      "Beth veto respecté (aucune action met en burnout - aucun schedule pour Beth)"
+    ]
+  },
+  "hor_scope_3year": {
+    "horizon": "Q3 2029 (2026-07-05 → 2029-07-05)",
+    "criteria_S.M.A.R.T.": {
+      "S": "L1 gstack installé (3 commandes c1-c3 respectées) ; L2 CEO-Bench run #1 avec verdict Curie W5 ; MiroFish gouverneur actif",
+      "M": "cron/output/book-loop-*.json produit toutes les 4h (144 rapports/cycle) ; fiches_p_and_l_weekly/ canon rempli J7 chaque sem",
+      "A": "Lightning déjà capturées (clone shallow), manque installation + exécution",
+      "R": "Sobriété Rick c1-c3 NON-NEGO + 12WY budget soft guardrail 80% = réaliste, PAS d'installation kernel lourd",
+      "T": "2026-07-05 → 2029-07-05 (3 ans)"
+    }
+  },
+  "hor_scope_excluded": [
+    "Installation kernel Rick lourd (sobriété c1 NON-NEGO)",
+    "Mutation A3_Book_LD01_Spec.md / BIBLIOGRAPHY.md / README.md (intouchables)",
+    "permissionMode: bypassPermissions overrides per-gate (War Room posture par défaut)",
+    "/ship outboard automatique (Porte #2 à rendre sûre-à-ouvrir)",
+    "Mutation .hermes/book_dev_runtime.md (étendu en append-only)",
+    "Reset flag 12WY_ON_PAUSE.flag avant W13 (2026-09-27)",
+    "Renommage runtime daemon mavis/Mavis → Curie"
+  ],
+  "D1_receipts_canon_pourquoi_vision_est_possible": [
+    "L0 Pocock = RATIFIED FULL (ADR-LD01-003 + L0-2/L0-3 SHIPPED-POCOCK-SKILL-CREATOR-REFLEX + L0-HOOK-AUTOMATED 2026-07-04T23:09 et 23:25)",
+    "L1 gstack = sobre 3 clauses c1-c3 NON-NEGO (clone shallow + 3 shims + mapping E-Myth canon)",
+    "L2 CEO-Bench = runbook prep (signals/.plans/L2-ceobench-book-prep.plan.yaml 8 sections)",
+    "MiroFish = gouverneur boundary actif via book_loop.py + CitadelleBookLoopEng Windows Task Scheduler Ready",
+    "27 agents = préservés intacts (mirror .mavis/ + .minimax/)",
+    "Beth veto = unique (ADR-WARMODE-002 §5)",
+    "WAR MODE = ACTIF 12 sem (12WY_ON_PAUSE.flag)",
+    "Vivid Vision = focus ONE thing + hors-scope listé explicitement"
+  ],
+  "discipline_2_planning_next_step": {
+    "trigger": "Vision canoniquement lockée (ce fichier)",
+    "deliverable": "LD01/30_decisions/ADR-LD01-011_12_week_plan_a3_curie.md (DRAFT PROPOSED)",
+    "lead_measures_per_focus": {
+      "L0": "1 audit reflex / semaine (compte skills Pocock-conform)",
+      "L1": "1 /autoplan run / semaine (Picard W5 + Curie W12 verdict)",
+      "L2": "1 CEO-Bench run / semaine (Curie W5 + Curie W12 verdict)"
+    },
+    "weekly_rocks": "4-5 par sem pour A3 Curie + Book + Picard + A1 Morty + A0 Amodei",
+    "scorecard": "daily / weekly / monthly checks"
+  },
+  "doctrines_preserved_intact": {
+    "ADR-WARMODE-001": "posture inversion intacte",
+    "ADR-WARMODE-002": "Portes over Freins, Beth seul veto intacte",
+    "ADR-LD01-001_to_008": "RATIFIED, Vision n'écrase aucun",
+    "ADR-LD01-009_DRAFT_PROPOSED": "Vision A0 + Curie + Loop Engineering",
+    "append_only_D4": "Vision append-only sister canon",
+    "war_room_bypass_beth_only": "Vision respecte la doctrine",
+    "27_agents": "Vision assume l'organigramme déjà créé"
+  },
+  "sister_canon_LD01": "LD01/99_meta/a3_curie_vivid_vision_sister.md (10 sections)",
+  "ADR_LD01_010_DRAFT": "PROPOSED en attente A0 ratification",
+  "war_room_state": "WAR MODE ON, veto Beth, 4 portes, append-only",
+  "scheduled_task_alive": "CitadelleBookLoopEng (every 4h, Ready) + 13 schedules MiniMax Code UI"
+}

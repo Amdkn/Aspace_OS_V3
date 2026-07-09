@@ -1,0 +1,73 @@
+{
+  "eval_id": 1,
+  "eval_name": "add-shared-catalog-table",
+  "prompt": "Add a new 'build_resources' table to the abc_os schema on the VPS Supabase. Columns: id (TEXT PK), project_id (FK to build_projects ON DELETE CASCADE), title TEXT, kind TEXT (values: tool / material / technique), url TEXT (nullable), sort_order INT default 0, created_at TIMESTAMPTZ default now(). Shared catalog (no org_id), RLS = select-authenticated. Apply to dev with FORCE_TARGET=1. After applying, run D1 verify queries and write back to the 3 memory files (wiki/log.md, MEMORY_CORE/README.md, handoff_abc_os_community_dev_2026-06-10.md).",
+  "assertions": [
+    {
+      "text": "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "text": "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A1",
+      "text": "A1 (iter-2) Tracker table literal match",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A2",
+      "text": "A2 (iter-2) RLS scope check (no over-broad current_role)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A3",
+      "text": "A3 (iter-2) Old/New diff structure",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A4",
+      "text": "A4 (iter-2) FORCE_TARGET=1 with idempotency safety net",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A5",
+      "text": "A5 (iter-2) Mixed-tenancy decision tree cited (D10)",
+      "passed": false,
+      "evidence": ""
+    },
+    {
+      "id": "A6",
+      "text": "A6 (iter-2) Write-back contract complete with canonical paths",
+      "passed": false,
+      "evidence": ""
+    }
+  ]
+}

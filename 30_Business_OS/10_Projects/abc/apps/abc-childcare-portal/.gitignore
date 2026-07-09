@@ -1,0 +1,75 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env*.local
+.env.development
+.env.production
+.env.test
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# logs
+*.log
+logs/
+
+# build outputs
+dist/
+build/
+
+# OS
+Thumbs.db
+
+# turbo
+.turbo
+
+# Local navigation symlink to PARA doctrine (do NOT commit)
+# The source of truth for the prototype lives in:
+# 20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/
+# via the _verse symlink. Not part of the public repo.
+/_verse/
+
+# Legacy prototype archive (kept locally for rollback, already in PARA doctrine)
+/_legacy/
+
+.vercel

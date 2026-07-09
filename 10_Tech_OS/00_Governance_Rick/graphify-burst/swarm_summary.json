@@ -1,0 +1,255 @@
+{
+  "summary": {
+    "target": "C:\\Users\\amado\\ASpace_OS_V2\\10_Tech_OS\\00_Governance_Rick",
+    "out_root": "C:\\Users\\amado\\ASpace_OS_V2\\10_Tech_OS\\00_Governance_Rick\\graphify-burst",
+    "n_chunks": 30,
+    "max_workers": 8,
+    "timeout_s": 600,
+    "ok": 30,
+    "failed": 0,
+    "elapsed_s": 285.6,
+    "total_files": 783
+  },
+  "results": [
+    {
+      "chunk": 4,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 59.8,
+      "error": null
+    },
+    {
+      "chunk": 7,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 72.0,
+      "error": null
+    },
+    {
+      "chunk": 5,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 80.9,
+      "error": null
+    },
+    {
+      "chunk": 3,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 102.7,
+      "error": null
+    },
+    {
+      "chunk": 0,
+      "files": 27,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 108.8,
+      "error": null
+    },
+    {
+      "chunk": 2,
+      "files": 27,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 121.5,
+      "error": null
+    },
+    {
+      "chunk": 8,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 63.5,
+      "error": null
+    },
+    {
+      "chunk": 6,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 125.1,
+      "error": null
+    },
+    {
+      "chunk": 1,
+      "files": 27,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 138.3,
+      "error": null
+    },
+    {
+      "chunk": 10,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 57.9,
+      "error": null
+    },
+    {
+      "chunk": 9,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 81.5,
+      "error": null
+    },
+    {
+      "chunk": 13,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 42.6,
+      "error": null
+    },
+    {
+      "chunk": 11,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 69.1,
+      "error": null
+    },
+    {
+      "chunk": 12,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 66.8,
+      "error": null
+    },
+    {
+      "chunk": 17,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 38.6,
+      "error": null
+    },
+    {
+      "chunk": 14,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 57.7,
+      "error": null
+    },
+    {
+      "chunk": 16,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 53.7,
+      "error": null
+    },
+    {
+      "chunk": 15,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 70.2,
+      "error": null
+    },
+    {
+      "chunk": 18,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 53.5,
+      "error": null
+    },
+    {
+      "chunk": 23,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 38.6,
+      "error": null
+    },
+    {
+      "chunk": 22,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 45.4,
+      "error": null
+    },
+    {
+      "chunk": 20,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 54.2,
+      "error": null
+    },
+    {
+      "chunk": 21,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 66.4,
+      "error": null
+    },
+    {
+      "chunk": 24,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 51.3,
+      "error": null
+    },
+    {
+      "chunk": 19,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 90.5,
+      "error": null
+    },
+    {
+      "chunk": 26,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 52.4,
+      "error": null
+    },
+    {
+      "chunk": 25,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 72.5,
+      "error": null
+    },
+    {
+      "chunk": 27,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 54.6,
+      "error": null
+    },
+    {
+      "chunk": 29,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 52.1,
+      "error": null
+    },
+    {
+      "chunk": 28,
+      "files": 26,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 60.3,
+      "error": null
+    }
+  ]
+}

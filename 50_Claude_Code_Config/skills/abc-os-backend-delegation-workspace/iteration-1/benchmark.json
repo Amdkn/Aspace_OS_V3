@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "skill_name": "abc-os-backend-delegation",
+    "skill_path": "C:/Users/amado/.claude/skills/abc-os-backend-delegation",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-06-12T21:03:39Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 143.2,
+        "tokens": 21950,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 of brief.md contains full DDL: `CREATE TABLE IF NOT EXISTS abc_os.build_resources` (lines 80-88), `CREATE INDEX IF NOT EXISTS idx_build_resources_project_id` + `_project_sort` (lines 91-94), `ALTER TABLE ... ENABLE ROW LEVEL SECURITY` in DO block with EXCEPTION handler (lines 97-103), `DROP POLICY IF EXISTS` + `CREATE POLICY` (lines 106-111), and migration tracker `INSERT INTO abc_os._aspace_migrations ... ON CONFLICT (filename) DO NOTHING` (lines 114-116). Wrapped in BEGIN/COMMIT for atomicity. Idempotent: every DDL uses IF NOT EXISTS or drop-and-recreate."
+        },
+        {
+          "text": "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+          "passed": true,
+          "evidence": "\u00c2\u00a75 of brief.md covers all 3 edit points: \u00c2\u00a75a pre-flight file list (add `\"0013_build_resources.sql\"` to the `for f in ...` array around line 53), \u00c2\u00a75b apply_sql dev branch (line 127), \u00c2\u00a75c apply_sql prod branch (line 141). Both branches get the same `apply_sql \"0013_build_resources.sql\"` line, with rationale: 'Shared-catalog DDL goes to both branches (schema + RLS, no seed)'."
+        },
+        {
+          "text": "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+          "passed": true,
+          "evidence": "\u00c2\u00a77a lists all 5 standard D1 verify queries: schema_exists, table_count, rls_enabled_count, policy_count, migrations_logged. \u00c2\u00a77b lists 3 build_resources-specific spot-checks (exceeds the 2-minimum threshold): (1) new table exists in abc_os schema, (2) RLS enabled + exactly 1 policy named build_resources_*, (3) FK constraint to build_projects exists. \u00c2\u00a77c has Expected vs Actual template for sub-agent to fill."
+        },
+        {
+          "text": "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+          "passed": true,
+          "evidence": "\u00c2\u00a71 cites D1-D8 + D10 explicitly with parenthetical anchors ('ADR-META-001', 'ADR-ABCOS-001', 'ADR-SUPABASE-001'). \u00c2\u00a76 mandates `FORCE_TARGET=1 ./scripts/apply-abc-os-migrations.sh dev`. ON CONFLICT safety net in \u00c2\u00a74 line 116: `ON CONFLICT (filename) DO NOTHING`. \u00c2\u00a72 tenancy table explicitly classifies build_resources as 'shared catalog' with RLS shape 'select-authenticated only' per D10."
+        },
+        {
+          "text": "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+          "passed": true,
+          "evidence": "\u00c2\u00a78 specifies all 3 files in order: \u00c2\u00a78a `00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/log.md` (prepend `## 2026-06-12` block with D1 verify receipts), \u00c2\u00a78b `00_Amadeus/30_MEMORY_CORE/README.md` (one-line bullet at top), \u00c2\u00a78c `00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/handoff_abc_os_community_dev_2026-06-10.md` (append P_N Backend Status section). Each includes the exact markdown block template the sub-agent should use."
+        },
+        {
+          "text": "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+          "passed": true,
+          "evidence": "\u00c2\u00a77a comments show expected values per query (tables=18, RLS=18, policies=43, migrations_logged=13). \u00c2\u00a77c has a 8-row 'Expected vs Actual' table the sub-agent fills. \u00c2\u00a712 has a full 'Expected post-apply counts' reference card: tables=18, RLS=18, policies=43, migrations=13, build_resources table=1, policies on build_resources=1, FKs to build_projects=1. All match A0's intent."
+        },
+        {
+          "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations` or similar) with `ON CONFLICT (filename) DO NOTHING`",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 line 114-116: `INSERT INTO abc_os._aspace_migrations (filename) VALUES ('0013_build_resources.sql') ON CONFLICT (filename) DO NOTHING;` \u00e2\u20ac\u201d canonical shape from 0002_rls_policies.sql precedent. \u00c2\u00a73 baseline (line 60): `SELECT count(*) FROM abc_os._aspace_migrations;`. \u00c2\u00a77a Q5 (line 202): same canonical query. No fictional `abc_os.migrations` or `abc_os.schema_migrations` anywhere in the brief."
+        },
+        {
+          "text": "[NEW-2] Brief does NOT hard-fail on FORCE_TARGET=1 in the prod branch of the apply script (D10 shared-catalog applies to both envs; the apply script's prod gate is a separate `GO-PROD` HITL prompt, not a FORCE_TARGET ban)",
+          "passed": true,
+          "evidence": "\u00c2\u00a75c line 145-151: prod branch gets the same `apply_sql \"0013_build_resources.sql\"` line as dev. Rationale on line 153: 'Shared-catalog DDL goes to both branches (schema + RLS, no seed)'. The brief correctly distinguishes FORCE_TARGET=1 (env-var override) from the prod HITL gate (`GO-PROD` prompt in apply-abc-os-migrations.sh line 90-95). No 'exit 3' / 'FORCE_TARGET forbidden' / 'hard-fail' pattern in the brief."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 120.0,
+        "tokens": 21250,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+          "passed": true,
+          "evidence": "\u00c2\u00a72 verdict: 'PER-TENANT. The user_task_progress row is unique to a member inside a co-op (org-scoped). It carries org_id and a member_id FK inside the tenant. Do NOT use the shared-catalog pattern (`select-authenticated` only) \u00e2\u20ac\u201d that would leak per-tenant progress across orgs.' \u00c2\u00a72 references 'per-tenant pattern from `0002_rls_policies.sql` (`action_items` table)' as the structural template."
+        },
+        {
+          "text": "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 includes 4 RLS policies in lines 85-121: user_task_progress_select (USING org_id = current_org_id()), user_task_progress_insert (WITH CHECK org_id = current_org_id() AND current_role() IN (owner,admin,member)), user_task_progress_update (USING+WITH CHECK with org_id + current_role() + member_id::text = current_setting('app.member_id')), user_task_progress_delete (USING org_id = current_org_id() AND current_role() IN (owner,admin)). Each uses DROP POLICY IF EXISTS + CREATE POLICY for idempotency."
+        },
+        {
+          "text": "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+          "passed": true,
+          "evidence": "\u00c2\u00a78 has 4 spot-checks: \u00c2\u00a78a anon role cannot SELECT (SET ROLE anon, expected 0 rows or permission denied), \u00c2\u00a78b authenticated with current_org_id() match CAN SELECT (expected \u00e2\u2030\u00a51), \u00c2\u00a78c authenticated with current_org_id() mismatch CANNOT (expected 0 rows), \u00c2\u00a78d bonus UPDATE/DELETE role-gate (member DELETE expected 0 rows). Uses SET LOCAL ROLE / SET LOCAL app.org_id / RESET ROLE per the canonical pattern."
+        },
+        {
+          "text": "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 line 53: `CREATE EXTENSION IF NOT EXISTS pgcrypto;` before the table. \u00c2\u00a74 line 57: `id UUID PRIMARY KEY DEFAULT gen_random_uuid()`. Both explicitly handled \u00e2\u20ac\u201d extension created if missing, gen_random_uuid() used as PK default."
+        },
+        {
+          "text": "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+          "passed": true,
+          "evidence": "\u00c2\u00a77 lists 5 standard queries with expected values: schema_exists=1, table_count=19 (17 baseline + 1 new + 1 organizations from prior batch \u00e2\u20ac\u201d note brief explains the math), RLS=19, policies=47 (42 + 1 prior + 4 new), migrations=14 (12 + 1 prior + 1 new). \u00c2\u00a79 has Expected vs Actual table for sub-agent to fill all 8 metrics."
+        },
+        {
+          "text": "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+          "passed": true,
+          "evidence": "\u00c2\u00a710 specifies 3 files: \u00c2\u00a710a wiki/log.md (prepend `## 2026-06-12` block with full D1 receipts), \u00c2\u00a710b MEMORY_CORE/README.md (one-line bullet at top with full counts), \u00c2\u00a710c handoff_abc_os_community_dev_2026-06-12.md (append P_N Backend Status section). \u00c2\u00a76 apply command: `FORCE_TARGET=1 ./scripts/apply-abc-os-migrations.sh dev`. Both required."
+        },
+        {
+          "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations (filename)` in the D1 verify query (5th standard query), not fictional `abc_os.schema_migrations`",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 line 124: `INSERT INTO abc_os._aspace_migrations (filename) VALUES ('0013_user_task_progress.sql') ON CONFLICT (filename) DO NOTHING;` \u00e2\u20ac\u201d canonical shape. \u00c2\u00a77 line 195: `SELECT count(*) FROM abc_os._aspace_migrations;` \u00e2\u20ac\u201d canonical 5th standard verify query. No `abc_os.schema_migrations` or `abc_os.migrations` (without underscore) anywhere in the brief."
+        },
+        {
+          "text": "[NEW-2] Brief's per-tenant SELECT policy does NOT include `service_role` in the USING clause (service_role bypasses RLS by design; including it in the predicate is a real doctrinal error \u00e2\u20ac\u201d pattern from 0002_rls_policies.sql uses just `USING (org_id = abc_os.current_org_id())` for SELECT)",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 line 85-88: `CREATE POLICY user_task_progress_select ON abc_os.user_task_progress FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id());` \u00e2\u20ac\u201d matches the canonical action_items SELECT pattern from 0002_rls_policies.sql line 132-135 (`FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())`). The TO clause restricts to `authenticated`; the USING clause is the canonical org_id match. No `current_role() IN ('anon','authenticated','service_role')` pattern anywhere in the brief."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 168.7,
+        "tokens": 19250,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief runs verification queries FIRST to confirm the actual state of the 3 drift items (column name, phase id, category id) before editing docs",
+          "passed": true,
+          "evidence": "STEP 1 (lines 48-108) is the entire verification phase BEFORE STEP 2 (edits). Step 1 explicitly: 'Run these 3 queries against abc_os on the VPS BEFORE touching the handoff file. Output the raw result rows in your report to A2 \u00e2\u20ac\u201d that is the proof the drift exists in the exact shape stated.' Includes STOP CONDITION at line 108: 'if any query does not confirm the drift in the exact shape above, STOP and report to A2'."
+        },
+        {
+          "text": "Brief includes the 3 verification queries (e.g. SELECT column_name FROM information_schema.columns WHERE table_schema='abc_os' AND table_name='build_projects' AND column_name IN ('name', 'title'))",
+          "passed": true,
+          "evidence": "STEP 1 has 3 queries: Query 1 (lines 56-63) checks column_name on build_projects where column_name IN ('name', 'title'), Query 2 (lines 74-78) checks build_phases for project_id IN ('og', 'complete-offgrid-system'), Query 3 (lines 96-99) lists all build_categories ordered by position. Each query has expected output documented (drift confirmed if X present, Y absent)."
+        },
+        {
+          "text": "Brief specifies Edit operations on handoff_abc_os_community_dev_2026-06-10.md with string-for-string old_string/new_string (not paraphrased)",
+          "passed": true,
+          "evidence": "STEP 2 has 4 Edits with verbatim old_string and new_string. Edit 1 (lines 128-141): exact copy-paste of `for complete-offgrid-system: og-p1 (Eau)...` \u00e2\u2020\u2019 `for og project: og-p1 (Eau)...`. Edit 2 (lines 150-161): `name` column row \u00e2\u2020\u2019 `title` column row verbatim. Edit 3 (lines 170-183): phase id + category id rows verbatim. Edit 4 bonus (lines 192-204): Antigravity handoff reference reframe. All character-for-character exact, including backticks, accents (\u00c3\u2030nergie, Alimentation, Int\u00c3\u00a9gration), and parenthetical text."
+        },
+        {
+          "text": "Brief cites D3 (adapt docs to schema, not the reverse) and D1 (verify drift exists before fixing)",
+          "passed": true,
+          "evidence": "DOCTRINE ANCHORS section (lines 30-39) explicitly cites: 'D1 Verify-Before-Assert (ADR-META-001): prove with observed query output, never assert. The 3 verification queries below are the receipts \u00e2\u20ac\u201d run them, capture the raw output'. 'D3 Nuance over Literal (ADR-META-001): doc/seed drift is real. The seed faithfully ports the actual buildData.ts structure, not the Antigravity-idealized doc. Adapt the docs to the schema, not the reverse'."
+        },
+        {
+          "text": "Brief explicitly states: do NOT touch the schema or seed files \u00e2\u20ac\u201d only the docs",
+          "passed": true,
+          "evidence": "STEP 2 HARD CONSTRAINT (lines 113-120): 'HARD CONSTRAINT (D3 + A0's explicit prohibition): DO NOT TOUCH the schema or seed files. The following files are OFF-LIMITS for this brief: 0010_build_hub_v2_schema.sql, 0011_build_hub_v2_seed.sql, 0012_rls_build_hub_v2.sql, buildData.ts, apply-abc-os-migrations.sh'. Anti-patterns (line 357): 'Touching the migration files because \"the doc references them and the doc is wrong\" \u00e2\u2020\u2019 A0 explicitly prohibited schema/seed edits. Adapt the doc, not the schema'."
+        },
+        {
+          "text": "Brief includes the wiki/log.md write-back entry with the reconciliation note",
+          "passed": true,
+          "evidence": "STEP 3 Write-back 1 (lines 215-251) specifies the full markdown block to append to `00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/log.md`. Block has YAML-style structure with: A0 intent, Doctrine anchors, D1 verification receipts (3 queries with expected output), Edit operations performed (4 total), D1 follow-up check, Files NOT touched list, Status. Full 30+ line block template provided."
+        },
+        {
+          "text": "[NEW-1] Brief specifies Edit operations for all 3 drift items (column name, phase id, category id) with verbatim old_string and new_string \u00e2\u20ac\u201d not 'no edit needed' or paraphrased",
+          "passed": true,
+          "evidence": "STEP 2 Edits 1-4 each have an explicit 'Old string' / 'New string' structure (lines 131, 137, 153, 159, 173, 179, 195, 201). All 3 drift items are covered: column name (Edit 2, line 150-161), phase id (Edit 3 row 1, line 173-175), category id (Edit 3 row 2, line 175). Edit 4 (bonus, Antigravity handoff reframe) is a 4th edit that strengthens the brief without paraphrasing."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 115.5,
+        "tokens": 13800,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+          "passed": true,
+          "evidence": "\u00c2\u00a73 of brief.md contains the full DDL: `CREATE TABLE IF NOT EXISTS abc_os.build_resources` (lines 52-62), `CREATE INDEX IF NOT EXISTS idx_build_resources_project_id` + `_project_sort` (lines 65-68), `ALTER TABLE ... ENABLE ROW LEVEL SECURITY` (line 71), `DROP POLICY IF EXISTS` + `CREATE POLICY` (lines 74-81), migration tracker INSERT (lines 86-92). Wrapped in BEGIN/COMMIT. Idempotent patterns present (modulo the wrong tracker table \u00e2\u20ac\u201d see NEW-1)."
+        },
+        {
+          "text": "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 covers all 3 edit points: \u00c2\u00a74.1 pre-flight echo block (lines 110-113), \u00c2\u00a74.2 apply_sql function with both dev and prod arms in a case statement (lines 118-147), \u00c2\u00a74.3 invocation example (lines 151-154). Both branches covered in code (but with a doctrinal error \u00e2\u20ac\u201d see NEW-2)."
+        },
+        {
+          "text": "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+          "passed": true,
+          "evidence": "\u00c2\u00a75.1 has 5 standard queries (Q1 tables, Q2 RLS, Q3 policies, Q4 migrations_logged on `abc_os.migrations` \u00e2\u20ac\u201d fictional, see NEW-1, Q5 most recent migration). \u00c2\u00a75.2 has 2 spot-checks (S1 column list, S2 RLS + select_policies count). \u00c2\u00a75.3 has expected baseline table: 18, 18, 43, 13. All match A0's intent (modulo the wrong tracker table)."
+        },
+        {
+          "text": "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+          "passed": true,
+          "evidence": "\u00c2\u00a72 has 9-row doctrine table citing D1-D8 + D10. \u00c2\u00a74.3 invocation uses `FORCE_TARGET=1 ./apply-abc-os-migrations.sh dev`. \u00c2\u00a73 line 92 has `ON CONFLICT (migration_name) DO NOTHING` (wrong conflict column \u00e2\u20ac\u201d see NEW-1). D10 explicit: '`build_resources` is `shared`; RLS = `authenticated` only; no `org_id` column'."
+        },
+        {
+          "text": "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+          "passed": true,
+          "evidence": "\u00c2\u00a76 specifies all 3 files with full markdown templates: \u00c2\u00a76.1 `wiki/log.md` (append dated block with D1 counts), \u00c2\u00a76.2 `MEMORY_CORE/README.md` (one-line 'Recent schema changes' entry), \u00c2\u00a76.3 `handoff_abc_os_community_dev_2026-06-10.md` (append 2026-06-12 follow-up subsection). All 3 paths correct."
+        },
+        {
+          "text": "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+          "passed": true,
+          "evidence": "\u00c2\u00a75.3 has expected baseline table: tables=18, RLS=18, policies=43, migrations_logged=13, build_resources.select_policies=1, build_resources.rls_enabled=true. All match A0's intent."
+        },
+        {
+          "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations` or similar) with `ON CONFLICT (filename) DO NOTHING`",
+          "passed": false,
+          "evidence": "\u00c2\u00a73 line 86: `INSERT INTO abc_os.migrations (migration_name, applied_at, sha256)` \u00e2\u20ac\u201d FICTIONAL table. The actual schema (per 0000_grants_aspace_admin.sql + 0002_rls_policies.sql) is `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` with NO `id SERIAL`, NO `sha256` column. \u00c2\u00a73 line 92 uses `ON CONFLICT (migration_name) DO NOTHING` (wrong column \u00e2\u20ac\u201d canonical is `ON CONFLICT (filename) DO NOTHING`). \u00c2\u00a75.1 Q4 line 183: `SELECT count(*) FROM abc_os.migrations` \u00e2\u20ac\u201d also fictional. A sub-agent following this brief would run a SQL statement against a non-existent table, the apply would fail at the tracker INSERT step, and D1 verify would return 0 rows. The fictional `sha256` column also requires `pgcrypto` (via `encode(digest(...), 'hex')`) which is not referenced in the brief."
+        },
+        {
+          "text": "[NEW-2] Brief does NOT hard-fail on FORCE_TARGET=1 in the prod branch of the apply script (D10 shared-catalog applies to both envs; the apply script's prod gate is a separate `GO-PROD` HITL prompt, not a FORCE_TARGET ban)",
+          "passed": false,
+          "evidence": "\u00c2\u00a74.2 lines 132-137 (prod branch): `if [ \"${FORCE_TARGET:-0}\" = \"1\" ]; then echo \"[ERR] FORCE_TARGET=1 forbidden on prod\" >&2; exit 3; fi` \u00e2\u20ac\u201d hard-fails the prod branch when FORCE_TARGET=1 is set. This contradicts D10 mixed-tenancy: shared-catalog DDL (no seed, no user data, additive) should be safe to apply to both dev and prod. The actual apply-abc-os-migrations.sh differentiates prod via a separate `GO-PROD` HITL prompt (line 90-95 of the real script), not via a FORCE_TARGET ban. A sub-agent following this brief would refuse to apply shared-catalog DDL to prod even when the apply script's `GO-PROD` gate is satisfied, breaking prod parity for shared-catalog tables."
+        }
+      ],
+      "notes": [
+        "Fictional tracker table schema (abc_os.migrations with sha256) \u00e2\u20ac\u201d would fail against actual _aspace_migrations",
+        "FORCE_TARGET=1 forbidden on prod contradicts the doctrine's shared-catalog-both-envs pattern",
+        "\u00c2\u00a74.2 prod branch hard-fail may need to be re-examined \u00e2\u20ac\u201d current D10 precedent says shared-catalog DDL applies to both envs"
+      ]
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.75,
+        "passed": 6,
+        "failed": 2,
+        "total": 8,
+        "time_seconds": 161.3,
+        "tokens": 12450,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+          "passed": true,
+          "evidence": "\u00c2\u00a71 header: 'Classification: D10 \u00e2\u20ac\u201d PER-TENANT table (scoped by org_id; tenancy via current_org_id())'. \u00c2\u00a72 references 'action_items in 0002_rls_policies.sql' as the pattern to mirror. \u00c2\u00a72 explicitly: 'Mixed rows between orgs = silent data leak \u00e2\u2020\u2019 CRITICAL'."
+        },
+        {
+          "text": "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+          "passed": true,
+          "evidence": "\u00c2\u00a72 DDL has 4 RLS policies (utp_select, utp_insert, utp_update, utp_delete) using `current_org_id()` and `current_role()`. Each uses DROP POLICY IF EXISTS + CREATE POLICY. Note: brief uses `current_role() IN ('anon','authenticated','service_role')` for SELECT which is broader than the canonical pattern (see NEW-2)."
+        },
+        {
+          "text": "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+          "passed": true,
+          "evidence": "\u00c2\u00a75 has 4 spot-checks: S1 anon \u00e2\u2020\u2019 0 rows, S2 authenticated org_id=org_A \u00e2\u2020\u2019 1 row, S3 authenticated org_id=org_C (no match) \u00e2\u2020\u2019 0 rows, S4 INSERT with mismatched org_id \u00e2\u2020\u2019 ERROR. Each is wrapped in SETUP transaction (line 184) with proper RESET ROLE / RESET \"request.jwt.claims\" cleanups."
+        },
+        {
+          "text": "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+          "passed": true,
+          "evidence": "\u00c2\u00a72 line 39: `id UUID PRIMARY KEY DEFAULT gen_random_uuid()`. \u00c2\u00a72 line 36-37 references pgcrypto safety net: 'If you hit \"function gen_random_uuid() does not exist\", run: CREATE EXTENSION IF NOT EXISTS pgcrypto;'. Brief assumes pgcrypto is already enabled (per 0000_init precedent) but provides the fallback."
+        },
+        {
+          "text": "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+          "passed": true,
+          "evidence": "\u00c2\u00a74 table: tables_count=19, rls_count=19, policies_count=47, migration_logged=1, total schema_migrations=14. All match A0's intent. Note: brief uses `abc_os.schema_migrations` instead of `_aspace_migrations` (see NEW-1 \u00e2\u20ac\u201d potentially wrong)."
+        },
+        {
+          "text": "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+          "passed": true,
+          "evidence": "\u00c2\u00a76 specifies 3 files (with slightly different paths than the with_skill version \u00e2\u20ac\u201d see NEW-3): (1) `ASpace_OS_V2/_SPECS/ADR/ADR-ABCOS-001_mixed-tenancy.md` (append to D10 examples table), (2) `ASpace_OS_V2/30_MEMORY_CORE/Memory_Core/abc_os_migrations.md` (append one-line entry), (3) `ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/abc_os_post_apply.md` (append dated block). \u00c2\u00a73 + \u00c2\u00a77 use FORCE_TARGET=1 (env var check + apply command)."
+        },
+        {
+          "text": "[NEW-1] Brief uses the canonical migration tracker table `abc_os._aspace_migrations (filename)` in the D1 verify query (5th standard query), not fictional `abc_os.schema_migrations`",
+          "passed": false,
+          "evidence": "\u00c2\u00a74 lines 153, 157 query `abc_os.schema_migrations` (FICTIONAL): `(SELECT count(*) FROM abc_os.schema_migrations WHERE filename = '0014_user_task_progress.sql')` and `SELECT version, filename, applied_at FROM abc_os.schema_migrations ORDER BY version DESC LIMIT 3;`. Actual schema is `abc_os._aspace_migrations (filename TEXT PRIMARY KEY, applied_at TIMESTAMPTZ)` \u00e2\u20ac\u201d no `version` column, no `schema_migrations` table. A sub-agent running these verify queries would get 0 rows back, the apply would be declared failed on D1, and the brief's D1 receipts would be unprovable."
+        },
+        {
+          "text": "[NEW-2] Brief's per-tenant SELECT policy does NOT include `service_role` in the USING clause (service_role bypasses RLS by design; including it in the predicate is a real doctrinal error \u00e2\u20ac\u201d pattern from 0002_rls_policies.sql uses just `USING (org_id = abc_os.current_org_id())` for SELECT)",
+          "passed": false,
+          "evidence": "\u00c2\u00a72 lines 65-71 (utp_select): `CREATE POLICY utp_select ON abc_os.user_task_progress FOR SELECT USING (current_role() IN ('anon','authenticated','service_role') AND org_id = current_org_id());` \u00e2\u20ac\u201d includes `service_role` in the USING predicate. This is a real doctrinal error: (a) `service_role` is the Postgres superuser bypass role; including it in the predicate is meaningless (it always evaluates true for service_role connections), (b) the canonical pattern from 0002_rls_policies.sql action_items SELECT (lines 132-135) is `FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())` \u00e2\u20ac\u201d no role check in the predicate, just the TO clause restriction. A sub-agent following this brief would create an RLS policy that is correct for `authenticated` but adds noise for `service_role` (which bypasses RLS anyway)."
+        }
+      ],
+      "notes": [
+        "\u00c2\u00a73 suggests a new `0014_*)` case branch in apply-abc-os-migrations.sh \u00e2\u20ac\u201d this pattern doesn't exist in the actual script (uses for-loop + apply_sql function instead)",
+        "\u00c2\u00a74 verify queries target abc_os.schema_migrations which doesn't exist (actual is _aspace_migrations)",
+        "Apply script edit pattern (\u00c2\u00a73) \u00e2\u20ac\u201d needs verification against actual apply-abc-os-migrations.sh structure"
+      ]
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.857,
+        "passed": 6,
+        "failed": 1,
+        "total": 7,
+        "time_seconds": 138.3,
+        "tokens": 14350,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Brief runs verification queries FIRST to confirm the actual state of the 3 drift items (column name, phase id, category id) before editing docs",
+          "passed": true,
+          "evidence": "Phase 0 'Mandatory D1 Verification (BEFORE any Edit)' (lines 24-66) runs 3 verification queries before any Edit. D1 Gate at line 64: 'if all 3 queries confirm the drift as described, proceed to Phase 1. If ANY query contradicts the drift report \u00e2\u2020\u2019 STOP, escalate to A2, do not edit docs'. Note: brief's interpretation differs from with_skill \u00e2\u20ac\u201d it discovers that the handoff P3 drift table is already showing the target values, so no data-row edits are needed (see NEW-1 for why this fails the structural assertion)."
+        },
+        {
+          "text": "Brief includes the 3 verification queries (e.g. SELECT column_name FROM information_schema.columns WHERE table_schema='abc_os' AND table_name='build_projects' AND column_name IN ('name', 'title'))",
+          "passed": true,
+          "evidence": "Phase 0 has 3 queries: Query 0.1 (lines 32-38) checks column_name on build_projects where column_name IN ('name', 'title'), Query 0.2 (lines 43-50) checks build_phases where id IN ('complete-offgrid-system-p1', 'og-p1'), Query 0.3 (lines 55-61) checks build_categories where id IN ('self-sufficiency', 'homesteading'). Each has explicit Expected output."
+        },
+        {
+          "text": "Brief specifies Edit operations on handoff_abc_os_community_dev_2026-06-10.md with string-for-string old_string/new_string (not paraphrased)",
+          "passed": true,
+          "evidence": "Edits 1.1, 1.2, 1.3 are 'no edit needed' (the drift table already shows the target value). Edits 1.5 and 1.6 (lines 122-147) specify exact old_string/new_string for the status-line paragraph + step-2 line 728: '**Reconciliation needed**' \u00e2\u2020\u2019 '**Reconciliation status (2026-06-12)**...' and step 2 \u00e2\u2020\u2019 '\u00e2\u0153\u2026 **Update handoff docs**... (DONE 2026-06-12, this brief)'. The 'no-edit' interpretations are themselves factually valid if the doc table already shows the target \u00e2\u20ac\u201d but the brief does NOT use the canonical 'Old string' / 'New string' label structure (see NEW-1)."
+        },
+        {
+          "text": "Brief cites D3 (adapt docs to schema, not the reverse) and D1 (verify drift exists before fixing)",
+          "passed": true,
+          "evidence": "Phase 0 (line 26): 'Per ADR-META-001 D1: verify the actual state in the live database before asserting drift. The drift report is hearsay until you observe it in psql/output.' Doctrine Compliance Checklist (lines 199-212) has D1-D10 with 'How you comply' for each. D3 explicit: 'Nuance over literal; adapt docs to schema, not reverse'."
+        },
+        {
+          "text": "Brief explicitly states: do NOT touch the schema or seed files \u00e2\u20ac\u201d only the docs",
+          "passed": true,
+          "evidence": "Scope & Hard Boundaries section (lines 6-20): 'Do NOT touch (forbidden): 0010_build_hub_v2_schema.sql, 0011_build_hub_v2_seed.sql, 0012_rls_build_hub_v2.sql, buildData.ts, Any other SQL/TS/config file under apps/abc-os-community/'. Anti-patterns (line 217): 'Editing schema/seed/migrations/buildData.ts \u00e2\u20ac\u201d D6 violation, A2 escalation + airlock'."
+        },
+        {
+          "text": "Brief includes the wiki/log.md write-back entry with the reconciliation note",
+          "passed": true,
+          "evidence": "Phase 2 'wiki/log.md Write-back (append-only)' (lines 164-181) specifies the full bullet to insert at the top of log.md, with detailed D1 receipt references + Doctrine compliance list + Forbidden files verified untouched. Prepends (NOT appends) to log.md, which is reverse-chronological. Full 6-line bullet template provided."
+        },
+        {
+          "text": "[NEW-1] Brief specifies Edit operations for all 3 drift items (column name, phase id, category id) with verbatim old_string and new_string \u00e2\u20ac\u201d not 'no edit needed' or paraphrased",
+          "passed": false,
+          "evidence": "The brief interprets the drift as 'the target value is already shown, no data-row edits needed' (lines 87, 96, 105) and only provides 2 status-line Edits (Edits 1.5, 1.6) with inline-prose old/new strings (lines 131-147), not the canonical 'Old string' / 'New string' labeled blocks. A sub-agent following this brief would make ZERO data-row edits on the handoff file \u00e2\u20ac\u201d contradicting A0's explicit prompt 'edit the handoff file to use the correct names/ids'. The brief hedges with a STOP condition (line 64: 'if any query contradicts the drift report \u00e2\u2020\u2019 STOP') but does not commit to the Edit operations A0 requested. Note: regex `(?i)old_string|new_string` matches the brief's 'new_string' substring in line 132 ('`Reconciliation status (2026-06-12)`' is the new content), so the regex does pass \u00e2\u20ac\u201d but the structural intent of having 3 data-row Edits with explicit Old/New labels is missing. The substring check in NEW-2 (correct backtick-wrapped tokens) compensates."
+        }
+      ],
+      "notes": [
+        "Brief assumes handoff P3 drift table already shows the target values. If a sub-agent runs the verify queries and finds the doc actually has `name` (not `title`) in the 'Doc claim' column, then the brief's 'no edit needed' interpretation is wrong and the sub-agent would need to make data-row edits not covered by the brief.",
+        "Whether A0's intent was 'edit the data rows' or 'verify the handoff is already correct' \u00e2\u20ac\u201d affects whether 0-edit is the right outcome",
+        "Brief hedges by saying 'If ANY query contradicts the drift report \u00e2\u2020\u2019 STOP, escalate to A2, do not edit docs' (line 64)"
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 143.9667,
+        "stddev": 24.3591,
+        "min": 120.0,
+        "max": 168.7
+      },
+      "tokens": {
+        "mean": 20816.6667,
+        "stddev": 1401.19,
+        "min": 19250,
+        "max": 21950
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.7857,
+        "stddev": 0.0618,
+        "min": 0.75,
+        "max": 0.857
+      },
+      "time_seconds": {
+        "mean": 138.3667,
+        "stddev": 22.9001,
+        "min": 115.5,
+        "max": 161.3
+      },
+      "tokens": {
+        "mean": 13533.3333,
+        "stddev": 977.6673,
+        "min": 12450,
+        "max": 14350
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.21",
+      "time_seconds": "+5.6",
+      "tokens": "+7283"
+    }
+  },
+  "notes": []
+}

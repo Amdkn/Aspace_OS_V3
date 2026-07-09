@@ -1,0 +1,55 @@
+{
+  "ran_at": "2026-07-06T00:49:18-0400",
+  "config_version": "0.1",
+  "stats_snapshot": {
+    "cron_enabled": false,
+    "dimensions_tracked": 8,
+    "recos_format": "4 max/nuit per Gwyn D11"
+  },
+  "recos": [
+    {
+      "id": "zora-mem-lint",
+      "label": "Lancer wiki-lint E3 pour mesurer frontmatter coverage (memory health)",
+      "payload": {
+        "script": "wiki-lint",
+        "metric": "frontmatter_coverage"
+      },
+      "source_dimension": "4_memory_health",
+      "roi_estimate": "memory health ↑ → Eero observational memory effectiveness ↑"
+    },
+    {
+      "id": "zora-skills-rot",
+      "label": "Identifier skills morts via RUNS.log (rot-rate check)",
+      "payload": {
+        "check": "runs_log_count_vs_total_skills",
+        "threshold": 0.1
+      },
+      "source_dimension": "3_skill_performance",
+      "roi_estimate": "savings de tokens — kill skills non-utilisés"
+    },
+    {
+      "id": "zora-cost-hermes",
+      "label": "Mesurer les costs Hermes (coût réel vs MiniMax Year-3000)",
+      "payload": {
+        "tool": "analyze-usage",
+        "target": "hermes"
+      },
+      "source_dimension": "2_cost_intelligence",
+      "roi_estimate": "cohérence Year-3000 cost reality"
+    },
+    {
+      "id": "zora-biz-ratio",
+      "label": "Mesurer ratio signaux marché / handoffs (Strategy Session metric)",
+      "payload": {
+        "metric": "signaux/handoffs",
+        "baseline_57_handovers_7j": "voir W3 strategy session"
+      },
+      "source_dimension": "8_business_outcomes",
+      "roi_estimate": "détection des signaux faibles → leverage Direction"
+    }
+  ],
+  "count": 4,
+  "max_recos": 4,
+  "doctrine": "lecture seule — append-only — anti-Ultron — pas d'auto-approval",
+  "status": "DECIDED"
+}

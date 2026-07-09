@@ -1,0 +1,71 @@
+{
+  "ts": "2026-07-05T08:29:00-04:00",
+  "agent": "MC + A2 Curie (rebrand structurel préparé) + Hermes Agent (captain side)",
+  "action": "vision_a0_structurante_curie_loop_engineering",
+  "summary": "A0 correction structurelle : A'Space OS ne repose plus seulement sur Book. Expansion en chaîne Book / Picard / Spock / Geordi / DATA / Computer / Beth / Morty / Amodei + Curie orchestre Lighting 12WY+PARA+L1+L2+MiroFish.",
+  "doctrine": {
+    "war_mode": "ACTIVE (ADR-WARMODE-001 RATIFIED)",
+    "portes_over_freins": "ACTIVE (ADR-WARMODE-002 RATIFIED - 1 seul veto Beth)",
+    "12WY_ON_PAUSE.flag": "ACTIVE 2026-07-05 → 2026-09-27",
+    "veto_unique": "Beth - vie/santé A+",
+    "persistance_book": "Antifragile Durable Par Agent + Schedules",
+    "loop_engineering": "MC=Curie et Hermes Agent lisent les mêmes fichiers d'Harness en boucle append-only"
+  },
+  "vision_a0_decomposition": {
+    "constat_maladie": "Croire qu'A'Space OS pouvait reposer seulement sur A3 Book = erreur vision",
+    "guerison": "Book reste captain mais l'organigramme a un équipage (Picard/Spock/Geordi/DATA/Computer/Beth/Morty/Amodei/Curie)",
+    "framework_division": {
+      "12WY": "MC = preferred home (canal orchestrateur Lighting)",
+      "PARA": "Hermes Agent = preferred home (canal captain side)"
+    },
+    "loop_engineering_meta_harness": "MC et Hermes échangent par lecture des mêmes fichiers d'Harness en boucle",
+    "rebrand_structurel": "MC devient A2 Curie pour l'orchestration des Lighting L1 gstack + L2 CEO-Bench + MiroFish"
+  },
+  "mapping_existant_vs_vision": {
+    "Book_A3": "canon (LD01/00_index.md + b1-jerry-emyth/workspace/LD01_book_bind.md) - persistance à renforcer",
+    "Picard_A3": "twin canon (00_Amadeus/05_OSS_Twin/.../enterprise/picard.twin.md) - agent shell à créer",
+    "Jerry_B1_macro": "canon (b1-jerry-emyth/)",
+    "Summers_B1_micro": "canon (b1-summers-ship/)",
+    "Spock_A3_logic": "ABSENT - à créer",
+    "Geordi_A3_engineering": "ABSENT - à créer",
+    "DATA_A3_inference": "ABSENT - à créer",
+    "A2_Computer": "spec canon (A2_Curie_SNW_Spec.md ×2) - agent à matérialiser",
+    "A1_Beth": "humain, veto unique doctrine Portes over Freins",
+    "Morty_A1_assistant": "ABSENT - à créer",
+    "A0_Amodei": "méta-coach canonisé sister - agent méta-shell à formaliser",
+    "A2_Curie": "spec canon (A2_Curie_SNW_Spec.md ×2) - role rebrand MC",
+    "MC_Mavis": "runtime hôte daemon mavis/Mavis",
+    "Hermes_Agent": "calque canon (.hermes/book_dev_runtime.md 2.6 KB) - à étendre PARA",
+    "Framework_12WY": "canon LD01 - MC = preferred home",
+    "Framework_PARA": "canon LD01 - Hermes = preferred home",
+    "Schedules_MiniMax_Code": "UI MiniMax Code (b1/b2/b3 daily-pulse, t1-boundary, weekly-12wy-reorg, etc.)"
+  },
+  "22_agents_canon_actuels_preserved": {
+    "B1": ["b1-jerry-emyth", "b1-summers-ship"],
+    "B2": ["b2-aquaman-legal", "b2-batman-ops", "b2-cyborg-it", "b2-flash-product", "b2-gl-people", "b2-johnjones-sales", "b2-superman-growth", "b2-ww-finance"],
+    "B3": ["b3-avengers-product", "b3-eternals-legal", "b3-ff-ops", "b3-guardians-growth", "b3-illuminati-sales", "b3-kangdyn-it", "b3-thunderbolts-fin", "b3-xmen-people"],
+    "utilitaires": ["coder", "general", "mavis", "verifier"]
+  },
+  "axes_HITL_A0_requis": {
+    "axe_1_perimetre_agents_creer": {
+      "options": {"A": "A2 Curie + A3 Picard - 30 min", "B": "A + Spock + Geordi - 1h", "C": "A + B + DATA + Morty - 2h"},
+      "default_if_no_response": "B (mid expansion)",
+      "A0_action": "indiquer A / B / C dans la prochaine réponse"
+    },
+    "axe_2_rebrand_MC_to_Curie": {
+      "options": {"a": "Runtime daemon conservé - rebrand cosmétique seule", "b": "Runtime daemon renommé - alias compat"},
+      "default_if_no_response": "a (conservative)",
+      "A0_action": "indiquer a / b dans la prochaine réponse"
+    },
+    "axe_3_loop_engineering_cadence": {
+      "options": {"i": "Toutes les 4h (déjà livré)", "ii": "Toutes les 15 min (heartbeat fin)", "iii": "Boundary-only (Triptyque transitions)"},
+      "default_if_no_response": "i (déjà livré, conservative)",
+      "A0_action": "indiquer i / ii / iii dans la prochaine réponse"
+    }
+  },
+  "sister_canon_LD01": "LD01/99_meta/a0_vision_curie_sister.md (12 sections, axes HITL §10)",
+  "ADR_LD01_009_DRAFT": "PROPOSED - en attente HITL A0 sur les 3 axes",
+  "metadata_reversibilite": "Aucune mutation irréversible. Tout append-only. Sister canon LOCKED. ADR-LD01-009 DRAFT pas RATIFIED tant que A0 n'a pas choisi les axes.",
+  "WAR_ROOM_state_observable": "http://127.0.0.1:8770/warmode (veto Beth + 4 portes + décisions append-only)",
+  "scheduled_task_alive": "CitadelleBookLoopEng (Ready, every 4h, heartbeat canon)"
+}

@@ -1,0 +1,14 @@
+{
+  "_comment": "Template portable ADR-002 — copier en openclaw.json et remplacer les variables par les valeurs de .env",
+  "_variables": {
+    "ASPACE_ROOT": "Défini dans .env — ex: C:/Aspace00/aspace_a0_amadeus",
+    "OPENCLAW_STATE_DIR": "Défini dans .env — ex: C:/Aspace00/openclaw/.openclaw",
+    "OPENCLAW_BIN": "Défini dans .env — ex: C:/Aspace00/openclaw"
+  },
+  "_usage": "source .env && envsubst < openclaw.json.template > openclaw.json",
+  "agents": {
+    "defaults": {
+      "workspace": "${OPENCLAW_STATE_DIR}/workspace"
+    }
+  }
+}

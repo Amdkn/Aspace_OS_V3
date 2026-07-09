@@ -1,0 +1,1 @@
+Airlock: B1 ✓ · B2 ✓ · B3 ✓ (0/3) · B4 ✓ · GO ✓ · chain: CHAIN_SOUTENABLE (wf0=GREEN wf1=OK(8t,8.00/wk) wf2=SOUTENABLE(9))

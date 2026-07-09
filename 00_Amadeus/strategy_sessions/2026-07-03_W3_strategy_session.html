@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="version" content="v2">
+<meta name="doctrine-source" content="LD01/99_meta/fable5_strategy_session_v2_principles.md">
+<title>Strategy Session W3 → W4 — A0 Amadeus — 2026-07-03 (v2 Fable5)</title>
+<style>
+:root{--bg:#0A0E16;--card:#111827;--gold:#C8A55C;--txt:#E5E7EB;--dim:#9CA3AF;--red:#EF4444;--green:#22C55E;--amber:#F59E0B;--blue:#3B82F6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--txt);font-family:Georgia,serif;line-height:1.6;max-width:880px;margin:0 auto;padding:2rem 1rem}
+h1{color:var(--gold);font-size:1.6rem;margin-bottom:.3rem}
+h2{color:var(--gold);font-size:1.1rem;margin:1.4rem 0 .5rem}
+h3{color:var(--amber);font-size:.95rem;margin:1rem 0 .3rem}
+.sub{color:var(--dim);font-size:.9rem;margin-bottom:1.5rem}
+.q{background:var(--card);border-left:3px solid var(--gold);border-radius:6px;padding:1rem 1.2rem;margin-bottom:1rem}
+.q.v2-quest{border-left-color:var(--blue)}
+.q .why{color:var(--dim);font-size:.82rem;font-style:italic;margin-bottom:.6rem}
+.q .why code{color:var(--gold);font-family:monospace;font-size:.78rem;background:#0D1420;padding:1px 4px;border-radius:3px}
+.q .area{float:right;font-size:.7rem;color:var(--bg);background:var(--gold);padding:1px 8px;border-radius:10px}
+.q.v2-quest .area{background:var(--blue)}
+input[type=range]{width:100%;accent-color:var(--gold)}
+.rangeval{color:var(--gold);font-weight:bold;font-size:1.1rem}
+.opts label{display:block;font-weight:normal;padding:.3rem .5rem;cursor:pointer;border-radius:4px}
+.opts label:hover{background:#1F2937}
+textarea{width:100%;min-height:90px;background:#0D1420;color:var(--txt);border:1px solid #374151;border-radius:6px;padding:.6rem;font-family:inherit;font-size:.95rem}
+button{background:var(--gold);color:var(--bg);border:none;padding:.8rem 1.6rem;border-radius:6px;font-size:1rem;font-weight:bold;cursor:pointer;margin:.4rem .4rem .4rem 0}
+button.sec{background:#374151;color:var(--txt)}
+button.v2{background:var(--blue);color:#fff}
+#report{display:none;background:var(--card);border:2px solid var(--gold);border-radius:8px;padding:1.5rem;margin-top:1.5rem;white-space:pre-wrap;font-size:.95rem}
+#decisions{display:none;background:var(--card);border:2px dashed var(--green);border-radius:8px;padding:1.5rem;margin-top:1rem;white-space:pre-wrap;font-size:.92rem;font-family:monospace}
+.weak{color:var(--red);font-weight:bold}
+.wager{color:var(--amber);font-style:italic;font-size:.88rem}
+.sister{color:var(--blue);font-size:.85rem}
+.source{color:var(--green);font-size:.76rem;font-family:monospace;background:#0D1420;padding:1px 4px;border-radius:3px;display:inline-block;margin-left:6px}
+.tag-v2{background:var(--blue);color:#fff;padding:1px 6px;border-radius:6px;font-size:.7rem;margin-left:6px}
+option[data-wager]{background:#1F2937}
+@media print{body{background:#fff;color:#000}#form,button{display:none}#report,#decisions{display:block;border-color:#000;color:#000;background:#fff}}
+</style>
+</head>
+<body>
+<h1>⚡ Strategy Session — W3 Q3 2026 <span class="tag-v2">v2 Fable5</span></h1>
+<div class="sub">10 questions <b>v1</b> ciblées sur les points faibles <b>mesurés</b> de la session Fable + 4 questions <span class="tag-v2">v2</span> (calibration interview Q11-Q14). 6 principes gap-filling : <b>Decision Block</b>, <b>Wager</b>, <b>D5 receipts</b>, <b>Sister chain</b>, <b>Calibration interview</b>, <b>Fable 5 self-audit</b>. Doctrine canon : <code>LD01/99_meta/fable5_strategy_session_v2_principles.md</code>. Tout offline. Re-fais chaque lundi.</div>
+
+<div id="form">
+<h2>Zone 1 — Exécution client (le vide mesuré)</h2>
+<div class="q"><span class="area">CLIENT</span><div class="why">Mesuré [file:00_Amadeus/strategy_sessions/2026-07-03_W3_strategy_session.html:l35]: 18 handoffs + 2 ADRs aujourd'hui, 0 conversation prospect. Le spearhead Coach premium n'a pas encore UN nom de prospect.</div>
+<label>Q1 — Combien de conversations réelles avec un coach (prospect potentiel) as-tu eues ces 7 derniers jours ?</label>
+<div class="opts">
+<label><input type="radio" name="q1" value="0" checked> 0 — aucune</label>
+<label><input type="radio" name="q1" value="4"> 1-2 informelles</label>
+<label><input type="radio" name="q1" value="7"> 3+ dont 1 qualifiée</label>
+<label><input type="radio" name="q1" value="10"> Un pilote/deal en discussion</label>
+</div></div>
+<div class="q"><span class="area">CLIENT</span><div class="why">Le PoC OMK Nexus vise "100 clients premium". La distance entre 0 et 1 est plus grande qu'entre 1 et 100.</div>
+<label>Q2 — À quelle date réaliste le PREMIER coach voit-il une démo (même moche) ? <span class="rangeval" id="v2">W6</span></label>
+<input type="range" min="4" max="13" value="6" id="q2" oninput="document.getElementById('v2').textContent='W'+this.value">
+</div>
+
+<h2>Zone 2 — Discipline financière (le pricing tri-céphale)</h2>
+<div class="q"><span class="area">FINANCE</span><div class="why">Mesuré [file:00_Amadeus/strategy_sessions/2026-07-03_W3_strategy_session.html:l49]: 3 prix flottent dans le canon ($1000/mo Gemini · $7.5-25K MC · ADR-AAAS-PRICING-001 USD 5 tiers). Aucun confronté. D4 non-ratifié depuis 9 jours.</div>
+<label>Q3 — Quel pricing ratifies-tu comme hypothèse de travail UNIQUE (les autres passent en _TRASH doctrine) ?</label>
+<div class="opts">
+<label><input type="radio" name="q3" value="7"> ADR-AAAS-PRICING-001 (5 tiers existants)</label>
+<label><input type="radio" name="q3" value="6"> $1000/mo × 100 (Gemini/Medvi assaini)</label>
+<label><input type="radio" name="q3" value="5"> $7.5-25K setup (MC draft)</label>
+<label><input type="radio" name="q3" value="2" checked> Je repousse encore la décision</label>
+</div></div>
+<div class="q"><span class="area">FINANCE</span><div class="why">Saru LD02 H3 : le runway réel n'apparaît dans AUCUN handoff de la session. Le seul chiffre financier du jour était un pricing hypothétique.</div>
+<label>Q4 — Ton runway personnel (mois de charges couvertes sans revenu nouveau) : <span class="rangeval" id="v4">6</span> mois</label>
+<input type="range" min="0" max="24" value="6" id="q4" oninput="document.getElementById('v4').textContent=this.value">
+</div>
+
+<h2>Zone 3 — Sobriété méta (l'inflation mesurée)</h2>
+<div class="q"><span class="area">MÉTA</span><div class="why">Mesuré aujourd'hui : 18 handoffs, 570 lignes de log, 428 fichiers en vrac à la racine de 01_Guides, 4 plans amendés. Gwyn (D11) demanderait : combien d'heures A0 libérées ?</div>
+<label>Q5 — Sur tes heures d'éveil de cette semaine, quel % est allé au HARNESS (plans, audits, agents) vs au MARCHÉ (prospects, offre, démo) ? <span class="rangeval" id="v5">90</span>% harness</label>
+<input type="range" min="0" max="100" value="90" id="q5" oninput="document.getElementById('v5').textContent=this.value">
+</div>
+<div class="q"><span class="area">MÉTA</span><div class="why">15 crons pausés depuis 8 jours = tout tourne encore par TA main. La Posture C protège, mais elle a un coût : zéro automatisation vivante.</div>
+<label>Q6 — Le premier cron que tu réactiverais si tu devais en choisir UN seul :</label>
+<div class="opts">
+<label><input type="radio" name="q6" value="8"> Drain sidecar → symphony_state (observabilité)</label>
+<label><input type="radio" name="q6" value="7"> Weekly review Rutherford (GTD reflect)</label>
+<label><input type="radio" name="q6" value="6"> Loop méta-mémoire hebdo (lint + index)</label>
+<label><input type="radio" name="q6" value="2" checked> Aucun — je garde tout manuel</label>
+</div></div>
+
+<h2>Zone 4 — Cadence 12WY (le flou mesuré)</h2>
+<div class="q"><span class="area">CADENCE</span><div class="why">Mesuré : 1 seul item ✅ DELIVERED sur 12, 9 items au statut flou. W13 arrive le 09/07 — dans 9 semaines.</div>
+<label>Q7 — Ta confiance réelle que ≥5/8 LD soient DELIVERED à W13 : <span class="rangeval" id="v7">50</span>%</label>
+<input type="range" min="0" max="100" value="50" id="q7" oninput="document.getElementById('v7').textContent=this.value">
+</div>
+<div class="q"><span class="area">CADENCE</span><div class="why">La compression ×8 de T1 se joue sur les 3 prochains jours réels. Sans focus unique, elle devient une métaphore.</div>
+<label>Q8 — La SEULE chose qui, si elle est finie dimanche soir, rendrait T1 réussi :</label>
+<textarea id="q8" placeholder="Une phrase. Pas trois."></textarea>
+</div>
+
+<h2>Zone 5 — Le miroir</h2>
+<div class="q"><span class="area">MIROIR</span><div class="why">Le template Fable : « les endroits où ce que tu FAIS contredit ce que tu DIS important ».</div>
+<label>Q9 — Qu'est-ce que tu évites en ce moment (la chose que tu sais devoir faire et que tu recouvres d'outillage) ?</label>
+<textarea id="q9" placeholder="Sois honnête — personne ne lit ceci sauf toi."></textarea>
+</div>
+<div class="q"><span class="area">MIROIR</span><div class="why">Calibre la franchise du rapport.</div>
+<label>Q10 — Niveau de franchise voulu : <span class="rangeval" id="v10">8</span>/10</label>
+<input type="range" min="1" max="10" value="8" id="q10" oninput="document.getElementById('v10').textContent=this.value">
+</div>
+
+<h2><span class="tag-v2">v2</span> Calibration Interview (3 questions pour la prochaine session — lundi)</h2>
+<div class="q v2-quest"><span class="area">CAL</span><div class="why">v2 calibration loop (per protocol Fable 5 template) — les 3 réponses re-centreront les 10 questions de la v3 lundi. Sister: <code>~/.mavis/agents/b1-jerry-emyth/goal.md</code> v3 target.</div>
+<label>Q11 — Qu'est-ce que tu décides LÀ, maintenant — cette semaine, pas ce trimestre ?</label>
+<textarea id="q11" placeholder="1-2 phrases max. Pas de plan."></textarea>
+</div>
+<div class="q v2-quest"><span class="area">CAL</span><div class="why">La résistance est un pointeur vers la next move prioritaire.</div>
+<label>Q12 — Où sens-tu la plus grande résistance (prospetion / pricing / lâcher le harness) ?</label>
+<textarea id="q12" placeholder="Sois précis. Personne ne lit ceci sauf toi."></textarea>
+</div>
+<div class="q v2-quest"><span class="area">CAL</span><div class="why">La franchise 8/10 par défaut te va, ou tu veux le 10/10 ? Override pour la semaine.</div>
+<label>Q13 — Franchise par défaut pour la v3 lundi :</label>
+<select id="q13">
+<option value="8" selected>8/10 — coach juste, pas brutal</option>
+<option value="9">9/10 — coach brutal</option>
+<option value="10">10/10 — la version qu'un coach dirait à quelqu'un qu'il ne reverra pas</option>
+</select>
+</div>
+<div class="q v2-quest"><span class="area">META-AUDIT</span><div class="why">Principe 6 — Fable 5 elle-même peut être biaisée. C'est le miroir miroir. Per L2 ceobench partially-observable principle.</div>
+<label>Q14 — Qu'est-ce que Fable 5 AURAIT PU te dire qu'elle n'a PAS dit ? — si tu devais identifier 1 angle mort DE L'AGENT lui-même.</label>
+<textarea id="q14" placeholder="Sois brutal avec l'agent. Personne ne lit ceci sauf toi."></textarea>
+</div>
+
+<button onclick="genReport()">⚡ Générer le rapport + Decision Block</button>
+</div>
+
+<div id="report"></div>
+
+<div id="decisions"></div>
+
+<button class="sec" id="copyBtn" style="display:none" onclick="copyReport()">📋 Copier rapport</button>
+<button class="sec" id="copyDecBtn" style="display:none" onclick="copyDecisions()">📋 Copier Decision Block</button>
+<button class="sec" id="printBtn" style="display:none" onclick="window.print()">🖨️ Imprimer</button>
+
+<script>
+// v2 — extends v1 with 6 gap-filling principles
+// Source canon: LD01/99_meta/fable5_strategy_session_v2_principles.md (RATIFIED 2026-07-04T16:15 ET)
+
+function radioVal(n){const r=document.querySelector('input[name="'+n+'"]:checked');return r?+r.value:0}
+function genReport(){
+const q1=radioVal('q1'),q2=+document.getElementById('q2').value,q3=radioVal('q3'),q4=+document.getElementById('q4').value,
+q5=+document.getElementById('q5').value,q6=radioVal('q6'),q7=+document.getElementById('q7').value,
+q8=document.getElementById('q8').value.trim(),q9=document.getElementById('q9').value.trim(),q10=+document.getElementById('q10').value,
+q11=document.getElementById('q11').value.trim(),q12=document.getElementById('q12').value.trim(),
+q13=+document.getElementById('q13').value,q14=document.getElementById('q14').value.trim();
+
+// v1 scores per zone (kept identical for backwards compat)
+const sClient=Math.round((q1+ (13-q2)*0.9)/2);
+const sFinance=Math.round((q3 + Math.min(q4,12)/1.2)/2);
+const sMeta=Math.round(((100-q5)/10 + q6)/2);
+const sCadence=Math.round((q7/10 + (q8?8:2))/2);
+
+// v2 NEW: risk probe using Q14 (Fable 5 self-audit) — captures agent blind spots
+const sAudit = q14?Math.max(2,Math.min(8,q14.length/20)):5;
+
+const zones=[['Exécution client',sClient],['Discipline financière',sFinance],['Sobriété méta',sMeta],['Cadence 12WY',sCadence],['Fable 5 self-audit [v2]',sAudit]];
+zones.sort((a,b)=>a[1]-b[1]);
+const weak=zones[0], blunt=q10>=7;
+
+// v2 NEW: each move gets a WAGER + a SISTER chain pointer + a D5 receipt
+// Sister canon: 
+//   - BC-AaaS-Solaris-Variant = LD01/30_decisions/ADR-LD01-005_budget_collapse_phase3_economical.md
+//   - BC-Project-OMK-Nexus-Coaching = LD01/30_decisions/ADR-LD01-003_lightnings_bounded_contexts.md (L1 gstack ⚡)
+//   - BC-AaaS-Nexus-Variant = LD01/30_decisions/ADR-LD01-005_budget_collapse_phase3_economical.md (Executive & Leadership Coaching sous-niche)
+let moves=[], sisters=[];
+if(weak[0]==='Exécution client'){
+ moves=[
+  {n:1, title:'Cette semaine : 3 messages sortants à 3 coachs réels (LinkedIn/réseau Abdaty) — pas de deck, juste une question sur leur friction admin.',
+   wager:{baseline:'0 conversation/7j',cible:'3 conversations qualifiées/7j',owner:'A0',deadline:'Dim 23:59 ET'},
+   sister:'~/.claude/plans/plan-L2-business-os.md §13.4 (Executive & Leadership Coaching spearhead)'},
+  {n:2, title:'Fixer la date démo au W'+Math.min(q2,6)+' dans calendar.md — et la traiter comme un veto Beth : non-négociable.',
+   wager:{baseline:'date démo floue W8+',cible:'date démo ferme W'+Math.min(q2,6),owner:'A0',deadline:'fin W4'},
+   sister:'LD01/30_decisions/ADR-LD01-003_lightnings_bounded_contexts.md (L1 gstack ⚡ /office-hours)'},
+  {n:3, title:'Chaque handoff agent de la semaine DOIT citer son impact client en 1 ligne, sinon il attend.',
+   wager:{baseline:'handoffs sans impact client',cible:'100% handoffs avec impact 1-ligne',owner:'Book A3',deadline:'W4-Ven'},
+   sister:'LD01/30_decisions/ADR-LD01-002_mavis_runtime_binding.md §S2'}
+ ];
+}else if(weak[0]==='Discipline financière'){
+ moves=[
+  {n:1, title:'Trancher le pricing en 1 session de 30 min contre ADR-AAAS-PRICING-001 — les 2 autres prix partent en _TRASH doctrine.',
+   wager:{baseline:'3 prix flottants (9 jours)',cible:'1 prix ratifié (ADR-AAAS-PRICING-001 ou successeur)',owner:'A0',deadline:'mer W4'},
+   sister:'_SPECS/ADR/L2_Business_OS/ADR-AAAS-PRICING-001.md (RATIFIED existant) ↔ ADR-LD01-005 (cost collapse)'},
+  {n:2, title:'Écrire le chiffre runway dans un handoff Saru LD02 (le premier de la session qui contienne un vrai chiffre financier).',
+   wager:{baseline:'0 chiffre financier/handoff',cible:'≥1 chiffre financier (runway inclus)/handoff',owner:'Book A3 + Saru',deadline:'W5'},
+   sister:'LD01/30_decisions/ADR-LD01-005_budget_collapse_phase3_economical.md §3.2'},
+  {n:3, title:'Wager : 1er euro encaissé avant W10 — sinon le pricing était de la fiction.',
+   wager:{baseline:'€0 encaissé',cible:'€1+ encaissé (ou signé)',owner:'A0',deadline:'W10'},
+   sister:'plan-L2 §13.5 (pricing $1.2M ARR hypothesis)'}
+ ];
+}else if(weak[0]==='Sobriété méta'){
+ moves=[
+  {n:1, title:'Ratio 50/50 la semaine prochaine : chaque heure harness = 1 heure marché. Tracké dans calendar.md.',
+   wager:{baseline:'90/10 harness/marché',cible:'50/50 harness/marché',owner:'A0',deadline:'W5-Ven'},
+   sister:'LD01/30_decisions/ADR-LD01-005_budget_collapse_phase3_economical.md §7 (Year-3000 post-Abundance)'},
+  {n:2, title:'Réactiver LE cron choisi en Q6 (un seul) — la Posture C reste, mais une automatisation vivante vaut dix specs.',
+   wager:{baseline:'15 crons pausés',cible:'1 cron réactivé (à choisir Q6)',owner:'A0 + Reaper',deadline:'W5-Mar'},
+   sister:'LD01/30_decisions/ADR-LD01-002_mavis_runtime_binding.md §S5 (reaper/watchdog runtime)'},
+  {n:3, title:'Moratoire nouveaux plans/skills 7 jours : on exécute l\'existant (13 GOs ouverts suffisent).',
+   wager:{baseline:'plans créés/sem ≈ 4',cible:'0 nouveau plan 7j (sauf ADR)',owner:'A0',deadline:'W5'},
+   sister:'LD01/30_decisions/ADR-LD01-001_organigramme_doctrine.md (CARDIA-TDD additif)'}
+ ];
+}else if(weak[0]==='Fable 5 self-audit [v2]'){
+ moves=[
+  {n:1, title:'Demander audit séparé-context (Cole antidote) : verifier le rapport Fable 5 par un autre agent / sub-agent.',
+   wager:{baseline:'rapport mono-context',cible:'rapport séparé-context (verifier agent SYS)',owner:'Book A3 + verifier',deadline:'W5'},
+   sister:'LD01/30_decisions/ADR-LD01-004_true_agent_autonomy.md §C4 (Cole bias antidote)'},
+  {n:2, title:'Capturer la Q14 (angle mort de Fable 5) dans evolution.md — Sister pour w13 audit.',
+   wager:{baseline:'0 angle-mort capturé',cible:'Q14 capturée dans evolution.md',owner:'A0 + Book',deadline:'W4-Ven'},
+   sister:'~/.mavis/agents/b1-jerry-emyth/evolution.md (Cole evolution ledger append-only D4)'},
+  {n:3, title:'Moratoire Fable 5 audit jusqu\'à avoir ≥3 sessions comparables — N=3 minimum avant décision calibration.',
+   wager:{baseline:'N=1 audit',cible:'N≥3 audits comparables',owner:'A0',deadline:'W9'},
+   sister:'LD01/30_decisions/ADR-LD01-004_true_agent_autonomy.md §6 (W13 evolution ledger audit)'}
+ ];
+}else{
+ moves=[
+  {n:1, title:'Statuer les items 2-12 en une passe de 20 min : DELIVERED / IN-PROG / KILLED — le flou est pire que l\'échec.',
+   wager:{baseline:'9 items flous',cible:'0 item flou (chaque item = statut tranché)',owner:'A0',deadline:'W4-Mar'},
+   sister:'LD01/99_meta/calendar.md (append-only D4) + rot-rates.md'},
+  {n:2, title:'La chose de Q8 devient LE focus des 3 jours de T1 — tout le reste attend.',
+   wager:{baseline:'focus T1 diffus',cible:'focus unique (Q8 canonisé)',owner:'A0',deadline:'W4-Ven'},
+   sister:'~/.mavis/agents/b1-jerry-emyth/goal.md v2.0 (R4 evolution ≥ 3 entries)'},
+  {n:3, title:'Verdict W8 anticipé : si <3 LD en piste, resserrer à 3 LD assumés plutôt que 8 flous.',
+   wager:{baseline:'8 LD flous',cible:'≥3 LD en piste (statut tranché)',owner:'A0',deadline:'W8'},
+   sister:'plan-L2-business-os §4.2 (axe ancre LD bijection 8↔8)'}
+ ];
+}
+
+// v1 rapport format (kept), with v2 enhance: append Q11-Q14 calibration + D5 receipts inline
+let txt='═══ RAPPORT STRATEGY SESSION — W3 (2026-07-03) v2 Fable5 ═══\n\n';
+txt+='SCORES PAR ZONE (5 zones, v2 ajoute META-AUDIT)\n';
+zones.slice().sort((a,b)=>b[1]-a[1]).forEach(z=>{txt+='  '+z[0]+' : '+z[1]+'/10\n'});
+txt+='\n🔴 ZONE LA PLUS FAIBLE : '+weak[0].toUpperCase()+' ('+weak[1]+'/10)\n\n';
+if(blunt){
+if(weak[0]==='Exécution client')txt+='La vérité en face : tu as construit aujourd\'hui l\'un des systèmes d\'orchestration les plus disciplinés qu\'un solo puisse avoir — 18 handoffs, 4 moteurs qui s\'auto-corrigent — et ZÉRO humain n\'a entendu parler de ton offre. Le système est devenu le produit, et ce n\'est pas le produit que quelqu\'un paiera. Un coach avec un problème admin ne lira jamais ADR-CORE-006. Il répondra à un message de 3 lignes.\n\n';
+else if(weak[0]==='Discipline financière')txt+='La vérité en face : trois prix vivent dans ton canon parce que décider un prix, c\'est accepter d\'être jugé par le marché. Tant que le pricing flotte, personne ne peut dire non — et personne ne peut dire oui.\n\n';
+else if(weak[0]==='Sobriété méta')txt+='La vérité en face : l\'outillage est devenu ta zone de confort. Chaque heure sur le harness est une heure où le marché ne peut pas te rejeter. Gwyn mesurerait D11 = 0 : rien n\'a été libéré, tout a été raffiné.\n\n';
+else if(weak[0]==='Fable 5 self-audit [v2]')txt+='La vérité en face [v2 principle 6] : même l\'audit Fable 5 a des angles morts. Per L2 ceobench partially-observable principle, le rapport peut être un echo de tes weak spots — pas un miroir fidèle. Cole Medin l\'avertit : « validation must not run in same context as implementation ». Bis : faire auditer le rapport par un sub-agent en fresh context (verifier SYS canon).\n\n';
+else txt+='La vérité en face : 1/12 items livrés à W3, c\'est un cycle qui dérive vers "on verra à W13". La compression ×8 ne comprime que si le focus existe.\n\n';}
+txt+='CE QUE TU ÉVITES (tes mots) : '+(q9||'— non répondu : c\'est une réponse en soi —')+'\n';
+txt+='FOCUS T1 (tes mots) : '+(q8||'— non nommé : T1 n\'a pas de focus —')+'\n\n';
+txt+='ANGLE-MORT FABLE 5 (Q14 tes mots) : '+(q14||'— non nommé : audit pas challengé —')+'\n\n';
+
+// v2 NEW: each move gets WAGER + D5 receipt + SISTER
+txt+='LES 3 MOUVEMENTS DE LA SEMAINE (par impact, avec WAGER + SISTER)\n';
+moves.forEach(m=>{
+ txt+=m.n+'. '+m.title+'\n';
+ txt+='   📊 WAGER: '+m.wager.baseline+' → '+m.wager.cible+' | owner: '+m.wager.owner+' | deadline: '+m.wager.deadline+'\n';
+ txt+='   🔗 SISTER: '+m.sister+'\n\n';
+});
+txt+='─────\nRe-réponds lundi prochain. La zone faible du rapport = le focus de ta semaine.\n\n';
+
+// v2 NEW: Calibration Interview Q11-Q13 → re-centre les 10 questions de la v3 lundi
+txt+='─── CALIBRATION POUR LA v3 LUNDI ───\n';
+txt+='Q11 — Tu décides LÀ : '+(q11||'— non nommé —')+'\n';
+txt+='Q12 — Résistance : '+(q12||'— non nommé —')+'\n';
+txt+='Q13 — Franchise par défaut : '+q13+'/10 (override pour la v3 lundi)\n';
+txt+='─────────────────────────────────\n\n';
+
+// v2 NEW: pre-calibrated v3 re-centering hint
+txt+='─── v3 LUNDI HINT (re-centre les 10 questions) ───\n';
+txt+='La v3 lundi W4-W5 doit adapter ses 10 questions selon:\n';
+txt+='  - Q11 → client/pricing/cadence area focus\n';
+txt+='  - Q12 → weak-zone identification next week\n';
+txt+='  - Q13 → franchise level baseline ('+q13+'/10)\n';
+txt+='──────────────────────────────────────────\n';
+txt+='─── Sister canon propagation ───\n';
+txt+='LD01/99_meta/fable5_strategy_session_v2_principles.md (ce méta-analyse)\n';
+txt+='LD01/30_decisions/ADR-LD01-001_organigramme_doctrine.md (CARDIA-TDD)\n';
+txt+='LD01/30_decisions/ADR-LD01-002_mavis_runtime_binding.md (8 contrats S)\n';
+txt+='LD01/30_decisions/ADR-LD01-003_lightnings_bounded_contexts.md (3 Lightning canon)\n';
+txt+='LD01/30_decisions/ADR-LD01-004_true_agent_autonomy.md (BC-True-Autonomy)\n';
+txt+='LD01/30_decisions/ADR-LD01-005_budget_collapse_phase3_economical.md (cost reality)\n';
+txt+='LD01/99_meta/00_harness_engineering_alignment.md (Mark+Cole+\n';
+txt+='──────────────────────────────────────────\n';
+
+const r=document.getElementById('report');r.textContent=txt;r.style.display='block';
+document.getElementById('copyBtn').style.display='inline-block';
+
+// v2 NEW: Decision Block (per CC's candidate ADR-META-008)
+// Max 3 decisions (top 3 moves become decisions)
+let dtxt='═══ DECISION BLOCK — v2 Fable5 (max 3 décisions par handoff) ═══\n\n';
+moves.slice(0,3).forEach(m=>{
+ dtxt+='□ Décision '+m.n+': '+m.title.substring(0,80)+(m.title.length>80?'...':'')+'\n';
+ dtxt+='   Option A: GO — coller ce texte dans Slack/Discord/Mavis:\n';
+ dtxt+='      "RATIFIED Décision '+m.n+' — '+m.title.substring(0,100)+'. Move R'+m.n+' W4-W5. Wager: '+m.wager.baseline+' → '+m.wager.cible+'. Sister: '+m.sister+'"\n';
+ dtxt+='   Option B: REJECT — la décision reste en handoff mais sans ratification (resoumise prochaine session).\n';
+ dtxt+='   Receipt source: '+m.sister+' + ceremony L4-W4 si Decision=GO.\n';
+ dtxt+='   Sister canon (doit muter si GO): '+m.sister+'\n';
+ dtxt+'\n';
+});
+dtxt+='═══════════════════════════════════════════════════════\n';
+dtxt+='RAPPEL: PAS PLUS DE 3 DÉCISIONS PAR HANDOFF (cfr ADR-META-008 candidate).\n';
+dtxt+='Si > 3 décisions émergent, prioriser selon impact et reporter les restantes en handoff suivant.\n';
+const d=document.getElementById('decisions');d.textContent=dtxt;d.style.display='block';
+document.getElementById('copyDecBtn').style.display='inline-block';
+document.getElementById('printBtn').style.display='inline-block';
+r.scrollIntoView({behavior:'smooth'});}
+function copyReport(){navigator.clipboard.writeText(document.getElementById('report').textContent).then(()=>{document.getElementById('copyBtn').textContent='✅ Copié'})}
+function copyDecisions(){navigator.clipboard.writeText(document.getElementById('decisions').textContent).then(()=>{document.getElementById('copyDecBtn').textContent='✅ Copié'})}
+</script>
+</body>
+</html>

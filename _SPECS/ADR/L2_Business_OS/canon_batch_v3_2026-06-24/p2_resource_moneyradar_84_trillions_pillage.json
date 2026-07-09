@@ -1,0 +1,34 @@
+{
+  "guide_id": "resource_moneyradar_84_trillions_pillage",
+  "guide_title": "84 000 000 000 000 - Le Pillage Silencieux",
+  "guide_size_chars": 14781,
+  "pilier_numero": 2,
+  "pilier_titre_canon": "Pillage Macro-Structurel par la Finance",
+  "insight_canon_verbatim": "Depuis 1971, avec la fin de l'etalon-or, les grandes banques centrales et institutions financieres ont cree ex nihilo plus de 84 000 milliards de dollars, soit l'equivalent de plusieurs fois la richesse reelle produite par l'humanite entiere. Cette creation monetaire detournee vers les marches financiers, immobilier de luxe, produits derives, rachats d'actions et speculation, creant une bulle geante qui s'auto-alimente.",
+  "concept_cles": [
+    "Quantitative Easing (QE) post-2008 creant 84 000 Mds USD ex nihilo",
+    "Bulle d'actifs financiers concentree sur 1% population (Oxfam 2023)",
+    "Rachat d'actions propres (buybacks) par les multinationales",
+    "Endettement public+prive US 100 000 Mds USD en 2024 = 350% PIB",
+    "Fuite en avant des banques centrales garantissant hyperinflation"
+  ],
+  "outils_souverains_alignment": [
+    "Fed/ECB/MAS monetaires traditionnels vers M3 Money Supply AaaS Canon Macro-Hedging",
+    "BCE rachats d'actifs illimites vers BAS-R Solana USDC Treasury Solarpunk souverain",
+    "Oxfam Inequality Report annuel vers ADR-L2-AAAS-001 Acquisition Doctrine",
+    "BIS BRI rapports trimestriels vers L1 Research Pulse macro-radar cerritos twins",
+    "Shadowstats inflation reelle vers Supabase Life OS fw_finance macro-snapshots"
+  ],
+  "anti_paperclip_check_pass": true,
+  "anti_paperclip_rationale": "Le pilier denonce le greenwashing monetaire et la deconnexion entre creation de richesse financiere et economie reelle. Conforme ADR-SOBER-002 : pas d'incitation a l'enrichissement fictif via buybacks/speculation, AaaS Doctrine preserve opex<15% MR via Solarpunk kernel, LTV:CAC>=3:1 via acquisition disciplinee sister-symetrique.",
+  "sister_canon_refs": [
+    "ADR-AAAS-ACQUISITION-DOCTRINE-001",
+    "ADR-AAAS-PRICING-001",
+    "ADR-MARKET-STUDY-001",
+    "ADR-SOBER-002"
+  ],
+  "a3_twin_sisters": [
+    "Tendi",
+    "Boimler"
+  ]
+}

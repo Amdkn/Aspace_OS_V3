@@ -1,0 +1,26 @@
+{
+  "schema": "state-bus.v1",
+  "tick": 1,
+  "cycle": "Q3-2026",
+  "week": "W2",
+  "ts": 1750686000,
+  "ts_iso": "2026-06-23T08:30:00Z",
+  "polled": 8,
+  "routed": 8,
+  "skipped": 0,
+  "drift_flag": false,
+  "d6_lessons_shipped": ["D6_#7_routing_matrix_title_pattern_fix"],
+  "issues_dispatched": [
+    {"seq": 21, "title": "Symphony Pilotage Phase A — Rock canon", "route": "A1:Beth > A2:Discovery > A3:Tilly", "agent_path": "B1 (governance H30)"},
+    {"seq": 22, "title": "Day 1 (06/22 Lun) — A0 brief sign-off + Plane setup", "route": "A1:Morty > A2:Cerritos > A3:Tendi", "agent_path": "B1 (setup)"},
+    {"seq": 23, "title": "Day 2 (06/23 Mar) — A1 Beth audit MCP drift + SOBER-002", "route": "A1:Beth > A2:Discovery > A3:Tilly", "agent_path": "B1 (audit)"},
+    {"seq": 24, "title": "Day 3 (06/24 Mer) — A3 Protostar DEAL Define+Eliminate", "route": "A1:Beth > A2:Protostar > A3:Rok-Tahk", "agent_path": "B1 (DEAL Define+Eliminate)"},
+    {"seq": 25, "title": "Day 4 (06/25 Jeu) — A3 Protostar Zero SPEC skill /symphony-pilot (DÉJÀ LIVRÉ)", "route": "A1:Beth > A2:Protostar > A3:Zero", "agent_path": "B1 (Automate)"},
+    {"seq": 26, "title": "Day 5 (06/26 Ven) — A3 Chapel measures D11 + /routine design", "route": "A1:Morty > A2:Curie-SNW > A3:Chapel", "agent_path": "B1 (Measure)"},
+    {"seq": 27, "title": "Day 6 (06/27 Sam) — Synthèse A0 + Décision Phase B GO/NO-GO", "route": "A1:Beth > A2:Discovery > A3:Tilly", "agent_path": "B1 (milestone)"},
+    {"seq": 28, "title": "Day 7 (06/28 Dim) — REST + Retro + Seed W+1", "route": "A1:Beth > A2:Cerritos > A3:Rutherford", "agent_path": "B1 (review)"}
+  ],
+  "cron_job_id": "28e33de6",
+  "cron_persisted": ".claude/scheduled_tasks.json",
+  "next_step": "Wait 30 min for next cron tick (auto-fire /symphony-pilot-runtime --once)"
+}

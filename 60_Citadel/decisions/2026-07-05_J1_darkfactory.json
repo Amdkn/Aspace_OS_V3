@@ -1,0 +1,60 @@
+{
+  "decision_id": "2026-07-05_J1_darkfactory",
+  "generated_by": "Mavis (MC/L1) — Book COO orchestrated",
+  "generated_at": "2026-07-05T04:11:00-04:00",
+  "doctrine": "append-only D4 · A0 Murderbot pré-ratification §8 · Book COO cadence 7-jours ratifiée",
+  "trace_source": "LD01/99_meta/plan_l2_dark_factory_sister.md §10-§11",
+  "appendix": {
+    "A0_amodei_murderbot_sister": "LD01/99_meta/a0_amodei_murderbot_meta_coach_sister.md",
+    "L0_L1_L2_lightning_sister": "LD01/99_meta/00_plan_lightning_l0l1l2_coach_sister.md",
+    "L1_gstack_mapping_sister": "LD01/99_meta/l1_gstack_e_myth_mapping.md",
+    "plan_citadelle_a0_sister": "LD01/99_meta/00_plan_citadelle_a0_sister.md"
+  },
+  "triptyque_phase": {
+    "name": "T1 pass-1",
+    "day": "J1",
+    "domains_concurrent_async": ["People", "Operation", "IT"],
+    "B3_async_spawned": [
+      {"agent": "b3-xmen-people", "B2_parent": "b2-gl-people", "framework": "LifeWheel"},
+      {"agent": "b3-ff-ops", "B2_parent": "b2-batman-ops", "framework": "PARA"},
+      {"agent": "b3-kangdyn-it", "B2_parent": "b2-cyborg-it", "framework": "12WY"}
+    ],
+    "mirofish_attached": true,
+    "mirofish_role": "mesure cadence + règle J2",
+    "ai1_gates": ["Beth (veto santé/burn-out)", "Morty (audit exécution)"],
+    "A2_engineers_orchestrating": ["Zora Discovery (S1-A2-FW-#1)", "+ 5 autres"]
+  },
+  "risk_flags": {
+    "kernel_rick_REAL": false,
+    "vie_sante_beth_REAL": false,
+    "ship_outboard_action": false,
+    "auto_ratify_decision": false
+  },
+  "lightning_3_outillage": {
+    "L0_pocock": "contrôle qualité chaque skill B3 avant chaîne",
+    "L1_gstack": "chaîne montage E-Myth — /plan-ceo-review · /ship GATED · /autoplan",
+    "L2_ceo_bench_mirofish": "dojo sim compression AVANT réel"
+  },
+  "doctrine_anti_ultron": {
+    "lecture_seule_canons": true,
+    "append_only_decisions": true,
+    "ship_gated_outboard": true,
+    "auto_update_off": true,
+    "browse_option": true,
+    "hook_exit_0_always": true,
+    "go_call_does_not_pause": true,
+    "fini_is_a_state_not_an_endpoint": true
+  },
+  "verbindings_esperes": {
+    "wager_3_picard_W5": "L1 1er /autoplan réel",
+    "wager_2_curie_W5": "L2 CEO-Bench run #1 complet",
+    "wager_1_rick_S1": "3 Lightning installées (PARTIEL : L0 fully + L1 partiel + L2 runbook)"
+  },
+  "next_boundary": {
+    "trigger": "MiroFish boundary J1→J2 produit rapport",
+    "rule": "si compression a tenu sans casse → accélère J2 · sinon ralentit + flag",
+    "no_human_in_loop": true,
+    "A0_pre_ratified": true
+  },
+  "trace_reciprocity": "ce decision file est append-only — toute mutation ultérieure crée un nouveau fichier versionné (jamais d'update)"
+}

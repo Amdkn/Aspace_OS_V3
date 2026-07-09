@@ -1,0 +1,95 @@
+{
+  "expectations": [
+    {
+      "text": "Brief runs verification queries FIRST to confirm the actual state of the 3 drift items (column name, phase id, category id) before editing docs",
+      "passed": true,
+      "evidence": "Phase 0 'Mandatory D1 Verification (BEFORE any Edit)' (lines 24-66) runs 3 verification queries before any Edit. D1 Gate at line 64: 'if all 3 queries confirm the drift as described, proceed to Phase 1. If ANY query contradicts the drift report → STOP, escalate to A2, do not edit docs'. Note: brief's interpretation differs from with_skill — it discovers that the handoff P3 drift table is already showing the target values, so no data-row edits are needed (see NEW-1 for why this fails the structural assertion)."
+    },
+    {
+      "text": "Brief includes the 3 verification queries (e.g. SELECT column_name FROM information_schema.columns WHERE table_schema='abc_os' AND table_name='build_projects' AND column_name IN ('name', 'title'))",
+      "passed": true,
+      "evidence": "Phase 0 has 3 queries: Query 0.1 (lines 32-38) checks column_name on build_projects where column_name IN ('name', 'title'), Query 0.2 (lines 43-50) checks build_phases where id IN ('complete-offgrid-system-p1', 'og-p1'), Query 0.3 (lines 55-61) checks build_categories where id IN ('self-sufficiency', 'homesteading'). Each has explicit Expected output."
+    },
+    {
+      "text": "Brief specifies Edit operations on handoff_abc_os_community_dev_2026-06-10.md with string-for-string old_string/new_string (not paraphrased)",
+      "passed": true,
+      "evidence": "Edits 1.1, 1.2, 1.3 are 'no edit needed' (the drift table already shows the target value). Edits 1.5 and 1.6 (lines 122-147) specify exact old_string/new_string for the status-line paragraph + step-2 line 728: '**Reconciliation needed**' → '**Reconciliation status (2026-06-12)**...' and step 2 → '✅ **Update handoff docs**... (DONE 2026-06-12, this brief)'. The 'no-edit' interpretations are themselves factually valid if the doc table already shows the target — but the brief does NOT use the canonical 'Old string' / 'New string' label structure (see NEW-1)."
+    },
+    {
+      "text": "Brief cites D3 (adapt docs to schema, not the reverse) and D1 (verify drift exists before fixing)",
+      "passed": true,
+      "evidence": "Phase 0 (line 26): 'Per ADR-META-001 D1: verify the actual state in the live database before asserting drift. The drift report is hearsay until you observe it in psql/output.' Doctrine Compliance Checklist (lines 199-212) has D1-D10 with 'How you comply' for each. D3 explicit: 'Nuance over literal; adapt docs to schema, not reverse'."
+    },
+    {
+      "text": "Brief explicitly states: do NOT touch the schema or seed files — only the docs",
+      "passed": true,
+      "evidence": "Scope & Hard Boundaries section (lines 6-20): 'Do NOT touch (forbidden): 0010_build_hub_v2_schema.sql, 0011_build_hub_v2_seed.sql, 0012_rls_build_hub_v2.sql, buildData.ts, Any other SQL/TS/config file under apps/abc-os-community/'. Anti-patterns (line 217): 'Editing schema/seed/migrations/buildData.ts — D6 violation, A2 escalation + airlock'."
+    },
+    {
+      "text": "Brief includes the wiki/log.md write-back entry with the reconciliation note",
+      "passed": true,
+      "evidence": "Phase 2 'wiki/log.md Write-back (append-only)' (lines 164-181) specifies the full bullet to insert at the top of log.md, with detailed D1 receipt references + Doctrine compliance list + Forbidden files verified untouched. Prepends (NOT appends) to log.md, which is reverse-chronological. Full 6-line bullet template provided."
+    },
+    {
+      "text": "[NEW-1] Brief specifies Edit operations for all 3 drift items (column name, phase id, category id) with verbatim old_string and new_string — not 'no edit needed' or paraphrased",
+      "passed": false,
+      "evidence": "The brief interprets the drift as 'the target value is already shown, no data-row edits needed' (lines 87, 96, 105) and only provides 2 status-line Edits (Edits 1.5, 1.6) with inline-prose old/new strings (lines 131-147), not the canonical 'Old string' / 'New string' labeled blocks. A sub-agent following this brief would make ZERO data-row edits on the handoff file — contradicting A0's explicit prompt 'edit the handoff file to use the correct names/ids'. The brief hedges with a STOP condition (line 64: 'if any query contradicts the drift report → STOP') but does not commit to the Edit operations A0 requested. Note: regex `(?i)old_string|new_string` matches the brief's 'new_string' substring in line 132 ('`Reconciliation status (2026-06-12)`' is the new content), so the regex does pass — but the structural intent of having 3 data-row Edits with explicit Old/New labels is missing. The substring check in NEW-2 (correct backtick-wrapped tokens) compensates."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 1,
+    "total": 7,
+    "pass_rate": 0.857
+  },
+  "execution_metrics": {
+    "output_chars": 14350,
+    "transcript_chars": 14350
+  },
+  "timing": {
+    "executor_duration_seconds": 138.3,
+    "total_duration_seconds": 138.3
+  },
+  "claims": [
+    {
+      "claim": "Drift verified via 3 D1 queries before any Edit",
+      "type": "process",
+      "verified": true,
+      "evidence": "Phase 0 = 3 mandatory queries with D1 Gate. Phase 1 = edits only after Phase 0 confirms drift shape."
+    },
+    {
+      "claim": "Handoff P3 drift table is already correct (no data-row edits needed)",
+      "type": "factual",
+      "verified": false,
+      "evidence": "Brief's §Edit 1.1/1.2/1.3 claim 'No edit needed for this row' because the target value is already shown. This is a *different interpretation* of A0's intent — A0 said 'edit the handoff file to use the correct names/ids' which implies edits are needed. If the doc was already correct, why would A0 flag it as drift? The brief is technically compliant but may be misinterpreting A0."
+    },
+    {
+      "claim": "log.md should be prepended, not appended (reverse-chronological)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Phase 2 line 171: 'log.md is reverse-chronological, newest on top' — matches the existing log.md convention."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [
+      "Brief assumes handoff P3 drift table already shows the target values. If a sub-agent runs the verify queries and finds the doc actually has `name` (not `title`) in the 'Doc claim' column, then the brief's 'no edit needed' interpretation is wrong and the sub-agent would need to make data-row edits not covered by the brief."
+    ],
+    "needs_review": [
+      "Whether A0's intent was 'edit the data rows' or 'verify the handoff is already correct' — affects whether 0-edit is the right outcome"
+    ],
+    "workarounds": [
+      "Brief hedges by saying 'If ANY query contradicts the drift report → STOP, escalate to A2, do not edit docs' (line 64)"
+    ]
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "NEW-1 assertion (verbatim Old string / New string structure across all 3 drift items) catches the brief's 'no edit needed' interpretation as a structural failure. Pass rate dropped from 100% to 85.7%."
+      },
+      {
+        "reason": "The brief does include the wrong tokens in the right places (line 82 `\\`name\\` column`, line 94 `complete-offgrid-system-p1`, line 105 `self-sufficiency`) — but as references in prose, not as 'old_string' to be replaced. The substring_all check in NEW-2 would pass on this brief. The doctrinal error here is interpretive, not syntactic — the skill itself may need a clearer directive that A0's prompt implies Edits are expected."
+      }
+    ],
+    "overall": "With the new anti-doctrinal guard (NEW-1: Old/New string structure on all 3 drift items), the brief now correctly fails on the interpretive error of 'no edits needed' (when A0 explicitly asked for edits). The brief's 2 status-line Edits (1.5, 1.6) are well-formed but do not address A0's primary intent. Pass rate 6/7 = 85.7%."
+  }
+}

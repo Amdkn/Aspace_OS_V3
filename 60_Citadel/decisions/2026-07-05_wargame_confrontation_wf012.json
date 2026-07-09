@@ -1,0 +1,16 @@
+{
+  "action": "decision",
+  "date": "2026-07-05",
+  "title": "Plan de confrontation Fable Wargame Kit x WF0/WF1/WF2 + instance scaffoldee",
+  "a0_intent_verbatim": "analyse et cree un plan de confrontation avec fable-wargame-kit (apres transcripts Gemini : WF0 Spock / WF1 Morty poupee russe / WF2 Book CEO-Bench, lightings reassignes CEO-Bench->Book, MiroFish->Picard, Gstack->B1)",
+  "decision": "Plan ecrit + instance fable-last-week-aspace/ scaffoldee : 10 missions pre-remplies depuis canon (zero placeholder vide), SUCCESS-ASPACE 12 points (8 kit + 4 A'Space D1/append-only/mapping-canon/Beth-compat), LEDGER. Template Geordi INTOUCHE. Fenetre J-2 : Fable 5 quitte les abonnements le 7 juillet (kit README L3) et cette session tourne EN fable-5.",
+  "files": [
+    ".claude/plans/plan-wargame-confrontation-wf012-fable-last-week.md",
+    "fable-last-week-aspace/{SUCCESS-ASPACE.md, LEDGER.md, wargames/README.txt, tasks/01..10}"
+  ],
+  "d4_corrections": "Jstack->Gstack, GDD->GTD (erreurs transcription vocale Gemini, confirmees A+). Typage WF (strates) vs WK (semaines 12WY) ADOPTE.",
+  "executor_map": "post-7-juillet : Opus 4.8 (01 WF0, 02 WF1, 04 Beth) - Hermes (03 CEO-Bench, 05 DLP, 06 AAARR, 07 Quiz) - MiniMax M3 (08 MiroFish, 09 Gstack, 10 localai)",
+  "beth_note": "Mission 04 = airlock POUR Beth (ses invariants chiffres), pas contre elle. WARMODE-002 respecte : Beth seul veto.",
+  "next": "Bulk run des wargames par Fable 5 avant le 7 (cette session ou demain). Draft all 10 -> refine loop -> grade /12 -> LEDGER.",
+  "reversible": true
+}

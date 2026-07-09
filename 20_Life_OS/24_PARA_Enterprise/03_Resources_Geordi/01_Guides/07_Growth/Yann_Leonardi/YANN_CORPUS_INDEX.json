@@ -1,0 +1,2429 @@
+{
+  "audit_metadata": {
+    "total_files_analyzed": 60,
+    "total_unique_videos": 58,
+    "total_duplicates_found": 2
+  },
+  "duplicates": [
+    {
+      "video_id": "YT-MKjeZ5cjRS8",
+      "reference": "resource_product_market_fit.md",
+      "duplicates": [
+        "resource_how_do_you_know_if_you_have_a_productmarket_fit.md"
+      ]
+    },
+    {
+      "video_id": "YT-ajIgF-1__pc",
+      "reference": "resource_seo_bases_referencement.md",
+      "duplicates": [
+        "resource_seo_les_bases_pour_se_lancer_dans_le_referencement_naturel.md"
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "YT-5DJfDoJe62M",
+      "title": "3 Conseils SEO Référencement Naturel avec résultats IMMEDIATS",
+      "filename": "resource_3-conseils-seo-referencement-naturel-avec-resultats-immediats.md",
+      "duration": "08:14",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-dBPWXaKaMPY",
+      "title": "3 Reasons Why You Should Stop Using a Traditional Blog",
+      "filename": "resource_3-reasons-why-you-should-stop-using-a-traditional-blog.md",
+      "duration": "08:05",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P9",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-rFxsdx6kvr4",
+      "title": "5 Marketing Tips for Instagram : Analyse de la Traction Organique",
+      "filename": "resource_5_instagram_marketing_tips.md",
+      "duration": "07:08",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-7OeOQlZfFV8",
+      "title": "6 Types of Personalities",
+      "filename": "resource_6-types-of-personalities-process-com-know-your-audience.md",
+      "duration": "09:47",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-j63wq_idljU",
+      "title": "Cette MALADIE peut rapporter gros 💶🇫🇷 : Guide Obsidian Haute Densité",
+      "filename": "resource_cette_maladie_peut_rapporter_gros.md",
+      "duration": "27:17",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P6",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-Oi29cqSDEoM",
+      "title": "Comment DOCTOLIB est devenu incontournable ?",
+      "filename": "resource_comment-doctolib-est-devenu-incontournable.md",
+      "duration": "25:55",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-ZfVhzYKgdMg",
+      "title": "Comment LENA SITUATIONS a braqué le game ?? Feat @LeCoinDesYouTubeurs",
+      "filename": "resource_comment-lena-situations-a-braque-le-game.md",
+      "duration": "46:36",
+      "mapped_principles": [
+        {
+          "code": "P4",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-P8FCPuZEpow",
+      "title": "Comment RED BULL est devenu un empire : Analyse Marketing",
+      "filename": "resource_comment-red-bull-est-devenu-un-empire-analyse-marketing.md",
+      "duration": "30:14",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P8",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-YpmqFpDUiaU",
+      "title": "Comment Twitch est devenu incontournable ?? 🤫 : Guide Obsidian Haute Densité",
+      "filename": "resource_comment_twitch_est_devenu_incontournable.md",
+      "duration": "51:39",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-S-MSI4jRklY",
+      "title": "Crisis Marketing - How to adapt your marketing to the Coronavirus?",
+      "filename": "resource_crisis-marketing-how-to-adapt-your-marketing-to-the-coronavirus.md",
+      "duration": "13:48",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-YUUu2MLl5y8",
+      "title": "S'inspirer des cartels pour dominer le monde : le cas Décathlon",
+      "filename": "resource_decathlon.md",
+      "duration": "unknown",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P8",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P10",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-zlschBckLnA",
+      "title": "Destroying your brand image to be reborn: the JAGUAR case : Guide Obsidian Haute Densité",
+      "filename": "resource_destroying_your_brand_image_to_be_reborn_the_jaguar_case.md",
+      "duration": "21:43",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 20,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-QswZX5hMtjo",
+      "title": "Détruire son image de marque pour reconquérir le marché : le cas DOMINO'S : Guide Obsidian Haute Densité",
+      "filename": "resource_detruire_son_image_de_marque_pour_reconquerir_le_marche_le_cas_dominos.md",
+      "duration": "22:39",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P6",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-4NMQZB3BnOE",
+      "title": "Dropshipping from a 100% Marketing Perspective",
+      "filename": "resource_dropshipping-from-a-100-marketing-perspective.md",
+      "duration": "09:31",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 13,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P6",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P2",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-LZsyJpKAu1M",
+      "title": "Duolingo ne veut pas que vous appreniez des langues",
+      "filename": "resource_duolingo.md",
+      "duration": "unknown",
+      "mapped_principles": [
+        {
+          "code": "P5",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P2",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-VMvqM11ECyU",
+      "title": "ELLE a tout inventé... Analyse Marketing LE BON MARCHÉ",
+      "filename": "resource_elle-a-tout-invente-analyse-marketing-le-bon-marche.md",
+      "duration": "27:22",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P6",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-lLXT_RvQ-K8",
+      "title": "C’est quoi le DÉLIRE avec le FC Versailles ?",
+      "filename": "resource_fc-versailles.md",
+      "duration": "unknown",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 21,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P11",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-MKjeZ5cjRS8",
+      "title": "Product/Market Fit : Les Indicateurs de Traction et Méthodes de Mesure",
+      "filename": "resource_product_market_fit.md",
+      "duration": "06:22",
+      "mapped_principles": [
+        {
+          "code": "P1",
+          "score": 26,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P7",
+          "score": 12,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P2",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P12",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P6",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-5Wd7Wvgg_7o",
+      "title": "HYROX n'est PAS un sport",
+      "filename": "resource_hyrox.md",
+      "duration": "unknown",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 12,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-YO5OFAfWPVc",
+      "title": "Inbound Marketing vs Content Marketing : La Clarification Sémantique",
+      "filename": "resource_inbound_vs_content_marketing.md",
+      "duration": "07:25",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 13,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-yndFBFueI5Y",
+      "title": "Khaby Lame: De chômeur à millionaire avec TikTok - Feat Théo Lion",
+      "filename": "resource_khaby-lame-de-chomeur-a-millionaire-avec-tiktok.md",
+      "duration": "36:01",
+      "mapped_principles": [
+        {
+          "code": "P12",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P8",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-_WfoDHpsDHg",
+      "title": "La Conférence De BOOBA à HARVARD Enfin Dévoilée",
+      "filename": "resource_la-conference-de-booba-a-harvard-enfin-devoilee.md",
+      "duration": "36:18",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-zLXg36Ua4fI",
+      "title": "La face cachée d’Alexandre Astier  - Feat @ninaramen : Guide Obsidian Haute Densité",
+      "filename": "resource_la_face_cachee_dalexandre_astier.md",
+      "duration": "36:45",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 14,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P11",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-5G6bHo4n3Zs",
+      "title": "Le Marketing de.. STRANGER THINGS - L'engagement avec le Marketing",
+      "filename": "resource_le-marketing-de-stranger-things-lengagement-avec-le-marketing-nostalgie.md",
+      "duration": "18:36",
+      "mapped_principles": [
+        {
+          "code": "P12",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P2",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P9",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-qPAnqa4NNfU",
+      "title": "Le problème du Marketing ? Feat @WaldyNZembele",
+      "filename": "resource_le-probleme-du-marketing.md",
+      "duration": "27:44",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-NoAce_czPPk",
+      "title": "Les 5 erreurs facebook Ads à éviter",
+      "filename": "resource_les-5-erreurs-facebook-ads-a-eviter.md",
+      "duration": "11:00",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P6",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        }
+      ]
+    },
+    {
+      "id": "YT-a7rNDJ7B2FQ",
+      "title": "Les clients ou utilisateurs dont vous ne voulez pas...",
+      "filename": "resource_les-clients-ou-utilisateurs-dont-vous-ne-voulez-pas.md",
+      "duration": "08:59",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 26,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P10",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P2",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P11",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-2IHlwHqG2MI",
+      "title": "Marketing Analysis of the",
+      "filename": "resource_marketing-analysis-of-the-ok-boomer-music-video-false-divide.md",
+      "duration": "13:48",
+      "mapped_principles": [
+        {
+          "code": "P12",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-5knAIPSbL1M",
+      "title": "Marketing Automation,  comment l’utiliser pour son business ? L’exemple de Mautic",
+      "filename": "resource_marketing-automation-comment-lutiliser-pour-son-business-lexemple-de-mautic.md",
+      "duration": "08:26",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-4QYvAhUglWw",
+      "title": "Marketing De.. ASPHALTE - Analysis of the brand's marketing and communication strategy",
+      "filename": "resource_marketing-de-asphalte-analysis-of-the-brands-marketing-and-communication-strategy.md",
+      "duration": "12:44",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-9N7A1arKCNc",
+      "title": "Marketing de... JUL - L' artisan qui tua les maisons de disques",
+      "filename": "resource_marketing-de-jul-l-artisan-qui-tua-les-maisons-de-disques.md",
+      "duration": "32:37",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P6",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-0gq7BVMs3Vg",
+      "title": "Marketing De.. MEERO - Analysis of Meero's Marketing and Growth Strategy",
+      "filename": "resource_marketing-de-meero-analysis-of-meeros-marketing-and-growth-strategy.md",
+      "duration": "26:16",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-BhlN3oqty7M",
+      "title": "Marketing de.. MLM & JP FANGUIN : décryptage d'un modèle et d'un buzz",
+      "filename": "resource_marketing-de-mlm-jp-fanguin-decryptage-d-un-modele-et-d-un-buzz.md",
+      "duration": "21:47",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-YDrFmJ2O13U",
+      "title": "Marketing de.. SLACK - Analyse Stratégie Marketing et Branding de Slack",
+      "filename": "resource_marketing-de-slack-analyse-strategie-marketing-et-branding-de-slack.md",
+      "duration": "35:08",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P7",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P2",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-UXZ5AuDdj0M",
+      "title": "Marketing De.. STARBUCKS - Marketing and branding strategy analysis",
+      "filename": "resource_marketing-de-starbucks-marketing-and-branding-strategy-analysis.md",
+      "duration": "20:59",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-Da9IKTD671g",
+      "title": "Marketing De.. WISH - Analyse Stratégie Marketing et Branding de Wish",
+      "filename": "resource_marketing-de-wish-analyse-strategie-marketing-et-branding-de-wish.md",
+      "duration": "27:02",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P2",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-jt_2FXSr7iI",
+      "title": "Marketing De YOMI DENZEL - Génération",
+      "filename": "resource_marketing-de-yomi-denzel-generation-fake-it.md",
+      "duration": "31:29",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-biv-dnqbm-8",
+      "title": "Marketing Du.. Gangsta Rap (N.W.A) - Analyse Marketing, Branding et Growth de NWA",
+      "filename": "resource_marketing-du-gangsta-rap-nwa-analyse-marketing-branding-et-growth-de-nwa.md",
+      "duration": "30:11",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-5Gp8pgFMhUI",
+      "title": "Méthode “Growth Hacking Process” - Comment la mettre en place ?",
+      "filename": "resource_methode-growth-hacking-process-comment-la-mettre-en-place.md",
+      "duration": "08:38",
+      "mapped_principles": [
+        {
+          "code": "P5",
+          "score": 27,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P6",
+          "score": 19,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 12,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P7",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-Hp363It6Xt0",
+      "title": "ONBOARDING - Exemple de Superhuman",
+      "filename": "resource_onboarding-exemple-de-superhuman.md",
+      "duration": "11:40",
+      "mapped_principles": [
+        {
+          "code": "P1",
+          "score": 22,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 19,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P6",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-mN07vXlqKVQ",
+      "title": "Opt-in: The 4 mistakes to avoid when collecting emails",
+      "filename": "resource_opt-in-the-4-mistakes-to-avoid-when-collecting-emails.md",
+      "duration": "08:26",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P3",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-tuhSzxk9Rf0",
+      "title": "Marketing De.. PNL - Analyse stratégie marketing et communication de PNL",
+      "filename": "resource_pnl.md",
+      "duration": "unknown",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P8",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-VDc99IQhxXg",
+      "title": "Pourquoi CLUBHOUSE vaut 1 MILLIARD $ ??? Analyse Growth Marketing",
+      "filename": "resource_pourquoi-clubhouse-vaut-1-milliard-analyse-growth-marketing.md",
+      "duration": "29:07",
+      "mapped_principles": [
+        {
+          "code": "P12",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P2",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-SB-k06PgIRE",
+      "title": "Pourquoi LinkedIn est si BIZARRE ? : Guide Obsidian Haute Densité",
+      "filename": "resource_pourquoi_linkedin_est_si_bizarre.md",
+      "duration": "30:22",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 14,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-4IOKonJx_ZQ",
+      "title": "ROLEX, La NOUVELLE Stratégie Marketing 🎯",
+      "filename": "resource_rolex-la-nouvelle-strategie-marketing.md",
+      "duration": "31:40",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 27,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-aZubNxpKpI0",
+      "title": "Sa petite entreprise ne connait pas la crise - Feat Benoit de @Scalezia",
+      "filename": "resource_sa-petite-entreprise-ne-connait-pas-la-crise.md",
+      "duration": "50:26",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P2",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-BqK0r8Lt40o",
+      "title": "Semantic Cocoon - Boost your SEO through internal linking",
+      "filename": "resource_semantic-cocoon-boost-your-seo-through-internal-linking.md",
+      "duration": "08:29",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-ajIgF-1__pc",
+      "title": "SEO : Les Bases Fondamentales du Référencement Naturel",
+      "filename": "resource_seo_bases_referencement.md",
+      "duration": "06:27",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P6",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-emetIlTePOs",
+      "title": "Social Media Content Strategy - Le Slip Français",
+      "filename": "resource_social-media-content-strategy-le-slip-francais.md",
+      "duration": "11:34",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-D7aPzkIt4_Y",
+      "title": "Stéphane Edouard : la stratégie controversée qui l'a rendu millionnaire ! : Guide Obsidian Haute Densité",
+      "filename": "resource_stephane_edouard_la_strategie_controversee_qui_la_rendu_millionnaire.md",
+      "duration": "25:28",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-0i0x7EPcYUw",
+      "title": "The Cult of Osama Ammar - Feat @ProduitInternet",
+      "filename": "resource_the-cult-of-osama-ammar.md",
+      "duration": "54:21",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P2",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-0MI8HEzJPkg",
+      "title": "The ABSURD strategy of PMU : Guide Obsidian Haute Densité",
+      "filename": "resource_the_absurd_strategy_of_pmu.md",
+      "duration": "19:45",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P4",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-tTBzI8fJBPM",
+      "title": "The Coffee Shop Scam: INVESTIGATION : Guide Obsidian Haute Densité",
+      "filename": "resource_the_coffee_shop_scam_investigation.md",
+      "duration": "16:21",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 16,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 12,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P5",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P11",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P10",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-q06zU9TxpRo",
+      "title": "Trump VS #blacklivesmatter - Marketing de Clivage",
+      "filename": "resource_trump-vs-blacklivesmatter-marketing-de-clivage.md",
+      "duration": "16:37",
+      "mapped_principles": [
+        {
+          "code": "P9",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P3",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P4",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P7",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P5",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-sjYj3tVqZbM",
+      "title": "UN CRÉATIF : juste un Marketeux de plus ??",
+      "filename": "resource_un-creatif-juste-un-marketeux-de-plus.md",
+      "duration": "34:15",
+      "mapped_principles": [
+        {
+          "code": "P4",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P8",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P1",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P12",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-2cLj0JtDYSM",
+      "title": "Vitamine, Pain Killer ou Candy ? Les 3 Types de Business qui changent votre Marketing",
+      "filename": "resource_vitamine-pain-killer-ou-candy-les-3-types-de-business-qui-changent-votre-marketing.md",
+      "duration": "09:45",
+      "mapped_principles": [
+        {
+          "code": "P8",
+          "score": 31,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P1",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P6",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-36eI7IwSnk0",
+      "title": "What is Growth Hacking? 8 Truths About Growth Hackers",
+      "filename": "resource_what-is-growth-hacking-8-truths-about-growth-hackers.md",
+      "duration": "10:58",
+      "mapped_principles": [
+        {
+          "code": "P6",
+          "score": 12,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 10,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P3",
+          "score": 7,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P7",
+          "score": 6,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P2",
+          "score": 5,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P5",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P9",
+          "score": 4,
+          "confidence": "MEDIUM"
+        },
+        {
+          "code": "P12",
+          "score": 3,
+          "confidence": "LOW"
+        }
+      ]
+    },
+    {
+      "id": "YT-apri8u410G4",
+      "title": "Why use the",
+      "filename": "resource_why-use-the-aarrr-framework-for-your-marketing-actions-instructions.md",
+      "duration": "13:32",
+      "mapped_principles": [
+        {
+          "code": "P3",
+          "score": 24,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P12",
+          "score": 11,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P4",
+          "score": 9,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P2",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P9",
+          "score": 8,
+          "confidence": "HIGH"
+        },
+        {
+          "code": "P1",
+          "score": 3,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P7",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P8",
+          "score": 2,
+          "confidence": "LOW"
+        },
+        {
+          "code": "P11",
+          "score": 2,
+          "confidence": "LOW"
+        }
+      ]
+    }
+  ]
+}

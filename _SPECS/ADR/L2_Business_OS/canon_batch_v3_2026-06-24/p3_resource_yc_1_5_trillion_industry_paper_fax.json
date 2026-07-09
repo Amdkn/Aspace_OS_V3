@@ -1,0 +1,34 @@
+{
+  "guide_id": "resource_yc_1_5_trillion_industry_paper_fax",
+  "guide_title": "This 1.5 Trillion Industry Still Runs on Paper and Fax Machines",
+  "guide_size_chars": 12999,
+  "pilier_numero": 3,
+  "pilier_titre_canon": "Trillion Dollar Digitization Gap",
+  "insight_canon_verbatim": "What it takes for us to win only becomes cheaper, but what it takes for somebody else to catch up only gets more expensive. The Halo Business combines hardware physique (electronic shelf labels, POS), IA native, paiements, regulation gouvernementale, et operations de deploiement en magasin.",
+  "concept_cles": [
+    "Wedge-then-Expand: pain point etroit puis full-stack system",
+    "Compound Startup: hardware+software+paiements+regulation, heart transplant",
+    "Halo Business: heavy asset, low obsolescence, moat contre thin AI wrappers",
+    "Self-Driving Grocery: System of Record + System of Action + System of Transaction",
+    "P&L-Coupled Selling: chaque pitch lie a sales/gross margin/labor chiffres"
+  ],
+  "outils_souverains_alignment": [
+    "Vori 3 agents IA autonomes vers A3 Zero Protostar + agents H1 Isaac",
+    "System of Record unique ledger vers ASpace PARC canon + wiki junction",
+    "P&L-Coupled Selling chiffre vers A2 USS Discovery LD02 Finance + 12WY Rocks",
+    "Wedge-then-Expand trajectory vers Life-OS-2026 ALPHA multi-tenant progression",
+    "Halo Business moat anti-thin-wrapper vers ADR-SOBER-002 Anti-Paperclip kernel"
+  ],
+  "anti_paperclip_check_pass": true,
+  "anti_paperclip_rationale": "Aucun greenwashing: Vori chiffre un impact P&L reel (+20-25% sales, +7-10pts marge, 1-2 employes redeployes) sans dumping captif. Opex operationnels <15% MR via paiements (60% revenu) en system of transaction, LTV:CAC implicit >=3:1. Pas de lock-in predator.",
+  "sister_canon_refs": [
+    "ADR-AAAS-ACQUISITION-DOCTRINE-001",
+    "ADR-AAAS-PRICING-001",
+    "ADR-MARKET-STUDY-001",
+    "ADR-SOBER-002"
+  ],
+  "a3_twin_sisters": [
+    "a3-discovery-saru",
+    "a3-protostar-dal"
+  ]
+}

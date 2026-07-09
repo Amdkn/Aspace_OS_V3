@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "target": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\01_Identity_Core",
+    "out_root": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\01_Identity_Core\\graphify-burst",
+    "n_chunks": 15,
+    "max_workers": 8,
+    "timeout_s": 600,
+    "ok": 15,
+    "failed": 0,
+    "elapsed_s": 149.2,
+    "total_files": 145
+  },
+  "results": [
+    {
+      "chunk": 0,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 52.7,
+      "error": null
+    },
+    {
+      "chunk": 5,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 54.4,
+      "error": null
+    },
+    {
+      "chunk": 6,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 58.8,
+      "error": null
+    },
+    {
+      "chunk": 4,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 62.7,
+      "error": null
+    },
+    {
+      "chunk": 3,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 62.7,
+      "error": null
+    },
+    {
+      "chunk": 2,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 78.0,
+      "error": null
+    },
+    {
+      "chunk": 1,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 80.2,
+      "error": null
+    },
+    {
+      "chunk": 7,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 81.7,
+      "error": null
+    },
+    {
+      "chunk": 10,
+      "files": 9,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 33.1,
+      "error": null
+    },
+    {
+      "chunk": 12,
+      "files": 9,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 56.0,
+      "error": null
+    },
+    {
+      "chunk": 8,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 67.6,
+      "error": null
+    },
+    {
+      "chunk": 9,
+      "files": 10,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 65.5,
+      "error": null
+    },
+    {
+      "chunk": 13,
+      "files": 9,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 46.8,
+      "error": null
+    },
+    {
+      "chunk": 14,
+      "files": 9,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 59.0,
+      "error": null
+    },
+    {
+      "chunk": 11,
+      "files": 9,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 85.2,
+      "error": null
+    }
+  ]
+}

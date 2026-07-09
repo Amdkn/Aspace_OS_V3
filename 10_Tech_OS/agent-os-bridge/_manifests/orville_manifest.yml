@@ -1,0 +1,12 @@
+# Agent OS standards manifest for ship: orville
+# Generated 2026-06-19T06:01:56Z by agent-os-to-symphony.sh
+# Source: C:/Users/amado/agent-os/standards/index.yml
+
+agent_os_standards:
+  source: agent-os-bridge (Brian Casel v3.0)
+  injected_at: 2026-06-19T06:01:56Z
+  standards:
+    - folder: global
+      file: coding-style
+      description: "General coding style, immutability, naming, file organization, error handling"
+      ref: C:/Users/amado/agent-os/standards/global/coding-style.md

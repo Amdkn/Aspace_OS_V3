@@ -1,0 +1,19 @@
+{
+  "_doc": "Kill switches (ClaudeClaw Mission Control pattern) adaptés War Mode A'Space. DÉFAUT = ON (tout tourne). Ce sont des interrupteurs d'URGENCE (incident response), PAS des gates-par-défaut. Passer un switch à false = coupe CETTE partie en ~lecture (2s), sans arrêter le reste. C'est le modèle correct qu'A+ cherchait : défaut ON, freins d'urgence granulaires. Révocation globale = retirer 12WY_ON_PAUSE.flag.",
+  "kill_switches": {
+    "LLM_SPAWN_ENABLED": true,
+    "SCHEDULER_ENABLED": true,
+    "DASHBOARD_MUTATIONS_ENABLED": true,
+    "MISSION_AUTO_ASSIGN_ENABLED": true,
+    "TELEGRAM_PUSH_ENABLED": true,
+    "DARK_FACTORY_ENABLED": true
+  },
+  "switch_meaning": {
+    "LLM_SPAWN_ENABLED": "tout spawn d'agent (A2/A3/B) — OFF = plus aucun agent ne démarre",
+    "SCHEDULER_ENABLED": "tous les crons (Zora, book loop, telegram digest) — OFF = crons gelés",
+    "DASHBOARD_MUTATIONS_ENABLED": "écritures decisions/ + citadel — OFF = lecture seule totale",
+    "MISSION_AUTO_ASSIGN_ENABLED": "auto-routage des tâches aux agents — OFF = routage manuel",
+    "TELEGRAM_PUSH_ENABLED": "push digest Telegram — OFF = plus de notif externe",
+    "DARK_FACTORY_ENABLED": "cycle compressé Book COO 7 jours — OFF = usine à l'arrêt"
+  }
+}

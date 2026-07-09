@@ -1,0 +1,11 @@
+{
+  "bridge": "A2_to_A3",
+  "ts": "2026-06-15T17:25:25+00:00",
+  "ship": "Computer_Enterprise",
+  "domain": "captain",
+  "a3_name": "Picard",
+  "critical": false,
+  "mission": {
+    "summary": "Delegated to Picard on Computer_Enterprise/captain"
+  }
+}

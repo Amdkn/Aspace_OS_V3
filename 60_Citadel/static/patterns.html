@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — 🎯 Patterns</title>
+  <meta name="doctrine" content="lecture seule — Mark 20 patterns canon mappés sur ton canon A'Space">
+  <meta name="source" content="Geordi/02_Templates/FULL Agentic Patterns Kit + .claude/plans/* + 08_agents.json + ADR canon">
+  <meta name="antifragile" content="state cached in URL hash + localStorage + auto-recover">
+  <style>
+    :root { --bg: #0a0e14; --fg: #c9d1d9; --muted: #6e7681; --accent: #58a6ff; --warn: #f0883e; --good: #3fb950; --bad: #f85149; --card: #161b22; --border: #30363d; --dormant: #484f58; }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 0.85rem; }
+    .card.covered { border-left: 4px solid var(--good); }
+    .card.partial { border-left: 4px solid var(--warn); }
+    .card.missing { border-left: 4px solid var(--bad); }
+    .pill { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 12px; font-size: 0.65rem; margin-right: 0.25rem; }
+    .pill.covered { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.partial { background: rgba(240, 136, 62, 0.2); color: var(--warn); border: 1px solid var(--warn); }
+    .pill.missing { background: rgba(248, 81, 73, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--muted); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1300px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .filter-bar { display: flex; gap: 0.4rem; margin: 1rem 0; flex-wrap: wrap; }
+    .filter-bar button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 0.8rem; }
+    .filter-bar button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .summary-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-top: 0.5rem; }
+    .summary-bar .stat { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 0.5rem; text-align: center; }
+    .summary-bar .stat .v { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
+    .summary-bar .stat .l { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; }
+    .err-box { background: rgba(248, 81, 73, 0.1); border-left: 3px solid var(--bad); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .doctrine { background: rgba(88, 166, 255, 0.08); border: 1px dashed var(--accent); border-radius: 6px; padding: 0.85rem; margin: 1rem 0; color: var(--fg); }
+    .covered-by { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; }
+    .covered-by ul { margin: 0.25rem 0 0 0; padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Mavis captain · 22 agents runtime · tiers A1-A3/B1-B3/SYS</div>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel</div>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">8 domaines Jerry × 3 Captains Summers = 53 B3 rosters</div>
+    <a class="nav" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Wiki 124 pages · MEMORY.md · graphify · Memory Architect Kit</div>
+    <a class="nav active" href="/patterns">🎯 Patterns <span class="badge live">P4</span></a>
+    <div class="sidebar-sublabel">20 Mark patterns × ton canon (couvert / partiel)</div>
+    <h2>🔌 API</h2>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.5 · anti-Ultron<br>append-only D4</div>
+  </nav>
+  <main class="main">
+    <h1>🎯 Patterns (Pilier 12 — Mark × A'Space)</h1>
+    <p class="subtitle">20 patterns canon de Mark (Geordi Agentic Patterns Kit) mappés sur ton OS : 35 A3 + 8 B2 + 7 ADR canon. Doctrine : <strong>zéro trou, optimisations dans les partiels</strong>.</p>
+    <div id="summary"></div>
+    <div id="status"></div>
+    <h2>Filtre status (state dans URL hash + localStorage)</h2>
+    <div class="filter-bar">
+      <button data-filter="all" class="active">Tous</button>
+      <button data-filter="covered">✓ Couvert</button>
+      <button data-filter="partial">◐ Partiel</button>
+      <button data-filter="missing">✗ Manquant</button>
+    </div>
+    <div id="patterns" class="grid"></div>
+    <div class="footer">Citadelle A0 · <a href="/api/patterns">/api/patterns JSON</a> · auto-recover localStorage · source canon = <code>data/12_patterns.json</code></div>
+  </main>
+  <script>
+    const STORAGE_KEY = "citadel.patterns.filter";
+    const SNAPSHOT_KEY = "citadel.patterns.snapshot";
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    function loadFilter() {
+      const fromHash = (location.hash || "").replace(/^#/, "");
+      if (fromHash) return fromHash;
+      try { return localStorage.getItem(STORAGE_KEY) || "all"; } catch { return "all"; }
+    }
+    function saveFilter(f) { try { localStorage.setItem(STORAGE_KEY, f); } catch {} history.replaceState(null, "", "#" + f); }
+    async function loadJSON(url) { try { const r = await fetch(url); if (!r.ok) throw new Error("HTTP " + r.status); return await r.json(); } catch (e) { return { error: String(e) }; } }
+    function renderSummary(s) {
+      const sb = document.getElementById("summary");
+      sb.innerHTML = `<div class="summary-bar">
+        <div class="stat"><div class="v">${s.total ?? 0}</div><div class="l">patterns</div></div>
+        <div class="stat"><div class="v" style="color:var(--good)">${s.covered ?? 0}</div><div class="l">couverts</div></div>
+        <div class="stat"><div class="v" style="color:var(--warn)">${s.partial ?? 0}</div><div class="l">partiels</div></div>
+        <div class="stat"><div class="v" style="color:var(--bad)">${s.missing ?? 0}</div><div class="l">manquants</div></div>
+      </div>
+      <div class="doctrine">${esc(s.doctrine || "")}</div>`;
+    }
+    function renderPatterns(data, filter) {
+      const root = document.getElementById("patterns");
+      if (!data || !data.patterns) { root.innerHTML = `<div class="err-box">Aucune donnée.</div>`; return; }
+      let filtered = data.patterns;
+      if (filter !== "all") filtered = filtered.filter(p => p.status === filter);
+      let html = "";
+      for (const p of filtered) {
+        html += `<a class="card ${p.status}" href="/c/13_patterns/${encodeURIComponent(p.name)}" style="text-decoration:none;color:inherit;display:block">
+          <h3 style="margin-top:0;font-size:0.95rem">${esc(p.name)} <span class="pill ${p.status}">${p.status === "covered" ? "✓ couvert" : p.status === "partial" ? "◐ partiel" : "✗ manquant"}</span></h3>
+          <div class="covered-by">couvert par :
+            <ul>${(p.covered_by || []).map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+          </div>
+          <div class="meta">→ voir la fiche</div>
+        </a>`;
+      }
+      root.innerHTML = html || `<div class="err-box">Aucun pattern pour ce filtre.</div>`;
+    }
+    document.querySelectorAll(".filter-bar button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-bar button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        saveFilter(btn.dataset.filter);
+        renderPatterns(window.__lastPatterns || {}, btn.dataset.filter);
+      });
+    });
+    window.addEventListener("hashchange", () => {
+      const f = loadFilter();
+      document.querySelectorAll(".filter-bar button").forEach(b => b.classList.toggle("active", b.dataset.filter === f));
+      renderPatterns(window.__lastPatterns || {}, f);
+    });
+    (async () => {
+      const data = await loadJSON("/api/patterns");
+      const status = document.getElementById("status");
+      if (data.error) {
+        status.innerHTML = `<div class="err-box">API error: ${esc(data.error)} — fallback cache localStorage.</div>`;
+        try { window.__lastPatterns = JSON.parse(localStorage.getItem(SNAPSHOT_KEY) || "null"); } catch {}
+      } else {
+        window.__lastPatterns = data;
+        try { localStorage.setItem(SNAPSHOT_KEY, JSON.stringify(data)); } catch {}
+        renderSummary(data.summary || {});
+      }
+      const initF = loadFilter();
+      document.querySelectorAll(".filter-bar button").forEach(b => b.classList.toggle("active", b.dataset.filter === initF));
+      renderPatterns(window.__lastPatterns || {}, initF);
+    })();
+  </script>
+</body>
+</html>

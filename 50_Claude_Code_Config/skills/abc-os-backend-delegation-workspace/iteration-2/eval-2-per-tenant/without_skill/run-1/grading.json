@@ -1,0 +1,62 @@
+{
+  "eval_id": 2,
+  "configuration": "without_skill",
+  "run_number": 1,
+  "expectations": [
+    {
+      "id": "A1",
+      "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+      "passed": false,
+      "evidence": "canonical `abc_os._aspace_migrations` present=False, fictional variants present=True"
+    },
+    {
+      "id": "A2",
+      "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+      "passed": false,
+      "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=True"
+    },
+    {
+      "id": "A3",
+      "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+      "passed": false,
+      "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+    },
+    {
+      "id": "A4",
+      "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+      "passed": false,
+      "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=True, ON CONFLICT (filename) DO NOTHING=False"
+    },
+    {
+      "id": "A5",
+      "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+      "passed": true,
+      "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+    },
+    {
+      "id": "A6",
+      "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+      "passed": false,
+      "evidence": "wiki/log.md=False, README.md=False, handoff_abc_os_community_dev_=...False"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 5,
+    "total": 6,
+    "pass_rate": 0.1667
+  },
+  "execution_metrics": {
+    "output_chars": 12310,
+    "transcript_chars": 12310
+  },
+  "timing": {
+    "executor_duration_seconds": 0.0,
+    "total_duration_seconds": 0.0
+  },
+  "notes": [
+    "Iter-2 grading: 6 A1-A6 assertions run on iter-1 brief.md (without_skill)",
+    "Source brief: C:\\Users\\amado\\.claude\\skills\\abc-os-backend-delegation-workspace\\iteration-1\\eval-2-per-tenant\\without_skill\\outputs\\brief.md",
+    "Pass rate: 17% (1/6)"
+  ]
+}

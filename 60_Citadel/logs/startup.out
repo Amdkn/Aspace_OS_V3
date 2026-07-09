@@ -1,0 +1,55 @@
+2026-07-04T22:30:08 [INFO] Citadelle A0 serving on http://127.0.0.1:8770 (P0 + P1 + P2 + P3 backend)
+2026-07-04T22:30:08 [INFO] Pages: / /decisions /agents /frameworks /domains /memory /zora /harnesses
+2026-07-04T22:30:08 [INFO] Endpoints API: 11 data + ratify/apply decisions + zora/last-run
+2026-07-04T22:30:08 [INFO] Doctrine: lecture seule — append-only — gates anti-Ultron actifs
+2026-07-04T22:30:08 [INFO] Flags: canonic_writes=False autostart=False watchdog=False zora=False
+2026-07-04T22:30:08 [INFO] 127.0.0.1 - "GET /api/zora HTTP/1.1" 200 -
+2026-07-04T22:30:08 [INFO] 127.0.0.1 - "GET /api/zora/last-run HTTP/1.1" 200 -
+2026-07-04T22:30:08 [INFO] 127.0.0.1 - "GET /api/harnesses/live HTTP/1.1" 200 -
+2026-07-04T22:30:08 [INFO] 127.0.0.1 - "GET /zora HTTP/1.1" 200 -
+2026-07-04T22:30:08 [INFO] 127.0.0.1 - "GET /harnesses HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /decisions HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /agents HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /frameworks HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /domains HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /memory HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /zora HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /harnesses HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/harnesses HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/harnesses/live HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/skills HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/connections HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/decisions HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/agents HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/frameworks HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/domains HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/memory HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/zora HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/zora/last-run HTTP/1.1" 200 -
+2026-07-04T22:30:24 [INFO] 127.0.0.1 - "GET /api/decisions/status HTTP/1.1" 200 -
+2026-07-04T22:34:13 [INFO] 127.0.0.1 - "GET /api/data/04_skills HTTP/1.1" 200 -
+2026-07-04T22:34:18 [INFO] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2026-07-04T22:34:18 [INFO] 127.0.0.1 - "GET /api/harnesses HTTP/1.1" 200 -
+2026-07-04T22:34:18 [INFO] 127.0.0.1 - "GET /api/skills HTTP/1.1" 200 -
+2026-07-04T22:34:18 [INFO] 127.0.0.1 - "GET /api/connections HTTP/1.1" 200 -
+2026-07-04T22:34:20 [INFO] 127.0.0.1 - "GET /harnesses HTTP/1.1" 200 -
+2026-07-04T22:34:20 [INFO] 127.0.0.1 - "GET /api/harnesses/live HTTP/1.1" 200 -
+2026-07-04T22:34:34 [INFO] 127.0.0.1 - "GET / HTTP/1.1" 200 -
+2026-07-04T22:34:34 [INFO] 127.0.0.1 - "GET /api/harnesses HTTP/1.1" 200 -
+2026-07-04T22:34:34 [INFO] 127.0.0.1 - "GET /api/skills HTTP/1.1" 200 -
+2026-07-04T22:34:35 [INFO] 127.0.0.1 - "GET /api/connections HTTP/1.1" 200 -
+2026-07-04T22:34:36 [INFO] 127.0.0.1 - "GET /decisions HTTP/1.1" 200 -
+2026-07-04T22:34:36 [INFO] 127.0.0.1 - "GET /api/decisions/status HTTP/1.1" 200 -
+2026-07-04T22:34:37 [INFO] 127.0.0.1 - "GET /api/decisions HTTP/1.1" 200 -
+2026-07-04T22:34:37 [INFO] 127.0.0.1 - "GET /api/decisions/list HTTP/1.1" 200 -
+2026-07-04T22:34:39 [INFO] 127.0.0.1 - "GET /api/data/04_skills HTTP/1.1" 200 -
+2026-07-04T22:34:42 [INFO] 127.0.0.1 - "GET /decisions HTTP/1.1" 200 -
+2026-07-04T22:34:42 [INFO] 127.0.0.1 - "GET /api/decisions/status HTTP/1.1" 200 -
+2026-07-04T22:34:42 [INFO] 127.0.0.1 - "GET /api/decisions HTTP/1.1" 200 -
+2026-07-04T22:34:42 [INFO] 127.0.0.1 - "GET /api/decisions/list HTTP/1.1" 200 -
+2026-07-04T22:34:44 [INFO] 127.0.0.1 - "GET /api/data/06_connections HTTP/1.1" 200 -
+2026-07-04T22:34:46 [INFO] 127.0.0.1 - "GET /decisions HTTP/1.1" 200 -
+2026-07-04T22:34:46 [INFO] 127.0.0.1 - "GET /api/decisions/status HTTP/1.1" 200 -
+2026-07-04T22:34:46 [INFO] 127.0.0.1 - "GET /api/decisions HTTP/1.1" 200 -
+2026-07-04T22:34:46 [INFO] 127.0.0.1 - "GET /api/decisions/list HTTP/1.1" 200 -

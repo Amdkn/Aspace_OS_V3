@@ -1,0 +1,12 @@
+# Agent OS standards manifest for ship: discovery
+# Generated 2026-06-19T06:01:53Z by agent-os-to-symphony.sh
+# Source: C:/Users/amado/agent-os/standards/index.yml
+
+agent_os_standards:
+  source: agent-os-bridge (Brian Casel v3.0)
+  injected_at: 2026-06-19T06:01:53Z
+  standards:
+    - folder: supabase
+      file: anti-pause
+      description: "Supabase FREE plan anti-pause protocol via Symphony MCP supabase_anti_pause_ping tool. Schedule every 5-6 days to prevent 1-week inactivity pause."
+      ref: C:/Users/amado/agent-os/standards/supabase/anti-pause.md

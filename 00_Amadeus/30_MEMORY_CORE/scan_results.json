@@ -1,0 +1,2300 @@
+{
+  "recent_files": [
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\symphony\\README.md",
+      "mtime": "2026-05-23T01:00:01.867886"
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-sheets.spec.md",
+      "mtime": "2026-05-23T01:27:01.462990"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\OMK_Services_Presentation.md",
+      "mtime": "2026-05-22T23:22:44.704511"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\README.md",
+      "mtime": "2026-05-23T08:04:52.785299"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\log.md",
+      "mtime": "2026-05-23T08:04:46.933559"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fs_001.md",
+      "mtime": "2026-05-22T15:29:54.332914"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fwk_021.md",
+      "mtime": "2026-05-22T15:29:43.480166"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fwk_022.md",
+      "mtime": "2026-05-22T17:43:53.425035"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_20260522_blueprints-canon-and-junctions.md",
+      "mtime": "2026-05-22T15:30:34.051786"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_20260522_business-os-restructure-complete.md",
+      "mtime": "2026-05-22T17:48:19.146192"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\skills_queue.md",
+      "mtime": "2026-05-22T23:57:30.522763"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\02_blueprints-canon-tripartite-20260522.md",
+      "mtime": "2026-05-22T15:28:56.282730"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\03_quick-access-summers-and-inbox-20260522.md",
+      "mtime": "2026-05-22T17:42:57.383384"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\06_blueprints-canon-l1-impact-20260522.md",
+      "mtime": "2026-05-22T15:29:14.193029"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\07_para-source-of-truth-confirmed-20260522.md",
+      "mtime": "2026-05-22T17:43:16.363765"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\07_blueprints-canon-l2-impact-20260522.md",
+      "mtime": "2026-05-22T15:29:32.424064"
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\08_business-os-quick-access-and-rename-20260522.md",
+      "mtime": "2026-05-22T17:43:41.017311"
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-001_junction-based-aliasing.md",
+      "mtime": "2026-05-22T15:28:33.097996"
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-002_setup-junctions-script.md",
+      "mtime": "2026-05-22T22:41:50.688991"
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-003_business-os-sub-junctions-transverse.md",
+      "mtime": "2026-05-22T22:42:13.542897"
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FWK-021_blueprints-canon-tripartite.md",
+      "mtime": "2026-05-22T17:42:35.991996"
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FWK-022_quick-access-summers-and-inbox-pattern.md",
+      "mtime": "2026-05-22T17:42:25.639888"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Jerry_Areas_README.md",
+      "mtime": "2026-05-22T04:16:28.293703"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\README.md",
+      "mtime": "2026-05-21T13:43:03.466733"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+      "mtime": "2026-05-21T13:43:05.560694"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+      "mtime": "2026-05-21T13:43:07.675349"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+      "mtime": "2026-05-21T13:43:09.753010"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B1_Area_Direction\\README.md",
+      "mtime": "2026-05-21T13:42:37.240664"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\README.md",
+      "mtime": "2026-05-21T13:42:39.286678"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\01_Growth_Superman_Guardians\\README.md",
+      "mtime": "2026-05-21T13:42:41.657139"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\01_Growth_Superman_Guardians\\B3_Squad_Guardians\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:13:32.207387"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\02_Sales_MartianManhunter_Illuminati\\README.md",
+      "mtime": "2026-05-21T13:42:43.655327"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\02_Sales_MartianManhunter_Illuminati\\B3_Squad_Illuminati\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:28.655613"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\03_Product_Flash_Avengers\\README.md",
+      "mtime": "2026-05-21T13:42:45.801724"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\03_Product_Flash_Avengers\\B3_Squad_Avengers\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:30.513066"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\04_Ops_Batman_Fantastic4\\README.md",
+      "mtime": "2026-05-21T13:42:47.964623"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\04_Ops_Batman_Fantastic4\\B3_Squad_Fantastic4\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:32.358101"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\05_IT_Cyborg_KangDynasty\\README.md",
+      "mtime": "2026-05-21T13:42:50.023032"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\05_IT_Cyborg_KangDynasty\\B3_Squad_KangDynasty\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:34.245177"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\06_Finance_WonderWoman_Thunderbolts\\README.md",
+      "mtime": "2026-05-21T13:42:52.191351"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\06_Finance_WonderWoman_Thunderbolts\\B3_Squad_Thunderbolts\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:36.124707"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\07_People_GreenLantern_XMen\\README.md",
+      "mtime": "2026-05-21T13:42:54.556016"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\07_People_GreenLantern_XMen\\B3_Squad_XMen\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:38.070385"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\08_Legal_Aquaman_Eternals\\README.md",
+      "mtime": "2026-05-21T13:42:56.732609"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\08_Legal_Aquaman_Eternals\\B3_Squad_Eternals\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:14:39.937224"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+      "mtime": "2026-05-21T13:43:01.147696"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+      "mtime": "2026-05-21T13:42:59.187732"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\README.md",
+      "mtime": "2026-05-21T13:50:22.070652"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+      "mtime": "2026-05-21T13:50:23.473795"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+      "mtime": "2026-05-21T13:50:24.885603"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+      "mtime": "2026-05-21T13:50:26.258226"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B1_Area_Direction\\README.md",
+      "mtime": "2026-05-21T13:46:44.444667"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\README.md",
+      "mtime": "2026-05-21T13:46:48.872437"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\01_Sleep_Recovery\\README.md",
+      "mtime": "2026-05-21T13:46:50.767478"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\02_Breath_Oxytocin\\README.md",
+      "mtime": "2026-05-21T13:46:52.673326"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\03_Movement_Outlive\\README.md",
+      "mtime": "2026-05-21T13:46:54.786995"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\04_Nutrition_4HB\\README.md",
+      "mtime": "2026-05-21T13:46:56.945526"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\05_Cold_Exposure_BLS\\README.md",
+      "mtime": "2026-05-21T13:46:58.703822"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\06_Strength_Supple_Leopard\\README.md",
+      "mtime": "2026-05-21T13:47:00.972059"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\07_Learning_How_to_Learn\\README.md",
+      "mtime": "2026-05-21T13:47:02.447623"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\08_Cognition_Mastery\\README.md",
+      "mtime": "2026-05-21T13:47:03.829475"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+      "mtime": "2026-05-21T13:50:20.669606"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+      "mtime": "2026-05-21T13:50:19.064893"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\README.md",
+      "mtime": "2026-05-21T13:46:43.309725"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W01.md",
+      "mtime": "2026-05-21T13:49:11.002988"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W02.md",
+      "mtime": "2026-05-21T13:49:12.488622"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W03.md",
+      "mtime": "2026-05-21T13:49:13.898323"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W04.md",
+      "mtime": "2026-05-21T13:49:15.267470"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W05.md",
+      "mtime": "2026-05-21T13:49:16.631001"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W06.md",
+      "mtime": "2026-05-21T13:49:18.009764"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W07.md",
+      "mtime": "2026-05-21T13:49:19.400021"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W08.md",
+      "mtime": "2026-05-21T13:49:20.813301"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W09.md",
+      "mtime": "2026-05-21T13:49:22.189419"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W10.md",
+      "mtime": "2026-05-21T13:49:23.554586"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W11.md",
+      "mtime": "2026-05-21T13:49:24.984769"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W12.md",
+      "mtime": "2026-05-21T13:49:26.874369"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+      "mtime": "2026-05-21T13:46:47.100008"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+      "mtime": "2026-05-21T13:46:50.765296"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+      "mtime": "2026-05-21T13:46:53.540310"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B1_Area_Direction\\README.md",
+      "mtime": "2026-05-21T13:41:55.898758"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\README.md",
+      "mtime": "2026-05-21T13:44:02.925913"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\01_Capital_Architecture\\README.md",
+      "mtime": "2026-05-21T13:44:05.198042"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\02_Cash_Flow_Architecture\\README.md",
+      "mtime": "2026-05-21T13:44:07.188926"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\03_Risk_Management\\README.md",
+      "mtime": "2026-05-21T13:44:09.121908"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\04_Tax_Optimization\\README.md",
+      "mtime": "2026-05-21T13:44:10.962366"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\05_Investment_Accumulation\\README.md",
+      "mtime": "2026-05-21T13:44:12.806801"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\06_Succession_Planning\\README.md",
+      "mtime": "2026-05-21T13:44:14.742965"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\07_Insurance_Protection\\README.md",
+      "mtime": "2026-05-21T13:44:17.781138"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\08_Family_Financial_Governance\\README.md",
+      "mtime": "2026-05-21T13:44:19.606285"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+      "mtime": "2026-05-21T13:45:01.529086"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+      "mtime": "2026-05-21T13:44:59.536084"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\README.md",
+      "mtime": "2026-05-21T13:46:55.486710"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+      "mtime": "2026-05-21T13:46:57.215127"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+      "mtime": "2026-05-21T13:46:59.343602"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+      "mtime": "2026-05-21T13:47:00.970977"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B1_Area_Direction\\README.md",
+      "mtime": "2026-05-21T13:44:41.365729"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\README.md",
+      "mtime": "2026-05-21T13:44:43.312525"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\01_Relational_Capital_LD05\\README.md",
+      "mtime": "2026-05-21T13:44:45.197477"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\02_Network_Activation_LD05\\README.md",
+      "mtime": "2026-05-21T13:44:47.045761"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\03_Experiential_Capital_LD07\\README.md",
+      "mtime": "2026-05-21T13:44:48.970827"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\04_Creativity_Gates_LD07\\README.md",
+      "mtime": "2026-05-21T13:44:51.112660"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\05_Solarpunk_Doctrine_LD08\\README.md",
+      "mtime": "2026-05-21T13:44:53.129992"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\06_MUSE_Eligible_Criteria_LD08\\README.md",
+      "mtime": "2026-05-21T13:44:55.032237"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\07_Public_Benefit_Standards_LD08\\README.md",
+      "mtime": "2026-05-21T13:44:56.979052"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\08_Contribution_Architecture_Integrated\\README.md",
+      "mtime": "2026-05-21T13:44:58.969085"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+      "mtime": "2026-05-21T13:46:53.288560"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+      "mtime": "2026-05-21T13:46:51.021164"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\affine_deal_drafts.md",
+      "mtime": "2026-05-23T02:09:04.804775"
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\resource_let_s_build_gpt_from_scratch_in_code.md",
+      "mtime": "2026-05-23T02:09:04.792067"
+    },
+    {
+      "path": "30_Business_OS\\README.md",
+      "mtime": "2026-05-21T14:20:15.926116"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:22.686495"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\02_Sales_MartianManhunter_Illuminati\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:24.631374"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:28.312632"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:26.414861"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:30.144537"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:31.892746"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:33.816571"
+    },
+    {
+      "path": "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\08_Legal_Aquaman_Eternals\\00_CROSSLINK.md",
+      "mtime": "2026-05-22T04:15:35.609373"
+    }
+  ],
+  "todos_and_debt": [
+    {
+      "path": "00_Amadeus\\Life_Agent_Portal.md",
+      "todos": [
+        {
+          "line": 54,
+          "match": "Todo",
+          "text": "ScoreCard\tdashboards/ScoreCard.tsx\t11 015 B\tSprint Kanban (Todo/InProgress/Review/Done)"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\Life_Reality_map.md",
+      "todos": [
+        {
+          "line": 267,
+          "match": "Todo",
+          "text": "ScoreCard\tdashboards/ScoreCard.tsx\t11 015 B\tSprint Kanban (Todo/InProgress/Review/Done)"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\Reality_map.md",
+      "todos": [
+        {
+          "line": 364,
+          "match": "Todo",
+          "text": "| ScoreCard | `dashboards/ScoreCard.tsx` | 11 015 B | Sprint Kanban (Todo/InProgress/Review/Done) |"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\README.md",
+      "todos": [
+        {
+          "line": 1,
+          "match": "Placeholder",
+          "text": "\ufeff# OSS Twin - Placeholder"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\V0_Windows.md",
+      "todos": [
+        {
+          "line": 1,
+          "match": "Placeholder",
+          "text": "\ufeff# V0 Windows - Placeholder"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\V1_WSL.md",
+      "todos": [
+        {
+          "line": 1,
+          "match": "Placeholder",
+          "text": "\ufeff# V1 WSL - Placeholder"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\V2_OSS_Twin.md",
+      "todos": [
+        {
+          "line": 1,
+          "match": "Placeholder",
+          "text": "\ufeff# V2 OSS Twin - Placeholder"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\symphony\\symphony-base.spec.md",
+      "todos": [
+        {
+          "line": 13,
+          "match": "Todo",
+          "text": "3. **Map les \u00e9tats Symphony aux \u00e9tats A'Space** \u2014 `Todo/In Progress/Done` devient un mapping configu"
+        },
+        {
+          "line": 206,
+          "match": "Todo",
+          "text": "next_actions: \"Todo\"               # Clarify (Boimler) done"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-plane.spec.md",
+      "todos": [
+        {
+          "line": 25,
+          "match": "Todo",
+          "text": "| State concept | WorkflowState (Backlog/Todo/InProgress/Done/Cancelled) | State (Backlog/Unstarted/"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\vps-cartography-20260514.md",
+      "todos": [
+        {
+          "line": 2433,
+          "match": "todo",
+          "text": "/home/amadeus/.claude/get-shit-done/workflows/add-todo.md"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2025-03_conversations.md",
+      "todos": [
+        {
+          "line": 3260,
+          "match": "placeholder",
+          "text": "is still not a valid YouTube video URL. It seems to be a placeholder or an incomplete link."
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2026-03_conversations.md",
+      "todos": [
+        {
+          "line": 8866,
+          "match": "placeholder",
+          "text": "Assure-toi que les champs de texte (`input`, `textarea`) utilisent aussi `text-[var(--theme-text)]` "
+        },
+        {
+          "line": 10653,
+          "match": "placeholder",
+          "text": "A full-screen container with a high-quality Solarpunk nature/city wallpaper (use a premium Unsplash "
+        },
+        {
+          "line": 10690,
+          "match": "placeholder",
+          "text": "Build the \"Agent Terminal\" featuring an avatar placeholder, a beautiful glowing toggle switch for \"D"
+        },
+        {
+          "line": 10767,
+          "match": "placeholder",
+          "text": "Right Main Panel (Agent Terminal): A detailed view of the selected agent. It includes a futuristic a"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2026-05_conversations.md",
+      "todos": [
+        {
+          "line": 57065,
+          "match": "placeholder",
+          "text": "Le placeholder"
+        },
+        {
+          "line": 80921,
+          "match": "todo",
+          "text": "dans la todo du 13\u00e8me Doctor."
+        },
+        {
+          "line": 89828,
+          "match": "Placeholder",
+          "text": "Le Placeholder (L'Espace R\u00e9serv\u00e9) :"
+        },
+        {
+          "line": 90653,
+          "match": "placeholder",
+          "text": ".\",\"deepLinkUrl\":\"https://keep.google.com/?note=1A12q3YzqB7axmUHLsIrbMFOe%2D6SiUh%5FCVyMDFTqhKGxOGJd"
+        },
+        {
+          "line": 90703,
+          "match": "TODO",
+          "text": ": RLS, Edge validations, UI-gating, rate-limits.\\n\\n## Secrets\\n- Jamais dans le client. Utiliser Su"
+        },
+        {
+          "line": 90802,
+          "match": "placeholder",
+          "text": ".\",\"deepLinkUrl\":\"https://keep.google.com/?note=1A12q3YzqB7axmUHLsIrbMFOe%2D6SiUh%5FCVyMDFTqhKGxOGJd"
+        },
+        {
+          "line": 90852,
+          "match": "TODO",
+          "text": ": RLS, Edge validations, UI-gating, rate-limits.\\n\\n## Secrets\\n- Jamais dans le client. Utiliser Su"
+        },
+        {
+          "line": 108493,
+          "match": "todo",
+          "text": "Status: todo | Priority: medium | Assignee: A0 Amadeus CEO Let me get the full details: \u26a0\ufe0f DANGEROUS"
+        },
+        {
+          "line": 159114,
+          "match": "placeholder",
+          "text": "(ou un placeholder encapsul\u00e9 dans un Tool)."
+        },
+        {
+          "line": 163565,
+          "match": "placeholder",
+          "text": ") est le placeholder de n8n. L'IA ne sait pas qu'elle doit g\u00e9n\u00e9rer"
+        },
+        {
+          "line": 164830,
+          "match": "placeholder",
+          "text": "Laisse un placeholder (ex: \"VPS Credential\")."
+        },
+        {
+          "line": 164870,
+          "match": "Placeholder",
+          "text": "(Placeholder dynamique)."
+        },
+        {
+          "line": 164993,
+          "match": "placeholder",
+          "text": "Remplace le placeholder"
+        },
+        {
+          "line": 165115,
+          "match": "placeholder",
+          "text": "(ou un placeholder g\u00e9n\u00e9rique si trop complexe \u00e0 configurer, mais pr\u00e9f\u00e8re le n\u0153ud r\u00e9el en mode \"Retri"
+        },
+        {
+          "line": 165438,
+          "match": "placeholder",
+          "text": "Laisse le Workflow ID vide (placeholder :"
+        },
+        {
+          "line": 165593,
+          "match": "placeholder",
+          "text": "Workflow ID : Laisse vide ou mets un placeholder."
+        },
+        {
+          "line": 165612,
+          "match": "placeholder",
+          "text": "Workflow ID : Laisse vide ou mets un placeholder."
+        },
+        {
+          "line": 166124,
+          "match": "placeholder",
+          "text": "Le 'Call Workflow' doit pointer vers un Sub-Workflow ID (mets un placeholder) et s'appeler 'tool_sec"
+        },
+        {
+          "line": 204750,
+          "match": "todo",
+          "text": "status text default 'todo',"
+        },
+        {
+          "line": 204762,
+          "match": "todo",
+          "text": "status text default 'todo' check (status in ('todo', 'doing', 'done')),"
+        },
+        {
+          "line": 224511,
+          "match": "Placeholder",
+          "text": "# Placeholder: connectera plus tard \u00e0 Apple Health / Oura"
+        },
+        {
+          "line": 224515,
+          "match": "Placeholder",
+          "text": "# Placeholder: connectera \u00e0 Notion/Obsidian"
+        },
+        {
+          "line": 224544,
+          "match": "Placeholder",
+          "text": "# Placeholder: connectera \u00e0 Stripe/Bank"
+        },
+        {
+          "line": 224731,
+          "match": "Placeholder",
+          "text": ": Placeholder pour le Life OS."
+        },
+        {
+          "line": 234299,
+          "match": "todo",
+          "text": "status text not null default 'todo'"
+        },
+        {
+          "line": 234300,
+          "match": "todo",
+          "text": "check (status in ('todo','doing','done','cancelled')),"
+        },
+        {
+          "line": 235101,
+          "match": "todo",
+          "text": "status text not null default 'todo'"
+        },
+        {
+          "line": 235103,
+          "match": "todo",
+          "text": "check (status in ('todo','doing','done','cancelled')),"
+        },
+        {
+          "line": 237010,
+          "match": "placeholder",
+          "text": "- Barre de recherche pro\u00e9minente en haut avec placeholder \"Rechercher sur KBS...\"."
+        },
+        {
+          "line": 237428,
+          "match": "placeholder",
+          "text": "- Une zone d'upload de photos en haut (placeholder pour 1-6 images)."
+        },
+        {
+          "line": 239783,
+          "match": "Placeholder",
+          "text": "Placeholder Testimonial:"
+        },
+        {
+          "line": 254231,
+          "match": "placeholder",
+          "text": "Child Details Panel :Photo placeholder (AC)"
+        },
+        {
+          "line": 256202,
+          "match": "placeholder",
+          "text": "- Taux de conversion leads: 42% (placeholder)"
+        },
+        {
+          "line": 274977,
+          "match": "placeholder",
+          "text": "placeholder=\"Entrez votre prompt ici...\""
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\02_architecture-services.md",
+      "todos": [
+        {
+          "line": 135,
+          "match": "Todo",
+          "text": "- Columns : **Triage \u2192 Todo \u2192 Ready \u2192 In Progress \u2192 Blocked \u2192 Done**"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\05_aspace-integration.md",
+      "todos": [
+        {
+          "line": 95,
+          "match": "Todo",
+          "text": "2. Tu d\u00e9coupes chaque payload en **t\u00e2ches Kanban** (Triage \u2192 Todo \u2192 Ready \u2192 In Progress \u2192 Done)"
+        },
+        {
+          "line": 130,
+          "match": "Todo",
+          "text": "| **Todo** | `Claimed` | R\u00e9serv\u00e9 \u00e0 un A2 Manager |"
+        },
+        {
+          "line": 184,
+          "match": "Todo",
+          "text": "\u2502 Triage \u2192 Todo \u2192 Ready \u2192 In Progress"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-004_ricks-verse-governance.md",
+      "todos": [
+        {
+          "line": 860,
+          "match": "TODO",
+          "text": "TODO V1 (Amy) :"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\log.md",
+      "todos": [
+        {
+          "line": 2069,
+          "match": "TODO",
+          "text": "3. Identification de **94 occurrences de dettes techniques** (TODO/PLACEHOLDERs en cours dans `05_OS"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_context_overwrite_anti_pattern.md",
+      "todos": [
+        {
+          "line": 27,
+          "match": "placeholder",
+          "text": "| Ignoring the `old_string` content during a `replace` call. | Double-checking that the `old_string`"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\syntheses\\synthesis_fin-gestation-strategique.md",
+      "todos": [
+        {
+          "line": 115,
+          "match": "Todo",
+          "text": "| Executor Scripts (Python/Node) | Rick + Doctors | \u2b1c Todo |"
+        },
+        {
+          "line": 116,
+          "match": "Todo",
+          "text": "| Obsidian Vault Setup (8 domaines) | 11th Doctor | \u2b1c Todo |"
+        },
+        {
+          "line": 119,
+          "match": "Todo",
+          "text": "| ABC OS VAPI Integration | A3 Teams | \u2b1c Todo |"
+        },
+        {
+          "line": 120,
+          "match": "Todo",
+          "text": "| Life OS Ships Setup (6 vaisseaux) | Beth + Morty | \u2b1c Todo |"
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\04_life-os-baserow-12wy-architecture-analysis-20260517.md",
+      "todos": [
+        {
+          "line": 86,
+          "match": "placeholder",
+          "text": "- Certaines valeurs de `Vision (Intent)` sont encore placeholder."
+        }
+      ]
+    },
+    {
+      "path": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\01_mcp-shadow-l2-config-20260516.md",
+      "todos": [
+        {
+          "line": 6,
+          "match": "placeholder",
+          "text": "tags: [#ShadowL2 #MCP #Notion #ClickUp #Airtable #DocsDogmatique #placeholder-config]"
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\README.md",
+      "todos": [
+        {
+          "line": 93,
+          "match": "placeholder",
+          "text": "- Set `LOCAL_AUTH_TOKEN` to a non-placeholder value (minimum 50 characters) when `AUTH_MODE=local`."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\coverage-policy.md",
+      "todos": [
+        {
+          "line": 3,
+          "match": "Placeholder",
+          "text": "Placeholder: coverage policy is currently documented in the root `Makefile` (`backend-coverage`)."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\installer-support.md",
+      "todos": [
+        {
+          "line": 16,
+          "match": "TODO",
+          "text": "| Fedora / RHEL / CentOS | `dnf` / `yum` | **Scaffolded** | Detection + actionable commands present;"
+        },
+        {
+          "line": 17,
+          "match": "TODO",
+          "text": "| openSUSE | `zypper` | **Scaffolded** | Detection + actionable commands present; auto-install path "
+        },
+        {
+          "line": 18,
+          "match": "TODO",
+          "text": "| Arch Linux | `pacman` | **Scaffolded** | Detection + actionable commands present; auto-install pat"
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\openclaw_baseline_config.md",
+      "todos": [
+        {
+          "line": 51,
+          "match": "placeholder",
+          "text": "\"placeholder\": \"[Old tool output cleared]\""
+        },
+        {
+          "line": 235,
+          "match": "placeholder",
+          "text": "- `hardClear`: full replacement with placeholder when limits are exceeded."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\deployment\\README.md",
+      "todos": [
+        {
+          "line": 26,
+          "match": "placeholder",
+          "text": "- **Set** `LOCAL_AUTH_TOKEN` to a non-placeholder value (\u2265 50 chars)"
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\getting-started\\README.md",
+      "todos": [
+        {
+          "line": 17,
+          "match": "placeholder",
+          "text": "# Set LOCAL_AUTH_TOKEN to a non-placeholder value with at least 50 characters."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\production\\README.md",
+      "todos": [
+        {
+          "line": 3,
+          "match": "Placeholder",
+          "text": "Placeholder."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\reference\\configuration.md",
+      "todos": [
+        {
+          "line": 19,
+          "match": "placeholder",
+          "text": "- **Policy:** Must be non-placeholder and at least 50 characters."
+        }
+      ]
+    },
+    {
+      "path": "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-004_ricks-verse-governance.md",
+      "todos": [
+        {
+          "line": 860,
+          "match": "TODO",
+          "text": "TODO V1 (Amy) :"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\00_Gatekeepers_Beth_Morty\\A1_Morty_Spec.md",
+      "todos": [
+        {
+          "line": 85,
+          "match": "todo",
+          "text": "`Morty_Global_Queue/` is not a random todo list. It accepts only:"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\00_Gatekeepers_Beth_Morty\\Beth_Alignment_Log\\README.md",
+      "todos": [
+        {
+          "line": 22,
+          "match": "todo",
+          "text": "- Raw tasks or todo lists. Send those to `Morty_Global_Queue/`."
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\.moat\\drawbridge-workflow.md",
+      "todos": [
+        {
+          "line": 48,
+          "match": "TODO",
+          "text": "\u2514\u2500 Update internal TODO to in_progress (if using todo_write)"
+        },
+        {
+          "line": 56,
+          "match": "TODO",
+          "text": "\u2514\u2500 Update internal TODO to completed (if using todo_write)"
+        },
+        {
+          "line": 64,
+          "match": "TODO",
+          "text": "\u274c Call tool to update TODO"
+        },
+        {
+          "line": 90,
+          "match": "TODO",
+          "text": "- todo_write(merge=true): Update internal TODO to in_progress"
+        },
+        {
+          "line": 102,
+          "match": "TODO",
+          "text": "- todo_write(merge=true): Update internal TODO to completed"
+        },
+        {
+          "line": 346,
+          "match": "TODO",
+          "text": "- Update internal TODO to `in_progress` (if using todo_write)"
+        },
+        {
+          "line": 362,
+          "match": "TODO",
+          "text": "- Update internal TODO to `completed` (if using todo_write)"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\rules-templates\\drawbridge-workflow.md",
+      "todos": [
+        {
+          "line": 48,
+          "match": "TODO",
+          "text": "\u2514\u2500 Update internal TODO to in_progress (if using todo_write)"
+        },
+        {
+          "line": 56,
+          "match": "TODO",
+          "text": "\u2514\u2500 Update internal TODO to completed (if using todo_write)"
+        },
+        {
+          "line": 64,
+          "match": "TODO",
+          "text": "\u274c Call tool to update TODO"
+        },
+        {
+          "line": 90,
+          "match": "TODO",
+          "text": "- todo_write(merge=true): Update internal TODO to in_progress"
+        },
+        {
+          "line": 102,
+          "match": "TODO",
+          "text": "- todo_write(merge=true): Update internal TODO to completed"
+        },
+        {
+          "line": 346,
+          "match": "TODO",
+          "text": "- Update internal TODO to `in_progress` (if using todo_write)"
+        },
+        {
+          "line": 362,
+          "match": "TODO",
+          "text": "- Update internal TODO to `completed` (if using todo_write)"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\03_Phase3_Master_SQL_Schema.md",
+      "todos": [
+        {
+          "line": 68,
+          "match": "todo",
+          "text": "status text default 'todo',"
+        },
+        {
+          "line": 80,
+          "match": "todo",
+          "text": "status text default 'todo' check (status in ('todo', 'doing', 'done')),"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+      "todos": [
+        {
+          "line": 82,
+          "match": "placeholder",
+          "text": "3. **B2 manager assignments**: Who owns each of the 8 domains? (Can be Jerry as placeholder until ex"
+        }
+      ]
+    },
+    {
+      "path": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\tasks.md",
+      "todos": [
+        {
+          "line": 24,
+          "match": "placeholder",
+          "text": "- [ ] Add: Search icon (placeholder for future)"
+        }
+      ]
+    }
+  ],
+  "broken_links": [
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+      "link_type": "standard",
+      "target": "agents/L2_A3_Illuminati_I.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+      "link_type": "standard",
+      "target": "agents/L2_A3_Illuminati_II.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+      "link_type": "standard",
+      "target": "agents/L2_A3_Illuminati_III.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+      "link_type": "standard",
+      "target": "agents/L2_A3_Illuminati_IV.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+      "link_type": "standard",
+      "target": "agents/L2_A3_Illuminati_V.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Aquaman.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Aquaman.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Batman.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Batman.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Cyborg.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Cyborg.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Flash.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Flash.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_GreenLantern.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_GreenLantern.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Superman.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Superman.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_WonderWoman.md",
+      "link_type": "standard",
+      "target": "L2_A1_Summer.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_WonderWoman.md",
+      "link_type": "standard",
+      "target": "L1_A3_Picard.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-001_OpenClaw-Position.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-002_Multiverse-Portability.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-003_agents-registry.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-004_doctrine-sync-canon.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-005_OpenClaw-Inside-Container.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-001_OpenClaw-Position.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-002_Multiverse-Portability.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-003_agents-registry.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-004_doctrine-sync-canon.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "02_V1_PRD/PRD-001_03_OpenClaw_Body_Cleanup.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "00_ADR/ADR-005_OpenClaw-Inside-Container.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "02_V1_PRD/PRD-003_Container-Migration.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+      "link_type": "standard",
+      "target": "02_V1_PRD/PRD-004_00_Amadeus-Restructuration.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\03_ROADMAP\\BACKLOG.md",
+      "link_type": "standard",
+      "target": "../02_V1_PRD/PRD-003_Container-Migration.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\03_ROADMAP\\BACKLOG.md",
+      "link_type": "standard",
+      "target": "../02_V1_PRD/PRD-004_00_Amadeus-Restructuration.md"
+    },
+    {
+      "source": "00_Amadeus\\01_Identity_Core\\_SPECS\\03_ROADMAP\\BACKLOG.md",
+      "link_type": "standard",
+      "target": "../02_V1_PRD/PRD-004_00_Amadeus-Restructuration.md"
+    },
+    {
+      "source": "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-sheets.spec.md",
+      "link_type": "wikilink",
+      "target": "\"CLARIFIED_PLANE\""
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\LLM Wiki\\Bienvenue.md",
+      "link_type": "wikilink",
+      "target": "cr\u00e9ez un lien"
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_openharness.md",
+      "link_type": "wikilink",
+      "target": "ADR-RICK-001_openharness-incarnation"
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\skills_queue.md",
+      "link_type": "wikilink",
+      "target": "wikilinks"
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\README.md",
+      "link_type": "wikilink",
+      "target": "Contribute"
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\README.md",
+      "link_type": "standard",
+      "target": "https://github.com/Requarks/wiki/blob/master/.github/CONTRIBUTING.md"
+    },
+    {
+      "source": "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Heartbeat.md",
+      "link_type": "wikilink",
+      "target": "wikilink"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\README.md",
+      "link_type": "standard",
+      "target": "https://github.com/anthropics/claude-plugins-official/blob/main/external_plugins/telegram/README.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\README.md",
+      "link_type": "standard",
+      "target": "https://github.com/anthropics/claude-plugins-official/blob/main/external_plugins/discord/README.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\conductor-track.md",
+      "link_type": "standard",
+      "target": "file:///c:/Users/amado/A%27Space%20OS%20V2/_SPECS/CONTRACTS.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\conductor-track.md",
+      "link_type": "standard",
+      "target": "file:///c:/Users/amado/A%27Space%20OS%20V2/_SPECS/DDD/META-CONDUCTOR.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\conductor-track.md",
+      "link_type": "standard",
+      "target": "file:///c:/Users/amado/A%27Space%20OS%20V2/_SPECS/DDD/patterns.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\conductor-track.md",
+      "link_type": "standard",
+      "target": "file:///c:/Users/amado/A%27Space%20OS%20V2/_SPECS/ADR/ADR-FWK-020_Framework-LD-Cooperation.md"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\resource_let_s_build_gpt_from_scratch_in_code.md",
+      "link_type": "wikilink",
+      "target": "02_Areas_Spock/IT"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\resource_let_s_build_gpt_from_scratch_in_code.md",
+      "link_type": "wikilink",
+      "target": "02_Areas_Spock/Career"
+    },
+    {
+      "source": "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\resource_let_s_build_gpt_from_scratch_in_code.md",
+      "link_type": "wikilink",
+      "target": "00_Index/index_youtube_rag"
+    }
+  ],
+  "blueprint_stats": {
+    "sdd": 13,
+    "adr": 5,
+    "prd": 0,
+    "ddd": 0
+  },
+  "all_md_files": [
+    "2026-05-01.md",
+    "2026-05-09.md",
+    "ARCHITECTURE_STRUCTURE.md",
+    "CLAUDE.md",
+    "full_conversation_python.md",
+    "full_conversation_raw.md",
+    "README.md",
+    "_PROMPT_INIT_GEMINI_CLI.md",
+    "00_Amadeus\\a0_reasoning_map.md",
+    "00_Amadeus\\adr-001-vps-tree.MD",
+    "00_Amadeus\\Life_Agent_Portal.md",
+    "00_Amadeus\\Life_Reality_map.md",
+    "00_Amadeus\\Manifesto.md",
+    "00_Amadeus\\README.md",
+    "00_Amadeus\\Reality_map.md",
+    "00_Amadeus\\01_Identity_Core\\AGENTS.md",
+    "00_Amadeus\\01_Identity_Core\\AGENTS_REGISTRY.md",
+    "00_Amadeus\\01_Identity_Core\\arch\u00e9-Futurisme (2).md",
+    "00_Amadeus\\01_Identity_Core\\arch\u00e9-Futurisme.md",
+    "00_Amadeus\\01_Identity_Core\\HEARTBEAT.md",
+    "00_Amadeus\\01_Identity_Core\\IDENTITY.md",
+    "00_Amadeus\\01_Identity_Core\\Manifeste_Souverain.md",
+    "00_Amadeus\\01_Identity_Core\\README.md",
+    "00_Amadeus\\01_Identity_Core\\SOUL.md",
+    "00_Amadeus\\01_Identity_Core\\TOOLS.md",
+    "00_Amadeus\\01_Identity_Core\\USER.md",
+    "00_Amadeus\\01_Identity_Core\\Valeurs.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_00_Couveuse.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_00_README.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A0_Amadeus.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A1_Rick.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A2_Doctor_11.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A2_Doctor_12.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A2_Doctor_13.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Amy.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Bill.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Clara.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Graham.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Nardole.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_River.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Rory.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Ryan.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_A3_Yaz.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L0_Donna_DLQ.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A1_Beth.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A1_Morty.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_Cerritos.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_Discovery.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_Enterprise.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_Orville.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_Protostar.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A2_USS_SNW.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Alara_Kitan.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Boimler.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Book.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Bortus.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Burnham.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Chapel.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Claire_Finn.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Culber.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Dal.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Data.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Ed_Mercer.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Freeman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Geordi.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Georgiou.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Gordon_Malloy.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Gwyn.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Holo_Janeway.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Isaac.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_John_Lamarr.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Kelly_Grayson.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Klyden.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Mariner.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_MBenga.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Picard.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Pike.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Reno.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_RokTahk.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Rutherford.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Saru.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Spock.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Stamets.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Tendi.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Tilly.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Uhura.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Una.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L1_A3_Zero.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A1_Jerry.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A1_Summer.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_Aquaman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_Batman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_Cyborg.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_Flash.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_GreenLantern.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_Superman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A2_WonderWoman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Ajak.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_BaronZemo.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Beast.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_BlackWidow.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_CaptainAmerica.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Cyclops.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Gamora.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Ghost.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Groot.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_HumanTorch.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Ikaris.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Immortus.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_InvisibleWoman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_IronLad.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_IronMan.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_JeanGrey.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Kang.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_MrFantastic.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Phastos.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_ProfessorX.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_RamaTut.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_RedHulk.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Rocket.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_StarLord.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Taskmaster.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Thena.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_TheThing.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\L2_A3_Thor.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Aquaman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Batman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Cyborg.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Flash.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_GreenLantern.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_Superman.md",
+    "00_Amadeus\\01_Identity_Core\\agents\\nano\\N_WonderWoman.md",
+    "00_Amadeus\\01_Identity_Core\\Vision_System\\README.md",
+    "00_Amadeus\\01_Identity_Core\\_SPECS\\README.md",
+    "00_Amadeus\\01_Identity_Core\\_SPECS\\01_V0_STATE\\V0_State_2026-02-28.md",
+    "00_Amadeus\\01_Identity_Core\\_SPECS\\03_ROADMAP\\BACKLOG.md",
+    "00_Amadeus\\02_Bio_Metrics\\README.md",
+    "00_Amadeus\\05_OSS_Twin\\README.md",
+    "00_Amadeus\\05_OSS_Twin\\V0_Windows.md",
+    "00_Amadeus\\05_OSS_Twin\\V1_WSL.md",
+    "00_Amadeus\\05_OSS_Twin\\V2_OSS_Twin.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\README.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\symphony-base.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L0\\open-hermes-runtime.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L0\\SDD-010_meta-cloture-scope-13eme-semaine_UPDATED_shadow-L0-IA.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L0\\shadow-ai-capability-routing.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-affine.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-baserow.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-obsidian.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L1\\symphony-plane.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-airtable.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-clickup.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-notion.spec.md",
+    "00_Amadeus\\05_OSS_Twin\\symphony\\L2\\symphony-sheets.spec.md",
+    "00_Amadeus\\30_MEMORY_CORE\\OMK_Services_Presentation.md",
+    "00_Amadeus\\30_MEMORY_CORE\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\vps-cartography-20260514.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2025-03_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2025-05_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2025-06_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2025-08_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2026-03_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\2026-05_conversations.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\_index.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Gemini_Takeout_2026\\Export Gemini 05\\26\\Bienvenue.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\00_session-handoff-20260515.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\01_installation-setup.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\02_architecture-services.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\03_security-best-practices.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\04_wsl2-networking.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\05_aspace-integration.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\06_mcp-tools-config.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\07_persistence-state-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\08_minimax-token-plan-config-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\09_context7-codex-mcp-config-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\10_context7-codex-hooks-config-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\11_symphony-shadow-l0-api-credentials-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\12_symphony-baserow-plane-smoke-test-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\13_hermes-retrogradation-shadow-l0-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\14_shadow-l0-executor-mesh-codex-strategy-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\15_final-handoff-hermes-to-llm-wiki-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Hermes Agent\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\LLM Wiki\\2026-05-11.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\LLM Wiki\\Bienvenue.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-000b_agent-bootstrap.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-000c_aspace-core.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-000_ricks-verse-constitution.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-001_solarpunk-kernel-core.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-002_a1-rick-harness.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-003_tardis-protocol-orchestration.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-004_ricks-verse-governance.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-005_life-os-l1-integration.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-006_business-pulse-l2-pyramide.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\raw\\sdd\\SDD-007_sob-factory-icp-variants.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\index.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\log.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\schema.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\agent_capsules\\_TEMPLATE\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\agent_capsules\\_TEMPLATE\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\agent_capsules\\_TEMPLATE\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\agent_capsules\\_TEMPLATE\\Soul.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\agent_capsules\\_TEMPLATE\\Tools.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_adr.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_agent_capsule.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_antigravity_migration_and_sdk_fusion.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_autonomous_research_loop.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_compounding_knowledge.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_context_overwrite_anti_pattern.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_e-myth.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_ecc_agnostic_agent_library.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_god_mode_cli_stack.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_heartbeat_2026.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_life_os.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_nano_squads.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_notebooklm_auth_2026.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_sdd.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_shadow_l1_l2_heartbeat_symphony.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_skill_reflex.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\concepts\\concept_sovereignty.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_11th_doctor.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_12th_doctor.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_13th_doctor.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_abc_os.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fs_001.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fwk_021.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_adr_fwk_022.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_amadeus.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_autoresearch.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_master_soc.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_notebooklm.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_openharness.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_rick.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_shadow_l0_executor_mesh.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_solaris_os.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_symphony_router.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_tardis_protocol.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_vapi.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_youtube_history_rag_pipeline.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\entities\\entity_zod.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_20260522_blueprints-canon-and-junctions.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_20260522_business-os-restructure-complete.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_claude_desktop_quota_shadow_l0_2026-05-19.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\handoff_ecc_configuration_audit_2026-05-19.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\hand_offs\\skills_queue.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\gemini_sessions_2026_05.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ccc-claude-code-avec-minimax-2026-05-20.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-remaining-sessions-2026-05-20.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-04-23-406f2be9.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-04-23-d261eb2a.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-04-24-2fa44290.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-04-24-34f05221.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-04-29-4796ed0b.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\session-ssh-config-2026-05-11-e2cc2fd5.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\skill-notebooklm_research-archived-2026-05-20.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_archive_multica_2026_05.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_codex_session_019e2524_shadow_aspace_os.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_gemini-takeout-2026-03.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_gemini-takeout-2026-05.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_karpathy-autoresearch.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_llm-wiki-pattern.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\sources\\source_sdd-blueprints.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki\\wiki\\syntheses\\synthesis_fin-gestation-strategique.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\SECURITY.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\.github\\CODE_OF_CONDUCT.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\.github\\CONTRIBUTING.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\.github\\PULL_REQUEST_TEMPLATE.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\dev\\helm\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\server\\app\\content\\create.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wiki\\server\\locales\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\wikijs-local\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\01_shadow-l0-coordination-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\02_blueprints-canon-tripartite-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\03_quick-access-summers-and-inbox-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\HEARTBEAT_PROTOCOL.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\SPEC.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\WORKFLOW.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\A0_inbox\\register-heartbeat-tasks-2026-05-18\\turn-1.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Claude_Code_CLI\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Claude_Code_CLI\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Claude_Code_CLI\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Claude_Code_CLI\\Soul.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Claude_Code_CLI\\Tools.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\Soul.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\Tools.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Codex_CLI\\memory\\inbox\\register-heartbeat-tasks-2026-05-18.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Soul.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L0\\agents\\Gemini_CLI\\Tools.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\01_baserow-plane-handoff-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\02_life-os-baserow-schema-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\03_life-os-baserow-database-analysis-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\04_life-os-baserow-12wy-architecture-analysis-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\05_life-os-baserow-population-test-20260518.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\06_blueprints-canon-l1-impact-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\07_para-source-of-truth-confirmed-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\HEARTBEAT.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\HEARTBEAT_PROTOCOL.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\SPEC.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\WORKFLOW.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\agents\\Claude_Code_CLI\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\agents\\Claude_Code_CLI\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\agents\\Claude_Code_CLI\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\agents\\Claude_Code_CLI\\Tools.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\handoffs\\Claude_Code_CLI.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L1\\handoffs\\Gemini_CLI.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\00_picard-phase-1-summary-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\01_mcp-shadow-l2-config-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\02_god-mode-cli-stack-20260516.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\03_solaris-aaas-migration-report-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\04_omk-services-migration-report-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\05_marina-cleaning-migration-report-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\06_alykaly-os-migration-report-20260517.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\07_blueprints-canon-l2-impact-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\08_business-os-quick-access-and-rename-20260522.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\HEARTBEAT.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\HEARTBEAT_PROTOCOL.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\README.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\SPEC.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\WORKFLOW.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\agents\\Claude_Code_CLI\\Agent.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\agents\\Claude_Code_CLI\\Context.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\agents\\Claude_Code_CLI\\Heartbeat.md",
+    "00_Amadeus\\30_MEMORY_CORE\\Shadow_L2\\agents\\Claude_Code_CLI\\Tools.md",
+    "00_Amadeus\\memory_continuations\\telegram_bot_recovery_2026-03-04.md",
+    "10_Tech_OS\\Manifesto.md",
+    "10_Tech_OS\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\Loi_L0.md",
+    "10_Tech_OS\\00_Governance_Rick\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\Sobriete.md",
+    "10_Tech_OS\\00_Governance_Rick\\VPS_AUDIT_PROTOCOL.md",
+    "10_Tech_OS\\00_Governance_Rick\\VPS_CLES.md",
+    "10_Tech_OS\\00_Governance_Rick\\VPS_KEYS.md",
+    "10_Tech_OS\\00_Governance_Rick\\Drivers\\A1 - Rick Sanchez (Visionnaire & Gatekeeper Absolu).md",
+    "10_Tech_OS\\00_Governance_Rick\\Drivers\\A2 - 11\u00e8me Docteur (Manager du Life Core).md",
+    "10_Tech_OS\\00_Governance_Rick\\Drivers\\A2 - 12\u00e8me Docteur (Manager du Buz Core  Business Pulse).md",
+    "10_Tech_OS\\00_Governance_Rick\\Drivers\\A2 - 13\u00e8me Docteur (Manager du Solarpunk Kernel).md",
+    "10_Tech_OS\\00_Governance_Rick\\Drivers\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\AGENTS.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\CONTRIBUTING.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\.github\\copilot-instructions.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\.github\\pull_request_template.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\backend\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\backend\\templates\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\03-development.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\coverage-policy.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\installer-support.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\openclaw_baseline_config.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\openclaw_gateway_ws.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\style-guide.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\architecture\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\deployment\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\development\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\getting-started\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\operations\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\policy\\one-migration-per-pr.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\production\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\reference\\api.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\reference\\authentication.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\reference\\configuration.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\reference\\security.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\release\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\testing\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\troubleshooting\\gateway-agent-provisioning.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\docs\\troubleshooting\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\openclaw-mission-control\\frontend\\README.md",
+    "10_Tech_OS\\00_Governance_Rick\\Scripts_Python\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\00_Blueprints\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\01_Yaz_SecOps\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\02_Ryan_SysAdmin\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\03_Graham_Backup\\README.md",
+    "10_Tech_OS\\11_Infra_13th_Doctor\\99_Container_Vault\\README.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-000b_agent-bootstrap.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-000c_aspace-core.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-000_ricks-verse-constitution.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-001_solarpunk-kernel-core.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-002_a1-rick-harness.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-003_tardis-protocol-orchestration.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-004_ricks-verse-governance.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-005_life-os-l1-integration.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-006_business-pulse-l2-pyramide.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-007_sob-factory-icp-variants.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-008_shadow-L1-life-os.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-009_shadow-L2-business-os.md",
+    "10_Tech_OS\\12_Blueprints\\01-SDD\\SDD-010_meta-cloture-scope-13eme-semaine.md",
+    "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-001_junction-based-aliasing.md",
+    "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-002_setup-junctions-script.md",
+    "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FS-003_business-os-sub-junctions-transverse.md",
+    "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FWK-021_blueprints-canon-tripartite.md",
+    "10_Tech_OS\\12_Blueprints\\02-ADR\\ADR-FWK-022_quick-access-summers-and-inbox-pattern.md",
+    "10_Tech_OS\\12_Interface_11th_Doctor\\README.md",
+    "10_Tech_OS\\12_Interface_11th_Doctor\\01_Amy_Social\\README.md",
+    "10_Tech_OS\\12_Interface_11th_Doctor\\02_Rory_Health\\README.md",
+    "10_Tech_OS\\12_Interface_11th_Doctor\\03_River_Knowledge\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\01_Clara_MCP\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\01_Clara_MCP\\02_Clara_ETL\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\02_Nardole_A2A\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\03_Missy_Chaos\\README.md",
+    "10_Tech_OS\\13_Data_12th_Doctor\\04_Bill_AG-UI\\README.md",
+    "20_Life_OS\\Manifesto.md",
+    "20_Life_OS\\README.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\A1_Beth_Spec.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\A1_Morty_Spec.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\README.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\README_Governance.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\Beth_Alignment_Log\\README.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\Morty_Global_Queue\\README.md",
+    "20_Life_OS\\00_Gatekeepers_Beth_Morty\\Sunday_Uplink_Protocols\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\A2_Orville_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\A3_Gemini_References_Index.md",
+    "20_Life_OS\\21_Ikigai_Orville\\Ikigai_Pillars_Horizons_Kardashev.md",
+    "20_Life_OS\\21_Ikigai_Orville\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\01_Profession_Mercer\\A3_Ed_Mercer_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\01_Profession_Mercer\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\02_Mission_Grayson\\A3_Kelly_Grayson_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\02_Mission_Grayson\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\03_Passion_Malloy\\A3_Gordon_Malloy_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\03_Passion_Malloy\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\04_Vocation_Finn\\A3_Claire_Finn_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\01_Pillars_Identity\\04_Vocation_Finn\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\01_H1_Isaac\\A3_Isaac_H1_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\01_H1_Isaac\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\02_H3_Lamarr\\A3_John_Lamarr_H3_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\02_H3_Lamarr\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\03_H10_Bortus\\A3_Bortus_H10_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\03_H10_Bortus\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\04_H30_Alara\\A3_Alara_Kitan_H30_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\04_H30_Alara\\README.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\05_H90_Klyden\\A3_Klyden_H90_Spec.md",
+    "20_Life_OS\\21_Ikigai_Orville\\02_Horizons_Time\\05_H90_Klyden\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\A2_Discovery_ZORA_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\A3_Discovery_References_Index.md",
+    "20_Life_OS\\22_Wheel_Discovery\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\A3_Book_LD01_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD02_Finance_Saru\\A3_Saru_LD02_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD02_Finance_Saru\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD02_Finance_Saru\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD03_Health_Culber\\A3_Culber_LD03_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD03_Health_Culber\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD03_Health_Culber\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD04_Cognition_Tilly\\A3_Tilly_LD04_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD04_Cognition_Tilly\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD04_Cognition_Tilly\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD05_Social_Stamets\\A3_Stamets_LD05_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD05_Social_Stamets\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD05_Social_Stamets\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD06_Family_Burnham\\A3_Burnham_LD06_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD06_Family_Burnham\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD06_Family_Burnham\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD07_Creativity_Reno\\A3_Reno_LD07_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD07_Creativity_Reno\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD07_Creativity_Reno\\README.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD08_Impact_Georgiou\\A3_Georgiou_LD08_Spec.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD08_Impact_Georgiou\\BIBLIOGRAPHY.md",
+    "20_Life_OS\\22_Wheel_Discovery\\LD08_Impact_Georgiou\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\A2_Curie_SNW_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\A3_SNW_References_Index.md",
+    "20_Life_OS\\23_12WY_SNW\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\01_Vision_Pike\\A3_Pike_Vision_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\01_Vision_Pike\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\02_Planning_Una\\A3_Una_Planning_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\02_Planning_Una\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\03_Focus_MBenga\\A3_MBenga_Focus_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\03_Focus_MBenga\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\04_Metrics_Chapel\\A3_Chapel_Metrics_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\04_Metrics_Chapel\\README.md",
+    "20_Life_OS\\23_12WY_SNW\\05_Execution_Ortegas\\A3_Ortegas_Execution_Spec.md",
+    "20_Life_OS\\23_12WY_SNW\\05_Execution_Ortegas\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\A2_Computer_Enterprise_Spec.md",
+    "20_Life_OS\\24_PARA_Enterprise\\A3_Enterprise_References_Index.md",
+    "20_Life_OS\\24_PARA_Enterprise\\Computer_B1_B2_B3_Business_Pulse_Doctrine.md",
+    "20_Life_OS\\24_PARA_Enterprise\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\A3_Picard_Projects_Spec.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\Picard_Summers_Verse_Register.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\Summers Verse.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\solaris-aaas\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\solaris-aaas\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\solaris-aaas\\picard_audit_solaris.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\solaris-aaas\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00 Agency as a Service\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B1_B2_B3_Fractal_Presentation.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B1_Summer_Direction\\Cycles_12WY_Governance.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\Rocks_And_Tactic_Specification.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\01_Growth_Superman_Guardians\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\02_Sales_MartianManhunter_Illuminati\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\03_Product_Flash_Avengers\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\04_Ops_Batman_Fantastic4\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\05_IT_Cyborg_KangDynasty\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\07_People_GreenLantern_XMen\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B2_Business_Domains\\08_Legal_Aquaman_Eternals\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\00_Summers_Verse\\B3_Warp_Core_Execution\\Lead_Lag_Log_Template.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\OMK SRV BOS\\OMK SERVICES Front-end Fr\\picard_audit_omk.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\OMK SRV BOS\\omk-services-front-end\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\OMK SRV BOS\\omk-services-front-end\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\OMK SRV BOS\\omk-services-front-end\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\OMK SRV BOS\\omk-services-front-end\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\01-omk-services-front-end\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\01-omk-services-front-end\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\01-omk-services-front-end\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01 OMK Business OS\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT PROJECT\\RILCOT Members OS\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\rilcot-os-v2\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\rilcot-os-v2\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\rilcot-os-v2\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\rilcot-os-v2\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT_OS\\picard_audit_rilcot.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT_OS\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT_OS\\_SPECS\\adrs\\ADR-V0.1_Rilcot.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT_OS\\_SPECS\\ddds\\DDD-V0.1_Rilcot.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\RILCOT_OS\\_SPECS\\prds\\PRD-V0.1_Rilcot.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Alikaly Bana Holding OS\\03_Kalybana_Production\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\01_Real_Estate\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\01_Real_Estate\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\02_Holdings_Platform\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\02_Holdings_Platform\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\alykaly-os\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\alykaly-os\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Kalybana Holding\\alykaly-os\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\01 alykaly-holding-front-v2\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\01 alykaly-holding-front-v2\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\01 alykaly-holding-front-v2\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\02_alykaly-os-v2\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\02_alykaly-os-v2\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\02_alykaly-os-v2\\SUPABASE_STRATEGY.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\02_alykaly-os-v2\\docs\\DEPLOYMENT_RUNBOOK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\Alykaly Bana  Real Estates Front-End FR V2\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\Alykaly Bana  Real Estates Front-End FR V2\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\Alykaly Bana  Real Estates Front-End FR V2\\picard_audit.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\Alykaly Bana  Real Estates Front-End FR V2\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\Alykaly Bana  Real Estates OS FR\\picard_audit_alykaly.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-front\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-front\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-front\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-holding-modern\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-holding-modern\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\alykaly-holding-modern\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\CERRIROS_HANDOVER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\SUMMERS_VERSE_MANIFEST.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B1_Summer_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Marina Super Cleaners (Copy)\\picard_audit_marina.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Marina Super Cleaners (Copy)\\marina-cleaning\\AGENTS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Marina Super Cleaners (Copy)\\marina-cleaning\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\03_Product_Flash_Avengers\\00_Interface_Prototypes\\Marina Super Cleaners (Copy)\\marina-cleaning\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B3_Warp_Core_Execution\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\SOUL.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\USER.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\.claude\\skills\\daily-summary.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\alpha\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\alpha\\.claude\\skills\\code-review.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\beta\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\beta\\.claude\\skills\\research-topic.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\gamma\\CLAUDE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\claudeclaw\\template\\agents\\gamma\\.claude\\skills\\check-schedule.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\.claude\\commands\\bridge.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\.moat\\drawbridge-workflow.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\.moat\\moat-tasks.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\ClaudeClaw Agent\\.moat\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\CHANGELOG.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\PRD-native-screenshot-capture.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\ARCHITECTURE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\rules-templates\\bridge.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\rules-templates\\drawbridge-workflow.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\chrome-extension\\rules-templates\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\drawbridge\\demo\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\A1_Jerry_Areas_Spec.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\A3_Spock_Areas_Spec.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Jerry_Areas_README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\L2_Business_Pulse_References_Index.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\BIBLIOGRAPHY_ALIGNMENT.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\n8n_workflows.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\00_Mission_Overview_SummerVerse.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\01_Phase1_Definition_Elimination.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\02_Phase2_Project_Charter.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\03_Phase3_Master_SQL_Schema.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\04_Seed_Ops_SOPs.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\05_Seed_Product_Offerings.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\06_Seed_Growth_Leads.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\07_Seed_Finance_Invoices.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\08_Seed_People_Capacity.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\09_Seed_Legal_Documents.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\10_N8N_CashIn_Flow.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\11_N8N_Inbound_Flow.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\Business_Pulse\\docs\\documentation\\Canon_BMad_DEAL\\12_N8N_Sunday_Uplink.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\AREA_STANDARD.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B1_Area_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\01_Growth_Superman_Guardians\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\01_Growth_Superman_Guardians\\B3_Squad_Guardians\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\02_Sales_MartianManhunter_Illuminati\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\02_Sales_MartianManhunter_Illuminati\\B3_Squad_Illuminati\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\03_Product_Flash_Avengers\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\03_Product_Flash_Avengers\\B3_Squad_Avengers\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\04_Ops_Batman_Fantastic4\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\04_Ops_Batman_Fantastic4\\B3_Squad_Fantastic4\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\05_IT_Cyborg_KangDynasty\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\05_IT_Cyborg_KangDynasty\\B3_Squad_KangDynasty\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\06_Finance_WonderWoman_Thunderbolts\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\06_Finance_WonderWoman_Thunderbolts\\B3_Squad_Thunderbolts\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\07_People_GreenLantern_XMen\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\07_People_GreenLantern_XMen\\B3_Squad_XMen\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\08_Legal_Aquaman_Eternals\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B2_Area_Domains\\08_Legal_Aquaman_Eternals\\B3_Squad_Eternals\\00_CROSSLINK.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\AREA_STANDARD.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\SUMMERS_VERSE_TEMPLATE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B1_Area_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\01_Sleep_Recovery\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\02_Breath_Oxytocin\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\03_Movement_Outlive\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\04_Nutrition_4HB\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\05_Cold_Exposure_BLS\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\06_Strength_Supple_Leopard\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\07_Learning_How_to_Learn\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B2_Area_Domains\\08_Cognition_Mastery\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\AREA_STANDARD.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\SUMMERS_VERSE_TEMPLATE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W01.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W02.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W03.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W04.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W05.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W06.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W07.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W08.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W09.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W10.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W11.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W12.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B1_Area_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\01_Capital_Architecture\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\02_Cash_Flow_Architecture\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\03_Risk_Management\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\04_Tax_Optimization\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\05_Investment_Accumulation\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\06_Succession_Planning\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\07_Insurance_Protection\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B2_Area_Domains\\08_Family_Financial_Governance\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\AREA_STANDARD.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\SUMMERS_VERSE_TEMPLATE.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W01_W04_Foundation\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W05_W08_Scaling\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\12WY_Area_Cadence\\W09_W12_Optimization\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B1_Area_Direction\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\01_Relational_Capital_LD05\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\02_Network_Activation_LD05\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\03_Experiential_Capital_LD07\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\04_Creativity_Gates_LD07\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\05_Solarpunk_Doctrine_LD08\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\06_MUSE_Eligible_Criteria_LD08\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\07_Public_Benefit_Standards_LD08\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B2_Area_Domains\\08_Contribution_Architecture_Integrated\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B3_Area_Warp_Core\\Artifact_Proofs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact\\B3_Area_Warp_Core\\Lead_Lag_Logs\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\conductor-track.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\tasks.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\specs\\agents-appstore.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\specs\\audit-antifragility.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\specs\\command-center.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\specs\\framework-apps.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\aspace-web-os\\specs\\shell.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.1-command-center\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.1-command-center\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.1-command-center\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.2-para-business\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.2-para-business\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.2-para-business\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.3-ikigai-protocol\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.3-ikigai-protocol\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.3-ikigai-protocol\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.4-life-wheel\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.4-life-wheel\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.4-life-wheel\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.5-12wy-strategy\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.5-12wy-strategy\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.5-12wy-strategy\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.6-gtd-system\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.6-gtd-system\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.7-deal-protocol\\design.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.7-deal-protocol\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.7-deal-protocol\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.8-agent-portal\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.8-agent-portal\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.9-app-store-settings\\proposal.md",
+    "20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\the-bridge-__-life-os\\openspec\\changes\\v0.1.9-app-store-settings\\specs\\features.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\A3_Geordi_Resources_Spec.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\README.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\00_Index\\RESOURCES_INDEX.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\00_Index\\TAGS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\affine_deal_drafts.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\LAYERS_ORDER_Local-WSL-VPS.md",
+    "20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\resource_let_s_build_gpt_from_scratch_in_code.md",
+    "20_Life_OS\\25_GTD_Cerritos\\A2_HoloDeck_Cerritos_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\A3_Cerritos_References_Index.md",
+    "20_Life_OS\\25_GTD_Cerritos\\README.md",
+    "20_Life_OS\\25_GTD_Cerritos\\01_Inbox_Mariner\\A3_Mariner_Capture_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\01_Inbox_Mariner\\README.md",
+    "20_Life_OS\\25_GTD_Cerritos\\02_Clarify_Boimler\\A3_Boimler_Clarify_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\02_Clarify_Boimler\\README.md",
+    "20_Life_OS\\25_GTD_Cerritos\\03_Organize_Rutherford\\A3_Rutherford_Organize_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\03_Organize_Rutherford\\README.md",
+    "20_Life_OS\\25_GTD_Cerritos\\04_Review_Tendi\\A3_Tendi_Review_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\04_Review_Tendi\\README.md",
+    "20_Life_OS\\25_GTD_Cerritos\\05_Engage_Freeman\\A3_Freeman_Engage_Spec.md",
+    "20_Life_OS\\25_GTD_Cerritos\\05_Engage_Freeman\\README.md",
+    "20_Life_OS\\26_DEAL_Protostar\\A2_HoloJaneway_Protostar_Spec.md",
+    "20_Life_OS\\26_DEAL_Protostar\\A3_Protostar_References_Index.md",
+    "20_Life_OS\\26_DEAL_Protostar\\README.md",
+    "20_Life_OS\\26_DEAL_Protostar\\01_Definition_Dal\\A3_Dal_Definition_Spec.md",
+    "20_Life_OS\\26_DEAL_Protostar\\01_Definition_Dal\\README.md",
+    "20_Life_OS\\26_DEAL_Protostar\\02_Elimination_RokTahk\\A3_RokTahk_Elimination_Spec.md",
+    "20_Life_OS\\26_DEAL_Protostar\\02_Elimination_RokTahk\\README.md",
+    "20_Life_OS\\26_DEAL_Protostar\\03_Automation_Zero\\A3_Zero_Automation_Spec.md",
+    "20_Life_OS\\26_DEAL_Protostar\\03_Automation_Zero\\README.md",
+    "20_Life_OS\\26_DEAL_Protostar\\04_Liberation_Gwyn\\A3_Gwyn_Liberation_Spec.md",
+    "20_Life_OS\\26_DEAL_Protostar\\04_Liberation_Gwyn\\README.md",
+    "20_Life_OS\\27_Cognition_LD04\\Gravity_Claw\\agents.md",
+    "20_Life_OS\\27_Cognition_LD04\\Gravity_Claw\\soul.md",
+    "30_Business_OS\\Manifesto.md",
+    "30_Business_OS\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\CEO_Directives.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\01_Vision_Strategy\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\02_Global_Dashboard\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\03_Master_Agreements\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\01_StarLord_Story\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\02_Rocket_Auto\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\03_Gamora_Target\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\01_Growth_Superman_Guardians\\04_Drax_Closing\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\02_Sales_MartianManhunter_Illuminati\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\02_Sales_MartianManhunter_Illuminati\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\01_Thing_Infra\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\02_Reed_Logic\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\03_Torch_UX\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Ops_Batman_Fantastic4\\04_Sue_SOPs\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\AGENTS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\CLAUDE.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\picard_audit.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\Alykaly Bana  Real Estates Front-End FR V2\\AGENTS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\Alykaly Bana  Real Estates Front-End FR V2\\CLAUDE.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\Alykaly Bana  Real Estates Front-End FR V2\\picard_audit.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\alykaly-front\\Alykaly Bana  Real Estates Front-End FR V2\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\rilcot-os-v2\\AGENTS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\rilcot-os-v2\\CLAUDE.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\rilcot-os-v2\\picard_audit.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\rilcot-os-v2\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\RILCOT_OS\\picard_audit_rilcot.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\RILCOT_OS\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\RILCOT_OS\\_SPECS\\adrs\\ADR-V0.1_Rilcot.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\RILCOT_OS\\_SPECS\\ddds\\DDD-V0.1_Rilcot.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\01_IronMan_Interface\\RILCOT_OS\\_SPECS\\prds\\PRD-V0.1_Rilcot.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\02_Vision_DataCore\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\04_Product_Flash\\03_Captain_QA\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\01_IronLad_IoT\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\02_Centurion_Security\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\05_IT_Cyborg_KangDynasty\\03_Immortus_Legacy\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\01_Ross_CostKiller\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\02_Taskmaster_Compliance\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\06_Finance_WonderWoman_Thunderbolts\\03_Ghost_Optimization\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\01_ProfX_Recruiting\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\02_Cyclops_Onboarding\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\07_People_GreenLantern_XMen\\03_JeanGrey_Culture\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\08_Legal_Aquaman_Eternals\\00_CROSSLINK.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\08_Legal_Aquaman_Eternals\\README_FROM_BUSINESS_OS.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\08_Legal_Aquaman_Eternals\\01_Ikaris_Contracts\\README.md",
+    "30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\08_Legal_Aquaman_Eternals\\02_Phastos_Structures\\README.md"
+  ],
+  "junction_loops_detected": [
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\arch",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\04_Archives_Data"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\area",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\biz",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\30_Business_OS"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\deal",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\26_DEAL_Protostar"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\gtd",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\25_GTD_Cerritos"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\para",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\proj",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\res",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi"
+    },
+    {
+      "junction": "C:\\Users\\amado\\ASpace_OS_V2\\_\\snw",
+      "target": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\23_12WY_SNW"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "bridge": "A1_to_A2",
+  "ts": "2026-06-15T17:25:24+00:00",
+  "context_pack": {
+    "framework": "12-Week Year",
+    "raw": {
+      "framework": "12-Week Year",
+      "summary": "Sprint W24 scorecard",
+      "tags": [
+        "sprint",
+        "scorecard"
+      ]
+    }
+  },
+  "beth_clearance": "GREEN",
+  "ship_intelligence": "Curie_SNW",
+  "framework": "12-Week Year"
+}

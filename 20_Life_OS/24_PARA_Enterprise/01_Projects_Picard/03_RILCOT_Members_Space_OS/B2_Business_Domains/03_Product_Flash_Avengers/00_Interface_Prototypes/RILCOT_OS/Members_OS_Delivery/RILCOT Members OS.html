@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RILCOT Members OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Urbanist:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        sans: ['Urbanist', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        cream: { DEFAULT: '#FAFAF9', deep: '#F5F2EC', warm: '#F0EBE0' },
+        forest: {
+          50:  '#ECFDF5', 100: '#D1FAE5', 200: '#A7F3D0',
+          500: '#10B981', 600: '#059669', 700: '#047857',
+          800: '#065F46', 900: '#064E3B', 950: '#022C22'
+        },
+        terra: {
+          50:  '#FEF7EE', 100: '#FCE9D2', 200: '#F8D0A4',
+          400: '#E89455', 500: '#D97338', 600: '#B45309',
+          700: '#9A3412', 800: '#7C2D12', 900: '#5C1F0A'
+        },
+        ink: { 900: '#1B1B18', 700: '#3D3A33', 500: '#6B6660', 400: '#8E8881', 300: '#B8B3AB' },
+        line: { DEFAULT: '#EAE6DD', soft: '#F1EEE6' }
+      },
+      boxShadow: {
+        'soft-sm': '0 1px 2px 0 rgba(27, 27, 24, 0.04), 0 1px 1px 0 rgba(27, 27, 24, 0.03)',
+        'soft':    '0 2px 6px -1px rgba(27, 27, 24, 0.06), 0 1px 3px -1px rgba(27, 27, 24, 0.04)',
+        'soft-md': '0 8px 24px -8px rgba(27, 27, 24, 0.10), 0 2px 6px -2px rgba(27, 27, 24, 0.05)',
+        'soft-lg': '0 24px 48px -12px rgba(6, 78, 59, 0.12), 0 4px 12px -4px rgba(27, 27, 24, 0.06)',
+        'inset-line': 'inset 0 0 0 1px #EAE6DD',
+      },
+    }
+  }
+}
+</script>
+<style>
+  html, body { background: #FAFAF9; }
+  body { font-family: Inter, system-ui, sans-serif; color: #1B1B18; -webkit-font-smoothing: antialiased; }
+  .font-display { font-family: "Playfair Display", serif; }
+  .font-sans { font-family: Urbanist, system-ui, sans-serif; }
+  .font-body { font-family: Inter, system-ui, sans-serif; }
+  .num { font-feature-settings: "tnum" 1, "lnum" 1; font-variant-numeric: tabular-nums; }
+
+  /* Subtle grain on cream surfaces */
+  .grain {
+    background-image:
+      radial-gradient(rgba(27,27,24,0.025) 1px, transparent 1px),
+      radial-gradient(rgba(27,27,24,0.018) 1px, transparent 1px);
+    background-size: 28px 28px, 64px 64px;
+    background-position: 0 0, 14px 14px;
+  }
+  .hero-pattern {
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(180,83,9,0.08), transparent 38%),
+      radial-gradient(circle at 88% 82%, rgba(6,78,59,0.10), transparent 42%),
+      linear-gradient(180deg, #FAFAF9 0%, #F5F2EC 100%);
+  }
+  .compass-ring {
+    background:
+      conic-gradient(from 0deg, transparent 0 88deg, rgba(6,78,59,0.18) 88deg 92deg, transparent 92deg 178deg,
+                    rgba(180,83,9,0.18) 178deg 182deg, transparent 182deg 268deg,
+                    rgba(6,78,59,0.18) 268deg 272deg, transparent 272deg 358deg,
+                    rgba(180,83,9,0.18) 358deg 360deg);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #EAE6DD; border-radius: 999px; border: 2px solid #FAFAF9; }
+  ::-webkit-scrollbar-thumb:hover { background: #D8D2C5; }
+
+  /* tiny pulse */
+  @keyframes pulse-dot { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(.85); } }
+  .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+  @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+
+  .tab-active { box-shadow: 0 1px 2px rgba(27,27,24,0.06), inset 0 0 0 1px #EAE6DD; }
+
+  .stripe-divider {
+    background: repeating-linear-gradient(90deg, #EAE6DD 0 6px, transparent 6px 14px);
+    height: 1px; width: 100%;
+  }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.452.0/dist/umd/lucide.min.js"></script>
+
+<script type="text/babel" src="rilcot-app.jsx"></script>
+<script type="text/babel" src="rilcot-os.jsx"></script>
+
+<script type="text/babel">
+  // Mount once both component files are evaluated. Babel scripts run in order.
+  const RILCOTApp = window.App;
+  ReactDOM.createRoot(document.getElementById("root")).render(<RILCOTApp />);
+</script>
+
+</body>
+</html>

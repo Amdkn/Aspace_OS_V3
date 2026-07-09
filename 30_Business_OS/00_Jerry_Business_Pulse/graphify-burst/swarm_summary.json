@@ -1,0 +1,175 @@
+{
+  "summary": {
+    "target": "C:\\Users\\amado\\ASpace_OS_V2\\30_Business_OS\\00_Jerry_Business_Pulse",
+    "out_root": "C:\\Users\\amado\\ASpace_OS_V2\\30_Business_OS\\00_Jerry_Business_Pulse\\graphify-burst",
+    "n_chunks": 20,
+    "max_workers": 4,
+    "timeout_s": 900,
+    "ok": 15,
+    "failed": 5,
+    "elapsed_s": 3917.8,
+    "total_files": 10494
+  },
+  "results": [
+    {
+      "chunk": 1,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 694.5,
+      "error": null
+    },
+    {
+      "chunk": 3,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 775.5,
+      "error": null
+    },
+    {
+      "chunk": 2,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 835.3,
+      "error": null
+    },
+    {
+      "chunk": 0,
+      "files": 525,
+      "ok": false,
+      "rc": -1,
+      "elapsed_s": 900.0,
+      "error": "timeout>900s"
+    },
+    {
+      "chunk": 4,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 477.9,
+      "error": null
+    },
+    {
+      "chunk": 6,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 459.1,
+      "error": null
+    },
+    {
+      "chunk": 5,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 637.5,
+      "error": null
+    },
+    {
+      "chunk": 7,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 777.0,
+      "error": null
+    },
+    {
+      "chunk": 10,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 275.6,
+      "error": null
+    },
+    {
+      "chunk": 9,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 473.2,
+      "error": null
+    },
+    {
+      "chunk": 8,
+      "files": 525,
+      "ok": false,
+      "rc": -1,
+      "elapsed_s": 900.0,
+      "error": "timeout>900s"
+    },
+    {
+      "chunk": 12,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 590.7,
+      "error": null
+    },
+    {
+      "chunk": 13,
+      "files": 525,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 768.0,
+      "error": null
+    },
+    {
+      "chunk": 11,
+      "files": 525,
+      "ok": false,
+      "rc": -1,
+      "elapsed_s": 900.0,
+      "error": "timeout>900s"
+    },
+    {
+      "chunk": 14,
+      "files": 524,
+      "ok": false,
+      "rc": -1,
+      "elapsed_s": 900.0,
+      "error": "timeout>900s"
+    },
+    {
+      "chunk": 16,
+      "files": 524,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 472.4,
+      "error": null
+    },
+    {
+      "chunk": 15,
+      "files": 524,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 894.6,
+      "error": null
+    },
+    {
+      "chunk": 17,
+      "files": 524,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 856.9,
+      "error": null
+    },
+    {
+      "chunk": 18,
+      "files": 524,
+      "ok": true,
+      "rc": 0,
+      "elapsed_s": 666.2,
+      "error": null
+    },
+    {
+      "chunk": 19,
+      "files": 524,
+      "ok": false,
+      "rc": -1,
+      "elapsed_s": 900.0,
+      "error": "timeout>900s"
+    }
+  ]
+}

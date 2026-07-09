@@ -1,0 +1,41 @@
+# Agent OS Standards Index — solaris-landing
+# Auto-generated 2026-06-06 by /discover-standards + /index-standards (batch).
+# Real descriptions — no "Needs description" placeholders.
+
+root:
+  tech-stack:
+    description: Next 16.2.6 + React 19.2.4 + TS 5 + ESLint 9 + Node runtime. Read this first; the Next 16 version is breaking vs prior majors.
+  nextjs-16-rules:
+    description: "BEFORE any Next code: read node_modules/next/dist/docs/. Training data is wrong for v16 — trust the local doc, not memory."
+  architecture:
+    description: App Router layout (app/components/lib), path alias @/*, runtime config (nodejs + force-dynamic) required on all API routes.
+
+api:
+  result-types:
+    description: Never throw across an HTTP boundary. Every endpoint returns a discriminated union result with typed errors. 200/400/422/503 mapping.
+  lead-capture:
+    description: "D09 spec: parseLead() + captureLead() in src/lib/leads.ts. URL normalization, email regex, length caps (archetype 40, note 1000, utm 10×200), honeypot, storage chain."
+  storage-fallback:
+    description: "3-tier persistence: Supabase (canonical, prod) → .data/leads.jsonl (dev only) → 503 storage_unavailable (no silent loss in prod)."
+  honeypot:
+    description: "Hidden company_website field — bots fill it, server returns 200 ok silently. Never persist, never log, never reveal the trap."
+
+forms:
+  state-machine:
+    description: "Client form pattern: Status = idle|submitting|success|error. Guard with `if (status === submitting) return` for no double-submit. errorFields[] for typed UX."
+  utm-capture:
+    description: "readUtm() helper pulls 6 standard params (utm_source/medium/campaign/content/term + ref) from window.location.search on submit. SSR-safe (window guard)."
+
+layout:
+  fonts-and-metadata:
+    description: "3 fonts via next/font/google as CSS variables (--font-display/--font-mono/--font-sans), all display: swap. Always export full metadata (title/description/keywords/OG/twitter/robots)."
+
+security:
+  no-secret-leak:
+    description: "Never log process.env values, never echo env-driven fetch errors, never put keys in URL. Silent try/catch — return type carries the signal."
+  rgpd-consent:
+    description: "Form collects email+URL = personal data (RGPD L6). Required before scaling to EU: consent checkbox, privacy page, retention policy, right to access/erasure."
+
+typescript:
+  data-shape:
+    description: "Duality: short keys (n, vp, k, v) in data.ts for terse JSON bundle, long names (name, squads) in types.ts for self-documenting contracts. Both are intentional."

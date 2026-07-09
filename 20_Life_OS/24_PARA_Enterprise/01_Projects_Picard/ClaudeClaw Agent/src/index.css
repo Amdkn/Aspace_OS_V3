@@ -1,0 +1,112 @@
+@import "./styles/fonts.css";
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════
+   ClaudeClaw Agent — Glassmorphism Design System
+   Source: A'Space Web OS (Archaeo-Futurism)
+   ═══════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* Archaeo-Futurism Metallic Palette */
+    --copper: #b87333;
+    --copper-glow: rgba(184, 115, 51, 0.4);
+    --brass: #d4af37;
+    --brass-light: #e5c158;
+    --brass-glow: rgba(212, 175, 55, 0.3);
+
+    /* Glass surfaces */
+    --glass-bg: rgba(10, 15, 13, 0.65);
+    --glass-bg-hover: rgba(255, 255, 255, 0.08);
+    --glass-bg-active: rgba(255, 255, 255, 0.12);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-border-subtle: rgba(255, 255, 255, 0.08);
+    --glass-blur: 24px;
+    --glass-blur-heavy: 48px;
+    --shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+
+    /* Glass Level 2 — nested cards */
+    --glass-l2-bg: rgba(255, 255, 255, 0.05);
+    --glass-l2-border: rgba(255, 255, 255, 0.12);
+
+    /* Solarpunk palette */
+    --accent-primary: #10b981;
+    --accent-primary-glow: rgba(16, 185, 129, 0.4);
+    --accent-warning: #f59e0b;
+    --accent-danger: #ef4444;
+
+    /* Surfaces */
+    --surface-desktop: #020617;
+    --surface-window: rgba(10, 15, 13, 0.85);
+
+    /* Text */
+    --text-primary: #f8fafc;
+    --text-secondary: rgba(248, 250, 252, 0.8);
+    --text-muted: rgba(248, 250, 252, 0.5);
+
+    /* Spacing */
+    --sidebar-width: 250px;
+    --header-height: 64px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', 'Outfit', system-ui, -apple-system, sans-serif;
+    background: var(--surface-desktop);
+    color: var(--text-primary);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+  }
+
+  .glass-card {
+    background: var(--glass-l2-bg);
+    border: 1px solid var(--glass-l2-border);
+    border-radius: 12px;
+  }
+
+  .border-brass {
+    border-color: var(--brass);
+    box-shadow: inset 0 0 15px var(--brass-glow), 0 0 10px var(--brass-glow);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 10px var(--accent-primary-glow);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--brass-glow);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--brass);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

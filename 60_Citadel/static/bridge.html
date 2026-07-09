@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — Bridge (Overview)</title>
+  <meta name="doctrine" content="lecture seule — anti-Ultron — dormants affichés">
+  <meta name="source" content="~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3">
+  <meta name="generated" content="2026-07-04T20:03 ET">
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --fg: #c9d1d9;
+      --muted: #6e7681;
+      --accent: #58a6ff;
+      --warn: #f0883e;
+      --good: #3fb950;
+      --bad: #f85149;
+      --card: #161b22;
+      --border: #30363d;
+      --dormant: #484f58;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace;
+      background: var(--bg);
+      color: var(--fg);
+      margin: 0;
+      padding: 1.5rem;
+      line-height: 1.5;
+    }
+    h1, h2, h3 { font-weight: 600; margin-top: 0; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+    .card h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.7rem; margin-right: 0.25rem; }
+    .pill.active { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.absent { background: rgba(110, 118, 129, 0.2); color: var(--muted); border: 1px solid var(--muted); }
+    .pill.dormant { background: rgba(72, 79, 88, 0.4); color: var(--dormant); border: 1px solid var(--dormant); font-style: italic; }
+    .stat { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .stat-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.25rem; }
+    code { background: rgba(110, 118, 129, 0.15); padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+    .warn-box { background: rgba(240, 136, 62, 0.1); border-left: 3px solid var(--warn); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background: #06090d;
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1rem;
+      overflow-y: auto;
+      z-index: 100;
+    }
+    .sidebar h2 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 1rem 0 0.4rem 0;
+      border: none;
+      padding: 0;
+    }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.45rem 0.6rem;
+      border-radius: 4px;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 0.15rem;
+      border: 1px solid transparent;
+    }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--muted); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .sidebar .badge {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 8px;
+      background: var(--card);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.7rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav active" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Mavis captain · 22 agents runtime · tiers A1-A3/B1-B3/SYS</div>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel</div>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">8 domaines Jerry × 3 Captains Summers = 53 B3 rosters</div>
+    <a class="nav" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Wiki 124 pages · MEMORY.md · graphify · Memory Architect Kit</div>
+    <h2>🔌 API</h2>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">
+      v0.4 · anti-Ultron<br>
+      append-only D4<br>
+      A0 HITL = enable_write_canonic.flag
+    </div>
+  </nav>
+  <main class="main">
+  <h1>🏰 Citadelle A0 — Bridge (Overview)</h1>
+  <p class="subtitle">A0 = Jarvis, voit tout, prépare tout, n'exécute rien d'irréversible sans A+. Ultron = anti-pattern nommé.</p>
+  <p class="meta">P0 squelette · port 8770 · stdlib http.server · 3 collectors piliers 1/4/6 · doctrine lecture seule</p>
+
+  <div class="warn-box">
+    <strong>Doctrine anti-Ultron :</strong> lecture seule sur les sources canoniques.
+    Écriture = <code>data/</code> (collectors) + <code>decisions/</code> (gated Gate #2).
+    Aucune mutation hors de ces dossiers. Aucun auto-approval.
+  </div>
+
+  <div id="status"></div>
+
+  <h2>📊 Harnesses (Pilier 1 — Models)</h2>
+  <div id="harnesses" class="grid"></div>
+
+  <h2>🧰 Skills (Pilier 4 — Skills)</h2>
+  <div id="skills" class="grid"></div>
+
+  <h2>🔌 Connections (Pilier 6 — MCP servers + crons + heartbeat)</h2>
+  <div id="connections" class="grid"></div>
+
+  <h2>⚖️ Décisions (LE CŒUR de la Citadelle)</h2>
+  <p class="meta"><a href="/decisions">→ Page Décisions</a> · 7 ADR canon (1 PROPOSED awaiting ratification) · 13 GOs · ratification 1-clic → append-only <code>decisions/</code> · anti-Ultron</p>
+
+  <h2>👥 Agents / 🎡 Frameworks / 🏢 Domaines / 📚 Memory</h2>
+  <ul>
+    <li><a href="/agents">→ Page Agents</a> · Mavis captain · 22 agents runtime · tiers A1-A3/B1-B3/SYS</li>
+    <li><a href="/frameworks">→ Page Frameworks</a> · 12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel</li>
+    <li><a href="/domains">→ Page Domaines</a> · 8 domaines Jerry × 3 Captains Summers = 53 B3 rosters</li>
+    <li><a href="/memory">→ Page Memory</a> · Wiki 124 pages · MEMORY.md · graphify · Memory Architect Kit</li>
+  </ul>
+
+  <h2>🛰️ Harnesses live + 🌙 Zora nightly (P3 backend)</h2>
+  <ul>
+    <li><a href="/harnesses">→ Page Harnesses live</a> · runtime state · sessions + processes · dormants affichés gris</li>
+    <li><a href="/zora">→ Page Zora nightly digest</a> · 8 dimensions Jack · 4 recos max/nuit · gated par <code>enable_zora.flag</code></li>
+  </ul>
+
+  <h2>⚙️ Gates (FREIN À MAIN ACTIF)</h2>
+  <ul>
+    <li>Canonic writes : <code>decisions/enable_write_canonic.flag</code> — default DISABLED</li>
+    <li>Auto-start Windows logon : <code>decisions/enable_autostart.flag</code> — default DISABLED</li>
+    <li>Watchdog port 8770 : <code>decisions/enable_watchdog.flag</code> — default DISABLED</li>
+    <li>Zora nightly cron : <code>decisions/enable_zora.flag</code> — default DISABLED (Posture C)</li>
+    <li><em>Tant que les flags sont absents : persistence système = gated, watchdog = off, décision ADR = append-only sans apply, Zora = pas de cron.</em></li>
+  </ul>
+
+  <h2>📜 Doctrine & sources</h2>
+  <ul>
+    <li><a href="https://platform.minimax.io/console/usage">Cost reality (Year-3000)</a> · <code>ADR-LD01-005_budget_collapse_phase3_economical.md</code></li>
+    <li><a href="/api/health">Health endpoint JSON</a></li>
+    <li><a href="/api/harnesses">Harnesses data JSON (Pilier 1)</a></li>
+    <li><a href="/api/harnesses/live">Harnesses LIVE data JSON (P3 runtime)</a></li>
+    <li><a href="/api/skills">Skills data JSON</a></li>
+    <li><a href="/api/connections">Connections data JSON</a></li>
+    <li><a href="/api/decisions">Decisions data JSON</a></li>
+    <li><a href="/api/agents">Agents data JSON</a></li>
+    <li><a href="/api/frameworks">Frameworks data JSON</a></li>
+    <li><a href="/api/domains">Domains data JSON</a></li>
+    <li><a href="/api/memory">Memory data JSON</a></li>
+    <li><a href="/api/zora">Zora data JSON (8 dimensions)</a></li>
+    <li><a href="/api/zora/last-run">Zora last-run JSON (append-only output)</a></li>
+  </ul>
+
+  <div class="footer">
+    <p>Citadelle A0 · Plan source <code>~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md</code></p>
+    <p>Sister LD01 <code>99_meta/00_plan_citadelle_a0_sister.md</code> · ADR <code>ADR-LD01-007_citadelle_agent_os_jarvis_pattern.md</code></p>
+    <p>Construite 2026-07-04 · P0 GREEN awaiting Gate #2 (page Décisions)</p>
+  </div>
+
+  <script>
+    async function loadJSON(url) {
+      try {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return await r.json();
+      } catch (e) {
+        return { error: String(e) };
+      }
+    }
+
+    function renderHarnesses(data) {
+      const root = document.getElementById("harnesses");
+      if (data.error) { root.innerHTML = `<div class="card"><em>error: ${data.error}</em></div>`; return; }
+      const h = data.harnesses || {};
+      let html = `<div class="card">
+        <div class="stat-label">Actifs</div>
+        <div class="stat">${data.summary.active_count}</div>
+        <div class="meta">absent: ${data.summary.absent_count} · dormant: ${data.summary.dormant_count}</div>
+      </div>`;
+      for (const [name, info] of Object.entries(h)) {
+        const pillClass = info.status === "active" ? "active" : info.status === "dormant" ? "dormant" : "absent";
+        html += `<div class="card">
+          <h3>${name} <span class="pill ${pillClass}">${info.status}</span></h3>
+          <div class="meta">${info.path || "n/a"}</div>
+          ${info.note ? `<div class="meta">${info.note}</div>` : ""}
+          ${info.model ? `<div class="meta">model: <code>${info.model}</code></div>` : ""}
+          ${info.agent_count !== undefined ? `<div class="meta">agents: ${info.agent_count}</div>` : ""}
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    function renderSkills(data) {
+      const root = document.getElementById("skills");
+      if (data.error) { root.innerHTML = `<div class="card"><em>error: ${data.error}</em></div>`; return; }
+      const s = data.summary || {};
+      const html = `
+        <div class="card">
+          <div class="stat-label">Total skills</div>
+          <div class="stat">${s.total || 0}</div>
+          <div class="meta">CC: ${s.claude_code_count || 0} · Hermes: ${s.hermes_count || 0}</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Avec LESSONS.md</div>
+          <div class="stat">${s.with_lessons_count || 0}</div>
+          <div class="meta">antifragile feedback loop</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Avec SKILL.md</div>
+          <div class="stat">${s.with_skill_md_count || 0}</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">_TRASH</div>
+          <div class="stat">${s.trash_count || 0}</div>
+          <div class="meta">retirés canoniquement</div>
+        </div>`;
+      root.innerHTML = html;
+    }
+
+    function renderConnections(data) {
+      const root = document.getElementById("connections");
+      if (data.error) { root.innerHTML = `<div class="card"><em>error: ${data.error}</em></div>`; return; }
+      const mcp = data.mcp_servers || {};
+      const crons = data.crons || {};
+      const hb = data.heartbeat || {};
+      const html = `
+        <div class="card">
+          <div class="stat-label">MCP servers</div>
+          <div class="stat">${mcp.count || 0}</div>
+          <div class="meta">${mcp.status || "n/a"}</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Crons</div>
+          <div class="stat">${crons.count || 0}</div>
+          <div class="meta">${crons.posture_c || crons.status || "n/a"}</div>
+        </div>
+        <div class="card">
+          <div class="stat-label">Heartbeat</div>
+          <div class="stat">${hb.status || "n/a"}</div>
+          <div class="meta">processes: ${hb.process_count !== undefined ? hb.process_count : "n/a"}</div>
+        </div>`;
+      root.innerHTML = html;
+    }
+
+    async function renderStatus() {
+      const h = await loadJSON("/api/health");
+      const root = document.getElementById("status");
+      if (h.status === "ok") {
+        root.innerHTML = `<div class="card">
+          <div class="stat-label">Citadelle A0 status</div>
+          <div class="stat" style="color: var(--good)">● ONLINE</div>
+          <div class="meta">${h.doctrine}</div>
+          <div class="meta">${h.timestamp}</div>
+        </div>`;
+      } else {
+        root.innerHTML = `<div class="card"><em>offline</em></div>`;
+      }
+    }
+
+    async function main() {
+      await renderStatus();
+      renderHarnesses(await loadJSON("/api/harnesses"));
+      renderSkills(await loadJSON("/api/skills"));
+      renderConnections(await loadJSON("/api/connections"));
+    }
+    main();
+  </script>
+  </main>
+</body>
+</html>

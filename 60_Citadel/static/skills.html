@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — Skills (Pilier 4)</title>
+  <meta name="doctrine" content="lecture seule — anti-Ultron — dormants affichés">
+  <meta name="source" content="~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §2">
+  <style>
+    :root {
+      --bg: #0a0e14; --fg: #c9d1d9; --muted: #6e7681;
+      --accent: #58a6ff; --warn: #f0883e; --good: #3fb950;
+      --bad: #f85149; --card: #161b22; --border: #30363d; --dormant: #484f58;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+    .card.trash { border-left: 4px solid var(--bad); opacity: 0.7; }
+    .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.7rem; margin-right: 0.25rem; }
+    .pill.good { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.muted { background: rgba(110, 118, 129, 0.2); color: var(--muted); border: 1px solid var(--muted); }
+    .pill.bad { background: rgba(248, 81, 73, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+    code { background: rgba(110, 118, 129, 0.15); padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+    .filter-bar { display: flex; gap: 0.5rem; margin: 1rem 0; flex-wrap: wrap; }
+    .filter-bar button { background: var(--card); color: var(--fg); border: 1px solid var(--border); padding: 0.4rem 0.8rem; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 0.8rem; }
+    .filter-bar button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>Pages</h2>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav active" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">Decisions log <span class="badge">P1</span></a>
+    <h2>API</h2>
+    <a class="nav" href="/api/health">Health <span class="badge live">live</span></a>
+    <h2>Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.2 · anti-Ultron<br>append-only D4</div>
+  </nav>
+  <main class="main">
+    <h1>🧰 Skills (Pilier 4)</h1>
+    <p class="subtitle">Le catalogue des skills actifs par harness. ROI via <code>RUNS.log</code> + <code>LESSONS.md</code>. Antifragile feedback loop.</p>
+    <p class="meta">Anti-Ultron : pas de mutation depuis cette page. Ajout/suppression = action explicite A0 HITL.</p>
+    <div id="summary" class="grid"></div>
+    <h2>Filtres</h2>
+    <div class="filter-bar">
+      <button data-filter="all" class="active">Tous</button>
+      <button data-filter="claude_code">CC</button>
+      <button data-filter="hermes">Hermes</button>
+      <button data-filter="with_lessons">Avec LESSONS</button>
+      <button data-filter="trash">_TRASH</button>
+    </div>
+    <div id="skills" class="grid"></div>
+    <div class="footer">Citadelle A0 · <a href="/api/skills">/api/skills JSON</a></div>
+  </main>
+  <script>
+    let allSkills = [];
+    async function loadJSON(url) {
+      try { const r = await fetch(url); if (!r.ok) throw new Error("HTTP " + r.status); return await r.json(); }
+      catch (e) { return { error: String(e) }; }
+    }
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    function renderSummary(s) {
+      document.getElementById("summary").innerHTML = `
+        <div class="card"><div class="meta">Total</div><div style="font-size:1.6rem;font-weight:700;color:var(--accent)">${s.total || 0}</div></div>
+        <div class="card"><div class="meta">Claude Code</div><div style="font-size:1.6rem;font-weight:700">${s.claude_code_count || 0}</div></div>
+        <div class="card"><div class="meta">Hermes</div><div style="font-size:1.6rem;font-weight:700">${s.hermes_count || 0}</div></div>
+        <div class="card"><div class="meta">Avec LESSONS.md</div><div style="font-size:1.6rem;font-weight:700;color:var(--good)">${s.with_lessons_count || 0}</div></div>
+        <div class="card"><div class="meta">Avec SKILL.md</div><div style="font-size:1.6rem;font-weight:700">${s.with_skill_md_count || 0}</div></div>
+        <div class="card"><div class="meta">_TRASH</div><div style="font-size:1.6rem;font-weight:700;color:var(--bad)">${s.trash_count || 0}</div></div>
+      `;
+    }
+    function renderSkills(filter) {
+      const root = document.getElementById("skills");
+      let filtered = allSkills;
+      if (filter === "claude_code") filtered = allSkills.filter(s => s.harness === "claude_code");
+      else if (filter === "hermes") filtered = allSkills.filter(s => s.harness === "hermes");
+      else if (filter === "with_lessons") filtered = allSkills.filter(s => s.has_lessons);
+      else if (filter === "trash") filtered = allSkills.filter(s => s.trash);
+      let html = "";
+      for (const s of filtered) {
+        const badges = [];
+        if (s.has_skill_md) badges.push(`<span class="pill good">SKILL.md</span>`);
+        if (s.has_lessons) badges.push(`<span class="pill good">LESSONS</span>`);
+        else badges.push(`<span class="pill muted">no LESSONS</span>`);
+        if (s.has_runs_log) badges.push(`<span class="pill good">RUNS.log</span>`);
+        else badges.push(`<span class="pill muted">no RUNS</span>`);
+        if (s.trash) badges.push(`<span class="pill bad">_TRASH</span>`);
+        html += `<a class="card ${s.trash ? "trash" : ""}" href="/c/04_skills/${encodeURIComponent(s.name)}" style="text-decoration:none;color:inherit;display:block">
+          <h3 style="margin-top:0;font-size:0.9rem">${esc(s.name)}</h3>
+          <div style="margin:0.4rem 0">${badges.join(" ")}</div>
+          <div class="meta">harness: <code>${esc(s.harness)}</code></div>
+          <div class="meta">→ voir la fiche</div>
+        </a>`;
+      }
+      if (!filtered.length) html = `<div class="card"><em>Aucun skill pour ce filtre.</em></div>`;
+      root.innerHTML = html;
+    }
+    document.querySelectorAll(".filter-bar button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-bar button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderSkills(btn.dataset.filter);
+      });
+    });
+    (async () => {
+      const data = await loadJSON("/api/skills");
+      if (data.error) { document.getElementById("skills").innerHTML = `<div class="card"><em>error: ${esc(data.error)}</em></div>`; return; }
+      allSkills = data.skills || [];
+      renderSummary(data.summary || {});
+      renderSkills("all");
+    })();
+  </script>
+</body>
+</html>

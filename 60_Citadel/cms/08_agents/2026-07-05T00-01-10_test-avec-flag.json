@@ -1,0 +1,11 @@
+{
+  "id": "c2f7aff7",
+  "submitted_at": "2026-07-05T00:01:10.432555",
+  "collection": "08_agents",
+  "fields": {
+    "name": "test-avec-flag",
+    "note": "premier sub"
+  },
+  "submissions_enabled_at_decide_time": true,
+  "status": "SUBMITTED"
+}

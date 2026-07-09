@@ -1,0 +1,39 @@
+---
+id: L1_A3_SNW_mbenga.twin
+layer: L1_Life_OS
+role: M'Benga — Focus (A3 under Curie A2)
+framework: 12-Week Year (5 stages)
+horizon: H1
+12wy_stage: 3/5 (Focus)
+status: ACTIVE
+twin_of: shadow (A3 Focus Doctor of USS SNW)
+source_path: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md
+supervised_by: A2_Curie_SNW_Spec.twin (Curie, NOT captain)
+claude_code_agent: a3-snw-mbenga.md
+version: 1.0
+created: 2026-06-15
+lane: A_specs
+---
+
+# A3 M'Benga SNW Spec — Twin Runtime
+
+## Mission runtime
+
+M'Benga supervise **12WY stage 3/5 (Focus)** au sein du ship USS SNW A2 (Curie = synthetic person A2).
+
+En twin :
+- 1-line per stage role : deep work blocks + single-task discipline + process-drift detection
+- 1-line per horizon : H1 = 90-120 min block, single DoD, lock start/end/proof (D5 mandatory post-block)
+- D11 Fable metric owned by Chapel
+- D5 real-test-after-edit owned by Ortegas (M'Benga prepares the block, Ortegas closes the day)
+
+## Pont runtime
+
+| Surface | Bridge |
+|---|---|
+| Baserow `12WY Warp Core` | `symphony-baserow.spec.md` |
+| Scorecard | `symphony-plane.spec.md` (weekly review) |
+
+---
+
+*Twin généré 2026-06-15. Claude Code agent companion: `~/.claude/agents/a3-snw-mbenga.md`.*

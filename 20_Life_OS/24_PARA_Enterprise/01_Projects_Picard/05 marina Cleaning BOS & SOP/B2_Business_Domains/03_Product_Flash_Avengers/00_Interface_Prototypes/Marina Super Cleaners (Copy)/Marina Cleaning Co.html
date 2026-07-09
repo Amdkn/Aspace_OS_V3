@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Marina Cleaning Co. — Branchez-vous sur la propreté</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="image-slot.js"></script>
+
+<style>
+  :root{
+    --stone-50:#FAFAF9;
+    --stone-100:#F5F5F4;
+    --stone-200:#E7E5E4;
+    --stone-300:#D6D3D1;
+    --stone-500:#78716C;
+    --stone-700:#44403C;
+    --stone-800:#292524;
+    --stone-900:#1C1917;
+    --emerald-deep:#064E3B;
+    --emerald-950:#022C22;
+    --emerald-700:#047857;
+    --lime-300:#BEF264;
+    --lime-400:#A3E635;
+    --lime-500:#84CC16;
+    --lime-600:#65A30D;
+    --moss:#D9F99D;
+  }
+  html,body{ background:var(--stone-50); color:var(--stone-800); font-family:"Inter",ui-sans-serif,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  .font-display{ font-family:"Urbanist",ui-sans-serif,system-ui,sans-serif; letter-spacing:-0.02em; }
+  .font-serif-i{ font-family:"Instrument Serif",ui-serif,Georgia,serif; font-style:italic; letter-spacing:-0.01em; }
+
+  /* Grain texture overlay for organic warmth */
+  .grain::before{
+    content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:
+      radial-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.02) 1px, transparent 1px);
+    background-size: 3px 3px, 7px 7px;
+    background-position: 0 0, 1px 1px;
+    mix-blend-mode:multiply;
+  }
+
+  /* CTA — vibrant warm green */
+  .btn-cta{
+    background:var(--lime-400);
+    color:var(--emerald-950);
+    transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
+    box-shadow: 0 1px 0 rgba(6,78,59,.12), 0 8px 24px -8px rgba(132,204,22,.55);
+  }
+  .btn-cta:hover{ background:var(--lime-500); transform:translateY(-1px); box-shadow:0 1px 0 rgba(6,78,59,.18), 0 14px 32px -8px rgba(132,204,22,.7); }
+  .btn-cta:active{ transform:translateY(0); }
+
+  .btn-ghost{
+    background:transparent; color:var(--emerald-deep); border:1px solid rgba(6,78,59,.18);
+    transition:background .2s ease, border-color .2s ease, transform .15s ease;
+  }
+  .btn-ghost:hover{ background:rgba(6,78,59,.04); border-color:rgba(6,78,59,.35); }
+
+  .btn-dark{
+    background:var(--emerald-deep); color:#fff;
+    transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,.2), 0 10px 24px -10px rgba(6,78,59,.6);
+  }
+  .btn-dark:hover{ background:var(--emerald-950); transform:translateY(-1px); }
+
+  /* Soft card */
+  .card{
+    background:#fff; border:1px solid var(--stone-200); border-radius:20px;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover{ transform:translateY(-4px); border-color:var(--stone-300); box-shadow: 0 30px 60px -30px rgba(6,78,59,.18), 0 8px 20px -10px rgba(0,0,0,.08); }
+
+  /* Featured card pulse */
+  .card-featured{
+    background: linear-gradient(180deg, #064E3B 0%, #022C22 100%);
+    color:#fff; border:1px solid #064E3B; border-radius:20px;
+    transition: transform .25s ease, box-shadow .25s ease;
+    box-shadow: 0 30px 60px -20px rgba(6,78,59,.45), 0 10px 20px -10px rgba(0,0,0,.2);
+  }
+  .card-featured:hover{ transform:translateY(-6px); box-shadow: 0 40px 80px -20px rgba(6,78,59,.55); }
+
+  /* link underline */
+  .link-u{ background-image: linear-gradient(currentColor,currentColor); background-size:0 1px; background-repeat:no-repeat; background-position:0 100%; transition: background-size .25s ease; }
+  .link-u:hover{ background-size:100% 1px; }
+
+  /* Marquee */
+  @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+  .marquee{ display:flex; gap:3.5rem; animation: marquee 38s linear infinite; width:max-content; }
+
+  /* subtle dotted divider */
+  .dotted{ background-image: radial-gradient(circle, rgba(6,78,59,.25) 1px, transparent 1px); background-size: 10px 10px; }
+
+  /* sticky header backdrop */
+  .header-blur{ background: rgba(250,250,249,.78); backdrop-filter: saturate(140%) blur(10px); -webkit-backdrop-filter: saturate(140%) blur(10px); }
+
+  /* small details */
+  .ring-leaf{ box-shadow: inset 0 0 0 1px rgba(6,78,59,.12); }
+
+  .seal{
+    background: var(--moss); color:var(--emerald-deep);
+    border:1px solid rgba(6,78,59,.18);
+  }
+
+  /* Step number badge */
+  .step-num{
+    font-family:"Urbanist"; font-weight:800; font-size:14px; letter-spacing:0.04em;
+    background:var(--emerald-deep); color:var(--lime-300);
+    width:36px; height:36px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center;
+  }
+
+  /* image placeholder */
+  .photo-ph{
+    background:
+      linear-gradient(135deg, rgba(6,78,59,.05), rgba(6,78,59,.02)),
+      repeating-linear-gradient(45deg, rgba(6,78,59,.04) 0 2px, transparent 2px 14px);
+    color: var(--emerald-deep);
+  }
+
+  /* check chip */
+  .chk{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:22px; height:22px; border-radius:7px; background:var(--moss); color:var(--emerald-deep); flex-shrink:0;
+  }
+  .chk-dark{ background: rgba(190,242,100,.18); color:var(--lime-300); }
+
+  /* faint hairline grid */
+  .hair-grid{
+    background-image:
+      linear-gradient(to right, rgba(6,78,59,.06) 1px, transparent 1px);
+    background-size: 8.3333% 100%;
+  }
+
+  /* fade in */
+  @keyframes fadeUp { from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+  .fade-up{ animation: fadeUp .8s ease both; }
+  .delay-1{ animation-delay:.05s } .delay-2{ animation-delay:.12s } .delay-3{ animation-delay:.2s } .delay-4{ animation-delay:.3s }
+
+  /* image-slot overrides */
+  image-slot{ display:block; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" data-presets="env,react">
+const { useState, useEffect, useRef } = React;
+
+/* ---------- Lucide icon helper ---------- */
+function Icon({ name, className = "", size = 20, strokeWidth = 1.75 }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    if (ref.current && window.lucide) {
+      ref.current.innerHTML = "";
+      const svg = window.lucide.createElement(window.lucide.icons[name] || window.lucide.icons.Circle);
+      svg.setAttribute("width", size);
+      svg.setAttribute("height", size);
+      svg.setAttribute("stroke-width", strokeWidth);
+      ref.current.appendChild(svg);
+    }
+  }, [name, size, strokeWidth]);
+  return <span ref={ref} className={"inline-flex items-center justify-center " + className} aria-hidden="true" />;
+}
+
+/* ---------- Header ---------- */
+function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return (
+    <header className={"sticky top-0 z-50 transition-all " + (scrolled ? "header-blur border-b border-stone-200/70" : "")}>
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 h-[72px] flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2.5 group">
+          <span className="w-9 h-9 rounded-xl ring-leaf bg-white flex items-center justify-center">
+            {/* leaf monogram */}
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#064E3B" strokeWidth="1.6">
+              <path d="M4 20c2-10 8-16 16-16 0 8-6 14-16 16Z"/>
+              <path d="M4 20c4-4 8-7 12-9"/>
+            </svg>
+          </span>
+          <span className="font-display font-extrabold text-[19px] tracking-tight text-emerald-950 leading-none">
+            Marina Cleaning<span className="text-lime-600">.</span>
+            <span className="block text-[10px] font-medium uppercase tracking-[0.18em] text-stone-500 mt-1">Co. — Hospitality grade</span>
+          </span>
+        </a>
+
+        <nav className="hidden md:flex items-center gap-8 text-[14px] text-stone-700">
+          <a href="#packs" className="link-u hover:text-emerald-900">Les Packs</a>
+          <a href="#methode" className="link-u hover:text-emerald-900">La Méthode</a>
+          <a href="#standards" className="link-u hover:text-emerald-900">Nos Standards</a>
+          <a href="#zone" className="link-u hover:text-emerald-900">Zone couverte</a>
+        </nav>
+
+        <div className="flex items-center gap-2.5">
+          <a href="tel:+18595551212" className="hidden sm:inline-flex btn-ghost rounded-full px-4 h-10 items-center gap-2 text-[13px] font-medium">
+            <Icon name="Phone" size={15} />
+            <span className="hidden lg:inline">(859) 555-1212</span>
+          </a>
+          <a href="#packs" className="btn-cta rounded-full px-5 h-10 inline-flex items-center gap-2 text-[14px] font-semibold font-display">
+            Réserver mon Pack
+            <Icon name="ArrowRight" size={16} />
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+/* ---------- Hero ---------- */
+function Hero() {
+  return (
+    <section className="relative overflow-hidden">
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-10 lg:pt-16 pb-20 lg:pb-28">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-end">
+          {/* LEFT — copy */}
+          <div className="lg:col-span-7 fade-up">
+            <div className="inline-flex items-center gap-2 seal rounded-full pl-2 pr-3.5 py-1.5 text-[12px] font-medium">
+              <span className="w-5 h-5 rounded-full bg-emerald-900 text-lime-300 flex items-center justify-center">
+                <Icon name="Sparkles" size={11} />
+              </span>
+              Service-as-a-Product · Cincinnati × Florence × N. Kentucky
+            </div>
+
+            <h1 className="font-display font-black text-emerald-950 mt-6 text-[44px] leading-[1.02] sm:text-[60px] lg:text-[76px] lg:leading-[0.98] tracking-[-0.035em]">
+              Arrêtez de gérer<br/>votre ménage.<br/>
+              <span className="font-serif-i font-normal text-emerald-700">Branchez-vous</span> sur notre système.
+            </h1>
+
+            <p className="mt-7 text-stone-700 text-[17px] sm:text-[19px] leading-[1.55] max-w-[560px]">
+              Des standards de propreté <span className="font-medium text-emerald-900">hôteliers</span>, exécutés chez vous, sans friction. On ne facture pas des heures — on livre un résultat, à la checklist près.
+            </p>
+
+            <div className="mt-9 flex flex-wrap items-center gap-3">
+              <a href="#packs" className="btn-cta rounded-full pl-6 pr-5 h-14 inline-flex items-center gap-2.5 text-[15px] font-semibold font-display">
+                Réserver mon Pack
+                <span className="w-7 h-7 rounded-full bg-emerald-950 text-lime-300 flex items-center justify-center">
+                  <Icon name="ArrowRight" size={14} />
+                </span>
+              </a>
+              <a href="#packs" className="btn-ghost rounded-full px-6 h-14 inline-flex items-center gap-2 text-[15px] font-semibold font-display">
+                <Icon name="LayoutGrid" size={16} />
+                Découvrir nos Packs
+              </a>
+            </div>
+
+            {/* Trust row */}
+            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4 text-[13px] text-stone-600">
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  {["#84CC16","#064E3B","#A3E635","#047857"].map((c,i)=>(
+                    <div key={i} className="w-7 h-7 rounded-full ring-2 ring-stone-50 flex items-center justify-center text-[10px] font-bold text-white" style={{background:c}}>
+                      {"MJSL"[i]}
+                    </div>
+                  ))}
+                </div>
+                <span><span className="font-semibold text-emerald-950">312 foyers</span> nettoyés ce trimestre</span>
+              </div>
+              <div className="h-4 w-px bg-stone-300"></div>
+              <div className="flex items-center gap-1.5">
+                {[0,1,2,3,4].map(i=>(<Icon key={i} name="Star" size={14} className="text-lime-600" strokeWidth={2}/>))}
+                <span className="ml-1"><span className="font-semibold text-emerald-950">4,96/5</span> · 184 avis vérifiés</span>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT — visual card stack */}
+          <div className="lg:col-span-5 relative fade-up delay-2">
+            <div className="relative">
+              {/* Big card with image slot */}
+              <div className="relative rounded-[28px] overflow-hidden ring-1 ring-stone-200 bg-white shadow-[0_40px_80px_-30px_rgba(6,78,59,.35)]">
+                <image-slot
+                  id="hero-photo"
+                  shape="rect"
+                  placeholder="Glissez ici une photo d'intérieur propre & lumineux"
+                  style={{width:"100%", aspectRatio:"4/5", background:"linear-gradient(160deg,#ECFCCB 0%, #F5F5F4 60%, #FAFAF9 100%)"}}
+                ></image-slot>
+
+                {/* Overlay badges */}
+                <div className="absolute top-4 left-4 right-4 flex items-start justify-between pointer-events-none">
+                  <span className="seal rounded-full px-3 py-1.5 text-[11px] font-semibold flex items-center gap-1.5">
+                    <Icon name="Leaf" size={11}/> Eco-certified products
+                  </span>
+                  <span className="bg-white/95 backdrop-blur rounded-full px-3 py-1.5 text-[11px] font-semibold text-emerald-950 ring-1 ring-stone-200 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-lime-500"></span>
+                    Tech disponible aujourd'hui
+                  </span>
+                </div>
+
+                {/* Bottom checklist overlay */}
+                <div className="absolute left-4 right-4 bottom-4 bg-white/95 backdrop-blur rounded-2xl p-4 ring-1 ring-stone-200">
+                  <div className="flex items-center justify-between mb-2.5">
+                    <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-stone-500">SOP — Salle de bain</span>
+                    <span className="text-[11px] font-semibold text-emerald-700 flex items-center gap-1"><Icon name="CircleCheck" size={12}/> 14/14</span>
+                  </div>
+                  <div className="space-y-1.5 text-[12.5px] text-stone-700">
+                    {[
+                      ["Détartrage robinetterie","00:04"],
+                      ["Joints brossés + désinfection","00:06"],
+                      ["Miroir sans trace · finition microfibre","00:02"],
+                    ].map(([t,d],i)=>(
+                      <div key={i} className="flex items-center justify-between">
+                        <span className="flex items-center gap-2"><span className="chk"><Icon name="Check" size={12} strokeWidth={2.5}/></span>{t}</span>
+                        <span className="text-stone-400 tabular-nums">{d}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating price chip */}
+              <div className="hidden sm:flex absolute -left-6 lg:-left-10 top-12 bg-white rounded-2xl ring-1 ring-stone-200 px-4 py-3 items-center gap-3 shadow-[0_20px_40px_-20px_rgba(0,0,0,.2)]">
+                <div className="w-10 h-10 rounded-xl bg-emerald-900 text-lime-300 flex items-center justify-center">
+                  <Icon name="Clock4" size={18}/>
+                </div>
+                <div>
+                  <div className="text-[11px] text-stone-500 uppercase tracking-wider">Réservation</div>
+                  <div className="text-[15px] font-display font-bold text-emerald-950 leading-tight">60 secondes</div>
+                </div>
+              </div>
+
+              {/* Floating SOP chip */}
+              <div className="hidden sm:flex absolute -right-4 lg:-right-8 bottom-24 bg-emerald-900 text-white rounded-2xl px-4 py-3 items-center gap-3 shadow-[0_20px_40px_-20px_rgba(6,78,59,.7)]">
+                <div className="w-10 h-10 rounded-xl bg-lime-400 text-emerald-950 flex items-center justify-center">
+                  <Icon name="ClipboardCheck" size={18}/>
+                </div>
+                <div>
+                  <div className="text-[11px] text-lime-300 uppercase tracking-wider">SOPs exécutés</div>
+                  <div className="text-[15px] font-display font-bold leading-tight">37 checkpoints</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Marquee strip */}
+      <div className="border-y border-stone-200 bg-white/40 overflow-hidden">
+        <div className="py-5 overflow-hidden">
+          <div className="marquee whitespace-nowrap text-[13px] uppercase tracking-[0.18em] text-stone-500 font-medium">
+            {Array(2).fill(0).map((_,r)=>(
+              <div key={r} className="flex items-center gap-14 pr-14">
+                {[
+                  ["Leaf","Produits éco-certifiés EU Ecolabel"],
+                  ["ShieldCheck","Techniciens en CDI · formés sur SOP"],
+                  ["BadgeDollarSign","Prix fixe — zéro surprise"],
+                  ["Sparkles","Re-pass garanti sous 48h"],
+                  ["MapPin","Cincinnati · Florence · N. Kentucky"],
+                  ["Clock","Créneaux 7j/7 — 7h à 20h"],
+                ].map(([ic,t],i)=>(
+                  <div key={i} className="inline-flex items-center gap-2.5"><Icon name={ic} size={14} className="text-emerald-700"/> {t}</div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Packs ---------- */
+const PACKS = [
+  {
+    id:"flash",
+    eyebrow:"01 · Maintien",
+    name:"Le Flash",
+    tag:"Hebdo / Bi-mensuel",
+    icon:"Zap",
+    accent:"lime",
+    price:"89",
+    unit:"€",
+    cadence:"/ passage",
+    sub:"À partir de — abonnement résiliable",
+    intro:"Le rituel qui maintient votre maison en état hôtelier, semaine après semaine. Même technicien, même standard.",
+    bullets:[
+      "Cuisine + sanitaires en mode reset (28 checkpoints)",
+      "Sols aspirés & lavés vapeur · multi-surfaces",
+      "Surfaces hautes, miroirs, vitres intérieures",
+      "Re-pass gratuit sous 48h si insatisfaction",
+    ],
+    cta:"Démarrer le rituel",
+    badge:null,
+    duration:"≈ 2h",
+    rooms:"jusqu'à 80 m²",
+  },
+  {
+    id:"hulk",
+    eyebrow:"02 · Reset total",
+    name:"Le Hulk",
+    tag:"Grand nettoyage / Deep clean",
+    icon:"Sparkles",
+    accent:"emerald",
+    price:"349",
+    unit:"€",
+    cadence:"prix fixe",
+    sub:"Forfait au m² · devis instantané en ligne",
+    intro:"Le grand reset. On démonte, on dégraisse, on détartre, on remet en service comme au premier jour. Idéal 2× / an.",
+    bullets:[
+      "Intérieur four, frigo, micro-ondes & hotte démontée",
+      "Détartrage profond robinetterie + joints brossés",
+      "Plinthes, interrupteurs, poignées, radiateurs",
+      "Vitres intérieures + encadrements + appuis",
+      "104 checkpoints — rapport photo livré",
+    ],
+    cta:"Réserver le reset",
+    badge:"Le plus choisi",
+    duration:"≈ 5h",
+    rooms:"3 techniciens",
+    featured:true,
+  },
+  {
+    id:"stark",
+    eyebrow:"03 · Cas extrêmes",
+    name:"Le Stark",
+    tag:"Post-travaux · Déménagement",
+    icon:"HardHat",
+    accent:"lime",
+    price:"sur devis",
+    unit:"",
+    cadence:"≤ 24h",
+    sub:"Visite + chiffrage instantané · sans engagement",
+    intro:"Quand la maison sort d'un chantier ou se vide pour de bon. Poussière fine, résidus de plâtre, traces de peinture — tout part.",
+    bullets:[
+      "Décollage poussière fine (HEPA double passage)",
+      "Traces peinture/colle/plâtre · solvants pro",
+      "État des lieux conforme bail (caution garantie)",
+      "Évacuation déchets + remise des clés",
+    ],
+    cta:"Demander un devis",
+    badge:null,
+    duration:"½ à 2 jours",
+    rooms:"équipe dédiée",
+  },
+];
+
+function PackCard({ p }) {
+  const featured = p.featured;
+  return (
+    <div className={(featured ? "card-featured" : "card") + " relative p-7 lg:p-8 flex flex-col h-full"}>
+      {p.badge && (
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-lime-400 text-emerald-950 text-[11px] uppercase tracking-[0.18em] font-bold font-display px-3 py-1.5 rounded-full ring-2 ring-emerald-950">
+          {p.badge}
+        </div>
+      )}
+
+      <div className="flex items-center justify-between">
+        <span className={"text-[11px] uppercase tracking-[0.2em] font-semibold " + (featured ? "text-lime-300" : "text-stone-500")}>
+          {p.eyebrow}
+        </span>
+        <div className={"w-11 h-11 rounded-xl flex items-center justify-center " + (featured ? "bg-lime-400 text-emerald-950" : "bg-stone-100 text-emerald-900")}>
+          <Icon name={p.icon} size={20} strokeWidth={2}/>
+        </div>
+      </div>
+
+      <h3 className={"font-display font-black text-[40px] leading-none mt-4 tracking-[-0.035em] " + (featured ? "text-white" : "text-emerald-950")}>
+        {p.name}
+      </h3>
+      <p className={"mt-1 text-[14px] " + (featured ? "text-stone-300" : "text-stone-500")}>{p.tag}</p>
+
+      <p className={"mt-5 text-[14px] leading-relaxed " + (featured ? "text-stone-200" : "text-stone-700")}>
+        {p.intro}
+      </p>
+
+      {/* price */}
+      <div className={"mt-6 flex items-baseline gap-1.5 " + (featured ? "text-white" : "text-emerald-950")}>
+        <span className="font-display font-black text-[44px] tracking-[-0.035em] leading-none">
+          {p.price}{p.unit && <span className="text-[28px] font-bold">{p.unit}</span>}
+        </span>
+        <span className={"text-[13px] font-medium " + (featured ? "text-lime-300" : "text-stone-500")}>{p.cadence}</span>
+      </div>
+      <p className={"text-[12.5px] mt-1 " + (featured ? "text-stone-400" : "text-stone-500")}>{p.sub}</p>
+
+      {/* meta */}
+      <div className={"mt-5 flex flex-wrap gap-2"}>
+        <span className={"inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11.5px] font-medium " + (featured ? "bg-white/10 text-stone-200" : "bg-stone-100 text-stone-700")}>
+          <Icon name="Clock" size={12}/> {p.duration}
+        </span>
+        <span className={"inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11.5px] font-medium " + (featured ? "bg-white/10 text-stone-200" : "bg-stone-100 text-stone-700")}>
+          <Icon name="Home" size={12}/> {p.rooms}
+        </span>
+      </div>
+
+      {/* checklist */}
+      <div className={"my-6 h-px " + (featured ? "bg-white/15" : "bg-stone-200")}></div>
+      <div className="space-y-3">
+        <div className={"text-[11px] uppercase tracking-[0.2em] font-semibold " + (featured ? "text-lime-300" : "text-emerald-700")}>
+          Périmètre — checklist standardisée
+        </div>
+        {p.bullets.map((b,i)=>(
+          <div key={i} className="flex items-start gap-3 text-[13.5px] leading-snug">
+            <span className={featured ? "chk chk-dark mt-0.5" : "chk mt-0.5"}>
+              <Icon name="Check" size={12} strokeWidth={2.5}/>
+            </span>
+            <span className={featured ? "text-stone-100" : "text-stone-800"}>{b}</span>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-auto pt-7">
+        <a href="#" className={featured ? "btn-cta rounded-full h-12 px-5 inline-flex items-center justify-center gap-2 text-[14px] font-semibold font-display w-full" : "btn-dark rounded-full h-12 px-5 inline-flex items-center justify-center gap-2 text-[14px] font-semibold font-display w-full"}>
+          {p.cta}
+          <Icon name="ArrowRight" size={15}/>
+        </a>
+        <p className={"text-center text-[11.5px] mt-3 " + (featured ? "text-stone-400" : "text-stone-500")}>
+          Paiement à la livraison · satisfait ou re-passé
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function Packs() {
+  return (
+    <section id="packs" className="relative py-24 lg:py-32">
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div className="max-w-2xl">
+            <span className="text-[12px] uppercase tracking-[0.22em] font-semibold text-emerald-700 flex items-center gap-2">
+              <span className="w-7 h-px bg-emerald-700"></span> Les Packs
+            </span>
+            <h2 className="font-display font-black text-emerald-950 mt-3 text-[40px] sm:text-[52px] leading-[1.02] tracking-[-0.035em]">
+              Trois produits.<br/>
+              <span className="font-serif-i font-normal text-emerald-700">Zéro</span> heure facturée.
+            </h2>
+          </div>
+          <p className="text-stone-600 text-[15px] leading-relaxed max-w-md">
+            Chaque pack est un <span className="font-medium text-emerald-900">livrable mesurable</span> avec un périmètre verrouillé et un prix transparent. Vous savez exactement ce qui sera fait — et vérifié — avant que l'équipe sonne.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7 items-stretch">
+          {PACKS.map((p) => (
+            <div key={p.id} className={p.featured ? "lg:-mt-6" : ""}>
+              <PackCard p={p}/>
+            </div>
+          ))}
+        </div>
+
+        {/* Comparison note */}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-[13px] text-stone-600">
+          <span className="inline-flex items-center gap-2"><Icon name="ShieldCheck" size={15} className="text-emerald-700"/> Caution garantie pour les baux locatifs</span>
+          <span className="hidden sm:inline w-1 h-1 rounded-full bg-stone-300"></span>
+          <span className="inline-flex items-center gap-2"><Icon name="RefreshCcw" size={15} className="text-emerald-700"/> Annulation gratuite jusqu'à H-12</span>
+          <span className="hidden sm:inline w-1 h-1 rounded-full bg-stone-300"></span>
+          <span className="inline-flex items-center gap-2"><Icon name="ReceiptText" size={15} className="text-emerald-700"/> Facturation entreprise possible</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Méthode ---------- */
+const STEPS = [
+  {
+    n:"01",
+    icon:"MousePointerClick",
+    title:"Réservation en 60 secondes",
+    desc:"Vous choisissez votre Pack, votre créneau, votre adresse. Le prix est confirmé à l'écran — aucun appel, aucun devis manuel.",
+    bullets:["Devis instantané","Paiement sécurisé","Confirmation SMS"],
+  },
+  {
+    n:"02",
+    icon:"ClipboardCheck",
+    title:"Intervention sur SOP",
+    desc:"Nos techniciens en CDI arrivent avec la checklist du Pack. Ils cochent chaque point dans l'app — vous recevez le rapport photo en direct.",
+    bullets:["Équipe formée 80h","37 checkpoints/h","Rapport photo live"],
+  },
+  {
+    n:"03",
+    icon:"Home",
+    title:"Une maison parfaite",
+    desc:"Vous rentrez. Tout est à sa place, vérifié, certifié. Si un détail cloche, on re-passe sous 48h — sans discussion, sans surcoût.",
+    bullets:["Satisfait ou re-passé","Suivi mensuel optionnel","Note technicien"],
+  },
+];
+
+function Methode() {
+  return (
+    <section id="methode" className="relative py-24 lg:py-32 bg-emerald-950 text-white overflow-hidden">
+      {/* Decorative leaves */}
+      <svg className="absolute -top-20 -right-20 opacity-[0.08]" width="500" height="500" viewBox="0 0 200 200" fill="none">
+        <path d="M20 180c10-80 80-150 160-160 0 80-70 150-160 160Z" stroke="#BEF264" strokeWidth="1"/>
+        <path d="M40 175c20-30 50-60 100-90" stroke="#BEF264" strokeWidth="1"/>
+      </svg>
+
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 relative">
+        <div className="max-w-3xl">
+          <span className="text-[12px] uppercase tracking-[0.22em] font-semibold text-lime-300 flex items-center gap-2">
+            <span className="w-7 h-px bg-lime-300"></span> La Méthode
+          </span>
+          <h2 className="font-display font-black mt-3 text-[40px] sm:text-[56px] leading-[1.02] tracking-[-0.035em]">
+            Trois étapes.<br/>
+            <span className="font-serif-i font-normal text-lime-300">Zéro</span> friction.
+          </h2>
+          <p className="text-stone-300 text-[16px] mt-5 leading-relaxed max-w-xl">
+            On a industrialisé chaque geste pour que vous, vous n'ayez plus rien à faire — sauf rentrer.
+          </p>
+        </div>
+
+        <div className="mt-16 grid md:grid-cols-3 gap-8 lg:gap-10 relative">
+          {/* dotted connector */}
+          <div className="hidden md:block absolute top-12 left-[16.66%] right-[16.66%] h-px dotted opacity-60"></div>
+
+          {STEPS.map((s,i)=>(
+            <div key={s.n} className="relative">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-lime-400 text-emerald-950 flex items-center justify-center relative z-10">
+                  <Icon name={s.icon} size={22} strokeWidth={2}/>
+                </div>
+                <span className="font-display font-black text-[15px] tracking-[0.16em] text-lime-300">{s.n}</span>
+              </div>
+
+              <h3 className="font-display font-bold text-[24px] leading-tight mt-5 text-white">
+                {s.title}
+              </h3>
+              <p className="text-stone-300 text-[14.5px] leading-relaxed mt-3 max-w-sm">
+                {s.desc}
+              </p>
+
+              <ul className="mt-5 space-y-2">
+                {s.bullets.map((b,j)=>(
+                  <li key={j} className="flex items-center gap-2.5 text-[13px] text-stone-200">
+                    <span className="w-1.5 h-1.5 rounded-full bg-lime-400"></span> {b}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom CTA strip */}
+        <div className="mt-20 lg:mt-24 rounded-3xl border border-white/10 bg-white/[0.04] p-6 lg:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div>
+            <div className="flex items-center gap-2 text-[12px] uppercase tracking-[0.18em] text-lime-300 font-semibold">
+              <Icon name="Sparkles" size={13}/> Garantie hôtelière
+            </div>
+            <h3 className="font-display font-bold text-[24px] sm:text-[28px] mt-2 leading-tight">
+              Pas satisfait·e ? On re-passe sous 48h.<br className="hidden sm:block"/>
+              <span className="text-stone-300 font-medium">Aucun débat, aucun frais.</span>
+            </h3>
+          </div>
+          <a href="#packs" className="btn-cta rounded-full h-14 px-7 inline-flex items-center justify-center gap-2 text-[15px] font-semibold font-display shrink-0">
+            Réserver maintenant <Icon name="ArrowRight" size={16}/>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Standards strip ---------- */
+function Standards() {
+  return (
+    <section id="standards" className="py-20 lg:py-24">
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
+            <span className="text-[12px] uppercase tracking-[0.22em] font-semibold text-emerald-700 flex items-center gap-2">
+              <span className="w-7 h-px bg-emerald-700"></span> Standards hôteliers
+            </span>
+            <h2 className="font-display font-black text-emerald-950 mt-3 text-[36px] sm:text-[44px] leading-[1.05] tracking-[-0.035em]">
+              On ne vend pas des heures.<br/>
+              <span className="font-serif-i font-normal text-emerald-700">On livre</span> un résultat.
+            </h2>
+            <p className="text-stone-700 mt-5 text-[15.5px] leading-relaxed max-w-md">
+              Chaque Pack est défini par une <span className="text-emerald-900 font-medium">checklist verrouillée</span> — pas par un chronomètre. Notre équipe coche chaque point dans l'app, prend une photo si nécessaire, et vous recevez le rapport en fin de prestation.
+            </p>
+
+            <a href="#packs" className="mt-8 inline-flex items-center gap-2 text-emerald-900 font-semibold text-[14px] link-u">
+              Voir les checklists complètes <Icon name="ArrowUpRight" size={15}/>
+            </a>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { ic:"ClipboardCheck", t:"104 checkpoints", d:"par Deep Clean — verrouillés par SOP versionné", k:"v4.2" },
+                { ic:"Leaf", t:"EU Ecolabel", d:"produits éco-certifiés, sans allergènes agressifs", k:"100%" },
+                { ic:"ShieldCheck", t:"Techniciens CDI", d:"formés 80h sur nos procédures avant 1er chantier", k:"80h" },
+                { ic:"Camera", t:"Rapport photo", d:"avant/après livré dans l'app à chaque passage", k:"live" },
+              ].map((c,i)=>(
+                <div key={i} className="card p-6 flex flex-col">
+                  <div className="flex items-center justify-between">
+                    <div className="w-11 h-11 rounded-xl bg-stone-100 text-emerald-900 flex items-center justify-center">
+                      <Icon name={c.ic} size={20}/>
+                    </div>
+                    <span className="font-display font-bold text-[13px] text-lime-600 tracking-wider">{c.k}</span>
+                  </div>
+                  <div className="font-display font-bold text-[20px] text-emerald-950 mt-5 tracking-tight">{c.t}</div>
+                  <p className="text-[13.5px] text-stone-600 mt-1.5 leading-snug">{c.d}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Quote */}
+            <div className="card mt-4 p-6 lg:p-7 flex items-start gap-5">
+              <div className="w-12 h-12 rounded-full bg-emerald-900 text-lime-300 flex items-center justify-center shrink-0 font-display font-black">
+                JS
+              </div>
+              <div>
+                <div className="flex items-center gap-1 mb-2">
+                  {[0,1,2,3,4].map(i=>(<Icon key={i} name="Star" size={13} className="text-lime-600" strokeWidth={2}/>))}
+                </div>
+                <p className="text-[15px] text-stone-800 leading-relaxed font-serif-i not-italic" style={{fontStyle:'italic'}}>
+                  « Je suis abonnée au Flash depuis 6 mois — c'est la première fois qu'un service de ménage me donne envie d'éteindre mon téléphone et de partir au boulot l'esprit léger. »
+                </p>
+                <p className="mt-3 text-[12.5px] text-stone-500">Julie S. — Florence, KY · Pack Flash hebdo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------- Zone / Footer ---------- */
+function Footer() {
+  return (
+    <footer id="zone" className="bg-stone-100 border-t border-stone-200">
+      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-20">
+        {/* Top */}
+        <div className="grid lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-2.5">
+              <span className="w-10 h-10 rounded-xl bg-white ring-leaf flex items-center justify-center">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#064E3B" strokeWidth="1.6">
+                  <path d="M4 20c2-10 8-16 16-16 0 8-6 14-16 16Z"/>
+                  <path d="M4 20c4-4 8-7 12-9"/>
+                </svg>
+              </span>
+              <span className="font-display font-extrabold text-[20px] text-emerald-950">
+                Marina Cleaning<span className="text-lime-600">.</span> Co.
+              </span>
+            </div>
+            <p className="mt-5 text-stone-700 text-[15px] leading-relaxed max-w-sm">
+              Le ménage à domicile, livré comme un produit. Standards hôteliers, prix fixe, prise de tête : zéro.
+            </p>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a href="#packs" className="btn-cta rounded-full h-11 px-5 inline-flex items-center gap-2 text-[14px] font-semibold font-display">
+                Réserver mon Pack <Icon name="ArrowRight" size={15}/>
+              </a>
+              <a href="tel:+18595551212" className="btn-ghost rounded-full h-11 px-5 inline-flex items-center gap-2 text-[14px] font-semibold font-display">
+                <Icon name="Phone" size={14}/> (859) 555-1212
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 grid sm:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-display font-bold text-[13px] uppercase tracking-[0.18em] text-stone-500">Zone couverte</h4>
+              <ul className="mt-4 space-y-2.5 text-[14.5px] text-stone-800">
+                {["Cincinnati, OH","Florence, KY","Newport, KY","Covington, KY","Hyde Park · Oakley","Fort Mitchell"].map(z=>(
+                  <li key={z} className="flex items-center gap-2"><Icon name="MapPin" size={13} className="text-emerald-700"/>{z}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-display font-bold text-[13px] uppercase tracking-[0.18em] text-stone-500">Service</h4>
+              <ul className="mt-4 space-y-2.5 text-[14.5px] text-stone-800">
+                {["Les Packs","La Méthode","SOP & Standards","FAQ","Espace pro / B2B","Devenir technicien·ne"].map(z=>(
+                  <li key={z}><a href="#" className="link-u hover:text-emerald-900">{z}</a></li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-display font-bold text-[13px] uppercase tracking-[0.18em] text-stone-500">Contact</h4>
+              <ul className="mt-4 space-y-2.5 text-[14.5px] text-stone-800">
+                <li className="flex items-start gap-2"><Icon name="Mail" size={13} className="text-emerald-700 mt-1"/>hello@marinacleaning.co</li>
+                <li className="flex items-start gap-2"><Icon name="Phone" size={13} className="text-emerald-700 mt-1"/>(859) 555-1212</li>
+                <li className="flex items-start gap-2"><Icon name="Clock" size={13} className="text-emerald-700 mt-1"/>Lun–Dim · 7h–20h</li>
+                <li className="flex items-start gap-2"><Icon name="MessageSquareText" size={13} className="text-emerald-700 mt-1"/>Réponse &lt; 1h en semaine</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="mt-14 pt-6 border-t border-stone-200 flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between text-[12.5px] text-stone-500">
+          <div>© 2026 Marina Cleaning Co. — Tous droits réservés · Operated from Florence, KY</div>
+          <div className="flex items-center gap-5">
+            <a href="#" className="link-u hover:text-emerald-900">Mentions légales</a>
+            <a href="#" className="link-u hover:text-emerald-900">CGV</a>
+            <a href="#" className="link-u hover:text-emerald-900">Confidentialité</a>
+            <a href="#" className="link-u hover:text-emerald-900">Assurance RC pro</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/* ---------- App ---------- */
+function App() {
+  return (
+    <main className="relative">
+      <Header/>
+      <Hero/>
+      <Packs/>
+      <Methode/>
+      <Standards/>
+      <Footer/>
+    </main>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>

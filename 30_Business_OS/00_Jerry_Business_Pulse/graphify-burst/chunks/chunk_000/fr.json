@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "siteTitle": "ABC OS — Le système d'exploitation des coopératives africaines",
+    "siteDescription": "ABC OS est le système d'exploitation des coopératives africaines : une plateforme régénérative où l'on apprend, où l'on bâtit, et où l'on raconte — ensemble — les marques de la prochaine civilisation.",
+    "ogTitle": "ABC OS — De l'apprentissage à la civilisation",
+    "ogDescription": "Plateforme régénérative pour coopératives africaines : Community, Learn, Build, Brand."
+  },
+  "nav": {
+    "manifesto": "Manifeste",
+    "platform": "Plateforme",
+    "program": "Programme",
+    "cooperatives": "Coopératives",
+    "faq": "FAQ",
+    "launchOs": "Lancer l'OS",
+    "join": "Rejoindre"
+  },
+  "hero": {
+    "eyebrow": "African Business Cooperatives",
+    "headline1": "De l'",
+    "headline1Em": "apprentissage",
+    "headline1Cont": " à la ",
+    "headline2Em": "coopération",
+    "headline2Cont": ",",
+    "headline3": "de la coopération",
+    "headline4": "à la civilisation.",
+    "lede": "ABC OS est le système d'exploitation des coopératives africaines : une plateforme régénérative où l'on apprend, où l'on bâtit, et où l'on raconte — ensemble — les marques de la prochaine civilisation.",
+    "primaryCta": "Rejoindre la Coopérative",
+    "secondaryCta": "Lancer l'OS",
+    "trustActive": "coopérateurs actifs",
+    "trustCooperatives": "coopératives",
+    "trustCountries": "pays d'Afrique"
+  },
+  "marquee": {
+    "label": "Coopératives membres"
+  },
+  "manifesto": {
+    "eyebrow": "Manifeste",
+    "headline1": "Un système",
+    "headlineEm": "vivant.",
+    "p1Lead": "Nous croyons que l'avenir économique de l'Afrique ne s'écrit pas dans la concurrence, mais dans la ",
+    "p1Em": "coopération",
+    "p1Tail": ". Que les marques les plus durables naissent de communautés enracinées — dans la terre, dans le savoir, dans la mémoire.",
+    "p2Lead": "ABC OS rassemble dans un seul outil ce qu'il faut pour ",
+    "p2Em": "apprendre, structurer, financer et raconter",
+    "p2Tail": " une coopérative régénérative. C'est une boussole solarpunk pour les bâtisseurs de la prochaine civilisation."
+  },
+  "pillars": {
+    "eyebrow": "Les quatre piliers",
+    "headline1": "Une plateforme,",
+    "headlineEm": "quatre territoires",
+    "headlineCont": " d'action.",
+    "lede": "Chaque hub est un outil indépendant et complet — ensemble, ils forment l'écosystème complet d'une coopérative régénérative.",
+    "community": {
+      "title": "Community",
+      "subtitle": "L'Assemblée",
+      "desc": "Discussions, événements et coopératives — l'agora numérique où se nouent les alliances.",
+      "bullets": [
+        "Fil de discussion par hub",
+        "Annuaire des coopératives",
+        "Rencontres locales & en ligne"
+      ]
+    },
+    "learn": {
+      "title": "Learn",
+      "subtitle": "Cultiver le savoir",
+      "desc": "Six parcours pour bâtir un sens commun — du principe d'architecte aux principes solarpunk.",
+      "bullets": [
+        "76 cours en français & anglais",
+        "Mentorat entre pairs",
+        "Certifications coopératives"
+      ]
+    },
+    "build": {
+      "title": "Build",
+      "subtitle": "Bâtir ensemble",
+      "desc": "Les outils concrets de la coopérative : contrats, trésorerie, partenaires, jalons.",
+      "bullets": [
+        "Templates juridiques",
+        "Trésorerie partagée",
+        "Suivi de jalons & équipes"
+      ]
+    },
+    "brand": {
+      "title": "Brand",
+      "subtitle": "Votre identité",
+      "desc": "Mesurer la résonance, raconter votre histoire, faire rayonner votre coopérative.",
+      "bullets": [
+        "Score d'impact de marque",
+        "Stratégies de monétisation",
+        "Études de cas inspirantes"
+      ]
+    }
+  },
+  "tour": {
+    "eyebrow": "Une visite",
+    "headline1": "L'OS en main, ",
+    "headlineEm": "tout le temps",
+    "headlineCont": ".",
+    "lede": "Survolez chaque écran pour voir à quoi ressemble une journée dans la coopérative. Tout est mobile-first, hors-ligne disponible."
+  },
+  "stats": {
+    "items": [
+      { "n": "124", "l": "Coopératives bâties" },
+      { "n": "2 348", "l": "Coopérateurs actifs" },
+      { "n": "76", "l": "Cours et parcours" },
+      { "n": "17", "l": "Pays d'Afrique" },
+      { "n": "€2,4M", "l": "Financements débloqués" },
+      { "n": "92%", "l": "Taux de rétention" }
+    ]
+  },
+  "program": {
+    "eyebrow": "Le programme",
+    "headline1": "Trois actes pour ",
+    "headlineEm": "bâtir",
+    "headlineCont": ".",
+    "actLabel": "Acte",
+    "learnMore": "En savoir plus",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Apprendre",
+        "body": "Embarquez sur un parcours en six chapitres — du principe d'architecte aux principes solarpunk. À votre rythme, en français ou en anglais."
+      },
+      {
+        "n": "02",
+        "title": "Coopérer",
+        "body": "Rejoignez une coopérative existante ou fondez la vôtre. Trouvez des co-bâtisseurs alignés sur votre mission, près de chez vous ou ailleurs sur le continent."
+      },
+      {
+        "n": "03",
+        "title": "Civiliser",
+        "body": "Lancez votre marque coopérative. Mesurez votre impact, racontez votre histoire, inscrivez votre œuvre dans la civilisation régénérative à venir."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Coopératives",
+    "quote1": "ABC OS a transformé notre coopérative de tisserandes en une <em>marque continentale</em>. Avant : un cahier et des messages WhatsApp éparpillés. Aujourd'hui : un système qui apprend, qui structure, qui raconte.",
+    "author1Name": "Nailah Nyathi",
+    "author1Role": "Fondatrice · Umoja Weavers Collective · Tanzania",
+    "quote2": "Le hub Build nous a donné la rigueur d'une scale-up — sans renier nos valeurs. Trois étapes franchies en deux mois.",
+    "author2Name": "Amara Okoro",
+    "author2Role": "Solaris Agri-Coop · Kenya",
+    "quote3": "Les parcours Brand nous ont permis de doubler notre portée en six mois. Le storytelling coopératif, c'est l'arme du siècle.",
+    "author3Name": "Kaelan Patel",
+    "author3Role": "Sahel Solar Builders · Mali"
+  },
+  "faq": {
+    "eyebrow": "Questions courantes",
+    "headline1": "Avant de ",
+    "headlineEm": "rejoindre",
+    "headlineCont": ".",
+    "items": [
+      {
+        "q": "À qui s'adresse ABC OS ?",
+        "a": "À tout entrepreneur, artisan, agriculteur ou créatif basé en Afrique (ou de la diaspora) qui souhaite construire une activité économique en coopération plutôt qu'en concurrence. Les coopératives existantes peuvent migrer leur fonctionnement sur la plateforme."
+      },
+      {
+        "q": "Combien coûte la plateforme ?",
+        "a": "L'apprentissage est gratuit et le restera. Les outils Build et Brand sont facturés au prorata du chiffre d'affaires de votre coopérative — jamais en avance, et plafonnés."
+      },
+      {
+        "q": "L'application fonctionne-t-elle hors-ligne ?",
+        "a": "Oui. ABC OS est conçu pour des terrains avec une connectivité variable : cours téléchargeables, synchronisation en arrière-plan, mode léger sur mobile."
+      },
+      {
+        "q": "Comment rejoindre une coopérative existante ?",
+        "a": "Depuis le Community Hub, parcourez l'annuaire des coopératives, candidatez à celles qui résonnent avec votre mission. Les coopératives valident leurs membres collectivement."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "L'invitation",
+    "headline1": "Bâtissons",
+    "headlineEm1": "la prochaine civilisation",
+    "headlineEm2": "ensemble",
+    "lede": "Inscrivez-vous à la liste fondatrice. Vous recevrez le manifeste, l'accès anticipé à la plateforme et une invitation à la prochaine assemblée régénérative.",
+    "emailPlaceholder": "votre@email.coop",
+    "submitCta": "Rejoindre la liste",
+    "submitSent": "Bienvenue ✦",
+    "legalNote": "Pas de spam. Une lettre par mois. Désinscription en un clic."
+  },
+  "footer": {
+    "tagline": "African Business Cooperatives — Operating System. Un commun numérique pour la prochaine civilisation régénérative.",
+    "platform": "Plateforme",
+    "program": "Programme",
+    "house": "Maison",
+    "platformLinks": ["Community", "Learn", "Build", "Brand"],
+    "programLinks": ["Manifeste", "Coopératives", "Cas d'étude", "Tarifs"],
+    "houseLinks": ["Équipe", "Carrières", "Presse", "Contact"],
+    "copyright": "© 2026 ABC OS · Un commun open-source",
+    "license": "Licence Régénérative",
+    "motto": "De l'apprentissage à la civilisation.",
+    "origin": "Made on the continent."
+  },
+  "callout": {
+    "brandImpact": "Brand Impact",
+    "brandImpactScore": "/ 100",
+    "brandImpactLede": "Résonance communautaire — ",
+    "brandImpactDelta": "+6 cette semaine",
+    "cooperativeActive": "Étape 3 de 5 · validée",
+    "newMembersTitle": "128 nouveaux membres",
+    "newMembersSub": "cette semaine, 9 pays"
+  },
+  "hubs": {
+    "community": {
+      "title": "Community",
+      "kicker": "L'Assemblée",
+      "searchPlaceholder": "Rechercher discussions et membres…",
+      "tabs": {
+        "feed": "Fil",
+        "coops": "Coops",
+        "events": "Événements"
+      },
+      "feed": {
+        "kpName": "Kaelan Patel",
+        "kpTime": "il y a 2h · Lagos, NG",
+        "kpText": "Je cherche des conseils de quiconque est déjà passé par ce processus. Quels sont les documents et enregistrements clés requis ? ",
+        "aoName": "Amara Okoro",
+        "aoBadge": "Co-op lead",
+        "aoTime": "il y a 1 jour · Nairobi, KE",
+        "aoText": "Notre coopérative Agri-Tech vient de sécuriser sa première levée de fonds ! Un grand merci à tout le monde dans le "
+      },
+      "suggested": "Suggéré pour vous",
+      "sahelTitle": "Sahel Solar Builders",
+      "sahelSub": "248 membres · 4 que vous connaissez",
+      "join": "Rejoindre"
+    },
+    "learn": {
+      "title": "Learn Hub",
+      "kicker": "Cultiver le savoir",
+      "searchPlaceholder": "Rechercher cours et sujets…",
+      "myCourses": "Mes cours",
+      "seeAll": "Voir tout",
+      "recommended": "Recommandé pour vous",
+      "categories": "Catégories de cours",
+      "courses": {
+        "architect": {
+          "title": "Principes d'architecte",
+          "sub": "Fondations",
+          "count": 14
+        },
+        "financial": {
+          "title": "Littératie financière",
+          "sub": "Chiffres",
+          "count": 18
+        },
+        "brand": {
+          "title": "Storytelling de marque",
+          "sub": "Marketing",
+          "count": 11
+        },
+        "system": {
+          "title": "Construction de systèmes",
+          "sub": "Fondations coopératives"
+        },
+        "regen": {
+          "title": "Finance régénérative",
+          "sub": "L'argent comme sol"
+        },
+        "categories": [
+          { "title": "Principes d'architecte", "count": 14 },
+          { "title": "Construction de systèmes", "count": 9 },
+          { "title": "Storytelling de marque", "count": 11 },
+          { "title": "Littératie financière", "count": 18 },
+          { "title": "Pratiques durables", "count": 8 },
+          { "title": "Principes solarpunk", "count": 6 }
+        ]
+      }
+    },
+    "build": {
+      "title": "Build Hub",
+      "kicker": "Bâtir ensemble",
+      "tabs": {
+        "projects": "Mes projets",
+        "tools": "Outils coopératifs"
+      },
+      "projects": {
+        "solaris": {
+          "name": "Solaris Agri-Coop",
+          "tagline": "Agriculture coopérative solaire · Kenya",
+          "status": "En cours",
+          "milestone": "Avancement des jalons",
+          "next": "Finaliser le plan de distribution"
+        },
+        "umoja": {
+          "name": "Umoja Weavers Collective",
+          "tagline": "Textiles patrimoniaux & métiers partagés · Tanzanie",
+          "status": "Planification",
+          "milestone": "Avancement des jalons",
+          "next": "Rédiger l'accord coopératif"
+        },
+        "ctaTitle": "Prêt·e à bâtir ensemble ?",
+        "ctaBody": "Touchez le bouton « + » pour démarrer votre première coopérative et donner vie à votre vision."
+      },
+      "tools": {
+        "agreement": {
+          "title": "Rédacteur d'accord",
+          "sub": "Modèles de contrats coopératifs"
+        },
+        "treasury": {
+          "title": "Grand livre",
+          "sub": "Comptes partagés & versements"
+        },
+        "onboarding": {
+          "title": "Intégration des membres",
+          "sub": "Voter, inviter, ratifier"
+        },
+        "supply": {
+          "title": "Réseau d'approvisionnement",
+          "sub": "Trouver des partenaires régionaux"
+        },
+        "harvest": {
+          "title": "Calendrier des récoltes",
+          "sub": "Jalons saisonniers"
+        },
+        "impact": {
+          "title": "Rapport d'impact",
+          "sub": "Suivre les KPI régénératifs"
+        }
+      }
+    },
+    "brand": {
+      "title": "Brand Hub",
+      "kicker": "Votre identité collective",
+      "impactLabel": "Impact de marque",
+      "impactDelta": "↗ +6 cette semaine",
+      "impactLede": "Votre résonance communautaire actuelle. Croissance régulière ce mois-ci — continuez à raconter votre histoire.",
+      "subscores": {
+        "story": "Récit",
+        "reach": "Portée",
+        "impact": "Impact"
+      },
+      "actions": {
+        "crafting": {
+          "title": "Façonner votre récit",
+          "sub": "Définir valeurs, mission et identité visuelle."
+        },
+        "monetize": {
+          "title": "Stratégies de monétisation",
+          "sub": "Explorer prix, produits digitaux et subventions."
+        },
+        "community": {
+          "title": "Impact communautaire",
+          "sub": "Suivre le bien commun et la collaboration."
+        }
+      },
+      "inspiration": "Pôle d'inspiration",
+      "case": {
+        "label": "Étude de cas",
+        "brand": "Soko Weavers",
+        "title": "Ont doublé leur portée",
+        "sub": "Comment le marketing coopératif a étendu leur empreinte mondiale.",
+        "cta": "Lire l'histoire"
+      },
+      "atlas": {
+        "title": "Atlas des marques",
+        "sub": "Identités visuelles de 24 coopératives africaines"
+      }
+    },
+    "splash": {
+      "eyebrow": "ABC OS",
+      "tagline": "De l'Apprentissage\nà la Coopération,\nde la Coopération\nà la Civilisation.",
+      "subtitle": "African Business Cooperatives — Operating System",
+      "primaryCta": "Rejoindre la Coopérative",
+      "secondaryCta": "Se connecter",
+      "footer": "Une œuvre régénérative · Open Source"
+    }
+  }
+}

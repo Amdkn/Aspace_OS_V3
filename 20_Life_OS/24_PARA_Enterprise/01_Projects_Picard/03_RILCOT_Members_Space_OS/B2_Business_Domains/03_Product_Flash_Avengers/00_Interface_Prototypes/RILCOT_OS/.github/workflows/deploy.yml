@@ -1,0 +1,24 @@
+name: Deploy to Coolify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Trigger Coolify Redeploy Webhook
+        env:
+          COOLIFY_WEBHOOK: ${{ secrets.COOLIFY_WEBHOOK_URL }}
+        run: |
+          if [ -z "$COOLIFY_WEBHOOK" ]; then
+            echo "Error: COOLIFY_WEBHOOK_URL secret is not set. Skipping redeployment trigger."
+            exit 1
+          fi
+          echo "Triggering redeployment..."
+          curl -X GET "$COOLIFY_WEBHOOK"

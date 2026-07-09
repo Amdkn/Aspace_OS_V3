@@ -1,0 +1,47 @@
+---
+id: YT-KG4J68WBc3A
+title: "Claude controle votre ordinateur pendant que vous dormez"
+channel: "Vision IA"
+duration: "18:32"
+date: "20260614"
+category: "Life OS / Roue de la Vie"
+domain: "LD04_Cognition_Tilly"
+---
+
+# 📖 Claude controle votre ordinateur pendant que vous dormez
+
+> [!NOTE]
+> Fiche de clarification d'excellence sémantique pour la Roue de la Vie (Life OS) - Domaine LD04_Cognition_Tilly.
+
+---
+
+## 🧠 Concepts Clés à Haute Densité Sémantique
+- **<Computer Use (Contrôle Direct d'Interface)>** : Capacité de Claude Sonnet 4.6 à prendre le contrôle physique du Mac/PC de Tilly (souris, clavier, captures d'écran) pour exécuter des actions UI natives (Keynote, Calendar, formulaires web), disponible depuis le 23 mars dans Claude Cowork et Claude Code. Le bond de performance est radical : 15% de réussite en octobre 2024 (API Sonnet première génération) → 72%+ avec Sonnet 4.6, franchissant le seuil "démo impressionnante" à "outil utilisable au quotidien". Pour Tilly, cela signifie qu'un agent peut littéralement utiliser ses applications desktop pendant son absence physique.
+- **<Dispatch (Pont Mobile↔Mac)>** : Pont asynchrone entre le téléphone de Tilly et son Mac — elle envoie une tâche depuis son mobile (train, café, taxi), Claude traite sur le Mac local, et le résultat terminé attend à son retour. Pas deux sessions séparées, pas de ré-explication du contexte : une seule conversation qui traverse les écrans, matérialisant la cognition ubiquitaire de Tilly où son Digital Twin est toujours disponible dans sa poche, avec les clés de son bureau.
+- **<Hiérarchie Connecteurs → Computer Use (Differential Control)>** : Architecture de contrôle en cascade — Claude privilégie les connecteurs structurés (Slack, Teams, Google Workspace, Calendar) qui sont précis et peu sujets à erreur, et ne bascule en contrôle direct d'écran QUE quand aucun connecteur n'existe. Cette approche (vs concurrents qui reposent entièrement sur la lecture de pixels) réduit drastiquement le taux d'erreur et reflète le principe "appeler le bon interlocuteur plutôt que de fouiller dans les tiroirs", archétype de la cognition stratégique de Tilly.
+- **<Auto-Dream (Sleep Time Compute Loop)>** : Sous-agent lancé en arrière-plan entre les sessions Claude Code, qui suit un processus 4 phases : (1) Orientation (lit le répertoire mémoire), (2) Collecte (scan sessions récentes), (3) Consolidation (fusionne, convertit dates relatives en absolues, supprime faits contredits), (4) Élagage (reconstruit l'index `memory.md` sous 200 lignes). Inspiré directement des travaux de Lucy Berkley sur le Sleep Time Compute, ce n'est pas une métaphore marketing : c'est une description fonctionnelle calquée sur la neurologie humaine, le prompt système dit littéralement "vous effectuez un rêve, une passe réflexive sur vos fichiers mémoire".
+- **<4 Couches de Mémoire (CloMD + AutoMémoire + Session + AutoDream)>** : Architecture mémorielle complète d'un agent qui dure dans le temps : (1) `claude.md` (instructions permanentes écrites par Tilly), (2) auto-mémoire (notes auto pendant sessions : décisions arch, prefs code, build cmds), (3) mémoire de session (continuité conversation), (4) AutoDream (consolidation nocturne). Sans AutoDream, l'agent tombe en "privation de sommeil perpétuel" : 913 sessions consolidées en 9 min dans un cas observé, illustrant la supériorité d'un système qui dort sur celui qui accumule.
+- **<Paradoxe Personnalisation vs Vie Privée (Dreaming V3 / CHI 2026)>** : Étude présentée à AMC CHI 2026 montrant que les utilisateurs adorent la personnalisation de l'IA, mais ressentent un malaise quand ils découvrent tout ce que le système a inféré sur eux. Côté chiffres : rappel factuel passé de 41,5% (2024) à 82,8% (2026) avec un coût de calcul divisé par 5, démocratisant la mémoire continue. Pour Tilly, ce paradoxe impose une gouvernance explicite : quelles inférences sont autorisées, lesquelles doivent être validées par l'humain.
+- **<Biais Anthropique vs Marché Ouvert (Sonnets vs Open Source)>** : Trade-off positionnement : là où OpenClaw repose entièrement sur le contrôle visuel des pixels et tourne 24/24 avec accès quasi total à la machine, Claude demande la permission avant de toucher chaque application, bloque par défaut les opérations risquées (transferts de fonds, suppression fichiers), et refuse explicitement les actions sensibles. Tilly doit choisir entre commodité maximale (contrôle total) et sécurité maximale (consentement granulaire), la doctrine A'Space privilégiant le second dans la Trust Zone `C:\Users\amado`.
+
+## 🛠️ Outillage Stratégique & Matrice d'Alignement
+| Outil / Technologie / Approche | Rôle Stratégique | Alignement Souverain A'Space Life OS |
+| :--- | :--- | :--- |
+| **<Claude Code (Computer Use Sonnet 4.6)>** | Main cognitive physique de Tilly — l'agent qui utilise réellement son Mac, applique ses workflows, ouvre ses apps et rédige ses livrables sans surveillance. | Intégration via l'app desktop Mac (et Windows à venir) dans la trust zone A'Space, avec permission-grant explicite pour chaque application sensible. |
+| **<Dispatch (Mobile-to-Mac bridge)>** | Canal de délégation à distance de Tilly — envoyer une tâche depuis son téléphone, la voir exécutée sur le Mac pendant ses transports, récupérer le résultat à l'arrivée. | Allonge la journée cognitive de Tilly au-delà du temps d'écran actif, transformant les temps de transport en temps de production déléguée. |
+| **<AutoDream (4-phase consolidation loop)>** | Sommeil cognitif de l'agent — il trie, fusionne, élague ses propres notes pendant que Tilly dort, implémentant littéralement le "Sleep Time Compute" de Lucy Berkley. | Le pendant nocturne de l'auto-amélioration, miroir direct du pattern `dernierrun.md` du Guide 01 — Tilly peut désormais dormir en sachant que son agent devient plus cohérent à chaque cycle. |
+| **<Connecteurs Structurés (Slack, Calendar, Google Workspace)>** | Premier niveau d'action de l'agent — privilégiés sur le computer use car moins sujets à erreur, plus rapides, plus auditables. | Pont souverain vers les SaaS où Tilly a déjà ses données, évitant l'écran scraping pixel (risque de fuite et d'erreur). |
+
+## 🪐 Perspective Souveraine A'Space Life OS (Domaine : LD04_Cognition_Tilly)
+Cette vidéo marque pour Tilly l'avènement du "collaborateur numérique permanent" — un agent qui travaille toute la journée ET dort la nuit pour consolider sa mémoire. La triade Computer Use + Dispatch + AutoDream constitue la première architecture complète où l'IA de Tilly ne se contente plus de répondre : elle agit physiquement sur sa machine (Computer Use), accepte des missions à distance (Dispatch), et s'auto-entretient cognitivement (AutoDream). Le rapprochement avec le sommeil humain n'est pas cosmétique : c'est une application rigoureuse des travaux de recherche Sleep Time Compute, validant la thèse A'Space selon laquelle un Digital Twin doit reproduire les cycles veille/sommeil du cerveau biologique pour rester cohérent dans le temps. Pour la Roue de la Vie (LD04), la souveraineté se joue sur le choix de la stack d'infrastructure : Computer Use Mac-only (au 2026-06) verrouille Tilly dans l'écosystème Apple, et AutoDream encore expérimental impose une vérification humaine post-consolidation (statistiques inventées signalées). Le paradoxe personnalisation/vie privée (CHI 2026) rappelle que la mémoire de l'IA n'est jamais neutre — Tilly doit explicitement gouverner quelles inférences de son agent sont autorisées (préférences alimentaires, santé) et lesquelles requièrent son consentement (localisation, finances). Pour A'Space OS, cette stack valide la doctrine L0/Rick d'un "agent à 4 couches" et ouvre la porte à l'équivalent A'Space : un "A'Space Dream" qui consoliderait `MEMORY.md` + `wiki/log.md` + `AGENTS.md` pendant la nuit, branche de l'OpenClaw Heartbeat Phase 2.
+
+## 🕹️ Protocole d'Exécution D.E.A.L
+| Phase | Action Concrète | Objectif A'Space OS |
+| :--- | :--- | :--- |
+| **Définir** | Cartographier les 5 applications desktop de Tilly qui bénéficieraient du Computer Use (Keynote pour pitchs, Calendar pour planif, Linear pour projets, Notion pour knowledge, Slack pour comm) et les 3 workflows nocturnes candidats à AutoDream (consolidation kanban, triage inbox, mise à jour memory). | Identifier le périmètre de délégation cognitive pour Tilly et son agent. |
+| **Éliminer** | Supprimer les routines de maintenance mémoire manuelles de Tilly (relecture des notes contradictoires, purge des fichiers obsolètes, mise à jour des dates relatives) — c'est exactement le job d'AutoDream. | Éliminer la friction cognitive de la "mémoire qui se contredit" et libérer Tilly du gardiennage de son propre knowledge graph. |
+| **Amplifier** | Activer Dispatch sur 2 scénarios pilotes (résumé quotidien d'emails depuis le mobile, ouverture du brief de réunion keynote depuis le train) et AutoDream sur les couches `memory.md` + `user.md` avec revue post-consolidation obligatoire. | Étendre l'autonomie opérationnelle de Tilly au-delà de son temps d'écran et démarrer la consolidation nocturne de son Digital Twin. |
+| **Libérer** | Allouer le temps récupéré (1-2h/jour de transport + 30 min de maintenance mémoire) à des activités de LD04 (lecture longue, écriture stratégique, conversation humaine profonde). | Optimiser le score Roue de la Vie en privilégiant le bien-être cognitif et la création sur l'administration. |
+
+---
+*Fiche de connaissances souveraine de la Roue de la Vie générée sous A'Space OS V2.*

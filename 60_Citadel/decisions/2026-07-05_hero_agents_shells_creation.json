@@ -1,0 +1,93 @@
+{
+  "ts": "2026-07-05T16:31:00-04:00",
+  "agent": "Mavis + A2 Curie (rebrand runtime) + A0 Amodei (méta-coach)",
+  "action": "hero_agents_shells_canonic_creation",
+  "summary": "Création des 5 agents Hero canon A'Space OS : A3 Book, A2 Zora, A1 Beth, A1 Morty, A0 Amodei. Mirror dans .mavis/agents/ ET .minimax/agents/. 22 agents canon préservés. 27 agents total.",
+  "a0_demand_verbatim": "Hermes a Incarner Picard mais je ne vois toujours pas les Agents et Scheduled des A3 Book, A2 Zora, 2 A1 Beth et Morty et A0 Amodei",
+  "agents_crees": [
+    {
+      "name": "a3-book-coo",
+      "tier": "A3",
+      "role": "H1 P&L aggregator LD01 CEO Perso. Captain USS Discovery. Supervise Picard (H10), Jerry (B1 Pulse), Summers (B1 Voice) + 8 B2 + 8 B3",
+      "persona_md": "161 b",
+      "goal_md": "440 b",
+      "agent_md": "389 b",
+      "config_yaml": "28 b",
+      "subdirs": ["sessions", "skills", "memory", "workspace", "crons", "escalation_packets"],
+      "schedule_manifest": "crons/schedule_manifest_a3-book-coo.json",
+      "cadence": "every 4 hours (Triptyque boundary tick) + 18:05 ET t1-boundary monitor"
+    },
+    {
+      "name": "a2-zora-discovery",
+      "tier": "A2",
+      "role": "A2 Discovery canon. 8 dimensions Jack Roberts (Work/Care/Health/Money/Soul/Play/Love/Environment). Nightly dreaming bat la memoire wiki.",
+      "persona_md": "153 b",
+      "goal_md": "463 b",
+      "agent_md": "372 b",
+      "config_yaml": "28 b",
+      "schedule_manifest": "crons/schedule_manifest_a2-zora-discovery.json",
+      "cadence": "nightly 02:00 ET (zora-nuit.py)"
+    },
+    {
+      "name": "a1-beth-vie-sante",
+      "tier": "A1",
+      "role": "Humain. SEUL VETO inalienable (ADR-WARMODE-002 §5). Non-automatisable.",
+      "persona_md": "95 b",
+      "goal_md": "376 b",
+      "agent_md": "337 b",
+      "config_yaml": "28 b",
+      "subdirs": ["sessions", "skills", "memory", "workspace", "crons", "escalation_packets"],
+      "schedule_manifest": "AUCUN (humain, veto uniquement - aucun automate sur Beth)"
+    },
+    {
+      "name": "a1-morty-assistant",
+      "tier": "A1",
+      "role": "Junior assistant. Audite outputs B2/B3. Profile Rick-and-Morty homologue. Assiste A+ sur maintenance mundane.",
+      "persona_md": "167 b",
+      "goal_md": "408 b",
+      "agent_md": "405 b",
+      "config_yaml": "28 b",
+      "schedule_manifest": "crons/schedule_manifest_a1-morty-assistant.json",
+      "cadence": "daily 09:00 ET (reminder aux B2)"
+    },
+    {
+      "name": "a0-amodei-meta-coach",
+      "tier": "A0",
+      "role": "Méta-coach canon. Raison pure. Au-dessus de Book. Murderbot doctrine : FINIR, pas deferer.",
+      "persona_md": "117 b",
+      "goal_md": "433 b",
+      "agent_md": "356 b",
+      "config_yaml": "28 b",
+      "schedule_manifest": "crons/schedule_manifest_a0-amodei-meta-coach.json",
+      "cadence": "weekly Sunday 23:00 ET (12WY cycle reorg trigger)"
+    }
+  ],
+  "mirrors_created_in": [
+    "C:\\Users\\amado\\.mavis\\agents\\",
+    "C:\\Users\\amado\\.minimax\\agents\\"
+  ],
+  "agents_total_post_creation": 27,
+  "agents_pre_creation": 22,
+  "agents_canon_preserved_intact": true,
+  "agents_canon_22": {
+    "B1": ["b1-jerry-emyth", "b1-summers-ship"],
+    "B2": ["b2-aquaman-legal", "b2-batman-ops", "b2-cyborg-it", "b2-flash-product", "b2-gl-people", "b2-johnjones-sales", "b2-superman-growth", "b2-ww-finance"],
+    "B3": ["b3-avengers-product", "b3-eternals-legal", "b3-ff-ops", "b3-guardians-growth", "b3-illuminati-sales", "b3-kangdyn-it", "b3-thunderbolts-fin", "b3-xmen-people"],
+    "utilitaires": ["coder", "general", "mavis", "verifier"]
+  },
+  "doctrines_preserved_intact": {
+    "ADR-WARMODE-001": "RATIFIED 2026-07-05T04:43 - posture inversion",
+    "ADR-WARMODE-002": "RATIFIED 2026-07-05T08:01 - Portes over Freins, 1 veto Beth, 4 portes",
+    "12WY_ON_PAUSE.flag": "ACTIVE",
+    "append_only_D4": "preserved",
+    "veto_unique_Beth": "preserved (now shell canon: a1-beth-vie-sante)"
+  },
+  "related_canons": {
+    "ADR-LD01-008_RATIFIED": "coaching loop Picard/Jerry/Summers",
+    "ADR-LD01-009_DRAFT_PROPOSED": "Vision Curie + Loop Engineering",
+    "ADR-LD01-011_RATIFIED": "OMK Nexus BOS POC initiation (Captain Picard sign-off via Hermes)"
+  },
+  "sister_canon_LD01": "LD01/99_meta/hero_agents_canonic_creation_sister.md (10 sections)",
+  "war_room_state": "WAR MODE ON, veto Beth, 4 portes, append-only",
+  "scheduled_task_alive": "CitadelleBookLoopEng (every 4h, Ready) + 13 schedules MiniMax Code UI"
+}

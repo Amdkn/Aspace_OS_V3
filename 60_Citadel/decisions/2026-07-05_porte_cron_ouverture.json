@@ -1,0 +1,65 @@
+{
+  "ts": "2026-07-05T08:06:41-04:00",
+  "agent": "Mavis + CC ratifié",
+  "action": "porte_cron_ouverture",
+  "summary": "Porte cron ouverte - scheduled task Windows CitadelleBookLoopEng créée. Le système prend vie.",
+  "doctrine": {
+    "ADR-WARMODE-001": "RATIFIED 2026-07-05T04:43 - posture inversion, 4 inaliénables",
+    "ADR-WARMODE-002": "RATIFIED 2026-07-05T08:01 - Portes over Freins (HxH), 1 seul veto (Beth), bypass par défaut, 4 portes à ouvrir",
+    "12WY-ON-PAUSE.flag": "ACTIVE - bypass individual gates (Tony pré-ratification cycle 12 sem)"
+  },
+  "porte_cron": {
+    "rank": "Porte #4 (la plus fermée)",
+    "etat_avant": "0 scheduled task Windows active (Porte cron fermée — le système ne tournait pas)",
+    "etat_apres": "1 scheduled task Windows active : CitadelleBookLoopEng (every 4h, 1-year repetition)",
+    "gating_resolu_par": "12WY_ON_PAUSE.flag (bypass individuel du gate enable_book_loop.flag)",
+    "runonce_test": {
+      "datetime": "2026-07-05T08:06:38",
+      "result": "OK",
+      "report": "cron/output/book-loop-20260705-080638.json (J1 T1 People·Operation·IT, 22 agents, 7/7 invariants, cadence_alive=True, mirofish=True)",
+      "meaning": "RunOnce dry-test passed → safe to Install"
+    },
+    "install": {
+      "datetime": "2026-07-05T08:06:41",
+      "task_name": "CitadelleBookLoopEng",
+      "task_path": "\\",
+      "state": "Ready",
+      "schedule": "every 4 hours (365-day repetition)",
+      "principal": "Interactive - User : $env:USERNAME",
+      "settings": "AllowStartIfOnBatteries + DontStopIfGoingOnBatteries + StartWhenAvailable + 5min ExecutionTimeLimit",
+      "anti_ultron_enforced_in_script": [
+        "lecture seule sources canoniques (book_loop.py read-only sur canon)",
+        "append-only output (cron/output/book-loop-YYYYMMDD-HHMMSS.json)",
+        "JAMAIS /ship outboard",
+        "JAMAIS auto-update",
+        "hook EXIT 0 always",
+        "idempotent re-run safe"
+      ]
+    },
+    "log_emplacement": "citadel/logs/book_loop_cron.log (append-only)"
+  },
+  "porte_restante_etat": [
+    {"porte": "#0 Bypass par défaut", "state": "OUVERTE", "mécanisme": "permissionMode: bypassPermissions dans config.yaml"},
+    {"porte": "#1 Rick - sobriété-lever", "state": "OUVERTE conceptuellement", "note": "Rick reste l'agent S1 mais n'est plus mur. Sobriété réelle si dépendance lourde détectée — pas un frein permanent."},
+    {"porte": "#2 /ship - canal de preuve", "state": "FERMÉE (pas de besoin immédiat)", "note": "Aucune action /ship outboard dans le pipeline actuel"},
+    {"porte": "#3 append-only - fenêtré observation", "state": "OUVERTE", "mécanisme": "/warmode + data/14_warmode.json + feed last_10_decisions observable à 10s auto-refresh"},
+    {"porte": "#4 cron - cadence 7-jours", "state": "OUVERTE", "mécanisme": "CitadelleBookLoopEng Windows Task Scheduler (livré aujourd'hui 08:06:41)"}
+  ],
+  "veto_unique": {
+    "agent": "Beth - vie/santé A+",
+    "fonctionnement": "veto par exception, pas par défaut. Si une action mettrait Beth en burnout → action suspendue. Si action protège Beth (sommeil, décroissance, délégation Amodei) → action permise sans veto.",
+    "non_automatisable": true,
+    "mécanisme": "Aucun filtre automatique. A+ est le seul juge."
+  },
+  "sister_canon_LD01": "LD01/99_meta/portes_over_freins_sister.md (9 sections, D5 receipts)",
+  "mirror_WAR_ROOM": "http://127.0.0.1:8770/warmode (auto-refresh 10s)",
+  "next_step_cadence": "BookLoopHeartbeat runs every 4h, append report to cron/output/, observable on /warmode feed (decision par décision)",
+  "reversibilite": {
+    "commandes": [
+      "& 'C:\\Users\\amado\\agent-os\\citadel\\cron\\install-book-cron.ps1' -Uninstall",
+      "del 'C:\\Users\\amado\\agent-os\\citadel\\decisions\\12WY_ON_PAUSE.flag' (réactive les 4 mires ADR-WARMODE-001 si tu veux)",
+      "del '_SPECS\\ADR\\L0_Tech_OS\\ADR-WARMODE-002_portes-over-freins.md' (réduit à 1 veto + 1 miror append-only)"
+    ],
+    "scope": "Tout est append-only, suppression = retour à l'état précédent"
+  }
+}

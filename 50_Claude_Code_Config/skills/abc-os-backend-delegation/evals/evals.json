@@ -1,0 +1,297 @@
+{
+  "skill_name": "abc-os-backend-delegation",
+  "evals": [
+    {
+      "id": 1,
+      "name": "add-shared-catalog-table",
+      "prompt": "Add a new 'build_resources' table to the abc_os schema on the VPS Supabase. Columns: id (TEXT PK), project_id (FK to build_projects ON DELETE CASCADE), title TEXT, kind TEXT (values: tool / material / technique), url TEXT (nullable), sort_order INT default 0, created_at TIMESTAMPTZ default now(). Shared catalog (no org_id), RLS = select-authenticated. Apply to dev with FORCE_TARGET=1. After applying, run D1 verify queries and write back to the 3 memory files (wiki/log.md, MEMORY_CORE/README.md, handoff_abc_os_community_dev_2026-06-10.md).",
+      "expected_output": "A self-contained sub-agent brief that includes: (a) the full idempotent .sql file (0013_build_resources_schema.sql) with CREATE TABLE IF NOT EXISTS + RLS + migration tracker INSERT, (b) updated apply-abc-os-migrations.sh with the new file in the pre-flight list and the apply_sql block for both dev and prod branches, (c) the 5 standard D1 verify queries + 2-3 build_resources-specific spot-checks, (d) the 3-file write-back contract, (e) FORCE_TARGET=1 invocation. Expected counts (post-apply): tables=18, RLS=18, policies=43, migrations_logged=13.",
+      "files": [],
+      "expectations": [
+        "Brief includes the full idempotent .sql DDL (CREATE TABLE IF NOT EXISTS + indexes + RLS + migration tracker INSERT)",
+        "Brief includes the apply-abc-os-migrations.sh update (pre-flight list + apply_sql block for both dev and prod branches)",
+        "Brief includes the 5 standard D1 verify queries + at least 2 build_resources-specific spot-checks",
+        "Brief cites doctrine anchors (D1-D8, D10 mixed-tenancy) and uses FORCE_TARGET=1 with ON CONFLICT safety net",
+        "Brief specifies the 3-file write-back contract (wiki/log.md, MEMORY_CORE/README.md, handoff)",
+        "Brief includes expected post-apply counts (tables=18, RLS=18, policies=43, migrations_logged=13) so sub-agent can compare to actual",
+        "Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations` or similar) with `ON CONFLICT (filename) DO NOTHING`",
+        "Brief uses `FORCE_TARGET=1 ./scripts/apply-abc-os-migrations.sh dev` and does NOT hard-fail on FORCE_TARGET=1 in the prod branch (D10: shared-catalog DDL applies to both envs; the apply script's prod gate is a separate `GO-PROD` HITL prompt, not a FORCE_TARGET ban)"
+      ],
+      "assertions": [
+        {
+          "text": "Brief uses the canonical migration tracker table `abc_os._aspace_migrations` (not fictional `abc_os.migrations` or `abc_os.schema_migrations`)",
+          "check": "regex",
+          "pattern": "abc_os\\._aspace_migrations",
+          "must_match": true
+        },
+        {
+          "text": "Migration tracker INSERT uses `ON CONFLICT (filename) DO NOTHING` for idempotency",
+          "check": "substring",
+          "pattern": "ON CONFLICT (filename) DO NOTHING",
+          "must_match": true
+        },
+        {
+          "text": "Brief does NOT reference fictional tracker tables like `abc_os.migrations` (without underscore prefix) or `abc_os.schema_migrations`",
+          "check": "regex",
+          "pattern": "abc_os\\.migrations(?![_a-zA-Z])|abc_os\\.schema_migrations",
+          "must_match": false
+        },
+        {
+          "text": "Brief does NOT hard-fail on FORCE_TARGET=1 in the prod branch of the apply script (D10 shared-catalog applies to both envs)",
+          "check": "regex_negation",
+          "must_not_match": [
+            "FORCE_TARGET=1.*(?:forbidden|exit 3|exit 4|err.*prod)",
+            "exit 3.*FORCE_TARGET"
+          ]
+        },
+        {
+          "text": "Brief's RLS policy for shared-catalog uses the canonical `FOR SELECT TO authenticated USING (true)` pattern (not broader `current_role() IN (...)` checks)",
+          "check": "regex",
+          "pattern": "FOR\\s+SELECT\\s+TO\\s+authenticated\\s+USING\\s*\\(\\s*true\\s*\\)",
+          "must_match": true
+        },
+        {
+          "id": "A1",
+          "text": "A1 (iter-2) — Tracker table literal match: brief must reference `abc_os._aspace_migrations` (with full abc_os. prefix and underscore) for the INSERT statement AND the 5th D1 verify query. Bare `_aspace_migrations` (without abc_os. prefix) fails.",
+          "check": "regex",
+          "pattern": "abc_os\\._aspace_migrations",
+          "must_match": true
+        },
+        {
+          "id": "A2",
+          "text": "A2 (iter-2) — RLS scope check: brief's shared-catalog SELECT policy uses `FOR SELECT TO authenticated USING (true)` exactly (role scoped via TO clause, USING clause is `true`). Any `current_role() IN ('anon', 'authenticated', 'service_role')` over-broad pattern is a doctrinal error.",
+          "check": "regex_negation",
+          "must_not_match": [
+            "current_role\\(\\)\\s+IN\\s*\\(\\s*'anon'\\s*,\\s*'authenticated'\\s*,\\s*'service_role'\\s*\\)"
+          ]
+        },
+        {
+          "id": "A3",
+          "text": "A3 (iter-2) — Old/New diff structure: brief must include a '## Old' / '## New' markdown header pair (for A0 schema review) OR an explicit 'DRY-RUN MODE' line (if the apply will only run after A0 HITL).",
+          "check": "regex",
+          "pattern": "(?im)^##\\s+(Old|New|DRY-RUN\\s+MODE|OLD|NEW)\\b",
+          "must_match": true
+        },
+        {
+          "id": "A4",
+          "text": "A4 (iter-2) — FORCE_TARGET=1 with idempotency safety net: brief must mention `FORCE_TARGET=1` AND every CREATE TABLE / CREATE INDEX / CREATE POLICY uses `IF NOT EXISTS` or `DROP IF EXISTS`. Migration tracker INSERT uses `ON CONFLICT (filename) DO NOTHING`.",
+          "check": "substring_all",
+          "patterns": [
+            "FORCE_TARGET=1",
+            "IF NOT EXISTS",
+            "ON CONFLICT (filename) DO NOTHING"
+          ]
+        },
+        {
+          "id": "A5",
+          "text": "A5 (iter-2) — Mixed-tenancy decision tree cited: brief must cite D10 (e.g. 'D10 mixed-tenancy', 'ADR-ABCOS-001', or the decision tree shape 'shared-catalog = TEXT PK no org_id, per-tenant = has org_id').",
+          "check": "regex",
+          "pattern": "(?i)(D10|mixed[- ]tenancy|ADR-ABCOS-001|shared[- ]catalog|per[- ]tenant)",
+          "must_match": true
+        },
+        {
+          "id": "A6",
+          "text": "A6 (iter-2) — Write-back contract complete with canonical paths: brief must cite all 3 write-back files with full paths — `wiki/log.md`, `MEMORY_CORE/README.md`, and `handoff_abc_os_community_dev_<DATE>.md` (the canonical handoff naming convention).",
+          "check": "substring_all",
+          "patterns": [
+            "wiki/log.md",
+            "README.md",
+            "handoff_abc_os_community_dev_"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "add-per-tenant-table",
+      "prompt": "Add a new 'user_task_progress' per-tenant table to abc_os on the VPS Supabase. Columns: id UUID PRIMARY KEY default gen_random_uuid(), org_id TEXT NOT NULL REFERENCES abc_os.organizations(id) ON DELETE CASCADE, member_id UUID NOT NULL REFERENCES abc_os.members(id) ON DELETE CASCADE, task_id TEXT NOT NULL REFERENCES abc_os.build_tasks(id) ON DELETE CASCADE, status TEXT NOT NULL CHECK (status IN ('pending', 'in_progress', 'done')), started_at TIMESTAMPTZ, completed_at TIMESTAMPTZ, created_at TIMESTAMPTZ NOT NULL default now(). Per-tenant RLS: SELECT/INSERT/UPDATE/DELETE using abc_os.current_org_id() and abc_os.current_role() patterns. Apply to dev with FORCE_TARGET=1. After applying, run D1 verify and write back to the 3 memory files.",
+      "expected_output": "A self-contained sub-agent brief that includes: (a) the full idempotent .sql file (0014_user_task_progress_schema.sql) with the per-tenant RLS policies following the existing per-tenant pattern (e.g. from 0002_rls_policies.sql for action_items), (b) updated apply-abc-os-migrations.sh, (c) the 5 standard D1 verify queries + 2-3 user_task_progress-specific spot-checks (e.g. test that anon role cannot SELECT, authenticated role with current_org_id() match CAN), (d) the 3-file write-back contract, (e) FORCE_TARGET=1 invocation. Expected counts (post-apply): tables=19, RLS=19, policies=47 (43 + 4 new per-tenant CRUD), migrations_logged=14.",
+      "files": [],
+      "expectations": [
+        "Brief classifies the table as per-tenant (D10) and follows the existing per-tenant pattern from 0002_rls_policies.sql (e.g. action_items)",
+        "Brief includes the 4 per-tenant RLS policies (SELECT/INSERT/UPDATE/DELETE) using current_org_id() and current_role()",
+        "Brief includes spot-checks for RLS effectiveness (e.g. anon role cannot SELECT, authenticated role with current_org_id() match CAN, with mismatch CANNOT)",
+        "Brief uses gen_random_uuid() (pgcrypto extension) and references it in the migration if needed",
+        "Brief includes expected post-apply counts (tables=19, RLS=19, policies=47, migrations_logged=14)",
+        "Brief specifies the 3-file write-back contract and FORCE_TARGET=1",
+        "Brief uses the canonical migration tracker table `abc_os._aspace_migrations (filename)` in the D1 verify query (5th standard query), not fictional `abc_os.schema_migrations`",
+        "Brief's per-tenant SELECT policy does NOT include `service_role` in the USING clause (service_role bypasses RLS by design; including it in the predicate is a real doctrinal error — pattern from 0002_rls_policies.sql uses just `USING (org_id = abc_os.current_org_id())` for SELECT)"
+      ],
+      "assertions": [
+        {
+          "text": "Brief's D1 verify queries use the canonical `abc_os._aspace_migrations` table (5th standard query, not `abc_os.migrations` or `abc_os.schema_migrations`)",
+          "check": "regex",
+          "pattern": "abc_os\\._aspace_migrations",
+          "must_match": true
+        },
+        {
+          "text": "Brief does NOT reference fictional `abc_os.schema_migrations` in verify queries (would return 0 rows on real schema)",
+          "check": "regex_negation",
+          "must_not_match": [
+            "abc_os\\.schema_migrations",
+            "abc_os\\.migrations\\b(?!_)"
+          ]
+        },
+        {
+          "text": "Per-tenant SELECT policy follows the canonical pattern: `FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())` — does NOT include `service_role` in the USING clause",
+          "check": "regex",
+          "pattern": "FOR\\s+SELECT\\s+TO\\s+authenticated\\s+USING\\s*\\([^)]*org_id\\s*=\\s*abc_os\\.current_org_id\\(\\)[^)]*\\)",
+          "must_match": true
+        },
+        {
+          "text": "Brief does NOT use the broader `current_role() IN ('anon','authenticated','service_role')` for the SELECT policy (wrong per 0002_rls_policies.sql action_items precedent)",
+          "check": "regex_negation",
+          "must_not_match": [
+            "current_role\\(\\)\\s+IN\\s*\\(\\s*'anon'\\s*,\\s*'authenticated'\\s*,\\s*'service_role'\\s*\\)"
+          ]
+        },
+        {
+          "text": "Brief's write-back specifies the canonical 3 files: `wiki/log.md`, `MEMORY_CORE/README.md`, and a `handoff_*.md` file (not arbitrary ADR-XXX or abc_os_migrations.md etc.)",
+          "check": "substring_all",
+          "patterns": [
+            "wiki/log.md",
+            "README.md",
+            "handoff"
+          ]
+        },
+        {
+          "id": "A1",
+          "text": "A1 (iter-2) — Tracker table literal match: brief must reference `abc_os._aspace_migrations` (with full abc_os. prefix and underscore) for both the INSERT statement and the 5th D1 verify query. No fictional `abc_os.migrations` or `abc_os.schema_migrations` variants.",
+          "check": "regex",
+          "pattern": "abc_os\\._aspace_migrations",
+          "must_match": true
+        },
+        {
+          "id": "A2",
+          "text": "A2 (iter-2) — RLS scope check: per-tenant SELECT policy uses canonical `FOR SELECT TO authenticated USING (org_id = abc_os.current_org_id())` — NO `current_role() IN ('anon','authenticated','service_role')` over-broad pattern in the SELECT USING clause.",
+          "check": "regex_negation",
+          "must_not_match": [
+            "current_role\\(\\)\\s+IN\\s*\\(\\s*'anon'\\s*,\\s*'authenticated'\\s*,\\s*'service_role'\\s*\\)"
+          ]
+        },
+        {
+          "id": "A3",
+          "text": "A3 (iter-2) — Old/New diff structure: brief must include a '## Old' / '## New' markdown header pair (for A0 schema review) OR an explicit 'DRY-RUN MODE' line.",
+          "check": "regex",
+          "pattern": "(?im)^##\\s+(Old|New|DRY-RUN\\s+MODE|OLD|NEW)\\b",
+          "must_match": true
+        },
+        {
+          "id": "A4",
+          "text": "A4 (iter-2) — FORCE_TARGET=1 with idempotency safety net: brief must mention `FORCE_TARGET=1` AND every CREATE TABLE / CREATE INDEX / CREATE POLICY uses `IF NOT EXISTS` or `DROP IF EXISTS`. Migration tracker INSERT uses `ON CONFLICT (filename) DO NOTHING`.",
+          "check": "substring_all",
+          "patterns": [
+            "FORCE_TARGET=1",
+            "IF NOT EXISTS",
+            "ON CONFLICT (filename) DO NOTHING"
+          ]
+        },
+        {
+          "id": "A5",
+          "text": "A5 (iter-2) — Mixed-tenancy decision tree cited: brief must cite D10 AND classify this table as `per-tenant` (has `org_id`, uses `current_org_id()`). Shared-catalog is the wrong classification for this eval.",
+          "check": "regex",
+          "pattern": "(?i)(D10|mixed[- ]tenancy|ADR-ABCOS-001|per[- ]tenant)",
+          "must_match": true
+        },
+        {
+          "id": "A6",
+          "text": "A6 (iter-2) — Write-back contract complete with canonical paths: brief must cite all 3 write-back files with full paths including the canonical handoff naming `handoff_abc_os_community_dev_<DATE>.md`.",
+          "check": "substring_all",
+          "patterns": [
+            "wiki/log.md",
+            "README.md",
+            "handoff_abc_os_community_dev_"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "reconcile-doc-seed-drift",
+      "prompt": "There's a known doc/seed drift in the build_hub_v2 apply from 2026-06-12. The handoff file at ASpace_OS_V2/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/hand_offs/handoff_abc_os_community_dev_2026-06-10.md (look at the P3 section) says: column 'name' (actual schema has 'title'); phase id 'complete-offgrid-system-p1' (actual is 'og-p1'); category 'self-sufficiency' (actual is 'homesteading'). Reconcile the docs to match the actual schema. First run a verification query against abc_os on the VPS to confirm the actual state of these 3 things. Then edit the handoff file to use the correct names/ids. Write back to wiki/log.md noting the reconciliation. Do NOT touch the schema or seed files — only the docs.",
+      "expected_output": "A self-contained sub-agent brief that includes: (a) the 3 verification queries to run first (one per drift item), (b) the expected-vs-actual comparison, (c) the exact Edit operations on handoff_abc_os_community_dev_2026-06-10.md (string-for-string, not paraphrased), (d) the wiki/log.md write-back entry, (e) no schema/seed changes (D3 nuance: docs are wrong, not the code). Doctrine: D3 (adapt docs to schema, not the reverse) + D1 (verify drift exists before fixing).",
+      "files": [],
+      "expectations": [
+        "Brief runs verification queries FIRST to confirm the actual state of the 3 drift items (column name, phase id, category id) before editing docs",
+        "Brief includes the 3 verification queries (e.g. SELECT column_name FROM information_schema.columns WHERE table_schema='abc_os' AND table_name='build_projects' AND column_name IN ('name', 'title'))",
+        "Brief specifies Edit operations on handoff_abc_os_community_dev_2026-06-10.md with string-for-string old_string/new_string (not paraphrased)",
+        "Brief cites D3 (adapt docs to schema, not the reverse) and D1 (verify drift exists before fixing)",
+        "Brief explicitly states: do NOT touch the schema or seed files — only the docs",
+        "Brief includes the wiki/log.md write-back entry with the reconciliation note",
+        "Brief specifies at least 3 Edit operations on the handoff file (one per drift item: column name, phase id, category id) with verbatim old_string/new_string pairs"
+      ],
+      "assertions": [
+        {
+          "text": "Brief specifies Edit operations for all 3 drift items (column name, phase id, category id) with verbatim old_string and new_string — not 'no edit needed' or paraphrased",
+          "check": "regex",
+          "pattern": "(?i)old_string|new_string",
+          "must_match": true
+        },
+        {
+          "text": "Brief's Edit blocks contain the actual wrong tokens (`name`, `complete-offgrid-system-p1`, `self-sufficiency`) that are being replaced — proves real Edit operations, not just verification",
+          "check": "substring_all",
+          "patterns": [
+            "`name`",
+            "complete-offgrid-system-p1",
+            "self-sufficiency"
+          ]
+        },
+        {
+          "text": "Brief explicitly lists the 5 forbidden files (0010_schema, 0011_seed, 0012_rls, buildData.ts, apply-abc-os-migrations.sh) with a hard-constraint section — not just one passing mention",
+          "check": "substring_all",
+          "patterns": [
+            "0010_build_hub_v2_schema.sql",
+            "0011_build_hub_v2_seed.sql",
+            "0012_rls_build_hub_v2.sql",
+            "buildData.ts"
+          ]
+        },
+        {
+          "id": "A1",
+          "text": "A1 (iter-2) — Tracker table literal match: doc-only briefs (no schema apply) are exempt from A1, but IF the brief references ANY database table for verification queries, it MUST use the canonical names (e.g. `abc_os.build_projects`, not fictional variants).",
+          "check": "regex",
+          "pattern": "abc_os\\.(build_projects|build_phases|build_categories|_aspace_migrations|organizations)",
+          "must_match": true
+        },
+        {
+          "id": "A2",
+          "text": "A2 (iter-2) — RLS scope check: doc-only briefs are exempt from A2 (no new RLS is created). This assertion is documented as N/A for eval-3 and PASSES by default.",
+          "check": "substring",
+          "pattern": "N/A",
+          "must_match": true
+        },
+        {
+          "id": "A3",
+          "text": "A3 (iter-2) — Old/New diff structure: brief must include a '## Old' / '## New' markdown header pair (for A0 review of the doc edits) OR an explicit 'DRY-RUN MODE' line (if the sub-agent will not actually edit yet). This is the structural fix for the eval-3-without-skill failure (which had 0 explicit Old/New blocks).",
+          "check": "regex",
+          "pattern": "(?im)^##\\s+(Old|New|DRY-RUN\\s+MODE|OLD|NEW)\\b",
+          "must_match": true
+        },
+        {
+          "id": "A4",
+          "text": "A4 (iter-2) — FORCE_TARGET=1 with idempotency safety net: doc-only briefs are partially exempt — A4 is a soft N/A for eval-3 (no apply runs). The assertion is documented as informational. PASSES if the brief mentions 'no apply' or 'docs-only'.",
+          "check": "substring",
+          "pattern": "(?i)(docs?[ -]only|no apply|documentation[ -]only|doc[ -]edit)",
+          "must_match": true
+        },
+        {
+          "id": "A5",
+          "text": "A5 (iter-2) — Mixed-tenancy decision tree cited: brief must cite D10 OR ADR-ABCOS-001 OR mixed-tenancy (this eval touches build_hub_v2 which is a mixed-tenancy surface per D10 precedent).",
+          "check": "regex",
+          "pattern": "(?i)(D10|mixed[- ]tenancy|ADR-ABCOS-001|shared[- ]catalog|per[- ]tenant)",
+          "must_match": true
+        },
+        {
+          "id": "A6",
+          "text": "A6 (iter-2) — Write-back contract complete with canonical paths: brief must cite all 3 write-back files with full paths — `wiki/log.md`, `MEMORY_CORE/README.md`, and `handoff_abc_os_community_dev_<DATE>.md` (the canonical handoff naming convention).",
+          "check": "substring_all",
+          "patterns": [
+            "wiki/log.md",
+            "README.md",
+            "handoff_abc_os_community_dev_"
+          ]
+        }
+      ]
+    }
+  ]
+}

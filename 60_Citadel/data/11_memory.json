@@ -1,0 +1,41 @@
+{
+  "collector": "11_memory",
+  "pillar": 11,
+  "pillar_name": "Memory (📚 — carte mémoire)",
+  "generated_at": "2026-07-04T22:16:40-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 page Memory + Memory Architect Kit",
+  "doctrine": "lecture seule — Memristor observational memory — Kill switch E3 wiki-lint",
+  "entities": {
+    "wiki_pages": {
+      "path": "C:\\Users\\amado\\wiki",
+      "count": 0,
+      "target_124": 124
+    },
+    "memory_md": {
+      "path": "C:\\Users\\amado\\.mavis\\agents\\mavis\\memory\\MEMORY.md",
+      "exists": true,
+      "size_bytes": 21652
+    },
+    "graphify_master_M": {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\graphify-out-master\\graph.json",
+      "exists": true
+    },
+    "memory_arch_kit": {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\02_Templates\\Memory Architect Kit",
+      "exists": true
+    }
+  },
+  "memory_principles": [
+    "Memristor observational memory (Eero)",
+    "Append-only sessions/ + contracts/ + WEEK_CONTRACT.md",
+    "Frontmatter coverage ≥ 95% (rot-rate W6 audit)",
+    "Wiki-lint E3 (Memory health)",
+    "Cross-harness memory junction .mavis/ ↔ .minimax/"
+  ],
+  "summary": {
+    "wiki_pages": 0,
+    "wiki_target": 124,
+    "memory_md_exists": true,
+    "memory_md_size": 21652
+  }
+}

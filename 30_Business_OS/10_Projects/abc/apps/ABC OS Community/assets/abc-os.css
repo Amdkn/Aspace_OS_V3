@@ -1,0 +1,169 @@
+/* ============================================================
+   ABC OS — Shared design-system stylesheet
+   Solarpunk coopératif africain : terre cuite + teal + soleil
+   ============================================================ */
+
+:root {
+  /* Core palette */
+  --primary: #E57373;      /* terracotta */
+  --primary-deep: #C75C5C;
+  --secondary: #00796B;    /* teal */
+  --accent: #FFD600;       /* sunshine */
+  --cream: #FFF8E1;
+  --bg-dark: #1f1a17;
+  --bg-dark-2: #17120f;
+  --surface: #FFFFFF;
+  --surface-dark: #2a2420;
+  --surface-dark-2: #322b26;
+
+  /* Hub accents */
+  --brand-gold: #FFC72C;
+  --brand-terra: #A45D5D;
+  --brand-teal: #008080;
+  --build-green: #13ec13;
+  --build-blue: #3b82f6;
+  --learn-green: #13ec13;
+  --community: #E57373;
+
+  /* Semantic (dark default) */
+  --bg: var(--bg-dark);
+  --bg-2: var(--bg-dark-2);
+  --card: var(--surface-dark);
+  --card-2: var(--surface-dark-2);
+  --ink: #FBF3E4;
+  --ink-soft: #C9BCAE;
+  --ink-faint: #8E8175;
+  --line: rgba(251, 243, 228, 0.10);
+  --line-strong: rgba(251, 243, 228, 0.16);
+  --ok: #3FB984;
+  --warn: #E9A23B;
+  --danger: #E06B5B;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.35);
+}
+
+html:not(.dark) {
+  --bg: var(--cream);
+  --bg-2: #F6ECCF;
+  --card: var(--surface);
+  --card-2: #FFFDF6;
+  --ink: #2A211B;
+  --ink-soft: #6B5D50;
+  --ink-faint: #998877;
+  --line: rgba(42, 33, 27, 0.10);
+  --line-strong: rgba(42, 33, 27, 0.16);
+  --shadow: 0 1px 2px rgba(120,90,60,.10), 0 10px 26px rgba(120,90,60,.12);
+  --shadow-sm: 0 1px 2px rgba(120,90,60,.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Warm subtle grain + glow texture applied to app backgrounds */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .5;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  letter-spacing: normal;
+  text-transform: none;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+.ms-fill { font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+
+/* Eyebrow label */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+/* Tap micro-interaction */
+.tap { transition: transform .12s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease; }
+.tap:active { transform: scale(.965); }
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Progress bar */
+.bar { height: 7px; border-radius: 999px; background: var(--line-strong); overflow: hidden; }
+.bar > span { display: block; height: 100%; border-radius: 999px; }
+
+/* Pill */
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 11px; border-radius: 999px;
+  font-size: 12px; font-weight: 600; line-height: 1;
+}
+
+/* Avatar stack */
+.stack { display: flex; }
+.stack > * { margin-left: -9px; border: 2px solid var(--card); }
+.stack > *:first-child { margin-left: 0; }
+
+.avatar {
+  display: grid; place-items: center; border-radius: 999px;
+  font-weight: 700; color: #2A211B; font-size: 12px; flex: none;
+}
+
+/* Skeleton */
+@keyframes shimmer { 100% { background-position: -200% 0; } }
+.skel {
+  background: linear-gradient(90deg, var(--line) 25%, var(--line-strong) 37%, var(--line) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* Scrollbar */
+.noscroll::-webkit-scrollbar { display: none; }
+.noscroll { scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* Entrance */
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }

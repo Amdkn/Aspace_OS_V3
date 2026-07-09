@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-07-04T18:24:03",
+  "elapsed_s": 0.0,
+  "takeout": "C:\\Users\\amado\\Downloads\\takeout-20260702T062438Z-3-001\\watch-history-2026-07-02.html",
+  "date_range": [
+    "2026-07-02",
+    "2026-07-02"
+  ],
+  "limit_per_ld": 11,
+  "total_unique_videos": 34,
+  "newly_categorized": 4,
+  "skipped_already_processed": 30,
+  "by_ld": {
+    "LD04_Cognition_Tilly": 4
+  }
+}

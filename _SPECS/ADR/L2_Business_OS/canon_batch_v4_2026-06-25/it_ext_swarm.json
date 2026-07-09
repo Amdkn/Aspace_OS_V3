@@ -1,0 +1,103 @@
+{
+  "guides": [
+    {
+      "slug": "google-ai-coding-masterclass-summary-zbmuiaPuiNM",
+      "pilier_titre_canon": "AI Coding : Outils Sans Devenir Dev",
+      "insight_verbatim": "L'IA va remplacer les programmeurs. Mais elle ne va pas remplacer celui qui sait quoi programmer. Ce qui compte c'est de savoir structurer un probleme, pas d'ecrire la syntaxe.",
+      "concept_cles": [
+        "Vibe coding",
+        "Spec-first prompting",
+        "Agent loop autonomy",
+        "Context window economy"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-META-001",
+        "ADR-SOBER-002"
+      ]
+    },
+    {
+      "slug": "reading-ais-mind-probes-passengers-vs-drivers-N-yVh0bKsIk",
+      "pilier_titre_canon": "Probes Passagers vs Drivers : Lire l'IA",
+      "insight_verbatim": "La vraie question n'est pas ce que le modele sait, mais ce que le modele ignore qu'il ignore. Les probes bien construites revelent les angles morts, les drivers les exploitent.",
+      "concept_cles": [
+        "Interpretability probes",
+        "Latent space mapping",
+        "Activation steering",
+        "Driver vs passenger split"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-SOBER-002",
+        "ADR-META-001"
+      ]
+    },
+    {
+      "slug": "system-design-101-apis-databases-caching-cdns-load-balancing-production-infra-oYxTTirKY8M",
+      "pilier_titre_canon": "Architecture Production Infra Resiliente",
+      "insight_verbatim": "Caching is a complex topic, but the fundamental thing to know is that there are two main strategies: cache aside and write through. Both have tradeoffs in terms of complexity, performance, and consistency that you need to understand deeply before picking one.",
+      "concept_cles": [
+        "cache-aside",
+        "write-through",
+        "load-balancing",
+        "CDN",
+        "production-resilience"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-META-001"
+      ]
+    },
+    {
+      "slug": "ant-simulator-collision-resolution-MD4hH1ObrYg",
+      "pilier_titre_canon": "Algorithmie Espaces Discrets Bornes",
+      "insight_verbatim": "Grid based collision detection works by dividing the world into cells, only checking collisions between entities in the same or adjacent cells, dramatically reducing the number of pairwise checks from O(n2) to roughly O(n) for uniformly distributed entities.",
+      "concept_cles": [
+        "spatial-hashing",
+        "grid-partitioning",
+        "O(n)-lookup",
+        "bounded-arena",
+        "discretization"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-META-001",
+        "ADR-SOBER-002"
+      ]
+    },
+    {
+      "slug": "every-folder-on-my-computer-full-reveal-tiago-forte-A0pdL3MS_7E",
+      "pilier_titre_canon": "Code comme Competence Cognitive Second Cerveau",
+      "insight_verbatim": "c'est pas juste pour les creatifs ou les hackers les codeurs deviennent une competence cognitive fondamentale pour pouvoir vraiment changer le monde vous allez avoir besoin de coder",
+      "concept_cles": [
+        "code",
+        "competence cognitive",
+        "second cerveau",
+        "PARA",
+        "productivite"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-META-001",
+        "ADR-MEM-002"
+      ]
+    },
+    {
+      "slug": "retry-urban-vpn-WgmseucKcCA",
+      "pilier_titre_canon": "Anti-Pause HitL Strategie Maintenance VPN",
+      "insight_verbatim": "note it's basically what we're doing but we've uh we we've made it a lot more elegant we have a system in place where um every couple of weeks I get a notification from Claude",
+      "concept_cles": [
+        "anti-pause",
+        "HITL",
+        "UrbanVPN",
+        "notification",
+        "rotation"
+      ],
+      "sisters": [
+        "ADR-AAAS-IT-CANON-001",
+        "ADR-META-001",
+        "ADR-META-006"
+      ]
+    }
+  ]
+}

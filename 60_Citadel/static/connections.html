@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Citadelle A0 — Connections (Pilier 6)</title>
+  <meta name="doctrine" content="lecture seule — anti-Ultron — dormants affichés">
+  <meta name="source" content="~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §2">
+  <style>
+    :root {
+      --bg: #0a0e14; --fg: #c9d1d9; --muted: #6e7681;
+      --accent: #58a6ff; --warn: #f0883e; --good: #3fb950;
+      --bad: #f85149; --card: #161b22; --border: #30363d; --dormant: #484f58;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .subtitle { color: var(--muted); font-size: 0.85rem; margin-bottom: 1.5rem; }
+    .meta { color: var(--muted); font-size: 0.75rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+    .card.ok { border-left: 4px solid var(--good); }
+    .card.warn { border-left: 4px solid var(--warn); }
+    .card.bad { border-left: 4px solid var(--bad); }
+    .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.7rem; margin-right: 0.25rem; }
+    .pill.ok { background: rgba(63, 185, 80, 0.2); color: var(--good); border: 1px solid var(--good); }
+    .pill.warn { background: rgba(240, 136, 62, 0.2); color: var(--warn); border: 1px solid var(--warn); }
+    .pill.bad { background: rgba(248, 81, 73, 0.2); color: var(--bad); border: 1px solid var(--bad); }
+    code { background: rgba(110, 118, 129, 0.15); padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    a { color: var(--accent); text-decoration: none; } a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>Pages</h2>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav active" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">Decisions log <span class="badge">P1</span></a>
+    <h2>API</h2>
+    <a class="nav" href="/api/health">Health <span class="badge live">live</span></a>
+    <h2>Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.2 · anti-Ultron<br>append-only D4</div>
+  </nav>
+  <main class="main">
+    <h1>🔌 Connections (Pilier 6)</h1>
+    <p class="subtitle">MCP servers + crons + heartbeat. L'état du câblage entre CC/Hermes/MC et le reste du monde.</p>
+    <p class="meta">Source : <code>06_connections.json</code> collecté par <code>collector_06_connections.py</code>. Posture C : 0 cron sans A0 HITL.</p>
+
+    <h2>MCP Servers</h2>
+    <div id="mcp" class="grid"></div>
+
+    <h2>Crons</h2>
+    <div id="crons" class="grid"></div>
+
+    <h2>Heartbeat</h2>
+    <div id="heartbeat" class="grid"></div>
+
+    <div class="footer">Citadelle A0 · <a href="/api/connections">/api/connections JSON</a></div>
+  </main>
+  <script>
+    async function loadJSON(url) {
+      try { const r = await fetch(url); if (!r.ok) throw new Error("HTTP " + r.status); return await r.json(); }
+      catch (e) { return { error: String(e) }; }
+    }
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    function statusClass(s) {
+      s = String(s || "").toLowerCase();
+      if (s.includes("ok") || s.includes("live") || s.includes("active") || s.includes("green")) return "ok";
+      if (s.includes("warn") || s.includes("partial") || s.includes("paused")) return "warn";
+      if (s.includes("fail") || s.includes("err") || s.includes("down") || s.includes("bad")) return "bad";
+      return "";
+    }
+    function pill(s) { return `<span class="pill ${statusClass(s)}">${esc(s || "n/a")}</span>`; }
+    async function render() {
+      const data = await loadJSON("/api/connections");
+      if (data.error) {
+        document.getElementById("mcp").innerHTML = `<div class="card bad"><em>error: ${esc(data.error)}</em></div>`;
+        return;
+      }
+      const mcp = data.mcp_servers || {};
+      const crons = data.crons || {};
+      const hb = data.heartbeat || {};
+
+      // MCP
+      const mcpRoot = document.getElementById("mcp");
+      let mcpHtml = `<div class="card"><div class="meta">Total</div><div style="font-size:1.6rem;font-weight:700">${mcp.count ?? 0}</div><div class="meta">${esc(mcp.status || "")}</div></div>`;
+      if (Array.isArray(mcp.servers)) {
+        for (const s of mcp.servers) {
+          mcpHtml += `<div class="card ${statusClass(s.status)}">
+            <h3 style="margin-top:0;font-size:0.95rem">${esc(s.name)} ${pill(s.status)}</h3>
+            ${s.note ? `<div class="meta">${esc(s.note)}</div>` : ""}
+            ${s.scope ? `<div class="meta">scope: <code>${esc(s.scope)}</code></div>` : ""}
+          </div>`;
+        }
+      } else if (mcp.by_harness) {
+        for (const [h, list] of Object.entries(mcp.by_harness)) {
+          mcpHtml += `<div class="card"><h3 style="margin-top:0;font-size:0.95rem">${esc(h)}</h3><div class="meta">${list.length} servers</div></div>`;
+        }
+      }
+      mcpRoot.innerHTML = mcpHtml;
+
+      // Crons
+      const cronRoot = document.getElementById("crons");
+      cronRoot.innerHTML = `<div class="card"><div class="meta">Total</div><div style="font-size:1.6rem;font-weight:700">${crons.count ?? 0}</div><div class="meta">${esc(crons.posture_c || crons.status || "")}</div></div>`;
+
+      // Heartbeat
+      const hbRoot = document.getElementById("heartbeat");
+      hbRoot.innerHTML = `<div class="card ${statusClass(hb.status)}">
+        <div class="meta">Heartbeat</div>
+        <div style="font-size:1.6rem;font-weight:700">${esc(hb.status || "n/a")}</div>
+        <div class="meta">processes: ${hb.process_count ?? "n/a"}</div>
+        ${hb.note ? `<div class="meta">${esc(hb.note)}</div>` : ""}
+      </div>`;
+    }
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<#
+wf1_runner.ps1 - LE RUN LOOP (True Agent Autonomy, option 1 - ADR-L1-WF-001 + critique A+ 2026-07-06).
+PAS un cron a heure fixe : une boucle while(true) qui relance un worker M3 headless DES que le
+precedent finit. Chaque worker = 1 iteration (1 item + preuve + worklog), etat porte par le filesystem.
+Le plan MiniMax (5.1B tokens) travaille au lieu de dormir.
+
+Gates (kill-switches, verifies A CHAQUE iteration - retirer un flag = arret au tour suivant) :
+- decisions/enable_wf1.flag ABSENT -> exit (cascade GO Spock)
+- data/beth_repos.flag PRESENT hors Fenetre Fable -> pause 30 min (Beth veto vie - les workers
+  n'interpellent personne mais on respecte le gel hors fenetre)
+- decisions/STOP_WF1_RUNNER.flag PRESENT -> exit immediat (arret d'urgence dedie)
+
+Usage : .\wf1_runner.ps1            (boucle infinie)
+        .\wf1_runner.ps1 -Once     (1 iteration, test)
+Install 24/7 : schtask ONSTART via install-loops.ps1 (ajoute) + demarrage immediat detache.
+#>
+[CmdletBinding()]
+param([switch]$Once)
+
+$ErrorActionPreference = "Continue"
+$Citadel = $PSScriptRoot | Split-Path -Parent
+$Dec = Join-Path $Citadel "decisions"
+$LogDir = Join-Path $Citadel "logs"
+$Log = Join-Path $LogDir "wf1_runner.log"
+$PromptFile = Join-Path $Citadel "loops\domains\wf1-morty\WORKER_PROMPT.md"
+$null = New-Item -ItemType Directory -Force -Path $LogDir
+
+# env M3 (User scope -> process) : le runner tourne headless, jamais de valeur loggee
+$env:ANTHROPIC_AUTH_TOKEN = [Environment]::GetEnvironmentVariable('ANTHROPIC_AUTH_TOKEN','User')
+$env:ANTHROPIC_API_KEY   = [Environment]::GetEnvironmentVariable('ANTHROPIC_API_KEY','User')
+$env:ANTHROPIC_BASE_URL  = [Environment]::GetEnvironmentVariable('ANTHROPIC_BASE_URL','User')
+
+function Log([string]$m) {
+  $line = "$(Get-Date -Format s) [wf1-runner] $m"
+  Add-Content -LiteralPath $Log -Value $line -Encoding UTF8
+  Write-Host $line
+}
+
+Log "RUN LOOP start (Once=$Once) - workers M3 headless, pas d'heures fixes"
+$iter = 0
+while ($true) {
+  $iter++
+  if (Test-Path (Join-Path $Dec "STOP_WF1_RUNNER.flag")) { Log "STOP flag - exit"; break }
+  if (-not (Test-Path (Join-Path $Dec "enable_wf1.flag"))) { Log "enable_wf1 absent (GO revoque) - exit"; break }
+  $fableWindow = Test-Path (Join-Path $Dec "FABLE_WINDOW.flag")
+  $bethRepos = Test-Path (Join-Path $Citadel "data\beth_repos.flag")
+  if ($bethRepos -and -not $fableWindow) { Log "Beth repos actif (hors fenetre) - pause 30 min"; Start-Sleep -Seconds 1800; continue }
+
+  Log "iteration $iter - spawn worker (bare)"
+  $prompt = Get-Content $PromptFile -Raw
+  $t0 = Get-Date
+  Set-Location $Citadel
+  # --bare (fix thrashing 2026-07-06) : skip CLAUDE.md global + hooks + plugins + auto-memory ;
+  # zero MCP ; le worker recoit UNIQUEMENT WORKER_PROMPT.md + les tools de base. Auth = env process (User M3).
+  & claude -p $prompt --bare --dangerously-skip-permissions --strict-mcp-config --mcp-config '{"mcpServers":{}}' *>> $Log
+  $dur = [int]((Get-Date) - $t0).TotalSeconds
+  Log "iteration $iter done in ${dur}s (rc=$LASTEXITCODE)"
+
+  if ($Once) { Log "Once mode - exit"; break }
+  Start-Sleep -Seconds 45  # respiration entre workers (pas des heures : 45 s)
+}
+Log "RUN LOOP end"

@@ -1,0 +1,82 @@
+{
+  "$schema": "state-bus.v1",
+  "status": "ACTIVE",
+  "created": "2026-07-03T08:00:00-04:00",
+  "updated": "2026-07-07T23:59:04-04:00",
+  "agent_id": "A2:agent-os-sync",
+  "session_id": "a3da18ee-0107-4ce7-895d-0108a69c26d4",
+  "cycle": "Q3-2026",
+  "week": "W3",
+  "stage": "captured",
+  "agent_path": "A1:Beth > A2:Cerritos > A3:Boimler",
+  "para_bucket": "01_Projects/life-os-2026",
+  "twelvewy_discipline": "ProcessControl",
+  "life_wheel_domain": "LD07_Creativity",
+  "raw_input_hash": "sha256:013c5bae39a227ee",
+  "raw_input_preview": "'lance le Wargame 26  Sur la consolidation de la Coherence temporelle des Wargame'",
+  "next_step": "A3:Boimler",
+  "tokens_used": 0,
+  "tokens_budget": 15000,
+  "drift_flag": false,
+  "extra": {
+    "agent_os_standards": [
+      {
+        "name": "error-handling",
+        "category": "api",
+        "description": "Error codes, exception handling, error response format (AUTH/DB/VAL/NET/INT)"
+      },
+      {
+        "name": "response-format",
+        "category": "api",
+        "description": "API response envelope structure with success/data/error fields"
+      },
+      {
+        "name": "coding-style",
+        "category": "global",
+        "description": "General coding style, immutability, naming, file organization, error handling"
+      },
+      {
+        "name": "anti-pause",
+        "category": "supabase",
+        "description": "Supabase FREE plan anti-pause protocol via Symphony MCP supabase_anti_pause_ping tool. Schedule every 5-6 days to prevent 1-week inactivity pause."
+      },
+      {
+        "name": "lightning-l0-pocock",
+        "category": "a0s",
+        "description": "L0 MC ? Matt Pocock writing-great-skills canon. Quality gate skill cr?ation, anti-doublon skill-creator.",
+        "repo": "https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-great-skills/SKILL.md",
+        "layer": "L0",
+        "doctrine_anchor": "plan-minimax-l1-book-lune.md ?4"
+      },
+      {
+        "name": "lightning-l1-gstack",
+        "category": "a0s",
+        "description": "L1 MC ? Garry Tan gstack Software factory YC. 23 specialistes + 8 power tools slash commands MIT. Stack SHIP du spearhead OMK Nexus. [ECHANGE 2026-07-03] (avant : claude-video /watch, deferre W6+).",
+        "repo": "https://github.com/garrytan/gstack",
+        "layer": "L1",
+        "doctrine_anchor": "plan-minimax-l1-book-lune.md ?4"
+      },
+      {
+        "name": "lightning-l2-ceobench",
+        "category": "a0s",
+        "description": "L2 MC ? zlab-princeton/ceobench-src 500-jours sim dojo long game (sandbox). Terrain d'exp?rimentation long-horizon pour MC avant production L2.",
+        "repo": "https://github.com/zlab-princeton/ceobench-src",
+        "layer": "L2",
+        "doctrine_anchor": "plan-minimax-l1-book-lune.md ?4"
+      }
+    ],
+    "agent_os_standards_count": 7,
+    "agent_os_u3_status": "injected-2026-07-04",
+    "u3_doctrine": "standards → symphony bus → Supabase uplink (U1 SHIPPED)"
+  },
+  "metadata": {
+    "d6_receipt": "Backup: ASpace_OS_V2/00_Amadeus/_TRASH_2026-07-03_state_corruption/_TRASH-state_corrupted/state.json_2026-07-03T06-35-07_corrupt.json",
+    "d6_root_cause": "Unicode apostrophe not escaped + dict merge in lieu of replace in state_writer.write_state"
+  },
+  "d├⌐but.' session_id": "5919c077-8b35-45a8-87c3-def29d119008",
+  "puis' session_id": "0120d242-a4ab-4b3d-bdfe-4cc4d5d83fca",
+  "d' session_id": "0120d242-a4ab-4b3d-bdfe-4cc4d5d83fca",
+  "D1' session_id": "0120d242-a4ab-4b3d-bdfe-4cc4d5d83fca",
+  "d├⌐termini' session_id": "ff34585a-4b78-4727-a27b-bf34c429169c",
+  "entir' session_id": "a3da18ee-0107-4ce7-895d-0108a69c26d4"
+}

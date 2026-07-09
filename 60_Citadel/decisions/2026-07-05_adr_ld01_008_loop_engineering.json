@@ -1,0 +1,79 @@
+{
+  "id": "citadel-decision-2026-07-05-adr-ld01-008",
+  "date": "2026-07-05T05:55:00-04:00",
+  "type": "ADR-LD01-008",
+  "title": "LD01 Coaching Loop Engineering (Picard x Jerry x Summers, orchestrated by Book H1)",
+  "decision": "ACCEPTED",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "suppression du seul fichier ADR-LD01-008 + revert append calendar.md (git checkout -- calendar.md)",
+  "pre_decision_corrections": {
+    "slot_003_occupied_by": "ADR-LD01-003_lightnings_bounded_contexts.md",
+    "slot_used": "ADR-LD01-008",
+    "twin_book_path_full": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\discovery\\book.twin.md",
+    "twin_book_path_resolves": true,
+    "twin_book_size_bytes": 1722,
+    "twin_path_relative_tested_by_mc": "symphony/L1/lane_A_specs/03_A3_crews/discovery/book.twin.md",
+    "twin_path_relative_verdict": "false_alert (chemin relatif sans prefixe 00_Amadeus/05_OSS_Twin/)",
+    "twin_picard_path_full": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\enterprise\\picard.twin.md",
+    "twin_picard_path_resolves": true,
+    "twin_summers_path_declaration_only": true,
+    "twin_summers_path_full": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\protostar\\summers.twin.md",
+    "twin_summers_path_resolves_D1_this_iteration": null,
+    "twin_summers_path_resolves_sister_scope": "prochaine iteration (ADR-LD01-009 ou sister canon)"
+  },
+  "deciders": {
+    "a0_go": "A0 Amadeus - GO 2026-07-05 'slot 008, twin path complet confirmé résolu, écris'",
+    "cc_verification": "Claude Code - D1 receipts (slot 003 occupe, twin paths absolus resolus)",
+    "ha_author": "Hermes Agent - dev runtime A3 Book (calque .hermes/book_dev_runtime.md)"
+  },
+  "doctrine_decisions": {
+    "D1_loop_engineering": "cadence matrix H10 (Picard) / H1 (Book) / Daily (Squad B3), chaque tour append un episode calendar.md",
+    "D2_book_role": "H1 aggregator (pas coach direct), lit Picard H10 + Jerry Pulse + Summers Verse, produit fiche P&L, escalade si load=critical ou coherence=extractive",
+    "D3_lighting_pattern": "Jerry Pulse = source canonique lumieres L2, subset 4 indicateurs LD01-coaching (lights_project_count, lights_load_signal, lights_business_coherence, lights_calendar_dernier_episode), pointeur seul sur 30_Business_OS/00_Jerry_Business_Pulse/",
+    "D4_append_only_strict": "zéro mutation canon (A3_Book spec / BIBLIOGRAPHY / README / twins / agent files / calques)",
+    "D5_d1_receipts": "PowerShell script 4 Test-Path + 2 frontmatter + 1 grep + 1 JSON parse",
+    "D6_yagni": "pas de code TS, pas de mutation l2_mesh, pas de cron auto, pas de mutation twins, pas de materialisation runtime Lighting/fiches_p_and_l_weekly/, Summers twin verification reportee"
+  },
+  "files_created": [
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\30_decisions\\ADR-LD01-008_coaching-loop-picard-jerry-summers.md",
+      "size_bytes": 15770,
+      "lines": 204,
+      "operation": "create"
+    },
+    {
+      "path": "C:\\Users\\amado\\agent-os\\citadel\\decisions\\2026-07-05_adr_ld01_008_loop_engineering.json",
+      "operation": "create"
+    }
+  ],
+  "files_appended": [
+    {
+      "path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\99_meta\\calendar.md",
+      "operation": "append",
+      "episode_line_count": 1,
+      "episode_timestamp": "2026-07-05T05:55:00-04:00"
+    }
+  ],
+  "files_unchanged_intentionally": [
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\A3_Book_LD01_Spec.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\BIBLIOGRAPHY.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\README.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\CLAUDE.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\AGENTS.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\30_Business_OS\\00_Jerry_Business_Pulse\\**",
+    "C:\\Users\\amado\\ASpace_OS_V2\\30_Business_OS\\00_Summers_Verse\\**",
+    "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\discovery\\book.twin.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\05_OSS_Twin\\symphony\\L1\\lane_A_specs\\03_A3_crews\\enterprise\\picard.twin.md",
+    "C:\\Users\\amado\\ASpace_OS_V2\\.mavis\\**",
+    "C:\\Users\\amado\\ASpace_OS_V2\\.hermes\\book_dev_runtime.md"
+  ],
+  "sister_scope_next_iteration": [
+    "99_meta/loop_engineering_sister.md (version narrative)",
+    "Summers twin verification (protostar/summers.twin.md)",
+    "materialisation runtime Lighting (Postgres l2_mesh.lights view ou equivalent)",
+    "Premier episode tick H1 reel Book (collecte Picard H10 + Jerry Pulse + Summers Verse)"
+  ],
+  "next_episode_trigger": "A chaque tick H1 (hebdo), Book agregate Picard H10 + Jerry Pulse + Summers Verse -> append nouvel episode calendar.md",
+  "remote_commit_gate": "diff complet presente a A0 avant tout push vers un remote (ruling A0 2026-07-05)"
+}

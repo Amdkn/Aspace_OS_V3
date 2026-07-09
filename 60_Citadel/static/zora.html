@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Citadelle A0 — 🌙 Zora nightly (Dreaming)</title>
+  <meta name="doctrine" content="lecture seule — append-only — 4 recos max/nuit — gated par enable_zora.flag — anti-Ultron">
+  <style>
+    :root { --bg:#0a0e14; --fg:#c9d1d9; --muted:#6e7681; --accent:#58a6ff; --good:#3fb950; --warn:#f0883e; --bad:#f85149; --card:#161b22; --border:#30363d; --draft:#d29922; }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, monospace; background: var(--bg); color: var(--fg); margin: 0; line-height: 1.5; }
+    h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.25rem; }
+    h2 { font-size: 1.1rem; color: var(--accent); margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+    .card.enabled { border-left: 4px solid var(--good); }
+    .card.disabled { border-left: 4px solid var(--bad); }
+    .card.draft { border-left: 4px solid var(--draft); }
+    .stat { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .pill { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 12px; font-size: 0.7rem; background: rgba(88, 166, 255, 0.2); color: var(--accent); border: 1px solid var(--accent); }
+    .pill.good { background: rgba(63, 185, 80, 0.2); color: var(--good); border-color: var(--good); }
+    .pill.bad { background: rgba(248, 81, 73, 0.2); color: var(--bad); border-color: var(--bad); }
+    .pill.warn { background: rgba(210, 153, 34, 0.2); color: var(--draft); border-color: var(--draft); }
+    button { background: var(--accent); color: #0a0e14; border: none; padding: 0.45rem 0.9rem; border-radius: 4px; cursor: pointer; font-family: inherit; font-size: 0.8rem; font-weight: 600; margin-top: 0.5rem; }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button:hover:not(:disabled) { opacity: 0.85; }
+    .warn-box { background: rgba(210, 153, 34, 0.1); border-left: 3px solid var(--draft); padding: 0.75rem; margin: 1rem 0; border-radius: 4px; }
+    .reco { background: rgba(88, 166, 255, 0.08); border-left: 3px solid var(--accent); padding: 0.6rem; margin-bottom: 0.5rem; border-radius: 4px; }
+    .meta { color: var(--muted); font-size: 0.75rem; margin: 0.25rem 0; }
+    a { color: var(--accent); text-decoration: none; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+    /* sidebar canon */
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--fg); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(88, 166, 255, 0.12); border-color: var(--accent); color: var(--accent); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--muted); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(63, 185, 80, 0.15); color: var(--good); border-color: var(--good); }
+    .sidebar .badge.dormant { color: var(--dormant); font-style: italic; }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--muted); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+    .main { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1300px; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🛰️ Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Mavis captain · 22 agents runtime · tiers A1-A3/B1-B3/SYS</div>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">12WY ⊃ PARA ⊃ DEAL + GTD + Ikigai + Life Wheel</div>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">8 domaines Jerry × 3 Captains Summers = 53 B3 rosters</div>
+    <a class="nav" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <div class="sidebar-sublabel">Wiki 124 pages · MEMORY.md · graphify · Memory Architect Kit</div>
+    <a class="nav" href="/patterns">🎯 Patterns <span class="badge live">P4</span></a>
+    <div class="sidebar-sublabel">20 Mark patterns × ton canon (couvert / partiel)</div>
+    <a class="nav" href="/warmode">⚔ War Room <span class="badge live">ON</span></a>
+    <div class="sidebar-sublabel">Mark Mission Control Kit inspiration · 4 freins inaliénables</div>
+    <h2>🔌 API</h2>
+    <a class="nav active" href="/zora">🌙 Zora nightly <span class="badge live">ON</span></a>
+    <div class="sidebar-sublabel">1 cron · 4 recos max/nuit · append-only · gated</div>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.2 · anti-Ultron<br>append-only D4</div>
+  </nav>
+  <main class="main">
+    <h1>🌙 Citadelle A0 — Zora nightly (Dreaming)</h1>
+    <p class="meta">Per Plan Citadelle §6 — 8 dimensions Jack · 4 recos max/nuit (discipline Gwyn D11) · append-only · gated par <code>enable_zora.flag</code></p>
+
+    <div class="warn-box">
+      <strong>Doctrine anti-Ultron :</strong>
+      <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0;">
+        <li>Zora nightly = LE cron (1 cron, 1×/nuit, lecture seule, sortie 1 fichier <code>cron/output/</code>)</li>
+        <li>Pas d'écriture vers sources canoniques (ADR, décisions, ADR canon)</li>
+        <li>Pas d'auto-apply — chaque recos nécessite A0 HITL « fait / ignorer »</li>
+        <li>Posture C : no cron without GO A+</li>
+      </ul>
+    </div>
+
+    <div id="status"></div>
+
+    <h2>📊 État Zora + 8 dimensions</h2>
+    <div id="state" class="grid"></div>
+
+    <h2>📜 Dernier run (append-only <code>cron/output/</code>)</h2>
+    <div id="last-run"></div>
+
+    <h2>🎯 4 recommandations max/nuit</h2>
+    <div id="recos"></div>
+
+    <div class="footer">
+      <p><a href="/">← Bridge</a> · <a href="/harnesses">🛰️ Harnesses live</a> · <a href="/decisions">⚖️</a> · <a href="/api/zora">Raw JSON</a></p>
+      <p>Pour activer Zora nightly : <code>New-Item -ItemType File "decisions/enable_zora.flag"</code> · puis <code>.\install-zora.ps1 -Install</code></p>
+      <p>Zora dry-run (Posture C permissive) : <code>.\install-zora.ps1 -DryRun</code></p>
+    </div>
+  </main>
+  <script>
+    const STATE = location.hash.replace("#","") || "all";
+    async function loadJSON(url) {
+      try { const r = await fetch(url); return r.ok ? await r.json() : { error: "HTTP " + r.status }; }
+      catch (e) { return { error: String(e) }; }
+    }
+
+    function renderStatus(data) {
+      const root = document.getElementById("status");
+      const enabled = data.cron_enabled;
+      const card = enabled ? "card enabled" : "card disabled";
+      const pill = enabled ? "good" : "bad";
+      const pillTxt = enabled ? "ENABLED" : "DISABLED";
+      root.innerHTML = `<div class="${card}">
+        <div class="stat-label">Cron Zora</div>
+        <div class="stat"><span class="pill ${pill}">${pillTxt}</span></div>
+        <div class="meta">config: ${data.config_exists ? "✓" : "—"} · output dir: ${data.output_dir_exists ? "✓" : "—"}</div>
+        <div class="meta">last run: ${data.last_run_state?.last_run || "never"}</div>
+        ${!enabled ? `<div class="warn-box" style="margin-top:0.75rem;"><strong>Pour activer :</strong> <code>New-Item -ItemType File "decisions/enable_zora.flag"</code> puis <code>.\install-zora.ps1 -Install</code></div>` : ""}
+      </div>`;
+    }
+
+    function renderState(data) {
+      const root = document.getElementById("state");
+      let html = `<div class="card">
+        <div class="stat-label">Dimensions tracked</div>
+        <div class="stat">${data.summary?.dimensions_tracked || 8}</div>
+        <div class="meta">8 dimensions Jack version A'Space</div>
+      </div>`;
+      for (const [k, v] of Object.entries(data.dimensions || {})) {
+        const dimName = k.replace(/_/g, " ");
+        html += `<div class="card">
+          <h3>${dimName}</h3>
+          <pre style="font-size:0.75rem; color:var(--muted); white-space:pre-wrap;">${JSON.stringify(v, null, 2)}</pre>
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    async function renderLastRun() {
+      const data = await loadJSON("/api/zora/last-run");
+      const root = document.getElementById("last-run");
+      if (data.error || !data.last_run) {
+        root.innerHTML = `<div class="card">Aucun run enregistré. ${data.error || "Posture C : cron désactivé par défaut."}</div>`;
+        return;
+      }
+      root.innerHTML = `<div class="card">
+        <div class="meta"><strong>${data.last_run}</strong></div>
+        <div class="meta">recos: ${data.recos?.length || 0} · ran_at: ${data.ran_at}</div>
+        <div class="meta">status: ${data.status} · doctrine: ${data.doctrine}</div>
+      </div>`;
+    }
+
+    async function renderRecos() {
+      // Recos only available after a real run
+      const lastRun = await loadJSON("/api/zora/last-run");
+      const root = document.getElementById("recos");
+      if (lastRun.error || !lastRun.recos || lastRun.recos.length === 0) {
+        root.innerHTML = `<div class="card disabled">
+          <div class="meta">Aucune recos générée. Lancer <code>python cron/zora-nuit.py</code> après activation gate.</div>
+        </div>`;
+        return;
+      }
+      let html = "";
+      for (const r of lastRun.recos) {
+        html += `<div class="reco">
+          <strong>[${r.id}]</strong> ${r.label}
+          <div class="meta">source: ${r.source_dimension} · ROI: ${r.roi_estimate}</div>
+          <div class="meta">payload: <code>${JSON.stringify(r.payload).replace(/"/g, '\\"')}</code></div>
+          <button>✅ Marquer fait (A0 HITL)</button>
+          <button style="background:var(--muted);">Ignorer</button>
+        </div>`;
+      }
+      root.innerHTML = html;
+    }
+
+    async function main() {
+      const data = await loadJSON("/api/zora");
+      if (data.error) { document.body.innerHTML += `<div class="warn-box">error: ${data.error}</div>`; return; }
+      renderStatus(data);
+      renderState(data);
+      await renderLastRun();
+      await renderRecos();
+    }
+    main();
+  </script>
+</body>
+</html>

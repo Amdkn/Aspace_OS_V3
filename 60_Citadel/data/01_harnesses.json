@@ -1,0 +1,58 @@
+{
+  "collector": "01_harnesses",
+  "pillar": 1,
+  "pillar_name": "Models / Harnesses",
+  "generated_at": "2026-07-04T20:06:40-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §2",
+  "doctrine": "lecture seule — anti-Ultron — dormants affichés dormants",
+  "harnesses": {
+    "claude_code": {
+      "status": "active",
+      "path": "C:\\Users\\amado\\.claude\\settings.json",
+      "size_bytes": 10048,
+      "model_hint": "opus-equivalent via Fable 5 quota"
+    },
+    "hermes": {
+      "status": "active",
+      "path": "C:\\Users\\amado\\.hermes",
+      "has_config": true,
+      "has_processes": true,
+      "has_auth": true,
+      "note": "Desktop + VPS dual presence"
+    },
+    "minimax_code": {
+      "status": "active",
+      "path": "C:\\Users\\amado\\.mavis",
+      "model": "MiniMax-M3 (default per config.yaml)",
+      "agent_count": 22,
+      "has_nexus": false,
+      "note": "MC = L1 per plan-L2 §13 permutation"
+    },
+    "codex": {
+      "status": "active",
+      "path": "C:\\Users\\amado\\.codex"
+    },
+    "omnigent": {
+      "status": "active",
+      "path": "C:\\Users\\amado\\shadow-l0-omnigent",
+      "note": "shadow-l0, E1 in-loop"
+    },
+    "paperclip_ai": {
+      "status": "dormant",
+      "path": "n/a",
+      "note": "DORMANT per Plan Citadelle §1 + §9 Gate #6. Anti-Ultron structurel.",
+      "doctrine": "Le fait que 'Paperclip AI' soit littéralement le nom d'un harness dormant n'est pas une coïncidence : il reste dormant."
+    },
+    "multica": {
+      "status": "dormant",
+      "path": "n/a",
+      "note": "DORMANT per Plan Citadelle §1 + §9 Gate #6."
+    }
+  },
+  "summary": {
+    "active_count": 5,
+    "absent_count": 0,
+    "dormant_count": 2,
+    "dormants_displayed_grey": true
+  }
+}

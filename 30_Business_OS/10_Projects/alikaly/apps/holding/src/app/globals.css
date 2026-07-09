@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #020617;
+  --color-surface: #0a1124;
+  --color-line: #1e293b;
+  --color-line-soft: #14213a;
+  --color-cream: #fffaf0;
+  --color-cream-dim: #e8e2d4;
+  --color-emerald-custom: #10b981;
+  
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:root {
+  --bg: #020617;
+  --cream: #fffaf0;
+  --emerald-glow: rgba(16, 185, 129, 0.35);
+}
+
+@layer base {
+  html, body {
+    @apply bg-background text-cream font-sans antialiased;
+  }
+}
+
+@utility ambient-bg {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(16,185,129,0.10), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 90% 30%, rgba(16,185,129,0.04), transparent 60%),
+    linear-gradient(to right, rgba(30,41,59,0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30,41,59,0.45) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+}
+
+@utility grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(30,41,59,0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30,41,59,0.35) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility emerald-glow {
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.4), 0 0 30px -6px var(--emerald-glow);
+}
+
+@utility emerald-glow-strong {
+  box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.6), 0 0 40px -4px var(--emerald-glow), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+@utility hairline-v { 
+  background: linear-gradient(180deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent); 
+}
+
+@utility hairline-h { 
+  background: linear-gradient(90deg, transparent, rgba(30,41,59,0.9) 20%, rgba(30,41,59,0.9) 80%, transparent); 
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@utility marquee-track { 
+  animation: marquee 60s linear infinite; 
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+@utility pulse-dot { 
+  animation: pulse-dot 1.6s ease-in-out infinite; 
+}
+
+.expertise-card {
+  transition: border-color 240ms ease, transform 240ms ease, background-color 240ms ease;
+}
+
+.expertise-card:hover {
+  border-color: rgba(16,185,129,0.55);
+  background-color: rgba(16,185,129,0.025);
+  transform: translateY(-2px);
+}

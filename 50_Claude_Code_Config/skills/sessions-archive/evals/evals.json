@@ -1,0 +1,26 @@
+{
+  "skill_name": "sessions-archive",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "first-run-cleanup-30-sessions",
+      "prompt": "skill: sessions-archive. Aujourd'hui j'ai 31 sessions qui s'accumulent dans ~/.claude/projects/, on doit faire le ménage. Garde la 2e9afd44 (la plus récente) et archive le reste. Profondeur = both (fiches + index).",
+      "expected_output": "After ~7 min: 31 fiches .md in LLM_Wiki/wiki/hand_offs/sessions_archive/ + INDEX_sessions.md + LOG_YYYY-MM-DD_session_archive.md + Memory_Core/sessions_canon.md. 30 .jsonl moved to ~/.claude/session-data/_TRASH/YYYY-MM-DD_cleanup/. Alias 'current' points to 2e9afd44. SessionStart hook verified in settings.json. CLAUDE.md and MEMORY.md updated.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "quarterly-housekeeping-threshold-trigger",
+      "prompt": "skill: sessions-archive. Trigger automatique: ~/.claude/projects/C--Users-amado/ contient 47 .jsonl pour 2.3 GB. C'est trop. Propose-moi un plan de consolidation (sans rien casser), puis exécute.",
+      "expected_output": "Pre-flight: print explicit size + 47 file list, ask A0 to validate. On green light, run 4 phases. Sub-agent produces 47 fiches (some may be compact 1-paragraph for empty sessions). _TRASH dir created with 46 .jsonl. Final report shows GB saved, alias updated.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "repair-mode-broken-current-alias",
+      "prompt": "skill: sessions-archive --repair. /sessions load current fails because the alias points to a missing file (someone hard-deleted it). Recreate the alias from the most recent surviving session in the trash, then run the full archive to prevent recurrence.",
+      "expected_output": "Detect: session-aliases.json points to non-existent file. Action: scan _TRASH/ for most recent .jsonl, promote to current via setAlias, then re-run Phases 2-4 (no need to re-move, files already in _TRASH). Update doc to add 'repair-mode' note.",
+      "files": []
+    }
+  ]
+}

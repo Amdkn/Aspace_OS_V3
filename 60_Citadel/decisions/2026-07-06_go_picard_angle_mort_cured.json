@@ -1,0 +1,9 @@
+{
+  "action": "decision",
+  "date": "2026-07-06",
+  "title": "GO Picard: angle-mort gouverneur-sourd trouve+patche+gueri, wargame 08 vecu en prod",
+  "decision": "Book ecoute desormais son gouverneur WF3 (read_governor_signals additif). Cadence Dark Factory CAP x4 tant que capacite < 96/WK (task queue avec exit condition). Point faible shotgun = L2 Gstack (0 rails) -> wargame 09 au backlog executeur.",
+  "d5_proofs": "dry-run avant: risque_unabsorbed=True + rule CAP x4 · run reel apres absorption: False + 7/7 invariants · task cap-compression-x4 en queue · signal x8 absorbed",
+  "pattern_generique": "booleen de sante calcule par proxy (grep/trace) au lieu de la source de verite = evaluation gaming structurel. Chaque Picard variant (C1..I1) chasse ce pattern dans son domaine via wargame 08 comme replay.",
+  "reversible": "git checkout book_loop.py + rm task + status open sur signal"
+}

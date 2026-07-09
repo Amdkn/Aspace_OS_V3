@@ -1,0 +1,77 @@
+{
+  "id": "citadel-decision-2026-07-05-agents-picard-jerry-summers-l+-aligned",
+  "date": "2026-07-05T10:35:00-04:00",
+  "type": "AGENT_ALIGNMENT_L+_SKILL_STANDARD",
+  "title": "Agents Picard/Jerry/Summers alignes sur L+ Skill Standard canon (2026-07-05 ratification)",
+  "decision": "ACCEPTED + ALIGNED",
+  "war_mode": true,
+  "append_only": true,
+  "reversible_by": "git checkout sur les 3 fichiers agents/* + delete citadel trace + git checkout -- calendar.md",
+  "rationale": "Suite au HITL captain 't'es plus que paresseux cree les Agents', alignement des 3 agents canon sur le L+ Skill Standard qu'on vient de ratifier, pour qu'ils incarnent la doctrine au lieu de la precher",
+  "agents_updated": [
+    {
+      "path": "C:\\Users\\amado\\.claude\\agents\\a3-enterprise-picard.md",
+      "size_before": 6143,
+      "size_after": 9956,
+      "new_frontmatter_fields": [
+        "l_plus_skill_standard_version",
+        "l_plus_role",
+        "ha_identity",
+        "loop_engineering_tick"
+      ],
+      "l_plus_role": "L0 CEO Bench foundation (Book dojo is sister) + H10 projects owner input to Book H1 aggregator",
+      "section_l_plus_added": true
+    },
+    {
+      "path": "C:\\Users\\amado\\.claude\\agents\\b1-jerry-prime.md",
+      "size_before": 3906,
+      "size_after": 7580,
+      "new_frontmatter_fields": [
+        "l_plus_skill_standard_version",
+        "l_plus_role",
+        "loop_engineering_tick"
+      ],
+      "l_plus_role": "L+ Lighting keeper transversal - keep lights on = observabilite Business OS L2 canon",
+      "section_l_plus_added": true
+    },
+    {
+      "path": "C:\\Users\\amado\\.claude\\agents\\b1-summers-nexus-omk-bos.md",
+      "size_before": 1777,
+      "size_after": 5528,
+      "new_frontmatter_fields": [
+        "l_plus_skill_standard_version",
+        "l_plus_role",
+        "loop_engineering_tick",
+        "omk_variant"
+      ],
+      "l_plus_role": "L+ Verse singer transversal - narrative poetry des 4 indicateurs Jerry + agregation Book H1",
+      "section_l_plus_added": true
+    }
+  ],
+  "l_plus_skill_standard_10_invariants_applied": [
+    "1. Frontmatter YAML sur tout .md (valide pour les 3)",
+    "2. type: top-level OKF v0.1 (valide)",
+    "3. Append-only strict (nouvelle section ajoutee sans rewrite)",
+    "4. Idempotency key (l_plus_skill_standard_version = 2026-07-05 pour les 3)",
+    "5. D1 receipts (D1 verifications faites via Python)",
+    "6. Anti-Ultron check (lecture seule sur intouchables)",
+    "7. Wager mesurable (loop_engineering_tick documente)",
+    "8. HITL queue visible (escalation paths documentes dans section L+)",
+    "9. Verify-first (verifie que les sources existent avant agregation)",
+    "10. OKF v0.1 conformant (frontmatter structure OK)"
+  ],
+  "loop_engineering_pattern": {
+    "Picard_H10": "input to Book H1 aggregator (MC) per ADR-LD01-008 D1 - MANIFEST.md per cycle",
+    "Jerry_Lighting": "input to Book H1 aggregator (MC) per ADR-LD01-008 D3 - 4 lights indicators per tick",
+    "Summers_Verse": "input to Book H1 aggregator (MC) per ADR-LD01-008 D1 - 1 verse line per quadrant"
+  },
+  "files_unchanged_intentionally": [
+    "C:\\Users\\amado\\.claude\\agents\\a2-uss-*.md (6 A2 captain ships)",
+    "C:\\Users\\amado\\.claude\\agents\\a3-*.md (autres A3 crews : 34 fichiers)",
+    "C:\\Users\\amado\\.claude\\agents\\b1-*.md (autres B1 : 2 fichiers)",
+    "C:\\Users\\amado\\.claude\\agents\\b2-*.md (8 B2 managers)",
+    "C:\\Users\\amado\\.claude\\agents\\b3-*.md (8 B3 squads x 7 = 56 fichiers)",
+    "C:\\Users\\amado\\.claude\\agents\\_S_L0_kernel_dormant\\** (14 capsules dormantes, intouchables)"
+  ],
+  "next_action": "Spawn 3 sub-agents // pour valider OMK Phase 2 application (Picard projects, Jerry lighting, Summers verse)"
+}

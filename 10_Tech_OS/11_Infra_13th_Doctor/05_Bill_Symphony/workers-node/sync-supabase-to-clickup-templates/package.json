@@ -1,0 +1,19 @@
+{
+  "name": "aspace-sync-supabase-to-clickup-templates",
+  "version": "1.0.0",
+  "description": "Symphony Phase 2 worker — Supabase tenant.<slug>.sops (Active only) -> ClickUp list 'Active SOPs Master Templates' (hourly cron via PM2, +5min offset)",
+  "main": "sync-supabase-to-clickup-templates.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node sync-supabase-to-clickup-templates.js",
+    "dry": "DRY_RUN=1 node sync-supabase-to-clickup-templates.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

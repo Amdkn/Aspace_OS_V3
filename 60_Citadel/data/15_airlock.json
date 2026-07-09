@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-07-08T20:49:18-04:00",
+  "invariants": {
+    "B1_replication": "GREEN",
+    "rest_sommeil_a0": "RED",
+    "B2_ratio_outillage": {
+      "status": "GREEN",
+      "ratio": 0.38
+    },
+    "B3_cycles_verts": {
+      "status": "GREEN",
+      "count": 0,
+      "target": 3
+    },
+    "B4_escalade": "GREEN"
+  },
+  "global": "GREEN",
+  "consecutive_green": 32,
+  "go_spock_unique": true,
+  "fable_window": true,
+  "cascade_flags_on": true,
+  "outboard_earned": false,
+  "chain_decomposition": {
+    "wf0": "GREEN",
+    "wf1": "OK(8t,8.00/wk)",
+    "wf2_l2": "SOUTENABLE(9)",
+    "chain": "CHAIN_SOUTENABLE",
+    "reasons": [],
+    "source": "sim-chain-WK01.md"
+  }
+}

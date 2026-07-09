@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚔ War Room — Citadelle A0</title>
+  <meta name="doctrine" content="lecture seule — Portes over Freins (HxH) — Beth seul veto + 12WY-ON-PAUSE">
+  <meta name="antifragile" content="state cached in localStorage + auto-recover fallback">
+  <style>
+    :root { --bg: #0A0E16; --panel: #111827; --gold: #C8A55C; --txt: #E5E7EB; --dim: #9CA3AF; --red: #EF4444; --grn: #34D399; --accent: #58a6ff; --warn: #f0883e; --good: #3fb950; --bad: #f85149; --card: #161b22; --border: #30363d; }
+    * { box-sizing: border-box; }
+    body { font-family: 'SF Mono', Consolas, Monaco, 'Courier New', monospace; background: var(--bg); color: var(--txt); margin: 0; line-height: 1.5; }
+    h1 { color: var(--gold); font-size: 1.4rem; letter-spacing: .04em; display: flex; align-items: center; gap: .6rem; }
+    h2 { color: var(--gold); font-size: 1rem; margin: 1.2rem 0 .6rem; text-transform: uppercase; letter-spacing: .05em; }
+    .wrap { margin-left: 240px; padding: 1.5rem 2rem; max-width: 1100px; }
+    .status { display: inline-block; font-weight: bold; padding: .2rem .8rem; border-radius: 4px; font-size: 1rem; }
+    .on { background: rgba(239, 68, 68, .15); color: var(--red); border: 1px solid var(--red); }
+    .off { background: rgba(52, 211, 153, .12); color: var(--grn); border: 1px solid var(--grn); }
+    .meta { color: var(--dim); font-size: .85rem; margin: .4rem 0 1.4rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .8rem; margin-bottom: 1.5rem; }
+    .card { background: var(--panel); border-radius: 8px; padding: 1rem; border-left: 3px solid var(--gold); }
+    .card .n { font-size: 1.8rem; color: var(--gold); font-weight: bold; }
+    .card .l { color: var(--dim); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+    .dec { background: var(--panel); border-radius: 6px; padding: .8rem 1rem; margin-bottom: .6rem; border-left: 2px solid var(--dim); }
+    .dec .top { display: flex; justify-content: space-between; font-size: .8rem; color: var(--dim); }
+    .dec .act { color: var(--gold); font-weight: bold; text-transform: uppercase; }
+    .dec .sum { margin-top: .3rem; font-size: .92rem; }
+    .brakes { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
+    .brake { background: rgba(200, 165, 92, .1); border: 1px solid var(--gold); color: var(--gold); padding: .2rem .6rem; border-radius: 4px; font-size: .8rem; }
+    .refresh { color: var(--dim); font-size: .75rem; margin-top: 1.5rem; }
+    .inspiration { background: rgba(88, 166, 255, 0.08); border: 1px dashed var(--accent); border-radius: 6px; padding: 0.75rem; margin: 1rem 0; font-size: 0.85rem; color: var(--dim); }
+    /* sidebar canon */
+    .sidebar { position: fixed; top: 0; left: 0; width: 220px; height: 100vh; background: #06090d; border-right: 1px solid var(--border); padding: 1.25rem 1rem; overflow-y: auto; z-index: 100; }
+    .sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dim); margin: 1rem 0 0.4rem 0; border: none; padding: 0; }
+    .sidebar h2:first-child { margin-top: 0; }
+    .sidebar a.nav { display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0.6rem; border-radius: 4px; color: var(--txt); text-decoration: none; font-size: 0.85rem; margin-bottom: 0.15rem; border: 1px solid transparent; }
+    .sidebar a.nav:hover { background: var(--card); border-color: var(--border); text-decoration: none; }
+    .sidebar a.nav.active { background: rgba(200, 165, 92, 0.12); border-color: var(--gold); color: var(--gold); }
+    .sidebar .badge { font-size: 0.65rem; padding: 0.1rem 0.4rem; border-radius: 8px; background: var(--card); color: var(--dim); border: 1px solid var(--border); }
+    .sidebar .badge.live { background: rgba(200, 165, 92, 0.15); color: var(--gold); border-color: var(--gold); }
+    .sidebar .badge.dormant { color: var(--dim); font-style: italic; }
+    .sidebar .sidebar-sublabel { font-size: 0.7rem; color: var(--dim); padding: 0.1rem 0.6rem 0.5rem 1.4rem; margin-top: -0.05rem; line-height: 1.3; border-left: 1px solid var(--border); margin-left: 0.7rem; }
+    .sidebar .footer-meta { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--dim); line-height: 1.4; }
+    a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Citadelle A0 navigation">
+    <h2>Citadelle A0</h2>
+    <a class="nav" href="/">🏰 Bridge <span class="badge">P0</span></a>
+    <a class="nav" href="/harnesses">🤖 Harnesses <span class="badge live">P2</span></a>
+    <a class="nav" href="/decisions">⚖️ Décisions <span class="badge live">P1</span></a>
+    <h2>📂 Pages</h2>
+    <a class="nav" href="/agents">👥 Agents <span class="badge live">P2</span></a>
+    <a class="nav" href="/frameworks">🎡 Frameworks <span class="badge live">P2</span></a>
+    <a class="nav" href="/domains">🏢 Domaines <span class="badge live">P2</span></a>
+    <a class="nav" href="/memory">📚 Memory <span class="badge live">P2</span></a>
+    <a class="nav" href="/patterns">🎯 Patterns <span class="badge live">P4</span></a>
+    <a class="nav active" href="/warmode">⚔ War Room <span class="badge live">ON</span></a>
+    <div class="sidebar-sublabel">Portes over Freins (HxH) · Beth seul veto</div>
+    <h2>🔌 API</h2>
+    <a class="nav" href="/skills">🧰 Skills <span class="badge live">P2</span></a>
+    <a class="nav" href="/connections">🔌 Connections <span class="badge">P3</span></a>
+    <a class="nav" href="/api/decisions/list">📋 Decisions log <span class="badge">P1</span></a>
+    <a class="nav" href="/api/health">❤️ Health <span class="badge live">live</span></a>
+    <h2>🛌 Dormants</h2>
+    <a class="nav" href="#">Paperclip AI <span class="badge dormant">dormant</span></a>
+    <a class="nav" href="#">Multica <span class="badge dormant">dormant</span></a>
+    <div class="footer-meta">v0.8 · War Room<br>append-only D4<br>Portes over Freins · Beth seul veto</div>
+  </nav>
+  <div class="wrap">
+    <h1>⚔ WAR ROOM <span id="status" class="status">…</span></h1>
+    <div class="meta" id="meta">NO-HITL ≠ NO-VISIBILITY · A+ observe, n'intervient pas · A0-Amodei décide en autonomie</div>
+
+    <div class="inspiration">
+      <strong>📐 Inspiration Mark (Mission Control Kit) :</strong> "An operating system is a data engineering exercise. The brain is replaceable, the bridge is replaceable, the orchestration layer is the only thing that's yours." — Cette War Room = le cockpit où <strong>A+</strong> observe ce que l'orchestration fait en autonomie, sans HITL. <strong>A0-Amodei</strong> décide (pas de Stark : il est B3, Illuminati/Iron Man — jamais à la table A0).
+    </div>
+
+    <h2>État cycle 12WY (Q3 2026 — A+ pré-ratifié · 12 sem)</h2>
+    <div class="cards" id="cards-12wy"></div>
+
+    <h2>Décisions autonomes A0 (append-only · anti-Ultron)</h2>
+    <div class="cards" id="cards"></div>
+    <div id="decisions"></div>
+
+    <h2>🔴 Kill switches (défaut ON · urgence OFF granulaire — ClaudeClaw pattern)</h2>
+    <div class="brakes" id="killswitches"></div>
+
+    <h2>🧠 Hive Mind — activité cross-agent (qui a fait quoi)</h2>
+    <div id="hivemind"></div>
+
+    <h2>🏭 Mission tasks (Dark Factory J1-J7)</h2>
+    <div id="missiontasks"></div>
+
+    <h2>🚪 Portes à ouvrir (HxH) — 1 seul veto : Beth vie/santé</h2>
+    <div class="brakes" id="veto"></div>
+    <div class="brakes" id="doors"></div>
+
+    <div class="refresh" id="refresh">auto-refresh 10s</div>
+  </div>
+  <script>
+    function esc(s) { return String(s ?? "").replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" })[c]); }
+    function card(n, l) { return `<div class="card"><div class="n">${esc(n)}</div><div class="l">${esc(l)}</div></div>`; }
+    async function load() {
+      try {
+        const r = await fetch('/api/warmode', { cache: 'no-store' });
+        const d = await r.json();
+        const on = d.war_mode === 'ON';
+        const s = document.getElementById('status');
+        s.textContent = 'WAR MODE ' + d.war_mode; s.className = 'status ' + (on ? 'on' : 'off');
+        document.getElementById('meta').innerHTML = `NO-HITL ≠ NO-VISIBILITY · A+ observe, n'intervient pas · A0-Amodei décide en autonomie · <strong>Cycle:</strong> ${esc(d.cycle || '?')} · <strong>Stage:</strong> ${esc(d.cycle_stage || '?')}`;
+
+        // 12WY cycle status
+        const c12 = d.cycle_12wy || {};
+        document.getElementById('cards-12wy').innerHTML = [
+          card(c12.week || '?', 'week'),
+          card(c12.days_remaining ?? '?', 'jours restants'),
+          card(c12.deferred_count ?? 0, 'déférées'),
+          card(c12.pre_ratified_count ?? 0, 'pré-ratifiées'),
+        ].join('');
+
+        // Decisions counters
+        document.getElementById('cards').innerHTML =
+          card(d.decisions_total, 'décisions totales') +
+          card(d.decisions_by_action?.ratify ?? 0, 'ratifiées') +
+          card(d.decisions_by_action?.reject ?? 0, 'rejetées') +
+          card(d.decisions_by_action?.autonome ?? 0, 'autonomes A0');
+
+        // Kill switches (défaut ON = vert, OFF = rouge)
+        const ks = (d.kill_switches && d.kill_switches.switches) || {};
+        const meaning = (d.kill_switches && d.kill_switches.meaning) || {};
+        document.getElementById('killswitches').innerHTML =
+          Object.entries(ks).map(([k, v]) => {
+            const col = v ? 'var(--good)' : 'var(--bad)';
+            return `<span class="brake" title="${esc(meaning[k] || '')}" style="border-color:${col};color:${col}">${v ? '● ON' : '○ OFF'} ${esc(k)}</span>`;
+          }).join('') || '<span class="brake">config absente</span>';
+
+        // Hive Mind cross-agent log
+        document.getElementById('hivemind').innerHTML =
+          (d.hive_mind_log || []).map(h => `<div class="dec">
+            <div class="top"><span class="act">${esc(h.agent || '?')}</span><span>${esc(h.when || '')}</span></div>
+            <div class="sum"><em>${esc(h.action || '')}</em> — ${esc(h.summary || '')}</div></div>`).join('')
+            || '<div class="dec">aucune activité</div>';
+
+        // Mission tasks (Dark Factory)
+        document.getElementById('missiontasks').innerHTML =
+          (d.mission_tasks || []).map(t => `<span class="brake" style="border-color:var(--accent);color:var(--accent)">${esc(t.task)} · ${esc(t.state)}</span>`).join('')
+            || '<span class="brake">aucune tâche</span>';
+
+        // Veto unique (Beth) + portes à ouvrir (HxH)
+        document.getElementById('veto').innerHTML =
+          d.veto_unique ? `<span class="brake" style="border-color:var(--accent);color:var(--accent)">🛡️ ${esc(d.veto_unique)}</span>` : '';
+        document.getElementById('doors').innerHTML =
+          (d.portes_a_ouvrir || []).map(b => `<span class="brake">🚪 ${esc(b)}</span>`).join('');
+
+        // Last 10 decisions
+        document.getElementById('decisions').innerHTML =
+          (d.last_10_decisions || []).map(x => `<div class="dec">
+            <div class="top"><span class="act">${esc(x.action || 'decision')}</span><span>${esc(x.when || '')}</span></div>
+            <div class="sum">${esc(x.summary || x.file || '').replace(/</g, '&lt;')}</div>
+            <div class="top"><span>${esc(x.file || '')}</span></div></div>`).join('');
+
+        document.getElementById('refresh').textContent = 'dernière lecture ' + (d.generated_at || '') + ' · auto-refresh 10s';
+      } catch (e) {
+        document.getElementById('refresh').textContent = 'erreur fetch: ' + e;
+      }
+    }
+    load(); setInterval(load, 10000);
+  </script>
+</body>
+</html>

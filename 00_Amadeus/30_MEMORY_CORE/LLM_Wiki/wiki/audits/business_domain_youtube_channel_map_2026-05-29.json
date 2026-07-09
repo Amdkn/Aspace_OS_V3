@@ -1,0 +1,3443 @@
+{
+  "source_csv": "C:\\Users\\amado\\ASpace_OS_V2\\00_Amadeus\\30_MEMORY_CORE\\LLM_Wiki_Runtime\\youtube-history-analyzer\\watch_history_rag.csv",
+  "rows_scanned": 25463,
+  "unique_channels": 7137,
+  "generated_at": "2026-05-29",
+  "domains": {
+    "01_Growth_Superman_Guardians": [
+      {
+        "channel": "Yann Leonardi",
+        "url": "https://www.youtube.com/channel/UC-06IzcwOHu9_Xgqr-NMkUQ",
+        "count": 86,
+        "domain_score": 1174,
+        "confidence": 1221.58,
+        "statuses": {
+          "CLARIFIED_PLANE": 58,
+          "SKIPPED": 28
+        },
+        "categories": {
+          "Business": 53,
+          "Regular": 33
+        },
+        "hits": [
+          "yann",
+          "channel:yann leonardi",
+          "marketing",
+          "brand",
+          "growth",
+          "branding",
+          "seo",
+          "content"
+        ],
+        "sample_titles": [
+          "Marketing De.. PNL - Analyse stratégie marketing et communication de PNL",
+          "Nike est en train de PERDRE face à On.",
+          "La doudoune virale",
+          "Pourquoi tout le monde s’en fout de Benetton ?",
+          "Pourquoi Apple a racheté Beats by Dre pour 3 milliards"
+        ]
+      },
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 41,
+        "confidence": 296.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "cro",
+          "yann",
+          "audience"
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 6,
+        "confidence": 170.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "cro",
+          "brand",
+          "youtube",
+          "viral"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "Crossthememory",
+        "url": "https://www.youtube.com/channel/UCzsdGXNzB9m0wXZwU05Fiyg",
+        "count": 150,
+        "domain_score": 151,
+        "confidence": 166.5,
+        "statuses": {
+          "SKIPPED": 150
+        },
+        "categories": {
+          "Regular": 150
+        },
+        "hits": [
+          "cro",
+          "content"
+        ],
+        "sample_titles": [
+          "Des nems avec un ingrédient spécial. 🤔",
+          "Des détails qui en disent beaucoup sur lui. 🤣",
+          "Il doit ramener de l'oseille à la maison, peu importe les moyens. 🤔",
+          "L'importance de peser ses mots avant de parler. 🤔",
+          "Un professeur qui doit endosser tout les rôles. 🤔"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 18,
+        "confidence": 153.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "cro",
+          "youtube",
+          "content"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "FRANCE 24",
+        "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+        "count": 204,
+        "domain_score": 12,
+        "confidence": 133.52,
+        "statuses": {
+          "CAPTURED": 195,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 204
+        },
+        "hits": [
+          "cro",
+          "offer",
+          "viral",
+          "content",
+          "youtube"
+        ],
+        "sample_titles": [
+          "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+          "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+          "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron",
+          "États-Unis : Elon Musk critique \"Stargate\", projet de Donald Trump • FRANCE 24",
+          "IA : l'audacieux projet kenyan qui pourrait inspirer Sam Altman et Elon Musk • FRANCE 24"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 8,
+        "confidence": 113.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "cro"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 14,
+        "confidence": 109.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "cro",
+          "viral",
+          "content",
+          "youtube",
+          "brand"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "Koda",
+        "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+        "count": 156,
+        "domain_score": 4,
+        "confidence": 101.56,
+        "statuses": {
+          "CAPTURED": 144,
+          "CLARIFIED_PLANE": 12
+        },
+        "categories": {
+          "AI": 156
+        },
+        "hits": [
+          "yann",
+          "cro",
+          "seo"
+        ],
+        "sample_titles": [
+          "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+          "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+          "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch",
+          "⁠@filsdelachance1708 & ​⁠@2sDoubleA - Ni oui ni non 🤐 Prt 1 #shorts #animation #humour #drole",
+          "Partie 1 | Le psy psychopathe 💀 @RENOISANSEAU #shorts #animation #humour #drole #sketch"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 9,
+        "confidence": 94.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "cro"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 16,
+        "confidence": 92.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "cro",
+          "yann"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      },
+      {
+        "channel": "SUSHI NIHILISTE",
+        "url": "https://www.youtube.com/channel/UCqH0qUc5t05h20yl-hPw2Pw",
+        "count": 127,
+        "domain_score": 1,
+        "confidence": 84.02,
+        "statuses": {
+          "CAPTURED": 127
+        },
+        "categories": {
+          "AI": 127
+        },
+        "hits": [
+          "yann"
+        ],
+        "sample_titles": [
+          "ÉPISODE 414 : BACON WAR",
+          "ÉPISODE 415 : LES GUERRIERS DE LA 9D",
+          "ÉPISODE 404 : NOUVELLE GÉNÉRATION",
+          "ÉPISODE 416 : SUSHI AU BAR",
+          "ÉPISODE 417 : POMME D'ADAM"
+        ]
+      },
+      {
+        "channel": "sotorutv",
+        "url": "https://www.youtube.com/channel/UC6Hz9toNO9cP7pgxev9P2EQ",
+        "count": 41,
+        "domain_score": 41,
+        "confidence": 80.6,
+        "statuses": {
+          "CAPTURED": 41
+        },
+        "categories": {
+          "AI": 41
+        },
+        "hits": [
+          "viral"
+        ],
+        "sample_titles": [
+          "Beerus rencontre Goku 🥰🤩 #dragonballsuper #dbs #goku #viral #vu",
+          "Le super saiyan Rosée 😱🤩 #dragonballsuper  #dbz #vegeta #viral #vu",
+          "Goku se sacrifie... 🤧 #dragonball #dbz #goku #viralvideo #vu",
+          "Les adieux de Goku... 🤧 #dragonball #dbz #goku #viral #vu",
+          "La voix de Goku, dit tout... 🤧 #dragoball #dbz #goku #viral #vu"
+        ]
+      },
+      {
+        "channel": "TIKTOK France",
+        "url": "https://www.youtube.com/channel/UCi3lkhz9cmyaH67bi8cZsKQ",
+        "count": 104,
+        "domain_score": 9,
+        "confidence": 80.56,
+        "statuses": {
+          "CAPTURED": 104
+        },
+        "categories": {
+          "AI": 104
+        },
+        "hits": [
+          "cro",
+          "viral",
+          "youtube"
+        ],
+        "sample_titles": [
+          "Les plus gros dérapage à la télévision 🤯",
+          "Elle lui vole son argent... 😱",
+          "Les pranks de Slapman 🤣",
+          "TOP 5 des moments drôles à la télé 😂",
+          "Emilien répond aux rageux 😂"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 4,
+        "confidence": 78.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "cro",
+          "landing page"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      }
+    ],
+    "02_Sales_MartianManhunter_Illuminati": [
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 1,
+        "confidence": 165.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "deal"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 1,
+        "confidence": 86.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "sales"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 1,
+        "confidence": 77.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "deal"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      },
+      {
+        "channel": "Les Echos",
+        "url": "https://www.youtube.com/channel/UChZWs6PJY0hND384d2_RrhQ",
+        "count": 30,
+        "domain_score": 1,
+        "confidence": 30.5,
+        "statuses": {
+          "CAPTURED": 29,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 30
+        },
+        "hits": [
+          "deal"
+        ],
+        "sample_titles": [
+          "Akamai, le géant très SECRET sur qui Internet repose",
+          "Warren Buffett et le mystère à 300 milliards de dollars",
+          "Droits de douane : les 5 chiffres que l'on a retenus du tableau de Trump",
+          "La tech mondiale dépend... de cette entreprise européenne",
+          "Voici la nouvelle plus jeune \"self-made\" milliardaire (devant Taylor Swift) #money #milliardaire"
+        ]
+      },
+      {
+        "channel": "Claude",
+        "url": "https://www.youtube.com/channel/UCV03SRZXJEz-hchIAogeJOg",
+        "count": 10,
+        "domain_score": 1,
+        "confidence": 17.5,
+        "statuses": {
+          "CAPTURED": 10
+        },
+        "categories": {
+          "AI": 10
+        },
+        "hits": [
+          "sales"
+        ],
+        "sample_titles": [
+          "What is Claude Managed Agents?",
+          "Introducing Claude Managed Agents",
+          "Claude works inside your Word document",
+          "The new Claude Code desktop app, redesigned for parallel agents",
+          "Introducing Claude Design by Anthropic Labs"
+        ]
+      },
+      {
+        "channel": "VU FranceTV",
+        "url": "https://www.youtube.com/channel/UCqt99sKYNTxqlHtzV9weUYA",
+        "count": 227,
+        "domain_score": 1,
+        "confidence": 16.5,
+        "statuses": {
+          "SKIPPED": 227
+        },
+        "categories": {
+          "Regular": 227
+        },
+        "hits": [
+          "sales"
+        ],
+        "sample_titles": [
+          "VU du 30/07/2025 : Le mantra de la compassion",
+          "VU du 31/07/2025 : Alerte au tsunami",
+          "VU du 01/08/2025 : Léon Marchand champion du monde",
+          "VU du 02/08/2025 - Gaza : aide alimentaire bloquée",
+          "VU du 04/08/2025 : Le sacre de Pauline Ferrand-Prevot"
+        ]
+      },
+      {
+        "channel": "Le Journal de l'Espace",
+        "url": "https://www.youtube.com/channel/UCypzG0nv9B65DwOLJ578rZQ",
+        "count": 139,
+        "domain_score": 1,
+        "confidence": 16.5,
+        "statuses": {
+          "SKIPPED": 139
+        },
+        "categories": {
+          "Regular": 139
+        },
+        "hits": [
+          "sell"
+        ],
+        "sample_titles": [
+          "Ils ont installé un réacteur NUCLÉAIRE sur un AVION ! - On Se l'Demande #120 - Le JDE",
+          "Un HUMAIN peut-il VRAIMENT aller sur MARS ? - Le Journal de l'Espace #259 - Actu spatiale",
+          "SCANDALE D'ÉTAT: Un programme caché par le PENTAGONE ? - Le Journal de l'Espace #260 - Actu spatiale",
+          "Le plus GRAND objet VOLANT devait être NUCLÉAIRE ! - On Se l'Demande #120 - Le JDE",
+          "Un ROVER lunaire IMPOSSIBLE à créer à l'époque ? - On Se l'Demande #123 - Le JDE"
+        ]
+      },
+      {
+        "channel": "RapidsCrew",
+        "url": "https://www.youtube.com/channel/UCa7X_xpZob-7Cl3spe0aOoA",
+        "count": 55,
+        "domain_score": 1,
+        "confidence": 16.5,
+        "statuses": {
+          "SKIPPED": 55
+        },
+        "categories": {
+          "Regular": 55
+        },
+        "hits": [
+          "sell"
+        ],
+        "sample_titles": [
+          "Les tendances mode qui vont POP et FLOP en 2025 ! 👀",
+          "Les Nike TN que personne connait ❌️",
+          "Le PIRE scandale du luxe ?! 😨",
+          "Justin Bieber = nouveau Kanye West ?",
+          "Tu vas avoir des PROBLÈMES avec ces outfits 😬"
+        ]
+      },
+      {
+        "channel": "Franjo",
+        "url": "https://www.youtube.com/channel/UC53gfTiWvslLPNuoDcoxmVg",
+        "count": 54,
+        "domain_score": 1,
+        "confidence": 16.5,
+        "statuses": {
+          "SKIPPED": 54
+        },
+        "categories": {
+          "Regular": 54
+        },
+        "hits": [
+          "sales"
+        ],
+        "sample_titles": [
+          "DOGSITTER",
+          "A l'hôpital",
+          "TRUMP PRESIDENT",
+          "L'élection de Trump est une cata, c'est pas un débat.Toute la vidéo sur ma chaîne youtube.",
+          "Lyon on est à 2 heures de trucs cools"
+        ]
+      },
+      {
+        "channel": "DAVYNIMAL",
+        "url": "https://www.youtube.com/channel/UCsDNLaqXIuqjm_btU_ZtHxQ",
+        "count": 46,
+        "domain_score": 1,
+        "confidence": 15.5,
+        "statuses": {
+          "SKIPPED": 46
+        },
+        "categories": {
+          "Regular": 46
+        },
+        "hits": [
+          "sales"
+        ],
+        "sample_titles": [
+          "Sarko - Du Ferme 🎙(parodie La Fouine)",
+          "Lecornu, le retour 🥶 - 11-10-25",
+          "Retour d'Égypte et non-censure du PS - 14-10-25",
+          "Sauvés par les socialos 🥀 - 17-10-25",
+          "Incarcération du petit Nicolas 👮‍♂️ - 21-10-25"
+        ]
+      },
+      {
+        "channel": "Google Cloud Tech",
+        "url": "https://www.youtube.com/channel/UCJS9pqu9BzkAMNTmzNMNhvg",
+        "count": 42,
+        "domain_score": 1,
+        "confidence": 14.5,
+        "statuses": {
+          "SKIPPED": 42
+        },
+        "categories": {
+          "Regular": 42
+        },
+        "hits": [
+          "pipeline"
+        ],
+        "sample_titles": [
+          "Translating baby sounds using Google AI",
+          "Build an AI-powered recipe generator with Gemini on AI Studio",
+          "Google AI Studio for Beginners",
+          "Google AI Studio: Your AI playground 🛝🦾",
+          "How memory makes AI agents more effective"
+        ]
+      },
+      {
+        "channel": "Moritz | AI Builder",
+        "url": "https://www.youtube.com/channel/UCh6wT1M9abL0wiJz4eZTwdw",
+        "count": 2,
+        "domain_score": 4,
+        "confidence": 13.5,
+        "statuses": {
+          "CAPTURED": 2
+        },
+        "categories": {
+          "AI": 2
+        },
+        "hits": [
+          "sales",
+          "sales call"
+        ],
+        "sample_titles": [
+          "How to Build a Chrome Extension Completely With AI (FULL TUTORIAL)",
+          "This AI Agent Records Every Sales Call and Tells You What's Wrong"
+        ]
+      },
+      {
+        "channel": "LCI",
+        "url": "https://www.youtube.com/channel/UCewhc0fvja891XkpIPGRMxQ",
+        "count": 23,
+        "domain_score": 1,
+        "confidence": 13.34,
+        "statuses": {
+          "SKIPPED": 22,
+          "CAPTURED": 1
+        },
+        "categories": {
+          "Business": 23
+        },
+        "hits": [
+          "deal"
+        ],
+        "sample_titles": [
+          "🗣️ Quand Trump se riait de Macron｜LCI",
+          "Elon Musk et son fils dans le bureau de Donald Trump à la Maison Blanche｜LCI",
+          "Donald Trump : l'Europe \"est en train de perdre son merveilleux droit à la liberté d'expression\"｜LCI",
+          "Donald Trump signe un décret excluant les athlètes transgenres des sports féminins｜LCI",
+          "Trump-Poutine : les coulisses du premier deal｜LCI"
+        ]
+      },
+      {
+        "channel": "C dans l'air - France Télévisions",
+        "url": "https://www.youtube.com/channel/UCvg4_wSz4Cmo4xRPXaKU47A",
+        "count": 7,
+        "domain_score": 1,
+        "confidence": 13.25,
+        "statuses": {
+          "CAPTURED": 7
+        },
+        "categories": {
+          "AI": 7
+        },
+        "hits": [
+          "sell"
+        ],
+        "sample_titles": [
+          "Agriculture : au coeur d'une ferme verticale en France - Reportage #cdanslair 14.04.2021",
+          "Discours de D. Trump à l'ONU : \"ça restera dans les annales par son côté chaotique et surréaliste\"",
+          "Morris Pearl : \"il y a un ruissellement vers le haut\"",
+          "IA : la guerre des robots a commencé !",
+          "Révélations du dossier Epstein"
+        ]
+      },
+      {
+        "channel": "Jono Catliff",
+        "url": "https://www.youtube.com/channel/UCnzxPyNnn8jk4bHFk3JUBhA",
+        "count": 5,
+        "domain_score": 1,
+        "confidence": 12.95,
+        "statuses": {
+          "CAPTURED": 5
+        },
+        "categories": {
+          "AI": 5
+        },
+        "hits": [
+          "sell"
+        ],
+        "sample_titles": [
+          "I Replaced n8n With Google’s Antigravity (Agentic Workflows Explained)",
+          "n8n vs Anti-Gravity: What You NEED to Know Before Switching",
+          "AI Workflows Just Got 10x Easier (Goodbye Zapier & Make & n8n?)",
+          "This n8n AI Agent Extracts Text From Anything (Images, PDFs, Google Docs)",
+          "Antigravity 2 Hour Masterclass: Build & Sell AI Agents & Apps (No Code)"
+        ]
+      }
+    ],
+    "03_Product_Flash_Avengers": [
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 96,
+        "confidence": 351.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "ui",
+          "ux",
+          "app"
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 84,
+        "confidence": 219.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "ui",
+          "ux",
+          "app"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 41,
+        "confidence": 205.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "ui",
+          "app",
+          "ux"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "WorldofAI",
+        "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+        "count": 128,
+        "domain_score": 107,
+        "confidence": 192.08,
+        "statuses": {
+          "CAPTURED": 123,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 128
+        },
+        "hits": [
+          "ui",
+          "build",
+          "app",
+          "design",
+          "software",
+          "builder",
+          "interface",
+          "design system"
+        ],
+        "sample_titles": [
+          "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+          "How To Build an AI WhatsApp Chatbot With No-code!",
+          "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)"
+        ]
+      },
+      {
+        "channel": "FRANCE 24",
+        "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+        "count": 204,
+        "domain_score": 54,
+        "confidence": 175.52,
+        "statuses": {
+          "CAPTURED": 195,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 204
+        },
+        "hits": [
+          "ui",
+          "ux",
+          "app",
+          "build"
+        ],
+        "sample_titles": [
+          "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+          "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+          "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron",
+          "États-Unis : Elon Musk critique \"Stargate\", projet de Donald Trump • FRANCE 24",
+          "IA : l'audacieux projet kenyan qui pourrait inspirer Sam Altman et Elon Musk • FRANCE 24"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 52,
+        "confidence": 157.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "ui",
+          "app",
+          "ux"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 45,
+        "confidence": 140.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "ux",
+          "ui",
+          "app"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "FICKO TV",
+        "url": "https://www.youtube.com/channel/UCuH818pUjI_x0_h7X5Y7P1w",
+        "count": 256,
+        "domain_score": 119,
+        "confidence": 134.5,
+        "statuses": {
+          "SKIPPED": 256
+        },
+        "categories": {
+          "Regular": 256
+        },
+        "hits": [
+          "ui",
+          "app",
+          "ux",
+          "product"
+        ],
+        "sample_titles": [
+          "MAES MET en GARDE SDM, BOOBA REPOND CLASH, JUL POLEMIQUE, NEW ALBUM, DAMSO PARLE AYA en ITW (EXCLU)",
+          "BOOBA REPOND CLASH ROHFF, PIQUE ENCORE CHRIS HYCONIQ, REPOND DIAMS, ZAMDANE100K, DAMSO ALBUM (EXCLU)",
+          "BOOBA MEN4CE LAMAL, ROHFF CLASH ENCORE BALOO, JUL sur BLACK OPS 6, NINHO COLLAB avec NASDAS (EXCLU)",
+          "LACRIM REPOND MAES en DISSTRACK, MAES REAGIT CLASH, BOOBA AUSSI, KAARIS, ROHFF VENDEUR UNKUT (EXCLU)",
+          "BOOBA CLASH MEHDI MAIZI, IL REAGIT en ITW, MAES LUI REPOND, KERCHAK HALLOWEEN, GIMS NEW YORK (EXCLU)"
+        ]
+      },
+      {
+        "channel": "Koda",
+        "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+        "count": 156,
+        "domain_score": 33,
+        "confidence": 130.56,
+        "statuses": {
+          "CAPTURED": 144,
+          "CLARIFIED_PLANE": 12
+        },
+        "categories": {
+          "AI": 156
+        },
+        "hits": [
+          "ui",
+          "ux",
+          "app"
+        ],
+        "sample_titles": [
+          "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+          "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+          "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch",
+          "⁠@filsdelachance1708 & ​⁠@2sDoubleA - Ni oui ni non 🤐 Prt 1 #shorts #animation #humour #drole",
+          "Partie 1 | Le psy psychopathe 💀 @RENOISANSEAU #shorts #animation #humour #drole #sketch"
+        ]
+      },
+      {
+        "channel": "Guillaume Genou",
+        "url": "https://www.youtube.com/channel/UCwG2muK9xT_HFK7xC6n-PIw",
+        "count": 67,
+        "domain_score": 75,
+        "confidence": 128.03,
+        "statuses": {
+          "CAPTURED": 66,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 67
+        },
+        "hits": [
+          "ui",
+          "ux",
+          "app"
+        ],
+        "sample_titles": [
+          "J'ai gagné au loto mais la CIA m'arrête",
+          "Amixem est mon ami",
+          "Le meilleur téléfilm de noël",
+          "Je te fais un vocal c'est plus rapide",
+          "Je croise un provincial de m*rde"
+        ]
+      },
+      {
+        "channel": "Ottekoi",
+        "url": "https://www.youtube.com/channel/UCXX048tuf0BROH6UMePGKPg",
+        "count": 167,
+        "domain_score": 20,
+        "confidence": 123.83,
+        "statuses": {
+          "CAPTURED": 166,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 167
+        },
+        "hits": [
+          "ui",
+          "app"
+        ],
+        "sample_titles": [
+          "DESCENTE au QUARTIER 2 🔥",
+          "Un autre verse ? 😱 #3d #anime #dbz #onepiece",
+          "Meme le F s’y met #dragonball #goku #dbz #anime",
+          "Le bœuf Koba #3d #anime #dbz #onepiece",
+          "La vengeance de Vegedream 💥 | crédit : @dennis_main #3d #dragonball #animation #goku #dbz #vegeta"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 41,
+        "confidence": 115.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "ui",
+          "app",
+          "ux",
+          "saas",
+          "roadmap",
+          "design",
+          "startup",
+          "product"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 22,
+        "confidence": 107.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "ui",
+          "ux"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "Le Rab En Mieux (Chaine Secondaire)",
+        "url": "https://www.youtube.com/channel/UCgqT2qUTulhUDi1KCG05-3g",
+        "count": 49,
+        "domain_score": 62,
+        "confidence": 105.79,
+        "statuses": {
+          "CAPTURED": 49
+        },
+        "categories": {
+          "AI": 49
+        },
+        "hits": [
+          "ux",
+          "ui",
+          "app"
+        ],
+        "sample_titles": [
+          "DINOS SORT LE PROJET LE PLUS INCROYABLE DE L'HISTOIRE (je rigole c'est horrible)",
+          "LAFOUINE ESSAYE D'ÊTRE JEUNE MAIS IL A PRIS 20 PIGES (1ère écoute Capital Du Crime)",
+          "NINHO ET NISKA SE REUNISSENT POUR FAIRE UN SANDWICH AU CACA (1ère écoute GOAT)",
+          "SNEAZZY S'EN SORT PAS SI MAL AVEC CE PROJET NON? (1ère écoute Derrière l'horizon)",
+          "LE PROFESSEUR OXMO REUNI L'UNDERGROUND SUR UNE MIXTAPE FORT GOUTÛE (1ère écoute Lafiya session)"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 29,
+        "confidence": 105.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "ui",
+          "app",
+          "ux"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      }
+    ],
+    "04_Ops_Batman_Fantastic4": [
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 2,
+        "confidence": 137.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "sop"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "WorldofAI",
+        "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+        "count": 128,
+        "domain_score": 46,
+        "confidence": 131.08,
+        "statuses": {
+          "CAPTURED": 123,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 128
+        },
+        "hits": [
+          "automate",
+          "n8n",
+          "operating system",
+          "workflow",
+          "automation"
+        ],
+        "sample_titles": [
+          "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+          "How To Build an AI WhatsApp Chatbot With No-code!",
+          "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)"
+        ]
+      },
+      {
+        "channel": "Julien Sanson | Automatisation & AI",
+        "url": "https://www.youtube.com/channel/UCK85rF_WKv1N6ojTzVbj3yw",
+        "count": 69,
+        "domain_score": 64,
+        "confidence": 118.46,
+        "statuses": {
+          "CAPTURED": 69
+        },
+        "categories": {
+          "AI": 69
+        },
+        "hits": [
+          "n8n",
+          "workflow",
+          "ops"
+        ],
+        "sample_titles": [
+          "Créez votre Chatbot WhatsApp avec N8N en quelques minutes ! (Tutoriel)",
+          "Apprends à maitriser les webhooks sur n8n ! (Partie 1)",
+          "🚀 MCP expliqué : le nouveau standard à connaitre pour connecter tes outils !",
+          "La nouvelle API GPT-IMAGE-1 va rendre ta vie 10X PLUS FACILE #n8n #openai #nocode",
+          "Trouve le meilleur resto en 1 min avec cette agent ! 👨🏻‍🍳"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 1,
+        "confidence": 96.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "ops"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 1,
+        "confidence": 75.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "workflow"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      },
+      {
+        "channel": "TIKTOK France",
+        "url": "https://www.youtube.com/channel/UCi3lkhz9cmyaH67bi8cZsKQ",
+        "count": 104,
+        "domain_score": 2,
+        "confidence": 73.56,
+        "statuses": {
+          "CAPTURED": 104
+        },
+        "categories": {
+          "AI": 104
+        },
+        "hits": [
+          "ops"
+        ],
+        "sample_titles": [
+          "Les plus gros dérapage à la télévision 🤯",
+          "Elle lui vole son argent... 😱",
+          "Les pranks de Slapman 🤣",
+          "TOP 5 des moments drôles à la télé 😂",
+          "Emilien répond aux rageux 😂"
+        ]
+      },
+      {
+        "channel": "OpenAI",
+        "url": "https://www.youtube.com/channel/UCXZCJLdBC09xxGZ6gcdrc6A",
+        "count": 86,
+        "domain_score": 4,
+        "confidence": 67.62,
+        "statuses": {
+          "CAPTURED": 85,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 86
+        },
+        "hits": [
+          "automate",
+          "workflow",
+          "notion"
+        ],
+        "sample_titles": [
+          "OpenAI o1 and o1 pro mode in ChatGPT — 12 Days of OpenAI: Day 1",
+          "Introduction to Operator & Agents",
+          "Introduction to Deep Research",
+          "Refreshed.",
+          "匚尺丨ㄒㄒ乇尺乙 — REMASTERED with Sora"
+        ]
+      },
+      {
+        "channel": "AICodeKing",
+        "url": "https://www.youtube.com/channel/UC0m81bQuthaQZmFbXEY9QSw",
+        "count": 81,
+        "domain_score": 3,
+        "confidence": 64.41,
+        "statuses": {
+          "CAPTURED": 71,
+          "CLARIFIED_PLANE": 10
+        },
+        "categories": {
+          "AI": 81
+        },
+        "hits": [
+          "workflow",
+          "ops"
+        ],
+        "sample_titles": [
+          "Deepseek Operator (+Free APIs) : This 100% FREE AI Agent Beats OpenAI's Operator FOR FREE!",
+          "E2B Gemini 2.0 Computer Use: This FULLY FREE Agent can Control Whole Computer & DO ANYTHING!",
+          "DeepSeek-V3 Agents : This FULLY FREE AI Agent can DO ANYTHING!",
+          "Open Operator : This FULLY FREE AI Agent Operator BEATS OPENAI's OPERATOR for FREE!",
+          "Cline 3.2 (Upgraded) + New Free APIs (R1, Sonnet) : This FULLY FREE AI Coder JUST GOT AMAZING!"
+        ]
+      },
+      {
+        "channel": "Nate Herk | AI Automation",
+        "url": "https://www.youtube.com/channel/UC2ojq-nuP8ceeHqiroeKhBA",
+        "count": 26,
+        "domain_score": 35,
+        "confidence": 62.88,
+        "statuses": {
+          "CAPTURED": 25,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 26
+        },
+        "hits": [
+          "automation",
+          "n8n",
+          "workflow",
+          "systems"
+        ],
+        "sample_titles": [
+          "How I Built JARVIS with No Code (Tutorial w/ Lovable, ElevenLabs, n8n)",
+          "Unlock the Next Evolution of Agents with Human-like Memory (n8n + zep)",
+          "The NEW Easiest Way to Build RAG Agents in Minutes (no code)",
+          "Build Anything with Lovable + n8n AI Agents (beginner's guide)",
+          "Build ANYTHING with Claude Code & n8n (Beginner's Guide)"
+        ]
+      },
+      {
+        "channel": "Cole Medin",
+        "url": "https://www.youtube.com/channel/UCMwVTLZIRRUyyVrkjDpn4pA",
+        "count": 57,
+        "domain_score": 13,
+        "confidence": 62.4,
+        "statuses": {
+          "CAPTURED": 56,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 57
+        },
+        "hits": [
+          "workflow",
+          "operating system",
+          "n8n"
+        ],
+        "sample_titles": [
+          "Deploying Billions of AI Agents is Easier than You Think",
+          "Run Supabase 100% LOCALLY for Your AI Agents",
+          "Run Supabase 100% LOCALLY for Your AI Agents",
+          "Introducing Archon - an AI Agent that BUILDS AI Agents",
+          "Build AI Agents that EVOLVE Over Time"
+        ]
+      },
+      {
+        "channel": "Estherium",
+        "url": "https://www.youtube.com/channel/UC1PNMYKAaG-3kEcQKxe1H3A",
+        "count": 69,
+        "domain_score": 2,
+        "confidence": 56.12,
+        "statuses": {
+          "CAPTURED": 68,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 69
+        },
+        "hits": [
+          "ops"
+        ],
+        "sample_titles": [
+          "Une passion comme une autre 😳 #stagiaire #humour",
+          "La meilleure demande en mariage 🥹 #mariage #amour",
+          "Sauver une demande en mariage ✅ #mariage #amour",
+          "Mon pire prof 🫣",
+          "Meilleure Tatie 👑 #neveux #créatifs"
+        ]
+      },
+      {
+        "channel": "Yann Leonardi",
+        "url": "https://www.youtube.com/channel/UC-06IzcwOHu9_Xgqr-NMkUQ",
+        "count": 86,
+        "domain_score": 4,
+        "confidence": 51.58,
+        "statuses": {
+          "CLARIFIED_PLANE": 58,
+          "SKIPPED": 28
+        },
+        "categories": {
+          "Business": 53,
+          "Regular": 33
+        },
+        "hits": [
+          "process",
+          "automation",
+          "ops"
+        ],
+        "sample_titles": [
+          "Marketing De.. PNL - Analyse stratégie marketing et communication de PNL",
+          "Nike est en train de PERDRE face à On.",
+          "La doudoune virale",
+          "Pourquoi tout le monde s’en fout de Benetton ?",
+          "Pourquoi Apple a racheté Beats by Dre pour 3 milliards"
+        ]
+      },
+      {
+        "channel": "LefaAuthentiqueVEVO",
+        "url": "https://www.youtube.com/channel/UC9YFlwUanLrqoSHw5DQ2Ifg",
+        "count": 62,
+        "domain_score": 1,
+        "confidence": 51.5,
+        "statuses": {
+          "CAPTURED": 51,
+          "CLARIFIED_PLANE": 11
+        },
+        "categories": {
+          "AI": 62
+        },
+        "hits": [
+          "ops"
+        ],
+        "sample_titles": [
+          "Lefa - Intro (Audio)",
+          "Lefa - Quelques minutes (Clip officiel)",
+          "Lefa - 20 ans (Clip officiel)",
+          "Lefa - En terrasse (Clip officiel)",
+          "Lefa - Cuba (Audio)"
+        ]
+      },
+      {
+        "channel": "Notion",
+        "url": "https://www.youtube.com/channel/UCoSvlWS5XcwaSzIcbuJ-Ysg",
+        "count": 31,
+        "domain_score": 38,
+        "confidence": 48.75,
+        "statuses": {
+          "SKIPPED": 31
+        },
+        "categories": {
+          "Regular": 31
+        },
+        "hits": [
+          "notion",
+          "standard operating",
+          "workflow"
+        ],
+        "sample_titles": [
+          "What is Notion?",
+          "Notion 101: Introduction and everything you’ll learn in this course",
+          "Document editing in Notion",
+          "Blocks that power Notion’s flexible data model",
+          "How to build a standard operating procedure doc"
+        ]
+      },
+      {
+        "channel": "ByteMonk",
+        "url": "https://www.youtube.com/channel/UCzCsyvyrq38R6TnztEzOmgg",
+        "count": 40,
+        "domain_score": 9,
+        "confidence": 46.2,
+        "statuses": {
+          "CAPTURED": 40
+        },
+        "categories": {
+          "AI": 40
+        },
+        "hits": [
+          "operating system",
+          "workflow",
+          "systems",
+          "process"
+        ],
+        "sample_titles": [
+          "Kernel in Operating System: The Secret Power Inside Every Computer System Design!",
+          "How I Scraped Amazon Without Getting Blocked | Python Proxy",
+          "Kernel in Operating System: The Secret Power Inside Every Computer System Design!",
+          "🧑🏽‍💻 What REALLY Happens When You Type Localhost?",
+          "How Facebook & YouTube Handle BILLIONS of Likes & Views!"
+        ]
+      }
+    ],
+    "05_IT_Cyborg_KangDynasty": [
+      {
+        "channel": "Fireship",
+        "url": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA",
+        "count": 36,
+        "domain_score": 442,
+        "confidence": 454.0,
+        "statuses": {
+          "SKIPPED": 36
+        },
+        "categories": {
+          "Regular": 36
+        },
+        "hits": [
+          "channel:fireship",
+          "linux",
+          "docker",
+          "programming",
+          "supabase",
+          "javascript",
+          "coding"
+        ],
+        "sample_titles": [
+          "Build a Mindblowing 3D Portfolio Website // Three.js Beginner’s Tutorial",
+          "This free Chinese AI just crushed OpenAI's $200 o1 model...",
+          "The Stargate situation is crazy... Elon vs Altman beef intensifies",
+          "Wake up babe, a dangerous new open-source AI model is here",
+          "Big Tech in panic mode... Did DeepSeek R1 just pop the AI bubble?"
+        ]
+      },
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 17,
+        "confidence": 272.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "api"
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 129,
+        "confidence": 205.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "react",
+          "git",
+          "api"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      },
+      {
+        "channel": "WorldofAI",
+        "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+        "count": 128,
+        "domain_score": 86,
+        "confidence": 171.08,
+        "statuses": {
+          "CAPTURED": 123,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 128
+        },
+        "hits": [
+          "coding",
+          "agentic",
+          "ai agents",
+          "llm",
+          "git",
+          "github",
+          "mcp",
+          "frontend"
+        ],
+        "sample_titles": [
+          "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+          "How To Build an AI WhatsApp Chatbot With No-code!",
+          "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 1,
+        "confidence": 165.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "git"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "Nono",
+        "url": "https://www.youtube.com/channel/UCcC5nCsn859d-nqbH2MCjUA",
+        "count": 168,
+        "domain_score": 145,
+        "confidence": 160.5,
+        "statuses": {
+          "SKIPPED": 168
+        },
+        "categories": {
+          "Regular": 168
+        },
+        "hits": [
+          "react"
+        ],
+        "sample_titles": [
+          "il est revenu à la base😂😂 #comedie #humour #food #react #drole",
+          "la limonade pro max #comedie #humour #drole #react #food #reaction",
+          "un sachet d'airtag #comedie #humour #drole #react #food #reaction",
+          "50 nuances de farine #comedie #humour #food #react #collage #recette #reaction",
+          "apple pie.... #comedie #humour #food #recette #react"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 7,
+        "confidence": 142.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "api",
+          "git"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "Cole Medin",
+        "url": "https://www.youtube.com/channel/UCMwVTLZIRRUyyVrkjDpn4pA",
+        "count": 57,
+        "domain_score": 80,
+        "confidence": 129.4,
+        "statuses": {
+          "CAPTURED": 56,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 57
+        },
+        "hits": [
+          "coding",
+          "ai agents",
+          "mcp",
+          "server",
+          "agentic",
+          "supabase",
+          "git",
+          "github"
+        ],
+        "sample_titles": [
+          "Deploying Billions of AI Agents is Easier than You Think",
+          "Run Supabase 100% LOCALLY for Your AI Agents",
+          "Run Supabase 100% LOCALLY for Your AI Agents",
+          "Introducing Archon - an AI Agent that BUILDS AI Agents",
+          "Build AI Agents that EVOLVE Over Time"
+        ]
+      },
+      {
+        "channel": "FRANCE 24",
+        "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+        "count": 204,
+        "domain_score": 4,
+        "confidence": 125.52,
+        "statuses": {
+          "CAPTURED": 195,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 204
+        },
+        "hits": [
+          "git",
+          "cloud"
+        ],
+        "sample_titles": [
+          "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+          "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+          "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron",
+          "États-Unis : Elon Musk critique \"Stargate\", projet de Donald Trump • FRANCE 24",
+          "IA : l'audacieux projet kenyan qui pourrait inspirer Sam Altman et Elon Musk • FRANCE 24"
+        ]
+      },
+      {
+        "channel": "NetworkChuck",
+        "url": "https://www.youtube.com/channel/UC9x0AN7BWHpCDHSm9NiJFJQ",
+        "count": 8,
+        "domain_score": 106,
+        "confidence": 111.0,
+        "statuses": {
+          "SKIPPED": 8
+        },
+        "categories": {
+          "Regular": 8
+        },
+        "hits": [
+          "network",
+          "channel:networkchuck",
+          "linux",
+          "homelab"
+        ],
+        "sample_titles": [
+          "ChatGPT Operator is expensive....use this instead (FREE + Open Source)",
+          "I built an AI supercomputer with 5 Mac Studios",
+          "Your Remote Desktop SUCKS!! Try this instead (FREE + Open Source)",
+          "You NEED to Use n8n RIGHT NOW!! (Free, Local, Private)",
+          "Hacking AI is TOO EASY (this should be illegal)"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 3,
+        "confidence": 108.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "git",
+          "api"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 1,
+        "confidence": 96.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "api"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 10,
+        "confidence": 95.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "api",
+          "git"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "AICodeKing",
+        "url": "https://www.youtube.com/channel/UC0m81bQuthaQZmFbXEY9QSw",
+        "count": 81,
+        "domain_score": 25,
+        "confidence": 86.41,
+        "statuses": {
+          "CAPTURED": 71,
+          "CLARIFIED_PLANE": 10
+        },
+        "categories": {
+          "AI": 81
+        },
+        "hits": [
+          "api",
+          "coding",
+          "mcp",
+          "ai agents",
+          "agentic",
+          "git",
+          "github",
+          "vps"
+        ],
+        "sample_titles": [
+          "Deepseek Operator (+Free APIs) : This 100% FREE AI Agent Beats OpenAI's Operator FOR FREE!",
+          "E2B Gemini 2.0 Computer Use: This FULLY FREE Agent can Control Whole Computer & DO ANYTHING!",
+          "DeepSeek-V3 Agents : This FULLY FREE AI Agent can DO ANYTHING!",
+          "Open Operator : This FULLY FREE AI Agent Operator BEATS OPENAI's OPERATOR for FREE!",
+          "Cline 3.2 (Upgraded) + New Free APIs (R1, Sonnet) : This FULLY FREE AI Coder JUST GOT AMAZING!"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 10,
+        "confidence": 84.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "security",
+          "git",
+          "github",
+          "react",
+          "coding",
+          "frontend",
+          "cloud",
+          "next.js"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      }
+    ],
+    "06_Finance_WonderWoman_Thunderbolts": [
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 26,
+        "confidence": 281.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "arr",
+          "budget",
+          "tax",
+          "cac",
+          "profit",
+          "finance"
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 4,
+        "confidence": 168.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "arr",
+          "tax",
+          "profit"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 12,
+        "confidence": 147.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "arr",
+          "cac"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "FRANCE 24",
+        "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+        "count": 204,
+        "domain_score": 8,
+        "confidence": 129.52,
+        "statuses": {
+          "CAPTURED": 195,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 204
+        },
+        "hits": [
+          "arr",
+          "tax",
+          "cac",
+          "taxes",
+          "cost"
+        ],
+        "sample_titles": [
+          "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+          "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+          "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron",
+          "États-Unis : Elon Musk critique \"Stargate\", projet de Donald Trump • FRANCE 24",
+          "IA : l'audacieux projet kenyan qui pourrait inspirer Sam Altman et Elon Musk • FRANCE 24"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 7,
+        "confidence": 112.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "arr",
+          "cac",
+          "tax"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 10,
+        "confidence": 105.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "arr",
+          "profit",
+          "tax",
+          "taxes",
+          "cost",
+          "cac"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "Ottekoi",
+        "url": "https://www.youtube.com/channel/UCXX048tuf0BROH6UMePGKPg",
+        "count": 167,
+        "domain_score": 1,
+        "confidence": 104.83,
+        "statuses": {
+          "CAPTURED": 166,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 167
+        },
+        "hits": [
+          "arr"
+        ],
+        "sample_titles": [
+          "DESCENTE au QUARTIER 2 🔥",
+          "Un autre verse ? 😱 #3d #anime #dbz #onepiece",
+          "Meme le F s’y met #dragonball #goku #dbz #anime",
+          "Le bœuf Koba #3d #anime #dbz #onepiece",
+          "La vengeance de Vegedream 💥 | crédit : @dennis_main #3d #dragonball #animation #goku #dbz #vegeta"
+        ]
+      },
+      {
+        "channel": "Koda",
+        "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+        "count": 156,
+        "domain_score": 4,
+        "confidence": 101.56,
+        "statuses": {
+          "CAPTURED": 144,
+          "CLARIFIED_PLANE": 12
+        },
+        "categories": {
+          "AI": 156
+        },
+        "hits": [
+          "arr",
+          "cac"
+        ],
+        "sample_titles": [
+          "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+          "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+          "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch",
+          "⁠@filsdelachance1708 & ​⁠@2sDoubleA - Ni oui ni non 🤐 Prt 1 #shorts #animation #humour #drole",
+          "Partie 1 | Le psy psychopathe 💀 @RENOISANSEAU #shorts #animation #humour #drole #sketch"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 6,
+        "confidence": 91.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "tax",
+          "taxes"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 9,
+        "confidence": 85.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "arr",
+          "cac"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      },
+      {
+        "channel": "SUSHI NIHILISTE",
+        "url": "https://www.youtube.com/channel/UCqH0qUc5t05h20yl-hPw2Pw",
+        "count": 127,
+        "domain_score": 1,
+        "confidence": 84.02,
+        "statuses": {
+          "CAPTURED": 127
+        },
+        "categories": {
+          "AI": 127
+        },
+        "hits": [
+          "arr"
+        ],
+        "sample_titles": [
+          "ÉPISODE 414 : BACON WAR",
+          "ÉPISODE 415 : LES GUERRIERS DE LA 9D",
+          "ÉPISODE 404 : NOUVELLE GÉNÉRATION",
+          "ÉPISODE 416 : SUSHI AU BAR",
+          "ÉPISODE 417 : POMME D'ADAM"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 7,
+        "confidence": 81.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "arr",
+          "cac"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      },
+      {
+        "channel": "Y Combinator",
+        "url": "https://www.youtube.com/channel/UCcefcZRL2oaA_uBNeo5UOWg",
+        "count": 6,
+        "domain_score": 72,
+        "confidence": 81.17,
+        "statuses": {
+          "SKIPPED": 4,
+          "CAPTURED": 2
+        },
+        "categories": {
+          "Business": 6
+        },
+        "hits": [
+          "channel:y combinator"
+        ],
+        "sample_titles": [
+          "AI Interfaces Of The Future | Design Review",
+          "The Next Breakthrough In AI Agents Is Here",
+          "Cursor Head of Design Roasts Startup Websites",
+          "Sam Altman - How to Succeed with a Startup",
+          "How To Get Your First Users"
+        ]
+      },
+      {
+        "channel": "RapMinute",
+        "url": "https://www.youtube.com/channel/UCUVi6ODFENaJBpHBbdZ8fBg",
+        "count": 100,
+        "domain_score": 5,
+        "confidence": 74.52,
+        "statuses": {
+          "CAPTURED": 98,
+          "CLARIFIED_PLANE": 2
+        },
+        "categories": {
+          "AI": 100
+        },
+        "hits": [
+          "arr",
+          "cac"
+        ],
+        "sample_titles": [
+          "Freeze Corleone sur scène aux Ardentes 🤯🥷🏼",
+          "Quand Fianso partait en impro sur une prod d’Inoxtag 🤯",
+          "Le 667 toujours reconnaissants envers leurs fans 🥷🏼👏",
+          "La blague d’Inoxtag n’a pas fait l’unanimité 😅",
+          "Freeze Corleone dans les coulisses du concert d’Osirus Jack 🥷🏼"
+        ]
+      },
+      {
+        "channel": "TIKTOK France",
+        "url": "https://www.youtube.com/channel/UCi3lkhz9cmyaH67bi8cZsKQ",
+        "count": 104,
+        "domain_score": 2,
+        "confidence": 73.56,
+        "statuses": {
+          "CAPTURED": 104
+        },
+        "categories": {
+          "AI": 104
+        },
+        "hits": [
+          "arr"
+        ],
+        "sample_titles": [
+          "Les plus gros dérapage à la télévision 🤯",
+          "Elle lui vole son argent... 😱",
+          "Les pranks de Slapman 🤣",
+          "TOP 5 des moments drôles à la télé 😂",
+          "Emilien répond aux rageux 😂"
+        ]
+      }
+    ],
+    "07_People_GreenLantern_XMen": [
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 12,
+        "confidence": 267.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "culture",
+          "hr",
+          "management"
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 1,
+        "confidence": 165.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 1,
+        "confidence": 136.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 3,
+        "confidence": 108.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 6,
+        "confidence": 101.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "Koda",
+        "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+        "count": 156,
+        "domain_score": 3,
+        "confidence": 100.56,
+        "statuses": {
+          "CAPTURED": 144,
+          "CLARIFIED_PLANE": 12
+        },
+        "categories": {
+          "AI": 156
+        },
+        "hits": [
+          "hr",
+          "manager"
+        ],
+        "sample_titles": [
+          "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+          "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+          "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch",
+          "⁠@filsdelachance1708 & ​⁠@2sDoubleA - Ni oui ni non 🤐 Prt 1 #shorts #animation #humour #drole",
+          "Partie 1 | Le psy psychopathe 💀 @RENOISANSEAU #shorts #animation #humour #drole #sketch"
+        ]
+      },
+      {
+        "channel": "WorldofAI",
+        "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+        "count": 128,
+        "domain_score": 9,
+        "confidence": 94.08,
+        "statuses": {
+          "CAPTURED": 123,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 128
+        },
+        "hits": [
+          "team",
+          "hr",
+          "people",
+          "employee"
+        ],
+        "sample_titles": [
+          "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+          "How To Build an AI WhatsApp Chatbot With No-code!",
+          "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)"
+        ]
+      },
+      {
+        "channel": "NAÏM",
+        "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+        "count": 131,
+        "domain_score": 1,
+        "confidence": 86.02,
+        "statuses": {
+          "CAPTURED": 107,
+          "CLARIFIED_PLANE": 24
+        },
+        "categories": {
+          "AI": 131
+        },
+        "hits": [
+          "team"
+        ],
+        "sample_titles": [
+          "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+          "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+          "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art",
+          "Le Pen , les agriculteurs et Tintin au Brésil - La semaine de Naïm",
+          "Les élections, ça ne prend pas!La video entière sur ma chaîne YT si vous ne l’avez pas vue 😉"
+        ]
+      },
+      {
+        "channel": "SUSHI NIHILISTE",
+        "url": "https://www.youtube.com/channel/UCqH0qUc5t05h20yl-hPw2Pw",
+        "count": 127,
+        "domain_score": 2,
+        "confidence": 85.02,
+        "statuses": {
+          "CAPTURED": 127
+        },
+        "categories": {
+          "AI": 127
+        },
+        "hits": [
+          "team",
+          "culture"
+        ],
+        "sample_titles": [
+          "ÉPISODE 414 : BACON WAR",
+          "ÉPISODE 415 : LES GUERRIERS DE LA 9D",
+          "ÉPISODE 404 : NOUVELLE GÉNÉRATION",
+          "ÉPISODE 416 : SUSHI AU BAR",
+          "ÉPISODE 417 : POMME D'ADAM"
+        ]
+      },
+      {
+        "channel": "PAGESSE React",
+        "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+        "count": 114,
+        "domain_score": 1,
+        "confidence": 77.52,
+        "statuses": {
+          "CAPTURED": 114
+        },
+        "categories": {
+          "AI": 114
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+          "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+          "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL",
+          "Un couple de P DO arrêtés, Aurore BERGÉ veut nous la faire a l'envers",
+          "Des touristes crient F**K ARABIC, LA FLÈCHE retrouve un HATER, Les vacances de MACRON"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 2,
+        "confidence": 76.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "hr"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      },
+      {
+        "channel": "TIKTOK France",
+        "url": "https://www.youtube.com/channel/UCi3lkhz9cmyaH67bi8cZsKQ",
+        "count": 104,
+        "domain_score": 1,
+        "confidence": 72.56,
+        "statuses": {
+          "CAPTURED": 104
+        },
+        "categories": {
+          "AI": 104
+        },
+        "hits": [
+          "talent"
+        ],
+        "sample_titles": [
+          "Les plus gros dérapage à la télévision 🤯",
+          "Elle lui vole son argent... 😱",
+          "Les pranks de Slapman 🤣",
+          "TOP 5 des moments drôles à la télé 😂",
+          "Emilien répond aux rageux 😂"
+        ]
+      },
+      {
+        "channel": "RapMinute",
+        "url": "https://www.youtube.com/channel/UCUVi6ODFENaJBpHBbdZ8fBg",
+        "count": 100,
+        "domain_score": 1,
+        "confidence": 70.52,
+        "statuses": {
+          "CAPTURED": 98,
+          "CLARIFIED_PLANE": 2
+        },
+        "categories": {
+          "AI": 100
+        },
+        "hits": [
+          "culture"
+        ],
+        "sample_titles": [
+          "Freeze Corleone sur scène aux Ardentes 🤯🥷🏼",
+          "Quand Fianso partait en impro sur une prod d’Inoxtag 🤯",
+          "Le 667 toujours reconnaissants envers leurs fans 🥷🏼👏",
+          "La blague d’Inoxtag n’a pas fait l’unanimité 😅",
+          "Freeze Corleone dans les coulisses du concert d’Osirus Jack 🥷🏼"
+        ]
+      },
+      {
+        "channel": "AICodeKing",
+        "url": "https://www.youtube.com/channel/UC0m81bQuthaQZmFbXEY9QSw",
+        "count": 81,
+        "domain_score": 6,
+        "confidence": 67.41,
+        "statuses": {
+          "CAPTURED": 71,
+          "CLARIFIED_PLANE": 10
+        },
+        "categories": {
+          "AI": 81
+        },
+        "hits": [
+          "hr",
+          "team"
+        ],
+        "sample_titles": [
+          "Deepseek Operator (+Free APIs) : This 100% FREE AI Agent Beats OpenAI's Operator FOR FREE!",
+          "E2B Gemini 2.0 Computer Use: This FULLY FREE Agent can Control Whole Computer & DO ANYTHING!",
+          "DeepSeek-V3 Agents : This FULLY FREE AI Agent can DO ANYTHING!",
+          "Open Operator : This FULLY FREE AI Agent Operator BEATS OPENAI's OPERATOR for FREE!",
+          "Cline 3.2 (Upgraded) + New Free APIs (R1, Sonnet) : This FULLY FREE AI Coder JUST GOT AMAZING!"
+        ]
+      },
+      {
+        "channel": "Brut",
+        "url": "https://www.youtube.com/channel/UCSKdvgqdnj72_SLggp7BDTg",
+        "count": 66,
+        "domain_score": 6,
+        "confidence": 58.53,
+        "statuses": {
+          "CAPTURED": 64,
+          "CLARIFIED_PLANE": 2
+        },
+        "categories": {
+          "AI": 66
+        },
+        "hits": [
+          "hr",
+          "culture"
+        ],
+        "sample_titles": [
+          "Immersion dans la vie d'un rappeur chrétien",
+          "Donald Trump coupe son gâteau d’investiture avec une épée… puis danse avec.",
+          "Emmanuel Macron : Interdiction des manifestations de soutien à la Palestine",
+          "Google Maps renommera le golfe “du Mexique” le golfe “d’Amérique”",
+          "Procès requis contre les 4 policiers impliqués dans l’agression raciste Michel Zecler en 2020."
+        ]
+      }
+    ],
+    "08_Legal_Aquaman_Eternals": [
+      {
+        "channel": "BLAST, Le souffle de l'info",
+        "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+        "count": 471,
+        "domain_score": 17,
+        "confidence": 272.01,
+        "statuses": {
+          "CAPTURED": 412,
+          "CLARIFIED_PLANE": 59
+        },
+        "categories": {
+          "AI": 471
+        },
+        "hits": [
+          "nda",
+          "ip "
+        ],
+        "sample_titles": [
+          "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+          "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+          "LA FRANCE EST-ELLE VRAIMENT À DROITE ?",
+          "L'ARGENT MAGIQUE : LA SOLUTION À TOUS NOS PROBLÈMES ? AVEC @Heu7reka & @StupidEco",
+          "ISRAËL/PALESTINE : APRÈS LE 7 OCTOBRE, BILAN D'UN AN DE PROPAGANDE ET DE COUPS DE FORCE"
+        ]
+      },
+      {
+        "channel": "AJ+ français",
+        "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+        "count": 290,
+        "domain_score": 11,
+        "confidence": 175.52,
+        "statuses": {
+          "CAPTURED": 285,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 290
+        },
+        "hits": [
+          "nda",
+          "ip "
+        ],
+        "sample_titles": [
+          "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+          "Trump va-t-il taxer les Européens ?",
+          "TSHISEKEDI A DIT LES TERMES !",
+          "La Palestinienne Khalida Jarrar libérée par Israël",
+          "Otages vs Prisonniers 🇵🇸 : France Info s’excuse"
+        ]
+      },
+      {
+        "channel": "Le Parisien",
+        "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+        "count": 232,
+        "domain_score": 23,
+        "confidence": 158.55,
+        "statuses": {
+          "CAPTURED": 210,
+          "CLARIFIED_PLANE": 22
+        },
+        "categories": {
+          "AI": 232
+        },
+        "hits": [
+          "nda",
+          "ip "
+        ],
+        "sample_titles": [
+          "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+          "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+          "Agressé violemment par un patient, ce médecin songe à fermer son cabinet",
+          "« Il aurait dû être dans le véhicule » : la DZ Mafia accusée dans la fusillade qui visait SCH",
+          "Il part en Antarctique prouver que la Terre est plate et découvre... qu’elle est ronde"
+        ]
+      },
+      {
+        "channel": "LefaAuthentiqueVEVO",
+        "url": "https://www.youtube.com/channel/UC9YFlwUanLrqoSHw5DQ2Ifg",
+        "count": 62,
+        "domain_score": 87,
+        "confidence": 137.5,
+        "statuses": {
+          "CAPTURED": 51,
+          "CLARIFIED_PLANE": 11
+        },
+        "categories": {
+          "AI": 62
+        },
+        "hits": [
+          "ip "
+        ],
+        "sample_titles": [
+          "Lefa - Intro (Audio)",
+          "Lefa - Quelques minutes (Clip officiel)",
+          "Lefa - 20 ans (Clip officiel)",
+          "Lefa - En terrasse (Clip officiel)",
+          "Lefa - Cuba (Audio)"
+        ]
+      },
+      {
+        "channel": "FRANCE 24",
+        "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+        "count": 204,
+        "domain_score": 4,
+        "confidence": 125.52,
+        "statuses": {
+          "CAPTURED": 195,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 204
+        },
+        "hits": [
+          "nda"
+        ],
+        "sample_titles": [
+          "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+          "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+          "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron",
+          "États-Unis : Elon Musk critique \"Stargate\", projet de Donald Trump • FRANCE 24",
+          "IA : l'audacieux projet kenyan qui pourrait inspirer Sam Altman et Elon Musk • FRANCE 24"
+        ]
+      },
+      {
+        "channel": "Fireship",
+        "url": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA",
+        "count": 36,
+        "domain_score": 108,
+        "confidence": 120.0,
+        "statuses": {
+          "SKIPPED": 36
+        },
+        "categories": {
+          "Regular": 36
+        },
+        "hits": [
+          "ip "
+        ],
+        "sample_titles": [
+          "Build a Mindblowing 3D Portfolio Website // Three.js Beginner’s Tutorial",
+          "This free Chinese AI just crushed OpenAI's $200 o1 model...",
+          "The Stargate situation is crazy... Elon vs Altman beef intensifies",
+          "Wake up babe, a dangerous new open-source AI model is here",
+          "Big Tech in panic mode... Did DeepSeek R1 just pop the AI bubble?"
+        ]
+      },
+      {
+        "channel": "Glupatate",
+        "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+        "count": 171,
+        "domain_score": 7,
+        "confidence": 112.04,
+        "statuses": {
+          "CAPTURED": 151,
+          "CLARIFIED_PLANE": 20
+        },
+        "categories": {
+          "AI": 171
+        },
+        "hits": [
+          "nda"
+        ],
+        "sample_titles": [
+          "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+          "Glupatate racheté par un GRAND MÉDIA ?!",
+          "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël",
+          "L'apologie du terrorisme est détournée pour faire taire des opposants politiques – S. Binet",
+          "Personne ne précise que les vi*leurs de G. Pélicot sont des blancs, avec papiers – P. Canfin"
+        ]
+      },
+      {
+        "channel": "Ottekoi",
+        "url": "https://www.youtube.com/channel/UCXX048tuf0BROH6UMePGKPg",
+        "count": 167,
+        "domain_score": 7,
+        "confidence": 110.83,
+        "statuses": {
+          "CAPTURED": 166,
+          "CLARIFIED_PLANE": 1
+        },
+        "categories": {
+          "AI": 167
+        },
+        "hits": [
+          "ip ",
+          "nda"
+        ],
+        "sample_titles": [
+          "DESCENTE au QUARTIER 2 🔥",
+          "Un autre verse ? 😱 #3d #anime #dbz #onepiece",
+          "Meme le F s’y met #dragonball #goku #dbz #anime",
+          "Le bœuf Koba #3d #anime #dbz #onepiece",
+          "La vengeance de Vegedream 💥 | crédit : @dennis_main #3d #dragonball #animation #goku #dbz #vegeta"
+        ]
+      },
+      {
+        "channel": "LeHuffPost",
+        "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+        "count": 152,
+        "domain_score": 15,
+        "confidence": 110.54,
+        "statuses": {
+          "CAPTURED": 143,
+          "CLARIFIED_PLANE": 9
+        },
+        "categories": {
+          "AI": 152
+        },
+        "hits": [
+          "nda",
+          "ip "
+        ],
+        "sample_titles": [
+          "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+          "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+          "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses",
+          "Cette prof de maths a « calculé » combien de jours Borne allait rester à l’Éducation",
+          "Les 25 événements les plus attendus de 2025"
+        ]
+      },
+      {
+        "channel": "Koda",
+        "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+        "count": 156,
+        "domain_score": 5,
+        "confidence": 102.56,
+        "statuses": {
+          "CAPTURED": 144,
+          "CLARIFIED_PLANE": 12
+        },
+        "categories": {
+          "AI": 156
+        },
+        "hits": [
+          "nda"
+        ],
+        "sample_titles": [
+          "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+          "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+          "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch",
+          "⁠@filsdelachance1708 & ​⁠@2sDoubleA - Ni oui ni non 🤐 Prt 1 #shorts #animation #humour #drole",
+          "Partie 1 | Le psy psychopathe 💀 @RENOISANSEAU #shorts #animation #humour #drole #sketch"
+        ]
+      },
+      {
+        "channel": "WorldofAI",
+        "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+        "count": 128,
+        "domain_score": 15,
+        "confidence": 100.08,
+        "statuses": {
+          "CAPTURED": 123,
+          "CLARIFIED_PLANE": 5
+        },
+        "categories": {
+          "AI": 128
+        },
+        "hits": [
+          "law",
+          "ip "
+        ],
+        "sample_titles": [
+          "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+          "How To Build an AI WhatsApp Chatbot With No-code!",
+          "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)",
+          "Browser Use: FREE AI Agent CAN CONTROL BROWSERS & DO ANYTHING! (Beats Anthropic!)"
+        ]
+      },
+      {
+        "channel": "AICodeKing",
+        "url": "https://www.youtube.com/channel/UC0m81bQuthaQZmFbXEY9QSw",
+        "count": 81,
+        "domain_score": 33,
+        "confidence": 94.41,
+        "statuses": {
+          "CAPTURED": 71,
+          "CLARIFIED_PLANE": 10
+        },
+        "categories": {
+          "AI": 81
+        },
+        "hits": [
+          "law",
+          "ip ",
+          "policy"
+        ],
+        "sample_titles": [
+          "Deepseek Operator (+Free APIs) : This 100% FREE AI Agent Beats OpenAI's Operator FOR FREE!",
+          "E2B Gemini 2.0 Computer Use: This FULLY FREE Agent can Control Whole Computer & DO ANYTHING!",
+          "DeepSeek-V3 Agents : This FULLY FREE AI Agent can DO ANYTHING!",
+          "Open Operator : This FULLY FREE AI Agent Operator BEATS OPENAI's OPERATOR for FREE!",
+          "Cline 3.2 (Upgraded) + New Free APIs (R1, Sonnet) : This FULLY FREE AI Coder JUST GOT AMAZING!"
+        ]
+      },
+      {
+        "channel": "Le Rab En Mieux (Chaine Secondaire)",
+        "url": "https://www.youtube.com/channel/UCgqT2qUTulhUDi1KCG05-3g",
+        "count": 49,
+        "domain_score": 49,
+        "confidence": 92.79,
+        "statuses": {
+          "CAPTURED": 49
+        },
+        "categories": {
+          "AI": 49
+        },
+        "hits": [
+          "nda"
+        ],
+        "sample_titles": [
+          "DINOS SORT LE PROJET LE PLUS INCROYABLE DE L'HISTOIRE (je rigole c'est horrible)",
+          "LAFOUINE ESSAYE D'ÊTRE JEUNE MAIS IL A PRIS 20 PIGES (1ère écoute Capital Du Crime)",
+          "NINHO ET NISKA SE REUNISSENT POUR FAIRE UN SANDWICH AU CACA (1ère écoute GOAT)",
+          "SNEAZZY S'EN SORT PAS SI MAL AVEC CE PROJET NON? (1ère écoute Derrière l'horizon)",
+          "LE PROFESSEUR OXMO REUNI L'UNDERGROUND SUR UNE MIXTAPE FORT GOUTÛE (1ère écoute Lafiya session)"
+        ]
+      },
+      {
+        "channel": "VALD",
+        "url": "https://www.youtube.com/channel/UCUNv0EUZYhuelHXWoFLTqwg",
+        "count": 47,
+        "domain_score": 71,
+        "confidence": 85.75,
+        "statuses": {
+          "SKIPPED": 47
+        },
+        "categories": {
+          "Regular": 47
+        },
+        "hits": [
+          "ip ",
+          "regulation"
+        ],
+        "sample_titles": [
+          "VALD - GAUCHE DROITE (Clip Officiel)",
+          "AVANT PREMIERE ECOUTE",
+          "AVANT PREMIERE ECOUTE",
+          "VALD - 93 MILLIARDS feat SUIKONBLAZ AD (Visualizer officiel)",
+          "VALD - ROCHE NOIRE (Visualizer officiel)"
+        ]
+      },
+      {
+        "channel": "Melvynx",
+        "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+        "count": 109,
+        "domain_score": 8,
+        "confidence": 82.86,
+        "statuses": {
+          "CAPTURED": 109
+        },
+        "categories": {
+          "AI": 109
+        },
+        "hits": [
+          "law",
+          "ip ",
+          "nda"
+        ],
+        "sample_titles": [
+          "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+          "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+          "Je teste OpenAI Codex pour la première fois ! (c'est dingue)",
+          "Kiro, l'IDE IA d'Amazon : potentiel Cursor Killer (et gratuit)",
+          "Comment ENFIN terminer tes projets SaaS !"
+        ]
+      }
+    ]
+  },
+  "top_overall": [
+    {
+      "channel": "BLAST, Le souffle de l'info",
+      "url": "https://www.youtube.com/channel/UC__xRB5L4toU9yYawt_lIKg",
+      "count": 471,
+      "statuses": {
+        "CAPTURED": 412,
+        "CLARIFIED_PLANE": 59
+      },
+      "sample_titles": [
+        "RÉVÉLATIONS GLAÇANTES SUR LE SYSTÈME QUI MALTRAITE NOS BÉBÉS",
+        "RABELAIS EMMERDE MACRON (ET EN FAIT DE L'OR) - ÉPISODE 8",
+        "LA FRANCE EST-ELLE VRAIMENT À DROITE ?"
+      ]
+    },
+    {
+      "channel": "AJ+ français",
+      "url": "https://www.youtube.com/channel/UCd1jQ_ppmKfphnh4p39HMFg",
+      "count": 290,
+      "statuses": {
+        "CAPTURED": 285,
+        "CLARIFIED_PLANE": 5
+      },
+      "sample_titles": [
+        "BARDELLA SE FAIT RECADRER AU PARLEMENT EUROPÉEN",
+        "Trump va-t-il taxer les Européens ?",
+        "TSHISEKEDI A DIT LES TERMES !"
+      ]
+    },
+    {
+      "channel": "FICKO TV",
+      "url": "https://www.youtube.com/channel/UCuH818pUjI_x0_h7X5Y7P1w",
+      "count": 256,
+      "statuses": {
+        "SKIPPED": 256
+      },
+      "sample_titles": [
+        "MAES MET en GARDE SDM, BOOBA REPOND CLASH, JUL POLEMIQUE, NEW ALBUM, DAMSO PARLE AYA en ITW (EXCLU)",
+        "BOOBA REPOND CLASH ROHFF, PIQUE ENCORE CHRIS HYCONIQ, REPOND DIAMS, ZAMDANE100K, DAMSO ALBUM (EXCLU)",
+        "BOOBA MEN4CE LAMAL, ROHFF CLASH ENCORE BALOO, JUL sur BLACK OPS 6, NINHO COLLAB avec NASDAS (EXCLU)"
+      ]
+    },
+    {
+      "channel": "C à vous - France Télévisions",
+      "url": "https://www.youtube.com/channel/UCejTWYquMXD_MFHRZiqo_Aw",
+      "count": 253,
+      "statuses": {
+        "SKIPPED": 253
+      },
+      "sample_titles": [
+        "Le Micro Foutoir de “L’Amour ouf” - L’ABC de Bertrand Chameroy  - C à Vous - 14/10/2024",
+        "Bertrand Dion en playback - L’ABC de Bertrand Chameroy  - C à Vous - 11/10/2024",
+        "Quand des fans très particuliers chantent du Kaaris  - L’ABC de Bertrand Chameroy-CàVous-15/10/2024"
+      ]
+    },
+    {
+      "channel": "Vision IA",
+      "url": "https://www.youtube.com/channel/UCyc03X3uRuxM9n7fyRH_gIw",
+      "count": 241,
+      "statuses": {
+        "SKIPPED": 241
+      },
+      "sample_titles": [
+        "La Chine dévoile son projet de Téléportation Quantique !",
+        "Une IA 100% AUTONOME débarque – L'ordinateur sans humain devient réalité !",
+        "Les Experts sont sous le CHOC ! Le nouveau prototype IA de Meta va TOUT CHANGER !"
+      ]
+    },
+    {
+      "channel": "Le Parisien",
+      "url": "https://www.youtube.com/channel/UCfHn_8-ehdem86fEvlFg-Gw",
+      "count": 232,
+      "statuses": {
+        "CAPTURED": 210,
+        "CLARIFIED_PLANE": 22
+      },
+      "sample_titles": [
+        "Paris : des milliers de manifestants contre le gala « Israël is Forever »",
+        "Aurélie B., la comptable qui dépouillait ses employeurs (KIABI, CULTURA)",
+        "Agressé violemment par un patient, ce médecin songe à fermer son cabinet"
+      ]
+    },
+    {
+      "channel": "VU FranceTV",
+      "url": "https://www.youtube.com/channel/UCqt99sKYNTxqlHtzV9weUYA",
+      "count": 227,
+      "statuses": {
+        "SKIPPED": 227
+      },
+      "sample_titles": [
+        "VU du 30/07/2025 : Le mantra de la compassion",
+        "VU du 31/07/2025 : Alerte au tsunami",
+        "VU du 01/08/2025 : Léon Marchand champion du monde"
+      ]
+    },
+    {
+      "channel": "FRANCE 24",
+      "url": "https://www.youtube.com/channel/UCCCPCZNChQdGa9EkATeye4g",
+      "count": 204,
+      "statuses": {
+        "CAPTURED": 195,
+        "CLARIFIED_PLANE": 9
+      },
+      "sample_titles": [
+        "Voitures électriques : la Chine passe à l'offensive • FRANCE 24",
+        "Le Canada va-t-il devenir le 51ème État américain, comme le propose Trump ? • FRANCE 24",
+        "Fin des accords militaires avec la France : le Sénégal dénonce le \"propos erroné\" d'Emmanuel Macron"
+      ]
+    },
+    {
+      "channel": "Glupatate",
+      "url": "https://www.youtube.com/channel/UCE38FJeWDQ-ViY6buSKWoJg",
+      "count": 171,
+      "statuses": {
+        "CAPTURED": 151,
+        "CLARIFIED_PLANE": 20
+      },
+      "sample_titles": [
+        "Un militant pro-Israël SIMULE une agression ?! – GluNews #6",
+        "Glupatate racheté par un GRAND MÉDIA ?!",
+        "De Villepin recadre Borne sur les sanctions à mettre en place contre Israël"
+      ]
+    },
+    {
+      "channel": "Nono",
+      "url": "https://www.youtube.com/channel/UCcC5nCsn859d-nqbH2MCjUA",
+      "count": 168,
+      "statuses": {
+        "SKIPPED": 168
+      },
+      "sample_titles": [
+        "il est revenu à la base😂😂 #comedie #humour #food #react #drole",
+        "la limonade pro max #comedie #humour #drole #react #food #reaction",
+        "un sachet d'airtag #comedie #humour #drole #react #food #reaction"
+      ]
+    },
+    {
+      "channel": "Ottekoi",
+      "url": "https://www.youtube.com/channel/UCXX048tuf0BROH6UMePGKPg",
+      "count": 167,
+      "statuses": {
+        "CAPTURED": 166,
+        "CLARIFIED_PLANE": 1
+      },
+      "sample_titles": [
+        "DESCENTE au QUARTIER 2 🔥",
+        "Un autre verse ? 😱 #3d #anime #dbz #onepiece",
+        "Meme le F s’y met #dragonball #goku #dbz #anime"
+      ]
+    },
+    {
+      "channel": "Osirus Jack - Topic",
+      "url": "https://www.youtube.com/channel/UCCaORShQKrvuulAoLp2hgQA",
+      "count": 164,
+      "statuses": {
+        "SKIPPED": 164
+      },
+      "sample_titles": [
+        "Sous Teh",
+        "V.V.T (feat. Slim C)",
+        "Même Merde"
+      ]
+    },
+    {
+      "channel": "Koda",
+      "url": "https://www.youtube.com/channel/UC8Sgg29FRGBWuwrAeMkOAYA",
+      "count": 156,
+      "statuses": {
+        "CAPTURED": 144,
+        "CLARIFIED_PLANE": 12
+      },
+      "sample_titles": [
+        "Quand tu dragues une meuf de 30 ans 😭😂 Audio: @yacetom #shorts #animation #humour #drole #sketch",
+        "@Ton_pote_Gillian - Le psychopathe ☕️ #shorts #animation #humour #drole #sketch",
+        "@LIMITELIMITE77 - Le contrôle de police 👮‍♂️ #shorts #animation #humour #drole #sketch"
+      ]
+    },
+    {
+      "channel": "LeHuffPost",
+      "url": "https://www.youtube.com/channel/UC9GGzAhhvhJO1hL10-BcgNA",
+      "count": 152,
+      "statuses": {
+        "CAPTURED": 143,
+        "CLARIFIED_PLANE": 9
+      },
+      "sample_titles": [
+        "À Paris, le « gala de la honte » pour Israël mobilise des milliers de contre-manifestants",
+        "Avec France-Israël, un Stade de France bunkérisé et cerné par les divisions sur Gaza",
+        "Sylvester Stallone, ravi de la victoire de Donald Trump, a osé deux comparaisons audacieuses"
+      ]
+    },
+    {
+      "channel": "Crossthememory",
+      "url": "https://www.youtube.com/channel/UCzsdGXNzB9m0wXZwU05Fiyg",
+      "count": 150,
+      "statuses": {
+        "SKIPPED": 150
+      },
+      "sample_titles": [
+        "Des nems avec un ingrédient spécial. 🤔",
+        "Des détails qui en disent beaucoup sur lui. 🤣",
+        "Il doit ramener de l'oseille à la maison, peu importe les moyens. 🤔"
+      ]
+    },
+    {
+      "channel": "Le Journal de l'Espace",
+      "url": "https://www.youtube.com/channel/UCypzG0nv9B65DwOLJ578rZQ",
+      "count": 139,
+      "statuses": {
+        "SKIPPED": 139
+      },
+      "sample_titles": [
+        "Ils ont installé un réacteur NUCLÉAIRE sur un AVION ! - On Se l'Demande #120 - Le JDE",
+        "Un HUMAIN peut-il VRAIMENT aller sur MARS ? - Le Journal de l'Espace #259 - Actu spatiale",
+        "SCANDALE D'ÉTAT: Un programme caché par le PENTAGONE ? - Le Journal de l'Espace #260 - Actu spatiale"
+      ]
+    },
+    {
+      "channel": "NAÏM",
+      "url": "https://www.youtube.com/channel/UCL5WDPEm30nG6kkBmF9bfig",
+      "count": 131,
+      "statuses": {
+        "CAPTURED": 107,
+        "CLARIFIED_PLANE": 24
+      },
+      "sample_titles": [
+        "Ils donnent le doliprane, ils taxent les chiens et pas de débat - La semaine de Naïm",
+        "Le retour de Trump! La suite dans ma dernière vidéo dispo sur ma chaine.",
+        "J’ai honte !! Nouveau spectacle Chapitre II à Paris et en tournée, toutes les infos sur naim.art"
+      ]
+    },
+    {
+      "channel": "WorldofAI",
+      "url": "https://www.youtube.com/channel/UC2WmuBuFq6gL08QYG-JjXKw",
+      "count": 128,
+      "statuses": {
+        "CAPTURED": 123,
+        "CLARIFIED_PLANE": 5
+      },
+      "sample_titles": [
+        "OS-Copilot: Your Personal AI Agent with Semantic Memory - Rabbit R1 Alternative That is FREE!",
+        "How To Build an AI WhatsApp Chatbot With No-code!",
+        "Deepseek-R1 Computer Use: FULLY FREE AI Agent With UI CAN DO ANYTHING! (Beats OpenAI Operator)"
+      ]
+    },
+    {
+      "channel": "SUSHI NIHILISTE",
+      "url": "https://www.youtube.com/channel/UCqH0qUc5t05h20yl-hPw2Pw",
+      "count": 127,
+      "statuses": {
+        "CAPTURED": 127
+      },
+      "sample_titles": [
+        "ÉPISODE 414 : BACON WAR",
+        "ÉPISODE 415 : LES GUERRIERS DE LA 9D",
+        "ÉPISODE 404 : NOUVELLE GÉNÉRATION"
+      ]
+    },
+    {
+      "channel": "Islem Sehili",
+      "url": "https://www.youtube.com/channel/UCsKs7qJ8cv7tCDh-F8CfI5A",
+      "count": 123,
+      "statuses": {
+        "SKIPPED": 123
+      },
+      "sample_titles": [
+        "J’me suis toujours demandé s’ils existaient vraiment #date #humour #couple #drole",
+        "Au moins j’suis dispo #humour #date",
+        "#date #humour #sketch #couple #drole"
+      ]
+    },
+    {
+      "channel": "Josman - Topic",
+      "url": "https://www.youtube.com/channel/UC0hsMMOPUmc9HbYIX04MNeQ",
+      "count": 116,
+      "statuses": {
+        "SKIPPED": 116
+      },
+      "sample_titles": [
+        "Tulum, México",
+        "Señorita",
+        "Les Flammes"
+      ]
+    },
+    {
+      "channel": "PAGESSE React",
+      "url": "https://www.youtube.com/channel/UCQZQE4vjOXaMg0J-wEx5axA",
+      "count": 114,
+      "statuses": {
+        "CAPTURED": 114
+      },
+      "sample_titles": [
+        "Céline PINA fait un CSC sur ISRAEL, Une GRECQUE lâche une VÉRITÉ sur des ISRAÉLIENS",
+        "Nili NOUARI veut la paix à GAZA a sa façon, MORANDINI fait un csc, OPTICALCENTER dans la sauce",
+        "Des SOLDATES de TSAHAL se tapent des TERRO en prison, CHALGHOUMI l'imam des JUIFS en ISRAEL"
+      ]
+    },
+    {
+      "channel": "Melvynx",
+      "url": "https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA",
+      "count": 109,
+      "statuses": {
+        "CAPTURED": 109
+      },
+      "sample_titles": [
+        "Ils ont ENFIN résolu le problème de Shadcn/UI !",
+        "Ma Stack Technique : J'explique TOUS mes choix (j'ai changé...)",
+        "Je teste OpenAI Codex pour la première fois ! (c'est dingue)"
+      ]
+    },
+    {
+      "channel": "House of Marvel",
+      "url": "https://www.youtube.com/channel/UCNJXZEq-3qPB4vAhuPAoEQw",
+      "count": 105,
+      "statuses": {
+        "CAPTURED": 103,
+        "CLARIFIED_PLANE": 2
+      },
+      "sample_titles": [
+        "DR DOOM, THANOS, KANG : QUI EST LE PLUS FORT?",
+        "STEVE A CRÉÉ LES 4 FANTASTIQUES!",
+        "SPIDER MAN 4 VA TOUT CHANGER !"
+      ]
+    },
+    {
+      "channel": "TIKTOK France",
+      "url": "https://www.youtube.com/channel/UCi3lkhz9cmyaH67bi8cZsKQ",
+      "count": 104,
+      "statuses": {
+        "CAPTURED": 104
+      },
+      "sample_titles": [
+        "Les plus gros dérapage à la télévision 🤯",
+        "Elle lui vole son argent... 😱",
+        "Les pranks de Slapman 🤣"
+      ]
+    },
+    {
+      "channel": "CHILO",
+      "url": "https://www.youtube.com/channel/UC9p4xo6kdsN_3G-N5PAnF4A",
+      "count": 103,
+      "statuses": {
+        "CAPTURED": 79,
+        "CLARIFIED_PLANE": 24
+      },
+      "sample_titles": [
+        "C’est compliqué hein 😭😭",
+        "Faut respecter les gens ! Allez RKO",
+        "DOUBLE RKO !!!"
+      ]
+    },
+    {
+      "channel": "RapMinute",
+      "url": "https://www.youtube.com/channel/UCUVi6ODFENaJBpHBbdZ8fBg",
+      "count": 100,
+      "statuses": {
+        "CAPTURED": 98,
+        "CLARIFIED_PLANE": 2
+      },
+      "sample_titles": [
+        "Freeze Corleone sur scène aux Ardentes 🤯🥷🏼",
+        "Quand Fianso partait en impro sur une prod d’Inoxtag 🤯",
+        "Le 667 toujours reconnaissants envers leurs fans 🥷🏼👏"
+      ]
+    },
+    {
+      "channel": "Idriss J. Aberkane",
+      "url": "https://www.youtube.com/channel/UCsBPtU4hJkWNQ4kA-IsxgKw",
+      "count": 98,
+      "statuses": {
+        "SKIPPED": 98
+      },
+      "sample_titles": [
+        "Conférence: Dessine-moi Mille Milliards ! | Idriss Aberkane",
+        "L'Iran vient-il de déguiser un essai nucléaire? | IA reçoit Eric Denécé et Caroline Galactéros",
+        "Conférence : le Futur de l'Education face à l'Intelligence Artificielle | Idriss Aberkane"
+      ]
+    },
+    {
+      "channel": "Mozinor",
+      "url": "https://www.youtube.com/channel/UCTIiKt_Bp4gKlFPtHeB3qGw",
+      "count": 97,
+      "statuses": {
+        "SKIPPED": 97
+      },
+      "sample_titles": [
+        "Booba Réaction (Parodie)",
+        "CHADMANU",
+        "Booba Réaction (Parodie)"
+      ]
+    },
+    {
+      "channel": "Laury Aucalme",
+      "url": "https://www.youtube.com/channel/UCzjLpi5Vrv_dGc-CfzZH9aw",
+      "count": 97,
+      "statuses": {
+        "SKIPPED": 97
+      },
+      "sample_titles": [
+        "Quand tu revois ton ex au pire moment",
+        "Quand tu invites une meuf chez toi (ça tourne bien mal)",
+        "Quand ta copine invite sa pote"
+      ]
+    }
+  ]
+}

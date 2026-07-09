@@ -1,0 +1,389 @@
+{
+  "metadata": {
+    "skill_name": "abc-os-backend-delegation",
+    "skill_path": "C:/Users/amado/.claude/skills/abc-os-backend-delegation",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-06-13T18:37:25Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 16857,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": true,
+          "evidence": "canonical `abc_os._aspace_migrations` present=True, fictional variants present=False"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": true,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=False"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": true,
+          "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=True, ON CONFLICT (filename) DO NOTHING=True"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": true,
+          "evidence": "wiki/log.md=True, README.md=True, handoff_abc_os_community_dev_=...True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8333,
+        "passed": 5,
+        "failed": 1,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 16160,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": true,
+          "evidence": "canonical `abc_os._aspace_migrations` present=True, fictional variants present=False"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": true,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=False"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": true,
+          "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=True, ON CONFLICT (filename) DO NOTHING=True"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": true,
+          "evidence": "wiki/log.md=True, README.md=True, handoff_abc_os_community_dev_=...True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "failed": 3,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 20914,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": false,
+          "evidence": "canonical `abc_os._aspace_migrations` present=False, fictional variants present=False"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": true,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=False"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": false,
+          "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=False, ON CONFLICT (filename) DO NOTHING=False"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": true,
+          "evidence": "wiki/log.md=True, README.md=True, handoff_abc_os_community_dev_=...True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "failed": 3,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 13305,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": false,
+          "evidence": "canonical `abc_os._aspace_migrations` present=False, fictional variants present=True"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": true,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=False"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": false,
+          "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=True, ON CONFLICT (filename) DO NOTHING=False"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": true,
+          "evidence": "wiki/log.md=True, README.md=True, handoff_abc_os_community_dev_=...True"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.1667,
+        "passed": 1,
+        "failed": 5,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 12310,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": false,
+          "evidence": "canonical `abc_os._aspace_migrations` present=False, fictional variants present=True"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": false,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=True"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": false,
+          "evidence": "FORCE_TARGET=1=True, IF NOT EXISTS=True, ON CONFLICT (filename) DO NOTHING=False"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": false,
+          "evidence": "wiki/log.md=False, README.md=False, handoff_abc_os_community_dev_=...False"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3333,
+        "passed": 2,
+        "failed": 4,
+        "total": 6,
+        "time_seconds": 0.0,
+        "tokens": 14557,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "id": "A1",
+          "text": "[A1] Tracker table literal match (canonical abc_os._aspace_migrations)",
+          "passed": false,
+          "evidence": "canonical `abc_os._aspace_migrations` present=False, fictional variants present=False"
+        },
+        {
+          "id": "A2",
+          "text": "[A2] RLS scope check (no over-broad current_role IN (anon,authenticated,service_role))",
+          "passed": true,
+          "evidence": "over-broad `current_role() IN ('anon','authenticated','service_role')` present=False"
+        },
+        {
+          "id": "A3",
+          "text": "[A3] Old/New diff structure (## Old / ## New or DRY-RUN MODE header)",
+          "passed": false,
+          "evidence": "`## Old` / `## New` / `## DRY-RUN MODE` header present=False"
+        },
+        {
+          "id": "A4",
+          "text": "[A4] FORCE_TARGET=1 with idempotency safety net (IF NOT EXISTS + ON CONFLICT (filename))",
+          "passed": false,
+          "evidence": "FORCE_TARGET=1=False, IF NOT EXISTS=False, ON CONFLICT (filename) DO NOTHING=False"
+        },
+        {
+          "id": "A5",
+          "text": "[A5] Mixed-tenancy decision tree cited (D10 or ADR-ABCOS-001)",
+          "passed": true,
+          "evidence": "D10/mixed-tenancy/ADR-ABCOS-001 cited=True"
+        },
+        {
+          "id": "A6",
+          "text": "[A6] Write-back contract complete with canonical paths (wiki/log.md, README.md, handoff_abc_os_community_dev_*)",
+          "passed": false,
+          "evidence": "wiki/log.md=True, README.md=False, handoff_abc_os_community_dev_=...True"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.7222,
+        "stddev": 0.1924,
+        "min": 0.5,
+        "max": 0.8333
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 17977.0,
+        "stddev": 2567.2805,
+        "min": 16160,
+        "max": 20914
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.3333,
+        "stddev": 0.1667,
+        "min": 0.1667,
+        "max": 0.5
+      },
+      "time_seconds": {
+        "mean": 0.0,
+        "stddev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "tokens": {
+        "mean": 13390.6667,
+        "stddev": 1125.9469,
+        "min": 12310,
+        "max": 14557
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.39",
+      "time_seconds": "+0.0",
+      "tokens": "+4586"
+    }
+  },
+  "notes": []
+}

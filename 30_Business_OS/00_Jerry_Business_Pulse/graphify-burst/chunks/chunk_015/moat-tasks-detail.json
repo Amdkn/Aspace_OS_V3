@@ -1,0 +1,337 @@
+[
+  {
+    "id": "e27e9871-0441-400c-810e-6a549fb89bdb",
+    "title": "Freeform Rectangle Task",
+    "comment": "Met les frameworks dans le bon ordre de Ikigai, Life Wheel, 12WY, PARA, GTD et DEAL et transforme les en Dossier depliables avec leurs composant par pages \nPour le menu, je veux que quand un framework est ouvers les autres soit fermé pour qu'un seul soit ouvers en meme temps que tous les autres sont fermé",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 2,
+      "y": 91,
+      "w": 283,
+      "h": 393
+    },
+    "screenshotPath": "./screenshots/moat-1774843216004-79er8qwgk.png",
+    "status": "done",
+    "timestamp": 1774843216248,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 2,
+        "y1": 91,
+        "x2": 285,
+        "y2": 484
+      },
+      "xywh": {
+        "x": 2,
+        "y": 91,
+        "width": 283,
+        "height": 393
+      },
+      "normalized": {
+        "x": 0.00078125,
+        "y": 0.08536585365853659,
+        "width": 0.110546875,
+        "height": 0.36866791744840527
+      },
+      "viewport": {
+        "width": 2560,
+        "height": 1066
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "147225dd-9091-4684-a581-3525aabe0add",
+    "title": "Freeform Rectangle Task",
+    "comment": "Ajoute a Life Wheel les pages des 8 Domaines de la Roue de la Vie dans l'ordre",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 11,
+      "y": 132,
+      "w": 221,
+      "h": 171
+    },
+    "screenshotPath": "./screenshots/moat-1774844302849-0fzgkiw8r.png",
+    "status": "done",
+    "timestamp": 1774844303245,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 11,
+        "y1": 132,
+        "x2": 232,
+        "y2": 303
+      },
+      "xywh": {
+        "x": 11,
+        "y": 132,
+        "width": 221,
+        "height": 171
+      },
+      "normalized": {
+        "x": 0.006444053895723492,
+        "y": 0.18565400843881857,
+        "width": 0.12946690099589925,
+        "height": 0.24050632911392406
+      },
+      "viewport": {
+        "width": 1707,
+        "height": 711
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "f184c17d-475c-43ab-9a2e-93e368bd27c8",
+    "title": "Freeform Rectangle Task",
+    "comment": "le bon ordre des Domaines de la Life Wheel est Carriere, Finance, Sante, Croissance, Relation, Famille, Loisir et Environment",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 7,
+      "y": 132,
+      "w": 216,
+      "h": 294
+    },
+    "screenshotPath": "./screenshots/moat-1774844777194-g1axtsl7p.png",
+    "status": "done",
+    "timestamp": 1774844777468,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 7,
+        "y1": 132,
+        "x2": 223,
+        "y2": 426
+      },
+      "xywh": {
+        "x": 7,
+        "y": 132,
+        "width": 216,
+        "height": 294
+      },
+      "normalized": {
+        "x": 0.004100761570005858,
+        "y": 0.18565400843881857,
+        "width": 0.1265377855887522,
+        "height": 0.41350210970464135
+      },
+      "viewport": {
+        "width": 1707,
+        "height": 711
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "a0ea5938-8096-47c0-94d5-7a5138100aac",
+    "title": "Freeform Rectangle Task",
+    "comment": "les Disciplines de Life Wheel sont Vision, Planning, process Control, measurement et Time Use",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 19,
+      "y": 188,
+      "w": 207,
+      "h": 180
+    },
+    "screenshotPath": "./screenshots/moat-1774845101627-23uxnsgzl.png",
+    "status": "done",
+    "timestamp": 1774845102032,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 19,
+        "y1": 188,
+        "x2": 226,
+        "y2": 368
+      },
+      "xywh": {
+        "x": 19,
+        "y": 188,
+        "width": 207,
+        "height": 180
+      },
+      "normalized": {
+        "x": 0.011130638547158758,
+        "y": 0.26441631504922647,
+        "width": 0.12126537785588752,
+        "height": 0.25316455696202533
+      },
+      "viewport": {
+        "width": 1707,
+        "height": 711
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "9f3ed858-07b9-45fe-bb36-5b03cbe74d8b",
+    "title": "Freeform Rectangle Task",
+    "comment": "Ajoute Engage aux Pages de GTD pour garder les trace de tous les passage dans Airlock",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 14,
+      "y": 296,
+      "w": 231,
+      "h": 171
+    },
+    "screenshotPath": "./screenshots/moat-1774845187376-4vgio4xfo.png",
+    "status": "done",
+    "timestamp": 1774845187672,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 14,
+        "y1": 296,
+        "x2": 245,
+        "y2": 467
+      },
+      "xywh": {
+        "x": 14,
+        "y": 296,
+        "width": 231,
+        "height": 171
+      },
+      "normalized": {
+        "x": 0.008201523140011716,
+        "y": 0.41631504922644164,
+        "width": 0.13532513181019332,
+        "height": 0.24050632911392406
+      },
+      "viewport": {
+        "width": 1707,
+        "height": 711
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "07294853-a823-4770-80db-ab00b7d37e9a",
+    "title": "Freeform Rectangle Task",
+    "comment": "Deplace cette bar de recherche en bas des Framework dans la Sidebar",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 982,
+      "y": 9,
+      "w": 216,
+      "h": 58
+    },
+    "screenshotPath": "./screenshots/moat-1774845936985-c3g2nbsf6.png",
+    "status": "done",
+    "timestamp": 1774845937153,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 982,
+        "y1": 9,
+        "x2": 1198,
+        "y2": 67
+      },
+      "xywh": {
+        "x": 982,
+        "y": 9,
+        "width": 216,
+        "height": 58
+      },
+      "normalized": {
+        "x": 0.5752782659636789,
+        "y": 0.012658227848101266,
+        "width": 0.1265377855887522,
+        "height": 0.08157524613220815
+      },
+      "viewport": {
+        "width": 1707,
+        "height": 711
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "eb15cb53-aa3b-49b9-98c8-cf5925c33304",
+    "title": "Freeform Rectangle Task",
+    "comment": "Deplace le Relation aussi en bas de la Sidebar pour liberer de la place pour les autre element du Menu header",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 635,
+      "y": 15,
+      "w": 185,
+      "h": 43
+    },
+    "screenshotPath": "./screenshots/moat-1774846938778-qerdh8kfq.png",
+    "status": "done",
+    "timestamp": 1774846939012,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 635,
+        "y1": 15,
+        "x2": 820,
+        "y2": 58
+      },
+      "xywh": {
+        "x": 635,
+        "y": 15,
+        "width": 185,
+        "height": 43
+      },
+      "normalized": {
+        "x": 0.3307291666666667,
+        "y": 0.01875,
+        "width": 0.09635416666666667,
+        "height": 0.05375
+      },
+      "viewport": {
+        "width": 1920,
+        "height": 800
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "966707c8-c94c-42c3-9cd4-ccf4003ce799",
+    "title": "Freeform Rectangle Task",
+    "comment": "c'est  quoi ce brodel?\npourquoi les Disciplines de 12WY sont dans Life Wheel plutôt que d'etre dans 12WY !\nSupprime les pages qui sont dans 12WY pour les remplacer par les 5 Disciplines et enleve les [D] devant leurs nom",
+    "selector": "freeform",
+    "boundingRect": {
+      "x": 1,
+      "y": 127,
+      "w": 247,
+      "h": 443
+    },
+    "screenshotPath": "./screenshots/moat-1774847175063-s8iike1pf.png",
+    "status": "done",
+    "timestamp": 1774847175186,
+    "boundingBox": {
+      "xyxy": {
+        "x1": 1,
+        "y1": 127,
+        "x2": 248,
+        "y2": 570
+      },
+      "xywh": {
+        "x": 1,
+        "y": 127,
+        "width": 247,
+        "height": 443
+      },
+      "normalized": {
+        "x": 0.0005208333333333333,
+        "y": 0.15875,
+        "width": 0.12864583333333332,
+        "height": 0.55375
+      },
+      "viewport": {
+        "width": 1920,
+        "height": 800
+      },
+      "type": "freeform"
+    }
+  },
+  {
+    "id": "153e017e-0ad1-409c-ae66-e56b9ca2dd87",
+    "title": "h2: The Watcher A0 Observer",
+    "comment": "enleve ce long titre pour liberer de la place pour le menu du header",
+    "selector": "div.items-center.gap-6:nth-child(1) > div.items-center.gap-2:nth-child(1) > h2.text-sm.font-black",
+    "boundingRect": {
+      "x": 125,
+      "y": 22,
+      "w": 292,
+      "h": 20
+    },
+    "screenshotPath": "./screenshots/moat-1774849710860-tnpe7s5uv.png",
+    "status": "done",
+    "timestamp": 1774849711034
+  }
+]

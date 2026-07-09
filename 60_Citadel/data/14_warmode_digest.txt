@@ -1,0 +1,13 @@
+🔴 WAR MODE ON — Citadelle A0 · 2026-07-08T23:29:41-04:00
+Décisions autonomes A0 : 34 (decision:26, vision_ratified_planning_drafted_4sessions_spawned:1, a3_curie_vivid_vision_discipline_1_canonized:1, hero_agents_shells_canonic_creation:1, vision_a0_structurante_curie_loop_engineering:1, porte_cron_ouverture:1, delegate:1, war_mode_observability_canonized:1, warmode:1)
+
+Dernières décisions (append-only, A+ observe, n'intervient pas) :
+  • [decision] 2026-07-08_b1_mirofish_gate.json — 
+  • [decision] 2026-07-08_w28_m1_veto_decorrele.json — 
+  • [decision] 2026-07-08_fable_window_extend_12.json — 
+  • [decision] 2026-07-06_wf1_run_loop_live.json — 
+  • [decision] pass_wf1_WK04.json — 
+Airlock: B1 ✓ · B2 ✓ · B3 ✓ (0/3) · B4 ✓ · GO ✓ · chain: CHAIN_SOUTENABLE (wf0=GREEN wf1=OK(8t,8.00/wk) wf2=SOUTENABLE(9))
+
+Veto unique : Beth vie/santé. Le reste = PORTES à ouvrir (HxH), plus des freins.
+http://127.0.0.1:8770/warmode

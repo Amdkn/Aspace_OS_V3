@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-07-08T23:29:41-04:00",
+  "war_mode": "ON",
+  "flag_file": "decisions\\12WY_ON_PAUSE.flag",
+  "active_flags": [
+    {
+      "flag": "12WY_ON_PAUSE.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_book_loop.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_heartbeat.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_ship_internal.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_wf0.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_wf1.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_wf3.flag",
+      "active": true
+    },
+    {
+      "flag": "enable_zora.flag",
+      "active": true
+    },
+    {
+      "flag": "FABLE_WINDOW.flag",
+      "active": true
+    }
+  ],
+  "decisions_total": 34,
+  "decisions_by_action": {
+    "decision": 26,
+    "vision_ratified_planning_drafted_4sessions_spawned": 1,
+    "a3_curie_vivid_vision_discipline_1_canonized": 1,
+    "hero_agents_shells_canonic_creation": 1,
+    "vision_a0_structurante_curie_loop_engineering": 1,
+    "porte_cron_ouverture": 1,
+    "delegate": 1,
+    "war_mode_observability_canonized": 1,
+    "warmode": 1
+  },
+  "kill_switches": {
+    "switches": {
+      "LLM_SPAWN_ENABLED": true,
+      "SCHEDULER_ENABLED": true,
+      "DASHBOARD_MUTATIONS_ENABLED": true,
+      "MISSION_AUTO_ASSIGN_ENABLED": true,
+      "TELEGRAM_PUSH_ENABLED": true,
+      "DARK_FACTORY_ENABLED": true
+    },
+    "meaning": {
+      "LLM_SPAWN_ENABLED": "tout spawn d'agent (A2/A3/B) — OFF = plus aucun agent ne démarre",
+      "SCHEDULER_ENABLED": "tous les crons (Zora, book loop, telegram digest) — OFF = crons gelés",
+      "DASHBOARD_MUTATIONS_ENABLED": "écritures decisions/ + citadel — OFF = lecture seule totale",
+      "MISSION_AUTO_ASSIGN_ENABLED": "auto-routage des tâches aux agents — OFF = routage manuel",
+      "TELEGRAM_PUSH_ENABLED": "push digest Telegram — OFF = plus de notif externe",
+      "DARK_FACTORY_ENABLED": "cycle compressé Book COO 7 jours — OFF = usine à l'arrêt"
+    },
+    "any_off": false
+  },
+  "hive_mind_log": [
+    {
+      "agent": "system",
+      "when": "2026-07-08T13:08:26-04:00",
+      "action": "decision",
+      "summary": "2026-07-08_b1_mirofish_gate.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-08T09:08:20-04:00",
+      "action": "decision",
+      "summary": "2026-07-08_w28_m1_veto_decorrele.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-08T06:22:39-04:00",
+      "action": "decision",
+      "summary": "2026-07-08_fable_window_extend_12.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T07:06:55-04:00",
+      "action": "decision",
+      "summary": "CORRECTION A+ : collectors != workers. RUN LOOP WF1 arme et LIVE (True Agent Autonomy option 1)"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T06:56:42-04:00",
+      "action": "decision",
+      "summary": "pass_wf1_WK04.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T05:38:28-04:00",
+      "action": "decision",
+      "summary": "Banque Fable complete avant fermeture fenetre: 10 wargames 12/12. Correction Picard (Hermes): hunt proxy-boolean L2 -> proie #1 consumer L2 "
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T05:05:24-04:00",
+      "action": "decision",
+      "summary": "Book ecoute desormais son gouverneur WF3 (read_governor_signals additif). Cadence Dark Factory CAP x4 tant que capacite < 96/WK (task queue "
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T04:11:08-04:00",
+      "action": "decision",
+      "summary": "Fenetre Fable RATIFIED + GO Spock LANCE + 7/7 wargames + plans L0/L1 + /go-spock /go-picard"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-06T00:49:57-04:00",
+      "action": "decision",
+      "summary": "Topologie WF0 Spock airlock / WF1 Morty poupee russe / WF2 Book CEO-Bench / WF3 MiroFish sim. Unique GO A+ -> Spock = HITL max a droite (GO_"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T23:48:43-04:00",
+      "action": "decision",
+      "summary": "Plan ecrit + instance fable-last-week-aspace/ scaffoldee : 10 missions pre-remplies depuis canon (zero placeholder vide), SUCCESS-ASPACE 12 "
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:21:13-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED + RATIFIED 2026-07-05 (HITL A0 cleared)"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:12:17-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED + RATIFIED 2026-07-05 (HITL A0 cleared)"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:08:56-04:00",
+      "action": "decision",
+      "summary": "Niche verrouillée = intersection Cabinets Coaching Premium x Agences Business Development. Pricing 1000$/mo x 100 = 1.2M ARR, marge >90% via"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:08:03-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED + RATIFIED 2026-07-05 (cascade post-ratification, War Mode)"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:03:57-04:00",
+      "action": "vision_ratified_planning_drafted_4sessions_spawned",
+      "summary": "2026-07-05_a3_curie_12_week_plan.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T17:00:24-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED + ALIGNED"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T16:48:15-04:00",
+      "action": "a3_curie_vivid_vision_discipline_1_canonized",
+      "summary": "2026-07-05_a3_curie_vivid_vision_discipline_1.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T16:33:47-04:00",
+      "action": "hero_agents_shells_canonic_creation",
+      "summary": "2026-07-05_hero_agents_shells_creation.json"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T16:03:12-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED + RATIFIED"
+    },
+    {
+      "agent": "system",
+      "when": "2026-07-05T09:49:43-04:00",
+      "action": "decision",
+      "summary": "ACCEPTED"
+    }
+  ],
+  "mission_tasks": [
+    {
+      "task": "2026-07-05_J1_darkfactory",
+      "state": "done",
+      "summary": "append-only D4 · A0 Murderbot pré-ratification §8 · Book COO cadence 7-jours ratifiée"
+    }
+  ],
+  "last_10_decisions": [
+    {
+      "file": "2026-07-08_b1_mirofish_gate.json",
+      "when": "2026-07-08T13:08:26-04:00",
+      "action": "decision",
+      "summary": ""
+    },
+    {
+      "file": "2026-07-08_w28_m1_veto_decorrele.json",
+      "when": "2026-07-08T09:08:20-04:00",
+      "action": "decision",
+      "summary": ""
+    },
+    {
+      "file": "2026-07-08_fable_window_extend_12.json",
+      "when": "2026-07-08T06:22:39-04:00",
+      "action": "decision",
+      "summary": ""
+    },
+    {
+      "file": "2026-07-06_wf1_run_loop_live.json",
+      "when": "2026-07-06T07:06:55-04:00",
+      "action": "decision",
+      "summary": ""
+    },
+    {
+      "file": "pass_wf1_WK04.json",
+      "when": "2026-07-06T06:56:42-04:00",
+      "action": "decision",
+      "summary": ""
+    },
+    {
+      "file": "2026-07-06_full_house_wargames_10_10.json",
+      "when": "2026-07-06T05:38:28-04:00",
+      "action": "decision",
+      "summary": "Banque Fable complete avant fermeture fenetre: 10 wargames 12/12. Correction Picard (Hermes): hunt proxy-boolean L2 -> proie #1 consumer L2 ABSENT (gstack_loop a creer, exit_condit"
+    },
+    {
+      "file": "2026-07-06_go_picard_angle_mort_cured.json",
+      "when": "2026-07-06T05:05:24-04:00",
+      "action": "decision",
+      "summary": "Book ecoute desormais son gouverneur WF3 (read_governor_signals additif). Cadence Dark Factory CAP x4 tant que capacite < 96/WK (task queue avec exit condition). Point faible shotg"
+    },
+    {
+      "file": "2026-07-06_fenetre_fable_go_spock_lance.json",
+      "when": "2026-07-06T04:11:08-04:00",
+      "action": "decision",
+      "summary": "go wargames 05-07, ADR Ratification Urgente Fenetre Fable bypass Beth jusqu'au 07/08, lancer le Go Spock sans aucun frein en wargame+simulation, renommer plan en L0 Amodei Murderbo"
+    },
+    {
+      "file": "2026-07-06_adr_l1_wf_001_wf0_wf3.json",
+      "when": "2026-07-06T00:49:57-04:00",
+      "action": "decision",
+      "summary": "Topologie WF0 Spock airlock / WF1 Morty poupee russe / WF2 Book CEO-Bench / WF3 MiroFish sim. Unique GO A+ -> Spock = HITL max a droite (GO_SPOCK_UNIQUE, revocation=suppression). P"
+    },
+    {
+      "file": "2026-07-05_wargame_confrontation_wf012.json",
+      "when": "2026-07-05T23:48:43-04:00",
+      "action": "decision",
+      "summary": "Plan ecrit + instance fable-last-week-aspace/ scaffoldee : 10 missions pre-remplies depuis canon (zero placeholder vide), SUCCESS-ASPACE 12 points (8 kit + 4 A'Space D1/append-only"
+    }
+  ],
+  "veto_unique": "Beth — vie/santé A+ (SEUL veto inaliénable)",
+  "portes_a_ouvrir": [
+    "Porte 0 — Bypass par défaut : ouvert = anti-panique (fermer = paniquer)",
+    "Porte Rick — sobriété-LEVIER, plus un veto : ouvre au lieu de bloquer",
+    "Porte /ship — deploy outward = porte à rendre sûre-à-ouvrir (pas de Stark, il est B3)",
+    "Porte append-only — fenêtre d'observation (NO-HITL ≠ NO-VISIBILITY), infra pas frein"
+  ]
+}

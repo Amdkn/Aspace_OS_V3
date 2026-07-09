@@ -1,0 +1,42 @@
+{
+  "ts": "2026-07-05T05:30:00-04:00",
+  "agent": "Mavis + CC Opus 4.8 ratifié",
+  "action": "war_mode_observability_canonized",
+  "summary": "Inaliénable #4 rendu visible — 4 pièces livrées, A+ observe sans HITL",
+  "pieces_delivered": [
+    {"id": 1, "name": "collector", "path": "agent-os/citadel/collectors/collector_14_warmode.py", "size_bytes": 4297, "exit_code": 0, "verify": "python collect → WAR MODE ON, 6 décisions"},
+    {"id": 2, "name": "page_war_room", "path": "agent-os/citadel/static/warmode.html", "size_bytes": 4011, "verify": "GET /warmode → 200, dark theme + auto-refresh 10s + inalienables_4"},
+    {"id": 3, "name": "api", "path": "agent-os/citadel/serve.py routes '/api/warmode' + '/api/data/14_warmode'", "verify": "GET /api/warmode → 200 {war_mode:ON, decisions_total:6}"},
+    {"id": 4, "name": "server_detached", "path": "serve.py v0.4 detached PID 27780 (live)", "verify": "netstat :8770 LISTENING + /api/health flags 4/4 TRUE"}
+  ],
+  "inalienables_served": {
+    "Rick_kernel_reelle": "observabilité READ-ONLY sur canons, pas de dépendance lourde ajoutée",
+    "Beth_vie_sante": "push Telegram optionnel (outbox local par défaut), pas d'astreinte Beth",
+    "ship_outboard": "Aucune des 4 pièces n'écrit dans le canon ni n'exécute de /ship",
+    "append_only": "data/14_warmode.json append-only + feed last_10_decisions visible"
+  },
+  "telegram_honnetete": {
+    "claim": "A0 supposait tokens en clair dans MiniMax",
+    "d1_reality": "channel-bindings.yaml a placeholder '8466501613:8466501613' mais PAS un vrai token (regex échoue). Bot Telegram non encore créé via @BotFather.",
+    "outbox_local": "data/14_warmode_telegram_outbox.txt — trace canon append-only (inaliénable #4) en attendant token réel",
+    "two_paths_to_enable": [
+      "Test Key Pragma env User scope: setx TELEGRAM_BOT_TOKEN + setx TELEGRAM_CHAT_ID",
+      "Bootstrapping agnostique: créer bot via @BotFather, remplacer placeholder dans channel-bindings.yaml"
+    ]
+  },
+  "sister_canon": "LD01/99_meta/war_mode_observability_sister.md (7 sections, D5 receipts)",
+  "doctrine": {
+    "NO_HITL_neq_NO_VISIBILITY": "On retire le verrou (gate), pas le judas (fenêtre). Inaliénable #4 = trace append-only + visible.",
+    "observability_readonly": "Collector lit, serveur sert, page rend. Aucune des 4 pièces n'écrit dans le canon.",
+    "no_self_gate_under_war_mode": "Observabilité ne crée aucun gate HITL. A+ observe, n'intervient pas.",
+    "one_button": "Seul geste d'A+ au monde : supprimer 12WY_ON_PAUSE.flag. Tant qu'il ne le fait pas, la machine tire et il regarde."
+  },
+  "verification_post_finish": {
+    "datetime": "2026-07-05T05:30:00-04:00",
+    "war_mode": "ON",
+    "active_flags": ["12WY_ON_PAUSE.flag", "enable_book_loop.flag", "enable_zora.flag"],
+    "decisions_total": 6,
+    "book_loop_latest": "cron/output/book-loop-20260705-052952.json (1796 b, J1 T1 People·Op·IT, 22 agents, 7/7 invariants)",
+    "health_live": "v0.4 flags: canonic_writes=true, autostart=true, watchdog=true, zora=true"
+  }
+}

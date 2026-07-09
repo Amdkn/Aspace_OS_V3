@@ -1,0 +1,2215 @@
+{
+  "collector": "08_agents",
+  "pillar": 8,
+  "pillar_name": "Agents (👥)",
+  "generated_at": "2026-07-04T22:16:40-0400",
+  "source": "~/.claude/plans/plan-a0-dashboard-citadel-agent-os.md §3 page Agents",
+  "doctrine": "lecture seule — ne réveille JAMAIS les agents dormants — capitaine=Mavis",
+  "tiers": {
+    "A1": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "A1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "A2": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "A2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "A3": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "A3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "B1": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "B1",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "B2": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "B2",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "B3": [
+      {
+        "name": "b1-jerry-emyth",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": true,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "b1-summers-ship",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-aquaman-legal",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-batman-ops",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-cyborg-it",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-flash-product",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-gl-people",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-johnjones-sales",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-superman-growth",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b2-ww-finance",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-avengers-product",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-eternals-legal",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-ff-ops",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-guardians-growth",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-illuminati-sales",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-kangdyn-it",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-thunderbolts-fin",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "b3-xmen-people",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "coder",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "B3",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ],
+    "SYS": [
+      {
+        "name": "coder",
+        "tier": "SYS",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "general",
+        "tier": "SYS",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      },
+      {
+        "name": "mavis",
+        "tier": "SYS",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": true
+      },
+      {
+        "name": "verifier",
+        "tier": "SYS",
+        "has_agents_md": false,
+        "has_goal": false,
+        "has_memory_dir": true,
+        "is_captain": false
+      }
+    ]
+  },
+  "all_agents": [
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "A1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "A2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "A3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "B1",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "B2",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b1-jerry-emyth",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": true,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "b1-summers-ship",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-aquaman-legal",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-batman-ops",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-cyborg-it",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-flash-product",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-gl-people",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-johnjones-sales",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-superman-growth",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b2-ww-finance",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-avengers-product",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-eternals-legal",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-ff-ops",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-guardians-growth",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-illuminati-sales",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-kangdyn-it",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-thunderbolts-fin",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "b3-xmen-people",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "B3",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "coder",
+      "tier": "SYS",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "general",
+      "tier": "SYS",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    },
+    {
+      "name": "mavis",
+      "tier": "SYS",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": true
+    },
+    {
+      "name": "verifier",
+      "tier": "SYS",
+      "has_agents_md": false,
+      "has_goal": false,
+      "has_memory_dir": true,
+      "is_captain": false
+    }
+  ],
+  "summary": {
+    "total": 136,
+    "A1": 22,
+    "A2": 22,
+    "A3": 22,
+    "B1": 22,
+    "B2": 22,
+    "B3": 22,
+    "SYS": 4,
+    "with_goal_v2": 6,
+    "captains": 13,
+    "plan_target": "A1(2)/A2(6)/A3(35) + B1(2)/B2(8)/B3(53) = 81 + 4 SYS = ~85"
+  }
+}
