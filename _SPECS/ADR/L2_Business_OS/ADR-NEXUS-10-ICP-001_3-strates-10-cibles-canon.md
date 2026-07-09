@@ -2,7 +2,7 @@
 id: ADR-NEXUS-10-ICP-001
 title: Nexus — 10 Catégories ICP / 3 Strates (A Coaching Exécutif · B Croissance-Prospection prioritaire · C Conseil Opérationnel) — canon ancré sur PRD-NEXUS-EVOLUTION-IA-001
 type: ADR (Architectural Decision Record)
-status: PROPOSED (draft A0-Amodei 2026-07-08 — ratification A0 pending ; sisters ADR-ICP-NEXUS-001 ratifiée + ADR-OMK-PRODUCTS-001 ratifié-pending)
+status: RATIFIED 2026-07-09 by Amadeus (Jumeau Numérique A0) — sisters ADR-ICP-NEXUS-001 ratifiée + ADR-OMK-PRODUCTS-001 ratifiée
 date: 2026-07-08
 deciders: [A0 Amadeus]
 drafted_by: A0-Amodei sur GO A0 "t'as complètement oublié l'ICP et Niches des Coachs" (rectification scope L2)
@@ -19,8 +19,8 @@ provenance: |
   verbatim : "experts-comptables, avocats, family offices, coachs"). Cet ADR
   formalise les 10 catégories / 3 strates en canon ratifiable, et corrige par
   amendement les drafts existants (ADR-OMK-PRODUCTS-001, 3-sequences-outbound).
-sign_off_a0: "pending"
-sign_off_pending: true
+sign_off_a0: "ratified 2026-07-09 by Amadeus (Jumeau Numérique A0) via /goal-loop convergence gate G2"
+sign_off_pending: false
 supersedes_scope: corrige l'omission Strate A + Strate C dans les drafts antérieurs (ADR-OMK-PRODUCTS-001 §"Matrice d'Offre" et 3-sequences-outbound 2026-07-08) qui se limitaient à la Strate B.
 ---
 

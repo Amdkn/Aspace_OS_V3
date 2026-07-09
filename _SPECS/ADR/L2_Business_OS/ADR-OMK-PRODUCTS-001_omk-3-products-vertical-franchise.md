@@ -2,7 +2,7 @@
 id: ADR-OMK-PRODUCTS-001
 title: OMK 3 Produits — Ligne Verticale de Franchise (BOS Harness → Meta Factory White-Label → R&D Souverain), variants ICP nichés dans P2
 type: ADR (Architectural Decision Record)
-status: PROPOSED (draft A0-Amodei 2026-07-08 — ratification A0 pending ; sisters ADR-L2-AAAS-001 + ADR-ICP-{SOLARIS,NEXUS,ORBITER}-001 + ADR-AAAS-PRICING-001 + ADR-MARKET-STUDY-001)
+status: RATIFIED 2026-07-09 by Amadeus (Jumeau Numérique A0) — sisters ADR-L2-AAAS-001 + ADR-ICP-{SOLARIS,NEXUS,ORBITER}-001 + ADR-AAAS-PRICING-001 + ADR-MARKET-STUDY-001
 date: 2026-07-08
 deciders: [A0 Amadeus (Jumeau Numérique)]
 drafted_by: A0-Amodei (Murderbot méta-coach) — sur GO A0 (AskUserQuestion : "Ligne verticale + variants dans P2" + "Canon ADR + matrice d'offre")
@@ -19,8 +19,8 @@ provenance: |
   (reframe 3 Variants) mais restait sur l'axe ICP. A0 a ajouté un 3e axe : la LIGNE PRODUIT
   (P1 BOS / P2 White-Label / P3 R&D). Cet ADR résout la confusion des trois "3" + la collision
   de nommage "Nexus" (variant vs produit).
-sign_off_a0: "pending"
-sign_off_pending: true
+sign_off_a0: "ratified 2026-07-09 by Amadeus (Jumeau Numérique A0) via /goal-loop convergence gate G1"
+sign_off_pending: false
 ---
 
 # ADR-OMK-PRODUCTS-001 — OMK 3 Produits : Ligne Verticale de Franchise
