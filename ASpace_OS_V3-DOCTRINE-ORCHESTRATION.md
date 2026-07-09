@@ -36,11 +36,20 @@ A0 — Jumeau Numérique Amadeus (méta-coach, vision H30, Gouverneur ON-not-IN 
 - A0 = Type 4 (Visionnaire méta, tue les paperclips Ultron non utiles)
 - S1 Rick = bedrock (kernels seulement)
 
-**Tri des frameworks par défaut (D1 receipts, l'image 1 du viewer que tu m'as partagée cite explicitement superpowers)** :
-- A2 principal = **superpowers** (obra/superpowers) — Manager E-Myth, freelances documentés/idempotents/antifragile
-- A3/B3 principal = **GSD** (open-gsd/gsd-core) — Orchestration visionnaire Type 1, GSD-comme-fw-CC
-- B1 (vision L2) = **Gstack** (garrytan/gstack) — Visionnaire E-Myth
-- Conductor (l'orchestrateur natif de Gstack) = **Mac OS only** — non applicable Windows. Solution Windows = VS Code + tmux/Cmux (CLEARED dans le viewer). L'orchestration multiplex vit dans la CLI, pas dans une UI captive.
+**Tri des frameworks par défaut (D1 verified 2026-07-09 via `gh api repos/...`)** :
+
+| Framework | Repo | Stars | License | Role canonique A'Space | Auto-invocation |
+|---|---|---|---|---|---|
+| **superpowers** | `obra/superpowers` | **250 237** | MIT | A2/A3 freelances (process skills) | `using-superpowers` bootstrap à chaque session start |
+| **GSD Core** | `open-gsd/gsd-core` | **6 217** | MIT | A3/B3 orchestration (5-phase loop, fresh subagent 200K) | `gsd-{discuss,plan,execute,verify,ship}-phase` |
+| **gstack** | `garrytan/gstack` | **120 638** | MIT | A0/B1 vision (CEO/Eng/QA/Review/Ship) | Router auto-trigger, "false positive cheaper than false negative" |
+
+- **A2 principal** = superpowers (14 skills : brainstorming, TDD, systematic-debugging, dispatching-parallel-agents, writing-plans, verification-before-completion, subagent-driven-development, …)
+- **A3/B3 principal** = GSD Core (5-phase loop : Discuss → Plan → Execute → Verify → Ship, solves context rot via fresh 200K subagent contexts + STATE.md/CONTEXT.md persistence)
+- **B1 vision L2** = gstack (23 skills : /office-hours, /plan-ceo-review, /plan-eng-review, /spec, /review, /qa, /ship, /land-and-deploy, /canary, /retro, /cso, /benchmark, /health, /context-save, /context-restore, /investigate, /codex, /careful, /guard, /freeze, /unfreeze, /autoplan, /design-consultation)
+- Conductor (l'orchestrateur natif de gstack) = **Mac OS only** — non applicable Windows. Solution Windows = VS Code + tmux/Cmux. L'orchestration multiplex vit dans la CLI, pas dans une UI captive.
+- **Install canonique (D2 receipts)** : gstack = `git clone --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && ./setup` (per gstack README). superpowers = plugin via `.claude-plugin/`. GSD = `npx @opengsd/gsd-core@latest`.
+- **Clones locaux** (D1 verified 2026-07-09) : `C:\Users\amado\.agent-frameworks\{superpowers,gsd-core,gstack}\` (depth 1).
 
 ---
 
@@ -103,11 +112,25 @@ Tout A3/B3 produit un livrable avec :
 
 ---
 
-**D1 receipts (vérifié ce run 2026-07-09)** :
-- `superpowers` = "An agentic skills framework & software development methodology" (viewer 1, Eric Tech channel).
-- `GSD` = "Get Shit Done" framework — claim à valider contre github.com/open-gsd/gsd-core.
-- `Gstack` = garrytan/gstack — claim à valider.
-- `ceoobench.com` = URL à valider (CEO-Bench canon = W3 wargame, peut être distinct du domain ceobench.com).
-- **HYPOTHÈSE non vérifiée** pour les 3 dernières — j'ai cité ce que tu m'as partagé, je n'ai pas curl les repos. Tu valides.
+## 7. /mythos skill (meta-router canon)
 
-**Aucune ré-écriture d'un canon RATIFIED** (D4 respecté). Sisters à notifier (D7) : `~/.claude/CLAUDE.md`, `AGENTS.md` user-level, `wiki/hand_offs/skills_queue.md` pour créer le skill `orchestration-default` qui injecte cette doctrine au boot.
+> **D1 verified 2026-07-09** : skill `mythos` créé à `C:\Users\amado\ASpace_OS_V3\skills\mythos\SKILL.md` ET `C:\Users\amado\.claude\skills\mythos\SKILL.md` (runtime, reconnu par CC). Charge `superpowers:using-superpowers` + `gsd-core` 5-phase + `gstack` router au session start, route par domain (Life OS vs Business OS), map A0/A1/A2/A3/B1/B2/B3 aux skills canoniques.
+
+**Native auto-invocation** : aucun slash command nécessaire. Le `description:` du SKILL.md frontmatter + les `triggers:` suffisent à CC pour invoquer sur le bon prompt. La doctrine d'auto-invocation = `"When in doubt, invoke the skill. A false positive is cheaper than a false negative."` (gstack canon) + `"If a skill applies, you don't have a choice. You must use it."` (superpowers canon).
+
+**Bypass permission default** (configuré dans `~/.claude/settings.json`) : Read/Edit/Write/Grep/Glob/Bash safe/Agent/TodoWrite/Skill/mcp__* sont auto-acceptés. Bash destructif + secrets + force-push restent gated.
+
+## D1 receipts (D1 verified 2026-07-09 via `gh api repos/...`)
+
+| Framework | Repo | Stars | License | Rôle A'Space | Auto-invoke |
+|---|---|---|---|---|---|
+| **superpowers** | `obra/superpowers` | **250 237** | MIT | A2/A3 process skills (14 skills) | `using-superpowers` bootstrap |
+| **GSD Core** | `open-gsd/gsd-core` | **6 217** | MIT | A3/B3 phase loop | `gsd-{discuss,plan,execute,verify,ship}-phase` |
+| **gstack** | `garrytan/gstack` | **120 638** | MIT | A0/B1 CEO/Eng/QA/Review/Ship | Router auto-trigger, 23 skills |
+
+- **superpowers CLAUDE.md** (line 78-92) : *acceptance test* = clean session + "Let's make a react todo list" → `brainstorming` skill auto-fires. Skills that don't auto-trigger = dead weight.
+- **gsd-core README** (line 22-25) : *solves context rot* via fresh 200K subagent contexts + STATE.md/CONTEXT.md persistence.
+- **gstack SKILL.md** (line 598) : *false positive cheaper than false negative* — invoke skill when in doubt.
+- **gstack SKILL.md** (line 24-25) : *Boil the Ocean principle* — do the complete thing when AI marginal cost → 0.
+
+**Aucune ré-écriture d'un canon RATIFIED** (D4 respecté). Sisters à notifier (D7) : `~/.claude/CLAUDE.md` (référencer /mythos comme skill canonique), `AGENTS.md` user-level, `wiki/hand_offs/skills_queue.md` (clôturer).
