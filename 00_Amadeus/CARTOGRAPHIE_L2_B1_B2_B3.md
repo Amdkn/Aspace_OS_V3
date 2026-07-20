@@ -41,21 +41,22 @@ graph TD
 | Batman Ops | 🟢 **ACTIF** | porte R3 (SOP onboarding) + SOP émergents des scrums |
 | WonderWoman Finance | 🟡 SEMI | ledger + forecast + unit economics — 1 scrum/sprint suffit |
 | Aquaman Legal | ⚪ DORMANT | réveil au **1er contrat coach à signer** (CGV, RGPD, DPA) |
-| GreenLantern People | ⚪ DORMANT | réveil quand un squad manque d'un rôle (staffing d'agents) |
+| GreenLantern People | 🟢 **ACTIF** | **RH AGENTIQUE = configurer les agents des autres B2/B3** (correction 20/07 : People ≠ RH humaine — les X-Men sont le squad qui STAFFE, INSTRUIT et OUTILLE tous les autres squads, déchargeant Summers de la gestion d'agents) |
 | Cyborg R&D | 🟡 SEMI | 1 sweep découverte/mois, **≤3 propositions actionnables** max |
 
 ## 3. La délégation exécutive — les 53 B3, domaine par domaine
 
 ### T1 · B2-03 Flash PRODUCT — mission « Agency as a Service » — squad AVENGERS (7) 🟢
-| B3 | Rôle canon | Délégation exécutive Cycle 1 (R1) |
+**Specs de design OBLIGATOIRES** (D1 vérifié 20/07) : tout livrable visuel respecte **[ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** (107 902★ — 161 reasoning rules, 84 UI styles) + **[impeccable](https://github.com/pbakaus/impeccable)** (48 159★ — `npx impeccable install`, `/impeccable init` → PRODUCT.md+DESIGN.md, 23 commandes : polish/audit/critique/animate, 46 detector rules anti-template-AI). Périmètre : le produit AaaS ET les assets Growth — **landing pages, quiz d'audit simulés, flows d'onboarding**.
+| B3 | Rôle canon | Délégation exécutive Cycle 1 (R1 + assets Growth) |
 |---|---|---|
-| **Captain America** (LEAD) | vision produit, intégrité de spec | tient l'Ownerbook R1 ; arbitre chaque scrum produit contre la spec ; dispatch les 6 |
-| Iron Man | tech produit, premium UX | l'instance démo (serve_instance, viewer) au niveau « screenshot vendable » |
-| Thor | flagship, premium tiers | le paquet 1000 $/mois : ce que le coach VOIT pour ce prix (liste livrables) |
+| **Captain America** (LEAD) | vision produit, intégrité de spec | tient l'Ownerbook R1 ; **fait tourner `/impeccable init` (PRODUCT.md + DESIGN.md = la spec de design du SOB)** ; arbitre chaque livrable contre les 2 skills |
+| Iron Man | tech produit, premium UX | l'instance démo au niveau « screenshot vendable » — **auditée `/impeccable audit` + styles ui-ux-pro-max (zéro tell AI : pas d'Inter-partout, pas de gradient violet-bleu, pas de cards-dans-cards)** |
+| Thor | flagship, premium tiers | le paquet 1000 $/mois : ce que le coach VOIT — **la landing page de l'offre (design specs appliquées)** |
 | Hulk | stress test, scale | casser l'instance : re-runs, données volumineuses, 2 instances en parallèle |
 | Black Widow | intel concurrentielle, rétention | 3 AaaS/outils concurrents analysés → 1 page « pourquoi nous » |
-| Hawkeye | traçabilité des specs | chaque sortie Runbook R1 a son receipt SQL — rien ne se perd |
-| Scarlet Witch | chaos engineering | les cas tordus : coach sans contenu, données bizarres, edge cases démo |
+| Hawkeye | traçabilité des specs | chaque sortie Runbook R1 a son receipt SQL ; **chaque asset visuel a son verdict audit design loggé** |
+| Scarlet Witch | chaos engineering | les cas tordus + **le QUIZ D'AUDIT simulé** (l'asset Growth : le coach répond à 8 questions → son diagnostic → la démo) et le flow d'onboarding |
 
 ### T2 · B2-05 JohnJones SALES — mission « 100M Offers » — squad ILLUMINATI (6) 🟢
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R2) |
@@ -78,12 +79,13 @@ graph TD
 | Mantis | empathie d'onboarding | les 10 conversations découverte/mois (source='research', non-vendantes) |
 
 ### T1 · B2-02 Batman OPS — mission « SOP & Skills » — squad FANTASTIC FOUR (4) 🟢
+**Le pendant reproductible de la RH Agentique** : les X-Men CONFIGURENT (créent la config d'un agent), les F4 la rendent REPRODUCTIBLE (template + script — la 2e configuration ne se refait jamais à la main). C'est la boucle T1 : GreenLantern invente, Batman industrialise, Flash productise.
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R3 + transverse) |
 |---|---|---|
-| **Mr Fantastic** (LEAD) | process élastiques | cartographie l'onboarding manuel des 3 premiers clients → le SOP émerge du réel |
+| **Mr Fantastic** (LEAD) | process élastiques | cartographie l'onboarding manuel des 3 premiers clients → le SOP émerge du réel ; **idem pour les configs X-Men : 2e config d'agent similaire = template** |
 | Invisible Woman | privacy ops, incidents | les données coach cloisonnées (instance isolée) + réponse incident 1 page |
 | Human Torch | hot fixes, déploiement urgent | le scrum de réparation quand un E.2 dépasse 3 retries |
-| The Thing | process porteurs, durabilité | ce qui a marché 2× devient script (`tools/`) — l'anti-fragilité par répétition |
+| The Thing | process porteurs, durabilité | ce qui a marché 2× devient script (`tools/`) — **y compris les configs RH Agentique (template d'instruction, memory file type, checklist de staffing d'agent)** |
 
 ### T2 · B2-07 WonderWoman FINANCE — mission « 1-Person/1-Billion Company » — squad THUNDERBOLTS (6) 🟡
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (1 scrum/sprint) |
@@ -109,17 +111,18 @@ graph TD
 | Gilgamesh | gouvernance souveraine | la structure juridique porteuse (auto-entreprise → société, au seuil) |
 | Makkari | recherche rapide | précédents et modèles : 1 h max par question, cite ses sources |
 
-### T1 · B2-01 GreenLantern PEOPLE — mission « RH Agentique » — squad X-MEN (8) ⚪
-| B3 | Rôle canon | Délégation au réveil (staffing d'un rôle manquant) |
+### T1 · B2-01 GreenLantern PEOPLE — mission « RH Agentique » — squad X-MEN (8) 🟢
+**Le squad qui configure tous les autres.** RH Agentique = Harness Engineering + Context Engineering + Prompt Engineering des agents eux-mêmes. C'est lui qui décharge Summers : quand un domaine a besoin d'un agent (instructions, memory file, skill, accès), la demande va aux X-Men — jamais au CEO.
+| B3 | Rôle canon | Délégation exécutive Cycle 1 (ACTIVE) |
 |---|---|---|
-| **Professor X** (LEAD) | comptes stratégiques, éthique | décide QUEL rôle manque vraiment (vs travail inventé) — le garde anti-usine |
-| Cyclops | leadership tactique | découpe le rôle en délégation exécutable (ce document = son format) |
-| Jean Grey | résolution de conflits | 2 squads qui se marchent dessus → frontière clarifiée en 1 ligne |
-| Wolverine | profils difficiles, rétention | les tâches que personne ne veut : relances froides, nettoyage de données |
-| Storm | culture, atmosphère | le ton des messages sortants : humain, pas robot (relit 1 échantillon/sprint) |
-| Beast | L&D, rigueur scientifique | ce que les échecs enseignent → 1 leçon/sprint dans le memory file du domaine |
-| Nightcrawler | mobilité inter-équipes | un B3 sous-utilisé se prête au squad qui déborde (transferts) |
-| Rogue | transfert de savoir, anti-fraude | un savoir critique détenu par 1 seul agent = copié dans un Runbook |
+| **Professor X** (LEAD) | stratégie, éthique | arbitre QUELLE configuration manque vraiment (anti-usine) ; tient le registre des agents configurés vs dormants |
+| Cyclops | leadership tactique | **écrit les délégations exécutables** : chaque B3 actif a son instruction 1-page (rôle, Runbook source, format d'uplink) — ce document est son template |
+| Jean Grey | résolution de conflits | frontières entre squads : 2 domaines sur la même tâche → 1 ligne de partage ; harmonise les formats d'uplink |
+| Wolverine | profils difficiles | configure les agents des tâches ingrates : relances froides, nettoyage de données — et vérifie qu'ils tournent |
+| Storm | culture, ton | **la voix du système** : prompts de messages sortants (outreach R2) relus — humain, pas robot ; 1 échantillon/sprint |
+| Beast | L&D, rigueur | **la formation des agents** : les leçons des RUN_LOGs distillées dans les memory files et les prompts (l'agent du Run N+1 est plus intelligent) |
+| Nightcrawler | mobilité | réaffectation : un agent/harness sous-utilisé (Multica idle, session morte) se re-route vers le squad qui déborde |
+| Rogue | transfert de savoir | **anti-single-point** : tout savoir critique détenu par 1 seule config d'agent est copié dans un Runbook/template (le système survit à la perte de n'importe quel agent) |
 
 ### T3 · B2-06 Cyborg R&D — mission « Découverte externe » — squad KANG DYNASTY (6) 🟡
 | B3 | Rôle canon | Délégation exécutive (1 sweep/mois, ≤3 propositions) |
@@ -150,7 +153,7 @@ graph TD
           "t3_foundation": ["aquaman_legal","cyborg_rd"] },
   "b3_total": 53,
   "squads": { "xmen": 8, "f4": 4, "avengers": 7, "gotg": 6, "illuminati": 6, "thunderbolts": 6, "eternals": 10, "kang": 6 },
-  "cycle1_gates": { "actifs": ["product","sales","growth","ops"], "semi": ["finance","rd"], "dormants": ["legal","people"] },
+  "cycle1_gates": { "actifs": ["people","product","sales","growth","ops"], "semi": ["finance","rd"], "dormants": ["legal"] },
   "rule": "le LEAD dispatch, le membre execute, le dormant dort, l'uplink monte au score"
 }
 ```
