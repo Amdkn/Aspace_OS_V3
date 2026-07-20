@@ -31,22 +31,26 @@ graph TD
 
 **Comptage canon** : 8+4+7+6+6+6+10+6 = **53 B3**. L'infra technique n'appartient plus à Cyborg (pivot R&D) — elle descend à L0 sous Rick (sovereignty ladder).
 
-## 2. Statut Cycle 1 (la cadence est un droit gate-PASS, pas une obligation — W40)
+## 2. Charge par Run — 8/8 ACTIFS, TOUJOURS (correction 20/07 : zéro dormant)
 
-| Domaine | Statut C1 | Cause / Déclencheur de réveil |
+**En compression temporelle (scrum = 12 min, sprint = 1 h, Run = 48 h), un domaine inactif n'économise rien et coûte tout au réveil.** L'ancien modèle dormant/semi venait de W40 (temps calendaire humain — catégorie d'erreur corrigée). Le vrai anti-usine n'est PAS l'interrupteur ON/OFF : c'est le **delta SQL obligatoire** — un scrum sans delta ne compte pas, quel que soit le domaine.
+
+| Domaine | Scrums/Run | Livrable minimal du Run (delta SQL exigé) |
 |---|---|---|
-| Flash Product | 🟢 **ACTIF** | porte R1 (instance AaaS démontrable) |
-| JohnJones Sales | 🟢 **ACTIF** | porte R2 (outreach → démos → closing) |
-| Superman Growth | 🟢 **ACTIF** | porte R2 amont (liste 100, canaux, AAARR) |
-| Batman Ops | 🟢 **ACTIF** | porte R3 (SOP onboarding) + SOP émergents des scrums |
-| WonderWoman Finance | 🟡 SEMI | ledger + forecast + unit economics — 1 scrum/sprint suffit |
-| Aquaman Legal | ⚪ DORMANT | réveil au **1er contrat coach à signer** (CGV, RGPD, DPA) |
-| GreenLantern People | 🟢 **ACTIF** | **RH AGENTIQUE = configurer les agents des autres B2/B3** (correction 20/07 : People ≠ RH humaine — les X-Men sont le squad qui STAFFE, INSTRUIT et OUTILLE tous les autres squads, déchargeant Summers de la gestion d'agents) |
-| Cyborg R&D | 🟡 SEMI | 1 sweep découverte/mois, **≤3 propositions actionnables** max |
+| Flash Product | 5 | l'instance/les assets avancent (R1) — experiments |
+| JohnJones Sales | 5 | messages ENVOYÉS, démos, closings (R2) — outreach_log/pipeline |
+| Superman Growth | 5 | prospects réels + canaux mesurés (R2 amont) — pipeline/experiments |
+| Batman Ops | 3 | 1 SOP/script émergé du répété (R3 + templates RH) — tools/, experiments |
+| GreenLantern People | 3 | configs d'agents écrites/améliorées (Cyclops/Beast/Storm) — experiments |
+| WonderWoman Finance | 1 | daily_cash lu + unit econ à jour — ledger |
+| Aquaman Legal | 1 | **le pack contrat AVANT le 1er closing** (jamais un closing qui attend Legal) — experiments |
+| Cyborg R&D | 1 | 1 découverte testée ou 1 retrait — experiments (≤3 propositions/mois vers Summers) |
+
+**Total ≈ 24 scrums/Run ≈ 5 h de travail machine.** La charge se re-négocie chaque Run par l'uplink (un domaine qui a plus de travail réel demande plus de scrums via le canal RH) — mais AUCUN domaine ne descend à zéro : le plancher universel est 1 scrum/Run avec delta.
 
 ## 3. La délégation exécutive — les 53 B3, domaine par domaine
 
-### T1 · B2-03 Flash PRODUCT — mission « Agency as a Service » — squad AVENGERS (7) 🟢
+### T1 · B2-03 Flash PRODUCT — mission « Agency as a Service » — squad AVENGERS (7) — 5 scrums/Run
 **Specs de design OBLIGATOIRES** (D1 vérifié 20/07) : tout livrable visuel respecte **[ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** (107 902★ — 161 reasoning rules, 84 UI styles) + **[impeccable](https://github.com/pbakaus/impeccable)** (48 159★ — `npx impeccable install`, `/impeccable init` → PRODUCT.md+DESIGN.md, 23 commandes : polish/audit/critique/animate, 46 detector rules anti-template-AI). Périmètre : le produit AaaS ET les assets Growth — **landing pages, quiz d'audit simulés, flows d'onboarding**.
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R1 + assets Growth) |
 |---|---|---|
@@ -58,7 +62,7 @@ graph TD
 | Hawkeye | traçabilité des specs | chaque sortie Runbook R1 a son receipt SQL ; **chaque asset visuel a son verdict audit design loggé** |
 | Scarlet Witch | chaos engineering | les cas tordus + **le QUIZ D'AUDIT simulé** (l'asset Growth : le coach répond à 8 questions → son diagnostic → la démo) et le flow d'onboarding |
 
-### T2 · B2-05 JohnJones SALES — mission « 100M Offers » — squad ILLUMINATI (6) 🟢
+### T2 · B2-05 JohnJones SALES — mission « 100M Offers » — squad ILLUMINATI (6) — 5 scrums/Run
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R2) |
 |---|---|---|
 | **Black Bolt** (LEAD) | closing complexe, silence-as-power | tient le pipeline ; dispatch ; ferme les démos (les 3 premiers signés) |
@@ -68,7 +72,7 @@ graph TD
 | Namor | distribution, wholesale | canaux indirects : communautés de coachs, certifs ICF, podcasts |
 | Reed Richards | pipeline d'innovation | l'offre Hormozi : valeur×certitude ÷ délai×effort — la page d'offre irrésistible |
 
-### T2 · B2-04 Superman GROWTH — mission « AAARR » — squad GUARDIANS OF THE GALAXY (6) 🟢
+### T2 · B2-04 Superman GROWTH — mission « AAARR » — squad GUARDIANS OF THE GALAXY (6) — 5 scrums/Run
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R2 amont) |
 |---|---|---|
 | **Star-Lord** (LEAD) | top funnel, narrative | le hook : 1 phrase qui fait ouvrir le message d'un coach mid-tier |
@@ -78,7 +82,7 @@ graph TD
 | Drax | A/B littéral, sans subtilité | 2 variantes de message, comptage brut des réponses, verdict mécanique |
 | Mantis | empathie d'onboarding | les 10 conversations découverte/mois (source='research', non-vendantes) |
 
-### T1 · B2-02 Batman OPS — mission « SOP & Skills » — squad FANTASTIC FOUR (4) 🟢
+### T1 · B2-02 Batman OPS — mission « SOP & Skills » — squad FANTASTIC FOUR (4) — 3 scrums/Run
 **Le pendant reproductible de la RH Agentique** : les X-Men CONFIGURENT (créent la config d'un agent), les F4 la rendent REPRODUCTIBLE (template + script — la 2e configuration ne se refait jamais à la main). C'est la boucle T1 : GreenLantern invente, Batman industrialise, Flash productise.
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (R3 + transverse) |
 |---|---|---|
@@ -87,8 +91,8 @@ graph TD
 | Human Torch | hot fixes, déploiement urgent | le scrum de réparation quand un E.2 dépasse 3 retries |
 | The Thing | process porteurs, durabilité | ce qui a marché 2× devient script (`tools/`) — **y compris les configs RH Agentique (template d'instruction, memory file type, checklist de staffing d'agent)** |
 
-### T2 · B2-07 WonderWoman FINANCE — mission « 1-Person/1-Billion Company » — squad THUNDERBOLTS (6) 🟡
-| B3 | Rôle canon | Délégation exécutive Cycle 1 (1 scrum/sprint) |
+### T2 · B2-07 WonderWoman FINANCE — mission « 1-Person/1-Billion Company » — squad THUNDERBOLTS (6) — 1 scrum/Run
+| B3 | Rôle canon | Délégation exécutive Cycle 1 (1 scrum/Run) |
 |---|---|---|
 | **Bucky Barnes** (LEAD) | runway, résilience hiver | la vue `daily_cash` lue chaque sprint ; plancher 2 mois de burn surveillé |
 | Yelena Belova | pricing affûté, unit econ | coût réel par client (tokens+infra) vs 1000 $ — la marge par tête |
@@ -97,8 +101,8 @@ graph TD
 | Taskmaster | CAC miroir, anti-pattern billing | coût d'acquisition par canal depuis ledger×outreach_log |
 | U.S. Agent | conformité comptable | chaque € entré/sorti a sa ligne ledger — auditable en 1 query |
 
-### T3 · B2-08 Aquaman LEGAL — mission « 365 Conformité par Conception » — squad ETERNALS (10) ⚪
-| B3 | Rôle canon | Délégation au réveil (1er contrat à signer) |
+### T3 · B2-08 Aquaman LEGAL — mission « 365 Conformité par Conception » — squad ETERNALS (10) — 1 scrum/Run
+| B3 | Rôle canon | Délégation exécutive Cycle 1 (1 scrum/Run — le pack contrat se construit AVANT le 1er closing) |
 |---|---|---|
 | **Ikaris** (LEAD) | AI-Act lead | le pack conformité minimal : mentions IA, AI-Act applicable à l'AaaS |
 | Sersi | alchimie contractuelle | LE contrat type coach (1000 $/mois, résiliable, IP claire) |
@@ -111,7 +115,7 @@ graph TD
 | Gilgamesh | gouvernance souveraine | la structure juridique porteuse (auto-entreprise → société, au seuil) |
 | Makkari | recherche rapide | précédents et modèles : 1 h max par question, cite ses sources |
 
-### T1 · B2-01 GreenLantern PEOPLE — mission « RH Agentique » — squad X-MEN (8) 🟢
+### T1 · B2-01 GreenLantern PEOPLE — mission « RH Agentique » — squad X-MEN (8) — 3 scrums/Run
 **Le squad qui configure tous les autres.** RH Agentique = Harness Engineering + Context Engineering + Prompt Engineering des agents eux-mêmes. C'est lui qui décharge Summers : quand un domaine a besoin d'un agent (instructions, memory file, skill, accès), la demande va aux X-Men — jamais au CEO.
 | B3 | Rôle canon | Délégation exécutive Cycle 1 (ACTIVE) |
 |---|---|---|
@@ -124,8 +128,8 @@ graph TD
 | Nightcrawler | mobilité | réaffectation : un agent/harness sous-utilisé (Multica idle, session morte) se re-route vers le squad qui déborde |
 | Rogue | transfert de savoir | **anti-single-point** : tout savoir critique détenu par 1 seule config d'agent est copié dans un Runbook/template (le système survit à la perte de n'importe quel agent) |
 
-### T3 · B2-06 Cyborg R&D — mission « Découverte externe » — squad KANG DYNASTY (6) 🟡
-| B3 | Rôle canon | Délégation exécutive (1 sweep/mois, ≤3 propositions) |
+### T3 · B2-06 Cyborg R&D — mission « Découverte externe » — squad KANG DYNASTY (6) — 1 scrum/Run
+| B3 | Rôle canon | Délégation exécutive Cycle 1 (1 scrum/Run, ≤3 propositions/mois) |
 |---|---|---|
 | **Kang Prime** (LEAD) | architecture prime | arbitre les découvertes : max 3 candidats Rock remontés à Summers |
 | Victor Timely | frontier civique | le sweep Last30days : nouveaux outils/repos/releases pertinents AaaS-coach |
@@ -138,7 +142,7 @@ graph TD
 
 1. **Le LEAD dispatch, les membres exécutent.** Un LEAD qui exécute = un domaine sans dispatcher (signal WF1).
 2. **Un B3 reçoit sa tâche du Runbook via son LEAD** — jamais en direct de Summers ni d'un autre domaine (le canal RH GreenLantern route les besoins inter-domaines).
-3. **Un B3 dormant DORT** (règle des dormants, carte A3) : les Eternals ne produisent rien tant qu'aucun contrat n'est à signer. Zéro travail inventé.
+3. **Zéro dormant, zéro travail inventé** : chaque domaine a ≥1 scrum/Run avec delta SQL obligatoire. Un scrum sans delta ne compte pas — c'est LA protection anti-usine, pas l'interrupteur.
 4. **L'uplink monte au score** : 5 scrums DoD-PASS = sprint review du B2 → 4 sprints = dossier Rock pour Summers. Contre-exemples [E-type + ID SQL], jamais un PASS/FAIL sec.
 5. **Besoin hors-domaine détecté en scrum** → route par la matrice RH : Skills/SOP → Batman F4 · produit → Flash Avengers · legal → Aquaman Eternals · découverte → Cyborg Kang. On ne crée pas, on route.
 
@@ -153,10 +157,10 @@ graph TD
           "t3_foundation": ["aquaman_legal","cyborg_rd"] },
   "b3_total": 53,
   "squads": { "xmen": 8, "f4": 4, "avengers": 7, "gotg": 6, "illuminati": 6, "thunderbolts": 6, "eternals": 10, "kang": 6 },
-  "cycle1_gates": { "actifs": ["people","product","sales","growth","ops"], "semi": ["finance","rd"], "dormants": ["legal"] },
-  "rule": "le LEAD dispatch, le membre execute, le dormant dort, l'uplink monte au score"
+  "cycle1_charge_par_run": { "product": 5, "sales": 5, "growth": 5, "ops": 3, "people": 3, "finance": 1, "legal": 1, "rd": 1, "regle": "8/8 actifs, plancher 1 scrum/Run, delta SQL obligatoire, zero dormant" },
+  "rule": "le LEAD dispatch, le membre execute, 8/8 domaines actifs chaque Run, l'uplink monte au score"
 }
 ```
 
 ---
-*Summers commande, 8 managers dispatchent, 53 exécutants livrent — et 4 domaines seulement sont éveillés, parce que le Cycle 1 n'a besoin que d'eux. La hiérarchie complète existe pour le jour où le MRR la remplira. — A.S. 2026-07-20*
+*Summers commande, 8 managers dispatchent, 53 exécutants livrent — les 8 domaines tournent à CHAQUE Run, du 5-scrums de Sales au 1-scrum de Legal. En compression temporelle, personne ne dort : la charge varie, l'état jamais. — A.S. 2026-07-20*
