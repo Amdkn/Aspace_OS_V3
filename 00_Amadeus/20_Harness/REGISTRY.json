@@ -1,0 +1,81 @@
+{
+ "politique": "reference, pas de sous-module : les depots restent en place, V3 ne les imbrique pas",
+ "genere_le": "2026-08-02",
+ "entrees": {
+  "multica": {
+   "nom": "multica",
+   "chemin": "PATH (multica 0.4.4)",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "note_passe_2026-08-02": "103/112 agents archives le 2026-08-02. 9 actifs residuels (M10-smoke, Mariner-Capture, Boimler-Clarify, Tendi-Reflect, Freeman-Engage, Spock-Areas, A0-Amadeus, A3-Book, B1 Jerry Prime). Refonte vers ORG.json NON faite (decision operateur). Voir HARNESS_SETUP_2026-08-02.md T1."
+  },
+  "paperclip": {
+   "nom": "paperclip",
+   "chemin": "npm global (paperclipai 2026.722.0)",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "note_passe_2026-08-02": "Binaire paperclipai 2026.722.0 installe via npm. Instance pre-existante a ~/.paperclip/instances/default/ sauvegardee a default.bak-2026-08-02. Serveur NON demarre, 5 garde-fous NON configures. Voir 00_Amadeus/20_Harness/paperclip/SECURITY_NOTES_2026-08-02.md."
+  },
+  "buzz": {
+   "nom": "buzz",
+   "chemin": "C:/Users/amado/bin/buzz.cmd -> AppData/Local/Buzz/buzz.exe",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "note_passe_2026-08-02": "Shim PATH cree a C:/Users/amado/bin/buzz.cmd deleguant a AppData/Local/Buzz/buzz.exe. Persona Pack Life Core pose et valide a ~/.buzz/packs/aspace-life-core/ (4 personas doctor_11/amy/rory/river + 1 skill adapter-uc-py). Pack NON importe dans Buzz Desktop. Voir HARNESS_SETUP_2026-08-02.md T2."
+  },
+  "cc": {
+   "nom": "cc",
+   "chemin": "PATH (claude 2.1.143)",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "note_passe_2026-08-02": "Claude Code 2.1.143 sur PATH (C:/Users/amado/AppData/Roaming/npm/claude). Skill meta-orchestration posee a .claude/skills/aspace-orchestrate/SKILL.md. Voir HARNESS_SETUP_2026-08-02.md T4."
+  },
+  "hermes": {
+   "nom": "hermes",
+   "chemin": "AppData/Local/hermes/hermes-agent/venv/Scripts/hermes",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "note_passe_2026-08-02": "Binaire a C:/Users/amado/AppData/Local/hermes/hermes-agent/venv/Scripts/hermes.exe. Config a ~/.hermes/. Skill meta-orchestration posee a ~/.hermes/skills/aspace-orchestrate/SKILL.md. Voir HARNESS_SETUP_2026-08-02.md T4."
+  },
+  "orca": {
+   "nom": "orca",
+   "chemin": "C:/Users/amado/orca",
+   "present": true,
+   "depot_git": false,
+   "remote": null
+  },
+  "herdr": {
+   "nom": "herdr",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "remote": null
+  },
+  "omnigent": {
+   "nom": "omnigent",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "remote": null
+  },
+  "codex": {
+   "nom": "codex",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "remote": null
+  },
+  "antigravity": {
+   "nom": "antigravity",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "remote": null
+  }
+ }
+}

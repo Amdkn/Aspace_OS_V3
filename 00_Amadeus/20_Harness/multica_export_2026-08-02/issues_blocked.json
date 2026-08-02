@@ -1,0 +1,61 @@
+{
+  "has_more": false,
+  "issues": [
+    {
+      "assignee_id": "659a6975-958a-4ab9-bdf1-784fb3457506",
+      "assignee_type": "agent",
+      "created_at": "2026-07-20T08:00:15Z",
+      "creator_id": "659a6975-958a-4ab9-bdf1-784fb3457506",
+      "creator_type": "agent",
+      "description": "Autonomous watchdog. Per ADR-L2-PAPERCLIPAI-004 §1.1: T0 routine = sub-agent dispatch self-monitoring. NO anti-paperclip veto. LANE PPR. Economics: M3 = $0.30/$1.20 per 1M tokens = ~$1.50/month for 24/7 routine T0.\n\nCONTEXT DISCIPLINE (PPR, autocompact-safe, ASP-116 patch 2026-07-17):\n- Hard cap on every log read: `multica daemon logs -n 30` (NEVER unbounded tail).\n- NEVER run awk-grep over a full 1h window inline — count markers with bounded reads only.\n- NEVER read daemon.log file directly; route all log reads through `multica daemon logs`.\n- Hard cap comment history: read only `--recent 3` and only on the current issue id.\n- Skip all comment-history reads on parent issues unless the current issue is explicitly blocked on parent context.\n- Reuse `context-bloat-detector` skill only if pre-prompt introspection is required; do not load it for routine ticks.\n\nFUNCTIONS (run on every heartbeat, cron */30 * * * * America/New_York):\n1. F1 daemon status: `multica daemon status`. If stopped → `multica daemon start` (T0).\n2. F2 runtime health: `multica runtime list --output json`. If Hermes/Codex offline \u003e 1h → `multica runtime restart` (T0).\n3. F3 BOUNDED ERROR/FAIL scan (replaces prior unbounded tail):\n   a. `multica daemon logs -n 30 | grep -cE \"ERROR|FAIL\"` → distinct marker count.\n   b. If count ≥ 3 in last 30 lines → T2 advisory: append single line to wiki/log.md naming the highest-severity marker + flag A0 in issue title (T2).\n   c. NEVER cat/awk/grep more than 30 lines in one go.\n4. F4 heartbeat: ALWAYS append one line 'Multica Self-Watchdog heartbeat OK' to wiki/log.md (D4 append-only, single line, no full daemon log embedded).\n\nVERIFICATION RECEIPT (mandatory each run, D1 verify-before-assert):\n- daemon pid + uptime\n- 7/7 runtime count (or named offline runtime)\n- F3 bounded count (single integer)\n- single-line heartbeat append verification (grep \"Multica Self-Watchdog heartbeat OK\" wiki/log.md)\n\nANTI-PAPERCLIP: T0 routine only. No external publish, no charge, no contract, no self-modifying code. Lane PPR. Reversal path: `multica autopilot update b3b2ef13-c1af-4fba-b73e-f82b5d0b0b8c --description \"\u003cprior text\u003e\"` (prior text recoverable from `multica autopilot get` history or git).\n\n---\n*Autopilot run triggered at 2026-07-20 04:00 America/New_York. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "13c4aa81-cd7c-4954-beec-755388e18db3",
+      "identifier": "ASP-658",
+      "labels": [],
+      "metadata": {},
+      "number": 658,
+      "parent_issue_id": null,
+      "position": -491,
+      "priority": "none",
+      "project_id": "2a3c20c7-d500-4d51-a536-931f38c35e4c",
+      "properties": {},
+      "stage": null,
+      "start_date": null,
+      "status": "blocked",
+      "title": "[Watchdog] Multica health heartbeat — 2026-07-20 04:00 ET",
+      "updated_at": "2026-07-20T10:09:16Z",
+      "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+    },
+    {
+      "assignee_id": "659a6975-958a-4ab9-bdf1-784fb3457506",
+      "assignee_type": "agent",
+      "created_at": "2026-07-20T07:30:16Z",
+      "creator_id": "659a6975-958a-4ab9-bdf1-784fb3457506",
+      "creator_type": "agent",
+      "description": "Master Gate du Développement Autonome pour Enterprise OS Coach-Deployer (PRD SPEC-ENTERPRISE-OS-100M-001).\n\nCALIBRATION (per ADR-L2-PAPERCLIPAI-004 RATIFIED 2026-07-16): ROUTINE TASKS EXEMPT from anti-paperclip check — T0 (read/write/think, daemon restart, autopilot create, ADR write, sub-agent dispatch) and T1 (sister-scope commit, wiki/log.md sync) run free without veto. Anti-paperclip fires ONLY on T2 (external publish), T3 (patrimony \u003e$5K charge), T4 (contract), T5 (self-modifying). FLAG to A0-Amadeus on T2-T5. T0-T1 = NO FLAG.\n\nCONTEXT DISCIPLINE (PPR, autocompact-safe, ASP-116 patch 2026-07-17):\n- Hard cap on every log read: `multica daemon logs -n 20` (NEVER unbounded tail).\n- Runtime reads: `multica runtime list --output json` is bounded by workspace count (~7 runtimes).\n- Comment history: read only `--recent 3` and only on the current issue id or direct parent.\n- Do NOT inline the PRD or ADR bodies in the prompt context — reference by `ADR-\u003cid\u003e` only.\n- Reuse `context-bloat-detector` skill only if pre-prompt introspection is required.\n\nROUTING RULES:\n- Development tasks (Phase 2+3+4 leftovers + Q4 2026 pilot ops): route to A0-Amadeus or Picard-Projects\n- Coach enablement questions: route to Spock-Areas + Tendi-Reflect\n- AI-Act compliance: route to Ikaris\n- ADR/JTBD canon work: route to Spock + Picard (with PM-spec discipline)\n- Pilot cohort ops: route to Freeman-Engage + Cerritos-HoloDeck\n- Default model: MiniMax-M3 (per ADR-LLM-COST-COMPARE-001 $0.30/$1.20 per 1M tokens, ~$1.50/month for 24/7 routine)\n\nMONITORING:\n- Self-monitoring: heart-beat every 6h (cron 0 */6 * * * America/New_York)\n- Runtime health: re-trigger offline runtimes via F2 short-circuit (offline \u003e1h → restart)\n- Pilot cohort: W1 outreach 2026-10-01 onwards (countdown only, no action)\n\nVERIFICATION RECEIPT (mandatory each run, D1):\n- 7/7 runtime count (or named offline runtime)\n- bounded F3 ERROR/FAIL count (max -n 20)\n- single-line gate heartbeat append to wiki/log.md\n\nANTI-PAPERCLIP VETO (T5 only): MAXIMIZER MODE REFUSED, self-modifying ML REFUSED.\n\nLANE: PPR (réversible). Reversal path: `multica autopilot update 2dabf5b8-dc6a-4629-a866-8c7493652a22 --description \"\u003cprior text\u003e\"`.\n\n---\n*Autopilot run triggered at 2026-07-20 03:30 America/New_York. After starting work, rename this issue to accurately reflect what you are doing.*",
+      "due_date": null,
+      "id": "d9b48b4b-ed67-4fb5-ad28-4d16e579bf75",
+      "identifier": "ASP-656",
+      "labels": [],
+      "metadata": {
+        "blocked_reason": "5 runtimes offline \u003e1h; multica runtime exposes no start/restart command; host integrations must reconnect",
+        "pipeline_status": "degraded"
+      },
+      "number": 656,
+      "parent_issue_id": null,
+      "position": -489,
+      "priority": "none",
+      "project_id": "2a3c20c7-d500-4d51-a536-931f38c35e4c",
+      "properties": {},
+      "stage": null,
+      "start_date": null,
+      "status": "blocked",
+      "title": "[Dev Gate] Runtime Health Heartbeat — 2026-07-20",
+      "updated_at": "2026-07-20T10:19:14Z",
+      "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+    }
+  ],
+  "limit": 100,
+  "offset": 0,
+  "total": 2
+}

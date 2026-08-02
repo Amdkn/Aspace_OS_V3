@@ -1,0 +1,20 @@
+{
+ "politique": "reference, pas de sous-module : les depots restent en place, V3 ne les imbrique pas",
+ "genere_le": "2026-08-02",
+ "entrees": {
+  "l0-omnigent": {
+   "nom": "shadow-l0-omnigent",
+   "chemin": "C:/Users/amado/shadow-l0-omnigent",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/omnigent-ai/omnigent"
+  },
+  "l1-agent-zero": {
+   "nom": "shadow-l1-agent-zero",
+   "chemin": "C:/Users/amado/shadow-l1-agent-zero",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/agent0ai/agent-zero"
+  }
+ }
+}

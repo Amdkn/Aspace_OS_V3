@@ -83,3 +83,8 @@ Thumbs.db
 
 # V3-fix: long paths (>240 chars, Windows MAX_PATH limit)
 *System Operating Blueprint_ Governance and/Artifacts/Le Code de Gouvernance RILCOT metadata.json
+
+# noyau : base locale, jamais commitee
+10_Tech_OS/kernel/uc.db
+10_Tech_OS/kernel/uc.db-wal
+10_Tech_OS/kernel/uc.db-shm

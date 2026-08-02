@@ -1,6 +1,0 @@
-{
-  "name": "Alykaly OS",
-  "description": "Operating system and internal pipeline for Alykaly Holding surplus funds recovery.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}

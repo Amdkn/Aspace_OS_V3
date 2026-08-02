@@ -1,44 +1,83 @@
-# A'Space OS V3 — Sovereign Matryoshka (git-publiable)
+# A'Space OS V3
 
-> *"La Sobriété est la clé de la Liberté. Don't break the kernel."* — Rick Sanchez (Loi L0)
+> **Loi L0 — Rick.** *Un système qui ne sait pas se répliquer n'est pas un système,
+> c'est un document.* Von Neumann : ruban + constructeur + copieur + contrôleur.
+> Conway : trois règles suffisent, la complexité émerge, jamais déclarée.
 
-**V3 = V2 (copie littérale du canon) + les strates rendues clone-friendly pour un déploiement VPS H24/7.**
-Ce dépôt est la version **intégrale et git-publiable** de l'Harness Amadeus A'Space. Rien n'a été
-re-dérivé (doctrine anti-paperclip, `_SPECS/ADR/.../ADR-SOBER-002`) : V3 est V2 **déplacé**, jamais réécrit.
+V3 n'est pas une copie de V2. **V2 est la mémoire, V3 est le runtime.**
 
-## 🧬 Architecture Matriochka
+---
 
-**A0 (Identité)** pilote **L0 (Tech)** → soutient **L1 (Vie)** → alimente **L2 (Business)**.
-Rien n'existe hors de cette hiérarchie. C'est le *Sovereign Kernel*.
+## État au 2026-08-02
 
-## 🗺️ Arborescence V3
+**84 dossiers, 50 fichiers réels.** Tout ce qui existe ici sert au fonctionnement.
 
-| Dossier | Source V2 | Contenu |
+Les 17 665 fichiers de l'ancienne structuration sont archivés, intacts et réversibles, dans
+`ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\04_Archives_Data\_V3_STRUCTURE_2026-08-02\`
+(manifeste de 471 entrées).
+
+Les 1 576 dossiers vides qui reproduisaient l'imbrication V2 ont été supprimés le 2026-08-02 :
+un dossier vide n'est pas une structure, c'est une règle en plus qui fige la capacité sans
+rien produire. La structure d'origine reste lisible dans l'archive.
+
+## Arborescence
+
+| Chemin | Contenu |
+|---|---|
+| `_INBOX/` | admission — portiers `S1_Rick`, `A1_Beth_Morty`, `B1_Jerry_Summer` |
+| `00_Amadeus/` | A0 — Observateur Méta : observateurs, harness, shadow, prédictions, bench, rubans, skills, doctrine |
+| `10_Tech_OS/00_Governance_Rick/` | la loi et le **réplicateur** — gabarit de Core + `spawn.py` |
+| `10_Tech_OS/kernel/` | les organes : `uc.py`, `harness.py`, `gate.py`, `review.py`, `dlq.py` |
+| `10_Tech_OS/11_Kernel_Core_13th/` | 13e Docteur — maître de `10_Tech_OS` *(engendré)* |
+| `10_Tech_OS/12_Life_Core_11th/` | 11e Docteur — maître de `20_Life_OS` *(engendré)* |
+| `10_Tech_OS/13_Buzz_Core_12th/` | 12e Docteur — maître de `30_Business_OS` *(engendré)* |
+| `20_Life_OS/` · `30_Business_OS/` | les couches maîtrisées — le travail y atterrit, pas les Cores |
+| `scripts/` · `AGENTS.md` · `LICENSE` · `.gitignore` · `README.md` | amorçage et identité |
+
+**Rien ne se crée à la racine.** Tout fichier qui n'appartient ni à Tech, ni à Life, ni à
+Business va dans `00_Amadeus/`.
+
+## Les quatre organes
+
+| Organe | Où | Fait quoi |
 |---|---|---|
-| `00_Amadeus/` | `ASpace_OS_V2/00_Amadeus/` | Identité A0 + Memory Core + Symphony bus |
-| `10_Tech_OS/` | `ASpace_OS_V2/10_Tech_OS/` | L0 Bedrock (Rick / Sovereignty Kernel) |
-| `20_Life_OS/` | `ASpace_OS_V2/20_Life_OS/` | L1 — PARA + 8 domaines Life Wheel (LD01-08) |
-| `30_Business_OS/` | `ASpace_OS_V2/30_Business_OS/` | L2 — 8 Domaines + Variants Solaris/Nexus/Orbiter |
-| `_SPECS/` | `ASpace_OS_V2/_SPECS/` | 211 fichiers ADR/PRD/canon (copie intégrale, 0-diff) |
-| `40_Fable_Banque/` | `fable-last-week-aspace/` | Banque Fable : wargames + sims Mirofish + LEDGER + TEMPORAL-CANON |
-| `50_Claude_Code_Config/` | `.claude/` (sélection) | skills / rules / agents / hooks — rend l'OS reproductible (**sans secrets**) |
-| `60_Citadel/` | `agent-os/citadel/` | Moteur WF0 orchestrator (Spock) |
-| `90_INBOX/` | `ASpace_OS_V2/_Inbox/` | Staging zone (triggers) |
-| `scripts/` | *(V3-specific)* | `install.sh` + `verify_structure.sh` |
+| Ruban φ | `00_Amadeus/60_Tape_Specs/` | la description — `/spec-loop`, `/bmad` |
+| Constructeur A | `10/20/30_*_OS/` | bâtit depuis le ruban |
+| Copieur B | `00_Governance_Rick/replicator/` | duplique sans interpréter — engendre les Cores |
+| Contrôleur C | `_INBOX/` + `kernel/uc.db` | ordonne, puis **détache** |
 
-## 🔒 Sobriété git-publiable
-
-Exclus du dépôt (non canon, non-git-publiable) : `.git` imbriqués, `_TRASH*`, YouTube Takeout
-(`.mp4` / `takeout-*`), `graphify-out*`, `node_modules`, `__pycache__`, tarballs, logs, **et tous les
-secrets** (`settings.json`, `history.jsonl`, `sessions/`, `telemetry/`). Voir `.gitignore`.
-
-## 🚀 Démarrage
-
-Voir **`V3-INIT.md`** — clone VPS, câblage `.claude/settings.json` (créé par l'utilisateur, jamais commité),
-lancement du WF0 Citadel, câblage des MCPs. Licence : **MIT** (`LICENSE`).
+## Le cycle, de bout en bout
 
 ```bash
-git clone <remote> aspace-os-v3 && cd aspace-os-v3
-bash scripts/install.sh          # vérifie Node≥22 / Python≥3.10, scaffold settings, valide la structure
-bash scripts/verify_structure.sh # contrôle d'intégrité de l'arborescence
+python 10_Tech_OS/kernel/gate.py run        # le portier admet ou refuse
+python 10_Tech_OS/kernel/worker_example.py --harness cc --layer L2 --max 1
+python 10_Tech_OS/kernel/review.py run      # exige les preuves, score, détache
+python 10_Tech_OS/kernel/dlq.py rapport     # ce qui attend Rick
 ```
+
+## Hiérarchie
+
+`ORG.json` fait foi. S1 Rick gouverne le mécanisme et ne réclame jamais de travail.
+S2 les trois Docteurs maîtrisent une couche et **détachent**. S3 les neuf compagnons
+exécutent — Spec, Build, Spawn. Donna reçoit les échecs répétés et escalade à Rick.
+
+Harness : Multica (L0) · Buzz (L1) · Paperclip (L2). Contrat commun :
+`00_Amadeus/20_Harness/ADAPTER.md`.
+
+## La mémoire est dans V2
+
+```
+ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\
+```
+
+Point d'entrée `03_Resources_Geordi/CLAUDE.md`. Les 4 piliers : **OKF** · **Wiki** ·
+**Graphify** · **Dox**. Un fichier qui n'exécute rien et contre lequel rien ne s'exécute
+appartient à Geordi, pas ici.
+
+## ⚠ Secrets publiés
+
+Ce dépôt a un remote GitHub et son historique contient au moins 11 fichiers porteurs de
+credentials, poussés via le commit `41c19a5`. **Faire tourner ces clés** est prioritaire sur
+toute réécriture d'historique — celle-ci ne révoque rien.
+
+Licence : **MIT**.

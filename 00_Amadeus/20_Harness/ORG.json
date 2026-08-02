@@ -1,0 +1,177 @@
+{
+ "version": "2026-08-02",
+ "principe": "S1 gouverne le mecanisme. S2 maitrise une couche et detache. S3 execute. Donna recoit ce qui a echoue.",
+ "regle_dure": "Nul ne cumule Build et Review. Rick ne reclame jamais de travail dans la file.",
+ "S1": {
+  "rick": {
+   "role": "gouvernance du mecanisme",
+   "harness": "multica",
+   "possede": [
+    "le gabarit de Core",
+    "la loi L0",
+    "les organes du noyau"
+   ],
+   "ne_fait_pas": [
+    "ecrire une spec",
+    "batir",
+    "revoir",
+    "reclamer du travail"
+   ],
+   "recoit": "le Super Uplink de Donna"
+  }
+ },
+ "S2": {
+  "doctor_13": {
+   "core": "Kernel Core",
+   "layer": "L0",
+   "os": "10_Tech_OS",
+   "harness": "multica",
+   "role": "Review — exige les preuves, score, detache"
+  },
+  "doctor_11": {
+   "core": "Life Core",
+   "layer": "L1",
+   "os": "20_Life_OS",
+   "harness": "buzz",
+   "role": "Review — exige les preuves, score, detache"
+  },
+  "doctor_12": {
+   "core": "Buzz Core",
+   "layer": "L2",
+   "os": "30_Business_OS",
+   "harness": "paperclip",
+   "role": "Review — exige les preuves, score, detache"
+  }
+ },
+ "S3": {
+  "yaz": {
+   "doctor": "doctor_13",
+   "layer": "L0",
+   "role": "Spec",
+   "verbe": "redige le ruban, le depose au portier S1_Rick, le corrige tant qu'il echoue au test",
+   "specialite": "SecOps"
+  },
+  "ryan": {
+   "doctor": "doctor_13",
+   "layer": "L0",
+   "role": "Build",
+   "verbe": "claim -> predict -> batit -> attest -> review",
+   "specialite": "SysAdmin"
+  },
+  "graham": {
+   "doctor": "doctor_13",
+   "layer": "L0",
+   "role": "Spawn",
+   "verbe": "duplique un ruban eprouve en aveugle, soumet la descendance",
+   "specialite": "Backup-DBA"
+  },
+  "amy": {
+   "doctor": "doctor_11",
+   "layer": "L1",
+   "role": "Spec",
+   "verbe": "redige le ruban, le depose au portier A1_Beth_Morty",
+   "specialite": "Social"
+  },
+  "rory": {
+   "doctor": "doctor_11",
+   "layer": "L1",
+   "role": "Build",
+   "verbe": "claim -> predict -> batit -> attest -> review",
+   "specialite": "Health"
+  },
+  "river": {
+   "doctor": "doctor_11",
+   "layer": "L1",
+   "role": "Spawn",
+   "verbe": "duplique un ruban eprouve, soumet la descendance",
+   "specialite": "Knowledge"
+  },
+  "clara": {
+   "doctor": "doctor_12",
+   "layer": "L2",
+   "role": "Spec",
+   "specialite": "MCP-ETL",
+   "verbe": "redige le ruban, le depose au portier B1_Jerry_Summer"
+  },
+  "nardole": {
+   "doctor": "doctor_12",
+   "layer": "L2",
+   "role": "Build",
+   "specialite": "A2A",
+   "verbe": "claim -> predict -> batit -> attest -> review"
+  },
+  "bill": {
+   "doctor": "doctor_12",
+   "layer": "L2",
+   "role": "Spawn",
+   "specialite": "AG-UI",
+   "verbe": "duplique un ruban eprouve en aveugle, soumet la descendance"
+  },
+  "donna": {
+   "doctor": null,
+   "sous": "rick",
+   "layer": "*",
+   "role": "DLQ",
+   "verbe": "collecte les echecs repetes que l'uplink des compagnons et le Docteur n'ont pas resolus, les qualifie par famille, escalade a Rick",
+   "outil": "10_Tech_OS/kernel/dlq.py"
+  }
+ },
+ "uplink": {
+  "niveau_1": "compagnon S3 -> son Docteur S2 (echec simple, retentable)",
+  "niveau_2": "Docteur S2 -> Donna (echec repete, seuil 3 tentatives)",
+  "super_uplink": "Donna -> Rick S1 (arbitrage, puis dlq.py rendre)"
+ },
+ "chaine_orchestration": {
+  "A0": {
+   "meta": [
+    "hermes",
+    "cc"
+   ],
+   "role": "orchestrent les trois couches, ne travaillent dans aucune"
+  },
+  "L0_orchestre": "L1 — les agents Multica pilotent Buzz",
+  "L1_orchestre": "L2 — les agents Buzz pilotent l'expansion Paperclip",
+  "contrat": "00_Amadeus/20_Harness/ADAPTER.md — meme contrat pour les trois"
+ },
+ "harness": {
+  "multica": {
+   "couche": "L0",
+   "cli": "multica",
+   "version": "0.4.4",
+   "present": true,
+   "commandes": [
+    "agent",
+    "autopilot",
+    "chat",
+    "issue",
+    "label",
+    "project",
+    "property",
+    "repo",
+    "skill",
+    "squad"
+   ]
+  },
+  "buzz": {
+   "couche": "L1",
+   "cli": "buzz",
+   "present": true,
+   "sur_le_path": false,
+   "binaires": "C:/Users/amado/AppData/Local/Buzz/{buzz-acp,buzz-agent,buzz-desktop}.exe",
+   "config": "C:/Users/amado/.buzz"
+  },
+  "paperclip": {
+   "couche": "L2",
+   "cli": "paperclip",
+   "present": false,
+   "trace": "C:/Users/amado/.paperclip/instances",
+   "a_installer": true
+  }
+ },
+ "canon": {
+  "13": "Doctor_13_Yaz_Ryan_Graham",
+  "11": "Doctor_11_Amy_Rory_River",
+  "12": "Doctor_12_Clara_Nardole_Bill"
+ },
+ "note_canon": "Trios etablis par les dossiers canoniques de V2. Missy (03_Missy_Chaos) est un dossier annexe, pas une compagne."
+}

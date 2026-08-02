@@ -1,0 +1,82 @@
+[
+  {
+    "config": {},
+    "created_at": "2026-07-12T20:30:02Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "Quick-add inbox specialist for Holo Deck GTD Dispatch OS. Sister to a3-cerritos-mariner canon.",
+    "id": "6d3c2d68-fa1c-4723-9ea9-5b6f9cdcd911",
+    "name": "gtd-capture-mariner",
+    "updated_at": "2026-07-12T20:30:02Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T20:30:06Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "Triage + routing specialist for Holo Deck GTD Dispatch OS. Sister to a3-cerritos-boimler canon.",
+    "id": "40288536-80d6-43b2-b9ac-6ae1bd36c892",
+    "name": "gtd-clarify-boimler",
+    "updated_at": "2026-07-12T20:30:06Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T20:30:23Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "Priority/context/time/energy picker for Holo Deck GTD Dispatch OS. Sister to a3-cerritos-freeman canon.",
+    "id": "418c2f54-8c0d-4649-a4e6-194f86086232",
+    "name": "gtd-engage-freeman",
+    "updated_at": "2026-07-12T20:30:23Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T20:30:12Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "PARA placement + project scaffolding specialist for Holo Deck GTD Dispatch OS. OWNED BY RUTHERFORD (SDD-008 canon). INVERTED 2026-07-12.",
+    "id": "44297a9f-92ab-423a-94ad-9fb6a0fea96d",
+    "name": "gtd-organize-rutherford",
+    "updated_at": "2026-07-12T20:47:27Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T20:30:18Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "Weekly review + pattern detection specialist for Holo Deck GTD Dispatch OS. OWNED BY TENDI (SDD-008 canon). INVERTED 2026-07-12.",
+    "id": "2970b5d6-6953-4c3b-9ce1-23a972dd3472",
+    "name": "gtd-reflect-tendi",
+    "updated_at": "2026-07-12T20:47:31Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T22:38:38Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "WF0 Spock governance skill for Holo Deck Dispatch OS. 3-route Fork Protocol (contradiction/incomplet/intention A+). Sister canon ~/.claude/plans/wf0_governance_spock.md.",
+    "id": "8b4d9831-e7bf-45e4-9da1-d5a044d62d63",
+    "name": "wf0-governance-spock",
+    "updated_at": "2026-07-12T22:38:38Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T22:38:49Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "WF1 Morty pass-management skill. Weekly Pass JSON with Beth invariants + scopes. 3 soupapes compression ×4. Anti-M3-laziness proof. Sister canon ~/.claude/plans/wf1_pass_morty.md.",
+    "id": "f9746965-f40a-43f2-a7db-1c3074e3bb97",
+    "name": "wf1-pass-morty",
+    "updated_at": "2026-07-12T22:38:49Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "config": {},
+    "created_at": "2026-07-12T22:39:02Z",
+    "created_by": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "WF2 Book CEO-Bench tick skill. H1 weekly P\u0026L: 3 metrics + 8 domaines lighting + verse Summers + calendar append. Anti-jerry-not-done double proof. Sister canon ~/.claude/plans/wf2_book_tick.md.",
+    "id": "1da7284f-a774-484e-9319-6eebe3b07c42",
+    "name": "wf2-tick-book",
+    "updated_at": "2026-07-12T22:39:02Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  }
+]

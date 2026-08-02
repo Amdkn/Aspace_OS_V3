@@ -1,0 +1,67 @@
+{
+ "politique": "reference, pas de sous-module : les depots restent en place, V3 ne les imbrique pas",
+ "genere_le": "2026-08-02",
+ "entrees": {
+  "opik": {
+   "nom": "opik",
+   "chemin": "C:/Users/amado/opik",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/comet-ml/opik.git",
+   "type": "local"
+  },
+  "agentpulse": {
+   "nom": "agentpulse",
+   "chemin": "C:/Users/amado/agentpulse",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/prove-ai/agentpulse.git",
+   "type": "local"
+  },
+  "aios": {
+   "nom": "AIOS",
+   "chemin": "C:/Users/amado/AIOS",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/agiresearch/AIOS.git",
+   "type": "local"
+  },
+  "agents-observe": {
+   "nom": "agents-observe",
+   "type": "local",
+   "chemin": "C:/Users/amado/observability-stack/agents-observe",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/simple10/agents-observe.git"
+  },
+  "agent-super-spy": {
+   "nom": "agent-super-spy",
+   "type": "a_cloner",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "url": "https://github.com/simple10/agent-super-spy"
+  },
+  "phoenix": {
+   "nom": "phoenix",
+   "type": "a_cloner",
+   "chemin": null,
+   "present": false,
+   "depot_git": false,
+   "url": "https://github.com/arize-ai/phoenix"
+  },
+  "langsmith": {
+   "nom": "langsmith",
+   "type": "service_heberge",
+   "url": "https://smith.langchain.com/"
+  },
+  "agent-os": {
+   "nom": "agent-os",
+   "type": "local",
+   "chemin": "C:/Users/amado/agent-os",
+   "present": true,
+   "depot_git": false,
+   "remote": null
+  }
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "13": {
+  "doctor": "13e Docteur",
+  "core": "Kernel Core",
+  "layer": "L0",
+  "os": "10_Tech_OS",
+  "dest": "10_Tech_OS/11_Kernel_Core_13th",
+  "mission": "tenir le noyau, l'infrastructure et les harness",
+  "harness": "multica",
+  "roles": {
+   "spec": "Yaz",
+   "build": "Ryan",
+   "spawn": "Graham",
+   "review": "13e Docteur"
+  },
+  "compagnons": [
+   {
+    "n": "01",
+    "nom": "Yaz",
+    "specialite": "SecOps",
+    "organe": "Spec",
+    "dossiers": [
+     "01_Yaz_SecOps"
+    ]
+   },
+   {
+    "n": "02",
+    "nom": "Ryan",
+    "specialite": "SysAdmin",
+    "organe": "Build",
+    "dossiers": [
+     "02_Ryan_SysAdmin"
+    ]
+   },
+   {
+    "n": "03",
+    "nom": "Graham",
+    "specialite": "Backup",
+    "organe": "Spawn",
+    "dossiers": [
+     "03_Graham_Backup",
+     "03_Graham_DBA"
+    ]
+   }
+  ],
+  "maitrise": "10_Tech_OS",
+  "canon": "Doctor_13_Yaz_Ryan_Graham"
+ },
+ "11": {
+  "doctor": "11e Docteur",
+  "core": "Life Core",
+  "layer": "L1",
+  "os": "20_Life_OS",
+  "dest": "10_Tech_OS/12_Life_Core_11th",
+  "mission": "tenir l'identite, l'observation et la vie",
+  "harness": "buzz",
+  "roles": {
+   "spec": "Amy",
+   "build": "Rory",
+   "spawn": "River",
+   "review": "11e Docteur"
+  },
+  "compagnons": [
+   {
+    "n": "01",
+    "nom": "Amy",
+    "specialite": "Social",
+    "organe": "Spec",
+    "dossiers": [
+     "01_Amy_Social"
+    ]
+   },
+   {
+    "n": "02",
+    "nom": "Rory",
+    "specialite": "Health",
+    "organe": "Build",
+    "dossiers": [
+     "02_Rory_Health"
+    ]
+   },
+   {
+    "n": "03",
+    "nom": "River",
+    "specialite": "Knowledge",
+    "organe": "Spawn",
+    "dossiers": [
+     "03_River_Knowledge"
+    ]
+   }
+  ],
+  "maitrise": "20_Life_OS",
+  "canon": "Doctor_11_Amy_Rory_River"
+ },
+ "12": {
+  "doctor": "12e Docteur",
+  "core": "Buzz Core",
+  "layer": "L2",
+  "os": "30_Business_OS",
+  "dest": "10_Tech_OS/13_Buzz_Core_12th",
+  "mission": "produire de la valeur externe",
+  "harness": "paperclip",
+  "roles": {
+   "spec": "Clara",
+   "build": "Nardole",
+   "spawn": "Bill",
+   "review": "12e Docteur"
+  },
+  "compagnons": [
+   {
+    "n": "01",
+    "nom": "Clara",
+    "specialite": "MCP",
+    "organe": "Spec",
+    "dossiers": [
+     "01_Clara_MCP",
+     "01_Clara_MCP/02_Clara_ETL"
+    ]
+   },
+   {
+    "n": "02",
+    "nom": "Nardole",
+    "specialite": "A2A",
+    "organe": "Build",
+    "dossiers": [
+     "02_Nardole_A2A"
+    ]
+   },
+   {
+    "n": "04",
+    "nom": "Bill",
+    "specialite": "AG-UI",
+    "organe": "Spawn",
+    "dossiers": [
+     "04_Bill_AG-UI"
+    ]
+   }
+  ],
+  "maitrise": "30_Business_OS",
+  "canon": "Doctor_12_Clara_Nardole_Bill"
+ }
+}
