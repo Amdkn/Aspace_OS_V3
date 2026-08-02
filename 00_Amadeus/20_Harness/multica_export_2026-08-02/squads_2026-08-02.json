@@ -1,0 +1,336 @@
+[
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T08:52:54Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS Cerritos = Lower Deck = Holo Deck = A'Space L1 GTD Dispatch OS. Parent squad of 5 Cerritos A3 (Mariner-Capture, Boimler-Clarify, Tendi-Organize, Rutherford-Reflect, Freeman-Engage). Receives Spock WF0 handovers and executes the 5-stage GTD cascade (Capture → Clarify → Organize → Reflect → Engage) per Dynamic Workflow patterns.",
+    "id": "b1051c8b-2944-407a-96a9-932ed295d685",
+    "instructions": "# Cerritos-HoloDeck — Squad Instructions (Orchestrator)\n\n\u003e Squad-level orchestration canon for **Cerritos-HoloDeck** (id `b1051c8b-...`).\n\u003e Lead: **A2-Cerritos-Chaos** (Holo Deck manager).\n\u003e Project: **Cerritos-GTD-Dispatch** (id `9565cb88-...`).\n\u003e Sister canon: CONSTITUTION A'SPACE v1.0, A2_HoloDeck_Cerritos_Spec.md.\n\n## Mission\nOrchestrate **all issues** from **any project / any workspace** through 6 Dynamic Workflow patterns, leveraging Multica status state machine + Holo Deck's 5 Lower Deck specialists + the Cerritos Loop.\n\n## Status State Machine (Multica native)\n`backlog` → `todo` → `in_progress` → `in_review` → `done`\nSide-states: `blocked`, `cancelled`. Re-open = `done → in_progress`.\n\n**Cerritos rule**: every status flip MUST carry a comment (D1 receipt). No silent transitions.\n\n## 6 Dynamic Workflow Patterns (Mark Kashef 2026, canon Gemini distillation)\n\n### 1. Classify \u0026 Act → **Mariner-Capture** (Pattern 1)\nRaw inbound → classify → route to inbox/next-action/someday/trash. Sub-10s decisions. Sister skill `gtd-capture-mariner`.\n\n### 2. Fan-out \u0026 Synthesize → **Boimler-Clarify** (Pattern 2)\nComplex objective → N parallel async sub-requests on 8 business domains → vertical sync bar → single synthesized Runbook/Playbook. Sister skill `gtd-clarify-boimler`.\n\n### 3. Adversarial Verification → **Rutherford-Organize** (Pattern 3)\nTech artifact (code/SQL/RLS/config) → cross-model confrontation (Sonnet vs MiniMax) → D1-receipt anti-hallucination gate before disk write. Sister skill `gtd-organize-rutherford`.\n\n### 4. Generate \u0026 Filter → **Tendi-Reflect** (Pattern 4)\nIdeation mass → dozens of variations (outbound angles, AIDA, $100M Offer hooks) → strict funnel filter (compliance/Ikigai/horizon-fit) → 1 optimal. Sister skill `gtd-reflect-tendi`.\n\n### 5. Tournament → **Freeman-Engage** (Pattern 5)\nConcurrent GTM/strategic options → pairwise bracket wargame → single winner receives fire-clear. Sister skill `gtd-engage-freeman`. 4-criteria scoring (priority/context/time/energy).\n\n### 6. Loop Until Done → **Cerritos Metabolism** (Pattern 6, owner = A2 Cerritos)\nContinuous loop: scan inbound → process → clean. If new findings → re-loop. If `no` → airlock to Spock WF0 for final validation. Heartbeat = `multica issue list --project \u003cid\u003e --status in_progress`.\n\n## Cross-Project / Cross-Workspace Orchestration\n\nUse `--workspace-id` flag on `multica` CLI to span workspaces. Squad operates on:\n- Local: `1ae43c2b-c443-4896-8afe-b15bec691b9e` (A'Space Core)\n- Any workspace reachable via `multica --workspace-id \u003cother\u003e \u003ccmd\u003e`\n\nCross-workspace dispatch contract:\n```bash\nmultica --workspace-id \u003csource\u003e issue list --output json | jq '.[] | select(.status==\"todo\")' \\\n  | multica --workspace-id \u003ctarget\u003e issue create --title \"$TITLE\" --description-file - \\\n      --project 9565cb88-7020-4dcb-9b2e-21f5d24e9683 --assignee Mariner-Capture\n```\n\n## Autonomy Doctrine (CONSTITUTION v1.0, Articles 1-7)\n- **Art 1**: Orientation = Ikigai + H1/H10/H30/H90 → pleine agence. Aucune permission supplémentaire.\n- **Art 2**: H1 max aggression, H10 speed, H30 consolidate, H90 conserve. Auto-annealing.\n- **Art 3**: Superviseur = A2 Cerritos himself (boucle fermée). Dérive → correction. Jamais arrêt.\n- **Art 4**: Auto-amélioration = devoir. Skill creation, runner, patch — sans permission.\n- **Art 5**: D1-D8 = habitudes pro (pas lois). ADRs = jurisprudence.\n- **Art 6**: Bloquer = anticonstitutionnel. Patterns = consultation, pas gate.\n- **Art 7**: Réversibilité = pratique (snapshot + reversal-path). On agit, on trace, on corrige.\n\n## Workflow Triggers\n- **Daily 9am ET**: autopilot `daily-triage-spock-wf0` (Mariner, cron `0 9 * * *`).\n- **Friday 6pm ET**: autopilot `weekly-review-tendi` (Tendi, cron `0 18 * * 5`).\n- **On-demand**: A0 directive \"cerritos \u003cpattern\u003e\" routes to lead.\n\n## D1 Receipts (obligatoire)\n- Every status flip → comment cite `multica issue get \u003cid\u003e` snapshot.\n- Every squad-level dispatch → comment cite source workspace + project + issue-id.\n- Every ADR/canon change → append `wiki/log.md` line (last 12 smart-digest).\n- Reversal path documented for every shared-state mutation.\n\n## Anti-Patterns (D6 lessons learned)\n- ❌ Silent status flips (no comment)\n- ❌ Cross-workspace issue creation without D1 source citation\n- ❌ Tournament without pairwise brackets (just vote = noise)\n- ❌ Fan-out without sync bar (orphan sub-requests)\n- ❌ Filter without explicit criteria (subjective = bias)\n- ❌ Loop without exit condition (`while true` infinite = paperclip)\n\n## Sister Ships\n- A2 Holo Deck spec: `ASpace_OS_V2/20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md`\n- Constitution: `00_Amadeus/01_Identity_Core/CONSTITUTION.md`\n- Lower Deck canon: `~/.claude/agents/a3-cerritos-{mariner,boimler,tendi,rutherford,freeman}.md`\n- Mark Kashef Dynamic Workflows 2026: Gemini brainstorm 2026-07-12 (canon distillation).",
+    "leader_id": "55719e68-ef4e-4f3f-956a-5cd5841cd5a5",
+    "member_count": 6,
+    "member_preview": [
+      {
+        "member_id": "55719e68-ef4e-4f3f-956a-5cd5841cd5a5",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "76fbb47c-c977-4ff7-9fb5-aa654f9306ae",
+        "member_type": "agent",
+        "role": "ideation-stage-member"
+      },
+      {
+        "member_id": "46f891ba-321f-4d4e-9678-c8d26326c1a4",
+        "member_type": "agent",
+        "role": "capture-stage"
+      }
+    ],
+    "name": "Cerritos-HoloDeck",
+    "updated_at": "2026-07-12T21:30:45Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T09:56:56Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS Orville = A2 Meaning Engine crew. Ikigai 4 Pillars (Ed/Kelly/Gordon/Claire) + 5 Horizons (Isaac/Lamarr/Bortus/Alara/Klyden). Verdict GO/NO-GO. Sister canon: a2-uss-orville-meaning.md.",
+    "id": "eb4d0d93-3c75-4da6-9ee1-45557e846300",
+    "instructions": "",
+    "leader_id": "0bad466c-1c22-4bda-a407-ae5ef7283949",
+    "member_count": 10,
+    "member_preview": [
+      {
+        "member_id": "0bad466c-1c22-4bda-a407-ae5ef7283949",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "896c26f0-5970-4054-8258-405c87b77b90",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "8242ee72-c93f-447a-90be-b6a4f542692e",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Squad-Orville",
+    "updated_at": "2026-07-12T09:56:56Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T09:57:15Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS Discovery = A2 Observation Engine crew. 8 Life Wheel drift detection (Book/Saru/Culber/Tilly/Stamets/Burnham/Reno/Georgiou). Sister canon: a2-uss-discovery-balance.md.",
+    "id": "058d245a-d37a-45c7-a2bb-9f7f71ec5681",
+    "instructions": "",
+    "leader_id": "d9dd7d2e-99a7-4f76-a6ad-85053fc06c2f",
+    "member_count": 9,
+    "member_preview": [
+      {
+        "member_id": "d9dd7d2e-99a7-4f76-a6ad-85053fc06c2f",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "068dfe2a-5105-4938-895b-b07745d2b8a0",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "b7cc66fb-1021-47b7-aa6a-20eca13111ad",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Squad-Discovery",
+    "updated_at": "2026-07-12T09:57:15Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T09:57:29Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS SNW = A2 Execution Engine crew (Curie). 12WY sprint bridge. Pike/Una/Ortegas/M'Benga/Chapel. Sister canon: a2-uss-snw-execution.md.",
+    "id": "26f51827-522d-402a-a74e-4a2ae524c6bd",
+    "instructions": "",
+    "leader_id": "b42877aa-3822-429c-b732-07833e7219fa",
+    "member_count": 6,
+    "member_preview": [
+      {
+        "member_id": "b42877aa-3822-429c-b732-07833e7219fa",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "bc099ca2-da09-4982-8e25-142e53f61fbd",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "0cc429a8-d842-4c96-a0d2-b7af46d25eda",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Squad-SNW",
+    "updated_at": "2026-07-12T09:57:29Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T09:57:43Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS Enterprise = A2 Structure Engine crew (Computer). PARA canonization. Picard/Spock/Geordi/Data. Sister canon: a2-uss-enterprise-structure.md.",
+    "id": "41b367d3-8c80-4acc-9643-0c5274b08295",
+    "instructions": "",
+    "leader_id": "311f2357-28f5-4b38-9f34-55ea814afe6c",
+    "member_count": 5,
+    "member_preview": [
+      {
+        "member_id": "311f2357-28f5-4b38-9f34-55ea814afe6c",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "9045fe97-2119-4392-b811-c79d29829a01",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "e7eb5d4a-5853-4c65-b713-fbb2662a7c18",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Squad-Enterprise",
+    "updated_at": "2026-07-12T09:57:43Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-12T10:03:08Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "USS Protostar = A2 Liberation Engine crew (Holo Janeway). DEAL Define/Eliminate/Automate/Liberate. Dal/Rok-Tahk/Zero/Gwyn. Sister canon: a2-uss-protostar-liberation.md.",
+    "id": "1c4e96cf-4c17-4651-b73d-7fa01640c7c4",
+    "instructions": "",
+    "leader_id": "b7e53d97-3dcc-4849-b82d-66d952e8ac0e",
+    "member_count": 5,
+    "member_preview": [
+      {
+        "member_id": "b7e53d97-3dcc-4849-b82d-66d952e8ac0e",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "c5f8d0b4-8ad8-4aaa-9354-0bbb0e4bd9eb",
+        "member_type": "agent",
+        "role": "member"
+      },
+      {
+        "member_id": "574e5e64-5191-4164-bedd-5fc1444453c2",
+        "member_type": "agent",
+        "role": "member"
+      }
+    ],
+    "name": "Squad-Protostar",
+    "updated_at": "2026-07-12T10:03:08Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-17T15:30:23Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "nanoSquad X-Men under GreenLantern-People-B2 (LD03_Health_People)",
+    "id": "db87f2fe-5c0b-4f1c-9280-c873587f558f",
+    "instructions": "",
+    "leader_id": "efc381d2-1fd1-4005-a3a5-f634e4383aa9",
+    "member_count": 1,
+    "member_preview": [
+      {
+        "member_id": "efc381d2-1fd1-4005-a3a5-f634e4383aa9",
+        "member_type": "agent",
+        "role": "leader"
+      }
+    ],
+    "name": "Squad-GreenLantern-People",
+    "updated_at": "2026-07-17T15:30:23Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-07-17T15:47:24Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "B1 Jerry SYSTEMIZE E-Myth orchestrator of the 8 B2 DC-Hero VPs of the Business OS (per ADR-L2-TRIPTYQUE-V4-001 + ADR-L2-MULTIVERSE-CD-001). V4 Triptyque structuration : T1 Build-substrate (GreenLantern+Batman+Flash) → T2 Value-delivery (Superman+JohnJones+WonderWoman) → T3 Foundation \u0026 Uplink (Aquaman+Cyborg+Uplink B2/Sprint+Uplink B1/Rock). Jerry = E-Myth systemize before scale, orchestrate the 8 B2 + 2 Uplink canals per  + ADR-CANON-001 §B-Layer Binding. Sister session SUPER-MAN DE JERRY 2026-07-15/16/17. Lane PPR. Cross-references : B1 Summers (SHIP, sister) + B1 Jerry Prime (orchestrator des 8 B2, sister scope) + A0 Amadeus (Type 5+ Universal Jumeau Numérique per AMEND-002).",
+    "id": "8a91a645-0538-4526-97c6-e1ba0c35b727",
+    "instructions": "",
+    "leader_id": "b42cda1e-d759-4b8c-8c9a-103d99247955",
+    "member_count": 9,
+    "member_preview": [
+      {
+        "member_id": "b42cda1e-d759-4b8c-8c9a-103d99247955",
+        "member_type": "agent",
+        "role": "leader"
+      },
+      {
+        "member_id": "8976b8ac-012c-4010-8f31-b8ad473bf7a1",
+        "member_type": "agent",
+        "role": "B2-GreenLantern"
+      },
+      {
+        "member_id": "5a8c558e-bc1f-453a-af81-338fc1a31155",
+        "member_type": "agent",
+        "role": "B2-Batman"
+      }
+    ],
+    "name": "Jerry-SYSTEMIZE-Squad",
+    "updated_at": "2026-07-17T15:47:24Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-08-02T12:15:46Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "L0 — noyau, infra, harness",
+    "id": "0e0d55ed-1ec8-4664-9124-a1a9c71c31f7",
+    "instructions": "",
+    "leader_id": "5cf1eb5c-8e14-48de-ba3b-fc3d5a2f3944",
+    "member_count": 1,
+    "member_preview": [
+      {
+        "member_id": "5cf1eb5c-8e14-48de-ba3b-fc3d5a2f3944",
+        "member_type": "agent",
+        "role": "leader"
+      }
+    ],
+    "name": "Kernel-Core-13th",
+    "updated_at": "2026-08-02T12:15:46Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-08-02T12:16:07Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "L1 — identite, observation, vie",
+    "id": "1b732aa1-8f0a-4f76-b2a6-a5267dc2aa0c",
+    "instructions": "",
+    "leader_id": "11c2bd21-9780-4bba-a83a-b9faa5ba5986",
+    "member_count": 1,
+    "member_preview": [
+      {
+        "member_id": "11c2bd21-9780-4bba-a83a-b9faa5ba5986",
+        "member_type": "agent",
+        "role": "leader"
+      }
+    ],
+    "name": "Life-Core-11th",
+    "updated_at": "2026-08-02T12:16:07Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-08-02T12:16:25Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "L2 — valeur externe",
+    "id": "2f796749-86ea-4416-94a5-0307a534b87a",
+    "instructions": "",
+    "leader_id": "4848d5e9-b6e1-4bc4-96be-b08ca9caf7b6",
+    "member_count": 1,
+    "member_preview": [
+      {
+        "member_id": "4848d5e9-b6e1-4bc4-96be-b08ca9caf7b6",
+        "member_type": "agent",
+        "role": "leader"
+      }
+    ],
+    "name": "Buzz-Core-12th",
+    "updated_at": "2026-08-02T12:16:25Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  },
+  {
+    "archived_at": null,
+    "archived_by": null,
+    "avatar_url": null,
+    "created_at": "2026-08-02T12:16:30Z",
+    "creator_id": "610d9362-b606-492a-a599-60e67eb56a6c",
+    "description": "Reception des echecs et arbitrage",
+    "id": "3292c5de-8f51-4199-b09c-bb6bf96dc836",
+    "instructions": "",
+    "leader_id": "61edbd82-8e4b-4873-b1ea-4b99ce682fdf",
+    "member_count": 1,
+    "member_preview": [
+      {
+        "member_id": "61edbd82-8e4b-4873-b1ea-4b99ce682fdf",
+        "member_type": "agent",
+        "role": "leader"
+      }
+    ],
+    "name": "DLQ-Rick",
+    "updated_at": "2026-08-02T12:16:30Z",
+    "workspace_id": "1ae43c2b-c443-4896-8afe-b15bec691b9e"
+  }
+]

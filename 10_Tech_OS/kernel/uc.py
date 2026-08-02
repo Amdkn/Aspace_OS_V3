@@ -71,9 +71,13 @@ def cmd_claim(a):
     c = cx()
     c.execute("BEGIN IMMEDIATE")
     try:
-        row = c.execute(
-            "SELECT id FROM work WHERE status='pending' AND (? IS NULL OR layer=?) "
-            "ORDER BY priority DESC, id LIMIT 1", (a.layer, a.layer)).fetchone()
+        if a.work:                      # reclamation ciblee : un pont sait quel item il traite
+            row = c.execute("SELECT id FROM work WHERE id=? AND status IN ('pending','failed')",
+                            (a.work,)).fetchone()
+        else:
+            row = c.execute(
+                "SELECT id FROM work WHERE status='pending' AND (? IS NULL OR layer=?) "
+                "ORDER BY priority DESC, id LIMIT 1", (a.layer, a.layer)).fetchone()
         if not row:
             c.execute("COMMIT"); out({"ok": True, "work": None}); return
         wid = row["id"]
@@ -174,6 +178,7 @@ p = S.add_parser("submit"); p.add_argument("--layer", required=True, choices=["A
 p.add_argument("--title", required=True); p.add_argument("--tape"); p.add_argument("--parent", type=int)
 p.add_argument("--priority", type=int, default=0); p.set_defaults(f=cmd_submit)
 p = S.add_parser("claim"); p.add_argument("--harness", required=True)
+p.add_argument("--work", type=int, help="reclamer un item precis (ponts, watchdogs)")
 p.add_argument("--layer", choices=["A0", "L0", "L1", "L2"]); p.add_argument("--lease", type=int, default=900)
 p.set_defaults(f=cmd_claim)
 p = S.add_parser("predict"); p.add_argument("--work", type=int, required=True)
