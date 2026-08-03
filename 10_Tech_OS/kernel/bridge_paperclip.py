@@ -24,6 +24,16 @@ jusqu'à l'organe qui sait quoi en faire.
 from __future__ import annotations
 import argparse, json, os, re, sqlite3, subprocess, sys, time
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="bridge-sync",
+    prompt_version=1,
+    db_name="kernel-bridge",
+)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC = os.path.join(HERE, "uc.py")
 DLQ = os.path.join(HERE, "dlq.py")

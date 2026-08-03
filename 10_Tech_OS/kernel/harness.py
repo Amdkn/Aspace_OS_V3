@@ -24,6 +24,16 @@ Usage :
 from __future__ import annotations
 import json, os, subprocess, sys, threading, time
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="harness-orchestrate",
+    prompt_version=1,
+    db_name="kernel-harness",
+)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
 

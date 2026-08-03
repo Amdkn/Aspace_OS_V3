@@ -16,6 +16,16 @@ from __future__ import annotations
 import argparse, json, os, re, sqlite3, subprocess, sys
 from collections import Counter
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="dlq-triage",
+    prompt_version=1,
+    db_name="kernel-dlq",
+)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
 DB   = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))

@@ -16,6 +16,16 @@ from __future__ import annotations
 import argparse, json, os, re, shutil, subprocess, sys, unicodedata
 from datetime import date
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="gate-eval",
+    prompt_version=1,
+    db_name="kernel-gate",
+)
+
 HERE  = os.path.dirname(os.path.abspath(__file__))
 V3    = os.path.abspath(os.path.join(HERE, "..", ".."))
 INBOX = os.path.join(V3, "_INBOX")

@@ -14,6 +14,16 @@ constate pas, il **exige des preuves**. Un critère sans attestation vaut faux.
 from __future__ import annotations
 import argparse, json, os, re, shlex, subprocess, sys, sqlite3
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="review-attest",
+    prompt_version=1,
+    db_name="kernel-review",
+)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
 DB   = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))

@@ -19,6 +19,16 @@ un autre sans passer par l'operateur.
 """
 import argparse, hashlib, json, os, sqlite3, sys
 
+sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+sys.path.insert(0, os.path.expanduser("~"))
+from agentpulse.sdk import instrument
+
+instrument(
+    task_type="uc-queue",
+    prompt_version=1,
+    db_name="kernel-uc",
+)
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB   = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))
 
