@@ -13,4 +13,8 @@ La règle qui le gouverne : *le goulot n'est jamais la motivation, c'est la bouc
 
 # Files
 
-*Aucune page pour l'instant.* Voir [_briefs](../_briefs/).
+- [Examen préalable](examen-prealable.md) — Commande unique (tsc × 2, oxlint, vitest) que l'agent lance lui-même avant de rendre. Sortie jointe au rapport.
+- [Agent relecteur — mandat unique](agent-relecteur-mandat.md) — Un agent neuf qui n'a pas écrit le code, mandat unique : trouver ce qui casse. Liste, pas prose.
+- [Bacs à sable — git worktree](bacs-a-sable-worktree.md) — Ce que le worktree changerait, ce qu'il coûterait, et les raisons de ne pas l'adopter tout de suite.
+- [Goodhart et le compteur de jetons](goodhart-compteur-jetons.md) — La jauge de jetons situe une pratique, elle ne la note pas. Les jetons sont l'entrée, pas la sortie.
+- [Tension qualité-quantité](tension-qualite-quantite.md) — Les deux vidéos ne tirent pas dans le même sens ; grille de décision cas par cas pour ne pas lisser la tension.

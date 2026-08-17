@@ -13,4 +13,10 @@ La règle qui le gouverne : *plus un artefact est multiplicatif, plus on ralenti
 
 # Files
 
-*Aucune page pour l'instant.* Voir [_briefs](../_briefs/).
+- [Purpose et le pourquoi](purpose-et-pourquoi.md) — Relier chaque règle du canon au piège qui l'a rendue nécessaire, sans quoi la règle ne se généralise pas.
+- [Patterns positifs et négatifs](patterns-positifs-negatifs.md) — Deux listes explicites : ce qu'on reproduit, ce qu'on évite. Cible le ton, pas seulement les fautes.
+- [Points de référence](points-de-reference.md) — Codes courts D/R/F partagés agent↔humain, conservés dans toute la conversation longue.
+- [Bornes opérationnelles](bornes-operationnelles.md) — Sept interdits consolidés : périmètre strict, pas d'extension latérale, livré ≠ fait, secrets en préfixe, etc.
+- [Alias](alias.md) — Quatre raccourcis (scr, okf, bor, rec) que l'agent développe comme s'ils étaient écrits en entier.
+- [Exemples — distillation en contexte](exemples-distillation-contexte.md) — Trois paires « voici comment on communique / comment on ne communique pas », tirées d'observations réelles.
+- [Règle de multiplicativité](regle-multiplicativite.md) — Méta-règle : un artefact ré-utilisé mille fois mérite une heure d'écriture ; une commande jetable, non.
