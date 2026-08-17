@@ -16,6 +16,4 @@ vue — et la question se rouvre à zéro.
 
 # Files
 
-*Aucune page pour l'instant.* Le sous-bundle existe pour que la première
-décision ait un endroit où aller, plutôt que d'atterrir dans un dossier créé à
-la hâte.
+- [Bloquer une app par son registre, pas par ses boutons d'entrée](bloquer-une-app-par-le-registre.md) - Remplacer le composant dans le manifeste ferme toutes les portes d'un coup, retire la sidebar sans traitement séparé, et sort le code du bundle livré. Contient l'anti-piège : quand l'interaction scriptée résiste, mesurer l'artefact plutôt que le geste.
