@@ -28,13 +28,13 @@
 # introuvable".
 
 set -u
-QUOI="${1:?usage: lance.sh areas|projets|archives|ressources|ontologie}"
+QUOI="${1:?usage: lance.sh areas|projets|archives|ressources|ontologie|liaison}"
 
 V3="C:/Users/amado/ASpace_OS_V3"
 BRIEFS="$V3/50_Distillation/_briefs"
 
 case "$QUOI" in
-  areas|projets|archives|ressources|ontologie) ;;
+  areas|projets|archives|ressources|ontologie|liaison) ;;
   *) echo "inconnu : $QUOI" >&2; exit 2 ;;
 esac
 
@@ -49,12 +49,18 @@ done
 # Le substrat doit exister AVANT de lancer l'agent : son brief lui dit de
 # commencer par la. Le lancer sans substrat, c'est le condamner a lire les
 # fichiers dans l'ordre alphabetique.
-if [ "$QUOI" = "ontologie" ]; then
+if [ "$QUOI" = "ontologie" ] || [ "$QUOI" = "liaison" ]; then
   # Cette passe ne travaille pas sur un seau : elle travaille sur le graphe
   # deja genere. Le refuser s'il est absent evite un agent qui brode.
   TTL="$V3/50_Distillation/ontologie/aspace-instances.ttl"
   [ -s "$TTL" ] || { echo "graphe absent ou vide : $TTL" >&2; exit 4; }
   SUBSTRAT="$TTL"
+  # La passe de liaison a besoin du catalogue : son brief lui dit de
+  # commencer par la plutot que d'ouvrir 102 fichiers.
+  if [ "$QUOI" = "liaison" ]; then
+    CAT="$V3/50_Distillation/ontologie/CATALOGUE.md"
+    [ -s "$CAT" ] || { echo "catalogue absent : $CAT" >&2; exit 5; }
+  fi
 else
 case "$QUOI" in
   areas)      SUB="02_Areas_Spock" ;;

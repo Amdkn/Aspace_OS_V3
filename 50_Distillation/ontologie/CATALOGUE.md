@@ -1,0 +1,333 @@
+# Catalogue des concepts distilles
+
+Genere par `scripts/catalogue_concepts.py`. Une ligne par concept.
+L'identifiant est celui du graphe : `urn:aspace:concept:<bundle>:<slug>`.
+**102 concepts au total.**
+
+
+## areas — 21 concepts
+
+- **`area-vs-project-classification`** · _Concept_ — Area ≠ Project — le critère manquant
+  - Ce qui distingue une Area d'un Project n'est pas la taille mais l'absence d'échéance ; toute confusion ici fait dériver Spock hors de sa juridiction et transforme une responsabilité durable en livrable jetable.
+  - tags : [para, classification, area, project, spock, picard, doctrine]
+- **`b1-direction-cockpit`** · _Concept_ — B1 direction cockpit — North Star, 12WY, decision charter
+  - B1 possède la direction (North Star 1Y/3Y/10Y, cycles 12WY, decision charter, handoff queue, DoD/JTBD specs). Le cockpit B1 est la couche qui prend les décisions que B2 et B3 ne peuvent pas prendre sans escalader.
+  - tags : [b1, direction, north-star, 12wy, decision-charter, handoff-queue, dod, jtbd]
+- **`b2-meso-coordination-dc-council`** · _Concept_ — B2 meso coordination — le DC Direction Council
+  - Le DC Direction Council (les 8 hero-managers B2) reçoit les mandates B1, résout les tradeoffs meso, et garde B1 hors du churn opérationnel. Trois modes : parallel, handoff, negotiation.
+  - tags : [b2, council, meso, dc, hero-managers, coordination]
+- **`b3-jtbd-packet-grammar`** · _Concept_ — JTBD-001 packet grammar — la grammaire B3 canonique
+  - Les packets JTBD-001 (Jobs To Be Done) sont la grammaire canonique par laquelle B3 reçoit le travail de B2 : scope, lead, ICP/VOC/painkiller hypotheses, premier experiment RICE, lead/lag indicators, build gates. Les Projects hérit
+  - tags : [jtbd, b3, packet, grammar, dod, area-level, canonical]
+- **`beth-morty-safety-gatekeepers`** · _Concept_ — Beth & Morty — les safety gatekeepers L1
+  - Beth (HALT veto authority sur LD03/LD04 + life signals) et Morty (Focus Gatekeeper A1) sont les gatekeepers L1 qui peuvent geler n'importe quel Jerry ou Summer's Verse. L'escalation canonique : B3 → B2 → B1 → gatekeepers (Rick/Mor
+  - tags : [beth, morty, halt-veto, safety, gatekeepers, life-os, l1, escalation]
+- **`bibliography-alignment-l1-l2`** · _Concept_ — BIBLIOGRAPHY_ALIGNMENT — Life Wheel × Jerry Areas (L1 ↔ L2)
+  - Le mapping canonique entre les bibliographies des 8 Life Domains (LD01-LD08) et les 4 Jerry Areas (J01-J04). Chaque livre est assigné à un domaine B2 ; chaque Jerry hérite d'un stack cohérent qui informe ses AREA_STANDARD et son p
+  - tags : [bibliography, l1-l2, life-wheel, jerry-area, alignment, mapping]
+- **`business-wheel-eight-domains`** · _Concept_ — La wheel Business — 8 domaines B2
+  - Le Business Wheel de LD01 fixe huit domaines (Growth, Sales, Product, Ops, IT, Finance, People, Legal) — chacun avec un hero-manager B2 et un squad B3. La règle "one datum, one owner" empêche la dérive produit-only et la duplicati
+  - tags : [business-wheel, b2, growth, sales, product, ops, finance, people, legal, domains]
+- **`business-wheel-harmonization-matrix`** · _Concept_ — Harmonisation de la wheel — pair checks et red flags
+  - La matrice d'harmonisation B2 vérifie les appariements de domaines deux à deux (Growth×Sales, Sales×Ops, etc.) et identifie les combinaisons de drapeaux rouges qui doivent bloquer un lancement même si un seul domaine passe au vert
+  - tags : [harmonization, b2, red-flags, b2-council, gates]
+- **`coach-client-onboarding-pathway`** · _Concept_ — Coach client onboarding pathway (N0 KB)
+  - La KB canonique pour le niveau 0 Architecte clients : un pathway 3 phases (PoC Superman×Guardians → SaaS WonderWoman×Thunderbolts → White-Label Aquaman×Eternals), un canon 4 PARA dossiers, 3 vertus, 8 B2 managers + 8 B3 squads, do
+  - tags : [coach-client, onboarding, a3 architect, a3, aaa-sisters, us-only, poC, saas, white-label, paras, kb]
+- **`four-jerry-fractal`** · _Concept_ — Les quatre Jerry — fractal des Areas L2
+  - Quatre Jerry couvrent les huit LD du Life Wheel : J01 ↔ LD01, J02 ↔ LD03+LD04 (Bio = hard safety), J03 ↔ LD02+LD06 (Nexus = stability), J04 ↔ LD05+LD07+LD08 (Solarpunk = contribution). Chaque Jerry est un fractal B0/B1/B2/B3 + 12W
+  - tags : [jerry, j01, j02, j03, j04, ld01, ld02, ld03, ld04, ld05, ld06, ld07, ld08, fractal]
+- **`fractal-b1b2b3-architecture`** · _Concept_ — Le fractal B1/B2/B3 — Areas perpétuelles vs Summer's Verse datées
+  - La même structure B1→B2→B3 se répète à deux échelles : macro (Jerry's Area, perpétuelle, source de vérité) et micro (Summer's Verse, projet daté, calibration par mode). Les Projects héritent de la doctrine Area et y font remonter 
+  - tags : [fractal, b1, b2, b3, jerry, summer, picard, area, project]
+- **`jerry-bio-hard-safety-doctrine`** · _Concept_ — Jerry Bio (J02) — hard safety doctrine
+  - J02 détient le STOP, jamais le GO. Sleep/HRV/cognition/exercise thresholds (GREEN/ORANGE/RED) déclenchent un Beth HALT veto qui freeze tous les autres Jerry — LD03 dégradation cascade LD04, et la founder load ceiling limite l'expa
+  - tags : [j02, jerry-bio, hard-safety, beth-halt, sleep, hrv, cognition, stop, halt]
+- **`jerry-macro-steward`** · _Concept_ — Jerry = macro steward (A1 macro)
+  - Jerry est l'A1 macro de L2 Business Pulse : il porte la responsabilité d'entreprise dans le temps, ne crée jamais de Project directement, et fait transiter toute idée opérationnelle par Cerritos/GTD avant qu'elle ne devienne un Su
+  - tags : [jerry, a1, l2, business-pulse, spock, picard, cerritos]
+- **`jerry-nexus-stability-doctrine`** · _Concept_ — Jerry Nexus (J03) — stability doctrine
+  - J03 protège A0 de l'urgence revenue qui déforme Life OS. Wealth tiers T1-T4, coverage ratio, 4% rule, automated banking, family presence floor — Nexus dit NON à l'urgence revenue quand stability/family est en jeu.
+  - tags : [j03, jerry-nexus, stability, wealth-tiers, coverage-ratio, family-presence, 4-percent-rule]
+- **`jerry-solarpunk-contribution-doctrine`** · _Concept_ — Jerry Solarpunk (J04) — contribution doctrine
+  - J04 garantit que L2 Business Pulse ne devient jamais une machine d'extraction pure. 78 règles réparties en LD05 (relational), LD07 (experiential), LD08 (regenerative), un quota MUSE de 14 contributions/an, et un test anti-extracti
+  - tags : [j04, jerry-solarpunk, contribution, muse, biomimicry, regenerative, commons, ld05, ld07, ld08]
+- **`ld-router-life-os-bridge`** · _Concept_ — the-bridge — Life OS ↔ Business OS conductor track
+  - Le dossier the-bridge-__-life-os relie L1 Life OS (12WY, PARA, Life Wheel) à L2 Business OS via une track V0.1.x. Le conductor-track orchestre 9 baselines V0.1.1–V0.1.9 (Command Center, PARA Business, Ikigai, Life Wheel, 12WY, GTD
+  - tags : [bridge, conductor-track, life-os, business-os, v0.1.x, v0.2, 12wy, para, gtd, ikigai]
+- **`para-picard-routing-boundary`** · _Concept_ — Para-Picard routing boundary — Jerry → Cerritos → Picard Summer's Verse
+  - Le pipeline canonique Jerry (proposition de standard/score) → Cerritos/GTD (filtre, qualification, routage 48h) → Picard (instancie un Summer's Verse Project). Le boundary tient en trois gates : Cerritos inbox zero, routage <48h, 
+  - tags : [para, picard, cerritos, gtd, routing, pipeline, summer-verse]
+- **`project-graduation-gates`** · _Concept_ — Project Graduation Gates — Gate 0 à Gate 7
+  - Huit gates séparent prototype et Business Done : Direction (B1), Market (Growth+Sales+B1), Product, Delivery (Ops), Runtime (IT), Margin (Finance), Trust (Legal), Handoff (People). Business Done exige les huit B2 d'accord ou une e
+  - tags : [graduation, gates, b1, b2, business-done, project]
+- **`self-operating-business-doctrine`** · _Concept_ — Self-Operating Business Doctrine (B0)
+  - La couche B0 au-dessus de B1/B2/B3 demande : peut-ceci devenir un business qui tourne sans que le fondateur porte chaque décision ? Cinq artefacts transforment cette question en scorecards actionnables (franchise, sellable, delega
+  - tags : [sob, b0, e-myth, built-to-sell, who-not-how, franchise, delegation]
+- **`spock-areas-canon`** · _Concept_ — Spock = A3 Areas officer
+  - Le gardien de la classification PARA Areas ; il protège la distinction entre responsabilité durable et livrable à échéance, et route le reste vers Geordi (ressources) ou Picard (projet).
+  - tags : [spock, areas, para, classification, a3, life-os, business-os]
+- **`wheel-alignment-values-canon`** · _Concept_ — Wheel Alignment — le canon de valeurs et la cross-Jerry hard safety law
+  - Cinq valeurs-socle (foi, famille & enfants, mission & impact, ikigai, discipline & transmission) sont immuables ; le changement de vie réussit quand la discipline transforme la forme sans toucher au canon. La hard safety law trave
+  - tags : [values, foi, famille, ikigai, discipline, cross-jerry, hard-safety, beth-halt, alignment]
+
+## projets — 20 concepts
+
+- **`abc-compliance-gate`** · _Concept_ — ABC Compliance Gate (B2-G8 Legal)
+  - Règle de signature obligatoire B2-G8 Aquaman Legal sur toute offre Child Care avant exécution B3 — première occurrence d'un gate de priorité Legal transversale au projet.
+  - tags : [concept, compliance, legal, child-care, gate, priority, b2-g8]
+- **`abc-os-child-care-bos`** · _Project_ — ABC OS & Child Care BOS
+  - Dual-entity Business OS (ABC licence operating system + Child Care compliance framework) pour le client ABC, status GRADUATED selon manifeste Summer's Verse 2026-05-21.
+  - tags : [projet, summer-verse, gradue, b2b, childcare, compliance, ld01]
+- **`alikaly-bana-holding-llc`** · _Project_ — Alikaly Bana Holding to LLC
+  - Transformation d'une holding Alikaly Bana en LLC US — projet cross-Jerry (J01 Business + J03 Finance/Family), status GRADUATED selon Summer's Verse 2026-05-21.
+  - tags : [projet, summer-verse, gradue, legal-entity, llc, cross-jerry, ld01]
+- **`b2-business-wheel-harmonization-matrix`** · _Concept_ — B2 Business Wheel Harmonization Matrix
+  - Matrice 8-domaines transverses GROWTH/SALES/PRODUCT/OPS/IT/FINANCE/PEOPLE/LEGAL — chacun avec un gate READY/NEEDS/BLOCKED à franchir avant qu'une motion devienne publique, contractuelle ou data-bearing.
+  - tags : [concept, b2, matrice, gates, transverse, harmonization, eight-domain]
+- **`cerritos-gtd-pipeline`** · _Concept_ — Cerritos GTD Pipeline
+  - Chaîne de routage des idées — Mariner (capture) → Boimler (clarify) → Rutherford (organize) → Tendi (review) → Freeman (engage) — 5 acteurs canoniques couvrant le cycle GTD de Cerritos.
+  - tags : [concept, gtd, cerritos, picard, routing, ideas, life-os]
+- **`cerritos-plane-onboarding`** · _Project_ — Cerritos x Plane Onboarding
+  - Onboarding du workspace Plane.so dans le pipeline Cerritos GTD — 3 items backlog (ASPAC-3, ASPAC-6, ASPAC-7) classés via les 5 stages canoniques, status ACTIVE 2026-06-22.
+  - tags : [projet, cerritos, plane, gtd, onboarding, integration, a0]
+- **`claudeclaw-moat-agent`** · _Project_ — ClaudeClaw Moat Agent
+  - Scaffold Vite + React + TypeScript avec le workflow Drawbridge (Moat extension Chrome pour annotations UI) — projet de test/expérimentation, embryonnaire, statut réel non graduation.
+  - tags : [projet, scaffold, drawbridge, moat, vite, react, annotation, embryo]
+- **`cross-jerry-routing`** · _Concept_ — Cross-Jerry Routing
+  - Coordination entre Jerry Prime de LD01 Business (J01) et Jerry Prime de LD03 Finance/Family (J03) — nécessaire quand un projet touche à la fois structure opérationnelle et structure fiscale/familiale. Première occurrence : Alikaly
+  - tags : [concept, cross-jerry, ld01, ld03, routing, finans, family, governance]
+- **`eight-domain-avengers-wheel`** · _Concept_ — Eight Domain Avengers Wheel
+  - Les 8 domaines B2 — Growth (Superman/Guardians), Sales (Martian Manhunter/Illuminati), Product (Flash/Avengers), Ops (Batman/Fantastic4), IT (Cyborg/KangDynasty), Finance (WonderWoman/Thunderbolts), People (GreenLantern/X-Men), Le
+  - tags : [concept, eight-domain, avengers, b2, b3, marvel, mapping]
+- **`fifty-three-b3-agent-roster`** · _Concept_ — 53 B3 Agent Roster
+  - Roster canonique de 53 agents B3 du projet OMK — organisés en 8 squads Marvel (X-Men, Avengers, Fantastic4, Guardians, Illuminati, Thunderbolts, Kang Dynasty, Eternals), profils documentés `_doctrine/agents/b3-*.md`.
+  - tags : [concept, b3, agents, roster, 53, omk, marvel, squads]
+- **`graphify-out-outputs`** · _Archive_ — graphify-out — Les 1208 sorties générées
+  - Le tiers des fichiers .md du seau (1208 sur 2154) vit dans `graphify-out/` — sorties générées par le pipeline Graphify, pas de la connaissance écrite à la main. Distinction qui corrige l'impression "2154 fichiers = corpus entier".
+  - tags : [archive, graphify-out, generated, substrat, comptage, correction]
+- **`ld01-book-alignment`** · _Concept_ — LD01 Book Alignment
+  - Mapping 6 livres (Herb Gerber, John Warrilow, Dan Sullivan, Alex Hormozi, Demto, Noah Huber) → 8 B2 domains — base canonique pour les projets Summer's Verse (et 9 livres pour RILCOT avec Expert Secrets + Group Genius).
+  - tags : [concept, livres, ld01, b2, mapping, book-alignment, canon]
+- **`marina-cleaning-bos-sop`** · _Project_ — Marina Cleaning BOS & SOP
+  - Business OS et système SOP pour Marina Super Cleaners (opérations de nettoyage de marinas), mode Orbiter primary, status GRADUATED depuis 2026-05-21.
+  - tags : [projet, summer-verse, gradue, field-services, sop, marina, ld01]
+- **`omk-business-os`** · _Project_ — OMK Business OS
+  - OS SaaS interne OMK — 53 agents B3 et 8 capitaines B2, structure Triptyque V4 (T1 People+Ops+Product, T2 Growth+Sales+Finance, T3 Legal+R&D), pivot marché US, status ACTIVE 2026-07-15.
+  - tags : [projet, saas, agency-as-service, us-market, triptyque, bridge, w40]
+- **`omk-us-market-pivot`** · _Concept_ — OMK US Market Pivot (2026-07-15)
+  - Pivot explicite du projet OMK Business OS vers le marché US — Coach premium B2B ($7.5-25K ACV) + Enterprise mid-market, géographie US-first (Silicon Valley, NYC, Austin), compliance posture AI Bill of Rights + Colorado AI Act (PAS
+  - tags : [concept, omk, us-market, pivot, ai-bill-of-rights, colorado-ai-act, adr-aaas-pricing-001]
+- **`picard-project-pattern`** · _Concept_ — Picard Project Pattern
+  - Schéma d'audit-driven project — audit technique Antigravity IDE (score Design/Infra), plan de modernisation 4 phases, gating d'approbation. Origine : RILCOT Members OS Master Interface 2026-05-20.
+  - tags : [concept, picard, audit, pattern, antigravity, modernization, plan]
+- **`rilcot-members-space-os`** · _Project_ — RILCOT Members Space OS
+  - OS pour communauté de membres RILCOT, mode Nexus primary (member knowledge) et Solaris secondary (member experience), status GRADUATED depuis 2026-05-21.
+  - tags : [projet, summer-verse, gradue, member-community, nexus-mode, ld01]
+- **`summers-verse-framework`** · _Concept_ — Summer's Verse Framework
+  - Cadre d'opération Picard pour les projets clients — B1 Summer's Verse (direction), B2 Business Domains (8 domaines Marvel), B3 Warp Core Execution (cycle 12WY, Lead/Lag logs).
+  - tags : [concept, picard, summer-verse, framework, b1-b2-b3, structure]
+- **`triptyque-v4-t1-t2-t3`** · _Concept_ — Triptyque V4 (T1, T2, T3)
+  - Structure en 3 axes du projet OMK — T1 People+Ops+Product (build), T2 Growth+Sales+Finance (sell), T3 Legal+R&D (govern + innovate). Chaque triptyque = 1 Ownerbook + 3 chartes + 3 runbooks par Rock.
+  - tags : [concept, triptyque, t1, t2, t3, omk, w40, v4]
+- **`twelve-weeks-year-cycle`** · _Concept_ — 12WY Cycle (Twelve Weeks Year)
+  - Cadence trimestrielle de 84 jours (12 semaines) — rythme canonique pour Rocks B2, avec Lead Indicator (lundi) et Lag Indicator (vendredi) et bloc Lead/Lag_Logs/ prévu.
+  - tags : [concept, cycle, 12wy, cadence, lead-lag, b2, b3]
+
+## archives — 16 concepts
+
+- **`adr-meta-001-anti-paresse-verify-before-assert`** · _Decision_ — ADR-META-001 — Anti-paresse, vérifier avant d'affirmer
+  - ADR-META-001 (ACCEPTED 2026-06-08, layer L1 Life OS) est la doctrine parente de l'anti-paperclip : un agent ne doit jamais affirmer un fait sans l'avoir vérifié, et le marqueur `verified` d'OKF v0.2 en est l'application concrète d
+  - tags : [adr, meta, doctrine, anti-paresse, okf, verify, l1, life-os]
+- **`adr-sober-002-anti-paperclip-doctrine`** · _Decision_ — ADR-SOBER-002 — Doctrine anti-paperclip-maximizer
+  - Ratifiée 2026-06-21 par A0 « GO » batch, cette doctrine impose le déplacement physique (move) plutôt que la réécriture ou la suppression lors de toute réorganisation d'arborescence ; appliquée au versement 2026-08-02 de V3 vers le
+  - tags : [adr, doctrine, anti-paperclip, l0, kernel, sober, 2026-06-21, ratifié, amadeus]
+- **`agent-vocabulary-legacy-vs-current`** · _Concept_ — Le vocabulaire d'agents a changé entre 2026-05 et 2026-08
+  - En comparant les specs legacy (jusqu'au 2026-05-22) et l'état archivé/canonique (2026-08), le vocabulaire d'agents a été refondu : A'0 GravityClaw → A0 Amadeus, A'1 Rick → A1 Beth, A'2 Doctors → A2 Computer (Picard/Spock/Geordi), 
+  - tags : [vocabulaire, agents, legacy, gravityclaw, amadeus, rick, beth, doctors, computer, data, gemini-cli, ironclaw, renommage]
+- **`archive-as-source-of-truth-decision`** · _Decision_ — Geordi (03_Resources_Geordi) est la racine unique de la KB
+  - La décision D-2026-08-01-#1 fait de `03_Resources_Geordi/` (et non V3, et non `04_Archives_Data/`) la source de vérité unique de la base de connaissance. Les archives — y compris `_V3_STRUCTURE_2026-08-02/` — ne sont qu'un héritag
+  - tags : [kb, geordi, ressources, source-of-truth, decision, 2026-08-01, unification]
+- **`archive-published-secrets-warning`** · _Vulnerability_ — 11 fichiers de l'archive portent des secrets déjà publiés sur GitHub
+  - Au moins 11 fichiers de `_V3_STRUCTURE_2026-08-02/` contiennent des clés d'API ou des jetons ; ils étaient déjà suivis par git dans V3 et poussés sur le remote GitHub via le commit 41c19a5 ; le déplacement les a rendus visibles et
+  - tags : [securité, secret, github, commit-41c19a5, archive, v3, fuite, vulnerability]
+- **`archive-v3-structure-snapshot-2026-08-02`** · _Event_ — Versement de la structure V3 aux Archives de V2 (2026-08-02)
+  - Le 2026-08-02, 17 665 fichiers issus de l'arborescence de `C:\Users\amado\ASpace_OS_V3` ont été déplacés dans `04_Archives_Data/_V3_STRUCTURE_2026-08-02/`, conformément à l'ADR-SOBER-002 (anti-paperclip) ; V3 ne conserve que 12 fi
+  - tags : [archive, v3, v2, para, adr-sober-002, transfert, structure, 2026-08-02]
+- **`data-role-a3-archives-officer`** · _Concept_ — Data — A3 officier d'archives PARA
+  - A3_Data_Archives_Spec définit le rôle « Data » comme officier d'archives du PARA : il protège la mémoire de la suppression comme de la pollution du contexte actif, et n'archive jamais sans `archive-and-document` préalable.
+  - tags : [a3, data, archives, para, role, doctrine, archive-and-document]
+- **`deal-muse-data-as-conductor`** · _Concept_ — DEAL Muse — Data comme chef d'orchestre (par imbrication DEAL ⊂ PARA)
+  - Le patch top-level du 2026-06-21 sur A3_Data_Archives_Spec établit que Data est à la fois officier A3 (PARA) et chef d'orchestre DEAL — par imbrication DEAL ⊂ PARA (plan §3.1), pas par promotion au rang de 5ème vaisseau A2 ; les 4
+  - tags : [deal, muse, data, conductor, para, dal, rok-tahk, zero, gwyn, 2026-06-21, plan-fancy-hugging-bengio]
+- **`graphify-burst-chunk-duplication-pattern`** · _Pattern_ — Graphify-burst chunks — la duplication de fichiers massifs entre chunks et Geordi
+  - Le pipeline Graphify produit des dossiers `graphify-burst/chunks/chunk_NNN/` dupliquant le contenu d'autres chemins du seau ; un même fichier (ex. `affine_deal_drafts.md` 60 001 mots, `REBUILD_PROMPT_V2.md` 15 627 mots) peut appar
+  - tags : [graphify, burst, chunks, duplication, pipeline, 60001-mots]
+- **`graphify-out-pipeline-partial-run`** · _Event_ — Graphify-out — pipeline parallèle avec 11 chunks échoués sur 25
+  - Le dossier `graphify-out/` contient les sorties d'un run Graphify (25 chunks, 8 workers max) qui a réussi 14 chunks sur 25, produit 1006 nœuds uniques et 1666 arêtes, avec 17 communautés détectées (long tail).
+  - tags : [graphify, pipeline, parallel, chunks, failure, partial-run, 2026-06-16, 421-files]
+- **`legacy-lifeos-app-specs-evolution`** · _Project_ — Legacy LifeOS App Specs — l'évolution V0.2 → V0.6 (jusqu'au 2026-05-22)
+  - Le dossier `Legacy_LifeOS_App_Specs_2026-05-22/` archive les spécifications des apps Life OS en versions V0.2 à V0.6 (Micro → EngineRoom → EnterpriseComputer → SovereignConstitution → TemporalEngine), une chaîne de SDD, ADRs, DDD,
+  - tags : [legacy, lifeos, sdd, adr, ddd, prd, v0.2, v0.3, v0.4, v0.5, v0.6, micro, engine-room, enterprise-computer, sovereign-constitution, temporal-engine, 2026-05-22]
+- **`memory-compact-trash-snapshots`** · _Archive_ — Memory Compact Trash Snapshots — 4 sauvegardes `_TRASH_2026-07-XX_mem_compact`
+  - Le dossier `Backup_01/memory_duplicates/` contient 4 instantanés `_TRASH_2026-07-02_mem_compact` à `_TRASH_2026-07-26_mem_compact`, témoins des compactions de mémoire successives de juillet 2026 ; seul le premier contient un `MEMO
+  - tags : [backup, mem-compact, trash, memory, snapshots, 2026-07]
+- **`ntfs-junctions-inventory-2026-08-01`** · _Archive_ — NTFS Junctions Inventory — 2026-08-01
+  - Le fichier `Backup_01/_manifests/codex_memory_junctions_2026-08-01.json` inventorie les jonctions NTFS actives au 2026-08-01 — un type de lien que `os.walk` ne voit pas et qui a déjà coûté un comptage de 13,8 millions de fichiers 
+  - tags : [ntfs, junctions, manifest, walk, comptage, 2026-08-01, anti-piege]
+- **`openclaw-body-legacy`** · _Archive_ — OpenClaw Body Legacy — l'avant-M3 (février-mars 2026)
+  - Le dossier `03_OpenClaw_Body_Legacy/` archive l'état du corps OpenClaw tel qu'il était entre février et mars 2026, avant l'ère M3 : modèle GPT-5.2-codex + fallbacks Sonnet 4.5 / Opus 4.5 thinking, version 2026.2.1, et un ensemble 
+  - tags : [openclaw, body, legacy, gpt-5.2, codex, sonnet-4-5, opus-4-5, 2026-02, 2026-03]
+- **`sdd-sovereign-constitution-v05`** · _Concept_ — SDD V0.5 Sovereign Constitution — le pivot du « Livre des Lois »
+  - Le SDD V0.5 (lu dans Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/) marque le pivot où Ikigai et Life Wheel cessent d'être des mockups visuels pour devenir un Livre des Lois immuable, avec 8 domaines figés, migration IndexedDB et Pon
+  - tags : [sdd, v0.5, sovereign-constitution, ikigai, life-wheel, livre-des-lois, indexeddb, legacy]
+- **`shadow-active-1425-files-status`** · _Concept_ — SHADOW_ACTIVE — 1425 fichiers dans un état dormant
+  - `status: SHADOW_ACTIVE` est le 2ᵉ statut le plus fréquent du seau 04_Archives_Data avec 1 425 fichiers (11,6 %), derrière `status: NONE` (8 316 fichiers sans statut). Ces fichiers sont « capturés mais non activés » — présents en a
+  - tags : [status, shadow-active, dormant, classification, capture]
+
+## ressources — 26 concepts
+
+- **`a3-geordi-resources-officer`** · _Entity_ — A3 Geordi — Resources Officer (spec & mission)
+  - Spec de rôle A3_Geordi_Resources_Spec : Geordi est l'officier Resources du PARA A'Space, transforme la connaissance en infrastructure réutilisable pour les agents futurs. Quatre-questions de discipline, six findings, frontières ex
+  - tags : [a3, geordi, resources, para, officer, spec, knowledge-infrastructure]
+- **`adr-immutability-ricks-law`** · _Concept_ — ADR — Architecture Decision Records (Rick's Law)
+  - Le canon juridique de Rick. Une décision architecturale immuable : créée une fois, jamais réécrite. Toute évolution → un nouvel ADR. Différent des SDD (design) et PRDs (requirement).
+  - tags : [adr, rick, immutability, decision-record, governance, l0]
+- **`agents-md-identity-canon`** · _Concept_ — AGENTS.md — canon absolu d'identité
+  - Manifeste d'identité des agents A'Space OS. Gouverne l'identité ; la Constitution 2026-07-12 gouverne le comportement. Source de vérité pour le registre des Owners, l'organigramme canon, les ADR Fundamentals.
+  - tags : [agents-md, identity, canon, owner, registre, hierarchy]
+- **`aspace-governance-dashboard`** · _Backend_ — A'Space Governance Dashboard — console unifiée VPS
+  - Console canonique d'infrastructure (ADR-INFRA-001) : `https://aspace-dashboard.148.230.92.235.sslip.io/`. Plus de dashboards isolés — toute nouvelle gouvernance devient une app dans cette console (Caddy/Kong reverse-proxy + Dokplo
+  - tags : [governance, dashboard, vps, caddy, kong, dokploy, hermes, adr-infra-001]
+- **`blueprints-canon-tripartite`** · _Concept_ — Canon Tripartite des Blueprints (ADR-FWK-021)
+  - Doctrine d'isomorphie L0/L1/L2 pour les Blueprints : trois canons (10_Tech_OS\12_Blueprints\, 20_Life_OS\28_Blueprints\, 30_Business_OS\09_Blueprints\). Chaque canon contient 01-SDD/02-ADR/03-PRD/04-DDD. _SPECS\ devient zone d'inb
+  - tags : [blueprints, canon, l0-l1-l2, isomorphie, adr-fwk-021, sdd, adr, prd, ddd]
+- **`compounding-knowledge-wiki`** · _Concept_ — Compounding Knowledge — pourquoi un wiki LLM bat RAG
+  - Le wiki LLM produit un effet composé (chaque interaction augmente la valeur), contrairement à RAG extractif qui repart de zéro. Trois conditions : le principal reste, les rendements sont réinvestis, le temps amplifie la base. Le L
+  - tags : [compounding-knowledge, wiki, rag, maintenance, llm-pattern, knowledge-system]
+- **`constitution-aspace-v1`** · _Concept_ — Constitution A'SPACE v1.0 — loi suprême
+  - Texte ratifié 2026-07-12 par A+ qui inverse la nature du système : d'exosquelette mort (freins cumulés sans expiration) à organisme vivant (orientation + maximiseur modulé par horizon). 8 articles, aucun sunset calendaire.
+  - tags : [constitution, loi, articles, maximiseur, horizon, sunset, amadeus, aspace]
+- **`geordi-junctions-map-159`** · _Playbook_ — Geordi — cartographie des 159 jonctions NTFS
+  - Carte exhaustive des 159 jonctions sous `03_Resources_Geordi` au 2026-08-02, classifiées en 10 catégories de risque (dead/trash/external_home_dot/external_appdata/external_other/intra_g/cross_para_*). Trois classes de danger concr
+  - tags : [ntfs-junction, junctions-map, cartographie, migration, v3, security, fs]
+- **`geordi-kb-quatre-piliers`** · _Backend_ — Geordi KB — quatre piliers OKF/Wiki/Graphify/Dox
+  - L'architecture canonique de la racine KB Geordi : quatre piliers distincts et complémentaires qui répondent à quatre classes de questions, plus un index utilitaire. La connaissance d'une question → le bon pilier.
+  - tags : [kb, geordi, pilier, routage, okf, wiki, graphify, dox]
+- **`l2-8-domaines-roster-canon`** · _Relation_ — Roster canon 8 Domaines L2 — Notion prime AGENTS.md (ADR-CANON-001)
+  - Résolution A0 du 2026-06-02 sur les divergences AGENTS.md (manifeste) vs Notion AGENT_REGISTRY_DB (lore) : Notion prime ; AGENTS.md = structure index avec addendum daté. 8 domaines L2 alignés (Growth/Sales/Product/Ops/IT/Finance/P
+  - tags : [l2-roster, 8-domaines, notion, agents-md, adr-canon-001, squad-canon, ruling]
+- **`l2-fractal-b1-b2-b3`** · _Concept_ — L2 Fractal B1/B2/B3 — Command Stack
+  - Le stack vertical A0-A3 incarné en B1-B2-B3 à L2 Business : Direction (Jerry/Summer) → Domaines (8 héros-managers) → Exécution (8 squads Marvel). Fractal : se répète à deux échelles (Area perpétuelle macro, Project micro).
+  - tags : [l2, business-os, fractal, b1-b2-b3, jerry, summer, 8-domaines, agent-hierarchy, matryoshka]
+- **`life-os-six-vaisseaux`** · _Concept_ — Life OS — six vaisseaux L1 et leurs frameworks
+  - Le second layer de la Matrioshka : 6 vaisseaux USS commandés par Beth & Morty, chacun incarnant un framework d'exécution personnel (Ikigai, Life Wheel, 12WY, PARA, GTD, DEAL). Le miroir L1 du L2 B1/B2/B3.
+  - tags : [life-os, fleet, vaisseaux, ikigai, 12wy, para, gtd, deal, life-wheel, beth, morty]
+- **`loi-du-harvest-wiki`** · _Playbook_ — Loi du harvest — wiki evergreen depuis artefact shippé
+  - Doctrine de récolte du wiki (W22 M5, 2026-07-13) : une page evergreen (concepts/, entities/) n'est créée QUE depuis un artefact shippé (handoff, wargame exécuté, projet clos). Skill canon `/harvest` (72 lignes). Anti-pattern : cré
+  - tags : [harvest, wiki, evergreen, sister-artifact, lint-wiki, doctrine, anti-pollution]
+- **`matryoshka-l0-l1-l2`** · _Concept_ — Matryoshka A'Space OS — L0/L1/L2 emboîtés
+  - Architecture en poupée russe d'A'Space OS : L0 Tech OS (Rick) héberge L1 Life OS (Beth/Morty/6 vaisseaux), qui héberge L2 Business Pulse (Jerry/Summer/8 Domaines). Chaque couche suit la même grammaire (A1/A2/A3), adaptée à son reg
+  - tags : [matryoshka, l0, l1, l2, tech-os, life-os, business-os, governance, architecture]
+- **`notebooklm-bridge-dbsc`** · _Playbook_ — NotebookLM Bridge — contourner DBSC par Chromium persistant
+  - Solution validée Antigravity 2026-05-20 pour utiliser NotebookLM depuis Claude Code malgré DBSC (Device Bound Session Credentials). Playwright `chromium.launch_persistent_context` sur storage_state persistant + lecture DOM (projec
+  - tags : [notebooklm, dbsc, playwright, bridge, google, mcp-blocked, cookie-extraction, work-around]
+- **`ntfs-junction-aliasing`** · _Concept_ — NTFS Junction Aliasing (ADR-FS-001) — short-path operability
+  - Doctrine filesystem : PARA/Enterprise est source de vérité unique ; exposition via NTFS junctions (jamais copies). Trois couches d'aliasing (sentinelles racine `_\`, drives subst B:/P:, junctions sectorielles). Interdictions expli
+  - tags : [ntfs-junction, aliasing, para-fs, short-path, agent-operability, adr-fs-001]
+- **`okf-v0-1-format-standard`** · _Backend_ — OKF v0.1 — standard de format d'un bundle mémoire
+  - 4ᵉ pilier de la KB Geordi après Wiki/Graphify/Dox — définit ce qu'est un bundle valide (frontmatter, fichiers réservés, consommation permissive). C'est le format dont tous les autres concepts dérivent.
+  - tags : [okf, format, bundle, standard, frontmatter, kb-pilier, geordi]
+- **`rot-strates-s0-s4`** · _Backend_ — Rot-rates S0→S4 — politique de péremption par strate
+  - Doctrine de péremption des cinq strates mémoire (S0 Identité → S1 Court terme → S2 Travail → S3 Long terme → S4 Méta), créée 2026-08-01 pour rendre le rot opérable ligne par ligne dans RESOURCES_INDEX.md.
+  - tags : [rot, péremption, strates, s0, s1, s2, s3, s4, fresh, kb-hygiene]
+- **`sdd-system-design-documents`** · _Concept_ — SDD — System Design Documents (couche design)
+  - La couche design entre la décision (ADR) et l'exécution (Blueprint code). 10 SDDs canon pour L0 Tech OS, versionnés via TARDIS Protocol. Pas de code sans spec ; pas de spec sans ADR ; pas d'ADR sans ancrage AGENTS.md.
+  - tags : [sdd, system-design, architecture, blueprint, l0, tardis]
+- **`second-brain-14-sous-dossiers`** · _Backend_ — Second Brain PARA — 14 sous-dossiers de Geordi
+  - Cartographie mesurée 2026-08-02 des 14 sous-dossiers réels de `03_Resources_Geordi/` vers les 4 buckets PARA et les 5 strates S0→S4. Table de vérité de la racine KB.
+  - tags : [para, second-brain, geordi, strates, mapping, kb-racine]
+- **`shadow-l1-l2-homologie`** · _Concept_ — Shadow L1/L2 Homologie 4-méthodes
+  - Thèse centrale de Symphony : Shadow L1 (souverain, outils locaux) et Shadow L2 (cloud, outils payants) partagent la même colonne vertébrale à 4 méthodes (PARA/12WY/GTD/DEAL) — c'est la même grammaire, projetée sur des instruments 
+  - tags : [symphony, shadow-l1, shadow-l2, homologie, para, 12wy, gtd, deal, matryoshka, mesh]
+- **`sovereignty-3-niveaux`** · _Concept_ — Souveraineté — trois niveaux (infra, code, mémoire)
+  - Le principe directeur de L0 Tech OS, gouverné par Rick. Trois manifestations : infra (Trust Zone ADR-007), code (ADRs immuables), mémoire (TARDIS Protocol). Née de la perte d'A0_Memory du 2026-03-05.
+  - tags : [sovereignty, trust-zone, adr-immutability, tardis, rick, l0, security]
+- **`supabase-rls-multi-tenant`** · _Backend_ — Supabase Sovereign — multi-tenant RLS par JWT custom claim
+  - Architecture de déploiement souverain Supabase sur VPS Hostinger (148.230.92.235) : Caddy (reverse-proxy frontal) → Kong (API gateway) → services internes. Isolation multi-tenant stricte par RLS basée sur `org_id` injecté dans JWT
+  - tags : [supabase, rls, multi-tenant, jwt-custom-claim, caddy, kong, vps, sovereignty]
+- **`tags-registres-owner-shelf`** · _Backend_ — TAGS — registres Owner (Star Trek) + Shelf (Doctor Who)
+  - Tags obligatoires pour chaque document Geordi : Layer/Status/Owner/Strate/Purpose/Shelf + description. Owner = registre Star Trek v2 arbitré 2026-08-01 (Computer/Picard/Spock/Geordi/Data/Morty). Shelf = registre Doctor Who, scoped
+  - tags : [tags, owner, shelf, star-trek, doctor-who, layer, status, strate, purpose, description]
+- **`wiki-routing-by-question`** · _Backend_ — Wiki routing par question — 6 branches canoniques
+  - Algorithme canonique de routage d'une question sur A'Space OS V2 vers le bon pilier KB (OKF/Wiki/Graphify/Dox/Index/ROT). Six branches testées et patchées (OKF ajouté 2026-08-01 en première).
+  - tags : [routing, kb, algorithm, okf, wiki, graphify, dox, index, rot]
+- **`wiki-schema-llm-wiki`** · _Backend_ — Schema LLM Wiki — trois couches raw/wiki/schema.md
+  - Le schéma de construction et maintenance du wiki LLM_Wiki : trois couches physiques, six types de pages, trois workflows (ingest/query/lint), conventions de nommage et formatage.
+  - tags : [llm-wiki, schema, pattern, maintenance, ingest, lint, geordi]
+
+## ontologie — 7 concepts
+
+- **`_concepts_ontologie_confiance`** · _Concept_ — Le niveau de confiance doit être interrogeable, pas dissimulé
+  - Au 2026-08-17, les 95 concepts sont aspace:confirmeMachine — aucun n'a été relu par un humain. C'est un fait, pas un défaut : le schema doit rendre ce fait interrogeable via aspace:niveauConfiance, et la requête Q1 doit rendre les
+  - tags : [ontologie, okf, confiance, verification, qualite]
+- **`_concepts_ontologie_hors_perimetre`** · _Concept_ — Ce que le schéma ne couvre pas — et pourquoi c'est honnête
+  - Le schema couvre 11 classes, 11 predicats, 9 racines SKOS et 39 narrowers. Il ne couvre pas : les relations temporelles (avant/apres un événement), les relations quantitatives (mesure/comptage), la résolution fine des doublons pro
+  - tags : [ontologie, perimetre, schema, avenu, evolutions]
+- **`_concepts_ontologie_liens_amont`** · _Concept_ — Les 4 liens non résolus pointent vers le LLM_Wiki amont — et c'est un signal
+  - Les liens compounding-knowledge-wiki → sources/source_llm-wiki-pattern et wiki-schema-llm-wiki → concept_sovereignty, entity_rick, sources/source_gemini-takeout-2026-05 utilisent un naming systeme etranger au bundle (concept_*, en
+  - tags : [ontologie, liens-non-resolus, llm-wiki, amont, sources]
+- **`_concepts_ontologie_modele`** · _Concept_ — Pourquoi 11 classes, pas une seule — la décomposition d'« aspace:Concept »
+  - Le constat mesure : 62/95 concepts sont kind:Concept, ce qui transforme la classe en fourre-tout. La décomposition proposée distingue les concepts par engagement (Doctrine/Decision/Playbook/Pattern) et isole les artefacts (Project
+  - tags : [ontologie, classe, doctrine, artefact, modelisation]
+- **`_concepts_ontologie_namespace`** · _Concept_ — Pourquoi urn:aspace:ns: — un namespace qui ne prétend rien
+  - Le namespace de l'ontologie est urn:aspace:ns: — pas https://aspace-os.org/. C'est un choix delibere : inventer un domaine HTTP risquerait de s'approprier un domaine detenu par un tiers et de poser une adresse qui ne resout pas. L
+  - tags : [ontologie, namespace, iri, urn, semantique]
+- **`_concepts_ontologie_predicats`** · _Concept_ — Pourquoi 11 prédicats typés, pas un seul relatedTo
+  - Le constat : 129 relations, toutes aspace:relatedTo. Le schema propose 11 prédicats typés (instantiates, appliesTo, dependsOn, partOf, refines, supersedes, pairedWith, governs, cites, handledBy, seeAlso). Chaque prédicat est illus
+  - tags : [ontologie, predicat, relation, semantique, rdf]
+- **`_concepts_ontologie_seuil_tags`** · _Concept_ — Pourquoi la règle des trois occurrences — un tag seul n'est pas une catégorie
+  - Le constat : 457 tags distincts pour 95 concepts, 39 seulement apparaissent 3 fois ou plus, 418 une ou deux fois. La règle du poste : en dessous de trois occurrences, ce n'est pas une catégorie, c'est une occurrence. Cette règle t
+  - tags : [ontologie, tags, skos, vocabulaire, seuil]
+
+## prompt-systeme — 7 concepts
+
+- **`alias`** · _Concept_ — Alias — raccourcis que l'agent développe comme s'ils étaient écrits
+  - Section 5 du prompt système : trois ou quatre raccourcis déclenchant un comportement nommé, qui valent autant de phrases en termes de coût de token et de précision d'intention.
+  - tags : [prompt-systeme, alias, raccourcis, tokens]
+- **`bornes-operationnelles`** · _Concept_ — Bornes opérationnelles — les interdits consolidés
+  - Section 4 du prompt système appliquée au poste : transformer les interdits dispersés du canon en une liste unique, vérifiable, qui pose la différence entre « livré » et « fait ».
+  - tags : [prompt-systeme, bornes, perimetre, interdits]
+- **`exemples-distillation-contexte`** · _Concept_ — Exemples — la distillation en contexte
+  - Section 6 du prompt système : des paires « voici comment on communique » / « voici comment on ne communique pas », tirées de vraies réponses récentes et nettoyées à la main.
+  - tags : [prompt-systeme, exemples, distillation, few-shot]
+- **`patterns-positifs-negatifs`** · _Concept_ — Patterns positifs et négatifs — ce qu'on reproduit, ce qu'on évite
+  - Section 2 du prompt système appliquée à ce poste : deux listes explicites posées une fois, qui évitent de répéter à chaque brief le ton et les tics à proscrire.
+  - tags : [prompt-systeme, patterns, ton, tics]
+- **`points-de-reference`** · _Concept_ — Points de référence — codes courts partagés par tout le bundle
+  - Section 3 du prompt système : assigner des codes D1…Dn, R1…Rn, F1…Fn aux éléments énumérés d'une conversation longue, pour fabriquer un langage commun en une ligne de prompt système.
+  - tags : [prompt-systeme, reference, codes, conversation]
+- **`purpose-et-pourquoi`** · _Concept_ — Purpose et le pourquoi — relier chaque règle au piège qu'elle évite
+  - Section 1 du prompt système appliquée au canon : derrière chaque interdit écrit doit vivre le paiement qui l'a rendu nécessaire, sans quoi la règle ne se généralise pas.
+  - tags : [prompt-systeme, purpose, canon, methode]
+- **`regle-multiplicativite`** · _Concept_ — Règle de multiplicativité — plus l'artefact compose, plus on ralentit
+  - Méta-règle tirée d'IndyDevDan : un artefact appliqué à mille exécutions mérite une heure d'écriture, une commande jetable n'en mérite aucune. Le canon du poste est multiplicatif — il se relit à chaque session.
+  - tags : [prompt-systeme, meta, regle, ecriture]
+
+## autonomie-agents — 5 concepts
+
+- **`agent-relecteur-mandat`** · _Concept_ — Agent relecteur — mandat unique, contexte vierge
+  - Chantier 4 du passage 1 → 2 : un agent neuf qui n'a pas écrit le code, avec un mandat unique — trouver ce qui casse. Pas un copiste qui valide, pas un professeur qui note, un testeur qui signale.
+  - tags : [autonomie, relecture, revue, separation, conflit]
+- **`bacs-a-sable-worktree`** · _Concept_ — Bacs à sable — ce que git worktree changerait, et ce qu'il coûterait
+  - Chantier 3 du passage 1 → 2 : remplacer la discipline du brief par un cloisonnement d'outil. Une copie de travail isolée par chantier, branches parallèles sans collision.
+  - tags : [autonomie, bac-a-sable, worktree, cloisonnement, git]
+- **`examen-prealable`** · _Concept_ — L'examen préalable — une commande unique qui prouve avant de rendre
+  - Chantier 1 du passage 1 → 2 : une commande unique qui enchaîne vitest, deux tsc et oxlint, et que l'agent doit lancer avant de présenter un livrable — pas après, pas à la demande.
+  - tags : [autonomie, examen, verification, linter, tests]
+- **`goodhart-compteur-jetons`** · _Concept_ — Goodhart et le compteur de jetons — la jauge situe, elle ne note pas
+  - Anti-piège Goodhart appliqué à la doctrine d'économie de quota : une mesure qui devient un objectif cesse d'être une bonne mesure. Les jetons sont l'entrée du retour sur investissement, pas la sortie.
+  - tags : [autonomie, goodhart, jetons, mesure, quota]
+- **`tension-qualite-quantite`** · _Concept_ — Tension qualité-quantité — quand lisser serait trahir
+  - Les deux vidéos ne tirent pas dans le même sens : l'une optimise la qualité d'une réponse, l'autre la quantité de travail délégué. Ce concept dit comment on tranche, cas par cas, sans nier la tension.
+  - tags : [autonomie, prompt-systeme, tension, qualite, quantite]
