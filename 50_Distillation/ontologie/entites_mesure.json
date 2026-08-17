@@ -1,0 +1,28 @@
+{
+ "entites": 21,
+ "concepts_analyses": 102,
+ "couverture": {
+  "a0-amadeus": 38,
+  "a1": 23,
+  "a2": 23,
+  "a3": 30,
+  "rick": 19,
+  "docteur": 6,
+  "compagnons": 1,
+  "b1": 29,
+  "b2": 41,
+  "b3": 33,
+  "business-os": 20,
+  "life-os": 84,
+  "tech-os": 8,
+  "beth": 23,
+  "morty": 15,
+  "jerry": 30,
+  "summer": 31,
+  "picard": 27,
+  "spock": 19,
+  "data": 16,
+  "geordi": 26
+ },
+ "jamais_mentionnees": []
+}

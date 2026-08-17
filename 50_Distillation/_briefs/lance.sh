@@ -28,13 +28,13 @@
 # introuvable".
 
 set -u
-QUOI="${1:?usage: lance.sh areas|projets|archives|ressources|ontologie|liaison}"
+QUOI="${1:?usage: lance.sh areas|projets|archives|ressources|ontologie|liaison|hierarchie}"
 
 V3="C:/Users/amado/ASpace_OS_V3"
 BRIEFS="$V3/50_Distillation/_briefs"
 
 case "$QUOI" in
-  areas|projets|archives|ressources|ontologie|liaison) ;;
+  areas|projets|archives|ressources|ontologie|liaison|hierarchie) ;;
   *) echo "inconnu : $QUOI" >&2; exit 2 ;;
 esac
 
@@ -49,7 +49,7 @@ done
 # Le substrat doit exister AVANT de lancer l'agent : son brief lui dit de
 # commencer par la. Le lancer sans substrat, c'est le condamner a lire les
 # fichiers dans l'ordre alphabetique.
-if [ "$QUOI" = "ontologie" ] || [ "$QUOI" = "liaison" ]; then
+if [ "$QUOI" = "ontologie" ] || [ "$QUOI" = "liaison" ] || [ "$QUOI" = "hierarchie" ]; then
   # Cette passe ne travaille pas sur un seau : elle travaille sur le graphe
   # deja genere. Le refuser s'il est absent evite un agent qui brode.
   TTL="$V3/50_Distillation/ontologie/aspace-instances.ttl"
@@ -60,6 +60,13 @@ if [ "$QUOI" = "ontologie" ] || [ "$QUOI" = "liaison" ]; then
   if [ "$QUOI" = "liaison" ]; then
     CAT="$V3/50_Distillation/ontologie/CATALOGUE.md"
     [ -s "$CAT" ] || { echo "catalogue absent : $CAT" >&2; exit 5; }
+  fi
+  # La passe hierarchie a besoin de la couche entites ET du canon amont.
+  if [ "$QUOI" = "hierarchie" ]; then
+    ENT="$V3/50_Distillation/ontologie/aspace-entites.ttl"
+    META="$V3/00_Amadeus/30_MEMORY_CORE/META_ONTOLOGIE.md"
+    [ -s "$ENT" ]  || { echo "entites absentes : $ENT" >&2; exit 5; }
+    [ -s "$META" ] || { echo "canon amont absent : $META" >&2; exit 6; }
   fi
 else
 case "$QUOI" in
