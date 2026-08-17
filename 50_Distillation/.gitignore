@@ -1,0 +1,7 @@
+# Le substrat est regenerable par scripts/extraire_substrat_rdf.py et pese
+# plusieurs dizaines de Mo. Ce qui compte est versionne : le script qui le
+# produit, et le rapport de couverture qui dit ce qu'il a lu.
+_substrat/*.jsonl
+
+# Les journaux d'agents : bruit de session, pas de la connaissance.
+_briefs/journal_*.log

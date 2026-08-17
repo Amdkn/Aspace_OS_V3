@@ -1,0 +1,31 @@
+{
+ "genere": "2026-08-17T19:26:53.414868+00:00",
+ "seaux": {
+  "01_Projects_Picard": {
+   "lus": 2154,
+   "echecs": 0,
+   "jonctions_ecartees": 17,
+   "fichier": "01_Projects_Picard.jsonl"
+  },
+  "02_Areas_Spock": {
+   "lus": 444,
+   "echecs": 0,
+   "jonctions_ecartees": 0,
+   "fichier": "02_Areas_Spock.jsonl"
+  },
+  "03_Resources_Geordi": {
+   "lus": 48378,
+   "echecs": 0,
+   "jonctions_ecartees": 159,
+   "fichier": "03_Resources_Geordi.jsonl"
+  },
+  "04_Archives_Data": {
+   "lus": 12284,
+   "echecs": 0,
+   "jonctions_ecartees": 0,
+   "fichier": "04_Archives_Data.jsonl"
+  }
+ },
+ "total_lus": 63260,
+ "total_echecs": 0
+}

@@ -1,0 +1,182 @@
+{
+ "01_Projects_Picard": {
+  "md": 2154,
+  "mo": 4.0,
+  "zones": [
+   [
+    "graphify-out",
+    1208
+   ],
+   [
+    "04 Alikaly Bana Holding to LLC",
+    208
+   ],
+   [
+    "03_RILCOT_Members_Space_OS",
+    203
+   ],
+   [
+    "05 marina Cleaning BOS & SOP",
+    197
+   ],
+   [
+    "02 ABC OS & Child Care BOS",
+    193
+   ],
+   [
+    "01-omk-business-os",
+    137
+   ],
+   [
+    "ClaudeClaw Agent",
+    5
+   ],
+   [
+    "Cerritos_Plane_Onboarding",
+    3
+   ]
+  ]
+ },
+ "02_Areas_Spock": {
+  "md": 444,
+  "mo": 1.6,
+  "zones": [
+   [
+    "graphify-out",
+    181
+   ],
+   [
+    "J01_Jerry_Prime_LD01_Business",
+    134
+   ],
+   [
+    "the-bridge-__-life-os",
+    34
+   ],
+   [
+    "J03_Jerry_Nexus_LD02_LD06_Finance_Family",
+    32
+   ],
+   [
+    "J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact",
+    20
+   ],
+   [
+    "J02_Jerry_Bio_LD03_LD04_Vitality_Cognition",
+    20
+   ],
+   [
+    "Business_Pulse",
+    17
+   ],
+   [
+    "(racine)",
+    6
+   ]
+  ]
+ },
+ "03_Resources_Geordi": {
+  "md": 48378,
+  "mo": 259.1,
+  "zones": [
+   [
+    "01_Guides",
+    15560
+   ],
+   [
+    "04_From_V2_Root",
+    14632
+   ],
+   [
+    "05_From_V2_Domains",
+    8888
+   ],
+   [
+    "06_Claude_Code_Bare",
+    5460
+   ],
+   [
+    "03_Memory_Unified",
+    1774
+   ],
+   [
+    "graphify-out",
+    1195
+   ],
+   [
+    "09_Life_OS",
+    297
+   ],
+   [
+    "08_Workspaces_Dormants_2026-08-01",
+    268
+   ],
+   [
+    "02_Templates",
+    136
+   ],
+   [
+    "_DRAFTS_V3_Sessions_md_2026-08-16",
+    96
+   ],
+   [
+    "07_From_Home_Root_2026-08-01",
+    32
+   ],
+   [
+    "00_Index",
+    13
+   ],
+   [
+    "09_From_Home_Root_Batch2_2026-08-01",
+    8
+   ],
+   [
+    "_transcripts_raw",
+    7
+   ],
+   [
+    "_DRAFTS_V3_Memory_Core_2026-08-16",
+    7
+   ],
+   [
+    "(racine)",
+    4
+   ],
+   [
+    "Cerritos_Plane_Settings",
+    1
+   ]
+  ]
+ },
+ "04_Archives_Data": {
+  "md": 12284,
+  "mo": 71.2,
+  "zones": [
+   [
+    "_V3_STRUCTURE_2026-08-02",
+    11504
+   ],
+   [
+    "graphify-out",
+    387
+   ],
+   [
+    "Legacy_LifeOS_App_Specs_2026-05-22",
+    375
+   ],
+   [
+    "03_OpenClaw_Body_Legacy",
+    10
+   ],
+   [
+    "Backup_01",
+    6
+   ],
+   [
+    "(racine)",
+    2
+   ]
+  ]
+ }
+}

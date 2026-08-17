@@ -1,0 +1,512 @@
+{
+ "racine": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise",
+ "seaux": {
+  "01_Projects_Picard": {
+   "fichiers": 248923,
+   "dossiers": 21893,
+   "profondeur_max": 16,
+   "megaoctets": 5487.7,
+   "top_extensions": [
+    [
+     ".js",
+     111521
+    ],
+    [
+     ".map",
+     49924
+    ],
+    [
+     ".ts",
+     33899
+    ],
+    [
+     ".mjs",
+     13060
+    ],
+    [
+     ".md",
+     11387
+    ],
+    [
+     ".json",
+     10893
+    ],
+    [
+     "",
+     7182
+    ],
+    [
+     ".cjs",
+     2921
+    ],
+    [
+     ".mts",
+     1823
+    ],
+    [
+     ".cts",
+     1466
+    ],
+    [
+     ".yml",
+     892
+    ],
+    [
+     ".tsx",
+     677
+    ],
+    [
+     ".txt",
+     341
+    ],
+    [
+     ".flow",
+     320
+    ],
+    [
+     ".ps1",
+     276
+    ]
+   ],
+   "jonctions_ecartees": [
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\_Inbox\\B1",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\_Inbox\\B2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\_Inbox\\B3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\05 marina Cleaning BOS & SOP\\B2_Business_Domains\\03_Product_Flash_Avengers\\01-marina-cleaning-font-end",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\_Inbox\\B1",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\_Inbox\\B2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\_Inbox\\B3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\01 alykaly-holding-front-v2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\04 Alikaly Bana Holding to LLC\\B2_Business_Domains\\03_Product_Flash_Avengers\\02_alykaly-os-v2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\_Inbox\\B1",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\_Inbox\\B2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\_Inbox\\B3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\03_RILCOT_Members_Space_OS\\B2_Business_Domains\\03_Product_Flash_Avengers\\01-rilcot-members-v2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\_Inbox\\B1",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\_Inbox\\B2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\02 ABC OS & Child Care BOS\\_Inbox\\B3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01-omk-business-os\\B2_Business_Domains\\03_Product_Flash_Avengers\\02-omk-services-business-os"
+   ],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "02_Areas_Spock": {
+   "fichiers": 10340,
+   "dossiers": 1005,
+   "profondeur_max": 9,
+   "megaoctets": 182.9,
+   "top_extensions": [
+    [
+     ".js",
+     4047
+    ],
+    [
+     ".map",
+     2803
+    ],
+    [
+     ".md",
+     766
+    ],
+    [
+     ".ts",
+     734
+    ],
+    [
+     ".json",
+     627
+    ],
+    [
+     ".mjs",
+     502
+    ],
+    [
+     "",
+     301
+    ],
+    [
+     ".tsx",
+     281
+    ],
+    [
+     ".mts",
+     62
+    ],
+    [
+     ".cjs",
+     49
+    ],
+    [
+     ".cts",
+     34
+    ],
+    [
+     ".yml",
+     31
+    ],
+    [
+     ".cmd",
+     18
+    ],
+    [
+     ".ps1",
+     18
+    ],
+    [
+     ".sql",
+     11
+    ]
+   ],
+   "jonctions_ecartees": [],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "03_Resources_Geordi": {
+   "fichiers": 446152,
+   "dossiers": 47851,
+   "profondeur_max": 194,
+   "megaoctets": 14862.9,
+   "top_extensions": [
+    [
+     ".js",
+     147314
+    ],
+    [
+     ".map",
+     68646
+    ],
+    [
+     ".md",
+     59847
+    ],
+    [
+     ".ts",
+     52364
+    ],
+    [
+     ".json",
+     36210
+    ],
+    [
+     ".mjs",
+     26092
+    ],
+    [
+     "",
+     24648
+    ],
+    [
+     ".py",
+     4160
+    ],
+    [
+     ".tsx",
+     3667
+    ],
+    [
+     ".cjs",
+     3422
+    ],
+    [
+     ".mts",
+     2303
+    ],
+    [
+     ".pyc",
+     2105
+    ],
+    [
+     ".cts",
+     1827
+    ],
+    [
+     ".yml",
+     1574
+    ],
+    [
+     ".jsonl",
+     1551
+    ]
+   ],
+   "jonctions_ecartees": [
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\jct-aspace-codex-m3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\jct-biz-30-root",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\jct-lifeos-20-root",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\jct-lifeos-20-root-v2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\jct-techos-10-root",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\lifeos-21-ikigai-orville",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\lifeos-23-snw-staged",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\lifeos-25-cerritos-staged",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\lifeos-26-protostar-staged",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\root-00_Amadeus",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\root-10_Tech_OS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\root-20_Life_OS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\root-30_Business_OS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\root-ASpace_OS_V2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\staged-.agent",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\07_From_Home_Root_2026-08-01\\_TRASH_from_root\\_TRASH_2026-07-03_broken_junctions\\.claude-memory\\staging-agent-app",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\canon",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\skills\\gstack",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\skills\\notebooklm-bridge",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\skills\\orchestration",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\skills\\superpowers",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\rules\\ecc\\common",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\projects\\C--Users-amado\\memory",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-01-identity",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-02-bio",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-02-infra",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-05-oss-tstwin",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-05-oss-twin",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-archives",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-archives-root",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\amadeus-memory-continuations",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.agent",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.agents",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.aitk",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.antigravity",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.antigravity-extensions",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.antigravity-ide",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.antigravitycli",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.antigravity_cockpit",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.browser-use",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.cagent",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude-agents",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude-bin",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude-commands",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude-rules",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.claude-scripts",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.codex",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.codex-agents",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.context7",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.copilot",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.cursor",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.gemini",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.gemini-agents",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.hermes",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.kimi",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.mcp_servers",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-.skills",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\app-agent-os",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\aspace-inbox",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\aspace-specs",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-00-agency-aas",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-00-jerry",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-01-vision-strategy",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-02-abc-os",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-02-global-dashboard",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-03-master-agreements",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-09-blueprints",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\biz-10-projects",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\geordi",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\graphify-out",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\graphify-out-amadeus",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\graphify-out-archives-data",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\graphify-out-master",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\jct-amadeus-05-oss-tstwin",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\jct-amadeus-mem-continuations",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\jct-app-mcp-servers",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\jct-app-skills",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\jct-aspace-inbox",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-00-gatekeepers",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-01-picard",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-02-spock",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-03-geordi",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-03-rilcot",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-05-marina",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-22-wheel-discovery",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-23-12wy-snw",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-25-gtd-cerritos",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-26-deal-protostar",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-27-cognition",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\lifeos-27-cognition-ld04",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\memcore-llm-wiki-sdd",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\specs",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-10-11-infra",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-10-12-blueprints",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-11-infra",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-12-blueprints",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-12-interface",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-13-data",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\tech-agent-os-bridge",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-00-governance-rick",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-11-infra",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-12-blueprints",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-12-interface",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-13-data",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\techos-agent-os-bridge",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\06_Claude_Code_Bare\\memory\\wiki",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\solaris\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\rilcot\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.codex\\skills\\aionui-config",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.codex\\skills\\cron",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.codex\\skills\\officecli",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.codex\\skills\\skill-creator",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.claude\\skills\\aionui-config",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.claude\\skills\\cron",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.claude\\skills\\officecli",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\.claude\\skills\\skill-creator",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\marina\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\cerritos-gtd-dispatch\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\alikaly\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\abc\\_doctrine",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B1",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B2",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B3",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\abc\\apps\\ABC OS Community\\_app",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\00_Agency_aaS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\01-omk-business-os",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\01_OMK_BOS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\02_ABC_OS",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\03_RILCOT",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\04_Alikaly",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_QuickAccess\\05_Marina",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\alykaly-front",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\arch",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\deal",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\gtd",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\res",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\snw",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\22_Wheel_Discovery\\LD01_Business_Book\\01_Guides_Business",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\00_Amadeus\\04_Digital_Memory",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\00_Amadeus\\30_MEMORY_CORE",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\00_Amadeus\\memory_continuations",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_TRASH\\2026-06-11_abc-archive\\abc-os-community-junction",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\arch",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\area",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\biz",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\deal",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\gtd",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\mem",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\para",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\proj",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\res",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\04_From_V2_Root\\_\\snw",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\03_Memory_Unified\\LLM_Wiki\\wiki\\_INTAKE\\from_claude",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\03_Memory_Unified\\LLM_Wiki\\wiki\\_INTAKE\\from_codex",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\03_Memory_Unified\\LLM_Wiki\\wiki\\_INTAKE\\from_minimax",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\03_Memory_Unified\\LLM_Wiki\\wiki\\_INTAKE\\from_minimax_canon",
+    "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\03_Memory_Unified\\LLM_Wiki\\wiki\\_INTAKE\\from_openclaw"
+   ],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "04_Archives_Data": {
+   "fichiers": 20187,
+   "dossiers": 3924,
+   "profondeur_max": 13,
+   "megaoctets": 353.0,
+   "top_extensions": [
+    [
+     ".md",
+     12284
+    ],
+    [
+     ".json",
+     1740
+    ],
+    [
+     ".tsx",
+     1324
+    ],
+    [
+     ".ts",
+     1278
+    ],
+    [
+     "",
+     1011
+    ],
+    [
+     ".py",
+     720
+    ],
+    [
+     ".js",
+     336
+    ],
+    [
+     ".svg",
+     208
+    ],
+    [
+     ".yml",
+     171
+    ],
+    [
+     ".ps1",
+     109
+    ],
+    [
+     ".vue",
+     94
+    ],
+    [
+     ".mjs",
+     83
+    ],
+    [
+     ".jsx",
+     81
+    ],
+    [
+     ".html",
+     79
+    ],
+    [
+     ".sh",
+     78
+    ]
+   ],
+   "jonctions_ecartees": [],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "_DRAFTS_PPR_LANE": {
+   "fichiers": 3,
+   "dossiers": 0,
+   "profondeur_max": 0,
+   "megaoctets": 0.0,
+   "top_extensions": [
+    [
+     ".py",
+     2
+    ],
+    [
+     ".tsv",
+     1
+    ]
+   ],
+   "jonctions_ecartees": [],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "graphify-out": {
+   "fichiers": 0,
+   "dossiers": 1,
+   "profondeur_max": 1,
+   "megaoctets": 0.0,
+   "top_extensions": [],
+   "jonctions_ecartees": [],
+   "illisibles": [],
+   "nb_illisibles": 0
+  },
+  "logs": {
+   "fichiers": 2,
+   "dossiers": 1,
+   "profondeur_max": 1,
+   "megaoctets": 0.0,
+   "top_extensions": [
+    [
+     ".json",
+     2
+    ]
+   ],
+   "jonctions_ecartees": [],
+   "illisibles": [],
+   "nb_illisibles": 0
+  }
+ },
+ "total_fichiers": 725607
+}
