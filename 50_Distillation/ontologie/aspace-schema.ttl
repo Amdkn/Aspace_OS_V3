@@ -1,0 +1,201 @@
+# Ontologie A'Space OS — schema (classes, hierarchie, predicats types).
+# Produit par minimax-m3 le 2026-08-17. NE PAS regenerer depuis les instances :
+# ce fichier est le modele ; il precede les donnees.
+
+@prefix aspace:    <urn:aspace:ns:> .
+@prefix kind:      <urn:aspace:kind:> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+
+# ========================================================================
+# CLASSES — hierarchie
+# ========================================================================
+
+aspace:Concept
+    a owl:Class ;
+    rdfs:label "Concept"@fr ;
+    rdfs:comment "Idee universelle, principe, doctrine, patron, cadre ou theorie. Classe par defaut des 62 entrees du bundle qui n'ont pas de materialite propre : une matrice, un cycle, un schema de pensee, une doctrine. Les sous-classes expriment des engagements plus precis : ratification formelle (Decision), operational (Playbook), structure recurrente (Pattern). Une assertion `a aspace:Concept` sans sous-classe precise equivaut a 'idee descriptive, non formellement adoptee'."@fr ;
+    rdfs:subClassOf skos:Concept .
+
+aspace:Doctrine
+    a owl:Class ;
+    rdfs:label "Doctrine"@fr ;
+    rdfs:comment "Regle nommee, canon, principe immutable. Le statut 'doctrine' signale qu'un concept a ete promu au rang de regle — soit par ratification (Decision), soit par adoption operationnelle (Playbook), soit par reconnaissance comme structure recurrente (Pattern). Le critere de sous-classement : la regle est-elle formulee comme un imperative ? Si oui, Doctrine."@fr ;
+    rdfs:subClassOf aspace:Concept .
+
+aspace:Decision
+    a owl:Class ;
+    rdfs:label "Decision"@fr ;
+    rdfs:comment "Decision architecturale formelle au sens d'un ADR : creee une fois, jamais reecrite. Toute evolution -> un nouvel ADR. Trois occurrences (ADR-META-001, ADR-SOBER-002, archive-as-source-of-truth). Engage l'architecture, pas l'operationnel : voir Playbook pour le comment."@fr ;
+    rdfs:subClassOf aspace:Doctrine .
+
+aspace:Playbook
+    a owl:Class ;
+    rdfs:label "Playbook"@fr ;
+    rdfs:comment "Pas-a-pas operationnel d'une doctrine : comment l'appliquer, ce qu'elle commande, comment reconnaitre qu'elle a ete appliquee. Trois occurrences (loi-du-harvest, notebooklm-bridge, geordi-junctions-map). Un playbook n'engage pas l'architecture, il sert son execution."@fr ;
+    rdfs:subClassOf aspace:Doctrine .
+
+aspace:Pattern
+    a owl:Class ;
+    rdfs:label "Patron"@fr ;
+    rdfs:comment "Structure recurrente qu'on peut reinstancier dans d'autres contextes. Une occurrence (graphify-burst-chunk-duplication-pattern). La rarete signale que la majorite des patterns vivent dans le wiki LLM_Wiki amont (categories 'concepts/' et 'entities/'), pas dans ce bundle-ci."@fr ;
+    rdfs:subClassOf aspace:Doctrine .
+
+aspace:Artefact
+    a owl:Class ;
+    rdfs:label "Artefact"@fr ;
+    rdfs:comment "Chose concrete : projet borne, systeme, infrastructure, archive, evenement. Differente d'un concept : un artefact existe dans le temps, a des frontieres, a des operateurs. La frontiere Concept/Artefact suit la distinction deperdurable/perdurable : un cycle 12WY est un Concept (reproductible a l'infini), un versement V3 est un Artefact (date, volume, manifest)."@fr .
+
+aspace:Project
+    a owl:Class ;
+    rdfs:label "Projet"@fr ;
+    rdfs:comment "Initiative bornee par une echeance et un livrable (mode Project PARA). Huit occurrences, dont certaines graduees (status GRADUATED) et d'autres actives. La frontiere Project/Backend suit l'engagement temporel : un projet a un debut et une fin, un backend tourne en continu."@fr ;
+    rdfs:subClassOf aspace:Artefact .
+
+aspace:Backend
+    a owl:Class ;
+    rdfs:label "Backend"@fr ;
+    rdfs:comment "Systeme, infrastructure, pipeline : ce qui tourne, pas ce qui se lit. Neuf occurrences : governance dashboard, wiki routing, Supabase RLS multi-tenant, OKF v0.1 standard, Rot-rates, Second Brain, TAGS registre, schema LLM Wiki, Geordi KB piliers."@fr ;
+    rdfs:subClassOf aspace:Artefact .
+
+aspace:Archive
+    a owl:Class ;
+    rdfs:label "Archive"@fr ;
+    rdfs:comment "Enregistrement historique, instantane, manifeste : ce qui decrit un etat passe d'un systeme. Quatre occurrences : legacy LifeOS App Specs (V0.2-V0.6), Memory Compact Trash Snapshots (juillet 2026), NTFS Junctions Inventory, OpenClaw Body Legacy. Une archive est par construction non-mutable."@fr ;
+    rdfs:subClassOf aspace:Artefact .
+
+aspace:Event
+    a owl:Class ;
+    rdfs:label "Evenement"@fr ;
+    rdfs:comment "Occurrence ponctuelle dans le temps : versement V3 du 2026-08-02, run Graphify partiel du 2026-06-16. Un evenement a une date, pas une duree. La frontiere Event/Archive suit l'instance vs l'enregistrement : le versement EST un evenement, l'instantane de ce versement EST une archive."@fr ;
+    rdfs:subClassOf aspace:Artefact .
+
+aspace:Relation
+    a owl:Class ;
+    rdfs:label "Relation canonique"@fr ;
+    rdfs:comment "Description d'une relation canonique — c'est-a-dire d'une regle de correspondance entre deux sources (ex : Notion prime AGENTS.md pour le roster 8-domaines). Une occurrence : L2 8 Domaines Roster Canon. La rarete signale que les autres resolutions de divergence (canon Notion vs canon AGENTS.md) sont dans le wiki LLM_Wiki amont (categorie 'comparisons/'), pas dans ce bundle-ci."@fr ;
+    rdfs:subClassOf aspace:Artefact .
+
+aspace:Persona
+    a owl:Class ;
+    rdfs:label "Persona"@fr ;
+    rdfs:comment "Acteur nomme, role canonique : un agent A0-A3, un heros-manager B1-B3, un officier (Picard/Spock/Geordi/Data/Cerritos). Une occurrence dans le bundle : A3 Geordi Resources Officer. La sous-representation signale que les autres personas vivent dans le wiki LLM_Wiki amont (entites/) ou dans AGENTS.md, pas dans ce bundle-ci. A integrer en priorite quand le bundle s'enrichira."@fr .
+
+aspace:Vulnerability
+    a owl:Class ;
+    rdfs:label "Vulnerabilite"@fr ;
+    rdfs:comment "Faille connue ou constatee, generalement de nature securite. Une occurrence : archive-published-secrets-warning (11 fichiers de secrets deja publies sur GitHub). A developper si d'autres occurrences arrivent ; le seuil de pertinence est 'incident de securite observe et documente'."@fr .
+
+# ========================================================================
+# PREDICATS TYPES — remplacent aspace:relatedTo (lien generique)
+# ========================================================================
+
+aspace:instantiates
+    a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "instancie"@fr ;
+    rdfs:comment "A est une instance concrete de B (B est un patron, un cadre, une doctrine). Inverse implicite : aspace:hasInstance. Exemples : ABC OS instancie Summer's Verse Framework ; 53 B3 Roster instancie Eight Domain Avengers Wheel ; archive-v3-snapshot instancie ADR-SOBER-002 ; Cerritos Plane instancie Cerritos GTD Pipeline."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Concept .
+
+aspace:appliesTo
+    a owl:ObjectProperty ;
+    rdfs:label "s'applique a"@fr ;
+    rdfs:comment "A (doctrine, decision, patron) est applique a B (artefact, evenement, projet). Exemples : ADR-SOBER-002 s'applique au versement V3 du 2026-08-02 ; B2 Harmonization Matrix s'applique a ABC OS / Alikaly / Marina / RILCOT ; Picard Project Pattern s'applique a OMK et Alikaly. La distinction avec dependsOn : appliesTo est prescriptif (B est sous le regime de A), dependsOn est productif (B est dans la chaine de A)."@fr ;
+    rdfs:domain aspace:Doctrine ;
+    rdfs:range aspace:Artefact .
+
+aspace:dependsOn
+    a owl:ObjectProperty ;
+    rdfs:label "depend de"@fr ;
+    rdfs:comment "A requiert B pour fonctionner ; sans B, A casse. Exemples : 12WY depend de Summer's Verse (cycle prescrit par le cadre) ; OMK depend de 53 B3 Roster (le projet ne tourne pas sans ses 53 agents) ; Cerritos Plane depend de Cerritos GTD Pipeline ; Triptyque depend de OMK."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Artefact .
+
+aspace:partOf
+    a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:label "fait partie de"@fr ;
+    rdfs:comment "A est une composante de B (composition). Transitif. Exemples : 53 B3 Roster fait partie de Eight Domain Avengers Wheel ; Triptyque V4 fait partie de OMK Business OS ; graphify-burst fait partie du pipeline graphify-out ; A3 archives officer fait partie de la racine Geordi KB ; Memory Compact Trash fait partie du Backup_01."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Artefact .
+
+aspace:refines
+    a owl:ObjectProperty ;
+    rdfs:label "affine"@fr ;
+    rdfs:comment "A est une version plus precise ou plus etroite de B (B est plus general). Exemples : OMK US Market Pivot affine OMK Business OS (restriction geographique US-first) ; ABC Compliance Gate affine ABC OS (vue legale specifique). Inverse implicite : aspace:broadens. La distinction avec supersedes : refines preserve la validite de B (B reste utile, A en est une variante), supersedes l'invalide."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Artefact .
+
+aspace:supersedes
+    a owl:ObjectProperty , owl:AsymmetricProperty ;
+    rdfs:label "remplace"@fr ;
+    rdfs:comment "A invalide B (B est obsolete, A est le successeur canonique). Differente d'affine : supersedes implique que B n'a plus de role actif. Exemples : le vocabulaire actuel d'agents (A0 Amadeus / A1 Beth / A2 Computer / A3 Data) remplace le vocabulaire legacy (GravityClaw / Rick / Doctors / IronClaw). Note : un seul couple supersedes clairement identifiable dans les 129 ; voir concept 03x pour la justification de conserver ce predicat."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Artefact .
+
+aspace:pairedWith
+    a owl:ObjectProperty , owl:SymmetricProperty ;
+    rdfs:label "appaire a"@fr ;
+    rdfs:comment "A et B sont des doctrines soeurs : elles se renforcent mutuellement, forment une paire qui se lit ensemble. Symetrique. Exemples : ADR-META-001 (verifier avant d'affirmer) et ADR-SOBER-002 (deplacer, ne pas supprimer) sont apparies ; les 4 jumeaux DEAL (Dal, Rok-Tahk, Zero, Gwyn) sont apparies entre eux."@fr ;
+    rdfs:domain aspace:Doctrine ;
+    rdfs:range aspace:Doctrine .
+
+aspace:governs
+    a owl:ObjectProperty ;
+    rdfs:label "gouverne"@fr ;
+    rdfs:comment "A (decision, ADR, constitution) est la regle liante pour B. Differente d'appliesTo : governs pose B sous la juridiction de A (B ne peut pas devier sans escalader), appliesTo decrit l'usage. Exemples : Constitution A'Space v1.0 gouverne l'identite des agents ; ADR-SOBER-002 gouverne toutes les operations d'archives. Une relation governs peut aussi bien aller de Decision vers Artefact que de Decision vers Concept — un ADR peut gouverner une autre doctrine en exigeant qu'elle s'aligne."@fr ;
+    rdfs:domain aspace:Decision ;
+    rdfs:range aspace:Artefact .
+
+aspace:cites
+    a owl:ObjectProperty ;
+    rdfs:label "cite"@fr ;
+    rdfs:comment "A cite B comme source, evidence ou fondement d'un raisonnement. Plus faible que dependsOn : B n'est pas requis pour que A fonctionne, B eclaire A. Exemples : Geordi KB cite INDEX_OF_INDEXES ; OKF v0.1 cite OKF_INDEX ; Sovereignty-3-niveaux cite concept_adr. La rarete dans le graphe tient au fait que les sources sont portees par dcterms:source, pas par une relation typée."@fr ;
+    rdfs:domain aspace:Concept ;
+    rdfs:range aspace:Concept .
+
+aspace:handledBy
+    a owl:ObjectProperty ;
+    rdfs:label "traite par"@fr ;
+    rdfs:comment "A (artefact, evenement, archive) est pris en charge par B (persona, role). Exemples : archive-v3-snapshot est traitee par A3 archives officer (data-role-a3-archives) ; graphify-out est traite par le pipeline Graphify ; TAGS registre est tenu par le Geordi KB. Note : une seule Persona dans le bundle, donc handledBy est sous-utilisee ; deviendra centrale quand les autres officiers seront integres."@fr ;
+    rdfs:domain aspace:Artefact ;
+    rdfs:range aspace:Persona .
+
+# Predicat reserve aux references externes non resolues
+
+aspace:seeAlso
+    a owl:ObjectProperty , owl:IrreflexiveProperty ;
+    rdfs:label "voir aussi"@fr ;
+    rdfs:comment "Reference externe ou lien non resolu vers un systeme de nommage amont (LLM_Wiki wiki/, Notion, etc.). Distinct des autres predicats : seeAlso n'engage pas la semantique du graphe, il signale qu'une autre source existe ailleurs. Les 4 liens non resolus mesures dans le bundle (concept_sovereignty, entity_rick, sources/source_llm-wiki-pattern, sources/source_gemini-takeout-2026-05) sont de cette nature et proviennent du naming systeme LLM_Wiki (concepts/, entities/, sources/)."@fr .
+
+# Predicat de confiance (information property)
+
+aspace:niveauConfiance
+    a owl:ObjectProperty ;
+    rdfs:label "niveau de confiance"@fr ;
+    rdfs:comment "Marqueur de confiance herite d'OKF v0.2. Domaine : tout concept ; range : aspace:confirmeMachine aujourd'hui, plus human:<id> quand un humain l'aura relu. Le niveau 'confirme par machine' est l'etat par defaut ; l'absence d'une entree human:<id> dans le frontmatter OKF est un fait qu'on doit pouvoir interroger (voir aspace:requetes.sparql). Pour quitter ce niveau : ajouter une entree human:<id>, regenerer les triplets, revalider."@fr ;
+    rdfs:domain aspace:Concept .
+
+aspace:confirmeMachine
+    a owl:NamedIndividual , aspace:Concept ;
+    rdfs:label "confirme par machine"@fr ;
+    rdfs:comment "Niveau de confiance minimal : un process automatique a genere ou mesure ce concept, aucun humain ne l'a relu. Etat par defaut des 95 concepts du bundle au 2026-08-17. La requete sparql 'SELECT ?c WHERE { ?c aspace:niveauConfiance aspace:confirmeMachine }' rend les 95 ; aucune ligne n'a de marqueur human:<id> au 2026-08-17."@fr .
+
+# ========================================================================
+# ALIGNEMENT — mapping avec l'ancien namespace kind:
+# (kind:* est le namespace type utilise dans les instances generees ;
+# le schema les declare comme sous-classes des classes canoniques.)
+# ========================================================================
+
+kind:Concept         rdfs:subClassOf aspace:Concept .
+kind:Project         rdfs:subClassOf aspace:Project .
+kind:Archive         rdfs:subClassOf aspace:Archive .
+kind:Decision        rdfs:subClassOf aspace:Decision .
+kind:Playbook        rdfs:subClassOf aspace:Playbook .
+kind:Event           rdfs:subClassOf aspace:Event .
+kind:Vulnerability   rdfs:subClassOf aspace:Vulnerability .
+kind:Pattern         rdfs:subClassOf aspace:Pattern .
+kind:Entity          rdfs:subClassOf aspace:Persona .
+kind:Relation        rdfs:subClassOf aspace:Relation .

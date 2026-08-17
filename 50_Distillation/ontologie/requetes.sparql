@@ -1,0 +1,179 @@
+# Requetes SPARQL — ontologie A'Space OS
+# Produit par minimax-m3 le 2026-08-17
+#
+# Chaque requete repond a une question reelle du poste. Le prefixe PREFIX
+# n'est pas portable : rdflib le supporte, Jena aussi ; les moteurs qui ne
+# le supportent pas doivent le remplacer par des URI absolus.
+#
+# Pour executer sur le graphe complet :
+#   python -c "import rdflib; g=rdflib.Graph(); \
+#               g.parse('50_Distillation/ontologie/aspace-instances.ttl'); \
+#               g.parse('50_Distillation/ontologie/aspace-schema.ttl'); \
+#               print(g.query(open('50_Distillation/ontologie/requetes.sparql').read()).serialize())"
+
+PREFIX aspace:  <urn:aspace:ns:>
+PREFIX kind:    <urn:aspace:kind:>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+# ============================================================================
+# Q1 — Qu'est-ce qui n'a jamais ete relu par un humain ?
+# Question de la regle OKF v0.2 : la distinction entre 'mesure par process'
+# et 'revu par un humain' ne doit jamais se ressembler. La reponse est
+# qu'au 2026-08-17 les 95 concepts sont au niveau confirmeMachine ; aucun
+# ne porte de marqueur human:<id>.
+# ============================================================================
+
+SELECT ?concept ?title WHERE {
+    ?concept aspace:niveauConfiance aspace:confirmeMachine ;
+             dcterms:title ?title .
+}
+ORDER BY ?title
+
+# ============================================================================
+# Q2 — Quels concepts n'ont aucune source documentee ?
+# Un concept sans source est invérifiable ; il doit etre signale pour
+# enquete ou suppression. La requete retourne les concepts sans
+# dcterms:source.
+# ============================================================================
+
+SELECT ?concept ?title WHERE {
+    ?concept a aspace:Concept ;
+             dcterms:title ?title .
+    FILTER NOT EXISTS { ?concept dcterms:source ?src . }
+}
+ORDER BY ?title
+
+# ============================================================================
+# Q3 — Quelles contradictions sont declarees explicitement dans le graphe ?
+# Aucun concept ne porte actuellement la classe aspace:Vulnerability
+# explicitement au-dela du seul archive-published-secrets-warning. Mais
+# la requete cherche toute relation de type 'contradicts' (predicat
+# reserve pour ce genre d'usage, encore inutilise ici) ; si elle rend 0
+# resultat, c'est que le graphe n'a pas encore de pole contradiction.
+# ============================================================================
+
+SELECT ?a ?b ?label_a ?label_b WHERE {
+    ?a aspace:contradicts ?b .
+    OPTIONAL { ?a dcterms:title ?label_a . }
+    OPTIONAL { ?b dcterms:title ?label_b . }
+}
+
+# ============================================================================
+# Q4 — Quels concepts sont orphelins (aucune relation typée vers/depuis) ?
+# Mesure cle : sur 95 concepts, 36 participent a des relations
+# (20 projets + 16 archives). Les 59 autres sont orphelins. Le seuil
+# d'orphelinage est 'zero relation' (ni sujet ni objet).
+# ============================================================================
+
+SELECT ?concept ?title WHERE {
+    ?concept a aspace:Concept ;
+             dcterms:title ?title .
+    FILTER NOT EXISTS { ?concept ?p ?o .
+                        FILTER (?p != rdfs:label && ?p != dcterms:title
+                             && ?p != dcterms:description && ?p != dcterms:source
+                             && ?p != aspace:tag && ?p != aspace:bundle
+                             && ?p != aspace:fichier && ?p != aspace:kind
+                             && ?p != aspace:okfVersion && ?p != aspace:niveauConfiance
+                             && ?p != aspace:generePar && ?p != aspace:verifiePar
+                             && ?p != rdf:type) }
+    FILTER NOT EXISTS { ?s ?p ?concept .
+                        FILTER (?p != rdfs:label && ?p != dcterms:title
+                             && ?p != dcterms:description && ?p != dcterms:source
+                             && ?p != aspace:tag && ?p != aspace:bundle
+                             && ?p != aspace:fichier && ?p != aspace:kind
+                             && ?p != aspace:okfVersion && ?p != aspace:niveauConfiance
+                             && ?p != aspace:generePar && ?p != aspace:verifiePar
+                             && ?p != rdf:type) }
+}
+ORDER BY ?title
+
+# ============================================================================
+# Q5 — Couverture par seau PARA + bundles specialises
+# Question d'inventaire : combien de concepts par bundle ? Permet de voir
+# si la distillation est equilibree ou si un bundle domine.
+# ============================================================================
+
+SELECT ?bundle (COUNT(?c) AS ?nb) WHERE {
+    ?c aspace:bundle ?bundle .
+}
+GROUP BY ?bundle
+ORDER BY DESC(?nb)
+
+# ============================================================================
+# Q6 — Repartition par classe
+# Combien de concepts tombent dans chaque aspace:* ou kind:* ? Permet de
+# detecter les classes monopolisees (ex : 'Concept' qui couvre 62/95).
+# ============================================================================
+
+SELECT ?cls (COUNT(?c) AS ?nb) WHERE {
+    ?c a ?cls .
+    FILTER (strstarts(str(?cls), "urn:aspace:"))
+}
+GROUP BY ?cls
+ORDER BY DESC(?nb)
+
+# ============================================================================
+# Q7 — Quels concepts tagues 'concept' ne sont PAS des aspace:Concept ?
+# Verifie l'alignement entre le tag (marqueur de type) et la classe
+# canonique. Un decalage signale soit un tag mal pose, soit une instance
+# a reclassifier.
+# ============================================================================
+
+SELECT ?concept ?title ?cls WHERE {
+    ?concept aspace:tag "concept" ;
+             a ?cls ;
+             dcterms:title ?title .
+    FILTER (?cls != aspace:Concept)
+    FILTER (strstarts(str(?cls), "urn:aspace:"))
+}
+ORDER BY ?title
+
+# ============================================================================
+# Q8 — Quels predicats typés sont effectivement utilises dans le graphe ?
+# Au 2026-08-17, le graphe n'utilise que aspace:relatedTo (129 fois). Le
+# schema propose 11 nouveaux predicats ; la requete montre que leur
+# usage est nul, ce qui est attendu puisque le graphe n'a pas encore ete
+# re-travaille avec eux. Permet de mesurer la migration.
+# ============================================================================
+
+SELECT ?pred (COUNT(*) AS ?nb) WHERE {
+    ?s ?pred ?o .
+    FILTER (strstarts(str(?pred), "urn:aspace:"))
+    FILTER (?pred != rdf:type)
+}
+GROUP BY ?pred
+ORDER BY DESC(?nb)
+
+# ============================================================================
+# Q9 — Quels concepts ont des liens inter-bundles (projets <-> archives
+# <-> ressources <-> prompt-systeme) ?
+# Mesure cle de la coherence du graphe : si tous les liens vivent a
+# l'interieur d'un bundle, c'est que les bundles sont des silos. Au
+# 2026-08-17, tous les 129 liens vivent entre projets ou entre archives ;
+# aucun ne traverse. La requete rendra 0 ligne : c'est un etat des lieux.
+# ============================================================================
+
+SELECT ?a ?b ?bundle_a ?bundle_b WHERE {
+    ?a aspace:relatedTo ?b .
+    ?a aspace:bundle ?bundle_a .
+    ?b aspace:bundle ?bundle_b .
+    FILTER (?bundle_a != ?bundle_b)
+}
+ORDER BY ?bundle_a ?bundle_b
+
+# ============================================================================
+# Q10 — Quels tags apparaissent moins de 3 fois (a abandonner ou fusionner) ?
+# Application directe de la regle des trois occurrences. Le resultat sert
+# de TODO list pour la prochaine vague de regeneration des triplets : tous
+# ces tags doivent disparaitre des instances ou etre fusionnes dans un
+# tag retenu.
+# ============================================================================
+
+SELECT ?tag (COUNT(?c) AS ?occurrences) WHERE {
+    ?c aspace:tag ?tag .
+}
+GROUP BY ?tag
+HAVING (COUNT(?c) < 3)
+ORDER BY ?occurrences ?tag

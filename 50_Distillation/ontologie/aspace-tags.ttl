@@ -1,0 +1,180 @@
+# Ontologie A'Space OS — vocabulaire controle des tags (SKOS).
+# Produit par minimax-m3 le 2026-08-17.
+#
+# Regle appliquee : la regle des trois occurrences. Sur 457 tags distincts
+# dans le bundle au 2026-08-17, 39 apparaissent au moins 3 fois. Les 418
+# autres n'apparaissent qu'une ou deux fois : ce ne sont pas des categories,
+# ce sont des occurrences (et la majorite devraient disparaitre des tags
+# une fois le vocabulaire controle en place).
+#
+# Les fusions : 'projet' (7) et 'project' (3) designent le meme concept ;
+# on garde 'projet' et on redirige 'project' via skos:relatedMatch.
+
+@prefix aspace:    <urn:aspace:ns:> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+
+# ========================================================================
+# 8 concepts-racines — la structure du vocabulaire controle
+# ========================================================================
+
+aspace:tag-methode
+    a skos:Concept ;
+    skos:prefLabel "methode"@fr ;
+    skos:definition "Cadre methodologique d'execution ou d'organisation. Regroupe les methodes dotees d'un nom propre (PARA, GTD, Ikigai, Life Wheel, 12WY, DEAL) — toutes partagent le statut de 'grammaire canonique' du poste. La frontiere avec 'framework' : une methode est une procedure, un framework est une structure."@fr ;
+    skos:notation "methode" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-architecture
+    a skos:Concept ;
+    skos:prefLabel "architecture"@fr ;
+    skos:definition "Couche, structure, gouvernance. Regroupe les tags qui designent un niveau d'abstraction du systeme (L0 Tech OS / L1 Life OS / L2 Business OS), un registre de souverainete (governance, canon), ou une frontiere (matryoshka). La frontiere avec 'methode' : l'architecture decrit ou sont les choses, la methode dit quoi en faire."@fr ;
+    skos:notation "architecture" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-agent-persona
+    a skos:Concept ;
+    skos:prefLabel "agent / persona"@fr ;
+    skos:definition "Acteur canonique, role, officier. Regroupe les tags qui designent un agent A0-A3 (registre kernel), un officier (registre Star Trek : Picard/Spock/Geordi/Data/Cerritos), un hero-manager (B1-B3), ou un capitaine de domaine. La frontiere avec 'architecture' : un agent est un acteur, l'architecture est le decor."@fr ;
+    skos:notation "agent-persona" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-artefact-type
+    a skos:Concept ;
+    skos:prefLabel "type d'artefact"@fr ;
+    skos:definition "Nature du document ou du concept porte par le tag. Regroupe les tags qui designent un type de livrable (concept, projet, doctrine, ADR, SDD). La frontiere avec 'statut' : le type est permanent (un projet reste un projet), le statut evolue (un projet embryonnaire devient gradue)."@fr ;
+    skos:notation "artefact-type" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-domaine
+    a skos:Concept ;
+    skos:prefLabel "domaine fonctionnel"@fr ;
+    skos:definition "Registre d'activite, life-domain ou business-domain. Regroupe les tags qui designent une aire d'engagement (ld01 Business, business-os, life-os). La frontiere avec 'methode' : un domaine est un terrain, une methode est un outil qu'on y applique."@fr ;
+    skos:notation "domaine" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-connaissance
+    a skos:Concept ;
+    skos:prefLabel "gestion de la connaissance"@fr ;
+    skos:definition "Pilier ou outil de gestion de la base de connaissance (KB) : OKF (frontmatter canonique), Wiki (format LLM), Graphify (pipeline graphe), KB (racine). Quatre piliers canoniques du Geordi KB."@fr ;
+    skos:notation "connaissance" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-statut
+    a skos:Concept ;
+    skos:prefLabel "statut"@fr ;
+    skos:definition "Etat d'avancement ou cycle de vie. Regroupe les tags qui designent un etat (gradue, legacy, embryonnaire). La frontiere avec 'type d'artefact' : un statut est temporel, un type est permanent."@fr ;
+    skos:notation "statut" ;
+    skos:inScheme aspace:tag-scheme .
+
+aspace:tag-cartographie
+    a skos:Concept ;
+    skos:prefLabel "cartographie / routage"@fr ;
+    skos:definition "Mise en correspondance entre deux structures. Regroupe les tags qui designent une action de mapping (mapping, routing, classification) — l'operation qui prend une structure A et la projette sur une structure B."@fr ;
+    skos:notation "cartographie" ;
+    skos:inScheme aspace:tag-scheme .
+
+# Concept-racine dedie au bundle prompt-systeme (sa nomenclature propre)
+
+aspace:tag-prompt-systeme
+    a skos:Concept ;
+    skos:prefLabel "section du prompt systeme"@fr ;
+    skos:definition "Section du prompt systeme telle que structuree dans le bundle 60_Implementation_Methodologiques. Les sous-tags sont les 7 sections canoniques : purpose, alias, points-de-reference, bornes-operationnelles, patterns-positifs-negatifs, exemples-distillation-contexte, regle-multiplicativite. Statut a part : ce tag designe une section formelle du systeme, pas un theme."@fr ;
+    skos:notation "prompt-systeme" ;
+    skos:inScheme aspace:tag-scheme .
+
+# ========================================================================
+# 39 narrower concepts — application de la regle des trois occurrences
+# ========================================================================
+
+# methode (7 narrowers)
+
+aspace:tag-para            a skos:Concept ; skos:prefLabel "PARA"@fr ; skos:notation "para" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode .
+aspace:tag-gtd             a skos:Concept ; skos:prefLabel "GTD"@fr ; skos:notation "gtd" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode .
+aspace:tag-ikigai          a skos:Concept ; skos:prefLabel "Ikigai"@fr ; skos:notation "ikigai" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode .
+aspace:tag-life-wheel      a skos:Concept ; skos:prefLabel "Life Wheel"@fr ; skos:notation "life-wheel" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode .
+aspace:tag-12wy            a skos:Concept ; skos:prefLabel "12 Weeks Year"@fr ; skos:notation "12wy" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode .
+aspace:tag-deal            a skos:Concept ; skos:prefLabel "DEAL"@fr ; skos:notation "deal" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-methode ; skos:scopeNote "Tag present 1-2 fois dans le bundle mais deja vu dans la litterature source ; garde ici pour anticipation."@fr .
+
+# architecture (6 narrowers)
+
+aspace:tag-l0              a skos:Concept ; skos:prefLabel "L0 Tech OS"@fr ; skos:notation "l0" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+aspace:tag-l1              a skos:Concept ; skos:prefLabel "L1 Life OS"@fr ; skos:notation "l1" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+aspace:tag-life-os         a skos:Concept ; skos:prefLabel "Life OS"@fr ; skos:notation "life-os" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+aspace:tag-business-os     a skos:Concept ; skos:prefLabel "Business OS"@fr ; skos:notation "business-os" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+aspace:tag-governance      a skos:Concept ; skos:prefLabel "gouvernance"@fr ; skos:notation "governance" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+aspace:tag-canon           a skos:Concept ; skos:prefLabel "canon"@fr ; skos:notation "canon" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture .
+
+# agent / persona (10 narrowers)
+
+aspace:tag-a3              a skos:Concept ; skos:prefLabel "A3 Data"@fr ; skos:notation "a3" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-b1              a skos:Concept ; skos:prefLabel "B1 direction"@fr ; skos:notation "b1" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-b2              a skos:Concept ; skos:prefLabel "B2 meso"@fr ; skos:notation "b2" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-b3              a skos:Concept ; skos:prefLabel "B3 warp"@fr ; skos:notation "b3" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-spock           a skos:Concept ; skos:prefLabel "Spock Areas"@fr ; skos:notation "spock" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-beth            a skos:Concept ; skos:prefLabel "Beth Life"@fr ; skos:notation "beth" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-jerry           a skos:Concept ; skos:prefLabel "Jerry Business"@fr ; skos:notation "jerry" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-picard          a skos:Concept ; skos:prefLabel "Picard Projects"@fr ; skos:notation "picard" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-geordi          a skos:Concept ; skos:prefLabel "Geordi Resources"@fr ; skos:notation "geordi" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+aspace:tag-cerritos        a skos:Concept ; skos:prefLabel "Cerritos GTD"@fr ; skos:notation "cerritos" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-agent-persona .
+
+# artefact-type (6 narrowers)
+
+aspace:tag-concept         a skos:Concept ; skos:prefLabel "concept (type)"@fr ; skos:notation "concept" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type ; skos:scopeNote "Marqueur TYPE qui chevauche la classe aspace:Concept. Une entite tagguee 'concept' est censee etre un aspace:Concept — voir requetes.sparql pour verifier l'alignement."@fr .
+aspace:tag-projet          a skos:Concept ; skos:prefLabel "projet"@fr ; skos:notation "projet" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type .
+aspace:tag-project         a skos:Concept ; skos:prefLabel "project (EN)"@fr ; skos:notation "project" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type ; skos:relatedMatch aspace:tag-projet ; skos:scopeNote "Doublon linguistique de 'projet' (7). A fusionner dans une prochaine regeneration : remplacer 'project' (3) par 'projet' partout."@fr .
+aspace:tag-doctrine        a skos:Concept ; skos:prefLabel "doctrine"@fr ; skos:notation "doctrine" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type .
+aspace:tag-adr             a skos:Concept ; skos:prefLabel "ADR"@fr ; skos:notation "adr" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type .
+aspace:tag-sdd             a skos:Concept ; skos:prefLabel "SDD"@fr ; skos:notation "sdd" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-artefact-type .
+
+# domaine (3 narrowers)
+
+aspace:tag-ld01            a skos:Concept ; skos:prefLabel "LD01 Business"@fr ; skos:notation "ld01" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-domaine .
+aspace:tag-life-os-dom     a skos:Concept ; skos:prefLabel "Life OS (domaine)"@fr ; skos:notation "life-os" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-domaine ; skos:scopeNote "Le tag 'life-os' designe ici le life-domain L1 (Beth/Morty/6 vaisseaux), distinct de la couche architecture life-os."@fr .
+aspace:tag-business-os-dom a skos:Concept ; skos:prefLabel "Business OS (domaine)"@fr ; skos:notation "business-os" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-domaine ; skos:scopeNote "Le tag 'business-os' designe ici le domaine metier L2, distinct de la couche architecture business-os. Meme notation, usage distinct selon le contexte — a clarifier dans une V0.2 du schema."@fr .
+
+# connaissance (4 narrowers — les 4 piliers Geordi)
+
+aspace:tag-kb              a skos:Concept ; skos:prefLabel "Knowledge Base"@fr ; skos:notation "kb" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-connaissance .
+aspace:tag-okf             a skos:Concept ; skos:prefLabel "OKF"@fr ; skos:notation "okf" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-connaissance .
+aspace:tag-wiki            a skos:Concept ; skos:prefLabel "Wiki"@fr ; skos:notation "wiki" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-connaissance .
+aspace:tag-graphify        a skos:Concept ; skos:prefLabel "Graphify"@fr ; skos:notation "graphify" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-connaissance .
+
+# statut (2 narrowers — gradue, legacy)
+
+aspace:tag-gradue          a skos:Concept ; skos:prefLabel "gradue"@fr ; skos:notation "gradue" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-statut .
+aspace:tag-legacy          a skos:Concept ; skos:prefLabel "legacy"@fr ; skos:notation "legacy" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-statut .
+
+# cartographie (3 narrowers)
+
+aspace:tag-mapping         a skos:Concept ; skos:prefLabel "mapping"@fr ; skos:notation "mapping" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-cartographie .
+aspace:tag-routing         a skos:Concept ; skos:prefLabel "routing"@fr ; skos:notation "routing" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-cartographie .
+aspace:tag-classification  a skos:Concept ; skos:prefLabel "classification"@fr ; skos:notation "classification" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-cartographie .
+
+# prompt-systeme (1 narrower de la racine dediee)
+
+aspace:tag-prompt-section  a skos:Concept ; skos:prefLabel "section prompt-systeme"@fr ; skos:notation "prompt-systeme" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-prompt-systeme ; skos:scopeNote "Tag racine qui designe a la fois le bundle et une section du prompt. Les 7 concepts du bundle prompt-systeme sont chacun une sous-section : purpose, alias, points-de-reference, bornes-operationnelles, patterns-positifs-negatifs, exemples-distillation-contexte, regle-multiplicativite."@fr .
+
+# Autonomie (1 narrower — racine non creee separement, rangee dans methode/architecture)
+
+aspace:tag-autonomie       a skos:Concept ; skos:prefLabel "autonomie agent"@fr ; skos:notation "autonomie" ; skos:inScheme aspace:tag-scheme ; skos:broader aspace:tag-architecture ; skos:scopeNote "Tag theme transversal ; pas un concept-racine du SKOS car il designe un theme de reflexion (passage 1 -> 2 de l'autonomie), pas une categorie structurelle."@fr .
+
+# ========================================================================
+# Concept-scheme
+# ========================================================================
+
+aspace:tag-scheme
+    a skos:ConceptScheme ;
+    skos:prefLabel "Vocabulaire controle des tags A'Space OS"@fr ;
+    skos:definition "Schemas SKOS des tags retenus apres application de la regle des trois occurrences. 457 tags distincts au 2026-08-17 -> 39 retenus ici (8.5 %), 418 a abandonner ou fusionner. Chaque concept skos:Concept porte une notation (forme canonique dans le bundle), un prefLabel (forme lisible), un broader (rattachement au concept-racine)."@fr ;
+    skos:hasTopConcept aspace:tag-methode , aspace:tag-architecture , aspace:tag-agent-persona , aspace:tag-artefact-type , aspace:tag-domaine , aspace:tag-connaissance , aspace:tag-statut , aspace:tag-cartographie , aspace:tag-prompt-systeme .
+
+# ========================================================================
+# Notes de gestion — fusions et abandons
+# ========================================================================
+
+# Projet / project : doublons. Garder 'projet' (7 occurrences), rediriger 'project' (3) via skos:relatedMatch (deja fait ci-dessus sur aspace:tag-project).
+
+# 'concept' (12) chevauche la classe aspace:Concept : un concept taggue 'concept' est sense etre un aspace:Concept. Voir requetes.sparql pour verification.
