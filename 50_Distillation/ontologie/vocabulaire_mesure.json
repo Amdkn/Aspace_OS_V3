@@ -1,0 +1,243 @@
+{
+ "genere": "2026-08-17T20:19:07.434318+00:00",
+ "concepts": 95,
+ "relations_resolues": 129,
+ "liens_non_resolus": 4,
+ "exemples_liens_non_resolus": [
+  {
+   "depuis": "compounding-knowledge-wiki",
+   "vers": "sources/source_llm-wiki-pattern"
+  },
+  {
+   "depuis": "wiki-schema-llm-wiki",
+   "vers": "concept_sovereignty"
+  },
+  {
+   "depuis": "wiki-schema-llm-wiki",
+   "vers": "entity_rick"
+  },
+  {
+   "depuis": "wiki-schema-llm-wiki",
+   "vers": "sources/source_gemini-takeout-2026-05"
+  }
+ ],
+ "niveaux_confiance": {
+  "confirmeMachine": 95
+ },
+ "types_utilises": [
+  [
+   "Concept",
+   62
+  ],
+  [
+   "Backend",
+   9
+  ],
+  [
+   "Project",
+   8
+  ],
+  [
+   "Archive",
+   4
+  ],
+  [
+   "Decision",
+   3
+  ],
+  [
+   "Playbook",
+   3
+  ],
+  [
+   "Event",
+   2
+  ],
+  [
+   "Vulnerability",
+   1
+  ],
+  [
+   "Pattern",
+   1
+  ],
+  [
+   "Entity",
+   1
+  ],
+  [
+   "Relation",
+   1
+  ]
+ ],
+ "tags_utilises": [
+  [
+   "concept",
+   12
+  ],
+  [
+   "para",
+   11
+  ],
+  [
+   "b2",
+   9
+  ],
+  [
+   "prompt-systeme",
+   8
+  ],
+  [
+   "picard",
+   7
+  ],
+  [
+   "life-os",
+   7
+  ],
+  [
+   "ld01",
+   7
+  ],
+  [
+   "projet",
+   7
+  ],
+  [
+   "gtd",
+   6
+  ],
+  [
+   "summer-verse",
+   6
+  ],
+  [
+   "geordi",
+   6
+  ],
+  [
+   "doctrine",
+   5
+  ],
+  [
+   "12wy",
+   5
+  ],
+  [
+   "b3",
+   5
+  ],
+  [
+   "adr",
+   5
+  ],
+  [
+   "l0",
+   5
+  ],
+  [
+   "autonomie",
+   5
+  ],
+  [
+   "mapping",
+   4
+  ],
+  [
+   "a3",
+   4
+  ],
+  [
+   "kb",
+   4
+  ],
+  [
+   "jerry",
+   4
+  ],
+  [
+   "cerritos",
+   4
+  ],
+  [
+   "business-os",
+   4
+  ],
+  [
+   "ikigai",
+   4
+  ],
+  [
+   "routing",
+   4
+  ],
+  [
+   "gradue",
+   4
+  ],
+  [
+   "governance",
+   4
+  ],
+  [
+   "canon",
+   4
+  ],
+  [
+   "okf",
+   4
+  ],
+  [
+   "legacy",
+   4
+  ],
+  [
+   "graphify",
+   4
+  ],
+  [
+   "sdd",
+   4
+  ],
+  [
+   "wiki",
+   4
+  ],
+  [
+   "classification",
+   3
+  ],
+  [
+   "project",
+   3
+  ],
+  [
+   "spock",
+   3
+  ],
+  [
+   "b1",
+   3
+  ],
+  [
+   "beth",
+   3
+  ],
+  [
+   "l1",
+   3
+  ],
+  [
+   "life-wheel",
+   3
+  ]
+ ],
+ "par_bundle": {
+  "areas": 21,
+  "projets": 20,
+  "archives": 16,
+  "ressources": 26,
+  "prompt-systeme": 7,
+  "autonomie-agents": 5
+ }
+}

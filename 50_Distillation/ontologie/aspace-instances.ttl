@@ -1,0 +1,2348 @@
+# Ontologie A'Space OS — instances, generees depuis les concepts OKF.
+# Genere par scripts/concepts_vers_triplets.py — NE PAS EDITER A LA MAIN.
+# Genere le 2026-08-17T20:19:07.425207+00:00
+
+@prefix aspace:  <urn:aspace:ns:> .
+@prefix concept: <urn:aspace:concept:> .
+@prefix kind:    <urn:aspace:kind:> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:aspace:concept:areas:area-vs-project-classification>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//area-vs-project-classification.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Area ≠ Project — le critère manquant" ;
+    dcterms:description "Ce qui distingue une Area d'un Project n'est pas la taille mais l'absence d'échéance ; toute confusion ici fait dériver Spock hors de sa juridiction et transforme une responsabilité durable en livrable jetable." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "para" ;
+    aspace:tag "classification" ;
+    aspace:tag "area" ;
+    aspace:tag "project" ;
+    aspace:tag "spock" ;
+    aspace:tag "picard" ;
+    aspace:tag "doctrine" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A3_Spock_Areas_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A1_Jerry_Areas_Spec.md" ;
+    rdfs:label "Area ≠ Project — le critère manquant" .
+
+<urn:aspace:concept:areas:b1-direction-cockpit>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//b1-direction-cockpit.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "B1 direction cockpit — North Star, 12WY, decision charter" ;
+    dcterms:description "B1 possède la direction (North Star 1Y/3Y/10Y, cycles 12WY, decision charter, handoff queue, DoD/JTBD specs). Le cockpit B1 est la couche qui prend les décisions que B2 et B3 ne peuvent pas prendre sans escalader." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "b1" ;
+    aspace:tag "direction" ;
+    aspace:tag "north-star" ;
+    aspace:tag "12wy" ;
+    aspace:tag "decision-charter" ;
+    aspace:tag "handoff-queue" ;
+    aspace:tag "dod" ;
+    aspace:tag "jtbd" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/00_B1_DIRECTION_INDEX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/01_NORTH_STAR_1Y_3Y_10Y.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md" ;
+    rdfs:label "B1 direction cockpit — North Star, 12WY, decision charter" .
+
+<urn:aspace:concept:areas:b2-meso-coordination-dc-council>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//b2-meso-coordination-dc-council.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "B2 meso coordination — le DC Direction Council" ;
+    dcterms:description "Le DC Direction Council (les 8 hero-managers B2) reçoit les mandates B1, résout les tradeoffs meso, et garde B1 hors du churn opérationnel. Trois modes : parallel, handoff, negotiation." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "b2" ;
+    aspace:tag "council" ;
+    aspace:tag "meso" ;
+    aspace:tag "dc" ;
+    aspace:tag "hero-managers" ;
+    aspace:tag "coordination" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_DC_DIRECTION_COUNCIL_WORKFLOW.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md" ;
+    rdfs:label "B2 meso coordination — le DC Direction Council" .
+
+<urn:aspace:concept:areas:b3-jtbd-packet-grammar>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//b3-jtbd-packet-grammar.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "JTBD-001 packet grammar — la grammaire B3 canonique" ;
+    dcterms:description "Les packets JTBD-001 (Jobs To Be Done) sont la grammaire canonique par laquelle B3 reçoit le travail de B2 : scope, lead, ICP/VOC/painkiller hypotheses, premier experiment RICE, lead/lag indicators, build gates. Les Projects héritent de la version Area et calibrent par mode." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "jtbd" ;
+    aspace:tag "b3" ;
+    aspace:tag "packet" ;
+    aspace:tag "grammar" ;
+    aspace:tag "dod" ;
+    aspace:tag "area-level" ;
+    aspace:tag "canonical" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/03_SUPERMAN_GROWTH_PRINCIPLES.md" ;
+    rdfs:label "JTBD-001 packet grammar — la grammaire B3 canonique" .
+
+<urn:aspace:concept:areas:beth-morty-safety-gatekeepers>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//beth-morty-safety-gatekeepers.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Beth & Morty — les safety gatekeepers L1" ;
+    dcterms:description "Beth (HALT veto authority sur LD03/LD04 + life signals) et Morty (Focus Gatekeeper A1) sont les gatekeepers L1 qui peuvent geler n'importe quel Jerry ou Summer's Verse. L'escalation canonique : B3 → B2 → B1 → gatekeepers (Rick/Morty) → A0." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "beth" ;
+    aspace:tag "morty" ;
+    aspace:tag "halt-veto" ;
+    aspace:tag "safety" ;
+    aspace:tag "gatekeepers" ;
+    aspace:tag "life-os" ;
+    aspace:tag "l1" ;
+    aspace:tag "escalation" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A3_Spock_Areas_Spec.md" ;
+    rdfs:label "Beth & Morty — les safety gatekeepers L1" .
+
+<urn:aspace:concept:areas:bibliography-alignment-l1-l2>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//bibliography-alignment-l1-l2.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "BIBLIOGRAPHY_ALIGNMENT — Life Wheel × Jerry Areas (L1 ↔ L2)" ;
+    dcterms:description "Le mapping canonique entre les bibliographies des 8 Life Domains (LD01-LD08) et les 4 Jerry Areas (J01-J04). Chaque livre est assigné à un domaine B2 ; chaque Jerry hérite d'un stack cohérent qui informe ses AREA_STANDARD et son portfolio stewardship." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "bibliography" ;
+    aspace:tag "l1-l2" ;
+    aspace:tag "life-wheel" ;
+    aspace:tag "jerry-area" ;
+    aspace:tag "alignment" ;
+    aspace:tag "mapping" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md" ;
+    rdfs:label "BIBLIOGRAPHY_ALIGNMENT — Life Wheel × Jerry Areas (L1 ↔ L2)" .
+
+<urn:aspace:concept:areas:business-wheel-eight-domains>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//business-wheel-eight-domains.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "La wheel Business — 8 domaines B2" ;
+    dcterms:description "Le Business Wheel de LD01 fixe huit domaines (Growth, Sales, Product, Ops, IT, Finance, People, Legal) — chacun avec un hero-manager B2 et un squad B3. La règle \"one datum, one owner\" empêche la dérive produit-only et la duplication cross-domaine." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "business-wheel" ;
+    aspace:tag "b2" ;
+    aspace:tag "growth" ;
+    aspace:tag "sales" ;
+    aspace:tag "product" ;
+    aspace:tag "ops" ;
+    aspace:tag "finance" ;
+    aspace:tag "people" ;
+    aspace:tag "legal" ;
+    aspace:tag "domains" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A1_Jerry_Areas_Spec.md" ;
+    rdfs:label "La wheel Business — 8 domaines B2" .
+
+<urn:aspace:concept:areas:business-wheel-harmonization-matrix>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//business-wheel-harmonization-matrix.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Harmonisation de la wheel — pair checks et red flags" ;
+    dcterms:description "La matrice d'harmonisation B2 vérifie les appariements de domaines deux à deux (Growth×Sales, Sales×Ops, etc.) et identifie les combinaisons de drapeaux rouges qui doivent bloquer un lancement même si un seul domaine passe au vert." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "harmonization" ;
+    aspace:tag "b2" ;
+    aspace:tag "red-flags" ;
+    aspace:tag "b2-council" ;
+    aspace:tag "gates" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_DC_DIRECTION_COUNCIL_WORKFLOW.md" ;
+    rdfs:label "Harmonisation de la wheel — pair checks et red flags" .
+
+<urn:aspace:concept:areas:coach-client-onboarding-pathway>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//coach-client-onboarding-pathway.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Coach client onboarding pathway (N0 KB)" ;
+    dcterms:description "La KB canonique pour le niveau 0 Architecte clients : un pathway 3 phases (PoC Superman×Guardians → SaaS WonderWoman×Thunderbolts → White-Label Aquaman×Eternals), un canon 4 PARA dossiers, 3 vertus, 8 B2 managers + 8 B3 squads, doctrine US-only AaaS." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "coach-client" ;
+    aspace:tag "onboarding" ;
+    aspace:tag "a3 architect" ;
+    aspace:tag "a3" ;
+    aspace:tag "aaa-sisters" ;
+    aspace:tag "us-only" ;
+    aspace:tag "poC" ;
+    aspace:tag "saas" ;
+    aspace:tag "white-label" ;
+    aspace:tag "paras" ;
+    aspace:tag "kb" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/N0_Coach_Client_Onboarding_KB.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Jerry_Areas_README.md" ;
+    rdfs:label "Coach client onboarding pathway (N0 KB)" .
+
+<urn:aspace:concept:areas:four-jerry-fractal>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//four-jerry-fractal.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Les quatre Jerry — fractal des Areas L2" ;
+    dcterms:description "Quatre Jerry couvrent les huit LD du Life Wheel : J01 ↔ LD01, J02 ↔ LD03+LD04 (Bio = hard safety), J03 ↔ LD02+LD06 (Nexus = stability), J04 ↔ LD05+LD07+LD08 (Solarpunk = contribution). Chaque Jerry est un fractal B0/B1/B2/B3 + 12WY." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "jerry" ;
+    aspace:tag "j01" ;
+    aspace:tag "j02" ;
+    aspace:tag "j03" ;
+    aspace:tag "j04" ;
+    aspace:tag "ld01" ;
+    aspace:tag "ld02" ;
+    aspace:tag "ld03" ;
+    aspace:tag "ld04" ;
+    aspace:tag "ld05" ;
+    aspace:tag "ld06" ;
+    aspace:tag "ld07" ;
+    aspace:tag "ld08" ;
+    aspace:tag "fractal" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Jerry_Areas_README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md" ;
+    rdfs:label "Les quatre Jerry — fractal des Areas L2" .
+
+<urn:aspace:concept:areas:fractal-b1b2b3-architecture>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//fractal-b1b2b3-architecture.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Le fractal B1/B2/B3 — Areas perpétuelles vs Summer's Verse datées" ;
+    dcterms:description "La même structure B1→B2→B3 se répète à deux échelles : macro (Jerry's Area, perpétuelle, source de vérité) et micro (Summer's Verse, projet daté, calibration par mode). Les Projects héritent de la doctrine Area et y font remonter leurs preuves." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "fractal" ;
+    aspace:tag "b1" ;
+    aspace:tag "b2" ;
+    aspace:tag "b3" ;
+    aspace:tag "jerry" ;
+    aspace:tag "summer" ;
+    aspace:tag "picard" ;
+    aspace:tag "area" ;
+    aspace:tag "project" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md" ;
+    rdfs:label "Le fractal B1/B2/B3 — Areas perpétuelles vs Summer's Verse datées" .
+
+<urn:aspace:concept:areas:jerry-bio-hard-safety-doctrine>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//jerry-bio-hard-safety-doctrine.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Jerry Bio (J02) — hard safety doctrine" ;
+    dcterms:description "J02 détient le STOP, jamais le GO. Sleep/HRV/cognition/exercise thresholds (GREEN/ORANGE/RED) déclenchent un Beth HALT veto qui freeze tous les autres Jerry — LD03 dégradation cascade LD04, et la founder load ceiling limite l'expansion." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "j02" ;
+    aspace:tag "jerry-bio" ;
+    aspace:tag "hard-safety" ;
+    aspace:tag "beth-halt" ;
+    aspace:tag "sleep" ;
+    aspace:tag "hrv" ;
+    aspace:tag "cognition" ;
+    aspace:tag "stop" ;
+    aspace:tag "halt" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md" ;
+    rdfs:label "Jerry Bio (J02) — hard safety doctrine" .
+
+<urn:aspace:concept:areas:jerry-macro-steward>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//jerry-macro-steward.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Jerry = macro steward (A1 macro)" ;
+    dcterms:description "Jerry est l'A1 macro de L2 Business Pulse : il porte la responsabilité d'entreprise dans le temps, ne crée jamais de Project directement, et fait transiter toute idée opérationnelle par Cerritos/GTD avant qu'elle ne devienne un Summer's Verse." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "jerry" ;
+    aspace:tag "a1" ;
+    aspace:tag "l2" ;
+    aspace:tag "business-pulse" ;
+    aspace:tag "spock" ;
+    aspace:tag "picard" ;
+    aspace:tag "cerritos" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A1_Jerry_Areas_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Jerry_Areas_README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md" ;
+    rdfs:label "Jerry = macro steward (A1 macro)" .
+
+<urn:aspace:concept:areas:jerry-nexus-stability-doctrine>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//jerry-nexus-stability-doctrine.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Jerry Nexus (J03) — stability doctrine" ;
+    dcterms:description "J03 protège A0 de l'urgence revenue qui déforme Life OS. Wealth tiers T1-T4, coverage ratio, 4% rule, automated banking, family presence floor — Nexus dit NON à l'urgence revenue quand stability/family est en jeu." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "j03" ;
+    aspace:tag "jerry-nexus" ;
+    aspace:tag "stability" ;
+    aspace:tag "wealth-tiers" ;
+    aspace:tag "coverage-ratio" ;
+    aspace:tag "family-presence" ;
+    aspace:tag "4-percent-rule" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/03_JERRY_NEXUS_PRINCIPLES.md" ;
+    rdfs:label "Jerry Nexus (J03) — stability doctrine" .
+
+<urn:aspace:concept:areas:jerry-solarpunk-contribution-doctrine>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//jerry-solarpunk-contribution-doctrine.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Jerry Solarpunk (J04) — contribution doctrine" ;
+    dcterms:description "J04 garantit que L2 Business Pulse ne devient jamais une machine d'extraction pure. 78 règles réparties en LD05 (relational), LD07 (experiential), LD08 (regenerative), un quota MUSE de 14 contributions/an, et un test anti-extraction systématique." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "j04" ;
+    aspace:tag "jerry-solarpunk" ;
+    aspace:tag "contribution" ;
+    aspace:tag "muse" ;
+    aspace:tag "biomimicry" ;
+    aspace:tag "regenerative" ;
+    aspace:tag "commons" ;
+    aspace:tag "ld05" ;
+    aspace:tag "ld07" ;
+    aspace:tag "ld08" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md" ;
+    rdfs:label "Jerry Solarpunk (J04) — contribution doctrine" .
+
+<urn:aspace:concept:areas:ld-router-life-os-bridge>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//ld-router-life-os-bridge.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "the-bridge — Life OS ↔ Business OS conductor track" ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "bridge" ;
+    aspace:tag "conductor-track" ;
+    aspace:tag "life-os" ;
+    aspace:tag "business-os" ;
+    aspace:tag "v0.1.x" ;
+    aspace:tag "v0.2" ;
+    aspace:tag "12wy" ;
+    aspace:tag "para" ;
+    aspace:tag "gtd" ;
+    aspace:tag "ikigai" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/the-bridge-__-life-os/conductor-track.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/the-bridge-__-life-os/README.md" ;
+    rdfs:label "the-bridge — Life OS ↔ Business OS conductor track" .
+
+<urn:aspace:concept:areas:para-picard-routing-boundary>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//para-picard-routing-boundary.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Para-Picard routing boundary — Jerry → Cerritos → Picard Summer's Verse" ;
+    dcterms:description "Le pipeline canonique Jerry (proposition de standard/score) → Cerritos/GTD (filtre, qualification, routage 48h) → Picard (instancie un Summer's Verse Project). Le boundary tient en trois gates : Cerritos inbox zero, routage <48h, Picard action <72h." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "para" ;
+    aspace:tag "picard" ;
+    aspace:tag "cerritos" ;
+    aspace:tag "gtd" ;
+    aspace:tag "routing" ;
+    aspace:tag "pipeline" ;
+    aspace:tag "summer-verse" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Jerry_Areas_README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A1_Jerry_Areas_Spec.md" ;
+    rdfs:label "Para-Picard routing boundary — Jerry → Cerritos → Picard Summer's Verse" .
+
+<urn:aspace:concept:areas:project-graduation-gates>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//project-graduation-gates.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Project Graduation Gates — Gate 0 à Gate 7" ;
+    dcterms:description "Huit gates séparent prototype et Business Done : Direction (B1), Market (Growth+Sales+B1), Product, Delivery (Ops), Runtime (IT), Margin (Finance), Trust (Legal), Handoff (People). Business Done exige les huit B2 d'accord ou une exception B1 documentée." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "graduation" ;
+    aspace:tag "gates" ;
+    aspace:tag "b1" ;
+    aspace:tag "b2" ;
+    aspace:tag "business-done" ;
+    aspace:tag "project" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/10_PROJECT_GRADUATION_GATES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md" ;
+    rdfs:label "Project Graduation Gates — Gate 0 à Gate 7" .
+
+<urn:aspace:concept:areas:self-operating-business-doctrine>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//self-operating-business-doctrine.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Self-Operating Business Doctrine (B0)" ;
+    dcterms:description "La couche B0 au-dessus de B1/B2/B3 demande : peut-ceci devenir un business qui tourne sans que le fondateur porte chaque décision ? Cinq artefacts transforment cette question en scorecards actionnables (franchise, sellable, delegable, offer, gates)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "sob" ;
+    aspace:tag "b0" ;
+    aspace:tag "e-myth" ;
+    aspace:tag "built-to-sell" ;
+    aspace:tag "who-not-how" ;
+    aspace:tag "franchise" ;
+    aspace:tag "delegation" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/00_SOB_INDEX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md" ;
+    rdfs:label "Self-Operating Business Doctrine (B0)" .
+
+<urn:aspace:concept:areas:spock-areas-canon>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//spock-areas-canon.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Spock = A3 Areas officer" ;
+    dcterms:description "Le gardien de la classification PARA Areas ; il protège la distinction entre responsabilité durable et livrable à échéance, et route le reste vers Geordi (ressources) ou Picard (projet)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "spock" ;
+    aspace:tag "areas" ;
+    aspace:tag "para" ;
+    aspace:tag "classification" ;
+    aspace:tag "a3" ;
+    aspace:tag "life-os" ;
+    aspace:tag "business-os" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A3_Spock_Areas_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md" ;
+    rdfs:label "Spock = A3 Areas officer" .
+
+<urn:aspace:concept:areas:wheel-alignment-values-canon>
+    a aspace:Concept ;
+    aspace:bundle "areas" ;
+    aspace:fichier "50_Distillation//areas//wheel-alignment-values-canon.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Wheel Alignment — le canon de valeurs et la cross-Jerry hard safety law" ;
+    dcterms:description "Cinq valeurs-socle (foi, famille & enfants, mission & impact, ikigai, discipline & transmission) sont immuables ; le changement de vie réussit quand la discipline transforme la forme sans toucher au canon. La hard safety law traverse tous les Jerry : LD03 dégradé → LD04 dégradé → Beth HALT → tous gèlent." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "values" ;
+    aspace:tag "foi" ;
+    aspace:tag "famille" ;
+    aspace:tag "ikigai" ;
+    aspace:tag "discipline" ;
+    aspace:tag "cross-jerry" ;
+    aspace:tag "hard-safety" ;
+    aspace:tag "beth-halt" ;
+    aspace:tag "alignment" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraction-areas" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md" ;
+    rdfs:label "Wheel Alignment — le canon de valeurs et la cross-Jerry hard safety law" .
+
+<urn:aspace:concept:projets:abc-compliance-gate>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//abc-compliance-gate.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "ABC Compliance Gate (B2-G8 Legal)" ;
+    dcterms:description "Règle de signature obligatoire B2-G8 Aquaman Legal sur toute offre Child Care avant exécution B3 — première occurrence d'un gate de priorité Legal transversale au projet." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "compliance" ;
+    aspace:tag "legal" ;
+    aspace:tag "child-care" ;
+    aspace:tag "gate" ;
+    aspace:tag "priority" ;
+    aspace:tag "b2-g8" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:abc-os-child-care-bos> ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "ABC Compliance Gate (B2-G8 Legal)" .
+
+<urn:aspace:concept:projets:abc-os-child-care-bos>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//abc-os-child-care-bos.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "ABC OS & Child Care BOS" ;
+    dcterms:description "Dual-entity Business OS (ABC licence operating system + Child Care compliance framework) pour le client ABC, status GRADUATED selon manifeste Summer's Verse 2026-05-21." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "summer-verse" ;
+    aspace:tag "gradue" ;
+    aspace:tag "b2b" ;
+    aspace:tag "childcare" ;
+    aspace:tag "compliance" ;
+    aspace:tag "ld01" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "ABC OS & Child Care BOS" .
+
+<urn:aspace:concept:projets:alikaly-bana-holding-llc>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//alikaly-bana-holding-llc.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "Alikaly Bana Holding to LLC" ;
+    dcterms:description "Transformation d'une holding Alikaly Bana en LLC US — projet cross-Jerry (J01 Business + J03 Finance/Family), status GRADUATED selon Summer's Verse 2026-05-21." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "summer-verse" ;
+    aspace:tag "gradue" ;
+    aspace:tag "legal-entity" ;
+    aspace:tag "llc" ;
+    aspace:tag "cross-jerry" ;
+    aspace:tag "ld01" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cross-jerry-routing> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "Alikaly Bana Holding to LLC" .
+
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//b2-business-wheel-harmonization-matrix.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "B2 Business Wheel Harmonization Matrix" ;
+    dcterms:description "Matrice 8-domaines transverses GROWTH/SALES/PRODUCT/OPS/IT/FINANCE/PEOPLE/LEGAL — chacun avec un gate READY/NEEDS/BLOCKED à franchir avant qu'une motion devienne publique, contractuelle ou data-bearing." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "b2" ;
+    aspace:tag "matrice" ;
+    aspace:tag "gates" ;
+    aspace:tag "transverse" ;
+    aspace:tag "harmonization" ;
+    aspace:tag "eight-domain" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:abc-os-child-care-bos> ;
+    aspace:relatedTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:marina-cleaning-bos-sop> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:rilcot-members-space-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "B2 Business Wheel Harmonization Matrix" .
+
+<urn:aspace:concept:projets:cerritos-gtd-pipeline>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//cerritos-gtd-pipeline.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Cerritos GTD Pipeline" ;
+    dcterms:description "Chaîne de routage des idées — Mariner (capture) → Boimler (clarify) → Rutherford (organize) → Tendi (review) → Freeman (engage) — 5 acteurs canoniques couvrant le cycle GTD de Cerritos." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "gtd" ;
+    aspace:tag "cerritos" ;
+    aspace:tag "picard" ;
+    aspace:tag "routing" ;
+    aspace:tag "ideas" ;
+    aspace:tag "life-os" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/00_Amadeus/01_Identity_Core/AGENTS.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-plane-onboarding> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "Cerritos GTD Pipeline" .
+
+<urn:aspace:concept:projets:cerritos-plane-onboarding>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//cerritos-plane-onboarding.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "Cerritos x Plane Onboarding" ;
+    dcterms:description "Onboarding du workspace Plane.so dans le pipeline Cerritos GTD — 3 items backlog (ASPAC-3, ASPAC-6, ASPAC-7) classés via les 5 stages canoniques, status ACTIVE 2026-06-22." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "cerritos" ;
+    aspace:tag "plane" ;
+    aspace:tag "gtd" ;
+    aspace:tag "onboarding" ;
+    aspace:tag "integration" ;
+    aspace:tag "a0" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/Cerritos_Plane_Onboarding/cycles-integration.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/Cerritos_Plane_Onboarding/invite-team.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "Cerritos x Plane Onboarding" .
+
+<urn:aspace:concept:projets:claudeclaw-moat-agent>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//claudeclaw-moat-agent.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "ClaudeClaw Moat Agent" ;
+    dcterms:description "Scaffold Vite + React + TypeScript avec le workflow Drawbridge (Moat extension Chrome pour annotations UI) — projet de test/expérimentation, embryonnaire, statut réel non graduation." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "scaffold" ;
+    aspace:tag "drawbridge" ;
+    aspace:tag "moat" ;
+    aspace:tag "vite" ;
+    aspace:tag "react" ;
+    aspace:tag "annotation" ;
+    aspace:tag "embryo" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/ClaudeClaw Agent/.moat/drawbridge-workflow.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/ClaudeClaw Agent/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/ClaudeClaw Agent/.moat/moat-tasks.md" ;
+    rdfs:label "ClaudeClaw Moat Agent" .
+
+<urn:aspace:concept:projets:cross-jerry-routing>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//cross-jerry-routing.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Cross-Jerry Routing" ;
+    dcterms:description "Coordination entre Jerry Prime de LD01 Business (J01) et Jerry Prime de LD03 Finance/Family (J03) — nécessaire quand un projet touche à la fois structure opérationnelle et structure fiscale/familiale. Première occurrence : Alikaly Bana LLC." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "cross-jerry" ;
+    aspace:tag "ld01" ;
+    aspace:tag "ld03" ;
+    aspace:tag "routing" ;
+    aspace:tag "finans" ;
+    aspace:tag "family" ;
+    aspace:tag "governance" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/CERRIROS_HANDOVER.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "Cross-Jerry Routing" .
+
+<urn:aspace:concept:projets:eight-domain-avengers-wheel>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//eight-domain-avengers-wheel.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Eight Domain Avengers Wheel" ;
+    dcterms:description "Les 8 domaines B2 — Growth (Superman/Guardians), Sales (Martian Manhunter/Illuminati), Product (Flash/Avengers), Ops (Batman/Fantastic4), IT (Cyborg/KangDynasty), Finance (WonderWoman/Thunderbolts), People (GreenLantern/X-Men), Legal (Aquaman/Eternals) — chacun avec un B2 captain et un B3 squad Marvel." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "eight-domain" ;
+    aspace:tag "avengers" ;
+    aspace:tag "b2" ;
+    aspace:tag "b3" ;
+    aspace:tag "marvel" ;
+    aspace:tag "mapping" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/08_Legal_Aquaman_Eternals/01_B3_AGENT_ROSTER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/04_Ops_Batman_Fantastic4/01_B3_AGENT_ROSTER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:fifty-three-b3-agent-roster> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "Eight Domain Avengers Wheel" .
+
+<urn:aspace:concept:projets:fifty-three-b3-agent-roster>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//fifty-three-b3-agent-roster.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "53 B3 Agent Roster" ;
+    dcterms:description "Roster canonique de 53 agents B3 du projet OMK — organisés en 8 squads Marvel (X-Men, Avengers, Fantastic4, Guardians, Illuminati, Thunderbolts, Kang Dynasty, Eternals), profils documentés `_doctrine/agents/b3-*.md`." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "b3" ;
+    aspace:tag "agents" ;
+    aspace:tag "roster" ;
+    aspace:tag "53" ;
+    aspace:tag "omk" ;
+    aspace:tag "marvel" ;
+    aspace:tag "squads" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/08_Legal_Aquaman_Eternals/01_B3_AGENT_ROSTER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/04_Ops_Batman_Fantastic4/01_B3_AGENT_ROSTER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/01_Growth_Superman_Guardians/01_B3_AGENT_ROSTER.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:omk-business-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> ;
+    rdfs:label "53 B3 Agent Roster" .
+
+<urn:aspace:concept:projets:graphify-out-outputs>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//graphify-out-outputs.md" ;
+    aspace:kind kind:Archive ;
+    dcterms:title "graphify-out — Les 1208 sorties générées" ;
+    dcterms:description "Le tiers des fichiers .md du seau (1208 sur 2154) vit dans `graphify-out/` — sorties générées par le pipeline Graphify, pas de la connaissance écrite à la main. Distinction qui corrige l'impression \"2154 fichiers = corpus entier\"." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "archive" ;
+    aspace:tag "graphify-out" ;
+    aspace:tag "generated" ;
+    aspace:tag "substrat" ;
+    aspace:tag "comptage" ;
+    aspace:tag "correction" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_substrat/01_Projects_Picard.jsonl" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/index.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:omk-business-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "graphify-out — Les 1208 sorties générées" .
+
+<urn:aspace:concept:projets:ld01-book-alignment>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//ld01-book-alignment.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "LD01 Book Alignment" ;
+    dcterms:description "Mapping 6 livres (Herb Gerber, John Warrilow, Dan Sullivan, Alex Hormozi, Demto, Noah Huber) → 8 B2 domains — base canonique pour les projets Summer's Verse (et 9 livres pour RILCOT avec Expert Secrets + Group Genius)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "livres" ;
+    aspace:tag "ld01" ;
+    aspace:tag "b2" ;
+    aspace:tag "mapping" ;
+    aspace:tag "book-alignment" ;
+    aspace:tag "canon" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:abc-os-child-care-bos> ;
+    aspace:relatedTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:marina-cleaning-bos-sop> ;
+    aspace:relatedTo <urn:aspace:concept:projets:rilcot-members-space-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "LD01 Book Alignment" .
+
+<urn:aspace:concept:projets:marina-cleaning-bos-sop>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//marina-cleaning-bos-sop.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "Marina Cleaning BOS & SOP" ;
+    dcterms:description "Business OS et système SOP pour Marina Super Cleaners (opérations de nettoyage de marinas), mode Orbiter primary, status GRADUATED depuis 2026-05-21." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "summer-verse" ;
+    aspace:tag "gradue" ;
+    aspace:tag "field-services" ;
+    aspace:tag "sop" ;
+    aspace:tag "marina" ;
+    aspace:tag "ld01" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "Marina Cleaning BOS & SOP" .
+
+<urn:aspace:concept:projets:omk-business-os>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//omk-business-os.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "OMK Business OS" ;
+    dcterms:description "OS SaaS interne OMK — 53 agents B3 et 8 capitaines B2, structure Triptyque V4 (T1 People+Ops+Product, T2 Growth+Sales+Finance, T3 Legal+R&D), pivot marché US, status ACTIVE 2026-07-15." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "saas" ;
+    aspace:tag "agency-as-service" ;
+    aspace:tag "us-market" ;
+    aspace:tag "triptyque" ;
+    aspace:tag "bridge" ;
+    aspace:tag "w40" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/runbooks/runbook-D-repositories.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/runbooks/runbook-C-saas-auth.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T1_people_ops_product.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T2_growth_sales_finance.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T3_legal_rd.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/chartes_cycle_2/" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:fifty-three-b3-agent-roster> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> ;
+    rdfs:label "OMK Business OS" .
+
+<urn:aspace:concept:projets:omk-us-market-pivot>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//omk-us-market-pivot.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "OMK US Market Pivot (2026-07-15)" ;
+    dcterms:description "Pivot explicite du projet OMK Business OS vers le marché US — Coach premium B2B ($7.5-25K ACV) + Enterprise mid-market, géographie US-first (Silicon Valley, NYC, Austin), compliance posture AI Bill of Rights + Colorado AI Act (PAS EU AI-Act)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "omk" ;
+    aspace:tag "us-market" ;
+    aspace:tag "pivot" ;
+    aspace:tag "ai-bill-of-rights" ;
+    aspace:tag "colorado-ai-act" ;
+    aspace:tag "adr-aaas-pricing-001" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T1_people_ops_product.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T3_legal_rd.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T2_growth_producthunt_playbook.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:fifty-three-b3-agent-roster> ;
+    aspace:relatedTo <urn:aspace:concept:projets:omk-business-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> ;
+    rdfs:label "OMK US Market Pivot (2026-07-15)" .
+
+<urn:aspace:concept:projets:picard-project-pattern>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//picard-project-pattern.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Picard Project Pattern" ;
+    dcterms:description "Schéma d'audit-driven project — audit technique Antigravity IDE (score Design/Infra), plan de modernisation 4 phases, gating d'approbation. Origine : RILCOT Members OS Master Interface 2026-05-20." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "picard" ;
+    aspace:tag "audit" ;
+    aspace:tag "pattern" ;
+    aspace:tag "antigravity" ;
+    aspace:tag "modernization" ;
+    aspace:tag "plan" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT PROJECT/RILCOT Members OS/picard_audit.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/picard_audit_rilcot.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Alykaly Bana  Real Estates OS FR/picard_audit_alykaly.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:omk-business-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:rilcot-members-space-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "Picard Project Pattern" .
+
+<urn:aspace:concept:projets:rilcot-members-space-os>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//rilcot-members-space-os.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "RILCOT Members Space OS" ;
+    dcterms:description "OS pour communauté de membres RILCOT, mode Nexus primary (member knowledge) et Solaris secondary (member experience), status GRADUATED depuis 2026-05-21." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "projet" ;
+    aspace:tag "summer-verse" ;
+    aspace:tag "gradue" ;
+    aspace:tag "member-community" ;
+    aspace:tag "nexus-mode" ;
+    aspace:tag "ld01" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT PROJECT/RILCOT Members OS/picard_audit.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "RILCOT Members Space OS" .
+
+<urn:aspace:concept:projets:summers-verse-framework>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//summers-verse-framework.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Summer's Verse Framework" ;
+    dcterms:description "Cadre d'opération Picard pour les projets clients — B1 Summer's Verse (direction), B2 Business Domains (8 domaines Marvel), B3 Warp Core Execution (cycle 12WY, Lead/Lag logs)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "picard" ;
+    aspace:tag "summer-verse" ;
+    aspace:tag "framework" ;
+    aspace:tag "b1-b2-b3" ;
+    aspace:tag "structure" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/README.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:abc-os-child-care-bos> ;
+    aspace:relatedTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:marina-cleaning-bos-sop> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    aspace:relatedTo <urn:aspace:concept:projets:rilcot-members-space-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:twelve-weeks-year-cycle> ;
+    rdfs:label "Summer's Verse Framework" .
+
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//triptyque-v4-t1-t2-t3.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Triptyque V4 (T1, T2, T3)" ;
+    dcterms:description "Structure en 3 axes du projet OMK — T1 People+Ops+Product (build), T2 Growth+Sales+Finance (sell), T3 Legal+R&D (govern + innovate). Chaque triptyque = 1 Ownerbook + 3 chartes + 3 runbooks par Rock." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "triptyque" ;
+    aspace:tag "t1" ;
+    aspace:tag "t2" ;
+    aspace:tag "t3" ;
+    aspace:tag "omk" ;
+    aspace:tag "w40" ;
+    aspace:tag "v4" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T1_people_ops_product.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T2_growth_sales_finance.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/ownerbooks/ownerbook_T3_legal_rd.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:fifty-three-b3-agent-roster> ;
+    aspace:relatedTo <urn:aspace:concept:projets:omk-business-os> ;
+    aspace:relatedTo <urn:aspace:concept:projets:picard-project-pattern> ;
+    rdfs:label "Triptyque V4 (T1, T2, T3)" .
+
+<urn:aspace:concept:projets:twelve-weeks-year-cycle>
+    a aspace:Concept ;
+    aspace:bundle "projets" ;
+    aspace:fichier "50_Distillation//projets//twelve-weeks-year-cycle.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "12WY Cycle (Twelve Weeks Year)" ;
+    dcterms:description "Cadence trimestrielle de 84 jours (12 semaines) — rythme canonique pour Rocks B2, avec Lead Indicator (lundi) et Lag Indicator (vendredi) et bloc Lead/Lag_Logs/ prévu." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "concept" ;
+    aspace:tag "cycle" ;
+    aspace:tag "12wy" ;
+    aspace:tag "cadence" ;
+    aspace:tag "lead-lag" ;
+    aspace:tag "b2" ;
+    aspace:tag "b3" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:extraire_substrat_rdf" ;
+    aspace:verifiePar "process:lecture_concepts_picard" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md" ;
+    aspace:relatedTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> ;
+    aspace:relatedTo <urn:aspace:concept:projets:eight-domain-avengers-wheel> ;
+    aspace:relatedTo <urn:aspace:concept:projets:summers-verse-framework> ;
+    rdfs:label "12WY Cycle (Twelve Weeks Year)" .
+
+<urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//adr-meta-001-anti-paresse-verify-before-assert.md" ;
+    aspace:kind kind:Decision ;
+    dcterms:title "ADR-META-001 — Anti-paresse, vérifier avant d'affirmer" ;
+    dcterms:description "ADR-META-001 (ACCEPTED 2026-06-08, layer L1 Life OS) est la doctrine parente de l'anti-paperclip : un agent ne doit jamais affirmer un fait sans l'avoir vérifié, et le marqueur `verified` d'OKF v0.2 en est l'application concrète dans ce bundle." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "adr" ;
+    aspace:tag "meta" ;
+    aspace:tag "doctrine" ;
+    aspace:tag "anti-paresse" ;
+    aspace:tag "okf" ;
+    aspace:tag "verify" ;
+    aspace:tag "l1" ;
+    aspace:tag "life-os" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/ADR/INDEX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/ADR/L1_Life_OS/ADR-META-001_anti-paresse-verify-before-assert.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_briefs/GARDE_FOU.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    rdfs:label "ADR-META-001 — Anti-paresse, vérifier avant d'affirmer" .
+
+<urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//adr-sober-002-anti-paperclip-doctrine.md" ;
+    aspace:kind kind:Decision ;
+    dcterms:title "ADR-SOBER-002 — Doctrine anti-paperclip-maximizer" ;
+    dcterms:description "Ratifiée 2026-06-21 par A0 « GO » batch, cette doctrine impose le déplacement physique (move) plutôt que la réécriture ou la suppression lors de toute réorganisation d'arborescence ; appliquée au versement 2026-08-02 de V3 vers les Archives de V2." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "adr" ;
+    aspace:tag "doctrine" ;
+    aspace:tag "anti-paperclip" ;
+    aspace:tag "l0" ;
+    aspace:tag "kernel" ;
+    aspace:tag "sober" ;
+    aspace:tag "2026-06-21" ;
+    aspace:tag "ratifié" ;
+    aspace:tag "amadeus" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/ADR/INDEX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/ARCHIVE_MANIFEST.json" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    rdfs:label "ADR-SOBER-002 — Doctrine anti-paperclip-maximizer" .
+
+<urn:aspace:concept:archives:agent-vocabulary-legacy-vs-current>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//agent-vocabulary-legacy-vs-current.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Le vocabulaire d'agents a changé entre 2026-05 et 2026-08" ;
+    dcterms:description "En comparant les specs legacy (jusqu'au 2026-05-22) et l'état archivé/canonique (2026-08), le vocabulaire d'agents a été refondu : A'0 GravityClaw → A0 Amadeus, A'1 Rick → A1 Beth, A'2 Doctors → A2 Computer (Picard/Spock/Geordi), A3 Gemini CLI/IronClaw → A3 Data. Un projet RDF doit choisir quel vocabulaire porte l'URI canonique." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "vocabulaire" ;
+    aspace:tag "agents" ;
+    aspace:tag "legacy" ;
+    aspace:tag "gravityclaw" ;
+    aspace:tag "amadeus" ;
+    aspace:tag "rick" ;
+    aspace:tag "beth" ;
+    aspace:tag "doctors" ;
+    aspace:tag "computer" ;
+    aspace:tag "data" ;
+    aspace:tag "gemini-cli" ;
+    aspace:tag "ironclaw" ;
+    aspace:tag "renommage" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/SDD-V0.5_SovereignConstitution.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/03_OpenClaw_Body_Legacy/openclaw.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/ADR/INDEX.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> ;
+    aspace:relatedTo <urn:aspace:concept:archives:openclaw-body-legacy> ;
+    rdfs:label "Le vocabulaire d'agents a changé entre 2026-05 et 2026-08" .
+
+<urn:aspace:concept:archives:archive-as-source-of-truth-decision>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//archive-as-source-of-truth-decision.md" ;
+    aspace:kind kind:Decision ;
+    dcterms:title "Geordi (03_Resources_Geordi) est la racine unique de la KB" ;
+    dcterms:description "La décision D-2026-08-01-#1 fait de `03_Resources_Geordi/` (et non V3, et non `04_Archives_Data/`) la source de vérité unique de la base de connaissance. Les archives — y compris `_V3_STRUCTURE_2026-08-02/` — ne sont qu'un héritage réversible, pas une source de canon." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "kb" ;
+    aspace:tag "geordi" ;
+    aspace:tag "ressources" ;
+    aspace:tag "source-of-truth" ;
+    aspace:tag "decision" ;
+    aspace:tag "2026-08-01" ;
+    aspace:tag "unification" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> ;
+    rdfs:label "Geordi (03_Resources_Geordi) est la racine unique de la KB" .
+
+<urn:aspace:concept:archives:archive-published-secrets-warning>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//archive-published-secrets-warning.md" ;
+    aspace:kind kind:Vulnerability ;
+    dcterms:title "11 fichiers de l'archive portent des secrets déjà publiés sur GitHub" ;
+    dcterms:description "Au moins 11 fichiers de `_V3_STRUCTURE_2026-08-02/` contiennent des clés d'API ou des jetons ; ils étaient déjà suivis par git dans V3 et poussés sur le remote GitHub via le commit 41c19a5 ; le déplacement les a rendus visibles et concentrés, mais ne les a pas exposés." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "securité" ;
+    aspace:tag "secret" ;
+    aspace:tag "github" ;
+    aspace:tag "commit-41c19a5" ;
+    aspace:tag "archive" ;
+    aspace:tag "v3" ;
+    aspace:tag "fuite" ;
+    aspace:tag "vulnerability" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/ARCHIVE_MANIFEST.json" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    rdfs:label "11 fichiers de l'archive portent des secrets déjà publiés sur GitHub" .
+
+<urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//archive-v3-structure-snapshot-2026-08-02.md" ;
+    aspace:kind kind:Event ;
+    dcterms:title "Versement de la structure V3 aux Archives de V2 (2026-08-02)" ;
+    dcterms:description "Le 2026-08-02, 17 665 fichiers issus de l'arborescence de `C:\\Users\\amado\\ASpace_OS_V3` ont été déplacés dans `04_Archives_Data/_V3_STRUCTURE_2026-08-02/`, conformément à l'ADR-SOBER-002 (anti-paperclip) ; V3 ne conserve que 12 fichiers réels et ~2 600 dossiers vides." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "archive" ;
+    aspace:tag "v3" ;
+    aspace:tag "v2" ;
+    aspace:tag "para" ;
+    aspace:tag "adr-sober-002" ;
+    aspace:tag "transfert" ;
+    aspace:tag "structure" ;
+    aspace:tag "2026-08-02" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/ARCHIVE_MANIFEST.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-published-secrets-warning> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    rdfs:label "Versement de la structure V3 aux Archives de V2 (2026-08-02)" .
+
+<urn:aspace:concept:archives:data-role-a3-archives-officer>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//data-role-a3-archives-officer.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Data — A3 officier d'archives PARA" ;
+    dcterms:description "A3_Data_Archives_Spec définit le rôle « Data » comme officier d'archives du PARA : il protège la mémoire de la suppression comme de la pollution du contexte actif, et n'archive jamais sans `archive-and-document` préalable." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "a3" ;
+    aspace:tag "data" ;
+    aspace:tag "archives" ;
+    aspace:tag "para" ;
+    aspace:tag "role" ;
+    aspace:tag "doctrine" ;
+    aspace:tag "archive-and-document" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md#alignement-plan-fancy-hugging-bengio-md-2026-06-21-patch-top-level" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    rdfs:label "Data — A3 officier d'archives PARA" .
+
+<urn:aspace:concept:archives:deal-muse-data-as-conductor>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//deal-muse-data-as-conductor.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "DEAL Muse — Data comme chef d'orchestre (par imbrication DEAL ⊂ PARA)" ;
+    dcterms:description "Le patch top-level du 2026-06-21 sur A3_Data_Archives_Spec établit que Data est à la fois officier A3 (PARA) et chef d'orchestre DEAL — par imbrication DEAL ⊂ PARA (plan §3.1), pas par promotion au rang de 5ème vaisseau A2 ; les 4 jumeaux DEAL sont Dal, Rok-Tahk, Zero, Gwyn." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "deal" ;
+    aspace:tag "muse" ;
+    aspace:tag "data" ;
+    aspace:tag "conductor" ;
+    aspace:tag "para" ;
+    aspace:tag "dal" ;
+    aspace:tag "rok-tahk" ;
+    aspace:tag "zero" ;
+    aspace:tag "gwyn" ;
+    aspace:tag "2026-06-21" ;
+    aspace:tag "plan-fancy-hugging-bengio" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md#alignement-plan-fancy-hugging-bengio-md-2026-06-21-patch-top-level" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    rdfs:label "DEAL Muse — Data comme chef d'orchestre (par imbrication DEAL ⊂ PARA)" .
+
+<urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//graphify-burst-chunk-duplication-pattern.md" ;
+    aspace:kind kind:Pattern ;
+    dcterms:title "Graphify-burst chunks — la duplication de fichiers massifs entre chunks et Geordi" ;
+    dcterms:description "Le pipeline Graphify produit des dossiers `graphify-burst/chunks/chunk_NNN/` dupliquant le contenu d'autres chemins du seau ; un même fichier (ex. `affine_deal_drafts.md` 60 001 mots, `REBUILD_PROMPT_V2.md` 15 627 mots) peut apparaître dans 4 chunks distincts et dans `03_Resources_Geordi/`." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "graphify" ;
+    aspace:tag "burst" ;
+    aspace:tag "chunks" ;
+    aspace:tag "duplication" ;
+    aspace:tag "pipeline" ;
+    aspace:tag "60001-mots" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_substrat/04_Archives_Data.jsonl" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> ;
+    aspace:relatedTo <urn:aspace:concept:archives:graphify-out-pipeline-partial-run> ;
+    rdfs:label "Graphify-burst chunks — la duplication de fichiers massifs entre chunks et Geordi" .
+
+<urn:aspace:concept:archives:graphify-out-pipeline-partial-run>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//graphify-out-pipeline-partial-run.md" ;
+    aspace:kind kind:Event ;
+    dcterms:title "Graphify-out — pipeline parallèle avec 11 chunks échoués sur 25" ;
+    dcterms:description "Le dossier `graphify-out/` contient les sorties d'un run Graphify (25 chunks, 8 workers max) qui a réussi 14 chunks sur 25, produit 1006 nœuds uniques et 1666 arêtes, avec 17 communautés détectées (long tail)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "graphify" ;
+    aspace:tag "pipeline" ;
+    aspace:tag "parallel" ;
+    aspace:tag "chunks" ;
+    aspace:tag "failure" ;
+    aspace:tag "partial-run" ;
+    aspace:tag "2026-06-16" ;
+    aspace:tag "421-files" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/graphify-out/GRAPH_REPORT.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/graphify-out/swarm_summary.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_substrat/04_Archives_Data.jsonl" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> ;
+    aspace:relatedTo <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> ;
+    rdfs:label "Graphify-out — pipeline parallèle avec 11 chunks échoués sur 25" .
+
+<urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//legacy-lifeos-app-specs-evolution.md" ;
+    aspace:kind kind:Project ;
+    dcterms:title "Legacy LifeOS App Specs — l'évolution V0.2 → V0.6 (jusqu'au 2026-05-22)" ;
+    dcterms:description "Le dossier `Legacy_LifeOS_App_Specs_2026-05-22/` archive les spécifications des apps Life OS en versions V0.2 à V0.6 (Micro → EngineRoom → EnterpriseComputer → SovereignConstitution → TemporalEngine), une chaîne de SDD, ADRs, DDD, PRDs et CONTRACTS close au 2026-05-22." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "legacy" ;
+    aspace:tag "lifeos" ;
+    aspace:tag "sdd" ;
+    aspace:tag "adr" ;
+    aspace:tag "ddd" ;
+    aspace:tag "prd" ;
+    aspace:tag "v0.2" ;
+    aspace:tag "v0.3" ;
+    aspace:tag "v0.4" ;
+    aspace:tag "v0.5" ;
+    aspace:tag "v0.6" ;
+    aspace:tag "micro" ;
+    aspace:tag "engine-room" ;
+    aspace:tag "enterprise-computer" ;
+    aspace:tag "sovereign-constitution" ;
+    aspace:tag "temporal-engine" ;
+    aspace:tag "2026-05-22" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/SDD-V0.5_SovereignConstitution.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_substrat/04_Archives_Data.jsonl" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:sdd-sovereign-constitution-v05> ;
+    rdfs:label "Legacy LifeOS App Specs — l'évolution V0.2 → V0.6 (jusqu'au 2026-05-22)" .
+
+<urn:aspace:concept:archives:memory-compact-trash-snapshots>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//memory-compact-trash-snapshots.md" ;
+    aspace:kind kind:Archive ;
+    dcterms:title "Memory Compact Trash Snapshots — 4 sauvegardes `_TRASH_2026-07-XX_mem_compact`" ;
+    dcterms:description "Le dossier `Backup_01/memory_duplicates/` contient 4 instantanés `_TRASH_2026-07-02_mem_compact` à `_TRASH_2026-07-26_mem_compact`, témoins des compactions de mémoire successives de juillet 2026 ; seul le premier contient un `MEMORY_pre.md` mesuré." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "backup" ;
+    aspace:tag "mem-compact" ;
+    aspace:tag "trash" ;
+    aspace:tag "memory" ;
+    aspace:tag "snapshots" ;
+    aspace:tag "2026-07" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Backup_01/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Backup_01/memory_duplicates/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Backup_01/memory_duplicates/_TRASH_2026-07-02_mem_compact/MEMORY_pre.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Backup_01/_manifests/codex_memory_junctions_2026-08-01.json" ;
+    aspace:relatedTo <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01> ;
+    rdfs:label "Memory Compact Trash Snapshots — 4 sauvegardes `_TRASH_2026-07-XX_mem_compact`" .
+
+<urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//ntfs-junctions-inventory-2026-08-01.md" ;
+    aspace:kind kind:Archive ;
+    dcterms:title "NTFS Junctions Inventory — 2026-08-01" ;
+    dcterms:description "Le fichier `Backup_01/_manifests/codex_memory_junctions_2026-08-01.json` inventorie les jonctions NTFS actives au 2026-08-01 — un type de lien que `os.walk` ne voit pas et qui a déjà coûté un comptage de 13,8 millions de fichiers là où il y en avait 14 613." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ntfs" ;
+    aspace:tag "junctions" ;
+    aspace:tag "manifest" ;
+    aspace:tag "walk" ;
+    aspace:tag "comptage" ;
+    aspace:tag "2026-08-01" ;
+    aspace:tag "anti-piege" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Backup_01/_manifests/codex_memory_junctions_2026-08-01.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/40_Memory_Wiki_OKF/canon/CANON-profil-racine.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:memory-compact-trash-snapshots> ;
+    rdfs:label "NTFS Junctions Inventory — 2026-08-01" .
+
+<urn:aspace:concept:archives:openclaw-body-legacy>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//openclaw-body-legacy.md" ;
+    aspace:kind kind:Archive ;
+    dcterms:title "OpenClaw Body Legacy — l'avant-M3 (février-mars 2026)" ;
+    dcterms:description "Le dossier `03_OpenClaw_Body_Legacy/` archive l'état du corps OpenClaw tel qu'il était entre février et mars 2026, avant l'ère M3 : modèle GPT-5.2-codex + fallbacks Sonnet 4.5 / Opus 4.5 thinking, version 2026.2.1, et un ensemble de 10 fichiers de configuration + AGENTS.md (20 576 octets)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "openclaw" ;
+    aspace:tag "body" ;
+    aspace:tag "legacy" ;
+    aspace:tag "gpt-5.2" ;
+    aspace:tag "codex" ;
+    aspace:tag "sonnet-4-5" ;
+    aspace:tag "opus-4-5" ;
+    aspace:tag "2026-02" ;
+    aspace:tag "2026-03" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/03_OpenClaw_Body_Legacy/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/03_OpenClaw_Body_Legacy/openclaw.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/03_OpenClaw_Body_Legacy/AGENTS.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/03_OpenClaw_Body_Legacy/agents_registry.json" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> ;
+    rdfs:label "OpenClaw Body Legacy — l'avant-M3 (février-mars 2026)" .
+
+<urn:aspace:concept:archives:sdd-sovereign-constitution-v05>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//sdd-sovereign-constitution-v05.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "SDD V0.5 Sovereign Constitution — le pivot du « Livre des Lois »" ;
+    dcterms:description "Le SDD V0.5 (lu dans Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/) marque le pivot où Ikigai et Life Wheel cessent d'être des mockups visuels pour devenir un Livre des Lois immuable, avec 8 domaines figés, migration IndexedDB et Pont Top-Down/Bottom-Up." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "sdd" ;
+    aspace:tag "v0.5" ;
+    aspace:tag "sovereign-constitution" ;
+    aspace:tag "ikigai" ;
+    aspace:tag "life-wheel" ;
+    aspace:tag "livre-des-lois" ;
+    aspace:tag "indexeddb" ;
+    aspace:tag "legacy" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/SDD-V0.5_SovereignConstitution.md" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    aspace:relatedTo <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> ;
+    rdfs:label "SDD V0.5 Sovereign Constitution — le pivot du « Livre des Lois »" .
+
+<urn:aspace:concept:archives:shadow-active-1425-files-status>
+    a aspace:Concept ;
+    aspace:bundle "archives" ;
+    aspace:fichier "50_Distillation//archives//shadow-active-1425-files-status.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "SHADOW_ACTIVE — 1425 fichiers dans un état dormant" ;
+    dcterms:description "`status: SHADOW_ACTIVE` est le 2ᵉ statut le plus fréquent du seau 04_Archives_Data avec 1 425 fichiers (11,6 %), derrière `status: NONE` (8 316 fichiers sans statut). Ces fichiers sont « capturés mais non activés » — présents en archive sans rôle actif." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "status" ;
+    aspace:tag "shadow-active" ;
+    aspace:tag "dormant" ;
+    aspace:tag "classification" ;
+    aspace:tag "capture" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture_concepts_archives" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/_substrat/04_Archives_Data.jsonl" ;
+    aspace:relatedTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> ;
+    aspace:relatedTo <urn:aspace:concept:archives:data-role-a3-archives-officer> ;
+    rdfs:label "SHADOW_ACTIVE — 1425 fichiers dans un état dormant" .
+
+<urn:aspace:concept:ressources:a3-geordi-resources-officer>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//a3-geordi-resources-officer.md" ;
+    aspace:kind kind:Entity ;
+    dcterms:title "A3 Geordi — Resources Officer (spec & mission)" ;
+    dcterms:description "Spec de rôle A3_Geordi_Resources_Spec : Geordi est l'officier Resources du PARA A'Space, transforme la connaissance en infrastructure réutilisable pour les agents futurs. Quatre-questions de discipline, six findings, frontières explicites." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "a3" ;
+    aspace:tag "geordi" ;
+    aspace:tag "resources" ;
+    aspace:tag "para" ;
+    aspace:tag "officer" ;
+    aspace:tag "spec" ;
+    aspace:tag "knowledge-infrastructure" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/A3_Geordi_Resources_Spec.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/00_Amadeus/01_Identity_Core/AGENTS.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/GEORDI_KB_ROOT.md" ;
+    rdfs:label "A3 Geordi — Resources Officer (spec & mission)" .
+
+<urn:aspace:concept:ressources:adr-immutability-ricks-law>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//adr-immutability-ricks-law.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "ADR — Architecture Decision Records (Rick's Law)" ;
+    dcterms:description "Le canon juridique de Rick. Une décision architecturale immuable : créée une fois, jamais réécrite. Toute évolution → un nouvel ADR. Différent des SDD (design) et PRDs (requirement)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "adr" ;
+    aspace:tag "rick" ;
+    aspace:tag "immutability" ;
+    aspace:tag "decision-record" ;
+    aspace:tag "governance" ;
+    aspace:tag "l0" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_adr.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_sdd.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/entities/entity_adr_fs_001.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/entities/entity_adr_fwk_021.md" ;
+    rdfs:label "ADR — Architecture Decision Records (Rick's Law)" .
+
+<urn:aspace:concept:ressources:agents-md-identity-canon>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//agents-md-identity-canon.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "AGENTS.md — canon absolu d'identité" ;
+    dcterms:description "Manifeste d'identité des agents A'Space OS. Gouverne l'identité ; la Constitution 2026-07-12 gouverne le comportement. Source de vérité pour le registre des Owners, l'organigramme canon, les ADR Fundamentals." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "agents-md" ;
+    aspace:tag "identity" ;
+    aspace:tag "canon" ;
+    aspace:tag "owner" ;
+    aspace:tag "registre" ;
+    aspace:tag "hierarchy" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/00_Amadeus/01_Identity_Core/" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/00_Amadeus/01_Identity_Core/CONSTITUTION.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/TAGS.md" ;
+    rdfs:label "AGENTS.md — canon absolu d'identité" .
+
+<urn:aspace:concept:ressources:aspace-governance-dashboard>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//aspace-governance-dashboard.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "A'Space Governance Dashboard — console unifiée VPS" ;
+    dcterms:description "Console canonique d'infrastructure (ADR-INFRA-001) : `https://aspace-dashboard.148.230.92.235.sslip.io/`. Plus de dashboards isolés — toute nouvelle gouvernance devient une app dans cette console (Caddy/Kong reverse-proxy + Dokploy)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "governance" ;
+    aspace:tag "dashboard" ;
+    aspace:tag "vps" ;
+    aspace:tag "caddy" ;
+    aspace:tag "kong" ;
+    aspace:tag "dokploy" ;
+    aspace:tag "hermes" ;
+    aspace:tag "adr-infra-001" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_aspace_governance_dashboard.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_shadow_l0_l1_l2_reprise.md" ;
+    rdfs:label "A'Space Governance Dashboard — console unifiée VPS" .
+
+<urn:aspace:concept:ressources:blueprints-canon-tripartite>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//blueprints-canon-tripartite.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Canon Tripartite des Blueprints (ADR-FWK-021)" ;
+    dcterms:description "Doctrine d'isomorphie L0/L1/L2 pour les Blueprints : trois canons (10_Tech_OS\\12_Blueprints\\, 20_Life_OS\\28_Blueprints\\, 30_Business_OS\\09_Blueprints\\). Chaque canon contient 01-SDD/02-ADR/03-PRD/04-DDD. _SPECS\\ devient zone d'inbox, plus de canon." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "blueprints" ;
+    aspace:tag "canon" ;
+    aspace:tag "l0-l1-l2" ;
+    aspace:tag "isomorphie" ;
+    aspace:tag "adr-fwk-021" ;
+    aspace:tag "sdd" ;
+    aspace:tag "adr" ;
+    aspace:tag "prd" ;
+    aspace:tag "ddd" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/entities/entity_adr_fwk_021.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/entities/entity_adr_fs_001.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_sdd.md" ;
+    rdfs:label "Canon Tripartite des Blueprints (ADR-FWK-021)" .
+
+<urn:aspace:concept:ressources:compounding-knowledge-wiki>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//compounding-knowledge-wiki.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Compounding Knowledge — pourquoi un wiki LLM bat RAG" ;
+    dcterms:description "Le wiki LLM produit un effet composé (chaque interaction augmente la valeur), contrairement à RAG extractif qui repart de zéro. Trois conditions : le principal reste, les rendements sont réinvestis, le temps amplifie la base. Le LLM élimine le goulot de maintenance." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "compounding-knowledge" ;
+    aspace:tag "wiki" ;
+    aspace:tag "rag" ;
+    aspace:tag "maintenance" ;
+    aspace:tag "llm-pattern" ;
+    aspace:tag "knowledge-system" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_compounding_knowledge.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/sources/source_llm-wiki-pattern.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/schema.md" ;
+    rdfs:label "Compounding Knowledge — pourquoi un wiki LLM bat RAG" .
+
+<urn:aspace:concept:ressources:constitution-aspace-v1>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//constitution-aspace-v1.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Constitution A'SPACE v1.0 — loi suprême" ;
+    dcterms:description "Texte ratifié 2026-07-12 par A+ qui inverse la nature du système : d'exosquelette mort (freins cumulés sans expiration) à organisme vivant (orientation + maximiseur modulé par horizon). 8 articles, aucun sunset calendaire." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "constitution" ;
+    aspace:tag "loi" ;
+    aspace:tag "articles" ;
+    aspace:tag "maximiseur" ;
+    aspace:tag "horizon" ;
+    aspace:tag "sunset" ;
+    aspace:tag "amadeus" ;
+    aspace:tag "aspace" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/00_Amadeus/01_Identity_Core/CONSTITUTION.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/GEORDI_KB_ROOT.md" ;
+    rdfs:label "Constitution A'SPACE v1.0 — loi suprême" .
+
+<urn:aspace:concept:ressources:geordi-junctions-map-159>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//geordi-junctions-map-159.md" ;
+    aspace:kind kind:Playbook ;
+    dcterms:title "Geordi — cartographie des 159 jonctions NTFS" ;
+    dcterms:description "Carte exhaustive des 159 jonctions sous `03_Resources_Geordi` au 2026-08-02, classifiées en 10 catégories de risque (dead/trash/external_home_dot/external_appdata/external_other/intra_g/cross_para_*). Trois classes de danger concrètes pour la migration V3." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ntfs-junction" ;
+    aspace:tag "junctions-map" ;
+    aspace:tag "cartographie" ;
+    aspace:tag "migration" ;
+    aspace:tag "v3" ;
+    aspace:tag "security" ;
+    aspace:tag "fs" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/JUNCTIONS_MAP_2026-08-02.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/FIX_KB_2026-08-02.md" ;
+    rdfs:label "Geordi — cartographie des 159 jonctions NTFS" .
+
+<urn:aspace:concept:ressources:geordi-kb-quatre-piliers>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//geordi-kb-quatre-piliers.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Geordi KB — quatre piliers OKF/Wiki/Graphify/Dox" ;
+    dcterms:description "L'architecture canonique de la racine KB Geordi : quatre piliers distincts et complémentaires qui répondent à quatre classes de questions, plus un index utilitaire. La connaissance d'une question → le bon pilier." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "kb" ;
+    aspace:tag "geordi" ;
+    aspace:tag "pilier" ;
+    aspace:tag "routage" ;
+    aspace:tag "okf" ;
+    aspace:tag "wiki" ;
+    aspace:tag "graphify" ;
+    aspace:tag "dox" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/INDEX_OF_INDEXES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/GEORDI_KB_ROOT.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/OKF_INDEX.md" ;
+    rdfs:label "Geordi KB — quatre piliers OKF/Wiki/Graphify/Dox" .
+
+<urn:aspace:concept:ressources:l2-8-domaines-roster-canon>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//l2-8-domaines-roster-canon.md" ;
+    aspace:kind kind:Relation ;
+    dcterms:title "Roster canon 8 Domaines L2 — Notion prime AGENTS.md (ADR-CANON-001)" ;
+    dcterms:description "Résolution A0 du 2026-06-02 sur les divergences AGENTS.md (manifeste) vs Notion AGENT_REGISTRY_DB (lore) : Notion prime ; AGENTS.md = structure index avec addendum daté. 8 domaines L2 alignés (Growth/Sales/Product/Ops/IT/Finance/People/Legal) avec leurs squads B3 canon." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "l2-roster" ;
+    aspace:tag "8-domaines" ;
+    aspace:tag "notion" ;
+    aspace:tag "agents-md" ;
+    aspace:tag "adr-canon-001" ;
+    aspace:tag "squad-canon" ;
+    aspace:tag "ruling" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/comparisons/comparison_l2_roster_divergence.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_l2_fractal_b1b2b3.md" ;
+    rdfs:label "Roster canon 8 Domaines L2 — Notion prime AGENTS.md (ADR-CANON-001)" .
+
+<urn:aspace:concept:ressources:l2-fractal-b1-b2-b3>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//l2-fractal-b1-b2-b3.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "L2 Fractal B1/B2/B3 — Command Stack" ;
+    dcterms:description "Le stack vertical A0-A3 incarné en B1-B2-B3 à L2 Business : Direction (Jerry/Summer) → Domaines (8 héros-managers) → Exécution (8 squads Marvel). Fractal : se répète à deux échelles (Area perpétuelle macro, Project micro)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "l2" ;
+    aspace:tag "business-os" ;
+    aspace:tag "fractal" ;
+    aspace:tag "b1-b2-b3" ;
+    aspace:tag "jerry" ;
+    aspace:tag "summer" ;
+    aspace:tag "8-domaines" ;
+    aspace:tag "agent-hierarchy" ;
+    aspace:tag "matryoshka" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_l2_fractal_b1b2b3.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/comparisons/comparison_l2_roster_divergence.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_shadow_l0_l1_l2_reprise.md" ;
+    rdfs:label "L2 Fractal B1/B2/B3 — Command Stack" .
+
+<urn:aspace:concept:ressources:life-os-six-vaisseaux>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//life-os-six-vaisseaux.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Life OS — six vaisseaux L1 et leurs frameworks" ;
+    dcterms:description "Le second layer de la Matrioshka : 6 vaisseaux USS commandés par Beth & Morty, chacun incarnant un framework d'exécution personnel (Ikigai, Life Wheel, 12WY, PARA, GTD, DEAL). Le miroir L1 du L2 B1/B2/B3." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "life-os" ;
+    aspace:tag "fleet" ;
+    aspace:tag "vaisseaux" ;
+    aspace:tag "ikigai" ;
+    aspace:tag "12wy" ;
+    aspace:tag "para" ;
+    aspace:tag "gtd" ;
+    aspace:tag "deal" ;
+    aspace:tag "life-wheel" ;
+    aspace:tag "beth" ;
+    aspace:tag "morty" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_life_os.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/20_Life_OS/22_Wheel_Discovery" ;
+    rdfs:label "Life OS — six vaisseaux L1 et leurs frameworks" .
+
+<urn:aspace:concept:ressources:loi-du-harvest-wiki>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//loi-du-harvest-wiki.md" ;
+    aspace:kind kind:Playbook ;
+    dcterms:title "Loi du harvest — wiki evergreen depuis artefact shippé" ;
+    dcterms:description "Doctrine de récolte du wiki (W22 M5, 2026-07-13) : une page evergreen (concepts/, entities/) n'est créée QUE depuis un artefact shippé (handoff, wargame exécuté, projet clos). Skill canon `/harvest` (72 lignes). Anti-pattern : créer une page SANS artefact shippé = bloquer." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "harvest" ;
+    aspace:tag "wiki" ;
+    aspace:tag "evergreen" ;
+    aspace:tag "sister-artifact" ;
+    aspace:tag "lint-wiki" ;
+    aspace:tag "doctrine" ;
+    aspace:tag "anti-pollution" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/index.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/schema.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_compounding_knowledge.md" ;
+    rdfs:label "Loi du harvest — wiki evergreen depuis artefact shippé" .
+
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//matryoshka-l0-l1-l2.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Matryoshka A'Space OS — L0/L1/L2 emboîtés" ;
+    dcterms:description "Architecture en poupée russe d'A'Space OS : L0 Tech OS (Rick) héberge L1 Life OS (Beth/Morty/6 vaisseaux), qui héberge L2 Business Pulse (Jerry/Summer/8 Domaines). Chaque couche suit la même grammaire (A1/A2/A3), adaptée à son registre de souveraineté." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "matryoshka" ;
+    aspace:tag "l0" ;
+    aspace:tag "l1" ;
+    aspace:tag "l2" ;
+    aspace:tag "tech-os" ;
+    aspace:tag "life-os" ;
+    aspace:tag "business-os" ;
+    aspace:tag "governance" ;
+    aspace:tag "architecture" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_life_os.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_l2_fractal_b1b2b3.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_sovereignty.md" ;
+    rdfs:label "Matryoshka A'Space OS — L0/L1/L2 emboîtés" .
+
+<urn:aspace:concept:ressources:notebooklm-bridge-dbsc>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//notebooklm-bridge-dbsc.md" ;
+    aspace:kind kind:Playbook ;
+    dcterms:title "NotebookLM Bridge — contourner DBSC par Chromium persistant" ;
+    dcterms:description "Solution validée Antigravity 2026-05-20 pour utiliser NotebookLM depuis Claude Code malgré DBSC (Device Bound Session Credentials). Playwright `chromium.launch_persistent_context` sur storage_state persistant + lecture DOM (project-grid). Le `notebooklm-mcp.exe` officiel ne marche JAMAIS, même cookies frais." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "notebooklm" ;
+    aspace:tag "dbsc" ;
+    aspace:tag "playwright" ;
+    aspace:tag "bridge" ;
+    aspace:tag "google" ;
+    aspace:tag "mcp-blocked" ;
+    aspace:tag "cookie-extraction" ;
+    aspace:tag "work-around" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_notebooklm_auth_2026.md" ;
+    rdfs:label "NotebookLM Bridge — contourner DBSC par Chromium persistant" .
+
+<urn:aspace:concept:ressources:ntfs-junction-aliasing>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//ntfs-junction-aliasing.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "NTFS Junction Aliasing (ADR-FS-001) — short-path operability" ;
+    dcterms:description "Doctrine filesystem : PARA/Enterprise est source de vérité unique ; exposition via NTFS junctions (jamais copies). Trois couches d'aliasing (sentinelles racine `_\\`, drives subst B:/P:, junctions sectorielles). Interdictions explicites (pas de robocopy /MIR)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ntfs-junction" ;
+    aspace:tag "aliasing" ;
+    aspace:tag "para-fs" ;
+    aspace:tag "short-path" ;
+    aspace:tag "agent-operability" ;
+    aspace:tag "adr-fs-001" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/entities/entity_adr_fs_001.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/JUNCTIONS_MAP_2026-08-02.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/syntheses/synthesis_session_2026-06-05_infra-ceo-dashboard.md" ;
+    rdfs:label "NTFS Junction Aliasing (ADR-FS-001) — short-path operability" .
+
+<urn:aspace:concept:ressources:okf-v0-1-format-standard>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//okf-v0-1-format-standard.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "OKF v0.1 — standard de format d'un bundle mémoire" ;
+    dcterms:description "4ᵉ pilier de la KB Geordi après Wiki/Graphify/Dox — définit ce qu'est un bundle valide (frontmatter, fichiers réservés, consommation permissive). C'est le format dont tous les autres concepts dérivent." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "okf" ;
+    aspace:tag "format" ;
+    aspace:tag "bundle" ;
+    aspace:tag "standard" ;
+    aspace:tag "frontmatter" ;
+    aspace:tag "kb-pilier" ;
+    aspace:tag "geordi" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/OKF_INDEX.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/schema.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/GEORDI_KB_ROOT.md" ;
+    rdfs:label "OKF v0.1 — standard de format d'un bundle mémoire" .
+
+<urn:aspace:concept:ressources:rot-strates-s0-s4>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//rot-strates-s0-s4.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Rot-rates S0→S4 — politique de péremption par strate" ;
+    dcterms:description "Doctrine de péremption des cinq strates mémoire (S0 Identité → S1 Court terme → S2 Travail → S3 Long terme → S4 Méta), créée 2026-08-01 pour rendre le rot opérable ligne par ligne dans RESOURCES_INDEX.md." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "rot" ;
+    aspace:tag "péremption" ;
+    aspace:tag "strates" ;
+    aspace:tag "s0" ;
+    aspace:tag "s1" ;
+    aspace:tag "s2" ;
+    aspace:tag "s3" ;
+    aspace:tag "s4" ;
+    aspace:tag "fresh" ;
+    aspace:tag "kb-hygiene" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/ROT.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/PLAN_META_MEMOIRE_2026-08-01.md" ;
+    rdfs:label "Rot-rates S0→S4 — politique de péremption par strate" .
+
+<urn:aspace:concept:ressources:sdd-system-design-documents>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//sdd-system-design-documents.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "SDD — System Design Documents (couche design)" ;
+    dcterms:description "La couche design entre la décision (ADR) et l'exécution (Blueprint code). 10 SDDs canon pour L0 Tech OS, versionnés via TARDIS Protocol. Pas de code sans spec ; pas de spec sans ADR ; pas d'ADR sans ancrage AGENTS.md." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "sdd" ;
+    aspace:tag "system-design" ;
+    aspace:tag "architecture" ;
+    aspace:tag "blueprint" ;
+    aspace:tag "l0" ;
+    aspace:tag "tardis" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_sdd.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_adr.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/syntheses/synthesis_fin-gestation-strategique.md" ;
+    rdfs:label "SDD — System Design Documents (couche design)" .
+
+<urn:aspace:concept:ressources:second-brain-14-sous-dossiers>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//second-brain-14-sous-dossiers.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Second Brain PARA — 14 sous-dossiers de Geordi" ;
+    dcterms:description "Cartographie mesurée 2026-08-02 des 14 sous-dossiers réels de `03_Resources_Geordi/` vers les 4 buckets PARA et les 5 strates S0→S4. Table de vérité de la racine KB." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "para" ;
+    aspace:tag "second-brain" ;
+    aspace:tag "geordi" ;
+    aspace:tag "strates" ;
+    aspace:tag "mapping" ;
+    aspace:tag "kb-racine" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/SECOND_BRAIN_PARA_MAP.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/GEORDI_KB_ROOT.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/FIX_KB_2026-08-02.md" ;
+    rdfs:label "Second Brain PARA — 14 sous-dossiers de Geordi" .
+
+<urn:aspace:concept:ressources:shadow-l1-l2-homologie>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//shadow-l1-l2-homologie.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Shadow L1/L2 Homologie 4-méthodes" ;
+    dcterms:description "Thèse centrale de Symphony : Shadow L1 (souverain, outils locaux) et Shadow L2 (cloud, outils payants) partagent la même colonne vertébrale à 4 méthodes (PARA/12WY/GTD/DEAL) — c'est la même grammaire, projetée sur des instruments différents." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "symphony" ;
+    aspace:tag "shadow-l1" ;
+    aspace:tag "shadow-l2" ;
+    aspace:tag "homologie" ;
+    aspace:tag "para" ;
+    aspace:tag "12wy" ;
+    aspace:tag "gtd" ;
+    aspace:tag "deal" ;
+    aspace:tag "matryoshka" ;
+    aspace:tag "mesh" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_shadow_l1_l2_heartbeat_symphony.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_shadow_l0_l1_l2_reprise.md" ;
+    rdfs:label "Shadow L1/L2 Homologie 4-méthodes" .
+
+<urn:aspace:concept:ressources:sovereignty-3-niveaux>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//sovereignty-3-niveaux.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Souveraineté — trois niveaux (infra, code, mémoire)" ;
+    dcterms:description "Le principe directeur de L0 Tech OS, gouverné par Rick. Trois manifestations : infra (Trust Zone ADR-007), code (ADRs immuables), mémoire (TARDIS Protocol). Née de la perte d'A0_Memory du 2026-03-05." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "sovereignty" ;
+    aspace:tag "trust-zone" ;
+    aspace:tag "adr-immutability" ;
+    aspace:tag "tardis" ;
+    aspace:tag "rick" ;
+    aspace:tag "l0" ;
+    aspace:tag "security" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_sovereignty.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_adr.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/JUNCTIONS_MAP_2026-08-02.md" ;
+    rdfs:label "Souveraineté — trois niveaux (infra, code, mémoire)" .
+
+<urn:aspace:concept:ressources:supabase-rls-multi-tenant>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//supabase-rls-multi-tenant.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Supabase Sovereign — multi-tenant RLS par JWT custom claim" ;
+    dcterms:description "Architecture de déploiement souverain Supabase sur VPS Hostinger (148.230.92.235) : Caddy (reverse-proxy frontal) → Kong (API gateway) → services internes. Isolation multi-tenant stricte par RLS basée sur `org_id` injecté dans JWT via custom_access_token_hook PostgreSQL." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "supabase" ;
+    aspace:tag "rls" ;
+    aspace:tag "multi-tenant" ;
+    aspace:tag "jwt-custom-claim" ;
+    aspace:tag "caddy" ;
+    aspace:tag "kong" ;
+    aspace:tag "vps" ;
+    aspace:tag "sovereignty" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_supabase_architecture.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_aspace_governance_dashboard.md" ;
+    rdfs:label "Supabase Sovereign — multi-tenant RLS par JWT custom claim" .
+
+<urn:aspace:concept:ressources:tags-registres-owner-shelf>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//tags-registres-owner-shelf.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "TAGS — registres Owner (Star Trek) + Shelf (Doctor Who)" ;
+    dcterms:description "Tags obligatoires pour chaque document Geordi : Layer/Status/Owner/Strate/Purpose/Shelf + description. Owner = registre Star Trek v2 arbitré 2026-08-01 (Computer/Picard/Spock/Geordi/Data/Morty). Shelf = registre Doctor Who, scoped aux guides `00_KERNEL_OS/`." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "tags" ;
+    aspace:tag "owner" ;
+    aspace:tag "shelf" ;
+    aspace:tag "star-trek" ;
+    aspace:tag "doctor-who" ;
+    aspace:tag "layer" ;
+    aspace:tag "status" ;
+    aspace:tag "strate" ;
+    aspace:tag "purpose" ;
+    aspace:tag "description" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/TAGS.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/CLAUDE.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/RESOURCES_INDEX.md" ;
+    rdfs:label "TAGS — registres Owner (Star Trek) + Shelf (Doctor Who)" .
+
+<urn:aspace:concept:ressources:wiki-routing-by-question>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//wiki-routing-by-question.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Wiki routing par question — 6 branches canoniques" ;
+    dcterms:description "Algorithme canonique de routage d'une question sur A'Space OS V2 vers le bon pilier KB (OKF/Wiki/Graphify/Dox/Index/ROT). Six branches testées et patchées (OKF ajouté 2026-08-01 en première)." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "routing" ;
+    aspace:tag "kb" ;
+    aspace:tag "algorithm" ;
+    aspace:tag "okf" ;
+    aspace:tag "wiki" ;
+    aspace:tag "graphify" ;
+    aspace:tag "dox" ;
+    aspace:tag "index" ;
+    aspace:tag "rot" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/CLAUDE.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/INDEX_OF_INDEXES.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/00_Index/OKF_INDEX.md" ;
+    rdfs:label "Wiki routing par question — 6 branches canoniques" .
+
+<urn:aspace:concept:ressources:wiki-schema-llm-wiki>
+    a aspace:Concept ;
+    aspace:bundle "ressources" ;
+    aspace:fichier "50_Distillation//ressources//wiki-schema-llm-wiki.md" ;
+    aspace:kind kind:Backend ;
+    dcterms:title "Schema LLM Wiki — trois couches raw/wiki/schema.md" ;
+    dcterms:description "Le schéma de construction et maintenance du wiki LLM_Wiki : trois couches physiques, six types de pages, trois workflows (ingest/query/lint), conventions de nommage et formatage." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "llm-wiki" ;
+    aspace:tag "schema" ;
+    aspace:tag "pattern" ;
+    aspace:tag "maintenance" ;
+    aspace:tag "ingest" ;
+    aspace:tag "lint" ;
+    aspace:tag "geordi" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/schema.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/CARTOGRAPHIE_MEMOIRE_UNIFIEE.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/sources/source_llm-wiki-pattern.md" ;
+    rdfs:label "Schema LLM Wiki — trois couches raw/wiki/schema.md" .
+
+<urn:aspace:concept:prompt-systeme:alias>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//alias.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Alias — raccourcis que l'agent développe comme s'ils étaient écrits" ;
+    dcterms:description "Section 5 du prompt système : trois ou quatre raccourcis déclenchant un comportement nommé, qui valent autant de phrases en termes de coût de token et de précision d'intention." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "alias" ;
+    aspace:tag "raccourcis" ;
+    aspace:tag "tokens" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    rdfs:label "Alias — raccourcis que l'agent développe comme s'ils étaient écrits" .
+
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//bornes-operationnelles.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Bornes opérationnelles — les interdits consolidés" ;
+    dcterms:description "Section 4 du prompt système appliquée au poste : transformer les interdits dispersés du canon en une liste unique, vérifiable, qui pose la différence entre « livré » et « fait »." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "bornes" ;
+    aspace:tag "perimetre" ;
+    aspace:tag "interdits" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Bornes opérationnelles — les interdits consolidés" .
+
+<urn:aspace:concept:prompt-systeme:exemples-distillation-contexte>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//exemples-distillation-contexte.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Exemples — la distillation en contexte" ;
+    dcterms:description "Section 6 du prompt système : des paires « voici comment on communique » / « voici comment on ne communique pas », tirées de vraies réponses récentes et nettoyées à la main." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "exemples" ;
+    aspace:tag "distillation" ;
+    aspace:tag "few-shot" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    rdfs:label "Exemples — la distillation en contexte" .
+
+<urn:aspace:concept:prompt-systeme:patterns-positifs-negatifs>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//patterns-positifs-negatifs.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Patterns positifs et négatifs — ce qu'on reproduit, ce qu'on évite" ;
+    dcterms:description "Section 2 du prompt système appliquée à ce poste : deux listes explicites posées une fois, qui évitent de répéter à chaque brief le ton et les tics à proscrire." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "patterns" ;
+    aspace:tag "ton" ;
+    aspace:tag "tics" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Patterns positifs et négatifs — ce qu'on reproduit, ce qu'on évite" .
+
+<urn:aspace:concept:prompt-systeme:points-de-reference>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//points-de-reference.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Points de référence — codes courts partagés par tout le bundle" ;
+    dcterms:description "Section 3 du prompt système : assigner des codes D1…Dn, R1…Rn, F1…Fn aux éléments énumérés d'une conversation longue, pour fabriquer un langage commun en une ligne de prompt système." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "reference" ;
+    aspace:tag "codes" ;
+    aspace:tag "conversation" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Points de référence — codes courts partagés par tout le bundle" .
+
+<urn:aspace:concept:prompt-systeme:purpose-et-pourquoi>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//purpose-et-pourquoi.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Purpose et le pourquoi — relier chaque règle au piège qu'elle évite" ;
+    dcterms:description "Section 1 du prompt système appliquée au canon : derrière chaque interdit écrit doit vivre le paiement qui l'a rendu nécessaire, sans quoi la règle ne se généralise pas." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "purpose" ;
+    aspace:tag "canon" ;
+    aspace:tag "methode" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Purpose et le pourquoi — relier chaque règle au piège qu'elle évite" .
+
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite>
+    a aspace:Concept ;
+    aspace:bundle "prompt-systeme" ;
+    aspace:fichier "60_Implementation_Méthodologiques//prompt-systeme//regle-multiplicativite.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Règle de multiplicativité — plus l'artefact compose, plus on ralentit" ;
+    dcterms:description "Méta-règle tirée d'IndyDevDan : un artefact appliqué à mille exécutions mérite une heure d'écriture, une commande jetable n'en mérite aucune. Le canon du poste est multiplicatif — il se relit à chaque session." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "meta" ;
+    aspace:tag "regle" ;
+    aspace:tag "ecriture" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Règle de multiplicativité — plus l'artefact compose, plus on ralentit" .
+
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat>
+    a aspace:Concept ;
+    aspace:bundle "autonomie-agents" ;
+    aspace:fichier "60_Implementation_Méthodologiques//autonomie-agents//agent-relecteur-mandat.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Agent relecteur — mandat unique, contexte vierge" ;
+    dcterms:description "Chantier 4 du passage 1 → 2 : un agent neuf qui n'a pas écrit le code, avec un mandat unique — trouver ce qui casse. Pas un copiste qui valide, pas un professeur qui note, un testeur qui signale." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "autonomie" ;
+    aspace:tag "relecture" ;
+    aspace:tag "revue" ;
+    aspace:tag "separation" ;
+    aspace:tag "conflit" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/echelle-autonomie-agents.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Agent relecteur — mandat unique, contexte vierge" .
+
+<urn:aspace:concept:autonomie-agents:bacs-a-sable-worktree>
+    a aspace:Concept ;
+    aspace:bundle "autonomie-agents" ;
+    aspace:fichier "60_Implementation_Méthodologiques//autonomie-agents//bacs-a-sable-worktree.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Bacs à sable — ce que git worktree changerait, et ce qu'il coûterait" ;
+    dcterms:description "Chantier 3 du passage 1 → 2 : remplacer la discipline du brief par un cloisonnement d'outil. Une copie de travail isolée par chantier, branches parallèles sans collision." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "autonomie" ;
+    aspace:tag "bac-a-sable" ;
+    aspace:tag "worktree" ;
+    aspace:tag "cloisonnement" ;
+    aspace:tag "git" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/echelle-autonomie-agents.md" ;
+    dcterms:source "C:/Users/CLAUDE.md" ;
+    rdfs:label "Bacs à sable — ce que git worktree changerait, et ce qu'il coûterait" .
+
+<urn:aspace:concept:autonomie-agents:examen-prealable>
+    a aspace:Concept ;
+    aspace:bundle "autonomie-agents" ;
+    aspace:fichier "60_Implementation_Méthodologiques//autonomie-agents//examen-prealable.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "L'examen préalable — une commande unique qui prouve avant de rendre" ;
+    dcterms:description "Chantier 1 du passage 1 → 2 : une commande unique qui enchaîne vitest, deux tsc et oxlint, et que l'agent doit lancer avant de présenter un livrable — pas après, pas à la demande." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "autonomie" ;
+    aspace:tag "examen" ;
+    aspace:tag "verification" ;
+    aspace:tag "linter" ;
+    aspace:tag "tests" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/echelle-autonomie-agents.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "L'examen préalable — une commande unique qui prouve avant de rendre" .
+
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons>
+    a aspace:Concept ;
+    aspace:bundle "autonomie-agents" ;
+    aspace:fichier "60_Implementation_Méthodologiques//autonomie-agents//goodhart-compteur-jetons.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Goodhart et le compteur de jetons — la jauge situe, elle ne note pas" ;
+    dcterms:description "Anti-piège Goodhart appliqué à la doctrine d'économie de quota : une mesure qui devient un objectif cesse d'être une bonne mesure. Les jetons sont l'entrée du retour sur investissement, pas la sortie." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "autonomie" ;
+    aspace:tag "goodhart" ;
+    aspace:tag "jetons" ;
+    aspace:tag "mesure" ;
+    aspace:tag "quota" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/echelle-autonomie-agents.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Goodhart et le compteur de jetons — la jauge situe, elle ne note pas" .
+
+<urn:aspace:concept:autonomie-agents:tension-qualite-quantite>
+    a aspace:Concept ;
+    aspace:bundle "autonomie-agents" ;
+    aspace:fichier "60_Implementation_Méthodologiques//autonomie-agents//tension-qualite-quantite.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Tension qualité-quantité — quand lisser serait trahir" ;
+    dcterms:description "Les deux vidéos ne tirent pas dans le même sens : l'une optimise la qualité d'une réponse, l'autre la quantité de travail délégué. Ce concept dit comment on tranche, cas par cas, sans nier la tension." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "autonomie" ;
+    aspace:tag "prompt-systeme" ;
+    aspace:tag "tension" ;
+    aspace:tag "qualite" ;
+    aspace:tag "quantite" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-fichiers" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/indydevdan-prompt-systeme.md" ;
+    dcterms:source "60_Implementation_Méthodologiques/_sources/echelle-autonomie-agents.md" ;
+    dcterms:source "60_Implementation_Méthodologiques/index.md" ;
+    rdfs:label "Tension qualité-quantité — quand lisser serait trahir" .

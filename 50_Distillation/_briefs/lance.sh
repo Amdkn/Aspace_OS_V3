@@ -28,13 +28,13 @@
 # introuvable".
 
 set -u
-QUOI="${1:?usage: lance.sh areas|projets|archives|ressources}"
+QUOI="${1:?usage: lance.sh areas|projets|archives|ressources|ontologie}"
 
 V3="C:/Users/amado/ASpace_OS_V3"
 BRIEFS="$V3/50_Distillation/_briefs"
 
 case "$QUOI" in
-  areas|projets|archives|ressources) ;;
+  areas|projets|archives|ressources|ontologie) ;;
   *) echo "inconnu : $QUOI" >&2; exit 2 ;;
 esac
 
@@ -49,6 +49,13 @@ done
 # Le substrat doit exister AVANT de lancer l'agent : son brief lui dit de
 # commencer par la. Le lancer sans substrat, c'est le condamner a lire les
 # fichiers dans l'ordre alphabetique.
+if [ "$QUOI" = "ontologie" ]; then
+  # Cette passe ne travaille pas sur un seau : elle travaille sur le graphe
+  # deja genere. Le refuser s'il est absent evite un agent qui brode.
+  TTL="$V3/50_Distillation/ontologie/aspace-instances.ttl"
+  [ -s "$TTL" ] || { echo "graphe absent ou vide : $TTL" >&2; exit 4; }
+  SUBSTRAT="$TTL"
+else
 case "$QUOI" in
   areas)      SUB="02_Areas_Spock" ;;
   projets)    SUB="01_Projects_Picard" ;;
@@ -57,6 +64,7 @@ case "$QUOI" in
 esac
 SUBSTRAT="$V3/50_Distillation/_substrat/${SUB}.jsonl"
 [ -s "$SUBSTRAT" ] || { echo "substrat absent ou vide : $SUBSTRAT" >&2; exit 4; }
+fi
 
 export ANTHROPIC_BASE_URL="https://api.minimax.io/anthropic"
 export ANTHROPIC_API_KEY="$(python -c "import json;print(json.load(open('C:/Users/amado/.claude/settings.json',encoding='utf-8'))['env']['ANTHROPIC_API_KEY'])")"
