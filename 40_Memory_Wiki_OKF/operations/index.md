@@ -16,5 +16,4 @@ qu'un `exit 0` trompeur passe pour une réussite.
 
 # Files
 
-*Aucune page pour l'instant.* Le sous-bundle existe pour que le premier
-playbook ait un endroit où aller.
+- [Une 404 de Vercel n'est pas une 404 de l'app](vercel-repli-spa-404.md) - Sans règle de repli dans `vercel.json`, tout chemin profond d'une SPA rend le 404 de la plateforme avant que le code ne s'exécute. C'est ce qui bloquait la connexion Google de Coach OS, après que le `redirect_uri_mismatch` de Google eut été corrigé. Contient le geste de vérification à trois chemins.
