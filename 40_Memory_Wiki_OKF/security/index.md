@@ -16,4 +16,5 @@ l'affirmation, pas de son contexte.
 
 # Files
 
+- [Une policy RLS sans son GRANT ne s'applique jamais](policy-rls-sans-grant.md) - Postgres vérifie le privilège de table avant la policy. Une policy correcte sans GRANT a toutes les apparences d'une configuration valide et faisait échouer le hook JWT de Coach OS en 500, pour Google comme pour le courriel. Contient la requête de diagnostic et la cascade d'annulation de transaction.
 - [Coach OS — un seul vocabulaire de tenant, `org_id uuid`](coach-os-canon-org-id.md) - Deux systèmes d'identifiant coexistaient, slug `text` et `uuid` ; le canon RLS l'emporte. Base et code alignés le 2026-08-17, marques de type pour empêcher la confusion de revenir. Mesure après : 0 colonne `text`, 128 policies, 0 table sans policy.
