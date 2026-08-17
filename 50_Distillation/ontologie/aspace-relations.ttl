@@ -1,0 +1,516 @@
+# Relations typees entre concepts A'Space OS.
+# Genere par scripts/valider_relations.py depuis relations.jsonl.
+# NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+
+<urn:aspace:concept:areas:business-wheel-eight-domains> aspace:instantiates <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# areas:business-wheel-eight-domains --instantiates--> projets:eight-domain-avengers-wheel : Les 8 domaines B2 sont le même canon vu côté area (Areas/Spock) et côté projet (Picard/Avengers) — la roue business est instanciée par le mapping Avengers. [haute]
+<urn:aspace:concept:areas:business-wheel-harmonization-matrix> aspace:refines <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# areas:business-wheel-harmonization-matrix --refines--> projets:b2-business-wheel-harmonization-matrix : Les deux matrices décrivent la même harmonisation 8-domaines ; la version projets est l'affinement opérationnel pour les Summer's Verse. [haute]
+<urn:aspace:concept:areas:fractal-b1b2b3-architecture> aspace:refines <urn:aspace:concept:projets:summers-verse-framework> .
+# areas:fractal-b1b2b3-architecture --refines--> projets:summers-verse-framework : Le fractal B1/B2/B3 au niveau Area (perpétuel) est projeté en Summer's Verse Framework au niveau projet (daté, calibré par mode). [haute]
+<urn:aspace:concept:areas:para-picard-routing-boundary> aspace:appliesTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# areas:para-picard-routing-boundary --appliesTo--> projets:cerritos-gtd-pipeline : Le boundary Jerry → Cerritos → Picard est la doctrine ; la pipeline Ce pipeline en est l'exécution canonique côté projets. [haute]
+<urn:aspace:concept:areas:para-picard-routing-boundary> aspace:appliesTo <urn:aspace:concept:projets:picard-project-pattern> .
+# areas:para-picard-routing-boundary --appliesTo--> projets:picard-project-pattern : Le boundary PARA-Picard est le cadre qui s'applique quand un projet Picard est instancié. [haute]
+<urn:aspace:concept:areas:project-graduation-gates> aspace:refines <urn:aspace:concept:projets:abc-compliance-gate> .
+# areas:project-graduation-gates --refines--> projets:abc-compliance-gate : Le gate Legal B2-G8 d'ABC est un raffinement concret d'un des 8 gates de graduation (Trust/Legal). [haute]
+<urn:aspace:concept:areas:coach-client-onboarding-pathway> aspace:dependsOn <urn:aspace:concept:projets:omk-business-os> .
+# areas:coach-client-onboarding-pathway --dependsOn--> projets:omk-business-os : Le pathway d'onboarding coach-client conduit typiquement vers un projet OMK Business OS comme première exécution. [moyenne]
+<urn:aspace:concept:areas:bibliography-alignment-l1-l2> aspace:refines <urn:aspace:concept:projets:ld01-book-alignment> .
+# areas:bibliography-alignment-l1-l2 --refines--> projets:ld01-book-alignment : L'alignement bibliographique Areas (L1↔L2) est raffiné côté projets par le mapping concret 6 livres → 8 B2 domains. [haute]
+<urn:aspace:concept:areas:ld-router-life-os-bridge> aspace:cites <urn:aspace:concept:ressources:matryoshka-l0-l1-l2> .
+# areas:ld-router-life-os-bridge --cites--> ressources:matryoshka-l0-l1-l2 : The-bridge conductor track cite la Matrioshka L0/L1/L2 comme architecture d'ensemble. [haute]
+<urn:aspace:concept:areas:self-operating-business-doctrine> aspace:refines <urn:aspace:concept:ressources:matryoshka-l0-l1-l2> .
+# areas:self-operating-business-doctrine --refines--> ressources:matryoshka-l0-l1-l2 : La couche B0 (SOB) s'inscrit au sommet de la Matrioshka ; la doctrine Areas raffine la position de B0. [moyenne]
+<urn:aspace:concept:areas:beth-morty-safety-gatekeepers> aspace:refines <urn:aspace:concept:ressources:life-os-six-vaisseaux> .
+# areas:beth-morty-safety-gatekeepers --refines--> ressources:life-os-six-vaisseaux : Beth & Morty sont les capitaines des 6 vaisseaux Life OS ; le concept Areas raffine qui commande quoi. [haute]
+<urn:aspace:concept:areas:jerry-macro-steward> aspace:appliesTo <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# areas:jerry-macro-steward --appliesTo--> projets:cerritos-gtd-pipeline : Le macro steward Jerry applique le pipeline Cerritos/GTD pour faire transiter toute idée opérationnelle. [haute]
+<urn:aspace:concept:areas:wheel-alignment-values-canon> aspace:cites <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# areas:wheel-alignment-values-canon --cites--> ressources:constitution-aspace-v1 : Les 5 valeurs-socle du canon Wheel Alignment citent la Constitution comme cadre de valeurs immuables. [haute]
+<urn:aspace:concept:areas:area-vs-project-classification> aspace:refines <urn:aspace:concept:ressources:second-brain-14-sous-dossiers> .
+# areas:area-vs-project-classification --refines--> ressources:second-brain-14-sous-dossiers : Le critère Area≠Project est raffiné côté ressources par la cartographie des 14 sous-dossiers Geordi vers les 4 buckets PARA. [moyenne]
+<urn:aspace:concept:areas:spock-areas-canon> aspace:pairedWith <urn:aspace:concept:ressources:a3-geordi-resources-officer> .
+# areas:spock-areas-canon --pairedWith--> ressources:a3-geordi-resources-officer : Spock (A3 Areas) et Geordi (A3 Resources) sont les deux officiers A3 du PARA, deux faces d'un même archétype. [haute]
+<urn:aspace:concept:areas:b3-jtbd-packet-grammar> aspace:refines <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# areas:b3-jtbd-packet-grammar --refines--> projets:cerritos-gtd-pipeline : La grammaire JTBD-001 (Area) est raffinée par le pipeline Cerritos (projet) qui standardise la capture/clarification. [moyenne]
+<urn:aspace:concept:areas:four-jerry-fractal> aspace:cites <urn:aspace:concept:ressources:l2-fractal-b1-b2-b3> .
+# areas:four-jerry-fractal --cites--> ressources:l2-fractal-b1-b2-b3 : Les quatre Jerry citent le fractal B1/B2/B3 comme armature verticale partagée. [haute]
+<urn:aspace:concept:areas:business-wheel-eight-domains> aspace:governs <urn:aspace:concept:ressources:l2-8-domaines-roster-canon> .
+# areas:business-wheel-eight-domains --governs--> ressources:l2-8-domaines-roster-canon : La wheel 8-domaines est régie par le roster canon L2 (ADR-CANON-001, Notion prime). [haute]
+<urn:aspace:concept:areas:fractal-b1b2b3-architecture> aspace:refines <urn:aspace:concept:ressources:l2-fractal-b1-b2-b3> .
+# areas:fractal-b1b2b3-architecture --refines--> ressources:l2-fractal-b1-b2-b3 : Le fractal B1/B2/B3 Areas est raffiné en fractal L2 Business spécifique dans ressources. [haute]
+<urn:aspace:concept:areas:jerry-nexus-stability-doctrine> aspace:cites <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# areas:jerry-nexus-stability-doctrine --cites--> ressources:sovereignty-3-niveaux : La stabilité Nexus (wealth tiers, coverage ratio) cite la souveraineté 3-niveaux comme cadre. [moyenne]
+<urn:aspace:concept:areas:jerry-bio-hard-safety-doctrine> aspace:cites <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# areas:jerry-bio-hard-safety-doctrine --cites--> ressources:sovereignty-3-niveaux : La hard safety Beth HALT cite la souveraineté comme raison d'être des bornes infranchissables. [moyenne]
+<urn:aspace:concept:areas:project-graduation-gates> aspace:partOf <urn:aspace:concept:projets:picard-project-pattern> .
+# areas:project-graduation-gates --partOf--> projets:picard-project-pattern : Les 8 graduation gates font partie du Picard Project Pattern (Gate 0 à Gate 7). [haute]
+<urn:aspace:concept:areas:b2-meso-coordination-dc-council> aspace:refines <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# areas:b2-meso-coordination-dc-council --refines--> projets:cerritos-gtd-pipeline : Le DC Direction Council B2 est raffiné côté projets par le pipeline Cerritos qui implémente la coordination. [moyenne]
+<urn:aspace:concept:areas:b3-jtbd-packet-grammar> aspace:partOf <urn:aspace:concept:projets:picard-project-pattern> .
+# areas:b3-jtbd-packet-grammar --partOf--> projets:picard-project-pattern : Les packets JTBD-001 font partie du Picard Project Pattern comme grammaire canonique d'entrée projet. [haute]
+<urn:aspace:concept:areas:wheel-alignment-values-canon> aspace:refines <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# areas:wheel-alignment-values-canon --refines--> ressources:constitution-aspace-v1 : Le canon de 5 valeurs Areas raffine la Constitution en valeurs opérationnelles. [moyenne]
+<urn:aspace:concept:ressources:adr-immutability-ricks-law> aspace:pairedWith <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# ressources:adr-immutability-ricks-law --pairedWith--> archives:adr-sober-002-anti-paperclip-doctrine : Rick's Law (ADR immuable) et ADR-SOBER-002 (anti-paperclip) sont des ADRs appariés, doctrines-sœurs. [haute]
+<urn:aspace:concept:ressources:adr-immutability-ricks-law> aspace:pairedWith <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# ressources:adr-immutability-ricks-law --pairedWith--> archives:adr-meta-001-anti-paresse-verify-before-assert : Rick's Law et ADR-META-001 sont deux faces (immutabilité formelle vs vérification factuelle). [haute]
+<urn:aspace:concept:ressources:adr-immutability-ricks-law> aspace:pairedWith <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# ressources:adr-immutability-ricks-law --pairedWith--> archives:archive-as-source-of-truth-decision : Rick's Law et la décision source-of-truth D-2026-08-01-#1 sont des ADRs appariés. [haute]
+<urn:aspace:concept:ressources:a3-geordi-resources-officer> aspace:pairedWith <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# ressources:a3-geordi-resources-officer --pairedWith--> archives:data-role-a3-archives-officer : Geordi (A3 Resources) et Data (A3 Archives) sont les deux officiers A3 PARA, appariés canoniquement. [haute]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:cites <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# ressources:matryoshka-l0-l1-l2 --cites--> archives:archive-v3-structure-snapshot-2026-08-02 : Le versement V3 du 2026-08-02 cite la Matrioshka : V3 incarne L0 Tech OS. [haute]
+<urn:aspace:concept:ressources:sovereignty-3-niveaux> aspace:appliesTo <urn:aspace:concept:archives:archive-published-secrets-warning> .
+# ressources:sovereignty-3-niveaux --appliesTo--> archives:archive-published-secrets-warning : La souveraineté 3-niveaux (infra/code/mémoire) est appliquée à la faille secrets publiés — elle est violée. [haute]
+<urn:aspace:concept:ressources:sovereignty-3-niveaux> aspace:supersedes <urn:aspace:concept:archives:openclaw-body-legacy> .
+# ressources:sovereignty-3-niveaux --supersedes--> archives:openclaw-body-legacy : La souveraineté 3-niveaux remplace l'avant-M3 OpenClaw body legacy comme doctrine opérationnelle. [haute]
+<urn:aspace:concept:ressources:ntfs-junction-aliasing> aspace:appliesTo <urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01> .
+# ressources:ntfs-junction-aliasing --appliesTo--> archives:ntfs-junctions-inventory-2026-08-01 : La doctrine ADR-FS-001 (aliasing) est appliquée par l'inventaire mesuré du 2026-08-01. [haute]
+<urn:aspace:concept:ressources:geordi-junctions-map-159> aspace:dependsOn <urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01> .
+# ressources:geordi-junctions-map-159 --dependsOn--> archives:ntfs-junctions-inventory-2026-08-01 : La cartographie des 159 jonctions dépend de l'inventaire formel comme entrée mesurée. [haute]
+<urn:aspace:concept:ressources:sdd-system-design-documents> aspace:instantiates <urn:aspace:concept:archives:sdd-sovereign-constitution-v05> .
+# ressources:sdd-system-design-documents --instantiates--> archives:sdd-sovereign-constitution-v05 : SDD V0.5 Sovereign Constitution est l'instanciation concrète du canon SDD dans les archives legacy. [haute]
+<urn:aspace:concept:ressources:sdd-system-design-documents> aspace:dependsOn <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# ressources:sdd-system-design-documents --dependsOn--> archives:legacy-lifeos-app-specs-evolution : Le canon SDD s'appuie sur les specs legacy V0.2→V0.6 comme matériel source. [haute]
+<urn:aspace:concept:ressources:notebooklm-bridge-dbsc> aspace:appliesTo <urn:aspace:concept:projets:picard-project-pattern> .
+# ressources:notebooklm-bridge-dbsc --appliesTo--> projets:picard-project-pattern : Le bridge NotebookLM DBSC (validé Antigravity 2026-05-20) s'applique au pattern Picard dont RILCOT est l'origine. [moyenne]
+<urn:aspace:concept:ressources:tags-registres-owner-shelf> aspace:appliesTo <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# ressources:tags-registres-owner-shelf --appliesTo--> archives:data-role-a3-archives-officer : Les registres de tags Owner/Shelf s'appliquent à tout document Geordi, dont les archives data-role. [haute]
+<urn:aspace:concept:ressources:wiki-schema-llm-wiki> aspace:refines <urn:aspace:concept:archives:graphify-out-pipeline-partial-run> .
+# ressources:wiki-schema-llm-wiki --refines--> archives:graphify-out-pipeline-partial-run : Le schema LLM Wiki raffine la connaissance des sorties graphify (graphify-out est un output du schema). [haute]
+<urn:aspace:concept:ressources:wiki-schema-llm-wiki> aspace:refines <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> .
+# ressources:wiki-schema-llm-wiki --refines--> archives:graphify-burst-chunk-duplication-pattern : Le schema wiki raffine la compréhension du pattern de duplication graphify-burst (wiki doit le mitiger). [haute]
+<urn:aspace:concept:ressources:loi-du-harvest-wiki> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# ressources:loi-du-harvest-wiki --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : La loi du harvest s'applique au snapshot V3 : aucun wiki evergreen ne devrait être créé depuis cet artefact sans sister-shipped. [haute]
+<urn:aspace:concept:ressources:aspace-governance-dashboard> aspace:appliesTo <urn:aspace:concept:archives:archive-published-secrets-warning> .
+# ressources:aspace-governance-dashboard --appliesTo--> archives:archive-published-secrets-warning : Le dashboard de gouvernance (ADR-INFRA-001) s'applique comme garde-fou à la faille secrets publiés. [haute]
+<urn:aspace:concept:ressources:rot-strates-s0-s4> aspace:appliesTo <urn:aspace:concept:archives:memory-compact-trash-snapshots> .
+# ressources:rot-strates-s0-s4 --appliesTo--> archives:memory-compact-trash-snapshots : La politique de rot S0→S4 s'applique aux compacts mémoire successifs (4 trash snapshots juillet 2026). [haute]
+<urn:aspace:concept:ressources:supabase-rls-multi-tenant> aspace:appliesTo <urn:aspace:concept:archives:archive-published-secrets-warning> .
+# ressources:supabase-rls-multi-tenant --appliesTo--> archives:archive-published-secrets-warning : L'architecture Supabase RLS multi-tenant est le garde-fou qui aurait dû empêcher la fuite de secrets. [haute]
+<urn:aspace:concept:ressources:blueprints-canon-tripartite> aspace:dependsOn <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# ressources:blueprints-canon-tripartite --dependsOn--> archives:legacy-lifeos-app-specs-evolution : Le canon Tripartite (ADR-FWK-021) s'appuie sur les specs legacy comme historique des trois canons. [haute]
+<urn:aspace:concept:ressources:l2-8-domaines-roster-canon> aspace:governs <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# ressources:l2-8-domaines-roster-canon --governs--> projets:eight-domain-avengers-wheel : Le roster canon 8-domaines L2 (ADR-CANON-001) gouverne le mapping Avengers des domaines. [haute]
+<urn:aspace:concept:ressources:l2-8-domaines-roster-canon> aspace:governs <urn:aspace:concept:projets:fifty-three-b3-agent-roster> .
+# ressources:l2-8-domaines-roster-canon --governs--> projets:fifty-three-b3-agent-roster : Le roster canon 8-domaines gouverne le roster 53 agents B3 (chaque squad est un domaine). [haute]
+<urn:aspace:concept:ressources:l2-8-domaines-roster-canon> aspace:governs <urn:aspace:concept:areas:business-wheel-eight-domains> .
+# ressources:l2-8-domaines-roster-canon --governs--> areas:business-wheel-eight-domains : Le roster canon L2 gouverne la wheel business Areas (les 8 domaines sont alignés). [haute]
+<urn:aspace:concept:ressources:l2-fractal-b1-b2-b3> aspace:refines <urn:aspace:concept:areas:fractal-b1b2b3-architecture> .
+# ressources:l2-fractal-b1-b2-b3 --refines--> areas:fractal-b1b2b3-architecture : Le fractal L2 (Business) raffine le fractal Areas B1/B2/B3 (transversal L1↔L2). [haute]
+<urn:aspace:concept:ressources:l2-fractal-b1-b2-b3> aspace:refines <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# ressources:l2-fractal-b1-b2-b3 --refines--> projets:eight-domain-avengers-wheel : Le fractal L2 B1→B2→B3 est raffiné en wheel Avengers quand projeté au niveau squad. [haute]
+<urn:aspace:concept:ressources:l2-fractal-b1-b2-b3> aspace:refines <urn:aspace:concept:areas:business-wheel-eight-domains> .
+# ressources:l2-fractal-b1-b2-b3 --refines--> areas:business-wheel-eight-domains : Le fractal L2 est raffiné par la wheel Areas qui assigne un domaine B2 par cellule. [haute]
+<urn:aspace:concept:ressources:life-os-six-vaisseaux> aspace:refines <urn:aspace:concept:areas:beth-morty-safety-gatekeepers> .
+# ressources:life-os-six-vaisseaux --refines--> areas:beth-morty-safety-gatekeepers : Les 6 vaisseaux L1 sont raffinés par Beth & Morty comme capitaines safety gatekeepers. [haute]
+<urn:aspace:concept:ressources:life-os-six-vaisseaux> aspace:cites <urn:aspace:concept:areas:ld-router-life-os-bridge> .
+# ressources:life-os-six-vaisseaux --cites--> areas:ld-router-life-os-bridge : Les 6 vaisseaux L1 citent the-bridge comme conducteur track L1↔L2. [haute]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:cites <urn:aspace:concept:areas:ld-router-life-os-bridge> .
+# ressources:matryoshka-l0-l1-l2 --cites--> areas:ld-router-life-os-bridge : La Matrioshka L0/L1/L2 est citée par the-bridge conductor track. [haute]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:refines <urn:aspace:concept:areas:self-operating-business-doctrine> .
+# ressources:matryoshka-l0-l1-l2 --refines--> areas:self-operating-business-doctrine : La Matrioshka est raffinée par la doctrine B0 (SOB) qui se place au-dessus de L2. [haute]
+<urn:aspace:concept:ressources:shadow-l1-l2-homologie> aspace:cites <urn:aspace:concept:areas:four-jerry-fractal> .
+# ressources:shadow-l1-l2-homologie --cites--> areas:four-jerry-fractal : L'homologie 4-méthodes cite le fractal des 4 Jerry comme variante L2. [moyenne]
+<urn:aspace:concept:ressources:shadow-l1-l2-homologie> aspace:cites <urn:aspace:concept:areas:jerry-macro-steward> .
+# ressources:shadow-l1-l2-homologie --cites--> areas:jerry-macro-steward : L'homologie cite le macro steward Jerry comme figure L2 stable. [moyenne]
+<urn:aspace:concept:ressources:compounding-knowledge-wiki> aspace:refines <urn:aspace:concept:projets:graphify-out-outputs> .
+# ressources:compounding-knowledge-wiki --refines--> projets:graphify-out-outputs : Le wiki compounding raffine la compréhension des sorties graphify (artefacts générés à mitiger). [haute]
+<urn:aspace:concept:ressources:compounding-knowledge-wiki> aspace:refines <urn:aspace:concept:archives:graphify-out-pipeline-partial-run> .
+# ressources:compounding-knowledge-wiki --refines--> archives:graphify-out-pipeline-partial-run : Le wiki compounding raffine le run partiel Graphify (1006 nœuds, 14/25 chunks). [haute]
+<urn:aspace:concept:ressources:compounding-knowledge-wiki> aspace:refines <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> .
+# ressources:compounding-knowledge-wiki --refines--> archives:graphify-burst-chunk-duplication-pattern : Le wiki compounding raffine le pattern duplication graphify-burst (mitigation anti-double). [haute]
+<urn:aspace:concept:ressources:agents-md-identity-canon> aspace:refines <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# ressources:agents-md-identity-canon --refines--> archives:archive-as-source-of-truth-decision : AGENTS.md raffine la décision source-of-truth en nommant Geordi comme racine KB canonique. [haute]
+<urn:aspace:concept:ressources:aspace-governance-dashboard> aspace:refines <urn:aspace:concept:projets:omk-business-os> .
+# ressources:aspace-governance-dashboard --refines--> projets:omk-business-os : Le dashboard governance raffine la vision d'OMK comme SaaS multi-tenant (hosting/VPS Hostinger). [moyenne]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# ressources:constitution-aspace-v1 --governs--> archives:archive-as-source-of-truth-decision : La Constitution A'SPACE gouverne la décision D-2026-08-01-#1 (source-of-truth Geordi). [haute]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# ressources:constitution-aspace-v1 --governs--> archives:archive-v3-structure-snapshot-2026-08-02 : La Constitution gouverne l'événement snapshot V3 (post-2026-07-12). [haute]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:projets:summers-verse-framework> .
+# ressources:constitution-aspace-v1 --governs--> projets:summers-verse-framework : La Constitution régit le framework Summer's Verse (B1/B2/B3) qui applique ses articles. [moyenne]
+<urn:aspace:concept:ressources:rot-strates-s0-s4> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# ressources:rot-strates-s0-s4 --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : La politique de rot S0→S4 s'applique au snapshot V3 (qui passe par les strates S2/S3/S4). [moyenne]
+<urn:aspace:concept:ressources:wiki-routing-by-question> aspace:refines <urn:aspace:concept:archives:graphify-out-pipeline-partial-run> .
+# ressources:wiki-routing-by-question --refines--> archives:graphify-out-pipeline-partial-run : Le routage wiki raffine la lecture des sorties graphify (sortie = artefact à ne pas router). [haute]
+<urn:aspace:concept:ressources:wiki-routing-by-question> aspace:refines <urn:aspace:concept:projets:graphify-out-outputs> .
+# ressources:wiki-routing-by-question --refines--> projets:graphify-out-outputs : Le routage wiki raffine la classification des 1208 graphify-out (sous-dossier à ne pas router comme source). [haute]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# ressources:constitution-aspace-v1 --governs--> archives:adr-sober-002-anti-paperclip-doctrine : La Constitution gouverne l'ADR-SOBER-002 (les 8 articles incluent le respect de l'historique). [haute]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# ressources:constitution-aspace-v1 --governs--> archives:adr-meta-001-anti-paresse-verify-before-assert : La Constitution gouverne ADR-META-001 (la vérification est un impératif constitutionnel). [haute]
+<urn:aspace:concept:ressources:constitution-aspace-v1> aspace:governs <urn:aspace:concept:areas:wheel-alignment-values-canon> .
+# ressources:constitution-aspace-v1 --governs--> areas:wheel-alignment-values-canon : La Constitution régit le canon de 5 valeurs Areas (les valeurs-socle sont constitutionnelles). [haute]
+<urn:aspace:concept:ressources:adr-immutability-ricks-law> aspace:governs <urn:aspace:concept:projets:summers-verse-framework> .
+# ressources:adr-immutability-ricks-law --governs--> projets:summers-verse-framework : Rick's Law régit Summer's Verse : un ADR de graduation est immuable. [moyenne]
+<urn:aspace:concept:ressources:wiki-schema-llm-wiki> aspace:refines <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# ressources:wiki-schema-llm-wiki --refines--> archives:legacy-lifeos-app-specs-evolution : Le schema LLM Wiki raffine la lecture des legacy specs (les traiter comme entrées wiki). [moyenne]
+<urn:aspace:concept:ressources:wiki-schema-llm-wiki> aspace:refines <urn:aspace:concept:projets:graphify-out-outputs> .
+# ressources:wiki-schema-llm-wiki --refines--> projets:graphify-out-outputs : Le schema wiki raffine les graphify-out outputs (les filtrer comme artefacts non-source). [haute]
+<urn:aspace:concept:ressources:sovereignty-3-niveaux> aspace:refines <urn:aspace:concept:projets:omk-business-os> .
+# ressources:sovereignty-3-niveaux --refines--> projets:omk-business-os : La souveraineté 3-niveaux raffine la posture d'OMK (Supabase sovereign, ADR-immutables). [moyenne]
+<urn:aspace:concept:ressources:sovereignty-3-niveaux> aspace:refines <urn:aspace:concept:projets:picard-project-pattern> .
+# ressources:sovereignty-3-niveaux --refines--> projets:picard-project-pattern : La souveraineté raffine le pattern Picard (audit-driven = code review immuable). [moyenne]
+<urn:aspace:concept:ressources:tags-registres-owner-shelf> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# ressources:tags-registres-owner-shelf --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : Les tags Owner/Shelf s'appliquent au snapshot V3 (chaque fichier tagué). [haute]
+<urn:aspace:concept:ressources:tags-registres-owner-shelf> aspace:appliesTo <urn:aspace:concept:projets:graphify-out-outputs> .
+# ressources:tags-registres-owner-shelf --appliesTo--> projets:graphify-out-outputs : Les tags Owner/Shelf s'appliquent aux graphify-out outputs (marquage pour ROT). [haute]
+<urn:aspace:concept:ressources:blueprints-canon-tripartite> aspace:cites <urn:aspace:concept:projets:summers-verse-framework> .
+# ressources:blueprints-canon-tripartite --cites--> projets:summers-verse-framework : Le canon Tripartite blueprints cite Summer's Verse (Blueprints code = artefacts projet). [moyenne]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:cites <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# ressources:matryoshka-l0-l1-l2 --cites--> projets:eight-domain-avengers-wheel : La Matrioshka cite la wheel Avengers comme projection L2. [moyenne]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:cites <urn:aspace:concept:projets:omk-business-os> .
+# ressources:matryoshka-l0-l1-l2 --cites--> projets:omk-business-os : La Matrioshka cite OMK comme incarnation L2 SaaS (Triptyque V4 = L2). [moyenne]
+<urn:aspace:concept:ressources:matryoshka-l0-l1-l2> aspace:cites <urn:aspace:concept:projets:fifty-three-b3-agent-roster> .
+# ressources:matryoshka-l0-l1-l2 --cites--> projets:fifty-three-b3-agent-roster : La Matrioshka cite le roster 53 agents B3 comme exécution L2. [moyenne]
+<urn:aspace:concept:ressources:life-os-six-vaisseaux> aspace:cites <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# ressources:life-os-six-vaisseaux --cites--> projets:cerritos-gtd-pipeline : Les 6 vaisseaux L1 citent Cerritos comme USS Ikigai/PARA/GTD. [moyenne]
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles> aspace:refines <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# prompt-systeme:bornes-operationnelles --refines--> archives:adr-sober-002-anti-paperclip-doctrine : Les bornes opérationnelles raffinent l'ADR anti-paperclip (le canon born les interdits dispersés). [haute]
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles> aspace:refines <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# prompt-systeme:bornes-operationnelles --refines--> archives:adr-meta-001-anti-paresse-verify-before-assert : Les bornes raffinent l'ADR anti-paresse (transformer en liste vérifiable). [haute]
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles> aspace:refines <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# prompt-systeme:bornes-operationnelles --refines--> ressources:constitution-aspace-v1 : Les bornes raffinent la Constitution en liste opérationnelle de périmètre. [haute]
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles> aspace:appliesTo <urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> .
+# prompt-systeme:bornes-operationnelles --appliesTo--> autonomie-agents:goodhart-compteur-jetons : Les bornes opérationnelles s'appliquent à l'anti-piège Goodhart (la borne est sur le périmètre, pas sur les jetons). [haute]
+<urn:aspace:concept:prompt-systeme:purpose-et-pourquoi> aspace:cites <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# prompt-systeme:purpose-et-pourquoi --cites--> archives:adr-meta-001-anti-paresse-verify-before-assert : La section Purpose cite l'ADR anti-paresse comme exemple canon de relier règle au piège. [haute]
+<urn:aspace:concept:prompt-systeme:purpose-et-pourquoi> aspace:cites <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# prompt-systeme:purpose-et-pourquoi --cites--> ressources:sovereignty-3-niveaux : Le purpose cite la souveraineté comme exemple de doctrine qui survit à sa raison d'être. [moyenne]
+<urn:aspace:concept:prompt-systeme:purpose-et-pourquoi> aspace:cites <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# prompt-systeme:purpose-et-pourquoi --cites--> archives:adr-sober-002-anti-paperclip-doctrine : Le purpose cite l'ADR anti-paperclip (la perte de A0_Memory du 2026-03-05). [haute]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:loi-du-harvest-wiki> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:loi-du-harvest-wiki : La règle de multiplicativité gouverne la loi du harvest : un wiki page composé mérite du soin. [haute]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:okf-v0-1-format-standard> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:okf-v0-1-format-standard : La multiplicativité gouverne l'OKF (un bundle lu mille fois mérite une heure d'écriture). [haute]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:constitution-aspace-v1 : La règle de multiplicativité gouverne la Constitution (relue à chaque session). [haute]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:sovereignty-3-niveaux : La multiplicativité gouverne la souveraineté 3-niveaux (canon nivelant). [haute]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:adr-immutability-ricks-law> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:adr-immutability-ricks-law : La multiplicativité régit Rick's Law (un ADR créé une fois, jamais réécrit). [haute]
+<urn:aspace:concept:prompt-systeme:exemples-distillation-contexte> aspace:appliesTo <urn:aspace:concept:ressources:wiki-schema-llm-wiki> .
+# prompt-systeme:exemples-distillation-contexte --appliesTo--> ressources:wiki-schema-llm-wiki : Les exemples few-shot s'appliquent au schema wiki (pairs positif/négatif dans wiki/raw/). [haute]
+<urn:aspace:concept:prompt-systeme:exemples-distillation-contexte> aspace:appliesTo <urn:aspace:concept:ressources:loi-du-harvest-wiki> .
+# prompt-systeme:exemples-distillation-contexte --appliesTo--> ressources:loi-du-harvest-wiki : Les exemples s'appliquent à la loi du harvest (les paires montrent ce qu'est un artefact shippé). [haute]
+<urn:aspace:concept:prompt-systeme:exemples-distillation-contexte> aspace:cites <urn:aspace:concept:ressources:compounding-knowledge-wiki> .
+# prompt-systeme:exemples-distillation-contexte --cites--> ressources:compounding-knowledge-wiki : Les exemples citent le wiki compounding (les paires montrent l'effet composé). [moyenne]
+<urn:aspace:concept:prompt-systeme:points-de-reference> aspace:refines <urn:aspace:concept:ressources:tags-registres-owner-shelf> .
+# prompt-systeme:points-de-reference --refines--> ressources:tags-registres-owner-shelf : Les codes D1…Dn raffinent les registres Owner/Shelf (codes courts vs tags hiérarchiques). [haute]
+<urn:aspace:concept:prompt-systeme:alias> aspace:refines <urn:aspace:concept:ressources:tags-registres-owner-shelf> .
+# prompt-systeme:alias --refines--> ressources:tags-registres-owner-shelf : Les alias raffinent les registres de tags (raccourcis nommés comme s'ils étaient écrits). [haute]
+<urn:aspace:concept:prompt-systeme:alias> aspace:refines <urn:aspace:concept:ressources:compounding-knowledge-wiki> .
+# prompt-systeme:alias --refines--> ressources:compounding-knowledge-wiki : Les alias raffinent le wiki compounding (le naming canonique alimente la valeur composée). [moyenne]
+<urn:aspace:concept:prompt-systeme:patterns-positifs-negatifs> aspace:refines <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# prompt-systeme:patterns-positifs-negatifs --refines--> ressources:constitution-aspace-v1 : Les patterns positifs/négatifs raffinent la Constitution en liste de tics à éviter. [moyenne]
+<urn:aspace:concept:prompt-systeme:patterns-positifs-negatifs> aspace:cites <urn:aspace:concept:ressources:wiki-schema-llm-wiki> .
+# prompt-systeme:patterns-positifs-negatifs --cites--> ressources:wiki-schema-llm-wiki : Les patterns citent le schema wiki (le format wiki = pattern de communication canon). [moyenne]
+<urn:aspace:concept:prompt-systeme:bornes-operationnelles> aspace:refines <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# prompt-systeme:bornes-operationnelles --refines--> ressources:sovereignty-3-niveaux : Les bornes raffinent la souveraineté en liste de ce qu'on ne touche pas. [moyenne]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:ressources:wiki-routing-by-question> .
+# prompt-systeme:regle-multiplicativite --governs--> ressources:wiki-routing-by-question : La règle de multiplicativité régit l'algorithme de routage (6 branches testées, patchées). [moyenne]
+<urn:aspace:concept:prompt-systeme:regle-multiplicativite> aspace:governs <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# prompt-systeme:regle-multiplicativite --governs--> archives:adr-meta-001-anti-paresse-verify-before-assert : La multiplicativité régit l'ADR anti-paresse (le vérificateur est un artefact multiplicatif). [moyenne]
+<urn:aspace:concept:prompt-systeme:purpose-et-pourquoi> aspace:appliesTo <urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> .
+# prompt-systeme:purpose-et-pourquoi --appliesTo--> autonomie-agents:goodhart-compteur-jetons : Le purpose s'applique au piège Goodhart : derrière chaque mesure, son piège qui l'a rendue nécessaire. [haute]
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat> aspace:appliesTo <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# autonomie-agents:agent-relecteur-mandat --appliesTo--> archives:adr-meta-001-anti-paresse-verify-before-assert : L'agent relecteur applique l'ADR anti-paresse (mandat unique = vérifier avant d'affirmer). [haute]
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat> aspace:pairedWith <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# autonomie-agents:agent-relecteur-mandat --pairedWith--> archives:data-role-a3-archives-officer : L'agent relecteur et l'officier Data sont appariés : tous deux relecteurs avec mandat vierge. [haute]
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat> aspace:pairedWith <urn:aspace:concept:ressources:a3-geordi-resources-officer> .
+# autonomie-agents:agent-relecteur-mandat --pairedWith--> ressources:a3-geordi-resources-officer : L'agent relecteur et l'officier Geordi sont appariés (mandat A3 = relecture de connaissance). [haute]
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat> aspace:refines <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# autonomie-agents:agent-relecteur-mandat --refines--> projets:cerritos-gtd-pipeline : L'agent relecteur raffine le pipeline Cerritos : la relecture = une étape Boimler (clarify) renforcée. [moyenne]
+<urn:aspace:concept:autonomie-agents:examen-prealable> aspace:appliesTo <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# autonomie-agents:examen-prealable --appliesTo--> archives:adr-meta-001-anti-paresse-verify-before-assert : L'examen préalable applique l'ADR anti-paresse (tester avant de rendre, pas après). [haute]
+<urn:aspace:concept:autonomie-agents:examen-prealable> aspace:appliesTo <urn:aspace:concept:ressources:okf-v0-1-format-standard> .
+# autonomie-agents:examen-prealable --appliesTo--> ressources:okf-v0-1-format-standard : L'examen préalable applique l'OKF (un bundle est jugé par son frontmatter — la commande vérifie). [haute]
+<urn:aspace:concept:autonomie-agents:examen-prealable> aspace:refines <urn:aspace:concept:ressources:notebooklm-bridge-dbsc> .
+# autonomie-agents:examen-prealable --refines--> ressources:notebooklm-bridge-dbsc : L'examen préalable raffine le bridge NotebookLM (DBSC check avant accès). [moyenne]
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> aspace:cites <urn:aspace:concept:ressources:constitution-aspace-v1> .
+# autonomie-agents:goodhart-compteur-jetons --cites--> ressources:constitution-aspace-v1 : L'anti-Goodhart cite la Constitution (la mesure n'est pas l'objectif). [haute]
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> aspace:cites <urn:aspace:concept:ressources:sovereignty-3-niveaux> .
+# autonomie-agents:goodhart-compteur-jetons --cites--> ressources:sovereignty-3-niveaux : L'anti-Goodhart cite la souveraineté (la souveraineté ne se mesure pas en jetons). [haute]
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> aspace:appliesTo <urn:aspace:concept:ressources:rot-strates-s0-s4> .
+# autonomie-agents:goodhart-compteur-jetons --appliesTo--> ressources:rot-strates-s0-s4 : L'anti-Goodhart s'applique au rot : la mesure S0→S4 situe, elle ne note pas. [haute]
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> aspace:cites <urn:aspace:concept:ressources:adr-immutability-ricks-law> .
+# autonomie-agents:goodhart-compteur-jetons --cites--> ressources:adr-immutability-ricks-law : L'anti-Goodhart cite Rick's Law (un ADR n'est pas évalué sur sa fréquence de modification). [moyenne]
+<urn:aspace:concept:autonomie-agents:tension-qualite-quantite> aspace:refines <urn:aspace:concept:prompt-systeme:regle-multiplicativite> .
+# autonomie-agents:tension-qualite-quantite --refines--> prompt-systeme:regle-multiplicativite : La tension qualité/quantité raffine la règle de multiplicativité (la tension est tranchée cas par cas). [haute]
+<urn:aspace:concept:autonomie-agents:tension-qualite-quantite> aspace:refines <urn:aspace:concept:prompt-systeme:bornes-operationnelles> .
+# autonomie-agents:tension-qualite-quantite --refines--> prompt-systeme:bornes-operationnelles : La tension raffine les bornes : la qualité et la quantité sont deux bornes distinctes. [haute]
+<urn:aspace:concept:autonomie-agents:bacs-a-sable-worktree> aspace:refines <urn:aspace:concept:projets:cerritos-plane-onboarding> .
+# autonomie-agents:bacs-a-sable-worktree --refines--> projets:cerritos-plane-onboarding : Les bacs à sable (worktree) raffinent l'onboarding Cerritos x Plane (workspace isolé). [moyenne]
+<urn:aspace:concept:autonomie-agents:bacs-a-sable-worktree> aspace:refines <urn:aspace:concept:projets:claudeclaw-moat-agent> .
+# autonomie-agents:bacs-a-sable-worktree --refines--> projets:claudeclaw-moat-agent : Les worktrees raffinent le scaffold ClaudeClaw (embryonnaire, cloisonné). [moyenne]
+<urn:aspace:concept:autonomie-agents:examen-prealable> aspace:refines <urn:aspace:concept:ressources:wiki-routing-by-question> .
+# autonomie-agents:examen-prealable --refines--> ressources:wiki-routing-by-question : L'examen préalable raffine le routage wiki (le lint-wiki est une étape préalable à la publication). [haute]
+<urn:aspace:concept:autonomie-agents:goodhart-compteur-jetons> aspace:refines <urn:aspace:concept:prompt-systeme:regle-multiplicativite> .
+# autonomie-agents:goodhart-compteur-jetons --refines--> prompt-systeme:regle-multiplicativite : L'anti-Goodhart raffine la règle de multiplicativité (la mesure est un input, pas une sortie). [haute]
+<urn:aspace:concept:autonomie-agents:agent-relecteur-mandat> aspace:appliesTo <urn:aspace:concept:ressources:adr-immutability-ricks-law> .
+# autonomie-agents:agent-relecteur-mandat --appliesTo--> ressources:adr-immutability-ricks-law : L'agent relecteur applique Rick's Law (vérifier qu'un ADR est bien immuable, jamais dupliqué). [moyenne]
+<urn:aspace:concept:projets:abc-compliance-gate> aspace:appliesTo <urn:aspace:concept:projets:abc-os-child-care-bos> .
+# projets:abc-compliance-gate --appliesTo--> projets:abc-os-child-care-bos : Le compliance gate Legal s'applique au projet ABC OS & Child Care BOS. [haute]
+<urn:aspace:concept:projets:abc-compliance-gate> aspace:partOf <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:abc-compliance-gate --partOf--> projets:b2-business-wheel-harmonization-matrix : Le gate ABC est une des instances de la matrice B2 (transverse aux 8 domaines). [haute]
+<urn:aspace:concept:projets:abc-compliance-gate> aspace:appliesTo <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:abc-compliance-gate --appliesTo--> projets:summers-verse-framework : Le compliance gate s'applique au framework Summer's Verse (gate de graduation Trust/Legal). [haute]
+<urn:aspace:concept:projets:abc-os-child-care-bos> aspace:appliesTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:abc-os-child-care-bos --appliesTo--> projets:b2-business-wheel-harmonization-matrix : Le projet ABC OS applique la matrice B2 (8 gates à franchir). [haute]
+<urn:aspace:concept:projets:abc-os-child-care-bos> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:abc-os-child-care-bos --dependsOn--> projets:cerritos-gtd-pipeline : ABC OS dépend du pipeline Cerritos pour le routage des items. [haute]
+<urn:aspace:concept:projets:abc-os-child-care-bos> aspace:instantiates <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:abc-os-child-care-bos --instantiates--> projets:eight-domain-avengers-wheel : ABC OS instancie la wheel Avengers (8 domaines opérationnels). [haute]
+<urn:aspace:concept:projets:abc-os-child-care-bos> aspace:instantiates <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:abc-os-child-care-bos --instantiates--> projets:summers-verse-framework : ABC OS instancie le framework Summer's Verse (status GRADUATED 2026-05-21). [haute]
+<urn:aspace:concept:projets:abc-os-child-care-bos> aspace:dependsOn <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:abc-os-child-care-bos --dependsOn--> projets:twelve-weeks-year-cycle : ABC OS dépend du cycle 12WY pour la cadence Rocks. [haute]
+<urn:aspace:concept:projets:alikaly-bana-holding-llc> aspace:appliesTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:alikaly-bana-holding-llc --appliesTo--> projets:b2-business-wheel-harmonization-matrix : Alikaly Holding to LLC applique la matrice B2 (gates Legal + Finance). [haute]
+<urn:aspace:concept:projets:alikaly-bana-holding-llc> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:alikaly-bana-holding-llc --dependsOn--> projets:cerritos-gtd-pipeline : Alikaly dépend de Cerritos pour la qualification des étapes. [haute]
+<urn:aspace:concept:projets:alikaly-bana-holding-llc> aspace:instantiates <urn:aspace:concept:projets:cross-jerry-routing> .
+# projets:alikaly-bana-holding-llc --instantiates--> projets:cross-jerry-routing : Alikaly est la première occurrence du cross-Jerry routing (J01 + J03). [haute]
+<urn:aspace:concept:projets:alikaly-bana-holding-llc> aspace:instantiates <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:alikaly-bana-holding-llc --instantiates--> projets:summers-verse-framework : Alikaly Holding to LLC instancie le framework Summer's Verse (GRADUATED 2026-05-21). [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:partOf <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:b2-business-wheel-harmonization-matrix --partOf--> projets:eight-domain-avengers-wheel : La matrice est la forme opérationnelle de la wheel Avengers (gates par domaine). [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:b2-business-wheel-harmonization-matrix --partOf--> projets:summers-verse-framework : La matrice B2 fait partie du framework Summer's Verse (B2 = couche meso). [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:appliesTo <urn:aspace:concept:projets:abc-os-child-care-bos> .
+# projets:b2-business-wheel-harmonization-matrix --appliesTo--> projets:abc-os-child-care-bos : La matrice s'applique au projet ABC OS. [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:appliesTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> .
+# projets:b2-business-wheel-harmonization-matrix --appliesTo--> projets:alikaly-bana-holding-llc : La matrice s'applique au projet Alikaly. [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:appliesTo <urn:aspace:concept:projets:marina-cleaning-bos-sop> .
+# projets:b2-business-wheel-harmonization-matrix --appliesTo--> projets:marina-cleaning-bos-sop : La matrice s'applique au projet Marina. [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:appliesTo <urn:aspace:concept:projets:rilcot-members-space-os> .
+# projets:b2-business-wheel-harmonization-matrix --appliesTo--> projets:rilcot-members-space-os : La matrice s'applique au projet RILCOT. [haute]
+<urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> aspace:appliesTo <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:b2-business-wheel-harmonization-matrix --appliesTo--> projets:picard-project-pattern : La matrice s'applique au pattern Picard (chaque projet Picard la franchit). [haute]
+<urn:aspace:concept:projets:cerritos-gtd-pipeline> aspace:partOf <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:cerritos-gtd-pipeline --partOf--> projets:picard-project-pattern : Le pipeline Cerritos est une étape du pattern Picard (clarify avant instanciation). [haute]
+<urn:aspace:concept:projets:cerritos-gtd-pipeline> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:cerritos-gtd-pipeline --partOf--> projets:summers-verse-framework : Cerritos fait partie du framework Summer's Verse (Mariner/Boimler/Rutherford/Tendi/Freeman). [haute]
+<urn:aspace:concept:projets:cerritos-plane-onboarding> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:cerritos-plane-onboarding --dependsOn--> projets:cerritos-gtd-pipeline : L'onboarding Plane dépend du pipeline Cerritos (3 items classés). [haute]
+<urn:aspace:concept:projets:cerritos-plane-onboarding> aspace:dependsOn <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:cerritos-plane-onboarding --dependsOn--> projets:summers-verse-framework : Cerritos Plane dépend du framework Summer's Verse (intégration projet). [haute]
+<urn:aspace:concept:projets:cerritos-plane-onboarding> aspace:dependsOn <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:cerritos-plane-onboarding --dependsOn--> projets:twelve-weeks-year-cycle : Cerritos Plane dépend du cycle 12WY (status ACTIVE 2026-06-22). [haute]
+<urn:aspace:concept:projets:cross-jerry-routing> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:cross-jerry-routing --dependsOn--> projets:b2-business-wheel-harmonization-matrix : Cross-Jerry routing dépend de la matrice B2 (gates Finance + Legal). [haute]
+<urn:aspace:concept:projets:cross-jerry-routing> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:cross-jerry-routing --partOf--> projets:summers-verse-framework : Le cross-Jerry fait partie du framework Summer's Verse. [haute]
+<urn:aspace:concept:projets:cross-jerry-routing> aspace:dependsOn <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:cross-jerry-routing --dependsOn--> projets:twelve-weeks-year-cycle : Cross-Jerry dépend du 12WY (cadence partagée entre Jerry). [haute]
+<urn:aspace:concept:projets:eight-domain-avengers-wheel> aspace:governs <urn:aspace:concept:projets:fifty-three-b3-agent-roster> .
+# projets:eight-domain-avengers-wheel --governs--> projets:fifty-three-b3-agent-roster : La wheel Avengers gouverne le roster 53 (chaque squad = un domaine Marvel). [haute]
+<urn:aspace:concept:projets:eight-domain-avengers-wheel> aspace:governs <urn:aspace:concept:projets:omk-business-os> .
+# projets:eight-domain-avengers-wheel --governs--> projets:omk-business-os : La wheel Avengers gouverne OMK (8 capitaines B2 alignés). [haute]
+<urn:aspace:concept:projets:fifty-three-b3-agent-roster> aspace:partOf <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:fifty-three-b3-agent-roster --partOf--> projets:eight-domain-avengers-wheel : Le roster 53 fait partie de la wheel Avengers (1 squad par domaine). [haute]
+<urn:aspace:concept:projets:fifty-three-b3-agent-roster> aspace:partOf <urn:aspace:concept:projets:omk-business-os> .
+# projets:fifty-three-b3-agent-roster --partOf--> projets:omk-business-os : Le roster 53 fait partie d'OMK Business OS (sa structure d'exécution). [haute]
+<urn:aspace:concept:projets:fifty-three-b3-agent-roster> aspace:dependsOn <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:fifty-three-b3-agent-roster --dependsOn--> projets:picard-project-pattern : Le roster dépend du pattern Picard (les agents sont instanciés par projet). [haute]
+<urn:aspace:concept:projets:fifty-three-b3-agent-roster> aspace:partOf <urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> .
+# projets:fifty-three-b3-agent-roster --partOf--> projets:triptyque-v4-t1-t2-t3 : Le roster 53 fait partie du Triptyque V4 (chaque tier = squads). [haute]
+<urn:aspace:concept:projets:ld01-book-alignment> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:ld01-book-alignment --dependsOn--> projets:b2-business-wheel-harmonization-matrix : LD01 Book Alignment dépend de la matrice B2 (mapping livres → gates). [haute]
+<urn:aspace:concept:projets:ld01-book-alignment> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:ld01-book-alignment --partOf--> projets:summers-verse-framework : LD01 Book Alignment fait partie du framework Summer's Verse (base canonique). [haute]
+<urn:aspace:concept:projets:ld01-book-alignment> aspace:dependsOn <urn:aspace:concept:projets:omk-business-os> .
+# projets:ld01-book-alignment --dependsOn--> projets:omk-business-os : LD01 Books sont mappés aux 8 domaines d'OMK. [haute]
+<urn:aspace:concept:projets:ld01-book-alignment> aspace:dependsOn <urn:aspace:concept:projets:rilcot-members-space-os> .
+# projets:ld01-book-alignment --dependsOn--> projets:rilcot-members-space-os : RILCOT (9 livres) dépend de l'alignement LD01 avec Expert Secrets + Group Genius. [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:appliesTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:marina-cleaning-bos-sop --appliesTo--> projets:b2-business-wheel-harmonization-matrix : Marina BOS applique la matrice B2. [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:marina-cleaning-bos-sop --dependsOn--> projets:cerritos-gtd-pipeline : Marina dépend de Cerritos pour le SOP. [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:instantiates <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:marina-cleaning-bos-sop --instantiates--> projets:eight-domain-avengers-wheel : Marina BOS instancie la wheel Avengers (Ops primary field-services). [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:appliesTo <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:marina-cleaning-bos-sop --appliesTo--> projets:picard-project-pattern : Marina applique le pattern Picard. [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:instantiates <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:marina-cleaning-bos-sop --instantiates--> projets:summers-verse-framework : Marina BOS instancie le framework Summer's Verse (GRADUATED 2026-05-21). [haute]
+<urn:aspace:concept:projets:marina-cleaning-bos-sop> aspace:dependsOn <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:marina-cleaning-bos-sop --dependsOn--> projets:twelve-weeks-year-cycle : Marina dépend du cycle 12WY. [haute]
+<urn:aspace:concept:projets:omk-business-os> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:omk-business-os --dependsOn--> projets:b2-business-wheel-harmonization-matrix : OMK dépend de la matrice B2 (8 gates traversés). [haute]
+<urn:aspace:concept:projets:omk-business-os> aspace:dependsOn <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:omk-business-os --dependsOn--> projets:eight-domain-avengers-wheel : OMK dépend de la wheel Avengers (8 capitaines alignés). [haute]
+<urn:aspace:concept:projets:omk-business-os> aspace:partOf <urn:aspace:concept:projets:fifty-three-b3-agent-roster> .
+# projets:omk-business-os --partOf--> projets:fifty-three-b3-agent-roster : Le roster 53 fait partie d'OMK Business OS. [haute]
+<urn:aspace:concept:projets:omk-business-os> aspace:instantiates <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:omk-business-os --instantiates--> projets:picard-project-pattern : OMK Business OS instancie le pattern Picard (ACTIVE 2026-07-15). [haute]
+<urn:aspace:concept:projets:omk-business-os> aspace:partOf <urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> .
+# projets:omk-business-os --partOf--> projets:triptyque-v4-t1-t2-t3 : Le Triptyque V4 fait partie d'OMK Business OS. [haute]
+<urn:aspace:concept:projets:omk-us-market-pivot> aspace:refines <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:omk-us-market-pivot --refines--> projets:b2-business-wheel-harmonization-matrix : Le pivot US raffine la matrice B2 (compliance US AI Bill of Rights, Colorado AI Act). [haute]
+<urn:aspace:concept:projets:omk-us-market-pivot> aspace:refines <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:omk-us-market-pivot --refines--> projets:eight-domain-avengers-wheel : Le pivot US raffine la wheel (géographie US-first, ACV $7.5-25K). [haute]
+<urn:aspace:concept:projets:omk-us-market-pivot> aspace:refines <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:omk-us-market-pivot --refines--> projets:summers-verse-framework : Le pivot raffine Summer's Verse (mode SaaS US). [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:picard-project-pattern --dependsOn--> projets:b2-business-wheel-harmonization-matrix : Le pattern Picard dépend de la matrice B2. [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:picard-project-pattern --partOf--> projets:summers-verse-framework : Le pattern Picard fait partie du framework Summer's Verse (B1→B2→B3). [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:appliesTo <urn:aspace:concept:projets:abc-os-child-care-bos> .
+# projets:picard-project-pattern --appliesTo--> projets:abc-os-child-care-bos : Le pattern s'applique au projet ABC OS. [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:appliesTo <urn:aspace:concept:projets:alikaly-bana-holding-llc> .
+# projets:picard-project-pattern --appliesTo--> projets:alikaly-bana-holding-llc : Le pattern s'applique au projet Alikaly. [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:appliesTo <urn:aspace:concept:projets:marina-cleaning-bos-sop> .
+# projets:picard-project-pattern --appliesTo--> projets:marina-cleaning-bos-sop : Le pattern s'applique au projet Marina. [haute]
+<urn:aspace:concept:projets:picard-project-pattern> aspace:appliesTo <urn:aspace:concept:projets:rilcot-members-space-os> .
+# projets:picard-project-pattern --appliesTo--> projets:rilcot-members-space-os : Le pattern s'applique au projet RILCOT (origine). [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:appliesTo <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:rilcot-members-space-os --appliesTo--> projets:b2-business-wheel-harmonization-matrix : RILCOT applique la matrice B2. [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:rilcot-members-space-os --dependsOn--> projets:cerritos-gtd-pipeline : RILCOT dépend de Cerritos pour la qualification. [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:instantiates <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:rilcot-members-space-os --instantiates--> projets:eight-domain-avengers-wheel : RILCOT instancie la wheel Avengers (Nexus primary + Solaris secondary). [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:appliesTo <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:rilcot-members-space-os --appliesTo--> projets:picard-project-pattern : RILCOT applique le pattern Picard (Master Interface 2026-05-20). [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:instantiates <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:rilcot-members-space-os --instantiates--> projets:summers-verse-framework : RILCOT Members OS instancie Summer's Verse (GRADUATED 2026-05-21). [haute]
+<urn:aspace:concept:projets:rilcot-members-space-os> aspace:dependsOn <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:rilcot-members-space-os --dependsOn--> projets:twelve-weeks-year-cycle : RILCOT dépend du cycle 12WY. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:partOf <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:summers-verse-framework --partOf--> projets:b2-business-wheel-harmonization-matrix : La matrice B2 fait partie du framework Summer's Verse. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:partOf <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:summers-verse-framework --partOf--> projets:eight-domain-avengers-wheel : La wheel Avengers fait partie du framework Summer's Verse. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:partOf <urn:aspace:concept:projets:twelve-weeks-year-cycle> .
+# projets:summers-verse-framework --partOf--> projets:twelve-weeks-year-cycle : Le 12WY fait partie du framework Summer's Verse (B3 Warp Core cadence). [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:instantiates <urn:aspace:concept:projets:abc-os-child-care-bos> .
+# projets:summers-verse-framework --instantiates--> projets:abc-os-child-care-bos : Summer's Verse est instancié par ABC OS. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:instantiates <urn:aspace:concept:projets:alikaly-bana-holding-llc> .
+# projets:summers-verse-framework --instantiates--> projets:alikaly-bana-holding-llc : Summer's Verse est instancié par Alikaly. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:instantiates <urn:aspace:concept:projets:marina-cleaning-bos-sop> .
+# projets:summers-verse-framework --instantiates--> projets:marina-cleaning-bos-sop : Summer's Verse est instancié par Marina. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:partOf <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:summers-verse-framework --partOf--> projets:picard-project-pattern : Le pattern Picard fait partie du framework. [haute]
+<urn:aspace:concept:projets:summers-verse-framework> aspace:instantiates <urn:aspace:concept:projets:rilcot-members-space-os> .
+# projets:summers-verse-framework --instantiates--> projets:rilcot-members-space-os : Summer's Verse est instancié par RILCOT. [haute]
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:triptyque-v4-t1-t2-t3 --dependsOn--> projets:b2-business-wheel-harmonization-matrix : Le Triptyque dépend de la matrice B2 (T2 = Growth+Sales+Finance = 3 domaines). [haute]
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> aspace:dependsOn <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:triptyque-v4-t1-t2-t3 --dependsOn--> projets:eight-domain-avengers-wheel : Le Triptyque dépend de la wheel (T1/T2/T3 regroupent les 8 domaines). [haute]
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> aspace:dependsOn <urn:aspace:concept:projets:fifty-three-b3-agent-roster> .
+# projets:triptyque-v4-t1-t2-t3 --dependsOn--> projets:fifty-three-b3-agent-roster : Le Triptyque dépend du roster 53 (chaque squad alimente un tier). [haute]
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> aspace:partOf <urn:aspace:concept:projets:omk-business-os> .
+# projets:triptyque-v4-t1-t2-t3 --partOf--> projets:omk-business-os : Le Triptyque fait partie d'OMK Business OS. [haute]
+<urn:aspace:concept:projets:triptyque-v4-t1-t2-t3> aspace:dependsOn <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:triptyque-v4-t1-t2-t3 --dependsOn--> projets:picard-project-pattern : Le Triptyque dépend du pattern Picard (Ownerbook par Rock). [haute]
+<urn:aspace:concept:projets:twelve-weeks-year-cycle> aspace:dependsOn <urn:aspace:concept:projets:b2-business-wheel-harmonization-matrix> .
+# projets:twelve-weeks-year-cycle --dependsOn--> projets:b2-business-wheel-harmonization-matrix : Le 12WY dépend de la matrice (Lead/Lag logs par gate). [haute]
+<urn:aspace:concept:projets:twelve-weeks-year-cycle> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:twelve-weeks-year-cycle --partOf--> projets:summers-verse-framework : Le 12WY fait partie du framework Summer's Verse (B3 Warp Core). [haute]
+<urn:aspace:concept:projets:twelve-weeks-year-cycle> aspace:dependsOn <urn:aspace:concept:projets:cerritos-gtd-pipeline> .
+# projets:twelve-weeks-year-cycle --dependsOn--> projets:cerritos-gtd-pipeline : Le 12WY dépend de Cerritos (cadence partagée Tendi review). [haute]
+<urn:aspace:concept:projets:twelve-weeks-year-cycle> aspace:dependsOn <urn:aspace:concept:projets:eight-domain-avengers-wheel> .
+# projets:twelve-weeks-year-cycle --dependsOn--> projets:eight-domain-avengers-wheel : Le 12WY dépend de la wheel (Rocks = cycles). [haute]
+<urn:aspace:concept:projets:twelve-weeks-year-cycle> aspace:dependsOn <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:twelve-weeks-year-cycle --dependsOn--> projets:picard-project-pattern : Le 12WY dépend du pattern Picard (cadence 12 semaines). [haute]
+<urn:aspace:concept:projets:graphify-out-outputs> aspace:partOf <urn:aspace:concept:projets:omk-business-os> .
+# projets:graphify-out-outputs --partOf--> projets:omk-business-os : Les graphify-out outputs font partie d'OMK Business OS (substrat généré). [haute]
+<urn:aspace:concept:projets:graphify-out-outputs> aspace:partOf <urn:aspace:concept:projets:picard-project-pattern> .
+# projets:graphify-out-outputs --partOf--> projets:picard-project-pattern : Les graphify-out outputs font partie du pattern Picard (artefact généré en parallèle). [haute]
+<urn:aspace:concept:projets:graphify-out-outputs> aspace:partOf <urn:aspace:concept:projets:summers-verse-framework> .
+# projets:graphify-out-outputs --partOf--> projets:summers-verse-framework : Les graphify-out outputs font partie du framework Summer's Verse (tier substrat). [haute]
+<urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> aspace:pairedWith <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:adr-meta-001-anti-paresse-verify-before-assert --pairedWith--> archives:adr-sober-002-anti-paperclip-doctrine : ADR-META-001 et ADR-SOBER-002 sont appariés (sisters ADRs L0/L1). [haute]
+<urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:adr-meta-001-anti-paresse-verify-before-assert --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : L'ADR anti-paresse s'applique au snapshot V3 (la vérification a précédé le versement). [haute]
+<urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> aspace:governs <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:adr-meta-001-anti-paresse-verify-before-assert --governs--> archives:data-role-a3-archives-officer : L'ADR anti-paresse gouverne l'officier Data (vérification avant archivage). [haute]
+<urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> aspace:pairedWith <urn:aspace:concept:archives:adr-meta-001-anti-paresse-verify-before-assert> .
+# archives:adr-sober-002-anti-paperclip-doctrine --pairedWith--> archives:adr-meta-001-anti-paresse-verify-before-assert : Sisters ADRs. [haute]
+<urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:adr-sober-002-anti-paperclip-doctrine --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : L'ADR anti-paperclip s'applique au snapshot V3 (move plutôt que réécriture). [haute]
+<urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> aspace:governs <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:adr-sober-002-anti-paperclip-doctrine --governs--> archives:data-role-a3-archives-officer : L'ADR anti-paperclip gouverne l'officier Data (move-only). [haute]
+<urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> aspace:appliesTo <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> .
+# archives:adr-sober-002-anti-paperclip-doctrine --appliesTo--> archives:graphify-burst-chunk-duplication-pattern : L'ADR s'applique au pattern duplication graphify-burst (interdit le re-copie). [haute]
+<urn:aspace:concept:archives:agent-vocabulary-legacy-vs-current> aspace:cites <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:agent-vocabulary-legacy-vs-current --cites--> archives:archive-v3-structure-snapshot-2026-08-02 : Le vocabulaire cite le snapshot V3 (état post-2026-05-22). [haute]
+<urn:aspace:concept:archives:agent-vocabulary-legacy-vs-current> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:agent-vocabulary-legacy-vs-current --handledBy--> archives:data-role-a3-archives-officer : Le vocabulaire est traité par l'officier Data (archives mémoire agents). [haute]
+<urn:aspace:concept:archives:agent-vocabulary-legacy-vs-current> aspace:cites <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# archives:agent-vocabulary-legacy-vs-current --cites--> archives:legacy-lifeos-app-specs-evolution : Le vocabulaire cite les legacy specs (jusqu'au 2026-05-22). [haute]
+<urn:aspace:concept:archives:agent-vocabulary-legacy-vs-current> aspace:cites <urn:aspace:concept:archives:openclaw-body-legacy> .
+# archives:agent-vocabulary-legacy-vs-current --cites--> archives:openclaw-body-legacy : Le vocabulaire cite OpenClaw body legacy (A'0 GravityClaw). [haute]
+<urn:aspace:concept:archives:archive-as-source-of-truth-decision> aspace:cites <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:archive-as-source-of-truth-decision --cites--> archives:adr-sober-002-anti-paperclip-doctrine : La décision source-of-truth cite l'ADR anti-paperclip (l'archive n'est pas canonique). [haute]
+<urn:aspace:concept:archives:archive-as-source-of-truth-decision> aspace:appliesTo <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:archive-as-source-of-truth-decision --appliesTo--> archives:archive-v3-structure-snapshot-2026-08-02 : La décision s'applique au snapshot V3 (archivé, pas canonique). [haute]
+<urn:aspace:concept:archives:archive-as-source-of-truth-decision> aspace:governs <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:archive-as-source-of-truth-decision --governs--> archives:data-role-a3-archives-officer : La décision gouverne l'officier Data (qui n'archive jamais sans source). [haute]
+<urn:aspace:concept:archives:archive-as-source-of-truth-decision> aspace:appliesTo <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> .
+# archives:archive-as-source-of-truth-decision --appliesTo--> archives:graphify-burst-chunk-duplication-pattern : La décision s'applique au pattern duplication (Geordi = source, pas le burst). [haute]
+<urn:aspace:concept:archives:archive-published-secrets-warning> aspace:cites <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:archive-published-secrets-warning --cites--> archives:adr-sober-002-anti-paperclip-doctrine : La vulnérabilité secrets cite l'ADR anti-paperclip (le move a exposé le commit 41c19a5). [haute]
+<urn:aspace:concept:archives:archive-published-secrets-warning> aspace:partOf <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:archive-published-secrets-warning --partOf--> archives:archive-v3-structure-snapshot-2026-08-02 : La vulnérabilité fait partie du snapshot V3 (11 fichiers sur 17 665). [haute]
+<urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> aspace:dependsOn <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:archive-v3-structure-snapshot-2026-08-02 --dependsOn--> archives:adr-sober-002-anti-paperclip-doctrine : Le snapshot V3 dépend de l'ADR anti-paperclip (le move était le motif). [haute]
+<urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> aspace:dependsOn <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# archives:archive-v3-structure-snapshot-2026-08-02 --dependsOn--> archives:archive-as-source-of-truth-decision : Le snapshot dépend de la décision source-of-truth (Geordi = canon). [haute]
+<urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> aspace:partOf <urn:aspace:concept:archives:archive-published-secrets-warning> .
+# archives:archive-v3-structure-snapshot-2026-08-02 --partOf--> archives:archive-published-secrets-warning : La vulnérabilité fait partie du snapshot. [haute]
+<urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:archive-v3-structure-snapshot-2026-08-02 --handledBy--> archives:data-role-a3-archives-officer : Le snapshot est traité par l'officier Data. [haute]
+<urn:aspace:concept:archives:data-role-a3-archives-officer> aspace:dependsOn <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:data-role-a3-archives-officer --dependsOn--> archives:adr-sober-002-anti-paperclip-doctrine : Le rôle Data dépend de l'ADR anti-paperclip (move-only). [haute]
+<urn:aspace:concept:archives:data-role-a3-archives-officer> aspace:dependsOn <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# archives:data-role-a3-archives-officer --dependsOn--> archives:archive-as-source-of-truth-decision : Le rôle Data dépend de la décision source-of-truth. [haute]
+<urn:aspace:concept:archives:data-role-a3-archives-officer> aspace:handledBy <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:data-role-a3-archives-officer --handledBy--> archives:archive-v3-structure-snapshot-2026-08-02 : Le snapshot est traité par Data. [haute]
+<urn:aspace:concept:archives:deal-muse-data-as-conductor> aspace:cites <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:deal-muse-data-as-conductor --cites--> archives:adr-sober-002-anti-paperclip-doctrine : DEAL Muse cite l'ADR anti-paperclip (Data = officier A3). [haute]
+<urn:aspace:concept:archives:deal-muse-data-as-conductor> aspace:cites <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:deal-muse-data-as-conductor --cites--> archives:archive-v3-structure-snapshot-2026-08-02 : DEAL Muse cite le snapshot (Data chef d'orchestre). [haute]
+<urn:aspace:concept:archives:deal-muse-data-as-conductor> aspace:refines <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:deal-muse-data-as-conductor --refines--> archives:data-role-a3-archives-officer : DEAL Muse raffine le rôle Data (par imbrication DEAL⊂PARA, pas promotion 5ème vaisseau). [haute]
+<urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> aspace:appliesTo <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# archives:graphify-burst-chunk-duplication-pattern --appliesTo--> archives:archive-as-source-of-truth-decision : Le pattern duplication applique la décision source-of-truth (Geordi canonique). [haute]
+<urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> aspace:partOf <urn:aspace:concept:archives:graphify-out-pipeline-partial-run> .
+# archives:graphify-burst-chunk-duplication-pattern --partOf--> archives:graphify-out-pipeline-partial-run : Le pattern duplication fait partie du run pipeline Graphify. [haute]
+<urn:aspace:concept:archives:graphify-out-pipeline-partial-run> aspace:dependsOn <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# archives:graphify-out-pipeline-partial-run --dependsOn--> archives:archive-as-source-of-truth-decision : Le run pipeline dépend de la décision source-of-truth. [haute]
+<urn:aspace:concept:archives:graphify-out-pipeline-partial-run> aspace:partOf <urn:aspace:concept:archives:graphify-burst-chunk-duplication-pattern> .
+# archives:graphify-out-pipeline-partial-run --partOf--> archives:graphify-burst-chunk-duplication-pattern : Le run produit le pattern duplication. [haute]
+<urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> aspace:partOf <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:legacy-lifeos-app-specs-evolution --partOf--> archives:archive-v3-structure-snapshot-2026-08-02 : Les legacy specs font partie du snapshot V3 (versions V0.2→V0.6). [haute]
+<urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:legacy-lifeos-app-specs-evolution --handledBy--> archives:data-role-a3-archives-officer : Les legacy specs sont traitées par Data. [haute]
+<urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> aspace:partOf <urn:aspace:concept:archives:sdd-sovereign-constitution-v05> .
+# archives:legacy-lifeos-app-specs-evolution --partOf--> archives:sdd-sovereign-constitution-v05 : Le SDD V0.5 fait partie de l'évolution legacy specs. [haute]
+<urn:aspace:concept:archives:memory-compact-trash-snapshots> aspace:cites <urn:aspace:concept:archives:adr-sober-002-anti-paperclip-doctrine> .
+# archives:memory-compact-trash-snapshots --cites--> archives:adr-sober-002-anti-paperclip-doctrine : Les compacts trash citent l'ADR (témoins de compaction). [haute]
+<urn:aspace:concept:archives:memory-compact-trash-snapshots> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:memory-compact-trash-snapshots --handledBy--> archives:data-role-a3-archives-officer : Les trash snapshots sont traités par Data. [haute]
+<urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:ntfs-junctions-inventory-2026-08-01 --handledBy--> archives:data-role-a3-archives-officer : L'inventaire jonctions est traité par Data. [haute]
+<urn:aspace:concept:archives:ntfs-junctions-inventory-2026-08-01> aspace:partOf <urn:aspace:concept:archives:memory-compact-trash-snapshots> .
+# archives:ntfs-junctions-inventory-2026-08-01 --partOf--> archives:memory-compact-trash-snapshots : L'inventaire fait partie des compacts memory (Backup_01). [haute]
+<urn:aspace:concept:archives:openclaw-body-legacy> aspace:partOf <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:openclaw-body-legacy --partOf--> archives:archive-v3-structure-snapshot-2026-08-02 : OpenClaw body legacy fait partie du snapshot V3. [haute]
+<urn:aspace:concept:archives:openclaw-body-legacy> aspace:cites <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# archives:openclaw-body-legacy --cites--> archives:legacy-lifeos-app-specs-evolution : OpenClaw cite les legacy specs (GPT-5.2-codex fallback). [haute]
+<urn:aspace:concept:archives:sdd-sovereign-constitution-v05> aspace:cites <urn:aspace:concept:archives:archive-as-source-of-truth-decision> .
+# archives:sdd-sovereign-constitution-v05 --cites--> archives:archive-as-source-of-truth-decision : Le SDD V0.5 cite la décision source-of-truth (Livre des Lois). [haute]
+<urn:aspace:concept:archives:sdd-sovereign-constitution-v05> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:sdd-sovereign-constitution-v05 --handledBy--> archives:data-role-a3-archives-officer : Le SDD est traité par Data. [haute]
+<urn:aspace:concept:archives:sdd-sovereign-constitution-v05> aspace:partOf <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# archives:sdd-sovereign-constitution-v05 --partOf--> archives:legacy-lifeos-app-specs-evolution : Le SDD fait partie de l'évolution legacy. [haute]
+<urn:aspace:concept:archives:shadow-active-1425-files-status> aspace:partOf <urn:aspace:concept:archives:archive-v3-structure-snapshot-2026-08-02> .
+# archives:shadow-active-1425-files-status --partOf--> archives:archive-v3-structure-snapshot-2026-08-02 : Le statut SHADOW_ACTIVE fait partie du snapshot V3 (1425 fichiers). [haute]
+<urn:aspace:concept:archives:shadow-active-1425-files-status> aspace:handledBy <urn:aspace:concept:archives:data-role-a3-archives-officer> .
+# archives:shadow-active-1425-files-status --handledBy--> archives:data-role-a3-archives-officer : Le statut est traité par Data. [haute]
+<urn:aspace:concept:archives:shadow-active-1425-files-status> aspace:cites <urn:aspace:concept:archives:legacy-lifeos-app-specs-evolution> .
+# archives:shadow-active-1425-files-status --cites--> archives:legacy-lifeos-app-specs-evolution : Le statut cite les legacy specs (mesure substrat). [moyenne]

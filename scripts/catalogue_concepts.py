@@ -26,6 +26,9 @@ BUNDLES = [
 SORTIE = os.path.join(V3, "50_Distillation", "ontologie", "CATALOGUE.md")
 
 
+GENERES = {"CATALOGUE.md", "RAPPORT.md"}
+
+
 def frontmatter(texte):
     if not texte.startswith("---"):
         return {}
@@ -58,7 +61,7 @@ def main():
             if not os.path.isdir(d):
                 continue
             fichiers = [n for n in sorted(os.listdir(d))
-                        if n.endswith(".md") and n != "index.md"]
+                        if n.endswith(".md") and n != "index.md" and n not in GENERES]
             if not fichiers:
                 continue
             lignes.append(f"## {sb} — {len(fichiers)} concepts")

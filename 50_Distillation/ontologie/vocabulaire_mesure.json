@@ -1,6 +1,6 @@
 {
- "genere": "2026-08-17T20:19:07.434318+00:00",
- "concepts": 95,
+ "genere": "2026-08-17T20:55:23.092054+00:00",
+ "concepts": 102,
  "relations_resolues": 129,
  "liens_non_resolus": 4,
  "exemples_liens_non_resolus": [
@@ -22,12 +22,12 @@
   }
  ],
  "niveaux_confiance": {
-  "confirmeMachine": 95
+  "confirmeMachine": 102
  },
  "types_utilises": [
   [
    "Concept",
-   62
+   69
   ],
   [
    "Backend",
@@ -104,6 +104,14 @@
    7
   ],
   [
+   "ontologie",
+   7
+  ],
+  [
+   "doctrine",
+   6
+  ],
+  [
    "gtd",
    6
   ],
@@ -116,10 +124,6 @@
    6
   ],
   [
-   "doctrine",
-   5
-  ],
-  [
    "12wy",
    5
   ],
@@ -129,6 +133,10 @@
   ],
   [
    "adr",
+   5
+  ],
+  [
+   "okf",
    5
   ],
   [
@@ -184,10 +192,6 @@
    4
   ],
   [
-   "okf",
-   4
-  ],
-  [
    "legacy",
    4
   ],
@@ -226,10 +230,6 @@
   [
    "l1",
    3
-  ],
-  [
-   "life-wheel",
-   3
   ]
  ],
  "par_bundle": {
@@ -237,6 +237,7 @@
   "projets": 20,
   "archives": 16,
   "ressources": 26,
+  "ontologie": 7,
   "prompt-systeme": 7,
   "autonomie-agents": 5
  }

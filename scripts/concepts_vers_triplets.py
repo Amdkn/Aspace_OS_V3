@@ -44,6 +44,10 @@ BUNDLES = [
 ]
 SORTIE = os.path.join(V3, "50_Distillation", "ontologie")
 
+# Fichiers produits par script : ce ne sont pas des concepts, et les compter
+# gonflerait le graphe d'un sujet sans frontmatter ni source.
+GENERES = {"CATALOGUE.md", "RAPPORT.md"}
+
 RE_WIKI = re.compile(r"\[\[([^\]\|#]+)")
 RE_MDLINK = re.compile(r"\]\(([A-Za-z0-9_./-]+\.md)\)")
 
@@ -121,7 +125,7 @@ def main():
             if not os.path.isdir(d):
                 continue
             for nom in sorted(os.listdir(d)):
-                if not nom.endswith(".md") or nom == "index.md":
+                if not nom.endswith(".md") or nom == "index.md" or nom in GENERES:
                     continue
                 chemin = os.path.join(d, nom)
                 with io.open(chemin, encoding="utf-8", errors="replace") as f:

@@ -1,6 +1,6 @@
 # Ontologie A'Space OS — instances, generees depuis les concepts OKF.
 # Genere par scripts/concepts_vers_triplets.py — NE PAS EDITER A LA MAIN.
-# Genere le 2026-08-17T20:19:07.425207+00:00
+# Genere le 2026-08-17T20:55:23.083897+00:00
 
 @prefix aspace:  <urn:aspace:ns:> .
 @prefix concept: <urn:aspace:concept:> .
@@ -2114,6 +2114,145 @@
     dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/CARTOGRAPHIE_MEMOIRE_UNIFIEE.md" ;
     dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/sources/source_llm-wiki-pattern.md" ;
     rdfs:label "Schema LLM Wiki — trois couches raw/wiki/schema.md" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_confiance>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_confiance.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Le niveau de confiance doit être interrogeable, pas dissimulé" ;
+    dcterms:description "Au 2026-08-17, les 95 concepts sont aspace:confirmeMachine — aucun n'a été relu par un humain. C'est un fait, pas un défaut : le schema doit rendre ce fait interrogeable via aspace:niveauConfiance, et la requête Q1 doit rendre les 95 sans qu'aucun ne se distingue." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "okf" ;
+    aspace:tag "confiance" ;
+    aspace:tag "verification" ;
+    aspace:tag "qualite" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:comptage-confiance" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/concepts/concept_okf.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/archives/adr-meta-001-anti-paresse-verify-before-assert.md" ;
+    rdfs:label "Le niveau de confiance doit être interrogeable, pas dissimulé" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_hors_perimetre>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_hors_perimetre.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Ce que le schéma ne couvre pas — et pourquoi c'est honnête" ;
+    dcterms:description "Le schema couvre 11 classes, 11 predicats, 9 racines SKOS et 39 narrowers. Il ne couvre pas : les relations temporelles (avant/apres un événement), les relations quantitatives (mesure/comptage), la résolution fine des doublons projet/project, ni l'ontologie du LLM_Wiki amont. C'est une borne explicite, pas un trou." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "perimetre" ;
+    aspace:tag "schema" ;
+    aspace:tag "avenu" ;
+    aspace:tag "evolutions" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:limites-schema" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/aspace-schema.ttl" ;
+    rdfs:label "Ce que le schéma ne couvre pas — et pourquoi c'est honnête" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_liens_amont>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_liens_amont.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Les 4 liens non résolus pointent vers le LLM_Wiki amont — et c'est un signal" ;
+    dcterms:description "Les liens compounding-knowledge-wiki → sources/source_llm-wiki-pattern et wiki-schema-llm-wiki → concept_sovereignty, entity_rick, sources/source_gemini-takeout-2026-05 utilisent un naming systeme etranger au bundle (concept_*, entity_*, sources/source_*). Ce naming vient de l'arborescence wiki/concepts/, wiki/entities/, wiki/sources/ du LLM_Wiki V2 amont — pas du bundle distille." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "liens-non-resolus" ;
+    aspace:tag "llm-wiki" ;
+    aspace:tag "amont" ;
+    aspace:tag "sources" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:analyse-liens-non-resolus" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/vocabulaire_mesure.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ressources/wiki-schema-llm-wiki.md" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/03_Memory_Unified/LLM_Wiki/wiki/schema.md" ;
+    rdfs:label "Les 4 liens non résolus pointent vers le LLM_Wiki amont — et c'est un signal" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_modele>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_modele.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Pourquoi 11 classes, pas une seule — la décomposition d'« aspace:Concept »" ;
+    dcterms:description "Le constat mesure : 62/95 concepts sont kind:Concept, ce qui transforme la classe en fourre-tout. La décomposition proposée distingue les concepts par engagement (Doctrine/Decision/Playbook/Pattern) et isole les artefacts (Project/Backend/Archive/Event/Relation) et les personas des concepts purs." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "classe" ;
+    aspace:tag "doctrine" ;
+    aspace:tag "artefact" ;
+    aspace:tag "modelisation" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-concepts" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/vocabulaire_mesure.json" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/aspace-schema.ttl" ;
+    rdfs:label "Pourquoi 11 classes, pas une seule — la décomposition d'« aspace:Concept »" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_namespace>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_namespace.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Pourquoi urn:aspace:ns: — un namespace qui ne prétend rien" ;
+    dcterms:description "Le namespace de l'ontologie est urn:aspace:ns: — pas https://aspace-os.org/. C'est un choix delibere : inventer un domaine HTTP risquerait de s'approprier un domaine detenu par un tiers et de poser une adresse qui ne resout pas. Le piege placeholder.invalid a deja ete paye sur ce poste. Un namespace URN est un nom, pas une promesse de resolution." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "namespace" ;
+    aspace:tag "iri" ;
+    aspace:tag "urn" ;
+    aspace:tag "semantique" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-canon" ;
+    dcterms:source "C:/Users/amado/.claude/CLAUDE.md" ;
+    dcterms:source "C:/Users/amado/CLAUDE.md" ;
+    rdfs:label "Pourquoi urn:aspace:ns: — un namespace qui ne prétend rien" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_predicats>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_predicats.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Pourquoi 11 prédicats typés, pas un seul relatedTo" ;
+    dcterms:description "Le constat : 129 relations, toutes aspace:relatedTo. Le schema propose 11 prédicats typés (instantiates, appliesTo, dependsOn, partOf, refines, supersedes, pairedWith, governs, cites, handledBy, seeAlso). Chaque prédicat est illustré par au moins deux relations réelles du graphe — règle du poste : un prédicat qui ne peut pas être illustré deux fois n'a pas lieu d'être." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "predicat" ;
+    aspace:tag "relation" ;
+    aspace:tag "semantique" ;
+    aspace:tag "rdf" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:lecture-relations" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/aspace-schema.ttl" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/aspace-instances.ttl" ;
+    rdfs:label "Pourquoi 11 prédicats typés, pas un seul relatedTo" .
+
+<urn:aspace:concept:ontologie:_concepts_ontologie_seuil_tags>
+    a aspace:Concept ;
+    aspace:bundle "ontologie" ;
+    aspace:fichier "50_Distillation//ontologie//_concepts_ontologie_seuil_tags.md" ;
+    aspace:kind kind:Concept ;
+    dcterms:title "Pourquoi la règle des trois occurrences — un tag seul n'est pas une catégorie" ;
+    dcterms:description "Le constat : 457 tags distincts pour 95 concepts, 39 seulement apparaissent 3 fois ou plus, 418 une ou deux fois. La règle du poste : en dessous de trois occurrences, ce n'est pas une catégorie, c'est une occurrence. Cette règle transforme un bruit de 457 en un vocabulaire contrôlé de 39 organisé en 9 racines SKOS." ;
+    aspace:okfVersion "0.2" ;
+    aspace:tag "ontologie" ;
+    aspace:tag "tags" ;
+    aspace:tag "skos" ;
+    aspace:tag "vocabulaire" ;
+    aspace:tag "seuil" ;
+    aspace:niveauConfiance aspace:confirmeMachine ;
+    aspace:generePar "minimax-m3" ;
+    aspace:verifiePar "process:comptage-tags" ;
+    dcterms:source "C:/Users/amado/ASpace_OS_V3/50_Distillation/ontologie/vocabulaire_mesure.json" ;
+    rdfs:label "Pourquoi la règle des trois occurrences — un tag seul n'est pas une catégorie" .
 
 <urn:aspace:concept:prompt-systeme:alias>
     a aspace:Concept ;
