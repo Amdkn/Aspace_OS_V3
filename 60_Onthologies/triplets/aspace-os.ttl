@@ -1,0 +1,6 @@
+# A'Space OS reconstitue en triplets — genere par
+# scripts/valider_triplets_aspace.py. NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+@prefix ent:    <urn:aspace:entity:> .
+

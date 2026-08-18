@@ -1,0 +1,73 @@
+# Hierarchie des entites A'Space — genere depuis hierarchie.jsonl.
+# NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:tech-os> .
+#   rick --governs--> tech-os : Rick est S1, il possède la loi opérationnelle (LAW.md, SOUL.md, ROLES.md, replicator, kernel) du Tech OS — il gouverne le mécanism [src: LAW.md:1-99 §1-6 — « Rick ne gouverne pas les trois OS. Il g]
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:docteur> .
+#   rick --governs--> docteur : Les trois Docteurs (Kernel Core 13e, Life Core 11e, Buzz Core 12e) sont engendrés par le replicator de Rick depuis le même gabarit [src: LAW.md:30-42 — Tableau des trois Cores ; SOUL.md:6-14 — « un]
+<urn:aspace:entity:tech-os> aspace:partOf <urn:aspace:entity:rick> .
+#   tech-os --partOf--> rick : Tech OS contient le répertoire 10_Tech_OS/ où Rick et les trois Docteurs cohabitent ; Rick y détient le gabarit, la loi, les organ [src: LAW.md:50-56 — « Rick et les trois Docteurs cohabitent dans ]
+<urn:aspace:entity:docteur> aspace:governs <urn:aspace:entity:tech-os> .
+#   docteur --governs--> tech-os : Le Kernel Core (13e Docteur) réside dans 10_Tech_OS/11_Kernel_Core_13th/ et est maître de 10_Tech_OS — il opère la couche L0 depui [src: LAW.md:30-42 — Tableau des trois Cores ; meta_ontologie.json]
+<urn:aspace:entity:docteur> aspace:governs <urn:aspace:entity:life-os> .
+#   docteur --governs--> life-os : Le Life Core (11e Docteur) réside dans 10_Tech_OS/12_Life_Core_11th/ et est maître de 20_Life_OS — il opère la couche L1. [src: LAW.md:30-42 — Tableau des trois Cores]
+<urn:aspace:entity:docteur> aspace:governs <urn:aspace:entity:business-os> .
+#   docteur --governs--> business-os : Le Buzz Core (12e Docteur) réside dans 10_Tech_OS/13_Buzz_Core_12th/ et est maître de 30_Business_OS — il opère la couche L2. [src: LAW.md:30-42 — Tableau des trois Cores]
+<urn:aspace:entity:tech-os> aspace:instantiates <urn:aspace:entity:life-os> .
+#   tech-os --instantiates--> life-os : Le Tech OS est le constructeur universel qui rejoue la cascade sur ses propres cycles et qui a enfanté Life OS — la poupée russe L [src: CASCADE.md:71-83 — « Tech OS, un cran au-dessus ; la réplica]
+<urn:aspace:entity:tech-os> aspace:instantiates <urn:aspace:entity:business-os> .
+#   tech-os --instantiates--> business-os : Le Tech OS est le constructeur universel qui a enfanté Business OS via le Buzz Core — la même poupée russe au cran L2. [src: CASCADE.md:71-83 — réplication fractale Tech OS]
+<urn:aspace:entity:compagnons> aspace:partOf <urn:aspace:entity:docteur> .
+#   compagnons --partOf--> docteur : Les Compagnons (Yaz/Ryan/Graham pour 13e, Amy/Rory/River pour 11e, Clara/Bill/Nardole pour 12e) sont les techniciens — ils assiste [src: meta_ontologie.json entites.tech_os.Core.companons_canonique]
+<urn:aspace:entity:a0-amadeus> aspace:pairedWith <urn:aspace:entity:rick> .
+#   a0-amadeus --pairedWith--> rick : A0 Amadeus est le Pilot (A0) qui donne l'intention à Rick (S1) — dans le pattern E-Myth A0 = Visionary, Rick = garderie autoritair [src: matryoshka-l0-l1-l2.md §4 — « A0 n'est pas un captain, c'est]
+<urn:aspace:entity:a0-amadeus> aspace:governs <urn:aspace:entity:a1> .
+#   a0-amadeus --governs--> a1 : A0 orchestre A1, A2 et A3 — c'est l'orchestrateur runtime 4h-12h, modèle-agnostique, qui subordonne 7 cadences. [src: matryoshka-l0-l1-l2.md §2 — grammaire A1/A2/A3 ; META_ONTOLO]
+<urn:aspace:entity:a1> aspace:partOf <urn:aspace:entity:life-os> .
+#   a1 --partOf--> life-os : A1 = Beth (Alignement) et Morty (Mise en file) — la couche A1 est inherent à Life OS (L1) avec horizon H+3 ans et droit de HALT ve [src: meta_ontologie.json entites.life_os.A1-Beth.et.A1-Morty ; ma]
+<urn:aspace:entity:a2> aspace:partOf <urn:aspace:entity:life-os> .
+#   a2 --partOf--> life-os : A2 = les 6 frameworks (Cerritos/GTD, Discovery/ZORA, Enterprise/Picard-Spock, Orville/Ikigai, Protostar/DEAL, SNW/12WY) — la couch [src: meta_ontologie.json entites.life_os.A2-* ; CASCADE.md:24-32 ]
+<urn:aspace:entity:a3> aspace:partOf <urn:aspace:entity:life-os> .
+#   a3 --partOf--> life-os : A3 = les officiers (Mercer, Pike, Mariner, Dal, Picard, Spock, Geordi, Data...) — cycle 12WY, livrent aux B1 des rocks mensuels. [src: CASCADE.md:24-32 — cascade amont A3 officiers]
+<urn:aspace:entity:beth> aspace:partOf <urn:aspace:entity:life-os> .
+#   beth --partOf--> life-os : Beth est l'A1 de Life OS (H+3 ans), porte le cap, filtre ce qui mérite d'entrer, peut HALT L2. [src: meta_ontologie.json entites.life_os.A1-Beth ; beth-morty-saf]
+<urn:aspace:entity:morty> aspace:partOf <urn:aspace:entity:life-os> .
+#   morty --partOf--> life-os : Morty est l'A1 de Life OS (H+3 ans), execution / mise en file, Focus Gatekeeper. [src: meta_ontologie.json entites.life_os.A1-Morty ; beth-morty-sa]
+<urn:aspace:entity:beth> aspace:pairedWith <urn:aspace:entity:morty> .
+#   beth --pairedWith--> morty : Beth (HALT veto authority) et Morty (Focus Gatekeeper) sont les deux gatekeepers L1 appariés — même rang A1, deux angles complémen [src: beth-morty-safety-gatekeepers.md §L'invariant — « Beth et Mo]
+<urn:aspace:entity:beth> aspace:governs <urn:aspace:entity:business-os> .
+#   beth --governs--> business-os : Beth HALT veto — toute acceleration Business gele immediatement quand LD03/LD04 passent en RED. Autorité L1 sur L2, absolue et non [src: meta_ontologie.json relations.inter_couches de Beth HALT ver]
+<urn:aspace:entity:life-os> aspace:governs <urn:aspace:entity:business-os> .
+#   life-os --governs--> business-os : L1 a la priorité absolue sur L2 — pyramide canonique L0 >= L1 > L2. Beth HALT est l'expression la plus brutale de cette autorité. [src: meta_ontologie.json relations.inter_couches Beth/HALT (SDD-0]
+<urn:aspace:entity:jerry> aspace:partOf <urn:aspace:entity:business-os> .
+#   jerry --partOf--> business-os : Jerry est l'A1 macro de L2 Business Pulse — il porte la responsabilité d'entreprise dans le temps (4 variantes : Prime/Bio/Nexus/S [src: jerry-macro-steward.md §Mission et périmètre ; four-jerry-fr]
+<urn:aspace:entity:summer> aspace:partOf <urn:aspace:entity:business-os> .
+#   summer --partOf--> business-os : Summer est l'A1 micro de L2 — micro-exécutif par projet (Summer's Verse), CEO Locale & Exclusive, durée datée. [src: meta_ontologie.json entites.business_os.Summer ; jerry-macro]
+<urn:aspace:entity:b1> aspace:partOf <urn:aspace:entity:business-os> .
+#   b1 --partOf--> business-os : B1 = Jerry (macro) et Summer (micro) — la direction qui prend les décisions que B2 et B3 ne peuvent pas prendre sans escalader. [src: b1-direction-cockpit.md §B1 possède la direction ; jerry-mac]
+<urn:aspace:entity:b2> aspace:partOf <urn:aspace:entity:business-os> .
+#   b2 --partOf--> business-os : B2 = 8 domaines Business (Growth, Sales, Product, Ops, IT, Finance, People, Legal) avec DC-Heroes managers — la méso-coordination. [src: business-wheel-eight-domains.md §La wheel Business — 8 domai]
+<urn:aspace:entity:b3> aspace:partOf <urn:aspace:entity:business-os> .
+#   b3 --partOf--> business-os : B3 = 8 squads Marvel (Guardians, Illuminati, Avengers, Fantastic4, KangDynasty, Thunderbolts, XMen, Eternals) — techniciens, 5 scr [src: meta_ontologie.json entites.business_os.Escouade-Marvel ; CA]
+<urn:aspace:entity:spock> aspace:partOf <urn:aspace:entity:a3> .
+#   spock --partOf--> a3 : Spock est l'officier A3 Areas (PARA) — gardien de la classification Areas/Projects, parent A2 Computer, owner A1 Morty. [src: spock-areas-canon.md §Frontières d'autorité — A3 Spock]
+<urn:aspace:entity:picard> aspace:partOf <urn:aspace:entity:a3> .
+#   picard --partOf--> a3 : Picard est l'officier A3 Projects — il instancie un Summer's Verse chaque fois qu'une proposition Jerry est qualifiée par Cerritos [src: meta_ontologie.json entites.life_os.A2-Enterprise ; picard-p]
+<urn:aspace:entity:geordi> aspace:partOf <urn:aspace:entity:a3> .
+#   geordi --partOf--> a3 : Geordi est l'officier A3 Resources (PARA) — il tient le Geordi KB (les 4 piliers) et route les items purement référentiels. [src: a3-geordi-resources-officer.md (concept) ; spock-areas-canon]
+<urn:aspace:entity:data> aspace:partOf <urn:aspace:entity:a3> .
+#   data --partOf--> a3 : Data est l'officier A3 Archives — il prend en charge les items clos mais conservés, c'est le pendant de Geordi côté archives. [src: data-role-a3-archives-officer.md (concept) ; spock-areas-can]
+<urn:aspace:entity:spock> aspace:governs <urn:aspace:entity:jerry> .
+#   spock --governs--> jerry : Spock (A3 Areas) héberge les 4 variantes de Jerry (J01/J02/J03/J04) — ce sont les quartiers canoniques de l'Areas ; Jerry hérite d [src: jerry-macro-steward.md §Le domaine Business Wheel LD01 (mapp]
+<urn:aspace:entity:picard> aspace:instantiates <urn:aspace:entity:summer> .
+#   picard --instantiates--> summer : Picard (A3 Projects) instancie un Summer's Verse à chaque fois que Cerritos/GTD qualifie une proposition Jerry — « chaque Summer e [src: meta_ontologie.json relations.inter_couches Picard→Summer « ]
+<urn:aspace:entity:data> aspace:pairedWith <urn:aspace:entity:geordi> .
+#   data --pairedWith--> geordi : Data (A3 Archives) et Geordi (A3 Resources) sont les deux officiers A3 PARA — Resources et Archives sont les deux faces d'un même  [src: a3-geordi-resources-officer.md + data-role-a3-archives-offic]
+<urn:aspace:entity:spock> aspace:pairedWith <urn:aspace:entity:picard> .
+#   spock --pairedWith--> picard : Spock (A3 Areas) et Picard (A3 Projects) sont les deux officiers A3 de la frontière Area/Project — Spock ne mute pas les Projects, [src: spock-areas-canon.md §Frontières d'autorité — Spock « n'exéc]
+<urn:aspace:entity:jerry> aspace:pairedWith <urn:aspace:entity:summer> .
+#   jerry --pairedWith--> summer : Jerry (A1 macro, perpétuel) et Summer (A1 micro, daté) sont les deux échelles du même fractal B1 — macro Areas et micro Summer's V [src: jerry-macro-steward.md §Jerry vs Summer macro/micro ; fracta]
+<urn:aspace:entity:summer> aspace:dependsOn <urn:aspace:entity:beth> .
+#   summer --dependsOn--> beth : Summer ne peut pas contourner le veto Beth HALT — c'est une limite explicite, posée dans le canon. [src: meta_ontologie.json entites.business_os.Summer.attributs.lim]
