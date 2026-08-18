@@ -2,7 +2,7 @@
 
 ## Résultat
 
-- **68 triplets** ont été écrits dans `60_Onthologies/triplets/tech.jsonl`.
+- **68 triplets** ont été écrits dans `70_Onthologies/triplets/tech.jsonl`.
 - Tous les triplets ont les sept champs requis : `sujet`, `verbe`, `objet`, `objet_type`, `phrase`, `source`, `confiance`.
 - Mesure JSONL : 68 lignes valides, 0 doublon de triplet, 0 source vide.
 - Répartition de confiance : 53 `haute`, 15 `moyenne`.

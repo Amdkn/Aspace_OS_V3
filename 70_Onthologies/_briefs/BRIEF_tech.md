@@ -1,4 +1,4 @@
-# BRIEF — reconstituer Business OS — l'action
+# BRIEF — reconstituer Tech OS — le mecanisme qui produit les trois OS
 
 ## Ce que tu produis
 
@@ -9,8 +9,8 @@ chacune sourcee.
 ## Ton perimetre EXCLUSIF en ecriture
 
 ```
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/business.jsonl
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/_briefs/RAPPORT_business.md
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/tech.jsonl
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/_briefs/RAPPORT_tech.md
 ```
 
 **Deux fichiers.** Deux autres agents travaillent en parallele sur les deux
@@ -32,24 +32,23 @@ Il fait 42 Ko et se lit d'un trait ; il te dit lesquels ouvrir.
 
 ## Ta couche
 
-**Entites principales** : `business-os`, `b1`, `b2`, `b3`, `jerry`, `summer`
+**Entites principales** : `rick`, `tech-os`, `docteur`, `compagnons`, `a0-amadeus`
 
-Cherche : la fractale B1/B2/B3 et ce que chaque etage decide, les huit
-domaines et leurs escouades, les quatre Jerry et leur macro-portefeuille, les
-Summer's Verse en micro-executif, Coach OS comme premiere franchise prototype.
+Rick gouverne **le mecanisme qui produit les trois OS**, pas les trois OS.
+Cette distinction est la these centrale de la couche ; toute assertion qui
+l'ignore est fausse.
 
-Une contradiction est **deja connue et ne doit pas etre tranchee** : le canon
-pose une pyramide stricte (L0 >= L1 > L2 en autorite), l'utilisateur dit que L2
-est unifie dans L1. Ecris les deux assertions, chacune avec sa source, et
-signale-les dans ton rapport.
+Cherche : le replicator et ses trois Cores issus du meme gabarit, le noyau et
+ses organes, les roles (Spec / Build / Spawn / Review) et la regle que nul ne
+cumule Build et Review, le watchdog et ses seuils, les cadences.
 
-Un rapport anterieur note aussi que SDD-006 decrit 7 domaines alors que le
-canon a jour en compte 8 — le code etait en avance sur le document. Si tu
-rencontres les deux comptes, ecris le plus recent et signale l'ecart.
+`Les Compagnons` n'apparait que dans 1 concept distille et `Les Docteurs` dans
+6. Si tu ne trouves pas de quoi les decrire, **dis-le** plutot que d'inventer :
+c'est un trou de couverture de la distillation, et c'est une information.
 
 ## Le format de sortie
 
-`triplets/business.jsonl` — un triplet par ligne, JSON strict :
+`triplets/tech.jsonl` — un triplet par ligne, JSON strict :
 
 ```json
 {"sujet":"rick","verbe":"governs","objet":"replicator","objet_type":"entite","phrase":"Rick gouverne le replicator, pas les trois OS qu'il produit","source":"ressources/adr-immutability-ricks-law.md","confiance":"haute"}
@@ -99,7 +98,7 @@ pas.
 
 ## Ton rapport
 
-`_briefs/RAPPORT_business.md` : combien de triplets, quels verbes neufs tu
+`_briefs/RAPPORT_tech.md` : combien de triplets, quels verbes neufs tu
 proposes et pourquoi, quelles contradictions tu as rencontrees, et **ce que la
 distillation ne portait pas** alors que tu l'attendais — c'est le plus utile
 pour la suite.

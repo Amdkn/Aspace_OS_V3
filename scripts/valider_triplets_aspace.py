@@ -28,9 +28,10 @@ import sys
 from collections import Counter, defaultdict
 
 V3 = r"C:\Users\amado\ASpace_OS_V3"
-D = os.path.join(V3, "60_Onthologies")
+D = os.path.join(V3, "70_Onthologies")
 DIST = os.path.join(V3, "50_Distillation")
 COUCHES = ("tech", "life", "business")
+COUCHES_V3 = ("v3-amadeus", "v3-tech", "v3-life", "v3-business")
 
 VERBES_SCHEMA = {
     "governs", "partOf", "dependsOn", "appliesTo", "refines", "instantiates",
@@ -39,8 +40,19 @@ VERBES_SCHEMA = {
 
 
 def sources_reelles():
-    """Les chemins de concepts distilles qui existent vraiment."""
+    """Les chemins qui existent vraiment — concepts distilles ET arborescence V3.
+
+    Les deux passes n'ont pas la meme source : la premiere cite des concepts
+    de 50_Distillation, la seconde des fichiers de l'arborescence V3. Le
+    validateur doit connaitre les deux, sinon il rejetterait comme
+    inexistante une source parfaitement reelle."""
     out = set()
+    for base, _, fichiers in os.walk(V3):
+        rel = os.path.relpath(base, V3).replace("\\", "/")
+        if rel.startswith((".git", "node_modules", "openwiki", ".obsidian")):
+            continue
+        for n in fichiers:
+            out.add(f"{rel}/{n}" if rel != "." else n)
     for sb in ("areas", "projets", "archives", "ressources", "ontologie"):
         d = os.path.join(DIST, sb)
         if not os.path.isdir(d):

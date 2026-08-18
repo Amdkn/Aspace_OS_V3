@@ -1,4 +1,4 @@
-# BRIEF — reconstituer Tech OS — le mecanisme qui produit les trois OS
+# BRIEF — reconstituer Life OS — la conscience
 
 ## Ce que tu produis
 
@@ -9,8 +9,8 @@ chacune sourcee.
 ## Ton perimetre EXCLUSIF en ecriture
 
 ```
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/tech.jsonl
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/_briefs/RAPPORT_tech.md
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/life.jsonl
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/_briefs/RAPPORT_life.md
 ```
 
 **Deux fichiers.** Deux autres agents travaillent en parallele sur les deux
@@ -32,23 +32,23 @@ Il fait 42 Ko et se lit d'un trait ; il te dit lesquels ouvrir.
 
 ## Ta couche
 
-**Entites principales** : `rick`, `tech-os`, `docteur`, `compagnons`, `a0-amadeus`
+**Entites principales** : `life-os`, `a1`, `a2`, `a3`, `beth`, `morty`, `picard`, `spock`, `data`, `geordi`
 
-Rick gouverne **le mecanisme qui produit les trois OS**, pas les trois OS.
-Cette distinction est la these centrale de la couche ; toute assertion qui
-l'ignore est fausse.
+C'est la couche la mieux couverte : `life-os` est cite dans 84 concepts sur
+102.
 
-Cherche : le replicator et ses trois Cores issus du meme gabarit, le noyau et
-ses organes, les roles (Spec / Build / Spawn / Review) et la regle que nul ne
-cumule Build et Review, le watchdog et ses seuils, les cadences.
+Cherche : les quatre gardiens PARA et le seau que chacun tient, le veto de
+Life OS sur Business OS (un HALT qui gele l'acceleration — c'est une relation
+d'autorite, pas une dependance), les rangs A1/A2/A3 et ce qu'ils designent,
+l'Ikigai et les horizons, les jauges, GTD et 12WY.
 
-`Les Compagnons` n'apparait que dans 1 concept distille et `Les Docteurs` dans
-6. Si tu ne trouves pas de quoi les decrire, **dis-le** plutot que d'inventer :
-c'est un trou de couverture de la distillation, et c'est une information.
+Attention a un piege deja documente : le registre Owner « Doctor Who » et le
+registre « Star Trek » ne se recouvrent pas terme a terme. Ne les fusionne
+pas.
 
 ## Le format de sortie
 
-`triplets/tech.jsonl` — un triplet par ligne, JSON strict :
+`triplets/life.jsonl` — un triplet par ligne, JSON strict :
 
 ```json
 {"sujet":"rick","verbe":"governs","objet":"replicator","objet_type":"entite","phrase":"Rick gouverne le replicator, pas les trois OS qu'il produit","source":"ressources/adr-immutability-ricks-law.md","confiance":"haute"}
@@ -98,7 +98,7 @@ pas.
 
 ## Ton rapport
 
-`_briefs/RAPPORT_tech.md` : combien de triplets, quels verbes neufs tu
+`_briefs/RAPPORT_life.md` : combien de triplets, quels verbes neufs tu
 proposes et pourquoi, quelles contradictions tu as rencontrees, et **ce que la
 distillation ne portait pas** alors que tu l'attendais — c'est le plus utile
 pour la suite.

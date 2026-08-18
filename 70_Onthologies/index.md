@@ -1,6 +1,6 @@
 ---
 type: Bundle index
-title: 60_Onthologies — A'Space OS reconstitue en sujet-verbe-objet
+title: 70_Onthologies — A'Space OS reconstitue en sujet-verbe-objet
 description: Le graphe RDF d'A'Space lui-meme, forme par des agents lisant la distillation. Trois couches, trois agents, un vocabulaire ferme.
 tags: [ontologie, rdf, triplets, aspace, sujet-verbe-objet]
 generated: {{ by: claude-opus-5, at: 2026-08-17T22:00:00Z }}
@@ -30,7 +30,7 @@ metadonnees, leurs liens. Celui-la decrit des **documents**.
 | | sujet du graphe | question a laquelle il repond |
 |---|---|---|
 | `50_Distillation/ontologie/` | les concepts distilles | « ou est-ce ecrit ? » |
-| `60_Onthologies` | A'Space lui-meme | « qu'est-ce qui est vrai ? » |
+| `70_Onthologies` | A'Space lui-meme | « qu'est-ce qui est vrai ? » |
 
 Ici, les 102 concepts distilles deviennent des **sources**, plus des sujets.
 

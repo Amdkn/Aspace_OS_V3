@@ -1,11 +1,11 @@
-"""Monte le bundle 60_Onthologies : index, briefs par couche, lanceur.
+"""Monte le bundle 70_Onthologies : index, briefs par couche, lanceur.
 
 POURQUOI CE BUNDLE EST DISTINCT DE 50_Distillation/ontologie/
 `50_Distillation/ontologie/` porte le graphe **mecanique** : les 102 concepts
 distilles comme sujets, leurs metadonnees, leurs liens. Il decrit des
 DOCUMENTS.
 
-`60_Onthologies` porte la reconstitution d'**A'Space lui-meme** en
+`70_Onthologies` porte la reconstitution d'**A'Space lui-meme** en
 sujet-verbe-objet : ce qu'est A'Space, qui y agit, selon quelle regle. Les
 concepts distilles y deviennent des SOURCES, plus des sujets.
 
@@ -22,9 +22,9 @@ import os
 import shutil
 
 V3 = r"C:\Users\amado\ASpace_OS_V3"
-D = os.path.join(V3, "60_Onthologies")
+D = os.path.join(V3, "70_Onthologies")
 DIST = "C:/Users/amado/ASpace_OS_V3/50_Distillation"
-BASE = "C:/Users/amado/ASpace_OS_V3/60_Onthologies"
+BASE = "C:/Users/amado/ASpace_OS_V3/70_Onthologies"
 
 COUCHES = {
     "tech": dict(
@@ -79,7 +79,7 @@ rencontres les deux comptes, ecris le plus recent et signale l'ecart."""),
 
 INDEX = """---
 type: Bundle index
-title: 60_Onthologies — A'Space OS reconstitue en sujet-verbe-objet
+title: 70_Onthologies — A'Space OS reconstitue en sujet-verbe-objet
 description: Le graphe RDF d'A'Space lui-meme, forme par des agents lisant la distillation. Trois couches, trois agents, un vocabulaire ferme.
 tags: [ontologie, rdf, triplets, aspace, sujet-verbe-objet]
 generated: {{ by: claude-opus-5, at: 2026-08-17T22:00:00Z }}
@@ -109,7 +109,7 @@ metadonnees, leurs liens. Celui-la decrit des **documents**.
 | | sujet du graphe | question a laquelle il repond |
 |---|---|---|
 | `50_Distillation/ontologie/` | les concepts distilles | « ou est-ce ecrit ? » |
-| `60_Onthologies` | A'Space lui-meme | « qu'est-ce qui est vrai ? » |
+| `70_Onthologies` | A'Space lui-meme | « qu'est-ce qui est vrai ? » |
 
 Ici, les 102 concepts distilles deviennent des **sources**, plus des sujets.
 
@@ -255,7 +255,7 @@ set -u
 QUOI="${1:?usage: lance.sh tech|life|business}"
 
 V3="C:/Users/amado/ASpace_OS_V3"
-D="$V3/60_Onthologies"
+D="$V3/70_Onthologies"
 BRIEFS="$D/_briefs"
 
 case "$QUOI" in tech|life|business) ;; *) echo "inconnu : $QUOI" >&2; exit 2 ;; esac

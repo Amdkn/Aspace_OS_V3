@@ -8,7 +8,7 @@ verified:
   - { by: process:compteur-jsonl, at: 2026-08-17T23:50:00Z }
 sources:
   - id: triplets-life
-    resource: "C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/life.jsonl"
+    resource: "C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/life.jsonl"
     title: "119 triplets sujet-verbe-objet sur Life OS"
     last_modified: 2026-08-17
   - id: catalogue
@@ -22,7 +22,7 @@ okf_version: "0.2"
 
 ## 1. Couverture
 
-- **119 triplets écrits** dans `C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/life.jsonl`
+- **119 triplets écrits** dans `C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/life.jsonl`
 - **0 triplet invalide** (vérification JSON strict ligne par ligne)
 - **Concepts lus en intégralité** (couverture complète des frontmatter + corps) : 16
   - `areas/area-vs-project-classification.md`
@@ -184,7 +184,7 @@ Aucune assertion n'est **inventée** hors distillation. Aucun secret n'apparaît
 
 ## 9. Périmètre respecté
 
-- **Écriture** : `C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/life.jsonl` et `C:/Users/amado/ASpace_OS_V3/60_Onthologies/_briefs/RAPPORT_life.md`.
+- **Écriture** : `C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/life.jsonl` et `C:/Users/amado/ASpace_OS_V3/70_Onthologies/_briefs/RAPPORT_life.md`.
 - **Aucune touche** : concepts distillés (`50_Distillation/`), fichiers `.ttl`, autres triplets (`tech.jsonl`, `business.jsonl` sont la responsabilité des autres agents en parallèle).
 
 ## 10. Suite recommandée

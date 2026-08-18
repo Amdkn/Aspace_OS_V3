@@ -1,4 +1,4 @@
-# BRIEF — reconstituer Life OS — la conscience
+# BRIEF — reconstituer Business OS — l'action
 
 ## Ce que tu produis
 
@@ -9,8 +9,8 @@ chacune sourcee.
 ## Ton perimetre EXCLUSIF en ecriture
 
 ```
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/triplets/life.jsonl
-C:/Users/amado/ASpace_OS_V3/60_Onthologies/_briefs/RAPPORT_life.md
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/triplets/business.jsonl
+C:/Users/amado/ASpace_OS_V3/70_Onthologies/_briefs/RAPPORT_business.md
 ```
 
 **Deux fichiers.** Deux autres agents travaillent en parallele sur les deux
@@ -32,23 +32,24 @@ Il fait 42 Ko et se lit d'un trait ; il te dit lesquels ouvrir.
 
 ## Ta couche
 
-**Entites principales** : `life-os`, `a1`, `a2`, `a3`, `beth`, `morty`, `picard`, `spock`, `data`, `geordi`
+**Entites principales** : `business-os`, `b1`, `b2`, `b3`, `jerry`, `summer`
 
-C'est la couche la mieux couverte : `life-os` est cite dans 84 concepts sur
-102.
+Cherche : la fractale B1/B2/B3 et ce que chaque etage decide, les huit
+domaines et leurs escouades, les quatre Jerry et leur macro-portefeuille, les
+Summer's Verse en micro-executif, Coach OS comme premiere franchise prototype.
 
-Cherche : les quatre gardiens PARA et le seau que chacun tient, le veto de
-Life OS sur Business OS (un HALT qui gele l'acceleration — c'est une relation
-d'autorite, pas une dependance), les rangs A1/A2/A3 et ce qu'ils designent,
-l'Ikigai et les horizons, les jauges, GTD et 12WY.
+Une contradiction est **deja connue et ne doit pas etre tranchee** : le canon
+pose une pyramide stricte (L0 >= L1 > L2 en autorite), l'utilisateur dit que L2
+est unifie dans L1. Ecris les deux assertions, chacune avec sa source, et
+signale-les dans ton rapport.
 
-Attention a un piege deja documente : le registre Owner « Doctor Who » et le
-registre « Star Trek » ne se recouvrent pas terme a terme. Ne les fusionne
-pas.
+Un rapport anterieur note aussi que SDD-006 decrit 7 domaines alors que le
+canon a jour en compte 8 — le code etait en avance sur le document. Si tu
+rencontres les deux comptes, ecris le plus recent et signale l'ecart.
 
 ## Le format de sortie
 
-`triplets/life.jsonl` — un triplet par ligne, JSON strict :
+`triplets/business.jsonl` — un triplet par ligne, JSON strict :
 
 ```json
 {"sujet":"rick","verbe":"governs","objet":"replicator","objet_type":"entite","phrase":"Rick gouverne le replicator, pas les trois OS qu'il produit","source":"ressources/adr-immutability-ricks-law.md","confiance":"haute"}
@@ -98,7 +99,7 @@ pas.
 
 ## Ton rapport
 
-`_briefs/RAPPORT_life.md` : combien de triplets, quels verbes neufs tu
+`_briefs/RAPPORT_business.md` : combien de triplets, quels verbes neufs tu
 proposes et pourquoi, quelles contradictions tu as rencontrees, et **ce que la
 distillation ne portait pas** alors que tu l'attendais — c'est le plus utile
 pour la suite.

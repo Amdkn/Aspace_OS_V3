@@ -10,7 +10,7 @@ set -u
 QUOI="${1:?usage: lance.sh tech|life|business}"
 
 V3="C:/Users/amado/ASpace_OS_V3"
-D="$V3/60_Onthologies"
+D="$V3/70_Onthologies"
 BRIEFS="$D/_briefs"
 
 case "$QUOI" in tech|life|business) ;; *) echo "inconnu : $QUOI" >&2; exit 2 ;; esac
