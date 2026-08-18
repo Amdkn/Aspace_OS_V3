@@ -4,3 +4,831 @@
 @prefix aspace: <urn:aspace:ns:> .
 @prefix ent:    <urn:aspace:entity:> .
 
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:tech-os> .
+#   Rick gouverne le Tech OS comme socle de souveraineté
+#   src: ressources/sovereignty-3-niveaux.md [haute] (tech)
+<urn:aspace:entity:trust-zone> aspace:partOf <urn:aspace:entity:tech-os> .
+#   La Trust Zone constitue le niveau infrastructure du Tech OS
+#   src: ressources/sovereignty-3-niveaux.md [moyenne] (tech)
+<urn:aspace:entity:adrs> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Les ADRs constituent le niveau code du Tech OS
+#   src: ressources/sovereignty-3-niveaux.md [moyenne] (tech)
+<urn:aspace:entity:tardis-protocol> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Le TARDIS Protocol constitue le niveau mémoire du Tech OS
+#   src: ressources/sovereignty-3-niveaux.md [haute] (tech)
+<urn:aspace:entity:tech-os> aspace:dependsOn <urn:aspace:entity:trust-zone> .
+#   Le Tech OS s'appuie sur la Trust Zone pour son niveau infrastructure
+#   src: ressources/sovereignty-3-niveaux.md [moyenne] (tech)
+<urn:aspace:entity:tech-os> aspace:dependsOn <urn:aspace:entity:adrs> .
+#   Le Tech OS s'appuie sur les ADRs immuables pour son niveau code
+#   src: ressources/sovereignty-3-niveaux.md [moyenne] (tech)
+<urn:aspace:entity:tech-os> aspace:dependsOn <urn:aspace:entity:tardis-protocol> .
+#   Le Tech OS s'appuie sur le TARDIS Protocol pour historiser les modifications
+#   src: ressources/sovereignty-3-niveaux.md [moyenne] (tech)
+<urn:aspace:entity:adrs> aspace:handledBy <urn:aspace:entity:rick> .
+#   Rick est le seul Guardian autorisé à créer les ADRs
+#   src: ressources/sovereignty-3-niveaux.md [haute] (tech)
+<urn:aspace:entity:adrs> aspace:dependsOn <urn:aspace:entity:agents-md> .
+#   Chaque ADR doit être ancrée dans AGENTS.md
+#   src: ressources/adr-immutability-ricks-law.md [haute] (tech)
+<urn:aspace:entity:sdds> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Les dix SDDs canoniques appartiennent au L0 Tech OS
+#   src: ressources/sdd-system-design-documents.md [haute] (tech)
+<urn:aspace:entity:sdds> aspace:handledBy <urn:aspace:entity:rick> .
+#   Rick garde les SDDs du L0
+#   src: ressources/sdd-system-design-documents.md [haute] (tech)
+<urn:aspace:entity:sdds> aspace:handledBy <urn:aspace:entity:a2> .
+#   A2 partage la garde des SDDs au niveau design
+#   src: ressources/sdd-system-design-documents.md [haute] (tech)
+<urn:aspace:entity:sdds> aspace:dependsOn <urn:aspace:entity:adrs> .
+#   La couche SDD vient après la décision ADR
+#   src: ressources/adr-immutability-ricks-law.md [haute] (tech)
+<urn:aspace:entity:sdds> aspace:dependsOn <urn:aspace:entity:tardis-protocol> .
+#   Les SDDs sont versionnées via le TARDIS Protocol
+#   src: ressources/sdd-system-design-documents.md [haute] (tech)
+<urn:aspace:entity:blueprints> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Le canon Blueprint L0 appartient au Tech OS
+#   src: ressources/blueprints-canon-tripartite.md [haute] (tech)
+<urn:aspace:entity:blueprints> aspace:partOf <urn:aspace:entity:life-os> .
+#   Le canon Blueprint L1 appartient au Life OS
+#   src: ressources/blueprints-canon-tripartite.md [haute] (tech)
+<urn:aspace:entity:blueprints> aspace:partOf <urn:aspace:entity:business-os> .
+#   Le canon Blueprint L2 appartient au Business OS
+#   src: ressources/blueprints-canon-tripartite.md [haute] (tech)
+<urn:aspace:entity:blueprints> aspace:handledBy <urn:aspace:entity:rick> .
+#   Rick est le Owner du canon Blueprint L0
+#   src: ressources/blueprints-canon-tripartite.md [haute] (tech)
+<urn:aspace:entity:blueprints> aspace:dependsOn <urn:aspace:entity:sdds> .
+#   Le Blueprint d'exécution suit la couche SDD
+#   src: ressources/sdd-system-design-documents.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Le Life OS est emboîté dans le Tech OS
+#   src: ressources/matryoshka-l0-l1-l2.md [moyenne] (tech)
+<urn:aspace:entity:business-os> aspace:partOf <urn:aspace:entity:life-os> .
+#   Le Business Pulse est emboîté dans le Life OS
+#   src: ressources/matryoshka-l0-l1-l2.md [moyenne] (tech)
+<urn:aspace:entity:business-os> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Le Business Pulse est transitivement emboîté dans le Tech OS
+#   src: ressources/matryoshka-l0-l1-l2.md [moyenne] (tech)
+<urn:aspace:entity:docteur> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Les Docteurs forment le rang A3 du L0 Tech OS
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:a0-amadeus> aspace:directs <urn:aspace:entity:rick> .
+#   A0 donne son intention à Rick pour l'infrastructure
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:a0-amadeus> aspace:directs <urn:aspace:entity:life-os> .
+#   A0 donne son intention au Life OS via Beth et Morty
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:a0-amadeus> aspace:directs <urn:aspace:entity:business-os> .
+#   A0 donne son intention au Business Pulse via Jerry et Summer
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:handledBy <urn:aspace:entity:beth> .
+#   Beth commande la flotte du Life OS
+#   src: ressources/life-os-six-vaisseaux.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:handledBy <urn:aspace:entity:morty> .
+#   Morty commande la flotte du Life OS
+#   src: ressources/life-os-six-vaisseaux.md [haute] (tech)
+<urn:aspace:entity:business-os> aspace:handledBy <urn:aspace:entity:jerry> .
+#   Jerry porte la responsabilité macro du Business Pulse
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:business-os> aspace:handledBy <urn:aspace:entity:summer> .
+#   Summer porte l'exécution micro du Business Pulse
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:dependsOn <urn:aspace:entity:tech-os> .
+#   Le Life OS repose sur le substrat Tech OS
+#   src: ressources/matryoshka-l0-l1-l2.md [moyenne] (tech)
+<urn:aspace:entity:business-os> aspace:dependsOn <urn:aspace:entity:life-os> .
+#   Le Business Pulse repose sur la couche Life OS
+#   src: ressources/matryoshka-l0-l1-l2.md [moyenne] (tech)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:business-os> .
+#   Beth peut geler toute expansion du Business OS
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (tech)
+<urn:aspace:entity:morty> aspace:hasVetoOver <urn:aspace:entity:business-os> .
+#   Morty appartient à la chaîne de gatekeepers qui peut arrêter le Business OS
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (tech)
+<urn:aspace:entity:rick> aspace:hasVetoOver <urn:aspace:entity:business-os> .
+#   Rick appartient à la chaîne de gatekeepers qui arbitre le Business OS
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (tech)
+<urn:aspace:entity:morty> aspace:governs <urn:aspace:entity:spock> .
+#   Morty est l'Owner A1 au-dessus de Spock A3
+#   src: areas/beth-morty-safety-gatekeepers.md [moyenne] (tech)
+<urn:aspace:entity:b1> aspace:governs "direction" .
+#   B1 gouverne la direction
+#   src: areas/b1-direction-cockpit.md [haute] (tech)
+<urn:aspace:entity:b2> aspace:governs "domain-dod" .
+#   B2 gouverne les Definition of Done de domaine
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (tech)
+<urn:aspace:entity:b2> aspace:governs "domain-gates" .
+#   B2 gouverne les gates de domaine
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (tech)
+<urn:aspace:entity:b3> aspace:governs "execution" .
+#   B3 gouverne l'exécution
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (tech)
+<urn:aspace:entity:b3> aspace:governs "proof" .
+#   B3 gouverne la preuve
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (tech)
+<urn:aspace:entity:b3> aspace:dependsOn <urn:aspace:entity:b2> .
+#   B3 ne travaille qu'avec une source DoD ou JTBD de B2
+#   src: ressources/l2-fractal-b1-b2-b3.md [haute] (tech)
+<urn:aspace:entity:b2> aspace:dependsOn <urn:aspace:entity:b1> .
+#   B2 reçoit son mandat de B1
+#   src: ressources/l2-fractal-b1-b2-b3.md [haute] (tech)
+<urn:aspace:entity:jerry> aspace:dependsOn <urn:aspace:entity:cerritos> .
+#   Les idées de Jerry passent par Cerritos avant Picard
+#   src: areas/jerry-macro-steward.md [haute] (tech)
+<urn:aspace:entity:picard> aspace:instantiates "Summer's Verse Project" .
+#   Picard instancie le projet Summer's Verse
+#   src: areas/para-picard-routing-boundary.md [haute] (tech)
+<urn:aspace:entity:constitution> aspace:appliesTo <urn:aspace:entity:tech-os> .
+#   La Constitution A'SPACE s'applique au Tech OS
+#   src: ressources/constitution-aspace-v1.md [haute] (tech)
+<urn:aspace:entity:constitution> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   La Constitution A'SPACE s'applique au Life OS
+#   src: ressources/constitution-aspace-v1.md [haute] (tech)
+<urn:aspace:entity:constitution> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   La Constitution A'SPACE s'applique au Business OS
+#   src: ressources/constitution-aspace-v1.md [haute] (tech)
+<urn:aspace:entity:constitution> aspace:appliesTo "Beth coherence function" .
+#   La Constitution définit Beth comme fonction de cohérence vie-santé
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (tech)
+<urn:aspace:entity:wiki> aspace:dependsOn <urn:aspace:entity:raw> .
+#   Le wiki lit les sources brutes sans les modifier
+#   src: ressources/wiki-schema-llm-wiki.md [haute] (tech)
+<urn:aspace:entity:wiki> aspace:dependsOn <urn:aspace:entity:okf> .
+#   Le wiki est construit comme un bundle OKF
+#   src: ressources/geordi-kb-quatre-piliers.md [haute] (tech)
+<urn:aspace:entity:graphify> aspace:dependsOn <urn:aspace:entity:okf> .
+#   Graphify consomme les bundles OKF
+#   src: ressources/geordi-kb-quatre-piliers.md [haute] (tech)
+<urn:aspace:entity:dox> aspace:dependsOn <urn:aspace:entity:okf> .
+#   Dox consomme les bundles OKF
+#   src: ressources/geordi-kb-quatre-piliers.md [haute] (tech)
+<urn:aspace:entity:graphify> aspace:produces "topological structure" .
+#   Graphify produit la structure topologique
+#   src: ressources/geordi-kb-quatre-piliers.md [haute] (tech)
+<urn:aspace:entity:dox> aspace:produces "filesystem navigation" .
+#   Dox produit la navigation filesystem
+#   src: ressources/geordi-kb-quatre-piliers.md [moyenne] (tech)
+<urn:aspace:entity:wiki> aspace:produces "canonical pages" .
+#   Le wiki produit les pages canoniques
+#   src: ressources/wiki-schema-llm-wiki.md [moyenne] (tech)
+<urn:aspace:entity:business-os> aspace:dependsOn "PARA/Enterprise" .
+#   Le Business OS expose les données de PARA/Enterprise
+#   src: ressources/ntfs-junction-aliasing.md [haute] (tech)
+<urn:aspace:entity:ntfs-junctions> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   Les jonctions NTFS exposent les données au Business OS
+#   src: ressources/ntfs-junction-aliasing.md [haute] (tech)
+<urn:aspace:entity:ntfs-junctions> aspace:partOf <urn:aspace:entity:tech-os> .
+#   Les jonctions NTFS forment un outillage de la souveraineté Tech OS
+#   src: ressources/ntfs-junction-aliasing.md [moyenne] (tech)
+<urn:aspace:entity:docteur> aspace:appliesTo "00_KERNEL_OS guides" .
+#   Le registre Doctor Who des Docteurs est limité aux guides 00_KERNEL_OS
+#   src: ressources/tags-registres-owner-shelf.md [haute] (tech)
+<urn:aspace:entity:a0-amadeus> aspace:supersedes "A'0 GravityClaw" .
+#   A0 Amadeus succède au vocabulaire legacy A'0 GravityClaw
+#   src: archives/agent-vocabulary-legacy-vs-current.md [moyenne] (tech)
+<urn:aspace:entity:rick> aspace:partOf "A'1 legacy vocabulary" .
+#   Rick appartient au vocabulaire legacy A'1
+#   src: archives/agent-vocabulary-legacy-vs-current.md [haute] (tech)
+<urn:aspace:entity:beth> aspace:partOf "A1 current vocabulary" .
+#   Beth appartient au vocabulaire actuel A1
+#   src: archives/agent-vocabulary-legacy-vs-current.md [haute] (tech)
+<urn:aspace:entity:docteur> aspace:partOf "A'2 legacy vocabulary" .
+#   Les Docteurs appartiennent au vocabulaire legacy A'2
+#   src: archives/agent-vocabulary-legacy-vs-current.md [haute] (tech)
+<urn:aspace:entity:tech-os> aspace:partOf "L0 Bedrock" .
+#   Tech OS est le bedrock L0 de l'archive V3
+#   src: archives/archive-v3-structure-snapshot-2026-08-02.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:partOf "L1 PARA + Life Wheel" .
+#   Life OS constitue la couche L1 de l'archive V3
+#   src: archives/archive-v3-structure-snapshot-2026-08-02.md [haute] (tech)
+<urn:aspace:entity:business-os> aspace:partOf "L2 eight domains" .
+#   Business OS constitue la couche L2 à huit domaines de l'archive V3
+#   src: archives/archive-v3-structure-snapshot-2026-08-02.md [haute] (tech)
+<urn:aspace:entity:rick> aspace:governs "ADR immutability" .
+#   Rick gouverne la règle d'immuabilité des ADRs
+#   src: ressources/adr-immutability-ricks-law.md [haute] (tech)
+<urn:aspace:entity:life-os> aspace:partOf <urn:aspace:entity:aspace-os> .
+#   Life OS est une composante d'A'Space OS — second layer de la matrioshka entre L0 Tech OS et L2 Business Pulse
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:beth> aspace:partOf <urn:aspace:entity:life-os> .
+#   Beth fait partie de Life OS — co-commandante L1 de la flotte
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:morty> aspace:partOf <urn:aspace:entity:life-os> .
+#   Morty fait partie de Life OS — co-commandant L1 de la flotte, Focus Gatekeeper A1
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:jerry> aspace:partOf <urn:aspace:entity:business-os> .
+#   Jerry fait partie de Business OS — A1 macro de L2, stewardship des Areas perpétuelles
+#   src: ressources/l2-fractal-b1-b2-b3.md [haute] (life)
+<urn:aspace:entity:summer> aspace:partOf <urn:aspace:entity:business-os> .
+#   Summer fait partie de Business OS — A1 micro de L2, exécution d'un projet daté
+#   src: ressources/l2-fractal-b1-b2-b3.md [haute] (life)
+<urn:aspace:entity:picard> aspace:partOf <urn:aspace:entity:business-os> .
+#   Picard fait partie de Business OS — A3 Projects, instancie les Summer's Verse
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:spock> aspace:partOf <urn:aspace:entity:life-os> .
+#   Spock fait partie de Life OS via PARA — A3 Areas, parent A2 Computer, owner A1 Morty
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:data> aspace:partOf <urn:aspace:entity:life-os> .
+#   Data fait partie de Life OS via PARA — A3 Archives, officier archives
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:geordi> aspace:partOf <urn:aspace:entity:life-os> .
+#   Geordi fait partie de Life OS via PARA — A3 Resources, racine KB canon
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:a1> aspace:partOf <urn:aspace:entity:life-os> .
+#   La couche A1 fait partie de Life OS — Beth & Morty incarnent A1 L1
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:a2> aspace:partOf <urn:aspace:entity:life-os> .
+#   La couche A2 fait partie de Life OS — 6 vaisseaux USS incarnent A2 L1 (Orville, Discovery, SNW, Enterprise, Cerritos, Protostar)
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:a3> aspace:partOf <urn:aspace:entity:life-os> .
+#   La couche A3 fait partie de Life OS — squads de chaque vaisseau + officiers Spock/Data/Geordi
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-orville> .
+#   Life OS instancie USS Orville — vaisseau Ikigai (le pourquoi), captain Orville
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-discovery> .
+#   Life OS instancie USS Discovery — vaisseau Life Wheel (équilibre 8 domaines), captain Discovery
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-snw> .
+#   Life OS instancie USS SNW — vaisseau 12WY (12 semaines = un cycle), captain SNW
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-enterprise> .
+#   Life OS instancie USS Enterprise — vaisseau PARA (Projects/Areas/Resources/Archives), captain Enterprise
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-cerritos> .
+#   Life OS instancie USS Cerritos — vaisseau GTD (Capture→Clarify→Organize→Reflect→Engage), captain Cerritos
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:instantiates <urn:aspace:entity:uss-protostar> .
+#   Life OS instancie USS Protostar — vaisseau DEAL (Define/Examine/Act/Lock), captain Protostar
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:jerry> .
+#   Beth a un veto sur tous les Jerry — HALT veto authority quand signaux vitaux/cognitifs passent en RED
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (life)
+<urn:aspace:entity:morty> aspace:hasVetoOver <urn:aspace:entity:spock> .
+#   Morty a un veto sur Spock — A1 Focus Gatekeeper, sans son OK Spock n'incube pas d'Area
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (life)
+<urn:aspace:entity:beth> aspace:governs <urn:aspace:entity:life-os> .
+#   Beth gouverne Life OS — co-A1 L1, garante de la survie du substrat vital/cognitif
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (life)
+<urn:aspace:entity:morty> aspace:governs <urn:aspace:entity:life-os> .
+#   Morty gouverne Life OS côté Areas — co-A1 L1, Focus Gatekeeper qui pose la Law de la couche Areas
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (life)
+<urn:aspace:entity:spock> aspace:handledBy <urn:aspace:entity:morty> .
+#   Spock est traité par Morty — A3 sous A1, dépendance hiérarchique explicite
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (life)
+<urn:aspace:entity:jerry-prime> aspace:covers <urn:aspace:entity:ld01> .
+#   J01 Jerry Prime couvre LD01 Business/Career — macro actif, wheel complète 8 domaines B2
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-bio> aspace:covers <urn:aspace:entity:ld03> .
+#   J02 Jerry Bio couvre LD03 Vitality — hard safety, déclenche Beth HALT veto si RED
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-bio> aspace:covers <urn:aspace:entity:ld04> .
+#   J02 Jerry Bio couvre LD04 Cognition — hard safety, learning threshold gates
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:covers <urn:aspace:entity:ld02> .
+#   J03 Jerry Nexus couvre LD02 Finance — wealth tiers T1-T4, coverage ratio, 4% rule
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:covers <urn:aspace:entity:ld06> .
+#   J03 Jerry Nexus couvre LD06 Family/Presence — family presence score floor, automated banking
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-solarpunk> aspace:covers <urn:aspace:entity:ld05> .
+#   J04 Jerry Solarpunk couvre LD05 Social — relational capital, 26 règles Carnegie/Voss/Cialdini
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-solarpunk> aspace:covers <urn:aspace:entity:ld07> .
+#   J04 Jerry Solarpunk couvre LD07 Creativity — experiential capital, 24 règles Flow/Game Design/Play
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:jerry-solarpunk> aspace:covers <urn:aspace:entity:ld08> .
+#   J04 Jerry Solarpunk couvre LD08 Impact/Regenerative — biomimicry, urban acupuncture, low-tech, 28 règles solarpunk
+#   src: areas/four-jerry-fractal.md [haute] (life)
+<urn:aspace:entity:ld04> aspace:dependsOn <urn:aspace:entity:ld03> .
+#   LD04 Cognition dépend de LD03 Vitality — on ne répare pas la cognition si le sommeil est cassé
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry-bio> aspace:appliesTo <urn:aspace:entity:jerry-prime> .
+#   Jerry Bio applique la hard stop authority à Jerry Prime — FULL STOP quand LD03 passe en RED
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:appliesTo <urn:aspace:entity:summer> .
+#   Jerry Nexus applique le stability veto à Summer — override automatique quand runway ORANGE/RED
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:hasVetoOver <urn:aspace:entity:summer> .
+#   Jerry Nexus a un veto sur Summer — expansion business refusée si elle menace coverage ratio dans les 60 jours
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry> aspace:stewards <urn:aspace:entity:ld01> .
+#   Jerry steward LD01 — porte la responsabilité d'entreprise dans le temps, A1 macro
+#   src: areas/jerry-macro-steward.md [haute] (life)
+<urn:aspace:entity:spock> aspace:stewards <urn:aspace:entity:areas> .
+#   Spock steward Areas — A3 Areas officer, classifie ce qui est Area vs Project vs Resource vs Archive
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:geordi> aspace:stewards <urn:aspace:entity:resources> .
+#   Geordi steward Resources — racine KB canon, transforme connaissance en infrastructure réutilisable
+#   src: ressources/a3-geordi-resources-officer.md [haute] (life)
+<urn:aspace:entity:data> aspace:stewards <urn:aspace:entity:archives> .
+#   Data steward Archives — officier archives PARA, protège de la suppression comme de la pollution
+#   src: archives/data-role-a3-archives-officer.md [haute] (life)
+<urn:aspace:entity:picard> aspace:stewards <urn:aspace:entity:projects> .
+#   Picard steward Projects — A3 Projects, instancie Summer's Verse à partir d'un routage Cerritos
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:spock> aspace:routes <urn:aspace:entity:picard> .
+#   Spock route vers Picard — si l'item a une deadline et un livrable
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:spock> aspace:routes <urn:aspace:entity:geordi> .
+#   Spock route vers Geordi — si l'item est purement référentiel
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:spock> aspace:routes <urn:aspace:entity:data> .
+#   Spock route vers Data — si l'item est clos mais conservé
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:jerry> aspace:routes <urn:aspace:entity:cerritos> .
+#   Jerry route ses idées via Cerritos — P7 « Cerritos First, Jerry Second »
+#   src: areas/para-picard-routing-boundary.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:routes <urn:aspace:entity:picard> .
+#   Cerritos route vers Picard — SLA 48h pour toute idée
+#   src: areas/para-picard-routing-boundary.md [haute] (life)
+<urn:aspace:entity:picard> aspace:instantiates <urn:aspace:entity:summer-verse> .
+#   Picard instancie Summer's Verse — Project daté issu d'un handoff Cerritos
+#   src: areas/para-picard-routing-boundary.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Cerritos applique le pipeline GTD à Life OS — Capture→Clarify→Organize→Reflect→Engage
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:dependsOn <urn:aspace:entity:jerry> .
+#   Cerritos dépend de Jerry — Jerry pose les critères que Cerritos applique
+#   src: areas/para-picard-routing-boundary.md [haute] (life)
+<urn:aspace:entity:picard> aspace:dependsOn <urn:aspace:entity:cerritos> .
+#   Picard dépend de Cerritos — aucun Project n'est ouvert sans handoff Cerritos
+#   src: areas/para-picard-routing-boundary.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:handledBy <urn:aspace:entity:mariner> .
+#   Cerritos étape 1 est tenue par Mariner — Capture verbatim dans l'inbox
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:handledBy <urn:aspace:entity:boimler> .
+#   Cerritos étape 2 est tenue par Boimler — Clarify (actionable, multi-step, someday/maybe)
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:handledBy <urn:aspace:entity:rutherford> .
+#   Cerritos étape 3 est tenue par Rutherford — Organize (route vers Projects/Areas/Resources/Archives)
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:handledBy <urn:aspace:entity:tendi> .
+#   Cerritos étape 4 est tenue par Tendi — Review (non-drift, graduation candidate)
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:cerritos> aspace:handledBy <urn:aspace:entity:freeman> .
+#   Cerritos étape 5 est tenue par Freeman — Engage (next action, schedule)
+#   src: projets/cerritos-gtd-pipeline.md [haute] (life)
+<urn:aspace:entity:areas> aspace:partOf <urn:aspace:entity:life-os> .
+#   Areas fait partie de Life OS via PARA — seau 02_Areas_Spock, géré par Spock
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:para> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   PARA s'applique à Life OS — Projects/Areas/Resources/Archives sont les 4 seaux de L1
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:para> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   PARA s'applique aussi à Business OS — L2 réutilise la grammaire L1
+#   src: ressources/l2-fractal-b1-b2-b3.md [haute] (life)
+<urn:aspace:entity:ikigai> aspace:partOf <urn:aspace:entity:life-os> .
+#   Ikigai fait partie de Life OS — framework central du USS Orville, mission 'Pourquoi je fais ça'
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-wheel> aspace:partOf <urn:aspace:entity:life-os> .
+#   Life Wheel fait partie de Life OS — framework du USS Discovery, 8 domaines de vie
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:12wy> aspace:partOf <urn:aspace:entity:life-os> .
+#   12WY fait partie de Life OS — framework du USS SNW, cycle trimestriel Brad Sugars
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:gtd> aspace:partOf <urn:aspace:entity:life-os> .
+#   GTD fait partie de Life OS — framework du USS Cerritos, Capture→Clarify→Organize→Reflect→Engage
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:deal> aspace:partOf <urn:aspace:entity:life-os> .
+#   DEAL fait partie de Life OS — framework du USS Protostar, Define/Examine/Act/Lock
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:jerry-bio> aspace:pairedWith <urn:aspace:entity:jerry-nexus> .
+#   Jerry Bio et Jerry Nexus sont appariés — Bio STOP substrat, Nexus STOP stabilité/famille
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:pairedWith <urn:aspace:entity:jerry-solarpunk> .
+#   Jerry Nexus et Jerry Solarpunk sont appariés — Nexus stabilité, Solarpunk widening contribution
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (life)
+<urn:aspace:entity:wheel-alignment> aspace:governs <urn:aspace:entity:jerry> .
+#   Le canon de 5 valeurs (foi, famille, mission, ikigai, discipline) gouverne tous les Jerry — transversal, immuable
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:beth-halt> aspace:appliesTo <urn:aspace:entity:jerry> .
+#   Le Beth HALT veto s'applique à tous les Jerry — chaîne LD03 dégradée → LD04 dégradée → HALT → tous gèlent
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:wheel-alignment> aspace:pairedWith <urn:aspace:entity:adr-immutability> .
+#   Le canon Wheel Alignment est apparié à l'immutabilité des ADRs — tous deux sont des canons immuables
+#   src: areas/wheel-alignment-values-canon.md [moyenne] (life)
+<urn:aspace:entity:fractal-b1b2b3> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   Le fractal B1/B2/B3 s'applique à Business OS — Direction (Jerry/Summer) → Domaines (8 héros) → Exécution (8 squads)
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (life)
+<urn:aspace:entity:fractal-b1b2b3> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Le fractal B1/B2/B3 s'applique aussi à Life OS — miroir L1 du L2 B1/B2/B3
+#   src: ressources/life-os-six-vaisseaux.md [moyenne] (life)
+<urn:aspace:entity:b1> aspace:partOf <urn:aspace:entity:life-os> .
+#   La couche B1 fait partie de Life OS — Direction incarnée par Beth/Morty côté L1
+#   src: ressources/life-os-six-vaisseaux.md [haute] (life)
+<urn:aspace:entity:life-os> aspace:refines <urn:aspace:entity:para> .
+#   Life OS affine PARA — la structure 4-seaux devient la grammaire des 6 vaisseaux
+#   src: ressources/life-os-six-vaisseaux.md [moyenne] (life)
+<urn:aspace:entity:constitution> aspace:governs <urn:aspace:entity:life-os> .
+#   La Constitution 2026-07-12 gouverne Life OS — article 3 fait de Beth une fonction cohérence vie/santé dans la boucle, plus un veto vertical
+#   src: ressources/constitution-aspace-v1.md [haute] (life)
+<urn:aspace:entity:agents-md> aspace:governs <urn:aspace:entity:life-os> .
+#   AGENTS.md gouverne l'identité de Life OS — registre Owner Star Trek arbitré 2026-08-01 (Computer/Picard/Spock/Geordi/Data/Morty)
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:sovereignty> aspace:governs <urn:aspace:entity:rick> .
+#   La souveraineté 3-niveaux gouverne Rick — principe directeur de L0 Tech OS
+#   src: ressources/sovereignty-3-niveaux.md [haute] (life)
+<urn:aspace:entity:rick> aspace:appliesTo <urn:aspace:entity:adr> .
+#   Rick applique l'immutabilité aux ADRs — Rick's Law : créée une fois, jamais réécrite
+#   src: ressources/adr-immutability-ricks-law.md [haute] (life)
+<urn:aspace:entity:geordi> aspace:appliesTo <urn:aspace:entity:knowledge> .
+#   Geordi applique la transformation connaissance → infrastructure réutilisable — racine KB canon
+#   src: ressources/a3-geordi-resources-officer.md [haute] (life)
+<urn:aspace:entity:data> aspace:appliesTo <urn:aspace:entity:archives> .
+#   Data applique la doctrine archive-and-document — n'archive jamais sans préalable
+#   src: archives/data-role-a3-archives-officer.md [haute] (life)
+<urn:aspace:entity:bridge-life-os> aspace:partOf <urn:aspace:entity:life-os> .
+#   the-bridge fait partie de Life OS — Spock Area technique qui orchestre 9 baselines V0.1.1–V0.1.9
+#   src: areas/ld-router-life-os-bridge.md [haute] (life)
+<urn:aspace:entity:bridge-life-os> aspace:partOf <urn:aspace:entity:business-os> .
+#   the-bridge fait partie de Business OS — relie L1 Life OS à L2 Business OS via conductor-track
+#   src: areas/ld-router-life-os-bridge.md [haute] (life)
+<urn:aspace:entity:bibliography-alignment> aspace:appliesTo <urn:aspace:entity:jerry> .
+#   Bibliography Alignment s'applique à tous les Jerry — chaque cluster B2 cite ≥1 livre source canon
+#   src: areas/bibliography-alignment-l1-l2.md [haute] (life)
+<urn:aspace:entity:shadow-homologie> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   La Shadow Homologie 4-méthodes s'applique à Life OS — même grammaire PARA/12WY/GTD/DEAL projetée sur instruments souverains vs cloud
+#   src: ressources/shadow-l1-l2-homologie.md [haute] (life)
+<urn:aspace:entity:para> aspace:pairedWith <urn:aspace:entity:shadow-l1> .
+#   PARA L1 (Obsidian) et PARA L2 (Notion) sont appariés — Notion est le jumeau cloud d'Obsidian
+#   src: ressources/shadow-l1-l2-homologie.md [haute] (life)
+<urn:aspace:entity:12wy> aspace:pairedWith <urn:aspace:entity:shadow-l2> .
+#   12WY L1 (Baserow) et 12WY L2 (Airtable) sont appariés — Baserow est un Airtable sans frais
+#   src: ressources/shadow-l1-l2-homologie.md [haute] (life)
+<urn:aspace:entity:gtd> aspace:pairedWith <urn:aspace:entity:shadow-l2> .
+#   GTD L1 (Plane.so) et GTD L2 (ClickUp) sont appariés — Plane est le ClickUp souverain
+#   src: ressources/shadow-l1-l2-homologie.md [haute] (life)
+<urn:aspace:entity:area-vs-project> aspace:refines <urn:aspace:entity:para> .
+#   Le critère Area vs Project affine PARA — pérennité + standard + non-livrable = Area, sinon Project
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:spock> aspace:dependsOn <urn:aspace:entity:computer> .
+#   Spock dépend de Computer — parent A2 (USS Enterprise, orchestration PARA)
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:jerry> aspace:dependsOn <urn:aspace:entity:beth> .
+#   Jerry dépend de Beth — ne peut pas outrepasser un Beth HALT veto
+#   src: areas/jerry-macro-steward.md [haute] (life)
+<urn:aspace:entity:summer> aspace:dependsOn <urn:aspace:entity:jerry> .
+#   Summer dépend de Jerry — micro hérite du macro, projets datés calibrent Areas perpétuelles
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (life)
+<urn:aspace:entity:summer-verse> aspace:dependsOn <urn:aspace:entity:jerry> .
+#   Summer's Verse dépend de Jerry — chaque Project hérite de la doctrine Area macro
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (life)
+<urn:aspace:entity:jerry-prime> aspace:instantiates <urn:aspace:entity:8-domaines> .
+#   Jerry Prime instancie la wheel 8-domaines B2 (Growth/Sales/Product/Ops/IT/Finance/People/Legal)
+#   src: areas/jerry-macro-steward.md [haute] (life)
+<urn:aspace:entity:constitution> aspace:supersedes <urn:aspace:entity:d4-doctrines> .
+#   La Constitution 2026-07-12 supersede les doctrines D1-D8 — rétrogradées en jurisprudence consultative
+#   src: ressources/constitution-aspace-v1.md [haute] (life)
+<urn:aspace:entity:adr-immutability> aspace:supersedes <urn:aspace:entity:rewrite> .
+#   L'immutabilité des ADRs supersede toute réécriture — Rick's Law : évolution = nouvel ADR
+#   src: ressources/adr-immutability-ricks-law.md [haute] (life)
+<urn:aspace:entity:beth> aspace:cites <urn:aspace:entity:ld03> .
+#   Beth cite LD03 — sleep/HRV/exercise thresholds comme signaux de HALT
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:cites <urn:aspace:entity:coverage-ratio> .
+#   Jerry Nexus cite le coverage ratio — Passif/Mensual Essentiel Burn, base de l'expansion
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (life)
+<urn:aspace:entity:jerry-solarpunk> aspace:cites <urn:aspace:entity:muse-quota> .
+#   Jerry Solarpunk cite le quota MUSE — 14 contributions/an minimum pour qualifier
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (life)
+<urn:aspace:entity:muse-quota> aspace:appliesTo <urn:aspace:entity:jerry-solarpunk> .
+#   Le quota MUSE (3/3/4/4 par trimestre) s'applique à Jerry Solarpunk — qualifier de contribution publique
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (life)
+<urn:aspace:entity:spock> aspace:appliesTo <urn:aspace:entity:para> .
+#   Spock applique PARA — classifie Area vs Project vs Resource vs Archive
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:areas> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Areas s'applique à Life OS — Areas = maintained systems, sans échéance
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:projects> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   Projects s'applique à Business OS — graduation Gate 0→Gate 7, finit en Business Done
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:computer> aspace:governs <urn:aspace:entity:para> .
+#   Computer (USS Enterprise) gouverne PARA — parent A2 de Spock
+#   src: areas/spock-areas-canon.md [haute] (life)
+<urn:aspace:entity:geordi> aspace:appliesTo <urn:aspace:entity:kb> .
+#   Geordi applique la structure KB 4-piliers (OKF/Wiki/Graphify/Dox) — racine unique
+#   src: ressources/geordi-kb-quatre-piliers.md [haute] (life)
+<urn:aspace:entity:data> aspace:dependsOn <urn:aspace:entity:geordi> .
+#   Data dépend de Geordi — Geordi signale les doublons ou références obsolètes pour revue Data
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:docteur> aspace:appliesTo <urn:aspace:entity:guides> .
+#   Les Docteurs (11th/12th/13th) s'appliquent aux guides de 01_Guides/00_KERNEL_OS/ — registre Shelf Doctor Who
+#   src: ressources/agents-md-identity-canon.md [haute] (life)
+<urn:aspace:entity:jerry-bio> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Jerry Bio applique la hard safety à Life OS — LD03/04 dégradés = expansion gelée
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:jerry-nexus> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Jerry Nexus applique la stability à Life OS — refuse l'urgence revenue qui déforme la présence familiale
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:jerry-solarpunk> aspace:appliesTo <urn:aspace:entity:life-os> .
+#   Jerry Solarpunk applique le widening à Life OS — contribution = qualifier, pas seulement revenu
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:values-canon> aspace:partOf <urn:aspace:entity:life-os> .
+#   Le canon de 5 valeurs (foi, famille, mission, ikigai, discipline) fait partie de Life OS — transversal, immuable comme AGENTS.md
+#   src: areas/wheel-alignment-values-canon.md [haute] (life)
+<urn:aspace:entity:a0-amadeus> aspace:cites <urn:aspace:entity:rick> .
+#   A0 Amadeus cite Rick — A0 donne l'intention à Rick (L0) pour l'infrastructure
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:a0-amadeus> aspace:cites <urn:aspace:entity:beth> .
+#   A0 Amadeus cite Beth/Morty — A0 donne l'intention à Beth & Morty (L1) pour le meaning
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:a0-amadeus> aspace:cites <urn:aspace:entity:jerry> .
+#   A0 Amadeus cite Jerry/Summer — A0 donne l'intention à Jerry & Summer (L2) pour le cashflow
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:emyth> aspace:refines <urn:aspace:entity:matryoshka> .
+#   Le pattern E-Myth affine la matrioshka — A0 = Visionary, Beth/Morty = Manager, captains = Technician
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (life)
+<urn:aspace:entity:area-vs-project> aspace:cites "perennite" .
+#   Area vs Project cite le critère de pérennité — la responsabilité est-elle tenue d'exister dans 12 mois ?
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:area-vs-project> aspace:cites "non-livrable" .
+#   Area vs Project cite le critère non-livrable — pas de date de fin ni de définition de done
+#   src: areas/area-vs-project-classification.md [haute] (life)
+<urn:aspace:entity:b1> aspace:governs "north-star" .
+#   B1 possède le North Star 1Y/3Y/10Y, pas les tactics
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:b1> aspace:governs <urn:aspace:entity:12wy-cycles> .
+#   B1 owns the 12WY cycles and the decision charter
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:b3> aspace:governs "execution-proof" .
+#   B3 owns JTBD execution, lead/lag indicators, and proof
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
+<urn:aspace:entity:b1> aspace:mandates <urn:aspace:entity:b2> .
+#   B1 mandate un B2 par un B1-B2-MANDATE packet (intent + contraintes + success signal)
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:b2> aspace:dispatches <urn:aspace:entity:b3> .
+#   B2 dispatch B3 via JTBD packets
+#   src: areas/b2-meso-coordination-dc-council.md [haute] (business)
+<urn:aspace:entity:b3> aspace:produces "inspectable-proof" .
+#   B3 produit la preuve — artefact inspectable sans faire confiance à l'auteur
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
+<urn:aspace:entity:b1> aspace:partOf <urn:aspace:entity:business-os> .
+#   B1 est la couche direction de L2 Business OS
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
+<urn:aspace:entity:b2> aspace:partOf <urn:aspace:entity:business-os> .
+#   B2 est la couche meso de L2 Business OS
+#   src: areas/b2-meso-coordination-dc-council.md [haute] (business)
+<urn:aspace:entity:b3> aspace:partOf <urn:aspace:entity:business-os> .
+#   B3 est la couche execution de L2 Business OS
+#   src: areas/b3-jtbd-packet-grammar.md [haute] (business)
+<urn:aspace:entity:business-wheel> aspace:partOf <urn:aspace:entity:j01-jerry-prime> .
+#   La Business Wheel 8-domaines appartient à J01 Jerry Prime (LD01)
+#   src: areas/business-wheel-eight-domains.md [haute] (business)
+<urn:aspace:entity:growth> aspace:appliesTo <urn:aspace:entity:business-wheel> .
+#   Growth (Superman) est l'un des 8 domaines canoniques de la Business Wheel
+#   src: areas/business-wheel-eight-domains.md [haute] (business)
+<urn:aspace:entity:finance-domain> aspace:vetoes "margin-deal" .
+#   Finance (Wonder Woman) veto sur deal/discount qui casse margin ou runway ; discount >15% requiert son sign-off
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:legal-domain> aspace:vetoes "public-claim" .
+#   Legal (Aquaman) veto sur claim/contract/IP exposure qui fail compliance
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:it-domain> aspace:governs "it-architecture" .
+#   IT (Cyborg) détient outright l'architecture IT — Jerry ne decide PAS IT
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:b2-council> aspace:routes <urn:aspace:entity:b1> .
+#   B2 Direction Council escalade à B1 si North Star/risk/authority sont touchés
+#   src: areas/b2-meso-coordination-dc-council.md [haute] (business)
+<urn:aspace:entity:picard> aspace:instantiates <urn:aspace:entity:summers-verse> .
+#   Picard instancie un Summer's Verse (Project) à partir du Cerritos handoff
+#   src: areas/para-picard-routing-boundary.md [haute] (business)
+<urn:aspace:entity:cerritos> aspace:dependsOn "inbox-zero" .
+#   Cerritos dépend de l'inbox zero (4h acknowledgement) pour honorer le 48h routing
+#   src: areas/para-picard-routing-boundary.md [haute] (business)
+<urn:aspace:entity:jerry-bio> aspace:halts "jerry-expansion" .
+#   J02 Jerry Bio détient le STOP et halte l'expansion business quand LD03/LD04 dégradent
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-nexus> aspace:denies "revenue-urgency" .
+#   J03 Jerry Nexus denies revenue urgency quand stability/family est en jeu
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-solarpunk> aspace:guarantees "contribution" .
+#   J04 Jerry Solarpunk guarantees que L2 Business Pulse ne devient pas extractif
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-bio> aspace:dependsOn <urn:aspace:entity:ld03> .
+#   J02 Bio depends on LD03 Vitality (sleep/HRV) — son autorité-mesure
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-nexus> aspace:dependsOn <urn:aspace:entity:ld02> .
+#   J03 Nexus depends on LD02 Finance (4% rule, coverage ratio)
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-solarpunk> aspace:dependsOn <urn:aspace:entity:ld08> .
+#   J04 Solarpunk depends on LD08 (biomimicry/régénération) — sa couche souveraine
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (business)
+<urn:aspace:entity:beth> aspace:vetoes "jerry-expansion" .
+#   Beth émet le HALT veto et freeze tous les Jerry si LD03/LD04 RED
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:beth> aspace:halts <urn:aspace:entity:ld01-business> .
+#   Beth émet le HALT veto et gèle l'expansion de LD01 Business Pulse
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (business)
+<urn:aspace:entity:morty> aspace:governs <urn:aspace:entity:focus-l2> .
+#   Morty est le Focus Gatekeeper A1 — il décide quelles Areas sont actives
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:escalation-ladder> aspace:appliesTo <urn:aspace:entity:business-os> .
+#   The escalation ladder B3→B2→B1→B1-gatekeepers→A0 s'applique à L2 Business OS
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:b0> aspace:appliesTo <urn:aspace:entity:j01-jerry-prime> .
+#   B0 Self-Operating Business Doctrine s'applique à J01 avec 5 artefacts (E-Myth, Built to Sell, Who Not How, Offer Engine, Graduation Gates)
+#   src: areas/self-operating-business-doctrine.md [haute] (business)
+<urn:aspace:entity:project-graduation-gates> aspace:appliesTo <urn:aspace:entity:summers-verse> .
+#   Les 8 gates (Direction, Market, Product, Delivery, Runtime, Margin, Trust, Handoff) s'appliquent à la sortie de tout Summer's Verse
+#   src: areas/project-graduation-gates.md [haute] (business)
+<urn:aspace:entity:gate-0-direction> aspace:governs <urn:aspace:entity:b1-direction> .
+#   Gate 0 Direction est possédé par B1 (Jerry/Summer)
+#   src: areas/project-graduation-gates.md [haute] (business)
+<urn:aspace:entity:gate-7-handoff> aspace:governs <urn:aspace:entity:people-domain> .
+#   Gate 7 Handoff est possédé par People B2 (Green Lantern)
+#   src: areas/project-graduation-gates.md [haute] (business)
+<urn:aspace:entity:gate-4-runtime> aspace:governs <urn:aspace:entity:it-domain> .
+#   Gate 4 Runtime est possédé par IT B2 (Cyborg)
+#   src: areas/project-graduation-gates.md [haute] (business)
+<urn:aspace:entity:omk> aspace:partOf <urn:aspace:entity:business-os> .
+#   OMK Business OS est un projet Summer's Verse de L2 Business OS
+#   src: projets/omk-business-os.md [haute] (business)
+<urn:aspace:entity:omk> aspace:instantiates <urn:aspace:entity:triptyque-v4> .
+#   OMK instancie la structure Triptyque V4 (T1, T2, T3)
+#   src: projets/triptyque-v4-t1-t2-t3.md [haute] (business)
+<urn:aspace:entity:t1-triptyque> aspace:partOf <urn:aspace:entity:omk> .
+#   T1 (People+Ops+Product) fait partie d'OMK
+#   src: projets/triptyque-v4-t1-t2-t3.md [haute] (business)
+<urn:aspace:entity:t2-triptyque> aspace:partOf <urn:aspace:entity:omk> .
+#   T2 (Growth+Sales+Finance) fait partie d'OMK
+#   src: projets/triptyque-v4-t1-t2-t3.md [haute] (business)
+<urn:aspace:entity:t3-triptyque> aspace:partOf <urn:aspace:entity:omk> .
+#   T3 (Legal+R&D) fait partie d'OMK
+#   src: projets/triptyque-v4-t1-t2-t3.md [haute] (business)
+<urn:aspace:entity:b3-roster> aspace:partOf <urn:aspace:entity:omk> .
+#   Le 53 B3 Agent Roster fait partie d'OMK Business OS
+#   src: projets/fifty-three-b3-agent-roster.md [haute] (business)
+<urn:aspace:entity:guardians> aspace:handledBy <urn:aspace:entity:superman> .
+#   Les Guardians of the Galaxy (B3 Growth squad) sont handled by Superman (B2)
+#   src: projets/eight-domain-avengers-wheel.md [haute] (business)
+<urn:aspace:entity:thunderbolts> aspace:handledBy <urn:aspace:entity:bucky-barnes> .
+#   Les Thunderbolts (B3 Finance squad) sont led by Bucky Barnes (post-ADR-CANON-001)
+#   src: ressources/l2-8-domaines-roster-canon.md [haute] (business)
+<urn:aspace:entity:illuminati> aspace:handledBy <urn:aspace:entity:black-bolt> .
+#   Les Illuminati (B3 Sales squad) sont led by Black Bolt (post-ADR-CANON-001)
+#   src: ressources/l2-8-domaines-roster-canon.md [haute] (business)
+<urn:aspace:entity:abc-os> aspace:instantiates <urn:aspace:entity:summers-verse> .
+#   ABC OS instancie Summer's Verse Framework (status GRADUATED 2026-05-21)
+#   src: projets/abc-os-child-care-bos.md [haute] (business)
+<urn:aspace:entity:rilcot> aspace:instantiates <urn:aspace:entity:summers-verse> .
+#   RILCOT Members Space OS instancie Summer's Verse (GRADUATED 2026-05-21)
+#   src: projets/rilcot-members-space-os.md [haute] (business)
+<urn:aspace:entity:marina> aspace:instantiates <urn:aspace:entity:summers-verse> .
+#   Marina Cleaning BOS instancie Summer's Verse (GRADUATED 2026-05-21)
+#   src: projets/marina-cleaning-bos-sop.md [haute] (business)
+<urn:aspace:entity:alikaly> aspace:instantiates <urn:aspace:entity:summers-verse> .
+#   Alikaly Bana Holding LLC instancie Summer's Verse (GRADUATED 2026-05-21)
+#   src: projets/alikaly-bana-holding-llc.md [haute] (business)
+<urn:aspace:entity:summers-verse> aspace:dependsOn <urn:aspace:entity:cerritos> .
+#   Summer's Verse depends on Cerritos — aucune ouverture sans handoff Cerritos
+#   src: projets/summers-verse-framework.md [haute] (business)
+<urn:aspace:entity:summers-verse> aspace:inherits <urn:aspace:entity:j01-area> .
+#   Summer's Verse inherits la doctrine de J01 Area (DRY)
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
+<urn:aspace:entity:summers-verse> aspace:calibrates "mode" .
+#   Summer's Verse calibre par mode (Solaris/Nexus/Orbiter)
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
+<urn:aspace:entity:12wy> aspace:appliesTo <urn:aspace:entity:b2-rocks> .
+#   12WY Cycle (84 jours) s'applique aux Rocks B2
+#   src: projets/twelve-weeks-year-cycle.md [haute] (business)
+<urn:aspace:entity:b2-rocks> aspace:dependsOn <urn:aspace:entity:12wy> .
+#   Les Rocks B2 dépendent de la cadence 12WY pour leur livraison
+#   src: projets/twelve-weeks-year-cycle.md [haute] (business)
+<urn:aspace:entity:b2-harmonization-matrix> aspace:appliesTo <urn:aspace:entity:summers-verse> .
+#   La B2 Business Wheel Harmonization Matrix s'applique aux 4 projets Summer's Verse
+#   src: projets/b2-business-wheel-harmonization-matrix.md [haute] (business)
+<urn:aspace:entity:b2-harmonization-matrix> aspace:dependsOn <urn:aspace:entity:b2-council> .
+#   La B2 Harmonization Matrix depends on the B2 Council comme instance d'arbitrage
+#   src: areas/business-wheel-harmonization-matrix.md [haute] (business)
+<urn:aspace:entity:cross-jerry-routing> aspace:appliesTo <urn:aspace:entity:alikaly> .
+#   Cross-Jerry Routing s'applique à Alikaly (J01 Business + J03 Finance/Family)
+#   src: projets/cross-jerry-routing.md [haute] (business)
+<urn:aspace:entity:omk-us-pivot> aspace:refines <urn:aspace:entity:omk> .
+#   OMK US Market Pivot (2026-07-15) refine OMK Business OS vers le marché US
+#   src: projets/omk-us-market-pivot.md [haute] (business)
+<urn:aspace:entity:omk-us-pivot> aspace:cites <urn:aspace:entity:adr-aaas-pricing-001> .
+#   OMK US Pivot cite ADR-AAAS-PRICING-001 (5 tiers USD)
+#   src: projets/omk-us-market-pivot.md [haute] (business)
+<urn:aspace:entity:the-bridge> aspace:partOf <urn:aspace:entity:jerry-areas> .
+#   The-bridge est une Spock Area technique reliant L1 Life OS à L2 Business OS
+#   src: areas/ld-router-life-os-bridge.md [haute] (business)
+<urn:aspace:entity:hard-safety-law> aspace:appliesTo <urn:aspace:entity:jerry> .
+#   La hard safety law (LD03→LD04→Beth HALT→tous Jerry freeze) s'applique à tous les Jerry
+#   src: areas/wheel-alignment-values-canon.md [haute] (business)
+<urn:aspace:entity:agents-md> aspace:handles <urn:aspace:entity:owner-registry> .
+#   AGENTS.md handles the Owner Star Trek registry (Computer/Picard/Spock/Geordi/Data/Morty)
+#   src: ressources/agents-md-identity-canon.md [haute] (business)
+<urn:aspace:entity:business-os> aspace:partOf <urn:aspace:entity:aspace-os> .
+#   L2 Business OS fait partie de la Matrioshka A'Space OS (L0/L1/L2)
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (business)
+<urn:aspace:entity:business-blueprints> aspace:partOf <urn:aspace:entity:business-os> .
+#   Le canon Blueprints L2 vit dans 30_Business_OS/09_Blueprints/
+#   src: ressources/blueprints-canon-tripartite.md [haute] (business)
+<urn:aspace:entity:notion> aspace:cites <urn:aspace:entity:agent-registry> .
+#   Notion AGENT_REGISTRY_DB est la source de vérité pour le lore des rosters (ADR-CANON-001)
+#   src: ressources/l2-8-domaines-roster-canon.md [haute] (business)
+<urn:aspace:entity:cerritos> aspace:partOf <urn:aspace:entity:life-os> .
+#   Cerritos GTD Pipeline (L1) est une étape obligatoire du routing Jerry → Picard
+#   src: projets/cerritos-gtd-pipeline.md [haute] (business)
+<urn:aspace:entity:values-canon> aspace:appliesTo <urn:aspace:entity:jerry> .
+#   Les 5 valeurs-socle (foi, famille, mission, ikigai, discipline/transmission) s'appliquent transversalement à tous les Jerry
+#   src: areas/wheel-alignment-values-canon.md [haute] (business)
+<urn:aspace:entity:spock> aspace:governs <urn:aspace:entity:areas> .
+#   Spock = A3 Areas officer — il gouverne la classification PARA Areas
+#   src: areas/spock-areas-canon.md [haute] (business)
+<urn:aspace:entity:ld01-book-alignment> aspace:appliesTo <urn:aspace:entity:b2-domains> .
+#   LD01 Book Alignment mappe 6 livres vers 8 B2 domains
+#   src: projets/ld01-book-alignment.md [haute] (business)
+<urn:aspace:entity:rilcot> aspace:refines <urn:aspace:entity:ld01-book-alignment> .
+#   RILCOT refine le LD01 Book Alignment avec 9 livres (ajout Expert Secrets + Group Genius)
+#   src: projets/ld01-book-alignment.md [haute] (business)
+<urn:aspace:entity:legal-aquaman> aspace:vetoes "child-care-offer" .
+#   B2-G8 Legal/Aquaman veto sur toute offre Child Care avant exécution B3 (ABC Compliance Gate)
+#   src: projets/abc-compliance-gate.md [haute] (business)
+<urn:aspace:entity:a0-amadeus> aspace:governs <urn:aspace:entity:intention> .
+#   A0 Amadeus possède l'Intention que ce business existe (veto absolu)
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:b1-decision-charter> aspace:appliesTo <urn:aspace:entity:b1-direction> .
+#   Le Decision Charter s'applique à toute décision B1 (RACI 12 décision-types)
+#   src: areas/b1-direction-cockpit.md [haute] (business)
+<urn:aspace:entity:jtbd-packet> aspace:appliesTo <urn:aspace:entity:b3-squads> .
+#   Le JTBD-001 packet grammar s'applique aux 8 squads B3
+#   src: areas/b3-jtbd-packet-grammar.md [haute] (business)
+<urn:aspace:entity:jtbd-packet> aspace:inherits <urn:aspace:entity:j01-area> .
+#   Les JTBD-001 packets héritent de la doctrine Area J01 et calibrent par mode
+#   src: areas/b3-jtbd-packet-grammar.md [haute] (business)
+<urn:aspace:entity:picard-audit> aspace:appliesTo <urn:aspace:entity:rilcot> .
+#   Le Picard Project Pattern a été appliqué à l'audit RILCOT Master Interface (2026-05-20)
+#   src: projets/picard-project-pattern.md [haute] (business)
+<urn:aspace:entity:cerritos> aspace:dependsOn <urn:aspace:entity:mariner> .
+#   Cerritos depends on Mariner (capture verbatim) pour la première étape du GTD
+#   src: projets/cerritos-gtd-pipeline.md [haute] (business)
+<urn:aspace:entity:n0-coach-kb> aspace:appliesTo <urn:aspace:entity:n0-coach-clients> .
+#   La N0 Coach KB s'applique aux clients Niveau 0 Architecte (PoC→SaaS→White-Label)
+#   src: areas/coach-client-onboarding-pathway.md [haute] (business)
+<urn:aspace:entity:roster-53> aspace:refines <urn:aspace:entity:agents-md> .
+#   Le 53 B3 Roster refine AGENTS.md (Notion prime selon ADR-CANON-001)
+#   src: projets/fifty-three-b3-agent-roster.md [haute] (business)
+<urn:aspace:entity:jerry> aspace:stewards <urn:aspace:entity:area> .
+#   Jerry steward une Area (responsabilité durable), pas un Project (livrable daté)
+#   src: areas/area-vs-project-classification.md [haute] (business)
+<urn:aspace:entity:omk-us-pivot> aspace:supersedes <urn:aspace:entity:omk-euro-context> .
+#   OMK US Market Pivot (2026-07-15) supersedes l'ancien contexte Euro d'OMK (pricing EUR, ICP PME Solo)
+#   src: projets/omk-us-market-pivot.md [haute] (business)
+<urn:aspace:entity:eight-domain-avengers-wheel> aspace:dependsOn <urn:aspace:entity:agents-md> .
+#   Le mapping 8-domaines Avengers dépend du Roster canon (ADR-CANON-001)
+#   src: projets/eight-domain-avengers-wheel.md [haute] (business)
+<urn:aspace:entity:business-wheel-eight-domains> aspace:seeAlso <urn:aspace:entity:sdd-006-seven-domains> .
+#   Le canon 8 domaines (canon actif, SDD-009+) renvoie au SDD-006 (7 domaines historiques) — écart à signaler
+#   src: areas/business-wheel-eight-domains.md [haute] (business)
+<urn:aspace:entity:matryoshka-l0-l1-l2> aspace:pairedWith <urn:aspace:entity:shadow-l1-l2-homologie> .
+#   La Matrioshka L0/L1/L2 est pairedWith l'homologie Shadow L1/L2 (4 méthodes)
+#   src: ressources/matryoshka-l0-l1-l2.md [haute] (business)
+<urn:aspace:entity:b3> aspace:routes <urn:aspace:entity:b2> .
+#   B3 escalade au B2 owner en cas de blocker (peer-unblock first)
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:b2> aspace:routes <urn:aspace:entity:b1> .
+#   B2 escalade à B1 si hors mandat
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:b1> aspace:escalates <urn:aspace:entity:b1-gatekeepers> .
+#   B1 escalade aux B1 gatekeepers (Rick/Morty) si North Star/risk/authority sont touchés
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:b1-gatekeepers> aspace:escalates <urn:aspace:entity:a0-amadeus> .
+#   B1 gatekeepers (Rick/Morty) escalade à A0 Amadeus en dernier ressort
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:jerry> aspace:dependsOn "triage-cerritos" .
+#   Jerry depends on Cerritos triage — il route & qualifie avant que l'idée devienne action
+#   src: projets/cerritos-gtd-pipeline.md [haute] (business)
+<urn:aspace:entity:cerritos> aspace:dependsOn <urn:aspace:entity:freeman> .
+#   Le pipeline Cerritos depends on Freeman (engage) — la dernière étape du GTD
+#   src: projets/cerritos-gtd-pipeline.md [haute] (business)
+<urn:aspace:entity:cerritos> aspace:dependsOn <urn:aspace:entity:tendi> .
+#   Le pipeline Cerritos depends on Tendi (review) — la graduation candidate
+#   src: projets/cerritos-gtd-pipeline.md [haute] (business)
+<urn:aspace:entity:llm-wiki> aspace:partOf <urn:aspace:entity:geordi-kb> .
+#   Le LLM Wiki est un pilier de la Geordi KB (4 piliers canon)
+#   src: ressources/agents-md-identity-canon.md [moyenne] (business)
+<urn:aspace:entity:jerry-bio> aspace:stewards <urn:aspace:entity:jerry-bio-perimeter> .
+#   J02 Jerry Bio stewards le perimeter LD03 Vitality + LD04 Cognition (HARD SAFETY)
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-nexus> aspace:stewards <urn:aspace:entity:jerry-nexus-perimeter> .
+#   J03 Jerry Nexus stewards le perimeter LD02 Finance + LD06 Family stability
+#   src: areas/jerry-nexus-stability-doctrine.md [haute] (business)
+<urn:aspace:entity:jerry-solarpunk> aspace:stewards <urn:aspace:entity:jerry-solarpunk-perimeter> .
+#   J04 Jerry Solarpunk stewards le perimeter LD05/LD07/LD08 contribution
+#   src: areas/jerry-solarpunk-contribution-doctrine.md [haute] (business)
+<urn:aspace:entity:b3> aspace:escalates <urn:aspace:entity:b2> .
+#   B3 escalate au B2 owner (peer-unblock d'abord)
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:b2> aspace:escalates <urn:aspace:entity:b1> .
+#   B2 escalates à B1 (Jerry/Summer) si hors mandat
+#   src: areas/beth-morty-safety-gatekeepers.md [haute] (business)
+<urn:aspace:entity:beth> aspace:halts <urn:aspace:entity:ld04-cognition> .
+#   Beth halts l'expansion quand LD04 Cognition est en RED (cascade LD03)
+#   src: areas/jerry-bio-hard-safety-doctrine.md [haute] (business)
+<urn:aspace:entity:projects> aspace:inherits <urn:aspace:entity:area-doctrine> .
+#   Les Projects hérent de la doctrine Area (DRY) et remontent leurs preuves
+#   src: areas/fractal-b1b2b3-architecture.md [haute] (business)
