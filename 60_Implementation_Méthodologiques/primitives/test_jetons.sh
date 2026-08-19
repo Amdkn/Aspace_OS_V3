@@ -36,17 +36,43 @@ kill "$bat" 2>/dev/null
 verdict oui "$present" "le jeton d'un agent vivant survit au balayage"
 
 echo
-echo "=== 3. un jeton SANS battement est bien recupere ==="
+echo "=== 3a. un jeton QUI BAT et se tait est recupere ==="
 rm -rf "$JETONS_DIR"; mkdir -p "$JETONS_DIR"
-j=$(jetons_prendre "agent_mort")
+j=$(jetons_prendre "agent_mort_avec_battement")
+: > "$j/battement"          # il battait
 python -c "
 import os,time
 t=time.time()-600
 os.utime(r'$j',(t,t))" 2>/dev/null
 _jetons_balayer
-verdict non "$([ -d "$j" ] && echo oui || echo non)" "le jeton d'un agent mort est libere"
+verdict non "$([ -d "$j" ] && echo oui || echo non)" "jeton battant, silencieux depuis 10 min > TTL court : libere"
 
 echo
+echo "=== 3b. LE DEFAUT CORRIGE : un jeton SANS battement garde le TTL long ==="
+# Une autre boucle peut utiliser le repertoire sans passer par jetons_avec.
+# Sa mtime est l'heure de naissance, pas un signe de vie : lui appliquer le
+# TTL court reviendrait a voler un agent vivant. Mesure du 2026-08-19 :
+# quatre jetons de la session Coach OS etaient dans ce cas.
+rm -rf "$JETONS_DIR"; mkdir -p "$JETONS_DIR"
+j=$(jetons_prendre "agent_autre_boucle")   # pas de marqueur battement
+python -c "
+import os,time
+t=time.time()-600
+os.utime(r'$j',(t,t))" 2>/dev/null
+_jetons_balayer
+verdict oui "$([ -d "$j" ] && echo oui || echo non)" "jeton sans battement, 10 min : CONSERVE (TTL long)"
+
+echo
+echo "=== 3c. un jeton sans battement finit quand meme par etre libere ==="
+rm -rf "$JETONS_DIR"; mkdir -p "$JETONS_DIR"
+j=$(jetons_prendre "agent_autre_boucle_mort")
+python -c "
+import os,time
+t=time.time()-4200
+os.utime(r'$j',(t,t))" 2>/dev/null
+_jetons_balayer
+verdict non "$([ -d "$j" ] && echo oui || echo non)" "jeton sans battement, 70 min > TTL long : libere"
+
 echo "=== 4. LE DEFAUT CORRIGE : une lecture d'etat ne mute rien ==="
 rm -rf "$JETONS_DIR"; mkdir -p "$JETONS_DIR"
 j=$(jetons_prendre "agent_vieux")

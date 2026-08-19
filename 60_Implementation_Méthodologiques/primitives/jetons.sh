@@ -62,16 +62,37 @@ JETONS_DIR="${JETONS_DIR:-C:/Users/amado/.aspace_slots}"
 JETONS_MAX="${JETONS_MAX:-8}"        # agents simultanes, TOUTES boucles confondues
 JETONS_TTL_MIN="${JETONS_TTL_MIN:-6}" # minutes sans battement avant peremption
 JETONS_BATTEMENT_S="${JETONS_BATTEMENT_S:-60}"
+# TTL des jetons qui NE battent pas : leur mtime est l'heure de naissance,
+# il faut donc majorer la duree du plus long agent sous peine de voler un vivant.
+JETONS_TTL_LONG_MIN="${JETONS_TTL_LONG_MIN:-45}"
 
 mkdir -p "$JETONS_DIR" 2>/dev/null
 
 # --- interne : ne balaie que ce qui n'a plus donne signe de vie -----------
 _jetons_balayer() {
-  # -mmin +TTL sur un jeton avec battement signifie : le detenteur n'a pas
-  # touche son jeton depuis TTL minutes. Il est mort, ou bloque au point de
-  # ne plus battre — dans les deux cas la place doit revenir.
-  find "$JETONS_DIR" -maxdepth 1 -type d -name 'slot_*' \
-       -mmin "+$JETONS_TTL_MIN" -exec rm -rf {} + 2>/dev/null
+  # DEUX TTL, ET C'EST DELIBERE.
+  #
+  # Un jeton qui BAT (marqueur `battement`) est balaye apres JETONS_TTL_MIN :
+  # six minutes de silence signifient vraiment que le detenteur est mort.
+  #
+  # Un jeton SANS marqueur vient d'une boucle qui n'utilise pas `jetons_avec`.
+  # Sa mtime est son heure de naissance, pas son dernier signe de vie —
+  # exactement le cas ou un TTL court VOLE un agent vivant. On lui applique
+  # donc le TTL long, celui de la premiere version.
+  #
+  # Sans cette distinction, abaisser le TTL de 45 a 6 minutes pour mes propres
+  # agents aurait tue ceux des autres boucles. Mesure du 2026-08-19 : quatre
+  # jetons de la session Coach OS presents et SANS battement au moment ou
+  # j'allais acquerir.
+  local d
+  while IFS= read -r d; do
+    [ -n "$d" ] || continue
+    if [ -f "$d/battement" ]; then
+      rm -rf "$d" 2>/dev/null
+    elif [ -n "$(find "$d" -maxdepth 0 -mmin "+$JETONS_TTL_LONG_MIN" 2>/dev/null)" ]; then
+      rm -rf "$d" 2>/dev/null
+    fi
+  done < <(find "$JETONS_DIR" -maxdepth 1 -type d -name 'slot_*' -mmin "+$JETONS_TTL_MIN" 2>/dev/null)
 }
 
 # --- lecture PURE : ne modifie rien --------------------------------------
@@ -144,6 +165,9 @@ jetons_avec() {
   }
 
   # battement de coeur en arriere-plan
+  # Le marqueur dit au balayage que ce jeton bat : un silence court signifie
+  # alors vraiment la mort, et le TTL court s'applique.
+  : > "$jeton/battement"
   ( while [ -d "$jeton" ]; do touch "$jeton" 2>/dev/null; sleep "$JETONS_BATTEMENT_S"; done ) &
   bat=$!
 
