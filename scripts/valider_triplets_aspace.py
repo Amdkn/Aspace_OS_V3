@@ -42,6 +42,10 @@ PASSES = {
     # plus des chemins V3 mais des chemins relatifs a 05_From_V2_Domains.
     "domaines": (("dom-tech", "dom-life", "dom-amadeus", "dom-business"),
                  "aspace-domaines.ttl"),
+    # Vague 2 : corpus normatif, Life Wheel, Templates. Sources dans Geordi
+    # au sens large, pas seulement 05_From_V2_Domains.
+    "vague2": (("dom-normatif-sdd-prd", "dom-normatif-adr", "dom-life-wheel",
+                "dom-templates"), "aspace-vague2.ttl"),
 }
 
 # La source reelle du contenu. La V3 n'est qu'un squelette : ses dossiers
@@ -118,6 +122,17 @@ def sources_reelles():
                "openwiki", ".obsidian"}
     out = _sans_jonctions(V3, ELAGUER)
     out |= _sans_jonctions(DOMAINES_V2, ELAGUER)
+    # La vague 2 cite des chemins ailleurs dans Geordi : 09_Life_OS,
+    # 02_Templates, 04_From_V2_Root/_SPECS. Sans eux, des sources reelles
+    # seraient rejetees.
+    GEORDI = os.path.dirname(os.path.dirname(DOMAINES_V2))
+    for sd in ("09_Life_OS", "02_Templates", "04_From_V2_Root",
+               "03_Memory_Unified", "05_From_V2_Domains"):
+        d = os.path.join(GEORDI, sd)
+        if os.path.isdir(d):
+            for rel in _sans_jonctions(d, ELAGUER):
+                out.add(f"{sd}/{rel}")
+                out.add(rel)
     for sb in ("areas", "projets", "archives", "ressources", "ontologie"):
         d = os.path.join(DIST, sb)
         if not os.path.isdir(d):
