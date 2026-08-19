@@ -14,6 +14,8 @@
 
 set -u
 HEURES="${1:-5}"
+# Verrou a jetons partage avec toute autre boucle du poste.
+source "$(dirname "${BASH_SOURCE[0]}")/slots.sh"
 V3="C:/Users/amado/ASpace_OS_V3"
 L="$V3/60_Implementation_Méthodologiques/_loop"
 FIN=$(( $(date +%s) + HEURES * 3600 ))
@@ -27,11 +29,18 @@ lancer() {
   local quoi="$1" tour="$2"
   local brief="$L/BRIEF_${quoi}.md"
   [ -f "$brief" ] || { echo "brief manquant : $brief" >&2; return 1; }
+  local jeton
+  jeton=$(attendre_jeton "$quoi/t$tour" 2400) || {
+    echo "[$(date +%H:%M:%S)] $quoi tour $tour : aucun jeton libre, tour saute" >> "$L/BOUCLE.log"
+    return 1
+  }
   cd "$V3" || return 1
   cat "$L/MODE_FABLE.md" "$brief" \
     | /c/Users/amado/AppData/Roaming/npm/claude -p --permission-mode bypassPermissions \
     > "$L/journal_${quoi}_t${tour}.log" 2>&1
-  echo "[$(date +%H:%M:%S)] $quoi tour $tour termine (exit=$?)" >> "$L/BOUCLE.log"
+  local code=$?
+  rendre_jeton "$jeton"
+  echo "[$(date +%H:%M:%S)] $quoi tour $tour termine (exit=$code)" >> "$L/BOUCLE.log"
 }
 
 # Rotation elargie. B3 etait servi une fois sur trois dans la version
@@ -53,8 +62,11 @@ while true; do
   fi
 
   # Plafond de concurrence : on attend qu'il redescende plutot que de saturer.
-  while [ "$(ps -W 2>/dev/null | grep -c node.exe)" -gt 40 ]; do
-    echo "[$(date +%H:%M:%S)] plafond node atteint, attente 60s" >> "$L/BOUCLE.log"
+  # Le verrou a jetons borne desormais la concurrence. Ce plafond n'est plus
+  # qu'un garde-fou de derniere ligne : la machine mesuree (34% CPU, 60% RAM,
+  # 387 processus) tient largement 8 agents.
+  while [ "$(ps -W 2>/dev/null | grep -c node.exe)" -gt 90 ]; do
+    echo "[$(date +%H:%M:%S)] garde-fou node atteint, attente 60s" >> "$L/BOUCLE.log"
     sleep 60
   done
 
@@ -64,7 +76,7 @@ while true; do
   echo "[$(date +%H:%M:%S)] tour $tour : $a + $b" >> "$L/BOUCLE.log"
 
   lancer "$a" "$tour" &
-  sleep 90                      # echelonnement : npm verrouille son wrapper
+  sleep 45                      # echelonnement : npm verrouille son wrapper
   lancer "$b" "$tour" &
   wait                          # les deux finissent avant le tour suivant
 done
