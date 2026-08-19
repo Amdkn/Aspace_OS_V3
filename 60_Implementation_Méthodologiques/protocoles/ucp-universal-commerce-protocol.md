@@ -1,11 +1,12 @@
 ---
 type: Backend
-title: UCP — Universal Commerce Protocol, la couche achat bout-à-bout par Google
-description: ucp.dev (Google, 2026-04-08) : standard ouvert d'achat agentique. Profils publiés en /.well-known/ucp, capabilities versionnées, transport REST/MCP/A2A/Embedded. « Trust triangle » entre business, plateforme et PSP. Pour Coach OS : pertinent seulement si on orchestre un tunnel d'achat.
-tags: [ucp, universal-commerce-protocol, google, agentic-commerce, rest, mcp, a2a, ap2, protocoles]
-generated: { by: claude-opus-5, at: 2026-08-19T02:05:00Z }
+title: UCP — Universal Commerce Protocol, le standard d'achat bout-à-bout par Google
+description: ucp.dev (Google, snapshot 2026-04-08). REST/MCP/A2A/Embedded. Profils publiés en `/.well-known/ucp`, capabilities versionnées (date calendaire), namespace reverse-domain, transport negociation server-selects avec extension pruning. Trust triangle Business ↔ Credential Provider ↔ Platform.
+tags: [ucp, universal-commerce-protocol, google, agentic-commerce, rest, mcp, a2a, embedded, ap2, protocoles]
+generated: { by: claude-opus-5, at: 2026-08-19T03:10:00Z }
 verified:
-  - { by: process:web-fetch-ucp, at: 2026-08-19T01:50:00Z }
+  - { by: process:web-fetch-ucp-spec, at: 2026-08-19T03:00:00Z }
+  - { by: process:web-fetch-ucp-google, at: 2026-08-19T03:00:00Z }
 sources:
   - id: ucp-spec
     resource: http://ucp.dev/2026-04-08/specification/overview/
@@ -27,7 +28,7 @@ okf_version: "0.2"
 ---
 
 > **Niveau de confiance : confirmé par machine.** Overview de la spec
-> `ucp.dev/2026-04-08` lu le 2026-08-19. Pas de relecture humaine.
+> `ucp.dev/2026-04-08` lu le 2026-08-19 03:00. Pas de relecture humaine.
 
 # 1. Quelle couche, et que relie-t-il exactement
 
@@ -64,37 +65,113 @@ PAN brut ne transite par la plateforme — la plateforme ne manipule
 - **Embedded Protocol** — iframe pour intégrer le checkout dans une
   surface web existante.
 
-**Profils** publiés à `/.well-known/ucp` :
+**Enum transport** : `rest | mcp | a2a | embedded`.
 
-- Version du protocole
-- Liste des services
-- Capabilities (catalog, cart, checkout, order…)
-- **Payment handlers** (Google Pay, Shop Pay, AP2…)
-- **Signing keys** (JWK)
+## Profils `/.well-known/ucp` — schema exact
 
-Les plateformes annoncent leur profil à chaque requête via le header
-**`UCP-Agent`**.
+L'extraction de la spec 2026-04-08 donne le schéma de document
+suivant (extrait exhaustif) :
 
-**Négociation** : modèle *server-selects*. Le business calcule
-l'intersection platform × business capabilities, choisit la version
-mutuellement supportée la plus haute, puis **prune les extensions
-orphelines** (celles dont le parent manque à l'intersection). Cette
-logique ressemble au capability discovery MCP, mais avec versionning
-calendaire (YYYY-MM-DD).
+```json
+{
+  "ucp": {
+    "version": "YYYY-MM-DD",
+    "supported_versions"?: { "<version>": "<profile_uri>", ... },
+    "services": {
+      "<reverse-domain>.<service>": [
+        { "version", "spec"*, "transport"*, "schema"?, "id"?, "config"?, "endpoint"? }
+      ]
+    },
+    "capabilities": {
+      "<capability_name>": [
+        { "version", "spec"*, "schema"*, "id"?, "config"?, "extends"? }
+      ]
+    },
+    "payment_handlers": { "<handler_name>": [ { ... } ] }
+  },
+  "signing_keys": [ JWK ]
+}
+```
+
+**Champs requis** :
+- Service : `version`, `spec`, `transport`. REST/MCP/embedded →
+  `schema` aussi.
+- Capability : `version`, `spec`, `schema`. Extensions ont `extends`
+  (string ou array).
+
+## Capabilities complètes (extrait exhaustif)
+
+| Capability | Field name | Type |
+|---|---|---|
+| Checkout | `dev.ucp.shopping.checkout` | core |
+| Cart | `dev.ucp.shopping.cart` | core |
+| Catalog | `dev.ucp.shopping.catalog` (search/lookup sub-paths) | core |
+| Order | `dev.ucp.shopping.order` | core |
+| Identity Linking | `dev.ucp.common.identity_linking` | core |
+| Fulfillment | `dev.ucp.shopping.fulfillment` | extension |
+| Discount | `dev.ucp.shopping.discount` | extension |
+| AP2 Mandates | `dev.ucp.shopping.ap2_mandate` | extension |
+| Buyer Consent | `dev.ucp.shopping.buyer_consent` | extension |
+| Payment Handlers | `com.{vendor}.*` / `dev.ucp.*` (e.g., `com.google.pay`, `dev.shopify.shop_pay`) | namespace |
 
 **Namespaces** : reverse-domain. `dev.ucp.*` réservé à l'organe de
 gouvernance UCP ; les vendors utilisent leur propre domaine
 (`com.{vendor}.*`).
 
-**Sécurité** :
+## Version negotiation — server-selects avec extension pruning
 
-- HTTPS obligatoire.
+**Algorithme** (extrait mot à mot de la spec) :
+
+1. **Compute intersection** — pour chaque capability business, ne
+   l'inclure que si une capability platform du même `name` existe.
+2. **Select version** — pour chaque capability intersectée, prendre
+   l'ensemble des versions présentes des deux côtés ; si non-vide,
+   choisir la **plus haute** ; si vide, **exclure** la capability.
+3. **Prune orphaned extensions** — supprimer toute capability dont
+   `extends` n'a pas de parent survivant. Single-parent : le parent
+   doit être présent. Multi-parent : au moins un parent doit être
+   présent.
+4. **Repeat pruning** — boucle jusqu'à stabilité.
+
+**Discovery** est séparé de la négociation. Les businesses qui
+supportent des versions plus anciennes `SHOULD` publier une map
+`supported_versions` (version → profile URI). Les échecs de discovery
+sont des erreurs de transport ; les échecs de capability negotiation
+retournent HTTP 200 avec `optional continue_url`.
+
+## Sécurité
+
+- **HTTPS obligatoire**.
 - **HTTP Message Signatures (RFC 9421)** avec JWKs publiés.
 - Support API keys, OAuth, mTLS.
 - Registre pré-approuvé de plateformes côté business (sinon discovery
   unbounded → DoS potentiel).
 
-# 3. Que faudrait-il pour l'implémenter dans Coach OS
+# 3. Trust triangle message flow (extrait)
+
+Trois participants, trois legs :
+
+- **Business ↔ Credential Provider** (legal/technical relationship)
+- **Platform ↔ Credential Provider** (tokenization interface)
+- **Platform ↔ Business** (final order)
+
+**Flow standard** :
+
+1. **Negotiation (Business → Platform)** : business annonce ses handlers
+   dans `ucp.payment_handlers` ; platform lit `config`.
+2. **Acquisition (Platform ↔ PCP)** : platform exécute le handler
+   contre le PCP directement via `config` ; business pas impliqué.
+3. **Completion (Platform → Business)** : platform soumet
+   `payment.instruments[]` contenant `handler_id`, `credential`
+   (opaque token/encrypted payload/mandate), et `signals`. Business
+   route via `handler_id` vers la clé PSP correcte.
+
+**Règle PCI-DSS** : credentials flow **Platform → Business only** ;
+business `MUST NOT` echo credentials dans les réponses ; `handler_id`
+prevent key confusion ; `signals.dev.ucp.buyer_ip` etc. doivent être
+**observés par la platform**, pas asserted par le buyer.
+
+# 4. Que faudrait-il pour l'implémentation dans Coach OS
 
 **Cas d'usage nécessaire** : Coach OS pilote un tunnel d'achat bout-à-bout
 au nom d'un utilisateur (achat agentique via Coach Shopping, ou
@@ -122,13 +199,14 @@ rentable**.
   messages sortants).
 - Registre pré-approuvé des plateformes (sinon exposure unbounded).
 - Politique de **consentement explicite** pour les agents autonomes
-  (mandats AP2 hors-ligne).
+  (mandats AP2 hors-ligne, mode Human Not Present).
 
-# 4. Quel risque
+# 5. Quel risque
 
 - **Vendor lock-in partiel** : gouvernance Google, même si la spec est
-  ouverte. Comparer avec AP2 (voir concept) qui est un standard
-  séparé mais imbriqué.
+  ouverte. Comparer avec AP2 (le concept suivant) qui est un standard
+  séparé mais imbriqué. Comparer aussi avec ACP-Commerce (Stripe+OpenAI)
+  qui couvre le même terrain.
 - **PCI-DSS surface** : la plateforme doit manipuler uniquement des
   **tokens opaques**. Confondre token et PAN brut = incident
   réglementaire. La spec le dit explicitement (« no raw PANs on the
@@ -148,4 +226,14 @@ rentable**.
   commencer par le **transport REST uniquement** (le plus simple, le
   moins couplé à l'écosystème agentique). MCP↔UCP et A2A↔UCP en
   extension.
-- Garder UCP et AP2 séparés : voir le concept suivant.
+- Garder UCP et AP2 séparés : voir le concept AP2.
+- **Cohabitation UCP ↔ ACP-Commerce** : à arbitrer au moment d'un
+  cas d'usage. Voir le concept ACP-Commerce.
+
+# Attaque sur la passe précédente
+
+La passe 2026-08-19 02:05 listait quatre UCP capabilities (catalog,
+cart, checkout, order). **C'était une simplification** — la spec en
+publie **dix** (4 core + 4 extensions + AP2 + payment handlers
+namespace). Le profile schema et l'algorithme de version negotiation
+n'étaient pas non plus extraits. **Corrections embarquées**.

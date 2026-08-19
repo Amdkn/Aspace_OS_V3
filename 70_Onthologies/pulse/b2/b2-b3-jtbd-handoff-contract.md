@@ -20,7 +20,7 @@ sources:
     title: Meso Decision Packet — le format canonique d'une décision B2
     last_modified: 2026-08-19
   - id: fractal-arch
-    resource: "C:/Users/ado/ASpace_OS_V3/50_Distillation/areas/fractal-b1b2b3-architecture.md"
+    resource: "C:/Users/amado/ASpace_OS_V3/50_Distillation/areas/fractal-b1b2b3-architecture.md"
     title: Le fractal B1/B2/B3 — Areas perpétuelles vs Summer's Verse datées
     last_modified: 2026-08-17
   - id: b3-jtbd-reception

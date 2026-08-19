@@ -23,10 +23,10 @@ sources:
     resource: "C:/Users/amado/ASpace_OS_V3/50_Distillation/areas/fractal-b1b2b3-architecture.md"
     title: Le fractal B1/B2/B3 — Areas perpétuelles vs Summer's Verse datées
     last_modified: 2026-08-17
-  - id: coach-os-vp
-    resource: "C:/Users/amado/ASpace_OS_V2/30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md"
-    title: Batman VP_AGENT — cycle sprint hebdo
-    last_modified: 2026-08-02
+  - id: batman-b2-control-room
+    resource: "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/04_Ops_Batman_Fantastic4/00_B2_DOMAIN_CONTROL_ROOM.md"
+    title: Batman Ops B2 Domain Control Room — cycle sprint hebdo
+    last_modified: 2026-05-27
 okf_version: "0.2"
 ---
 

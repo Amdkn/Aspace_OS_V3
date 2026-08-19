@@ -23,10 +23,10 @@ sources:
     resource: "C:/Users/amado/ASpace_OS_V3/70_Onthologies/pulse/b2/b2-council-arbitrage-rule.md"
     title: B2 Council — qui tranche quand deux domaines se contredisent
     last_modified: 2026-08-19
-  - id: coach-os-vp
-    resource: "C:/Users/amado/ASpace_OS_V2/30_Business_OS/10_Projects/coach-os/04_Business_Domains/08_Legal_et_Compliance_Aquaman_Eternals/VP_AGENT.md"
-    title: Aquaman VP_AGENT — état dormant
-    last_modified: 2026-08-02
+  - id: aquaman-b2-control-room
+    resource: "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/01-omk-business-os/B2_Business_Domains/08_Legal_Aquaman_Eternals/00_B2_DOMAIN_CONTROL_ROOM.md"
+    title: Aquaman Legal B2 Domain Control Room — état dormant SHADOW_ACTIVE
+    last_modified: 2026-05-27
 okf_version: "0.2"
 ---
 

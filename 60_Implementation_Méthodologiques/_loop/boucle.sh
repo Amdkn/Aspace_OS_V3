@@ -34,7 +34,12 @@ lancer() {
   echo "[$(date +%H:%M:%S)] $quoi tour $tour termine (exit=$?)" >> "$L/BOUCLE.log"
 }
 
-ROTATION=("protocoles b1" "b2 b3" "b1 b2" "b3 protocoles" "b1 b3" "b2 b1")
+# Rotation elargie. B3 etait servi une fois sur trois dans la version
+# precedente — un desequilibre de ma table, pas des agents. Chaque etage
+# apparait maintenant quatre fois sur dix paires.
+ROTATION=("frameworks b3" "b1 b2" "protocoles b3" "b2 b1"
+          "frameworks b1" "b3 b2" "protocoles b1" "b3 frameworks"
+          "b2 b3" "b1 protocoles")
 tour=0
 
 echo "[$(date +%H:%M:%S)] boucle demarree, echeance dans ${HEURES}h" > "$L/BOUCLE.log"
