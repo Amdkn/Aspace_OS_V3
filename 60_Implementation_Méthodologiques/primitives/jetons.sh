@@ -40,6 +40,17 @@
 #    pures et signalent les jetons suspects sans y toucher.
 #
 # ------------------------------------------------------------------------
+# INTEROPERABILITE — POURQUOI LE PREFIXE EST `slot_` ET NON `jeton_`
+#
+# La premiere version nommait ses jetons `slot_N` dans ce meme repertoire.
+# Les nommer `jeton_N` aurait cree DEUX verrous mutuellement invisibles dans
+# le meme dossier : chacun aurait compte ses propres jetons et ignore ceux de
+# l'autre. Un verrou que l'autre boucle ne voit pas ne verrouille rien.
+#
+# Le nom est donc conserve tel quel. C'est le prix de l'interoperabilite, et
+# il est nul.
+#
+# ------------------------------------------------------------------------
 # CE QUE CE VERROU NE GARANTIT PAS
 #
 # Il borne le nombre d'agents lances simultanement. Il ne dit rien de ce
@@ -59,13 +70,13 @@ _jetons_balayer() {
   # -mmin +TTL sur un jeton avec battement signifie : le detenteur n'a pas
   # touche son jeton depuis TTL minutes. Il est mort, ou bloque au point de
   # ne plus battre — dans les deux cas la place doit revenir.
-  find "$JETONS_DIR" -maxdepth 1 -type d -name 'jeton_*' \
+  find "$JETONS_DIR" -maxdepth 1 -type d -name 'slot_*' \
        -mmin "+$JETONS_TTL_MIN" -exec rm -rf {} + 2>/dev/null
 }
 
 # --- lecture PURE : ne modifie rien --------------------------------------
 jetons_pris() {
-  find "$JETONS_DIR" -maxdepth 1 -type d -name 'jeton_*' 2>/dev/null | wc -l
+  find "$JETONS_DIR" -maxdepth 1 -type d -name 'slot_*' 2>/dev/null | wc -l
 }
 
 jetons_libres() {
@@ -75,7 +86,7 @@ jetons_libres() {
 jetons_etat() {
   echo "  jetons : $(jetons_pris) / $JETONS_MAX pris   (TTL ${JETONS_TTL_MIN} min sans battement)"
   local d age
-  for d in "$JETONS_DIR"/jeton_*; do
+  for d in "$JETONS_DIR"/slot_*; do
     [ -d "$d" ] || continue
     age=$(find "$d" -maxdepth 0 -mmin "+$JETONS_TTL_MIN" 2>/dev/null)
     printf "    %-12s %s%s\n" "$(basename "$d")" \
@@ -91,7 +102,7 @@ jetons_prendre() {
   local etiquette="${1:-anonyme}" i j
   _jetons_balayer
   for i in $(seq 1 "$JETONS_MAX"); do
-    j="$JETONS_DIR/jeton_$i"
+    j="$JETONS_DIR/slot_$i"
     if mkdir "$j" 2>/dev/null; then
       printf '%s pid=%s depuis=%s\n' "$etiquette" "$$" "$(date '+%H:%M:%S')" \
         > "$j/proprietaire"

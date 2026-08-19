@@ -17,7 +17,7 @@
 # tentative. Sans ce balayage, le verrou se degrade en blocage.
 
 SLOTS="${SLOTS:-C:/Users/amado/.aspace_slots}"
-MAX_SLOTS="${MAX_SLOTS:-8}"     # agents claude -p simultanes, TOUTES boucles
+MAX_SLOTS="${MAX_SLOTS:-10}"
 TTL_MIN="${TTL_MIN:-45}"        # au-dela, le jeton est repute perime
 
 mkdir -p "$SLOTS" 2>/dev/null
