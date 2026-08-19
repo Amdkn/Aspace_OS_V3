@@ -1,0 +1,1155 @@
+# A'Space OS reconstitue en triplets — genere par
+# scripts/valider_triplets_aspace.py. NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+@prefix ent:    <urn:aspace:entity:> .
+
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:replicator> .
+#   Rick Sanchez (A1) gouverne le mécanisme qui produit les trois OS via Doctors A2 et Companions A3
+#   src: 10_Tech_OS/00_Governance_Rick/Loi_L0.md [haute] (dom-tech)
+<urn:aspace:entity:loi-l0> aspace:appliesTo <urn:aspace:entity:kernel-core> .
+#   La Loi L0 (Souverainete, Anti-fragilite, Sobriete, Idempotence) s'applique au Solarpunk Kernel Core L0.3
+#   src: 10_Tech_OS/00_Governance_Rick/Loi_L0.md [haute] (dom-tech)
+<urn:aspace:entity:loi-l0> aspace:supersedes <urn:aspace:entity:openclaw-pairing-policy> .
+#   La Loi L0 supersede toute politique OpenClaw pairing imposee par defaut
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:rick> aspace:produces <urn:aspace:entity:sdds> .
+#   Rick Prime (A0 dans certains contextes) produit les SDD apres ratification A0
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:sdds> aspace:routes <urn:aspace:entity:prds> .
+#   Chaque SDD ratifie declenche 3 PRDs (un par Doctor) selon la Loi des 3
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:prds> aspace:routes <urn:aspace:entity:adrs> .
+#   Chaque PRD genere 3 ADRs (un par Compagnon du Doctor) selon la Loi des 3
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:adrs> aspace:routes <urn:aspace:entity:ddds> .
+#   Chaque ADR produit N DDDs atomiques (un< 200 lignes, un module)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:ddds> aspace:instantiates <urn:aspace:entity:tdds> .
+#   Chaque DDD doit instancier un TDD avant activation A3 (gate Nardol>= 75/100)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:tardis-inverse> aspace:appliesTo <urn:aspace:entity:kernel-core> .
+#   L'ordre TARDIS Inverse impose L0.3 Kernel avant L0.2 Forge avant L0.1 Life Core
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:kernel-core> aspace:dependsOn <urn:aspace:entity:hostinger-mcp> .
+#   Le Kernel Core L0.3 depend du Hostinger MCP pour la structuration VPS
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:kernel-core> aspace:dependsOn <urn:aspace:entity:dokploy-mcp> .
+#   Le Kernel Core L0.3 depend du Dokploy MCP pour les deploiements
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:kernel-core> aspace:dependsOn <urn:aspace:entity:supabase-mcp> .
+#   Le Kernel Core L0.3 depend du Supabase MCP pour la memoire RAG pgvector
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:yaz> aspace:stewards <urn:aspace:entity:hostinger-mcp> .
+#   Yaz (A3 13eme Doctor) gere le Hostinger MCP (DNS, Firewall, VPS, SSL)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:ryan> aspace:stewards <urn:aspace:entity:dokploy-mcp> .
+#   Ryan (A3 13eme Doctor) gere le Dokploy MCP (deploy_application, rollback)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:graham> aspace:stewards <urn:aspace:entity:supabase-mcp> .
+#   Graham (A3 13eme Doctor) gere le Supabase MCP (RAG memory, kernel_memory table)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:bill> aspace:stewards <urn:aspace:entity:bmad-method> .
+#   Bill (A3 12eme Doctor) applique BMAD-METHOD (Phase 1-5) aux nouveaux Skills
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:clara> aspace:stewards <urn:aspace:entity:cli-forge> .
+#   Clara (A3 12eme Doctor) forge les CLIs Python Click via CLI-Anything 7 phases
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:nardol> aspace:stewards <urn:aspace:entity:agentshield> .
+#   Nardol (A3 12eme Doctor) applique AgentShield 102 regles ECC sur chaque Skill
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:amy> aspace:stewards <urn:aspace:entity:ag-ui> .
+#   Amy (A3 11eme Doctor) produit les composants React AG-UI/A2UI
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-004_ricks-verse-governance.md [haute] (dom-tech)
+<urn:aspace:entity:rory> aspace:stewards <urn:aspace:entity:rls-migrations> .
+#   Rory (A3 11eme Doctor) gere Supabase schemas + RLS + migrations SQL
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-004_ricks-verse-governance.md [haute] (dom-tech)
+<urn:aspace:entity:river> aspace:stewards <urn:aspace:entity:agent-portal> .
+#   River Song (A3 11eme Doctor) gere l'Agent Portal via OpenClaw + Hermes
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-004_ricks-verse-governance.md [haute] (dom-tech)
+<urn:aspace:entity:vault-tier-pattern> aspace:appliesTo <urn:aspace:entity:mcp-tokens> .
+#   Le vault-tier pattern impose toutes les cles MCP en env vars Windows User scope
+#   src: 10_Tech_OS/11_Infra_13th_Doctor/06_MCP_Mastery/AGENTS.md [haute] (dom-tech)
+<urn:aspace:entity:dox-framework> aspace:appliesTo <urn:aspace:entity:agents-md-hierarchy> .
+#   DOX impose la hierarchie AGENTS.md root > child > leaf comme contrat de travail
+#   src: 10_Tech_OS/11_Infra_13th_Doctor/06_MCP_Mastery_dox/AGENTS.md [haute] (dom-tech)
+<urn:aspace:entity:dox-framework> aspace:governs <urn:aspace:entity:mcp-doctrine-six> .
+#   DOX regit les six MCP canoniques (hostinger, github, dokploy, vercel, supabase, graphify)
+#   src: 10_Tech_OS/11_Infra_13th_Doctor/06_MCP_Mastery/AGENTS.md [haute] (dom-tech)
+<urn:aspace:entity:symphony> aspace:supersedes <urn:aspace:entity:n8n> .
+#   Symphony (file-based bus) supersede N8N (legacy depuis 2026-05-26)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md [haute] (dom-tech)
+<urn:aspace:entity:symphony> aspace:covers <urn:aspace:entity:tick-cycle> .
+#   Symphony couvre un cycle 8 phases WAKE-PROBE-DECIDE-EXECUTE-OBSERVE-LEARN-SIGNAL-SLEEP
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md [haute] (dom-tech)
+<urn:aspace:entity:symphony> aspace:appliesTo <urn:aspace:entity:agent-os> .
+#   Symphony consomme agent-os/standards/index.yml a chaque tick (ADR-SYMPH-003)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-003_agent-os-standards-injection.md [haute] (dom-tech)
+<urn:aspace:entity:axiome-raw> aspace:appliesTo <urn:aspace:entity:kernel-core> .
+#   L'axiome Read-After-Write s'applique a tout write critique du Kernel Core
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:axiome-degrade> aspace:appliesTo <urn:aspace:entity:kernel-core> .
+#   L'axiome degradation gracieuse s'applique a tout service L0.3 (Yaz, Ryan, Graham)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:axiome-memoire> aspace:appliesTo <urn:aspace:entity:kernel-core> .
+#   L'axiome memoire procedurale (Pattern x 3 -> Skill) s'applique au Kernel Core L0.3
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:panique-k1> aspace:handledBy <urn:aspace:entity:verify-write> .
+#   La panique K1 Filesystem Blindness est handled par verify_write() + helper Write-AndVerify
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:panique-k2> aspace:handledBy <urn:aspace:entity:read-after-write> .
+#   La panique K2 Hallucination de Succes est handled par Read-After-Write MCP
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:panique-k3> aspace:handledBy <urn:aspace:entity:check-env-vars> .
+#   La panique K3 Secret Leak 401 est handled par check_env_vars fail-fast
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:panique-k4> aspace:handledBy <urn:aspace:entity:dead-mans-switch> .
+#   La panique K4 Dead Kernel est handled par graham-dead-mans-switch.sh cron*/5min
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:junction-aliasing> aspace:supersedes <urn:aspace:entity:robocopy-2way> .
+#   Le junction-based aliasing supersede robocopy/MIR 2-way (anti-pattern)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-001_junction-based-aliasing.md [haute] (dom-tech)
+<urn:aspace:entity:junction-aliasing> aspace:governs <urn:aspace:entity:filesystem-aspace> .
+#   Le junction-based aliasing regit le filesystem ASpace_OS_V2 via 3 couches (sentinelles, drives subst, junctions fonctionnelles)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-001_junction-based-aliasing.md [haute] (dom-tech)
+<urn:aspace:entity:pyramide> aspace:hasVetoOver <urn:aspace:entity:l2-business> .
+#   La pyramide L0 >= L1 > L2 donne a L0/L1 un veto absolu sur L2 Business
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-006_business-pulse-l2-pyramide.md [haute] (dom-tech)
+<urn:aspace:entity:beth-veto> aspace:supersedes <urn:aspace:entity:roi-business> .
+#   Le Beth Veto supersede tout ROI Business quand LD03/LD04 sont en rouge
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-006_business-pulse-l2-pyramide.md [haute] (dom-tech)
+<urn:aspace:entity:ratio-50-30-20> aspace:appliesTo <urn:aspace:entity:temps-amadeus> .
+#   Le ratio 50% L2 / 30% L1 / 20% L0 s'applique au temps d'Amadeus par cycle
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-008_shadow-L1-life-os.md [haute] (dom-tech)
+<urn:aspace:entity:shadow-l0-triade> aspace:appliesTo <urn:aspace:entity:operation-pre-hermes> .
+#   La triade Claude/GPT/Gemini s'applique a l'operation manuelle avant Hermes A1
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-010_meta-cloture-scope-13eme-semaine_UPDATED_shadow-L0-IA.md [haute] (dom-tech)
+<urn:aspace:entity:capability-routing> aspace:supersedes <urn:aspace:entity:model-routing> .
+#   Le capability routing supersede le model routing rigide (anti-pattern V0)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-002_symphony-variants-per-harness.md [haute] (dom-tech)
+<urn:aspace:entity:13eme-semaine> aspace:governs <urn:aspace:entity:cycles-12wy> .
+#   La 13eme Semaine regit les transitions entre cycles 12WY (1 semaine de pause meta)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-010_meta-cloture-scope-13eme-semaine.md [haute] (dom-tech)
+<urn:aspace:entity:veto-sdd> aspace:appliesTo <urn:aspace:entity:production-90-jours> .
+#   Le veto SDD 90 jours (jusqu'au 2026-08-11) s'applique a toute production post-SDD-010
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-010_meta-cloture-scope-13eme-semaine.md [haute] (dom-tech)
+<urn:aspace:entity:apoptose> aspace:appliesTo <urn:aspace:entity:violations-loi-l0> .
+#   La directive d'Apoptose s'applique a tout agent qui viole la Loi L0
+#   src: 10_Tech_OS/00_Governance_Rick/Drivers/A1 - Rick Sanchez (Visionnaire & Gatekeeper Absolu).md [haute] (dom-tech)
+<urn:aspace:entity:rick> aspace:pairedWith <urn:aspace:entity:doctor-prime> .
+#   Rick Sanchez A1 est paired avec les 3 Doctors A2 (11eme, 12eme, 13eme)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:doctor-13> aspace:pairedWith <urn:aspace:entity:yaz-ryan-graham> .
+#   Le 13eme Doctor A2 est paired avec Yaz, Ryan, Graham (A3 Kernel Core)
+#   src: 10_Tech_OS/11_Infra_13th_Doctor/README.md [haute] (dom-tech)
+<urn:aspace:entity:doctor-12> aspace:pairedWith <urn:aspace:entity:bill-clara-nardol> .
+#   Le 12eme Doctor A2 est paired avec Bill, Clara, Nardol (A3 Forge Core)
+#   src: 10_Tech_OS/13_Data_12th_Doctor/README.md [haute] (dom-tech)
+<urn:aspace:entity:doctor-11> aspace:pairedWith <urn:aspace:entity:amy-rory-river> .
+#   Le 11eme Doctor A2 est paired avec Amy, Rory, River (A3 Life Core / Hospital)
+#   src: 10_Tech_OS/12_Interface_11th_Doctor/README.md [haute] (dom-tech)
+<urn:aspace:entity:canon-tripartite> aspace:governs <urn:aspace:entity:blueprints-l0-l1-l2> .
+#   ADR-FWK-021 regit le canon Blueprints L0 (10_Tech_OS), L1 (20_Life_OS), L2 (30_Business_OS)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-FWK-021_blueprints-canon-tripartite.md [haute] (dom-tech)
+<urn:aspace:entity:anti-panique> aspace:covers <urn:aspace:entity:tick-8-phases> .
+#   L'anti-panique (ADR-HEART-002) couvre les 8 phases du tick Symphony par garde
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-HEART-002_heartbeat-anti-panique-openclaw-paperclip.md [haute] (dom-tech)
+<urn:aspace:entity:mode-lean> aspace:appliesTo <urn:aspace:entity:openclaw-paperclip> .
+#   Le mode lean (defaut) s'applique a OpenClaw OFF + Paperclip OFF sauf escalade A0
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-HEART-002_heartbeat-anti-panique-openclaw-paperclip.md [haute] (dom-tech)
+<urn:aspace:entity:tmux-pm2> aspace:supersedes <urn:aspace:entity:custom-daemons> .
+#   Tmux (WSL dev) + PM2 (VPS prod) supersedent les daemons Windows custom (Hermes, OpenClaw gateway)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-INFRA-001_tmux-wsl-dev-pm2-vps-prod.md [haute] (dom-tech)
+<urn:aspace:entity:secnet-iptables> aspace:covers <urn:aspace:entity:ports-docker> .
+#   ADR-SECNET-001 couvre les ports Docker exposes (5432, 6543, 8000, 8001, 8443) via iptables DOCKER-USER
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SECNET-001_supabase-network-security.md [haute] (dom-tech)
+<urn:aspace:entity:supabase-multi-tenant> aspace:appliesTo <urn:aspace:entity:schemas-tenant> .
+#   Le pattern Supabase multi-tenant (org_id + RLS) s'applique a tous les schemas saas
+#   src: 10_Tech_OS/11_Infra_13th_Doctor/06_MCP_Mastery/05_supabase/AGENTS.md [haute] (dom-tech)
+<urn:aspace:entity:vault-rotation> aspace:governs <urn:aspace:entity:cles-api> .
+#   La rotation trimestrielle govern toutes les cles API (hostinger, github, dokploy, vercel, supabase)
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SECNET-001_supabase-network-security.md [haute] (dom-tech)
+<urn:aspace:entity:tardis-protocole> aspace:produces <urn:aspace:entity:filesystem-inbox> .
+#   Le protocole TARDIS produit un filesystem d'inboxes (A0_TO_A1/, A1_TO_A2/, A2_TO_A3/)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:anti-pattern-rigidit> aspace:appliesTo <urn:aspace:entity:assignation-modele-couche> .
+#   L'anti-pattern rigidite s'applique a l'assignation modele->couche (Claude=L0, GPT=L1, Gemini=L2)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-010_meta-cloture-scope-13eme-semaine_UPDATED_shadow-L0-IA.md [haute] (dom-tech)
+<urn:aspace:entity:hermes-nous> aspace:appliesTo <urn:aspace:entity:memoire-procedurale-a3> .
+#   Hermes Nous s'applique a la memoire procedurale A3 (Graham, Ryan en A1 L0)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:hermes-aspace> aspace:distinguishedFrom <urn:aspace:entity:hermes-nous> .
+#   Hermes A'Space (routing) est distinct d'Hermes Nous (memoire procedurale)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:fail-fast> aspace:appliesTo <urn:aspace:entity:clis-eck> .
+#   Le pattern fail-fast (exit 1 sur env var absente) s'applique aux Skills Clara et aux K3
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:openclaw-mission-control> aspace:covers <urn:aspace:entity:approvals-governance> .
+#   OpenClaw Mission Control couvre les approvals et gouvernance HITL du Rick's Verse
+#   src: 10_Tech_OS/00_Governance_Rick/openclaw-mission-control/README.md [haute] (dom-tech)
+<urn:aspace:entity:resilience> aspace:appliesTo <urn:aspace:entity:hermes-collapse> .
+#   La resilience (Yaz detecte, Ryan repare, Graham archive) s'applique a l'effondrement Hermes d'avril 2026
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:openclaw-gateway> aspace:supersedes <urn:aspace:entity:dm-pairing-policy> .
+#   L'OpenClaw gateway supersede la dmPolicy pairing par defaut (pairing bloque, open autorise)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:sovereignty-self-host> aspace:covers <urn:aspace:entity:stack-react-supabase-openclaw> .
+#   La souverainete self-host couvre la stack React+Supabase+OpenClaw definie par ADR-000
+#   src: 10_Tech_OS/00_Governance_Rick/Drivers/A1 - Rick Sanchez (Visionnaire & Gatekeeper Absolu).md [haute] (dom-tech)
+<urn:aspace:entity:traceability> aspace:appliesTo <urn:aspace:entity:cascade-sdd-code> .
+#   La tracabilite SDD->Code s'applique a toute ligne de code (chaque ligne peut etre tracee a son DDD)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:soif-de-souverainete> aspace:supersedes <urn:aspace:entity:valeur-l2> .
+#   La soif de souverainete absolue immediate supersede la valeur L2 (anti-pattern V0 corrige par SDD-010)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-010_meta-cloture-scope-13eme-semaine.md [haute] (dom-tech)
+<urn:aspace:entity:frugal-stack-chinoise> aspace:appliesTo <urn:aspace:entity:minimax-glm-claude> .
+#   La stack frugale chinoise (MiniMax 2.7 + GLM 4.7 Flash + Claude Sonnet) s'applique a la phase Gamma+
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-009_shadow-L2-business-os.md [haute] (dom-tech)
+<urn:aspace:entity:donna-r-gle-des-3> aspace:governs <urn:aspace:entity:escalade-a3> .
+#   La Donna Règle des 3 govern l'escalade A3 (Niveau 1 Doctor x 3, Niveau 2 Rick x 3, Niveau 3 A0)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:caste> aspace:covers <urn:aspace:entity:9-compagnons-a3> .
+#   La caste Doctor Who couvre les 9 Compagnons A3 (3 triades x 3)
+#   src: 10_Tech_OS/00_Governance_Rick/Drivers/A1 - Rick Sanchez (Visionnaire & Gatekeeper Absolu).md [haute] (dom-tech)
+<urn:aspace:entity:l0-life-core> aspace:inherits <urn:aspace:entity:l0-kernel-core> .
+#   Le L0.1 Life Core herite de la stabilite du L0.3 Kernel Core
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:l0-forge-core> aspace:inherits <urn:aspace:entity:l0-kernel-core> .
+#   Le L0.2 Forge Core herite du L0.3 Kernel Core (sans Kernel stable, pas de Skill)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:a0> aspace:hasVetoOver <urn:aspace:entity:sdds> .
+#   A0 Amadeus a un veto absolu sur les SDDs (ratification exclusive)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:a0> aspace:routes <urn:aspace:entity:cl-s-api> .
+#   A0 Amadeus distribue les clés API aux agents concernes (jamais en automatique)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:hermes-effondrement> aspace:appliesTo <urn:aspace:entity:kernel-canon> .
+#   L'effondrement Hermes d'avril 2026 s'applique comme cas fondateur du Kernel canon L0
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:pulse-log> aspace:covers <urn:aspace:entity:tick-observability> .
+#   Le pulse.log (JSONL append-only, 14 champs) couvre l'observabilite tick Symphony
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-003_agent-os-standards-injection.md [haute] (dom-tech)
+<urn:aspace:entity:bypass-permissions> aspace:appliesTo <urn:aspace:entity:agents-night> .
+#   bypassPermissions + defaultMode=safe s'applique aux agents overnight (A3) en sandbox
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-000_ricks-verse-constitution.md [haute] (dom-tech)
+<urn:aspace:entity:claude-sdk-attended> aspace:governs <urn:aspace:entity:claude-desktop-app> .
+#   Anthropic refuse Claude SDK unattended -> Claude Desktop App reste console A0 interactive
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-002_symphony-variants-per-harness.md [haute] (dom-tech)
+<urn:aspace:entity:greenfield> aspace:appliesTo <urn:aspace:entity:deployment-fresh> .
+#   Le pattern greenfield (Setup-ASpace-Junctions.ps1 -Apply + .env distribues) s'applique a tout deployment fresh
+#   src: 10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-002_setup-junctions-script.md [haute] (dom-tech)
+<urn:aspace:entity:cadrage-rbac> aspace:covers <urn:aspace:entity:agents-a3-scope> .
+#   Le cadrage RBAC (A0/A1/A2/A3) couvre le scope perimetre de chaque agent Rick's Verse
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-004_ricks-verse-governance.md [haute] (dom-tech)
+<urn:aspace:entity:pattern-x3> aspace:produces <urn:aspace:entity:skill-hermes> .
+#   Pattern x 3 (incident repete 3 fois dans WIKI.md) produit un Skill Hermes Nous auto-encodé
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-001_solarpunk-kernel-core.md [haute] (dom-tech)
+<urn:aspace:entity:trace-id> aspace:covers <urn:aspace:entity:payload-soc> .
+#   Le trace_id (UUID v4) couvre la tracabilite du Payload SOC dans Symphony Router B1
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-009_shadow-L2-business-os.md [haute] (dom-tech)
+<urn:aspace:entity:triade-sla-soa-soc> aspace:covers <urn:aspace:entity:l2-business> .
+#   La triade SLA/SOA/SOC couvre le L2 Business (espace, langage, temps+energie)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-009_shadow-L2-business-os.md [haute] (dom-tech)
+<urn:aspace:entity:ddd-granularite> aspace:appliesTo <urn:aspace:entity:ddd-taille> .
+#   La granularite DDD s'applique comme < 200 lignes, un seul module par DDD
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-002_a1-rick-harness.md [haute] (dom-tech)
+<urn:aspace:entity:inefficiency-clis> aspace:appliesTo <urn:aspace:entity:frugalite-mcp> .
+#   L'inefficience MCP (~800 tokens/appel) s'applique a la frugalite des CLIs Clara (~50 tokens/appel)
+#   src: 10_Tech_OS/12_Blueprints/01-SDD/SDD-003_tardis-protocol-orchestration.md [haute] (dom-tech)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:life-os> .
+#   Beth has veto over the whole Life OS layer — distributed across 6 A2 ships
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ld03-health> .
+#   Beth has automatic veto on LD03 Health below threshold 4.0 — HALT_LD03
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ld04-cognition> .
+#   Beth has automatic veto on LD04 Cognition below threshold 3.5 — HALT_LD04
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ship-orville> .
+#   Beth supervises USS Orville (Ikigai) and can veto meaning conflicts
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ship-discovery> .
+#   Beth supervises USS Discovery (Life Wheel) and can veto domain health collapse
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ship-protostar> .
+#   Beth supervises USS Protostar (DEAL) and can veto high-risk automation
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-orville> .
+#   Morty routes Ikigai intentions to USS Orville (Obsidian / notes)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-discovery> .
+#   Morty routes domain health queries to USS Discovery (Baserow ZORA)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-snw> .
+#   Morty routes Rocks and tactics to USS SNW / Curie (Baserow 12WY Warp Core)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-enterprise> .
+#   Morty routes project structure to USS Enterprise / Picard (Obsidian PARA)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-cerritos> .
+#   Morty routes inbox and next actions to USS Cerritos (Plane)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:ship-protostar> .
+#   Morty routes DEAL blueprints to USS Protostar (Affine Edgeless)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:morty> aspace:dependsOn <urn:aspace:entity:beth-clearance> .
+#   Morty execution depends on Beth clearance state — GREEN / ORANGE / RED / HALT
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ikigai> aspace:partOf <urn:aspace:entity:triptyque-beth> .
+#   Ikigai (Orville) is the outermost layer of the BETH triptyque — meaning layer
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (dom-life)
+<urn:aspace:entity:life-wheel> aspace:partOf <urn:aspace:entity:triptyque-beth> .
+#   Life Wheel (Discovery) is the middle layer of the BETH triptyque — balance layer
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (dom-life)
+<urn:aspace:entity:deal-muse> aspace:partOf <urn:aspace:entity:triptyque-beth> .
+#   DEAL Muse (Protostar) is the innermost layer of the BETH triptyque — liberation layer
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (dom-life)
+<urn:aspace:entity:12wy> aspace:partOf <urn:aspace:entity:triptyque-morty> .
+#   12 Week Year (SNW / Curie) is the outermost layer of the MORTY triptyque — cadence layer
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (dom-life)
+<urn:aspace:entity:para> aspace:partOf <urn:aspace:entity:triptyque-morty> .
+#   PARA (Enterprise) is the middle layer of the MORTY triptyque — structure layer
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (dom-life)
+<urn:aspace:entity:deal> aspace:partOf <urn:aspace:entity:triptyque-morty> .
+#   DEAL (Protostar via Data) is the innermost layer of the MORTY triptyque — liberation layer
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:deal> aspace:dependsOn <urn:aspace:entity:para> .
+#   DEAL pipeline depends on PARA Archives — A3 Data supervises DEAL operationally
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:para> aspace:dependsOn <urn:aspace:entity:12wy> .
+#   PARA structure depends on 12WY cadence — 5 disciplines SNW structure Projects / Areas / Resources / Archives
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ed-mercer> aspace:governs <urn:aspace:entity:pillar-profession> .
+#   Ed Mercer governs the Profession pillar of Ikigai — craft standards and market role
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Ed_Mercer_Spec.md [haute] (dom-life)
+<urn:aspace:entity:kelly-grayson> aspace:governs <urn:aspace:entity:pillar-mission> .
+#   Kelly Grayson governs the Mission pillar of Ikigai — service and Solarpunk direction
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (dom-life)
+<urn:aspace:entity:gordon-malloy> aspace:governs <urn:aspace:entity:pillar-passion> .
+#   Gordon Malloy governs the Passion pillar of Ikigai — joy and creative recharge
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (dom-life)
+<urn:aspace:entity:claire-finn> aspace:governs <urn:aspace:entity:pillar-vocation> .
+#   Claire Finn governs the Vocation pillar of Ikigai — zone of genius and non-negotiables
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md [haute] (dom-life)
+<urn:aspace:entity:isaac> aspace:governs <urn:aspace:entity:horizon-h1> .
+#   Isaac governs the H1 horizon of Ikigai — annual realism and immediate bridge to 12WY
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/01_H1_Isaac/A3_Isaac_H1_Spec.md [haute] (dom-life)
+<urn:aspace:entity:lamarr> aspace:governs <urn:aspace:entity:horizon-h3> .
+#   John Lamarr governs the H3 horizon of Ikigai — medium-term options and platforms
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/02_H3_Lamarr/A3_John_Lamarr_H3_Spec.md [haute] (dom-life)
+<urn:aspace:entity:bortus> aspace:governs <urn:aspace:entity:horizon-h10> .
+#   Bortus governs the H10 horizon of Ikigai — durable 10-year assets and resilience
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/03_H10_Bortus/A3_Bortus_H10_Spec.md [haute] (dom-life)
+<urn:aspace:entity:alara> aspace:governs <urn:aspace:entity:horizon-h30> .
+#   Alara Kitan governs the H30 horizon of Ikigai — expansion and ceiling-break
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/04_H30_Alara/A3_Alara_Kitan_H30_Spec.md [haute] (dom-life)
+<urn:aspace:entity:klyden> aspace:governs <urn:aspace:entity:horizon-h90> .
+#   Klyden governs the H90 horizon of Ikigai — Solarpunk legacy and civilization scale
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/05_H90_Klyden/A3_Klyden_H90_Spec.md [haute] (dom-life)
+<urn:aspace:entity:book> aspace:governs <urn:aspace:entity:ld01-career> .
+#   Book governs LD01 of Life Wheel — professional coherence at H1 weekly P&L
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md [haute] (dom-life)
+<urn:aspace:entity:saru> aspace:governs <urn:aspace:entity:ld02-finance> .
+#   Saru governs LD02 of Life Wheel — finance and runway at H3 quarterly
+#   src: 20_Life_OS/22_Wheel_Discovery/LD02_Finance_Saru/A3_Saru_LD02_Spec.md [haute] (dom-life)
+<urn:aspace:entity:culber> aspace:governs <urn:aspace:entity:ld03-health> .
+#   Culber governs LD03 of Life Wheel — health, sleep, energy at H10 cycle
+#   src: 20_Life_OS/22_Wheel_Discovery/LD03_Health_Culber/A3_Culber_LD03_Spec.md [haute] (dom-life)
+<urn:aspace:entity:tilly> aspace:governs <urn:aspace:entity:ld04-cognition> .
+#   Tilly governs LD04 of Life Wheel — mind, cognition, mental load at H30 learning arc
+#   src: 20_Life_OS/22_Wheel_Discovery/LD04_Cognition_Tilly/A3_Tilly_LD04_Spec.md [haute] (dom-life)
+<urn:aspace:entity:stamets> aspace:governs <urn:aspace:entity:ld05-social> .
+#   Stamets governs LD05 of Life Wheel — social relations and invisible networks at H30 half-life
+#   src: 20_Life_OS/22_Wheel_Discovery/LD05_Social_Stamets/A3_Stamets_LD05_Spec.md [haute] (dom-life)
+<urn:aspace:entity:burnham> aspace:governs <urn:aspace:entity:ld06-family> .
+#   Burnham governs LD06 of Life Wheel — love, family, presence at H10 family cycle
+#   src: 20_Life_OS/22_Wheel_Discovery/LD06_Family_Burnham/A3_Burnham_LD06_Spec.md [haute] (dom-life)
+<urn:aspace:entity:reno> aspace:governs <urn:aspace:entity:ld07-creativity> .
+#   Reno governs LD07 of Life Wheel — creativity, leisure, flow at H10 MVP build arc
+#   src: 20_Life_OS/22_Wheel_Discovery/LD07_Creativity_Reno/A3_Reno_LD07_Spec.md [haute] (dom-life)
+<urn:aspace:entity:georgiou> aspace:governs <urn:aspace:entity:ld08-impact> .
+#   Georgiou governs LD08 of Life Wheel — contribution, impact, Solarpunk alignment at H90
+#   src: 20_Life_OS/22_Wheel_Discovery/LD08_Impact_Georgiou/A3_Georgiou_LD08_Spec.md [haute] (dom-life)
+<urn:aspace:entity:culber> aspace:produces <urn:aspace:entity:ld04-cognition-signal> .
+#   Culber LD03 produces a recovery signal that Tilly LD04 depends on for cognition decisions
+#   src: 20_Life_OS/22_Wheel_Discovery/LD03_Health_Culber/A3_Culber_LD03_Spec.md [haute] (dom-life)
+<urn:aspace:entity:tilly> aspace:escalates <urn:aspace:entity:beth> .
+#   Tilly escalates to Beth when Culber LD03 is RED — STOP authority without recovery signal
+#   src: 20_Life_OS/22_Wheel_Discovery/LD04_Cognition_Tilly/A3_Tilly_LD04_Spec.md [haute] (dom-life)
+<urn:aspace:entity:pike> aspace:governs <urn:aspace:entity:12wy-vision> .
+#   Pike governs 12WY Vision — Quarter Intent with Klyden H90 and Bortus H10
+#   src: 20_Life_OS/23_12WY_SNW/README.md [haute] (dom-life)
+<urn:aspace:entity:una> aspace:governs <urn:aspace:entity:12wy-planning> .
+#   Una governs 12WY Planning — Rocks decomposition at H10 with Bortus H10
+#   src: 20_Life_OS/23_12WY_SNW/README.md [haute] (dom-life)
+<urn:aspace:entity:mbenga> aspace:governs <urn:aspace:entity:12wy-focus> .
+#   M'Benga governs 12WY Focus — process control at H1 with Ed and Gordon
+#   src: 20_Life_OS/23_12WY_SNW/README.md [haute] (dom-life)
+<urn:aspace:entity:chapel> aspace:governs <urn:aspace:entity:12wy-metrics> .
+#   Chapel governs 12WY Metrics — Scorecard at H10 with Claire and D11 Fable score
+#   src: 20_Life_OS/23_12WY_SNW/README.md [haute] (dom-life)
+<urn:aspace:entity:ortegas> aspace:governs <urn:aspace:entity:12wy-execution> .
+#   Ortegas governs 12WY Execution — Time Use at H1 with Ed and Isaac
+#   src: 20_Life_OS/23_12WY_SNW/README.md [haute] (dom-life)
+<urn:aspace:entity:mariner> aspace:governs <urn:aspace:entity:gtd-capture> .
+#   Mariner governs GTD Capture — raw input preview 80 chars + sha256 hash
+#   src: 20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner/A3_Mariner_Capture_Spec.md [haute] (dom-life)
+<urn:aspace:entity:boimler> aspace:governs <urn:aspace:entity:gtd-clarify> .
+#   Boimler governs GTD Clarify — para_bucket assignment with tag @next / @waiting / @someday / @archive
+#   src: 20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/A3_Boimler_Clarify_Spec.md [haute] (dom-life)
+<urn:aspace:entity:rutherford> aspace:governs <urn:aspace:entity:gtd-organize> .
+#   Rutherford governs GTD Organize — bucket PARA label and route (D3 nuance : canon local actif)
+#   src: 20_Life_OS/25_GTD_Cerritos/03_Organize_Rutherford/A3_Rutherford_Organize_Spec.md [haute] (dom-life)
+<urn:aspace:entity:tendi> aspace:governs <urn:aspace:entity:gtd-review> .
+#   Tendi governs GTD Review — stale blocked repeated graduation candidates
+#   src: 20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md [haute] (dom-life)
+<urn:aspace:entity:freeman> aspace:governs <urn:aspace:entity:gtd-engage> .
+#   Freeman governs GTD Engage — next_action with drift_flag dispatch to Morty
+#   src: 20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md [haute] (dom-life)
+<urn:aspace:entity:dal> aspace:governs <urn:aspace:entity:deal-define> .
+#   Dal governs DEAL Define — pattern detection and recurrence counting
+#   src: 20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/A3_Dal_Definition_Spec.md [haute] (dom-life)
+<urn:aspace:entity:roktahk> aspace:governs <urn:aspace:entity:deal-eliminate> .
+#   Rok-Tahk governs DEAL Eliminate — NO-GO proposals before automation
+#   src: 20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/A3_RokTahk_Elimination_Spec.md [haute] (dom-life)
+<urn:aspace:entity:zero> aspace:governs <urn:aspace:entity:deal-automate> .
+#   Zero governs DEAL Automate — skill creation and sub-agent deployment with risk_class
+#   src: 20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md [haute] (dom-life)
+<urn:aspace:entity:gwyn> aspace:governs <urn:aspace:entity:deal-liberate> .
+#   Gwyn governs DEAL Liberate — D11 bandwidth measurement and maintenance tax
+#   src: 20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md [haute] (dom-life)
+<urn:aspace:entity:gwyn> aspace:produces <urn:aspace:entity:d11-bandwidth-metric> .
+#   Gwyn produces the D11 bandwidth metric — minutes libérées/semaine vs maintenance tax
+#   src: 20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md [haute] (dom-life)
+<urn:aspace:entity:gwyn> aspace:escalates <urn:aspace:entity:beth> .
+#   Gwyn escalates to Beth when D11 upkeep > gain — anti-paperclip Saru supervisor
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:picard> aspace:governs <urn:aspace:entity:para-projects> .
+#   Picard governs PARA Projects — strategy and project ownership at H10
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:spock> aspace:governs <urn:aspace:entity:para-areas> .
+#   Spock governs PARA Areas — logic and ongoing responsibility areas
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:geordi> aspace:governs <urn:aspace:entity:para-resources> .
+#   Geordi governs PARA Resources — engineering and reference themes
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:data> aspace:governs <urn:aspace:entity:para-archives> .
+#   Data governs PARA Archives — memory and durable Muse records
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:data> aspace:stewards <urn:aspace:entity:deal-supervision> .
+#   Data stewards the operational supervision of DEAL — frees Beth from operational supervision of Protostar
+#   src: 20_Life_OS/26_DEAL_Protostar/README.md [haute] (dom-life)
+<urn:aspace:entity:book> aspace:instantiates <urn:aspace:entity:aaas-solaris> .
+#   Book instantiates the AaaS Solaris variant — Kardashev Type 3 civilization at H90 Legacy 1000T
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md [haute] (dom-life)
+<urn:aspace:entity:saru> aspace:instantiates <urn:aspace:entity:aaas-nexus> .
+#   Saru instantiates the AaaS Nexus OMK variant — CLOS 2026-06-20
+#   src: 20_Life_OS/22_Wheel_Discovery/LD02_Finance_Saru/A3_Saru_LD02_Spec.md [haute] (dom-life)
+<urn:aspace:entity:burnham> aspace:instantiates <urn:aspace:entity:aaas-orbiter> .
+#   Burnham instantiates the AaaS Orbiter ABC variant — Family Offices H10 Patrimoine baby-boomers
+#   src: 20_Life_OS/22_Wheel_Discovery/LD06_Family_Burnham/A3_Burnham_LD06_Spec.md [haute] (dom-life)
+<urn:aspace:entity:book> aspace:hasVetoOver <urn:aspace:entity:saru> .
+#   Book has veto over Saru LD02 — coordinates but Saru does not override LD01 strategy
+#   src: 20_Life_OS/22_Wheel_Discovery/LD02_Finance_Saru/A3_Saru_LD02_Spec.md [haute] (dom-life)
+<urn:aspace:entity:saru> aspace:dependsOn <urn:aspace:entity:musk-pivot-check> .
+#   Saru LD02 depends on Musk pivot check — does the intention increase agency or expect external salvation
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ld01-business-book> aspace:dependsOn <urn:aspace:entity:cardia-tdd> .
+#   LD01 Business Book depends on CARDIA-TDD methodology for all module creation
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-001_organigramme_doctrine.md [haute] (dom-life)
+<urn:aspace:entity:organigramme-doctrine> aspace:supersedes <urn:aspace:entity:plan-markdown-plat> .
+#   Organigramme Doctrine folder-based supersedes single plan markdown — survives context compactions
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-001_organigramme_doctrine.md [haute] (dom-life)
+<urn:aspace:entity:ship-cerritos> aspace:dependsOn <urn:aspace:entity:plane> .
+#   USS Cerritos depends on Plane.so as Shadow L1 tool for GTD capture
+#   src: 20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ship-snw> aspace:dependsOn <urn:aspace:entity:baserow-12wy> .
+#   USS SNW depends on Baserow 12WY Warp Core table as Shadow L1 tool
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ship-discovery> aspace:dependsOn <urn:aspace:entity:baserow-zora> .
+#   USS Discovery depends on Baserow LD00 Life Wheel Zora as Shadow L1 tool
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ship-orville> aspace:dependsOn <urn:aspace:entity:obsidian> .
+#   USS Orville depends on Obsidian / filesystem notes as Shadow L1 tool
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ship-protostar> aspace:dependsOn <urn:aspace:entity:affine> .
+#   USS Protostar depends on Affine Edgeless as Shadow L1 canvas for DEAL blueprints
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (dom-life)
+<urn:aspace:entity:cycle-q3-2026> aspace:produces <urn:aspace:entity:treizieme-semaine> .
+#   Cycle 12WY Q3 2026 produces the 13th week W13 on 2026-09-14 as buffer transition
+#   src: 20_Life_OS/23_12WY_SNW/W1_Item2_13e_Semaine_Rock_Decomposition.md [haute] (dom-life)
+<urn:aspace:entity:treizieme-semaine> aspace:precedes <urn:aspace:entity:cycle-q4-2026> .
+#   The 13th week W13 (2026-09-14) precedes Cycle 4 kick-off with W0 transition on 2026-09-21
+#   src: 20_Life_OS/23_12WY_SNW/W1_Item2_13e_Semaine_Rock_Decomposition.md [haute] (dom-life)
+<urn:aspace:entity:state-json> aspace:partOf <urn:aspace:entity:amadeus-symphony-bus> .
+#   state.json part of the Amadeus Symphony Bus at 00_Amadeus/40_SYMPHONY_BUS/state.json
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (dom-life)
+<urn:aspace:entity:cycle-q3-2026> aspace:refines <urn:aspace:entity:veto-90j-sdd010> .
+#   Q3 2026 cycle refines the SDD-010 90-day veto rule — window 2026-08-11 to 2026-09-07 for ratification amendments
+#   src: 20_Life_OS/23_12WY_SNW/W1_Item2_13e_Semaine_Rock_Decomposition.md [haute] (dom-life)
+<urn:aspace:entity:book> aspace:dependsOn <urn:aspace:entity:saru-coordination> .
+#   Book depends on Saru coordination for finance signals — Saru coordinates but does not override LD01 strategy
+#   src: 20_Life_OS/22_Wheel_Discovery/LD02_Finance_Saru/A3_Saru_LD02_Spec.md [haute] (dom-life)
+<urn:aspace:entity:a0-reasoning-map> aspace:governs <urn:aspace:entity:clarify-phase> .
+#   A0 Reasoning Map governs the CLARIFY phase — 3 questions max before verdict
+#   src: 20_Life_OS/a0_reasoning_map.md [haute] (dom-life)
+<urn:aspace:entity:a0> aspace:escalates <urn:aspace:entity:board-observer-passif> .
+#   A0 escalates to board observer passif — only at H30 / H90 milestones or Rick kernel veto
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/README.md [haute] (dom-life)
+<urn:aspace:entity:a0-reasoning-map> aspace:cites <urn:aspace:entity:ren-s-law> .
+#   A0 Reasoning Map cites Ren's Law — Health negative net triggers Beth RED automatic
+#   src: 20_Life_OS/a0_reasoning_map.md [haute] (dom-life)
+<urn:aspace:entity:icardia-tdd> aspace:appliesTo <urn:aspace:entity:a3-spec-creation> .
+#   CARDIA-TDD applies to A3 spec creation — 6 properties C/A/R/D/I/A per construction
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/AGENTS.md [haute] (dom-life)
+<urn:aspace:entity:icardia-tdd> aspace:appliesTo <urn:aspace:entity:adr-creation> .
+#   CARDIA-TDD applies to ADR creation — append-only with D1 receipt and D4 close
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-001_organigramme_doctrine.md [haute] (dom-life)
+<urn:aspace:entity:edron> aspace:appliesTo <urn:aspace:entity:hartbeat-protocol> .
+#   A0 Reasoning Map applies to Morty heartbeat protocol — no empty heartbeat allowed
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (dom-life)
+<urn:aspace:entity:edron> aspace:appliesTo <urn:aspace:entity:foundering-window> .
+#   A0 Reasoning Map applies to the 90-day veto window — Q3 focus on PRD/ADR/DDD/TDD only
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/README.md [haute] (dom-life)
+<urn:aspace:entity:idiscovery> aspace:handlesBy <urn:aspace:entity:discovery-zora> .
+#   LD08 Impact handled by Discovery ZORA state — quarterly legacy review at H90 Georgiou
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (dom-life)
+<urn:aspace:entity:igeorgiou> aspace:pairedWith <urn:aspace:entity:klyden> .
+#   Georgiou LD08 paired with Klyden H90 — coupling for Solarpunk héritage at civilization scale
+#   src: 20_Life_OS/22_Wheel_Discovery/LD08_Impact_Georgiou/A3_Georgiou_LD08_Spec.md [haute] (dom-life)
+<urn:aspace:entity:iultrich> aspace:handledBy <urn:aspace:entity:zero-skill-creation> .
+#   Skill creation handled by A3 Zero — SKILL.md + risk_class + D1 proof
+#   src: 20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md [haute] (dom-life)
+<urn:aspace:entity:istandards> aspace:inherits <urn:aspace:entity:d1-receipt-pattern> .
+#   All A3 specs inherit the D1 receipt pattern — anchor canon plan + verbatim cross-reference
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (dom-life)
+<urn:aspace:entity:d1-receipt> aspace:appliesTo <urn:aspace:entity:canon-alignment> .
+#   D1 receipt applies to canon alignment — every spec must cite plan fancy-hugging-bengio.md by section
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (dom-life)
+<urn:aspace:entity:iplan-fancy> aspace:covers <urn:aspace:entity:life-os-alignment> .
+#   Plan fancy-hugging-bengio.md covers Life OS alignment — 33 sections locked 2026-06-21
+#   src: 20_Life_OS/21_Ikigai_Orville/README.md [haute] (dom-life)
+<urn:aspace:entity:ikely-grayson> aspace:escalates <urn:aspace:entity:beth> .
+#   Kelly Grayson escalates to Beth when impact_signal is vague or extractive
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ilaire-finn> aspace:hasVetoOver <urn:aspace:entity:non-negotiables> .
+#   Claire Finn has veto over non-negotiable conflicts — bypassed zone of genius triggers RED direct
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ied-mercer> aspace:escalates <urn:aspace:entity:beth> .
+#   Ed Mercer escalates to Beth when technician_risk is high — anti-paperclip via Orville
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Ed_Mercer_Spec.md [haute] (dom-life)
+<urn:aspace:entity:iordon-malloy> aspace:routes <urn:aspace:entity:deal-protostar> .
+#   Gordon Malloy routes friction to A2 Protostar when energy_delta drains
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (dom-life)
+<urn:aspace:entity:iburnham> aspace:escalates <urn:aspace:entity:beth> .
+#   Burnham escalates to Beth when bond fracture is RED — 1-turn escalation
+#   src: 20_Life_OS/22_Wheel_Discovery/LD06_Family_Burnham/A3_Burnham_LD06_Spec.md [haute] (dom-life)
+<urn:aspace:entity:istamets> aspace:escalates <urn:aspace:entity:beth> .
+#   Stamets escalates to Beth when isolation is RED — 1-turn escalation
+#   src: 20_Life_OS/22_Wheel_Discovery/LD05_Social_Stamets/A3_Stamets_LD05_Spec.md [haute] (dom-life)
+<urn:aspace:entity:igeorgiou> aspace:escalates <urn:aspace:entity:beth> .
+#   Georgiou escalates to Beth when negative-reach is RED — 1-turn escalation
+#   src: 20_Life_OS/22_Wheel_Discovery/LD08_Impact_Georgiou/A3_Georgiou_LD08_Spec.md [haute] (dom-life)
+<urn:aspace:entity:ireno> aspace:escalates <urn:aspace:entity:deal-protostar> .
+#   Reno escalates to DEAL Protostar when creativity is consumed by maintenance drag
+#   src: 20_Life_OS/22_Wheel_Discovery/LD07_Creativity_Reno/A3_Reno_LD07_Spec.md [haute] (dom-life)
+<urn:aspace:entity:constitution> aspace:governs <urn:aspace:entity:aspace-os> .
+#   La Constitution A'Space v1.0 gouverne A'Space OS comme seule LOI
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:constitution> aspace:supersedes <urn:aspace:entity:doctrines-d1-d8> .
+#   La Constitution supersede les doctrines D1-D8 en jurisprudence consultative
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:constitution> aspace:appliesTo <urn:aspace:entity:systeme-agents> .
+#   La Constitution s'applique à tous les agents A0/A1/A2/A3
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:a0-amadeus> aspace:partOf <urn:aspace:entity:layer-0-bedrock> .
+#   A0 Amadeus appartient à L0 Bedrock en tant que Pilot/Observateur
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:a0-amadeus> aspace:stewards <urn:aspace:entity:a1-visionaries> .
+#   A0 Amadeus stewardise les A1 Visionaries (Rick, Beth, Morty, Jerry, Summer)
+#   src: 00_Amadeus/01_Identity_Core/IDENTITY.md [haute] (dom-amadeus)
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:layer-0-bedrock> .
+#   Rick gouverne le L0 Bedrock en Architecte de Souveraineté
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:rick> aspace:appliesTo <urn:aspace:entity:loi-du-coeur> .
+#   Rick applique la Loi du Cœur > Cerveau (kémétique)
+#   src: 00_Amadeus/01_Identity_Core/SOUL.md [haute] (dom-amadeus)
+<urn:aspace:entity:beth> aspace:stewards <urn:aspace:entity:coherence-loop> .
+#   Beth stewardise la fonction de cohérence vie/santé à l'intérieur de la boucle
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:beth> aspace:instantiates <urn:aspace:entity:loi-de-maat> .
+#   Beth instancie la Loi de Ma'at comme équivalence du présent
+#   src: 00_Amadeus/01_Identity_Core/arché-Futurisme.md [haute] (dom-amadeus)
+<urn:aspace:entity:morty> aspace:executes <urn:aspace:entity:dispatch-actions> .
+#   Morty exécute les actions de dispatch au L1
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:jerry> aspace:commands <urn:aspace:entity:openclaw-fleet> .
+#   Jerry commande la OpenClaw Fleet (Justice League & Marvel Squads)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:summer> aspace:commands <urn:aspace:entity:nano-claw-fleet> .
+#   Summer commande la Nano Claw Fleet (Sandboxed)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:cerritos> aspace:instantiates <urn:aspace:entity:loi-kheper> .
+#   Cerritos instancie la Loi de Kheper (transformation naît du chaos)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:cerritos> aspace:appliesTo <urn:aspace:entity:gtd> .
+#   Cerritos applique le framework GTD (Capture/Clarify/Organize/Reflect/Engage)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:orville> aspace:instantiates <urn:aspace:entity:loi-du-ren> .
+#   Orville instancie la Loi du Ren (le nom programme l'être)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:orville> aspace:appliesTo <urn:aspace:entity:ikigai> .
+#   Orville applique le framework Ikigai (Meaning)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:discovery> aspace:instantiates <urn:aspace:entity:loi-de-sia> .
+#   Discovery instancie la Loi de Sia (perception filtre la réalité)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:discovery> aspace:appliesTo <urn:aspace:entity:life-wheel> .
+#   Discovery applique le framework Life Wheel (8 Domaines)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:snw> aspace:instantiates <urn:aspace:entity:loi-de-lakh> .
+#   SNW instancie la Loi de l'Akh (alignement total)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:snw> aspace:appliesTo <urn:aspace:entity:12wy> .
+#   SNW applique le framework 12 Week Year (Execution trimestrielle)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:protostar> aspace:instantiates <urn:aspace:entity:loi-de-heka> .
+#   Protostar instancie la Loi de Heka (parole créatrice)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:protostar> aspace:appliesTo <urn:aspace:entity:deal> .
+#   Protostar applique le framework DEAL (Definition/Elimination/Automation/Liberation)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:enterprise> aspace:appliesTo <urn:aspace:entity:para> .
+#   Enterprise applique le framework PARA (Projects/Areas/Resources/Archives)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:horizon-h1> aspace:maximizes <urn:aspace:entity:agression-maximale> .
+#   L'horizon H1 maximise l'agression — exécution totale, zéro frein (Constitution Article 2)
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:horizon-h10> aspace:maximizes <urn:aspace:entity:vitesse-prioritaire> .
+#   L'horizon H10 maximise la vitesse prioritaire, corrections en vol
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:horizon-h30> aspace:maximizes <urn:aspace:entity:consolidation> .
+#   L'horizon H30 maximise la consolidation, compounding sur l'acquis
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:horizon-h90> aspace:maximizes <urn:aspace:entity:preservation> .
+#   L'horizon H90 maximise la préservation du legs, anti-fragilité
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:superviseur-coherence> aspace:corriges <urn:aspace:entity:derive-maximisatrice> .
+#   Le superviseur de cohérence corrige la dérive maximisatrice (Constitution Article 3)
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:superviseur-coherence> aspace:replaces <urn:aspace:entity:all-vetos> .
+#   Le superviseur de cohérence remplace TOUS les vetos (Beth inclus)
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:d1-verify-before-assert> aspace:appliesTo <urn:aspace:entity:all-agents> .
+#   D1 verify-before-assert s'applique à TOUS les agents (ADR-META-001)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:d7-cost-escalation> aspace:prioritizes <urn:aspace:entity:non-escalade> .
+#   D7 coût d'escalade A0 priorise la non-escalade (~100× économie)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:12wy-01> aspace:targets <urn:aspace:entity:10k-mrr> .
+#   Le cycle 12WY-01 cible 10 clients · $10K MRR
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:12wy-02> aspace:targets <urn:aspace:entity:100k-mrr> .
+#   Le cycle 12WY-02 cible 100 clients · $100K MRR
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:12wy-03> aspace:targets <urn:aspace:entity:1m-mrr> .
+#   Le cycle 12WY-03 cible 1 000 clients · $1M MRR
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:srun-48h> aspace:compresses <urn:aspace:entity:trimestre-humain> .
+#   Le Run 48h compresse 1 trimestre humain en 2 jours machine
+#   src: 00_Amadeus/START_HERE_2026-07-19.md [haute] (dom-amadeus)
+<urn:aspace:entity:plan-minimax> aspace:provides <urn:aspace:entity:5b-tokens-mois> .
+#   Le plan MiniMax M3 fournit 5 milliards de tokens/mois pour 50 $
+#   src: 00_Amadeus/START_HERE_2026-07-19.md [haute] (dom-amadeus)
+<urn:aspace:entity:picard> aspace:decomposes <urn:aspace:entity:cycle-12wy> .
+#   Picard décompose chaque cycle 12WY en 3 Rocks
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:summers> aspace:translates <urn:aspace:entity:rock-directive> .
+#   Summers traduit chaque Rock en directives par domaine B2
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:b3-squads> aspace:executes <urn:aspace:entity:scrum> .
+#   B3 squads exécute chaque scrum 12 min et logge le delta SQL
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c1> aspace:requires <urn:aspace:entity:memory-file> .
+#   CEO-BENCH C1 requiert un memory_<domaine>.md réécrit chaque fin de sprint
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c2> aspace:requires <urn:aspace:entity:memo-if-then> .
+#   CEO-BENCH C2 requiert un mémo if-then ≥5/semaine (mécanique des gagnants)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c3> aspace:requires <urn:aspace:entity:forecast-j28> .
+#   CEO-BENCH C3 requiert un forecast cash J+28 chaque lundi
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c4> aspace:requires <urn:aspace:entity:6-tables-sql> .
+#   CEO-BENCH C4 requiert 6 tables SQL comme seule source d'état
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c5> aspace:requires <urn:aspace:entity:daily-cash> .
+#   CEO-BENCH C5 requiert une équation de cash quotidienne (cash < 2 mois = mode préservation)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-bench-c10> aspace:requires <urn:aspace:entity:tokens-budget> .
+#   CEO-BENCH C10 mesuré par turns/semaine (Opus 4.8 gagne avec 10.8)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:specloop-s2> aspace:enforces <urn:aspace:entity:information-hiding> .
+#   SpecLoop S2 enforces l'information hiding (B3 exécute depuis Runbook SEUL)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:specloop-s3> aspace:classifies <urn:aspace:entity:erreurs-e1-e4> .
+#   SpecLoop S3 classifie les erreurs E.1 non-vérifiable / E.2 crash / E.3 mismatch / E.4 ambiguïté
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:specloop-s5> aspace:format <urn:aspace:entity:runbook> .
+#   SpecLoop S5 format canonique Runbook 1 page (Objectif / Entrées / Sorties / Procédure / Cadence / Notes)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:omk-nexus> aspace:targets <urn:aspace:entity:coachs-premium> .
+#   OMK Nexus cible les coachs premium 'Expert méthodique / Praticien conformité'
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:omk-nexus> aspace:offers <urn:aspace:entity:citadelle-zero-pii> .
+#   OMK Nexus offre la Citadelle Zero-PII par instance privée
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:citadelle> aspace:rejects <urn:aspace:entity:niches-regulees> .
+#   La Citadelle refuse explicitement les niches médical/psy (HIPAA/FDA)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:killer-feature> aspace:differentiates <urn:aspace:entity:zero-pii> .
+#   Zero-PII Agentic Governance différencie Citadelle (aucun dominant player sur ce segment)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:pricing-1k-mois> aspace:generates <urn:aspace:entity:1-2m-arr-baseline> .
+#   Pricing 1 000 $/mois × 100 clients premium = 1,2 M$ ARR baseline
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:kardreec> aspace:orchestrates <urn:aspace:entity:3-engines> .
+#   Kadreec orchestre les 3 engines (ICP-driven / Sales-Enablement / Zero-PII)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:3-icp-solari> aspace:positioned <urn:aspace:entity:flux-image> .
+#   Solaris est positionné sur la niche flux/image (Outbound)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:3-icp-nexus> aspace:positioned <urn:aspace:entity:donnee-froide> .
+#   Nexus est positionné sur la donnée froide, critique, confidentielle
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:3-icp-orbiter> aspace:positioned <urn:aspace:entity:terrain> .
+#   Orbiter est positionné sur le terrain (Sales-Enablement)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:twin-oss> aspace:contains <urn:aspace:entity:symphony-specs> .
+#   05_OSS_Twin contient en exclusivité les symphony-airtable/clickup/notion/sheets specs
+#   src: 00_Amadeus/_ALIGNMENT_TSTwin_Twin_2026-07-03.md [haute] (dom-amadeus)
+<urn:aspace:entity:tstwin> aspace:freezes <urn:aspace:entity:pre-l0-sdd> .
+#   05_OSS_TSTwin gèle la précédente livraison avant L0 SDD + B1 Solaris loop
+#   src: 00_Amadeus/_ALIGNMENT_TSTwin_Twin_2026-07-03.md [haute] (dom-amadeus)
+<urn:aspace:entity:symphony-bus> aspace:serves <urn:aspace:entity:ssot> .
+#   40_SYMPHONY_BUS sert de SSOT pour A0 → A1 → A2 → A3 → B1/B2/B3
+#   src: 00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md [haute] (dom-amadeus)
+<urn:aspace:entity:state-writer> aspace:enforces <urn:aspace:entity:lock-atomique> .
+#   state_writer.py enforce le lock atomique + tempfile + rename (anti-corruption D6)
+#   src: 00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md [haute] (dom-amadeus)
+<urn:aspace:entity:state-json> aspace:limits <urn:aspace:entity:raw-input-preview-80> .
+#   state.json raw_input_preview est limité à 80 chars (garde-fou 10 KB)
+#   src: 00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md [haute] (dom-amadeus)
+<urn:aspace:entity:sob> aspace:exchanges <urn:aspace:entity:harness-agnostic> .
+#   sob/ est harness-agnostic (Hermes / Multica / AIonUI / Orca / Claude Code M3)
+#   src: 00_Amadeus/sob/HANDOVER_EXECUTOR.md [haute] (dom-amadeus)
+<urn:aspace:entity:sob> aspace:runs <urn:aspace:entity:predict-12-min> .
+#   SOB Daily Scrum B3 dure 12 min (query SQL → action → delta SQL → uplink 1 ligne)
+#   src: 00_Amadeus/START_HERE_2026-07-19.md [haute] (dom-amadeus)
+<urn:aspace:entity:sob-runbook> aspace:amends <urn:aspace:entity:contreexemples> .
+#   SOB Runbook s'amende sur contre-exemples E.3 (2 FAILs consécutifs = stop retry)
+#   src: 00_Amadeus/sob/HANDOVER_EXECUTOR.md [haute] (dom-amadeus)
+<urn:aspace:entity:amend-001> aspace:coaching <urn:aspace:entity:pocock-2026> .
+#   AMEND-001 Coaching Layer Pocock 2026 - 3 skills sisters (/grill-me, /grill-with-docs-codex, /spec-loop)
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:amend-001> aspace:extends <urn:aspace:entity:a0l-layer> .
+#   AMEND-001 étend l'A0L Layer (méta-canon) en sisters canoniques
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:v2-canon> aspace:adds <urn:aspace:entity:article-4bis> .
+#   V2.0-canon ajoute Article 4bis : subordonne auto-amélioration à la question inverse (anti-helplessness)
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:v2-canon> aspace:requires <urn:aspace:entity:ship-when-invited> .
+#   V2.0-canon requiert ship-when-invited (pas ship-by-default)
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:3-turn-bmad> aspace:clarifies <urn:aspace:entity:intent> .
+#   3-Turn BMad Air Lock clarifie l'intention avant tout artefact
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:a0-l> aspace:challenges <urn:aspace:entity:plan-meta> .
+#   A0-L Jumeau Challenger challenge les plans au niveau méta (4e layer)
+#   src: 00_Amadeus/01_Identity_Core/a0_l_canon.md [haute] (dom-amadeus)
+<urn:aspace:entity:a0-l> aspace:inherits <urn:aspace:entity:face-a-jumeau> .
+#   A0-L hérite de la face (a) méta-orchestrateur L1 du Jumeau Numérique
+#   src: 00_Amadeus/01_Identity_Core/a0_l_canon.md [haute] (dom-amadeus)
+<urn:aspace:entity:jumeau-numerique> aspace:hasVetoOver <urn:aspace:entity:3-faces> .
+#   Le Jumeau Numérique a 3 faces : (a) méta-orch L1, (b) digital twin terrain, (c) API
+#   src: 00_Amadeus/01_Identity_Core/a0_l_canon.md [haute] (dom-amadeus)
+<urn:aspace:entity:adr-canvas-001> aspace:routes <urn:aspace:entity:b3-roster> .
+#   ADR-CANON-001 route la source de vérité B3 squad roster → Notion AGENT_REGISTRY_DB
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:agent-bench-schema> aspace:defines <urn:aspace:entity:4-tables> .
+#   ADR-AGENT-BENCH-SCHEMA-001 définit 4 tables agent_bench (agents, agent_souls, rh_sprints, gatekeeper_log)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:green-lantern> aspace:actsAs <urn:aspace:entity:gatekeeper-b1> .
+#   Green Lantern agit comme Gatekeeper B1 (scope H1/H10 réversible)
+#   src: 00_Amadeus/01_Identity_Core/AGENTS.md [haute] (dom-amadeus)
+<urn:aspace:entity:valeurs> aspace:declare <urn:aspace:entity:7-piliers> .
+#   Les 7 Valeurs déclarent : Souveraineté, Sobriété, Clarté, Autonomie, Anti-fragilité, Non-parasitage, Long terme
+#   src: 00_Amadeus/01_Identity_Core/Valeurs.md [haute] (dom-amadeus)
+<urn:aspace:entity:identite> aspace:dependsOn <urn:aspace:entity:loi-du-ren> .
+#   L'identité d'un agent dependsOn la Loi du Ren (naming comme acte créateur)
+#   src: 00_Amadeus/01_Identity_Core/arché-Futurisme.md [haute] (dom-amadeus)
+<urn:aspace:entity:twelvewy-cadence> aspace:produces <urn:aspace:entity:delta-sql> .
+#   La cadence 12WY produit du delta SQL (sinon le travail n'existe pas)
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:uplink> aspace:includes <urn:aspace:entity:contreexemple> .
+#   L'uplink inclut un contre-exemple (SpecLoop S4) — pas un FAIL sec
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:amend-001> aspace:directs <urn:aspace:entity:single-mode-fallback> .
+#   A0+ direct le SINGLE-MODE FALLBACK quand pas de pair M3/Codex live
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:forecasting> aspace:escalates <urn:aspace:entity:rere-scope> .
+#   Erreur forecast > 50% (CEO-BENCH C3) escalate vers re-scope du Rock
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:pocock-coaching> aspace:forces <urn:aspace:entity:grill-canon> .
+#   Pocock Coaching Layer forces un grill canonique à chaque phase BMad
+#   src: 00_Amadeus/01_Identity_Core/LEARNING.md [haute] (dom-amadeus)
+<urn:aspace:entity:vps-hostinger> aspace:pre-served <urn:aspace:entity:architecture-adrs> .
+#   VPS Hostinger architecture preserved by ADR-001 (DRAFT)
+#   src: 00_Amadeus/adr-001-vps-tree.MD [moyenne] (dom-amadeus)
+<urn:aspace:entity:memory-file> aspace:survives <urn:aspace:entity:compact> .
+#   Le memory_<domaine>.md survit au compact (réécrit, ≤ 150 l.)
+#   src: 00_Amadeus/START_HERE_2026-07-19.md [haute] (dom-amadeus)
+<urn:aspace:entity:reversal-path> aspace:couvre <urn:aspace:entity:trash-papier-suppression> .
+#   Le reversal-path couvre la suppression-papier (Article 7 Constitution)
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:cycle-12wy> aspace:scales <urn:aspace:entity:x10-par-cycle> .
+#   Le cycle 12WY scale ×10 par cycle (10K → 100K → 1M MRR)
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:review-w13> aspace:triggers <urn:aspace:entity:re-scope> .
+#   La review W13 déclenche un re-scope du Rock du mois suivant (CEO-BENCH C11)
+#   src: 00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md [haute] (dom-amadeus)
+<urn:aspace:entity:iksigai> aspace:unlocks <urn:aspace:entity:agence-pleine> .
+#   L'Ikigai verrouillé + horizons déclarés unlock la pleine agence (Constitution Article 1)
+#   src: 00_Amadeus/01_Identity_Core/CONSTITUTION.md [haute] (dom-amadeus)
+<urn:aspace:entity:kadreec> aspace:appliesTo <urn:aspace:entity:citadel-architecture> .
+#   Kadreec applies à la Citadel architecture (3 ICP × 3 engines × 1 Kadreec)
+#   src: 00_Amadeus/sob/PRODUCT.md [haute] (dom-amadeus)
+<urn:aspace:entity:sync-multiversal> aspace:covers <urn:aspace:entity:a0-variants> .
+#   Le sync Multiversal (Daily Heartbeat) covers les A0 Variants WSL/VPS/Local
+#   src: 00_Amadeus/01_Identity_Core/HEARTBEAT.md [haute] (dom-amadeus)
+<urn:aspace:entity:dokploy> aspace:killed <urn:aspace:entity:2026-06-15> .
+#   Dokploy killed 2026-06-15 (CPU steal 89.5%) — pivot Vercel+Supabase+Coolify
+#   src: 00_Amadeus/01_Identity_Core/a0_l_canon.md [haute] (dom-amadeus)
+<urn:aspace:entity:issuer> aspace:jumeau-challenger <urn:aspace:entity:adr-a0l-meta-001> .
+#   A0-L Jumeau Challenger émet ADR-A0-L-META-001 (3-Harness doctrine)
+#   src: 00_Amadeus/01_Identity_Core/a0_l_canon.md [haute] (dom-amadeus)
+<urn:aspace:entity:discipline> aspace:beats <urn:aspace:entity:volume> .
+#   La discipline beats le volume (Opus 4.8 gagne avec 10.8 turns/semaine)
+#   src: 00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md [haute] (dom-amadeus)
+<urn:aspace:entity:ceo-desktop> aspace:partOf <urn:aspace:entity:business-os> .
+#   Le CEO's Desktop est un projet du Business OS — runtime de souveraineté d'A0 sur les 8 SOB.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:b1-direction> aspace:governs <urn:aspace:entity:8-sob-domains> .
+#   B1 (A0) gouverne la direction des 8 SOB via la triade B1/B2/B3.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md [haute] (dom-business)
+<urn:aspace:entity:b2-domain-acceptance> aspace:handledBy <urn:aspace:entity:8-dc-managers> .
+#   B2 (8 managers DC, un par SOB) accepte les DoD et tient les gates.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:b3-execution> aspace:handledBy <urn:aspace:entity:8-marvel-squads> .
+#   B3 (8 squads Marvel, un par SOB) exécute tactique et rapporte Lead/Lag.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B3_Warp_Core_Execution/00_B3_SWARM_CONFIG.md [haute] (dom-business)
+<urn:aspace:entity:growth-domain> aspace:pairedWith <urn:aspace:entity:guardians-of-the-galaxy> .
+#   Le SOB Growth est apparié avec la squad Marvel Guardians of the Galaxy.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:sales-domain> aspace:pairedWith <urn:aspace:entity:illuminati> .
+#   Le SOB Sales est apparié avec la squad Marvel Illuminati.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:product-domain> aspace:pairedWith <urn:aspace:entity:the-avengers> .
+#   Le SOB Product est apparié avec la squad Marvel The Avengers.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:ops-domain> aspace:pairedWith <urn:aspace:entity:fantastic-four> .
+#   Le SOB Ops est apparié avec la squad Marvel Fantastic Four.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:it-domain> aspace:pairedWith <urn:aspace:entity:kang-dynasty> .
+#   Le SOB IT est apparié avec la squad Marvel Kang Dynasty.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:finance-domain> aspace:pairedWith <urn:aspace:entity:thunderbolts> .
+#   Le SOB Finance est apparié avec la squad Marvel Thunderbolts.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:people-domain> aspace:pairedWith <urn:aspace:entity:x-men> .
+#   Le SOB People est apparié avec la squad Marvel X-Men.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:legal-domain> aspace:pairedWith <urn:aspace:entity:eternals> .
+#   Le SOB Legal est apparié avec la squad Marvel Eternals.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:growth-domain> aspace:instantiates <urn:aspace:entity:superman-owner> .
+#   Le B2 owner du SOB Growth est Superman (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:sales-domain> aspace:instantiates <urn:aspace:entity:martian-manhunter-owner> .
+#   Le B2 owner du SOB Sales est Martian Manhunter (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:ops-domain> aspace:instantiates <urn:aspace:entity:batman-owner> .
+#   Le B2 owner du SOB Ops est Batman (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:it-domain> aspace:instantiates <urn:aspace:entity:cyborg-owner> .
+#   Le B2 owner du SOB IT est Cyborg (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:finance-domain> aspace:instantiates <urn:aspace:entity:wonder-woman-owner> .
+#   Le B2 owner du SOB Finance est Wonder Woman (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:people-domain> aspace:instantiates <urn:aspace:entity:green-lantern-owner> .
+#   Le B2 owner du SOB People est Green Lantern (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:legal-domain> aspace:instantiates <urn:aspace:entity:aquaman-owner> .
+#   Le B2 owner du SOB Legal est Aquaman (DC).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [haute] (dom-business)
+<urn:aspace:entity:a0-amadeus> aspace:directs <urn:aspace:entity:b1-direction> .
+#   Amadeus (A0) est le seul B1 — il owns la direction du CEO's Desktop.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/01_NORTH_STAR_1Y_3Y_10Y.md [haute] (dom-business)
+<urn:aspace:entity:12wy> aspace:governs <urn:aspace:entity:ceo-cadence> .
+#   Le 12-Week Year est la cadence canonique qui gouverne le CEO's Desktop.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/02_12WY_COMMAND_CYCLES.md [haute] (dom-business)
+<urn:aspace:entity:c1-direction-lock> aspace:partOf <urn:aspace:entity:phase-1-2026q3q4> .
+#   Le cycle C1 (Direction Lock) couvre 2026-Q3 et vise la ratification B1.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/02_12WY_COMMAND_CYCLES.md [haute] (dom-business)
+<urn:aspace:entity:c2-domain-activation-prep> aspace:partOf <urn:aspace:entity:phase-1-2026q4> .
+#   Le cycle C2 (Domain Activation Prep) couvre 2026-Q4 et nomme les 8 B2 managers.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/02_12WY_COMMAND_CYCLES.md [haute] (dom-business)
+<urn:aspace:entity:growth-cadence> aspace:dependsOn <urn:aspace:entity:weekly> .
+#   Le SOB Growth opère à cadence hebdomadaire.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:sales-cadence> aspace:dependsOn <urn:aspace:entity:weekly> .
+#   Le SOB Sales opère à cadence hebdomadaire.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:it-cadence> aspace:dependsOn <urn:aspace:entity:daily> .
+#   Le SOB IT opère à cadence quotidienne — runtime et sécurité temps réel.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:legal-cadence> aspace:dependsOn <urn:aspace:entity:quarterly> .
+#   Le SOB Legal opère à cadence trimestrielle — IP, terms, exposition, conformité.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:product-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Product ouvre la séquence canonique : la valeur utilisateur d'abord.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:ops-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Ops suit Product : peut-on livrer répétablement ?
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:it-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate IT suit Ops : peut-on faire tourner hors de la tête du maker ?
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:finance-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Finance suit IT : la viabilité économique précède le juridique.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:legal-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Legal suit Finance : claims, privacy, IP, terms.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:sales-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Sales suit Legal : peut-on vendre et passer le relais humain ?
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:growth-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate Growth suit Sales : le marché comprend-il pourquoi ça compte ?
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:people-gate> aspace:partOf <urn:aspace:entity:gate-order> .
+#   Le gate People ferme la séquence : l'équipe porte-t-elle sans burnout ?
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md [haute] (dom-business)
+<urn:aspace:entity:business-done> aspace:dependsOn <urn:aspace:entity:4-boundary-gates> .
+#   Business Done requiert les 4 boundary gates (IT, Finance, Legal, People) en plus de Product/Ops.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/01_NORTH_STAR_1Y_3Y_10Y.md [haute] (dom-business)
+<urn:aspace:entity:matryoshka-dashboard> aspace:refines <urn:aspace:entity:cadence-layer-mapping> .
+#   Le Matrioshka Dashboard déplie la couche juste à la cadence juste du SOB consulté.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:life-wheel> aspace:holds <urn:aspace:entity:business-wheel> .
+#   La Life Wheel contient la Business Wheel (Matrioshka).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:business-wheel> aspace:holds <urn:aspace:entity:domain-wheels> .
+#   La Business Wheel contient les 8 Domain Wheels.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:domain-wheels> aspace:holds <urn:aspace:entity:rock-wheels> .
+#   Les Domain Wheels contiennent les Rock Wheels actifs.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:adr-infra-002> aspace:governs <urn:aspace:entity:repo-home-junction> .
+#   ADR-INFRA-002 (Repo-Home Junction Law) : doctrine vit longtemps, code vit court.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/README.md [haute] (dom-business)
+<urn:aspace:entity:adr-infra-003> aspace:governs <urn:aspace:entity:matryoshka-dashboard> .
+#   ADR-INFRA-003 (CEO Dashboard Matryoshka) : la couche juste à la cadence juste.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/CLAUDE.md [haute] (dom-business)
+<urn:aspace:entity:adr-fwk-021> aspace:governs <urn:aspace:entity:canon-tripartite> .
+#   ADR-FWK-021 (Canon Tripartite des Blueprints) impose B1 → B2 → B3 avec handoffs explicites.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/CLAUDE.md [haute] (dom-business)
+<urn:aspace:entity:b1-hand-off-queue> aspace:partOf <urn:aspace:entity:8-sob-pending> .
+#   La B2 Handoff Queue contient 8 lignes PENDING — une par SOB.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/04_B2_HANDOFF_QUEUE.md [haute] (dom-business)
+<urn:aspace:entity:decision-charter> aspace:appliesTo <urn:aspace:entity:b1-direction-decisions> .
+#   Toute décision de direction B1 passe par le schema YAML Decision Charter avec boundary gates.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/03_DECISION_CHARTER.md [haute] (dom-business)
+<urn:aspace:entity:beth> aspace:appliesTo <urn:aspace:entity:alignment-channel> .
+#   Beth est le canal d'alignement — elle consigne décisions et vetoes.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Beth_Alignment_Log.md [haute] (dom-business)
+<urn:aspace:entity:morty> aspace:appliesTo <urn:aspace:entity:execution-channel> .
+#   Morty est le canal d'exécution — il porte la queue globale des Context Packs et dry-runs.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Morty_Global_Queue.md [haute] (dom-business)
+<urn:aspace:entity:sunday> aspace:appliesTo <urn:aspace:entity:cadence-channel> .
+#   Sunday est le canal de cadence — elle orchestre le weekly uplink entre A0, Beth, Morty et OpenHarness.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Sunday_Uplink_Protocols.md [haute] (dom-business)
+<urn:aspace:entity:openharness> aspace:appliesTo <urn:aspace:entity:runtime-channel> .
+#   OpenHarness est le canal runtime implicite, défini par ADR-RICK-001.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/CLAUDE.md [haute] (dom-business)
+<urn:aspace:entity:phase-2-trigger> aspace:dependsOn <urn:aspace:entity:b2-managers-named-4-of-8> .
+#   Phase 2 du CEO's Desktop se déclenche quand 4+ B2 managers sont nommés.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:phase-3-graduation> aspace:dependsOn <urn:aspace:entity:first-full-12wy-cycle> .
+#   Phase 3 Graduation requiert un premier cycle 12WY complet exécuté.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Sunday_Uplink_Protocols.md [haute] (dom-business)
+<urn:aspace:entity:notion> aspace:appliesTo <urn:aspace:entity:doctrine-what> .
+#   Notion porte le WHAT (Doctrine) — Comment doit-on faire ?
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md [haute] (dom-business)
+<urn:aspace:entity:clickup> aspace:appliesTo <urn:aspace:entity:execution-when-who> .
+#   ClickUp porte le WHEN-WHO (Exécution) — Quelle étape, qui agit, quelles deps ?
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md [haute] (dom-business)
+<urn:aspace:entity:airtable> aspace:appliesTo <urn:aspace:entity:data-quantitative-how-much> .
+#   Airtable porte le HOW-MUCH (Données) — État réel : qui, combien, statut ?
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md [haute] (dom-business)
+<urn:aspace:entity:master-sop-db> aspace:instantiates <urn:aspace:entity:sop-registry> .
+#   MASTER_SOP_DB (Notion) est le registre canonique des SOPs avec 14 propriétés.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-NOTION-001_back-office-solaris-template.md [haute] (dom-business)
+<urn:aspace:entity:agent-registry-db> aspace:instantiates <urn:aspace:entity:squad-roster> .
+#   AGENT_REGISTRY_DB (Notion) catalogue un row par squad Marvel/DC active.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-NOTION-001_back-office-solaris-template.md [haute] (dom-business)
+<urn:aspace:entity:pipeline> aspace:routes <urn:aspace:entity:airtable-to-notion-to-clickup> .
+#   Le pipeline canonique remonte Airtable → Notion → ClickUp, orchestré par Symphony.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-NOTION-001_back-office-solaris-template.md [haute] (dom-business)
+<urn:aspace:entity:symphony-worker> aspace:orchestrates <urn:aspace:entity:tri-plateforme-mesh> .
+#   Symphony est le bus d'orchestration canonique (ADR-SYMPH-001 à venir).
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-NOTION-001_back-office-solaris-template.md [haute] (dom-business)
+<urn:aspace:entity:clickup-free> aspace:constrains <urn:aspace:entity:5-spaces> .
+#   Le plan Free ClickUp impose 5 spaces max — aucun 6ᵉ space toléré.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-CK-FREE-001_clickup-free-constraints.md [haute] (dom-business)
+<urn:aspace:entity:clickup-free> aspace:forbids <urn:aspace:entity:workspace-wide-custom-fields> .
+#   Le plan Free ClickUp interdit les Custom Fields workspace-wide (quota ClickApps limité).
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-CK-FREE-001_clickup-free-constraints.md [haute] (dom-business)
+<urn:aspace:entity:8-squads> aspace:projectsTo <urn:aspace:entity:12-sectors> .
+#   Les 8 squads doctrinaux se projettent en 12 sectors ClickUp — adaptation contrainte, pas drift.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-CK-FREE-001_clickup-free-constraints.md [haute] (dom-business)
+<urn:aspace:entity:sop-id> aspace:instantiates <urn:aspace:entity:pattern-sop-l2-domain-nn> .
+#   Le SOP_ID suit le pattern SOP-L2-{DOMAIN}-{NN} — immuable.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-ID-001_identifiants-universels.md [haute] (dom-business)
+<urn:aspace:entity:client-id> aspace:instantiates <urn:aspace:entity:pattern-cl-slug> .
+#   Le CLIENT_ID suit le pattern CL-{slug} — slug kebab-case max 24 caractères.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-ID-001_identifiants-universels.md [haute] (dom-business)
+<urn:aspace:entity:client-id> aspace:inherits <urn:aspace:entity:immutability> .
+#   Une fois assigné, un CLIENT_ID ne change jamais — Display_Name s'ajoute, l'ID reste.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-ID-001_identifiants-universels.md [haute] (dom-business)
+<urn:aspace:entity:clickup-task> aspace:dependsOn <urn:aspace:entity:sop-id-prefix> .
+#   Chaque task ClickUp porte le préfixe [SOP-L2-{DOMAIN}-{NN}] dans son titre.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-ID-001_identifiants-universels.md [haute] (dom-business)
+<urn:aspace:entity:clickup-tags> aspace:appliesTo <urn:aspace:entity:cross-referencing> .
+#   Les tags ClickUp sont le vecteur principal de cross-référencement (illimités en Free).
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-CK-FREE-001_clickup-free-constraints.md [haute] (dom-business)
+<urn:aspace:entity:aaas-doctrine> aspace:appliesTo <urn:aspace:entity:meta-factory> .
+#   La doctrine AaaS (Agency as a Service) installe P2 Meta Factory — une seule usine, 3 Variants.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/7-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:solaris-variant> aspace:pairedWith <urn:aspace:entity:visual-first-icp> .
+#   Solaris est le variant ICP Visual First / DAM — designer premium 5-25K.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:nexus-variant> aspace:pairedWith <urn:aspace:entity:data-compliance-icp> .
+#   Nexus est le variant ICP Data-First / Expert Knowledge (avocats, experts-comptables, family offices).
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:orbiter-variant> aspace:pairedWith <urn:aspace:entity:enterprise-icp> .
+#   Orbiter est le variant ICP Enterprise — cabinets d'enablement à $100K+.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:tier-t1> aspace:covers <urn:aspace:entity:solo-founder> .
+#   T1 PME Solo Founder ($300-500/an) — solo sans track record.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:tier-t3> aspace:covers <urn:aspace:entity:pme-groupe> .
+#   T3 PME Groupe ($4-5K/an) — cabinet multi-partners (10+ clients).
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:tier-t4> aspace:covers <urn:aspace:entity:nexus-pro> .
+#   T4 Nexus Pro ($30-50K/an) — grand compte, conformité, multi-tenant.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:tier-t5> aspace:covers <urn:aspace:entity:orbiter-enterprise> .
+#   T5 Orbiter Enterprise ($100-250K/an) — IP-as-software.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:franchise-first> aspace:supersedes <urn:aspace:entity:token-first> .
+#   Le pivot Franchise-First supersede le pitch Token-First — on vend la franchise, pas la tuyauterie.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:built-to-sell> aspace:governs <urn:aspace:entity:tier-t3-t5> .
+#   Built-to-Sell est le critère de qualification Tier T3-T5 — sans revente possible, pas T3-T5.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/7-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:built-to-sell> aspace:hasVetoOver <urn:aspace:entity:utility-buyer> .
+#   Built-to-Sell a veto sur les acheteurs utilitaires — un prospect qui négocie sur les tokens a perdu la bataille.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:zpag> aspace:appliesTo <urn:aspace:entity:ai-act-conformity> .
+#   ZPAG (Zero-PII Agentic Governance) garantit la conformité AI Act 2026-08-02 article 12.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/7-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:zpag> aspace:appliesTo <urn:aspace:entity:rgpd-conformity> .
+#   ZPAG garantit la conformité RGPD — Docker hermétique + DLP bare-metal + action-space bounding.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:dlp-bare-metal> aspace:partOf <urn:aspace:entity:module-5> .
+#   DLP bare-metal (Module 5 d'OMK Meta Factory) est priorité 1 pour les installations Nexus.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/7-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:matter-noire-semantique> aspace:instantiates <urn:aspace:entity:customer-asset> .
+#   La matière noire sémantique accumulée par l'agence devient son actif le plus précieux — Built-to-Sell.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:client-onboarding-kit> aspace:cites <urn:aspace:entity:8-active-sops> .
+#   Le Client Onboarding Kit v1 cite les 8 SOPs Active tri-plateforme.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:build-gate> aspace:dependsOn <urn:aspace:entity:8-sops-exercised> .
+#   Le vrai Build Gate doctrinal requiert l'exercice des 8 SOPs en réel sur un onboarding client.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-sales-001> aspace:instantiates <urn:aspace:entity:lead-qualification> .
+#   SOP-L2-SALES-001 qualifie le lead inbound + audit margin bleed.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-finance-001> aspace:instantiates <urn:aspace:entity:invoice-stripe> .
+#   SOP-L2-FINANCE-001 émet l'invoice Stripe setup fee + MRR M1.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-it-001> aspace:instantiates <urn:aspace:entity:vps-provisioning> .
+#   SOP-L2-IT-001 provisionne le VPS Nexus instance (S3 + Dokploy + Supabase + domaine).
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-people-001> aspace:instantiates <urn:aspace:entity:brand-book-vector> .
+#   SOP-L2-PEOPLE-001 vectorise le Brand Book + crée le Context Pack.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-legal-001> aspace:instantiates <urn:aspace:entity:contract-prep> .
+#   SOP-L2-LEGAL-001 prépare le contrat client + DPA.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:sop-l2-growth-001> aspace:instantiates <urn:aspace:entity:linkedin-publish> .
+#   SOP-L2-GROWTH-001 publie le post personnal branding fondateur agence.
+#   src: 30_Business_OS/09_Blueprints/03-ONBOARDING/client-onboarding-kit-v1.md [haute] (dom-business)
+<urn:aspace:entity:meta-factory> aspace:produces <urn:aspace:entity:3-variants> .
+#   P2 Meta Factory produit 3 Variants distincts (Solaris, Nexus, Orbiter) à partir d'une seule usine.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:cuisine-salle> aspace:appliesTo <urn:aspace:entity:notion-client-ux> .
+#   Notion = cuisine (Back Office Amadeus + A3 techniciens) ; le client final consomme App Next.js + Supabase.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-NOTION-001_back-office-solaris-template.md [haute] (dom-business)
+<urn:aspace:entity:adr-mesh-l2-001> aspace:governs <urn:aspace:entity:tri-plateforme-doctrine> .
+#   ADR-MESH-L2-001 (Doctrine Tri-Plateforme) sépare WHAT / WHEN-WHO / HOW-MUCH.
+#   src: 30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md [haute] (dom-business)
+<urn:aspace:entity:jerry-prime> aspace:partOf <urn:aspace:entity:j01-ld01-business> .
+#   Jerry Prime (J01) est le parent canonical de tous les projets Business OS.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/SUMMERS_VERSE_MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:wargame-w30> aspace:produces <urn:aspace:entity:triptyque-1-businessos> .
+#   Wargame 30 Mirofish produit le Triptyque 1 Business OS (People × Ops × IT) avec 3 horizons emboîtés.
+#   src: 30_Business_OS/10_Projects/wargames/wargame-30-out/MANIFEST_Triptyque_1_BusinessOS.md [haute] (dom-business)
+<urn:aspace:entity:a1-beth> aspace:hasVetoOver <urn:aspace:entity:boundary-gate-violations> .
+#   A1 Beth a veto sur les violations des 4 boundary gates (IT, Finance, Legal, People).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B1_Summer_Direction/03_DECISION_CHARTER.md [haute] (dom-business)
+<urn:aspace:entity:a1-morty> aspace:routes <urn:aspace:entity:jtbd-queue> .
+#   A1 Morty route la queue globale des JTBD entre B2 managers et B3 squads.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Morty_Global_Queue.md [haute] (dom-business)
+<urn:aspace:entity:a3-sunday> aspace:cadence <urn:aspace:entity:weekly-uplink> .
+#   A3 Sunday cadence le weekly uplink (template 90s lisible par A0).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/handoffs/Sunday_Uplink_Protocols.md [haute] (dom-business)
+<urn:aspace:entity:a1-rick> aspace:partOf <urn:aspace:entity:openharness-runtime> .
+#   A1 Rick (L0 Bedrock Sobriété) anchor OpenHarness runtime (ADR-RICK-001).
+#   src: 30_Business_OS/10_Projects/ceo-desktop/CLAUDE.md [haute] (dom-business)
+<urn:aspace:entity:pivot-2026-06-19> aspace:supersedes <urn:aspace:entity:dual-product-mode> .
+#   Le pivot 2026-06-19 (ADR-OMK-004) supersede le dual-product mode ; A1 LOCKED sur single SaaS mode.
+#   src: 30_Business_OS/10_Projects/omk/MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:d4-append-only> aspace:governs <urn:aspace:entity:manifest-canon> .
+#   D4 append-only governs tous les MANIFEST canon (Solaris, ceo-desktop, OMK, RILCOT).
+#   src: 30_Business_OS/10_Projects/solaris/MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:d6-no-self-contradiction> aspace:governs <urn:aspace:entity:junction-canon> .
+#   D6 no-self-contradiction guard : la junction `_doctrine/` est superset du CLAUDE.md frontmatter.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/MANIFEST.md [haute] (dom-business)
+<urn:aspace:entity:paradox-of-jevons> aspace:appliesTo <urn:aspace:entity:growth-agencies> .
+#   Le paradoxe de Jevons : la marge part en fumée à mesure que le cabinet grandit (cohorts RAG massifs).
+#   src: 30_Business_OS/02_Meta_Factory/outbound/7-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:gravite-des-donnees> aspace:partOf <urn:aspace:entity:retention-lever> .
+#   La gravité des données est le levier de rétention — l'attrition tombe vers zéro.
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:mirofish-wargame> aspace:partOf <urn:aspace:entity:determinism-stack> .
+#   Mirofish + CEO-Bench + Gstack = le déterminisme qui prouve la promesse (pas une promesse en l'air).
+#   src: 30_Business_OS/02_Meta_Factory/outbound/3-sequences-franchise-2026-07-08.md [haute] (dom-business)
+<urn:aspace:entity:8-sob-doctrine> aspace:supersedes <urn:aspace:entity:7-sob-doctrine> .
+#   Le canon à jour compte 8 SOB (avec Sales position 02) ; les couches antérieures évoquaient 7 SOB sans Sales.
+#   src: 30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md [moyenne] (dom-business)
+<urn:aspace:entity:picard-3-projets-actifs> aspace:stewards <urn:aspace:entity:manifests-canon> .
+#   Picard (A3) stwart les MANIFEST canon des 4 projets actifs (ceo-desktop, solaris, rilcot, omk).
+#   src: 30_Business_OS/10_Projects/solaris/MANIFEST.md [haute] (dom-business)

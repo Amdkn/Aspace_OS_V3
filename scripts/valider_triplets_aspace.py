@@ -24,6 +24,7 @@ import io
 import json
 import os
 import re
+import stat
 import sys
 from collections import Counter, defaultdict
 
@@ -37,6 +38,26 @@ DIST = os.path.join(V3, "50_Distillation")
 PASSES = {
     "v2": (("tech", "life", "business"), "aspace-os.ttl"),
     "v3": (("v3-amadeus", "v3-tech", "v3-life", "v3-business"), "aspace-v3.ttl"),
+    # Troisieme passe : le CONTENU reel, lu dans la V2. Les sources ne sont
+    # plus des chemins V3 mais des chemins relatifs a 05_From_V2_Domains.
+    "domaines": (("dom-tech", "dom-life", "dom-amadeus", "dom-business"),
+                 "aspace-domaines.ttl"),
+}
+
+# La source reelle du contenu. La V3 n'est qu'un squelette : ses dossiers
+# portent la structure, pas les documents.
+DOMAINES_V2 = "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains"
+
+# Chaque escouade de domaine couvre UNE couche. Un agent ecrit parfois son
+# chemin relatif a sa couche plutot qu'a la racine des domaines : la
+# correspondance etant deterministe, resoudre le prefixe n'est pas de la
+# complaisance, c'est lever une reference non ambigue. Ce qui reste refuse,
+# c'est ce qui ne resout NI d'une facon NI de l'autre.
+COUCHE_DE = {
+    "dom-tech": "10_Tech_OS",
+    "dom-life": "20_Life_OS",
+    "dom-amadeus": "00_Amadeus",
+    "dom-business": "30_Business_OS",
 }
 
 VERBES_SCHEMA = {
@@ -45,20 +66,58 @@ VERBES_SCHEMA = {
 }
 
 
-def sources_reelles():
-    """Les chemins qui existent vraiment — concepts distilles ET arborescence V3.
+def _sans_jonctions(racine, elaguer):
+    """Parcours qui NE SUIT PAS les jonctions NTFS.
 
-    Les deux passes n'ont pas la meme source : la premiere cite des concepts
-    de 50_Distillation, la seconde des fichiers de l'arborescence V3. Le
-    validateur doit connaitre les deux, sinon il rejetterait comme
-    inexistante une source parfaitement reelle."""
+    os.walk les traite comme des dossiers ordinaires et y descend. Le canon du
+    poste documente le cout : un parcours naif a deja compte 13,8 millions de
+    fichiers la ou il y en avait 14 613. Geordi en porte 159 a lui seul, et
+    c'est ce qui faisait boucler ce validateur.
+
+    `os.path.islink()` ne les voit pas sous Windows. Le seul test fiable est
+    l'attribut FILE_ATTRIBUTE_REPARSE_POINT.
+    """
+    RP = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
     out = set()
-    for base, _, fichiers in os.walk(V3):
-        rel = os.path.relpath(base, V3).replace("\\", "/")
-        if rel.startswith((".git", "node_modules", "openwiki", ".obsidian")):
+    if not os.path.isdir(racine):
+        return out
+    pile = [racine]
+    while pile:
+        p = pile.pop()
+        try:
+            entrees = list(os.scandir(p))
+        except OSError:
             continue
-        for n in fichiers:
-            out.add(f"{rel}/{n}" if rel != "." else n)
+        for e in entrees:
+            try:
+                if e.is_dir(follow_symlinks=False):
+                    if e.name in elaguer:
+                        continue
+                    try:
+                        if e.stat(follow_symlinks=False).st_file_attributes & RP:
+                            continue  # jonction : on ne la suit pas
+                    except OSError:
+                        continue
+                    pile.append(e.path)
+                elif e.is_file(follow_symlinks=False):
+                    out.add(os.path.relpath(e.path, racine).replace(os.sep, "/"))
+            except OSError:
+                pass
+    return out
+
+
+def sources_reelles():
+    """Les chemins qui existent vraiment — V3, domaines V2, et concepts distilles.
+
+    Les trois passes n'ont pas la meme source : v2 cite des concepts de
+    50_Distillation, v3 des fichiers de l'arborescence V3, domaines des chemins
+    relatifs a 05_From_V2_Domains. Le validateur doit connaitre les trois,
+    sinon il rejetterait comme inexistante une source parfaitement reelle."""
+    ELAGUER = {"node_modules", ".git", "dist", "build", ".next", ".vercel",
+               "venv", ".venv", "__pycache__", ".turbo", "coverage", ".cache",
+               "openwiki", ".obsidian"}
+    out = _sans_jonctions(V3, ELAGUER)
+    out |= _sans_jonctions(DOMAINES_V2, ELAGUER)
     for sb in ("areas", "projets", "archives", "ressources", "ontologie"):
         d = os.path.join(DIST, sb)
         if not os.path.isdir(d):
@@ -116,9 +175,16 @@ def main():
                 refus["SANS SOURCE"] += 1
                 exemples.append((couche, num, "sans source", f"{s} {v}")); continue
             base = src.split("#")[0].strip().lstrip("./")
-            if base not in reelles and os.path.basename(base) not in reelles:
+            prefixe = COUCHE_DE.get(couche)
+            candidats = [base, os.path.basename(base)]
+            if prefixe and not base.startswith(prefixe):
+                candidats.insert(1, f"{prefixe}/{base}")
+            resolu = next((c for c in candidats if c in reelles), None)
+            if resolu is None:
                 refus["source inexistante"] += 1
                 exemples.append((couche, num, "source inexistante", base[:60])); continue
+            if resolu != base:
+                r["source"] = resolu  # on garde le chemin qui resout, pas celui ecrit
             if typ == "entite" and cle(o) == s:
                 refus["reflexif"] += 1
                 exemples.append((couche, num, "reflexif", s)); continue
