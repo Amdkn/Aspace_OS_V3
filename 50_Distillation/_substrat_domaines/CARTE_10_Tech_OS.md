@@ -1,0 +1,301 @@
+# Carte du domaine 10_Tech_OS
+
+Genere par `scripts/substrat_domaines_v2.py`. **Ne pas editer.**
+
+**97 fichiers `.md` ecrits a la main**, 10 dossiers d'artefacts ecartes.
+
+Zones : `00_Governance_Rick` 42 · `12_Blueprints` 26 · `11_Infra_13th_Doctor` 16 · `13_Data_12th_Doctor` 6 · `12_Interface_11th_Doctor` 5 · `(racine)` 2
+
+- 00_Governance_Rick/
+- 11_Infra_13th_Doctor/
+- 12_Blueprints/
+- 12_Interface_11th_Doctor/
+- 13_Data_12th_Doctor/
+- Manifesto.md
+- README.md  — 10_Tech_OS (The Bedrock)
+- agent-os-bridge/
+- graphify-out/  **[ECARTE : artefact genere]**
+  - _logs/
+  - _manifests/
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - 01_Clara_MCP/
+  - 02_Nardole_A2A/
+  - 03_Missy_Chaos/
+  - 04_Bill_AG-UI/
+  - README.md  — 13_Data_12th_Doctor (The Factory)
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — 04_Bill_AG-UI (The Interface Designer)
+    - README.md  — 03_Missy_Chaos (The Red Team)
+    - README.md  — 02_Nardole_A2A (The Protocol)
+    - 02_Clara_ETL/
+    - README.md  — 01_Clara_MCP (The Architect)
+      - README.md  — Clara_ETL
+  - 01_Amy_Social/
+  - 02_Rory_Health/
+  - 03_River_Knowledge/
+  - README.md  — 12_Interface_11th_Doctor (The Hospital)
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — 03_River_Knowledge (The Archaeologist)
+    - README.md  — 02_Rory_Health (The Sentinel)
+    - IDENTITY.md  — [A3] Amy (The Interface Designer)
+    - README.md  — 01_Amy_Social (The Storyteller)
+  - 01-SDD/
+  - 02-ADR/
+  - 03-PRD/
+  - 04-DDD/
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - ADR-FS-001_junction-based-aliasing.md  — ADR-FS-001 — Junction-Based Aliasing for Short-Path Agent Operability
+    - ADR-FS-002_setup-junctions-script.md  — ADR-FS-002 — Script `Setup-ASpace-Junctions.ps1` (Sentinelles + Profil
+    - ADR-FS-003_business-os-sub-junctions-transverse.md  — ADR-FS-003 — Sub-Junctions Business OS Links (Resources / Archives / 1
+    - ADR-FWK-021_blueprints-canon-tripartite.md  — ADR-FWK-021 — Canon Tripartite des Blueprints (L0 / L1 / L2)
+    - ADR-FWK-022_quick-access-summers-and-inbox-pattern.md  — ADR-FWK-022 — Quick Access Layer (Summers Verse) + Pattern `_Inbox` Pr
+    - ADR-HEART-002_heartbeat-anti-panique-openclaw-paperclip.md  — ADR-HEART-002 — Heartbeat Anti-Panique + Réintroduction Conditionnelle
+    - ADR-INFRA-001_tmux-wsl-dev-pm2-vps-prod.md  — ADR-INFRA-001 — Tmux (WSL Dev) + PM2 (VPS Prod) : Base de Persistance 
+    - ADR-SECNET-001_supabase-network-security.md  — ADR-SECNET-001 — Sécurité Réseau Supabase Self-Hosted + Mesh L2
+    - ADR-SYMPH-001_symphony-replaces-n8n.md  — ADR-SYMPH-001 — Symphony Bus Remplace N8N (L0 Orchestration)
+    - ADR-SYMPH-002_symphony-variants-per-harness.md  — ADR-SYMPH-002 — Variants Symphony par Harness Agentique
+    - ADR-SYMPH-003_agent-os-standards-injection.md  — ADR-SYMPH-003 — Agent OS = Standards Injection + Observability Layer f
+    - SDD-000_ricks-verse-constitution.md  — SDD-000 — La Constitution du Rick's Verse : Onboarding & Orchestration
+    - SDD-000b_agent-bootstrap.md  — SDD-000b — Agent Bootstrap Specification
+    - SDD-000c_aspace-core.md  — SDD-000c — A'Space Core : Le Jumeau Numérique & La Symétrie Fractale
+    - SDD-001_solarpunk-kernel-core.md  — SDD-001 — Solarpunk Kernel Core L0.3 : Autonomie Agentique & Antifragi
+    - SDD-002_a1-rick-harness.md  — SDD-002 — A1 Rick Harness : Brainstorming & Architecture
+    - SDD-003_tardis-protocol-orchestration.md  — SDD-003 — Protocole TARDIS : Onboarding & Orchestration des A2 Doctors
+    - SDD-004_ricks-verse-governance.md  — SDD-001 — Rick's Verse Governance : Rôles, Responsabilités & Initiativ
+    - SDD-005_life-os-l1-integration.md  — SDD-004 — Architecture L1 : Life OS & Intégration au Bedrock Solarpunk
+    - SDD-006_business-pulse-l2-pyramide.md  — SDD-005 — Architecture L2 : Business Pulse & Clôture de la Pyramide Un
+    - SDD-007_sob-factory-icp-variants.md  — SDD-007 — SOB Factory : Les 3 ICP Variants & La Mécanique AaaS
+    - SDD-008_shadow-L1-life-os.md  — SDD-008 — Shadow L1 Life OS : Le Laboratoire de la Souveraineté
+    - SDD-009_dashboard-governance.md
+    - SDD-009_shadow-L2-business-os.md  — SDD-009 — Shadow L2 Business OS : La Matrice Souveraine 3×8
+    - SDD-010_meta-cloture-scope-13eme-semaine.md  — SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine
+    - SDD-010_meta-cloture-scope-13eme-semaine_UPDATED_shadow-L0-IA.md  — SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine
+  - 00_Blueprints/
+  - 00_Dashboard_Gouvernance.md  — Database
+  - 01_Yaz_SecOps/
+  - 02_Ryan_SysAdmin/
+  - 03_Graham_Backup/
+  - 03_Graham_DBA/
+  - 05_Bill_Symphony/
+  - 06_MCP_Mastery/
+  - 06_MCP_Mastery_dox/
+  - 99_Container_Vault/
+  - Donna_DLQ/
+  - README.md  — 11_Infra_13th_Doctor (The TARDIS)
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — 99_Container_Vault (The Cargo Bay)
+    - .git/  **[ECARTE : artefact genere]**
+    - AGENTS.md  — DOX framework
+    - README.md
+    - 01_hostinger/
+    - 02_github/
+    - 03_dokploy/
+    - 04_vercel/
+    - 05_supabase/
+    - 06_graphify/
+    - AGENTS.md  — 06_MCP_Mastery — DOX root for the 5 production MCPs
+      - AGENTS.md  — 06_graphify — DOX leaf for the graphify MCP/CLI
+      - graphify-out/  **[ECARTE : artefact genere]**
+      - AGENTS.md  — 05_supabase — DOX leaf for Supabase MCP
+      - AGENTS.md  — 04_vercel — DOX leaf for Vercel MCP
+      - AGENTS.md  — 03_dokploy — DOX leaf for Dokploy MCP
+      - AGENTS.md  — 02_github — DOX leaf for GitHub MCP
+      - AGENTS.md  — 01_hostinger — DOX leaf for Hostinger MCP
+    - workers/
+    - workers-node/
+      - bridge-airtable-to-clickup/
+      - sync-notion-to-supabase/
+      - sync-supabase-to-clickup-templates/
+    - templates/
+    - README.md  — 03_Graham_Backup (The Archivist)
+    - README.md  — 02_Ryan_SysAdmin (The Mechanic)
+    - modules/
+    - README.md  — 01_Yaz_SecOps (The Shield)
+    - README.md  — 00_Blueprints (The Schematics)
+  - Drivers/
+  - Loi_L0.md
+  - README.md  — 00_Governance_Rick (The Citadel)
+  - Rituals/
+  - Scripts_Python/
+  - Sobriete.md
+  - VPS_AUDIT_PROTOCOL.md  — VPS Audit Protocol (The Truth)
+  - VPS_CLES.md  — Les Clés du VPS : Le Manuel de l'Architecte
+  - VPS_KEYS.md  — VPS Keys: The Architect's Manual to the TARDIS
+  - graphify-burst/  **[ECARTE : artefact genere]**
+  - openclaw-mission-control/
+  - scripts/
+    - Graham/
+    - Ryan/
+    - Yaz/
+    - .git/  **[ECARTE : artefact genere]**
+    - .github/
+    - AGENTS.md  — Repository Guidelines
+    - CONTRIBUTING.md  — Contributing to OpenClaw Mission Control
+    - README.md  — OpenClaw Mission Control
+    - backend/
+    - docs/
+    - frontend/
+    - scripts/
+      - ci/
+      - README.md  — Mission Control Frontend (`frontend/`)
+      - cypress/
+      - src/
+        - api/
+        - app/
+        - auth/
+        - components/
+        - hooks/
+        - lib/
+          - activity/
+          - agents/
+          - atoms/
+          - auth/
+          - board-groups/
+          - boards/
+          - charts/
+          - custom-fields/
+          - gateways/
+          - molecules/
+          - organisms/
+          - organization/
+          - providers/
+          - skills/
+          - tables/
+          - tags/
+          - templates/
+          - ui/
+          - activity/
+          - agents/
+          - approvals/
+          - board-groups/
+          - boards/
+          - custom-fields/
+          - dashboard/
+          - gateways/
+          - invite/
+          - onboarding/
+          - organization/
+          - settings/
+          - sign-in/
+          - skills/
+          - tags/
+            - [tagId]/
+            - add/
+              - edit/
+            - marketplace/
+            - packs/
+              - [packId]/
+              - new/
+                - edit/
+              - [skillId]/
+              - new/
+                - edit/
+            - [[...rest]]/
+            - [gatewayId]/
+            - new/
+              - edit/
+            - [fieldId]/
+            - new/
+              - edit/
+            - [boardId]/
+            - new/
+              - approvals/
+              - edit/
+              - webhooks/
+                - [webhookId]/
+                  - payloads/
+            - [groupId]/
+            - new/
+              - edit/
+            - [agentId]/
+            - new/
+              - edit/
+          - generated/
+            - activity/
+            - agent/
+            - agents/
+            - approvals/
+            - auth/
+            - board-group-memory/
+            - board-groups/
+            - board-memory/
+            - board-onboarding/
+            - board-webhooks/
+            - boards/
+            - custom-fields/
+            - default/
+            - gateways/
+            - health/
+            - metrics/
+            - model/
+            - org-custom-fields/
+            - organizations/
+            - skills/
+            - skills-marketplace/
+            - souls-directory/
+            - tags/
+            - tasks/
+            - users/
+        - e2e/
+        - support/
+      - 03-development.md  — Development workflow
+      - README.md  — Mission Control docs
+      - architecture/
+      - coverage-policy.md  — Coverage policy
+      - deployment/
+      - development/
+      - getting-started/
+      - installer-support.md  — Installer platform support
+      - openclaw_baseline_config.md  — OpenClaw Baseline Configuration (Getting Started)
+      - openclaw_gateway_ws.md  — Gateway WebSocket protocol
+      - operations/
+      - policy/
+      - production/
+      - reference/
+      - release/
+      - style-guide.md  — Docs style guide
+      - testing/
+      - troubleshooting/
+        - README.md  — Troubleshooting
+        - gateway-agent-provisioning.md  — Gateway Agent Provisioning and Check-In Troubleshooting
+        - README.md  — Testing
+        - README.md  — Release checklist
+        - api.md  — API reference (notes + conventions)
+        - authentication.md  — Authentication
+        - configuration.md  — Configuration reference
+        - security.md  — Security reference
+        - README.md  — Production notes
+        - one-migration-per-pr.md  — Policy: one DB migration per PR
+        - README.md  — Operations
+        - README.md  — Getting started
+        - README.md  — Development
+        - README.md  — Deployment
+        - README.md  — Architecture
+      - README.md  — Mission Control Backend (FastAPI)
+      - app/
+      - migrations/
+      - scripts/
+      - templates/
+      - tests/
+        - core/
+        - README.md  — Backend Templates (Product Documentation)
+        - versions/
+        - api/
+        - core/
+        - db/
+        - models/
+        - schemas/
+        - services/
+          - openclaw/
+          - webhooks/
+            - internal/
+      - copilot-instructions.md  — Repository Guidelines
+      - pull_request_template.md
+      - workflows/
+    - README.md  — Scripts_Python
+    - logs/
+    - A1 - Rick Sanchez (Visionnaire & Gatekeeper Absolu).md
+    - A2 - 11ème Docteur (Manager du Life Core).md
+    - A2 - 12ème Docteur (Manager du Buz Core  Business Pulse).md
+    - A2 - 13ème Docteur (Manager du Solarpunk Kernel).md
+    - README.md  — Drivers

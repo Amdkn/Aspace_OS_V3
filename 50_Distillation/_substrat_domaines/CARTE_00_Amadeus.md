@@ -1,0 +1,1801 @@
+# Carte du domaine 00_Amadeus
+
+Genere par `scripts/substrat_domaines_v2.py`. **Ne pas editer.**
+
+**757 fichiers `.md` ecrits a la main**, 334 dossiers d'artefacts ecartes.
+
+Zones : `05_OSS_TSTwin` 283 · `05_OSS_Twin` 277 · `01_Identity_Core` 150 · `sob` 31 · `(racine)` 14 · `40_SYMPHONY_BUS` 1 · `02_Bio_Metrics` 1
+
+- 01_Identity_Core/
+- 02_Bio_Metrics/
+- 02_System_Infra/
+- 05_OSS_TSTwin/
+- 05_OSS_Twin/
+- 40_SYMPHONY_BUS/
+- CARTOGRAPHIE_FINALE_A3.md  — Cartographie FINALE — les 35 A3 des 6 frameworks + les 3 watchdogs A1,
+- CARTOGRAPHIE_L2_B1_B2_B3.md  — Cartographie L2 — B1 Summers → 8 B2 (Triptyque V4) → 53 B3 canon : la 
+- INTEGRATION_CEOBENCH_SPECLOOP.md  — Intégration complète CEO-BENCH × SpecLoop dans A'Space OS
+- Life_Agent_Portal.md
+- Life_Reality_map.md  — Action	Détail
+- Manifesto.md
+- README.md  — 00_Amadeus (The Sovereign Kernel)
+- ROADMAP_DEAL_12WY_2026-2027.md  — ROADMAP D.E.A.L — 4 Cycles 12WY · 20/07/2026 → 20/07/2027
+- Reality_map.md  — 🗺️ LIFE OS — Reality Map (État Factuel du Système Construit)
+- START_HERE_2026-07-19.md  — START HERE — v2, post-Roadmap + Intégration · la cadence est la vérité
+- SUPERVISION_WF_L2.md  — Supervision L2 Business OS — les 3 Workflows d'Airlock GTD (Multica)
+- _ALIGNMENT_TSTwin_Twin_2026-07-03.md  — ⚡ÉVOLUTION 2026-07-03 — TSTwin ≠ Twin (harmonisation staging, pas dest
+- _TRASH_2026-07-03_broken_junctions/
+- _TRASH_2026-07-03_state_corruption/
+- _archive/
+- a0_reasoning_map.md  — A0 REASONING MAP — Filtre de la Méta-Conscience
+- adr-001-vps-tree.MD  — ADR-001 : Arborescence du VPS Hostinger
+- graphify-out/  **[ECARTE : artefact genere]**
+- sob/
+- strategy_sessions/
+  - .pytest_cache/
+  - .venv-langgraph/
+  - HANDOVER_CCM3_2026-07-21.md  — HANDOVER — CC sous MiniMax M3 — Relais session 2026-07-21
+  - HANDOVER_EXECUTOR.md  — HANDOVER EXÉCUTEUR — agnostique : Hermes Agent · Multica · AIonUI · Or
+  - HANDOVER_HERMES.md  — ⇒ SUPERSEDÉ — lire `HANDOVER_EXECUTOR.md`
+  - LANGGRAPH_SPIKE_VERDICT.md  — LANGGRAPH_SPIKE_VERDICT.md — décision d'intégration (SpecLoop, preuve 
+  - OFFER_ROADMAP_STRATE_A.md  — OFFER_ROADMAP — Strate A en 3 Grand Slam Offers ($100M Offers × Millio
+  - OUTREACH_QUEUE.md  — OUTREACH QUEUE — messages prêts à envoyer (A+ copie-colle : l'ENVOI es
+  - POSTHOG_OBSERVABILITY.md  — POSTHOG_OBSERVABILITY.md — le rôle exact de PostHog dans le SOB (et la
+  - PRODUCT.md  — PRODUCT.md — définition DISTILLÉE DU CANON (v2, sourcée — corrige la v
+  - RUNBOOK_C1-R1.md  — Runbook C1-R1 — Instance AaaS déployable en 1 commande (mois 1 : 20/07
+  - RUNBOOK_C1-R2.md  — Runbook C1-R2 — Pipeline : 100 coachs contactés, 10 démos, 3 signés (m
+  - RUNBOOK_C1-R3.md  — Runbook C1-R3 — Onboarding + facturation récurrente automatiques (mois
+  - RUN_LOG.md  — RUN_LOG — append-only, 5 lignes/Run
+  - forecast.md  — Forecast J+28 — confronté chaque lundi (CEO-BENCH C3 : erreur >50% = R
+  - instances/
+  - memory_aquaman-legal.md  — memory — aquaman-legal (réécrit S4, 2026-07-20)
+  - memory_batman-ops.md  — memory — batman-ops (réécrit S4, 2026-07-20)
+  - memory_cyborg-rd.md  — memory — cyborg-rd (réécrit S4, 2026-07-20)
+  - memory_flash-product.md  — memory — flash-product (réécrit S4, 2026-07-20)
+  - memory_greenlantern-people.md  — memory — greenlantern-people (réécrit S4, 2026-07-20)
+  - memory_johnjones-sales.md  — memory — johnjones-sales (réécrit S4, 2026-07-20)
+  - memory_superman-growth.md  — memory — superman-growth (réécrit S4, 2026-07-20)
+  - memory_wonderwoman-finance.md  — memory — wonderwoman-finance (réécrit S4, 2026-07-20)
+  - tests/
+  - tools/
+    - __pycache__/  **[ECARTE : artefact genere]**
+    - __pycache__/  **[ECARTE : artefact genere]**
+    - demo-coach/
+    - Include/
+    - Lib/
+    - Scripts/
+      - site-packages/
+        - __pycache__/  **[ECARTE : artefact genere]**
+        - _yaml/
+        - aiosqlite/
+        - aiosqlite-0.22.1.dist-info/
+        - annotated_types/
+        - annotated_types-0.7.0.dist-info/
+        - anyio/
+        - anyio-4.14.2.dist-info/
+        - arize/
+        - arize_otel-0.13.0.dist-info/
+        - certifi/
+        - certifi-2026.6.17.dist-info/
+        - charset_normalizer/
+        - charset_normalizer-3.4.9.dist-info/
+        - distro/
+        - distro-1.9.0.dist-info/
+        - google/
+        - googleapis_common_protos-1.75.0.dist-info/
+        - grpc/
+        - grpcio-1.82.1.dist-info/
+        - h11/
+        - h11-0.16.0.dist-info/
+        - httpcore/
+        - httpcore-1.0.9.dist-info/
+        - httpx/
+        - httpx-0.28.1.dist-info/
+        - idna/
+        - idna-3.18.dist-info/
+        - jsonpatch-1.33.dist-info/
+        - jsonpointer-3.1.1.dist-info/
+        - langchain_core/
+        - langchain_core-1.5.0.dist-info/
+        - langchain_protocol/
+        - langchain_protocol-0.0.18.dist-info/
+        - langgraph/
+        - langgraph-1.2.9.dist-info/
+        - langgraph_checkpoint-4.1.1.dist-info/
+        - langgraph_checkpoint_sqlite-3.1.0.dist-info/
+        - langgraph_prebuilt-1.1.0.dist-info/
+        - langgraph_sdk/
+        - langgraph_sdk-0.4.2.dist-info/
+        - langsmith/
+        - langsmith-0.10.9.dist-info/
+        - openinference/
+        - openinference_instrumentation-0.1.54.dist-info/
+        - openinference_instrumentation_langchain-0.1.67.dist-info/
+        - openinference_semantic_conventions-0.1.30.dist-info/
+        - opentelemetry/
+        - opentelemetry_api-1.44.0.dist-info/
+        - opentelemetry_exporter_otlp-1.44.0.dist-info/
+        - opentelemetry_exporter_otlp_proto_common-1.44.0.dist-info/
+        - opentelemetry_exporter_otlp_proto_grpc-1.44.0.dist-info/
+        - opentelemetry_exporter_otlp_proto_http-1.44.0.dist-info/
+        - opentelemetry_instrumentation-0.65b0.dist-info/
+        - opentelemetry_proto-1.44.0.dist-info/
+        - opentelemetry_sdk-1.44.0.dist-info/
+        - opentelemetry_semantic_conventions-0.65b0.dist-info/
+        - orjson/
+        - orjson-3.11.9.dist-info/
+        - ormsgpack/
+        - ormsgpack-1.12.2.dist-info/
+        - packaging/
+        - packaging-26.2.dist-info/
+        - pip/
+        - pip-26.1.2.dist-info/
+        - protobuf-7.35.1.dist-info/
+        - pydantic/
+        - pydantic-2.13.4.dist-info/
+        - pydantic_core/
+        - pydantic_core-2.46.4.dist-info/
+        - pyyaml-6.0.3.dist-info/
+        - requests/
+        - requests-2.34.2.dist-info/
+        - requests_toolbelt/
+        - requests_toolbelt-1.0.0.dist-info/
+        - sniffio/
+        - sniffio-1.3.1.dist-info/
+        - sqlite_vec/
+        - sqlite_vec-0.1.9.dist-info/
+        - tenacity/
+        - tenacity-9.1.4.dist-info/
+        - typing_extensions-4.16.0.dist-info/
+        - typing_inspection/
+        - typing_inspection-0.4.2.dist-info/
+        - urllib3/
+        - urllib3-2.7.0.dist-info/
+        - uuid_utils/
+        - uuid_utils-0.17.0.dist-info/
+        - websockets/
+        - websockets-15.0.1.dist-info/
+        - wrapt/
+        - wrapt-2.2.2.dist-info/
+        - wrapt-stubs/
+        - xxhash/
+        - xxhash-3.8.1.dist-info/
+        - yaml/
+        - zstandard/
+        - zstandard-0.25.0.dist-info/
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - asyncio/
+          - extensions/
+          - legacy/
+          - sync/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - sboms/
+            - LICENSE.md
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - compat/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - contrib/
+          - http2/
+          - util/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - emscripten/
+              - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - asyncio/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _tests/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - adapters/
+          - auth/
+          - cookies/
+          - downloadutils/
+          - multipart/
+          - threaded/
+          - utils/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+          - sboms/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _internal/
+          - deprecated/
+          - experimental/
+          - plugin/
+          - v1/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+            - src/
+              - pip/
+                - _vendor/
+                  - cachecontrol/
+                  - certifi/
+                  - distlib/
+                  - distro/
+                  - idna/
+                  - msgpack/
+                  - packaging/
+                  - pkg_resources/
+                  - platformdirs/
+                  - pygments/
+                  - pyproject_hooks/
+                  - requests/
+                  - resolvelib/
+                  - rich/
+                  - tomli/
+                  - tomli_w/
+                  - truststore/
+                  - urllib3/
+                    - LICENSE.md
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _internal/
+          - _vendor/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - cachecontrol/
+            - certifi/
+            - distlib/
+            - distro/
+            - idna/
+            - msgpack/
+            - packaging/
+            - pkg_resources/
+            - platformdirs/
+            - pygments/
+            - pyproject_hooks/
+            - requests/
+            - resolvelib/
+            - rich/
+            - tomli/
+            - tomli_w/
+            - truststore/
+            - urllib3/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - contrib/
+              - http2/
+              - util/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - emscripten/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - resolvers/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - _in_process/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - filters/
+              - formatters/
+              - lexers/
+              - styles/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - licenses/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - LICENSE.md
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - caches/
+                - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - cli/
+            - commands/
+            - distributions/
+            - index/
+            - locations/
+            - metadata/
+            - models/
+            - network/
+            - operations/
+            - req/
+            - resolution/
+            - utils/
+            - vcs/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - legacy/
+              - resolvelib/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - build/  **[ECARTE : artefact genere]**
+              - install/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - importlib/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _pyinstaller/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - sboms/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - _logs/
+          - attributes/
+          - baggage/
+          - context/
+          - environment_variables/
+          - exporter/
+          - instrumentation/
+          - metrics/
+          - propagate/
+          - propagators/
+          - proto/
+          - sdk/
+          - semconv/
+          - trace/
+          - util/
+          - version/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - propagation/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _incubating/
+            - attributes/
+            - metrics/
+            - resource/
+            - trace/
+            - version/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - attributes/
+              - metrics/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+            - _configuration/
+            - _logs/
+            - _shared_internal/
+            - environment_variables/
+            - error_handler/
+            - metrics/
+            - resources/
+            - trace/
+            - util/
+            - version/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - _sampling_experimental/
+              - export/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - _internal/
+              - export/
+              - view/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - exemplar/
+                - exponential_histogram/
+                - export/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - mapping/
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - ieee_754.md  — IEEE 754 Explained
+                  - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - _internal/
+              - export/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - export/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - collector/
+            - common/
+            - logs/
+            - metrics/
+            - profiles/
+            - resource/
+            - trace/
+            - version/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - v1/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - v1/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - v1development/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - v1/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - v1/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - v1/
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - logs/
+              - metrics/
+              - profiles/
+              - trace/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - v1/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                - v1development/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - v1/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                - v1/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _internal/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _labeler/
+            - auto_instrumentation/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - _internal/
+                - __pycache__/  **[ECARTE : artefact genere]**
+            - otlp/
+              - proto/
+              - version/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - common/
+                - grpc/
+                - http/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - _common/
+                  - _log_exporter/
+                  - metric_exporter/
+                  - trace_exporter/
+                  - version/
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - encoder/
+                      - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - _log_exporter/
+                  - metric_exporter/
+                  - trace_exporter/
+                  - version/
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - _internal/
+                  - version/
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - __pycache__/  **[ECARTE : artefact genere]**
+                    - _log_encoder/
+                    - metrics_encoder/
+                    - trace_encoder/
+                      - __pycache__/  **[ECARTE : artefact genere]**
+                      - __pycache__/  **[ECARTE : artefact genere]**
+                      - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - propagation/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _internal/
+            - severity/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+          - licenses/
+          - instrumentation/
+          - semconv/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - resource/
+            - trace/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - langchain/
+              - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _internal/
+          - _openapi_client/
+          - beta/
+          - cli/
+          - env/
+          - evaluation/
+          - integrations/
+          - sandbox/
+          - testing/
+          - wrappers/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - README.md  — LangSmith Sandbox
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - claude_agent_sdk/
+            - google_adk/
+            - google_adk_live/
+            - livekit/
+            - openai_agents_sdk/
+            - openai_realtime/
+            - otel/
+            - pipecat/
+            - strands_agents/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - README.md  — DOCKER-COMPOSE MOVED
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _utils/
+            - resources/
+            - types/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - datasets/
+              - public/
+              - runs/
+              - sandboxes/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - datasets/
+              - public/
+              - runs/
+              - sandboxes/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - otel/
+            - voice/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _async/
+          - _shared/
+          - _sync/
+          - auth/
+          - encryption/
+          - stream/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - transport/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+          - licenses/
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _internal/
+          - cache/
+          - channels/
+          - checkpoint/
+          - func/
+          - graph/
+          - managed/
+          - prebuilt/
+          - pregel/
+          - store/
+          - stream/
+          - utils/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - base/
+            - memory/
+            - sqlite/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - base/
+            - memory/
+            - serde/
+            - sqlite/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - base/
+            - memory/
+            - redis/
+            - sqlite/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _api/
+          - _security/
+          - callbacks/
+          - document_loaders/
+          - documents/
+          - embeddings/
+          - example_selectors/
+          - indexing/
+          - language_models/
+          - load/
+          - messages/
+          - output_parsers/
+          - outputs/
+          - prompts/
+          - runnables/
+          - tools/
+          - tracers/
+          - utils/
+          - vectorstores/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - block_translators/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - licenses/
+            - LICENSE.md
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+            - LICENSE.md
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _transports/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+            - LICENSE.md
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _async/
+          - _backends/
+          - _sync/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _cython/
+          - aio/
+          - beta/
+          - experimental/
+          - framework/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - common/
+            - foundation/
+            - interfaces/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - base/
+              - face/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - aio/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - _credentials/
+            - _cygrpc/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - private_key_signing/
+          - licenses/
+          - _upb/
+          - api/
+          - cloud/
+          - gapic/
+          - logging/
+          - longrunning/
+          - protobuf/
+          - rpc/
+          - type/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - context/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - compiler/
+            - internal/
+            - pyext/
+            - testdata/
+            - util/
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - type/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - metadata/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - location/
+              - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - cli/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - otel/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - _backends/
+          - _core/
+          - abc/
+          - streams/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - licenses/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - tests/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - __pycache__/  **[ECARTE : artefact genere]**
+    - README.md  — pytest cache directory
+    - v/
+      - cache/
+  - codex_m3_lean_fixes_2026-06-19/
+  - _TRASH-state_corrupted/
+  - .state.lock/
+  - SCHEMA.md  — 40_SYMPHONY_BUS — Schéma canonique du bus sémantique
+  - __pycache__/  **[ECARTE : artefact genere]**
+  - hand_offs/
+    - inbox/
+    - outbox/
+  - README.md
+  - V0_Windows.md
+  - V1_WSL.md
+  - V2_OSS_Twin.md
+  - _DRAFTS_PPR_LANE/
+  - _reference/
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - symphony/
+    - .claude/
+    - BRIDGE.rock-l2-to-growth.draft.md  — ======================================================================
+    - L0/
+    - L1/
+    - L2/
+    - README.md  — Shadow A0 — Symphony Adapters
+    - SUPERVISION.symphony-hermes.draft.md  — Supervision de l'Orchestration — introduire Symphony + Hermes Agent
+    - agent-os/
+    - loops/
+    - scripts/
+    - symphony-base.spec.md  — Symphony for A'Space OS — Base Specification (Generalized)
+      - README.md  — Symphony × Agent OS — Scripts
+      - ui/
+      - b1-solaris-loop.draft.md  — ======================================================================
+      - domains/
+        - w-star/
+          - CONTRACT.md  — CONTRACT — W-Star (Gstack B1 Jerry+Summers) — Loi des 3 Verbes
+          - _TRASH_2026-07-12_pre-m1.bak/
+          - signals/
+          - verses/
+            - 2026-07-12_W28_gstack.md  — Verse W28 — Gstack B1 (Jerry + Summers) — 2026-07-12
+            - office-hours-sim-1-marcus-vance.md  — office-hours-sim-1 — Marcus Vance × Chef de Cabinet Souverain
+            - office-hours-sim-2-clara-sterling.md  — office-hours-sim-2 — Clara Sterling × migration anti-Jevons
+            - office-hours-sim-3-david-kross.md  — office-hours-sim-3 — David Kross × SOPs→Skills
+            - office-hours-sim-4-internal-1000usd.md  — office-hours-sim-4 — Cas interne : le forfait 1000$/mo est-il worth bu
+      - standards/
+        - airtable-specifics.md
+        - candidate-record-rule.md
+        - expected-proof.md
+        - forbidden-words.md  — Global (every Symphony agent)
+        - gate-decisions.md
+        - mission-contract.md
+        - schema-pulse-log.md
+        - sla-triple.md
+        - soa-routing.md
+        - supabase-specifics.md
+        - tick-handoff.md
+        - writeback-policy.md
+      - WORKFLOW.growth-airtable.draft.md  — Prompt — Gardien de la Galaxie opérant un lead Growth (Airtable 🦸)
+      - WORKFLOW.solaris-airtable-clients.md  — WORKFLOW — Solaris Airtable Clients To Hermes
+      - WORKFLOW.solaris-clickup-ops.md  — WORKFLOW — Solaris ClickUp Ops To Hermes
+      - symphony-airtable.spec.md  — Symphony Adapter — Airtable (L2 Shadow Business)
+      - symphony-clickup.spec.md  — Symphony Adapter — ClickUp (L2 Shadow Business)
+      - symphony-notion.spec.md  — Symphony Adapter — Notion (L2 Shadow Business)
+      - symphony-sheets.spec.md  — Symphony Adapter — Google Sheets (L2 Shadow Business)
+      - symphony-supabase.spec.md  — Symphony Adapter — Supabase (L2 Shadow Observability)
+      - INDEX_capsules.md  — Lane C — Agent Capsules Index
+      - INDEX_runtime.md  — Lane B — Runtime Index
+      - INDEX_specs.md  — Lane A — Specs Twin Index
+      - lane_A_specs/
+      - lane_B_runtime/
+      - lane_C_capsules/
+        - 01_A1_capsules/
+        - 02_A2_capsules/
+        - 03_A3_capsules/
+          - cerritos/
+          - discovery/
+          - enterprise/
+          - orville/
+          - protostar/
+          - snw/
+            - chapel/
+            - mbenga/
+            - ortegas/
+            - pike/
+            - una/
+            - dal/
+            - gwyn/
+            - roktahk/
+            - zero/
+            - alara/
+            - bortus/
+            - claire/
+            - ed/
+            - gordon/
+            - isaac/
+            - john/
+            - kelly/
+            - klyden/
+              - Agent.md  — A3 Klyden — H90 Agent
+              - Context.md  — A3 Klyden — H90 Context
+              - Heartbeat.md  — A3 Klyden — H90 Heartbeat
+              - Soul.md  — A3 Klyden — H90 Soul
+              - Tools.md  — A3 Klyden — H90 Tools
+              - Agent.md  — A3 Kelly — Agent
+              - Context.md  — A3 Kelly — Context
+              - Heartbeat.md  — A3 Kelly — Heartbeat
+              - Soul.md  — A3 Kelly — Soul
+              - Tools.md  — A3 Kelly — Tools
+              - Agent.md  — A3 John — H3 Agent
+              - Context.md  — A3 John — H3 Context
+              - Heartbeat.md  — A3 John — H3 Heartbeat
+              - Soul.md  — A3 John — H3 Soul
+              - Tools.md  — A3 John — H3 Tools
+              - Agent.md  — A3 Isaac — H1 Agent
+              - Context.md  — A3 Isaac — H1 Context
+              - Heartbeat.md  — A3 Isaac — H1 Heartbeat
+              - Soul.md  — A3 Isaac — H1 Soul
+              - Tools.md  — A3 Isaac — H1 Tools
+              - Agent.md  — A3 Gordon — Agent
+              - Context.md  — A3 Gordon — Context
+              - Heartbeat.md  — A3 Gordon — Heartbeat
+              - Soul.md  — A3 Gordon — Soul
+              - Tools.md  — A3 Gordon — Tools
+              - Agent.md  — A3 Ed — Agent
+              - Context.md  — A3 Ed — Context
+              - Heartbeat.md  — A3 Ed — Heartbeat
+              - Soul.md  — A3 Ed — Soul
+              - Tools.md  — A3 Ed — Tools
+              - Agent.md  — A3 Claire — Agent
+              - Context.md  — A3 Claire — Context
+              - Heartbeat.md  — A3 Claire — Heartbeat
+              - Soul.md  — A3 Claire — Soul
+              - Tools.md  — A3 Claire — Tools
+              - Agent.md  — A3 Bortus — H10 Agent
+              - Context.md  — A3 Bortus — H10 Context
+              - Heartbeat.md  — A3 Bortus — H10 Heartbeat
+              - Soul.md  — A3 Bortus — H10 Soul
+              - Tools.md  — A3 Bortus — H10 Tools
+              - Agent.md  — A3 Alara — H30 Agent
+              - Context.md  — A3 Alara — H30 Context
+              - Heartbeat.md  — A3 Alara — H30 Heartbeat
+              - Soul.md  — A3 Alara — H30 Soul
+              - Tools.md  — A3 Alara — H30 Tools
+            - data/
+            - geordi/
+            - picard/
+            - spock/
+            - book/
+            - burnham/
+            - culber/
+            - georgiou/
+            - reno/
+            - saru/
+            - stamets/
+            - tilly/
+              - Agent.md  — A3 Tilly — LD04 Agent ⚠️
+              - Context.md  — A3 Tilly — LD04 Context ⚠️
+              - Heartbeat.md  — A3 Tilly — LD04 Heartbeat ⚠️
+              - Soul.md  — A3 Tilly — LD04 Soul ⚠️
+              - Tools.md  — A3 Tilly — LD04 Tools ⚠️
+              - Agent.md  — A3 Stamets — LD05 Agent
+              - Context.md  — A3 Stamets — LD05 Context
+              - Heartbeat.md  — A3 Stamets — LD05 Heartbeat
+              - Soul.md  — A3 Stamets — LD05 Soul
+              - Tools.md  — A3 Stamets — LD05 Tools
+              - Agent.md  — A3 Saru — LD02 Agent
+              - Context.md  — A3 Saru — LD02 Context
+              - Heartbeat.md  — A3 Saru — LD02 Heartbeat
+              - Soul.md  — A3 Saru — LD02 Soul
+              - Tools.md  — A3 Saru — LD02 Tools
+              - Agent.md  — A3 Reno — LD07 Agent
+              - Context.md  — A3 Reno — LD07 Context
+              - Heartbeat.md  — A3 Reno — LD07 Heartbeat
+              - Soul.md  — A3 Reno — LD07 Soul
+              - Tools.md  — A3 Reno — LD07 Tools
+              - Agent.md  — A3 Culber — LD03 Agent ⚠️
+              - Context.md  — A3 Culber — LD03 Context ⚠️
+              - Heartbeat.md  — A3 Culber — LD03 Heartbeat ⚠️
+              - Soul.md  — A3 Culber — LD03 Soul ⚠️
+              - Tools.md  — A3 Culber — LD03 Tools ⚠️
+              - Agent.md  — A3 Burnham — LD06 Agent
+              - Context.md  — A3 Burnham — LD06 Context
+              - Heartbeat.md  — A3 Burnham — LD06 Heartbeat
+              - Soul.md  — A3 Burnham — LD06 Soul
+              - Tools.md  — A3 Burnham — LD06 Tools
+              - Agent.md  — A3 Book — LD01 Agent
+              - Context.md  — A3 Book — LD01 Context
+              - Heartbeat.md  — A3 Book — LD01 Heartbeat
+              - Soul.md  — A3 Book — LD01 Soul
+              - Tools.md  — A3 Book — LD01 Tools
+            - boimler/
+            - freeman/
+            - mariner/
+            - rutherford/
+            - tendi/
+          - computer_enterprise/
+          - curie_snw/
+          - discovery/
+          - holodeck_cerritos/
+          - holojaneway_protostar/
+          - orville/
+            - Agent.md  — Orville — Agent
+            - Context.md  — Orville — Context
+            - Heartbeat.md  — Orville — Heartbeat
+            - Soul.md  — Orville — Soul
+            - Tools.md  — Orville — Tools
+            - Agent.md  — HoloJaneway Protostar — Agent
+            - Context.md  — HoloJaneway Protostar — Context
+            - Heartbeat.md  — HoloJaneway Protostar — Heartbeat
+            - Soul.md  — HoloJaneway Protostar — Soul
+            - Tools.md  — HoloJaneway Protostar — Tools
+            - Agent.md  — HoloDeck Cerritos — Agent
+            - Context.md  — HoloDeck Cerritos — Context
+            - Heartbeat.md  — HoloDeck Cerritos — Heartbeat
+            - Soul.md  — HoloDeck Cerritos — Soul
+            - Tools.md  — HoloDeck Cerritos — Tools
+            - Agent.md  — Discovery — Agent
+            - Context.md  — Discovery — Context
+            - Heartbeat.md  — Discovery — Heartbeat
+            - Soul.md  — Discovery — Soul
+            - Tools.md  — Discovery — Tools
+            - Agent.md  — Curie SNW — Agent
+            - Context.md  — Curie SNW — Context
+            - Heartbeat.md  — Curie SNW — Heartbeat
+            - Soul.md  — Curie SNW — Soul
+            - Tools.md  — Curie SNW — Tools
+            - Agent.md  — Computer Enterprise — Agent
+            - Context.md  — Computer Enterprise — Context
+            - Heartbeat.md  — Computer Enterprise — Heartbeat
+            - Soul.md  — Computer Enterprise — Soul
+            - Tools.md  — Computer Enterprise — Tools
+          - beth/
+          - morty/
+            - Agent.md  — Morty — Agent
+            - Context.md  — Morty — Context
+            - Heartbeat.md  — Morty — Heartbeat
+            - Soul.md  — Morty — Soul
+            - Tools.md  — Morty — Tools
+            - Agent.md  — Beth — Agent
+            - Context.md  — Beth — Context
+            - Heartbeat.md  — Beth — Heartbeat
+            - Soul.md  — Beth — Soul
+            - Tools.md  — Beth — Tools
+        - 01_routing/
+        - 02_scripts/
+        - 03_bridges/
+        - 04_mcps/
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - scripts/
+            - __pycache__/  **[ECARTE : artefact genere]**
+          - A0_to_A1.bridge.md  — Bridge A0 → A1 — Amadeus → Beth/Morty
+          - A1_to_A2.bridge.md  — Bridge A1 → A2 — Beth/Morty → Ships
+          - A2_to_A3.bridge.md  — Bridge A2 → A3 — Ships → Crews
+          - A3_DLQ.bridge.md  — Bridge A3 → Donna DLQ — Dead Letter Queue
+          - L0_to_L1.bridge.md  — Bridge L0 → L1 — Shadow L0 IA → Life OS A1/A2
+          - L1_to_L2.bridge.md  — Bridge L1 → L2 — Life OS → Business Pulse
+          - __pycache__/  **[ECARTE : artefact genere]**
+          - symphony-affine.spec.md  — Symphony Adapter — Affine (L1 Shadow Life OS)
+          - symphony-baserow.spec.md  — Symphony Adapter — Baserow (L1 Shadow Life OS)
+          - symphony-obsidian.spec.md  — Symphony Adapter — Obsidian (L1 Shadow Life OS)
+          - symphony-plane.spec.md  — Symphony Adapter — Plane.so (L1 Shadow GTD)
+        - 01_A1_gatekeepers/
+        - 02_A1_supervisions/
+        - 02_A2_ships/
+        - 03_A3_crews/
+          - _TRASH_2026-06-15_legacy_v0/
+          - cerritos/
+          - discovery/
+          - enterprise/
+          - orville/
+          - protostar/
+          - snw/
+            - chapel.twin.md  — A3 Chapel SNW Spec — Twin Runtime
+            - mbenga.twin.md  — A3 M'Benga SNW Spec — Twin Runtime
+            - ortegas.twin.md  — A3 Ortegas SNW Spec — Twin Runtime
+            - pike.twin.md  — A3 Pike SNW Spec — Twin Runtime
+            - una.twin.md  — A3 Una SNW Spec — Twin Runtime
+            - dal.twin.md  — A3 Dal Protostar Spec — Twin Runtime
+            - gwyn.twin.md  — A3 Gwyn Protostar Spec — Twin Runtime
+            - rok-tahk.twin.md  — A3 Rok-Tahk Protostar Spec — Twin Runtime
+            - zero.twin.md  — A3 Zero Protostar Spec — Twin Runtime
+            - alara-kitan.twin.md  — A3 Alara Kitan Orville Spec — Twin Runtime
+            - bortus.twin.md  — A3 Bortus Orville Spec — Twin Runtime
+            - claire-finn.twin.md  — A3 Claire Finn Orville Spec — Twin Runtime
+            - ed-mercer.twin.md  — A3 Ed Mercer Orville Spec — Twin Runtime
+            - gordon-malloy.twin.md  — A3 Gordon Malloy Orville Spec — Twin Runtime
+            - isaac.twin.md  — A3 Isaac Orville Spec — Twin Runtime
+            - john-lamarr.twin.md  — A3 John Lamarr Orville Spec — Twin Runtime
+            - kelly-grayson.twin.md  — A3 Kelly Grayson Orville Spec — Twin Runtime
+            - klyden.twin.md  — A3 Klyden Orville Spec — Twin Runtime
+            - data.twin.md  — A3 Data Enterprise Spec — Twin Runtime
+            - geordi.twin.md  — A3 Geordi Enterprise Spec — Twin Runtime
+            - picard.twin.md  — A3 Picard Enterprise Spec — Twin Runtime
+            - spock.twin.md  — A3 Spock Enterprise Spec — Twin Runtime
+            - book.twin.md  — A3 Book Discovery Spec — Twin Runtime
+            - burnham.twin.md  — A3 Burnham Discovery Spec — Twin Runtime
+            - culber.twin.md  — A3 Culber Discovery Spec — Twin Runtime
+            - georgiou.twin.md  — A3 Georgiou Discovery Spec — Twin Runtime
+            - reno.twin.md  — A3 Reno Discovery Spec — Twin Runtime
+            - saru.twin.md  — A3 Saru Discovery Spec — Twin Runtime
+            - stamets.twin.md  — A3 Stamets Discovery Spec — Twin Runtime
+            - tilly.twin.md  — A3 Tilly Discovery Spec — Twin Runtime
+            - boimler.twin.md  — A3 Boimler Cerritos Spec — Twin Runtime
+            - freeman.twin.md  — A3 Freeman Cerritos Spec — Twin Runtime
+            - mariner.twin.md  — A3 Mariner Cerritos Spec — Twin Runtime
+            - rutherford.twin.md  — A3 Rutherford Cerritos Spec — Twin Runtime
+            - tendi.twin.md  — A3 Tendi Cerritos Spec — Twin Runtime
+            - A3_Alara_Horizon.twin.md  — A3 Alara Kitan — Horizon H30 (Twin)
+            - A3_Boimler_Clarify.twin.md  — A3 Boimler — GTD Clarify (Twin)
+            - A3_Book_LD01.twin.md  — A3 Book — LD01 Business & Career (Twin)
+            - A3_Bortus_Horizon.twin.md  — A3 Bortus — Horizon H10 (Twin)
+            - A3_Burnham_LD06.twin.md  — A3 Burnham — LD06 Family (Twin)
+            - A3_Chapel_Metrics.twin.md  — A3 Chapel — 12WY Metrics (Twin)
+            - A3_Claire_Pillar.twin.md  — A3 Claire Finn — Pillar Service (Twin)
+            - A3_Culber_LD03.twin.md  — A3 Culber — LD03 Health ⚠️ (Twin)
+            - A3_Dal_Definition.twin.md  — A3 Dal — DEAL Definition (Twin)
+            - A3_Data_Archives.twin.md  — A3 Data — PARA Archives (Twin)
+            - A3_Ed_Pillar.twin.md  — A3 Ed Mercer — Pillar Identity (Twin)
+            - A3_Freeman_Engage.twin.md  — A3 Freeman — GTD Engage (Twin)
+            - A3_Geordi_Resources.twin.md  — A3 Geordi — PARA Resources (Twin)
+            - A3_Georgiou_LD08.twin.md  — A3 Georgiou — LD08 Impact (Twin)
+            - A3_Gordon_Pillar.twin.md  — A3 Gordon Malloy — Pillar Profession (Twin)
+            - A3_Gwyn_Liberation.twin.md  — A3 Gwyn — DEAL Liberation (Twin)
+            - A3_Isaac_Horizon.twin.md  — A3 Isaac — Horizon H1 (Twin)
+            - A3_John_Horizon.twin.md  — A3 John Lamarr — Horizon H3 (Twin)
+            - A3_Kelly_Pillar.twin.md  — A3 Kelly Grayson — Pillar Passion (Twin)
+            - A3_Klyden_Horizon.twin.md  — A3 Klyden — Horizon H90 (Twin)
+            - A3_MBenga_Focus.twin.md  — A3 M'Benga — 12WY Focus (Twin)
+            - A3_Mariner_Inbox.twin.md  — A3 Mariner — GTD Inbox (Twin)
+            - A3_Ortegas_Execution.twin.md  — A3 Erica Ortegas — 12WY Execution (Twin)
+            - A3_Picard_Projects.twin.md  — A3 Picard — PARA Projects (Twin)
+            - A3_Pike_Vision.twin.md  — A3 Pike — 12WY Vision (Twin)
+            - A3_Reno_LD07.twin.md  — A3 Reno — LD07 Creativity (Twin)
+            - A3_RokTahk_Elimination.twin.md  — A3 Rok-Tahk — DEAL Elimination (Twin)
+            - A3_Rutherford_Organize.twin.md  — A3 Rutherford — GTD Organize (Twin)
+            - A3_Saru_LD02.twin.md  — A3 Saru — LD02 Finance & Independence (Twin)
+            - A3_Spock_Areas.twin.md  — A3 Spock — PARA Areas (Twin)
+            - A3_Stamets_LD05.twin.md  — A3 Stamets — LD05 Social (Twin)
+            - A3_Tendi_Review.twin.md  — A3 Tendi — GTD Review (Twin)
+            - A3_Tilly_LD04.twin.md  — A3 Tilly — LD04 Cognition ⚠️ (Twin)
+            - A3_Una_Planning.twin.md  — A3 Una — 12WY Planning (Twin)
+            - A3_Zero_Automation.twin.md  — A3 Zero — DEAL Automation (Twin)
+          - A2_Computer_Enterprise_Spec.twin.md  — A2 Computer Enterprise Spec — Twin Runtime
+          - A2_Curie_SNW_Spec.twin.md  — A2 Curie SNW Spec — Twin Runtime
+          - A2_Discovery_Spec.twin.md  — A2 Discovery Spec — Twin Runtime
+          - A2_HoloDeck_Cerritos_Spec.twin.md  — A2 HoloDeck Cerritos Spec — Twin Runtime
+          - A2_HoloJaneway_Protostar_Spec.twin.md  — A2 Holo Janeway Protostar Spec — Twin Runtime
+          - A2_Orville_Spec.twin.md  — A2 Orville Spec — Twin Runtime
+          - beth.twin.md  — A1 Beth Spec -- Twin Runtime (Cycle 12WY Veto Authority)
+          - morty.twin.md  — A1 Morty Spec -- Twin Runtime (Cycle 12WY Cross-Ship Routing)
+          - A1_Beth_Spec.twin.md  — A1 Beth Spec — Twin Runtime
+          - A1_Morty_Spec.twin.md  — A1 Morty Spec — Twin Runtime
+      - SDD-010_meta-cloture-scope-13eme-semaine_UPDATED_shadow-L0-IA.md  — SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine
+      - open-hermes-runtime.md  — Shadow L0 Adapter — Open Hermes Runtime (Cible Autonome V1)
+      - shadow-ai-capability-routing.md  — Shadow L0 Adapter — AI Capability Routing (Claude / GPT-Codex / Gemini
+      - commands/
+        - agent-os/
+          - discover-standards.md  — Discover Standards
+          - index-standards.md  — Index Standards
+          - inject-standards.md  — Inject Standards
+          - plan-product.md  — Plan Product
+          - shape-spec.md  — Shape Spec
+    - claudeclaw/
+    - drawbridge/
+      - .git/  **[ECARTE : artefact genere]**
+      - CHANGELOG.md  — Changelog
+      - PRD-native-screenshot-capture.md  — PRD: Native Screenshot Capture
+      - README.md
+      - chrome-extension/
+      - demo/
+      - scripts/
+        - README.md  — 🎯 Drawbridge Interactive Demo
+        - .moat/
+        - ARCHITECTURE.md  — 🏗 Moat Architecture Documentation
+        - README.md  — Moat Chrome Extension
+        - icons/
+        - rules-templates/
+        - tests/
+        - utils/
+          - README.md  — 🧭 Moat - Visual UI Feedback for Your Project
+          - bridge.md  — Drawbridge Command
+          - drawbridge-workflow.md
+          - pixel/
+      - .git/  **[ECARTE : artefact genere]**
+      - README.md  — ClaudeClaw
+      - template/
+        - .claude/
+        - .vscode/
+        - CLAUDE.md  — CLAUDE.md - Primary Agent
+        - SOUL.md  — SOUL.md - Agent Personality
+        - USER.md  — USER.md - About You
+        - agents/
+        - memory/
+        - shared/
+          - memory/
+          - alpha/
+          - beta/
+          - gamma/
+            - .claude/
+            - CLAUDE.md  — CLAUDE.md - Gamma
+            - memory/
+              - skills/
+                - check-schedule.md  — Check Schedule
+            - .claude/
+            - CLAUDE.md  — CLAUDE.md - Beta
+            - memory/
+              - skills/
+                - research-topic.md  — Research Topic
+            - .claude/
+            - CLAUDE.md  — CLAUDE.md - Alpha
+            - memory/
+              - skills/
+                - code-review.md  — Code Review
+          - skills/
+            - daily-summary.md  — Daily Summary
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - symphony/
+    - L1/
+      - 01_A1_gatekeepers/
+      - 02_A2_ships/
+      - INDEX_capsules.md  — Lane C — Agent Capsules Index
+      - INDEX_runtime.md  — Lane B — Runtime Index
+      - INDEX_specs.md  — Lane A — Specs Twin Index
+      - agent-os/
+      - lane_A_specs/
+      - lane_B_runtime/
+      - lane_C_capsules/
+      - scripts/
+        - 01_A1_capsules/
+        - 02_A2_capsules/
+        - 03_A3_capsules/
+          - cerritos/
+          - discovery/
+          - enterprise/
+          - orville/
+          - protostar/
+          - snw/
+            - chapel/
+            - mbenga/
+            - ortegas/
+            - pike/
+            - una/
+              - Agent.md  — A3 Una — Agent
+              - Context.md  — A3 Una — Context
+              - Heartbeat.md  — A3 Una — Heartbeat
+              - Soul.md  — A3 Una — 12WY Planning
+              - Tools.md  — A3 Una — Tools
+              - Agent.md  — A3 Pike — Agent
+              - Context.md  — A3 Pike — Context
+              - Heartbeat.md  — A3 Pike — Heartbeat
+              - Soul.md  — A3 Pike — 12WY Vision
+              - Tools.md  — A3 Pike — Tools
+              - Agent.md  — A3 Ortegas — Agent
+              - Context.md  — A3 Ortegas — Context
+              - Heartbeat.md  — A3 Ortegas — Heartbeat
+              - Soul.md  — A3 Erica Ortegas — 12WY Execution ⚠️ Canon
+              - Tools.md  — A3 Ortegas — Tools
+              - Agent.md  — A3 M'Benga — Agent
+              - Context.md  — A3 M'Benga — Context
+              - Heartbeat.md  — A3 M'Benga — Heartbeat
+              - Soul.md  — A3 M'Benga — 12WY Focus
+              - Tools.md  — A3 M'Benga — Tools
+              - Agent.md  — A3 Chapel — Agent
+              - Context.md  — A3 Chapel — Context
+              - Heartbeat.md  — A3 Chapel — Heartbeat
+              - Soul.md  — A3 Chapel — 12WY Metrics
+              - Tools.md  — A3 Chapel — Tools
+            - dal/
+            - gwyn/
+            - roktahk/
+            - zero/
+              - Agent.md  — A3 Zero — Agent
+              - Context.md  — A3 Zero — Context
+              - Heartbeat.md  — A3 Zero — Heartbeat
+              - Soul.md  — A3 Zero — DEAL Automation
+              - Tools.md  — A3 Zero — Tools
+              - Agent.md  — A3 Rok-Tahk — Agent
+              - Context.md  — A3 Rok-Tahk — Context
+              - Heartbeat.md  — A3 Rok-Tahk — Heartbeat
+              - Soul.md  — A3 Rok-Tahk — DEAL Elimination
+              - Tools.md  — A3 Rok-Tahk — Tools
+              - Agent.md  — A3 Gwyn — Agent
+              - Context.md  — A3 Gwyn — Context
+              - Heartbeat.md  — A3 Gwyn — Heartbeat
+              - Soul.md  — A3 Gwyn — DEAL Liberation
+              - Tools.md  — A3 Gwyn — Tools
+              - Agent.md  — A3 Dal — Agent
+              - Context.md  — A3 Dal — Context
+              - Heartbeat.md  — A3 Dal — Heartbeat
+              - Soul.md  — A3 Dal — DEAL Definition
+              - Tools.md  — A3 Dal — Tools
+            - alara/
+            - bortus/
+            - claire/
+            - ed/
+            - gordon/
+            - isaac/
+            - john/
+            - kelly/
+            - klyden/
+              - Agent.md  — A3 Klyden — Agent
+              - Context.md  — A3 Klyden — Context
+              - Heartbeat.md  — A3 Klyden — Heartbeat
+              - Soul.md  — A3 Klyden — H90 Soul
+              - Tools.md  — A3 Klyden — Tools
+              - Agent.md  — A3 Kelly — Agent
+              - Context.md  — A3 Kelly — Context
+              - Heartbeat.md  — A3 Kelly — Heartbeat
+              - Soul.md  — A3 Kelly — Soul
+              - Tools.md  — A3 Kelly — Tools
+              - Agent.md  — A3 John — Agent
+              - Context.md  — A3 John — Context
+              - Heartbeat.md  — A3 John — Heartbeat
+              - Soul.md  — A3 John — H3 Soul
+              - Tools.md  — A3 John — Tools
+              - Agent.md  — A3 Isaac — Agent
+              - Context.md  — A3 Isaac — Context
+              - Heartbeat.md  — A3 Isaac — Heartbeat
+              - Soul.md  — A3 Isaac — H1 Soul
+              - Tools.md  — A3 Isaac — Tools
+              - Agent.md  — A3 Gordon — Agent
+              - Context.md  — A3 Gordon — Context
+              - Heartbeat.md  — A3 Gordon — Heartbeat
+              - Soul.md  — A3 Gordon — Soul
+              - Tools.md  — A3 Gordon — Tools
+              - Agent.md  — A3 Ed — Agent
+              - Context.md  — A3 Ed — Context
+              - Heartbeat.md  — A3 Ed — Heartbeat
+              - Soul.md  — A3 Ed — Soul
+              - Tools.md  — A3 Ed — Tools
+              - Agent.md  — A3 Claire — Agent
+              - Context.md  — A3 Claire — Context
+              - Heartbeat.md  — A3 Claire — Heartbeat
+              - Soul.md  — A3 Claire — Soul
+              - Tools.md  — A3 Claire — Tools
+              - Agent.md  — A3 Bortus — Agent
+              - Context.md  — A3 Bortus — Context
+              - Heartbeat.md  — A3 Bortus — Heartbeat
+              - Soul.md  — A3 Bortus — H10 Soul
+              - Tools.md  — A3 Bortus — Tools
+              - Agent.md  — A3 Alara — Agent
+              - Context.md  — A3 Alara — Context
+              - Heartbeat.md  — A3 Alara — Heartbeat
+              - Soul.md  — A3 Alara — H30 Soul
+              - Tools.md  — A3 Alara — Tools
+            - data/
+            - geordi/
+            - picard/
+            - spock/
+              - Agent.md  — A3 Spock — Agent
+              - Context.md  — A3 Spock — Context
+              - Heartbeat.md  — A3 Spock — Heartbeat
+              - Soul.md  — A3 Spock — PARA Areas
+              - Tools.md  — A3 Spock — Tools
+              - Agent.md  — A3 Picard — Agent
+              - Context.md  — A3 Picard — Context
+              - Heartbeat.md  — A3 Picard — Heartbeat
+              - Soul.md  — A3 Picard — PARA Projects
+              - Tools.md  — A3 Picard — Tools
+              - Agent.md  — A3 Geordi — Agent
+              - Context.md  — A3 Geordi — Context
+              - Heartbeat.md  — A3 Geordi — Heartbeat
+              - Soul.md  — A3 Geordi — PARA Resources
+              - Tools.md  — A3 Geordi — Tools
+              - Agent.md  — A3 Data — Agent
+              - Context.md  — A3 Data — Context
+              - Heartbeat.md  — A3 Data — Heartbeat
+              - Soul.md  — A3 Data — PARA Archives
+              - Tools.md  — A3 Data — Tools
+            - book/
+            - burnham/
+            - culber/
+            - georgiou/
+            - reno/
+            - saru/
+            - stamets/
+            - tilly/
+              - Agent.md  — A3 Tilly — Agent
+              - Context.md  — A3 Tilly — Context ⚠️
+              - Heartbeat.md  — A3 Tilly — Heartbeat ⚠️
+              - Soul.md  — A3 Tilly — LD04 Soul ⚠️
+              - Tools.md  — A3 Tilly — Tools ⚠️
+              - Agent.md  — A3 Stamets — Agent
+              - Context.md  — A3 Stamets — Context
+              - Heartbeat.md  — A3 Stamets — Heartbeat
+              - Soul.md  — A3 Stamets — LD05 Soul
+              - Tools.md  — A3 Stamets — Tools
+              - Agent.md  — A3 Saru — Agent
+              - Context.md  — A3 Saru — Context
+              - Heartbeat.md  — A3 Saru — Heartbeat
+              - Soul.md  — A3 Saru — LD02 Soul
+              - Tools.md  — A3 Saru — Tools
+              - Agent.md  — A3 Reno — Agent
+              - Context.md  — A3 Reno — Context
+              - Heartbeat.md  — A3 Reno — Heartbeat
+              - Soul.md  — A3 Reno — LD07 Soul
+              - Tools.md  — A3 Reno — Tools
+              - Agent.md  — A3 Georgiou — Agent
+              - Context.md  — A3 Georgiou — Context
+              - Heartbeat.md  — A3 Georgiou — Heartbeat
+              - Soul.md  — A3 Georgiou — LD08 Soul
+              - Tools.md  — A3 Georgiou — Tools
+              - Agent.md  — A3 Culber — Agent
+              - Context.md  — A3 Culber — Context ⚠️
+              - Heartbeat.md  — A3 Culber — Heartbeat ⚠️
+              - Soul.md  — A3 Culber — LD03 Soul ⚠️
+              - Tools.md  — A3 Culber — Tools ⚠️
+              - Agent.md  — A3 Burnham — Agent
+              - Context.md  — A3 Burnham — Context
+              - Heartbeat.md  — A3 Burnham — Heartbeat
+              - Soul.md  — A3 Burnham — LD06 Soul
+              - Tools.md  — A3 Burnham — Tools
+              - Agent.md  — A3 Book — Agent
+              - Context.md  — A3 Book — Context
+              - Heartbeat.md  — A3 Book — Heartbeat
+              - Soul.md  — A3 Book — LD01 Soul
+              - Tools.md  — A3 Book — Tools
+            - boimler/
+            - freeman/
+            - mariner/
+            - rutherford/
+            - tendi/
+              - Agent.md  — A3 Tendi — Agent
+              - Context.md  — A3 Tendi — Context
+              - Heartbeat.md  — A3 Tendi — Heartbeat
+              - Soul.md  — A3 Tendi — GTD Review ⚠️
+              - Tools.md  — A3 Tendi — Tools
+              - Agent.md  — A3 Rutherford — Agent
+              - Context.md  — A3 Rutherford — Context
+              - Heartbeat.md  — A3 Rutherford — Heartbeat
+              - Soul.md  — A3 Rutherford — GTD Organize ⚠️
+              - Tools.md  — A3 Rutherford — Tools
+              - Agent.md  — A3 Mariner — Agent
+              - Context.md  — A3 Mariner — Context
+              - Heartbeat.md  — A3 Mariner — Heartbeat
+              - Soul.md  — A3 Mariner — GTD Inbox
+              - Tools.md  — A3 Mariner — Tools
+              - Agent.md  — A3 Freeman — Agent
+              - Context.md  — A3 Freeman — Context
+              - Heartbeat.md  — A3 Freeman — Heartbeat
+              - Soul.md  — A3 Freeman — GTD Engage
+              - Tools.md  — A3 Freeman — Tools
+              - Agent.md  — A3 Boimler — Agent
+              - Context.md  — A3 Boimler — Context
+              - Heartbeat.md  — A3 Boimler — Heartbeat
+              - Soul.md  — A3 Boimler — GTD Clarify
+              - Tools.md  — A3 Boimler — Tools
+          - computer_enterprise/
+          - curie_snw/
+          - discovery/
+          - holodeck_cerritos/
+          - holojaneway_protostar/
+          - orville/
+            - Agent.md  — Orville — Agent
+            - Context.md  — Orville — Context
+            - Heartbeat.md  — Orville — Heartbeat
+            - Soul.md  — Orville — Soul
+            - Tools.md  — Orville — Tools
+            - Agent.md  — HoloJaneway Protostar — Agent
+            - Context.md  — HoloJaneway Protostar — Context
+            - Heartbeat.md  — HoloJaneway Protostar — Heartbeat
+            - Soul.md  — HoloJaneway Protostar — Soul
+            - Tools.md  — HoloJaneway Protostar — Tools
+            - Agent.md  — HoloDeck Cerritos — Agent
+            - Context.md  — HoloDeck Cerritos — Context
+            - Heartbeat.md  — HoloDeck Cerritos — Heartbeat
+            - Soul.md  — HoloDeck Cerritos — Soul
+            - Tools.md  — HoloDeck Cerritos — Tools
+            - Agent.md  — Discovery — Agent
+            - Context.md  — Discovery — Context
+            - Heartbeat.md  — Discovery — Heartbeat
+            - Soul.md  — Discovery — Soul
+            - Tools.md  — Discovery — Tools
+            - Agent.md  — Curie SNW — Agent
+            - Context.md  — Curie SNW — Context
+            - Heartbeat.md  — Curie SNW — Heartbeat
+            - Soul.md  — Curie SNW — Soul
+            - Tools.md  — Curie SNW — Tools
+            - Agent.md  — Computer Enterprise — Agent
+            - Context.md  — Computer Enterprise — Context
+            - Heartbeat.md  — Computer Enterprise — Heartbeat
+            - Soul.md  — Computer Enterprise — Soul
+            - Tools.md  — Computer Enterprise — Tools
+          - beth/
+          - morty/
+            - Agent.md  — Morty — Agent
+            - Context.md  — Morty — Context
+            - Heartbeat.md  — Morty — Heartbeat
+            - Soul.md  — Morty — Soul
+            - Tools.md  — Morty — Tools
+            - Agent.md  — Beth — Agent
+            - Context.md  — Beth — Context
+            - Heartbeat.md  — Beth — Heartbeat
+            - Soul.md  — Beth — Soul
+            - Tools.md  — Beth — Tools
+        - 01_routing/
+        - 02_scripts/
+        - 03_bridges/
+        - 04_mcps/
+          - A0_to_A1.bridge.md  — Bridge A0 → A1
+          - A1_to_A2.bridge.md  — Bridge A1 → A2
+          - A2_to_A3.bridge.md  — Bridge A2 → A3
+          - A3_DLQ.bridge.md  — Bridge A3 → Donna DLQ
+          - L0_to_L1.bridge.md  — Bridge L0 → L1
+          - L1_to_L2.bridge.md  — Bridge L1 → L2
+          - symphony-affine.spec.md  — Symphony Runtime — Affine (DEAL)
+          - symphony-baserow.spec.md  — Symphony Runtime — Baserow (Life Wheel + 12WY)
+          - symphony-obsidian.spec.md  — Symphony Runtime — Obsidian (PARA)
+          - symphony-plane.spec.md  — Symphony Runtime — Plane (GTD)
+        - 03_A3_crews/
+          - cerritos/
+          - discovery/
+          - enterprise/
+          - orville/
+          - protostar/
+          - snw/
+            - A3_Chapel_Metrics.twin.md  — A3 Chapel — 12WY Metrics (Twin)
+            - A3_MBenga_Focus.twin.md  — A3 M'Benga — 12WY Focus (Twin)
+            - A3_Ortegas_Execution.twin.md  — A3 Erica Ortegas — 12WY Execution ⚠️ Canon (Twin)
+            - A3_Pike_Vision.twin.md  — A3 Pike — 12WY Vision (Twin)
+            - A3_Una_Planning.twin.md  — A3 Una — 12WY Planning (Twin)
+            - A3_Dal_Definition.twin.md  — A3 Dal — DEAL Definition (Twin)
+            - A3_Gwyn_Liberation.twin.md  — A3 Gwyn — DEAL Liberation (Twin)
+            - A3_RokTahk_Elimination.twin.md  — A3 Rok-Tahk — DEAL Elimination (Twin)
+            - A3_Zero_Automation.twin.md  — A3 Zero — DEAL Automation (Twin)
+            - A3_Alara_Horizon.twin.md  — A3 Alara Kitan — Horizon H30 (Twin)
+            - A3_Bortus_Horizon.twin.md  — A3 Bortus — Horizon H10 (Twin)
+            - A3_Claire_Pillar.twin.md  — A3 Claire Finn — Pillar Service (Twin)
+            - A3_Ed_Pillar.twin.md  — A3 Ed Mercer — Pillar Identity (Twin)
+            - A3_Gordon_Pillar.twin.md  — A3 Gordon Malloy — Pillar Profession (Twin)
+            - A3_Isaac_Horizon.twin.md  — A3 Isaac — Horizon H1 (Twin)
+            - A3_John_Horizon.twin.md  — A3 John Lamarr — Horizon H3 (Twin)
+            - A3_Kelly_Pillar.twin.md  — A3 Kelly Grayson — Pillar Passion (Twin)
+            - A3_Klyden_Horizon.twin.md  — A3 Klyden — Horizon H90 (Twin)
+            - A3_Data_Archives.twin.md  — A3 Data — PARA Archives (Twin)
+            - A3_Geordi_Resources.twin.md  — A3 Geordi — PARA Resources (Twin)
+            - A3_Picard_Projects.twin.md  — A3 Picard — PARA Projects (Twin)
+            - A3_Spock_Areas.twin.md  — A3 Spock — PARA Areas (Twin)
+            - A3_Book_LD01.twin.md  — A3 Book — LD01 Business & Career (Twin)
+            - A3_Burnham_LD06.twin.md  — A3 Burnham — LD06 Family (Twin)
+            - A3_Culber_LD03.twin.md  — A3 Culber — LD03 Health ⚠️ (Twin)
+            - A3_Georgiou_LD08.twin.md  — A3 Georgiou — LD08 Impact (Twin)
+            - A3_Reno_LD07.twin.md  — A3 Reno — LD07 Creativity (Twin)
+            - A3_Saru_LD02.twin.md  — A3 Saru — LD02 Finance (Twin)
+            - A3_Stamets_LD05.twin.md  — A3 Stamets — LD05 Social (Twin)
+            - A3_Tilly_LD04.twin.md  — A3 Tilly — LD04 Cognition ⚠️ (Twin)
+            - A3_Boimler_Clarify.twin.md  — A3 Boimler — GTD Clarify (Twin)
+            - A3_Freeman_Engage.twin.md  — A3 Freeman — GTD Engage (Twin)
+            - A3_Mariner_Inbox.twin.md  — A3 Mariner — GTD Inbox (Twin)
+            - A3_Rutherford_Organize.twin.md  — A3 Rutherford — GTD Organize ⚠️ Canon (Twin)
+            - A3_Tendi_Review.twin.md  — A3 Tendi — GTD Review ⚠️ Canon (Twin)
+        - standards/
+          - 01_agent-hierarchy-contract.md  — 01 — Agent Hierarchy Contract (A0/A1/A2/A3)
+          - 02_beth-5-states-machine.md  — 02 — Beth 5-States Machine (A1 Gatekeeper)
+          - 03_vessel-captain-protocol.md  — 03 — Vessel Captain Protocol (A2 Managers)
+          - 04_crew-bridge-protocol.md  — 04 — Crew Bridge Protocol (A3 Technicians)
+          - 05_baserow-lifedb-schema.md  — 05 — Baserow LifeDB Schema (8 LD + Ikigai Pillars)
+          - 06_obsidian-vault-linkage.md  — 06 — Obsidian Vault Linkage (Knowledge Graph)
+          - 07_plane-12wy-cycle.md  — 07 — Plane 12-Weeks Year Cycle
+          - 08_affine-kanban-gtd.md  — 08 — Affine Kanban (GTD + DEAL)
+          - 09_stop-authority-protocol.md  — 09 — STOP Authority Protocol (Culber LD03 + Tilly LD04)
+          - 10_handoff-json-outbox-l1.md  — 10 — Hand-off JSON Outbox (L1 Inter-Agent Comms)
+          - 11_canon-vs-runtime-drift.md  — 11 — Canon vs Runtime Drift Reconciliation
+          - schema-pulse-log-l1.md  — Schema `pulse.log` — L1 Life OS
+        - A2_Computer_Enterprise_Spec.twin.md  — A2 Computer Enterprise — Twin (Recover)
+        - A2_Curie_SNW_Spec.twin.md  — A2 Curie SNW — Twin (Recover)
+        - A2_Discovery_Spec.twin.md  — A2 Discovery — Twin (Recover)
+        - A2_HoloDeck_Cerritos_Spec.twin.md  — A2 HoloDeck Cerritos — Twin (Recover)
+        - A2_HoloJaneway_Protostar_Spec.twin.md  — A2 HoloJaneway Protostar — Twin (Recover)
+        - A2_Orville_Spec.twin.md  — A2 Orville — Twin (Recover)
+        - A1_Beth_Spec.twin.md  — A1 Beth — Twin (Recover)
+        - A1_Morty_Spec.twin.md  — A1 Morty — Twin (Recover)
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - litellm/
+  - README.md
+  - V0_SolarpunkKernel/
+  - V1_LifeOS/
+  - V2_BusinessPulse/
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - AGENTS.md  — A'Space Sovereign Agent Manifest (Rick's Verse Canon)
+  - AGENTS_REGISTRY.md  — AGENTS_REGISTRY
+  - AMENDMENT-001_terminal-lifecycle_PROPOSED.md  — AMENDMENT-001 — Terminal Lifecycle canon
+  - CONSTITUTION.md  — CONSTITUTION A'SPACE — v1.0
+  - HEARTBEAT.md  — HEARTBEAT — A0 (Pouls de l'Akh)
+  - IDENTITY.md  — IDENTITY.md — Amadeus A0 (Le Nom & Le Multivers)
+  - LEARNING.md  — LEARNING.md — Journal d'évolution de la Constitution A'Space OS V2
+  - Manifeste_Souverain.md  — Manifeste Souverain
+  - README.md  — 01_Identity_Core (The Soul of the Machine)
+  - SOUL.md  — SOUL.md — A0 (L'Akh : Observateur Panoptique)
+  - TOOLS.md  — TOOLS.md - Local Notes
+  - USER.md  — USER.md — Amadeus Koné (The Sovereign Architect)
+  - Valeurs.md  — Valeurs — A_Space_OS
+  - Vision_System/
+  - a0_l_canon.md  — A0-L Canon — A'Space OS dans le Takeout Gemini
+  - a0_l_geordi_canon.md  — A0-L Geordi Canon — Mapping 8 Sub-Dossiers ↔ Harness ↔ LDxx ↔ B2
+  - agents/
+  - arché-Futurisme (2).md
+  - arché-Futurisme.md  — Arché-Futurisme — Mémoire de Contexte & Processus
+  - graphify-burst/  **[ECARTE : artefact genere]**
+  - secrets/
+    - L0_00_Couveuse.md  — L0_00 — Couveuse des Vaisseaux‑Monde
+    - L0_00_README.md  — L0_00 — Protocole d’Activation A1/A2/A3
+    - L0_A0_Amadeus.md  — [A0] Amadeus (The Pilot)
+    - L0_A1_Rick.md  — [A1] Rick (Layer 0: The Gatekeeper)
+    - L0_A2_Doctor_11.md  — [A2] 11th Doctor (Layer 0: Life Infra Manager)
+    - L0_A2_Doctor_12.md  — [A2] 12th Doctor (Layer 0: Business Infra Manager)
+    - L0_A2_Doctor_13.md  — [A2] 13th Doctor (Layer 0: Core Infra Manager)
+    - L0_A3_Amy.md  — [A3] Amy (The Interface Designer)
+    - L0_A3_Bill.md  — [A3] Bill (The Scout)
+    - L0_A3_Clara.md  — [A3] Clara (The Processor)
+    - L0_A3_Graham.md  — [A3] Graham (The Driver)
+    - L0_A3_Nardole.md  — [A3] Nardole (The Dispatcher)
+    - L0_A3_River.md  — [A3] River (The Timekeeper)
+    - L0_A3_Rory.md  — [A3] Rory (The Sentinel)
+    - L0_A3_Ryan.md  — [A3] Ryan (The Mechanic)
+    - L0_A3_Yaz.md  — [A3] Yaz (The Watchdog)
+    - L0_Donna_DLQ.md  — Donna (Dead Letter Queue)
+    - L1_A1_Beth.md  — [A1] Beth (Veto & Safety)
+    - L1_A1_Morty.md  — [A1] Morty (Execution)
+    - L1_A2_USS_Cerritos.md  — [L1] USS Cerritos (The Chaos Engine)
+    - L1_A2_USS_Discovery.md  — [L1] USS Discovery (The Balance Engine)
+    - L1_A2_USS_Enterprise.md  — [L1] USS Enterprise (The Structure Engine)
+    - L1_A2_USS_Orville.md  — [L1] USS Orville (The Meaning Engine)
+    - L1_A2_USS_Protostar.md  — [L1] USS Protostar (The Liberation Engine)
+    - L1_A2_USS_SNW.md  — [L1] USS Strange New Worlds (The Execution Engine)
+    - L1_A3_Alara_Kitan.md  — [L1] Alara Kitan (H30 - Expansion)
+    - L1_A3_Boimler.md  — [L1] Brad Boimler (Clarify - Lower Decks)
+    - L1_A3_Book.md  — [L1] Book (LD01 - Business)
+    - L1_A3_Bortus.md  — [L1] Bortus (H10 - Stability)
+    - L1_A3_Burnham.md  — [L1] Michael Burnham (LD06 - Family)
+    - L1_A3_Chapel.md  — [L1] Nurse Chapel (Measure - The Bio-Bed)
+    - L1_A3_Claire_Finn.md  — [L1] Claire Finn (Vocation - The Doctor)
+    - L1_A3_Culber.md  — [L1] Dr. Hugh Culber (LD03 - Health)
+    - L1_A3_Dal.md  — [L1] Dal R'El (Definition - Captain)
+    - L1_A3_Data.md  — [L1] Data (Archives - Ops)
+    - L1_A3_Ed_Mercer.md  — [L1] Ed Mercer (Profession - The Captain)
+    - L1_A3_Freeman.md  — [L1] Captain Freeman (Engage - Command)
+    - L1_A3_Geordi.md  — [L1] Geordi La Forge (Resources - Chief Engineer)
+    - L1_A3_Georgiou.md  — [L1] Philippa Georgiou (LD08 - Impact)
+    - L1_A3_Gordon_Malloy.md  — [L1] Gordon Malloy (Passion - The Helmsman)
+    - L1_A3_Gwyn.md  — [L1] Gwyndala (Liberate - Comms)
+    - L1_A3_Holo_Janeway.md  — [L1] Holo-Janeway (Command - Training)
+    - L1_A3_Isaac.md  — [L1] Isaac (H1 - Execution)
+    - L1_A3_John_Lamarr.md  — [L1] John Lamarr (H3 - Strategy)
+    - L1_A3_Kelly_Grayson.md  — [L1] Kelly Grayson (Mission - The XO)
+    - L1_A3_Klyden.md  — [L1] Klyden (H90 - Legacy)
+    - L1_A3_MBenga.md  — [L1] Dr. M'Benga (Focus - The CMO)
+    - L1_A3_Mariner.md  — [L1] Beckett Mariner (Capture - Lower Decks)
+    - L1_A3_Ortegas.md  — [L1] Erica Ortegas (Execution - The Pilot)
+    - L1_A3_Picard.md  — [L1] Jean-Luc Picard (Projects - The Captain)
+    - L1_A3_Pike.md  — [L1] Christopher Pike (Vision - The Captain)
+    - L1_A3_Reno.md  — [L1] Jett Reno (LD07 - Creativity)
+    - L1_A3_RokTahk.md  — [L1] Rok-Tahk (Eliminate - Science)
+    - L1_A3_Rutherford.md  — [L1] Sam Rutherford (Reflect - Lower Decks)
+    - L1_A3_Saru.md  — [L1] Saru (LD02 - Finances)
+    - L1_A3_Spock.md  — [L1] Spock (Areas - The Science Officer)
+    - L1_A3_Stamets.md  — [L1] Paul Stamets (LD05 - Social)
+    - L1_A3_Tendi.md  — [L1] D'Vana Tendi (Organize - Lower Decks)
+    - L1_A3_Tilly.md  — [L1] Sylvia Tilly (LD04 - Cognition)
+    - L1_A3_Una.md  — [L1] Number One / Una (Execution - The XO)
+    - L1_A3_Zero.md  — [L1] Zero (Automate - Navigator)
+    - L2_A1_Jerry.md  — [A1] Jerry (CEO/Orchestrator)
+    - L2_A1_Summer.md  — [A1] Summer (Nano Claw)
+    - L2_A2_Aquaman.md  — [L2] Aquaman (Head of Legal)
+    - L2_A2_Batman.md  — [L2] Batman (Head of Ops)
+    - L2_A2_Cyborg.md  — [L2] Cyborg (Head of IT)
+    - L2_A2_Flash.md  — [L2] The Flash (Head of Product)
+    - L2_A2_GreenLantern.md  — [L2] Green Lantern (Head of People)
+    - L2_A2_Superman.md  — [L2] Superman (Head of Growth)
+    - L2_A2_WonderWoman.md  — [L2] Wonder Woman (Head of Finance)
+    - L2_A3_Ajak.md  — [L2] Ajak (Compliance)
+    - L2_A3_Beast.md  — [L2] Beast (Knowledge)
+    - L2_A3_BlackBolt.md  — [L2] Black Bolt (the Council)
+    - L2_A3_BlackWidow.md  — [L2] Black Widow (Research & Bugs)
+    - L2_A3_BuckyBarnes.md  — [L2] Bucky Barnes (Cashflow Discipline)
+    - L2_A3_CaptainAmerica.md  — [L2] Captain America (QA & Standards)
+    - L2_A3_Cyclops.md  — [L2] Cyclops (Field Commander)
+    - L2_A3_DoctorStrange.md  — [L2] Doctor Strange (Probabilistic Qualification)
+    - L2_A3_Drax.md  — [L2] Drax (Brutal A/B Testing)
+    - L2_A3_Druig.md  — [L2] Druig (Negotiation Influence)
+    - L2_A3_Gamora.md  — [L2] Gamora (Targeting & Strategy)
+    - L2_A3_Ghost.md  — [L2] Ghost (Leaks)
+    - L2_A3_Gilgamesh.md  — [L2] Gilgamesh (Clause Enforcement)
+    - L2_A3_Groot.md  — [L2] Groot (Brand & Retention)
+    - L2_A3_Hawkeye.md  — [L2] Hawkeye (UX Precision)
+    - L2_A3_Hulk.md  — [L2] Hulk (Destructive QA)
+    - L2_A3_HumanTorch.md  — [L2] Human Torch (Firefighter)
+    - L2_A3_Ikaris.md  — [L2] Ikaris (Enforcement)
+    - L2_A3_Immortus.md  — [L2] Immortus (Legacy)
+    - L2_A3_InvisibleWoman.md  — [L2] Invisible Woman (Data & Guardrails)
+    - L2_A3_IronLad.md  — [L2] Iron Lad (New Tech)
+    - L2_A3_IronMan.md  — [L2] Iron Man (Features & R&D)
+    - L2_A3_JeanGrey.md  — [L2] Jean Grey (Empathy)
+    - L2_A3_KangPrime.md  — [L2] Kang Prime (Architecture)
+    - L2_A3_Kingo.md  — [L2] Kingo (Public-Facing Communication)
+    - L2_A3_Makkari.md  — [L2] Makkari (Signature Velocity)
+    - L2_A3_Mantis.md  — [L2] Mantis (Buyer Empathy)
+    - L2_A3_MrFantastic.md  — [L2] Mr. Fantastic (Architecture)
+    - L2_A3_Namor.md  — [L2] Namor (Hardball Negotiation)
+    - L2_A3_Nightcrawler.md  — [L2] Nightcrawler (Distributed Onboarding)
+    - L2_A3_Phastos.md  — [L2] Phastos (IP & Tech)
+    - L2_A3_ProfessorX.md  — [L2] Professor X (Vision & Culture)
+    - L2_A3_RamaTut.md  — [L2] Rama-Tut (Hardware)
+    - L2_A3_RedGuardian.md  — [L2] Red Guardian (Transparent Reporting)
+    - L2_A3_Rocket.md  — [L2] Rocket Raccoon (Ads & Tracking)
+    - L2_A3_Rogue.md  — [L2] Rogue (Skill Transfer)
+    - L2_A3_ScarletCenturion.md  — [L2] Scarlet Centurion (Network Security)
+    - L2_A3_ScarletWitch.md  — [L2] Scarlet Witch (Design System Vision)
+    - L2_A3_Sersi.md  — [L2] Sersi (Jurisdictional Adaptation)
+    - L2_A3_Sprite.md  — [L2] Sprite (IP Protection)
+    - L2_A3_StarLord.md  — [L2] Star-Lord (Lead & Copy)
+    - L2_A3_Storm.md  — [L2] Storm (Operational Leadership)
+    - L2_A3_Taskmaster.md  — [L2] Taskmaster (Tracking)
+    - L2_A3_TheThing.md  — [L2] The Thing (Reliability)
+    - L2_A3_Thena.md  — [L2] Thena (Defense)
+    - L2_A3_Thor.md  — [L2] Thor (Delivery Force)
+    - L2_A3_USAgent.md  — [L2] U.S. Agent (Fiscal Compliance)
+    - L2_A3_VictorTimely.md  — [L2] Victor Timely (Deployment Timing)
+    - L2_A3_Wolverine.md  — [L2] Wolverine (Direct Performance Reviews)
+    - L2_A3_YelenaBelova.md  — [L2] Yelena Belova (Realistic Forecasting)
+    - L2_B1_Summers_Orbiter.md  — [B1] Summers_Orbiter_ABC (Captain Orbiter ABC OS)
+    - L2_B1_Summers_Solaris.md  — [B1] Summers_Solaris (Captain Solaris AaaS)
+    - L2_B2_JohnJones_Sales.md  — [B2] JohnJones_Sales (Manager E-Myth Sales)
+    - _retired_ADR-CANON-001/
+    - nano/
+      - N_Aquaman.md  — [N] Aquaman (Nano Legal)
+      - N_Batman.md  — [N] Batman (Nano Ops)
+      - N_Cyborg.md  — [N] Cyborg (Nano IT)
+      - N_Flash.md  — [N] Flash (Nano Product)
+      - N_GreenLantern.md  — [N] Green Lantern (Nano People)
+      - N_Superman.md  — [N] Superman (Nano Growth)
+      - N_WonderWoman.md  — [N] Wonder Woman (Nano Finance)
+      - L2_A3_BaronZemo.md  — [L2] Baron Zemo (Strategy)
+      - L2_A3_RedHulk.md  — [L2] General Ross / Red Hulk (Budget)
+    - README.md  — Vision_System
+    - WindowsBridge/

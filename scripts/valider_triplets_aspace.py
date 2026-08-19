@@ -30,8 +30,14 @@ from collections import Counter, defaultdict
 V3 = r"C:\Users\amado\ASpace_OS_V3"
 D = os.path.join(V3, "70_Onthologies")
 DIST = os.path.join(V3, "50_Distillation")
-COUCHES = ("tech", "life", "business")
-COUCHES_V3 = ("v3-amadeus", "v3-tech", "v3-life", "v3-business")
+# Deux passes, deux jeux de couches, deux graphes de sortie. Les melanger
+# produirait un .ttl ou l'on ne saurait plus si une assertion vient de la
+# distillation V2 ou de l'arborescence V3 — donc laquelle prime en cas de
+# conflit. Le mode se choisit en argument.
+PASSES = {
+    "v2": (("tech", "life", "business"), "aspace-os.ttl"),
+    "v3": (("v3-amadeus", "v3-tech", "v3-life", "v3-business"), "aspace-v3.ttl"),
+}
 
 VERBES_SCHEMA = {
     "governs", "partOf", "dependsOn", "appliesTo", "refines", "instantiates",
@@ -73,6 +79,12 @@ def echapper(s):
 
 
 def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else "v2"
+    if mode not in PASSES:
+        print(f"mode inconnu : {mode} (attendu : v2 ou v3)", file=sys.stderr)
+        raise SystemExit(2)
+    COUCHES, SORTIE_TTL = PASSES[mode]
+    print(f"passe {mode} — couches {COUCHES}", file=sys.stderr)
     reelles = sources_reelles()
     acceptes, refus, exemples = [], Counter(), []
     vus = set()
@@ -137,7 +149,7 @@ def main():
         t.append(f"#   {echapper(r.get('phrase', ''))[:150]}")
         t.append(f"#   src: {echapper(r.get('source', ''))} [{r.get('confiance', 'moyenne')}] ({r['_couche']})")
 
-    io.open(os.path.join(D, "triplets", "aspace-os.ttl"), "w", encoding="utf-8").write("\n".join(t) + "\n")
+    io.open(os.path.join(D, "triplets", SORTIE_TTL), "w", encoding="utf-8").write("\n".join(t) + "\n")
 
     # --- Rapport --------------------------------------------------------
     verbes = Counter(r["_verbe"] for r in acceptes)
@@ -162,7 +174,7 @@ def main():
     faibles = [v for v, n in neufs.items() if n < 3]
     if faibles:
         print(f"\nVERBES NEUFS SERVANT MOINS DE 3 FOIS (a trancher, non rejetes) : {faibles}")
-    print(f"\n-> {os.path.join(D, 'triplets', 'aspace-os.ttl')}")
+    print(f"\n-> {os.path.join(D, 'triplets', SORTIE_TTL)}")
 
 
 if __name__ == "__main__":

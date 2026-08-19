@@ -1,0 +1,981 @@
+# A'Space OS reconstitue en triplets — genere par
+# scripts/valider_triplets_aspace.py. NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+@prefix ent:    <urn:aspace:entity:> .
+
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:mecanisme-de-reproduction> .
+#   Rick (S1) gouverne le mécanisme qui produit les trois OS, pas les trois OS eux-mêmes ; il ne réclame jamais de travail dans la file
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:rick> aspace:hasVetoOver <urn:aspace:entity:reclamation-de-travail-dans-la-file> .
+#   La règle dure d'ORG.json interdit à Rick de réclamer du travail dans la file — 'Nul ne cumule Build et Review'
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:rick> aspace:produces <urn:aspace:entity:loi-l0> .
+#   Rick possède la loi L0 (un système qui ne sait pas se répliquer n'est pas un système), inscrite dans le canon racine V3
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:doctor-13> aspace:stewards <urn:aspace:entity:10-tech-os> .
+#   doctor_13 (S2 Kernel Core) revoit, exige les preuves, score et détache la couche 10_Tech_OS, depuis son harness multica
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:doctor-11> aspace:stewards <urn:aspace:entity:20-life-os> .
+#   doctor_11 (S2 Life Core) revoit, exige les preuves, score et détache la couche 20_Life_OS, depuis son harness buzz
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:doctor-12> aspace:stewards <urn:aspace:entity:30-business-os> .
+#   doctor_12 (S2 Buzz Core) revoit, exige les preuves, score et détache la couche 30_Business_OS, depuis son harness paperclip
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:yaz> aspace:handledBy <urn:aspace:entity:doctor-13> .
+#   Yaz (S3 L0) rédige le ruban, le dépose au portier S1_Rick, le corrige tant qu'il échoue au test — spécialité SecOps
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:ryan> aspace:handledBy <urn:aspace:entity:doctor-13> .
+#   Ryan (S3 L0) suit claim -> predict -> bâtit -> attest -> review — spécialité SysAdmin
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:graham> aspace:handledBy <urn:aspace:entity:doctor-13> .
+#   Graham (S3 L0) duplique un ruban éprouvé en aveugle, soumet la descendance — spécialité Backup-DBA
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:amy> aspace:handledBy <urn:aspace:entity:doctor-11> .
+#   Amy (S3 L1) rédige le ruban et le dépose au portier A1_Beth_Morty — spécialité Social
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:rory> aspace:handledBy <urn:aspace:entity:doctor-11> .
+#   Rory (S3 L1) suit claim -> predict -> bâtit -> attest -> review — spécialité Health
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:river> aspace:handledBy <urn:aspace:entity:doctor-11> .
+#   River (S3 L1) duplique un ruban éprouvé en aveugle, soumet la descendance — spécialité Knowledge
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:clara> aspace:handledBy <urn:aspace:entity:doctor-12> .
+#   Clara (S3 L2) rédige le ruban, le dépose au portier B1_Jerry_Summer — spécialité MCP-ETL
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:nardole> aspace:handledBy <urn:aspace:entity:doctor-12> .
+#   Nardole (S3 L2) suit claim -> predict -> bâtit -> attest -> review — spécialité A2A
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:bill> aspace:handledBy <urn:aspace:entity:doctor-12> .
+#   Bill (S3 L2) duplique un ruban éprouvé en aveugle, soumet la descendance — spécialité AG-UI
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:donna> aspace:escalates <urn:aspace:entity:rick> .
+#   Donna escalade à Rick (Super Uplink) après 3 tentatives échouées qualifiées par famille de cause
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:donna> aspace:dependsOn <urn:aspace:entity:kernel-dlq-py> .
+#   Donna s'incarne dans l'outil kernel/dlq.py (run, rapport, rendre), localisé dans 10_Tech_OS
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:compagnon-s3> aspace:escalates <urn:aspace:entity:docteur-s2> .
+#   Un compagnon S3 escalade à son Docteur S2 (uplink niveau 1) pour un échec simple retentable
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:docteur-s2> aspace:escalates <urn:aspace:entity:donna> .
+#   Un Docteur S2 escalade à Donna (uplink niveau 2) après seuil de 3 tentatives échouées
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:uc-py> aspace:cites <urn:aspace:entity:contrat-adapter> .
+#   Le protocole de communication entre harness et noyau est la CLI uc.py — chaque verbe écrit un objet JSON sur stdout
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:contrat-adapter> aspace:requires "cinq-verbes" .
+#   Le contrat ADAPTER.md impose 5 verbes : claim, predict, beat, review/fail, reap
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:contrat-adapter> aspace:requires "quatre-obligations" .
+#   Le contrat ADAPTER.md impose 4 obligations : prédire avant d'agir, battre pendant le travail, fail sur exception, ne pas poser de question
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:contrat-adapter> aspace:enforces <urn:aspace:entity:refus-review-sans-predict> .
+#   La base refuse review sans prédiction — ce n'est pas une convention, c'est un trigger SQL
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:beat> aspace:appliesTo "lease-divise-par-3" .
+#   Un harness doit appeler beat au moins toutes les lease/3 secondes, sinon reap reprend le travail
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:done> aspace:appliesTo <urn:aspace:entity:detache-par-controleur> .
+#   L'état done n'est pas prononcé par le harness : c'est le contrôleur qui détache, après revue
+#   src: 00_Amadeus/20_Harness/ADAPTER.md [haute] (v3-amadeus)
+<urn:aspace:entity:agentgateway> aspace:partOf <urn:aspace:entity:20-harness> .
+#   agentgateway est le runner qui agrège 17 sources MCP derrière un binaire natif Windows unique — pas de Docker
+#   src: 00_Amadeus/20_Harness/agentgateway/build_config.py [haute] (v3-amadeus)
+<urn:aspace:entity:agentgateway> aspace:dependsOn <urn:aspace:entity:mcp-sources-json> .
+#   agentgateway lit 20_Harness/agentgateway/mcp_sources.json comme source de vérité des MCP déclarés
+#   src: 00_Amadeus/20_Harness/agentgateway/mcp_sources.json [haute] (v3-amadeus)
+<urn:aspace:entity:agent-os> aspace:dependsOn <urn:aspace:entity:junction-agent-os> .
+#   agent-os est monté dans V3 via une jonction NTFS vers C:/Users/amado/agent-os — pas un sous-module
+#   src: 00_Amadeus/10_Observers/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:agent-os> aspace:appliesTo "specs-et-standards" .
+#   agent-os (Brian Casel) n'est PAS un outil d'observabilité : il ne mesure rien, il cadre l'écriture de specs
+#   src: 00_Amadeus/10_Observers/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:super-simple-software-factory> aspace:appliesTo "workflows-adw" .
+#   Le skill Claude Code 'sssf' implémente des workflows ADW déterministes en Python, agents bornés en phases, trace SQLite
+#   src: 00_Amadeus/10_Observers/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:pocketbase-vec> aspace:appliesTo "framework-go-cgo-free" .
+#   PocketBase compile comme framework Go avec driver SQLite WASM (ncruces) et extension vectorielle sqlite-vec, sans CGO
+#   src: 00_Amadeus/10_Observers/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:observatoire> aspace:dependsOn <urn:aspace:entity:python-serveur> .
+#   L'observatoire des délégations expose l'état des agents détachés via python serveur.py sur http://127.0.0.1:8787
+#   src: 00_Amadeus/10_Observers/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:multica> aspace:instantiates <urn:aspace:entity:harness-l0> .
+#   Multica 0.4.4 est le harness de la couche L0 (Tech OS), sur le PATH, avec 10 commandes agent/autopilot/chat/issue/label/project/property/repo/skill/sq
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:buzz> aspace:instantiates <urn:aspace:entity:harness-l1> .
+#   Buzz est le harness de la couche L1 (Life OS), binaires sous AppData/Local/Buzz/, absent du PATH, configuré sous ~/.buzz
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:paperclip> aspace:instantiates <urn:aspace:entity:harness-l2> .
+#   Paperclip est le harness de la couche L2 (Business OS), installé via npm 2026.722.0, serveur NON démarré, 5 garde-fous NON configurés
+#   src: 00_Amadeus/20_Harness/HARNESS_SETUP_2026-08-02.md [haute] (v3-amadeus)
+<urn:aspace:entity:hermes> aspace:instantiates <urn:aspace:entity:meta-orchestrateur> .
+#   Hermes (binaire AppData/Local/hermes/hermes-agent) orchestre les 3 couches sans travailler dans aucune — meta avec cc
+#   src: 00_Amadeus/20_Harness/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:cc> aspace:instantiates <urn:aspace:entity:meta-orchestrateur> .
+#   Claude Code 2.1.143 orchestre les 3 couches sans travailler dans aucune — meta avec hermes (A0)
+#   src: 00_Amadeus/20_Harness/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:multica> aspace:covers "9-agents-actifs" .
+#   Sur 112 agents Multica mesurés, 103 ont été archivés le 2026-08-02 ; 9 restent actifs : M10-smoke, Mariner-Capture, Boimler-Clarify, Tendi-Reflect, Fr
+#   src: 00_Amadeus/20_Harness/multica_export_2026-08-02/agents.json [haute] (v3-amadeus)
+<urn:aspace:entity:ruban> aspace:partOf <urn:aspace:entity:60-tape-specs> .
+#   Le ruban φ vit dans 60_Tape_Specs/ — c'est la description que le constructeur lit et le copieur duplique
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:constructeur> aspace:appliesTo "lecture-interpretation" .
+#   Le constructeur A lit le ruban et l'interprète pour bâtir — usage sémantique
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:copieur> aspace:appliesTo "duplication-aveugle" .
+#   Le copieur B duplique le ruban sans l'interpréter — usage binaire
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:controleur> aspace:appliesTo "detache-apres-revue" .
+#   Le contrôleur C ordonne A et B, puis détache depuis l'état review — le dernier verbe est le seul qui compte
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:constructeur> aspace:dependsOn <urn:aspace:entity:10-20-30-os> .
+#   Le constructeur A loge dans 10_Tech_OS/, 20_Life_OS/, 30_Business_OS/ — chacun bâtit depuis φ pour sa couche
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:controleur> aspace:dependsOn <urn:aspace:entity:inbox-et-kernel-uc-db> .
+#   Le contrôleur C loge dans _INBOX/ (portiers par couche) et kernel/uc.db (file durable)
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:test-du-ruban> aspace:appliesTo "ruban-incomplet" .
+#   Le test du ruban est binaire : si le constructeur doit poser une question à l'opérateur, le ruban est incomplet — il retourne à _INBOX
+#   src: AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:30-memory-core> aspace:appliesTo "archival-candidate" .
+#   30_MEMORY_CORE/ est marqué ARCHIVAL CANDIDATE dans 00_Amadeus/AGENTS.md : la mémoire ne devrait pas vivre dans 00_Amadeus
+#   src: 00_Amadeus/AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:30-memory-core> aspace:dependsOn <urn:aspace:entity:geordi-v2> .
+#   30_MEMORY_CORE/ doit retourner dans Geordi V2 (ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/) en tant que ressources canoniques arch
+#   src: 00_Amadeus/30_MEMORY_CORE/V3_MEMORY_DOCTRINE.md [haute] (v3-amadeus)
+<urn:aspace:entity:30-memory-core> aspace:partOf <urn:aspace:entity:doctrine-openwiki-okf-dox> .
+#   La doctrine 30_MEMORY_CORE/ pose : mémoire long terme = OpenWiki + OKF 0.2 (format) + DOX (AGENTS.md hiérarchique) + Geordi V2 (canon historique)
+#   src: 00_Amadeus/30_MEMORY_CORE/V3_MEMORY_DOCTRINE.md [haute] (v3-amadeus)
+<urn:aspace:entity:meta-ontologie-md> aspace:supersedes <urn:aspace:entity:sdd-006> .
+#   META_ONTOLOGIE.md (2026-08-13) écrase SDD-006 Geordi : aucun SDD n'est source de vérité, V3 + code priment ; SDD-006 décrit 7 domaines Business, le ca
+#   src: 00_Amadeus/30_MEMORY_CORE/META_ONTOLOGIE.md [haute] (v3-amadeus)
+<urn:aspace:entity:shadow-l0-omnigent> aspace:dependsOn "github-omnigent-ai" .
+#   Le shadow L0 'omnigent' est un dépôt git local miroir de github.com/omnigent-ai/omnigent
+#   src: 00_Amadeus/30_Shadow/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:shadow-l1-agent-zero> aspace:dependsOn "github-agent0ai" .
+#   Le shadow L1 'agent-zero' est un dépôt git local miroir de github.com/agent0ai/agent-zero
+#   src: 00_Amadeus/30_Shadow/REGISTRY.json [haute] (v3-amadeus)
+<urn:aspace:entity:dox> aspace:partOf <urn:aspace:entity:agents-md-hierarchique> .
+#   DOX est la hiérarchie AGENTS.md arborescente append-only D4 ; DOX child = local AGENTS.md sous racine V3
+#   src: 00_Amadeus/AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:okf> aspace:appliesTo "format-canonique" .
+#   OKF 0.2 est le format canonique de la connaissance : frontmatter type/title/description/tags/generated/verified/sources obligatoire
+#   src: 00_Amadeus/30_MEMORY_CORE/V3_MEMORY_DOCTRINE.md [haute] (v3-amadeus)
+<urn:aspace:entity:openwiki> aspace:appliesTo "memoire-long-terme" .
+#   OpenWiki est la mémoire long terme d'A'Space — wiki engine standardisé Karpathy LLM Wiki sous ~/.openwiki/wiki/
+#   src: 00_Amadeus/30_MEMORY_CORE/V3_MEMORY_DOCTRINE.md [haute] (v3-amadeus)
+<urn:aspace:entity:regle-dure> aspace:appliesTo "build-vs-review" .
+#   La règle dure d'ORG.json : 'Nul ne cumule Build et Review' — séparation stricte des rôles S3
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:missy> aspace:appliesTo "dossier-annexe" .
+#   Missy (03_Missy_Chaos) est un dossier annexe, pas une compagne — ne fait pas partie du canon
+#   src: 00_Amadeus/20_Harness/ORG.json [haute] (v3-amadeus)
+<urn:aspace:entity:landing-3-personas> aspace:cites <urn:aspace:entity:portee-00-amadeus-20-harness> .
+#   Le ruban landing-omk-trois-personas cite explicitement un périmètre Dedans : 00_Amadeus/20_Harness/../repos/omk-nexus-landing-3-personas
+#   src: 00_Amadeus/60_Tape_Specs/2026-08-02-landing-omk-trois-personas-en-ligne.md [haute] (v3-amadeus)
+<urn:aspace:entity:recouvrance-amadeus> aspace:covers "identite-appareil" .
+#   00_Amadeus/ porte deux charges : l'identité (Identity Core) ET l'appareil (observers, harness, memory, shadow, tape, skills, doctrine)
+#   src: 00_Amadeus/AGENTS.md [haute] (v3-amadeus)
+<urn:aspace:entity:rick> aspace:governs <urn:aspace:entity:mecanisme-de-reproduction-des-trois-os> .
+#   Rick (S1) gouverne le mécanisme qui produit les trois OS, pas les trois OS eux-mêmes
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:produces <urn:aspace:entity:playbook> .
+#   Rick produit des playbooks (cycle 12WY), jamais des roadmaps ni des runbooks
+#   src: 10_Tech_OS/00_Governance_Rick/SOUL.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:hasVetoOver <urn:aspace:entity:derives-du-mecanisme> .
+#   Rick a un droit de refus sur quatre dérives : Core qui acquiert un organe unique, format de ruban inventé par une couche, fichier Core hors gabarit, d
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:dependsOn <urn:aspace:entity:cascade-life-os> .
+#   Le playbook de Rick est le précipité d'une cascade qui commence trois ans en amont chez Beth et Morty (A1)
+#   src: 10_Tech_OS/00_Governance_Rick/CASCADE.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:stewards <urn:aspace:entity:loi-de-replication> .
+#   Rick tient la loi de réplication : un Core ne s'écrit pas, il s'engendre via spawn.py depuis le gabarit
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:inherits <urn:aspace:entity:cycle-12wy> .
+#   Rick tient un cycle 12 Week Year — son playbook descend d'une cascade pilotée par Life OS
+#   src: 10_Tech_OS/00_Governance_Rick/CASCADE.md [haute] (v3-tech)
+<urn:aspace:entity:donna> aspace:dependsOn <urn:aspace:entity:dlq-py> .
+#   Donna s'incarne dans kernel/dlq.py (run, rapport, rendre) — c'est la Super Uplink vers Rick qui qualifie les échecs par famille de cause
+#   src: 10_Tech_OS/kernel/dlq.py [haute] (v3-tech)
+<urn:aspace:entity:dlq-py> aspace:covers "sept-familles-de-cause" .
+#   dlq.py couvre 7 familles de cause (preuve manquante, ruban sans critère, critère exécuté en échec, critère attesté en échec, harness disparu, plantage
+#   src: 10_Tech_OS/kernel/dlq.py [haute] (v3-tech)
+<urn:aspace:entity:noyau> aspace:enforces <urn:aspace:entity:loi-prediction-prealable> .
+#   Le trigger loi_prediction_prealable refuse tout passage vers review/done sans prediction enregistrée avant exécution
+#   src: 10_Tech_OS/kernel/schema.sql [haute] (v3-tech)
+<urn:aspace:entity:noyau> aspace:enforces <urn:aspace:entity:loi-detachement> .
+#   Le trigger loi_detachement refuse tout passage vers done hors d'un passage préalable par review
+#   src: 10_Tech_OS/kernel/schema.sql [haute] (v3-tech)
+<urn:aspace:entity:noyau> aspace:enforces <urn:aspace:entity:loi-du-bail> .
+#   Un bail expiré rend l'item à la file via reap, empêchant un agent mort de bloquer une branche
+#   src: 10_Tech_OS/kernel/schema.sql [haute] (v3-tech)
+<urn:aspace:entity:uc-py> aspace:partOf <urn:aspace:entity:constructeur-universel> .
+#   uc.py est la CLI du constructeur universel — file durable, réclamation atomique, bail expirant, registre de prédictions
+#   src: 10_Tech_OS/kernel/uc.py [haute] (v3-tech)
+<urn:aspace:entity:gate-py> aspace:partOf <urn:aspace:entity:constructeur-universel> .
+#   gate.py est le portier : il admet ou refuse les rubans déposés dans _INBOX/<portier>/
+#   src: 10_Tech_OS/kernel/gate.py [haute] (v3-tech)
+<urn:aspace:entity:review-py> aspace:partOf <urn:aspace:entity:constructeur-universel> .
+#   review.py exige une preuve par critère et détache seulement si tout est prouvé
+#   src: 10_Tech_OS/kernel/review.py [haute] (v3-tech)
+<urn:aspace:entity:harness-py> aspace:partOf <urn:aspace:entity:constructeur-universel> .
+#   harness.py est l'adaptateur de référence : il prolonge le bail tout seul et fait fail() l'item si le contexte plante
+#   src: 10_Tech_OS/kernel/harness.py [haute] (v3-tech)
+<urn:aspace:entity:bridge-paperclip-py> aspace:partOf <urn:aspace:entity:constructeur-universel> .
+#   bridge_paperclip.py transporte les échecs Paperclip vers la file noyau et laisse dlq.py escalader à la 3e
+#   src: 10_Tech_OS/kernel/bridge_paperclip.py [haute] (v3-tech)
+<urn:aspace:entity:watchdog> aspace:covers <urn:aspace:entity:seuil-vivant> .
+#   Le watchdog mesure le seuil vivant : A0 écrit < 10 min, ordonnanceur tourne, fournisseur répond
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:watchdog> aspace:covers <urn:aspace:entity:seuil-bien-portant> .
+#   Le watchdog mesure le seuil bien portant : node<45, cadences≤2, disque>5 Go
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:watchdog> aspace:covers <urn:aspace:entity:seuil-anti-fragile> .
+#   Le seuil anti-fragile exige cause nommée, garde-fou en code, garde-fou vu se déclencher, leçon écrite
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:incident-2026-08-12> aspace:produces "plafond-node-45" .
+#   L'incident 2026-08-12 (saturation mémoire, 103 node.exe → STATUS_COMMITTANCE_LIMIT) a produit le plafond MAX_NODE=45 (et MAX_CADENCES_VIVES=2)
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:incident-2026-08-13> aspace:produces <urn:aspace:entity:sonde-identifiants-fournisseur> .
+#   L'incident 2026-08-13 (gateway MCP mort en silence) a produit la sonde_identifiants qui appelle 'qui suis-je' sur chaque fournisseur
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:kernel-core> aspace:stewards <urn:aspace:entity:10-tech-os> .
+#   Kernel Core (13e Docteur) est maître de 10_Tech_OS, couche L0, harness multica
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:life-core> aspace:stewards <urn:aspace:entity:20-life-os> .
+#   Life Core (11e Docteur) est maître de 20_Life_OS, couche L1, harness buzz
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:buzz-core> aspace:stewards <urn:aspace:entity:30-business-os> .
+#   Buzz Core (12e Docteur) est maître de 30_Business_OS, couche L2, harness paperclip
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:kernel-core> aspace:partOf <urn:aspace:entity:10-tech-os> .
+#   Kernel Core réside dans 10_Tech_OS/11_Kernel_Core_13th, pas dans la couche qu'il maîtrise (cohérent avec LAW.md)
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:life-core> aspace:partOf <urn:aspace:entity:10-tech-os> .
+#   Life Core réside dans 10_Tech_OS/12_Life_Core_11th, pas dans la couche qu'il maîtrise
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:buzz-core> aspace:partOf <urn:aspace:entity:10-tech-os> .
+#   Buzz Core réside dans 10_Tech_OS/13_Buzz_Core_12th, pas dans la couche qu'il maîtrise
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:13e-docteur> aspace:produces <urn:aspace:entity:roadmap-mensuelle> .
+#   Le 13e Docteur tire sa roadmap mensuelle du playbook 12WY de Rick
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:11e-docteur> aspace:produces <urn:aspace:entity:roadmap-mensuelle> .
+#   Le 11e Docteur tire sa roadmap mensuelle du playbook 12WY de Rick
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:12e-docteur> aspace:produces <urn:aspace:entity:roadmap-mensuelle> .
+#   Le 12e Docteur tire sa roadmap mensuelle du playbook 12WY de Rick
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:13e-docteur> aspace:instantiates <urn:aspace:entity:reviewer> .
+#   Le 13e Docteur assume lui-même le 4e rôle (Review/détachement) — les 3 compagnons portent Spec, Build, Spawn
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/core.template/ROLES.md [haute] (v3-tech)
+<urn:aspace:entity:11e-docteur> aspace:instantiates <urn:aspace:entity:reviewer> .
+#   Le 11e Docteur assume lui-même le 4e rôle (Review/détachement)
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/core.template/ROLES.md [haute] (v3-tech)
+<urn:aspace:entity:12e-docteur> aspace:instantiates <urn:aspace:entity:reviewer> .
+#   Le 12e Docteur assume lui-même le 4e rôle (Review/détachement)
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/core.template/ROLES.md [haute] (v3-tech)
+<urn:aspace:entity:yaz> aspace:pairedWith <urn:aspace:entity:13e-docteur> .
+#   Yaz est le compagnon Spec (SecOps) du 13e Docteur, couche L0
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:ryan> aspace:pairedWith <urn:aspace:entity:13e-docteur> .
+#   Ryan est le compagnon Build (SysAdmin) du 13e Docteur, couche L0
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:graham> aspace:pairedWith <urn:aspace:entity:13e-docteur> .
+#   Graham est le compagnon Spawn (Backup-DBA) du 13e Docteur, couche L0
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:amy> aspace:pairedWith <urn:aspace:entity:11e-docteur> .
+#   Amy est le compagnon Spec (Social) du 11e Docteur, couche L1
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:rory> aspace:pairedWith <urn:aspace:entity:11e-docteur> .
+#   Rory est le compagnon Build (Health) du 11e Docteur, couche L1
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:river> aspace:pairedWith <urn:aspace:entity:11e-docteur> .
+#   River est le compagnon Spawn (Knowledge) du 11e Docteur, couche L1
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:clara> aspace:pairedWith <urn:aspace:entity:12e-docteur> .
+#   Clara est le compagnon Spec (MCP) du 12e Docteur, couche L2 — couvre aussi 02_Clara_ETL
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:nardole> aspace:pairedWith <urn:aspace:entity:12e-docteur> .
+#   Nardole est le compagnon Build (A2A) du 12e Docteur, couche L2
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:bill> aspace:pairedWith <urn:aspace:entity:12e-docteur> .
+#   Bill est le compagnon Spawn (AG-UI) du 12e Docteur, couche L2
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:yaz> aspace:produces <urn:aspace:entity:ruban> .
+#   Yaz écrit le ruban φ, le dépose au portier de la couche, et n'a pas le droit de bâtir ni de détacher
+#   src: 10_Tech_OS/11_Kernel_Core_13th/compagnons/01_Yaz_SecOps/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:ryan> aspace:produces <urn:aspace:entity:artefact-prouve> .
+#   Ryan bâtit depuis le ruban avec claim→predict→bâtit→attest chaque critère→review ; il n'a pas le droit de prononcer done
+#   src: 10_Tech_OS/11_Kernel_Core_13th/compagnons/02_Ryan_SysAdmin/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:graham> aspace:produces <urn:aspace:entity:descendance> .
+#   Graham duplique un ruban éprouvé en aveugle (sans le réinterpréter) et soumet la descendance ; il n'a pas le droit de modifier le ruban
+#   src: 10_Tech_OS/11_Kernel_Core_13th/compagnons/03_Graham_Backup-DBA/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:yaz> aspace:handledBy <urn:aspace:entity:escalade-en-3-echecs> .
+#   Échec simple chez Yaz → 13e Docteur ; 3 tentatives échouées → Donna → Rick
+#   src: 10_Tech_OS/11_Kernel_Core_13th/compagnons/01_Yaz_SecOps/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:amy> aspace:handledBy <urn:aspace:entity:escalade-en-3-echecs> .
+#   Échec simple chez Amy → 11e Docteur ; 3 tentatives échouées → Donna → Rick
+#   src: 10_Tech_OS/12_Life_Core_11th/compagnons/01_Amy_Social/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:clara> aspace:handledBy <urn:aspace:entity:escalade-en-3-echecs> .
+#   Échec simple chez Clara → 12e Docteur ; 3 tentatives échouées → Donna → Rick
+#   src: 10_Tech_OS/13_Buzz_Core_12th/compagnons/01_Clara_MCP/AGENT.md [haute] (v3-tech)
+<urn:aspace:entity:spawn-py> aspace:produces <urn:aspace:entity:core> .
+#   spawn.py duplique le gabarit core.template/ en substituant les paramètres de couche depuis cores.json, puis crée un dossier par compagnon
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/spawn.py [haute] (v3-tech)
+<urn:aspace:entity:spawn-py> aspace:appliesTo <urn:aspace:entity:substitution-aveugle> .
+#   spawn.py pratique la substitution aveugle — le copieur ne comprend pas ce qu'il copie (échappatoire au paradoxe de l'auto-description)
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/spawn.py [haute] (v3-tech)
+<urn:aspace:entity:spawn-py> aspace:hasVetoOver <urn:aspace:entity:compagnons-obsoletes> .
+#   Avec --force, spawn.py supprime le dossier compagnons/ avant de ré-engendrer — sinon un ancien roster survivrait
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/spawn.py [haute] (v3-tech)
+<urn:aspace:entity:cores-json> aspace:stewards <urn:aspace:entity:parametres-des-cores> .
+#   cores.json définit les 3 instances : 13(Kernel/multica), 11(Life/buzz), 12(Buzz/paperclip), avec leurs compagnons et spécialités héritées de V2
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/cores.json [haute] (v3-tech)
+<urn:aspace:entity:gate-py> aspace:appliesTo <urn:aspace:entity:test-du-ruban> .
+#   Le portier applique le test du ruban : titre en frontmatter, sections Objectif/Critère/Périmètre/Interdits, critère vérifiable (chiffre, comparaison, 
+#   src: 10_Tech_OS/kernel/gate.py [haute] (v3-tech)
+<urn:aspace:entity:review-py> aspace:appliesTo <urn:aspace:entity:critere-executable> .
+#   review.py exécute les critères entre accents graves (--exec) et exige une attestation par criterion, et marque la prédiction scored
+#   src: 10_Tech_OS/kernel/review.py [haute] (v3-tech)
+<urn:aspace:entity:harness-py> aspace:appliesTo <urn:aspace:entity:loi-prediction-prealable> .
+#   L'adaptateur harness.py refuse de laisser review() si predict() n'a pas été appelé — la loi_prediction est tenue par construction
+#   src: 10_Tech_OS/kernel/harness.py [haute] (v3-tech)
+<urn:aspace:entity:harness-py> aspace:appliesTo <urn:aspace:entity:fail-sur-exception> .
+#   harness.py appelle Item.fail() si le contexte plante — un plantage ne bloque jamais le bail
+#   src: 10_Tech_OS/kernel/harness.py [haute] (v3-tech)
+<urn:aspace:entity:bridge-paperclip-py> aspace:dependsOn "paperclip-company-7beec325" .
+#   Le pont lit les runs Paperclip de la company 7beec325-965f-41b8-b5aa-786deea04bc3 par défaut
+#   src: 10_Tech_OS/kernel/bridge_paperclip.py [haute] (v3-tech)
+<urn:aspace:entity:rory> aspace:cites <urn:aspace:entity:cascade-build-spec> .
+#   Rory a son ruban admis Cascade_Build_Spec.md (Life OS cascade A1/A2/A3 dans A'Space Core) — étape Build en cours, étapes 1 et 3 détachées par le 11e D
+#   src: 10_Tech_OS/12_Life_Core_11th/tapes/02_Rory_Health/Cascade_Build_Spec.md [haute] (v3-tech)
+<urn:aspace:entity:yaz> aspace:cites <urn:aspace:entity:spec-loop-nodejs-port> .
+#   Yaz a écrit la spec de l'agentpulse-node (port Node.js de l'AgentPulse SDK Python) — transfert à Ryan-Build, review par 13e Docteur et meta-review Ric
+#   src: 10_Tech_OS/11_Kernel_Core_13th/compagnons/01_Yaz_SecOps/spec-loop/nodejs-port.md [haute] (v3-tech)
+<urn:aspace:entity:wargame-acces> aspace:cites "quatorze-trouvailles" .
+#   Le wargame d'accès du 2026-08-14 a rendu 14 trouvailles (8 critiques, cote:interface) — coach-os n'a aucune cloison par tenant côté serveur
+#   src: 10_Tech_OS/00_Governance_Rick/wargame_acces.json [haute] (v3-tech)
+<urn:aspace:entity:jcode-sdk> aspace:supersedes <urn:aspace:entity:these-plugin> .
+#   L'audit du jcode sdk casse la thèse plugin : point d'extension inexistant, sandbox absent, jcode est exclusivement client MCP
+#   src: 10_Tech_OS/00_Governance_Rick/jcode_sdk.json [haute] (v3-tech)
+<urn:aspace:entity:decisions-oubliees> aspace:cites "trente-trois-decisions" .
+#   decisions_oubliees.json liste 33 décisions affirmées et non exécutées, extraites du condensé du 2026-08-13 (29 047 lignes)
+#   src: 10_Tech_OS/00_Governance_Rick/decisions_oubliees.json [haute] (v3-tech)
+<urn:aspace:entity:compagnon> aspace:produces <urn:aspace:entity:runbook-hebdomadaire> .
+#   Chaque compagnon produit un runbook hebdomadaire, depuis la roadmap mensuelle de son Docteur — cycle hebdo, rang Technicien au sens de Gerber
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/spawn.py [haute] (v3-tech)
+<urn:aspace:entity:docteur> aspace:produces <urn:aspace:entity:roadmap-mensuelle> .
+#   Chaque Docteur produit une roadmap mensuelle, depuis le playbook 12WY de Rick — cycle mensuel, rang Manager au sens de Gerber
+#   src: 10_Tech_OS/00_Governance_Rick/CASCADE.md [haute] (v3-tech)
+<urn:aspace:entity:loi-prediction> aspace:appliesTo <urn:aspace:entity:review> .
+#   La loi de prédiction s'applique à toute transition vers review ou done — pas de prédiction après l'acte
+#   src: 10_Tech_OS/kernel/schema.sql [haute] (v3-tech)
+<urn:aspace:entity:loi-detachement> aspace:appliesTo <urn:aspace:entity:done> .
+#   La loi de détachement s'applique à toute transition vers done — exige un passage préalable par review
+#   src: 10_Tech_OS/kernel/schema.sql [haute] (v3-tech)
+<urn:aspace:entity:build> aspace:pairedWith <urn:aspace:entity:review> .
+#   Aucun titulaire ne cumule Build et Review — celui qui bâtit ne prononce pas le détachement
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/core.template/ROLES.md [haute] (v3-tech)
+<urn:aspace:entity:frontiere> aspace:appliesTo <urn:aspace:entity:inter-couches> .
+#   Un Core ne lit ni n'écrit dans les deux autres couches — il dépose une note dans _INBOX/ du portier concerné s'il a besoin d'un travail hors de sa cou
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/core.template/CORE.md [haute] (v3-tech)
+<urn:aspace:entity:replicator> aspace:partOf <urn:aspace:entity:00-governance-rick> .
+#   replicator/ est possédé par Rick : il contient le gabarit (core.template/), les paramètres (cores.json) et le copieur (spawn.py)
+#   src: 10_Tech_OS/00_Governance_Rick/LAW.md [haute] (v3-tech)
+<urn:aspace:entity:sonde-identifiants> aspace:partOf <urn:aspace:entity:watchdog> .
+#   La sonde_identifiants (20_Harness/agentgateway/sonde_identifiants.py) appelle 'qui suis-je' sur chaque fournisseur — un outil qui réécrit mcp_sources.
+#   src: 10_Tech_OS/00_Governance_Rick/WATCHDOG.md [haute] (v3-tech)
+<urn:aspace:entity:wargame-acces> aspace:routes <urn:aspace:entity:security-architecture-v1> .
+#   Les 14 trouvailles du wargame (8 critiques, cote:interface) sont le point de départ du HANDOFF_SECURITY_ARCHITECTURE_V1 : la cloison par tenant dans s
+#   src: 10_Tech_OS/00_Governance_Rick/HANDOFF_SECURITY_ARCHITECTURE_V1.md [haute] (v3-tech)
+<urn:aspace:entity:rick> aspace:hasVetoOver <urn:aspace:entity:uc-py-claim> .
+#   Rick ne peut jamais claim dans la file — c'est la contrainte qui rend la gouvernance crédible
+#   src: 10_Tech_OS/00_Governance_Rick/SOUL.md [haute] (v3-tech)
+<urn:aspace:entity:compagnon> aspace:inherits <urn:aspace:entity:specialite-v2> .
+#   Chaque compagnon porte une spécialité héritée de V2 (SecOps, SysAdmin, Backup-DBA, Social, Health, Knowledge, MCP, A2A, AG-UI) — deux compagnons de mê
+#   src: 10_Tech_OS/00_Governance_Rick/replicator/spawn.py [haute] (v3-tech)
+<urn:aspace:entity:beth> aspace:governs <urn:aspace:entity:life-os> .
+#   Beth est la gardienne stratégique de la couche L1 Life OS
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ld03-health> .
+#   Beth possède un droit de veto sur tout ce qui menace LD03 Health
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:ld04-cognition> .
+#   Beth possède un droit de veto sur tout ce qui menace LD04 Cognition
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:hasVetoOver <urn:aspace:entity:priority-incoherence> .
+#   Beth peut bloquer une exécution si la priorité contredit la cohérence Life OS
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:pairedWith <urn:aspace:entity:morty> .
+#   Beth forme un couple de gatekeepers A1 avec Morty
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/README.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:produces <urn:aspace:entity:prd-l1-decision> .
+#   Beth écrit les décisions PRD-L1 de Life OS
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:produces <urn:aspace:entity:beth-veto-record> .
+#   Beth produit des enregistrements de veto dans Beth_Alignment_Log
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:stewards <urn:aspace:entity:filesystem-conscience> .
+#   Beth est la personification de la conscience du système de fichiers Life OS
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-orville> .
+#   Beth supervise le ship USS Orville (Ikigai)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-discovery> .
+#   Beth supervise le ship USS Discovery (Life Wheel / ZORA)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-snw> .
+#   Beth supervise le ship USS SNW (12WY)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-enterprise> .
+#   Beth supervise le ship USS Enterprise (PARA)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-cerritos> .
+#   Beth supervise le ship USS Cerritos (GTD)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:covers <urn:aspace:entity:a2-protostar> .
+#   Beth supervise le ship USS Protostar (DEAL)
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:dependsOn <urn:aspace:entity:filesystem-evidence> .
+#   Beth ne statue que sur preuves lues dans le système de fichiers
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:appliesTo "ld03_minimum_threshold_4_0" .
+#   Le seuil Beth LD03 minimum est fixé à 4.0 par SDD-005
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:beth> aspace:appliesTo "ld04_minimum_threshold_3_5" .
+#   Le seuil Beth LD04 minimum est fixé à 3.5 par SDD-005
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:instantiates <urn:aspace:entity:context-pack-gate> .
+#   Morty est le gardien d'exécution qui exige un Context Pack complet avant d'agir
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-orville> .
+#   Morty route un Context Pack Ikigai vers USS Orville via Obsidian
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-discovery> .
+#   Morty route un Context Pack Life Wheel / ZORA vers USS Discovery via Baserow
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-snw-curie> .
+#   Morty route Rocks / Tactics vers USS SNW / Curie via Baserow
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-enterprise-computer> .
+#   Morty route la structure Project/Area vers USS Enterprise / Computer via Obsidian PARA
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-cerritos-holodeck> .
+#   Morty route inbox et next actions vers USS Cerritos via Plane
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:routes <urn:aspace:entity:a2-protostar-holo-janeway> .
+#   Morty route DEAL automation/liberation vers USS Protostar via Affine
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:dependsOn <urn:aspace:entity:beth-clearance> .
+#   Morty n'exécute jamais sans clearance Beth explicite
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:appliesTo "dry_run_first" .
+#   Par défaut Morty opère en dry-run avant toute écriture externe
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:morty> aspace:appliesTo "max_concurrent_3" .
+#   La limite Morty de tickets concurrents est fixée à 3
+#   src: 20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-orville> aspace:instantiates <urn:aspace:entity:ikigai-meaning-engine> .
+#   Le ship USS Orville instantie le moteur de sens Ikigai
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-orville> aspace:compiles <urn:aspace:entity:nine-a3-findings> .
+#   Orville compile les neuf findings A3 (4 piliers + 5 horizons) en un verdict Ikigai unique
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-orville> aspace:produces <urn:aspace:entity:pillar-horizon-kardashev-packet> .
+#   Orville produit un packet pillar x horizon Kardashev quand la question touche la trajectoire
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-orville> aspace:governs <urn:aspace:entity:framework-ikigai> .
+#   Orville gouverne le framework Ikigai dans la couche Life OS
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-orville> aspace:dependsOn <urn:aspace:entity:beth-clearance> .
+#   Orville produit un alignment `meaning_alignment` GREEN|YELLOW|RED transmis à Beth pour clearance
+#   src: 20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ed-mercer> aspace:governs <urn:aspace:entity:pillar-profession> .
+#   Ed Mercer gouverne le pilier Profession de l'Ikigai
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Ed_Mercer_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ed-mercer> aspace:pairedWith <urn:aspace:entity:craft-and-economic-role> .
+#   Ed Mercer garde craft et rôle économique payé du Life OS
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Ed_Mercer_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ed-mercer> aspace:appliesTo <urn:aspace:entity:technician-risk-guard> .
+#   Ed détecte le risque de tomber dans le piège E-Myth du technicien sous-payé
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Ed_Mercer_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ed-mercer> aspace:escalates <urn:aspace:entity:a2-orville> .
+#   Un finding technician_risk: high chez Ed déclenche une escalade vers Orville
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/01_Profession_Mercer/A3_Mercer_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:gordon-malloy> aspace:governs <urn:aspace:entity:pillar-passion> .
+#   Gordon Malloy gouverne le pilier Passion de l'Ikigai
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gordon-malloy> aspace:pairedWith <urn:aspace:entity:energy-curiosity-joy> .
+#   Gordon Malloy garde énergie, curiosité et joie pour éviter l'OS efficient sans âme
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gordon-malloy> aspace:appliesTo <urn:aspace:entity:friction-pattern-escalation> .
+#   Gordon escalade les friction patterns vers Orville puis Protostar/DEAL
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gordon-malloy> aspace:produces <urn:aspace:entity:deal-candidate-signal> .
+#   Gordon émet un signal `deal_candidate: true|false` pour Protostar
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy/A3_Gordon_Malloy_Spec.md [haute] (v3-life)
+<urn:aspace:entity:kelly-grayson> aspace:governs <urn:aspace:entity:pillar-mission> .
+#   Kelly Grayson gouverne le pilier Mission de l'Ikigai
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (v3-life)
+<urn:aspace:entity:kelly-grayson> aspace:pairedWith <urn:aspace:entity:impact-beyond-ego> .
+#   Kelly Grayson garde l'utilité et l'impact au-delà de l'ego et de la dépendance
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (v3-life)
+<urn:aspace:entity:kelly-grayson> aspace:appliesTo <urn:aspace:entity:dependency-risk-guard> .
+#   Kelly escalade dépendance et risque ego-product vers Orville et Beth
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (v3-life)
+<urn:aspace:entity:kelly-grayson> aspace:appliesTo <urn:aspace:entity:solarpunk-alignment> .
+#   Kelly vérifie l'alignement avec la direction Solarpunk
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/02_Mission_Grayson/A3_Kelly_Grayson_Spec.md [haute] (v3-life)
+<urn:aspace:entity:claire-finn> aspace:governs <urn:aspace:entity:pillar-vocation> .
+#   Claire Finn gouverne le pilier Vocation de l'Ikigai
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md [haute] (v3-life)
+<urn:aspace:entity:claire-finn> aspace:pairedWith <urn:aspace:entity:zone-of-genius-and-non-negotiables> .
+#   Claire garde la zone de génie et les frontières non-négociables
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md [haute] (v3-life)
+<urn:aspace:entity:claire-finn> aspace:hasVetoOver <urn:aspace:entity:non-negotiable-violation> .
+#   Un finding Claire de `non_negotiable_risk: high` déclenche un Beth veto recommandé
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Finn_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:claire-finn> aspace:refines <urn:aspace:entity:who-not-how-pressure> .
+#   Claire route la pression de délégation Who Not How vers Orville et Morty
+#   src: 20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md [haute] (v3-life)
+<urn:aspace:entity:isaac> aspace:governs <urn:aspace:entity:horizon-h1> .
+#   Isaac gouverne l'horizon H1 / 1 an
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/01_H1_Isaac/A3_Isaac_H1_Spec.md [haute] (v3-life)
+<urn:aspace:entity:isaac> aspace:pairedWith <urn:aspace:entity:annual-realism> .
+#   Isaac sert de pont entre Ikigai et SNW 12WY sur 12 mois
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/01_H1_Isaac/A3_Isaac_H1_Spec.md [haute] (v3-life)
+<urn:aspace:entity:isaac> aspace:routes <urn:aspace:entity:a2-snw-curie> .
+#   Si un finding H1 déclenche `snw_route_needed: true`, Isaac le transmet à Orville qui route SNW/Curie
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/01_H1_Isaac/A3_Isaac_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:john-lamarr> aspace:governs <urn:aspace:entity:horizon-h3> .
+#   John Lamarr gouverne l'horizon H3 / 3 ans
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/02_H3_Lamarr/A3_John_Lamarr_H3_Spec.md [haute] (v3-life)
+<urn:aspace:entity:john-lamarr> aspace:pairedWith <urn:aspace:entity:strategic-options-and-platforms> .
+#   Lamarr garde options stratégiques et plateformes sur 3 ans
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/02_H3_Lamarr/A3_John_Lamarr_H3_Spec.md [haute] (v3-life)
+<urn:aspace:entity:john-lamarr> aspace:routes <urn:aspace:entity:a2-enterprise-para> .
+#   Lamarr route vers A2 Enterprise / Computer pour les plateformes 3 ans
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/02_H3_Lamarr/A3_John_Lamarr_H3_Spec.md [haute] (v3-life)
+<urn:aspace:entity:bortus> aspace:governs <urn:aspace:entity:horizon-h10> .
+#   Bortus gouverne l'horizon H10 / 10 ans
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/03_H10_Bortus/A3_Bortus_H10_Spec.md [haute] (v3-life)
+<urn:aspace:entity:bortus> aspace:pairedWith <urn:aspace:entity:durable-systems-resilience> .
+#   Bortus garde durabilité et résilience sur 10 ans (Solarpunk counter-infrastructure)
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/03_H10_Bortus/A3_Bortus_H10_Spec.md [haute] (v3-life)
+<urn:aspace:entity:bortus> aspace:appliesTo <urn:aspace:entity:anti-fragility-check> .
+#   Bortus impose un anti-fragility check : la proposition doit traverser un cycle Burnham H10 sans casser
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/03_H10_Bortus/A3_Bortus_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:bortus> aspace:routes <urn:aspace:entity:a2-enterprise-archives> .
+#   Bortus route les assets durables GREEN vers Enterprise / Picard Archives canon
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/03_H10_Bortus/A3_Bortus_H10_Spec.md [haute] (v3-life)
+<urn:aspace:entity:alara-kitan> aspace:governs <urn:aspace:entity:horizon-h30> .
+#   Alara Kitan gouverne l'horizon H30 / 30 ans
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/04_H30_Alara/A3_Alara_Kitan_H30_Spec.md [haute] (v3-life)
+<urn:aspace:entity:alara-kitan> aspace:pairedWith <urn:aspace:entity:expansion-and-ceiling-break> .
+#   Alara garde expansion et brise-plafond sur 30 ans (Solarpunk civilization engine)
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/04_H30_Alara/A3_Alara_Kitan_H30_Spec.md [haute] (v3-life)
+<urn:aspace:entity:alara-kitan> aspace:appliesTo <urn:aspace:entity:kardashev3-trajectory> .
+#   Alara aligne les verdicts H30 avec la trajectoire Kardashev-3 (continental tipping point)
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/04_H30_Alara/A3_Alara_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:klyden> aspace:governs <urn:aspace:entity:horizon-h90> .
+#   Klyden gouverne l'horizon H90 / legacy
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/05_H90_Klyden/A3_Klyden_H90_Spec.md [haute] (v3-life)
+<urn:aspace:entity:klyden> aspace:pairedWith <urn:aspace:entity:solarpunk-legacy-civilization-scale> .
+#   Klyden garde legacy, transmission et impact à l'échelle civilisationnelle
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/05_H90_Klyden/A3_Klyden_H90_Spec.md [haute] (v3-life)
+<urn:aspace:entity:klyden> aspace:escalates <urn:aspace:entity:a1-beth> .
+#   Tout conflit H1/H3 avec H90 est escaladé vers Orville et Beth par Klyden
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/05_H90_Klyden/A3_Klyden_H90_Spec.md [haute] (v3-life)
+<urn:aspace:entity:klyden> aspace:appliesTo <urn:aspace:entity:transmission-and-commons> .
+#   Klyden exige `legacy_signal: strengthens` pour un signal H90 GREEN
+#   src: 20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/05_H90_Klyden/A3_Klyden_Bootstrap_Finding.md [haute] (v3-life)
+<urn:aspace:entity:ikigai-pillars-horizons-kardashev> aspace:appliesTo <urn:aspace:entity:kardashev4-trajectory> .
+#   Le document Kardashev encode la trajectoire Kardashev-4 héritée de l'Identity Core
+#   src: 20_Life_OS/21_Ikigai_Orville/Ikigai_Pillars_Horizons_Kardashev.md [haute] (v3-life)
+<urn:aspace:entity:ikigai-pillars-horizons-kardashev> aspace:refines <urn:aspace:entity:orville-meaning-compass> .
+#   Le document Kardashev sert de boussole de sens à Orville avant Beth ou Morty
+#   src: 20_Life_OS/21_Ikigai_Orville/Ikigai_Pillars_Horizons_Kardashev.md [haute] (v3-life)
+<urn:aspace:entity:a2-discovery> aspace:instantiates <urn:aspace:entity:life-wheel-zora> .
+#   Le ship USS Discovery instantie le moteur Life Wheel / ZORA
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-discovery> aspace:covers <urn:aspace:entity:ld01-to-ld08> .
+#   Discovery maintient l'état ZORA sur les 8 domaines LD01 à LD08
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-discovery> aspace:protects <urn:aspace:entity:ld03-health-hard-safety> .
+#   Discovery protège LD03 Health comme hard safety
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-discovery> aspace:protects <urn:aspace:entity:ld04-cognition-hard-safety> .
+#   Discovery protège LD04 Cognition comme hard safety
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-discovery> aspace:routes <urn:aspace:entity:a1-beth-via-recovery-first> .
+#   Discovery peut recommander un recovery-first halt à Beth via beth_action: recovery_first
+#   src: 20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md [haute] (v3-life)
+<urn:aspace:entity:book> aspace:covers <urn:aspace:entity:ld01-career-business> .
+#   Book (LD01) couvre le domaine Career & Business
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md [haute] (v3-life)
+<urn:aspace:entity:book> aspace:pairedWith <urn:aspace:entity:ld01-load-signal> .
+#   Book remonte un load_signal low/medium/high/critical à Discovery
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md [haute] (v3-life)
+<urn:aspace:entity:book> aspace:escalates <urn:aspace:entity:a2-discovery-and-a1-beth> .
+#   Book escalade vers Discovery et Beth si LD01 consomme plus que la bande passante sûre
+#   src: 20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md [haute] (v3-life)
+<urn:aspace:entity:saru> aspace:covers <urn:aspace:entity:ld02-finance-independence> .
+#   Saru (LD02) couvre le domaine Finance et indépendance
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:culber> aspace:covers <urn:aspace:entity:ld03-health-sleep-energy> .
+#   Hugh Culber (LD03) couvre le domaine Health, sleep et energy
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:tilly> aspace:covers <urn:aspace:entity:ld04-mind-cognition-load> .
+#   Sylvia Tilly (LD04) couvre le domaine Mind, cognition, charge mentale
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:stamets> aspace:covers <urn:aspace:entity:ld05-social-relations> .
+#   Paul Stamets (LD05) couvre le domaine Social relations
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:burnham> aspace:covers <urn:aspace:entity:ld06-love-family> .
+#   Michael Burnham (LD06) couvre le domaine Love, family, présence
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:reno> aspace:covers <urn:aspace:entity:ld07-creativity-leisure> .
+#   Jett Reno (LD07) couvre le domaine Creativity, leisure, flow
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:georgiou> aspace:covers <urn:aspace:entity:ld08-impact-legacy> .
+#   Philippa Georgiou (LD08) couvre le domaine Contribution, impact, héritage Solarpunk
+#   src: 20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md [haute] (v3-life)
+<urn:aspace:entity:a2-curie> aspace:instantiates <urn:aspace:entity:twelve-week-year-engine> .
+#   Le ship USS SNW / Curie instantie le moteur 12 Week Year
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-curie> aspace:compiles <urn:aspace:entity:five-a3-findings> .
+#   Curie compile les 5 findings A3 du SNW (Pike/Una/M'Benga/Chapel/Ortegas)
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-curie> aspace:appliesTo "50_30_20_load_rule" .
+#   Curie maintient la règle de charge 50/30/20 sur le cycle actif
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-curie> aspace:produces <urn:aspace:entity:cycle-q3-2026-12-items> .
+#   Curie produit le cycle Q3 2026 composé de 12 items canon
+#   src: 20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md [haute] (v3-life)
+<urn:aspace:entity:pike> aspace:covers <urn:aspace:entity:vision-quarter-intent> .
+#   Pike couvre la discipline Vision / Quarter Intent du 12WY
+#   src: 20_Life_OS/23_12WY_SNW/01_Vision_Pike/A3_Pike_Vision_Spec.md [haute] (v3-life)
+<urn:aspace:entity:pike> aspace:pairedWith <urn:aspace:entity:north-star-12wy> .
+#   Pike garde le Star North du 12 Week Year pour éviter la dérive tactique
+#   src: 20_Life_OS/23_12WY_SNW/01_Vision_Pike/A3_Pike_Vision_Spec.md [haute] (v3-life)
+<urn:aspace:entity:una> aspace:covers <urn:aspace:entity:planning-rocks> .
+#   Una couvre la discipline Planning / Rocks du 12WY
+#   src: 20_Life_OS/23_12WY_SNW/02_Planning_Una/A3_Una_Planning_Spec.md [haute] (v3-life)
+<urn:aspace:entity:una> aspace:produces <urn:aspace:entity:rock-definition-of-done> .
+#   Una exige que chaque Rock ait une Definition of Done citée en evidence
+#   src: 20_Life_OS/23_12WY_SNW/02_Planning_Una/A3_Una_Planning_Spec.md [haute] (v3-life)
+<urn:aspace:entity:mbenga> aspace:covers <urn:aspace:entity:process-control-focus> .
+#   M'Benga couvre la discipline Process Control / Focus du 12WY
+#   src: 20_Life_OS/23_12WY_SNW/03_Focus_MBenga/A3_MBenga_Focus_Spec.md [haute] (v3-life)
+<urn:aspace:entity:mbenga> aspace:appliesTo <urn:aspace:entity:50-30-20-overload-guard> .
+#   M'Benga diagnostique les violations de la règle 50/30/20 et signale overload à Curie
+#   src: 20_Life_OS/23_12WY_SNW/03_Focus_MBenga/A3_MBenga_Focus_Spec.md [haute] (v3-life)
+<urn:aspace:entity:mbenga> aspace:routes <urn:aspace:entity:a2-protostar-via-deal> .
+#   En cas d'overload durable, M'Benga route vers Protostar (DEAL Eliminate ou Automate)
+#   src: 20_Life_OS/23_12WY_SNW/03_Focus_MBenga/A3_MBenga_Focus_Spec.md [haute] (v3-life)
+<urn:aspace:entity:chapel> aspace:covers <urn:aspace:entity:metrics-scorecard> .
+#   Chapel couvre la discipline Metrics / Scorecard du 12WY
+#   src: 20_Life_OS/23_12WY_SNW/04_Metrics_Chapel/A3_Chapel_Metrics_Spec.md [haute] (v3-life)
+<urn:aspace:entity:chapel> aspace:appliesTo <urn:aspace:entity:lead-lag-indicator-distinction> .
+#   Chapel impose la distinction entre lead indicators et lag indicators pour auditer les Rocks
+#   src: 20_Life_OS/23_12WY_SNW/04_Metrics_Chapel/A3_Chapel_Metrics_Spec.md [haute] (v3-life)
+<urn:aspace:entity:chapel> aspace:rejects <urn:aspace:entity:vanity-metrics> .
+#   Chapel rejette les vanity metrics sans décision ni comportement attaché
+#   src: 20_Life_OS/23_12WY_SNW/04_Metrics_Chapel/A3_Chapel_Metrics_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ortegas> aspace:covers <urn:aspace:entity:weekly-execution-time-use> .
+#   Ortegas couvre la discipline Weekly Execution / Time Use du 12WY
+#   src: 20_Life_OS/23_12WY_SNW/05_Execution_Ortegas/A3_Ortegas_Execution_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ortegas> aspace:produces <urn:aspace:entity:executable-context-pack> .
+#   Ortegas émet une readiness de Context Pack exécutable vers A1 Morty
+#   src: 20_Life_OS/23_12WY_SNW/05_Execution_Ortegas/A3_Ortegas_Execution_Spec.md [haute] (v3-life)
+<urn:aspace:entity:ortegas> aspace:routes <urn:aspace:entity:a2-cerritos-holodeck> .
+#   En cas d'overload, Ortegas route vers Cerritos (GTD engage) avant dispatch Morty
+#   src: 20_Life_OS/23_12WY_SNW/05_Execution_Ortegas/A3_Ortegas_Execution_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-computer> aspace:instantiates <urn:aspace:entity:para-structure-engine> .
+#   Le ship USS Enterprise / Computer instantie le moteur de structure PARA
+#   src: 20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-computer> aspace:classifies <urn:aspace:entity:para-project-area-resource-archive> .
+#   Computer classifie chaque artefact comme Project, Area, Resource ou Archive
+#   src: 20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-computer> aspace:compiles <urn:aspace:entity:four-a3-findings> .
+#   Computer compile les 4 findings A3 (Picard/Spock/Geordi/Data) en classification PARA
+#   src: 20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md [haute] (v3-life)
+<urn:aspace:entity:picard> aspace:covers <urn:aspace:entity:para-projects> .
+#   Picard couvre la classification Projects dans PARA
+#   src: 20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md [haute] (v3-life)
+<urn:aspace:entity:spock> aspace:covers <urn:aspace:entity:para-areas-standards> .
+#   Spock couvre la classification Areas et les standards PARA
+#   src: 20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A3_Spock_Areas_Spec.md [haute] (v3-life)
+<urn:aspace:entity:spock> aspace:pairedWith <urn:aspace:entity:ongoing-standards-over-time> .
+#   Spock protège les standards durables qui empêchent le Life OS de se dissoudre en projets
+#   src: 20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/A3_Spock_Areas_Spec.md [haute] (v3-life)
+<urn:aspace:entity:geordi> aspace:covers <urn:aspace:entity:para-resources> .
+#   Geordi couvre la classification Resources dans PARA
+#   src: 20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/A3_Geordi_Resources_Spec.md [haute] (v3-life)
+<urn:aspace:entity:geordi> aspace:pairedWith <urn:aspace:entity:reusable-infrastructure-for-agents> .
+#   Geordi transforme les connaissances en infrastructure réutilisable pour les agents futurs
+#   src: 20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/A3_Geordi_Resources_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holodeck> aspace:instantiates <urn:aspace:entity:gtd-chaos-engine> .
+#   Le ship USS Cerritos / Holo Deck instantie le moteur de chaos GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holodeck> aspace:compiles <urn:aspace:entity:five-a3-findings-gtd> .
+#   Holo Deck compile les 5 findings A3 (Mariner/Boimler/Rutherford/Tendi/Freeman)
+#   src: 20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md [haute] (v3-life)
+<urn:aspace:entity:mariner> aspace:covers <urn:aspace:entity:gtd-capture> .
+#   Mariner couvre le stage Capture de la chaîne GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner/A3_Mariner_Capture_Spec.md [haute] (v3-life)
+<urn:aspace:entity:mariner> aspace:routes <urn:aspace:entity:a3-boimler-clarify> .
+#   Mariner route l'input brut vers Boimler (Clarify) sans organiser elle-même
+#   src: 20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner/A3_Mariner_Capture_Spec.md [haute] (v3-life)
+<urn:aspace:entity:boimler> aspace:covers <urn:aspace:entity:gtd-clarify> .
+#   Boimler couvre le stage Clarify de la chaîne GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/A3_Boimler_Clarify_Spec.md [haute] (v3-life)
+<urn:aspace:entity:boimler> aspace:produces <urn:aspace:entity:actionability-decision> .
+#   Boimler transforme le bruit capturé en décision d'actionnabilité (next_action|project|resource|someday|trash|blocked)
+#   src: 20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/A3_Boimler_Clarify_Spec.md [haute] (v3-life)
+<urn:aspace:entity:boimler> aspace:routes <urn:aspace:entity:a3-rutherford-organize> .
+#   Boimler route l'item clarifié vers Rutherford (Organize) sauf s'il faut escalader à Picard ou Data
+#   src: 20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/A3_Boimler_Clarify_Spec.md [haute] (v3-life)
+<urn:aspace:entity:rutherford> aspace:covers <urn:aspace:entity:gtd-organize> .
+#   Rutherford couvre le stage Organize de la chaîne GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/03_Organize_Rutherford/A3_Rutherford_Organize_Spec.md [haute] (v3-life)
+<urn:aspace:entity:rutherford> aspace:routes <urn:aspace:entity:a3-tendi-review> .
+#   Rutherford route l'item organisé vers Tendi (Review) avec son bucket PARA
+#   src: 20_Life_OS/25_GTD_Cerritos/03_Organize_Rutherford/A3_Rutherford_Organize_Spec.md [haute] (v3-life)
+<urn:aspace:entity:tendi> aspace:covers <urn:aspace:entity:gtd-review> .
+#   Tendi couvre le stage Review de la chaîne GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/04_Review_Tendi/A3_Tendi_Review_Spec.md [haute] (v3-life)
+<urn:aspace:entity:tendi> aspace:detects <urn:aspace:entity:stale-blocked-repeated-graduation-candidates> .
+#   Tendi identifie items stales, bloqués, répétés, ou candidats à la graduation
+#   src: 20_Life_OS/25_GTD_Cerritos/04_Review_Tendi/A3_Tendi_Review_Spec.md [haute] (v3-life)
+<urn:aspace:entity:tendi> aspace:escalates <urn:aspace:entity:a2-protostar-via-repeated-work> .
+#   Tendi escalade le travail répété (>3 fois) vers Protostar/DEAL pour élimination
+#   src: 20_Life_OS/25_GTD_Cerritos/04_Review_Tendi/A3_Tendi_Review_Spec.md [haute] (v3-life)
+<urn:aspace:entity:freeman> aspace:covers <urn:aspace:entity:gtd-engage> .
+#   Freeman couvre le stage Engage de la chaîne GTD
+#   src: 20_Life_OS/25_GTD_Cerritos/05_Engage_Freeman/A3_Freeman_Engage_Spec.md [haute] (v3-life)
+<urn:aspace:entity:freeman> aspace:routes <urn:aspace:entity:a1-morty> .
+#   Freeman fait passer une next action prête vers A1 Morty (next_action_router)
+#   src: 20_Life_OS/25_GTD_Cerritos/05_Engage_Freeman/A3_Freeman_Engage_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holo-janeway> aspace:instantiates <urn:aspace:entity:deal-liberation-engine> .
+#   Le ship USS Protostar / Holo Janeway instantie le moteur de libération DEAL
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holo-janeway> aspace:appliesTo <urn:aspace:entity:deal-d-e-a-l-pipeline> .
+#   Holo Janeway applique la pipeline D-E-A-L (Define / Eliminate / Automate / Liberate)
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holo-janeway> aspace:compiles <urn:aspace:entity:four-a3-findings-deal> .
+#   Holo Janeway compile les 4 findings A3 (Dal / Rok-Tahk / Zero / Gwyn)
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:a2-holo-janeway> aspace:routes <urn:aspace:entity:a2-enterprise-computer-via-muse> .
+#   Holo Janeway route les blueprints durables vers Enterprise / Computer (PARA Archives)
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:dal> aspace:covers <urn:aspace:entity:deal-define> .
+#   Dal couvre le stage D (Define) de la pipeline DEAL
+#   src: 20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/A3_Dal_Definition_Spec.md [haute] (v3-life)
+<urn:aspace:entity:dal> aspace:produces <urn:aspace:entity:pattern-definition-md> .
+#   Dal produit pattern_definition.md (1 friction, 1 outcome mesurable)
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:roktahk> aspace:covers <urn:aspace:entity:deal-eliminate> .
+#   Rok-Tahk couvre le stage E (Eliminate) de la pipeline DEAL
+#   src: 20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/A3_RokTahk_Elimination_Spec.md [haute] (v3-life)
+<urn:aspace:entity:roktahk> aspace:produces <urn:aspace:entity:elimination-proposal-md> .
+#   Rok-Tahk produit elimination_proposal.md avec étapes NO-GO et gains de bande passante
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:roktahk> aspace:pairedWith <urn:aspace:entity:no-automation-before-elimination> .
+#   Rok-Tahk empêche d'automatiser un gaspillage (E avant A)
+#   src: 20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/A3_RokTahk_Elimination_Spec.md [haute] (v3-life)
+<urn:aspace:entity:zero> aspace:covers <urn:aspace:entity:deal-automate> .
+#   Zero couvre le stage A (Automate) de la pipeline DEAL
+#   src: 20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md [haute] (v3-life)
+<urn:aspace:entity:zero> aspace:produces <urn:aspace:entity:skill-blueprint-md> .
+#   Zero produit un blueprint d'automation (skill_<name>/SKILL.md + risk_class + D1 proof)
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:zero> aspace:dependsOn <urn:aspace:entity:a1-beth-high-risk-approval> .
+#   Zero requiert Beth approval pour toute automation à risque high
+#   src: 20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gwyn> aspace:covers <urn:aspace:entity:deal-liberate> .
+#   Gwyn couvre le stage L (Liberate) de la pipeline DEAL
+#   src: 20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gwyn> aspace:produces <urn:aspace:entity:d11-bandwidth-score> .
+#   Gwyn produit d11_score.json mesurant le temps/attention libérés vs upkeep tax
+#   src: 20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md [haute] (v3-life)
+<urn:aspace:entity:gwyn> aspace:rejects <urn:aspace:entity:liberation-claim-without-metric> .
+#   Gwyn refuse toute revendication de libération sans métrique
+#   src: 20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md [haute] (v3-life)
+<urn:aspace:entity:coach-os> aspace:instantiates <urn:aspace:entity:business-os-prototype> .
+#   Coach OS est la première Franchise Prototype du Business OS : arborescence engendrée le 2026-08-02, conforme à ADR-CANON-001 (8 B2 + 8 squads + 53 B3)
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:coach-os> aspace:stewards <urn:aspace:entity:emyth-cascade-b1-b2-b3> .
+#   Coach OS porte la cascade E-Myth : B1 Summers (Entrepreneur, 1 rock/mois, 3/12WY) -> B2 les 8 VP (Manager, 4 sprints/mois) -> B3 les 53 techniciens (T
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:coach-os> aspace:partOf <urn:aspace:entity:paperclip-company> .
+#   Coach OS tourne dans une société Paperclip vivante, UUID 1c6e1a3b-7cc0-49ec-8de4-a501e219f37c, créée le 2026-08-02
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:paperclip-coach-os> aspace:appliesTo <urn:aspace:entity:modele-minimax-m3-1m> .
+#   La société Paperclip-Coach-OS utilise le modèle MiniMax-M3[1m] via l'environnement Local, zéro quota Anthropic
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:paperclip-coach-os> aspace:covers "62-agents" .
+#   Paperclip-Coach-OS abrite 62 agents Paperclip (1 CEO + 8 VP + 53 techniciens), hiérarchie reportsTo conforme à ORG.json
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:b1-summers-nexus-omk-bos> aspace:produces <urn:aspace:entity:rocks-md> .
+#   Summers, CEO B1 de Coach OS, écrit ROCKS.md et rien d'autre — pas de sprint (c'est le VP), pas de scrum (c'est le technicien)
+#   src: 30_Business_OS/10_Projects/coach-os/00_Summers_CEO/AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b2-domain> aspace:produces <urn:aspace:entity:sprints-md> .
+#   Chaque VP B2 écrit SPRINTS.md et rien d'autre — pas de rock (c'est Summers), pas de scrum (c'est le technicien)
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b3-technicien> aspace:produces <urn:aspace:entity:scrums-md> .
+#   Chaque technicien B3 écrit SCRUMS.md et rien d'autre — pas de sprint (c'est le VP), pas de rock (c'est Summers)
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/squad/01_MrFantastic_ProcessDesign/AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b1-summers> aspace:governs <urn:aspace:entity:cycle-mensuel> .
+#   Summers tient un cycle mensuel : écriture du rock en début de mois, revue de mi-mois (sans arbitrage), clôture fin de mois
+#   src: 30_Business_OS/10_Projects/coach-os/00_Summers_CEO/AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b2-vp> aspace:governs <urn:aspace:entity:cycle-hebdomadaire> .
+#   Chaque VP coupe le rock en 4 sprints hebdomadaires ; le lundi ouvre le sprint, le vendredi le clôt (tenu ou non, avec motif)
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b3-technicien> aspace:governs <urn:aspace:entity:cycle-quotidien> .
+#   Chaque technicien tire 5 scrums par semaine, un par jour ouvré — une action exécutable, pas un plan
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/squad/01_MrFantastic_ProcessDesign/SOUL.md [haute] (v3-business)
+<urn:aspace:entity:b2-vp> aspace:dependsOn <urn:aspace:entity:b1-rock> .
+#   Le VP dépend du rock mensuel de Summers : un sprint qui ne se rattache à aucun rock ne s'ouvre pas
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b3-technicien> aspace:dependsOn <urn:aspace:entity:b2-sprint> .
+#   Le technicien dépend du sprint hebdomadaire de son VP : un scrum sans sprint est du geste sans cause
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/squad/01_MrFantastic_ProcessDesign/SCRUMS.md [haute] (v3-business)
+<urn:aspace:entity:coach-os-rock> aspace:inherits <urn:aspace:entity:beth-morty-vision> .
+#   Le rock mensuel de Summers est le précipité de la cascade Life OS : A1 Beth·Morty (H+3 ans) -> A2 les six frameworks (H+1 an) -> A3 les officiers (12W
+#   src: 30_Business_OS/10_Projects/coach-os/00_Summers_CEO/ROCKS.md [haute] (v3-business)
+<urn:aspace:entity:green-lantern> aspace:pairedWith <urn:aspace:entity:x-men> .
+#   Green Lantern (VP B2 domaine 1 — RH & Méta Gouvernance) commande le squad X-Men (8 techniciens : ProfessorX, Cyclops, JeanGrey, Wolverine, Storm, Beas
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/01_RH_Meta_Gouvernance_GreenLantern_XMen/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:batman> aspace:pairedWith <urn:aspace:entity:fantastic-four> .
+#   Batman (VP B2 domaine 2 — Opérations en Loops) commande le squad Fantastic Four (4 techniciens : MrFantastic, InvisibleWoman, HumanTorch, TheThing)
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:flash> aspace:pairedWith <urn:aspace:entity:avengers> .
+#   Flash (VP B2 domaine 3 — Productization des Besoins) commande le squad Avengers (7 techniciens : CaptainAmerica, IronMan, Thor, Hulk, BlackWidow, Hawk
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/03_Productization_des_Besoins_Flash_Avengers/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:martian-manhunter> aspace:pairedWith <urn:aspace:entity:illuminati> .
+#   Martian Manhunter (VP B2 domaine 4 — Sales & Cognition) commande le squad Illuminati (6 techniciens : BlackBolt, IronMan, MrFantastic, Namor, Professo
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/04_Sales_et_Cognition_MartianManhunter_Illuminati/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:superman> aspace:pairedWith <urn:aspace:entity:guardians> .
+#   Superman (VP B2 domaine 5 — People & Brand) commande le squad Guardians (6 techniciens : StarLord, Rocket, Gamora, Drax, Groot, Mantis)
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/05_People_et_Brand_Superman_Guardians/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:wonder-woman> aspace:pairedWith <urn:aspace:entity:thunderbolts> .
+#   Wonder Woman (VP B2 domaine 6 — Finance & ROI) commande le squad Thunderbolts (6 techniciens : BuckyBarnes, YelenaBelova, RedGuardian, Ghost, Taskmast
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/06_Finance_et_ROI_WonderWoman_Thunderbolts/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:cyborg> aspace:pairedWith <urn:aspace:entity:kang-dynasty> .
+#   Cyborg (VP B2 domaine 7 — R&D & IT) commande le squad Kang Dynasty (6 techniciens : KangPrime, IronLad, ScarletCenturion, Immortus, VictorTimely, Rama
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/07_RD_et_IT_Cyborg_KangDynasty/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:aquaman> aspace:pairedWith <urn:aspace:entity:eternals> .
+#   Aquaman (VP B2 domaine 8 — Legal & Compliance) commande le squad Eternals (10 techniciens : Ikaris, Sersi, Ajak, Kingo, Phastos, Sprite, Druig, Thena,
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/08_Legal_et_Compliance_Aquaman_Eternals/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:green-lantern> aspace:hasVetoOver <urn:aspace:entity:recrutement-sans-mandat> .
+#   Green Lantern bloque tout recrutement — humain ou agent — qui n'a pas de mandat écrit et de critère de sortie vérifiable
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:batman> aspace:hasVetoOver <urn:aspace:entity:procedure-sans-condition-arret> .
+#   Batman bloque toute procédure qui n'a pas de condition d'arrêt écrite
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:flash> aspace:hasVetoOver <urn:aspace:entity:offre-depersonnalisee> .
+#   Flash bloque toute offre dont la valeur dépend d'une personne nommée
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:martian-manhunter> aspace:hasVetoOver <urn:aspace:entity:proposition-sans-reformulation> .
+#   Martian Manhunter bloque toute proposition envoyée avant qu'un problème client ait été reformulé et validé par le client
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:superman> aspace:hasVetoOver <urn:aspace:entity:promesse-non-tenue> .
+#   Superman bloque toute prise de parole publique qui promet un résultat que la delivery ne tient pas
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:wonder-woman> aspace:hasVetoOver <urn:aspace:entity:depense-recurrente-sans-roi> .
+#   Wonder Woman bloque toute dépense récurrente sans date de revue et sans métrique de retour
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:cyborg> aspace:hasVetoOver <urn:aspace:entity:cloud-only-sans-sortie> .
+#   Cyborg bloque tout fournisseur cloud-only sans chemin de sortie documenté
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:aquaman> aspace:hasVetoOver <urn:aspace:entity:engagement-sans-perimetre> .
+#   Aquaman bloque toute prestation démarrée sans accord écrit sur le périmètre et la propriété du livrable
+#   src: 30_Business_OS/10_Projects/coach-os/ORG.json [haute] (v3-business)
+<urn:aspace:entity:mr-fantastic> aspace:handledBy <urn:aspace:entity:processdesign> .
+#   MrFantastic (B3 squad Fantastic Four, sous Batman) tient la charge ProcessDesign : conçoit la boucle, décide de sa forme et de son point d'entrée
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/squad/01_MrFantastic_ProcessDesign/SOUL.md [haute] (v3-business)
+<urn:aspace:entity:human-torch> aspace:handledBy <urn:aspace:entity:incidents> .
+#   HumanTorch (B3 squad Fantastic Four) tient la charge Incidents : prend l'incident, décide de l'escalade et du retour à la normale
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:professor-x> aspace:handledBy <urn:aspace:entity:recruiting> .
+#   ProfessorX (B3 squad X-Men, sous Green Lantern) tient le recruiting : sourcing, lecture des profils, décide qui entre
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/01_RH_Meta_Gouvernance_GreenLantern_XMen/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:beast> aspace:handledBy <urn:aspace:entity:techrecruiting> .
+#   Beast (B3 squad X-Men) tient le TechRecruiting : recrutement technique et agentique, décide de la compétence réelle
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/01_RH_Meta_Gouvernance_GreenLantern_XMen/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:aquaman> aspace:stewards <urn:aspace:entity:domaine-dormant> .
+#   Aquaman steward Legal & Compliance en état dormant : ne produit rien tant que 00_Summers_CEO/03_Master_Agreements/ reste vide — un domaine dormant qui
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/08_Legal_et_Compliance_Aquaman_Eternals/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:domaine-legal> aspace:dependsOn <urn:aspace:entity:premier-contrat-signe> .
+#   Le domaine Legal & Compliance ne s'active qu'au premier fichier déposé dans 00_Summers_CEO/03_Master_Agreements/, c'est-à-dire au premier contrat de c
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:green-lantern> aspace:cites <urn:aspace:entity:protocole-forge-injection> .
+#   Green Lantern (B2 People) sollicite les skills L0 via Bill (L0.2 Forge) ; Forge = CLI, Inject = River Song — le protocole ne se contourne pas
+#   src: 30_Business_OS/AGENTS.md [haute] (v3-business)
+<urn:aspace:entity:cyborg> aspace:dependsOn <urn:aspace:entity:river-song> .
+#   Cyborg (B2 IT/R&D) ne touche pas L0 directement — il passe par River Song (SDD-004 §7.2), médiation agentique imposée
+#   src: 30_Business_OS/AGENTS.md [haute] (v3-business)
+<urn:aspace:entity:pyramide-l0-l1-l2> aspace:governs <urn:aspace:entity:autorite-absolue-l0> .
+#   La pyramide L0 ≥ L1 > L2 (SDD-006 §1.1:59) impose que L0 a autorité absolue, L1 a le veto (Beth), L2 exécute dans ces bornes
+#   src: 30_Business_OS/AGENTS.md [haute] (v3-business)
+<urn:aspace:entity:b2-vp> aspace:appliesTo <urn:aspace:entity:interdit-ecrire-rock> .
+#   Tout VP B2 a l'interdit d'écrire un rock — c'est Summers ; et l'interdit d'écrire un scrum — c'est le technicien
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:b3-technicien> aspace:appliesTo <urn:aspace:entity:interdit-combler-trou> .
+#   Tout B3 a l'interdit de combler lui-même un trou du sprint — il le signale à son VP au lieu de laisser le défaut invisible
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/squad/01_MrFantastic_ProcessDesign/AGENT.md [haute] (v3-business)
+<urn:aspace:entity:agentic-os-blueprint> aspace:stewards <urn:aspace:entity:modele-cinq-couches> .
+#   Le blueprint agentic-os pose un modèle à cinq couches : Identity, Rules and hooks, Skills, Agents, Tools/MCPs/CLI — avec rot rate comme dimension tran
+#   src: 30_Business_OS/09_Blueprints/agentic-os/SYNTHESE_AGENTIC_OS.md [haute] (v3-business)
+<urn:aspace:entity:modele-cinq-couches> aspace:covers "rot-rate" .
+#   Le modèle 5 couches déclare explicitement son rot rate : Identity stable (6 mois), Tools continu, etc. — à déclarer comme un fichier plutôt qu'à redéc
+#   src: 30_Business_OS/09_Blueprints/agentic-os/SYNTHESE_AGENTIC_OS.md [haute] (v3-business)
+<urn:aspace:entity:gateways-blueprint> aspace:cites <urn:aspace:entity:schema-six-briques> .
+#   Le blueprint gateways cite le schéma de référence six-briques (Karan Sampath, 'Gateways are all you need') : Auth Handler, RBAC Engine, Proxy Router, 
+#   src: 30_Business_OS/09_Blueprints/gateways/BRIEF_gateways.md [haute] (v3-business)
+<urn:aspace:entity:ontologie-trois-couches> aspace:covers "12-entites-canoniques" .
+#   L'ontologie Coach OS actuelle couvre 12 entités canoniques : Organization, Membership, Profile, Client, Offering, SOP, Runbook, Skill, Agent, Routine,
+#   src: 30_Business_OS/09_Blueprints/ontologie-trois-couches/BRIEF_I_GEORDI_ENTITES.md [haute] (v3-business)
+<urn:aspace:entity:ontologie-trois-couches> aspace:covers "20-relations-structurelles" .
+#   L'ontologie actuelle porte 20 relations, toutes structurelles (has, binds, manages, executes, runs, acquires, incarnates, projects, guides, requires, 
+#   src: 30_Business_OS/09_Blueprints/ontologie-trois-couches/BRIEF_I_GEORDI_ENTITES.md [haute] (v3-business)
+<urn:aspace:entity:ontologie-trois-couches> aspace:appliesTo <urn:aspace:entity:seuil-3-occurrences> .
+#   L'ontologie-trois-couches applique le seuil doctrinal de 3 occurrences pour promouvoir un concept au rang d'entité candidate (5 pour remboursement)
+#   src: 30_Business_OS/09_Blueprints/ontologie-trois-couches/BRIEF_I_GEORDI_ENTITES.md [haute] (v3-business)
+<urn:aspace:entity:coach-os-refonte> aspace:covers "22-primitives-retenues" .
+#   L'analyse coach-os-refonte retient 22 primitives sur ~270 proposées (filtre 92 %) : 12 P1 universelles + 4 transversales spécialisées + 5 par variant 
+#   src: 30_Business_OS/09_Blueprints/coach-os-refonte/CARTE.md [haute] (v3-business)
+<urn:aspace:entity:fde-these> aspace:covers "10-gestes" .
+#   La thèse FDE décompose le métier en 10 gestes : 5 automatisables (ontologie, plan, configuration, évals, déploiement) + 4 irréductibles (mandat, non-é
+#   src: 30_Business_OS/09_Blueprints/coach-os-refonte/SYNTHESE.md [haute] (v3-business)
+<urn:aspace:entity:coach-os-refonte> aspace:routes <urn:aspace:entity:chantier-couche-transversale> .
+#   Le chantier 1 (couche transversale + graphe ontologique) est posé comme premier chantier car sans lui les suivants sont aveugles
+#   src: 30_Business_OS/09_Blueprints/coach-os-refonte/CARTE.md [haute] (v3-business)
+<urn:aspace:entity:coach-os-refonte> aspace:routes <urn:aspace:entity:chantier-onboarding-fde> .
+#   Le chantier 2 refond onboarding en moteur d'installation FDE — premier increment de la thèse T6, test de 30 jours sans ingénieur en salle
+#   src: 30_Business_OS/09_Blueprints/coach-os-refonte/CARTE.md [haute] (v3-business)
+<urn:aspace:entity:paperclip-coach-os> aspace:covers "plafond-2-3-claude-local" .
+#   Paperclip-Coach-OS plafonne à 2-3 agents claude_local simultanés : sept VP réveillés simultanément ont épuisé la table des process le 2026-08-02 (fork
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:paperclip-failed-run> aspace:appliesTo <urn:aspace:entity:verifier-fichier-avant-relance> .
+#   Un 'failed' sur un agent Paperclip ne veut pas dire 'rien produit' — vérifier le fichier avant de relancer, sous sous peine d'écraser du travail valid
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:coach-os-arborescence> aspace:dependsOn <urn:aspace:entity:meta-factory-moule> .
+#   L'arborescence Coach OS n'est pas écrite à la main — le moule est dans 02_Meta_Factory/ ; modifier un fichier engendré à la main, c'est le perdre à la
+#   src: 30_Business_OS/10_Projects/coach-os/README.md [haute] (v3-business)
+<urn:aspace:entity:green-lantern> aspace:escalates <urn:aspace:entity:bill-forge-l0-2> .
+#   Green Lantern escalade les besoins de skills L0 vers Bill (L0.2 Forge) — un canal défini, pas une improvisation
+#   src: 30_Business_OS/AGENTS.md [haute] (v3-business)
+<urn:aspace:entity:batman> aspace:escalates <urn:aspace:entity:summers-fait-non-tenu> .
+#   Batman remonte à Summers des faits, pas des décisions — l'arbitrage est à Summers
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_AGENT.md [haute] (v3-business)
+<urn:aspace:entity:batman-veto> aspace:escalates <urn:aspace:entity:summers-fait-brut> .
+#   Le veto de Batman ne se négocie pas dans le sprint : il remonte à Summers comme un fait, avec son motif
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/02_Operations_en_Loops_Batman_Fantastic4/VP_SOUL.md [haute] (v3-business)
+<urn:aspace:entity:wonder-woman> aspace:seeAlso <urn:aspace:entity:dette-recurrente-roi> .
+#   Wonder Woman étend la doctrine veto-dépense : corrélat direct avec la dette récurrente — chaque ligne doit porter une métrique de retour chiffrée
+#   src: 30_Business_OS/10_Projects/coach-os/04_Business_Domains/06_Finance_et_ROI_WonderWoman_Thunderbolts/VP_AGENT.md [haute] (v3-business)

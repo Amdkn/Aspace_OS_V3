@@ -1,0 +1,159 @@
+{
+ "racine": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains",
+ "couches": {
+  "00_Amadeus": {
+   "lus": 757,
+   "echecs": 0,
+   "dossiers_artefacts_ecartes": 334,
+   "dossiers": 702,
+   "zones": [
+    [
+     "05_OSS_TSTwin",
+     283
+    ],
+    [
+     "05_OSS_Twin",
+     277
+    ],
+    [
+     "01_Identity_Core",
+     150
+    ],
+    [
+     "sob",
+     31
+    ],
+    [
+     "(racine)",
+     14
+    ],
+    [
+     "40_SYMPHONY_BUS",
+     1
+    ],
+    [
+     "02_Bio_Metrics",
+     1
+    ]
+   ]
+  },
+  "10_Tech_OS": {
+   "lus": 97,
+   "echecs": 0,
+   "dossiers_artefacts_ecartes": 10,
+   "dossiers": 186,
+   "zones": [
+    [
+     "00_Governance_Rick",
+     42
+    ],
+    [
+     "12_Blueprints",
+     26
+    ],
+    [
+     "11_Infra_13th_Doctor",
+     16
+    ],
+    [
+     "13_Data_12th_Doctor",
+     6
+    ],
+    [
+     "12_Interface_11th_Doctor",
+     5
+    ],
+    [
+     "(racine)",
+     2
+    ]
+   ]
+  },
+  "20_Life_OS": {
+   "lus": 159,
+   "echecs": 0,
+   "dossiers_artefacts_ecartes": 8,
+   "dossiers": 62,
+   "zones": [
+    [
+     "22_Wheel_Discovery",
+     78
+    ],
+    [
+     "21_Ikigai_Orville",
+     24
+    ],
+    [
+     "23_12WY_SNW",
+     16
+    ],
+    [
+     "25_GTD_Cerritos",
+     13
+    ],
+    [
+     "26_DEAL_Protostar",
+     11
+    ],
+    [
+     "(racine)",
+     9
+    ],
+    [
+     "00_Gatekeepers_Beth_Morty",
+     7
+    ],
+    [
+     "27_Cognition_LD04",
+     1
+    ]
+   ]
+  },
+  "30_Business_OS": {
+   "lus": 1335,
+   "echecs": 0,
+   "dossiers_artefacts_ecartes": 126,
+   "dossiers": 1743,
+   "zones": [
+    [
+     "10_Projects",
+     861
+    ],
+    [
+     "00_Jerry_Business_Pulse",
+     466
+    ],
+    [
+     "09_Blueprints",
+     5
+    ],
+    [
+     "02_Meta_Factory",
+     2
+    ],
+    [
+     "00_Summers_Verse",
+     1
+    ]
+   ]
+  }
+ },
+ "ecartes": [
+  ".cache",
+  ".git",
+  ".next",
+  ".turbo",
+  ".venv",
+  ".vercel",
+  "Takeout",
+  "__pycache__",
+  "build",
+  "coverage",
+  "dist",
+  "graphify-burst",
+  "graphify-out",
+  "node_modules",
+  "venv"
+ ],
+ "total_lus": 2348
+}

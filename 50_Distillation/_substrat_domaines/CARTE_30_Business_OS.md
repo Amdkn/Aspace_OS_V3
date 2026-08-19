@@ -1,0 +1,3212 @@
+# Carte du domaine 30_Business_OS
+
+Genere par `scripts/substrat_domaines_v2.py`. **Ne pas editer.**
+
+**1335 fichiers `.md` ecrits a la main**, 126 dossiers d'artefacts ecartes.
+
+Zones : `10_Projects` 861 · `00_Jerry_Business_Pulse` 466 · `09_Blueprints` 5 · `02_Meta_Factory` 2 · `00_Summers_Verse` 1
+
+- 00_Jerry_Business_Pulse/
+- 00_Summers_QuickAccess/
+- 00_Summers_Verse/
+- 02_Meta_Factory/
+- 09_Blueprints/
+- 10_Projects/
+- Cookbooks_Coaching/
+- Ownerbooks_Picard/
+- Playbooks_Jerry/
+- Runbooks_Summers/
+- SOPs_B2/
+- Skills_B3/
+- graphify-out/  **[ECARTE : artefact genere]**
+  - .ha_h10_drift_scan_2026-07-28T0602ET_append.md
+  - abc/
+  - alikaly/
+  - ceo-desktop/
+  - cerritos-gtd-dispatch/
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - marina/
+  - omk/
+  - rilcot/
+  - solaris/
+  - wargames/
+    - 30-mirofish-triptyque-1-businessos.md  — WARGAME 30 — Mirofish Triptyque 1 Business OS : People × Ops × IT sous
+    - wargame-30-out/
+      - MANIFEST_Triptyque_1_BusinessOS.md  — WARGAME ORDER — MANIFEST_Triptyque_1_BusinessOS
+      - sub_MANIFEST_IT_Cyborg.md  — Sub-MANIFEST IT — Cyborg (B2 06)
+      - sub_MANIFEST_Ops_Batman.md  — Sub-MANIFEST Ops — Batman (B2 02)
+      - sub_MANIFEST_People_GreenLantern.md  — Sub-MANIFEST People — GreenLantern (B2 01)
+    - CLAUDE.md  — CLAUDE.md
+    - MANIFEST.md  — Manifest — solaris (AaaS Agency Garden)
+    - apps/
+      - dashboard/
+      - landing/
+    - MANIFEST.md  — Manifest — RILCOT Members Space & OS
+    - apps/
+      - members/
+        - .git/  **[ECARTE : artefact genere]**
+        - node_modules/  **[ECARTE : artefact genere]**
+        - src/
+    - .claude/
+    - .codex/
+    - 00_coach_os/
+    - CLAUDE.md  — CLAUDE.md
+    - MANIFEST.md  — Manifest — omk (PARENT)
+    - MANIFEST_coaching_premium.md  — Manifest — omk-nexus-coaching-premium
+    - MERGE_REPORT_2026-08-01.md  — Fusion OMK — 2026-08-01
+    - README.md  — Project — omk-nexus-coaching-premium
+    - _TRASH_2026-06-19_pre_pivot_vercel/
+    - _briefs/
+    - _resources/
+    - _sidebars/
+    - _stranded_2026-07-24/
+    - apps/
+    - chartes/
+    - docs/
+    - repos/
+    - runbooks/
+    - signals/
+    - verses/
+    - wiki/
+      - log.md  — Wiki log — append-only ledger
+      - verse-W30_2026-07-10.md  — Verse W30 — 2026-07-10 → 2026-07-26
+      - .plans/
+      - 2026-07-04_L1-bootstrap.md  — Bootstrap signal L1 gstack install — A0 GO Total Gate Open Go Bypass A
+      - ws_atelier_1.md  — Signal — Atelier Coach premium #1 (workshop pilote)
+      - runbook-coach-premium-capsule.md  — Runbook — Coach Premium Catch-up R3+R4+R5
+      - citadelle-os/
+      - coach-os/
+      - omk-nexus-landing-3-personas/
+      - omk-saas-target/
+      - omk-services-nexus-landing-en/
+      - omk-services-nexus-quiz/
+        - .git/  **[ECARTE : artefact genere]**
+        - .vercel/  **[ECARTE : artefact genere]**
+        - README.md  — Nexus — Agentic Governance (EN) | OMK Services
+        - .git/  **[ECARTE : artefact genere]**
+        - AGENTS.md  — OMK Dashboard — Agent Contract
+        - README.md  — Run and deploy your AI Studio app
+        - REBUILD_WORKFLOW.md  — 🔆 OMK Dashboard — Workflow de Rebuild Deployment-Ready
+        - dist/  **[ECARTE : artefact genere]**
+        - node_modules/  **[ECARTE : artefact genere]**
+        - picard_audit.md  — 🔆 OMK Services Business OS — Audit Technique & Correction de Dettes (P
+        - sql/
+        - src/
+        - supabase/
+          - functions/
+            - sign-up-organization/
+          - auth/
+          - components/
+          - config/
+          - contexts/
+          - data/
+          - hooks/
+          - lib/
+            - empty-states/
+            - skeletons/
+            - views/
+              - mission-control/
+          - 99_README.md  — OMK Dashboard — SQL DDL Package
+        - _canon-skill/
+        - _qa/
+        - _references/
+        - _screenshots/
+        - v2/
+        - v3/
+        - wargame/
+          - 00_INDEX.md  — V2 Design References — Hub
+          - 01_marcus-editorial.md  — Marcus — Editorial Ledger
+          - 02_harrison-terminal.md  — Harrison — Terminal Stratégique
+          - 03_david-atelier.md  — David — Atelier Industriel
+          - 04_synthesis.md  — Synthèse — 3 patterns transversaux réutilisables
+          - SKILL-frontend-design.md
+        - .bmad-loop/
+        - .claude/
+        - .codex/
+        - .git/  **[ECARTE : artefact genere]**
+        - .moat/
+        - .multica-briefs/
+        - .superpowers/
+        - .windsurf/
+        - AUDIT_BRIEF.md  — BRIEF — Audit complet de Coach OS
+        - AUDIT_FINAL.md  — AUDIT FINAL — Coach OS
+        - AUDIT_RAPPORT.md  — Coach OS — Audit complet
+        - CANVAS_TASK.md  — Tâche — Canvas UI : effet du Desktop + style par app
+        - HANDOVER_M3_PHASE0_SUPABASE.md  — Handover → M3 : Coach OS Phase 0 (Supabase provisioning)
+        - MIGRATION_SUPABASE.md  — Coach OS → Supabase Migration Plan
+        - PHASE0_RECEIPT.md  — Phase 0 Receipt — Coach OS Supabase Provisioning
+        - README.md  — Coach OS
+        - VERIFICATION_FINAL.md  — VERIFICATION FINAL — Coach OS
+        - _DRAFTS_PPR_LANE/
+        - _TRASH_2026-07-25_pre_blackwidow_scarletwitch_purge/
+        - _TRASH_2026-08-06_lockfiles/
+        - _bmad/
+        - _bmad-output/
+        - _briefs/
+        - _config/
+        - _verify_proofs/
+        - adws/
+        - api/
+        - cli/
+        - coach-os-plugin/
+        - deploy/
+        - dist/  **[ECARTE : artefact genere]**
+        - docs/
+        - harness/
+        - logs/
+        - mcp/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - okf/
+        - public/
+        - scripts/
+        - skills/
+        - src/
+        - supabase/
+        - tools/
+        - wiki/
+        - {output_folder}/
+          - implementation-artifacts/
+          - planning-artifacts/
+          - hand_offs/
+            - 2026-07-28_drawbridge_coach_os_iterations.md  — Handoff Phase 40 — Drawbridge setup for Coach OS iterations (2026-07-2
+            - 2026-07-30_canvas-ui-v30-fix-css-fallback.md  — canvas-ui v30 — CssFallback fix 2026-07-30
+            - 2026-07-30_canvas-ui-v30-integration.md  — canvas-ui v30 integration — COMPLETE 2026-07-30
+            - 2026-07-30_detail_pages_per_app.md  — 2026-07-30 — Detail pages per app, handoff
+          - .temp/
+          - EVOLUTION.md  — EVOLUTION.md — Du PoC au Souverain : quatre paliers, ce qui change
+          - VERIFICATION_RLS.md  — VERIFICATION_RLS.md — Procédure de vérification RLS + JWT claim
+          - migrations/
+          - tests/
+          - tools/
+          - agent/
+          - apps/
+          - assets/
+          - components/
+          - contexts/
+          - data/
+          - hooks/
+          - landing/
+          - lib/
+          - onboarding/
+          - site/
+          - stores/
+          - types/
+            - REPARTITION.md  — REPARTITION — styles `styles.csv` × composants Canvas UI
+            - chrome/
+            - effects/
+            - pages/
+            - styles/
+            - audit/
+            - auth/
+            - cms/
+            - cognition/
+            - ontology/
+            - saas-builder/
+            - tenant/
+            - themes/
+            - tooling/
+            - workspace/
+              - adapters/
+              - catalog/
+              - ui/
+              - engines/
+            - audit/
+            - auth/
+            - canvasui/
+            - cms/
+            - workspace/
+              - _v1_css_retired/
+              - v30/
+                - AsciiObject/
+                - Asciify/
+                - Bend/
+                - Blaze/
+                - Bubble/
+                - Canvas/
+                - Cloth/
+                - Clouds/
+                - DecryptReveal/
+                - Displacement/
+                - DitheredObject/
+                - Droplets/
+                - FlameWrap/
+                - ForceField/
+                - Frost/
+                - Glass/
+                - GlassObject/
+                - Glitch/
+                - GlyphRain/
+                - Grid/
+                - HexFloat/
+                - Laser/
+                - Liquid/
+                - LiquidObject/
+                - Magnify/
+                - ParticleObject/
+                - ParticleReveal/
+                - ParticleScroll/
+                - Peel/
+                - RetroDither/
+                - Ripple/
+                - Shatter/
+                - VHS/
+                - README.md  — _v1_css_retired — Hand-rolled CSS sister patterns (Retired 2026-07-30)
+            - Macro/
+            - _ui/
+            - app-store/
+            - audit/
+            - auth/
+            - clients/
+            - cognition/
+            - dashboard/
+            - design/
+            - en-construction/
+            - finance/
+            - growth/
+            - it-rd/
+            - legal/
+            - marketplace/
+            - onboarding/
+            - ontology/
+            - operations/
+            - people/
+            - product/
+            - saas-builder/
+            - sales/
+            - settings/
+            - tasks/
+            - three-program/
+            - welcome/
+            - workspace/
+              - landing/
+                - canvases/
+              - _TRASH_2026-07-27_pre_page_detail_align/
+              - _TRASH_2026-08-10/
+              - tours/
+              - OUTILS.md  — OUTILS — Conformité sans Vanta
+              - embedded/
+              - dashboard/
+              - platform/
+              - security/
+                - sections/
+              - FOURNISSEURS.md  — Configurer les fournisseurs OAuth (Google, Apple, Microsoft)
+              - ontology/
+          - INSTALL.md  — Coach OS — installer le plugin
+          - app.list/
+          - app.open/
+          - collection.create/
+          - collection.delete/
+          - collection.list/
+          - collection.read/
+          - collection.search/
+          - collection.update/
+          - scenario.approve/
+          - scenario.list/
+          - scenario.read/
+          - scenario.reject/
+          - section.goto/
+            - SKILL.md  — section.goto
+            - SKILL.md  — scenario.reject
+            - SKILL.md  — scenario.read
+            - SKILL.md  — scenario.list
+            - SKILL.md  — scenario.approve
+            - SKILL.md  — collection.update
+            - SKILL.md  — collection.search
+            - SKILL.md  — collection.read
+            - SKILL.md  — collection.list
+            - SKILL.md  — collection.delete
+            - SKILL.md  — collection.create
+            - SKILL.md  — app.open
+            - SKILL.md  — app.list
+          - assets/
+          - landing/
+          - site/
+            - ARTEFACTS.md  — Artefacts visuels du site — invites Nano Banana 2 et Veo 3
+            - BARRE.md  — BARRE — le site Coach OS
+            - demo/
+            - diagnostic/
+            - engagements/
+            - paliers/
+            - assistant/
+              - clippy/
+              - f1/
+              - genie/
+              - genius/
+              - links/
+              - merlin/
+              - monkeyking/
+              - officelogo/
+              - peedy/
+              - rocky/
+              - rover/
+              - saeko/
+          - index.md  — Coach OS — bundle OKF v0.2
+          - securite/
+            - fuite-cache-navigateur.md  — Constat
+            - modele-rls.md  — Ce qui est correct
+            - projets-supabase.md  — Constat
+          - 224e0153-4ecc-4860-81fd-6fae419f08b8/
+          - 52db8e61-fe29-48ab-95af-c9ec0bfb9fdc/
+          - 9259fd84-cac8-42d3-be20-1cfbddc4fec7/
+          - de35c5f1-6944-47f6-b8bc-849452b0313a/
+          - adws/
+            - adw_data/
+            - adw_sssf_config/
+              - harness_engineering/
+          - superpowers/
+            - plans/
+            - specs/
+              - 2026-07-30-coach-os-app-detail-pages-design.md  — Coach OS — Pages de détail par app, un style par app
+              - 2026-07-30-coach-os-app-detail-pages.md  — Coach OS — App Detail Pages per App Implementation Plan
+          - probo/
+            - README.md  — Probo sur Render — guide non-technique
+          - skills/
+            - INSTALL.md  — Coach OS — installer le plugin
+            - app.list/
+            - app.open/
+            - collection.create/
+            - collection.delete/
+            - collection.list/
+            - collection.read/
+            - collection.search/
+            - collection.update/
+            - scenario.approve/
+            - scenario.list/
+            - scenario.read/
+            - scenario.reject/
+            - section.goto/
+              - SKILL.md  — section.goto
+              - SKILL.md  — scenario.reject
+              - SKILL.md  — scenario.read
+              - SKILL.md  — scenario.list
+              - SKILL.md  — scenario.approve
+              - SKILL.md  — collection.update
+              - SKILL.md  — collection.search
+              - SKILL.md  — collection.read
+              - SKILL.md  — collection.list
+              - SKILL.md  — collection.delete
+              - SKILL.md  — collection.create
+              - SKILL.md  — app.open
+              - SKILL.md  — app.list
+          - _agent/
+          - agent/
+          - v1/
+            - backends/
+          - adw_data/
+          - adw_modules/
+          - adw_sssf_config/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - harness_engineering/
+            - prompt_engineering/
+            - sessions/
+              - 4df61972/
+                - builder/
+                - context_handoff/
+                  - prompts/
+                    - system.md  — Builder Agent
+                    - user.md  — Build Task
+              - builder/
+              - documenter/
+              - planner/
+              - reviewer/
+              - scout/
+                - system.md  — Scout Agent
+                - user.md  — Scout Task
+                - system.md  — Reviewer Agent
+                - user.md  — Review Task
+                - system.md  — Planner Agent
+                - user.md  — Plan Task
+                - system.md  — Documenter Agent
+                - user.md  — Document Task
+                - system.md  — Builder Agent
+                - user.md  — Build Task
+          - cms/
+          - 2026-08-09_prod/
+          - 2026-08-10_audit_crud/
+          - 2026-08-10_dettes/
+          - 2026-08-10_vague2/
+          - 2026-08-10_vague3/
+          - 2026-08-11_production/
+          - 2026-08-15_AUDIT_LOG/
+          - 2026-08-15_AUTH_FIX/
+          - 2026-08-15_MEMBERSHIPS/
+          - 2026-08-15_W03_fermeture/
+          - 2026-08-15_W13_QUOTAS/
+          - 2026-08-15_WORKSPACE_BRANCHES/
+          - 2026-08-15_saas_builder_v1/
+          - 2026-08-16_WARGAME_ANTIFRAGILITE/
+          - 2026-08-17_APPS_IFRAME/
+          - 2026-08-17_CANON_UUID/
+          - 2026-08-17_CORRECTIFS_M3/
+          - 2026-08-17_PENTEST_M3/
+            - BRIEF_A_authn_isolation.md  — BRIEF A — authentification, session, isolation multi-tenant
+            - BRIEF_B_collections_pages.md  — BRIEF B — collections manquantes et pages qui cassent
+            - BRIEF_C_surface_secrets.md  — BRIEF C — surface d'exécution, secrets, chaîne d'approvisionnement
+            - FAITS.md  — FAITS DÉJÀ MESURÉS — ne les remesure pas
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_A.md  — Brief A — Authentification, session, isolation multi-tenant
+            - RAPPORT_B.md  — RAPPORT B — Collections manquantes & pages qui cassent
+            - RAPPORT_C.md  — RAPPORT_C — surface d'exécution, secrets, chaîne d'approvisionnement
+            - BALAYAGE.md  — Balayage production — toutes les apps, toutes les sections
+            - FIX_1_identite.md  — CORRECTIF 1 — l'identité est forgeable (CRITIQUE)
+            - FIX_2_fuite_cache.md  — CORRECTIF 2 — fuite inter-comptes par le cache du navigateur (ÉLEVÉ)
+            - FIX_3_routes_api.md  — CORRECTIF 3 — routes API sans garde d'authentification (ÉLEVÉ)
+            - FIX_4_pages_cassees.md  — CORRECTIF 4 — deux pages cassent, et la cause est invisible (ÉLEVÉ)
+            - FIX_5_api500_et_deps.md  — CORRECTIF 5 — le 500 de `/api/v1/*` et les dépendances vulnérables
+            - FIX_6_customers_orphelin.md  — CORRECTIF 6 — le projet CUSTOMERS et ses cinq tables mortes
+            - FIX_7_collections_fantomes.md  — CORRECTIF 7 — les collections que les apps lisent et qui n'existent pa
+            - FIX_8_persistance_versionnee.md  — CORRECTIF 8 — un état persisté périmé casse l'app (la cause de « Legal
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_FIX_1.md  — RAPPORT_FIX_1 — identité forgeable, fermeture W03
+            - RAPPORT_FIX_2.md  — RAPPORT FIX 2 — Fuite inter-comptes par le cache du navigateur
+            - RAPPORT_FIX_3.md  — RAPPORT FIX_3 — routes API sans garde d'authentification
+            - RAPPORT_FIX_5.md  — RAPPORT FIX_5 — le 500 de `/api/v1/*` et les dépendances vulnérables
+            - RAPPORT_FIX_6.md  — RAPPORT_FIX_6 — CUSTOMERS orphelin, cinq (six) tables mortes
+            - RAPPORT_FIX_7.md  — RAPPORT FIX-7 — collections consommées par les apps
+            - RAPPORT_FIX_8.md  — RAPPORT FIX-8 — un état persisté périmé casse l'app (la cause de « Leg
+            - BRIEF_ALIGNEMENT_CODE.md  — BRIEF — aligner le code sur le canon `org_id uuid`
+            - RAPPORT.md  — Rapport — aligner le code sur le canon `org_id uuid`
+            - BRIEF_ARCHITECTURE.md  — BRIEF — architecture des apps embarquées, multi-tenant et partage
+            - FAITS.md  — FAITS MESURÉS — apps embarquées en iframe
+            - RAPPORT_ARCHITECTURE.md  — RAPPORT_ARCHITECTURE — apps embarquées, multi-tenant, partage
+            - AUDIT_4_PROJETS_ACTIFS.md  — AUDIT — 4 projets actifs (sauf Life OS)
+            - BRIEF_WARGAME_ANTIFRAGILITE.md  — BRIEF_WARGAME_ANTIFRAGILITE — pourquoi tes serveurs sont fragiles, et 
+            - CIBLE_CANONIQUE_COACH_OS.md  — CIBLE CANONIQUE : coach-os
+            - DETTE_3_orgs_supabase.md  — DETTE #2 — 3 organisations Supabase distinctes
+            - DETTE_6_tables_au_mauvais_endroit.md  — DETTE : 6 tables coach-os appliquées sur le mauvais projet Supabase
+            - DETTE_lance_sh_manquant.md  — DETTE #3 — `lance.sh` canonique n'existe pas sur disque
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_WARGAME.md  — RAPPORT_WARGAME — anti-fragilite par conception
+            - SPEC_SAAS_BUILDER_V1.md  — SPEC SaaS builder V1
+            - BRIEF_WORKSPACE_BRANCHES.md  — BRIEF_WORKSPACE_BRANCHES — WorkSpaces versionnés, branche/PR/merge
+            - GARDE_FOU.md  — GARDE-FOU — commun aux cinq briefs du 2026-08-15
+            - RAPPORT_WORKSPACE_BRANCHES.md  — RAPPORT_WORKSPACE_BRANCHES — 2026-08-15
+            - BRIEF_W13_QUOTAS.md  — BRIEF_W13_QUOTAS — rate-limit par tenant
+            - GARDE_FOU.md  — GARDE-FOU — commun aux cinq briefs du 2026-08-15
+            - RAPPORT_W13_QUOTAS.md  — RAPPORT_W13_QUOTAS — rate-limit par tenant dans serverStore
+            - BRIEF_W03_PAQUET_A_CODE.md  — W03 — FERMETURE — Paquet A (code uniquement)
+            - BRIEF_W03_PAQUET_B_HITL.md  — W03 — FERMETURE — Paquet B (HITL humain)
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - BRIEF_MEMBERSHIPS.md  — BRIEF_MEMBERSHIPS — multi-utilisateurs par tenant
+            - GARDE_FOU.md  — GARDE-FOU — commun aux cinq briefs du 2026-08-15
+            - RAPPORT_MEMBERSHIPS.md  — RAPPORT_MEMBERSHIPS — multi-utilisateurs par tenant
+            - BRIEF_AUTH_FIX.md  — BRIEF_AUTH_FIX — l'auth qui marche enfin
+            - GARDE_FOU.md  — GARDE-FOU — commun aux cinq briefs du 2026-08-15
+            - RAPPORT_AUTH_FIX.md  — RAPPORT_AUTH_FIX — 2026-08-15
+            - BRIEF_AUDIT_LOG.md  — BRIEF_AUDIT_LOG — qui a touché quoi, et quand
+            - GARDE_FOU.md  — GARDE-FOU — commun aux cinq briefs du 2026-08-15
+            - RAPPORT_AUDIT_LOG.md  — RAPPORT — BRIEF_AUDIT_LOG (2026-08-15)
+            - BRIEF_A_AVATAR.md  — BRIEF A — l'avatar d'agent qui sort de l'ecran, et le repointage Supab
+            - BRIEF_B_SUPABASE.md  — BRIEF B — Supabase multi-tenant : 23 collections, RLS, Auth, compte de
+            - BRIEF_C_AI_NATIVE.md  — BRIEF C — le socle AI-natif : une definition d'outil, cinq surfaces
+            - BRIEF_D_AUTH.md  — BRIEF D — connexion et inscription : formulaire stable, decor vivant
+            - BRIEF_E_LANDING.md  — BRIEF E — la page d'atterrissage pour les coachs
+            - BRIEF_F_LEGAL.md  — BRIEF F — l'app Legal : la conformite sans Vanta
+            - BRIEF_G_ONBOARDING.md  — BRIEF G — la prise en main du bureau, et les services embarques
+            - BRIEF_H_RLS.md  — BRIEF H — casser la recursion RLS, et ouvrir la voie a la demonstratio
+            - BRIEF_I_LANDING_V2.md  — BRIEF I — la page d'atterrissage devient un site : plusieurs pages, un
+            - BRIEF_J_SITE.md  — BRIEF J — le site web : un style par section, deux niveaux de navigati
+            - BRIEF_K_SITE_RENDU.md  — BRIEF K — le site : appliquer réellement ce que J a planifié
+            - BRIEF_L_CONFORMITE_ACCUEIL.md  — BRIEF L — la conformite hebergee, et l'accueil sur le VRAI bureau
+            - BRIEF_M_AUDIT.md  — BRIEF M — l'app Onboarding est refaite de zero et devient « Audit »
+            - BRIEF_N_COGNITION.md  — BRIEF N — Cognition redevient une app, et se remplit
+            - BRIEF_O_SIDEBAR.md  — BRIEF O — Le site passe en rail latéral, et le héros redevient lisible
+            - BRIEF_P_PALIERS_ENGAGEMENTS.md  — BRIEF P — Paliers et Engagements : une carte devient une section
+            - BRIEF_Q_ACCUEIL_ARRONDI.md  — BRIEF Q — L'accueil s'arrondit, et emprunte les registres de l'app Des
+            - BRIEF_R_METHODE.md  — BRIEF R — Méthode : Editorial, Art Deco, Wabi-sabi
+            - BRIEF_S_PALIERS_REGISTRES.md  — BRIEF S — Paliers : Bento, Drawn, Aurora, Liquid, Retro 57
+            - BRIEF_T_ENGAGEMENTS_REGISTRES.md  — BRIEF T — Engagements : Bauhaus, Brutalism, Neo-brutal, Memphis, Vapor
+            - BRIEF_U_STORY4_ONTOLOGIE.md  — BRIEF U — Story 4 : brancher IT/R&D et Operations sur le registre d'on
+            - BRIEF_V_CARTOGRAPHIE_GEORDI.md  — BRIEF V — Cartographier Geordi, sans le lire en entier
+            - BRIEF_W_GEORDI_INTEGRAL.md  — BRIEF W — Geordi en entier, YouTube compris, sans plafond de fichiers
+            - BRIEF_X_CANVAS_FONDS.md  — BRIEF X — Les cinq Canvas de FOND, un par page du site
+            - BRIEF_Y_CANVAS_CURSEURS.md  — BRIEF Y — Les cinq Canvas de CURSEUR, et la question des fusions
+            - GARDE_FOU.md  — GARDE-FOU — a lire avant toute action
+            - RAPPORT_A_AVATAR.md  — Rapport BRIEF A — avatar + repointage Supabase
+            - RAPPORT_B_SUPABASE.md  — Rapport B — Supabase multi-tenant : 23 collections, RLS, Auth, compte 
+            - RAPPORT_C_AI_NATIVE.md  — RAPPORT_C_AI_NATIVE — 2026-08-11
+            - RAPPORT_D_AUTH.md  — RAPPORT D — Auth : page de connexion / inscription
+            - RAPPORT_E_LANDING.md  — Rapport E — page d'atterrissage Coach OS
+            - RAPPORT_F_LEGAL.md  — RAPPORT F — Legal, la conformité sans Vanta — 2026-08-11
+            - RAPPORT_G_ONBOARDING.md  — RAPPORT G — ONBOARDING + SERVICES EMBARQUÉS
+            - RAPPORT_H_RLS.md  — RAPPORT H — casser la recursion RLS, ouvrir la voie a la demonstration
+            - RAPPORT_I_LANDING_V2.md  — Rapport I — la page d'atterrissage devient un site
+            - RAPPORT_K_SITE_RENDU.md  — RAPPORT K — le site : appliquer réellement ce que J a planifié
+            - RAPPORT_L_CONFORMITE_ACCUEIL.md  — RAPPORT L — la conformité hébergée, et l'accueil sur le VRAI bureau
+            - RAPPORT_M_AUDIT.md  — RAPPORT M — Audit (Brief M, 2026-08-11)
+            - RAPPORT_O_SIDEBAR.md  — RAPPORT_O_SIDEBAR — le site passe en rail latéral, le héros redevient 
+            - RAPPORT_P_PALIERS_ENGAGEMENTS.md  — RAPPORT P — Paliers & Engagements
+            - RAPPORT_Q_ACCUEIL_ARRONDI.md  — Rapport Q — Accueil arrondi
+            - RAPPORT_R_METHODE.md  — RAPPORT R — Méthode : Editorial, Art Deco, Wabi-sabi
+            - RAPPORT_S_PALIERS_REGISTRES.md  — RAPPORT S — Paliers : Bento, Drawn, Aurora, Liquid, Retro 57
+            - RAPPORT_T_ENGAGEMENTS_REGISTRES.md  — RAPPORT T — Engagements : Bauhaus, Brutalism, Neo-brutal, Memphis, Vap
+            - RAPPORT_U_STORY4.md  — RAPPORT U — Story 4 : brancher it-rd et operations sur le registre
+            - RAPPORT_V_CARTOGRAPHIE_GEORDI.md  — Rapport V — Cartographie de Geordi
+            - RAPPORT_W_GEORDI_INTEGRAL.md  — Rapport W — Geordi en entier, YouTube compris
+            - RAPPORT_X_CANVAS_FONDS.md  — Rapport X — Cinq Canvas de fond, un par page du site
+            - RAPPORT_Y_CANVAS_CURSEURS.md  — RAPPORT Y — Canvas UI curseurs
+            - REGISTRE_CANVAS_UI.md  — Registre d'utilisation — Canvas UI, les 33 composants
+            - SOCLE.md  — SOCLE — les faits deja mesures. Ne les remesure pas.
+            - VERDICT_CANVAS_UI.md  — Verdict — les dix composants Canvas UI, et la question des fusions
+            - captures/
+            - proposals/
+            - rapports/
+            - registre_canvas/
+              - RAPPORT_J_SITE.md  — RAPPORT J — site web : un style par section, deux niveaux de navigatio
+              - G_onboarding/
+              - L_conformite_accueil/
+              - site/
+              - site-reduced-motion/
+            - BRIEF_B_BUSINESS.md  — BRIEF B — Sales OS, Finance, Clients, Growth
+            - BRIEF_D_DASHBOARD.md  — BRIEF D — Dashboard, les 23 sections au crible du CRUD
+            - BRIEF_O_OPS.md  — BRIEF O — Operations, Tasks, Product, IT/R&D
+            - CRITERES.md  — CRITÈRES — ce que tu cherches dans ton périmètre
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_B_BUSINESS.md  — Rapport B_BUSINESS — vague 3 (2026-08-10)
+            - RAPPORT_D_DASHBOARD.md  — Rapport D — Dashboard, vague 3 2026-08-10
+            - RAPPORT_O_OPS.md  — RAPPORT O — Operations · Tasks · Product · IT/R&D
+            - REPRISE.md  — REPRISE — vague 3 interrompue par le quota
+            - SOCLE_ACQUIS.md  — CE QUI EXISTE DÉJÀ DANS LE SOCLE — sers-t'en, ne le réécris pas
+            - BRIEF_G_DASHBOARD.md  — BRIEF G — Dashboard : l'invite système et le dépôt de documents
+            - BRIEF_P_PEOPLE.md  — BRIEF P — l'app People, la plus incomplète des dix-neuf
+            - BRIEF_S_SOCLE.md  — BRIEF S — le socle : ce qui manque à TOUTES les apps
+            - BRIEF_W_WEB.md  — BRIEF W — Welcome, Marketplace, et l'audit du reste
+            - CRITERES.md  — CRITÈRES — ce que tu cherches dans ton périmètre
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_P_PEOPLE.md  — RAPPORT P_PEOPLE — vague 2 du 2026-08-10
+            - RAPPORT_S_SOCLE.md  — RAPPORT S — Socle (chantiers 1 à 4)
+            - RAPPORT_W_WEB.md  — RAPPORT W — Welcome, Marketplace, et l'audit du reste
+            - BRIEF_A_SALES_LEGAL.md  — BRIEF A — le snapshot qui ment, et la grille dupliquée
+            - BRIEF_B_PEOPLE_PLATFORM.md  — BRIEF B — la fiche inatteignable, le lien volatil, les boutons décorat
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_A_SALES_LEGAL.md  — RAPPORT A — Sales & Legal
+            - RAPPORT_B_PEOPLE_PLATFORM.md  — RAPPORT B_PEOPLE_PLATFORM — campagne 2026-08-10 (dettes assumées)
+            - SOCLE_ACQUIS.md  — CE QUI EXISTE DÉJÀ DANS LE SOCLE — sers-t'en, ne le réécris pas
+            - BRIEF_F_FINANCE_SALES.md  — BRIEF F — finance, sales, clients, growth, legal, audit
+            - BRIEF_G_DASH_OPS.md  — BRIEF G — dashboard, people, operations, tasks, product, it-rd, ontolo
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - MESURE.md  — LA MESURE — ne la refais pas, sers-t'en
+            - RAPPORT_F_FINANCE_SALES.md  — RAPPORT F — finance · sales · clients · growth · legal · audit
+            - RAPPORT_G_DASH_OPS.md  — RAPPORT G — dashboard · people · operations · tasks · product · it-rd 
+            - SOCLE_ACQUIS.md  — CE QUI EXISTE DÉJÀ DANS LE SOCLE — sers-t'en, ne le réécris pas
+            - BRIEF_A_SOCLE.md  — BRIEF A — le socle commun
+            - BRIEF_B_DASHBOARD.md  — BRIEF B — l'app Dashboard (23 sections)
+            - BRIEF_C_BUSINESS.md  — BRIEF C — les apps du chiffre d'affaires
+            - BRIEF_D_OPS.md  — BRIEF D — les apps d'exécution
+            - BRIEF_E_PERIPHERIE.md  — BRIEF E — la périphérie et les portes d'entrée
+            - CRITERES.md  — CRITÈRES — ce que tu cherches dans ton périmètre
+            - GARDE_FOU.md  — GARDE-FOU — à lire avant tout
+            - RAPPORT_A_SOCLE.md  — Rapport A — Socle commun
+            - RAPPORT_B_DASHBOARD.md  — RAPPORT_B_DASHBOARD — campagne 2026-08-09 production-ready
+            - RAPPORT_C_BUSINESS.md  — RAPPORT C — apps du chiffre d'affaires
+            - RAPPORT_D_OPS.md  — RAPPORT D — apps d'exécution
+            - RAPPORT_E_PERIPHERIE.md  — Rapport E — périphérie et portes d'entrée
+          - implementation-artifacts/
+          - specs/
+            - spec-couche-ontologie/
+            - spec-themes-par-app/
+              - SPEC.md  — SPEC — Les thèmes par app doivent réellement s'appliquer
+              - stories/
+                - 1-cabler-les-9-variables-css-orphelines.md
+                - 2-garde-fou-contre-le-retour-des-variables-orphelines.md
+                - 3-faire-suivre-son-theme-a-lapp-settings.md
+              - SPEC.md  — SPEC — La couche d'ontologie, socle transversal de P1
+              - stories/
+                - 1-le-registre-dentites-en-typescript-pur.md
+                - 2-l-app-ontology-et-ses-quatre-sections.md
+                - 3-la-portee-personnelle-ou-organisation.md
+                - 4-brancher-it-rd-et-operations-sur-le-registre.md
+            - bmad-build-auto-result-story2-2026-08-05.md  — Story 2 — Résultat Build Auto
+            - deferred-work.md
+            - spec-people-personas-memoire-codex.md
+          - _config/
+          - bmm/
+          - core/
+          - custom/
+          - render/
+          - scripts/
+            - __pycache__/  **[ECARTE : artefact genere]**
+            - bmad-build/
+            - bmad-build-auto/
+              - coach-os-9d804c898d90/
+                - .staging-g5edhzp7/
+                - 33065a5d326cf7520a46/
+                - ff09e527edd6533a144f/
+                  - compile-epic-context.md  — Compile Epic Context
+                  - references/
+                  - review-prompts/
+                  - spec-template.md
+                  - step-01-clarify-and-route.md  — Step 1: Clarify and Route
+                  - step-02-plan.md  — Step 2: Plan
+                  - step-03-implement.md  — Step 3: Implement
+                  - step-04-review.md  — Step 4: Review
+                  - workflow.md  — Build Auto Workflow
+                    - edge-case-hunter.md  — Edge Case Hunter Review
+                    - verification-gap.md  — Verification Gap Review
+                    - deletion-check.md  — Deletion Check
+                  - compile-epic-context.md  — Compile Epic Context
+                  - references/
+                  - review-prompts/
+                  - spec-template.md
+                  - step-01-clarify-and-route.md  — Step 1: Clarify and Route
+                  - step-02-plan.md  — Step 2: Plan
+                  - step-03-implement.md  — Step 3: Implement
+                  - step-04-review.md  — Step 4: Review
+                  - workflow.md  — Build Auto Workflow
+                    - edge-case-hunter.md  — Edge Case Hunter Review
+                    - verification-gap.md  — Verification Gap Review
+                    - deletion-check.md  — Deletion Check
+              - coach-os-462e156a2975/
+              - coach-os-9d804c898d90/
+                - 8328b0894ad3cf758645/
+                  - compile-epic-context.md  — Compile Epic Context
+                  - references/
+                  - review-prompts/
+                  - spec-template.md
+                  - step-01-clarify-and-route.md  — Step 1: Clarify and Route
+                  - step-02-plan.md  — Step 2: Plan
+                  - step-03-implement.md  — Step 3: Implement
+                  - step-04-review.md  — Step 4: Review
+                  - step-05-present.md  — Step 5: Present
+                  - step-oneshot.md  — Step One-Shot: Implement, Review, Present
+                  - sync-sprint-status.md  — Sync Sprint Status
+                  - workflow.md  — Build New Preview Workflow
+                    - edge-case-hunter.md  — Edge Case Hunter Review
+                    - verification-gap.md  — Verification Gap Review
+                    - deletion-check.md  — Deletion Check
+            - v6-shims/
+              - README.md  — v6 Deprecation Shims
+            - v6-shims/
+              - README.md  — v6 Deprecation Shims
+          - src/
+          - tests/
+            - growth/
+            - apps/
+              - growth/
+          - workflows/
+            - bridge.md  — Drawbridge Command
+          - sdd/
+            - final-review.md  — Final Whole-Branch Review
+            - hotfix-10-apps-report.md  — Hotfix 10 Apps Report — Wire drill.openId → setDetail
+            - progress.md
+            - task-1-brief.md
+            - task-1-report.md
+            - task-1-review.md  — Task 1 Review
+            - task-2-brief.md
+            - task-2-report.md
+            - task-2-review.md  — Task 2 Review
+            - task-3-brief.md
+            - task-3-report.md  — Task 3 Report — Expose `--sidebar-w` on `AppFrame` root
+            - task-3-review.md  — Task 3 Review — Expose `--sidebar-w` on AppFrame root
+            - task-4-brief.md
+            - task-4-report.md  — Task 4 Report — Refactor SalesApp.tsx to use AppDetailOverlay
+            - task-4-review.md  — Task 4 Review — Refactor `SalesApp.tsx` to use `<AppDetailOverlay>`
+            - task-5-brief.md
+            - task-5-report.md  — Task 5 Report — 11 DetailPage Files
+            - task-5-review.md  — Task 5 Review — 11 DetailPage files
+            - task-6-brief.md
+            - task-6-report.md  — Task 6 Report — Wire `*App.tsx` to `<AppDetailOverlay>` + new `*Detail
+            - task-6-review.md  — Task 6 Review
+            - task-7-brief.md  — 2026-07-30 — Detail pages per app, handoff
+            - task-7-report.md  — Task 7 Report
+            - task-7-review.md  — Task 7 Review
+          - PILOTE.md  — Pilote — verifier l'acces au depot
+          - README.md  — 🧭 Moat - Visual UI Feedback for Your Project
+          - drawbridge-workflow.md
+          - moat-tasks.md  — Moat Tasks
+          - prompts/
+            - bridge.md  — Drawbridge Command
+          - commands/
+          - skills/
+          - worktrees/
+            - agent-a331955f33c5b74de/
+            - agent-ab3a41e871d70bdbb/
+              - HANDOVER_M3_PHASE0_SUPABASE.md  — Handover → M3 : Coach OS Phase 0 (Supabase provisioning)
+              - MIGRATION_SUPABASE.md  — Coach OS → Supabase Migration Plan
+              - PHASE0_RECEIPT.md  — Phase 0 Receipt — Coach OS Supabase Provisioning
+              - README.md  — Coach OS
+              - logs/
+              - public/
+              - src/
+                - apps/
+                - assets/
+                - components/
+                - contexts/
+                - hooks/
+                - lib/
+                - stores/
+                - types/
+                  - cms/
+                  - themes/
+                  - cms/
+                  - _ui/
+                  - clients/
+                  - dashboard/
+                  - finance/
+                  - growth/
+                  - it-rd/
+                  - legal/
+                  - marketplace/
+                  - onboarding/
+                  - operations/
+                  - people/
+                  - product/
+                  - sales/
+                  - settings/
+                  - tasks/
+                  - welcome/
+                    - landing/
+                    - citadel/
+                - 224e0153-4ecc-4860-81fd-6fae419f08b8/
+              - HANDOVER_M3_PHASE0_SUPABASE.md  — Handover → M3 : Coach OS Phase 0 (Supabase provisioning)
+              - MIGRATION_SUPABASE.md  — Coach OS → Supabase Migration Plan
+              - PHASE0_RECEIPT.md  — Phase 0 Receipt — Coach OS Supabase Provisioning
+              - README.md  — Coach OS
+              - _bmad-output/
+              - public/
+              - src/
+                - apps/
+                - assets/
+                - components/
+                - contexts/
+                - hooks/
+                - lib/
+                - stores/
+                - types/
+                  - cms/
+                  - themes/
+                  - cms/
+                  - _ui/
+                  - clients/
+                  - dashboard/
+                  - finance/
+                  - growth/
+                  - it-rd/
+                  - legal/
+                  - marketplace/
+                  - onboarding/
+                  - operations/
+                  - people/
+                  - product/
+                  - sales/
+                  - settings/
+                  - tasks/
+                  - welcome/
+                    - landing/
+                    - citadel/
+                - implementation-artifacts/
+                  - bmad-build-auto-result-story2-2026-08-05-branch-mismatch.md  — BMad Build Auto Result — Story 2 (folder+id dispatch)
+            - bmad-advanced-elicitation/
+            - bmad-agent-analyst/
+            - bmad-agent-architect/
+            - bmad-agent-dev/
+            - bmad-agent-pm/
+            - bmad-agent-ux-designer/
+            - bmad-architecture/
+            - bmad-brainstorming/
+            - bmad-build/
+            - bmad-build-auto/
+            - bmad-checkpoint-preview/
+            - bmad-code-review/
+            - bmad-correct-course/
+            - bmad-create-architecture/
+            - bmad-create-epics-and-stories/
+            - bmad-create-prd/
+            - bmad-create-story/
+            - bmad-customize/
+            - bmad-deep-recon/
+            - bmad-dev-auto/
+            - bmad-dev-story/
+            - bmad-document-project/
+            - bmad-domain-research/
+            - bmad-edit-prd/
+            - bmad-editorial-review/
+            - bmad-editorial-review-prose/
+            - bmad-editorial-review-structure/
+            - bmad-forge-idea/
+            - bmad-generate-project-context/
+            - bmad-help/
+            - bmad-loop-resolve/
+            - bmad-loop-setup/
+            - bmad-loop-sweep/
+            - bmad-market-research/
+            - bmad-party-mode/
+            - bmad-prd/
+            - bmad-prfaq/
+            - bmad-product-brief/
+            - bmad-project-context/
+            - bmad-qa-generate-e2e-tests/
+            - bmad-quick-dev/
+            - bmad-retrospective/
+            - bmad-review/
+            - bmad-review-adversarial-general/
+            - bmad-review-edge-case-hunter/
+            - bmad-review-verification-gap/
+            - bmad-spec/
+            - bmad-sprint-planning/
+            - bmad-sprint-status/
+            - bmad-technical-research/
+            - bmad-ux/
+            - bmad-validate-prd/
+            - sssf/
+              - SKILL.md  — Super Simple Software Factory (SSSF)
+              - apps/
+              - cookbooks/
+              - references/
+              - scripts/
+              - templates/
+                - adws/
+                - harness_engineering/
+                - prompt_engineering/
+                  - builder/
+                  - documenter/
+                  - planner/
+                  - reviewer/
+                  - scout/
+                    - system.md  — Scout Agent
+                    - user.md  — Scout Task
+                    - system.md  — Reviewer Agent
+                    - user.md  — Review Task
+                    - system.md  — Planner Agent
+                    - user.md  — Plan Task
+                    - system.md  — Documenter Agent
+                    - user.md  — Document Task
+                    - system.md  — Builder Agent
+                    - user.md  — Build Task
+                  - adw_modules/
+                - config.md  — Config Reference
+                - handoff.md  — Handoff Reference
+                - observability.md  — Observability Reference
+                - create_adw.md  — Create ADW
+                - create_config.md  — Create Config
+                - how_to_prompt_for_the_eng.md  — How to Prompt for the Engineering
+                - install.md  — Install
+                - run_adw.md  — Run ADW
+                - sssf_overview.md  — SSSF Overview
+                - update_adw.md  — Update ADW
+                - update_config.md  — Update Config
+                - update_modules.md  — Update Modules
+                - visualizer/
+                  - public/
+                  - server/
+                  - shared/
+                  - src/
+                    - components/
+                    - lib/
+                    - models/
+              - SKILL.md  — DEPRECATED — forwards to bmad-prd (validate intent)
+              - SKILL.md  — BMad UX
+              - assets/
+              - references/
+                - creative-tools.md  — Creative Tools
+                - design-md-spec.md  — DESIGN.md Spec — Working Reference
+                - headless.md  — Headless Mode
+                - validate.md  — Validate
+                - color-themes.md  — Color Themes Renderer
+                - design-directions.md  — Design Directions Renderer
+                - design-example-editorial.md
+                - design-example-mobile.md
+                - design-example-shadcn.md
+                - excalidraw-wireframe.md  — Excalidraw Wireframe Renderer
+                - experience-example-mobile.md  — Quill — Experience Spine
+                - experience-example-shadcn.md  — Drift — Experience Spine
+                - headless-schemas.md  — Headless Mode JSON Schemas
+                - key-screens.md  — Key Screens Renderer
+              - SKILL.md  — DEPRECATED — forwards to bmad-deep-recon (technical type)
+              - SKILL.md  — DEPRECATED — forwards to bmad-sprint-planning (status view)
+              - SKILL.md  — Overview
+              - references/
+              - scripts/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - tests/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                - fix-sprint-status.md  — Fix Sprint Status
+                - generate-tracking.md  — Generate Tracking
+                - readiness-gate.md  — Readiness Gate
+                - status-view.md  — Status View
+                - validate.md  — Validate
+              - SKILL.md  — BMad Spec
+              - assets/
+                - headless-schemas.md  — Headless JSON Response
+                - spec-template.md  — {Spec Title}
+                - stories-schema.md  — Stories schema
+              - SKILL.md
+              - SKILL.md
+              - SKILL.md
+              - SKILL.md  — BMad Review
+              - references/
+              - scripts/
+                - tests/
+                - editorial-common.md  — Editorial Lenses — Common Ground
+                - lens-adversarial.md  — Adversarial Lens
+                - lens-edge-case-hunter.md  — Edge-Case Lens
+                - lens-prose.md  — Prose Lens
+                - lens-structure.md  — Structure Lens
+                - lens-verification-gap.md  — Verification-Gap Lens
+                - structure-models.md  — Structure Models
+              - SKILL.md  — Retrospective
+              - references/
+              - scripts/
+                - __pycache__/  **[ECARTE : artefact genere]**
+                - tests/
+                  - __pycache__/  **[ECARTE : artefact genere]**
+                  - fixtures/
+                - acceptance-verdict.md  — Decide: Routing and the Acceptance Verdict
+                - aggregate-views.md  — Aggregate Views
+                - evidence-gathering.md  — Evidence Gathering
+                - retro-document.md  — Finalize: Retrospective Document and Sprint Status
+                - team-discussion.md  — Team Discussion (opt-in)
+              - SKILL.md  — Deprecated Build Alias
+              - SKILL.md  — QA Generate E2E Tests Workflow
+              - checklist.md  — QA Automate - Validation Checklist
+              - SKILL.md  — Overview
+              - evals/
+              - references/
+              - scripts/
+                - tests/
+                - bundle-contract.md  — Bundle Contract
+                - interrogation-guide.md  — Interrogation Guide
+                - kernel-contract.md  — Kernel Contract
+                - placement.md  — Placement — first run only
+                - files/
+                  - fixture-brownfield/
+                  - fixture-greenfield/
+                  - fixture-monorepo/
+                  - fixture-refresh/
+                  - fixture-standalone/
+                  - fixture-workspace/
+                    - obeya/
+                    - proj-a/
+                      - src/
+                    - planning/
+                    - src/
+                      - lib/
+                      - decisions.md  — Architecture decisions — wavecart
+                    - context/
+                    - planning/
+                    - src/
+                      - lib/
+                      - routes/
+                      - decisions.md  — Architecture decisions — wavecart
+                      - index.md
+                      - integer-cents.md
+                      - kernel.md  — Project Kernel — wavecart
+                      - repository-pattern.md
+                    - README.md  — nimbus
+                    - apps/
+                    - services/
+                      - billing/
+                        - src/
+                      - web/
+                        - src/
+                          - conventions.md
+                    - spec.md  — Spec — TrailLedger
+                    - AGENTS.md  — Wavecart Agents
+                    - _bmad/
+                    - legacy/
+                    - planning/
+                    - src/
+                      - lib/
+                      - repos/
+                      - routes/
+                      - decisions.md  — Architecture decisions — wavecart
+                      - README.md  — legacy/
+              - SKILL.md  — Overview
+              - assets/
+                - brief-template.md  — Product Brief Template
+              - SKILL.md  — Working Backwards: The PRFAQ Challenge
+              - agents/
+              - assets/
+              - references/
+                - customer-faq.md  — Stage 3: Customer FAQ
+                - internal-faq.md  — Stage 4: Internal FAQ
+                - press-release.md  — Stage 2: The Press Release
+                - verdict.md  — Stage 5: The Verdict
+                - prfaq-template.md  — {Headline}
+                - artifact-analyzer.md  — Artifact Analyzer
+                - web-researcher.md  — Web Researcher
+              - SKILL.md  — BMad PRD
+              - assets/
+              - references/
+                - headless.md  — Headless Mode
+                - validate.md  — Validate
+                - headless-schemas.md  — Headless Mode JSON Schemas
+                - prd-template.md  — PRD Template
+                - prd-validation-checklist.md  — PRD Quality Rubric
+              - SKILL.md  — Party Mode
+              - references/
+              - scripts/
+                - tests/
+                - create-party.md  — Creating a Party
+                - mode-agent-team.md  — Agent-Team Mode
+                - mode-auto.md  — Auto Mode
+                - mode-subagent.md  — Subagent Mode
+                - party-memory.md  — Party Memory
+              - SKILL.md  — DEPRECATED — forwards to bmad-deep-recon (market type)
+              - SKILL.md  — Deferred-Work Sweep Triage
+              - automation-mode.md  — Automation Mode
+              - deferred-work-format.md  — Deferred Work Format
+              - migration-mode.md  — Migration Mode
+              - SKILL.md  — Module Setup
+              - assets/
+              - SKILL.md  — bmad-loop Escalation Resolution
+              - SKILL.md  — BMad Help
+              - SKILL.md  — DEPRECATED — forwards to bmad-project-context
+              - SKILL.md  — BMad Forge Idea
+              - scripts/
+                - tests/
+              - SKILL.md
+              - SKILL.md
+              - SKILL.md
+              - SKILL.md  — DEPRECATED — forwards to bmad-prd (update intent)
+              - SKILL.md  — DEPRECATED — forwards to bmad-deep-recon (domain type)
+              - SKILL.md  — DEPRECATED — forwards to bmad-project-context
+              - SKILL.md  — Dev Story Workflow
+              - checklist.md  — 🎯 Enhanced Definition of Done Checklist
+              - SKILL.md  — Deprecated Build Auto Alias
+              - SKILL.md  — BMad Deep Recon
+              - assets/
+              - references/
+              - scripts/
+              - types/
+                - academic-lit.md  — Academic Literature Pack
+                - competitive.md  — Competitive Research Pack
+                - domain.md  — Domain Research Pack
+                - market.md  — Market Research Pack
+                - technical.md  — Technical Research Pack
+                - user-voice.md  — User-Voice Research Pack
+                - tests/
+                - draft.md  — Draft
+                - finalize.md  — Finalize
+                - html-briefing.md  — HTML Briefing
+                - lifecycle.md  — Refresh and Deepen
+                - process.md  — Process
+                - run.md  — Run
+                - selection.md  — The Select Shape
+                - synthesis.md  — Synthesis
+                - verification.md  — Verification
+                - research.template.md  — {research_type} research: {research_topic}
+              - SKILL.md  — BMad Customize
+              - scripts/
+                - tests/
+              - SKILL.md  — Create Story Workflow
+              - checklist.md  — 🎯 Story Context Quality Competition Prompt
+              - discover-inputs.md  — Discover Inputs Protocol
+              - template.md  — Story {{epic_num}}.{{story_num}}: {{story_title}}
+              - SKILL.md  — DEPRECATED — forwards to bmad-prd (create intent)
+              - SKILL.md  — Create Epics and Stories
+              - steps/
+              - templates/
+                - epics-template.md  — {{project_name}} - Epic Breakdown
+                - step-01-validate-prerequisites.md  — Step 1: Validate Prerequisites and Extract Requirements
+                - step-02-design-epics.md  — Step 2: Design Epic List
+                - step-03-create-stories.md  — Step 3: Generate Epics and Stories
+                - step-04-final-validation.md  — Step 4: Final Validation
+              - SKILL.md  — DEPRECATED — forwards to bmad-architecture (create intent)
+              - SKILL.md  — Correct Course - Sprint Change Management Workflow
+              - checklist.md  — Change Navigation Checklist
+              - SKILL.md  — Code Review Workflow
+              - references/
+              - review-prompts/
+              - steps/
+                - step-01-gather-context.md  — Step 1: Gather Context
+                - step-02-review.md  — Step 2: Review
+                - step-03-triage.md  — Step 3: Triage
+                - step-04-present.md  — Step 4: Present and Act
+                - edge-case-hunter.md  — Edge Case Hunter Review
+                - verification-gap.md  — Verification Gap Review
+                - deletion-check.md  — Deletion Check
+              - SKILL.md  — Checkpoint Review Workflow
+              - generate-trail.md  — Generate Review Trail
+              - step-01-orientation.md  — Step 1: Orientation
+              - step-02-walkthrough.md  — Step 2: Walkthrough
+              - step-03-detail-pass.md  — Step 3: Detail Pass
+              - step-04-testing.md  — Step 4: Testing
+              - step-05-wrapup.md  — Step 5: Wrap-Up
+              - SKILL.md
+              - compile-epic-context.md  — Compile Epic Context
+              - references/
+              - review-prompts/
+              - spec-template.md
+              - step-01-clarify-and-route.md  — Step 1: Clarify and Route
+              - step-02-plan.md  — Step 2: Plan
+              - step-03-implement.md  — Step 3: Implement
+              - step-04-review.md  — Step 4: Review
+              - workflow.md  — Build Auto Workflow
+                - edge-case-hunter.md  — Edge Case Hunter Review
+                - verification-gap.md  — Verification Gap Review
+                - deletion-check.md  — Deletion Check
+              - SKILL.md
+              - compile-epic-context.md  — Compile Epic Context
+              - references/
+              - review-prompts/
+              - spec-template.md
+              - step-01-clarify-and-route.md  — Step 1: Clarify and Route
+              - step-02-plan.md  — Step 2: Plan
+              - step-03-implement.md  — Step 3: Implement
+              - step-04-review.md  — Step 4: Review
+              - step-05-present.md  — Step 5: Present
+              - step-oneshot.md  — Step One-Shot: Implement, Review, Present
+              - sync-sprint-status.md  — Sync Sprint Status
+              - workflow.md  — Build New Preview Workflow
+                - edge-case-hunter.md  — Edge Case Hunter Review
+                - verification-gap.md  — Verification Gap Review
+                - deletion-check.md  — Deletion Check
+              - SKILL.md  — BMad Brainstorming
+              - assets/
+              - references/
+              - scripts/
+                - tests/
+                - converge.md  — Converging: Narrow & Decide
+                - finalize.md  — Wrap-Up: Synthesis & Artifacts
+                - headless.md  — Headless Mode
+                - in-chat-techniques.md  — Choosing Techniques In Chat
+                - mode-autonomous.md  — Mode: Ideate For Me
+                - mode-facilitator.md  — Mode: Facilitator
+                - mode-partner.md  — Mode: Creative Partner
+                - resume.md  — Resuming a Session
+              - SKILL.md  — BMad Architecture
+              - assets/
+              - references/
+              - scripts/
+                - tests/
+                - headless.md  — Headless
+                - reviewer-gate.md  — Reviewer Gate
+                - spine-template.md  — Architecture Spine — {name}
+              - SKILL.md  — Sally — UX Designer
+              - SKILL.md  — John — Product Manager
+              - SKILL.md  — Amelia — Senior Software Engineer
+              - SKILL.md  — Winston — System Architect
+              - SKILL.md  — Mary — Business Analyst
+              - SKILL.md  — Advanced Elicitation
+              - assets/
+              - scripts/
+                - tests/
+            - bridge.md  — Drawbridge Command
+          - runs/
+          - story4-restes/
+            - ontology/
+            - 20260805-003756-9e5e/
+            - 20260805-004616-e1cb/
+            - 20260805-004852-ff6c/
+            - 20260805-011320-ef9e/
+            - 20260805-011444-a026/
+            - 20260805-091730-9034/
+            - 20260805-153043-5cf4/
+              - events/
+              - logs/
+              - tasks/
+                - 4-dev-1/
+              - events/
+              - feedback/
+              - logs/
+              - tasks/
+                - 1-dev-1/
+                - 1-dev-2/
+                - 1-review-1/
+                - 1-review-2/
+                - 2-dev-1/
+                - 2-dev-2/
+                - 2-review-1/
+                - 2-review-2/
+                - 2-review-3/
+                - 3-dev-1/
+                - 3-review-1/
+                - 2-1.md  — Verification feedback: 2
+              - events/
+              - feedback/
+              - logs/
+              - tasks/
+                - 1-dev-1/
+                - 1-dev-2/
+                - 2-dev-1/
+                - 3-dev-1/
+                - 1-1.md  — Verification feedback: 1
+              - events/
+              - logs/
+              - tasks/
+              - events/
+              - logs/
+              - tasks/
+                - 1-dev-1/
+                - 1-dev-2/
+              - events/
+              - logs/
+              - tasks/
+                - 1-dev-1/
+              - events/
+              - logs/
+              - tasks/
+                - 1-dev-1/
+        - .claude/
+        - README.md  — React + TypeScript + Vite
+        - node_modules/  **[ECARTE : artefact genere]**
+        - public/
+        - src/
+          - apps/
+          - assets/
+          - components/
+          - contexts/
+          - hooks/
+          - lib/
+          - stores/
+          - types/
+            - _ui/
+            - client-vault/
+            - compliance/
+            - pipeline/
+            - voice-studio/
+            - zero-pii/
+      - PR_BODY.md  — 🚀 Phase G — PR GitHub Prête à Merger
+      - runbooks/
+        - 2026-06-20-phase-b-auth-hook-wiring.md  — 🔐 OMK Phase B — Auth Hook Wiring Runbook
+        - 2026-06-20-phase-b-receipt.md  — 📋 Phase B Receipt — Vercel + Auth Wiring
+        - 2026-06-20-phase-c-receipt.md  — 📋 Phase C Receipt — Repository + Tenant Guard
+        - 2026-06-20-phase-d-receipt.md  — 📋 Phase D Receipt — Views Upgrade Sprint
+        - 2026-06-20-phase-e-receipt.md  — 📋 Phase E Receipt — Routing + Auth Guard
+        - 2026-06-20-phase-f-receipt.md  — 📋 Phase F Receipt — Edge Function SignUp + Sign Out
+        - 2026-06-20-phase-g-receipt.md  — 📋 Phase G Receipt — Vercel Deploy + Live E2E
+        - 2026-06-20-phase-h-receipt.md  — 📋 Phase H Receipt — Documentation + ADR + Skills
+        - 2026-06-20-phase-i-receipt.md  — Phase I — Live E2E Audit Fix — Receipt (2026-06-20)
+        - 2026-06-20-phase-ii-receipt.md  — Phase II — D6 #94 Fix — Role "owner" Does Not Exist — Receipt (2026-06
+        - 2026-06-20-zero-bug-sprint-receipt.md  — Zero Bug Sprint — Strategic Audit + Comprehensive Fix — Receipt (2026-
+      - coach_premium_capsule.md
+      - Nexus Agentic Governance Platform/
+      - dashboard/
+      - landing/
+      - nexus/
+      - omk-hermes-jarvis-stubs.md  — Chantier C — Hermes Jarvis Surface (OMK SaaS OS) — Stubs Spec
+        - .git/  **[ECARTE : artefact genere]**
+        - .next/  **[ECARTE : artefact genere]**
+        - .vercel/  **[ECARTE : artefact genere]**
+        - AGENTS.md  — This is NOT the Next.js you know
+        - CLAUDE.md
+        - README.md  — or
+        - app/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - public/
+        - src/
+          - components/
+          - data/
+          - design/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - sql/
+        - src/
+        - supabase/
+          - functions/
+            - sign-up-organization/
+          - auth/
+          - components/
+          - config/
+          - contexts/
+          - data/
+          - hooks/
+          - lib/
+            - empty-states/
+            - skeletons/
+            - views/
+          - 99_README.md  — OMK Dashboard — SQL DDL Package
+        - picard_audit.md  — Picard Audit — Nexus Agentic Governance Platform
+      - AGC_Analysis.md
+      - AGENTS.md  — AGENTS.md allégé - A'Space OS V2
+      - APOLLO_CSV_ANALYSIS.md  — Apollo contacts export — analysis & US-only lead-quality assessment
+      - APOLLO_ONBOARDING_ANSWERS_OMK_NEXUS.md  — Apollo Onboarding Answers — OMK Nexus (Coaching Experts US, 50 states)
+      - PROSPECTION_COACH_EXPERT_V2_CORRECTED.md  — [OMK] Prospection Coach Expert — Marketplaces Study (V2 CORRIGÉE 2026-
+      - REALITY_MAP.md  — 🗺️ LIFE OS — Reality Map (État Factuel du Système Construit)
+      - supabase_readme.md  — 🗄️ Supabase Core — Life OS Persistence Layer
+      - README.md  — Sidebar V2 — OMK SaaS OS NEXUS fork — reconstitution
+      - audits/
+      - capsules/
+      - gstack-mapping.md  — E-Myth ↔ gstack — mapping pour omk-nexus-coaching-premium
+      - guides_ld01_business_book/
+        - Guide_15T_industry_paper_fax_PREMIUM.md  — Guide PREMIUM — $1.5T Paper/Fax Industry pour Executive Coach premium 
+        - Guide_ai_sales_coach_system_PREMIUM.md  — Guide PREMIUM — AI Sales Coach System pour Executive Coach premium
+        - Guide_solo_business_ia_2026_PREMIUM.md  — Guide PREMIUM — Solo Business IA 2026 pour Executive Coach premium
+        - _INDEX.md  — _INDEX — Guides LD01 Business Book distillés (Coach premium context-sp
+        - clarify_ws1.md  — Clarify ws1 — Triage 4 catégories (Boimler)
+        - coach_premium_001.md  — Capsule 001 — Coach premium (1 page, ≤400 mots)
+        - 2026-07-15_ai-act-pilier5-audit.md  — Audit AI-Act Pilier 5 — Capsule 001 pre-ship
+      - dashboard_dot_vercel/
+      - .git/  **[ECARTE : artefact genere]**
+      - HANDOVER_M3_PHASE0_SUPABASE.md  — Handover → M3 : Coach OS Phase 0 (Supabase provisioning)
+      - MIGRATION_SUPABASE.md  — Coach OS → Supabase Migration Plan
+      - PHASE0_RECEIPT.md  — Phase 0 Receipt — Coach OS Supabase Provisioning
+      - README.md  — Coach OS
+      - dist/  **[ECARTE : artefact genere]**
+      - node_modules/  **[ECARTE : artefact genere]**
+      - public/
+      - src/
+      - tests/
+        - apps/
+        - assets/
+        - components/
+        - contexts/
+        - hooks/
+        - lib/
+        - stores/
+        - types/
+          - cms/
+          - themes/
+          - cms/
+          - _ui/
+          - clients/
+          - dashboard/
+          - finance/
+          - growth/
+          - it-rd/
+          - legal/
+          - marketplace/
+          - onboarding/
+          - operations/
+          - people/
+          - product/
+          - sales/
+          - settings/
+          - tasks/
+          - welcome/
+            - landing/
+            - citadel/
+      - skills/
+      - commands/
+      - skills/
+        - README.md  — gstack shims — portée projet (omk-nexus-coaching-premium)
+        - _lib/
+        - autoplan.md  — autoplan — shim pour gstack ⇄ boucle auto-loop canon
+        - gstack-autoplan.md  — Conductor host: AskUserQuestion is unreliable here (native disabled, M
+        - gstack-cso.md  — Conductor host: AskUserQuestion is unreliable here (native disabled, M
+        - gstack-ship.md  — Conductor host: AskUserQuestion is unreliable here (native disabled, M
+        - plan-ceo-review.md  — plan-ceo-review — shim pour gstack ⇄ E-Myth Jerry
+        - ship.md  — ship — shim pour gstack ⇄ Summers SHIP factory
+    - OWNERBOOK.md  — Ownerbook — marina (marina Cleaning BOS & SOP)
+    - apps/
+      - landing/
+        - .git/  **[ECARTE : artefact genere]**
+        - README.md  — Marina Cleaning Front End
+        - legacy_sources/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - src/
+          - app/
+          - components/
+          - Marina Super Cleaners Copy/
+            - marina-cleaning/
+            - picard_audit_marina.md  — 🔆 MARINA CLEANING CO. — Audit Technique Picard
+              - AGENTS.md  — This is NOT the Next.js you know
+              - CLAUDE.md
+              - README.md  — or
+              - public/
+              - src/
+                - app/
+    - 01_plan.md  — 01 — Plan (SNW gate criteria + Definition of Done)
+    - 02_status.md  — 02 — Status (live tracking)
+    - MANIFEST.md  — MANIFEST — cerritos-gtd-dispatch
+    - README.md  — cerritos-gtd-dispatch
+    - _archive/
+    - _inbox/
+    - apps/
+      - spock-wf0/
+    - CLAUDE.md  — CLAUDE.md — CEO's Desktop (ceo-desktop)
+    - MANIFEST.md  — Manifest — ceo-desktop
+    - README.md  — README — CEO's Desktop
+    - _doctrine/
+    - apps/
+    - area_junction_placeholder.md  — Area Junction Placeholder — Spock/Areas Counterpart
+    - handoffs/
+      - Beth_Alignment_Log.md  — Beth — Alignment Log
+      - Morty_Global_Queue.md  — Morty — Global Queue
+      - Sunday_Uplink_Protocols.md  — Sunday — Uplink Protocols
+      - B1_Summer_Direction/
+      - B2_Business_Domains/
+      - B3_Warp_Core_Execution/
+      - SUMMERS_VERSE_MANIFEST.md  — Summer's Verse Manifest — CEO's Desktop
+      - _Inbox/
+        - 00_B3_SWARM_CONFIG.md  — CEO Desktop — B3 Warp Core Execution (Phase 1 Skeleton)
+        - 01_Growth_Superman_Guardians/
+        - 02_Sales_MartianManhunter_Illuminati/
+        - 03_Product_Flash_Avengers/
+        - 04_Ops_Batman_Fantastic4/
+        - 05_IT_Cyborg_KangDynasty/
+        - 06_Finance_WonderWoman_Thunderbolts/
+        - 07_People_GreenLantern_XMen/
+        - 08_Legal_Aquaman_Eternals/
+          - 00_B3_SWARM_CONFIG.md  — Legal B3 Swarm Config — Eternals (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — People B3 Swarm Config — X-Men (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — Finance B3 Swarm Config — Thunderbolts (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — IT B3 Swarm Config — Kang Dynasty (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — Ops B3 Swarm Config — Fantastic Four (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — Product B3 Swarm Config — Avengers (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — Sales B3 Swarm Config — Illuminati (CEO Desktop — Phase 1 Stub)
+          - 00_B3_SWARM_CONFIG.md  — Growth B3 Swarm Config — Guardians (CEO Desktop — Phase 1 Stub)
+        - 00_AAAS_DOMAIN_DEVELOPMENT_MAP.md  — CEO's Desktop — Domain Development Map (Stub)
+        - 01_Growth_Superman_Guardians/
+        - 02_Sales_MartianManhunter_Illuminati/
+        - 03_Product_Flash_Avengers/
+        - 04_Ops_Batman_Fantastic4/
+        - 05_IT_Cyborg_KangDynasty/
+        - 06_Finance_WonderWoman_Thunderbolts/
+        - 07_People_GreenLantern_XMen/
+        - 08_Legal_Aquaman_Eternals/
+        - B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md  — B2 Business Wheel Harmonization Matrix — CEO's Desktop (Stub)
+        - B2_DOMAIN_GATE_MATRIX.md  — B2 Domain Gate Matrix — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Legal Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — People Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Finance Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — IT Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Ops Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Product Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Sales Control Room — CEO's Desktop (Stub)
+          - 00_B2_DOMAIN_CONTROL_ROOM.md  — Growth Control Room — CEO's Desktop (Stub)
+        - 00_B1_DIRECTION_INDEX.md  — B1 Direction — CEO's Desktop
+        - 01_NORTH_STAR_1Y_3Y_10Y.md  — North Star — CEO's Desktop
+        - 02_12WY_COMMAND_CYCLES.md  — 12WY Command Cycles — CEO's Desktop
+        - 03_DECISION_CHARTER.md  — Decision Charter — CEO's Desktop
+        - 04_B2_HANDOFF_QUEUE.md  — B2 Handoff Queue — CEO's Desktop
+    - CLAUDE.md  — CLAUDE.md
+    - OWNERBOOK.md  — Ownerbook — alikaly (Phase 0 SPEC)
+    - apps/
+      - holding/
+      - os/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - .git/  **[ECARTE : artefact genere]**
+        - AGENTS.md  — This is NOT the Next.js you know
+        - CLAUDE.md
+        - README.md  — or
+        - node_modules/  **[ECARTE : artefact genere]**
+        - public/
+        - src/
+          - app/
+          - components/
+          - lib/
+          - test/
+            - layout/
+            - marketing/
+            - widgets/
+    - CLAUDE.md  — CLAUDE.md
+    - MANIFEST.md  — Manifest — abc
+    - apps/
+    - scratch/
+      - ABC OS Community/
+      - abc-childcare-portal/
+      - abc-os-community/
+        - .git/  **[ECARTE : artefact genere]**
+        - .next/  **[ECARTE : artefact genere]**
+        - .vercel/  **[ECARTE : artefact genere]**
+        - AGENTS.md  — This is NOT the Next.js you know
+        - README.md  — ABC OS Community
+        - messages/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - public/
+        - scratch/
+        - scripts/
+        - src/
+        - supabase/
+        - test-results/
+        - tests/
+          - e2e/
+          - BUILD_HUB_WIRING_NOTES.md  — Build Hub Wiring — Session Notes (2026-06-12)
+          - migrations/
+          - scripts/
+            - README.md  — abc_os Migrations — Apply Protocol
+            - abc_os/
+            - l2_mesh/
+          - app/
+          - components/
+          - contexts/
+          - data/
+          - hooks/
+          - i18n/
+          - lib/
+          - types/
+            - supabase/
+            - brand/
+            - build-hub/
+            - community/
+            - learn/
+            - login/
+            - sandbox/
+          - README.md  — scripts/ — operational helpers for abc-os-community
+        - .git/  **[ECARTE : artefact genere]**
+        - .next/  **[ECARTE : artefact genere]**
+        - .vercel/  **[ECARTE : artefact genere]**
+        - AGENTS.md  — This is NOT the Next.js you know
+        - CLAUDE.md
+        - README.md  — or
+        - _legacy/
+        - _verse/
+        - messages/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - picard_audit.md  — 🔆 ABC Childcare Portal — Audit Technique Picard & Prod Workflow (v2)
+        - public/
+        - src/
+          - app/
+          - components/
+          - design/
+          - hooks/
+          - i18n/
+          - lib/
+            - HubScreens/
+            - brand/
+            - build-hub/
+            - community/
+            - learn/
+          - B1_Summer_Direction/
+          - B2_Business_Domains/
+          - B3_Warp_Core_Execution/
+          - CERRIROS_HANDOVER.md  — Cerritos Handover — 02 ABC OS & Child Care BOS
+          - SUMMERS_VERSE_MANIFEST.md  — Summer's Verse Manifest — 02 ABC OS & Child Care BOS
+          - _Inbox/
+            - 00_B3_SWARM_CONFIG.md  — ABC OS + Child Care BOS — B3 Warp Core Execution (Phase 1 Skeleton)
+            - 01_Growth_Superman_Guardians/
+            - 02_Sales_MartianManhunter_Illuminati/
+            - 03_Product_Flash_Avengers/
+            - 04_Ops_Batman_Fantastic4/
+            - 05_IT_Cyborg_KangDynasty/
+            - 06_Finance_WonderWoman_Thunderbolts/
+            - 07_People_GreenLantern_XMen/
+            - 08_Legal_Aquaman_Eternals/
+            - README.md  — B3 Warp Core Execution — 02 ABC OS & Child Care BOS
+              - 00_B3_SWARM_CONFIG.md  — Legal B3 Swarm Config — Eternals (ABC OS + Child Care BOS — Phase 1 St
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Legal / Eternals
+              - 01_Ikaris_Strategy/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 02_Sersi_Jurisdiction/
+              - 03_Ajak_Mediation/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_Kingo_PublicComms/
+              - 05_Phastos_Templates/
+              - 06_Sprite_IP/
+              - 07_Druig_Negotiation/
+              - 08_Thena_Litigation/
+              - 09_Gilgamesh_Enforcement/
+              - 10_Makkari_Velocity/
+              - JTBD-001_ABC_CLAIMS_DATA_IP_BOUNDARY.md  — JTBD-001 - ABC Claims Data IP Boundary
+              - JTBD-002_ABC_TRANSVERSE_LEGAL_RISK_GATE.md  — JTBD-002 ABC Transverse Legal Risk Gate  ## Job When 02 ABC OS & Child
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — People B3 Swarm Config — X-Men (ABC OS + Child Care BOS — Phase 1 Stub
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - People / XMen
+              - 01_ProfessorX_Recruiting/
+              - 02_Cyclops_Onboarding/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 03_JeanGrey_Culture/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_Wolverine_PerfReviews/
+              - 05_Storm_OpsLeadership/
+              - 06_Beast_TechRecruiting/
+              - 07_Nightcrawler_DistributedOnboarding/
+              - 08_Rogue_SkillTransfer/
+              - JTBD-001_ABC_OWNER_HANDOFF_MAP.md  — JTBD-001 - ABC Owner and Agent Handoff Map
+              - JTBD-002_ABC_TRANSVERSE_PEOPLE_AGENT_GOVERNANCE_GATE.md  — JTBD-002 ABC Transverse People Agent Governance Gate
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — Finance B3 Swarm Config — Thunderbolts (ABC OS + Child Care BOS — Phas
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Finance / Thunderbolts
+              - 01_BuckyBarnes_Cashflow/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 02_YelenaBelova_Forecasting/
+              - 03_RedGuardian_Reporting/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_Ghost_CostOpt/
+              - 05_Taskmaster_Repro/
+              - 06_USAgent_Compliance/
+              - JTBD-001_ABC_PRICE_MARGIN_MODEL.md  — JTBD-001 - ABC Price Margin Model
+              - JTBD-002_ABC_TRANSVERSE_FINANCE_MONEY_GATE.md  — JTBD-002 ABC Transverse Finance Money Gate  ## Job When 02 ABC OS & Ch
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — IT B3 Swarm Config — Kang Dynasty (ABC OS + Child Care BOS — Phase 1 S
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - IT / KangDynasty
+              - 01_KangPrime_Infra/
+              - 02_IronLad_Provisioning/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 03_ScarletCenturion_Security/
+              - 04_Immortus_Capacity/
+              - 05_VictorTimely_CICD/
+              - 06_RamaTut_Backup/
+              - JTBD-001_ABC_RUNTIME_BOUNDARY.md  — JTBD-001 - ABC Runtime And Data Boundary
+              - JTBD-002_ABC_TRANSVERSE_IT_SYSTEMS_GATE.md  — JTBD-002 ABC Transverse IT Systems Gate
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — Ops B3 Swarm Config — Fantastic Four (ABC OS + Child Care BOS — Phase 
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Ops / Fantastic4
+              - 01_MrFantastic_ProcessDesign/
+              - 02_InvisibleWoman_Coordination/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 03_HumanTorch_Incidents/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_TheThing_Execution/
+              - JTBD-001_ABC_DELIVERY_SOP.md
+              - JTBD-002_ABC_TRANSVERSE_OPS_GATE.md  — JTBD-002 ABC Transverse Ops Gate
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — Product B3 Swarm Config — Avengers (ABC OS + Child Care BOS — Phase 1 
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Product / Avengers
+              - 01_CaptainAmerica_Vision/
+              - 02_IronMan_Architecture/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 03_Thor_PowerFeatures/
+              - 04_Hulk_QA/
+              - 05_BlackWidow_Specs/
+              - 06_Hawkeye_UX/
+              - 07_ScarletWitch_DesignSystem/
+              - JTBD-001_ABC_MVP_DEMO_BOUNDARY.md  — JTBD-001 - ABC MVP Demo Boundary
+              - JTBD-002_ABC_TRANSVERSE_PRODUCT_OFFER_GATE.md  — JTBD-002 ABC Transverse Product Offer Gate  ## Job When 02 ABC OS & Ch
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — Sales B3 Swarm Config — Illuminati (ABC OS + Child Care BOS — Phase 1 
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Sales / Illuminati
+              - 01_BlackBolt_Closer/
+              - 02_IronMan_Demo/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 03_MrFantastic_Discovery/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_Namor_Negotiation/
+              - 05_ProfessorX_BuyerRead/
+              - 06_DoctorStrange_Forecasting/
+              - JTBD-001_ABC_DIAGNOSTIC_TO_PROPOSAL.md  — JTBD-001 - ABC Diagnostic To Proposal
+              - JTBD-002_ABC_TRANSVERSE_SALES_REVENUE_GATE.md  — JTBD-002 ABC Transverse Sales Revenue Gate  ## Job When 02 ABC OS & Ch
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+              - 00_B3_SWARM_CONFIG.md  — Growth B3 Swarm Config — Guardians (ABC OS + Child Care BOS — Phase 1 
+              - 01_B3_AGENT_ROSTER.md  — Agent Roster - Growth / Guardians
+              - 01_StarLord_Story/
+              - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+              - 02_Rocket_Auto/
+              - 03_Gamora_Target/
+              - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 04_Drax_Closing/
+              - 05_Groot_Content/
+              - 06_Mantis_VoC/
+              - JTBD-001_ORBITER_VOC_PACKET.md  — JTBD-001 - ORBITER VOC Packet
+              - JTBD-002_ORBITER_ICP_FILTER.md  — JTBD-002 — Orbiter ICP Filter (structure-readiness rejection) — ABC Ch
+              - JTBD-003_ORBITER_PAINKILLER_VARIANTS.md  — JTBD-003 — Orbiter Painkiller Message Variants (trust, Legal-reviewed)
+              - JTBD-004_ORBITER_EXPERIMENT_RICE.md  — JTBD-004 — Orbiter Non-Paid Experiment + RICE — ABC Child Care BOS
+              - JTBD-005_ABC_TRANSVERSE_GROWTH_SIGNAL_GATE.md  — JTBD-005 ABC Transverse Growth Signal Gate
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+                - README.md
+            - 00_ABC_DOMAIN_DEVELOPMENT_MAP.md  — 02 ABC OS & Child Care BOS Domain Development Map
+            - 01_Growth_Superman_Guardians/
+            - 02_Sales_MartianManhunter_Illuminati/
+            - 03_Product_Flash_Avengers/
+            - 04_Ops_Batman_Fantastic4/
+            - 05_IT_Cyborg_KangDynasty/
+            - 06_Finance_WonderWoman_Thunderbolts/
+            - 07_People_GreenLantern_XMen/
+            - 08_Legal_Aquaman_Eternals/
+            - B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md  — B2 Business Wheel Harmonization Matrix
+            - B2_DC_DIRECTION_COUNCIL_WORKFLOW.md  — B2 DC Direction Council Workflow
+            - B2_DOMAIN_GATE_MATRIX.md  — B2 Domain Gate Matrix
+            - B2_MESO_VP_SWARM_COORDINATION.md  — B2 Meso VP Swarm Coordination
+            - B2_OFFER_BRAND_REVENUE_ENGINE.md  — B2 Offer Brand Revenue Engine - 02_ABC_OS
+            - README.md  — B2 Business Domains — 02 ABC OS & Child Care BOS
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Legal Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_LEGAL_PRINCIPLES_REF.md  — Legal Principles Reference - ABC
+              - 04_ABC_LEGAL_ROCK.md  — 02 ABC OS & Child Care BOS Legal Rock - Transverse Risk Boundary OS
+              - 05_ABC_LEGAL_TRANSVERSE_RISK_BOUNDARY_OS.md  — ABC Legal Transverse Risk Boundary OS  ## Purpose Legal is the transve
+              - 06_ABC_B2_B3_LEGAL_REVIEW_PROTOCOL.md  — ABC B2/B3 Legal Review Protocol  ## Legal Packet Every B2/B3 task that
+              - README.md  — 08 Legal - Aquaman / Eternals
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — People Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_PEOPLE_PRINCIPLES_REF.md  — People Principles Reference - ABC
+              - 04_ABC_PEOPLE_ROCK.md  — 02 ABC OS & Child Care BOS People Rock - Transverse Agent Governance O
+              - 05_ABC_PEOPLE_TRANSVERSE_AGENT_GOVERNANCE_OS.md  — ABC People Transverse Agent Governance OS
+              - 06_ABC_B2_B3_AGENT_COMMAND_PROTOCOL.md  — ABC B2/B3 Agent Command Protocol
+              - README.md  — 07 People - Green Lantern / X-Men
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Finance Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_FINANCE_PRINCIPLES_REF.md  — Finance Principles Reference - ABC
+              - 04_ABC_FINANCE_ROCK.md  — 02 ABC OS & Child Care BOS Finance Rock - Transverse Money Control OS
+              - 05_ABC_FINANCE_TRANSVERSE_MONEY_CONTROL_OS.md  — ABC Finance Transverse Money Control OS  ## Purpose Finance is the tra
+              - 06_ABC_B2_B3_FINANCE_APPROVAL_PROTOCOL.md  — ABC B2/B3 Finance Approval Protocol  ## Finance Packet Every B2/B3 tas
+              - README.md  — 06 Finance - Wonder Woman / Thunderbolts
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — IT Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_IT_PRINCIPLES_REF.md  — IT Principles Reference - ABC
+              - 04_ABC_IT_ROCK.md  — 02 ABC OS & Child Care BOS IT Rock - Transverse Systems Access OS
+              - 05_ABC_IT_TRANSVERSE_SYSTEMS_ACCESS_OS.md  — ABC IT Transverse Systems Access OS
+              - 06_ABC_B2_B3_SYSTEMS_ACCESS_PROTOCOL.md  — ABC B2/B3 Systems Access Protocol
+              - README.md  — 05 IT - Cyborg / Kang Dynasty
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Ops Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_OPS_PRINCIPLES_REF.md  — Ops Principles Reference - ABC
+              - 04_ABC_OPS_ROCK.md  — 02 ABC OS & Child Care BOS Ops Rock - Delivery SOP
+              - 05_ABC_OPS_TRANSVERSE_DOMAIN_OPERATING_SYSTEM.md  — ABC Ops Transverse Domain Operating System
+              - 06_ABC_B2_CROSS_DOMAIN_HANDOFF_PROTOCOL.md  — ABC B2 Cross-Domain Handoff Protocol
+              - README.md  — 04 Ops - Batman / Fantastic Four
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Product Control Room - 02_ABC_OS
+              - 00_Interface_Prototypes/
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_PRODUCT_PRINCIPLES_REF.md  — Product Principles Reference - ABC
+              - 04_ABC_PRODUCT_ROCK.md  — 02 ABC OS & Child Care BOS Product Rock - Transverse Offer Boundary OS
+              - 05_ABC_PRODUCT_TRANSVERSE_OFFER_BOUNDARY_OS.md  — ABC Product Transverse Offer Boundary OS  ## Purpose Product is the tr
+              - 06_ABC_B2_B3_PRODUCT_DELIVERY_PROTOCOL.md  — ABC B2/B3 Product Delivery Protocol  ## Product Packet Every Product t
+              - ABC OS/
+              - README.md  — 03 Product - Flash / Avengers
+                - abc/
+                - landing/
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Sales Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_SALES_PRINCIPLES_REF.md  — Sales Principles Reference - ABC
+              - 04_ABC_SALES_ROCK.md  — 02 ABC OS & Child Care BOS Sales Rock - Transverse Revenue Handoff OS
+              - 05_ABC_SALES_TRANSVERSE_REVENUE_HANDOFF_OS.md  — ABC Sales Transverse Revenue Handoff OS  ## Purpose Sales is the trans
+              - 06_ABC_B2_B3_SALES_PROPOSAL_PROTOCOL.md  — ABC B2/B3 Sales Proposal Protocol  ## Sales Packet Every Sales task th
+              - README.md  — 02 Sales - Martian Manhunter / Illuminati
+              - 00_B2_DOMAIN_CONTROL_ROOM.md  — Growth Control Room - 02_ABC_OS
+              - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+              - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+              - 03_GROWTH_PRINCIPLES_REF.md  — Principes Growth — Référence (NON dupliquée) — ABC Child Care / Orbite
+              - 04_GROWTH_EXTRACTION_QUEUE.md  — 02 ABC OS & Child Care BOS Growth Rock - Transverse Demand Signal OS
+              - 05_ABC_GROWTH_TRANSVERSE_DEMAND_SIGNAL_OS.md  — ABC Growth Transverse Demand Signal OS
+              - 06_ABC_B2_B3_GROWTH_EXPERIMENT_PROTOCOL.md  — ABC B2/B3 Growth Experiment Protocol
+              - README.md  — 01 Growth - Superman / Guardians
+            - 00_B1_DIRECTION_INDEX.md  — QuickAccess Summer Direction - ABC OS
+            - 01_NORTH_STAR_1Y_3Y_10Y.md  — North Star - 02_ABC_OS
+            - 02_12WY_COMMAND_CYCLES.md  — 12WY Command Cycles - 02_ABC_OS
+            - 03_DECISION_CHARTER.md
+            - 04_B2_HANDOFF_QUEUE.md  — B2 Handoff Queue - 02_ABC_OS
+            - 05_B2_DEFINITION_OF_DONE_SPEC.md  — B2 Definition Of Done Spec - 02_ABC_OS
+            - 06_B3_JOBS_TO_BE_DONE_SPEC.md  — B3 Jobs To Be Done Spec - 02_ABC_OS
+            - 07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md  — B1 -> B2 Domain Governance Workflow
+            - 08_BUSINESS_WHEEL_BALANCE_REVIEW.md  — Business Wheel Balance Review
+            - 09_MARKET_VALIDATION_SPRINT.md  — Market Validation Sprint - 02_ABC_OS
+            - 10_PROJECT_GRADUATION_GATES.md  — Project Graduation Gates - 02_ABC_OS
+            - 11_FRACTAL_PROJECT_DEVELOPMENT_PLAN.md  — Fractal Project Development Plan - 02 ABC OS & Child Care BOS
+            - README.md  — B1 Summer Direction — 02 ABC OS & Child Care BOS
+          - prototype-2026-06-07/
+        - assets/
+        - hubs/
+        - picard_audit.md  — 🎯 Rapport d'Audit Picard — ABC OS Community-01
+        - screenshots/
+  - 02-ADR/
+  - 03-ONBOARDING/
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - client-onboarding-kit-v1.md  — Client Onboarding Kit v1 — Solaris Nexus Agency
+    - ADR-CK-FREE-001_clickup-free-constraints.md  — ADR-CK-FREE-001 — Contraintes ClickUp Free → Choix 12-Sectors + Zéro C
+    - ADR-ID-001_identifiants-universels.md  — ADR-ID-001 — Conventions Identifiants Universels Tri-Plateforme
+    - ADR-MESH-L2-001_tri-plateforme-doctrine.md  — ADR-MESH-L2-001 — Doctrine Tri-Plateforme L2 (Notion / ClickUp / Airta
+    - ADR-NOTION-001_back-office-solaris-template.md  — ADR-NOTION-001 — Notion Back Office : Solaris Prototype + Template Rep
+  - outbound/
+    - 3-sequences-franchise-2026-07-08.md  — 3 Séquences Outbound OMK — Pitch Franchise-First (Abdaty-ready)
+    - 7-sequences-franchise-2026-07-08.md  — 7 Séquences Outbound OMK — 3 Strates × 10 ICPs (Franchise-First, Abdat
+  - state/
+    - SCHEMA.md  — state.json Schema (aspace-l2-state-v1)
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - 01_Vision_Strategy/
+  - 02_Global_Dashboard/
+  - 03_Master_Agreements/
+  - 04_Business_Domains/
+  - CEO_Directives.md
+  - README.md  — 00_Jerry_Business_Pulse
+  - graphify-burst/  **[ECARTE : artefact genere]**
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - 00_Links/
+    - 01_Growth_Superman_Guardians/
+    - 02_Sales_MartianManhunter_Illuminati/
+    - 03_Product_Flash_Avengers/
+    - 04_Ops_Batman_Fantastic4/
+    - 05_IT_Cyborg_KangDynasty/
+    - 06_Finance_WonderWoman_Thunderbolts/
+    - 07_People_GreenLantern_XMen/
+    - 08_Legal_Aquaman_Eternals/
+    - 09_Blueprints/
+    - graphify-out/  **[ECARTE : artefact genere]**
+      - 01-SDD/
+      - 02-ADR/
+      - 03-PRD/
+      - 04-DDD/
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_Ikaris_Strategy/
+      - 02_Sersi_Jurisdiction/
+      - 03_Ajak_Mediation/
+      - 04_Kingo_PublicComms/
+      - 05_Phastos_Templates/
+      - 06_Sprite_IP/
+      - 07_Druig_Negotiation/
+      - 08_Thena_Litigation/
+      - 09_Gilgamesh_Enforcement/
+      - 10_Makkari_Velocity/
+      - README_FROM_BUSINESS_OS.md  — 07_Legal_Aquaman
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_ProfessorX_Recruiting/
+      - 02_Cyclops_Onboarding/
+      - 03_JeanGrey_Culture/
+      - 04_Wolverine_PerfReviews/
+      - 05_Storm_OpsLeadership/
+      - 06_Beast_TechRecruiting/
+      - 07_Nightcrawler_DistributedOnboarding/
+      - 08_Rogue_SkillTransfer/
+      - README_FROM_BUSINESS_OS.md  — 01_People_GreenLantern
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_BuckyBarnes_Cashflow/
+      - 02_YelenaBelova_Forecasting/
+      - 03_RedGuardian_Reporting/
+      - 04_Ghost_CostOpt/
+      - 05_Taskmaster_Repro/
+      - 06_USAgent_Compliance/
+      - README_FROM_BUSINESS_OS.md  — 06_Finance_WonderWoman
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_KangPrime_Infra/
+      - 02_IronLad_Provisioning/
+      - 03_ScarletCenturion_Security/
+      - 04_Immortus_Capacity/
+      - 05_VictorTimely_CICD/
+      - 06_RamaTut_Backup/
+      - README_FROM_BUSINESS_OS.md  — 02_IT_Cyborg
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_MrFantastic_ProcessDesign/
+      - 02_InvisibleWoman_Coordination/
+      - 03_HumanTorch_Incidents/
+      - 04_TheThing_Execution/
+      - README_FROM_BUSINESS_OS.md  — 03_Operations_Batman
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_CaptainAmerica_Vision/
+      - 02_IronMan_Architecture/
+      - 03_Thor_PowerFeatures/
+      - 04_Hulk_QA/
+      - 05_BlackWidow_Specs/
+      - 06_Hawkeye_UX/
+      - 07_ScarletWitch_DesignSystem/
+      - README.md  — 04_Product_Flash
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_BlackBolt_Closer/
+      - 02_IronMan_Demo/
+      - 03_MrFantastic_Discovery/
+      - 04_Namor_Negotiation/
+      - 05_ProfessorX_BuyerRead/
+      - 06_DoctorStrange_Forecasting/
+      - README_FROM_BUSINESS_OS.md  — 08_Sales_JohnJones (SOA08 — Illuminati)
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+        - README.md
+      - 00_CROSSLINK.md  — 2-Way Crosslink — Reverse
+      - 01_StarLord_Story/
+      - 02_Rocket_Auto/
+      - 03_Gamora_Target/
+      - 04_Drax_Closing/
+      - 05_Groot_Content/
+      - 06_Mantis_VoC/
+      - README_FROM_BUSINESS_OS.md  — 01_Growth_Superman_Guardians
+        - README.md  — 06_Mantis_VoC
+        - README.md  — 05_Groot_Content
+        - README.md  — 04_Drax_Closing
+        - README.md  — 03_Gamora_Target
+        - README.md  — 02_Rocket_Auto
+        - README.md  — 01_StarLord_Story
+      - 02_alykaly-os-v2/
+      - 20_Life_OS_PARA_Portal/
+        - 00_Links/
+        - 01_Projects_Picard/
+        - A2_Computer_Enterprise_Spec.md  — A2 Computer / Enterprise Spec - PARA Structure Engine
+        - A3_Enterprise_References_Index.md  — A3 Enterprise References Index
+        - Business_Pulse_B3_Notion_Canon_Lore_Index.md  — Business Pulse B3 Notion Canon Lore Index
+        - Business_Pulse_B3_Swarm_Inspiration_Index.md  — Business Pulse B3 Swarm Inspiration Index
+        - Computer_B1_B2_B3_Business_Pulse_Doctrine.md  — Computer Doctrine - B1/B2/B3 Business Pulse In PARA
+        - README.md  — 24_PARA_Enterprise - Handoff A2
+          - 00 Agency as a Service/
+          - 00_Summers_Verse/
+          - 01-omk-business-os/
+          - A3_Picard_Projects_Spec.md  — A3 Picard Spec - Projects
+          - JERRY_SUMMER_FRACTAL_ALIGNMENT.md  — Jerry ↔ Summer Fractal Alignment — the macro ⇄ micro bridge
+          - Picard_Summers_Verse_Register.md  — Picard Register - Summer's Verse Projects
+          - README.md  — 01_Projects_Picard
+          - Summers Verse.md
+            - .git/  **[ECARTE : artefact genere]**
+            - B1_Summer_Direction/
+            - B2_Business_Domains/
+            - CERRIROS_HANDOVER.md  — Cerritos Handover — 01 OMK Business OS
+            - SUMMERS_VERSE_MANIFEST.md  — Summer's Verse Manifest — 01 OMK Business OS
+              - 01_Growth_Superman_Guardians/
+              - 02_Sales_MartianManhunter_Illuminati/
+              - 03_Product_Flash_Avengers/
+              - B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md  — B2 Business Wheel Harmonization Matrix
+              - B2_DC_DIRECTION_COUNCIL_WORKFLOW.md  — B2 DC Direction Council Workflow
+              - B2_DOMAIN_GATE_MATRIX.md  — B2 Domain Gate Matrix
+              - B2_MESO_VP_SWARM_COORDINATION.md  — B2 Meso VP Swarm Coordination
+              - B2_OFFER_BRAND_REVENUE_ENGINE.md  — B2 Offer Brand Revenue Engine - 01-omk-business-os
+              - README.md  — B2 Business Domains — 01 OMK Business OS
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Product Control Room - 01-omk-business-os
+                - 00_Interface_Prototypes/
+                - 01-omk-services-front-end/
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02-omk-services-business-os/
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 03 Product - Flash / Avengers
+                  - .git/  **[ECARTE : artefact genere]**
+                  - AGENTS.md  — OMK Dashboard — Agent Contract
+                  - README.md  — Run and deploy your AI Studio app
+                  - REBUILD_WORKFLOW.md  — 🔆 OMK Dashboard — Workflow de Rebuild Deployment-Ready
+                  - analyze/
+                  - dist/  **[ECARTE : artefact genere]**
+                  - node_modules/  **[ECARTE : artefact genere]**
+                  - picard_audit.md  — 🔆 OMK Services Business OS — Audit Technique & Correction de Dettes (P
+                  - .git/  **[ECARTE : artefact genere]**
+                  - .next/  **[ECARTE : artefact genere]**
+                  - .vercel/  **[ECARTE : artefact genere]**
+                  - AGENTS.md  — This is NOT the Next.js you know
+                  - CLAUDE.md
+                  - README.md  — or
+                  - node_modules/  **[ECARTE : artefact genere]**
+                  - public/
+                  - src/
+                    - app/
+                    - components/
+                      - api/
+                        - audit/
+                  - OMK SRV BOS/
+                    - OMK SERVICES Front-end Fr/
+                    - omk-services/
+                    - omk-services-front-end/
+                      - .git/  **[ECARTE : artefact genere]**
+                      - .next/  **[ECARTE : artefact genere]**
+                      - AGENTS.md  — This is NOT the Next.js you know
+                      - CLAUDE.md
+                      - README.md  — or
+                      - picard_audit.md  — Picard Audit: OMK Services
+                      - public/
+                      - src/
+                        - app/
+                        - components/
+                        - hooks/
+                        - lib/
+                        - types/
+                          - atoms/
+                          - molecules/
+                          - organisms/
+                          - templates/
+                      - .git/  **[ECARTE : artefact genere]**
+                      - .next/  **[ECARTE : artefact genere]**
+                      - src/
+                        - app/
+                        - components/
+                        - lib/
+                      - picard_audit_omk.md  — 🔆 OMK SERVICES — Audit Technique Picard
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Sales Control Room - 01-omk-business-os
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 02 Sales - Martian Manhunter / Illuminati
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Growth Control Room - 01-omk-business-os
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 01 Growth - Superman / Guardians
+              - 00_B1_DIRECTION_INDEX.md  — QuickAccess Summer Direction - OMK Business OS Canon
+              - 01_NORTH_STAR_1Y_3Y_10Y.md  — North Star - 01-omk-business-os
+              - 02_12WY_COMMAND_CYCLES.md  — 12WY Command Cycles - 01-omk-business-os
+              - 03_DECISION_CHARTER.md
+              - 04_B2_HANDOFF_QUEUE.md  — B2 Handoff Queue - 01-omk-business-os
+              - 05_B2_DEFINITION_OF_DONE_SPEC.md  — B2 Definition Of Done Spec - 01-omk-business-os
+              - 06_B3_JOBS_TO_BE_DONE_SPEC.md  — B3 Jobs To Be Done Spec - 01-omk-business-os
+              - 07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md  — B1 -> B2 Domain Governance Workflow
+              - 08_BUSINESS_WHEEL_BALANCE_REVIEW.md  — Business Wheel Balance Review
+              - 09_MARKET_VALIDATION_SPRINT.md  — Market Validation Sprint - 01-omk-business-os
+              - 10_PROJECT_GRADUATION_GATES.md  — Project Graduation Gates - 01-omk-business-os
+              - README.md  — B1 Summer Direction — 01 OMK Business OS
+            - B1_B2_B3_Fractal_Presentation.md  — Summer's Verse B1/B2/B3 Fractal
+            - B1_Summer_Direction/
+            - B2_Business_Domains/
+            - B3_Warp_Core_Execution/
+            - README.md  — Summer's Verse - Picard Project Template
+            - SUMMERS_VERSE_MANIFEST.md  — Summer's Verse Manifest - Template
+              - 01_Growth_Superman_Guardians/
+              - 02_Sales_MartianManhunter_Illuminati/
+              - 03_Product_Flash_Avengers/
+              - 04_Ops_Batman_Fantastic4/
+              - 05_IT_Cyborg_KangDynasty/
+              - 06_Finance_WonderWoman_Thunderbolts/
+              - 07_People_GreenLantern_XMen/
+              - 08_Legal_Aquaman_Eternals/
+              - Lead_Lag_Log_Template.md  — B3 Warp Core Execution - Lead/Lag Log Template
+                - 00_B3_SWARM_CONFIG.md  — Legal B3 Swarm Config - Eternals
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Legal / Eternals
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — People B3 Swarm Config - X-Men
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - People / XMen
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — Finance B3 Swarm Config - Thunderbolts
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Finance / Thunderbolts
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — IT B3 Swarm Config - Kang Dynasty
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - IT / KangDynasty
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — Ops B3 Swarm Config - Fantastic Four
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Ops / Fantastic4
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — Product B3 Swarm Config - Avengers
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Product / Avengers
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — Sales B3 Swarm Config - Illuminati
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Sales / Illuminati
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 00_B3_SWARM_CONFIG.md  — Growth B3 Swarm Config - Guardians
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Growth / Guardians
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+              - 01_Growth_Superman_Guardians/
+              - 02_Sales_MartianManhunter_Illuminati/
+              - 03_Product_Flash_Avengers/
+              - 04_Ops_Batman_Fantastic4/
+              - 05_IT_Cyborg_KangDynasty/
+              - 06_Finance_WonderWoman_Thunderbolts/
+              - 07_People_GreenLantern_XMen/
+              - 08_Legal_Aquaman_Eternals/
+              - B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md  — B2 Business Wheel Harmonization Matrix
+              - B2_DC_DIRECTION_COUNCIL_WORKFLOW.md  — B2 DC Direction Council Workflow
+              - B2_DOMAIN_GATE_MATRIX.md  — B2 Domain Gate Matrix
+              - B2_MESO_VP_SWARM_COORDINATION.md  — B2 Meso VP Swarm Coordination
+              - B2_OFFER_BRAND_REVENUE_ENGINE.md  — B2 Offer Brand Revenue Engine - 00_Summers_Verse
+              - README.md  — B2 Business Domains
+              - Rocks_And_Tactic_Specification.md  — B2 Business Domains - Rocks And Tactic Specification
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Legal Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 08 Legal - Aquaman / Eternals
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — People Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 07 People - Green Lantern / X-Men
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Finance Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 06 Finance - Wonder Woman / Thunderbolts
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — IT Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 05 IT - Cyborg / Kang Dynasty
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Ops Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 04 Ops - Batman / Fantastic Four
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Product Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 03 Product - Flash / Avengers
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Sales Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 02 Sales - Martian Manhunter / Illuminati
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Growth Control Room - 00_Summers_Verse
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - README.md  — 01 Growth - Superman / Guardians
+              - 00_B1_DIRECTION_INDEX.md  — Summer Direction - Summers Verse Template
+              - 01_NORTH_STAR_1Y_3Y_10Y.md  — North Star - 00_Summers_Verse
+              - 02_12WY_COMMAND_CYCLES.md  — 12WY Command Cycles - 00_Summers_Verse
+              - 03_DECISION_CHARTER.md
+              - 04_B2_HANDOFF_QUEUE.md  — B2 Handoff Queue - 00_Summers_Verse
+              - 05_B2_DEFINITION_OF_DONE_SPEC.md  — B2 Definition Of Done Spec - 00_Summers_Verse
+              - 06_B3_JOBS_TO_BE_DONE_SPEC.md  — B3 Jobs To Be Done Spec - 00_Summers_Verse
+              - 07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md  — B1 -> B2 Domain Governance Workflow
+              - 08_BUSINESS_WHEEL_BALANCE_REVIEW.md  — Business Wheel Balance Review
+              - 09_MARKET_VALIDATION_SPRINT.md  — Market Validation Sprint - 00_Summers_Verse
+              - 10_PROJECT_GRADUATION_GATES.md  — Project Graduation Gates - 00_Summers_Verse
+              - Cycles_12WY_Governance.md  — B1 Summer Direction - 4 Cycles 12WY Governance
+              - README.md  — B1 Summer Direction
+            - B1_Summer_Direction/
+            - B2_Business_Domains/
+            - B3_Warp_Core_Execution/
+            - CERRIROS_HANDOVER.md  — Cerritos Handover — 00 Agency as a Service
+            - SUMMERS_VERSE_MANIFEST.md  — Summer's Verse Manifest — 00 Agency as a Service
+            - _Inbox/
+            - graphify-out/  **[ECARTE : artefact genere]**
+              - B1/
+              - B2/
+              - B3/
+              - 01_Growth_Superman_Guardians/
+              - 02_Sales_MartianManhunter_Illuminati/
+              - 03_Product_Flash_Avengers/
+              - 04_Ops_Batman_Fantastic4/
+              - 05_IT_Cyborg_KangDynasty/
+              - 06_Finance_WonderWoman_Thunderbolts/
+              - 07_People_GreenLantern_XMen/
+              - 08_Legal_Aquaman_Eternals/
+              - README.md  — B3 Warp Core Execution — 00 Agency as a Service
+                - 00_B3_SWARM_CONFIG.md  — Legal B3 Swarm Config - Eternals
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Legal / Eternals
+                - 01_Ikaris_Strategy/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 02_Sersi_Jurisdiction/
+                - 03_Ajak_Mediation/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_Kingo_PublicComms/
+                - 05_Phastos_Templates/
+                - 06_Sprite_IP/
+                - 07_Druig_Negotiation/
+                - 08_Thena_Litigation/
+                - 09_Gilgamesh_Enforcement/
+                - 10_Makkari_Velocity/
+                - AAAS_CLAIMS_DATA_IP_BOUNDARY_SOLARIS.md  — ⚖️ Claims / Data / IP Boundary — Solaris AaaS
+                - JTBD-001_AAAS_CLAIMS_DATA_IP_BOUNDARY.md  — JTBD-001 - AAAS Claims Data IP Boundary
+                - JTBD-002_AAAS_TRANSVERSE_LEGAL_RISK_GATE.md  — JTBD-002 AAAS Transverse Legal Risk Gate  ## Job When 00 Agency as a S
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — People B3 Swarm Config - X-Men
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - People / XMen
+                - 01_ProfessorX_Recruiting/
+                - 02_Cyclops_Onboarding/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_JeanGrey_Culture/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_Wolverine_PerfReviews/
+                - 05_Storm_OpsLeadership/
+                - 06_Beast_TechRecruiting/
+                - 07_Nightcrawler_DistributedOnboarding/
+                - 08_Rogue_SkillTransfer/
+                - AAAS_PEOPLE_AGENTIC_HR_WORKFLOWS.md  — 👥 RH Agentique — les 6 patterns au service du domaine People
+                - JTBD-001_AAAS_OWNER_HANDOFF_MAP.md  — JTBD-001 - AaaS Owner and Agent Handoff Map
+                - JTBD-002_AAAS_TRANSVERSE_PEOPLE_AGENT_GOVERNANCE_GATE.md  — JTBD-002 AAAS Transverse People Agent Governance Gate
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — Finance B3 Swarm Config - Thunderbolts
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Finance / Thunderbolts
+                - 01_BuckyBarnes_Cashflow/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 02_YelenaBelova_Forecasting/
+                - 03_RedGuardian_Reporting/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_Ghost_CostOpt/
+                - 05_Taskmaster_Repro/
+                - 06_USAgent_Compliance/
+                - AAAS_PRICE_MARGIN_MODEL_SOLARIS.md  — 💰 Modèle Prix / Marge — Solaris (Content Forge + Lite)
+                - JTBD-001_AAAS_PRICE_MARGIN_MODEL.md  — JTBD-001 - AAAS Price Margin Model
+                - JTBD-002_AAAS_TRANSVERSE_FINANCE_MONEY_GATE.md  — JTBD-002 AAAS Transverse Finance Money Gate  ## Job When 00 Agency as 
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — IT B3 Swarm Config - Kang Dynasty
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - IT / KangDynasty
+                - 01_KangPrime_Infra/
+                - 02_IronLad_Provisioning/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 03_ScarletCenturion_Security/
+                - 04_Immortus_Capacity/
+                - 05_VictorTimely_CICD/
+                - 06_RamaTut_Backup/
+                - AAAS_RUNTIME_BOUNDARY_SOLARIS.md  — 🖥️ IT Runtime Boundary — Solaris AaaS
+                - JTBD-001_AAAS_RUNTIME_BOUNDARY.md  — JTBD-001 - AAAS Runtime And Data Boundary
+                - JTBD-002_AAAS_TRANSVERSE_IT_SYSTEMS_GATE.md  — JTBD-002 AAAS Transverse IT Systems Gate
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — Ops B3 Swarm Config - Fantastic Four
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Ops / Fantastic4
+                - 01_MrFantastic_ProcessDesign/
+                - 02_InvisibleWoman_Coordination/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_HumanTorch_Incidents/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_TheThing_Execution/
+                - AAAS_DELIVERY_SOP_SOLARIS.md  — ⚙️ Delivery SOP — Solaris AaaS (zero-Jerry)
+                - JTBD-001_AAAS_DELIVERY_SOP.md  — JTBD-001 - AaaS Delivery SOP
+                - JTBD-002_AAAS_TRANSVERSE_OPS_GATE.md  — JTBD-002 - AaaS Transverse Ops Gate
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — Product B3 Swarm Config - Avengers
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Product / Avengers
+                - 01_CaptainAmerica_Vision/
+                - 02_IronMan_Architecture/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 03_Thor_PowerFeatures/
+                - 04_Hulk_QA/
+                - 05_BlackWidow_Specs/
+                - 06_Hawkeye_UX/
+                - 07_ScarletWitch_DesignSystem/
+                - AAAS_PRODUCT_MVP_DEMO_BOUNDARY_SOLARIS.md  — 🟢 Product MVP & Demo Boundary — Solaris AaaS
+                - JTBD-001_AAAS_MVP_DEMO_BOUNDARY.md  — JTBD-001 - AAAS MVP Demo Boundary
+                - JTBD-002_AAAS_TRANSVERSE_PRODUCT_OFFER_GATE.md  — JTBD-002 AAAS Transverse Product Offer Gate  ## Job When 00 Agency as 
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — Sales B3 Swarm Config - Illuminati
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Sales / Illuminati
+                - 01_BlackBolt_Closer/
+                - 02_IronMan_Demo/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 03_MrFantastic_Discovery/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_Namor_Negotiation/
+                - 05_ProfessorX_BuyerRead/
+                - 06_DoctorStrange_Forecasting/
+                - JTBD-001_AAAS_DIAGNOSTIC_TO_PROPOSAL.md  — JTBD-001 - AAAS Diagnostic To Proposal
+                - JTBD-002_AAAS_TRANSVERSE_SALES_REVENUE_GATE.md  — JTBD-002 AAAS Transverse Sales Revenue Gate
+                - OFFER_GRANDSLAM_SOLARIS_CONTENT_FORGE.md  — 📦 Grand Slam Offer — Solaris pour les "Content Forges"
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                - 00_B3_SWARM_CONFIG.md  — Growth B3 Swarm Config - Guardians
+                - 01_B3_AGENT_ROSTER.md  — Agent Roster - Growth / Guardians
+                - 01_StarLord_Story/
+                - 02_PEER_UNBLOCKING_AND_HANDOFFS.md  — Peer Unblocking And Handoffs
+                - 02_Rocket_Auto/
+                - 03_Gamora_Target/
+                - 03_SHARED_CONTEXT_AND_PROOF_LOG.md  — Shared Context And Proof Log
+                - 04_Drax_Closing/
+                - 05_Groot_Content/
+                - 06_Mantis_VoC/
+                - JTBD-001_SOLARIS_VOC_PACKET.md  — JTBD-001 - SOLARIS VOC Packet
+                - JTBD-002_SOLARIS_ICP_FILTER.md  — JTBD-002 — Solaris ICP Filter (visual-first rejection criteria) — AaaS
+                - JTBD-003_SOLARIS_PAINKILLER_VARIANTS.md  — JTBD-003 — Solaris Painkiller Message Variants (StoryBrand) — AaaS
+                - JTBD-004_SOLARIS_EXPERIMENT_RICE.md  — JTBD-004 — Solaris Non-Paid Experiment + RICE — AaaS
+                - JTBD-005_AAAS_TRANSVERSE_GROWTH_SIGNAL_GATE.md  — JTBD-005 AAAS Transverse Growth Signal Gate
+                - SOLARIS_ICP_MARKET_STUDY_2026.md  — 🌅 SOLARIS ICP & Market Study 2026 — Agency-as-a-Service flagship
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+                  - README.md
+              - 00_AAAS_DOMAIN_DEVELOPMENT_MAP.md  — 00 Agency as a Service Domain Development Map
+              - 01_Growth_Superman_Guardians/
+              - 02_Sales_MartianManhunter_Illuminati/
+              - 03_Product_Flash_Avengers/
+              - 04_Ops_Batman_Fantastic4/
+              - 05_IT_Cyborg_KangDynasty/
+              - 06_Finance_WonderWoman_Thunderbolts/
+              - 07_People_GreenLantern_XMen/
+              - 08_Legal_Aquaman_Eternals/
+              - B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md  — B2 Business Wheel Harmonization Matrix
+              - B2_DC_DIRECTION_COUNCIL_WORKFLOW.md  — B2 DC Direction Council Workflow
+              - B2_DOMAIN_GATE_MATRIX.md  — B2 Domain Gate Matrix
+              - B2_MESO_VP_SWARM_COORDINATION.md  — B2 Meso VP Swarm Coordination
+              - B2_OFFER_BRAND_REVENUE_ENGINE.md  — B2 Offer Brand Revenue Engine - 00_Agency_aaS
+              - README.md  — B2 Business Domains — 00 Agency as a Service
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Legal Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_LEGAL_PRINCIPLES_REF.md  — Legal Principles Reference - AAAS
+                - 04_AAAS_LEGAL_ROCK.md  — 00 Agency as a Service Legal Rock - Transverse Risk Boundary OS
+                - 05_AAAS_LEGAL_TRANSVERSE_RISK_BOUNDARY_OS.md  — AAAS Legal Transverse Risk Boundary OS  ## Purpose Legal is the transv
+                - 06_AAAS_B2_B3_LEGAL_REVIEW_PROTOCOL.md  — AAAS B2/B3 Legal Review Protocol  ## Legal Packet Every B2/B3 task tha
+                - B3_Squad_Eternals/
+                - README.md  — 08 Legal - Aquaman / Eternals
+                  - 00_B3_SQUAD_CANON.md  — 🏛️ Eternals — Legal Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Legal (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — People Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_PEOPLE_PRINCIPLES_REF.md  — People Principles Reference - AAAS
+                - 04_AAAS_PEOPLE_ROCK.md  — 00 Agency as a Service People Rock - Transverse Agent Governance OS
+                - 05_AAAS_PEOPLE_TRANSVERSE_AGENT_GOVERNANCE_OS.md  — AAAS People Transverse Agent Governance OS
+                - 06_AAAS_B2_B3_AGENT_COMMAND_PROTOCOL.md  — AAAS B2/B3 Agent Command Protocol
+                - B3_Squad_XMen/
+                - README.md  — 07 People - Green Lantern / X-Men
+                  - 00_B3_SQUAD_CANON.md  — 🧬 X-Men — People Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris People (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Finance Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_FINANCE_PRINCIPLES_REF.md  — Finance Principles Reference - AAAS
+                - 04_AAAS_FINANCE_ROCK.md  — 00 Agency as a Service Finance Rock - Transverse Money Control OS
+                - 05_AAAS_FINANCE_TRANSVERSE_MONEY_CONTROL_OS.md  — AAAS Finance Transverse Money Control OS  ## Purpose Finance is the tr
+                - 06_AAAS_B2_B3_FINANCE_APPROVAL_PROTOCOL.md  — AAAS B2/B3 Finance Approval Protocol  ## Finance Packet Every B2/B3 ta
+                - B3_Squad_Thunderbolts/
+                - README.md  — 06 Finance - Wonder Woman / Thunderbolts
+                  - 00_B3_SQUAD_CANON.md  — ⚡ Thunderbolts — Finance Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Finance (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — IT Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_IT_PRINCIPLES_REF.md  — IT Principles Reference - AAAS
+                - 04_AAAS_IT_ROCK.md  — 00 Agency as a Service IT Rock - Transverse Systems Access OS
+                - 05_AAAS_IT_TRANSVERSE_SYSTEMS_ACCESS_OS.md  — AAAS IT Transverse Systems Access OS
+                - 06_AAAS_B2_B3_SYSTEMS_ACCESS_PROTOCOL.md  — AAAS B2/B3 Systems Access Protocol
+                - B3_Squad_KangDynasty/
+                - README.md  — 05 IT - Cyborg / Kang Dynasty
+                  - 00_B3_SQUAD_CANON.md  — 🟣 Kang Dynasty — IT Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris IT (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Ops Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_OPS_PRINCIPLES_REF.md  — Ops Principles Reference - AAAS
+                - 04_AAAS_OPS_ROCK.md  — 00 Agency as a Service Ops Rock - Transverse Delivery OS
+                - 05_AAAS_OPS_TRANSVERSE_DOMAIN_OPERATING_SYSTEM.md  — AaaS Ops Transverse Domain Operating System
+                - 06_AAAS_B2_CROSS_DOMAIN_HANDOFF_PROTOCOL.md  — AaaS B2 Cross-Domain Handoff Protocol
+                - B3_Squad_Fantastic4/
+                - README.md  — 04 Ops - Batman / Fantastic Four
+                  - 00_B3_SQUAD_CANON.md  — 🔵 Fantastic Four — Ops Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Ops (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Product Control Room - 00_Agency_aaS
+                - 00_Interface_Prototypes/
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 01_solaris-aaas/
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 02_aaas-os/
+                - 03_PRODUCT_PRINCIPLES_REF.md  — Product Principles Reference - AAAS
+                - 04_AAAS_PRODUCT_ROCK.md  — 00 Agency as a Service Product Rock - Transverse Offer Boundary OS
+                - 05_AAAS_PRODUCT_TRANSVERSE_OFFER_BOUNDARY_OS.md  — AAAS Product Transverse Offer Boundary OS  ## Purpose Product is the t
+                - 06_AAAS_B2_B3_PRODUCT_DELIVERY_PROTOCOL.md  — AAAS B2/B3 Product Delivery Protocol  ## Product Packet Every Product 
+                - B3_Squad_Avengers/
+                - README.md  — 03 Product - Flash / Avengers
+                  - 00_B3_SQUAD_CANON.md  — ⚡ The Avengers — Product Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Product (Picard)
+                  - .git/  **[ECARTE : artefact genere]**
+                  - .next/  **[ECARTE : artefact genere]**
+                  - AGENTS.md  — This is NOT the Next.js you know
+                  - CLAUDE.md
+                  - README.md  — or
+                  - REBUILD_WORKFLOW.md  — Solaris (AaaS Agency Garden) Dashboard — Workflow de Rebuild Deploymen
+                  - node_modules/  **[ECARTE : artefact genere]**
+                  - picard_audit.md  — 🔆 A'Space AaaS (Digital Garden) — Audit Technique & Correction de Dett
+                  - public/
+                  - src/
+                  - supabase/
+                    - migrations/
+                    - app/
+                    - components/
+                    - config/
+                    - lib/
+                    - repos/
+                    - types/
+                      - supabase/
+                      - auth/
+                      - empty-states/
+                      - skeletons/
+                      - views/
+                      - auth/
+                        - callback/
+                        - check-email/
+                        - signin/
+                        - signout/
+                        - signup/
+                  - .claude/
+                  - .git/  **[ECARTE : artefact genere]**
+                  - .next/  **[ECARTE : artefact genere]**
+                  - AGENTS.md  — This is NOT the Next.js you know
+                  - CLAUDE.md
+                  - LEADS_SETUP.md  — D09 — Lead Capture Setup
+                  - README.md  — or
+                  - agent-os/
+                  - node_modules/  **[ECARTE : artefact genere]**
+                  - picard_audit_solaris.md  — 🔆 SOLARIS AaaS — Audit Technique & Correction de Dettes
+                  - public/
+                  - src/
+                    - app/
+                    - components/
+                    - lib/
+                      - diagrams/
+                      - sections/
+                      - api/
+                        - leads/
+                    - standards/
+                      - api/
+                      - architecture.md
+                      - forms/
+                      - layout/
+                      - nextjs-16-rules.md
+                      - security/
+                      - tech-stack.md
+                      - typescript/
+                        - data-shape.md
+                        - no-secret-leak.md
+                        - rgpd-consent.md
+                        - fonts-and-metadata.md
+                        - state-machine.md
+                        - utm-capture.md
+                        - honeypot.md
+                        - lead-capture.md
+                        - result-types.md
+                        - storage-fallback.md
+                    - commands/
+                      - agent-os/
+                        - discover-standards.md  — Discover Standards
+                        - index-standards.md  — Index Standards
+                        - inject-standards.md  — Inject Standards
+                        - plan-product.md  — Plan Product
+                        - shape-spec.md  — Shape Spec
+                  - Solaris AaaS/
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Sales Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_SALES_PRINCIPLES_REF.md  — Sales Principles Reference - AAAS
+                - 04_AAAS_SALES_ROCK.md  — 00 Agency as a Service Sales Rock - Transverse Revenue Handoff OS
+                - 05_AAAS_SALES_TRANSVERSE_REVENUE_HANDOFF_OS.md  — AAAS Sales Transverse Revenue Handoff OS
+                - 06_AAAS_B2_B3_SALES_PROPOSAL_PROTOCOL.md  — AAAS B2/B3 Sales Proposal Protocol
+                - B3_Squad_Illuminati/
+                - README.md  — 02 Sales - Martian Manhunter / Illuminati
+                  - 00_B3_SQUAD_CANON.md  — 🤝 Illuminati — Sales Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Sales (Picard)
+                - 00_B2_DOMAIN_CONTROL_ROOM.md  — Growth Control Room - 00_Agency_aaS
+                - 01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md  — Rock -> DoD -> JTBD Pipeline
+                - 02_B3_SWARM_SUPERVISION_PROTOCOL.md  — B3 Swarm Supervision Protocol
+                - 03_GROWTH_PRINCIPLES_REF.md  — Principes Growth — Référence (NON dupliquée)
+                - 04_SOLARIS_GROWTH_EXTRACTION_QUEUE.md  — 00 Agency as a Service Growth Rock - Transverse Demand Signal OS
+                - 05_AAAS_GROWTH_TRANSVERSE_DEMAND_SIGNAL_OS.md  — AAAS Growth Transverse Demand Signal OS
+                - 06_AAAS_B2_B3_GROWTH_EXPERIMENT_PROTOCOL.md  — AAAS B2/B3 Growth Experiment Protocol
+                - B3_Squad_Guardians/
+                - README.md  — 01 Growth - Superman / Guardians
+                  - 00_B3_SQUAD_CANON.md  — 🛡️ Guardians — Growth Squad (Picard / AaaS Solaris instance)
+                  - 00_CROSSLINK.md  — 2-Way Crosslink — AaaS Solaris Growth (Picard)
+              - 00_B1_DIRECTION_INDEX.md  — QuickAccess Summer Direction - Agency aaS
+              - 01_NORTH_STAR_1Y_3Y_10Y.md  — North Star - 00_Agency_aaS
+              - 02_12WY_COMMAND_CYCLES.md  — 12WY Command Cycles - 00_Agency_aaS
+              - 03_DECISION_CHARTER.md
+              - 04_B2_HANDOFF_QUEUE.md  — B2 Handoff Queue - 00_Agency_aaS
+              - 05_B2_DEFINITION_OF_DONE_SPEC.md  — B2 Definition Of Done Spec - 00_Agency_aaS
+              - 06_B3_JOBS_TO_BE_DONE_SPEC.md  — B3 Jobs To Be Done Spec - 00_Agency_aaS
+              - 07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md  — B1 -> B2 Domain Governance Workflow
+              - 08_BUSINESS_WHEEL_BALANCE_REVIEW.md  — Business Wheel Balance Review
+              - 09_MARKET_VALIDATION_SPRINT.md  — Market Validation Sprint - 00_Agency_aaS
+              - 10_PROJECT_GRADUATION_GATES.md  — Project Graduation Gates - 00_Agency_aaS
+              - 11_FRACTAL_PROJECT_DEVELOPMENT_PLAN.md  — Fractal Project Development Plan - 00 Agency as a Service
+              - README.md  — B1 Summer Direction — 00 Agency as a Service
+          - 30_Business_OS_Portal/
+            - 00_Jerry_Business_Pulse/
+            - Manifesto.md  — Layer 2: Business OS Manifesto
+            - README.md  — 30_Business_OS (The Fractal Engine)
+              - 04_Business_Domains/
+                - 00_Links/
+                  - 02_alykaly-os-v2/
+                  - 20_Life_OS_PARA_Portal/
+                    - 00_Links/
+                      - 30_Business_OS_Portal/
+                        - 00_Jerry_Business_Pulse/
+                          - 04_Business_Domains/
+                            - 00_Links/
+                              - 20_Life_OS_PARA_Portal/
+                                - 00_Links/
+                                  - 30_Business_OS_Portal/
+                                    - 00_Jerry_Business_Pulse/
+                                      - 04_Business_Domains/
+                                        - 00_Links/
+                                          - 20_Life_OS_PARA_Portal/
+                                            - 00_Links/
+                                              - 30_Business_OS_Portal/
+                                                - 00_Jerry_Business_Pulse/
+                                                  - 04_Business_Domains/
+                                                    - 00_Links/
+                                                      - 20_Life_OS_PARA_Portal/
+                                                        - 00_Links/
+                                                          - 30_Business_OS_Portal/
+                                                            - 00_Jerry_Business_Pulse/
+                                                              - 04_Business_Domains/
+                                                                - 00_Links/
+                                                                  - 20_Life_OS_PARA_Portal/
+                                                                    - 00_Links/
+                                                                      - 30_Business_OS_Portal/
+                                                                        - 00_Jerry_Business_Pulse/
+                                                                          - 04_Business_Domains/
+                                                                            - 00_Links/
+                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                - 00_Links/
+                                                                                  - 30_Business_OS_Portal/
+                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                      - 04_Business_Domains/
+                                                                                        - 00_Links/
+                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                            - 00_Links/
+                                                                                              - 30_Business_OS_Portal/
+                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                  - 04_Business_Domains/
+                                                                                                    - 00_Links/
+                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                        - 00_Links/
+                                                                                                          - 30_Business_OS_Portal/
+                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                              - 04_Business_Domains/
+                                                                                                                - 00_Links/
+                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                    - 00_Links/
+                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                          - 04_Business_Domains/
+                                                                                                                            - 00_Links/
+                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                - 00_Links/
+                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                        - 00_Links/
+                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                            - 00_Links/
+                                                                                                                                              - 30_Business_OS_Portal/
+                                                                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                                                                  - 04_Business_Domains/
+                                                                                                                                                    - 00_Links/
+                                                                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                                                                        - 00_Links/
+                                                                                                                                                          - 30_Business_OS_Portal/
+                                                                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                                                                              - 04_Business_Domains/
+                                                                                                                                                                - 00_Links/
+                                                                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                                                                          - 04_Business_Domains/
+                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                              - 30_Business_OS_Portal/
+                                                                                                                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                  - 04_Business_Domains/
+                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                          - 30_Business_OS_Portal/
+                                                                                                                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                              - 04_Business_Domains/
+                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                          - 04_Business_Domains/
+                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                              - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                  - 04_Business_Domains/
+                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                          - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                            - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                            - 00_Summers_Verse/
+                                                                                                                                                                                                                                                            - 02_Meta_Factory/
+                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                            - 10_Projects/
+                                                                                                                                                                                                                                                            - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                              - 04_Business_Domains/
+                                                                                                                                                                                                                                                              - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                              - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                - 09_Blueprints/
+                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                  - alykaly-front/
+                                                                                                                                                                                                                                                                  - arch/
+                                                                                                                                                                                                                                                                  - deal/
+                                                                                                                                                                                                                                                                  - gtd/
+                                                                                                                                                                                                                                                                  - res/
+                                                                                                                                                                                                                                                                  - snw/
+                                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                                    - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                    - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                    - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                    - 04_Archives_Data/
+                                                                                                                                                                                                                                                                    - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                    - logs/
+                                                                                                                                                                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                        - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                        - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                        - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                        - 10_Projects/
+                                                                                                                                                                                                                                                                        - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                        - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                        - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                        - Runbooks_Summers/
+                                                                                                                                                                                                                                                                        - SOPs_B2/
+                                                                                                                                                                                                                                                                        - Skills_B3/
+                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                          - 04_Business_Domains/
+                                                                                                                                                                                                                                                                          - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                          - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                            - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                            - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                            - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                            - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                            - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                            - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                            - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                            - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                              - alykaly-front/
+                                                                                                                                                                                                                                                                              - arch/
+                                                                                                                                                                                                                                                                              - deal/
+                                                                                                                                                                                                                                                                              - gtd/
+                                                                                                                                                                                                                                                                              - res/
+                                                                                                                                                                                                                                                                              - snw/
+                                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                                - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                - logs/
+                                                                                                                                                                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                    - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                    - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                    - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                    - 09_Blueprints/
+                                                                                                                                                                                                                                                                                    - 10_Projects/
+                                                                                                                                                                                                                                                                                    - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                    - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                    - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                    - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                    - SOPs_B2/
+                                                                                                                                                                                                                                                                                    - Skills_B3/
+                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                      - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                      - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                                                        - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                        - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                        - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                        - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                        - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                        - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                        - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                        - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                          - alykaly-front/
+                                                                                                                                                                                                                                                                                          - arch/
+                                                                                                                                                                                                                                                                                          - deal/
+                                                                                                                                                                                                                                                                                          - gtd/
+                                                                                                                                                                                                                                                                                          - res/
+                                                                                                                                                                                                                                                                                          - snw/
+                                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                                            - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                            - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                            - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                            - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                            - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                            - logs/
+                                                                                                                                                                                                                                                                                              - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                - 10_Projects/
+                                                                                                                                                                                                                                                                                                - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                - SOPs_B2/
+                                                                                                                                                                                                                                                                                                - Skills_B3/
+                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                  - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                  - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                  - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                                                                    - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                    - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                    - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                    - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                    - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                    - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                    - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                    - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                    - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                      - alykaly-front/
+                                                                                                                                                                                                                                                                                                      - arch/
+                                                                                                                                                                                                                                                                                                      - deal/
+                                                                                                                                                                                                                                                                                                      - gtd/
+                                                                                                                                                                                                                                                                                                      - res/
+                                                                                                                                                                                                                                                                                                      - snw/
+                                                                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                                                                        - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                        - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                        - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                        - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                        - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                        - logs/
+                                                                                                                                                                                                                                                                                                          - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                            - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                            - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                            - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                            - 10_Projects/
+                                                                                                                                                                                                                                                                                                            - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                            - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                            - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                            - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                            - SOPs_B2/
+                                                                                                                                                                                                                                                                                                            - Skills_B3/
+                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                              - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                              - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                              - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                                                                - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                  - alykaly-front/
+                                                                                                                                                                                                                                                                                                                  - arch/
+                                                                                                                                                                                                                                                                                                                  - deal/
+                                                                                                                                                                                                                                                                                                                  - gtd/
+                                                                                                                                                                                                                                                                                                                  - res/
+                                                                                                                                                                                                                                                                                                                  - snw/
+                                                                                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                                                                                    - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                    - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                    - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                    - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                    - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                    - logs/
+                                                                                                                                                                                                                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                        - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                        - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                        - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                        - 10_Projects/
+                                                                                                                                                                                                                                                                                                                        - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                        - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                        - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                        - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                        - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                        - Skills_B3/
+                                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                          - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                          - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                          - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                                                                            - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                            - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                            - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                            - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                            - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                            - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                            - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                            - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                              - alykaly-front/
+                                                                                                                                                                                                                                                                                                                              - arch/
+                                                                                                                                                                                                                                                                                                                              - deal/
+                                                                                                                                                                                                                                                                                                                              - gtd/
+                                                                                                                                                                                                                                                                                                                              - res/
+                                                                                                                                                                                                                                                                                                                              - snw/
+                                                                                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                                                                                - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                - logs/
+                                                                                                                                                                                                                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                                    - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                                    - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                                    - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                                    - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                    - 10_Projects/
+                                                                                                                                                                                                                                                                                                                                    - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                                    - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                                    - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                                    - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                                    - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                                    - Skills_B3/
+                                                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                                      - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                      - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                                                                                                        - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                                        - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                                        - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                                        - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                                        - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                                        - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                                        - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                                        - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                                          - alykaly-front/
+                                                                                                                                                                                                                                                                                                                                          - arch/
+                                                                                                                                                                                                                                                                                                                                          - deal/
+                                                                                                                                                                                                                                                                                                                                          - gtd/
+                                                                                                                                                                                                                                                                                                                                          - res/
+                                                                                                                                                                                                                                                                                                                                          - snw/
+                                                                                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                                                                                            - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                            - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                            - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                            - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                            - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                            - logs/
+                                                                                                                                                                                                                                                                                                                                              - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                                                - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                                                - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                                                - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                                                - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                                                - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                - 10_Projects/
+                                                                                                                                                                                                                                                                                                                                                - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                                                - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                                                - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                                                - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                                                - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                                                - Skills_B3/
+                                                                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                  - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                                                  - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                  - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                    - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                                                    - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                                                    - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                                                    - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                                                    - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                                                    - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                                                    - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                                                    - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                                                    - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                      - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                                                      - alykaly-front/
+                                                                                                                                                                                                                                                                                                                                                      - arch/
+                                                                                                                                                                                                                                                                                                                                                      - deal/
+                                                                                                                                                                                                                                                                                                                                                      - gtd/
+                                                                                                                                                                                                                                                                                                                                                      - res/
+                                                                                                                                                                                                                                                                                                                                                      - snw/
+                                                                                                                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                        - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                                        - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                                        - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                                        - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                                        - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                        - logs/
+                                                                                                                                                                                                                                                                                                                                                          - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                                                            - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                                                            - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                                                            - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                                                            - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                            - 10_Projects/
+                                                                                                                                                                                                                                                                                                                                                            - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                                                            - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                                                            - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                                                            - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                                                            - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                                                            - Skills_B3/
+                                                                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                              - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                                                              - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                              - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                                                                - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                                                                - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                                                                - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                                                                - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                                                                - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                                                                - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                                                                - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                                                                - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                  - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                                                                  - alykaly-front/
+                                                                                                                                                                                                                                                                                                                                                                  - arch/
+                                                                                                                                                                                                                                                                                                                                                                  - deal/
+                                                                                                                                                                                                                                                                                                                                                                  - gtd/
+                                                                                                                                                                                                                                                                                                                                                                  - res/
+                                                                                                                                                                                                                                                                                                                                                                  - snw/
+                                                                                                                                                                                                                                                                                                                                                                    - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                    - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                                                    - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                                                    - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                                                    - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                                                    - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                    - logs/
+                                                                                                                                                                                                                                                                                                                                                                      - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                                                                        - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                                                                        - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                                                                        - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                                                                        - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                                        - 10_Projects/
+                                                                                                                                                                                                                                                                                                                                                                        - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                                                                        - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                                                                        - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                                                                        - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                                                                        - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                                                                        - Skills_B3/
+                                                                                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                          - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                                                                          - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                          - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                            - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                                                                            - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                                                                            - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                                                                            - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                                                                            - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                                                                            - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                                                                            - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                                                                            - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                                                                            - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                              - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                                                                              - alykaly-front/
+                                                                                                                                                                                                                                                                                                                                                                              - arch/
+                                                                                                                                                                                                                                                                                                                                                                              - deal/
+                                                                                                                                                                                                                                                                                                                                                                              - gtd/
+                                                                                                                                                                                                                                                                                                                                                                              - res/
+                                                                                                                                                                                                                                                                                                                                                                              - snw/
+                                                                                                                                                                                                                                                                                                                                                                                - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                                - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                                                                - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                                                                - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                                                                - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                                                                - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                                                                - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                - logs/
+                                                                                                                                                                                                                                                                                                                                                                                  - 30_Business_OS_Portal/
+                                                                                                                                                                                                                                                                                                                                                                                    - 00_Jerry_Business_Pulse/
+                                                                                                                                                                                                                                                                                                                                                                                    - 00_Summers_QuickAccess/
+                                                                                                                                                                                                                                                                                                                                                                                    - 00_Summers_Verse/
+                                                                                                                                                                                                                                                                                                                                                                                    - 02_Meta_Factory/
+                                                                                                                                                                                                                                                                                                                                                                                    - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                                                    - 10_Projects/
+                                                                                                                                                                                                                                                                                                                                                                                    - Cookbooks_Coaching/
+                                                                                                                                                                                                                                                                                                                                                                                    - Ownerbooks_Picard/
+                                                                                                                                                                                                                                                                                                                                                                                    - Playbooks_Jerry/
+                                                                                                                                                                                                                                                                                                                                                                                    - Runbooks_Summers/
+                                                                                                                                                                                                                                                                                                                                                                                    - SOPs_B2/
+                                                                                                                                                                                                                                                                                                                                                                                    - Skills_B3/
+                                                                                                                                                                                                                                                                                                                                                                                    - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                      - 04_Business_Domains/
+                                                                                                                                                                                                                                                                                                                                                                                      - graphify-burst/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                      - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                        - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                                        - 01_Growth_Superman_Guardians/
+                                                                                                                                                                                                                                                                                                                                                                                        - 02_Sales_MartianManhunter_Illuminati/
+                                                                                                                                                                                                                                                                                                                                                                                        - 03_Product_Flash_Avengers/
+                                                                                                                                                                                                                                                                                                                                                                                        - 04_Ops_Batman_Fantastic4/
+                                                                                                                                                                                                                                                                                                                                                                                        - 05_IT_Cyborg_KangDynasty/
+                                                                                                                                                                                                                                                                                                                                                                                        - 06_Finance_WonderWoman_Thunderbolts/
+                                                                                                                                                                                                                                                                                                                                                                                        - 07_People_GreenLantern_XMen/
+                                                                                                                                                                                                                                                                                                                                                                                        - 08_Legal_Aquaman_Eternals/
+                                                                                                                                                                                                                                                                                                                                                                                        - 09_Blueprints/
+                                                                                                                                                                                                                                                                                                                                                                                        - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                          - 20_Life_OS_PARA_Portal/
+                                                                                                                                                                                                                                                                                                                                                                                          - alykaly-front/
+                                                                                                                                                                                                                                                                                                                                                                                          - arch/
+                                                                                                                                                                                                                                                                                                                                                                                          - deal/
+                                                                                                                                                                                                                                                                                                                                                                                          - gtd/
+                                                                                                                                                                                                                                                                                                                                                                                          - res/
+                                                                                                                                                                                                                                                                                                                                                                                          - snw/
+                                                                                                                                                                                                                                                                                                                                                                                            - 00_Links/
+                                                                                                                                                                                                                                                                                                                                                                                            - 01_Projects_Picard/
+                                                                                                                                                                                                                                                                                                                                                                                            - 02_Areas_Spock/
+                                                                                                                                                                                                                                                                                                                                                                                            - 03_Resources_Geordi/
+                                                                                                                                                                                                                                                                                                                                                                                            - 04_Archives_Data/
+                                                                                                                                                                                                                                                                                                                                                                                            - _DRAFTS_PPR_LANE/
+                                                                                                                                                                                                                                                                                                                                                                                            - graphify-out/  **[ECARTE : artefact genere]**
+                                                                                                                                                                                                                                                                                                                                                                                            - logs/
+                                                                                                                                                                                                                                                                                                                                                                                              - 30_Business_OS_Portal/
+                    - node_modules/  **[ECARTE : artefact genere]**
+                    - src/
+                      - app/
+                      - components/
+                      - lib/
+                        - supabase/
+                        - bana/
+                        - api/
+                        - auth/
+                          - callback/
+                          - login/
+                          - engine/
+                          - intake/
+                            - status/
+        - .git/  **[ECARTE : artefact genere]**
+        - .github/
+        - .next/  **[ECARTE : artefact genere]**
+        - README.md  — Alikaly Bana Holding OS — V2
+        - SUPABASE_STRATEGY.md  — Alykaly OS — Stratégie Supabase + Déploiement Hostinger Business
+        - deploy/
+        - docs/
+        - node_modules/  **[ECARTE : artefact genere]**
+        - picard_audit.md  — Picard Audit: Alikaly Bana Holding OS
+        - src/
+        - supabase/
+          - functions/
+          - migrations/
+            - audit-rotate/
+            - case-confidence-recalc/
+            - docusign-webhook/
+            - intake-handler/
+            - sob-engine-simulate/
+          - assets/
+          - components/
+            - bana/
+            - fonts/
+          - DEPLOYMENT_RUNBOOK.md  — Deployment Runbook — Alykaly OS
+          - workflows/
+    - README.md  — 03_Master_Agreements
+    - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — 02_Global_Dashboard
+    - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — 01_Vision_Strategy
+    - graphify-out/  **[ECARTE : artefact genere]**

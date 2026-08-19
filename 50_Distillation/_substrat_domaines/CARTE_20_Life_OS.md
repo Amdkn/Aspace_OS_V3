@@ -1,0 +1,237 @@
+# Carte du domaine 20_Life_OS
+
+Genere par `scripts/substrat_domaines_v2.py`. **Ne pas editer.**
+
+**159 fichiers `.md` ecrits a la main**, 8 dossiers d'artefacts ecartes.
+
+Zones : `22_Wheel_Discovery` 78 · `21_Ikigai_Orville` 24 · `23_12WY_SNW` 16 · `25_GTD_Cerritos` 13 · `26_DEAL_Protostar` 11 · `(racine)` 9 · `00_Gatekeepers_Beth_Morty` 7 · `27_Cognition_LD04` 1
+
+- 00_Context7_Boundary_L1.md
+- 00_Gatekeepers_Beth_Morty/
+- 00_Phase1_Synthesis_L1.md
+- 00_Shadow_Tools_Audit_L1.md
+- 00_Shadow_Tools_Guide_L1.md
+- 21_Ikigai_Orville/
+- 22_Wheel_Discovery/
+- 23_12WY_SNW/
+- 25_GTD_Cerritos/
+- 26_DEAL_Protostar/
+- 27_Cognition_LD04/
+- 28_Blueprints/
+- Exporting Conversation for Analysis_20260320_010913.md  — Exporting Conversation for Analysis
+- Manifesto.md  — Layer 1: Life OS Manifesto
+- README.md  — 20_Life_OS (The Fleet)
+- a0_reasoning_map.md  — A0 REASONING MAP — Filtre de la Méta-Conscience
+- graphify-out-hors-para/
+- update_clawdbot.md  — Clawdbot Upstream Sync Workflow
+  - 00_Gatekeepers_Beth_Morty/
+  - 21_Ikigai_Orville/
+  - 22_Wheel_Discovery/
+  - 23_12WY_SNW/
+  - 25_GTD_Cerritos/
+  - 26_DEAL_Protostar/
+  - 27_Cognition_LD04/
+  - 01-SDD/
+  - 02-ADR/
+  - 03-PRD/
+  - 04-DDD/
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - README.md
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - 01_Definition_Dal/
+  - 02_Elimination_RokTahk/
+  - 03_Automation_Zero/
+  - 04_Liberation_Gwyn/
+  - A2_HoloJaneway_Protostar_Spec.md  — A2 Holo Janeway / Protostar Spec - DEAL Liberation Engine
+  - A3_Protostar_References_Index.md  — A3 Protostar References Index
+  - README.md  — 26_DEAL_Protostar - Handoff A2
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - A3_Gwyn_Liberation_Spec.md  — A3 Gwyn Spec - Liberate
+    - README.md  — 04_Liberation_Gwyn
+    - A3_Zero_Automation_Spec.md  — A3 Zero Spec - Automate
+    - README.md  — 03_Automation_Zero
+    - A3_RokTahk_Elimination_Spec.md  — A3 Rok-Tahk Spec - Eliminate
+    - README.md  — 02_Elimination_RokTahk
+    - A3_Dal_Definition_Spec.md  — A3 Dal Spec - Define
+    - README.md  — 01_Definition_Dal
+  - 01_Inbox_Mariner/
+  - 02_Clarify_Boimler/
+  - 03_Organize_Rutherford/
+  - 04_Review_Tendi/
+  - 05_Engage_Freeman/
+  - A2_HoloDeck_Cerritos_Spec.md  — A2 Holo Deck / Cerritos Spec - GTD Chaos Engine
+  - A3_Cerritos_References_Index.md  — A3 Cerritos References Index
+  - README.md  — 25_GTD_Cerritos - Handoff A2
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - A3_Freeman_Engage_Spec.md  — A3 Freeman Spec - Engage
+    - README.md  — 05_Engage_Freeman
+    - A3_Tendi_Review_Spec.md  — A3 Tendi Spec - Review
+    - README.md  — 04_Review_Tendi
+    - A3_Rutherford_Organize_Spec.md  — A3 Rutherford Spec - Organize
+    - README.md  — 03_Organize_Rutherford
+    - A3_Boimler_Clarify_Spec.md  — A3 Boimler Spec - Clarify
+    - README.md  — 02_Clarify_Boimler
+    - A3_Mariner_Capture_Spec.md  — A3 Mariner Spec - Capture
+    - README.md  — 01_Inbox_Mariner
+  - 01_Vision_Pike/
+  - 02_Planning_Una/
+  - 03_Focus_MBenga/
+  - 04_Metrics_Chapel/
+  - 05_Execution_Ortegas/
+  - A2_Curie_SNW_Spec.md  — A2 Curie / SNW Spec - 12 Week Year Execution Engine
+  - A3_SNW_References_Index.md  — A3 SNW References Index
+  - README.md  — 23_12WY_SNW - Handoff A2
+  - W1_Item2_13e_Semaine_Rock_Decomposition.md  — W1 Item 2 — Rock Decomposition 13e Semaine (Una H10 Planning)
+  - W1_Quarter_Intent_Q3_2026.md  — W1 Quarter Intent Q3 2026 — Vision Pike
+  - W1_Shadow_Tools_Routing.md  — W1 Shadow Tools Routing — Symphony Runtime (5-tier)
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - A3_Ortegas_Execution_Spec.md  — A3 Ortegas Spec - Weekly Execution / Time Use
+    - README.md  — 05_Execution_Ortegas
+    - A3_Chapel_Metrics_Spec.md  — A3 Chapel Spec - Metrics / Scorecard
+    - README.md  — 04_Metrics_Chapel
+    - A3_MBenga_Focus_Spec.md  — A3 M'Benga Spec - Process Control / Focus
+    - README.md  — 03_Focus_MBenga
+    - A3_Una_Planning_Spec.md  — A3 Una Spec - Planning / Rocks
+    - README.md  — 02_Planning_Una
+    - A3_Pike_Vision_Spec.md  — A3 Pike Spec - Vision / Quarter Intent
+    - README.md  — 01_Vision_Pike
+  - A2_Discovery_ZORA_Spec.md  — A2 Discovery Spec - Life Wheel / ZORA
+  - A3_Discovery_References_Index.md  — A3 Discovery References Index - Life Wheel / ZORA
+  - LD01_Business_Book/
+  - LD02_Finance_Saru/
+  - LD03_Health_Culber/
+  - LD04_Cognition_Tilly/
+  - LD05_Social_Stamets/
+  - LD06_Family_Burnham/
+  - LD07_Creativity_Reno/
+  - LD08_Impact_Georgiou/
+  - README.md
+  - graphify-out/  **[ECARTE : artefact genere]**
+  - graphify-out-direct/
+    - A3_Georgiou_LD08_Spec.md  — A3 Philippa Georgiou Spec - LD08 Contribution & Impact
+    - BIBLIOGRAPHY.md  — LD08 — Impact, Contribution & Solarpunk (Georgiou)
+    - README.md  — LD08_Impact_Georgiou - A3 Handoff
+    - A3_Reno_LD07_Spec.md  — A3 Jett Reno Spec - LD07 Creativity, Leisure & Flow
+    - BIBLIOGRAPHY.md  — LD07 — Creativity, Leisure & Flow (Reno)
+    - README.md  — LD07_Creativity_Reno - A3 Handoff
+    - A3_Burnham_LD06_Spec.md  — A3 Michael Burnham Spec - LD06 Love, Family & Presence
+    - BIBLIOGRAPHY.md  — LD06 — Love, Family & Presence (Burnham)
+    - README.md  — LD06_Family_Burnham - A3 Handoff
+    - W1_Item1_SOB_Abdaty_Handoff.md  — W1 Item 1 — SOB Abdaty Handoff (Burnham H10 Family)
+    - A3_Stamets_LD05_Spec.md  — A3 Paul Stamets Spec - LD05 Social Relations
+    - BIBLIOGRAPHY.md  — LD05 — Social & Relations (Stamets)
+    - README.md  — LD05_Social_Stamets - A3 Handoff
+    - A3_Tilly_LD04_Spec.md  — A3 Sylvia Tilly Spec - LD04 Mind & Cognition
+    - BIBLIOGRAPHY.md  — LD04 — Mind, Cognition & Mental Load (Tilly)
+    - README.md  — LD04_Cognition_Tilly - A3 Handoff
+    - A3_Culber_LD03_Spec.md  — A3 Hugh Culber Spec - LD03 Health, Sleep & Energy
+    - BIBLIOGRAPHY.md  — LD03 — Health, Sleep & Energy (Culber)
+    - README.md  — LD03_Health_Culber - A3 Handoff
+    - A3_Saru_LD02_Spec.md  — A3 Saru Spec - LD02 Finance & Independence
+    - BIBLIOGRAPHY.md  — LD02 — Finance & Independence (Saru)
+    - README.md  — LD02_Finance_Saru - A3 Handoff
+    - 00_index.md  — LD01_Business_Book — Index Racine (OKF v0.1)
+    - 10_methodology/
+    - 20_skeleton/
+    - 30_decisions/
+    - 90_manifests/
+    - 99_meta/
+    - A3_Book_LD01_Spec.md  — A3 Book Spec - LD01 Career & Business
+    - AGENTS.md  — AGENTS.md — LD01 Business Book (zone filesystem)
+    - BIBLIOGRAPHY.md  — LD01 — Career & Business (Book)
+    - CLAUDE.md  — CLAUDE.md — LD01 Business Book (zone harness)
+    - README.md  — LD01_Business_Book - A3 Handoff
+      - 00_harness_engineering_alignment.md  — Harness Engineering Alignment — LD01
+      - 00_mavis_runtime_alignment.md  — Mavis Runtime Alignment — LD01 ↔ orchestration layer
+      - 00_plan_citadelle_a0_sister.md  — Plan Citadelle A0 — Sister LD01 (Fable 5 last handoff, 2026-07-04 quot
+      - 00_plan_lightning_l0l1l2_coach_sister.md  — Plan Lightning L0/L1/L2 — chaîne Coach Book→Picard→Jerry→Summers (sist
+      - 12wy_on_pause_sister.md  — 12WY-ON-PAUSE — sister canon LD01 (Murderbot doctrine appliquée)
+      - ADR_WARMODE_001_sister.md  — ADR-WARMODE-001 — Inversion de posture canonique (sister LD01)
+      - LESSONS.md  — LESSONS.md - LD01_Business_Book (canon OKP v0.1)
+      - a0_amodei_murderbot_meta_coach_sister.md  — A0 Amodei / Murderbot — méta-coach (sister canon LD01)
+      - a0_vision_curie_sister.md  — A'Space OS — Vision A0 + Curie + Loop Engineering — sister canon LD01
+      - a3_curie_12_week_plan_sister.md  — A3 Curie 12 Week Plan — Discipline #2 sister canon LD01
+      - a3_curie_vivid_vision_sister.md  — A3 Curie — Vivid Vision 12WY Discipline #1 (sister canon)
+      - calendar.md  — calendar.md — LD01_Business_Book (épisode-mémoire)
+      - doctrine_lock_map.md  — Doctrine Lock Map — LD01 ↔ Plans source canoniques
+      - fable5_strategy_session_v2_principles.md  — Fable 5 Strategic Audit — Méta-analyse + 6 Principes
+      - hero_agents_canonic_creation_sister.md  — Hero Agents Creation — sister canon LD01 (Book / Zora / Beth / Morty /
+      - l1_gstack_e_myth_mapping.md  — L1 gstack — Mapping E-Myth → gstack (cadrage sobre, sister LD01)
+      - plan_l2_dark_factory_sister.md  — Plan L2 Dark Factory — A3 Book COO orchestration compressée 12WY→1 sem
+      - portes_over_freins_sister.md  — Portes over Freins (HxH) — sister canon LD01
+      - rot-rates.md  — ROT.md — péremption déclarée par module
+      - true_agent_autonomy_architecture.md  — True Agent Autonomy × Dark Factory Level 5 — Architecture Book LD01
+      - war_mode_observability_sister.md  — War Mode Observability — sister canon LD01
+      - manifest.cross-harness.md  — Manifest cross-harness — LD01_Business_Book
+      - ADR-LD01-001_organigramme_doctrine.md  — ADR-LD01-001 — Organigramme Doctrine (folder-based) au lieu de plans m
+      - ADR-LD01-002_mavis_runtime_binding.md  — ADR-LD01-002 — Mavis Runtime binding canonique pour LD01
+      - ADR-LD01-003_lightnings_bounded_contexts.md  — ADR-LD01-003 — Les 3 Lightning MC bindés aux bounded contexts LD01
+      - ADR-LD01-004_true_agent_autonomy.md  — ADR-LD01-004 — True Agent Autonomy × Dark Factory Level 5 pour Book LD
+      - ADR-LD01-005_budget_collapse_phase3_economical.md  — ADR-LD01-005 — Cost Collapse Reality (MiniMax $50/mo = 5.1B tokens)
+      - ADR-LD01-006_strategy_session_meta_skill_canon.md  — ADR-LD01-006 — Strategy Session Meta-Skill canon ratification
+      - ADR-LD01-007_citadelle_agent_os_jarvis_pattern.md  — ADR-LD01-007 — Citadelle Agent OS (Jarvis pattern + anti-Ultron struct
+      - ADR-LD01-008_coaching-loop-picard-jerry-summers.md  — ADR-LD01-008 — LD01 Coaching Loop Engineering
+      - ADR-LD01-009_a_space_vision_curie_loop_engineering.md  — ADR-LD01-009 — A'Space OS Vision Curie + Loop Engineering (DRAFT PROPO
+      - ADR-LD01-010_a3_curie_vivid_vision_12WY.md  — ADR-LD01-010 — A3 Curie Vivid Vision 12WY Discipline #1 (RATIFIED)
+      - ADR-LD01-010_hermes_promotion_a3_picard_in_para.md  — ADR-LD01-010 — Hermes Agent (HA) promotion : dev-runtime A3 Book → A3 
+      - ADR-LD01-011_12_week_plan_a3_curie.md  — ADR-LD01-011 — A3 Curie 12 Week Plan + Lead Measures Discipline #2 (DR
+      - ADR-LD01-011_omk_nexus_bos_poc_initiation.md  — ADR-LD01-011 — OMK Nexus BOS PoC Initiation
+      - ADR-LD01-012_l+_skill_standard_cascade_ratification.md  — ADR-LD01-012 - L+ Skill Standard ratification cascade
+      - ADR-LD01-013_hermes_cron_jobs_picard.md  — ADR-LD01-013 - Hermes Cron Jobs Picard
+      - ADR-LD01-014_gstack_sober_install_lighting_l1_book_lune.md  — ADR-LD01-014 - GStack sober install (L1-Book-Lune canon)
+      - ADR-LD01-015_orca_skill_meta_wrapper_amendement.md  — ADR-LD01-015 - Orca meta-skill v1.1.0 wrapper + LSN canonization + cro
+      - 00_module_template.md  — Module Template — CARDIA-TDD compliant
+      - 00_CARDIA_overview.md  — CARDIA-TDD — Choix par défaut Autonome Réversible Durable Intégratif A
+      - 00_L1_gstack_ship_stack.md  — ⚡ L1 gstack — Software Factory YC pour BC-Project-OMK-Nexus-Coaching
+      - 00_L2_ceobench_longgame_dojo.md  — L2 ceobench — 500-Day Long Game Dojo pour BC-AaaS-Solaris-Variant
+      - 00_LIGHTNINGS_integration.md  — 3 Lightnings — Index unificateur
+      - 00_Pocock_quality_canon.md  — Pocock Quality Canon — pour BC-Methodology skills
+      - 00_fable5_jack_roberts_meta_strategy.md  — Fable 5 — Jack Roberts Meta-Usage Strategy (5 Levels + Cost Reality)
+      - 00_strategy_session_meta_skill.md  — Strategy Session Meta-Skill — Intégration canon LD01
+  - 01_Pillars_Identity/
+  - 02_Horizons_Time/
+  - A2_Orville_Spec.md  — A2 Orville Spec - Ikigai / Meaning Engine
+  - A3_Gemini_References_Index.md  — A3 Gemini References Index - Orville / Ikigai
+  - Ikigai_Pillars_Horizons_Kardashev.md  — Ikigai Pillars x Horizons - Kardashev Trajectory
+  - README.md  — 21_Ikigai_Orville - Handoff A2
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - 01_H1_Isaac/
+    - 02_H3_Lamarr/
+    - 03_H10_Bortus/
+    - 04_H30_Alara/
+    - 05_H90_Klyden/
+    - README.md  — 02_Horizons_Time - A3 Ikigai Ring
+      - A3_Klyden_H90_Spec.md  — A3 Klyden Spec - H90 / Legacy
+      - README.md  — 05_H90_Klyden - A3 Handoff
+      - A3_Alara_Kitan_H30_Spec.md  — A3 Alara Kitan Spec - H30 / 30 Years
+      - README.md  — 04_H30_Alara - A3 Handoff
+      - A3_Bortus_H10_Spec.md  — A3 Bortus Spec - H10 / 10 Years
+      - README.md  — 03_H10_Bortus - A3 Handoff
+      - A3_John_Lamarr_H3_Spec.md  — A3 John Lamarr Spec - H3 / 3 Years
+      - README.md  — 02_H3_Lamarr - A3 Handoff
+      - A3_Isaac_H1_Spec.md  — A3 Isaac Spec - H1 / 1 Year
+      - README.md  — 01_H1_Isaac - A3 Handoff
+    - 01_Profession_Mercer/
+    - 02_Mission_Grayson/
+    - 03_Passion_Malloy/
+    - 04_Vocation_Finn/
+    - README.md  — 01_Pillars_Identity - A3 Ikigai Ring
+      - A3_Claire_Finn_Spec.md  — A3 Claire Finn Spec - Vocation
+      - README.md  — 04_Vocation_Finn - A3 Handoff
+      - A3_Gordon_Malloy_Spec.md  — A3 Gordon Malloy Spec - Passion
+      - README.md  — 03_Passion_Malloy - A3 Handoff
+      - A3_Kelly_Grayson_Spec.md  — A3 Kelly Grayson Spec - Mission
+      - README.md  — 02_Mission_Grayson - A3 Handoff
+      - A3_Ed_Mercer_Spec.md  — A3 Ed Mercer Spec - Profession
+      - README.md  — 01_Profession_Mercer - A3 Handoff
+  - A1_Beth_Spec.md  — A1 Beth Spec
+  - A1_Morty_Spec.md  — A1 Morty Spec
+  - Beth_Alignment_Log/
+  - Morty_Global_Queue/
+  - README.md  — 00_Gatekeepers_Beth_Morty
+  - README_Governance.md  — Governance Protocol
+  - Sunday_Uplink_Protocols/
+  - graphify-out/  **[ECARTE : artefact genere]**
+    - README.md  — Sunday Uplink Protocols
+    - README.md  — Morty Global Queue
+    - README.md  — Beth Alignment Log
