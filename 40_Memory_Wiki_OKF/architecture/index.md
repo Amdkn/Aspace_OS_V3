@@ -16,4 +16,5 @@ vue — et la question se rouvre à zéro.
 
 # Files
 
+- [Cordis est le runtime de DeepSeek Harness](cordis-runtime-et-couches-de-protocoles.md) - `dsh` est bâti sur Cordis. Les protocoles d'agents (MCP, A2A, AG-UI, ACP, UCP) sont des couches distinctes, pas des rivaux. LiteRT n'est pas au même étage qu'un adaptateur : il va dans les backends de modèle, pas dans la couche d'exposition.
 - [Bloquer une app par son registre, pas par ses boutons d'entrée](bloquer-une-app-par-le-registre.md) - Remplacer le composant dans le manifeste ferme toutes les portes d'un coup, retire la sidebar sans traitement séparé, et sort le code du bundle livré. Contient l'anti-piège : quand l'interaction scriptée résiste, mesurer l'artefact plutôt que le geste.
