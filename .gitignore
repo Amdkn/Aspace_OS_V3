@@ -88,3 +88,7 @@ Thumbs.db
 10_Tech_OS/kernel/uc.db
 10_Tech_OS/kernel/uc.db-wal
 10_Tech_OS/kernel/uc.db-shm
+
+# exports de harness : volumineux, regenerables, hors depot
+00_Amadeus/20_Harness/multica_export_*/
+_REVIEW_NOTEBOOKLM/

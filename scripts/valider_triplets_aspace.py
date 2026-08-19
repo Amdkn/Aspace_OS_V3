@@ -62,6 +62,9 @@ COUCHE_DE = {
     "dom-life": "20_Life_OS",
     "dom-amadeus": "00_Amadeus",
     "dom-business": "30_Business_OS",
+    # Vague 2 : sources ailleurs dans Geordi, pas sous une couche unique.
+    "dom-normatif-sdd-prd": "", "dom-normatif-adr": "",
+    "dom-life-wheel": "09_Life_OS", "dom-templates": "02_Templates",
 }
 
 VERBES_SCHEMA = {

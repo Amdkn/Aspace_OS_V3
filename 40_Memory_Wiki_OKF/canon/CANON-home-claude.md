@@ -149,3 +149,36 @@ la clé est valide et l'endpoint répond.
   nécessiter un `npm link` ou un ajout au PATH sous Windows.
 - **Le `~/.mcp.json` racine et `agentgateway` sont deux canaux
   indépendants.** Modifier l'un ne touche pas l'autre.
+
+---
+
+## Quand la production n'est plus le goulot
+
+Mesure du 2026-08-18 : deux vagues d'agents ont produit **423 fichiers**, dont
+321 concepts OKF, zéro échec sur 60 lancements — **et aucun relu par un
+humain**. Tous en `confiance: machine`.
+
+Produire davantage n'aide plus. **Le goulot est la vérification.**
+
+L'assistance de revue est **NotebookLM**, renommé **Gemini Notebook** par
+Google : podcast critique de vingt minutes, vidéo, carte mentale, chat. Ni MCP
+ni API publique — le transfert est manuel ou par N8N.
+
+```bash
+python "C:/Users/amado/ASpace_OS_V3/scripts/consolider_pour_review.py"
+```
+
+Regroupe le corpus en **26 sources** dans `ASpace_OS_V3/_REVIEW_NOTEBOOKLM/`
+— NotebookLM plafonne à 50 sources par carnet en gratuit, 300 en Plus.
+Chaque concept y garde son chemin d'origine, sans quoi un verdict de revue
+serait inapplicable.
+
+**Commencer par `50-rapports-agents.md`** : c'est là que les agents déclarent
+eux-mêmes leur couverture réelle et les contradictions qu'ils ont refusé de
+trancher. La source la plus rentable pour une critique, parce qu'elle contient
+déjà les aveux.
+
+**Rien ne passe de `confiance: machine` à `confiance: humain` sans
+l'utilisateur.** C'est le seul verrou qu'aucun script ne peut poser à sa
+place. Détail dans
+`ASpace_OS_V3/40_Memory_Wiki_OKF/operations/notebooklm-revue-humaine.md`.
