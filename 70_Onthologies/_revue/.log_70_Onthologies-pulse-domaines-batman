@@ -1,0 +1,2 @@
+API Error: Request rejected (429) · [ollama/nemotron-3-ultra] [429]: {"error":"you (amdkn777) have reached your session usage limit, upgrade for higher limits: https://ollama.com/upgrade (ref: 12c25a57-7f4f-40d6-9175-64528443eb1f)"}
+ (reset after 1m 33s)

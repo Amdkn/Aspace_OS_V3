@@ -1,0 +1,2 @@
+API Error: Request rejected (429) · [ollama/gpt-oss:120b] [429]: {"error":"you (amdkn777) have reached your session usage limit, upgrade for higher limits: https://ollama.com/upgrade (ref: 3e5cc2a3-ba4a-477c-bc36-e4132f92fa94)"}
+ (reset after 1m 45s)
