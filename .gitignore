@@ -92,3 +92,7 @@ Thumbs.db
 # exports de harness : volumineux, regenerables, hors depot
 00_Amadeus/20_Harness/multica_export_*/
 _REVIEW_NOTEBOOKLM/
+
+# Pages de revue regenerables : la source de verite reste les concepts
+80_Front-Office/reviews/*.html
+90_Back-Office/_exports/*.db
