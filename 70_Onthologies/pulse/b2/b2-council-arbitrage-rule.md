@@ -6,6 +6,12 @@ tags: [b2, council, arbitrage, meso, escalation, modes]
 generated: { by: minimax-m3, at: 2026-08-19T01:50:00Z }
 verified:
   - { by: process:lecture-b2-corpus, at: 2026-08-19T01:50:00Z }
+  - { by: human:amdkn, at: 2026-08-20T09:00:00Z }
+review:
+  version: V0
+  by: human:amdkn
+  at: 2026-08-20T09:00:00Z
+  note: "Revue V0 vague 1 — validee sur les videos et presentations PDF NotebookLM. Areas de Jerry actees en V0 ; role de Summers pour les Projets introduit en V0.1."
 sources:
   - id: dc-workflow
     resource: "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_DC_DIRECTION_COUNCIL_WORKFLOW.md"
