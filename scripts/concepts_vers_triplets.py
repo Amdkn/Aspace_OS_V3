@@ -41,6 +41,15 @@ V3 = r"C:\Users\amado\ASpace_OS_V3"
 BUNDLES = [
     ("50_Distillation", ["areas", "projets", "archives", "ressources", "ontologie"]),
     ("60_Implementation_Méthodologiques", ["prompt-systeme", "autonomie-agents"]),
+    # Ajoutes le 2026-08-24. Le graphe couvrait 102 concepts sur 653 mesures
+    # dans le corpus (15,6 %), et les 102 etaient TOUS `confirmeMachine` : les
+    # 46 concepts portant un `human:` vivent dans les bundles ci-dessous, que
+    # le generateur ne scannait pas. Un graphe qui ne contient aucune revue
+    # humaine ne peut pas repondre a la question qui compte — « qu'est-ce qui
+    # a ete verifie ? ».
+    ("70_Onthologies", ["pulse/b1", "pulse/b2", "pulse/b3", "pulse/domaines"]),
+    ("40_Memory_Wiki_OKF", ["architecture", "integrations", "operations",
+                            "security", "canon"]),
 ]
 SORTIE = os.path.join(V3, "50_Distillation", "ontologie")
 
@@ -118,22 +127,41 @@ def liste_tags(brut):
 def main():
     os.makedirs(SORTIE, exist_ok=True)
     concepts, index_slug = [], {}
+    collisions = []
 
     for racine, sous in BUNDLES:
         for sb in sous:
             d = os.path.join(V3, racine, sb)
             if not os.path.isdir(d):
                 continue
-            for nom in sorted(os.listdir(d)):
-                if not nom.endswith(".md") or nom == "index.md" or nom in GENERES:
-                    continue
-                chemin = os.path.join(d, nom)
+            # Marche RECURSIVE depuis le 2026-08-24 : `70_Onthologies/pulse/
+            # domaines/` range ses concepts par domaine, un `listdir` plat n'y
+            # voyait rien. Verifie sans effet sur les bundles existants, qui
+            # sont plats (meme compte a plat et en recursif, les sept).
+            fichiers = []
+            for r, _, noms in os.walk(d):
+                for nom in noms:
+                    if nom.endswith(".md") and nom != "index.md" and nom not in GENERES:
+                        fichiers.append(os.path.join(r, nom))
+
+            for chemin in sorted(fichiers):
+                nom = os.path.basename(chemin)
                 with io.open(chemin, encoding="utf-8", errors="replace") as f:
                     texte = f.read()
                 meta, corps = lire_frontmatter(texte)
                 slug = nom[:-3]
-                iri = f"urn:aspace:concept:{sb}:{slug}"
-                index_slug[slug] = iri
+                # `pulse/domaines` -> `pulse-domaines` : un segment d'URN ne
+                # gagne rien a porter une barre oblique.
+                seg = sb.replace("/", "-")
+                iri = f"urn:aspace:concept:{seg}:{slug}"
+                # Deux concepts homonymes dans des bundles differents : le
+                # second ecrasait le premier en silence, et tout lien vers ce
+                # slug pointait alors vers le mauvais. On garde le premier et
+                # on compte le conflit plutot que de choisir sans le dire.
+                if slug in index_slug:
+                    collisions.append((slug, index_slug[slug], iri))
+                else:
+                    index_slug[slug] = iri
                 concepts.append({
                     "iri": iri, "slug": slug, "bundle": sb, "racine": racine,
                     "meta": meta, "corps": corps, "chemin": os.path.relpath(chemin, V3),
@@ -236,6 +264,14 @@ def main():
     print(f"{relations} relations resolues, {len(liens_morts)} liens non resolus", file=sys.stderr)
     print(f"confiance : {dict(stats)}", file=sys.stderr)
     print(f"types distincts : {len(types_vus)}, tags distincts : {len(tags_vus)}", file=sys.stderr)
+    if collisions:
+        print(f"COLLISIONS de slug : {len(collisions)} — le premier vu gagne,"
+              " tout lien vers ce nom est ambigu", file=sys.stderr)
+        for slug, garde, ecarte in collisions[:10]:
+            print(f"  {slug}\n    garde   {garde}\n    ecarte  {ecarte}",
+                  file=sys.stderr)
+        if len(collisions) > 10:
+            print(f"  … {len(collisions) - 10} autres", file=sys.stderr)
 
 
 if __name__ == "__main__":
