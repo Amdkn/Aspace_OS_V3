@@ -1,5 +1,17 @@
 """Verifie l'integrite du corpus OKF : liens morts, frontmatter, niveau de confiance.
 
+TROIS MODES
+  (aucun)      rapport complet, sort 1 s'il reste des defauts
+  --baseline   ecrit le cliquet (scripts/okf_baseline.json) au niveau actuel
+  --ci         compare au cliquet, sort 1 SEULEMENT si ca s'aggrave
+
+Le mode --ci existe parce qu'une CI rouge des le premier jour se fait ignorer
+en une semaine : on apprend a passer outre, et le jour ou elle signale une
+vraie regression, plus personne ne regarde. Le cliquet interdit d'aggraver
+sans exiger de tout reparer d'abord — 78 liens morts ne se corrigent pas en
+un apres-midi, mais le 79e doit couter cher tout de suite.
+
+
 POURQUOI CE SCRIPT EXISTE
 Le canon du poste pose deux regles que rien ne verifiait mecaniquement :
 
@@ -31,6 +43,7 @@ affiche : un filtre silencieux est un mensonge par omission.
 """
 
 import io
+import json
 import os
 import re
 import sys
@@ -43,6 +56,9 @@ V3 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # aller corriger le fichier. Un rapport qu'on ne peut pas suivre ne sert a rien.
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
+BASELINE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "okf_baseline.json")
 
 # Dossiers hors perimetre. Ce ne sont pas des exclusions de confort :
 #   - node_modules / .git : ne nous appartiennent pas ;
@@ -335,6 +351,58 @@ def main() -> int:
     print(f"\n{defauts} defaut(s) d'integrite — "
           f"{len(liens_ambigus)} ambiguite(s) et {len(liens_malformes)} lien(s)"
           " malforme(s) signales, non bloquants.")
+
+    mesure = {
+        "liens_morts": len(liens_morts),
+        "frontmatter_incomplet": len(frontmatter_incomplet),
+        "liens_ambigus": len(liens_ambigus),
+        "liens_malformes": len(liens_malformes),
+    }
+
+    # ── Cliquet ───────────────────────────────────────────────────────────
+    # Une CI rouge des le premier jour se fait ignorer en une semaine : on
+    # apprend a passer outre, et le jour ou elle signale une vraie regression,
+    # personne ne regarde. Le cliquet interdit d'AGGRAVER sans exiger de tout
+    # reparer d'abord. Le seuil ne peut que descendre : chaque correction le
+    # verrouille a son nouveau niveau.
+    if "--baseline" in sys.argv:
+        with io.open(BASELINE, "w", encoding="utf-8") as fh:
+            json.dump(mesure, fh, indent=2, sort_keys=True)
+            fh.write("\n")
+        print(f"\nCliquet ecrit dans {os.path.relpath(BASELINE, V3)} :")
+        for k, v in sorted(mesure.items()):
+            print(f"  {k:24s} {v}")
+        return 0
+
+    if "--ci" in sys.argv:
+        if not os.path.exists(BASELINE):
+            print("\nAucun cliquet. Le poser : python scripts/verifier_okf.py --baseline")
+            return 1
+        with io.open(BASELINE, encoding="utf-8") as fh:
+            ref = json.load(fh)
+        pires, mieux = [], []
+        for cle, val in sorted(mesure.items()):
+            avant = ref.get(cle, 0)
+            if val > avant:
+                pires.append(f"  {cle} : {avant} -> {val}  (+{val - avant})")
+            elif val < avant:
+                mieux.append(f"  {cle} : {avant} -> {val}  ({val - avant})")
+        print("\n=== cliquet ===")
+        for l in mieux:
+            print(l)
+        if pires:
+            print("REGRESSION :")
+            for l in pires:
+                print(l)
+            print("\nCorriger, ou abaisser volontairement le cliquet avec"
+                  " --baseline si la hausse est assumee.")
+            return 1
+        if mieux:
+            print("Progres. Verrouiller ce niveau :"
+                  " python scripts/verifier_okf.py --baseline")
+        else:
+            print("  stable — aucune regression")
+        return 0
     if confiance["revu_humain"] == 0 and total > 1:
         print("Aucun concept revu par un humain — le goulot reste la verification,")
         print("pas la production. Aucun script ne peut poser ce tampon.")

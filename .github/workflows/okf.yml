@@ -1,0 +1,40 @@
+# Integrite du corpus OKF.
+#
+# Ne bloque PAS sur les 92 defauts existants — ils ne se corrigent pas en un
+# apres-midi, et une CI rouge des le premier jour se fait ignorer en une
+# semaine. Elle bloque sur l'AGGRAVATION : le cliquet
+# (scripts/okf_baseline.json) enregistre le niveau actuel, et un lien mort de
+# plus coute cher tout de suite.
+#
+# Pour verrouiller un progres apres avoir corrige :
+#   python scripts/verifier_okf.py --baseline
+
+name: OKF
+
+on:
+  push:
+    paths:
+      - "**/*.md"
+      - "scripts/verifier_okf.py"
+      - "scripts/okf_baseline.json"
+      - ".github/workflows/okf.yml"
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "scripts/verifier_okf.py"
+      - "scripts/okf_baseline.json"
+  workflow_dispatch:
+
+jobs:
+  integrite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      # Aucune dependance a installer : le script n'en a pas, volontairement.
+      - name: Verifier l'integrite du corpus
+        run: python scripts/verifier_okf.py --ci
