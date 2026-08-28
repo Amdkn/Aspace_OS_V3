@@ -112,10 +112,26 @@ effet au prochain `wsl --shutdown`, pas a chaud.
 **45 secondes, sans intervention.** Le journal vit dans
 `C:\Users\amado\bin\wsl-gardien.log`, avec rotation a 2000 lignes.
 
-Reserve honnete : ce test provoque un arret **propre**. Le vrai etat
-`0x8007274c` n'a pas pu etre reproduit a la demande, donc le chemin de
-reparation correspondant n'a pas ete exerce en conditions reelles. La
-logique est en place, elle n'est pas encore prouvee sur le defaut d'origine.
+Ce premier test provoquait un arret **propre**. Une vraie chute est
+survenue d'elle-meme quinze minutes plus tard, et le journal montre les
+deux regles de conception validees coup sur coup :
+
+```
+16:03:08  sonde en echec (1) : la distro ne repond pas
+16:04:46  distro de nouveau joignable apres 1 echec(s)     <- pas d'action
+16:06:26  sonde en echec (1) : la distro ne repond pas
+16:08:06  sonde en echec (2) : la distro ne repond pas
+16:08:09  reparation : wsl --terminate Ubuntu-24.04
+16:08:40  reparation reussie                               <- 31 secondes
+```
+
+La premiere sequence justifie a elle seule la regle des **deux echecs
+consecutifs** : la distro s'est retablie seule en 98 secondes. Un gardien
+qui aurait agi des le premier echec aurait termine une distro en train de
+revenir, et tue la session pour rien.
+
+La seconde prouve le chemin de reparation sur un defaut spontane, pas
+simule.
 
 ## Le piege ASCII de PowerShell 5.1
 
