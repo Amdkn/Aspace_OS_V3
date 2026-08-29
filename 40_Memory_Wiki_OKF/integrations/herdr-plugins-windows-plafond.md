@@ -1,8 +1,8 @@
 ---
 type: Integration
 title: Plugins Herdr — 866 au catalogue, 13 utilisables sous Windows
-description: Le marketplace Herdr compte 866 plugins, mais les manifestes déclarent presque tous platforms = ["linux","macos"] ; sur 36 manifestes lus, 13 supportent Windows, et aucun des dix plus populaires.
-tags: [herdr, plugins, windows, wsl, marketplace, compatibilite, orchestration]
+description: 866 plugins au catalogue ; sur 36 manifestes lus, 13 déclarent windows et aucun des dix plus populaires. Deux plafonds se cumulent — plateforme et min_herdr_version — et un plugin installé peut n'être qu'une couche sur un binaire absent.
+tags: [herdr, plugins, windows, wsl, marketplace, compatibilite, orchestration, llmtrim, securite]
 generated: { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
 verified:
   - { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
@@ -78,6 +78,72 @@ qui manquent : la surveillance de quota (`herdr-agent-quota`,
 | `ntindle/herdr-resurrect` | 23 | Snapshot/restauration de workspaces, façon tmux-resurrect | Une entrée du manifeste reste `linux/macos` |
 | `natori-hrj/herdr-lazy` | 22 | Gestionnaire de plugins déclaratif avec vrai lockfile | **Aucun binaire précompilé sous Windows** — compile depuis les sources |
 | `liamwh/herdr-rich-notifications` | 0 | Notifications natives sur changement d'état d'agent | Publié depuis quelques heures, non éprouvé |
+
+## Le second plafond : la version, pas la plateforme
+
+Déclarer `windows` ne suffit pas. Chaque manifeste porte aussi un
+`min_herdr_version`, et le poste est en **0.7.4** :
+
+```
+Error: plugin requires Herdr 0.8.0 or newer; current Herdr is 0.7.4
+```
+
+`herdr-hunk-diff` et `herdr-annotate` sont refusés par ce seul motif, alors
+qu'ils déclarent bien `windows`. `herdr-remote` et `llmtrim-herdr`
+(`min_herdr_version = 0.7.0`) passent. **Deux plafonds indépendants se
+cumulent** : la plateforme et la version. Vérifier les deux avant de conclure
+qu'un plugin est incompatible.
+
+## « Installé » ne veut pas dire « fonctionne »
+
+Mesure du 2026-08-29 sur `llmtrim.proxy`, installé et `enabled` :
+
+```
+statut: failed | erreur: program not found
+```
+
+Le plugin n'est qu'une **couche d'intégration** : il appelle un binaire
+`llmtrim` qui s'installe séparément (`npm install -g @llmtrim/cli`). Un plugin
+peut donc être installé, activé, exposer ses actions, et ne rien faire.
+
+Le geste qui tranche :
+
+```bash
+herdr plugin action invoke <action_id> --plugin <plugin_id>
+herdr plugin log list --limit 5      # status, error, stdout du dernier appel
+```
+
+Attention à la syntaxe : c'est `invoke <action_id> --plugin <id>`, pas
+`invoke <plugin> <action>` — cette dernière rend `unknown option`.
+
+Les actions portent chacune leur propre clause `platforms`, avec des **jumeaux
+Windows en `pwsh`** (`open-dashboard` / `open-dashboard-win`). Le listing
+paraît dupliqué ; il ne l'est pas.
+
+## Ce que llmtrim est réellement — à décider en connaissance de cause
+
+Les « −31 % / −74 % » annoncés ne viennent pas d'un réglage. `llmtrim doctor`
+le dit sans détour : c'est un **intercepteur HTTPS**.
+
+`llmtrim setup` « sets HTTPS_PROXY + CA trust in your environment (shell
+profile on POSIX, **HKCU\Environment** on Windows), enables run-at-login,
+wires Claude Code integrations (statusline, guard, /sub, compact), and starts
+the interceptor ».
+
+Trois conséquences à peser :
+
+1. **Il installe une autorité de certification** pour déchiffrer le trafic.
+   Mitigation réelle : la CA est *name-constrained* aux domaines d'API LLM, donc
+   elle ne peut pas signer pour un site quelconque.
+2. **Il écrit dans `HKCU\Environment`** — exactement le mécanisme qui, sur ce
+   poste, écrase les exports de shell. Toute variable posée là gagne contre un
+   `export` de session.
+3. **Il modifie la configuration de Claude Code** (statusline, guard, `/sub`,
+   compact), un fichier déjà réécrit en fin de session.
+
+Rien de tout cela n'a été exécuté : poser une CA racine et des variables
+d'environnement persistantes est une décision du propriétaire du poste, pas
+d'un agent.
 
 ## La réserve qui vise le canal, pas le plugin
 
