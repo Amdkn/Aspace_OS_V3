@@ -122,10 +122,36 @@ installé reste inerte. Les quatre en place réclament `node`, `bun`, `uv` et
 `pwsh` — tous présents ici, mais aucun n'est garanti par l'installation du
 plugin.
 
-**Ne pas démarrer le serveur pour vérifier si des panes viennent d'être
-fermés** : `plugin action list` exige un serveur vivant, et le démarrer avec
-`resume_agents_on_restore = true` **relance les panes d'agents**. La
-vérification attend la réouverture volontaire.
+**`plugin action list` exige un serveur vivant.** Et le démarrer avec
+`resume_agents_on_restore = true` **relance les panes d'agents** — ne pas le
+faire si l'utilisateur vient de les fermer.
+
+### Vérification complète, serveur relancé le 2026-08-29
+
+`herdr server` (headless), puis :
+
+- Serveur `running`, protocole 20, `compatible: yes`.
+- **Les hooks tirent vraiment**, `exit_code: 0` : `llmtrim.proxy` →
+  `pwsh bin/check-routing.ps1` sur `pane.agent_detected` (c'est bien le
+  **jumeau PowerShell** qui s'exécute), `herdr-remote.relay` →
+  `uv run --script relay/on_event.py`, `jhochenbaum.hunkdiff` →
+  `node dist/bin/event.js`, les deux derniers sur `pane.agent_status_changed`.
+- `annotate` ne déclare **aucun hook d'événement** — journal vide, ce qui est
+  normal, pas une panne. Il expose 3 actions.
+- **25 actions, dont 20 utilisables sous Windows.** `hunkdiff` en fournit 12,
+  dont `send-review` (renvoyer la revue à l'agent) : la boucle de vérification
+  recherchée.
+- `resume_agents_on_restore = true` **est prouvé** : un pane `claude` a été
+  repris au démarrage du serveur.
+- `llmtrim diagnose` rend `exit 1` — ce n'est **pas** un échec du plugin mais
+  `llmtrim doctor` qui compte ses étapes de configuration en attente. La chaîne
+  plugin → binaire est établie (`binary ✓ v0.13.2`), contre
+  `program not found` avant l'installation du CLI.
+
+**Un serveur démarré depuis le shell d'un agent lui est rattaché** : le
+processus a pour parent `bash.exe`. Il meurt avec ce shell. Pour un serveur
+durable, le lancer depuis son propre terminal — même famille de piège que le
+relais et le gardien WSL.
 
 ## Le second plafond : la version, pas la plateforme
 
