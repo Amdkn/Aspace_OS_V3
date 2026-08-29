@@ -152,6 +152,14 @@ existent, en Linux, dans WSL. Une sonde ne mesure que le système d'où elle
 part ; conclure « non installé » à partir d'un seul côté d'une frontière WSL
 est une erreur de méthode, pas une donnée.
 
+**Le même piège frappe Hermes, et coûte une clé.** Hermes existe des deux
+côtés : `~/.hermes/` dans WSL et `AppData\Local\hermes\` sous Windows. Les deux
+états sont **indépendants**. Côté WSL, `auth.json` ne garde qu'une empreinte
+(`secret_fingerprint`) et pointe vers une variable d'environnement vide ; la
+clé OpenRouter vivante était dans le `.env` **Windows**. Chercher d'un seul
+côté conclut à tort qu'elle n'existe plus — détail dans
+[[relais-openrouter-modeles-custom]].
+
 Deux pièges WSL connexes : la distro **par défaut** de ce poste est
 `docker-desktop`, pas `Ubuntu-24.04` — tout appel `wsl` nu tombe à côté de
 l'installation d'Ori ; et `wsl -l -v` peut afficher `Running` alors que le
