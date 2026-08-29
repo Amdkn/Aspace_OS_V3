@@ -1,11 +1,12 @@
 ---
 type: Integration
 title: Herdr et Ori — le substrat d'orchestration, mesuré
-description: Herdr expose 25 événements runtime et un wait bloquant sur l'état d'un agent ; Ori est un agent déclaratif à features TypeScript qui tourne dans WSL et ne voit donc aucun harnais Windows.
-tags: [herdr, ori, orchestration, runtime, events, mcp, skills, schedules, wsl]
+description: Herdr expose 25 événements runtime et un wait bloquant sur l'état d'un agent ; Ori est un pont OpenRouter natif dont la config vivait aux valeurs de scaffolding — mcp.json absent, persona par défaut. Audité et corrigé le 2026-08-29.
+tags: [herdr, ori, orchestration, runtime, events, mcp, skills, schedules, wsl, openrouter, config, audit]
 generated: { by: claude-opus-5, at: 2026-08-28T18:40:00Z }
 verified:
   - { by: claude-opus-5, at: 2026-08-28T18:40:00Z }
+  - { by: claude-opus-5, at: 2026-08-29T00:36:00Z }
 sources:
   - id: herdr-schema
     resource: "herdr api schema --json (244 913 octets)"
@@ -15,6 +16,14 @@ sources:
     resource: "/home/amdkn7/.ori/global/.ori/sdk/{index.ts,enums.ts} (WSL Ubuntu-24.04)"
     title: SDK de features Ori généré pour la version installée
     last_modified: 2026-08-28
+  - id: herdr-config-template
+    resource: "Gabarit de config commente embarque dans herdr.exe 0.7.4-preview"
+    title: Reference des options de config.toml (aucune doc sur disque)
+    last_modified: 2026-08-29
+  - id: ori-mcp-skill
+    resource: "~/.ori/global/.ori/snapshot/*/adding-mcp-servers/SKILL.md (WSL)"
+    title: Skill integree Ori — connecter un serveur MCP
+    last_modified: 2026-08-29
   - id: ori-agents-md
     resource: "/home/amdkn7/.ori/global/AGENTS.md"
     title: Guide canonique du workspace Ori
@@ -87,9 +96,14 @@ Deux mécanismes, et le second est plus fiable que le premier :
    `codex`, `copilot`, `devin`, `droid`, `kimi`, `opencode`, `kilo`,
    `hermes`, `qodercli`, `cursor`, `mastracode`.
 
-**Mesure du 2026-08-28 : aucune intégration n'est installée.** Herdr
-fonctionne donc uniquement par regex. C'est le premier levier à actionner
-avant de bâtir quoi que ce soit dessus.
+Aucune intégration n'était installée au 2026-08-28 ; Herdr ne fonctionnait
+alors que par regex. **État au 2026-08-29 : `claude` (v7) et `codex` (v6) sont
+installées** — vérifié par `herdr integration status`. Les quatre autres
+proposées (`copilot`, `droid`, `kimi`, `qodercli`) restent absentes, et c'est
+correct : les agents correspondants ne sont pas sur ce poste.
+
+Conséquence : `[session] resume_agents_on_restore` devient réellement effectif,
+puisqu'il exige des intégrations rapportant une référence de session.
 
 ### Plugins
 
@@ -98,6 +112,36 @@ Surface complète dans l'API : `plugin.link`, `plugin.unlink`,
 `plugin.action.invoke`, `plugin.pane.open`, `plugin.log.list`. Un manifeste
 de plugin déclare des hooks `{ on: <event>, command: [...] }` — donc un
 plugin peut réagir à un événement en lançant une commande.
+
+### La config, et où se trouve sa documentation
+
+**Il n'y a aucun fichier de doc dans l'installation de Herdr.** La référence
+des options de `config.toml` est un **gabarit commenté embarqué dans
+`herdr.exe`** : il documente chaque clé et, par ses lignes commentées, la
+valeur par défaut. On l'extrait en lisant les chaînes du binaire autour de
+`# Background notification popup delivery`.
+
+Sections : `[ui]` (19 clés), `[ui.sidebar.agents]`, `[ui.sidebar.spaces]`,
+`[ui.toast]`, `[ui.toast.herdr]`, `[ui.toast.clipboard]`, `[ui.sound]`,
+`[ui.sound.agents]`, `[keys]`, `[[keys.command]]`, `[worktrees]`, `[session]`,
+`[remote]`, `[experimental]`.
+
+Audit du 2026-08-29 : la config faisait 97 octets, quatre réglages. **La
+plupart des défauts étaient déjà les bons** — `confirm_close`,
+`[ui.sound] enabled`, `resume_agents_on_restore` sont à `true` par défaut.
+C'est un résultat d'audit, pas un échec : recopier des défauts dans un fichier
+de config fait passer une copie pour un choix délibéré.
+
+Trois changements retenus, tous porteurs :
+
+| Clé | Avant | Après | Pourquoi |
+|---|---|---|---|
+| `ui.agent_panel_sort` | `spaces` (défaut) | `priority` | Avec plusieurs agents en vol, la question est « lequel me réclame », pas « où vit-il » |
+| `ui.toast.delivery` | `herdr` | `system` | Un toast `herdr` ne s'affiche que **dans** Herdr : pendant un batch délégué, il arrive dans une fenêtre qu'on ne regarde pas |
+| `session.resume_agents_on_restore` | implicite | explicite `true` | Ne devient effectif qu'avec les intégrations, installées depuis peu |
+
+`herdr config check` valide, `herdr server reload-config` applique **à chaud** —
+`status: applied`, zéro diagnostic, sans redémarrer le serveur.
 
 ## Ori — un agent déclaratif, pas un lanceur
 
@@ -165,6 +209,55 @@ Deux pièges WSL connexes : la distro **par défaut** de ce poste est
 l'installation d'Ori ; et `wsl -l -v` peut afficher `Running` alors que le
 service refuse toute connexion (`Wsl/Service/0x8007274c`), état qui exige un
 `wsl --terminate Ubuntu-24.04`.
+
+### Ori est un pont OpenRouter natif — il double le relais maison
+
+Mesure du 2026-08-29, et c'est le constat qui porte le plus loin :
+**`ori` est bâti sur OpenRouter de bout en bout.** `ori login` ne connaît que
+lui, et chaque sous-commande de lancement est décrite comme « Launch X with
+Ori's OpenRouter environment » : `ori claude`, `ori codex`, `ori grok`,
+`ori opencode`, `ori hermes`, `ori omp`, `ori dsh`, `ori prime-agent`.
+
+```bash
+ori claude --model z-ai/glm-5.3-flash -- -p "Reponds exactement: PONG"
+# -> PONG
+```
+
+`--model` accepte **n'importe quel identifiant de modèle OpenRouter**, et le
+lancement passe la validation locale de Claude Code sans relais. C'est
+exactement le service que rend [[relais-openrouter-modeles-custom]], mais
+natif, supporté, sans port ni gardien.
+
+**Les deux ne se remplacent pas pour autant** : `ori claude` lance le Claude
+Code **de WSL** (`/usr/bin/claude`), le relais sert celui de **Windows**. Pour
+un batch délégué, `ori claude` est strictement supérieur — rien à maintenir.
+Pour une session Windows, le relais reste la seule voie.
+
+### La persona par défaut contredisait le canon du poste
+
+`~/.ori/global/ori.md` était le gabarit de scaffolding, jamais touché :
+
+```yaml
+model: ~anthropic/claude-opus-latest
+```
+> I'm an intern! I'm concise, prefer small reviewable changes, and I ask
+> before taking risky actions.
+
+Deux défauts, et le premier n'est pas celui qu'on croit. **`~anthropic/…` ne
+consomme pas le quota Anthropic** : tout passe par OpenRouter, donc c'est du
+crédit, pas du quota. L'enjeu est le coût, pas la rareté — Opus pour un
+« intern » qui fait de petites tâches est un choix cher par défaut, pas un
+choix fait.
+
+Le second est plus grave : « I ask before taking risky actions » est
+l'exact inverse de la consigne tenue sur ce poste, où un prompt de confirmation
+entre deux étapes est de la dette. Une persona de scaffolding qu'on ne relit
+pas gouverne l'agent en silence.
+
+Réécrite le 2026-08-29 (sauvegarde `ori.md.bak.*` à côté) : modèle
+`z-ai/glm-5.3-flash`, et une persona qui exécute au lieu de demander, vérifie
+au lieu de croire, et déclare ce qu'elle n'a pas fait. Mesuré : **0,000243 $
+le tour** contre plusieurs cents avec Opus.
 
 ### Le workspace global est un dépôt Bun
 
@@ -240,14 +333,51 @@ Convention d'écriture : skill racine à
 `.agents/skills` ni `.claude/skills`** : ce sont des vues snapshot
 régénérées.
 
-### MCP
+### MCP — câblé le 2026-08-29
 
 `ori mcp list` / `ori mcp test` lisent un `mcp.json` **à la racine du
 workspace**, ou le chemin pointé par `ORI_MCP_CONFIG`.
 
-**Mesure du 2026-08-28 : aucun `mcp.json` n'existe.** Ori a donc zéro
-serveur MCP configuré, indépendamment des 17 sources de l'agentgateway —
-voir [[composio-mcp-as-gateway]]. Les deux canaux sont disjoints.
+Aucun `mcp.json` n'existait au 2026-08-28 : Ori avait zéro serveur MCP,
+indépendamment des 17 sources de l'agentgateway — voir
+[[composio-mcp-as-gateway]]. Les deux canaux restent disjoints.
+
+État au 2026-08-29 : `~/.ori/global/mcp.json` déclare **context7** (2 outils)
+et **composio** (7 outils), tous deux `connected`.
+
+**Ori refuse les serveurs `stdio`.** Un serveur déclaré en stdio ressort
+`skipped — stdio bypasses the vault: the proxy variables are never passed to
+the child, and its env is never substituted`. C'est un choix du modèle de
+sécurité d'Ori, pas une panne — et la skill `adding-mcp-servers` donne pourtant
+un exemple stdio en premier. **Tout serveur utile à Ori doit être `type:
+"http"`.**
+
+**`ORI_MCP_CONFIG` est indispensable, pas optionnel.** Ori cherche `mcp.json`
+dans le **répertoire courant** — « never a home-level config », dit la skill.
+Lancé depuis un projet quelconque, il ne voit donc aucun serveur. La variable
+est posée dans `~/.ori/ori-env.sh`, sourcé par le wrapper (ci-dessous).
+
+Les secrets restent hors fichier : `mcp.json` ne porte que
+`"x-consumer-api-key": "${COMPOSIO_CONSUMER_KEY}"`, et `ori-env.sh` relit la
+valeur à chaud depuis `settings.json`. Aucune copie nouvelle sur le disque.
+
+### Le wrapper doit aussi porter l'environnement
+
+Le correctif de PATH de `ori.cmd` ne suffisait pas : un shell non-login ne
+fournit **aucune** variable, donc `${COMPOSIO_CONSUMER_KEY}` et
+`ORI_MCP_CONFIG` manquaient tous deux. Poser l'export dans `~/.bashrc` ne sert
+à rien — il n'est pas lu. D'où `~/.ori/ori-env.sh`, sourcé par le wrapper.
+
+**Ne jamais écrire `&&` ni `||` dans la chaîne passée à `sh -c` depuis un
+`.cmd`.** Les guillemets simples sont une notion de shell POSIX ; **cmd.exe les
+ignore** et voit ses propres opérateurs, donc il coupe la commande en deux et
+WSL reçoit une chaîne non terminée :
+
+```
+/bin/bash: -c: line 1: unexpected EOF while looking for matching `'
+```
+
+Utiliser `if … ; then … ; fi`, sans métacaractère cmd. Payé le 2026-08-29.
 
 ## Le piège du CLI contextuel
 
@@ -267,9 +397,22 @@ jour : `ori-help` et `ori-doctor` (avec un tiret) n'existent pas ; ce sont
 ```bash
 herdr agent list            # doit lister le pane et son agent_status
 herdr integration status    # dit quels hooks sont poses
-cmd /c "ori auth"           # authenticated: true + source du credential
-cmd /c "ori harness list"   # ce qu'Ori voit REELLEMENT, pas ce qu'on croit
+herdr config check          # doit rendre "config: ok"
 ```
+
+Pour Ori, **passer par un `.bat`**, pas par `cmd /c "ori …"` depuis bash : la
+double couche de citation casse la chaîne avant WSL, et `cmd /c` rend parfois
+la seule bannière de cmd sans rien exécuter.
+
+```bat
+call "C:\Users\amado\bin\ori.cmd" harness list
+call "C:\Users\amado\bin\ori.cmd" mcp list --human
+```
+
+`harness list` rend **deux listes** qu'il ne faut pas confondre :
+`data.harnesses` (features enregistrées — 1, le runloop intégré) et
+`data.launchable` (CLI externes lançables — 8/8 installés). Lire la première
+en croyant lire la seconde fait conclure à tort que sept harnais ont disparu.
 
 ## Comment le retirer
 
