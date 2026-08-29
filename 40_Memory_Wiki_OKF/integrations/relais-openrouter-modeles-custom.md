@@ -110,18 +110,21 @@ suffit pas non plus : le processus reste fils du shell qui l'a lancé.
    réellement de la duplication** — un second gardien voit le port occupé et
    ne fait rien.
 
-**`RestartCount 999` a été retiré.** Il semblait renforcer l'antifragilité ;
-il produisait en fait des gardiens en double, car Windows relance le processus
-*y compris quand on l'arrête volontairement*. Toute tentative de nettoyage
-était suivie d'une relance automatique. Le gardien ne se termine jamais de
-lui-même (boucle infinie) et la tâche repart à l'ouverture de session : le
-redémarrage automatique n'apportait rien qu'un doublon.
+3. **`RestartCount 999` / `RestartInterval 1 min`** : si le processus du
+   gardien est tué, Windows le relance dans la minute au lieu d'attendre la
+   prochaine ouverture de session. Pour une maintenance, `Stop-ScheduledTask`
+   **d'abord** — sinon Windows relance ce qu'on essaie d'arrêter.
 
-Un mutex `Global\RelaisOpenRouterGardien` a été essayé pour la même raison et
-**n'a pas fonctionné** : deux gardiens l'obtenaient. Il a été conservé sans
-être la protection effective — ne pas s'y fier. `Set-ScheduledTask` échoue par
-ailleurs en `0x80041319` sur cette tâche ; il faut `Unregister` puis
-`Register`.
+**Le « doublon de gardien » n'a jamais existé.** Il a été diagnostiqué, puis
+« corrigé » par le retrait de `RestartCount` et l'ajout d'un mutex, avant que
+la mesure ne s'avère fausse — voir la section suivante. `RestartCount` a été
+rétabli. Le mutex `Global\RelaisOpenRouterGardien` reste dans le script, sans
+être la protection effective : **c'est la sonde de port qui protège**, un
+second gardien voyant le port occupé ne fait rien.
+
+`Set-ScheduledTask` échoue par ailleurs en `0x80041319` sur cette tâche : il
+faut `Unregister` puis `Register`. Le script qui l'ignorait affichait son
+message de succès **après** l'échec, faute de `$ErrorActionPreference = 'Stop'`.
 
 Aucune fenêtre n'apparaît jamais : `CreateNoWindow` + `UseShellExecute=$false`
 partout, et `-WindowStyle Hidden` sur la tâche.
@@ -158,11 +161,22 @@ preuve que la substitution a eu lieu, le nom demandé ne prouve rien.
 revenu seul à 21:17:46 — 54 s, sans intervention. La reprise prend au plus un
 intervalle de sonde ; compter une minute, pas deux secondes.
 
-**L'instrument de mesure fabriquait le défaut qu'il signalait.** Compter les
-gardiens via `powershell -Command` depuis bash *créait un gardien de plus* à
-chaque appel — la mesure rapportait fidèlement deux processus, dont un né de la
-mesure elle-même. Le parent départage : `svchost.exe` = la tâche, tout autre
-parent = un résidu d'outillage.
+**L'instrument de mesure se comptait lui-même.** Compter les gardiens par
+
+```powershell
+Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*relais-gardien*' }
+```
+
+rapporte **toujours un processus de trop** : la ligne de commande de la requête
+*contient le motif cherché*, donc elle se matche elle-même. Le compte disait 2
+là où il y en avait 1, de façon parfaitement reproductible — l'erreur la plus
+traître, parce qu'elle est stable.
+
+Deux fausses corrections ont suivi avant que la parenté ne tranche
+(`svchost.exe` = la tâche, `bash.exe` = la requête) : le retrait de
+`RestartCount` et l'ajout d'un mutex, tous deux inutiles. **Un filtre par motif
+sur `CommandLine` doit toujours exclure le PID courant**, ou la mesure se
+compte dans son propre résultat.
 
 ```bash
 netstat -ano | grep LISTENING | grep ":8792"
