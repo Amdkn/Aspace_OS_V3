@@ -86,11 +86,17 @@ FAMILLES = [
 # un statut suppose vaut moins que pas de statut du tout.
 VERIFIE = {
     "sales-g2": {
-        "statut": "resolu",
-        "note": ("Mesure 2026-08-29 : `John Jones` rend ZERO occurrence dans le PARA. "
-                 "Les cinq projets portent `02_Sales_MartianManhunter_Illuminati` en B2 et B3. "
-                 "Le renommage W40 V4 est propage, fichiers ET contenu. "
-                 "Reste un seul ecart reel : `01-omk-business-os` n'a que 6 domaines "
+        "statut": "vivant",
+        "note": ("CORRIGE le 2026-08-29 — la conclusion precedente etait inversee. "
+                 "Mesure : les cinq projets portent `02_Sales_MartianManhunter_Illuminati` "
+                 "en B2 et B3, et `John Jones` rend zero occurrence. J'en avais deduit que "
+                 "Martian Manhunter avait gagne. C'est le contraire : la regle de date dit "
+                 "`JohnJones` (chartes OMK, 2026-07-15) contre `Martian Manhunter / John Jones` "
+                 "(SWARM_CONFIG marina, 2026-05-27). Les dossiers sont l'ANCIENNE forme, non "
+                 "encore propagee. Arbitrage du proprietaire : **les deux doivent devenir "
+                 "John Jones**, espace ou non. `ONTOLOGIE_V2` qui note « legacy : John Jones » "
+                 "est perimee sur ce point. "
+                 "Un ecart distinct reste vrai : `01-omk-business-os` n'a que 6 domaines "
                  "(Growth et Sales absents) quand les quatre autres en ont 8."),
     },
     "slots": {
@@ -127,6 +133,38 @@ def sans_accents(s):
     return s.translate(table).lower()
 
 
+def pre_arbitrer(paires):
+    """Applique la regle de l'utilisateur : la version la plus RECENTE fait foi.
+
+    Enoncee le 2026-08-29 : « T'as les Dates pour te montrer que les Version B
+    sont generalement l'evolution des Anciennes Versions, non encore propagees
+    dans les Projets qui sont presque a l'abandon. »
+
+    Une contradiction n'est donc pas un litige a arbitrer au cas par cas : c'est
+    une propagation en retard. La date tranche, et ce qui reste a trancher a la
+    main se reduit aux cas ou elle ne dit rien.
+
+    Rend (cote, motif) ou (None, raison) quand la date ne departage pas :
+    dates egales, date manquante, ou paires fusionnees qui se contredisent.
+    """
+    cotes = set()
+    for p in paires:
+        da, db = (p.get("da") or "").strip(), (p.get("db") or "").strip()
+        if not da or not db:
+            return None, "date manquante"
+        if da == db:
+            cotes.add("=")
+        else:
+            cotes.add("B" if db > da else "A")
+    if cotes == {"B"}:
+        return "B", "version B plus recente"
+    if cotes == {"A"}:
+        return "A", "version A plus recente"
+    if cotes == {"="}:
+        return None, "dates identiques"
+    return None, "paires en desaccord"
+
+
 def famille_de(sujet):
     s = sans_accents(sujet)
     for cle, libelle, motif in FAMILLES:
@@ -160,6 +198,7 @@ def main():
     for i, e in enumerate(fusion.values(), 1):
         cle, libelle = famille_de(e["sujet"])
         v = VERIFIE.get(cle, {})
+        pre, motif_pre = pre_arbitrer(e["paires"])
         items.append({
             "id": "C%03d" % i,
             "sujet": e["sujet"],
@@ -169,6 +208,8 @@ def main():
             "famille_libelle": libelle,
             "statut": v.get("statut", "vivant"),
             "note": v.get("note", ""),
+            "pre": pre,
+            "motif_pre": motif_pre,
         })
 
     familles = OrderedDict()
@@ -258,6 +299,10 @@ main{padding:18px 20px 90px;max-width:1180px;margin:0 auto}
 .ref{color:var(--doux);font:12px ui-monospace,SFMono-Regular,Menlo,monospace;flex:0 0 auto;padding-top:2px}
 .sujet{font-weight:600;font-size:14px;flex:1}
 .mult{font-size:11px;color:var(--attention);border:1px solid #4a3f2c;padding:1px 7px;border-radius:999px}
+.auto{font-size:11px;color:var(--ok);border:1px solid #2c4a3a;padding:1px 7px;border-radius:999px}
+.item.auto{border-left:3px solid #2c4a3a}
+.cote.recent{border-color:#3a5f7a;background:#1a222b}
+.cote.recent .eti{color:var(--accent)}
 .paires{margin:10px 0 0;display:grid;gap:7px}
 .paire{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .cote{background:var(--carte2);border:1px solid var(--bord);border-radius:7px;padding:8px 10px;
@@ -294,7 +339,9 @@ footer{position:fixed;bottom:0;left:0;right:0;background:rgba(15,17,21,.97);
   <div class="barre">
     <button class="action" onclick="exporter('json')">Exporter les décisions (JSON)</button>
     <button class="action fant" onclick="exporter('md')">Exporter en Markdown</button>
+    <button class="action" onclick="const n=appliquerRegleDate();alert(n+' contradictions pré-arbitrées par la date.')">Appliquer la règle de date</button>
     <button class="action fant" onclick="toutIgnorerResolus()">Marquer « déjà résolu » les familles vérifiées</button>
+    <button class="action fant" onclick="annulerAuto()">Annuler les pré-arbitrages</button>
     <span class="espace"></span>
     <button class="action fant" onclick="reinit()">Réinitialiser</button>
   </div>
@@ -375,9 +422,32 @@ function setFiltre(f){
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
+// Regle de l'utilisateur : la version la plus recente fait foi. Appliquee a
+// l'ouverture sur tout ce qui n'a pas deja une decision explicite. Ce qu'elle
+// ne tranche pas (dates egales ou manquantes) reste vide et remonte en tete.
+function appliquerRegleDate(){
+  let n = 0;
+  D.items.forEach(i => {
+    if(i.pre && !(etat[i.id] && etat[i.id].choix)){
+      etat[i.id] = etat[i.id] || {};
+      etat[i.id].choix = i.pre;
+      etat[i.id].auto = true;
+      if(!etat[i.id].motif) etat[i.id].motif = "règle de date : " + i.motif_pre;
+      n++;
+    }
+  });
+  sauver(); rendre();
+  return n;
+}
+function annulerAuto(){
+  Object.keys(etat).forEach(k => { if(etat[k] && etat[k].auto) delete etat[k]; });
+  sauver(); rendre();
+}
+
 function choisir(id, val){
   etat[id] = etat[id] || {};
   etat[id].choix = val;
+  etat[id].auto = false;   // un choix humain cesse d'etre une pre-decision
   sauver();
   const el = document.getElementById("i_"+id);
   el.className = "item" + (val==="A" ? " trancheA" : val==="B" ? " trancheB"
@@ -407,16 +477,23 @@ function carte(i){
   const e = etat[i.id] || {};
   const cls = e.choix==="A" ? " trancheA" : e.choix==="B" ? " trancheB"
             : (e.choix==="ignore"||e.choix==="resolu") ? " ignore" : "";
-  const paires = i.paires.map(p => `
+  // Le cote le plus recent est marque : la date est l'argument, elle doit se voir.
+  const paires = i.paires.map(p => {
+    const da=(p.da||"").trim(), db=(p.db||"").trim();
+    const aRecent = da && db && da > db, bRecent = da && db && db > da;
+    return `
     <div class="paire">
-      <div class="cote"><span class="eti">VERSION A ${p.da?("· "+p.da):""}</span>${esc(p.a)||"—"}</div>
-      <div class="cote"><span class="eti">VERSION B ${p.db?("· "+p.db):""}</span>${esc(p.b)||"—"}</div>
-    </div>`).join("");
+      <div class="cote${aRecent?" recent":""}"><span class="eti">VERSION A ${da?("· "+da):""}${aRecent?" · PLUS RÉCENTE":""}</span>${esc(p.a)||"—"}</div>
+      <div class="cote${bRecent?" recent":""}"><span class="eti">VERSION B ${db?("· "+db):""}${bRecent?" · PLUS RÉCENTE":""}</span>${esc(p.b)||"—"}</div>
+    </div>`;}).join("");
   const opt = (v,t)=>`<label><input type="radio" name="ch_${i.id}" value="${v}"
       ${e.choix===v?"checked":""} onchange="choisir('${i.id}','${v}')">${t}</label>`;
-  return `<div class="item${cls}" id="i_${i.id}">
+  const marque = e.auto ? `<span class="auto">pré-arbitré · ${esc(i.motif_pre||"")}</span>`
+               : (!i.pre ? `<span class="mult">à trancher · ${esc(i.motif_pre||"")}</span>` : "");
+  return `<div class="item${cls}${e.auto?" auto":""}" id="i_${i.id}">
     <div class="tete"><span class="ref">${i.id}</span>
       <span class="sujet">${esc(i.sujet)}</span>
+      ${marque}
       ${i.occurrences>1?`<span class="mult">${i.occurrences}× au catalogue</span>`:""}</div>
     <div class="paires">${paires}</div>
     <div class="choix">
@@ -445,6 +522,8 @@ function exporter(fmt){
   const lignes = D.items.map(i=>({
     id:i.id, famille:i.famille, sujet:i.sujet,
     statut_verifie:i.statut, decision:(etat[i.id]||{}).choix||null,
+    pre_arbitrage:i.pre||null, motif_pre:i.motif_pre||"",
+    auto:!!(etat[i.id]||{}).auto,
     motif:(etat[i.id]||{}).motif||"", paires:i.paires
   }));
   let contenu, nom, type;
@@ -456,15 +535,21 @@ function exporter(fmt){
     let m = "# Arbitrage des contradictions\n\n";
     m += "Source `CONSOLIDE.json` du " + D.genere_le + " — " + D.total_brut +
          " entrées, " + D.total_fusionne + " après fusion des doublons.\n\n";
-    const tranchees = lignes.filter(l=>l.decision);
-    m += "**" + tranchees.length + " tranchées sur " + lignes.length + ".**\n\n";
+    // Une ligne est exportee des qu'elle porte une decision OU un motif. Sans
+    // ce OU, un motif tape sans cocher de bouton disparaissait a l'export --
+    // defaut constate le 2026-08-29, qui a fait perdre deux raisonnements.
+    const retenues = lignes.filter(l=>l.decision || l.motif);
+    const humaines = lignes.filter(l=>l.decision && !l.auto).length;
+    m += "**" + lignes.filter(l=>l.decision).length + " tranchées sur " + lignes.length +
+         "**, dont " + humaines + " décidées à la main et le reste par la règle de date.\n\n";
     D.familles.forEach(f=>{
-      const s = lignes.filter(l=>l.famille===f.cle && l.decision);
+      const s = retenues.filter(l=>l.famille===f.cle);
       if(!s.length) return;
       m += "## " + f.libelle + "\n\n";
       s.forEach(l=>{
         m += "- **" + l.id + "** — " + l.sujet + "\n";
-        m += "  - décision : `" + l.decision + "`\n";
+        m += "  - décision : `" + (l.decision || "AUCUNE — note seule") + "`" +
+             (l.auto ? " *(règle de date)*" : "") + "\n";
         if(l.motif) m += "  - motif : " + l.motif + "\n";
       });
       m += "\n";
