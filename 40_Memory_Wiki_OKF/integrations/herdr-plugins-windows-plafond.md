@@ -1,11 +1,12 @@
 ---
 type: Integration
-title: Plugins Herdr — 866 au catalogue, 13 utilisables sous Windows
+title: Plugins Herdr — 866 au catalogue, deux plafonds cumulés sous Windows
 description: 866 plugins au catalogue ; sur 36 manifestes lus, 13 déclarent windows et aucun des dix plus populaires. Deux plafonds se cumulent — plateforme et min_herdr_version — et un plugin installé peut n'être qu'une couche sur un binaire absent.
 tags: [herdr, plugins, windows, wsl, marketplace, compatibilite, orchestration, llmtrim, securite]
 generated: { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
 verified:
   - { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
+  - { by: claude-opus-5, at: 2026-08-29T01:30:00Z }
 sources:
   - id: herdr-dev-plugins
     resource: "https://herdr.dev/plugins/"
@@ -14,6 +15,10 @@ sources:
   - id: github-topic
     resource: "GET api.github.com/search/repositories?q=topic:herdr-plugin&sort=stars"
     title: Source réelle de l'index — 886 dépôts portant le topic
+    last_modified: 2026-08-29
+  - id: update-082
+    resource: "herdr update sur le poste — 0.7.4-preview vers 0.8.2-preview"
+    title: Mise a jour du 2026-08-29 et etat des integrations apres coup
     last_modified: 2026-08-29
   - id: manifestes
     resource: "36 fichiers herdr-plugin.toml lus en raw.githubusercontent"
@@ -78,6 +83,49 @@ qui manquent : la surveillance de quota (`herdr-agent-quota`,
 | `ntindle/herdr-resurrect` | 23 | Snapshot/restauration de workspaces, façon tmux-resurrect | Une entrée du manifeste reste `linux/macos` |
 | `natori-hrj/herdr-lazy` | 22 | Gestionnaire de plugins déclaratif avec vrai lockfile | **Aucun binaire précompilé sous Windows** — compile depuis les sources |
 | `liamwh/herdr-rich-notifications` | 0 | Notifications natives sur changement d'état d'agent | Publié depuis quelques heures, non éprouvé |
+
+## Levée du plafond : 0.7.4 → 0.8.2 (2026-08-29)
+
+`herdr update` a porté le poste de `0.7.4-preview.2026-07-17` à
+`0.8.2-preview.2026-08-19`. Trois effets mesurés, dont un inattendu.
+
+**1. Le plafond de version tombe.** `herdr-hunk-diff` et `herdr-annotate`
+s'installent. Quatre plugins actifs : `annotate`, `herdr-remote.relay`,
+`jhochenbaum.hunkdiff`, `llmtrim.proxy`.
+
+**2. Les intégrations doivent être réinstallées** — le binaire le dit lui-même
+après la mise à jour. `claude` et `codex` passent de v7/v6 à **v8**.
+
+**3. Hermes devient supporté sous Windows.** En 0.7.4, `herdr integration
+install hermes` rendait `hermes integration is not supported on Windows` ;
+en 0.8.2 il pose un plugin Python dans
+`AppData\Local\hermes\plugins\herdr-agent-state\` et l'active dans
+`hermes/config.yaml`. **Hermes passe de la détection par regex à un hook
+autoritaire (v5).**
+
+Le catalogue d'intégrations s'élargit aussi : `pi`, `omp`, `devin`, `qwen`,
+`grok`, `antigravity-cli` apparaissent dans `integration status`, absents en
+0.7.4.
+
+**Leçon** : « non supporté sous Windows » est une réponse *datée*, pas une
+propriété. Sur un canal preview vieux de six semaines, revérifier après mise à
+jour avant de conclure qu'une capacité manque.
+
+Les trois harnais Windows du poste sont désormais tous en hook autoritaire :
+
+```
+claude: current (v8)   codex: current (v8)   hermes: current (v5)
+```
+
+**Vérifier les dépendances déclarées par les hooks**, sans quoi un plugin
+installé reste inerte. Les quatre en place réclament `node`, `bun`, `uv` et
+`pwsh` — tous présents ici, mais aucun n'est garanti par l'installation du
+plugin.
+
+**Ne pas démarrer le serveur pour vérifier si des panes viennent d'être
+fermés** : `plugin action list` exige un serveur vivant, et le démarrer avec
+`resume_agents_on_restore = true` **relance les panes d'agents**. La
+vérification attend la réouverture volontaire.
 
 ## Le second plafond : la version, pas la plateforme
 

@@ -1,11 +1,12 @@
 ---
 type: Integration
 title: Relais OpenRouter — router Sonnet 4.6/4.5 vers GLM 5.3 Flash et Qwen 3.8 Flash
-description: Claude Code CLI valide le nom du modèle localement et refuse tout id non-Anthropic ; un relais sur 127.0.0.1:8792 réécrit le champ `model` juste avant l'envoi vers OpenRouter, et une tâche planifiée le maintient vivant.
-tags: [openrouter, claude-code-cli, glm, qwen, relais, tache-planifiee, antifragile, cles]
+description: CORRIGÉ 2026-08-29 — la validation de nom ne s'applique qu'en mode Anthropic natif ; trois env vars routent vers GLM/Qwen sans relais, et Ori le fait nativement. Le relais 8792 est un détour, conservé comme repli.
+tags: [openrouter, claude-code-cli, glm, qwen, relais, ori, correction, cles]
 generated: { by: claude-opus-5, at: 2026-08-28T21:05:00Z }
 verified:
   - { by: claude-opus-5, at: 2026-08-28T21:02:00Z }
+  - { by: claude-sonnet-4-6, at: 2026-08-29T04:40:00Z }
 sources:
   - id: openrouter-models
     resource: "GET https://openrouter.ai/api/v1/models"
@@ -22,14 +23,38 @@ sources:
 okf_version: "0.2"
 ---
 
-Router Claude Code CLI vers un modèle non-Anthropic **ne se fait pas par
-configuration**. Le CLI valide le nom du modèle *localement*, avant tout appel
-réseau : `--model z-ai/glm-5.3-flash` est rejeté sans qu'un octet ne parte.
-`settings.json` portait `"model": "z-ai/glm-5.3-flash[1m]"`, ce qui cassait
-chaque démarrage pour cette raison exacte.
+## Correction du 2026-08-29 — l'hypothèse fondatrice était fausse
 
-La seule voie est un relais qui **présente au CLI un nom qu'il accepte**, puis
-réécrit le champ `model` juste avant l'envoi.
+Le montage ci-dessous **fonctionne mais n'était pas nécessaire**. Mesure du
+matin :
+
+- `ori claude --model z-ai/glm-5.3-flash -p "PONG"` → **PONG** (Ori pose lui-même
+  `ANTHROPIC_BASE_URL` vers OpenRouter, le nom non-Anthropic passe tel quel) ;
+- `ANTHROPIC_BASE_URL=https://openrouter.ai/api ANTHROPIC_AUTH_TOKEN=<clé>
+  claude --model z-ai/glm-5.3-flash -p "PONG"` → **PONG**, sans aucun relais.
+
+La règle exacte : **la validation des noms de modèles ne se produit que quand
+le CLI parle à Anthropic natif** (le cas `settings.json` cassé du 2026-08-28).
+Dès qu'`ANTHROPIC_BASE_URL` pointe ailleurs, un nom inconnu ne produit qu'un
+avertissement télémétrique (`claude-code:unrecognized_model`), jamais un rejet.
+La relance a renommé cette limite en « le CLI refuse tout id non-Anthropic » —
+une généralisation payée par un serveur de plus à maintenir.
+
+**La voie simple** : trois variables d'environnement, ou mieux
+[[herdr-ori-substrat-orchestration]] (`ori claude --model <id OpenRouter>`),
+qui gère le credential et couvre aussi codex, grok, opencode, hermes, omp et
+prime-agent. Le relais reste actif comme repli (session GLM en cours au
+moment de la correction) ; ne pas l'étendre, préférer Ori.
+
+---
+
+*(Ce qui suit décrit le montage relais tel qu'il a été câblé — historique
+exact, repli fonctionnel.)*
+
+Router Claude Code CLI vers un modèle non-Anthropic ~~ne se fait pas par
+configuration~~ *— réfuté ci-dessus : voir la correction du 2026-08-29.*
+`settings.json` portait `"model": "z-ai/glm-5.3-flash[1m]"`, ce qui cassait
+chaque démarrage — en mode Anthropic natif seulement.
 
 ## Le câblage
 

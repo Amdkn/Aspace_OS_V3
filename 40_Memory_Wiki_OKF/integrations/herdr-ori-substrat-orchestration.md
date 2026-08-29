@@ -97,10 +97,11 @@ Deux mécanismes, et le second est plus fiable que le premier :
    `hermes`, `qodercli`, `cursor`, `mastracode`.
 
 Aucune intégration n'était installée au 2026-08-28 ; Herdr ne fonctionnait
-alors que par regex. **État au 2026-08-29 : `claude` (v7) et `codex` (v6) sont
-installées** — vérifié par `herdr integration status`. Les quatre autres
-proposées (`copilot`, `droid`, `kimi`, `qodercli`) restent absentes, et c'est
-correct : les agents correspondants ne sont pas sur ce poste.
+alors que par regex. **État après la mise à jour en 0.8.2 du 2026-08-29 :
+`claude` (v8), `codex` (v8) et `hermes` (v5) sont installées** — les trois
+harnais Windows du poste, tous en hook autoritaire. Hermes n'était pas
+supporté sous Windows en 0.7.4 ; la mise à jour l'a débloqué. Voir
+[[herdr-plugins-windows-plafond]].
 
 Conséquence : `[session] resume_agents_on_restore` devient réellement effectif,
 puisqu'il exige des intégrations rapportant une référence de session.
