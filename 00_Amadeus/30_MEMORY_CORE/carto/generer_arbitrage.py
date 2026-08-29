@@ -221,6 +221,20 @@ h1{margin:0 0 4px;font-size:17px;letter-spacing:.2px}
 .filtre{background:var(--carte2);border:1px solid var(--bord);color:var(--texte);
         padding:5px 11px;border-radius:999px;cursor:pointer;font-size:12.5px}
 .filtre.on{background:var(--accent);color:#0b0d11;border-color:var(--accent);font-weight:600}
+/* Bloc de familles pliable : 23 puces occupaient la moitie de l'ecran et
+   repoussaient les contradictions hors de vue. Replie par defaut. */
+.plieur{display:flex;align-items:center;gap:9px;margin-top:10px;flex-wrap:wrap}
+.bouton-plier{background:var(--carte2);border:1px solid var(--bord);color:var(--texte);
+              padding:5px 12px;border-radius:7px;cursor:pointer;font-size:12.5px;
+              display:inline-flex;align-items:center;gap:7px}
+.bouton-plier:hover{border-color:var(--accent)}
+.chevron{display:inline-block;transition:transform .15s ease;font-size:10px;opacity:.75}
+.ouvert .chevron{transform:rotate(90deg)}
+.actif{font-size:12.5px;color:var(--doux)}
+.actif b{color:var(--accent);font-weight:650}
+#filtres{max-height:0;overflow:hidden;opacity:0;transition:max-height .2s ease,opacity .15s ease;
+         margin-top:0}
+#filtres.deplie{max-height:60vh;overflow:auto;opacity:1;margin-top:10px}
 .espace{flex:1}
 button.action{background:var(--accent);color:#0b0d11;border:0;padding:8px 15px;
               border-radius:7px;font-weight:650;cursor:pointer;font-size:13px}
@@ -270,6 +284,12 @@ footer{position:fixed;bottom:0;left:0;right:0;background:rgba(15,17,21,.97);
 <header>
   <h1>Arbitrage des contradictions — A'Space OS</h1>
   <div class="sous" id="entete"></div>
+  <div class="plieur" id="plieur">
+    <button class="bouton-plier" onclick="plier()">
+      <span class="chevron">&#9654;</span><span id="etiq_plier">Familles</span>
+    </button>
+    <span class="actif" id="filtre_actif"></span>
+  </div>
   <div class="barre" id="filtres"></div>
   <div class="barre">
     <button class="action" onclick="exporter('json')">Exporter les décisions (JSON)</button>
@@ -313,15 +333,47 @@ function majCompteur(){
     "<b>" + d + "</b> / " + n + " contradictions tranchées";
 }
 
+let deplie = false;
+try { if(STOCK) deplie = STOCK.getItem(CLE+"_deplie") === "1"; } catch(e){}
+
+function plier(){
+  deplie = !deplie;
+  appliquerPli();
+  try { if(STOCK) STOCK.setItem(CLE+"_deplie", deplie ? "1" : "0"); } catch(e){}
+}
+function appliquerPli(){
+  document.getElementById("filtres").classList.toggle("deplie", deplie);
+  document.getElementById("plieur").classList.toggle("ouvert", deplie);
+  document.getElementById("etiq_plier").textContent = deplie ? "Masquer les familles" : "Familles";
+}
+function libelleDe(cle){
+  if(cle==="tout") return "Tout";
+  const f = D.familles.find(x=>x.cle===cle);
+  return f ? f.libelle : cle;
+}
+function majFiltreActif(){
+  const n = filtre==="tout" ? D.items.length
+          : (D.familles.find(x=>x.cle===filtre)||{n:0}).n;
+  document.getElementById("filtre_actif").innerHTML =
+    "Filtre : <b>" + esc(libelleDe(filtre)) + "</b> — " + n + " contradiction" + (n>1?"s":"");
+}
+
 function rendreFiltres(){
   const c = document.getElementById("filtres");
   const fams = [{cle:"tout", libelle:"Tout", n:D.items.length, statut:""}].concat(
     D.familles.slice().sort((a,b)=>b.n-a.n));
   c.innerHTML = fams.map(f =>
     `<button class="filtre ${f.cle===filtre?'on':''}" onclick="setFiltre('${f.cle}')">`+
-    `${f.libelle} <span style="opacity:.7">${f.n}</span></button>`).join("");
+    `${esc(f.libelle)} <span style="opacity:.7">${f.n}</span></button>`).join("");
+  majFiltreActif();
 }
-function setFiltre(f){ filtre=f; rendreFiltres(); rendre(); }
+// Choisir une famille replie le bloc : on veut voir les contradictions,
+// pas la liste des familles qu'on vient de quitter.
+function setFiltre(f){
+  filtre=f; rendreFiltres(); rendre();
+  if(deplie) plier();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
 
 function choisir(id, val){
   etat[id] = etat[id] || {};
@@ -433,7 +485,7 @@ document.getElementById("avis_stockage").textContent = STOCK
   ? "Les décisions sont conservées dans ce navigateur jusqu'à l'export."
   : "⚠ Pas de stockage local ici : exportez avant de fermer, sinon les décisions sont perdues.";
 
-rendreFiltres(); rendre(); majCompteur();
+appliquerPli(); rendreFiltres(); rendre(); majCompteur();
 </script>
 </body>
 </html>
