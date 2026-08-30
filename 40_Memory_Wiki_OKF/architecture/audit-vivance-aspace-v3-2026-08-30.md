@@ -26,6 +26,56 @@ sources:
 okf_version: "0.2"
 ---
 
+# Suite donnée le 2026-08-30 par Claude Opus 5
+
+**Cet audit est confirmé, point par point, par une seconde mesure indépendante.**
+Dernier événement de `uc.db` : `2026-08-03 17:18` — 27 jours de silence. 6 work
+sur 11 en `failed`, 2 en `claimed` depuis 27 jours. Aucune tâche planifiée ne
+pilotait le kernel : mon premier filtre en annonçait 4, c'était un faux positif
+(`*uc*` attrape « Touchpad »). Et `worker_example.py` fait bien `time.sleep(0.2)`
+au lieu de construire.
+
+**Ce qui manquait est écrit : [`kernel/controleur.py`](../../10_Tech_OS/kernel/controleur.py).**
+Les organes existaient — gate, claim atomique, reap, prediction, review, DLQ —
+mais rien ne les appelait. Un cœur complet sans systole.
+
+| | Avant | Après le premier battement |
+|---|---|---|
+| Dernier événement | 2026-08-03 (**647 h**) | 2026-08-30, **0 h** |
+| `vivant` | **NON** | **oui** |
+| Travail disponible | 1 `pending` | **9 `pending`** |
+| Baux morts | 2 depuis 27 j | 0 |
+
+Le battement a été **testé sur une copie jetable avant la production**, et la
+base sauvegardée. `controleur.py --auto-test` refait cette vérification.
+
+**Ce que le contrôleur ne fait pas, et ne doit pas faire :** construire. Il
+ordonnance. Le constructeur est un harness, et confondre les deux est
+exactement ce que cet audit reproche au worker de référence. Les capacités 3
+et 5 de la définition falsifiable — *construire un artefact réel*, *scorer une
+prédiction* — restent ouvertes.
+
+**Le battement est détaché.** Tâche planifiée `ASpace_V3_Battement`, toutes les
+15 minutes, `StartWhenAvailable` — donc elle rattrape après une extinction.
+C'est la capacité 8, *recommencer après redémarrage*, et elle est fermée.
+
+Premier enregistrement : `rc=2147942667` (`0x8007010B`, répertoire de travail
+invalide — le planificateur Windows refuse les chemins en barres obliques).
+Corrigé, relancé, `rc=0` vérifié. Un `exit 0` non regardé n'aurait rien prouvé ;
+une tâche qui échoue en silence est pire que pas de tâche.
+
+```bash
+python C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel/controleur.py --etat
+```
+
+**Ce qui reste ouvert, et que ce contrôleur ne fermera pas :** les capacités 3
+et 5 — *construire un artefact réel* et *scorer une prédiction*. Elles
+demandent un constructeur, pas un ordonnanceur. Tant que `worker_example.py`
+simule le travail par un `sleep`, le métabolisme tourne à vide : il fait
+circuler du travail sans en produire.
+
+---
+
 # Verdict
 
 A'Space V3 n'est pas mort faute de sophistication. Il est **incomplet au niveau
