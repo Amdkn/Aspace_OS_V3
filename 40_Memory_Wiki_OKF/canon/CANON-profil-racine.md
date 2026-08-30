@@ -16,7 +16,44 @@ Ce dossier est un **profil utilisateur**, pas un projet. Aucun travail ne s'y fa
 Les quotas des modèles Anthropic sont la ressource rare. **Tout travail long, répétitif ou
 volumineux se délègue au CLI Claude Code sur MiniMax-M3**, qui ne consomme pas ces quotas.
 
-### Hiérarchie de délégation (mesure 2026-08-15)
+> ### ⚠ CORRECTION DU 2026-08-30 — lire avant la hiérarchie ci-dessous
+>
+> La hiérarchie de la mesure du 2026-08-15 est **périmée sur deux points**. Elle
+> est conservée telle quelle : c'est un relevé daté, pas une consigne actuelle.
+>
+> **1. MiniMax-M3 est mort.** Le canal n'existe plus. Le canal de délégation est
+> **`~/.claude/custom-models/claude-glm.cmd`** — GLM 5.3 Flash via OpenRouter.
+> `claude -p` nu consomme le quota Anthropic, donc exactement ce qu'on épargne.
+>
+> ```bash
+> "C:/Users/amado/.claude/custom-models/claude-glm.cmd" \
+>   --dangerously-skip-permissions \
+>   --strict-mcp-config --mcp-config '{"mcpServers":{}}' \
+>   -p "<brief court qui POINTE vers un fichier>"
+> ```
+>
+> **2. L'outil `Workflow` n'est plus le défaut.** Les sous-agents héritent du
+> modèle exporté ; si `ANTHROPIC_MODEL` pointe ailleurs, ils meurent. Orchestrer
+> par `claude-glm`, jamais par `Workflow`.
+>
+> **Les deux drapeaux MCP sont obligatoires.** Mesuré le 2026-08-30 sur une
+> fenêtre de 200k : plancher de démarrage à **~96k tokens d'outillage** (195
+> outils MCP = 60,2k ; outils système = 20,9k). Sans les drapeaux, le délégué
+> rend **`Prompt is too long` avant d'avoir lu son brief** — payé deux fois.
+>
+> **Ne jamais mettre un corpus dans le `-p`.** 409 Ko en argument échouent ;
+> découpés en tranches de ~40 Ko lues depuis le disque, ils passent.
+>
+> **Un délégué n'est pas Opus.** Incident du 2026-08-30 : `claude-glm` a lu le
+> `CLAUDE.md` racine, s'est cru Opus, et a repris la tâche de la session parente
+> pendant que le quota Anthropic du propriétaire était épuisé. Un brief délégué
+> doit dire au délégué ce qu'il est, ce qu'il écrit, et où il s'arrête.
+>
+> **Une seule boucle à la fois.** `pkill` ne prend pas toujours du premier coup.
+> Vérifier par `pgrep -fc` avant de relancer : deux boucles concurrentes ont
+> brûlé quatre tranches en double le 2026-08-30.
+
+### Hiérarchie de délégation (mesure 2026-08-15 — voir correction ci-dessus)
 
 L'environnement actuel expose **trois** canaux de délégation, avec une hiérarchie stricte :
 
