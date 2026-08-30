@@ -1,0 +1,65 @@
+<!doctype html><html lang=fr><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Vague 1 — Étage B1 (Rocks, mensuel) — revue</title><style>
+:root{--bg:#0d1117;--fg:#e6edf3;--mut:#8b949e;--brd:#30363d;--card:#161b22;
+--rouge:#f85149;--ambre:#d29922;--vert:#3fb950;--bleu:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
+h1{font-size:26px;margin:0 0 4px} h2{font-size:17px;margin:36px 0 12px;
+padding-bottom:6px;border-bottom:1px solid var(--brd)}
+.sub{color:var(--mut);margin:0 0 28px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:14px 16px}
+.kpi .n{font-size:28px;font-weight:600;line-height:1.1}
+.kpi .l{color:var(--mut);font-size:12px;margin-top:4px}
+.kpi.alerte{border-color:var(--rouge)} .kpi.alerte .n{color:var(--rouge)}
+.kpi.ok .n{color:var(--vert)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+th{text-align:left;color:var(--mut);font-weight:500;font-size:12px;
+padding:6px 8px;border-bottom:1px solid var(--brd)}
+td{padding:7px 8px;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+.p{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;
+border:1px solid}
+.p.humain{color:var(--vert);border-color:var(--vert)}
+.p.machine{color:var(--ambre);border-color:var(--ambre)}
+.p.non{color:var(--rouge);border-color:var(--rouge)}
+.d{color:var(--mut);font-size:12.5px}
+code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:12px}
+a{color:var(--bleu);text-decoration:none} a:hover{text-decoration:underline}
+.vide{color:var(--mut);font-style:italic;padding:10px 0}
+footer{margin-top:48px;color:var(--mut);font-size:12px;
+border-top:1px solid var(--brd);padding-top:14px}
+</style>
+<div class=wrap>
+<h1>Vague 1 — Étage B1 (Rocks, mensuel)</h1>
+<p class=sub><code>..\70_Onthologies\pulse\b1</code></p>
+<div class=grid>
+<div class='kpi ok'><div class=n>0</div><div class=l>concepts en attente d'un humain</div></div>
+<div class=kpi><div class=n>15</div><div class=l>concepts dans la vague</div></div>
+<div class=kpi><div class=n>15</div><div class=l>revus par un humain</div></div>
+<div class=kpi><div class=n>0</div><div class=l>confirmes par machine</div></div>
+</div>
+<h2>Dettes, avancées, apprentissages</h2>
+<p class=vide>Aucun <code>constats.json</code> dans ce dossier. La vague n'a pas déclaré ses constats — c'est une information, pas un vide à combler.</p>
+<h2>Les 15 concepts</h2>
+<table><tr><th>concept</th><th>type</th><th>confiance</th></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-cycle-rollover-protocol.md'>B1 cycle rollover protocol — la mécanique de fin de 12WY</a><div class=d>Le rollover 12WY est le moment où B1 fait son vrai travail : revue, accept/replace/geler, doctrine ou dette. Cinq étapes (revue, scan wheel, accept/replace/geler, log, communication) + trois</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-decision-rights-frontieres.md'>B1 — coup d'autorite et frontieres (ce qui se decide, ce qui ne s'y decide pas)</a><div class=d>La frontiere d'autorite de l'etage B1 : il decide du North Star, des cycles 12WY, des decision rights, de la handoff queue, des specs DoD/JTBD, de la gouvernance. Il ne decide pas de l'execu</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-doctrine-d7-stale-mandate.md'>Doctrine D7 — mandat B1 sans acceptance check sous 24h est STALE</a><div class=d>Doctrine verrouillée D7 qui ferme le trou entre `b1-mandate-packet-spec` (émission) et `b1-mandate-acceptance-check` (verrou 24h) : un mandat B1 sans acceptance check B2 sous 24h est marqué </div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-four-jerry-portfolio.md'>B1 portefeuille des quatre Jerry — la macro-stewardship qui surplombe LD01</a><div class=d>B1 ne couvre pas que LD01 Business. Quatre Jerry se partagent les 8 LD du Life Wheel : J01↔LD01 Business, J02↔LD03+LD04 Bio, J03↔LD02+LD06 Nexus, J04↔LD05+LD07+LD08 Solarpunk. La hard safety</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-macro-stewardship-cadence.md'>Cadence de macro-stewardship B1 — quand B1 revoit les 4-Jerry</a><div class=d>B1 a deux cycles distincts — le 12WY tactique sur J01 (Summer) et un cycle de macro-stewardship sur les 4-Jerry (Jerry Prime + Bio + Nexus + Solarpunk). Le second est annuel, pas 12WY ; il r</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-mandate-acceptance-check.md'>B1 mandate acceptance check — la face miroir, le verrou de gouvernance</a><div class=d>Six critères qu'un B2 captain doit valider dans les 24h après réception d'un mandat B1. Si un seul échoue, le mandat est gelé et B1 reformule. Sans ce verrou, la handoff queue accumule des m</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-mandate-packet-spec.md'>B1 mandate packet — la grammaire du paquet B1 vers B2</a><div class=d>Format canonique d'un domain mandate emis par B1 : intent + contraintes + success signal (pas un plan). Logue dans 04_B2_HANDOFF_QUEUE.md. B2 traduit en Rock + DoD, puis en B3 JTBD. B1 tient</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-omk-t1-mandate.md'>B1 OMK T1 People+Ops+Product — mandat calibré pour capacité opérationnelle</a><div class=d>Mandat B1 calibré sur le Rock B1-1 OMK Business OS (T1 People+Ops+Product — Green Lantern X-Men + Batman Fantastic4 + Flash Avengers) avec intent « capacité opérationnelle pour Agency-as-a-S</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-omk-t2-pivot-us-mandate.md'>B1 OMK T2 pivot US — exemple calibré de mandat B1→B2 sur pivot marché</a><div class=d>Mandat B1 calibré sur le Rock B1-2 OMK Business OS (T2 Growth+Sales+Finance, pivot marché US 2026-07-15) avec intent, contraintes, success_signal selon la grammaire canonique. Sert d'exemple</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-omk-t3-mandate.md'>B1 OMK T3 Legal+R&amp;D — mandat calibré sur domaine dormant + découverte externe</a><div class=d>Mandat B1 calibré sur le Rock B1-3 OMK Business OS (T3 Legal+R&amp;D — Aquaman Eternals + Cyborg Kang Dynasty) avec intent « conformité activée par premier contrat signé + R&amp;D External Discovery</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-stop-conditions-escalier.md'>B1 stop conditions et escalier d'escalade</a><div class=d>Trois stop conditions durs (pas de B2 sans mandat handoff queue, pas de B3 sans DoD/JTBD, pas de release Business Done sans passer la matrice B2) + l'escalier canonique B3-&gt;B2-&gt;B1-&gt;gatekeepe</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-success-signal-spec.md'>B1 success signal — mesurable ou observable, et la règle de choix</a><div class=d>Distingue success_signal mesurable (compteur, seuil, ratio chiffré) de success_signal observable (signal qui tombe sous les yeux, vérifiable sans instrument) ; pose la règle de choix B1→B2 e</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-transverse-captain-stewardship.md'>Stewardship B1 des capitaines transverses — People, Finance, Legal</a><div class=d>Trois capitaines B2 (Green Lantern People, Wonder Woman Finance, Aquaman Legal) ont des vetoes transverses qui touchent les 8 domaines. B1 doit avoir un canal de stewardship dédié, distinct </div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-twelve-weeks-year-cadence.md'>B1 twelve-weeks-year cycle — la cadence qui rend B1 vivant</a><div class=d>Le cycle 12WY (12 weeks year, Entrepreneur cadence) est le heartbeat de B1 : 3 rocks par cycle, 1 rock par mois. Distinct de la cadence B2 (4 sprints/mois, Manager) et B3 (5 scrums/semaine, </div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b1/b1-wheel-imbalance-six-signes.md'>B1 wheel imbalance scan — les six signes qu'un mandat est du</a><div class=d>Six signes que B1 scanne sur la wheel 8-domain avant d'emettre un mandat : domaine vide, surcharge, gate bloquee, derive produit-only, conflit cross-domaine, preuve manquante. Chaque signe a</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+</table>
+<footer>Page autonome — aucun CSS, JS ou police distants. Générée par <code>80_Front-Office/generer.py</code>. Le niveau de confiance est lu dans <code>verified</code>, jamais calculé.</footer></div></html>

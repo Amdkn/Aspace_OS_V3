@@ -1,0 +1,61 @@
+<!doctype html><html lang=fr><meta charset=utf-8>
+<meta name=viewport content='width=device-width,initial-scale=1'>
+<title>Vague 1 — Étage B3 (Scrums, quotidien) — revue</title><style>
+:root{--bg:#0d1117;--fg:#e6edf3;--mut:#8b949e;--brd:#30363d;--card:#161b22;
+--rouge:#f85149;--ambre:#d29922;--vert:#3fb950;--bleu:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.6 ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
+h1{font-size:26px;margin:0 0 4px} h2{font-size:17px;margin:36px 0 12px;
+padding-bottom:6px;border-bottom:1px solid var(--brd)}
+.sub{color:var(--mut);margin:0 0 28px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.kpi{background:var(--card);border:1px solid var(--brd);border-radius:8px;padding:14px 16px}
+.kpi .n{font-size:28px;font-weight:600;line-height:1.1}
+.kpi .l{color:var(--mut);font-size:12px;margin-top:4px}
+.kpi.alerte{border-color:var(--rouge)} .kpi.alerte .n{color:var(--rouge)}
+.kpi.ok .n{color:var(--vert)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px}
+th{text-align:left;color:var(--mut);font-weight:500;font-size:12px;
+padding:6px 8px;border-bottom:1px solid var(--brd)}
+td{padding:7px 8px;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+.p{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;
+border:1px solid}
+.p.humain{color:var(--vert);border-color:var(--vert)}
+.p.machine{color:var(--ambre);border-color:var(--ambre)}
+.p.non{color:var(--rouge);border-color:var(--rouge)}
+.d{color:var(--mut);font-size:12.5px}
+code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:12px}
+a{color:var(--bleu);text-decoration:none} a:hover{text-decoration:underline}
+.vide{color:var(--mut);font-style:italic;padding:10px 0}
+footer{margin-top:48px;color:var(--mut);font-size:12px;
+border-top:1px solid var(--brd);padding-top:14px}
+</style>
+<div class=wrap>
+<h1>Vague 1 — Étage B3 (Scrums, quotidien)</h1>
+<p class=sub><code>..\70_Onthologies\pulse\b3</code></p>
+<div class=grid>
+<div class='kpi ok'><div class=n>0</div><div class=l>concepts en attente d'un humain</div></div>
+<div class=kpi><div class=n>11</div><div class=l>concepts dans la vague</div></div>
+<div class=kpi><div class=n>11</div><div class=l>revus par un humain</div></div>
+<div class=kpi><div class=n>0</div><div class=l>confirmes par machine</div></div>
+</div>
+<h2>Dettes, avancées, apprentissages</h2>
+<p class=vide>Aucun <code>constats.json</code> dans ce dossier. La vague n'a pas déclaré ses constats — c'est une information, pas un vide à combler.</p>
+<h2>Les 11 concepts</h2>
+<table><tr><th>concept</th><th>type</th><th>confiance</th></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-anti-patterns-catalogue.md'>B3 anti-patterns catalogue — 9 façons de trahir la doctrine sans le vouloir</a><div class=d>Catalogue consolidé des 9 anti-patterns B3 les plus coûteux, dispersés dans les concepts antérieurs (réception, peer-unblock, hole-signaling, cycle-scrums, veto-signal, proof, dispatch, spri</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-cross-squad-dofld-protocol.md'>B3 cross-squad DOFLD — l'annuaire qui rend la sollicitation traçable</a><div class=d>Le DOFLD (Domain-Owner-Federated Lookup Dispatch) est l'annuaire qui permet à un B3 de trouver le bon pair cross-squad sans connaître tous les squads. Publié par chaque squad lead dans `01_B</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-cycle-scrums-five-per-week.md'>B3 cycle — 5 scrums par semaine, une action exécutable par jour ouvré</a><div class=d>La cadence B3 canonique : 5 scrums/semaine (un par jour ouvré), pas une moyenne, pas un sprint. Chaque Scrum = une action exécutable qui dépend d'un sprint B2 qui dépend d'un rock B1. Le Scr</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-hole-signaling-doctrine.md'>B3 hole-signaling — un B3 qui trouve un trou ne le comble pas, il le signale</a><div class=d>Étend au B3 l'invariant Coach OS « interdire de combler un trou du sprint ». Un trou de paquet (champ manquant, dépendance non résolue, hypothèse non vérifiable) n'est jamais comblé en silen</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-jtbd-packet-reception-checklist.md'>JTBD packet — checklist de réception côté B3</a><div class=d>Le point de vue B3 sur le paquet JTBD-001 : qu'est-ce qu'un agent doit cocher pour dire &quot;oui, je peux travailler sans revenir poser de question&quot; ? Checklist de complétude à 8 champs dérivés </div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-peer-unblock-protocol.md'>B3 peer-unblock — l'escalader entre pairs avant d'escalader à B2</a><div class=d>Le fractal B1/B2/B3 pose l'invariant : un B3 qui bloque escalade d'abord à ses pairs (squad lead, autres B3 du squad, ou cross-squad via DOFLD), pas à B2. Format canonique du peer-unblock : </div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-proof-path-4-formes.md'>B3 proof path — la preuve inspectable sans confiance à l'auteur</a><div class=d>La preuve que B3 rend n'est pas &quot;un commit qui passe les tests&quot; : c'est un artefact inspectable sans faire confiance à l'auteur (fractal). Les 4 formes canoniques : capture, log, diff, outpu</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-proof-return-contract.md'>B3 proof return contract — le miroir B3 → B2 de la handoff</a><div class=d>Le contrat B2 → B3 (B2 sponsor) promet un périmètre et un DoD. Le contrat B3 → B2 retourne la livraison : 4 formes de preuve (capture, log, diff, output reproductible), 5 acceptance checks B</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-sprint-close-mechanics.md'>B3 sprint close — la mécanique du vendredi, et ses trois issues</a><div class=d>Le sprint B2 dure 5 jours ouvrés. Le vendredi (ou dernier jour ouvré) tient la close : 3 artefacts dus (SPRINT_SUMMARY, proof attachments, next-sprint trigger), 3 issues possibles (clean, dr</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-squad-lead-dispatch-protocol.md'>B3 squad lead dispatch — du packet JTBD aux scrums quotidiens</a><div class=d>Le squad lead est le pont entre le packet JTBD-001 (Area-level, 9 sections en prose) et les 5 scrums/semaine par agent B3 (5 champs chacun). Décomposition explicite à 4 étapes, ledger de dis</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+<tr><td><a href='../../70_Onthologies/pulse/b3/b3-veto-and-signal-vocabulary.md'>B3 veto and signal vocabulary — le vocabulaire B3 ↔ B2</a><div class=d>Les 8 vetos B2 (un par VP, déjà documentés en triplets Coach OS), les signaux B2 → B3 (READY / NEEDS_X / BLOCKED_X par domaine), et les signaux B3 → B2 (ON_TRACK / AT_RISK / BLOCKED / DONE).</div></td><td class=d>Concept</td><td><span class='p humain'>revu par un humain</span></td></tr>
+</table>
+<footer>Page autonome — aucun CSS, JS ou police distants. Générée par <code>80_Front-Office/generer.py</code>. Le niveau de confiance est lu dans <code>verified</code>, jamais calculé.</footer></div></html>

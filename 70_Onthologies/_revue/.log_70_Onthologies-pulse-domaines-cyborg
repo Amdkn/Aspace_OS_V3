@@ -1,1 +1,1 @@
-API Error: Request rejected (429) · [nvidia/z-ai/glm-5.2] [429]: {"status":429,"title":"Too Many Requests"} (reset after 1m 4s)
+API Error: 400 [nvidia/z-ai/glm-5.2] [400]: {"message":"This model configuration accepts at most 202749 combined input and output tokens. (reset after 30s)

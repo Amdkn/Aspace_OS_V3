@@ -12,11 +12,11 @@ sources:
     title: WARMODE 001 — Posture Inversion Freins/Releases
     last_modified: "2026-07-15"
   - id: ADR-WARMODE-002
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/02-ADR/ADR-WARMODE-002_portes-over-freins.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-WARMODE-002_portes-over-freins.md"
     title: WARMODE 002 — Portes over Freins
     last_modified: "2026-07-26"
   - id: ADR-WARMODE-004
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/02-ADR/ADR-WARMODE-004_paperclip-utile-kardashev-conduction.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-WARMODE-004_paperclip-utile-kardashev-conduction.md"
     title: WARMODE 004 — Paperclip utile Kardashev Conduction
     last_modified: "2026-07-26"
 okf_version: "0.2"

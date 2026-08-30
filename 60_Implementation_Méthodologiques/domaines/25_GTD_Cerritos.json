@@ -1,0 +1,38 @@
+{
+ "domaine": "25_GTD_Cerritos",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\25_GTD_Cerritos",
+ "genere": "2026-08-30T02:47:25Z",
+ "distillation": {
+  "lus": 13,
+  "echecs": 0,
+  "fichiers": 13
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 6,
+   "jour": 7,
+   "deep-work": 10
+  },
+  "modes": {
+   "collaboratif": 10,
+   "autonome": 1
+  },
+  "gtd": {
+   "capture": 8,
+   "clarify": 11,
+   "organize": 4,
+   "review": 9,
+   "engage": 10
+  },
+  "sans_rattachement": [
+   "README.md"
+  ],
+  "couverture_echelle": 92
+ },
+ "ontologie": {
+  "triplets": 65,
+  "sujets": 13
+ },
+ "verdict": "passe",
+ "reserves": []
+}

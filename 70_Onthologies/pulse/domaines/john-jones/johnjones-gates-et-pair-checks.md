@@ -1,7 +1,7 @@
 ---
 type: Concept
-title: JohnJones — gates émis et pair-checks où Sales est Accountable / Consulted
-description: JohnJones émet trois gates : SALES_READY, NEEDS_QUALIFICATION, BLOCKED_COMMITMENT. Sur les 9 pair-checks canoniques, JohnJones est Accountable (A) sur le #2 Sales→Ops, Consulted (C) sur le #1 Growth→Sales, et absent des autres. Le pattern A=aval / C=amont est systématique (cf. b2-pair-check-raci-by-rank). Red flags impliquant Sales : #2 (Growth green / Sales red) et #3 (Sales green / Ops ou People red).
+title: JohnJones — gates émis et pair-checks où Sales est Accountable / Consulted (A sur #1, C sur #2)
+description: JohnJones émet trois gates : SALES_READY, NEEDS_QUALIFICATION, BLOCKED_COMMITMENT. Sur les 9 pair-checks canoniques, JohnJones est Accountable (A) sur le #1 Growth→Sales, Consulted (C) sur le #2 Sales→Ops, et transverse Consulted sur le #9 People→Tous. Le pattern A=aval / C=amont est systématique (cf. b2-pair-check-raci-by-rank). Red flags impliquant Sales : #2 (Growth green / Sales red) et #3 (Sales green / Ops ou People red).
 tags: [b2, johnjones, sales, gates, pair-checks, raci, red-flag, sales-ready, blocked-commitment]
 generated: { by: minimax-m3, at: 2026-08-19T04:10:00Z }
 verified:

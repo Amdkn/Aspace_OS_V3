@@ -35,11 +35,10 @@
    {
     "n": "03",
     "nom": "Graham",
-    "specialite": "Backup",
+    "specialite": "Backup-DBA",
     "organe": "Spawn",
     "dossiers": [
-     "03_Graham_Backup",
-     "03_Graham_DBA"
+     "03_Graham_Backup-DBA"
     ]
    }
   ],

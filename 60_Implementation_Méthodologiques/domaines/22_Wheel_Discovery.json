@@ -1,0 +1,40 @@
+{
+ "domaine": "22_Wheel_Discovery",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\22_Wheel_Discovery",
+ "genere": "2026-08-30T02:47:25Z",
+ "distillation": {
+  "lus": 81,
+  "echecs": 0,
+  "fichiers": 81
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 67,
+   "jour": 53,
+   "deep-work": 44
+  },
+  "modes": {
+   "collaboratif": 64,
+   "autonome": 43
+  },
+  "gtd": {
+   "capture": 24,
+   "clarify": 23,
+   "organize": 44,
+   "review": 39,
+   "engage": 64
+  },
+  "sans_rattachement": [
+   "la-seule-vido-dont-tu-as-besoin-pour-lancer-un-solo-business-ia-en-2026.md",
+   "the-ai-sales-coach-system-every-sales-team-needs.md",
+   "BIBLIOGRAPHY.md"
+  ],
+  "couverture_echelle": 96
+ },
+ "ontologie": {
+  "triplets": 437,
+  "sujets": 81
+ },
+ "verdict": "passe",
+ "reserves": []
+}

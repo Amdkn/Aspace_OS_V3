@@ -1,0 +1,42 @@
+{
+ "domaine": "21_Ikigai_Orville",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\21_Ikigai_Orville",
+ "genere": "2026-08-30T02:47:24Z",
+ "distillation": {
+  "lus": 24,
+  "echecs": 0,
+  "fichiers": 24
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 15,
+   "jour": 8,
+   "deep-work": 2
+  },
+  "modes": {
+   "collaboratif": 3,
+   "autonome": 2
+  },
+  "gtd": {
+   "capture": 1,
+   "clarify": 16,
+   "organize": 7,
+   "review": 0,
+   "engage": 10
+  },
+  "sans_rattachement": [
+   "README.md",
+   "README.md",
+   "A3_Bortus_H10_Spec.md",
+   "A3_Alara_Kitan_H30_Spec.md",
+   "README.md"
+  ],
+  "couverture_echelle": 79
+ },
+ "ontologie": {
+  "triplets": 120,
+  "sujets": 24
+ },
+ "verdict": "passe",
+ "reserves": []
+}

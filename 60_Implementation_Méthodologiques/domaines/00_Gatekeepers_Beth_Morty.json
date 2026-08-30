@@ -1,0 +1,36 @@
+{
+ "domaine": "00_Gatekeepers_Beth_Morty",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\00_Gatekeepers_Beth_Morty",
+ "genere": "2026-08-30T02:47:24Z",
+ "distillation": {
+  "lus": 7,
+  "echecs": 0,
+  "fichiers": 7
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 7,
+   "jour": 6,
+   "deep-work": 5
+  },
+  "modes": {
+   "collaboratif": 7,
+   "autonome": 3
+  },
+  "gtd": {
+   "capture": 4,
+   "clarify": 4,
+   "organize": 6,
+   "review": 6,
+   "engage": 7
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 35,
+  "sujets": 7
+ },
+ "verdict": "passe",
+ "reserves": []
+}

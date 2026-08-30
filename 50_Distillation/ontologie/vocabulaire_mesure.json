@@ -1,8 +1,8 @@
 {
- "genere": "2026-08-17T20:55:23.092054+00:00",
- "concepts": 102,
- "relations_resolues": 129,
- "liens_non_resolus": 4,
+ "genere": "2026-08-26T00:48:52.066340+00:00",
+ "concepts": 414,
+ "relations_resolues": 2026,
+ "liens_non_resolus": 129,
  "exemples_liens_non_resolus": [
   {
    "depuis": "compounding-knowledge-wiki",
@@ -19,23 +19,113 @@
   {
    "depuis": "wiki-schema-llm-wiki",
    "vers": "sources/source_gemini-takeout-2026-05"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "aquaman-pair-check-10"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "aquaman-veto"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "b1-stop-conditions"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "b2-council-arbitrage"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "b2-council-cadence"
+  },
+  {
+   "depuis": "aquaman-b1-escalade-packet-shape",
+   "vers": "b2-meso-packet"
+  },
+  {
+   "depuis": "aquaman-conflict-of-interest-check-pre-engagement",
+   "vers": "aquaman-conflict-disclaimer-emetteur-amont"
+  },
+  {
+   "depuis": "aquaman-cycle-de-vie-legal-5-phases",
+   "vers": "aquaman-defensibility"
+  },
+  {
+   "depuis": "aquaman-recompte-canonique-8-squads",
+   "vers": "aquaman-effectif"
+  },
+  {
+   "depuis": "aquaman-recompte-canonique-8-squads",
+   "vers": "b2-council-cadence"
+  },
+  {
+   "depuis": "aquaman-recompte-canonique-8-squads",
+   "vers": "b2-meso-packet"
+  },
+  {
+   "depuis": "aquaman-recompte-canonique-8-squads",
+   "vers": "rapport-tour-3"
+  },
+  {
+   "depuis": "aquaman-sales-pipeline-hand-over",
+   "vers": "b2-harmonization"
+  },
+  {
+   "depuis": "aquaman-sales-pipeline-hand-over",
+   "vers": "rapport-tour-1"
+  },
+  {
+   "depuis": "aquaman-veto-antisèche-pattern-detection",
+   "vers": "triplet-56"
+  },
+  {
+   "depuis": "aquaman-veto-antisèche-pattern-detection",
+   "vers": "triplet-57"
+  },
+  {
+   "depuis": "batman-doctrine-remonte-volume-amont-0-cas-observed",
+   "vers": "b2-veto-empirical-validation-protocol"
+  },
+  {
+   "depuis": "batman-procedure-amendement-raci-unanime-8-8-b1-format-complet",
+   "vers": "batman-matrice-12-v5-extension-proposal"
+  },
+  {
+   "depuis": "batman-procedure-amendement-raci-unanime-8-8-b1-format-complet",
+   "vers": "green-lantern-v5-pair-check-granularisation-9"
+  },
+  {
+   "depuis": "batman-protocole-validation-empirique-cycle-5-phases",
+   "vers": "b2-veto-empirical-validation-protocol"
+  },
+  {
+   "depuis": "batman-protocole-validation-empirique-cycle-5-phases",
+   "vers": "john-jones-cycle-de-vie-reformulation-5-phases"
   }
  ],
  "niveaux_confiance": {
-  "confirmeMachine": 102
+  "confirmeMachine": 372,
+  "revuHumain": 39,
+  "nonVerifie": 3
  },
  "types_utilises": [
   [
    "Concept",
-   69
+   365
   ],
   [
    "Backend",
-   9
+   12
   ],
   [
    "Project",
    8
+  ],
+  [
+   "Playbook",
+   7
   ],
   [
    "Archive",
@@ -46,11 +136,15 @@
    3
   ],
   [
-   "Playbook",
+   "Integration",
    3
   ],
   [
    "Event",
+   2
+  ],
+  [
+   "Security Model",
    2
   ],
   [
@@ -68,9 +162,133 @@
   [
    "Relation",
    1
+  ],
+  [
+   "Reference",
+   1
   ]
  ],
  "tags_utilises": [
+  [
+   "b2",
+   157
+  ],
+  [
+   "doctrine",
+   48
+  ],
+  [
+   "batman",
+   46
+  ],
+  [
+   "finance",
+   43
+  ],
+  [
+   "people",
+   43
+  ],
+  [
+   "veto",
+   43
+  ],
+  [
+   "aquaman",
+   42
+  ],
+  [
+   "growth",
+   39
+  ],
+  [
+   "green-lantern",
+   39
+  ],
+  [
+   "cyborg",
+   39
+  ],
+  [
+   "superman",
+   39
+  ],
+  [
+   "ops",
+   38
+  ],
+  [
+   "flash",
+   38
+  ],
+  [
+   "product",
+   37
+  ],
+  [
+   "wonder-woman",
+   37
+  ],
+  [
+   "sales",
+   35
+  ],
+  [
+   "johnjones",
+   32
+  ],
+  [
+   "b3",
+   31
+  ],
+  [
+   "packet",
+   28
+  ],
+  [
+   "b1",
+   27
+  ],
+  [
+   "raci",
+   23
+  ],
+  [
+   "pair-check",
+   23
+  ],
+  [
+   "council",
+   21
+  ],
+  [
+   "jtbd",
+   17
+  ],
+  [
+   "council-ready",
+   17
+  ],
+  [
+   "legal",
+   15
+  ],
+  [
+   "handoff",
+   14
+  ],
+  [
+   "amplification",
+   14
+  ],
+  [
+   "couplage",
+   13
+  ],
+  [
+   "escalation",
+   12
+  ],
   [
    "concept",
    12
@@ -80,156 +298,36 @@
    11
   ],
   [
-   "b2",
-   9
-  ],
-  [
-   "prompt-systeme",
-   8
-  ],
-  [
-   "picard",
-   7
-  ],
-  [
-   "life-os",
-   7
-  ],
-  [
-   "ld01",
-   7
-  ],
-  [
-   "projet",
-   7
-  ],
-  [
-   "ontologie",
-   7
-  ],
-  [
-   "doctrine",
-   6
-  ],
-  [
-   "gtd",
-   6
-  ],
-  [
-   "summer-verse",
-   6
-  ],
-  [
-   "geordi",
-   6
-  ],
-  [
    "12wy",
-   5
+   11
   ],
   [
-   "b3",
-   5
+   "b2-council",
+   11
   ],
   [
-   "adr",
-   5
-  ],
-  [
-   "okf",
-   5
-  ],
-  [
-   "l0",
-   5
-  ],
-  [
-   "autonomie",
-   5
-  ],
-  [
-   "mapping",
-   4
-  ],
-  [
-   "a3",
-   4
-  ],
-  [
-   "kb",
-   4
-  ],
-  [
-   "jerry",
-   4
-  ],
-  [
-   "cerritos",
-   4
-  ],
-  [
-   "business-os",
-   4
-  ],
-  [
-   "ikigai",
-   4
-  ],
-  [
-   "routing",
-   4
-  ],
-  [
-   "gradue",
-   4
-  ],
-  [
-   "governance",
-   4
+   "omk",
+   11
   ],
   [
    "canon",
-   4
+   11
   ],
   [
-   "legacy",
-   4
+   "dormant",
+   11
   ],
   [
-   "graphify",
-   4
+   "coach-os",
+   11
   ],
   [
-   "sdd",
-   4
+   "avengers",
+   10
   ],
   [
-   "wiki",
-   4
-  ],
-  [
-   "classification",
-   3
-  ],
-  [
-   "project",
-   3
-  ],
-  [
-   "spock",
-   3
-  ],
-  [
-   "b1",
-   3
-  ],
-  [
-   "beth",
-   3
-  ],
-  [
-   "l1",
-   3
+   "cycle",
+   10
   ]
  ],
  "par_bundle": {
@@ -239,6 +337,15 @@
   "ressources": 26,
   "ontologie": 7,
   "prompt-systeme": 7,
-  "autonomie-agents": 5
+  "autonomie-agents": 5,
+  "pulse/b1": 15,
+  "pulse/b2": 11,
+  "pulse/b3": 11,
+  "pulse/domaines": 259,
+  "architecture": 4,
+  "integrations": 4,
+  "operations": 4,
+  "security": 2,
+  "canon": 2
  }
 }

@@ -8,15 +8,15 @@ verified:
   - { by: process:lecture-directe, at: 2026-08-19 }
 sources:
   - id: ADR-LOOP-001
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/02-ADR/ADR-LOOP-001_canon-loop-verification-first.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-001_canon-loop-verification-first.md"
     title: LOOP 001 — Canon Loop Verification-First
     last_modified: "2026-07-15"
   - id: ADR-LOOP-002
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/02-ADR/ADR-LOOP-002_queues-over-loops-hitl-rightward.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-002_queues-over-loops-hitl-rightward.md"
     title: LOOP 002 — Queues over Loops HITL Rightward
     last_modified: "2026-07-15"
   - id: ADR-LOOP-CADENCE-004
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/02-ADR/ADR-LOOP-CADENCE-004_heartbeat-respiration-cascade_RATIFIED.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-CADENCE-004_heartbeat-respiration-cascade_RATIFIED.md"
     title: LOOP-CADENCE 004 — Heartbeat Respiration Cascade RATIFIED
     last_modified: "2026-07-15"
 okf_version: "0.2"

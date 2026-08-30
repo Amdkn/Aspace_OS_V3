@@ -1,0 +1,525 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 22_Wheel_Discovery — genere par porte_argent.py le 2026-08-30T02:47:25Z
+# 81 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:22-wheel-discovery-a2-discovery-zora-spec-md> a aspace:Document ;
+    rdfs:label "A2 Discovery Spec - Life Wheel / ZORA" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 380 .
+
+<urn:aspace:22-wheel-discovery-a3-discovery-references-index-md> a aspace:Document ;
+    rdfs:label "A3 Discovery References Index - Life Wheel / ZORA" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 310 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-00-index-md> a aspace:Document ;
+    rdfs:label "LD01 Book — Career & Business (A3 Discovery Crew)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 387 ;
+    aspace:type "book-doctrine-root" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-01-guides-business-la-seule-vido-dont-tu-as-besoin-pour-lancer-un-solo-business-ia-en-2026-md> a aspace:Document ;
+    rdfs:label "\"La seule vidéo dont tu as besoin pour lancer un solo business IA en 2026\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-05-31" ;
+    aspace:mots 714 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-01-guides-business-the-ai-sales-coach-system-every-sales-team-needs-md> a aspace:Document ;
+    rdfs:label "\"The AI Sales Coach System Every Sales Team Needs\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-05-31" ;
+    aspace:mots 724 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-01-guides-business-this-15-trillion-industry-still-runs-on-paper-and-fax-machines-md> a aspace:Document ;
+    rdfs:label "\"This $1.5 Trillion Industry Still Runs on Paper and Fax Machines\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-05-31" ;
+    aspace:mots 850 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-cardia-overview-md> a aspace:Document ;
+    rdfs:label "CARDIA-TDD — Choix par défaut Autonome Réversible Durable Intégratif Antifragile" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 848 ;
+    aspace:type "methodology" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-fable5-jack-roberts-meta-strategy-md> a aspace:Document ;
+    rdfs:label "Fable 5 — Jack Roberts Meta-Usage Strategy (5 Levels + Cost Reality)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 868 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-l1-gstack-ship-stack-md> a aspace:Document ;
+    rdfs:label "gstack Ship Stack — Software factory YC canon pour BC-Project-OMK-Nexus-Coaching" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1395 ;
+    aspace:type "methodology-l1-lightning" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-l2-ceobench-longgame-dojo-md> a aspace:Document ;
+    rdfs:label "ceobench 500-Day Long Game Dojo — méthodologie H90 Legacy 1000T pour BC-AaaS-Solaris-Variant" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1128 ;
+    aspace:type "methodology-l2-lightning" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-lightnings-integration-md> a aspace:Document ;
+    rdfs:label "3 Lightnings — synthèse canonique L0 Pocock + L1 gstack + L2 ceobench pour LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 721 ;
+    aspace:type "methodology-lightnings-integration" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-pocock-quality-canon-md> a aspace:Document ;
+    rdfs:label "Pocock Quality Canon — pour skills dérivés de CARDIA-TDD BC-Methodology" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 940 ;
+    aspace:type "methodology-l0-lightning" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-10-methodology-00-strategy-session-meta-skill-md> a aspace:Document ;
+    rdfs:label "Strategy Session Meta-Skill — intégration canon LD01 du skill CC + 6 principes v2 (sister convergence)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1303 ;
+    aspace:type "methodology-skill-integration" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-20-skeleton-00-module-template-md> a aspace:Document ;
+    rdfs:label "Module Template — CARDIA-TDD compliant" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 252 ;
+    aspace:type "skeleton-template" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-001-organigramme-doctrine-md> a aspace:Document ;
+    rdfs:label "Organigramme Doctrine (folder-based) au lieu de plans markdown plats" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 441 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-002-mavis-runtime-binding-md> a aspace:Document ;
+    rdfs:label "Mavis Runtime binding canonique pour LD01_Business_Book (orchestration L1+L2 permutée)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 638 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-003-lightnings-bounded-contexts-md> a aspace:Document ;
+    rdfs:label "ADR-LD01-003 — Les 3 Lightning MC bindés aux bounded contexts LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 842 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-004-true-agent-autonomy-md> a aspace:Document ;
+    rdfs:label "True Agent Autonomy × Dark Factory Level 5 — Book LD01 devient CEO Perso" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1648 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-005-budget-collapse-phase3-economical-md> a aspace:Document ;
+    rdfs:label "Cost Collapse Reality — MiniMax $50/mo = 5.1B tokens → Phase 3 L5 continuous économiquement faisable ; budget kill-switch devient soft guardrail" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1014 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-006-strategy-session-meta-skill-canon-md> a aspace:Document ;
+    rdfs:label "Strategy Session Meta-Skill canon ratification — CC pipeline + Mavis v2 principles convergence → loop complet mesure → confrontation → correction" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1447 ;
+    aspace:type "adr-decision" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-007-citadelle-agent-os-jarvis-pattern-md> a aspace:Document ;
+    rdfs:label "ADR-LD01-007 — Citadelle Agent OS (Jarvis pattern + anti-Ultron structurel)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 917 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-008-coaching-loop-picard-jerry-summers-md> a aspace:Document ;
+    rdfs:label "\"LD01 Coaching Loop Engineering — Picard (H10 structure) × Jerry (Lighting keep lights on) × Summers (Verse), orchestrated by Book (H1 aggregator)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1492 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-009-a-space-vision-curie-loop-engineering-md> a aspace:Document ;
+    rdfs:label "ADR-LD01-009 — A'Space OS Vision Curie + Loop Engineering (DRAFT PROPOSED)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 463 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-010-a3-curie-vivid-vision-12wy-md> a aspace:Document ;
+    rdfs:label "ADR-LD01-010 — A3 Curie Vivid Vision 12WY Discipline #1 (RATIFIED)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 407 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-010-hermes-promotion-a3-picard-in-para-md> a aspace:Document ;
+    rdfs:label "\"Hermes Agent (HA) promotion — dev-runtime A3 Book → A3 Picard in PARA (H10 projects owner)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1671 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-011-12-week-plan-a3-curie-md> a aspace:Document ;
+    rdfs:label "ADR-LD01-011 — A3 Curie 12 Week Plan + Lead Measures Discipline #2 (DRAFT PROPOSED)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 683 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-011-omk-nexus-bos-poc-initiation-md> a aspace:Document ;
+    rdfs:label "\"OMK Nexus BOS PoC Initiation — specs/demo/AAARR Growth prompts (Tier T1, Enterprise_OS_Blueprint_Kit)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1739 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-012-l-skill-standard-cascade-ratification-md> a aspace:Document ;
+    rdfs:label "\"L+ Skill Standard ratification cascade - HA Picard L0 CEO Bench + Jerry L+ Lighting + Summers L+ Verse + calque PARA + CLAUDE.md consumed_by + 3 audits OMK\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 886 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-013-hermes-cron-jobs-picard-md> a aspace:Document ;
+    rdfs:label "\"Hermes Cron Jobs Picard - L+ canon-aligned recurring verification (3 crons)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 747 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-014-gstack-sober-install-lighting-l1-book-lune-md> a aspace:Document ;
+    rdfs:label "\"GStack sober install dans les Lighting du plan L1-Book-Lune (3 shims sobres, 3 clauses respectees, ADR-WARMODE-001 War Mode)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1091 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-30-decisions-adr-ld01-015-orca-skill-meta-wrapper-amendement-md> a aspace:Document ;
+    rdfs:label "\"Orca meta-skill v1.1.0 wrapper autour du canon upstream stablyai/orca + LSN-D1-VERIFY-FIRST-2026-07-22 + cron sync upstream quotidien\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-22" ;
+    aspace:mots 1115 ;
+    aspace:type "adr-decision-doctrine" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-90-manifests-manifest-cross-harness-md> a aspace:Document ;
+    rdfs:label "Manifest cross-harness — qui consomme quoi dans LD01_Business_Book" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 590 ;
+    aspace:type "harness-manifest-cross" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-00-harness-engineering-alignment-md> a aspace:Document ;
+    rdfs:label "Harness Engineering Alignment — Mark Kashef (5 layers) × Cole Medin (Google masterclass, harness = 90%) × Cost Collapse (MiniMax $50/5.1B tokens) → LD01 canon + plan-meta-memoire" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 2200 ;
+    aspace:type "alignment-harness-engineering" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-00-mavis-runtime-alignment-md> a aspace:Document ;
+    rdfs:label "Mavis Runtime Alignment — LD01 ↔ `.mavis/` orchestration + L2 Business OS + L1 Lune 3 Lightnings" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1572 ;
+    aspace:type "mavis-runtime-alignment" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-00-plan-citadelle-a0-sister-md> a aspace:Document ;
+    rdfs:label "Plan Citadelle A0 — Sister LD01 (Fable 5 last handoff, 2026-07-04 quota)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1331 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-00-plan-lightning-l0l1l2-coach-sister-md> a aspace:Document ;
+    rdfs:label "Plan Lightning L0/L1/L2 — chaîne Coach Book→Picard→Jerry→Summers (sister LD01)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 802 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-12wy-on-pause-sister-md> a aspace:Document ;
+    rdfs:label "12WY-ON-PAUSE — sister canon LD01 (Murderbot doctrine appliquée)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 497 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-a0-amodei-murderbot-meta-coach-sister-md> a aspace:Document ;
+    rdfs:label "A0 Amodei / Murderbot — méta-coach (sister canon LD01)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 573 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-a0-vision-curie-sister-md> a aspace:Document ;
+    rdfs:label "A'Space OS — Vision A0 + Curie + Loop Engineering — sister canon LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1357 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-a3-curie-12-week-plan-sister-md> a aspace:Document ;
+    rdfs:label "A3 Curie 12 Week Plan — Discipline #2 sister canon LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 497 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-a3-curie-vivid-vision-sister-md> a aspace:Document ;
+    rdfs:label "A3 Curie — Vivid Vision 12WY Discipline #1 (sister canon)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 1020 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-adr-warmode-001-sister-md> a aspace:Document ;
+    rdfs:label "ADR-WARMODE-001 — Inversion de posture canonique (sister LD01)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 572 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-calendar-md> a aspace:Document ;
+    rdfs:label "calendar.md — épisode-mémoire de l'organigramme LD01_Business_Book" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-08-19" ;
+    aspace:mots 25252 ;
+    aspace:type "episode-memoire" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-doctrine-lock-map-md> a aspace:Document ;
+    rdfs:label "Doctrine Lock Map — alignement de l'organigramme LD01 avec les 4 plans source canoniques" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1504 ;
+    aspace:type "doctrine-lock-map" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-fable5-strategy-session-v2-principles-md> a aspace:Document ;
+    rdfs:label "Fable 5 Strategic Audit — Méta-analyse + 6 Principes pour combler les gaps (HTML v2)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1417 ;
+    aspace:type "meta-analysis-fable5-strategic-audit" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-hero-agents-canonic-creation-sister-md> a aspace:Document ;
+    rdfs:label "Hero Agents Creation — sister canon LD01 (Book / Zora / Beth / Morty / Amodei)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 779 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-l1-gstack-e-myth-mapping-md> a aspace:Document ;
+    rdfs:label "L1 gstack — Mapping E-Myth → gstack (cadrage sobre, sister LD01)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 725 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-lessons-md> a aspace:Document ;
+    rdfs:label "\"LESSONS.md - granular, contestable, append-only (OKP v0.1 canon)\"" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-22" ;
+    aspace:mots 446 ;
+    aspace:type "lessons-md" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-plan-l2-dark-factory-sister-md> a aspace:Document ;
+    rdfs:label "Plan L2 Dark Factory — A3 Book COO orchestration compressée 12WY→1 semaine (sister LD01)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 970 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-portes-over-freins-sister-md> a aspace:Document ;
+    rdfs:label "Portes over Freins (HxH) — sister canon LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 698 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-rot-rates-md> a aspace:Document ;
+    rdfs:label "ROT.md — péremption déclarée par module dans l'organigramme LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 240 ;
+    aspace:type "rot-rates" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-true-agent-autonomy-architecture-md> a aspace:Document ;
+    rdfs:label "True Agent Autonomy × Dark Factory Level 5 — Architecture détaillée Book LD01 CEO Perso" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 1885 ;
+    aspace:type "architecture" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-99-meta-war-mode-observability-sister-md> a aspace:Document ;
+    rdfs:label "War Mode Observability — sister canon LD01" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 838 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-a3-book-ld01-spec-md> a aspace:Document ;
+    rdfs:label "A3 Book Spec - LD01 Career & Business" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 198 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-agents-md> a aspace:Document ;
+    rdfs:label "AGENTS.md — LD01 Business Book (zone filesystem)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-04" ;
+    aspace:mots 362 ;
+    aspace:type "dox-family-agents" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-bibliography-md> a aspace:Document ;
+    rdfs:label "LD01 — Career & Business (Book)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 106 .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-claude-md> a aspace:Document ;
+    rdfs:label "CLAUDE.md — LD01 Business Book (zone harness)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-07-05" ;
+    aspace:mots 348 ;
+    aspace:type "dox-family-claude" .
+
+<urn:aspace:22-wheel-discovery-ld01-business-book-readme-md> a aspace:Document ;
+    rdfs:label "LD01_Business_Book - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 106 .
+
+<urn:aspace:22-wheel-discovery-ld02-finance-saru-a3-saru-ld02-spec-md> a aspace:Document ;
+    rdfs:label "A3 Saru Spec - LD02 Finance & Independence" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 242 .
+
+<urn:aspace:22-wheel-discovery-ld02-finance-saru-bibliography-md> a aspace:Document ;
+    rdfs:label "LD02 — Finance & Independence (Saru)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 137 .
+
+<urn:aspace:22-wheel-discovery-ld02-finance-saru-readme-md> a aspace:Document ;
+    rdfs:label "LD02_Finance_Saru - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 134 .
+
+<urn:aspace:22-wheel-discovery-ld03-health-culber-a3-culber-ld03-spec-md> a aspace:Document ;
+    rdfs:label "A3 Hugh Culber Spec - LD03 Health, Sleep & Energy" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 213 .
+
+<urn:aspace:22-wheel-discovery-ld03-health-culber-bibliography-md> a aspace:Document ;
+    rdfs:label "LD03 — Health, Sleep & Energy (Culber)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 117 .
+
+<urn:aspace:22-wheel-discovery-ld03-health-culber-readme-md> a aspace:Document ;
+    rdfs:label "LD03_Health_Culber - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 104 .
+
+<urn:aspace:22-wheel-discovery-ld04-cognition-tilly-a3-tilly-ld04-spec-md> a aspace:Document ;
+    rdfs:label "A3 Sylvia Tilly Spec - LD04 Mind & Cognition" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 222 .
+
+<urn:aspace:22-wheel-discovery-ld04-cognition-tilly-bibliography-md> a aspace:Document ;
+    rdfs:label "LD04 — Mind, Cognition & Mental Load (Tilly)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 118 .
+
+<urn:aspace:22-wheel-discovery-ld04-cognition-tilly-readme-md> a aspace:Document ;
+    rdfs:label "LD04_Cognition_Tilly - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 105 .
+
+<urn:aspace:22-wheel-discovery-ld05-social-stamets-a3-stamets-ld05-spec-md> a aspace:Document ;
+    rdfs:label "A3 Paul Stamets Spec - LD05 Social Relations" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 198 .
+
+<urn:aspace:22-wheel-discovery-ld05-social-stamets-bibliography-md> a aspace:Document ;
+    rdfs:label "LD05 — Social & Relations (Stamets)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 111 .
+
+<urn:aspace:22-wheel-discovery-ld05-social-stamets-readme-md> a aspace:Document ;
+    rdfs:label "LD05_Social_Stamets - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 101 .
+
+<urn:aspace:22-wheel-discovery-ld06-family-burnham-a3-burnham-ld06-spec-md> a aspace:Document ;
+    rdfs:label "A3 Michael Burnham Spec - LD06 Love, Family & Presence" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 220 .
+
+<urn:aspace:22-wheel-discovery-ld06-family-burnham-bibliography-md> a aspace:Document ;
+    rdfs:label "LD06 — Love, Family & Presence (Burnham)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 113 .
+
+<urn:aspace:22-wheel-discovery-ld06-family-burnham-readme-md> a aspace:Document ;
+    rdfs:label "LD06_Family_Burnham - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 115 .
+
+<urn:aspace:22-wheel-discovery-ld06-family-burnham-w1-item1-sob-abdaty-handoff-md> a aspace:Document ;
+    rdfs:label "W1 Item 1 — SOB Abdaty Handoff (Burnham H10 Family)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 485 .
+
+<urn:aspace:22-wheel-discovery-ld07-creativity-reno-a3-reno-ld07-spec-md> a aspace:Document ;
+    rdfs:label "A3 Jett Reno Spec - LD07 Creativity, Leisure & Flow" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 207 .
+
+<urn:aspace:22-wheel-discovery-ld07-creativity-reno-bibliography-md> a aspace:Document ;
+    rdfs:label "LD07 — Creativity, Leisure & Flow (Reno)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 99 .
+
+<urn:aspace:22-wheel-discovery-ld07-creativity-reno-readme-md> a aspace:Document ;
+    rdfs:label "LD07_Creativity_Reno - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 91 .
+
+<urn:aspace:22-wheel-discovery-ld08-impact-georgiou-a3-georgiou-ld08-spec-md> a aspace:Document ;
+    rdfs:label "A3 Philippa Georgiou Spec - LD08 Contribution & Impact" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 204 .
+
+<urn:aspace:22-wheel-discovery-ld08-impact-georgiou-bibliography-md> a aspace:Document ;
+    rdfs:label "LD08 — Impact, Contribution & Solarpunk (Georgiou)" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 115 .
+
+<urn:aspace:22-wheel-discovery-ld08-impact-georgiou-readme-md> a aspace:Document ;
+    rdfs:label "LD08_Impact_Georgiou - A3 Handoff" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 101 .
+
+<urn:aspace:22-wheel-discovery-readme-md> a aspace:Document ;
+    rdfs:label "Mission" ;
+    aspace:seau <urn:aspace:22-wheel-discovery> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 711 .

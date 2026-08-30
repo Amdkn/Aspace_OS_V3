@@ -8,7 +8,7 @@ verified:
   - { by: process:lecture-directe, at: 2026-08-19 }
 sources:
   - id: ADR-V0.1
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_Life-OS-2026-clone/openspec/changes/TOTAL_Spec/ADR/ADR-V0.1_Rilcot.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/_SPECS/adrs/ADR-V0.1_Rilcot.md"
     title: V0.1 — Rilcot (le tout premier)
     last_modified: "2026-05-15"
   - id: ADR-V0.4.5

@@ -8,15 +8,15 @@ verified:
   - { by: process:lecture-directe, at: 2026-08-19 }
 sources:
   - id: ADR-META-001
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/META_Organization/ADR-META-001_anti-paresse-verify-before-assert.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-001_anti-paresse-verify-before-assert.md"
     title: META 001 — Anti-Paresse verify-before-assert
     last_modified: "2026-07-15"
   - id: ADR-META-002
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/META_Organization/ADR-META-002_autonomy-by-design.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-002_autonomy-by-design.md"
     title: META 002 — Autonomie by design
     last_modified: "2026-07-15"
   - id: ADR-META-006
-    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/META_Organization/ADR-META-006_d6-root-causes-catalog.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-006_d6-root-causes-catalog.md"
     title: META 006 — D6 Root Causes Catalog
     last_modified: "2026-07-26"
 okf_version: "0.2"

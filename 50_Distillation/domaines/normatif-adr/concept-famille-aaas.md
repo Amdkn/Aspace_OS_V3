@@ -8,7 +8,7 @@ verified:
   - { by: process:lecture-directe, at: 2026-08-19 }
 sources:
   - id: ADR-AAAS-PRICING-001-AMEND-003
-    resource: "ASpace_OS_V2/20/Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-AAAS-PRICING-001_AMEND-003_enterprise-os-tier5_RATIFIED_2026-07-15.md"
+    resource: "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-AAAS-PRICING-001_AMEND-003_enterprise-os-tier5_RATIFIED_2026-07-15.md"
     title: AAAS Pricing Tier 5 RATIFIED
     last_modified: "2026-07-15"
   - id: ADR-AAAS-002

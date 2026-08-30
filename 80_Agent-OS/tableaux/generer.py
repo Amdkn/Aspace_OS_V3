@@ -208,7 +208,7 @@ def generer(dossier, titre, sortie, racine_rel):
     h.append("</table>")
 
     h.append("<footer>Page autonome — aucun CSS, JS ou police distants. "
-             "Générée par <code>80_Front-Office/generer.py</code>. "
+             "Générée par <code>80_Agent-OS/tableaux/generer.py</code>. "
              "Le niveau de confiance est lu dans <code>verified</code>, "
              "jamais calculé.</footer></div></html>")
 
@@ -220,7 +220,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("dossier", help="dossier de vague, relatif a ASpace_OS_V3")
     p.add_argument("--titre", required=True)
-    p.add_argument("--sortie", help="par defaut 80_Front-Office/reviews/<nom>.html")
+    p.add_argument("--sortie", help="par defaut 80_Agent-OS/tableaux/reviews/<nom>.html")
     a = p.parse_args()
 
     d = a.dossier if os.path.isabs(a.dossier) else os.path.join(V3, a.dossier)
@@ -229,11 +229,11 @@ def main():
         raise SystemExit(2)
 
     nom = re.sub(r"[^a-z0-9]+", "-", a.dossier.lower()).strip("-")
-    sortie = a.sortie or os.path.join(V3, "80_Front-Office", "reviews", f"{nom}.html")
+    sortie = a.sortie or os.path.join(V3, "80_Agent-OS/tableaux", "reviews", f"{nom}.html")
     os.makedirs(os.path.dirname(sortie), exist_ok=True)
 
     n, dette = generer(d, a.titre, sortie,
-                       os.path.relpath(d, os.path.join(V3, "80_Front-Office")))
+                       os.path.relpath(d, os.path.join(V3, "80_Agent-OS/tableaux")))
     print(f"{sortie}\n  {n} concepts, {dette} en attente d'un humain")
 
 

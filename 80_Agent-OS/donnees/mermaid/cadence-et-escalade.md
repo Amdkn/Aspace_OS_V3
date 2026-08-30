@@ -64,8 +64,8 @@ consigne écrite en marge : c'est la forme du graphe. La table
 ```mermaid
 sequenceDiagram
   participant B3 as B3 · escouade
-  participant DB as 90_Back-Office
-  participant FO as 80_Front-Office
+  participant DB as 80_Agent-OS/donnees
+  participant FO as 80_Agent-OS/tableaux
   participant A3 as A3 · conseil
   participant H as human:amdkn
 

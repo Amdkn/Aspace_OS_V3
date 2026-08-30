@@ -1,6 +1,6 @@
 {
  "politique": "reference, pas de sous-module : les depots restent en place, V3 ne les imbrique pas",
- "genere_le": "2026-08-02",
+ "genere_le": "2026-08-06",
  "entrees": {
   "opik": {
    "nom": "opik",
@@ -61,7 +61,49 @@
    "chemin": "C:/Users/amado/agent-os",
    "present": true,
    "depot_git": false,
-   "remote": null
+   "remote": null,
+   "jonction": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/agent-os",
+   "description": "Agent OS (Brian Casel) — systeme de specs et de standards pour agents de code. N'est PAS un outil d'observabilite : il ne mesure rien, il cadre l'ecriture.",
+   "heberge": [
+    "observatoire"
+   ],
+   "note": "supprimer la jonction avec os.rmdir uniquement, jamais rmtree / rm -rf / Remove-Item -Recurse"
+  },
+  "pocketbase-vec": {
+   "nom": "pocketbase-vec",
+   "type": "local",
+   "chemin": "C:/Users/amado/pocketbase-vec",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "jonction": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/pocketbase-vec",
+   "description": "PocketBase compile comme framework Go avec driver SQLite WASM (ncruces) et extension vectorielle sqlite-vec, sans CGO",
+   "note": "supprimer la jonction avec os.rmdir uniquement, jamais rmtree / rm -rf / Remove-Item -Recurse"
+  },
+  "super-simple-software-factory": {
+   "nom": "super-simple-software-factory",
+   "type": "local",
+   "chemin": "C:/Users/amado/super-simple-software-factory",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/disler/super-simple-software-factory.git",
+   "jonction": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/super-simple-software-factory",
+   "description": "Skill Claude Code 'sssf' : workflows ADW deterministes en Python, agents bornes en phases, trace SQLite",
+   "estampe_dans": [
+    "C:/Users/amado/pocketbase-vec"
+   ],
+   "note": "supprimer la jonction avec os.rmdir uniquement, jamais rmtree / rm -rf / Remove-Item -Recurse"
+  },
+  "observatoire": {
+   "nom": "observatoire",
+   "type": "local",
+   "chemin": "C:/Users/amado/agent-os/observatoire",
+   "present": true,
+   "depot_git": false,
+   "remote": null,
+   "description": "Observatoire des delegations : page locale qui montre l'etat des agents MiniMax detaches dans WSL, invisibles de tout gestionnaire de taches.",
+   "lancement": "python serveur.py  ->  http://127.0.0.1:8787",
+   "cree_le": "2026-08-06"
   }
  }
 }

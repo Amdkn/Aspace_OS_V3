@@ -1,0 +1,85 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 25_GTD_Cerritos — genere par porte_argent.py le 2026-08-30T02:47:25Z
+# 13 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:25-gtd-cerritos-01-inbox-mariner-a3-mariner-capture-spec-md> a aspace:Document ;
+    rdfs:label "A3 Mariner Spec - Capture" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 193 .
+
+<urn:aspace:25-gtd-cerritos-01-inbox-mariner-readme-md> a aspace:Document ;
+    rdfs:label "01_Inbox_Mariner" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 145 .
+
+<urn:aspace:25-gtd-cerritos-02-clarify-boimler-a3-boimler-clarify-spec-md> a aspace:Document ;
+    rdfs:label "A3 Boimler Spec - Clarify" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 163 .
+
+<urn:aspace:25-gtd-cerritos-02-clarify-boimler-readme-md> a aspace:Document ;
+    rdfs:label "02_Clarify_Boimler" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 131 .
+
+<urn:aspace:25-gtd-cerritos-03-organize-rutherford-a3-rutherford-organize-spec-md> a aspace:Document ;
+    rdfs:label "A3 Rutherford Spec - Organize" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 249 .
+
+<urn:aspace:25-gtd-cerritos-03-organize-rutherford-readme-md> a aspace:Document ;
+    rdfs:label "03_Organize_Rutherford" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 167 .
+
+<urn:aspace:25-gtd-cerritos-04-review-tendi-a3-tendi-review-spec-md> a aspace:Document ;
+    rdfs:label "A3 Tendi Spec - Review" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 219 .
+
+<urn:aspace:25-gtd-cerritos-04-review-tendi-readme-md> a aspace:Document ;
+    rdfs:label "04_Review_Tendi" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 173 .
+
+<urn:aspace:25-gtd-cerritos-05-engage-freeman-a3-freeman-engage-spec-md> a aspace:Document ;
+    rdfs:label "A3 Freeman Spec - Engage" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 228 .
+
+<urn:aspace:25-gtd-cerritos-05-engage-freeman-readme-md> a aspace:Document ;
+    rdfs:label "05_Engage_Freeman" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 157 .
+
+<urn:aspace:25-gtd-cerritos-a2-holodeck-cerritos-spec-md> a aspace:Document ;
+    rdfs:label "A2 Holo Deck / Cerritos Spec - GTD Chaos Engine" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 455 .
+
+<urn:aspace:25-gtd-cerritos-a3-cerritos-references-index-md> a aspace:Document ;
+    rdfs:label "A3 Cerritos References Index" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 431 .
+
+<urn:aspace:25-gtd-cerritos-readme-md> a aspace:Document ;
+    rdfs:label "25_GTD_Cerritos - Handoff A2" ;
+    aspace:seau <urn:aspace:25-gtd-cerritos> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 462 .

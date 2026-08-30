@@ -21,6 +21,32 @@ V3    = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 TPL   = os.path.join(HERE, "core.template")
 CORES = os.path.join(HERE, "cores.json")
 
+RAISON = {
+    "Spec": (
+        "J'écris le **ruban** — la description complète depuis laquelle un constructeur bâtit\n"
+        "sans poser de question. Von Neumann : le ruban est lu deux fois, interprété par le\n"
+        "constructeur et copié en aveugle par le copieur. Si le mien est incomplet, les deux\n"
+        "lectures échouent."
+    ),
+    "Build": (
+        "Je **bâtis depuis le ruban**, et je prouve. Prédire avant d'agir, attester chaque\n"
+        "critère : sans ça, mon travail est une affirmation. Un critère sans attestation vaut\n"
+        "faux, et c'est la base qui le refuse, pas mon Docteur."
+    ),
+    "Spawn": (
+        "Je **duplique un ruban éprouvé, en aveugle**. Ne pas comprendre ce que je copie est\n"
+        "volontaire : c'est l'échappatoire de Von Neumann au paradoxe de l'auto-description.\n"
+        "Si je réinterprète, la régression infinie revient — et avec elle les 48 000 fichiers\n"
+        "de V2."
+    ),
+}
+
+VERBES = {
+    "Spec": "Verbes : rédiger le ruban, le déposer au portier, le corriger tant qu'il échoue au test.\n\n",
+    "Build": "Verbes : `uc.py claim` → `predict` → bâtir → `attest` chaque critère → `review`.\n\n",
+    "Spawn": "Verbes : dupliquer un ruban éprouvé, `uc.py submit --parent N` pour la descendance.\n\n",
+}
+
 DEVOIRS = {
     "Spec": (
         "- rédige le ruban, le dépose au portier de la couche\n"
@@ -50,6 +76,7 @@ def substitue(txt: str, c: dict) -> str:
         "{{DOCTOR}}": c["doctor"], "{{CORE}}": c["core"], "{{LAYER}}": c["layer"],
         "{{OS}}": c["os"], "{{DEST}}": c["dest"], "{{MISSION}}": c["mission"],
         "{{MAITRISE}}": c.get("maitrise", c["os"]),
+        "{{HARNESS}}": c.get("harness", "—"),
         "{{R_SPEC}}": c["roles"]["spec"], "{{R_BUILD}}": c["roles"]["build"],
         "{{R_SPAWN}}": c["roles"]["spawn"], "{{R_REVIEW}}": c["roles"]["review"],
     }
@@ -74,6 +101,64 @@ def fiche_compagnon(k: dict, c: dict) -> str:
         + "\n## Escalade\n\n"
         f"Échec simple → {c['doctor']}. Échec répété (3 tentatives) → Donna\n"
         "(`10_Tech_OS/kernel/dlq.py`) → Rick, en Super Uplink.\n"
+    )
+
+
+def fiche_soul(k: dict, c: dict) -> str:
+    """SOUL d'un compagnon : sa raison d'etre, pas ses gestes."""
+    return (
+        f"# SOUL — {k['nom']}\n\n"
+        f"> Compagnon du {c['doctor']} · couche `{c['layer']}` · organe **{k['organe']}**\n"
+        f"> spécialité héritée : `{k['specialite']}`\n\n"
+        "**Fichier engendré.** Source : `10_Tech_OS/00_Governance_Rick/replicator/`.\n\n"
+        "## Raison d'être\n\n"
+        + RAISON[k["organe"]] +
+        "\n\n## Ce que ma spécialité ajoute\n\n"
+        f"`{k['specialite']}` vient de la structure V2. Elle porte un savoir de domaine que le\n"
+        "seul nom d'organe ne porte pas : deux compagnons de même organe sur deux couches ne\n"
+        "font pas le même travail.\n\n"
+        "## Mon rang dans la cascade\n\n"
+        "Je suis le **technicien** au sens de Gerber. Mon rang produit du travail **fait**, pas du\n"
+        "travail prévu. Cycle : **hebdomadaire** — le runbook.\n\n"
+        "```\nRick        playbook   12WY\n"
+        f"{c['doctor']:<12}roadmap    mensuel\n"
+        "MOI         runbook    hebdomadaire\n```\n\n"
+        "## Ce qui remonte de moi\n\n"
+        "Jamais une décision : un **fait**. Un échec avec son motif, une prédiction avec son\n"
+        "résultat. La décision reste au rang qui a la vue correspondante.\n\n"
+        "## Sources\n\n"
+        "`AGENT.md` — mes gestes · `RUNBOOK.md` — ma semaine ·\n"
+        "`../../ROADMAP.md` — la roadmap dont je tire mon runbook.\n"
+    )
+
+
+def fiche_runbook(k: dict, c: dict) -> str:
+    """RUNBOOK : le squelette de la semaine du compagnon."""
+    return (
+        f"# RUNBOOK — {k['nom']} · {k['specialite']}\n\n"
+        f"> Artefact du compagnon, rang Technicien. Cycle : **hebdomadaire**.\n"
+        f"> Amont : `../../ROADMAP.md` ({c['doctor']}, mensuel).\n"
+        f"> Organe : **{k['organe']}** · couche `{c['layer']}`\n\n"
+        "**Squelette engendré.** À remplir chaque semaine. `spawn.py --force` le réécrit :\n"
+        "archiver une semaine close avant de ré-engendrer.\n\n---\n\n"
+        "## Semaine `<AAAA-Www>`\n\n"
+        "### Rattachement\n\n"
+        "| | |\n|---|---|\n"
+        "| Étape de roadmap | `<numéro + intitulé>` |\n"
+        f"| Organe | {k['organe']} |\n"
+        "| Ruban | `<chemin dans 00_Amadeus/60_Tape_Specs/>` |\n\n"
+        "### Actions\n\n"
+        "Un runbook est une **suite d'actions exécutables**, pas un plan. Si je dois encore\n"
+        "décider de l'ordre, la roadmap était incomplète — je le dis à mon Docteur.\n\n"
+        "| # | Action | Commande ou geste | Fait |\n|---|---|---|---|\n"
+        "| 1 | | | |\n| 2 | | | |\n| 3 | | | |\n\n"
+        + VERBES[k["organe"]] +
+        "\n### Fin de semaine\n\n"
+        "- [ ] chaque action est faite ou explicitement reportée\n"
+        "- [ ] tout échec est remonté avec son motif, pas avec une excuse\n"
+        "- [ ] rien n'est resté \"en cours\" sans bail actif\n\n---\n\n"
+        "## Semaines closes\n\n"
+        "| Semaine | Actions | Faites | Échecs remontés |\n|---|---|---|---|\n| | | | |\n"
     )
 
 
@@ -114,6 +199,10 @@ def engendre(cle: str, c: dict, force: bool) -> dict:
             os.makedirs(d, exist_ok=True)
             with open(os.path.join(d, "AGENT.md"), "w", encoding="utf-8") as fh:
                 fh.write(fiche_compagnon(k, c))
+            with open(os.path.join(d, "SOUL.md"), "w", encoding="utf-8") as fh:
+                fh.write(fiche_soul(k, c))
+            with open(os.path.join(d, "RUNBOOK.md"), "w", encoding="utf-8") as fh:
+                fh.write(fiche_runbook(k, c))
             comp.append(rel)
 
     return {"core": cle, "etat": "engendre", "dest": c["dest"],

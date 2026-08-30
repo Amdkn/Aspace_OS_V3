@@ -102,3 +102,25 @@ s'exécute n'a pas sa place ici — il appartient à Geordi.
 ---
 
 *Canon V3, 2026-08-02. Abroge et remplace le canon V2 hérité.*
+
+
+---
+
+## 8. Mémoire de fin de réponse — OpenWiki + OKF + DOX
+
+Toute réponse substantielle, à son terme, actualise les trois organes cognitifs :
+
+- **OpenWiki** : la mémoire longue (φ-mémoire). Nouvelle page ou amendement.
+- **OKF 0.2** : le format canonique. Frontmatter complet. Pas de markdown nu pour le savoir canonique.
+- **DOX** : la hiérarchie `AGENTS.md` arborescente. Append-only D4.
+
+**Anti-dette d'obscurité.** Ce qui n'est ni tracé dans OpenWiki, ni formaté en OKF, ni append dans un `AGENTS.md` local, **n'existe pas pour les agents futurs**. C'est de l'obscurité — une dette qui grossit à chaque tour.
+
+**Règle de Conway appliquée** : chaque réponse laisse la machine un peu plus réplicable qu'avant. Une réponse qui n'actualise pas la mémoire casse l'invariant.
+
+**Outillage :**
+- Ontologie → **OpenWiki** (mémoire) + **OKF** (forme)
+- Hiérarchie `AGENTS.md` → **DOX** (append-only)
+- Lookup → context-mode FTS5 (`~/.pi/context-mode/`)
+
+*Ajouté 2026-08-17 sur directive A+. Voir `~/.pi/agent/AGENTS.md` §12 pour la procédure opérationnelle détaillée.*

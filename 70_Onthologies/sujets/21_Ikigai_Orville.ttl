@@ -1,0 +1,151 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 21_Ikigai_Orville — genere par porte_argent.py le 2026-08-30T02:47:24Z
+# 24 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-01-profession-mercer-a3-ed-mercer-spec-md> a aspace:Document ;
+    rdfs:label "A3 Ed Mercer Spec - Profession" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 170 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-01-profession-mercer-readme-md> a aspace:Document ;
+    rdfs:label "01_Profession_Mercer - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 86 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-02-mission-grayson-a3-kelly-grayson-spec-md> a aspace:Document ;
+    rdfs:label "A3 Kelly Grayson Spec - Mission" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 184 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-02-mission-grayson-readme-md> a aspace:Document ;
+    rdfs:label "02_Mission_Grayson - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 76 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-03-passion-malloy-a3-gordon-malloy-spec-md> a aspace:Document ;
+    rdfs:label "A3 Gordon Malloy Spec - Passion" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 179 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-03-passion-malloy-readme-md> a aspace:Document ;
+    rdfs:label "03_Passion_Malloy - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 81 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-04-vocation-finn-a3-claire-finn-spec-md> a aspace:Document ;
+    rdfs:label "A3 Claire Finn Spec - Vocation" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 183 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-04-vocation-finn-readme-md> a aspace:Document ;
+    rdfs:label "04_Vocation_Finn - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 77 .
+
+<urn:aspace:21-ikigai-orville-01-pillars-identity-readme-md> a aspace:Document ;
+    rdfs:label "01_Pillars_Identity - A3 Ikigai Ring" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 267 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-01-h1-isaac-a3-isaac-h1-spec-md> a aspace:Document ;
+    rdfs:label "A3 Isaac Spec - H1 / 1 Year" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 138 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-01-h1-isaac-readme-md> a aspace:Document ;
+    rdfs:label "01_H1_Isaac - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 70 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-02-h3-lamarr-a3-john-lamarr-h3-spec-md> a aspace:Document ;
+    rdfs:label "A3 John Lamarr Spec - H3 / 3 Years" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 147 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-02-h3-lamarr-readme-md> a aspace:Document ;
+    rdfs:label "02_H3_Lamarr - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 79 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-03-h10-bortus-a3-bortus-h10-spec-md> a aspace:Document ;
+    rdfs:label "A3 Bortus Spec - H10 / 10 Years" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 144 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-03-h10-bortus-readme-md> a aspace:Document ;
+    rdfs:label "03_H10_Bortus - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 62 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-04-h30-alara-a3-alara-kitan-h30-spec-md> a aspace:Document ;
+    rdfs:label "A3 Alara Kitan Spec - H30 / 30 Years" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 146 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-04-h30-alara-readme-md> a aspace:Document ;
+    rdfs:label "04_H30_Alara - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 68 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-05-h90-klyden-a3-klyden-h90-spec-md> a aspace:Document ;
+    rdfs:label "A3 Klyden Spec - H90 / Legacy" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 171 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-05-h90-klyden-readme-md> a aspace:Document ;
+    rdfs:label "05_H90_Klyden - A3 Handoff" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 62 .
+
+<urn:aspace:21-ikigai-orville-02-horizons-time-readme-md> a aspace:Document ;
+    rdfs:label "02_Horizons_Time - A3 Ikigai Ring" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 290 .
+
+<urn:aspace:21-ikigai-orville-a2-orville-spec-md> a aspace:Document ;
+    rdfs:label "A2 Orville Spec - Ikigai / Meaning Engine" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 417 .
+
+<urn:aspace:21-ikigai-orville-a3-gemini-references-index-md> a aspace:Document ;
+    rdfs:label "A3 Gemini References Index - Orville / Ikigai" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 389 .
+
+<urn:aspace:21-ikigai-orville-ikigai-pillars-horizons-kardashev-md> a aspace:Document ;
+    rdfs:label "Ikigai Pillars x Horizons - Kardashev Trajectory" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 774 .
+
+<urn:aspace:21-ikigai-orville-readme-md> a aspace:Document ;
+    rdfs:label "21_Ikigai_Orville - Handoff A2" ;
+    aspace:seau <urn:aspace:21-ikigai-orville> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 531 .
