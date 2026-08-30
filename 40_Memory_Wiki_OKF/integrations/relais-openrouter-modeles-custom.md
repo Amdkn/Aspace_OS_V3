@@ -7,6 +7,7 @@ generated: { by: claude-opus-5, at: 2026-08-28T21:05:00Z }
 verified:
   - { by: claude-opus-5, at: 2026-08-28T21:02:00Z }
   - { by: claude-sonnet-4-6, at: 2026-08-29T04:40:00Z }
+  - { by: claude-sonnet-4-6, at: 2026-08-30T05:10:00Z }
 sources:
   - id: openrouter-models
     resource: "GET https://openrouter.ai/api/v1/models"
@@ -215,6 +216,36 @@ mauvais coupable sur ce poste.
 sur un budget de 100, 99 tokens partent en `thinking` et le texte est coupé
 avant d'exister, avec `stop_reason: max_tokens`. Ce n'est pas une panne. Prévoir
 plusieurs centaines de tokens pour un simple test.
+
+## Déléguer l'analyse d'un gros corpus — la découpe par mois
+
+**Paiement du 2026-08-29 :** demander à `claude-glm -p` de lire d'un coup le
+corpus d'intentions complet (409 Ko, 2 325 entrées) échoue en
+`Prompt is too long`. Le relais porte un contexte de 1,3 M de tokens, mais le
+CLI compte le prompt autrement — la taille *fichier* n'est pas la limite
+*prompt*.
+
+**Le montage validé** (rapport `50_Distillation/RAPPORT_INTENTIONS_V3.md`,
+zéro quota Anthropic) :
+
+1. **Découper par mois** — `re.split(r"(?=^## 2026-\d\d )", txt, flags=re.M)`,
+   les mois ≤ la limite fusionnés en un chunk. 4 chunks de 12 à 206 Ko.
+2. **Un brief par chunk, avec un chemin en `%s`** — le même brief moule
+   `(intentions dominantes / besoins exprimés vs révélés / problématiques par
+   coût / désirs / citations datables)` réinjecté pour chaque chunk.
+3. **Env-vars répliquées depuis le wrapper**, pas d'invocation du `.cmd` :
+   `ANTHROPIC_BASE_URL=http://127.0.0.1:8792 ANTHROPIC_AUTH_TOKEN=custom-model-openrouter
+   ANTHROPIC_API_KEY="" claude --model claude-sonnet-4-6 -p "$brief" < /dev/null > sortie.md`
+4. **`< /dev/null` et stdout** — en `-p` mode, stdin ouvert et sortie fichier
+   peuvent rester suspendus sur une demande de permission jamais vue. Le
+   capture stdout se termine seul, rc=0.
+5. **L'orchestrateur écrit le fichier final** — jamais le délégué. GLM reçoit
+   les rapports partiels, produit la synthèse croisée, et c'est moi qui pose
+   le résultat dans le dépôt et committe.
+
+Séquence finale : 4 analyses mensuelles (4,7–6,3 Ko chacune, toutes portant
+des citations datées vérifiées) + 1 synthèse de 19 Ko. Un chunk qui échoue se
+relance seul, sans refaire les autres.
 
 ## Comment retirer le câblage
 
