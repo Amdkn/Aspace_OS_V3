@@ -1,0 +1,214 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine J03_Jerry_Nexus_LD02_LD06_Finance_Family — genere par porte_argent.py le 2026-08-30T03:43:30Z
+# 32 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-03-jerry-nexus-principles-md> a aspace:Document ;
+    rdfs:label "🪙 JERRY NEXUS PRINCIPLES — Finance (LD02) + Family (LD06) Doctrine" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 877 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-area-standard-md> a aspace:Document ;
+    rdfs:label "Jerry Nexus — Area Standard" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 1511 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-readme-md> a aspace:Document ;
+    rdfs:label "J03 Jerry Nexus - Finance & Family Stability" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 151 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-summers-verse-template-md> a aspace:Document ;
+    rdfs:label "FIP — Financial Independence Protocol" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 2254 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b3-area-warp-core-lead-lag-logs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Jerry Nexus Area Warp Core" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 245 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b3-area-warp-core-artifact-proofs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Artifact Proofs" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 334 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 — J03 Jerry Nexus Area Domains" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 316 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-08-family-financial-governance-readme-md> a aspace:Document ;
+    rdfs:label "B2-D08 — Family Financial Governance" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 417 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-07-insurance-protection-readme-md> a aspace:Document ;
+    rdfs:label "B2-D07 — Insurance Protection" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 280 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-06-succession-planning-readme-md> a aspace:Document ;
+    rdfs:label "B2-D06 — Succession Planning" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 274 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-05-investment-accumulation-readme-md> a aspace:Document ;
+    rdfs:label "B2-D05 — Investment Accumulation" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 292 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-04-tax-optimization-readme-md> a aspace:Document ;
+    rdfs:label "B2-D04 — Tax Optimization" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 315 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-03-risk-management-readme-md> a aspace:Document ;
+    rdfs:label "B2-D03 — Risk Management" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 309 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-02-cash-flow-architecture-readme-md> a aspace:Document ;
+    rdfs:label "B2-D02 — Cash Flow Architecture" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 281 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b2-area-domains-01-capital-architecture-readme-md> a aspace:Document ;
+    rdfs:label "B2-D01 — Capital Architecture" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 276 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-b1-area-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 — Jerry Nexus Area Direction" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 930 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-readme-md> a aspace:Document ;
+    rdfs:label "12WY — Jerry Nexus Area Cadence" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 407 ;
+    aspace:type "STABILITY_PROTOCOL" .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w01-md> a aspace:Document ;
+    rdfs:label "W01 — Year Close + Prior Year Analysis" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 179 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w02-md> a aspace:Document ;
+    rdfs:label "W02 — Tax Filing + Strategy Initiation" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 177 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w03-md> a aspace:Document ;
+    rdfs:label "W03 — Budget Establishment + Goal Setting" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 189 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w04-md> a aspace:Document ;
+    rdfs:label "W04 — Q1 Insurance Review + Q1 Close" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 173 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w05-md> a aspace:Document ;
+    rdfs:label "W05 — H1 Capital Deployment Check" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 163 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w06-md> a aspace:Document ;
+    rdfs:label "W06 — Investment Policy Review" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 172 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w07-md> a aspace:Document ;
+    rdfs:label "W07 — Q2 Close + Mid-Year Correction" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 162 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w08-md> a aspace:Document ;
+    rdfs:label "W08 — Q3 Setup + Block 2 Close" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 170 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w09-md> a aspace:Document ;
+    rdfs:label "W09 — Tax-Loss Harvesting + Year-End Planning" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 187 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w10-md> a aspace:Document ;
+    rdfs:label "W10 — Insurance Renewal Season" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 172 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w11-md> a aspace:Document ;
+    rdfs:label "W11 — Succession Planning Update" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 201 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w12-md> a aspace:Document ;
+    rdfs:label "W12 — Year-End Close + Annual Snapshot" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 226 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w09-w12-optimization-readme-md> a aspace:Document ;
+    rdfs:label "W09-W12 — Optimization Season" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 530 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w05-w08-scaling-readme-md> a aspace:Document ;
+    rdfs:label "W05-W08 — Scaling Season" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 402 .
+
+<urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family-12wy-area-cadence-w01-w04-foundation-readme-md> a aspace:Document ;
+    rdfs:label "W01-W04 — Foundation Season" ;
+    aspace:seau <urn:aspace:j03-jerry-nexus-ld02-ld06-finance-family> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 461 .

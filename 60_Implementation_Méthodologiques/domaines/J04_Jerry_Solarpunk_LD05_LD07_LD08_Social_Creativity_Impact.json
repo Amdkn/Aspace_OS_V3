@@ -1,0 +1,44 @@
+{
+ "domaine": "J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact",
+ "genere": "2026-08-30T03:43:30Z",
+ "distillation": {
+  "lus": 20,
+  "echecs": 0,
+  "fichiers": 20
+ },
+ "methodologique": {
+  "seau_para": "area",
+  "echelles": {
+   "semaine": 17,
+   "jour": 7,
+   "deep-work": 12
+  },
+  "modes": {
+   "collaboratif": 13,
+   "autonome": 1
+  },
+  "gtd": {
+   "capture": 1,
+   "clarify": 5,
+   "organize": 14,
+   "review": 13,
+   "engage": 16
+  },
+  "sans_rattachement": [
+   "README.md",
+   "README.md"
+  ],
+  "couverture_echelle": 90,
+  "standard_pct": 100,
+  "revue_pct": 70,
+  "dette_pct": 45,
+  "inertie": 0.64
+ },
+ "ontologie": {
+  "triplets": 101,
+  "sujets": 20
+ },
+ "verdict": "passe",
+ "reserves": []
+}

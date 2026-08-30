@@ -2,7 +2,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-# Domaine 00_Jerry_Business_Pulse — genere par porte_argent.py le 2026-08-30T03:31:12Z
+# Domaine 00_Jerry_Business_Pulse — genere par porte_argent.py le 2026-08-30T03:37:21Z
 # 461 documents. Triplets mecaniques : le fichier est le sujet,
 # chaque cle de frontmatter un predicat, chaque valeur un objet.
 

@@ -1,0 +1,41 @@
+{
+ "domaine": "J03_Jerry_Nexus_LD02_LD06_Finance_Family",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J03_Jerry_Nexus_LD02_LD06_Finance_Family",
+ "genere": "2026-08-30T03:43:30Z",
+ "distillation": {
+  "lus": 32,
+  "echecs": 0,
+  "fichiers": 32
+ },
+ "methodologique": {
+  "seau_para": "area",
+  "echelles": {
+   "semaine": 31,
+   "jour": 15,
+   "deep-work": 23
+  },
+  "modes": {
+   "collaboratif": 32,
+   "autonome": 16
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 5,
+   "organize": 27,
+   "review": 28,
+   "engage": 24
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100,
+  "standard_pct": 31,
+  "revue_pct": 88,
+  "dette_pct": 12,
+  "inertie": 0.14
+ },
+ "ontologie": {
+  "triplets": 175,
+  "sujets": 32
+ },
+ "verdict": "passe",
+ "reserves": []
+}

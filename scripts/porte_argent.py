@@ -46,6 +46,13 @@ V3 = Path("C:/Users/amado/ASpace_OS_V3")
 
 # Les domaines de Life OS vivent sous Geordi, dans le miroir des domaines V2.
 SOURCES_POSSIBLES = [
+    # Les seaux PARA VIVANTS d'abord : c'est la chose, pas son reflet.
+    # `05_From_V2_Domains` vit sous Geordi et est donc une RESSOURCE -- un
+    # miroir de reference. Migrer le miroir en croyant migrer la Area est la
+    # faute constatee le 2026-08-29 sur Jerry : la porte rendait un verdict
+    # sur une copie de lecture, pas sur le standard qui tourne.
+    V2 / "01_Projects_Picard",
+    V2 / "02_Areas_Spock",
     V2 / "03_Resources_Geordi/05_From_V2_Domains/20_Life_OS",
     V2 / "03_Resources_Geordi/05_From_V2_Domains/30_Business_OS",
     V2 / "03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS",
@@ -95,6 +102,42 @@ INDICES_MODE = {
     "collaboratif": ("hitl", "humain", "human", "review", "revue", "arbitrage", "valide", "approuv", "gate", "porte"),
     "autonome": ("cron", "vps", "autonome", "automatique", "daemon", "planifie", "schedule", "batch", "sans surveillance"),
 }
+# --- PARA : le seau commande le critere ------------------------------------
+# CORRECTION DU 2026-08-29, apres arbitrage du proprietaire.
+#
+# Juger une AREA sur une echelle semaine/jour/deep-work est une faute : une
+# Area est perpetuelle PAR DEFINITION, elle n'a pas de finalite temporelle.
+# Lui donner « PASSE » sur ce calcul revient a valider l'inertie au lieu de la
+# detecter -- et c'est exactement ce que la porte a fait pour Jerry.
+#
+# « Le maintien de standard de reproduction perpetuel sans finalite temporelle
+#   est pire pour l'inertie induite dans un systeme mort par des accumulations
+#   de defaut. »
+#
+# Donc : un critere par seau.
+#   Projects (Picard)  -> une fin. Un projet sans echeance est un defaut.
+#   Areas    (Spock)   -> un STANDARD a tenir et une REVUE qui retire. Pas
+#                         d'echeance, mais une cadence de revue -- sans quoi
+#                         les defauts s'accumulent sans jamais sortir.
+#   Resources(Geordi)  -> reference. Aucune cadence attendue.
+#   Archives (Data)    -> non-usage. Rien a mesurer.
+SEAUX_PARA = {
+    "01_Projects_Picard": "projet",
+    "02_Areas_Spock": "area",
+    "03_Resources_Geordi": "ressource",
+    "04_Archives_Data": "archive",
+}
+
+# Ce qu'on cherche dans une Area : la preuve qu'un standard est tenu ET revu.
+INDICES_STANDARD = ("standard", "sop", "principle", "principe", "doctrine",
+                    "definition of done", "dod", "critere", "invariant", "regle")
+INDICES_REVUE = ("review", "revue", "retro", "audit", "controle", "verification",
+                 "cadence", "rituel", "hebdo", "mensuel", "trimestre")
+# Les marqueurs de dette qui s'accumulent quand rien ne retire.
+INDICES_DETTE = ("todo", "fixme", "hack", "a corriger", "provisoire", "temporaire",
+                 "deprecated", "obsolete", "stale", "contested", "non encore",
+                 "pas encore", "manquant", "vide")
+
 # GTD : les cinq temps. Un domaine qui n'en couvre aucun ne se pilote pas.
 INDICES_GTD = {
     "capture": ("capture", "inbox", "collecte", "saisie"),
@@ -151,6 +194,22 @@ def parcourir_md(racine: Path):
 
 def journal(msg: str) -> None:
     print(f"{time.strftime('%H:%M:%S')}  {msg}", flush=True)
+
+
+def seau_para(src: Path) -> str:
+    """Rend le seau PARA d'une source, d'apres son chemin reel.
+
+    Le seau n'est pas une etiquette qu'on choisit : il est inscrit dans
+    l'arborescence. `05_From_V2_Domains` vit sous `03_Resources_Geordi`, donc
+    tout ce qui en vient est une RESSOURCE -- un miroir de reference, pas la
+    chose vivante. Le domaine correspondant, lui, peut etre une Area ou un
+    Projet ailleurs dans le PARA.
+    """
+    parts = set(src.parts)
+    for dossier, seau in SEAUX_PARA.items():
+        if dossier in parts:
+            return seau
+    return "inconnu"
 
 
 def trouver_source(domaine: str) -> Path | None:
@@ -238,13 +297,14 @@ def filtre_distillation(src: Path, domaine: str) -> tuple[list[dict], dict]:
 
 
 # ---------------------------------------------------------------- filtre 2 --
-def filtre_methodologique(lignes: list[dict], src: Path) -> dict:
+def filtre_methodologique(lignes: list[dict], src: Path, seau: str = "inconnu") -> dict:
     """A quelle echelle et sous quel mode ce domaine s'execute-t-il ?
 
     Un artefact qui ne se rattache ni a une echelle (semaine/jour/deep-work)
     ni a un mode (collaboratif/autonome) n'est pas implementable. Le filtre ne
     juge pas la qualite : il constate la couverture, et nomme les trous.
     """
+    std = rev = dette = 0
     ech = {k: 0 for k in ECHELLES}
     mod = {k: 0 for k in MODES}
     gtd = {k: 0 for k in INDICES_GTD}
@@ -268,16 +328,35 @@ def filtre_methodologique(lignes: list[dict], src: Path) -> dict:
         for k, mots in INDICES_GTD.items():
             if any(m in contexte for m in mots):
                 gtd[k] += 1
+        # Mesures propres aux Areas : standard tenu, revue qui retire, dette
+        # qui s'accumule. On les compte pour tout le monde -- elles ne coutent
+        # rien et servent au diagnostic meme hors Area.
+        if any(m in contexte for m in INDICES_STANDARD):
+            std += 1
+        if any(m in contexte for m in INDICES_REVUE):
+            rev += 1
+        if any(m in contexte for m in INDICES_DETTE):
+            dette += 1
         if not touche:
             sans_rattachement.append(l["nom"])
 
-    return {
+    n = max(1, len(lignes))
+    res = {
+        "seau_para": seau,
         "echelles": ech,
         "modes": mod,
         "gtd": gtd,
         "sans_rattachement": sans_rattachement,
-        "couverture_echelle": round(100 * (len(lignes) - len(sans_rattachement)) / max(1, len(lignes))),
+        "couverture_echelle": round(100 * (len(lignes) - len(sans_rattachement)) / n),
+        "standard_pct": round(100 * std / n),
+        "revue_pct": round(100 * rev / n),
+        "dette_pct": round(100 * dette / n),
     }
+    # Le ratio qui dit l'inertie : de la dette portee, sans revue qui la retire.
+    # Une Area perpetuelle avec beaucoup de dette et peu de revue est un
+    # systeme mort qui continue de tourner -- le cas que le proprietaire nomme.
+    res["inertie"] = round(dette / max(1, rev), 2)
+    return res
 
 
 # ---------------------------------------------------------------- filtre 3 --
@@ -342,12 +421,16 @@ def main() -> int:
     lignes, m1 = filtre_distillation(src, domaine)
     journal(f"   {m1['fichiers']} documents, {m1['lus']} lus, {m1['echecs']} en echec")
 
+    seau = seau_para(src)
+    journal(f"seau PARA : {seau}")
     journal("filtre 2/3 — implementation methodologique")
-    m2 = filtre_methodologique(lignes, src)
+    m2 = filtre_methodologique(lignes, src, seau)
     journal(f"   echelles {m2['echelles']}")
     journal(f"   modes    {m2['modes']}")
     journal(f"   gtd      {m2['gtd']}")
     journal(f"   couverture d'echelle : {m2['couverture_echelle']} %")
+    journal(f"   standard {m2['standard_pct']} % · revue {m2['revue_pct']} % · "
+            f"dette {m2['dette_pct']} % · inertie {m2['inertie']}")
     if m2["sans_rattachement"]:
         journal(f"   sans rattachement d'echelle : {len(m2['sans_rattachement'])} — "
                 + ", ".join(m2["sans_rattachement"][:5]))
@@ -361,10 +444,28 @@ def main() -> int:
     verdict = []
     if m1["echecs"] > 0:
         verdict.append(f"{m1['echecs']} fichiers illisibles")
-    if m2["couverture_echelle"] < 50:
-        verdict.append(f"couverture d'echelle faible ({m2['couverture_echelle']} %)")
-    if sum(m2["modes"].values()) == 0:
-        verdict.append("aucun mode d'execution identifiable")
+
+    seau = m2["seau_para"]
+    if seau == "area":
+        # Une Area n'a pas d'echeance : on ne la juge PAS sur l'echelle.
+        # Ce qu'elle doit prouver, c'est qu'un standard est tenu et qu'une
+        # revue le retire quand il ne sert plus.
+        if m2["standard_pct"] < 20:
+            verdict.append(f"aucun standard declare ({m2['standard_pct']} %)")
+        if m2["revue_pct"] < 20:
+            verdict.append(f"pas de cadence de revue ({m2['revue_pct']} %)")
+        if m2["inertie"] > 2.0:
+            verdict.append(f"inertie {m2['inertie']} — dette portee sans revue qui la retire")
+    elif seau in ("ressource", "archive"):
+        # Une ressource est de la reference : aucune cadence n'est attendue.
+        # Exiger un mode d'execution d'un miroir de lecture est une faute de
+        # categorie -- la meme que juger une Area sur une echeance.
+        pass
+    else:
+        if m2["couverture_echelle"] < 50:
+            verdict.append(f"couverture d'echelle faible ({m2['couverture_echelle']} %)")
+        if sum(m2["modes"].values()) == 0:
+            verdict.append("aucun mode d'execution identifiable")
     passe = not verdict
 
     journal("")

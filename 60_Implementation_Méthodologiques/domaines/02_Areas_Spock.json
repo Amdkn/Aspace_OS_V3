@@ -1,0 +1,72 @@
+{
+ "domaine": "02_Areas_Spock",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock",
+ "genere": "2026-08-30T03:43:31Z",
+ "distillation": {
+  "lus": 263,
+  "echecs": 0,
+  "fichiers": 263
+ },
+ "methodologique": {
+  "seau_para": "area",
+  "echelles": {
+   "semaine": 197,
+   "jour": 91,
+   "deep-work": 170
+  },
+  "modes": {
+   "collaboratif": 202,
+   "autonome": 68
+  },
+  "gtd": {
+   "capture": 22,
+   "clarify": 69,
+   "organize": 129,
+   "review": 170,
+   "engage": 204
+  },
+  "sans_rattachement": [
+   "README.md",
+   "README.md",
+   "proposal.md",
+   "proposal.md",
+   "features.md",
+   "design.md",
+   "features.md",
+   "proposal.md",
+   "design.md",
+   "proposal.md",
+   "features.md",
+   "design.md",
+   "proposal.md",
+   "design.md",
+   "proposal.md",
+   "features.md",
+   "audit-antifragility.md",
+   "command-center.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "01_E_MYTH_FRANCHISE_PROTOTYPE.md",
+   "02_BUILT_TO_SELL_SCORECARD.md",
+   "L2_Business_Pulse_References_Index.md",
+   "README.md"
+  ],
+  "couverture_echelle": 89,
+  "standard_pct": 70,
+  "revue_pct": 69,
+  "dette_pct": 44,
+  "inertie": 0.64
+ },
+ "ontologie": {
+  "triplets": 1341,
+  "sujets": 263
+ },
+ "verdict": "passe",
+ "reserves": []
+}

@@ -1,0 +1,50 @@
+{
+ "domaine": "J01_Jerry_Prime_LD01_Business",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J01_Jerry_Prime_LD01_Business",
+ "genere": "2026-08-30T03:43:29Z",
+ "distillation": {
+  "lus": 134,
+  "echecs": 0,
+  "fichiers": 134
+ },
+ "methodologique": {
+  "seau_para": "area",
+  "echelles": {
+   "semaine": 103,
+   "jour": 30,
+   "deep-work": 92
+  },
+  "modes": {
+   "collaboratif": 120,
+   "autonome": 26
+  },
+  "gtd": {
+   "capture": 13,
+   "clarify": 47,
+   "organize": 50,
+   "review": 102,
+   "engage": 112
+  },
+  "sans_rattachement": [
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "01_E_MYTH_FRANCHISE_PROTOTYPE.md",
+   "02_BUILT_TO_SELL_SCORECARD.md"
+  ],
+  "couverture_echelle": 94,
+  "standard_pct": 92,
+  "revue_pct": 76,
+  "dette_pct": 61,
+  "inertie": 0.8
+ },
+ "ontologie": {
+  "triplets": 677,
+  "sujets": 134
+ },
+ "verdict": "passe",
+ "reserves": []
+}

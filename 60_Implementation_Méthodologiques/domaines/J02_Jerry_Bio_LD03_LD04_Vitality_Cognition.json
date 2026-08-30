@@ -1,0 +1,41 @@
+{
+ "domaine": "J02_Jerry_Bio_LD03_LD04_Vitality_Cognition",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\02_Areas_Spock\\J02_Jerry_Bio_LD03_LD04_Vitality_Cognition",
+ "genere": "2026-08-30T03:43:30Z",
+ "distillation": {
+  "lus": 20,
+  "echecs": 0,
+  "fichiers": 20
+ },
+ "methodologique": {
+  "seau_para": "area",
+  "echelles": {
+   "semaine": 20,
+   "jour": 17,
+   "deep-work": 17
+  },
+  "modes": {
+   "collaboratif": 20,
+   "autonome": 10
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 2,
+   "organize": 15,
+   "review": 19,
+   "engage": 18
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100,
+  "standard_pct": 55,
+  "revue_pct": 85,
+  "dette_pct": 35,
+  "inertie": 0.41
+ },
+ "ontologie": {
+  "triplets": 102,
+  "sujets": 20
+ },
+ "verdict": "passe",
+ "reserves": []
+}

@@ -1,0 +1,818 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine J01_Jerry_Prime_LD01_Business — genere par porte_argent.py le 2026-08-30T03:43:29Z
+# 134 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:j01-jerry-prime-ld01-business-00-l2-fractal-b1b2b3-architecture-md> a aspace:Document ;
+    rdfs:label "L2 Business — The B1 / B2 / B3 Fractal Architecture" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 944 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-area-standard-md> a aspace:Document ;
+    rdfs:label "Jerry Prime — LD01 Business Area Standard" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 1907 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-readme-md> a aspace:Document ;
+    rdfs:label "J01 Jerry Prime - LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 177 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-lead-lag-logs-readme-md> a aspace:Document ;
+    rdfs:label "B3 Area Warp Core — Lead/Lag Logs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 318 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-artifact-proofs-readme-md> a aspace:Document ;
+    rdfs:label "B3 Area Warp Core — Artifact Proofs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 334 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-08-legal-aquaman-eternals-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Legal B3 Swarm Config - Eternals" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 182 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-08-legal-aquaman-eternals-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Legal / Eternals" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 386 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-08-legal-aquaman-eternals-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-08-legal-aquaman-eternals-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 199 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-08-legal-aquaman-eternals-jtbd-legal-001-eternals-contract-compliance-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-LEGAL-001 - Eternals canonical packet (Area-level) - Jerry / Aquaman" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 327 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-07-people-greenlantern-xmen-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "People B3 Swarm Config - X-Men" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 188 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-07-people-greenlantern-xmen-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - People / XMen" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 403 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-07-people-greenlantern-xmen-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-07-people-greenlantern-xmen-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 201 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-07-people-greenlantern-xmen-jtbd-people-001-xmen-capsule-onboard-ethics-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-PEOPLE-001 - X-Men canonical packet (Area-level) - Jerry / Green Lantern" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 323 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-06-finance-wonderwoman-thunderbolts-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Finance B3 Swarm Config - Thunderbolts" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-06-finance-wonderwoman-thunderbolts-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Finance / Thunderbolts" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 346 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-06-finance-wonderwoman-thunderbolts-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-06-finance-wonderwoman-thunderbolts-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 202 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-06-finance-wonderwoman-thunderbolts-jtbd-finance-001-thunderbolts-mrr-margin-runway-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-FINANCE-001 - Thunderbolts canonical packet (Area-level) - Jerry / Wonder Woman" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 301 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-05-it-cyborg-kangdynasty-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "IT B3 Swarm Config - Kang Dynasty" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 187 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-05-it-cyborg-kangdynasty-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - IT / KangDynasty" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 349 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-05-it-cyborg-kangdynasty-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-05-it-cyborg-kangdynasty-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 199 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-05-it-cyborg-kangdynasty-jtbd-it-001-kangdynasty-sovereign-provision-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-IT-001 - Kang Dynasty canonical packet (Area-level) - Jerry / Cyborg" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 315 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-04-ops-batman-fantastic4-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Ops B3 Swarm Config - Fantastic Four" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-04-ops-batman-fantastic4-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Ops / Fantastic4" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 348 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-04-ops-batman-fantastic4-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-04-ops-batman-fantastic4-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 200 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-04-ops-batman-fantastic4-jtbd-ops-001-fantastic4-deal-sop-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-OPS-001 - Fantastic Four canonical packet (Area-level) - Jerry / Batman" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 303 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-03-product-flash-avengers-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Product B3 Swarm Config - Avengers" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 192 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-03-product-flash-avengers-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Product / Avengers" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 378 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-03-product-flash-avengers-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-03-product-flash-avengers-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 200 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-03-product-flash-avengers-jtbd-product-001-avengers-prd-activation-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-PRODUCT-001 - Avengers canonical packet (Area-level) - Jerry / Flash" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 309 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-02-sales-martianmanhunter-illuminati-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Sales B3 Swarm Config - Illuminati" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 192 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-02-sales-martianmanhunter-illuminati-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Sales / Illuminati" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 377 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-02-sales-martianmanhunter-illuminati-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-02-sales-martianmanhunter-illuminati-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 201 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-02-sales-martianmanhunter-illuminati-jtbd-sales-001-illuminati-offer-qualify-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-SALES-001 - Illuminati canonical packet (Area-level) - Jerry / John Jones" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 312 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-01-growth-superman-guardians-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Growth B3 Swarm Config - Guardians" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 192 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-01-growth-superman-guardians-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Growth / Guardians" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 375 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-01-growth-superman-guardians-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 120 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-01-growth-superman-guardians-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 294 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b3-area-warp-core-01-growth-superman-guardians-jtbd-growth-001-guardians-aaas-gtm-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-GROWTH-001 — Guardians AaaS GTM Packet (canonical, Area-level) — Jerry / Superman" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 503 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-b2-business-wheel-harmonization-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Business Wheel Harmonization Matrix" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-b2-dc-direction-council-workflow-md> a aspace:Document ;
+    rdfs:label "B2 DC Direction Council Workflow" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 187 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-b2-meso-vp-swarm-coordination-md> a aspace:Document ;
+    rdfs:label "B2 Meso VP Swarm Coordination" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 147 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-b2-offer-brand-revenue-engine-md> a aspace:Document ;
+    rdfs:label "B2 Offer Brand Revenue Engine - J01_Jerry_Prime_LD01_Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 166 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 Area Domains — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 377 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Legal Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 194 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 160 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-03-aquaman-legal-principles-md> a aspace:Document ;
+    rdfs:label "⚖️ AQUAMAN LEGAL PRINCIPLES — Jerry Area Perpetual Doctrine (v4 — Abundance + Data-Rights + AI-Era Frontier)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-03" ;
+    aspace:mots 1867 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-readme-md> a aspace:Document ;
+    rdfs:label "⚖️ Legal Domain — Aquaman & The Eternals" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 97 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-b3-squad-eternals-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "⚖️ Eternals — Legal Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 287 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-08-legal-aquaman-eternals-b3-squad-eternals-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 69 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "People Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 197 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 161 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-03-greenlantern-people-principles-md> a aspace:Document ;
+    rdfs:label "💚 GREEN LANTERN PEOPLE PRINCIPLES — Jerry Area Perpetual Doctrine (v6 — + Agentic-HR dynamic-workflow mechanics)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-27" ;
+    aspace:mots 2418 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-readme-md> a aspace:Document ;
+    rdfs:label "💚 People Domain — Green Lantern & The X-Men" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 96 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-b3-squad-xmen-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "💚 X-Men — People Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 287 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-07-people-greenlantern-xmen-b3-squad-xmen-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 75 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Finance Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 202 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 161 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-03-wonderwoman-finance-principles-md> a aspace:Document ;
+    rdfs:label "💰 WONDER WOMAN FINANCE PRINCIPLES — Jerry Area Perpetual Doctrine (v4 — Empire / Kardashev + AI-Agency economics, field-grounded)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-25" ;
+    aspace:mots 1910 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-readme-md> a aspace:Document ;
+    rdfs:label "💰 Finance Domain — Wonder Woman & The Thunderbolts" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 93 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-b3-squad-thunderbolts-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "💰 Thunderbolts — Finance Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 253 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-06-finance-wonderwoman-thunderbolts-b3-squad-thunderbolts-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 75 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "IT Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 196 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 157 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-03-cyborg-it-principles-md> a aspace:Document ;
+    rdfs:label "🤖 CYBORG IT PRINCIPLES — Jerry Area Perpetual Doctrine (v2 — 2026-06-25 re-distillation)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-25" ;
+    aspace:mots 1435 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-readme-md> a aspace:Document ;
+    rdfs:label "🤖 IT Domain — Cyborg & The Kang Dynasty" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 89 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-b3-squad-kangdynasty-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🤖 Kang Dynasty — IT Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 225 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-05-it-cyborg-kangdynasty-b3-squad-kangdynasty-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 74 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Ops Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 203 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 160 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 209 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-03-batman-ops-principles-md> a aspace:Document ;
+    rdfs:label "🦇 BATMAN OPS PRINCIPLES — Jerry Area Perpetual Doctrine" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-07-16" ;
+    aspace:mots 2281 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-readme-md> a aspace:Document ;
+    rdfs:label "B2-G4: Ops / Batman / Fantastic Four" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-07-16" ;
+    aspace:mots 304 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-b3-squad-fantastic4-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🦇 Fantastic Four — Ops Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 225 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-04-ops-batman-fantastic4-b3-squad-fantastic4-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 78 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Product Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 199 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 160 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-03-flash-product-principles-md> a aspace:Document ;
+    rdfs:label "⚡ FLASH PRODUCT PRINCIPLES — Jerry Area Perpetual Doctrine" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-31" ;
+    aspace:mots 857 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-readme-md> a aspace:Document ;
+    rdfs:label "B2-G3: Product / Flash / Avengers" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 221 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-b3-squad-avengers-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "⚡ The Avengers — Product Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 226 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-03-product-flash-avengers-b3-squad-avengers-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 78 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Sales Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 198 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 163 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-03-johnjones-sales-principles-md> a aspace:Document ;
+    rdfs:label "🛸 JOHN JONES SALES PRINCIPLES — Jerry Area Perpetual Doctrine (v3 — + Dan Martell field-craft)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 1759 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-readme-md> a aspace:Document ;
+    rdfs:label "B2-G2: Sales / Martian Manhunter / Illuminati" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 235 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-b3-squad-illuminati-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🤝 Illuminati — Sales Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 231 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-02-sales-martianmanhunter-illuminati-b3-squad-illuminati-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 71 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Growth Control Room - Jerry Area J01 LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 200 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 160 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 207 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-03-superman-growth-principles-md> a aspace:Document ;
+    rdfs:label "Principes de Superman — Doctrine Growth du domaine B2-G1" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-25" ;
+    aspace:mots 1592 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-04-superman-extraction-queue-md> a aspace:Document ;
+    rdfs:label "Superman Extraction Queue — Backlog Guardians (corpus Yann Leonardi)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 620 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-readme-md> a aspace:Document ;
+    rdfs:label "B2-G1: Growth / Superman / Guardians" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 229 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🛡️ Guardians of the Galaxy — Growth Squad (CANON Notion)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 248 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Guardians Swarm Config" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 328 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 127 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Guardians Agent Roster" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 420 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking & Handoffs — Guardians" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 327 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b2-area-domains-01-growth-superman-guardians-b3-squad-guardians-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context & Proof Log — Guardians (artefact collectif)" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 479 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-00-b1-direction-index-md> a aspace:Document ;
+    rdfs:label "Jerry Area Direction - LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 169 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-01-north-star-1y-3y-10y-md> a aspace:Document ;
+    rdfs:label "North Star - J01 Jerry Prime LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 281 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-02-12wy-command-cycles-md> a aspace:Document ;
+    rdfs:label "12WY Command Cycles - J01 Jerry Prime LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 313 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-03-decision-charter-md> a aspace:Document ;
+    rdfs:label "B1 Decision Charter — Who decides what, who can veto, when to escalate" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-01" ;
+    aspace:mots 673 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-04-b2-handoff-queue-md> a aspace:Document ;
+    rdfs:label "B2 Handoff Queue - J01 Jerry Prime LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 189 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-05-b2-definition-of-done-spec-md> a aspace:Document ;
+    rdfs:label "B2 Definition Of Done Spec - J01 Jerry Prime LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 238 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-06-b3-jobs-to-be-done-spec-md> a aspace:Document ;
+    rdfs:label "B3 Jobs To Be Done Spec - J01 Jerry Prime LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 172 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-07-b1-to-b2-domain-governance-workflow-md> a aspace:Document ;
+    rdfs:label "B1 -> B2 Domain Governance Workflow" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 284 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-08-business-wheel-balance-review-md> a aspace:Document ;
+    rdfs:label "Business Wheel Balance Review" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 239 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-09-market-validation-sprint-md> a aspace:Document ;
+    rdfs:label "Market Validation Sprint - J01_Jerry_Prime_LD01_Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 132 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-10-project-graduation-gates-md> a aspace:Document ;
+    rdfs:label "Project Graduation Gates - J01_Jerry_Prime_LD01_Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 139 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b1-area-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 Area Direction — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 652 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-00-sob-index-md> a aspace:Document ;
+    rdfs:label "Jerry SOB Doctrine Index" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 187 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-01-e-myth-franchise-prototype-md> a aspace:Document ;
+    rdfs:label "E-Myth Franchise Prototype" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 135 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-02-built-to-sell-scorecard-md> a aspace:Document ;
+    rdfs:label "Built To Sell Scorecard" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 136 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-03-who-not-how-delegation-matrix-md> a aspace:Document ;
+    rdfs:label "Who Not How Delegation Matrix" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 124 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-04-offer-and-brand-engine-md> a aspace:Document ;
+    rdfs:label "Offer And Brand Engine" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-b0-self-operating-business-doctrine-05-project-graduation-gates-md> a aspace:Document ;
+    rdfs:label "Project Graduation Gates" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 122 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-12wy-area-cadence-readme-md> a aspace:Document ;
+    rdfs:label "12WY Area Cadence — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 727 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-12wy-area-cadence-weekly-execution-template-md> a aspace:Document ;
+    rdfs:label "12WY Weekly Execution Template — the WAM + Scorecard" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 423 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-12wy-area-cadence-w09-w12-optimization-readme-md> a aspace:Document ;
+    rdfs:label "12WY W09–W12: Optimization — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 356 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-12wy-area-cadence-w05-w08-scaling-readme-md> a aspace:Document ;
+    rdfs:label "12WY W05–W08: Scaling — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 321 .
+
+<urn:aspace:j01-jerry-prime-ld01-business-12wy-area-cadence-w01-w04-foundation-readme-md> a aspace:Document ;
+    rdfs:label "12WY W01–W04: Foundation — J01 Jerry Prime / LD01 Business" ;
+    aspace:seau <urn:aspace:j01-jerry-prime-ld01-business> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 337 .

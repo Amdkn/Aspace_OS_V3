@@ -1,0 +1,129 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine J02_Jerry_Bio_LD03_LD04_Vitality_Cognition — genere par porte_argent.py le 2026-08-30T03:43:30Z
+# 20 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-03-jerry-bio-principles-md> a aspace:Document ;
+    rdfs:label "🫀 JERRY BIO PRINCIPLES — Vitality (LD03) + Cognition (LD04) Doctrine" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 1092 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-area-standard-md> a aspace:Document ;
+    rdfs:label "J02 — Jerry Bio: LD03 Vitality + LD04 Cognition" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 1837 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-readme-md> a aspace:Document ;
+    rdfs:label "J02 Jerry Bio - Vitality & Cognition" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 134 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-summers-verse-template-md> a aspace:Document ;
+    rdfs:label "VPP — Vitality Protection Protocol" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 1997 ;
+    aspace:type "PROTECTION_PROTOCOL" .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b3-area-warp-core-lead-lag-logs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Jerry Bio: Area Warp Core" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 556 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b3-area-warp-core-artifact-proofs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Jerry Bio: Artifact Proofs" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 644 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 — Jerry Bio: 8 Biological Stack Domains" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 590 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-08-cognition-mastery-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 08 — Cognition/Mastery" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 649 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-07-learning-how-to-learn-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 07 — Learning/How to Learn" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 626 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-06-strength-supple-leopard-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 06 — Strength/Supple Leopard" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 609 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-05-cold-exposure-bls-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 05 — Cold Exposure/BLS" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 548 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-04-nutrition-4hb-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 04 — Nutrition/4HB" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 543 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-03-movement-outlive-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 03 — Movement/Outlive" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 540 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-02-breath-oxytocin-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 02 — Breath/Oxytocin" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 476 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b2-area-domains-01-sleep-recovery-readme-md> a aspace:Document ;
+    rdfs:label "B2 Domain 01 — Sleep/Recovery" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 420 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-b1-area-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 — Jerry Bio: Area Direction" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 971 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-12wy-area-cadence-readme-md> a aspace:Document ;
+    rdfs:label "12WY — Jerry Bio: Area Cadence" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 818 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-12wy-area-cadence-w09-w12-optimization-readme-md> a aspace:Document ;
+    rdfs:label "W09–W12: Summer-Autumn/Resilience Testing" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 843 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-12wy-area-cadence-w05-w08-scaling-readme-md> a aspace:Document ;
+    rdfs:label "W05–W08: Spring/Optimization" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 702 .
+
+<urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition-12wy-area-cadence-w01-w04-foundation-readme-md> a aspace:Document ;
+    rdfs:label "W01–W04: Winter/Foundational" ;
+    aspace:seau <urn:aspace:j02-jerry-bio-ld03-ld04-vitality-cognition> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 631 .

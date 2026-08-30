@@ -1,0 +1,128 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact — genere par porte_argent.py le 2026-08-30T03:43:30Z
+# 20 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-03-jerry-solarpunk-principles-md> a aspace:Document ;
+    rdfs:label "🌱 JERRY SOLARPUNK PRINCIPLES — Social (LD05) + Creativity (LD07) + Impact (LD08) Doctrine" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 895 ;
+    aspace:type "area_domain_principles" .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-area-standard-md> a aspace:Document ;
+    rdfs:label "J04 Jerry Solarpunk — Area Standard" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 2496 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-readme-md> a aspace:Document ;
+    rdfs:label "J04 Jerry Solarpunk - Social, Creativity & Impact" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 164 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-summers-verse-template-md> a aspace:Document ;
+    rdfs:label "SUMMER'S VERSE — SOLARPUNK CONTRIBUTION PROTOCOL (SCP)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 2326 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b3-area-warp-core-lead-lag-logs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Area Warp Core: Lead/Lag Logs" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 491 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b3-area-warp-core-artifact-proofs-readme-md> a aspace:Document ;
+    rdfs:label "B3 — Area Warp Core: Artifact Proofs" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 432 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 — Area Domains" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 384 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-08-contribution-architecture-integrated-readme-md> a aspace:Document ;
+    rdfs:label "B2-D08 — Contribution Architecture (Integrated)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 376 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-07-public-benefit-standards-ld08-readme-md> a aspace:Document ;
+    rdfs:label "B2-D07 — Public Benefit Standards (LD08)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 447 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-06-muse-eligible-criteria-ld08-readme-md> a aspace:Document ;
+    rdfs:label "B2-D06 — MUSE-Eligible Criteria (LD08)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 460 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-05-solarpunk-doctrine-ld08-readme-md> a aspace:Document ;
+    rdfs:label "B2-D05 — Solarpunk Doctrine (LD08)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 559 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-04-creativity-gates-ld07-readme-md> a aspace:Document ;
+    rdfs:label "B2-D04 — Creativity Gates (LD07)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 548 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-03-experiential-capital-ld07-readme-md> a aspace:Document ;
+    rdfs:label "B2-D03 — Experiential Capital (LD07)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 532 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-02-network-activation-ld05-readme-md> a aspace:Document ;
+    rdfs:label "B2-D02 — Network Activation (LD05)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 510 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b2-area-domains-01-relational-capital-ld05-readme-md> a aspace:Document ;
+    rdfs:label "B2-D01 — Relational Capital (LD05)" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 456 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-b1-area-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 — Area Direction" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 837 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-12wy-area-cadence-readme-md> a aspace:Document ;
+    rdfs:label "12WY — Area Cadence" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 329 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-12wy-area-cadence-w09-w12-optimization-readme-md> a aspace:Document ;
+    rdfs:label "12WY — W09-W12: Optimization" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 505 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-12wy-area-cadence-w05-w08-scaling-readme-md> a aspace:Document ;
+    rdfs:label "12WY — W05-W08: Scaling" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 473 .
+
+<urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact-12wy-area-cadence-w01-w04-foundation-readme-md> a aspace:Document ;
+    rdfs:label "12WY — W01-W04: Foundation" ;
+    aspace:seau <urn:aspace:j04-jerry-solarpunk-ld05-ld07-ld08-social-creativity-impact> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 445 .
