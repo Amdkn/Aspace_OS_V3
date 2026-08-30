@@ -46,48 +46,16 @@ se régénère dans `CARTOGRAPHIE.md` — ne pas l'éditer à la main.
 `openwiki/` est exclu des comptes : clone amont avec son propre `.git`, pas
 notre corpus.
 
-### L'arborescence profonde des six étages qui portent la connaissance
+### L'arborescence profonde
 
-**`00_Amadeus/`** — 4 705 `.md`, soit **72 % de tout le corpus** :
-- `30_MEMORY_CORE/` (4 794 fich.) → `carto/` (contradictions, CONSOLIDE.json)
-  et **`sessions_md/` 4 647 `.md` — c'est là que vit la masse** ; c'est du
-  vidage de sessions, pas de la connaissance rédigée
-- `20_Harness/` → **`agentgateway/`** (95 Mo, source MCP), **`bmad-loop/`**
-  (225 fich., tourne dans WSL), `openrouter/`, `routers/`
-- `10_Observers/` — stubs d'observabilité (agentpulse, opik, phoenix…), 3 jonctions
-- `60_Tape_Specs/` (ADR/PRD/REGISTRY) · `90_Doctrine/adr/` · `30_Shadow/`
+Elle est dans **`CARTOGRAPHIE.md`**, régénérée en 0,4 s — trois niveaux, poids,
+jonctions signalées. La dupliquer ici la condamnerait à vieillir : ce fichier
+est un relevé daté, la carte se recalcule.
 
-**`20_Life_OS/`** :
-- `00_Gatekeepers_Beth_Morty/` · `21_Ikigai_Orville/` (pillars + horizons)
-- `22_Wheel_Discovery/` LD01–LD08 (LD01_Business_Book : 68 `.md`)
-- `23_12WY_SNW/` Vision→Planning→Focus→Metrics→Execution
-- `24_PARA_Enterprise/` → `01_Projects_Picard/` · `02_Areas_Spock/` ·
-  **`03_Resources_Geordi/` (1,0 Go — le miroir)** · `04_Archives_Data/`
-- `25_GTD_Cerritos/` (Inbox→Clarify→Organize→Review→Engage) ·
-  `26_DEAL_Protostar/` (D.E.A.L) · `28_Blueprints/`
-
-**`30_Business_OS/`** — 1,3 Go, l'étage le plus lourd :
-- `09_Blueprints/` (2 784 fich.) : **coach-os-refonte** (794 fich., 194 `.md`,
-  497 Mo), **palantir-2.0** (1 055), agentic-os, vision-v1,
-  ontologie-trois-couches, ontologie-vocale, outils-micro-saas, gateways
-- `10_Projects/coach-os-app/` (959 fich., 303 `.md`) — le projet appliqué
-
-**`50_Distillation/`** :
-- `_substrat/` — **65,5 Mo de `.jsonl`** : la matière première des sessions ;
-  `_substrat_domaines/` · `_mesures/`
-- `_briefs/` + `_briefs_vague2/` + `_briefs_domaines/` — les briefs de distillation
-- `domaines/` (161 `.md` : amadeus, business, life, life-wheel, normatif-adr,
-  normatif-sdd-prd, tech, templates) · `areas/` · `projets/` · `ressources/`
-  · `ontologie/` · `archives/`
-
-**`70_Onthologies/`** :
-- `pulse/` (298 `.md`) : `b1/`, `b2/`, `b3/` + `domaines/` (259 `.md`)
-- `sujets/` · `triplets/` (RDF) · `_revue/` · `_structure/`
-- `verbes/` — **vide (0 fichier)** : lacune assumée de l'ontologie
-
-**`60_Implementation_Méthodologiques/`** :
-- `_loop/` (100 fich.) · `domaines/` · `protocoles/` · `frameworks/` ·
-  `prompt-systeme/` · `autonomie-agents/` · `primitives/`
+Les quatre pièges qu'elle ne dit pas d'elle-même :
+`03_Resources_Geordi/` est un **miroir** (1,0 Go), donc une Ressource et non
+l'Area vivante · `20_Harness/bmad-loop/` tourne **dans WSL** · `10_Observers/`
+porte 3 jonctions NTFS · `agentgateway/` pèse 95 Mo à lui seul.
 
 ### Où vit réellement la connaissance
 
@@ -180,11 +148,18 @@ découpé en tranches de ~40 Ko lues depuis le disque, il passe.
 
 ### Ce qu'un délégué doit savoir de lui-même
 
-**Si tu lis ceci et que tu tournes sous `claude-glm`, tu n'es pas Opus.** Tu
-exécutes un brief borné, tu écris ton rapport dans le fichier demandé, et tu
-t'arrêtes. **Tu ne reprends pas la tâche d'une session parente**, tu ne
-t'auto-invoques pas, tu ne décides rien. Incident du 2026-08-30 : un délégué
-a lu ce fichier, s'est cru Opus, et a poursuivi le travail du parent.
+**Si tu lis ceci et que tu tournes sous `claude-glm`, ton mandat est le brief
+que tu as reçu.** Tu es maître de la façon de l'accomplir : tu choisis tes
+outils, ton ordre d'exécution, ta méthode. Tu tranches tout ce que le brief
+laisse ouvert **à l'intérieur de sa portée**, et tu écris ton rapport dans le
+fichier demandé — c'est ta livraison, elle t'appartient.
+
+Ta portée s'arrête au bord du brief : le travail de la session parente est
+**son** mandat. Le reprendre met deux exécutants sur une tâche — quatre
+tranches en double le 2026-08-30. Une tâche hors brief que tu juges nécessaire
+**s'écrit dans ton rapport** : c'est une contribution, pas une transgression.
+Ce jour-là, la cause n'était pas l'excès d'initiative mais l'absence de portée
+écrite.
 
 - **Session courante** — décision, arbitrage, vérification. Pas l'exécution.
 - **`claude-glm`** — l'exécution longue, répétitive, volumineuse.
@@ -194,8 +169,14 @@ a lu ce fichier, s'est cru Opus, et a poursuivi le travail du parent.
 **Se délègue** : scans de corpus, lints, migrations, comptages, réécritures en
 masse, toute tâche dépassant ~20 appels d'outils ou ~200 fichiers.
 
-**Reste ici** : les décisions, et la vérification du travail délégué.
-**Un agent délégué n'est jamais cru sur parole.** Le 2026-08-30, un délégué a
+**Reste ici** : l'arbitrage, et la vérification du travail délégué.
+
+**Toute affirmation se vérifie contre l'environnement — la sienne comme celle
+d'un délégué.** Ce n'est pas de la défiance envers l'exécutant : c'est la règle
+qui vaut pour tout le monde, y compris la session qui arbitre. Un `exit 0` ne
+prouve rien, d'où qu'il vienne. Un rapport de délégué **accompagné d'un chemin,
+d'un `rc=` ou d'un code HTTP est une preuve recevable** ; c'est ce que
+`p7-memoire-travail` exige, sans distinction de qui l'apporte. Le 2026-08-30, un délégué a
 affirmé « la duplication domine » — c'était vrai, mais c'est le script qui l'a
 établi. L'inférence propose, le script tranche.
 
@@ -267,9 +248,13 @@ bool(entry.stat(follow_symlinks=False).st_file_attributes & RP)
 Pour en supprimer une : **`os.rmdir` uniquement**. `rmtree`, `rm -rf` et
 `Remove-Item -Recurse` suivent le lien et détruisent la cible réelle.
 
-**Git** — la racine n'est plus un dépôt (`.git.DESACTIVE_2026-08-02`). Ne pas
-le réactiver : 53 fichiers suivis pour tout le profil, cause d'une saturation
-CPU permanente.
+**Git à la racine du profil** — désactivé le 2026-08-02
+(`.git.DESACTIVE_2026-08-02`) : 53 fichiers suivis pour tout le profil
+saturaient le CPU. **Condition de réactivation** : un `.gitignore` qui exclut
+`AppData/`, `.cache/`, `node_modules/` et les journaux, vérifié par
+`git -C ~ status --porcelain | wc -l` < 200. C'est un seuil mesurable, pas un
+interdit. Versionner un projet précis n'exige d'ailleurs pas ce dépôt-racine —
+`agent-os` a le sien depuis le 2026-08-30, sans effet sur le profil.
 
 ---
 
@@ -286,8 +271,11 @@ un `MANIFEST.json` (`src` → `dst`) qui rend l'opération réversible.
 
 **Vérifier le modèle réel de la session avant d'écrire un brief.** Un brief qui
 contient `claude -p`, un bloc d'exports `ANTHROPIC_BASE_URL`, ou un
-`model: 'haiku'` est **impossible à exécuter** si la session ne tourne pas sur
-un modèle Anthropic. Erreur payée le 2026-08-15.
+`model: 'haiku'` **exige que la session tourne sur un modèle Anthropic** — un
+sous-agent hérite du canal du parent, pas du modèle nommé. Erreur payée le
+2026-08-15, et **détectable avant de lancer** : `echo $ANTHROPIC_BASE_URL`
+vide signifie canal Anthropic, donc `haiku` passe ; une URL locale
+(`127.0.0.1:*`) signifie relais, donc nommer un modèle Anthropic échouera.
 
 ```bash
 grep -E 'claude -p|ANTHROPIC_BASE_URL|model: .(haiku|sonnet|fable|opus)' mon_brief.md
@@ -308,10 +296,8 @@ Les écraser rend l'architecture illisible et fait proposer des remplacements
 d'étage là où il ne s'agit que d'outillage. Affectation donnée par le
 propriétaire : **gstack → B1, superpowers → B2, GSD → B3**.
 
-**État au 2026-08-29 : ni `spec-loop` ni `babysitter` ne tournent.** Configurés,
-pas fonctionnels. Toute affirmation qui les suppose actifs est fausse.
-
-**Mise à jour 2026-08-30 13:55 :** `spec-loop` (cadence 1 m, Beth/Morty) tourne
-de nouveau — test : `type %TEMP%\ordonnanceur\etat_1m.md` ; chemin : `bash A0.sh 4`
-(canal `claude-glm.cmd`, MiniMax expiré). `babysitter` reste non installé.
-Détail : `40_Memory_Wiki_OKF/operations/relance-spec-loop-2026-08-30.md`.
+**État au 2026-08-30 :** `spec-loop` (cadence 1 m, Beth/Morty) tourne — test :
+`type %TEMP%\ordonnanceur\etat_1m.md`, relance : `bash A0.sh 4` via
+`claude-glm.cmd`. `babysitter` est configuré mais pas installé ; l'installer
+est un chemin ouvert, pas une porte fermée. Détail :
+`40_Memory_Wiki_OKF/operations/relance-spec-loop-2026-08-30.md`.

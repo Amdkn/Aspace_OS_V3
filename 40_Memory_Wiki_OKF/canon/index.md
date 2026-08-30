@@ -71,3 +71,4 @@ secret, seulement des **noms** de variables et des préfixes.
 
 - [Canon global de l'utilisateur](CANON-home-claude.md) - Copie de `~/.claude/CLAUDE.md`. Déclare la mémoire OKF comme source de vérité locale, les deux obligations de session, et le câblage Composio.
 - [Canon du profil racine](CANON-profil-racine.md) - Copie de `C:\Users\amado\CLAUDE.md`. Économie de quotas et hiérarchie de délégation, vérification par capture, pièges du disque, gateway MCP, orchestration.
+- [Audit linguistique des CLAUDE.md](audit-langage-impuissance-claude-md-2026-08-30.md) - Audit mesuré (21 négations / 1 décision possédée dans le fichier dépôt) des quatre classes de formulations inductrices d'impuissance acquise : décrets d'impuissance sans chemin de réparation, identité niée des délégués, registre des pertes sans contrepoint, interdits éternels sans condition de levée. Patrons de réécriture par classe.
