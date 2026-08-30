@@ -1,0 +1,36 @@
+{
+ "domaine": "02_Meta_Factory",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\02_Meta_Factory",
+ "genere": "2026-08-30T03:03:49Z",
+ "distillation": {
+  "lus": 2,
+  "echecs": 0,
+  "fichiers": 2
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 2,
+   "jour": 2,
+   "deep-work": 1
+  },
+  "modes": {
+   "collaboratif": 2,
+   "autonome": 2
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 0,
+   "organize": 2,
+   "review": 2,
+   "engage": 2
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 12,
+  "sujets": 2
+ },
+ "verdict": "passe",
+ "reserves": []
+}

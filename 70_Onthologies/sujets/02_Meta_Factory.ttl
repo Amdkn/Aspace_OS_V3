@@ -1,0 +1,21 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 02_Meta_Factory — genere par porte_argent.py le 2026-08-30T03:03:49Z
+# 2 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:02-meta-factory-outbound-3-sequences-franchise-2026-07-08-md> a aspace:Document ;
+    rdfs:label "3 Séquences Outbound — Pitch Franchise-First (reframe des séquences Gemini : token-first → franchise-first)" ;
+    aspace:seau <urn:aspace:02-meta-factory> ;
+    dct:modified "2026-07-08" ;
+    aspace:mots 1367 ;
+    aspace:type "Outbound Playbook (réutilisable, AIDA + AAARR, aligné ADR-OMK-PRODUCTS-001)" .
+
+<urn:aspace:02-meta-factory-outbound-7-sequences-franchise-2026-07-08-md> a aspace:Document ;
+    rdfs:label "7 Séquences Outbound (3 Strates × 10 ICPs canon) — Pitch Franchise-First, Abdaty-ready" ;
+    aspace:seau <urn:aspace:02-meta-factory> ;
+    dct:modified "2026-07-08" ;
+    aspace:mots 2134 ;
+    aspace:type "Outbound Playbook (réutilisable, AIDA + AAARR, aligné ADR-OMK-PRODUCTS-001 v2 + ADR-NEXUS-10-ICP-001)" .

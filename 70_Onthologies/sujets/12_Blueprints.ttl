@@ -1,0 +1,163 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 12_Blueprints — genere par porte_argent.py le 2026-08-30T03:03:50Z
+# 26 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:12-blueprints-01-sdd-sdd-000-ricks-verse-constitution-md> a aspace:Document ;
+    rdfs:label "SDD-000 — La Constitution du Rick's Verse : Onboarding & Orchestration A1/A2/A3" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 3093 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-000b-agent-bootstrap-md> a aspace:Document ;
+    rdfs:label "SDD-000b — Agent Bootstrap Specification" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 706 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-000c-aspace-core-md> a aspace:Document ;
+    rdfs:label "SDD-000c — A'Space Core : Le Jumeau Numérique & La Symétrie Fractale" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 2881 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-001-solarpunk-kernel-core-md> a aspace:Document ;
+    rdfs:label "SDD-001 — Solarpunk Kernel Core L0.3 : Autonomie Agentique & Antifragilité" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 4635 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-002-a1-rick-harness-md> a aspace:Document ;
+    rdfs:label "SDD-002 — A1 Rick Harness : Brainstorming & Architecture" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 2230 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-003-tardis-protocol-orchestration-md> a aspace:Document ;
+    rdfs:label "SDD-003 — Protocole TARDIS : Onboarding & Orchestration des A2 Doctors et A3 Compagnons" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 4644 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-004-ricks-verse-governance-md> a aspace:Document ;
+    rdfs:label "SDD-001 — Rick's Verse Governance : Rôles, Responsabilités & Initiative ALPHA" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 4191 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-005-life-os-l1-integration-md> a aspace:Document ;
+    rdfs:label "SDD-004 — Architecture L1 : Life OS & Intégration au Bedrock Solarpunk Kernel" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 3121 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-006-business-pulse-l2-pyramide-md> a aspace:Document ;
+    rdfs:label "SDD-005 — Architecture L2 : Business Pulse & Clôture de la Pyramide Unifiée" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-08-19" ;
+    aspace:mots 3721 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-007-sob-factory-icp-variants-md> a aspace:Document ;
+    rdfs:label "SDD-007 — SOB Factory : Les 3 ICP Variants & La Mécanique AaaS" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 2815 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-008-shadow-l1-life-os-md> a aspace:Document ;
+    rdfs:label "SDD-008 — Shadow L1 Life OS : Le Laboratoire de la Souveraineté" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 1260 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-009-dashboard-governance-md> a aspace:Document ;
+    rdfs:label "Wishlist" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 555 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-009-shadow-l2-business-os-md> a aspace:Document ;
+    rdfs:label "SDD-009 — Shadow L2 Business OS : La Matrice Souveraine 3×8" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-13" ;
+    aspace:mots 1832 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-010-meta-cloture-scope-13eme-semaine-md> a aspace:Document ;
+    rdfs:label "SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-13" ;
+    aspace:mots 1703 .
+
+<urn:aspace:12-blueprints-01-sdd-sdd-010-meta-cloture-scope-13eme-semaine-updated-shadow-l0-ia-md> a aspace:Document ;
+    rdfs:label "SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-08-01" ;
+    aspace:mots 2237 .
+
+<urn:aspace:12-blueprints-02-adr-adr-fs-001-junction-based-aliasing-md> a aspace:Document ;
+    rdfs:label "ADR-FS-001 — Junction-Based Aliasing for Short-Path Agent Operability" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 680 .
+
+<urn:aspace:12-blueprints-02-adr-adr-fs-002-setup-junctions-script-md> a aspace:Document ;
+    rdfs:label "ADR-FS-002 — Script `Setup-ASpace-Junctions.ps1` (Sentinelles + Profile)" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 320 .
+
+<urn:aspace:12-blueprints-02-adr-adr-fs-003-business-os-sub-junctions-transverse-md> a aspace:Document ;
+    rdfs:label "ADR-FS-003 — Sub-Junctions Business OS Links (Resources / Archives / 12WY / GTD / DEAL)" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 273 .
+
+<urn:aspace:12-blueprints-02-adr-adr-fwk-021-blueprints-canon-tripartite-md> a aspace:Document ;
+    rdfs:label "ADR-FWK-021 — Canon Tripartite des Blueprints (L0 / L1 / L2)" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 524 .
+
+<urn:aspace:12-blueprints-02-adr-adr-fwk-022-quick-access-summers-and-inbox-pattern-md> a aspace:Document ;
+    rdfs:label "ADR-FWK-022 — Quick Access Layer (Summers Verse) + Pattern `_Inbox` Projet" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 808 .
+
+<urn:aspace:12-blueprints-02-adr-adr-heart-002-heartbeat-anti-panique-openclaw-paperclip-md> a aspace:Document ;
+    rdfs:label "ADR-HEART-002 — Heartbeat Anti-Panique + Réintroduction Conditionnelle OpenClaw / Paperclip" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 956 .
+
+<urn:aspace:12-blueprints-02-adr-adr-infra-001-tmux-wsl-dev-pm2-vps-prod-md> a aspace:Document ;
+    rdfs:label "ADR-INFRA-001 — Tmux (WSL Dev) + PM2 (VPS Prod) : Base de Persistance Opérationnelle" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 964 .
+
+<urn:aspace:12-blueprints-02-adr-adr-secnet-001-supabase-network-security-md> a aspace:Document ;
+    rdfs:label "ADR-SECNET-001 — Sécurité Réseau Supabase Self-Hosted + Mesh L2" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 943 .
+
+<urn:aspace:12-blueprints-02-adr-adr-symph-001-symphony-replaces-n8n-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-001 — Symphony Bus Remplace N8N (L0 Orchestration)" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 688 .
+
+<urn:aspace:12-blueprints-02-adr-adr-symph-002-symphony-variants-per-harness-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-002 — Variants Symphony par Harness Agentique" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 971 .
+
+<urn:aspace:12-blueprints-02-adr-adr-symph-003-agent-os-standards-injection-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-003 — Agent OS = Standards Injection + Observability Layer for Symphony Ticks" ;
+    aspace:seau <urn:aspace:12-blueprints> ;
+    dct:modified "2026-06-07" ;
+    aspace:mots 1210 .

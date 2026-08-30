@@ -1,0 +1,13 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 00_Summers_Verse — genere par porte_argent.py le 2026-08-30T03:03:48Z
+# 1 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:00-summers-verse-state-schema-md> a aspace:Document ;
+    rdfs:label "state.json Schema (aspace-l2-state-v1)" ;
+    aspace:seau <urn:aspace:00-summers-verse> ;
+    dct:modified "2026-06-28" ;
+    aspace:mots 234 .

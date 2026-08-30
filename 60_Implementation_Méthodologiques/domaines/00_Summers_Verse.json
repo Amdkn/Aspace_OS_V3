@@ -1,0 +1,36 @@
+{
+ "domaine": "00_Summers_Verse",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\00_Summers_Verse",
+ "genere": "2026-08-30T03:03:48Z",
+ "distillation": {
+  "lus": 1,
+  "echecs": 0,
+  "fichiers": 1
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 1,
+   "jour": 1,
+   "deep-work": 0
+  },
+  "modes": {
+   "collaboratif": 1,
+   "autonome": 1
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 0,
+   "organize": 1,
+   "review": 1,
+   "engage": 0
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 5,
+  "sujets": 1
+ },
+ "verdict": "passe",
+ "reserves": []
+}

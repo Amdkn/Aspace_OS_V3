@@ -1,0 +1,36 @@
+{
+ "domaine": "12_Blueprints",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\10_Tech_OS\\12_Blueprints",
+ "genere": "2026-08-30T03:03:50Z",
+ "distillation": {
+  "lus": 26,
+  "echecs": 0,
+  "fichiers": 26
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 18,
+   "jour": 21,
+   "deep-work": 20
+  },
+  "modes": {
+   "collaboratif": 25,
+   "autonome": 20
+  },
+  "gtd": {
+   "capture": 16,
+   "clarify": 15,
+   "organize": 18,
+   "review": 18,
+   "engage": 23
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 130,
+  "sujets": 26
+ },
+ "verdict": "passe",
+ "reserves": []
+}

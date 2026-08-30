@@ -1,0 +1,104 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 11_Infra_13th_Doctor — genere par porte_argent.py le 2026-08-30T03:03:49Z
+# 16 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:11-infra-13th-doctor-00-blueprints-readme-md> a aspace:Document ;
+    rdfs:label "00_Blueprints (The Schematics)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 65 .
+
+<urn:aspace:11-infra-13th-doctor-00-dashboard-gouvernance-md> a aspace:Document ;
+    rdfs:label "Overview" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 888 .
+
+<urn:aspace:11-infra-13th-doctor-01-yaz-secops-readme-md> a aspace:Document ;
+    rdfs:label "01_Yaz_SecOps (The Shield)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 83 .
+
+<urn:aspace:11-infra-13th-doctor-02-ryan-sysadmin-readme-md> a aspace:Document ;
+    rdfs:label "02_Ryan_SysAdmin (The Mechanic)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 71 .
+
+<urn:aspace:11-infra-13th-doctor-03-graham-backup-readme-md> a aspace:Document ;
+    rdfs:label "03_Graham_Backup (The Archivist)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 70 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-01-hostinger-agents-md> a aspace:Document ;
+    rdfs:label "01_hostinger — DOX leaf for Hostinger MCP" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-13" ;
+    aspace:mots 746 ;
+    aspace:renvoieVers <urn:aspace:claude-projects-c-users-amado-memory-project-hostinger-api-project-hostinger-api> .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-02-github-agents-md> a aspace:Document ;
+    rdfs:label "02_github — DOX leaf for GitHub MCP" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 400 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-03-dokploy-agents-md> a aspace:Document ;
+    rdfs:label "03_dokploy — DOX leaf for Dokploy MCP" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 404 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-04-vercel-agents-md> a aspace:Document ;
+    rdfs:label "04_vercel — DOX leaf for Vercel MCP" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 442 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-05-supabase-agents-md> a aspace:Document ;
+    rdfs:label "05_supabase — DOX leaf for Supabase MCP" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 559 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-06-graphify-agents-md> a aspace:Document ;
+    rdfs:label "06_graphify — DOX leaf for the graphify MCP/CLI" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 812 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-agents-md> a aspace:Document ;
+    rdfs:label "06_MCP_Mastery — DOX root for the 5 production MCPs" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 871 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-dox-agents-md> a aspace:Document ;
+    rdfs:label "DOX framework" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 518 .
+
+<urn:aspace:11-infra-13th-doctor-06-mcp-mastery-dox-readme-md> a aspace:Document ;
+    rdfs:label "How DOX works" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 225 .
+
+<urn:aspace:11-infra-13th-doctor-99-container-vault-readme-md> a aspace:Document ;
+    rdfs:label "99_Container_Vault (The Cargo Bay)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 52 .
+
+<urn:aspace:11-infra-13th-doctor-readme-md> a aspace:Document ;
+    rdfs:label "11_Infra_13th_Doctor (The TARDIS)" ;
+    aspace:seau <urn:aspace:11-infra-13th-doctor> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 79 .

@@ -1,0 +1,40 @@
+{
+ "domaine": "11_Infra_13th_Doctor",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\10_Tech_OS\\11_Infra_13th_Doctor",
+ "genere": "2026-08-30T03:03:49Z",
+ "distillation": {
+  "lus": 16,
+  "echecs": 0,
+  "fichiers": 16
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 9,
+   "jour": 5,
+   "deep-work": 8
+  },
+  "modes": {
+   "collaboratif": 7,
+   "autonome": 8
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 2,
+   "organize": 5,
+   "review": 3,
+   "engage": 6
+  },
+  "sans_rattachement": [
+   "README.md",
+   "README.md",
+   "README.md"
+  ],
+  "couverture_echelle": 81
+ },
+ "ontologie": {
+  "triplets": 81,
+  "sujets": 16
+ },
+ "verdict": "passe",
+ "reserves": []
+}

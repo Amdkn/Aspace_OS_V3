@@ -1,0 +1,36 @@
+{
+ "domaine": "12_Interface_11th_Doctor",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\10_Tech_OS\\12_Interface_11th_Doctor",
+ "genere": "2026-08-30T03:03:49Z",
+ "distillation": {
+  "lus": 5,
+  "echecs": 0,
+  "fichiers": 5
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 2,
+   "jour": 3,
+   "deep-work": 2
+  },
+  "modes": {
+   "collaboratif": 2,
+   "autonome": 0
+  },
+  "gtd": {
+   "capture": 0,
+   "clarify": 0,
+   "organize": 1,
+   "review": 0,
+   "engage": 4
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 25,
+  "sujets": 5
+ },
+ "verdict": "passe",
+ "reserves": []
+}
