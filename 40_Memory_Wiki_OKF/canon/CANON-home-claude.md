@@ -8,8 +8,17 @@
 
 > **Source de vérité locale : `C:\Users\amado\ASpace_OS_V3\40_Memory_Wiki_OKF\`**
 >
-> Bundle OKF v0.2. C'est la mémoire du poste. Pas les notes de session, pas
-> `~/.claude/projects/*/memory/`, pas un fichier de travail — **ce bundle**.
+> Bundle OKF v0.2 — l'**index des concepts consolidés**. Pas les notes de
+> session, pas `~/.claude/projects/*/memory/`, pas un fichier de travail.
+>
+> **Ce n'est pas le corpus** (correction du 2026-08-30). Mesure :
+> **38 `.md` sur 6 534**, soit **0,6 %** de V3. Chercher ici et s'arrêter, c'est
+> manquer 99,4 % de ce qui est écrit, conclure « non documenté », et redemander.
+> C'est la cause racine consignée dans `40_Memory_Wiki_OKF/learning/`.
+>
+> **Lire `ASpace_OS_V3/CARTOGRAPHIE.md` d'abord** — l'arborescence mesurée,
+> régénérable en 0,4 s par `python ASpace_OS_V3/scripts/cartographier_v3.py`.
+> Elle dit où chercher **avant** ce bundle.
 >
 > **`ASpace_OS_V3\openwiki\` n'est PAS la mémoire** (correction du 2026-08-17).
 > C'est un clone du dépôt amont `langchain-ai/openwiki` — l'outil qui *génère*
@@ -76,6 +85,28 @@ Supabase et une sonde de test qui accusait le mauvais coupable.
 1. Ajouter une ligne dans l'`index.md` du sous-bundle (convention `# Files`).
 2. Ne **jamais** poser de lien `[[nom]]` vers un concept qui n'existe pas —
    vérifier avant d'écrire. Un lien mort ment à l'avenir.
+
+### Écrire coûte : déléguer ce qui est long
+
+Une consigne d'écriture systématique n'a de sens que si l'écriture est payable.
+**Le canal de délégation est `~/.claude/custom-models/claude-glm.cmd`**, hors
+quota Anthropic — jamais `claude -p` nu, qui consomme précisément ce qu'on
+épargne.
+
+```bash
+"C:/Users/amado/.claude/custom-models/claude-glm.cmd" \
+  --dangerously-skip-permissions \
+  --strict-mcp-config --mcp-config '{"mcpServers":{}}' \
+  -p "<brief court qui POINTE vers un fichier>"
+```
+
+**Les deux drapeaux MCP sont obligatoires** : sans eux le délégué rend
+`Prompt is too long` avant d'avoir lu son brief (plancher mesuré à ~96k tokens
+d'outillage sur 200k). Détail et pièges : `CANON-profil-racine.md` §1.
+
+**Si tu tournes sous `claude-glm`, tu n'es pas Opus** : tu exécutes un brief
+borné, tu écris le fichier demandé, tu t'arrêtes. Tu ne reprends pas la tâche
+d'une session parente.
 
 ## Ce qui ne va PAS dans le bundle
 
