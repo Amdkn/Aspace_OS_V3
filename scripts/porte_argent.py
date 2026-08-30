@@ -35,6 +35,7 @@ import io
 import json
 import os
 import re
+import stat
 import sys
 import time
 from datetime import datetime, timezone
@@ -55,6 +56,24 @@ METHODO = V3 / "60_Implementation_Méthodologiques/domaines"
 ONTOLOGIE = V3 / "70_Onthologies/sujets"
 
 MOT = re.compile(r"[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ'-]{2,}")
+
+# --- Ce qui n'est pas de la connaissance -------------------------------------
+# Dependances installees et SORTIES generees. Les distiller reviendrait a
+# distiller ce que le systeme a lui-meme produit.
+#
+# Mesure du 2026-08-29 sur 00_Jerry_Business_Pulse : 107 265 fichiers, dont
+# 8 565 .md. En retirant node_modules il en reste 5 232 -- et sur ces 5 232,
+# **4 766 sont dans `graphify-burst`**. Le contenu reel tient en ~466 documents.
+#
+# Sans ces exclusions la porte expire ; et si elle n'expirait pas, son verdict
+# serait une moyenne sur du remplissage. Un domaine dilue passerait pour couvert.
+EXCLUS = {
+    "node_modules", ".git", ".venv", "venv", "__pycache__", "dist", "build",
+    ".next", ".nuxt", "target", "vendor", "coverage", ".cache", "site-packages",
+    # Sorties de generation : elles derivent du corpus, elles n'en font pas partie.
+    "graphify-out", "graphify-burst", "graphify-out-hors-para",
+    "_exports", ".obsidian",
+}
 
 # --- Cadences : la grille de D.E.A.L, telle que le proprietaire l'execute ----
 # « La seule configuration d'une semaine de 4 h reussie s'execute a l'echelle
@@ -86,15 +105,71 @@ INDICES_GTD = {
 }
 
 
+RP = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
+
+
+def est_jonction(entree) -> bool:
+    """Vrai si l'entree est une jonction NTFS (piege documente du canon)."""
+    try:
+        return bool(entree.stat(follow_symlinks=False).st_file_attributes & RP)
+    except (OSError, AttributeError):
+        return False
+
+
+def parcourir_md(racine: Path):
+    """Rend les .md sous `racine`, sans jamais DESCENDRE dans un dossier exclu.
+
+    `rglob` parcourt tout l'arbre puis laisse filtrer : sur les 107 265
+    fichiers de Jerry_Business_Pulse, cela coute des minutes pour jeter 94 %
+    du resultat. L'elagage a l'entree du dossier evite le parcours lui-meme.
+    """
+    pile = [racine]
+    while pile:
+        d = pile.pop()
+        try:
+            entrees = list(os.scandir(d))
+        except OSError:
+            continue
+        for e in entrees:
+            try:
+                if e.is_dir(follow_symlinks=False):
+                    if e.name in EXCLUS or e.name.startswith("."):
+                        continue
+                    # Jonctions NTFS : `os.path.islink` NE LES VOIT PAS et
+                    # `follow_symlinks=False` ne suffit pas. Sans ce garde, le
+                    # parcours boucle -- mesure du 2026-08-29 sur ce domaine :
+                    # 25 418 fichiers en 60 s alors que `find` en compte 8 565
+                    # AU TOTAL. On visitait les memes fichiers en rond.
+                    if est_jonction(e):
+                        continue
+                    pile.append(Path(e.path))
+                elif e.name.endswith(".md"):
+                    yield Path(e.path)
+            except OSError:
+                continue
+
+
 def journal(msg: str) -> None:
     print(f"{time.strftime('%H:%M:%S')}  {msg}", flush=True)
 
 
 def trouver_source(domaine: str) -> Path | None:
+    """Resout un nom de domaine, ou une RACINE entiere.
+
+    Les trois racines (`05_From_V2_Domains` et ses trois OS) sont des cibles
+    legitimes : on peut vouloir passer la porte sur un OS complet plutot que
+    domaine par domaine. Le parcours elague de toute facon, donc le cout suit
+    le contenu reel et non la taille de l'arbre.
+    """
     for base in SOURCES_POSSIBLES:
         c = base / domaine
         if c.is_dir():
             return c
+        if base.name == domaine:
+            return base
+    racine = V2 / "03_Resources_Geordi/05_From_V2_Domains"
+    if racine.name == domaine:
+        return racine
     return None
 
 
@@ -128,9 +203,7 @@ def filtre_distillation(src: Path, domaine: str) -> tuple[list[dict], dict]:
     """
     lignes = []
     lus = echecs = 0
-    for p in sorted(src.rglob("*.md")):
-        if "node_modules" in p.parts or "graphify-out" in p.parts:
-            continue
+    for p in parcourir_md(src):
         try:
             txt = p.read_text(encoding="utf-8", errors="ignore")
             lus += 1

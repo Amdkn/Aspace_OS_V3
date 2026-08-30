@@ -1,0 +1,69 @@
+{
+ "domaine": "10_Tech_OS",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\10_Tech_OS",
+ "genere": "2026-08-30T03:31:14Z",
+ "distillation": {
+  "lus": 95,
+  "echecs": 0,
+  "fichiers": 95
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 35,
+   "jour": 35,
+   "deep-work": 39
+  },
+  "modes": {
+   "collaboratif": 63,
+   "autonome": 35
+  },
+  "gtd": {
+   "capture": 18,
+   "clarify": 23,
+   "organize": 35,
+   "review": 26,
+   "engage": 47
+  },
+  "sans_rattachement": [
+   "Manifesto.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "Loi_L0.md",
+   "VPS_CLES.md",
+   "README.md",
+   "coverage-policy.md",
+   "installer-support.md",
+   "openclaw_gateway_ws.md",
+   "README.md",
+   "gateway-agent-provisioning.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "api.md",
+   "authentication.md",
+   "configuration.md",
+   "README.md",
+   "one-migration-per-pr.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md",
+   "README.md"
+  ],
+  "couverture_echelle": 66
+ },
+ "ontologie": {
+  "triplets": 476,
+  "sujets": 95
+ },
+ "verdict": "passe",
+ "reserves": []
+}

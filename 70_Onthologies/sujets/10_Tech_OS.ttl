@@ -1,0 +1,578 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 10_Tech_OS — genere par porte_argent.py le 2026-08-30T03:31:14Z
+# 95 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:10-tech-os-manifesto-md> a aspace:Document ;
+    rdfs:label "⚡ The Prime Directives" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 133 .
+
+<urn:aspace:10-tech-os-readme-md> a aspace:Document ;
+    rdfs:label "10_Tech_OS (The Bedrock)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 100 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-readme-md> a aspace:Document ;
+    rdfs:label "13_Data_12th_Doctor (The Factory)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 148 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-04-bill-ag-ui-readme-md> a aspace:Document ;
+    rdfs:label "04_Bill_AG-UI (The Interface Designer)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 96 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-03-missy-chaos-readme-md> a aspace:Document ;
+    rdfs:label "03_Missy_Chaos (The Red Team)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 97 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-02-nardole-a2a-readme-md> a aspace:Document ;
+    rdfs:label "02_Nardole_A2A (The Protocol)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 97 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-01-clara-mcp-readme-md> a aspace:Document ;
+    rdfs:label "01_Clara_MCP (The Architect)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 98 .
+
+<urn:aspace:10-tech-os-13-data-12th-doctor-01-clara-mcp-02-clara-etl-readme-md> a aspace:Document ;
+    rdfs:label "Clara_ETL" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:10-tech-os-12-interface-11th-doctor-readme-md> a aspace:Document ;
+    rdfs:label "12_Interface_11th_Doctor (The Hospital)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 153 .
+
+<urn:aspace:10-tech-os-12-interface-11th-doctor-03-river-knowledge-readme-md> a aspace:Document ;
+    rdfs:label "03_River_Knowledge (The Archaeologist)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 92 .
+
+<urn:aspace:10-tech-os-12-interface-11th-doctor-02-rory-health-readme-md> a aspace:Document ;
+    rdfs:label "02_Rory_Health (The Sentinel)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 98 .
+
+<urn:aspace:10-tech-os-12-interface-11th-doctor-01-amy-social-identity-md> a aspace:Document ;
+    rdfs:label "[A3] Amy (The Interface Designer)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-08-01" ;
+    aspace:mots 71 .
+
+<urn:aspace:10-tech-os-12-interface-11th-doctor-01-amy-social-readme-md> a aspace:Document ;
+    rdfs:label "01_Amy_Social (The Storyteller)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 94 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-fs-001-junction-based-aliasing-md> a aspace:Document ;
+    rdfs:label "ADR-FS-001 — Junction-Based Aliasing for Short-Path Agent Operability" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 680 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-fs-002-setup-junctions-script-md> a aspace:Document ;
+    rdfs:label "ADR-FS-002 — Script `Setup-ASpace-Junctions.ps1` (Sentinelles + Profile)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 320 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-fs-003-business-os-sub-junctions-transverse-md> a aspace:Document ;
+    rdfs:label "ADR-FS-003 — Sub-Junctions Business OS Links (Resources / Archives / 12WY / GTD / DEAL)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 273 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-fwk-021-blueprints-canon-tripartite-md> a aspace:Document ;
+    rdfs:label "ADR-FWK-021 — Canon Tripartite des Blueprints (L0 / L1 / L2)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 524 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-fwk-022-quick-access-summers-and-inbox-pattern-md> a aspace:Document ;
+    rdfs:label "ADR-FWK-022 — Quick Access Layer (Summers Verse) + Pattern `_Inbox` Projet" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 808 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-heart-002-heartbeat-anti-panique-openclaw-paperclip-md> a aspace:Document ;
+    rdfs:label "ADR-HEART-002 — Heartbeat Anti-Panique + Réintroduction Conditionnelle OpenClaw / Paperclip" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 956 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-infra-001-tmux-wsl-dev-pm2-vps-prod-md> a aspace:Document ;
+    rdfs:label "ADR-INFRA-001 — Tmux (WSL Dev) + PM2 (VPS Prod) : Base de Persistance Opérationnelle" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 964 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-secnet-001-supabase-network-security-md> a aspace:Document ;
+    rdfs:label "ADR-SECNET-001 — Sécurité Réseau Supabase Self-Hosted + Mesh L2" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 943 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-symph-001-symphony-replaces-n8n-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-001 — Symphony Bus Remplace N8N (L0 Orchestration)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 688 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-symph-002-symphony-variants-per-harness-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-002 — Variants Symphony par Harness Agentique" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 971 .
+
+<urn:aspace:10-tech-os-12-blueprints-02-adr-adr-symph-003-agent-os-standards-injection-md> a aspace:Document ;
+    rdfs:label "ADR-SYMPH-003 — Agent OS = Standards Injection + Observability Layer for Symphony Ticks" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-07" ;
+    aspace:mots 1210 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-000b-agent-bootstrap-md> a aspace:Document ;
+    rdfs:label "SDD-000b — Agent Bootstrap Specification" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 706 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-000c-aspace-core-md> a aspace:Document ;
+    rdfs:label "SDD-000c — A'Space Core : Le Jumeau Numérique & La Symétrie Fractale" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 2881 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-000-ricks-verse-constitution-md> a aspace:Document ;
+    rdfs:label "SDD-000 — La Constitution du Rick's Verse : Onboarding & Orchestration A1/A2/A3" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 3093 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-001-solarpunk-kernel-core-md> a aspace:Document ;
+    rdfs:label "SDD-001 — Solarpunk Kernel Core L0.3 : Autonomie Agentique & Antifragilité" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 4635 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-002-a1-rick-harness-md> a aspace:Document ;
+    rdfs:label "SDD-002 — A1 Rick Harness : Brainstorming & Architecture" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 2230 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-003-tardis-protocol-orchestration-md> a aspace:Document ;
+    rdfs:label "SDD-003 — Protocole TARDIS : Onboarding & Orchestration des A2 Doctors et A3 Compagnons" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 4644 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-004-ricks-verse-governance-md> a aspace:Document ;
+    rdfs:label "SDD-001 — Rick's Verse Governance : Rôles, Responsabilités & Initiative ALPHA" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 4191 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-005-life-os-l1-integration-md> a aspace:Document ;
+    rdfs:label "SDD-004 — Architecture L1 : Life OS & Intégration au Bedrock Solarpunk Kernel" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-11" ;
+    aspace:mots 3121 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-006-business-pulse-l2-pyramide-md> a aspace:Document ;
+    rdfs:label "SDD-005 — Architecture L2 : Business Pulse & Clôture de la Pyramide Unifiée" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-08-19" ;
+    aspace:mots 3721 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-007-sob-factory-icp-variants-md> a aspace:Document ;
+    rdfs:label "SDD-007 — SOB Factory : Les 3 ICP Variants & La Mécanique AaaS" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 2815 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-008-shadow-l1-life-os-md> a aspace:Document ;
+    rdfs:label "SDD-008 — Shadow L1 Life OS : Le Laboratoire de la Souveraineté" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-12" ;
+    aspace:mots 1260 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-009-dashboard-governance-md> a aspace:Document ;
+    rdfs:label "Wishlist" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 555 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-009-shadow-l2-business-os-md> a aspace:Document ;
+    rdfs:label "SDD-009 — Shadow L2 Business OS : La Matrice Souveraine 3×8" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-13" ;
+    aspace:mots 1832 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-010-meta-cloture-scope-13eme-semaine-md> a aspace:Document ;
+    rdfs:label "SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-05-13" ;
+    aspace:mots 1703 .
+
+<urn:aspace:10-tech-os-12-blueprints-01-sdd-sdd-010-meta-cloture-scope-13eme-semaine-updated-shadow-l0-ia-md> a aspace:Document ;
+    rdfs:label "SDD-010 — Meta : Clôture du Scope V0 & Doctrine de la 13ème Semaine" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-08-01" ;
+    aspace:mots 2237 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-00-dashboard-gouvernance-md> a aspace:Document ;
+    rdfs:label "Overview" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 888 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-readme-md> a aspace:Document ;
+    rdfs:label "11_Infra_13th_Doctor (The TARDIS)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 79 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-99-container-vault-readme-md> a aspace:Document ;
+    rdfs:label "99_Container_Vault (The Cargo Bay)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 52 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-dox-agents-md> a aspace:Document ;
+    rdfs:label "DOX framework" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 518 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-dox-readme-md> a aspace:Document ;
+    rdfs:label "How DOX works" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 225 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-agents-md> a aspace:Document ;
+    rdfs:label "06_MCP_Mastery — DOX root for the 5 production MCPs" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 871 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-06-graphify-agents-md> a aspace:Document ;
+    rdfs:label "06_graphify — DOX leaf for the graphify MCP/CLI" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 812 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-05-supabase-agents-md> a aspace:Document ;
+    rdfs:label "05_supabase — DOX leaf for Supabase MCP" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 559 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-04-vercel-agents-md> a aspace:Document ;
+    rdfs:label "04_vercel — DOX leaf for Vercel MCP" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 442 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-03-dokploy-agents-md> a aspace:Document ;
+    rdfs:label "03_dokploy — DOX leaf for Dokploy MCP" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 404 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-02-github-agents-md> a aspace:Document ;
+    rdfs:label "02_github — DOX leaf for GitHub MCP" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-10" ;
+    aspace:mots 400 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-06-mcp-mastery-01-hostinger-agents-md> a aspace:Document ;
+    rdfs:label "01_hostinger — DOX leaf for Hostinger MCP" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-06-13" ;
+    aspace:mots 746 ;
+    aspace:renvoieVers <urn:aspace:claude-projects-c-users-amado-memory-project-hostinger-api-project-hostinger-api> .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-03-graham-backup-readme-md> a aspace:Document ;
+    rdfs:label "03_Graham_Backup (The Archivist)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 70 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-02-ryan-sysadmin-readme-md> a aspace:Document ;
+    rdfs:label "02_Ryan_SysAdmin (The Mechanic)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 71 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-01-yaz-secops-readme-md> a aspace:Document ;
+    rdfs:label "01_Yaz_SecOps (The Shield)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 83 .
+
+<urn:aspace:10-tech-os-11-infra-13th-doctor-00-blueprints-readme-md> a aspace:Document ;
+    rdfs:label "00_Blueprints (The Schematics)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 65 .
+
+<urn:aspace:10-tech-os-00-governance-rick-loi-l0-md> a aspace:Document ;
+    rdfs:label "1. Souveraineté Absolue" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 115 .
+
+<urn:aspace:10-tech-os-00-governance-rick-readme-md> a aspace:Document ;
+    rdfs:label "00_Governance_Rick (The Citadel)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 117 .
+
+<urn:aspace:10-tech-os-00-governance-rick-sobriete-md> a aspace:Document ;
+    rdfs:label "⚡ Philosophie" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-15" ;
+    aspace:mots 104 .
+
+<urn:aspace:10-tech-os-00-governance-rick-vps-audit-protocol-md> a aspace:Document ;
+    rdfs:label "VPS Audit Protocol (The Truth)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 205 .
+
+<urn:aspace:10-tech-os-00-governance-rick-vps-cles-md> a aspace:Document ;
+    rdfs:label "Les Clés du VPS : Le Manuel de l'Architecte" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 338 .
+
+<urn:aspace:10-tech-os-00-governance-rick-vps-keys-md> a aspace:Document ;
+    rdfs:label "VPS Keys: The Architect's Manual to the TARDIS" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-16" ;
+    aspace:mots 340 .
+
+<urn:aspace:10-tech-os-00-governance-rick-scripts-python-readme-md> a aspace:Document ;
+    rdfs:label "Scripts_Python" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-agents-md> a aspace:Document ;
+    rdfs:label "Repository Guidelines" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 299 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-contributing-md> a aspace:Document ;
+    rdfs:label "Contributing to OpenClaw Mission Control" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 311 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-readme-md> a aspace:Document ;
+    rdfs:label "OpenClaw Mission Control" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 833 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-frontend-readme-md> a aspace:Document ;
+    rdfs:label "Mission Control Frontend (`frontend/`)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 630 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-03-development-md> a aspace:Document ;
+    rdfs:label "Development workflow" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 74 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-coverage-policy-md> a aspace:Document ;
+    rdfs:label "Coverage policy" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 11 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-installer-support-md> a aspace:Document ;
+    rdfs:label "Installer platform support" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 164 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-openclaw-baseline-config-md> a aspace:Document ;
+    rdfs:label "OpenClaw Baseline Configuration (Getting Started)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 1294 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-openclaw-gateway-ws-md> a aspace:Document ;
+    rdfs:label "Gateway WebSocket protocol" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 179 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-readme-md> a aspace:Document ;
+    rdfs:label "Mission Control docs" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 74 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-style-guide-md> a aspace:Document ;
+    rdfs:label "Docs style guide" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 84 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-troubleshooting-gateway-agent-provisioning-md> a aspace:Document ;
+    rdfs:label "Gateway Agent Provisioning and Check-In Troubleshooting" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 427 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-troubleshooting-readme-md> a aspace:Document ;
+    rdfs:label "Troubleshooting" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 35 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-testing-readme-md> a aspace:Document ;
+    rdfs:label "Testing" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 144 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-release-readme-md> a aspace:Document ;
+    rdfs:label "Release checklist" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 199 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-reference-api-md> a aspace:Document ;
+    rdfs:label "API reference (notes + conventions)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 629 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-reference-authentication-md> a aspace:Document ;
+    rdfs:label "Authentication" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 128 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-reference-configuration-md> a aspace:Document ;
+    rdfs:label "Configuration reference" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 268 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-reference-security-md> a aspace:Document ;
+    rdfs:label "Security reference" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 445 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-production-readme-md> a aspace:Document ;
+    rdfs:label "Production notes" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 3 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-policy-one-migration-per-pr-md> a aspace:Document ;
+    rdfs:label "Policy: one DB migration per PR" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 88 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-operations-readme-md> a aspace:Document ;
+    rdfs:label "Operations" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 428 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-getting-started-readme-md> a aspace:Document ;
+    rdfs:label "Getting started" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 78 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-development-readme-md> a aspace:Document ;
+    rdfs:label "Development" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 113 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-deployment-readme-md> a aspace:Document ;
+    rdfs:label "Deployment" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 383 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-docs-architecture-readme-md> a aspace:Document ;
+    rdfs:label "Architecture" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 24 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-backend-readme-md> a aspace:Document ;
+    rdfs:label "Mission Control Backend (FastAPI)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 525 .
+
+<urn:aspace:10-tech-os-00-governance-rick-openclaw-mission-control-backend-templates-readme-md> a aspace:Document ;
+    rdfs:label "Backend Templates (Product Documentation)" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-08" ;
+    aspace:mots 630 .
+
+<urn:aspace:10-tech-os-00-governance-rick-drivers-a1-rick-sanchez-visionnaire-gatekeeper-absolu-md> a aspace:Document ;
+    rdfs:label "`[ADR-000] : LA CONSTITUTION DU SOLARPUNK KERNEL (L0)`" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-03" ;
+    aspace:mots 344 .
+
+<urn:aspace:10-tech-os-00-governance-rick-drivers-a2-11-me-docteur-manager-du-life-core-md> a aspace:Document ;
+    rdfs:label "`[PRD-L1] : ORCHESTRATION DU LIFE CORE ET EXPÉRIENCE UTILISATEUR (AG-UI)`" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-03" ;
+    aspace:mots 445 .
+
+<urn:aspace:10-tech-os-00-governance-rick-drivers-a2-12-me-docteur-manager-du-buz-core-business-pulse-md> a aspace:Document ;
+    rdfs:label "`[PRD-B2] : ORCHESTRATION DU BUSINESS PULSE ET PROTOCOLES D'ÉMANCIPATION (SOB)`" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-03" ;
+    aspace:mots 439 .
+
+<urn:aspace:10-tech-os-00-governance-rick-drivers-a2-13-me-docteur-manager-du-solarpunk-kernel-md> a aspace:Document ;
+    rdfs:label "`[PRD-000] : ORCHESTRATION DU KERNEL CORE ET PROTOCOLE TARDIS INVERSÉ`" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-03-03" ;
+    aspace:mots 332 .
+
+<urn:aspace:10-tech-os-00-governance-rick-drivers-readme-md> a aspace:Document ;
+    rdfs:label "Drivers" ;
+    aspace:seau <urn:aspace:10-tech-os> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 5 .

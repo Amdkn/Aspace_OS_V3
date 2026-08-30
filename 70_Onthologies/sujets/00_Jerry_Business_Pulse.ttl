@@ -1,0 +1,2781 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 00_Jerry_Business_Pulse — genere par porte_argent.py le 2026-08-30T03:31:12Z
+# 461 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:00-jerry-business-pulse-ceo-directives-md> a aspace:Document ;
+    rdfs:label "CEO_Directives" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 20 .
+
+<urn:aspace:00-jerry-business-pulse-readme-md> a aspace:Document ;
+    rdfs:label "00_Jerry_Business_Pulse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 7 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 52 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "07_Legal_Aquaman" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-10-makkari-velocity-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 42 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-09-gilgamesh-enforcement-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-08-thena-litigation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-07-druig-negotiation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-06-sprite-ip-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 42 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-05-phastos-templates-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-04-kingo-publiccomms-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-03-ajak-mediation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-02-sersi-jurisdiction-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 41 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-08-legal-aquaman-eternals-01-ikaris-strategy-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 53 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "01_People_GreenLantern" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-08-rogue-skilltransfer-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-07-nightcrawler-distributedonboarding-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-06-beast-techrecruiting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-05-storm-opsleadership-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-04-wolverine-perfreviews-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-03-jeangrey-culture-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-02-cyclops-onboarding-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-07-people-greenlantern-xmen-01-professorx-recruiting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 47 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 53 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "06_Finance_WonderWoman" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-06-usagent-compliance-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-05-taskmaster-repro-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-04-ghost-costopt-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 47 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-03-redguardian-reporting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-02-yelenabelova-forecasting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 46 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-06-finance-wonderwoman-thunderbolts-01-buckybarnes-cashflow-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 49 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "02_IT_Cyborg" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 5 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-06-ramatut-backup-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 42 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-05-victortimely-cicd-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 42 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-04-immortus-capacity-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-03-scarletcenturion-security-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-02-ironlad-provisioning-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-05-it-cyborg-kangdynasty-01-kangprime-infra-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 54 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "03_Operations_Batman" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-04-thething-execution-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 46 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-03-humantorch-incidents-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-02-invisiblewoman-coordination-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-04-ops-batman-fantastic4-01-mrfantastic-processdesign-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 54 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-readme-md> a aspace:Document ;
+    rdfs:label "04_Product_Flash" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-07-scarletwitch-designsystem-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-06-hawkeye-ux-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 42 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-05-blackwidow-specs-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 45 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-04-hulk-qa-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-03-thor-powerfeatures-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 48 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-02-ironman-architecture-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 46 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-03-product-flash-avengers-01-captainamerica-vision-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 44 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-22" ;
+    aspace:mots 50 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "08_Sales_JohnJones (SOA08 — Illuminati)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-10" ;
+    aspace:mots 230 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-06-doctorstrange-forecasting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 47 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-05-professorx-buyerread-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 49 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-04-namor-negotiation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 49 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-03-mrfantastic-discovery-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 47 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-02-ironman-demo-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 48 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-02-sales-martianmanhunter-illuminati-01-blackbolt-closer-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 53 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — Reverse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 57 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-readme-from-business-os-md> a aspace:Document ;
+    rdfs:label "01_Growth_Superman_Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 135 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-06-mantis-voc-readme-md> a aspace:Document ;
+    rdfs:label "06_Mantis_VoC" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 57 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-05-groot-content-readme-md> a aspace:Document ;
+    rdfs:label "05_Groot_Content" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 70 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-04-drax-closing-readme-md> a aspace:Document ;
+    rdfs:label "04_Drax_Closing" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 63 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-03-gamora-target-readme-md> a aspace:Document ;
+    rdfs:label "03_Gamora_Target" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 64 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-02-rocket-auto-readme-md> a aspace:Document ;
+    rdfs:label "02_Rocket_Auto" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 68 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-01-growth-superman-guardians-01-starlord-story-readme-md> a aspace:Document ;
+    rdfs:label "01_StarLord_Story" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 69 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-a2-computer-enterprise-spec-md> a aspace:Document ;
+    rdfs:label "A2 Computer / Enterprise Spec - PARA Structure Engine" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 470 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-a3-enterprise-references-index-md> a aspace:Document ;
+    rdfs:label "A3 Enterprise References Index" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-20" ;
+    aspace:mots 269 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-business-pulse-b3-notion-canon-lore-index-md> a aspace:Document ;
+    rdfs:label "Business Pulse B3 Notion Canon Lore Index" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 1391 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-business-pulse-b3-swarm-inspiration-index-md> a aspace:Document ;
+    rdfs:label "Business Pulse B3 Swarm Inspiration Index" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 230 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-computer-b1-b2-b3-business-pulse-doctrine-md> a aspace:Document ;
+    rdfs:label "Computer Doctrine - B1/B2/B3 Business Pulse In PARA" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 1088 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-readme-md> a aspace:Document ;
+    rdfs:label "24_PARA_Enterprise - Handoff A2" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 527 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-a3-picard-projects-spec-md> a aspace:Document ;
+    rdfs:label "A3 Picard Spec - Projects" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 255 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-jerry-summer-fractal-alignment-md> a aspace:Document ;
+    rdfs:label "Jerry ↔ Summer Fractal Alignment — the macro ⇄ micro bridge" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 909 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-picard-summers-verse-register-md> a aspace:Document ;
+    rdfs:label "Picard Register - Summer's Verse Projects" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 444 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-readme-md> a aspace:Document ;
+    rdfs:label "01_Projects_Picard" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 233 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-summers-verse-md> a aspace:Document ;
+    rdfs:label "Summers Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-20" ;
+    aspace:mots 31 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-cerriros-handover-md> a aspace:Document ;
+    rdfs:label "Cerritos Handover — 01 OMK Business OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 635 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-summers-verse-manifest-md> a aspace:Document ;
+    rdfs:label "Summer's Verse Manifest — 01 OMK Business OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 471 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-b2-business-wheel-harmonization-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Business Wheel Harmonization Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 171 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-b2-dc-direction-council-workflow-md> a aspace:Document ;
+    rdfs:label "B2 DC Direction Council Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 185 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-b2-domain-gate-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Domain Gate Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 254 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-b2-meso-vp-swarm-coordination-md> a aspace:Document ;
+    rdfs:label "B2 Meso VP Swarm Coordination" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 145 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-b2-offer-brand-revenue-engine-md> a aspace:Document ;
+    rdfs:label "B2 Offer Brand Revenue Engine - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 161 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 Business Domains — 01 OMK Business OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 617 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Product Control Room - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 192 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 172 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 218 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-readme-md> a aspace:Document ;
+    rdfs:label "03 Product - Flash / Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 124 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-02-omk-services-business-os-agents-md> a aspace:Document ;
+    rdfs:label "OMK Dashboard — Agent Contract" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-20" ;
+    aspace:mots 771 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-02-omk-services-business-os-picard-audit-md> a aspace:Document ;
+    rdfs:label "🔆 OMK Services Business OS — Audit Technique & Correction de Dettes (Project Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 1020 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-02-omk-services-business-os-readme-md> a aspace:Document ;
+    rdfs:label "Run and deploy your AI Studio app" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 68 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-02-omk-services-business-os-rebuild-workflow-md> a aspace:Document ;
+    rdfs:label "🔆 OMK Dashboard — Workflow de Rebuild Deployment-Ready" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-19" ;
+    aspace:mots 1231 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-01-omk-services-front-end-agents-md> a aspace:Document ;
+    rdfs:label "This is NOT the Next.js you know" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-01-omk-services-front-end-claude-md> a aspace:Document ;
+    rdfs:label "CLAUDE" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 1 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-01-omk-services-front-end-readme-md> a aspace:Document ;
+    rdfs:label "Getting Started" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 188 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-interface-prototypes-omk-srv-bos-omk-services-front-end-agents-md> a aspace:Document ;
+    rdfs:label "This is NOT the Next.js you know" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-interface-prototypes-omk-srv-bos-omk-services-front-end-claude-md> a aspace:Document ;
+    rdfs:label "CLAUDE" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 1 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-interface-prototypes-omk-srv-bos-omk-services-front-end-picard-audit-md> a aspace:Document ;
+    rdfs:label "Picard Audit: OMK Services" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-20" ;
+    aspace:mots 160 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-interface-prototypes-omk-srv-bos-omk-services-front-end-readme-md> a aspace:Document ;
+    rdfs:label "Getting Started" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 188 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-03-product-flash-avengers-00-interface-prototypes-omk-srv-bos-omk-services-front-end-fr-picard-audit-omk-md> a aspace:Document ;
+    rdfs:label "🔆 OMK SERVICES — Audit Technique Picard" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 250 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-02-sales-martianmanhunter-illuminati-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Sales Control Room - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-02-sales-martianmanhunter-illuminati-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 175 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-02-sales-martianmanhunter-illuminati-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 218 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-02-sales-martianmanhunter-illuminati-readme-md> a aspace:Document ;
+    rdfs:label "02 Sales - Martian Manhunter / Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-01-growth-superman-guardians-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Growth Control Room - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 193 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-01-growth-superman-guardians-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 172 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-01-growth-superman-guardians-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 218 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b2-business-domains-01-growth-superman-guardians-readme-md> a aspace:Document ;
+    rdfs:label "01 Growth - Superman / Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-00-b1-direction-index-md> a aspace:Document ;
+    rdfs:label "QuickAccess Summer Direction - OMK Business OS Canon" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 171 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-01-north-star-1y-3y-10y-md> a aspace:Document ;
+    rdfs:label "North Star - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 254 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-02-12wy-command-cycles-md> a aspace:Document ;
+    rdfs:label "12WY Command Cycles - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 305 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-03-decision-charter-md> a aspace:Document ;
+    rdfs:label "03_DECISION_CHARTER" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 0 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-04-b2-handoff-queue-md> a aspace:Document ;
+    rdfs:label "B2 Handoff Queue - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 186 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-05-b2-definition-of-done-spec-md> a aspace:Document ;
+    rdfs:label "B2 Definition Of Done Spec - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 233 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-06-b3-jobs-to-be-done-spec-md> a aspace:Document ;
+    rdfs:label "B3 Jobs To Be Done Spec - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 167 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-07-b1-to-b2-domain-governance-workflow-md> a aspace:Document ;
+    rdfs:label "B1 -> B2 Domain Governance Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 282 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-08-business-wheel-balance-review-md> a aspace:Document ;
+    rdfs:label "Business Wheel Balance Review" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 237 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-09-market-validation-sprint-md> a aspace:Document ;
+    rdfs:label "Market Validation Sprint - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 127 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-10-project-graduation-gates-md> a aspace:Document ;
+    rdfs:label "Project Graduation Gates - 01-omk-business-os" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 134 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-01-omk-business-os-b1-summer-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 Summer Direction — 01 OMK Business OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 490 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-b2-b3-fractal-presentation-md> a aspace:Document ;
+    rdfs:label "Summer's Verse B1/B2/B3 Fractal" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 144 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-readme-md> a aspace:Document ;
+    rdfs:label "Summer's Verse - Picard Project Template" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 144 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-summers-verse-manifest-md> a aspace:Document ;
+    rdfs:label "Summer's Verse Manifest - Template" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 212 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-lead-lag-log-template-md> a aspace:Document ;
+    rdfs:label "B3 Warp Core Execution - Lead/Lag Log Template" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 89 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-08-legal-aquaman-eternals-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Legal B3 Swarm Config - Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 181 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-08-legal-aquaman-eternals-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Legal / Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 384 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-08-legal-aquaman-eternals-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-08-legal-aquaman-eternals-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-07-people-greenlantern-xmen-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "People B3 Swarm Config - X-Men" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 187 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-07-people-greenlantern-xmen-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - People / XMen" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 401 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-07-people-greenlantern-xmen-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-07-people-greenlantern-xmen-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Finance B3 Swarm Config - Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 190 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Finance / Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 344 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-05-it-cyborg-kangdynasty-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "IT B3 Swarm Config - Kang Dynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 186 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-05-it-cyborg-kangdynasty-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - IT / KangDynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 347 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-05-it-cyborg-kangdynasty-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 118 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-05-it-cyborg-kangdynasty-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 145 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-04-ops-batman-fantastic4-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Ops B3 Swarm Config - Fantastic Four" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 190 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-04-ops-batman-fantastic4-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Ops / Fantastic4" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 346 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-04-ops-batman-fantastic4-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-04-ops-batman-fantastic4-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-03-product-flash-avengers-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Product B3 Swarm Config - Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-03-product-flash-avengers-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Product / Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 376 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-03-product-flash-avengers-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-03-product-flash-avengers-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Sales B3 Swarm Config - Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Sales / Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 375 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-01-growth-superman-guardians-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Growth B3 Swarm Config - Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-01-growth-superman-guardians-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Growth / Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 373 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-01-growth-superman-guardians-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b3-warp-core-execution-01-growth-superman-guardians-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-b2-business-wheel-harmonization-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Business Wheel Harmonization Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 172 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-b2-dc-direction-council-workflow-md> a aspace:Document ;
+    rdfs:label "B2 DC Direction Council Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 186 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-b2-domain-gate-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Domain Gate Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 254 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-b2-meso-vp-swarm-coordination-md> a aspace:Document ;
+    rdfs:label "B2 Meso VP Swarm Coordination" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-b2-offer-brand-revenue-engine-md> a aspace:Document ;
+    rdfs:label "B2 Offer Brand Revenue Engine - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 163 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 Business Domains" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 77 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-rocks-and-tactic-specification-md> a aspace:Document ;
+    rdfs:label "B2 Business Domains - Rocks And Tactic Specification" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 97 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-08-legal-aquaman-eternals-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Legal Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 189 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-08-legal-aquaman-eternals-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-08-legal-aquaman-eternals-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-08-legal-aquaman-eternals-readme-md> a aspace:Document ;
+    rdfs:label "08 Legal - Aquaman / Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 105 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-07-people-greenlantern-xmen-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "People Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 192 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-07-people-greenlantern-xmen-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 174 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-07-people-greenlantern-xmen-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-07-people-greenlantern-xmen-readme-md> a aspace:Document ;
+    rdfs:label "07 People - Green Lantern / X-Men" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 111 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-06-finance-wonderwoman-thunderbolts-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Finance Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 197 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-06-finance-wonderwoman-thunderbolts-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 174 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-06-finance-wonderwoman-thunderbolts-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-06-finance-wonderwoman-thunderbolts-readme-md> a aspace:Document ;
+    rdfs:label "06 Finance - Wonder Woman / Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-05-it-cyborg-kangdynasty-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "IT Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 191 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-05-it-cyborg-kangdynasty-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 170 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-05-it-cyborg-kangdynasty-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-05-it-cyborg-kangdynasty-readme-md> a aspace:Document ;
+    rdfs:label "05 IT - Cyborg / Kang Dynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 117 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-04-ops-batman-fantastic4-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Ops Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 198 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-04-ops-batman-fantastic4-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-04-ops-batman-fantastic4-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 221 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-04-ops-batman-fantastic4-readme-md> a aspace:Document ;
+    rdfs:label "04 Ops - Batman / Fantastic Four" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 109 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-03-product-flash-avengers-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Product Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 194 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-03-product-flash-avengers-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-03-product-flash-avengers-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-03-product-flash-avengers-readme-md> a aspace:Document ;
+    rdfs:label "03 Product - Flash / Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 124 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-02-sales-martianmanhunter-illuminati-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Sales Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 193 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-02-sales-martianmanhunter-illuminati-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 176 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-02-sales-martianmanhunter-illuminati-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-02-sales-martianmanhunter-illuminati-readme-md> a aspace:Document ;
+    rdfs:label "02 Sales - Martian Manhunter / Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-01-growth-superman-guardians-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Growth Control Room - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 195 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-01-growth-superman-guardians-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-01-growth-superman-guardians-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b2-business-domains-01-growth-superman-guardians-readme-md> a aspace:Document ;
+    rdfs:label "01 Growth - Superman / Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-00-b1-direction-index-md> a aspace:Document ;
+    rdfs:label "Summer Direction - Summers Verse Template" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 170 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-01-north-star-1y-3y-10y-md> a aspace:Document ;
+    rdfs:label "North Star - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 259 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-02-12wy-command-cycles-md> a aspace:Document ;
+    rdfs:label "12WY Command Cycles - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 310 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-03-decision-charter-md> a aspace:Document ;
+    rdfs:label "03_DECISION_CHARTER" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 0 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-04-b2-handoff-queue-md> a aspace:Document ;
+    rdfs:label "B2 Handoff Queue - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 188 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-05-b2-definition-of-done-spec-md> a aspace:Document ;
+    rdfs:label "B2 Definition Of Done Spec - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 235 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-06-b3-jobs-to-be-done-spec-md> a aspace:Document ;
+    rdfs:label "B3 Jobs To Be Done Spec - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 169 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-07-b1-to-b2-domain-governance-workflow-md> a aspace:Document ;
+    rdfs:label "B1 -> B2 Domain Governance Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 283 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-08-business-wheel-balance-review-md> a aspace:Document ;
+    rdfs:label "Business Wheel Balance Review" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 238 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-09-market-validation-sprint-md> a aspace:Document ;
+    rdfs:label "Market Validation Sprint - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 129 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-10-project-graduation-gates-md> a aspace:Document ;
+    rdfs:label "Project Graduation Gates - 00_Summers_Verse" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 136 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-cycles-12wy-governance-md> a aspace:Document ;
+    rdfs:label "B1 Summer Direction - 4 Cycles 12WY Governance" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 115 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-summers-verse-b1-summer-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 Summer Direction" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 139 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-cerriros-handover-md> a aspace:Document ;
+    rdfs:label "Cerritos Handover — 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 589 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-summers-verse-manifest-md> a aspace:Document ;
+    rdfs:label "Summer's Verse Manifest — 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 390 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-readme-md> a aspace:Document ;
+    rdfs:label "B3 Warp Core Execution — 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 455 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Legal B3 Swarm Config - Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 193 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Legal / Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 384 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-aaas-claims-data-ip-boundary-solaris-md> a aspace:Document ;
+    rdfs:label "⚖️ Claims / Data / IP Boundary — Solaris AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 313 ;
+    aspace:type "legal_claims_data_ip_boundary" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-jtbd-001-aaas-claims-data-ip-boundary-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AAAS Claims Data IP Boundary" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 286 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-jtbd-002-aaas-transverse-legal-risk-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse Legal Risk Gate  ## Job When 00 Agency as a Service prepares any B2 or B3 action across the eight domains, Legal must verify claims, data, IP, contract, authority, compliance, safety/liability, and approval boundaries before execution or launch.  ## Trigger Use this gate before: - publishing claims, campaigns, landing pages, offers, scripts, or public positioning; - handling client/member/childcare/entity/field/finance/legal data; - transferring deliverables, IP, documents, assets, or records; - signing, filing, billing, refunding, onboarding, or committing externally; - running work where authority, compliance, privacy, or liability is unclear.  ## Output A dated Legal readiness decision: - LEGAL_READY - NEEDS_REVIEW - BLOCKED_RISK  ## Readiness Checks | Check | Question | | --- | --- | | Claim | Is the promise supported and bounded? | | Data | What data is touched and how is it protected? | | IP | Who owns the deliverable, asset, content, or method? | | Terms | What agreement, waiver, refund, or commitment applies? | | Liability | What safety, compliance, or responsibility risk exists? | | Authority | Who can approve, sign, publish, or commit? | | External review | Is professional legal/tax/compliance review needed? | | Escalation | Where does uncertainty go? |  ## Guardrail No client-facing promise, data workflow, contract, or deliverable transfer may launch without claims, data, IP, liability, and terms boundary.  ## Proof Attach the Legal packet, decision log, boundary proof, cross-domain approvals, and final Legal decision." ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 176 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-10-makkari-velocity-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-09-gilgamesh-enforcement-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-08-thena-litigation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-07-druig-negotiation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-06-sprite-ip-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 64 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-05-phastos-templates-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-04-kingo-publiccomms-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-03-ajak-mediation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-02-sersi-jurisdiction-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-08-legal-aquaman-eternals-01-ikaris-strategy-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "People B3 Swarm Config - X-Men" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 198 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - People / XMen" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 401 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-aaas-people-agentic-hr-workflows-md> a aspace:Document ;
+    rdfs:label "👥 RH Agentique — les 6 patterns au service du domaine People" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 426 ;
+    aspace:type "agentic_hr_workflows" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-jtbd-001-aaas-owner-handoff-map-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AaaS Owner and Agent Handoff Map" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 297 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-jtbd-002-aaas-transverse-people-agent-governance-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse People Agent Governance Gate" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 152 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-08-rogue-skilltransfer-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-07-nightcrawler-distributedonboarding-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-06-beast-techrecruiting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-05-storm-opsleadership-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-04-wolverine-perfreviews-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-03-jeangrey-culture-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-02-cyclops-onboarding-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-07-people-greenlantern-xmen-01-professorx-recruiting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Finance B3 Swarm Config - Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 193 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Finance / Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 344 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-aaas-price-margin-model-solaris-md> a aspace:Document ;
+    rdfs:label "💰 Modèle Prix / Marge — Solaris (Content Forge + Lite)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 484 ;
+    aspace:type "price_margin_model" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-jtbd-001-aaas-price-margin-model-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AAAS Price Margin Model" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 310 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-jtbd-002-aaas-transverse-finance-money-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse Finance Money Gate  ## Job When 00 Agency as a Service prepares any B2 or B3 action across the eight domains, Finance must verify price, margin, budget, cost, payment, refund, tax/legal dependency, approval, and leakage boundary before execution or launch.  ## Trigger Use this gate before: - publishing a price, quote, offer, package, membership, or service promise; - spending money, buying tools, assigning labor, or launching paid channels; - billing, refunding, collecting payments, or changing payment terms; - launching field/client/member/entity work with cost or liability exposure; - running work where margin, cash, or tax/entity implications are unclear.  ## Output A dated Finance readiness decision: - FINANCE_READY - NEEDS_MODEL - BLOCKED_LEAKAGE  ## Readiness Checks | Check | Question | | --- | --- | | Price | What is charged or budgeted? | | Cost | What labor, tools, supplies, compliance, or delivery costs exist? | | Margin | Is the work profitable or intentionally subsidized? | | Cash | When is money received or paid? | | Refund/exception | What happens when delivery changes or fails? | | Approval | Who can approve spend, price, or payment terms? | | Tax/legal | Does Legal/J03 need review? | | Leakage | What unpriced labor or hidden cost can break the model? |  ## Guardrail No offer, client workflow, or delivery package may launch without price, margin, cost, payment, refund, and leakage boundary.  ## Proof Attach the Finance packet, price/margin model, approval proof, cross-domain dependencies, and final Finance decision." ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 189 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-06-usagent-compliance-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-05-taskmaster-repro-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-04-ghost-costopt-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-03-redguardian-reporting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-02-yelenabelova-forecasting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-06-finance-wonderwoman-thunderbolts-01-buckybarnes-cashflow-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "IT B3 Swarm Config - Kang Dynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 190 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - IT / KangDynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 347 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 118 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 145 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-aaas-runtime-boundary-solaris-md> a aspace:Document ;
+    rdfs:label "🖥️ IT Runtime Boundary — Solaris AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 492 ;
+    aspace:type "it_runtime_boundary" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-jtbd-001-aaas-runtime-boundary-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AAAS Runtime And Data Boundary" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 288 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-jtbd-002-aaas-transverse-it-systems-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse IT Systems Gate" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 179 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-06-ramatut-backup-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-05-victortimely-cicd-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-04-immortus-capacity-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-03-scarletcenturion-security-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-02-ironlad-provisioning-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-05-it-cyborg-kangdynasty-01-kangprime-infra-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 65 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Ops B3 Swarm Config - Fantastic Four" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 190 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Ops / Fantastic4" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 346 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-aaas-delivery-sop-solaris-md> a aspace:Document ;
+    rdfs:label "⚙️ Delivery SOP — Solaris AaaS (zero-Jerry)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 333 ;
+    aspace:type "delivery_sop" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-jtbd-001-aaas-delivery-sop-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AaaS Delivery SOP" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 130 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-jtbd-002-aaas-transverse-ops-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 - AaaS Transverse Ops Gate" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 167 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-04-thething-execution-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-03-humantorch-incidents-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-02-invisiblewoman-coordination-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-04-ops-batman-fantastic4-01-mrfantastic-processdesign-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Product B3 Swarm Config - Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 208 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Product / Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 376 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-aaas-product-mvp-demo-boundary-solaris-md> a aspace:Document ;
+    rdfs:label "🟢 Product MVP & Demo Boundary — Solaris AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 370 ;
+    aspace:type "product_mvp_demo_boundary" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-jtbd-001-aaas-mvp-demo-boundary-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AAAS MVP Demo Boundary" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 247 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-jtbd-002-aaas-transverse-product-offer-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse Product Offer Gate  ## Job When 00 Agency as a Service prepares any offer, product package, service package, MVP, demo, feature, deliverable, or acceptance boundary, Product must verify scope and cross-domain readiness before Sales, Ops, or B3 execution proceeds.  ## Output A dated Product readiness decision: - PRODUCT_READY - NEEDS_SCOPE - BLOCKED_DELIVERY  ## Readiness Checks | Check | Question | | --- | --- | | Scope | What is included? | | Exclusions | What is not included? | | Acceptance | How is done proven? | | Demo/MVP | What does proof mean and not mean? | | Sales/Growth | Does promise match Product? | | Ops/IT | Can delivery/runtime support it? | | Finance | Does price match scope/cost? | | People/Legal | Who owns it and is IP/claims safe? |  ## Guardrail No agency offer may be sold or delivered without productized scope, demo/proof boundary, exclusions, QA, and Ops handoff.  ## Proof Attach Product packet, scope, acceptance criteria, cross-domain approvals, and final Product decision." ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 123 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-07-scarletwitch-designsystem-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-06-hawkeye-ux-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 64 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-05-blackwidow-specs-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-04-hulk-qa-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 64 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-03-thor-powerfeatures-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-02-ironman-architecture-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-03-product-flash-avengers-01-captainamerica-vision-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Sales B3 Swarm Config - Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 211 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Sales / Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 375 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-jtbd-001-aaas-diagnostic-to-proposal-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - AAAS Diagnostic To Proposal" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 919 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-jtbd-002-aaas-transverse-sales-revenue-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-002 AAAS Transverse Sales Revenue Gate" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 200 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-offer-grandslam-solaris-content-forge-md> a aspace:Document ;
+    rdfs:label "📦 Grand Slam Offer — Solaris pour les \"Content Forges\"" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 961 ;
+    aspace:type "grand_slam_offer" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-06-doctorstrange-forecasting-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-05-professorx-buyerread-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-04-namor-negotiation-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-03-mrfantastic-discovery-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-02-ironman-demo-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-02-sales-martianmanhunter-illuminati-01-blackbolt-closer-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-00-b3-swarm-config-md> a aspace:Document ;
+    rdfs:label "Growth B3 Swarm Config - Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 294 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-01-b3-agent-roster-md> a aspace:Document ;
+    rdfs:label "Agent Roster - Growth / Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 373 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-02-peer-unblocking-and-handoffs-md> a aspace:Document ;
+    rdfs:label "Peer Unblocking And Handoffs" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-03-shared-context-and-proof-log-md> a aspace:Document ;
+    rdfs:label "Shared Context And Proof Log" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 379 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-jtbd-001-solaris-voc-packet-md> a aspace:Document ;
+    rdfs:label "JTBD-001 - SOLARIS VOC Packet" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 341 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-jtbd-002-solaris-icp-filter-md> a aspace:Document ;
+    rdfs:label "JTBD-002 — Solaris ICP Filter (visual-first rejection criteria) — AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 235 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-jtbd-003-solaris-painkiller-variants-md> a aspace:Document ;
+    rdfs:label "JTBD-003 — Solaris Painkiller Message Variants (StoryBrand) — AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 237 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-jtbd-004-solaris-experiment-rice-md> a aspace:Document ;
+    rdfs:label "JTBD-004 — Solaris Non-Paid Experiment + RICE — AaaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-29" ;
+    aspace:mots 285 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-jtbd-005-aaas-transverse-growth-signal-gate-md> a aspace:Document ;
+    rdfs:label "JTBD-005 AAAS Transverse Growth Signal Gate" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 192 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-solaris-icp-market-study-2026-md> a aspace:Document ;
+    rdfs:label "🌅 SOLARIS ICP & Market Study 2026 — Agency-as-a-Service flagship" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 903 ;
+    aspace:type "icp_market_study" .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-06-mantis-voc-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-05-groot-content-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-04-drax-closing-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-03-gamora-target-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-02-rocket-auto-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b3-warp-core-execution-01-growth-superman-guardians-01-starlord-story-readme-md> a aspace:Document ;
+    rdfs:label "README" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 67 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-00-aaas-domain-development-map-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Domain Development Map" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 358 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-b2-business-wheel-harmonization-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Business Wheel Harmonization Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 1002 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-b2-dc-direction-council-workflow-md> a aspace:Document ;
+    rdfs:label "B2 DC Direction Council Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 186 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-b2-domain-gate-matrix-md> a aspace:Document ;
+    rdfs:label "B2 Domain Gate Matrix" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 340 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-b2-meso-vp-swarm-coordination-md> a aspace:Document ;
+    rdfs:label "B2 Meso VP Swarm Coordination" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 146 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-b2-offer-brand-revenue-engine-md> a aspace:Document ;
+    rdfs:label "B2 Offer Brand Revenue Engine - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 163 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-readme-md> a aspace:Document ;
+    rdfs:label "B2 Business Domains — 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 510 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Legal Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 223 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-03-legal-principles-ref-md> a aspace:Document ;
+    rdfs:label "Legal Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-04-aaas-legal-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Legal Rock - Transverse Risk Boundary OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 151 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-05-aaas-legal-transverse-risk-boundary-os-md> a aspace:Document ;
+    rdfs:label "AAAS Legal Transverse Risk Boundary OS  ## Purpose Legal is the transverse risk gate for 00 Agency as a Service. It ensures claims, data, IP, compliance, contracts, authority, liability, and approval boundaries are explicit before B2/B3 work becomes public or operational.  ## Operating Thesis AaaS needs Legal to keep client claims, data handling, IP ownership, service terms, and contractor/client boundaries explicit before delivery scales.  ## Eight-Domain Legal Interface | Domain | Legal Surface | Required Proof | | --- | --- | --- |" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 270 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-06-aaas-b2-b3-legal-review-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Legal Review Protocol  ## Legal Packet Every B2/B3 task that touches a claim, contract, client/member/entity/childcare/field data, IP, billing/refund/tax responsibility, public message, or authority boundary must carry this packet:  project: 00 Agency as a Service b2_domain: b2_owner: b3_agent: legal_surface: claim_or_commitment: data_or_record_path: ip_or_deliverable_boundary: terms_or_contract_boundary: liability_or_safety_boundary: authority_owner: review_needed: proof_required: decision:  ## Assignment Rules | Rule | Standard | | --- | --- | | One legal surface | The risk category is explicit | | One authority owner | Approval and responsibility are named | | One proof path | Decision evidence is attached | | One escalation | Uncertain work routes to Legal/B1/Donna | | One boundary | Allowed, conditional, blocked, or external review |  ## Refusal Conditions Legal blocks execution when: - public claims are unsupported; - data path or privacy boundary is unclear; - IP or deliverable ownership is vague; - terms, waiver, refund, tax, or liability boundary is missing; - authority to decide/sign/commit is unclear; - external professional review is needed but absent.  ## Output Legal emits one of three states: - LEGAL_READY: B3 can execute inside the named boundary. - NEEDS_REVIEW: work returns to Legal/B2 for clarification. - BLOCKED_RISK: work routes to Donna/DLQ or B1." ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 160 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-readme-md> a aspace:Document ;
+    rdfs:label "08 Legal - Aquaman / Eternals" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 105 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-b3-squad-eternals-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🏛️ Eternals — Legal Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 262 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-08-legal-aquaman-eternals-b3-squad-eternals-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Legal (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 136 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "People Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 174 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-03-people-principles-ref-md> a aspace:Document ;
+    rdfs:label "People Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-04-aaas-people-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service People Rock - Transverse Agent Governance OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 358 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-05-aaas-people-transverse-agent-governance-os-md> a aspace:Document ;
+    rdfs:label "AAAS People Transverse Agent Governance OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 325 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-06-aaas-b2-b3-agent-command-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Agent Command Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 196 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-readme-md> a aspace:Document ;
+    rdfs:label "07 People - Green Lantern / X-Men" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 111 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-b3-squad-xmen-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🧬 X-Men — People Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 264 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-07-people-greenlantern-xmen-b3-squad-xmen-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris People (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 130 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Finance Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 218 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 174 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-03-finance-principles-ref-md> a aspace:Document ;
+    rdfs:label "Finance Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-04-aaas-finance-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Finance Rock - Transverse Money Control OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 137 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-05-aaas-finance-transverse-money-control-os-md> a aspace:Document ;
+    rdfs:label "AAAS Finance Transverse Money Control OS  ## Purpose Finance is the transverse money gate for 00 Agency as a Service. It ensures pricing, margin, costs, cash timing, payment terms, refunds, taxes, approvals, and leakage controls are explicit before B2/B3 work becomes operational.  ## Operating Thesis AaaS needs Finance to keep pricing, margin, labor load, client payment timing, tooling cost, and delivery profitability visible before agency work scales.  ## Eight-Domain Finance Interface | Domain | Finance Surface | Required Proof | | --- | --- | --- |" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 300 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-06-aaas-b2-b3-finance-approval-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Finance Approval Protocol  ## Finance Packet Every B2/B3 task that touches price, cost, spend, payment, refund, tax, labor, tooling, margin, cash, quote, invoice, or financial commitment must carry this packet:  project: 00 Agency as a Service b2_domain: b2_owner: b3_agent: money_surface: price_or_budget: cost_components: margin_or_unit_economics: payment_terms: refund_or_exception_boundary: tax_or_legal_dependency: approval_owner: proof_required: decision:  ## Assignment Rules | Rule | Standard | | --- | --- | | One money surface | The financial category is explicit | | One approval owner | Spend/price/payment authority is named | | One model | Price, cost, and margin proof are attached | | One exception path | Refund/leakage/tax risk has escalation | | One decision | Ready, needs model, or blocked leakage |  ## Refusal Conditions Finance blocks execution when: - price or budget is missing; - cost-to-serve is unknown; - margin is negative or unproven; - payment/refund terms are vague; - labor or tooling is unpriced; - tax/legal/entity dependency is unresolved; - approval authority is unclear.  ## Output Finance emits one of three states: - FINANCE_READY: B3 can execute inside the named money boundary. - NEEDS_MODEL: work returns to Finance/B2 for pricing/cost proof. - BLOCKED_LEAKAGE: work routes to Donna/DLQ or B1." ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 160 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-readme-md> a aspace:Document ;
+    rdfs:label "06 Finance - Wonder Woman / Thunderbolts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-b3-squad-thunderbolts-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "⚡ Thunderbolts — Finance Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 236 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-06-finance-wonderwoman-thunderbolts-b3-squad-thunderbolts-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Finance (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 121 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "IT Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 215 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 170 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-03-it-principles-ref-md> a aspace:Document ;
+    rdfs:label "IT Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 29 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-04-aaas-it-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service IT Rock - Transverse Systems Access OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 390 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-05-aaas-it-transverse-systems-access-os-md> a aspace:Document ;
+    rdfs:label "AAAS IT Transverse Systems Access OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 344 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-06-aaas-b2-b3-systems-access-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Systems Access Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 166 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-readme-md> a aspace:Document ;
+    rdfs:label "05 IT - Cyborg / Kang Dynasty" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 117 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-b3-squad-kangdynasty-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🟣 Kang Dynasty — IT Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 245 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-05-it-cyborg-kangdynasty-b3-squad-kangdynasty-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris IT (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 122 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Ops Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 198 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 221 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-03-ops-principles-ref-md> a aspace:Document ;
+    rdfs:label "Ops Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-04-aaas-ops-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Ops Rock - Transverse Delivery OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 109 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-05-aaas-ops-transverse-domain-operating-system-md> a aspace:Document ;
+    rdfs:label "AaaS Ops Transverse Domain Operating System" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 435 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-06-aaas-b2-cross-domain-handoff-protocol-md> a aspace:Document ;
+    rdfs:label "AaaS B2 Cross-Domain Handoff Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 283 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-readme-md> a aspace:Document ;
+    rdfs:label "04 Ops - Batman / Fantastic Four" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 109 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-b3-squad-fantastic4-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🔵 Fantastic Four — Ops Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 234 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-04-ops-batman-fantastic4-b3-squad-fantastic4-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Ops (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 119 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Product Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 229 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-03-product-principles-ref-md> a aspace:Document ;
+    rdfs:label "Product Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-04-aaas-product-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Product Rock - Transverse Offer Boundary OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 123 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-05-aaas-product-transverse-offer-boundary-os-md> a aspace:Document ;
+    rdfs:label "AAAS Product Transverse Offer Boundary OS  ## Purpose Product is the transverse offer boundary gate for 00 Agency as a Service. It converts demand and sales intent into a scoped, testable, deliverable, supportable, priced, and legally bounded product/service system.  ## Operating Thesis AaaS needs Product to define service packages, demo boundaries, deliverables, exclusions, and acceptance criteria before sales or ops scale.  ## Eight-Domain Product Interface | Domain | Product Surface | Required Proof | | --- | --- | --- |" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 238 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-06-aaas-b2-b3-product-delivery-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Product Delivery Protocol  ## Product Packet Every Product task that touches offer, package, MVP, demo, deliverable, service scope, QA, or acceptance must carry this packet:  project: 00 Agency as a Service b2_owner: Flash b3_swarm: Avengers growth_signal: sales_diagnostic: scope: exclusions: mvp_or_demo_boundary: acceptance_criteria: ops_handoff: it_runtime_boundary: finance_price_margin: people_owner: legal_ip_claims_boundary: decision:  ## Refusal Conditions Product blocks execution when: - scope is vague; - exclusions are missing; - acceptance criteria are absent; - Sales promise exceeds Product boundary; - Ops/IT/Finance/Legal dependencies are unresolved; - owner or reviewer is missing.  ## Output Product emits one of three states: - PRODUCT_READY - NEEDS_SCOPE - BLOCKED_DELIVERY" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 95 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-readme-md> a aspace:Document ;
+    rdfs:label "03 Product - Flash / Avengers" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 124 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-b3-squad-avengers-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "⚡ The Avengers — Product Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 321 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-b3-squad-avengers-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Product (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 158 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-aaas-os-agents-md> a aspace:Document ;
+    rdfs:label "This is NOT the Next.js you know" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-aaas-os-claude-md> a aspace:Document ;
+    rdfs:label "CLAUDE" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 1 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-aaas-os-picard-audit-md> a aspace:Document ;
+    rdfs:label "🔆 A'Space AaaS (Digital Garden) — Audit Technique & Correction de Dettes (Project Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 1285 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-aaas-os-readme-md> a aspace:Document ;
+    rdfs:label "Getting Started" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 188 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-02-aaas-os-rebuild-workflow-md> a aspace:Document ;
+    rdfs:label "Solaris (AaaS Agency Garden) Dashboard — Workflow de Rebuild Deployment-Ready" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-08" ;
+    aspace:mots 1364 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agents-md> a aspace:Document ;
+    rdfs:label "This is NOT the Next.js you know" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 43 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-claude-md> a aspace:Document ;
+    rdfs:label "CLAUDE" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 1 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-leads-setup-md> a aspace:Document ;
+    rdfs:label "D09 — Lead Capture Setup" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-04" ;
+    aspace:mots 281 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-picard-audit-solaris-md> a aspace:Document ;
+    rdfs:label "🔆 SOLARIS AaaS — Audit Technique & Correction de Dettes" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 1327 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-readme-md> a aspace:Document ;
+    rdfs:label "Getting Started" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-17" ;
+    aspace:mots 188 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-architecture-md> a aspace:Document ;
+    rdfs:label "Architecture" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 220 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-nextjs-16-rules-md> a aspace:Document ;
+    rdfs:label "Next.js 16 — Read Before Coding" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-tech-stack-md> a aspace:Document ;
+    rdfs:label "Tech Stack" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 71 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-typescript-data-shape-md> a aspace:Document ;
+    rdfs:label "Data Shape — Short Keys in data.ts, Long Names in types.ts" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 195 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-security-no-secret-leak-md> a aspace:Document ;
+    rdfs:label "No Secret Leak" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 198 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-security-rgpd-consent-md> a aspace:Document ;
+    rdfs:label "RGPD Consent (L6)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 197 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-layout-fonts-and-metadata-md> a aspace:Document ;
+    rdfs:label "Fonts + Metadata" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 190 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-forms-state-machine-md> a aspace:Document ;
+    rdfs:label "Form State Machine" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 208 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-forms-utm-capture-md> a aspace:Document ;
+    rdfs:label "UTM Capture" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 161 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-api-honeypot-md> a aspace:Document ;
+    rdfs:label "Honeypot Anti-Spam" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 184 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-api-lead-capture-md> a aspace:Document ;
+    rdfs:label "Lead Capture (D09)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 200 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-api-result-types-md> a aspace:Document ;
+    rdfs:label "API Result Types (Discriminated Unions)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 148 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-03-product-flash-avengers-01-solaris-aaas-agent-os-standards-api-storage-fallback-md> a aspace:Document ;
+    rdfs:label "Storage Fallback Chain" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-06" ;
+    aspace:mots 214 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Sales Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 193 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 176 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-03-sales-principles-ref-md> a aspace:Document ;
+    rdfs:label "Sales Principles Reference - AAAS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 32 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-04-aaas-sales-rock-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Sales Rock - Transverse Revenue Handoff OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 161 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-05-aaas-sales-transverse-revenue-handoff-os-md> a aspace:Document ;
+    rdfs:label "AAAS Sales Transverse Revenue Handoff OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 253 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-06-aaas-b2-b3-sales-proposal-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Sales Proposal Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 95 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-readme-md> a aspace:Document ;
+    rdfs:label "02 Sales - Martian Manhunter / Illuminati" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-b3-squad-illuminati-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🤝 Illuminati — Sales Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 317 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-02-sales-martianmanhunter-illuminati-b3-squad-illuminati-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Sales (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 124 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-00-b2-domain-control-room-md> a aspace:Document ;
+    rdfs:label "Growth Control Room - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 237 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-01-rock-to-dod-to-jtbd-pipeline-md> a aspace:Document ;
+    rdfs:label "Rock -> DoD -> JTBD Pipeline" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 173 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-02-b3-swarm-supervision-protocol-md> a aspace:Document ;
+    rdfs:label "B3 Swarm Supervision Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 219 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-03-growth-principles-ref-md> a aspace:Document ;
+    rdfs:label "Principes Growth — Référence (NON dupliquée)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 344 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-04-solaris-growth-extraction-queue-md> a aspace:Document ;
+    rdfs:label "00 Agency as a Service Growth Rock - Transverse Demand Signal OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 441 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-05-aaas-growth-transverse-demand-signal-os-md> a aspace:Document ;
+    rdfs:label "AAAS Growth Transverse Demand Signal OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 336 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-06-aaas-b2-b3-growth-experiment-protocol-md> a aspace:Document ;
+    rdfs:label "AAAS B2/B3 Growth Experiment Protocol" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 176 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-readme-md> a aspace:Document ;
+    rdfs:label "01 Growth - Superman / Guardians" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-25" ;
+    aspace:mots 113 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-b3-squad-guardians-00-b3-squad-canon-md> a aspace:Document ;
+    rdfs:label "🛡️ Guardians — Growth Squad (Picard / AaaS Solaris instance)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 436 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b2-business-domains-01-growth-superman-guardians-b3-squad-guardians-00-crosslink-md> a aspace:Document ;
+    rdfs:label "2-Way Crosslink — AaaS Solaris Growth (Picard)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-28" ;
+    aspace:mots 235 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-00-b1-direction-index-md> a aspace:Document ;
+    rdfs:label "QuickAccess Summer Direction - Agency aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 170 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-01-north-star-1y-3y-10y-md> a aspace:Document ;
+    rdfs:label "North Star - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 261 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-02-12wy-command-cycles-md> a aspace:Document ;
+    rdfs:label "12WY Command Cycles - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 308 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-03-decision-charter-md> a aspace:Document ;
+    rdfs:label "03_DECISION_CHARTER" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 0 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-04-b2-handoff-queue-md> a aspace:Document ;
+    rdfs:label "B2 Handoff Queue - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 240 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-05-b2-definition-of-done-spec-md> a aspace:Document ;
+    rdfs:label "B2 Definition Of Done Spec - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 235 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-06-b3-jobs-to-be-done-spec-md> a aspace:Document ;
+    rdfs:label "B3 Jobs To Be Done Spec - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-26" ;
+    aspace:mots 169 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-07-b1-to-b2-domain-governance-workflow-md> a aspace:Document ;
+    rdfs:label "B1 -> B2 Domain Governance Workflow" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 283 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-08-business-wheel-balance-review-md> a aspace:Document ;
+    rdfs:label "Business Wheel Balance Review" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 238 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-09-market-validation-sprint-md> a aspace:Document ;
+    rdfs:label "Market Validation Sprint - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 129 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-10-project-graduation-gates-md> a aspace:Document ;
+    rdfs:label "Project Graduation Gates - 00_Agency_aaS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-27" ;
+    aspace:mots 136 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-11-fractal-project-development-plan-md> a aspace:Document ;
+    rdfs:label "Fractal Project Development Plan - 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-02" ;
+    aspace:mots 200 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-01-projects-picard-00-agency-as-a-service-b1-summer-direction-readme-md> a aspace:Document ;
+    rdfs:label "B1 Summer Direction — 00 Agency as a Service" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 453 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-00-links-30-business-os-portal-manifesto-md> a aspace:Document ;
+    rdfs:label "Layer 2: Business OS Manifesto" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-23" ;
+    aspace:mots 14 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-20-life-os-para-portal-00-links-30-business-os-portal-readme-md> a aspace:Document ;
+    rdfs:label "30_Business_OS (The Fractal Engine)" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-05-21" ;
+    aspace:mots 202 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-02-alykaly-os-v2-picard-audit-md> a aspace:Document ;
+    rdfs:label "Picard Audit: Alikaly Bana Holding OS" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 250 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-02-alykaly-os-v2-readme-md> a aspace:Document ;
+    rdfs:label "Alikaly Bana Holding OS — V2" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 435 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-02-alykaly-os-v2-supabase-strategy-md> a aspace:Document ;
+    rdfs:label "Alykaly OS — Stratégie de Structuration Supabase" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 6028 .
+
+<urn:aspace:00-jerry-business-pulse-04-business-domains-00-links-02-alykaly-os-v2-docs-deployment-runbook-md> a aspace:Document ;
+    rdfs:label "Alykaly OS — Deployment Runbook" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-06-05" ;
+    aspace:mots 1064 .
+
+<urn:aspace:00-jerry-business-pulse-03-master-agreements-readme-md> a aspace:Document ;
+    rdfs:label "03_Master_Agreements" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-02-global-dashboard-readme-md> a aspace:Document ;
+    rdfs:label "02_Global_Dashboard" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
+
+<urn:aspace:00-jerry-business-pulse-01-vision-strategy-readme-md> a aspace:Document ;
+    rdfs:label "01_Vision_Strategy" ;
+    aspace:seau <urn:aspace:00-jerry-business-pulse> ;
+    dct:modified "2026-02-06" ;
+    aspace:mots 6 .
