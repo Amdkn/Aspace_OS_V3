@@ -34,17 +34,36 @@ USAGE
 """
 
 from __future__ import annotations
-import io, json, os, sys
+import io, json, os, stat, sys
 from datetime import datetime
 from pathlib import Path
 
 # Les sessions ne vivent pas toutes sous ~/.claude/projects : Codex, Ori et le
 # depot lui-meme en portent aussi. Mesure du 2026-08-29 : 1085 + 52 + 11 + 28.
 # N'en convertir qu'une source laisse le reste mourir avec la retention.
+# Viser les dossiers de sessions, JAMAIS la racine d'un outil : `.codex` porte
+# plus de 31 000 entrees de caches de paquets, et un rglob dessus noyait la
+# conversion sans jamais rien ecrire (mesure 2026-08-29).
+#
+# Ce que ces sources rapportent, et qui vaut le detour : `.codex/archived_sessions`
+# et `.codex/sessions` contiennent 48 sessions de MARS a AOUT 2026 -- cinq mois
+# anterieurs a la coupure de retention de Claude Code, qui n'a garde que le
+# 1er aout et apres. C'est de l'historique qu'on croyait perdu.
 SOURCES = [
     Path("C:/Users/amado/.claude/projects"),
-    Path("C:/Users/amado/.codex"),
+    Path("C:/Users/amado/.codex/sessions"),
+    Path("C:/Users/amado/.codex/archived_sessions"),
     Path("C:/Users/amado/.ori"),
+    # AJOUT DU 2026-08-29 — la sauvegarde que le proprietaire avait faite
+    # lui-meme dans les Ressources de Geordi, et que la purge n'a jamais
+    # touchee. Elle contient 485 sessions Claude Code ANTERIEURES au 1er aout :
+    #   projects/                            431  (dont 418 de juillet)
+    #   _ARCHIVE_2026-06-16_sessions/         24  (dont 5 d'avril)
+    #   _TRASH_2026-06-30_..._doctrine/       30  (dont 2 d'avril)
+    # L'affirmation « rien n'existe avant le 1er aout » etait fausse de 485
+    # sessions : elle ne valait que pour ~/.claude/projects, et a ete enoncee
+    # comme si elle valait pour le disque entier.
+    Path("C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/06_Claude_Code_Bare"),
 ]
 SORTIE = Path(__file__).resolve().parent / "sessions_md"
 
@@ -81,6 +100,37 @@ def rejete(t: str) -> bool:
         return True
     return False
 
+def lire_evenement(e: dict) -> tuple[str, str]:
+    """Rend (role, texte) pour un evenement, quel que soit l'outil d'origine.
+
+    DEUX SCHEMAS, et les confondre rend un corpus vide :
+
+    - Claude Code : {"message": {"role": ..., "content": ...}}
+    - Codex       : {"type": "event_msg", "payload": {"type": "user_message"
+                     | "agent_message", "message": "..."}}
+
+    Mesure du 2026-08-29 : les 48 sessions Codex (mars a aout, 758 Mo) n'ont
+    aucun champ `message.role`. Passees au lecteur de Claude Code, elles
+    rendaient zero ligne -- une conversion « reussie » et vide.
+
+    On lit les evenements de tour (`user_message` / `agent_message`) plutot que
+    les `response_item`, qui redisent la meme chose en dupliquant l'historique.
+    """
+    m = e.get("message")
+    if isinstance(m, dict):                      # schema Claude Code
+        return (m.get("role") or ""), texte(m.get("content"))
+
+    if e.get("type") == "event_msg":             # schema Codex
+        p = e.get("payload") or {}
+        if isinstance(p, dict):
+            tp = p.get("type")
+            if tp == "user_message":
+                return "user", str(p.get("message") or "")
+            if tp == "agent_message":
+                return "assistant", str(p.get("message") or "")
+    return "", ""
+
+
 def convertir(src: Path, dst: Path) -> tuple[int, int]:
     nu = na = 0
     caracteres_humains = 0
@@ -96,10 +146,8 @@ def convertir(src: Path, dst: Path) -> tuple[int, int]:
             if ts:
                 premier = premier or ts
                 dernier = ts
-            m = e.get("message") or {}
-            role = m.get("role") or e.get("type")
-            t = texte(m.get("content"))
-            if rejete(t):
+            role, t = lire_evenement(e)
+            if not role or rejete(t):
                 continue
             if role == "user":
                 nu += 1
@@ -122,6 +170,44 @@ def convertir(src: Path, dst: Path) -> tuple[int, int]:
     io.open(dst, "w", encoding="utf-8").write(entete + "".join(lignes))
     return nu, na
 
+RP = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)
+
+
+def est_jonction(entree) -> bool:
+    """Vrai si l'entree est une jonction NTFS.
+
+    `os.path.islink()` NE LES VOIT PAS sous Windows -- piege documente dans le
+    canon du poste, ou un `os.walk` naif a compte 13,8 millions de fichiers la
+    ou il y en a 14 613. `rglob` les suit aussi : l'enumeration de
+    06_Claude_Code_Bare tournait sans fin.
+    """
+    try:
+        return bool(entree.stat(follow_symlinks=False).st_file_attributes & RP)
+    except (OSError, AttributeError):
+        return False
+
+
+def parcourir_sans_jonctions(racine: Path):
+    """Parcours iteratif qui refuse d'entrer dans une jonction."""
+    pile = [racine]
+    while pile:
+        d = pile.pop()
+        try:
+            entrees = list(os.scandir(d))
+        except OSError:
+            continue
+        for e in entrees:
+            try:
+                if e.is_dir(follow_symlinks=False):
+                    if e.name in ("node_modules", ".git") or est_jonction(e):
+                        continue
+                    pile.append(Path(e.path))
+                elif e.name.endswith(".jsonl"):
+                    yield Path(e.path)
+            except OSError:
+                continue
+
+
 def main() -> int:
     depuis = None
     if "--depuis" in sys.argv:
@@ -132,7 +218,7 @@ def main() -> int:
             print(f"  source absente, ignoree : {racine}")
             continue
         n0 = len(fichiers)
-        for p in sorted(racine.rglob("*.jsonl")):
+        for p in sorted(parcourir_sans_jonctions(racine)):
             fichiers.append((racine, p))
         print(f"  {racine.name or racine} : {len(fichiers) - n0} sessions")
 
@@ -151,7 +237,12 @@ def main() -> int:
         if racine.name == "projects":
             dst = SORTIE / src.parent.name / f"{src.stem}.md"
         else:
-            dst = SORTIE / ("_" + racine.name.lstrip(".")) / rel / f"{src.stem}.md"
+            # « _codex_archived_sessions » plutot que « _archived_sessions » :
+            # le nom seul du dossier ne dit pas de quel outil il vient.
+            etiquette = "_" + "_".join(
+                x.lstrip(".") for x in racine.parts[-2:] if x not in ("C:", "/", "\\")
+            )
+            dst = SORTIE / etiquette / rel / f"{src.stem}.md"
         try:
             nu, na = convertir(src, dst)
         except Exception as ex:
