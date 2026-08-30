@@ -187,7 +187,8 @@ def main() -> int:
         "60_Implementation_Méthodologiques": "Verdicts du triptyque par domaine",
         "70_Onthologies": "Sujets, triplets RDF, revue",
         "80_Agent-OS": "Observabilite — tableaux de revue et schema de cadence",
-        "scripts": "Porte d'argent, cartographie, generateurs",
+        "90-self-evolution": "Skills d'auto-amelioration — une par problematique mesuree",
+    "scripts": "Porte d'argent, cartographie, generateurs",
     }
     for e in sorted(arbre.enfants, key=lambda x: x.nom):
         if e.jonction:

@@ -1,6 +1,6 @@
 # Cartographie de A'Space OS V3
 
-> Genere par `scripts/cartographier_v3.py` le 2026-08-30 07:11 UTC, en 0.4 s.
+> Genere par `scripts/cartographier_v3.py` le 2026-08-30 12:43 UTC, en 0.5 s.
 > **Ne pas editer a la main** : une carte ecrite a la main vieillit et ment.
 > Regenerer par `python scripts/cartographier_v3.py`.
 
@@ -8,12 +8,12 @@
 
 | | |
 |---|---|
-| Fichiers | **10,734** |
+| Fichiers | **10,784** |
 | Poids | **2.8 Go** |
-| Documents `.md` | **6,534** |
+| Documents `.md` | **6,565** |
 | Triplets `.ttl` | 31 |
 | Substrat `.jsonl` | 45 |
-| Scripts `.py` | 282 |
+| Scripts `.py` | 290 |
 
 Exclus du compte : `.cache`, `.git`, `.mypy_cache`, `.next`, `.nuxt`, `.obsidian`, `.pytest_cache`, `.venv`, `__pycache__`, `build`, `coverage`, `dist`, `node_modules`, `openwiki`, `site-packages`, `target`, `vendor`, `venv`.
 
@@ -25,26 +25,27 @@ etranger au notre.
 
 | Etage | Fichiers | dont `.md` | Poids | Ce qu'il porte |
 |---|---:|---:|---:|---|
-| `00_Amadeus/` | 5,132 | 4,705 | 228.7 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
+| `00_Amadeus/` | 5,132 | 4,705 | 228.9 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
 | `10_Tech_OS/` | 97 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
 | `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
 | `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
-| `40_Memory_Wiki_OKF/` | 38 | 38 | 256.1 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
-| `50_Distillation/` | 363 | 300 | 69.9 Mo | Methode, substrat, briefs de distillation |
+| `40_Memory_Wiki_OKF/` | 38 | 38 | 259.4 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `50_Distillation/` | 394 | 321 | 70.3 Mo | Methode, substrat, briefs de distillation |
 | `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
 | `70_Onthologies/` | 396 | 324 | 6.8 Mo | Sujets, triplets RDF, revue |
 | `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
+| `90-self-evolution/` | 15 | 8 | 68.5 Ko | Skills d'auto-amelioration — une par problematique mesuree |
 | `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109.2 Mo | Briefs archives de coach-os |
 | `_INBOX/` | 9 | 5 | 10.9 Ko | Capture GTD, non trie |
 | `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4.7 Mo | 26 sources consolidees pour la revue humaine |
-| `scripts/` | 27 | 0 | 235.1 Ko | Porte d'argent, cartographie, generateurs |
-| *(racine)* | 6 | 4 | 33.4 Ko | fichiers de tete |
+| `scripts/` | 29 | 0 | 243.1 Ko | Porte d'argent, cartographie, generateurs |
+| *(racine)* | 8 | 6 | 79.8 Ko | fichiers de tete |
 
 ## Arborescence, 3 niveaux
 
 ```
 ASpace_OS_V3/
-|-- 00_Amadeus/  (5132 fich., 4705 md, 228.7 Mo)
+|-- 00_Amadeus/  (5132 fich., 4705 md, 228.9 Mo)
 |   |-- 10_Observers/  (9 fich., 3.7 Ko)
 |   |   |-- _placeholder_agent-os_2026-08-06/  (1 fich.)
 |   |   |-- agent-os/  -> JONCTION (non suivie)
@@ -57,8 +58,8 @@ ASpace_OS_V3/
 |   |   |-- phoenix/  (1 fich.)
 |   |   |-- pocketbase-vec/  -> JONCTION (non suivie)
 |   |   `-- super-simple-software-factory/  -> JONCTION (non suivie)
-|   |-- 20_Harness/  (300 fich., 33 md, 110.2 Mo)
-|   |   |-- agentgateway/  (24 fich., 95.4 Mo)
+|   |-- 20_Harness/  (300 fich., 33 md, 110.4 Mo)
+|   |   |-- agentgateway/  (24 fich., 95.5 Mo)
 |   |   |-- antigravity/  (1 fich.)
 |   |   |-- bmad-loop/  (225 fich., 28 md, 9.5 Mo)
 |   |   |   ... 5 sous-dossiers, non deplies
@@ -198,20 +199,22 @@ ASpace_OS_V3/
 |   `-- 10_Projects/  (960 fich., 303 md, 20.7 Mo)
 |       `-- coach-os-app/  (959 fich., 303 md, 20.7 Mo)
 |           ... 29 sous-dossiers, non deplies
-|-- 40_Memory_Wiki_OKF/  (38 fich., 38 md, 256.1 Ko)
+|-- 40_Memory_Wiki_OKF/  (38 fich., 38 md, 259.4 Ko)
 |   |-- architecture/  (9 fich., 9 md, 56.5 Ko)
-|   |-- canon/  (4 fich., 4 md, 45.9 Ko)
+|   |-- canon/  (4 fich., 4 md, 49.3 Ko)
 |   |-- integrations/  (8 fich., 8 md, 82.0 Ko)
 |   |-- learning/  (2 fich., 2 md, 8.9 Ko)
 |   |-- operations/  (8 fich., 8 md, 40.6 Ko)
 |   `-- security/  (3 fich., 3 md, 10.6 Ko)
-|-- 50_Distillation/  (363 fich., 300 md, 69.9 Mo)
+|-- 50_Distillation/  (394 fich., 321 md, 70.3 Mo)
 |   |-- _briefs/  (24 fich., 16 md, 145.2 Ko)
 |   |-- _briefs_domaines/  (14 fich., 9 md, 84.7 Ko)
 |   |-- _briefs_vague2/  (14 fich., 9 md, 83.4 Ko)
 |   |-- _mesures/  (4 fich., 33.1 Ko)
+|   |-- _partiels/  (21 fich., 11 md, 35.3 Ko)
 |   |-- _substrat/  (25 fich., 1 md, 65.5 Mo)
 |   |-- _substrat_domaines/  (9 fich., 4 md, 1.7 Mo)
+|   |-- _tranches/  (10 fich., 10 md, 379.9 Ko)
 |   |-- archives/  (17 fich., 17 md, 86.4 Ko)
 |   |-- areas/  (22 fich., 22 md, 136.0 Ko)
 |   |-- domaines/  (161 fich., 161 md, 654.8 Ko)
@@ -255,6 +258,23 @@ ASpace_OS_V3/
 |   |   `-- schema/  (1 fich., 10.0 Ko)
 |   `-- tableaux/  (4 fich., 47.2 Ko)
 |       `-- reviews/  (3 fich., 36.7 Ko)
+|-- 90-self-evolution/  (15 fich., 8 md, 68.5 Ko)
+|   |-- datasets/  (0 fich.)
+|   |-- evolution/  (2 fich., 1 md, 8.6 Ko)
+|   |-- reports/  (0 fich.)
+|   `-- skills/  (12 fich., 6 md, 55.7 Ko)
+|       |-- p1-anti-rejeu/  (2 fich., 1 md, 10.9 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       |-- p2-mandat-persistant/  (2 fich., 1 md, 11.6 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       |-- p3-point-entree/  (2 fich., 1 md, 7.6 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       |-- p4-instrument-honnete/  (2 fich., 1 md, 9.3 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       |-- p5-plancher-contexte/  (2 fich., 1 md, 7.7 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       `-- p6-verification-goulot/  (2 fich., 1 md, 8.5 Ko)
+|           ... 2 sous-dossiers, non deplies
 |-- _ARCHIVE_coach-os-briefs/  (349 fich., 154 md, 109.2 Mo)
 |   `-- _briefs/  (349 fich., 154 md, 109.2 Mo)
 |       |-- 2026-08-09_prod/  (14 fich., 12 md, 72.9 Ko)
@@ -285,7 +305,7 @@ ASpace_OS_V3/
 |   `-- _refuses/  (2 fich., 2 md, 603 o)
 |       `-- S1_Rick/  (2 fich., 2 md, 603 o)
 |-- _REVIEW_NOTEBOOKLM/  (26 fich., 26 md, 4.7 Mo)
-`-- scripts/  (27 fich., 235.1 Ko)
+`-- scripts/  (29 fich., 243.1 Ko)
 ```
 
 ## Ou vit reellement la connaissance
@@ -323,7 +343,7 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 ### Le point qui compte
 
 Le `CLAUDE.md` designe `40_Memory_Wiki_OKF/` comme « la memoire du
-poste ». Ce bundle porte **38 fichiers `.md` sur 6,534**, soit **0.6 %** du corpus.
+poste ». Ce bundle porte **38 fichiers `.md` sur 6,565**, soit **0.6 %** du corpus.
 
 Chercher la et s'arreter, c'est manquer le reste. Le bundle est un
 **index de concepts consolides**, pas le corpus. Les deux tableaux

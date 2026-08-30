@@ -20,27 +20,28 @@
 ## 0. La cartographie mesurée de A'Space OS V3
 
 **C'est la carte du corpus, pas une table de routage.** Mesure du 2026-08-30
-par `scripts/cartographier_v3.py` : **10 731 fichiers, 6 531
-`.md`, 2,8 Go**. La version pleine (arborescence 3 niveaux, classements)
+par `scripts/cartographier_v3.py` : **10 784 fichiers, 6 565 `.md`, 2,8 Go**. La version pleine (arborescence 3 niveaux, classements)
 se régénère dans `CARTOGRAPHIE.md` — ne pas l'éditer à la main.
 
 ### Les étages de premier niveau
 
 | Étage | Fichiers | dont `.md` | Poids | Ce qu'il porte |
 |---|---:|---:|---:|---|
-| `00_Amadeus/` | 5 132 | 4 705 | 228,7 Mo | Observateurs, harness, MEMORY_CORE (sessions), doctrine |
-| `10_Tech_OS/` | 97 | 71 | 2,2 Mo | Gouvernance Rick, Donna DLQ, noyaux 11/12/13 |
-| `20_Life_OS/` | 361 | 291 | 1,0 Go | Ikigai, Wheel, 12WY, PARA, GTD, D.E.A.L |
-| `30_Business_OS/` | 3 750 | 538 | 1,3 Go | Blueprints (coach-os, palantir…), projets appliqués |
-| `40_Memory_Wiki_OKF/` | 36 | 36 | 239,5 Ko | Bundle OKF v0.2 — index de concepts consolidés |
-| `50_Distillation/` | 362 | 299 | 69,9 Mo | Méthode, briefs, substrat `.jsonl`, distillats de domaines |
-| `60_Implementation_Méthodologiques/` | 173 | 76 | 1,3 Mo | Verdicts du triptyque, `_loop`, protocoles |
-| `70_Onthologies/` | 396 | 324 | 6,8 Mo | Pulse b1/b2/b3/domaines, sujets, triplets RDF, revue |
-| `80_Agent-OS/` | 7 | 2 | 64,3 Ko | Observabilité, schéma de cadence |
-| `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109,2 Mo | Briefs datés 08-09 → 08-17 |
-| `_INBOX/` | 9 | 5 | 10,9 Ko | Capture GTD — A1/Beth-Morty, B1/Jerry, S1/Rick, admis/refusés |
-| `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4,7 Mo | 26 sources consolidées pour la revue humaine |
-| `scripts/` | 27 | — | 235,1 Ko | Porte d'argent, cartographie, générateurs |
+| `00_Amadeus/` | 5,132 | 4,705 | 228.9 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
+| `10_Tech_OS/` | 97 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
+| `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
+| `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
+| `40_Memory_Wiki_OKF/` | 38 | 38 | 259.4 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `50_Distillation/` | 394 | 321 | 70.3 Mo | Methode, substrat, briefs de distillation |
+| `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
+| `70_Onthologies/` | 396 | 324 | 6.8 Mo | Sujets, triplets RDF, revue |
+| `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
+| `90-self-evolution/` | 15 | 8 | 68.5 Ko | Skills d'auto-amelioration — une par problematique mesuree |
+| `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109.2 Mo | Briefs archives de coach-os |
+| `_INBOX/` | 9 | 5 | 10.9 Ko | Capture GTD, non trie |
+| `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4.7 Mo | 26 sources consolidees pour la revue humaine |
+| `scripts/` | 29 | 0 | 243.1 Ko | Porte d'argent, cartographie, generateurs |
+| *(racine)* | 8 | 6 | 79.8 Ko | fichiers de tete |
 
 `openwiki/` est exclu des comptes : clone amont avec son propre `.git`, pas
 notre corpus.
@@ -90,13 +91,13 @@ notre corpus.
 
 ### Où vit réellement la connaissance
 
-- **4 647 `.md` sur 6 531 (71 %) sont des vidages de sessions** dans
+- **4 647 `.md` sur 6 565 (71 %) sont des vidages de sessions** dans
   `00_Amadeus/30_MEMORY_CORE/sessions_md/`. Compter ça pour de la
   connaissance, c'est se mentir.
 - La connaissance **rédigée** : `70_Onthologies/pulse/domaines/` (259),
   `50_Distillation/domaines/` (161), `_ARCHIVE_coach-os-briefs/` (154),
   `30_Business_OS/09_Blueprints/coach-os-refonte/` (194).
-- **Le bundle OKF ne porte que 36 `.md` (0,6 % du corpus).** C'est un index
+- **Le bundle OKF ne porte que 38 `.md` (0,6 % du corpus).** C'est un index
   de concepts consolidés, pas le corpus. Chercher là et s'arrêter, c'est
   manquer le reste.
 
@@ -127,42 +128,24 @@ vieilli.
 
 **`grep` le corpus entier avant d'affirmer.** Le bundle seul ne suffit jamais.
 
-### Ce que la distillation a déjà établi — lire avant de refaire
+### Les gardes exécutables — les lancer, pas les relire
 
-| | |
-|---|---|
-| **147 rapports d'agents délégués, 35 vagues, 2,6 Mo** | `INDEX_DISTILLATIONS.md` |
-| **Intentions, besoins, problématiques, désirs** (2 307 sessions, mars→août) | `50_Distillation/RAPPORT_INTENTIONS_V3.md` |
-
-Mesure du 2026-08-30 : sur 4 625 documents, **520 seulement (11,2 %) étaient
-atteignables** depuis ce fichier, et **117 rapports sur 130 étaient hors de
-portée** — pas orphelins, ils se citaient entre eux, mais dans une boucle
-fermée que rien de lu au démarrage n'atteignait. Les deux index ci-dessus les
-ramènent à **un saut**. Régénérables :
+Une skill par problématique mesurée dans
+[`90-self-evolution/`](90-self-evolution/README.md). Ces scripts **refusent**
+quand la règle n'est pas tenue, au lieu de la rappeler.
 
 ```bash
-python C:/Users/amado/ASpace_OS_V3/scripts/indexer_distillations.py
+python 90-self-evolution/evolution/portes.py                                # les 8 skills
+python 90-self-evolution/skills/p1-anti-rejeu/scripts/deja_vu.py "<brief>"  # deja tourne ?
+python 90-self-evolution/skills/p7-memoire-travail/scripts/etat.py voir     # ou en est-on
+python 90-self-evolution/skills/p8-forum-agents/scripts/forum.py fils       # qui fait quoi
 ```
 
-**Cinq constats qui commandent une décision, pas une lecture :**
-
-1. **Deux sessions d'août sur trois rejouent un brief déjà écrit** (unicité
-   80,5 % en juillet → **32,3 %** en août ; `GARDE-FOU` relancé 96×, `LES SEPT
-   CADENCES` 69×, `MODE FABLE` 60×). **Avant d'exécuter un brief, vérifier
-   qu'il n'a pas déjà tourné.** Un système qui ne sait pas qu'il se répète ne
-   peut pas s'arrêter.
-2. **Ces briefs sont réécrits parce que le mandat ne survit pas à la
-   compaction.** Le résumé garde les faits et perd l'autorisation. C'est la
-   cause du point 1, et le besoin non satisfait le plus cher du corpus.
-3. **Les applications sont la seule intention qui n'a jamais reculé**
-   (18 → 55 → 59 → 62 de mai à août). Coach OS, Life OS, Agent OS. Une surface
-   visible est un livrable de premier rang, pas un habillage.
-4. **L'ontologie est l'intention la plus récente, pas la plus mûre** — 22
-   occurrences uniques, dont la moitié en août. Virage en cours ; ne pas la
-   traiter comme un acquis.
-5. **Le quota n'est plus le problème** : 53 intentions uniques sur le sujet en
-   juillet, **3 en août**. Les routeurs l'ont éteint. Le goulot est désormais
-   la **vérification**, pas la production.
+`deja_vu.py` avant tout brief — 42,4 % des sessions rejouent une intention, deux
+sur trois en août. `etat.py` sur une tâche longue : un objectif ne passe à
+`fait` que contre une **preuve d'environnement**, jamais sur « c'est fait »
+*(Recuris)*. `forum.py prendre` avant d'agir à plusieurs — il refuse une tâche
+déjà prise. `auditer.py` avant de rapporter un chiffre issu d'un script.
 
 ---
 
