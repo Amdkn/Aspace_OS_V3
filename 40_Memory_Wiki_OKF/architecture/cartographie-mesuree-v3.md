@@ -76,6 +76,4 @@ python C:/Users/amado/ASpace_OS_V3/scripts/cartographier_v3.py
 Si un compte diffère d'un `find` sur le corpus, c'est l'instrument qu'il faut
 réparer, pas le chiffre qu'il faut ajuster.
 
-**Lacune assumée** : la porte d'argent (`ASpace_OS_V3/scripts/porte_argent.py`),
-filtre d'entrée en V3, n'a pas encore de concept dans ce bundle. Elle est
-citée ici par son chemin.
+Voir aussi [[porte-argent-triptyque-filtres]], qui partage le garde de jonction.

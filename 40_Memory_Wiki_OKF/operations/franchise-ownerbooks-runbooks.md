@@ -123,8 +123,5 @@ n'est pas source, c'est batir sur une hypothese en croyant batir sur une mesure.
 Voir [[multica-governor-module]] pour la panne que ces portes ne doivent pas
 rejouer.
 
-**Lacune assumee** : la porte d'argent (`ASpace_OS_V3/scripts/porte_argent.py`),
-qui est le filtre d'entree en V3, n'a **pas** encore de concept dans ce bundle.
-Elle est citee ici par son chemin, faute de mieux. Poser un `[[lien]]` vers un
-concept inexistant aurait menti a l'avenir ; le nommer comme manquant ne ment
-pas.
+Voir [[porte-argent-triptyque-filtres]] : la porte d'argent, filtre d'entree
+en V3, possede desormais son concept dans ce bundle.
