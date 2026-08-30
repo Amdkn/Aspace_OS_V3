@@ -477,3 +477,102 @@ Store) vit dans `repos/coach-os/_briefs/2026-08-15_saas_builder_v1/SPEC_SAAS_BUI
 C'est la source de vérité pour toute passe d'implémentation. Avant de
 modifier le builder, je lis cette SPEC. Si elle est obsolète, je la
 mets à jour d'abord, **puis** le code.
+
+---
+
+## 9. Cartographie mesurée mesurée de A'Space OS V3
+
+**C'est la carte du corpus, pas une table de routage.** Mesure du 2026-08-30
+par `ASpace_OS_V3/scripts/cartographier_v3.py` : **10 731 fichiers, 6 531
+`.md`, 2,8 Go**. La version pleine (arborescence 3 niveaux, classements)
+se régénère dans `ASpace_OS_V3/CARTOGRAPHIE.md` — ne pas l'éditer à la main.
+
+### Les étages de premier niveau
+
+| Étage | Fichiers | dont `.md` | Poids | Ce qu'il porte |
+|---|---:|---:|---:|---|
+| `00_Amadeus/` | 5 132 | 4 705 | 228,7 Mo | Observateurs, harness, MEMORY_CORE (sessions), doctrine |
+| `10_Tech_OS/` | 97 | 71 | 2,2 Mo | Gouvernance Rick, Donna DLQ, noyaux 11/12/13 |
+| `20_Life_OS/` | 361 | 291 | 1,0 Go | Ikigai, Wheel, 12WY, PARA, GTD, D.E.A.L |
+| `30_Business_OS/` | 3 750 | 538 | 1,3 Go | Blueprints (coach-os, palantir…), projets appliqués |
+| `40_Memory_Wiki_OKF/` | 36 | 36 | 239,5 Ko | Bundle OKF v0.2 — index de concepts consolidés |
+| `50_Distillation/` | 362 | 299 | 69,9 Mo | Méthode, briefs, substrat `.jsonl`, distillats de domaines |
+| `60_Implementation_Méthodologiques/` | 173 | 76 | 1,3 Mo | Verdicts du triptyque, `_loop`, protocoles |
+| `70_Onthologies/` | 396 | 324 | 6,8 Mo | Pulse b1/b2/b3/domaines, sujets, triplets RDF, revue |
+| `80_Agent-OS/` | 7 | 2 | 64,3 Ko | Observabilité, schéma de cadence |
+| `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109,2 Mo | Briefs datés 08-09 → 08-17 |
+| `_INBOX/` | 9 | 5 | 10,9 Ko | Capture GTD — A1/Beth-Morty, B1/Jerry, S1/Rick, admis/refusés |
+| `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4,7 Mo | 26 sources consolidées pour la revue humaine |
+| `scripts/` | 27 | — | 235,1 Ko | Porte d'argent, cartographie, générateurs |
+
+`openwiki/` est exclu des comptes : clone amont avec son propre `.git`, pas
+notre corpus.
+
+### L'arborescence profonde des six étages qui portent la connaissance
+
+**`00_Amadeus/`** — 4 705 `.md`, soit **72 % de tout le corpus** :
+- `30_MEMORY_CORE/` (4 794 fich.) → `carto/` (contradictions, CONSOLIDE.json)
+  et **`sessions_md/` 4 647 `.md` — c'est là que vit la masse** ; c'est du
+  vidage de sessions, pas de la connaissance rédigée
+- `20_Harness/` → **`agentgateway/`** (95 Mo, source MCP), **`bmad-loop/`**
+  (225 fich., tourne dans WSL), `openrouter/`, `routers/`
+- `10_Observers/` — stubs d'observabilité (agentpulse, opik, phoenix…), 3 jonctions
+- `60_Tape_Specs/` (ADR/PRD/REGISTRY) · `90_Doctrine/adr/` · `30_Shadow/`
+
+**`20_Life_OS/`** :
+- `00_Gatekeepers_Beth_Morty/` · `21_Ikigai_Orville/` (pillars + horizons)
+- `22_Wheel_Discovery/` LD01–LD08 (LD01_Business_Book : 68 `.md`)
+- `23_12WY_SNW/` Vision→Planning→Focus→Metrics→Execution
+- `24_PARA_Enterprise/` → `01_Projects_Picard/` · `02_Areas_Spock/` ·
+  **`03_Resources_Geordi/` (1,0 Go — le miroir)** · `04_Archives_Data/`
+- `25_GTD_Cerritos/` (Inbox→Clarify→Organize→Review→Engage) ·
+  `26_DEAL_Protostar/` (D.E.A.L) · `28_Blueprints/`
+
+**`30_Business_OS/`** — 1,3 Go, l'étage le plus lourd :
+- `09_Blueprints/` (2 784 fich.) : **coach-os-refonte** (794 fich., 194 `.md`,
+  497 Mo), **palantir-2.0** (1 055), agentic-os, vision-v1,
+  ontologie-trois-couches, ontologie-vocale, outils-micro-saas, gateways
+- `10_Projects/coach-os-app/` (959 fich., 303 `.md`) — le projet appliqué
+
+**`50_Distillation/`** :
+- `_substrat/` — **65,5 Mo de `.jsonl`** : la matière première des sessions ;
+  `_substrat_domaines/` · `_mesures/`
+- `_briefs/` + `_briefs_vague2/` + `_briefs_domaines/` — les briefs de distillation
+- `domaines/` (161 `.md` : amadeus, business, life, life-wheel, normatif-adr,
+  normatif-sdd-prd, tech, templates) · `areas/` · `projets/` · `ressources/`
+  · `ontologie/` · `archives/`
+
+**`70_Onthologies/`** :
+- `pulse/` (298 `.md`) : `b1/`, `b2/`, `b3/` + `domaines/` (259 `.md`)
+- `sujets/` · `triplets/` (RDF) · `_revue/` · `_structure/`
+- `verbes/` — **vide (0 fichier)** : lacune assumée de l'ontologie
+
+**`60_Implementation_Méthodologiques/`** :
+- `_loop/` (100 fich.) · `domaines/` · `protocoles/` · `frameworks/` ·
+  `prompt-systeme/` · `autonomie-agents/` · `primitives/`
+
+### Où vit réellement la connaissance
+
+- **4 647 `.md` sur 6 531 (71 %) sont des vidages de sessions** dans
+  `00_Amadeus/30_MEMORY_CORE/sessions_md/`. Compter ça pour de la
+  connaissance, c'est se mentir.
+- La connaissance **rédigée** : `70_Onthologies/pulse/domaines/` (259),
+  `50_Distillation/domaines/` (161), `_ARCHIVE_coach-os-briefs/` (154),
+  `30_Business_OS/09_Blueprints/coach-os-refonte/` (194).
+- **Le bundle OKF ne porte que 36 `.md` (0,6 % du corpus).** C'est un index
+  de concepts consolidés, pas le corpus. Chercher là et s'arrêter, c'est
+  manquer le reste.
+
+### Points d'entrée précis
+
+| Question | Où |
+|---|---|
+| Rangs, domaines, horizons, verbes | `00_Amadeus/30_MEMORY_CORE/ONTOLOGIE_V2.md` |
+| Cascade E-Myth, S1/S2/S3, Donna | `10_Tech_OS/00_Governance_Rick/CASCADE.md` |
+| Contradictions déjà cataloguées (204) | `00_Amadeus/30_MEMORY_CORE/carto/CONSOLIDE.json` |
+| Distillation, substrat, méthode | `50_Distillation/METHODE.md` |
+| Intégrations récentes, pièges d'outillage | `40_Memory_Wiki_OKF/` |
+| **Échecs déjà payés, à ne pas rejouer** | **`40_Memory_Wiki_OKF/learning/`** |
+
+**`grep` le corpus entier avant d'affirmer.** Le bundle seul ne suffit jamais.
+
