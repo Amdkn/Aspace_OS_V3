@@ -310,3 +310,8 @@ propriétaire : **gstack → B1, superpowers → B2, GSD → B3**.
 
 **État au 2026-08-29 : ni `spec-loop` ni `babysitter` ne tournent.** Configurés,
 pas fonctionnels. Toute affirmation qui les suppose actifs est fausse.
+
+**Mise à jour 2026-08-30 13:55 :** `spec-loop` (cadence 1 m, Beth/Morty) tourne
+de nouveau — test : `type %TEMP%\ordonnanceur\etat_1m.md` ; chemin : `bash A0.sh 4`
+(canal `claude-glm.cmd`, MiniMax expiré). `babysitter` reste non installé.
+Détail : `40_Memory_Wiki_OKF/operations/relance-spec-loop-2026-08-30.md`.
