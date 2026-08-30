@@ -1,0 +1,123 @@
+# BRIEF T6 — Le FDE est-il un role humain, ou un systeme non encore ecrit ?
+
+Tu n'analyses pas des videos pour en tirer des fonctionnalites. Tu instruis une
+**these**, et ton travail est de la mettre a l'epreuve — pas de la confirmer.
+
+## La these a instruire
+
+Le **Forward Deployed Engineering** tel que le pratique Anthropic est un metier
+de service : un ingenieur s'installe chez un client, apprend son domaine, cable
+des agents sur mesure, itere avec lui. C'est cher, lent, et non duplicable —
+d'ou sa vente en prestation plutot qu'en produit.
+
+L'hypothese : **le travail du FDE se decompose en gestes specifiables, et ce qui
+est specifiable est executable par des agents correctement structures.** Au lieu
+de deployer des ingenieurs chez les clients, on deploierait des agents-FDE.
+
+Si l'hypothese tient, le produit n'est plus un tableau de bord. C'est le
+**substrat sur lequel un agent-FDE s'installe chez un client** : il y acquiert
+l'ontologie du metier, y cartographie les flux, y cable les agents, y boucle avec
+des evals.
+
+**Ton travail n'est pas de vendre cette these. C'est de dire ou elle tient et ou
+elle casse.** Un rapport qui conclut « oui tout est possible » est un rapport
+rate : il aura evite la seule question difficile.
+
+## Le corpus
+
+Lis ces transcripts, dans `transcripts/<id>.md` :
+
+**Le metier FDE, decrit par ceux qui le pratiquent**
+- `KwhgfwOSToQ.md` — Forward Deployed Engineering 101, Kevin Bai, Anthropic
+- `l0FLhNqBOic.md` — AI tools for Forward Deployed Engineering, Varick Agents
+- `lXZb21CfeIY.md` — comment Bridgewater a construit Pat, son analyste de poche
+
+**Ce qui manque aux agents pour connaitre un metier**
+- `hmjRc6KJ-hw.md` — Your AI Agent Doesn't Know Your Business
+- `8G_1-3IO4ZQ.md` — WTF Is the Context Layer ?
+- `Sir59K8ZDPU.md` — Why Agentic Systems Need Ontologies
+- `jt1Pbr_n6oU.md` — Your Moat Is Your Data Model
+
+Ne va pas sur le web. Ne lis pas les autres transcripts du dossier : d'autres
+agents les traitent, et ton regard doit rester independant du leur.
+
+## Le produit, tel qu'il est aujourd'hui
+
+**Coach OS** : un shell type OS de bureau dans le navigateur, 19 apps metier
+montees dans des fenetres deplacables. React 19 / TypeScript / Tailwind / Zustand.
+Chaque app a une barre laterale de sections, chaque section ouvre une page de
+detail. Les apps sont aujourd'hui des coquilles generiques.
+
+Les 19 : dashboard · product · growth · sales · operations · finance · legal ·
+people · it-rd · clients · tasks · marketplace · settings · onboarding · welcome ·
+audit · cognition · design · _ui (composants partages).
+
+Note que `onboarding` existe deja, et qu'il est marque « demo ». Si la these
+tient, c'est probablement l'app la plus mal nommee du projet.
+
+## Livrable — `analyses/T6_these.md`
+
+### 1. Decomposition du metier
+
+Le FDE, decompose en **gestes** : des unites de travail nommees, chacune avec ce
+qu'elle prend en entree et ce qu'elle produit en sortie. Ancre chaque geste dans
+une citation VERBATIM de moins de 15 mots tiree des trois videos FDE.
+
+Vise entre 6 et 12 gestes. Moins, tu as survole ; plus, tu n'as pas synthetise.
+
+### 2. Le tri, geste par geste
+
+Un tableau, une ligne par geste :
+
+| geste | automatisable | ce qu'il faudrait pour l'automatiser | ce qui manque aujourd'hui |
+|---|---|---|---|
+
+Pour `automatisable`, trois valeurs seulement : **oui** · **partiellement** ·
+**non**. Pas de « ça dépend ».
+
+### 3. Ou la these casse
+
+**La section la plus importante du rapport.** Nomme les gestes ou l'humain est
+irreductible, et dis POURQUOI — pas « c'est humain », mais le mecanisme precis
+qui resiste. Exemples de mecanismes a chercher : l'acces politique dans
+l'organisation cliente, la responsabilite juridique d'une decision, la lecture
+d'un non-dit, la negociation d'un arbitrage entre deux services qui s'opposent.
+
+Si tu ne trouves aucun point de rupture, dis-le explicitement et assume-le —
+mais sache que ce sera lu comme un signal que tu n'as pas cherche.
+
+### 4. Ce que Coach OS devrait devenir
+
+Si la these tient, meme partiellement :
+
+- **Quelle couche manque au produit ?** Nomme-la, definis-la en une phrase, et
+  dis quelles apps la consomment.
+- **Quelles apps changent de nature ?** Pour chacune, son role aujourd'hui et son
+  role dans la these. Sois precis sur `onboarding`, `cognition`, `it-rd`.
+- **Quelle app manque entierement ?** S'il en manque une, nomme-la et decris ses
+  sections. S'il n'en manque aucune, dis-le.
+- **Quel est le premier increment livrable ?** Une seule chose, la plus petite
+  qui prouve la these plutot que de la decrire. Justifie ce choix contre deux
+  alternatives que tu auras ecartees.
+
+### 5. Le pari, en une page
+
+Ce qu'il faut croire pour que ca marche, ce qui le tuerait, et le signal le plus
+precoce qui dirait qu'on a raison ou tort.
+
+## Interdits
+
+1. Tu ecris **un seul fichier** : `analyses/T6_these.md`. Tu ne modifies aucun
+   fichier du depot coach-os.
+2. Pas plus de **15 mots d'affilee** cites d'un transcript (droit d'auteur).
+3. **N'invente aucune citation.** Si tu ne retrouves pas le passage, ecris la
+   primitive sans citation en le signalant.
+4. Pas de recherche web, pas d'installation, pas de commande longue.
+5. Ne redige pas de plan d'implementation, pas de code, pas de schema de base de
+   donnees. C'est une these produit, pas une specification.
+
+## Si tu dois t'arreter
+
+Ecris le rapport avec ce que tu as etabli et une section « reste a couvrir ».
+Les sections 1 et 3 priment sur toutes les autres : si tu manques de temps,
+livre-les completes et tronque le reste.

@@ -1,0 +1,205 @@
+{
+  "id": "WARGAME_ACCES",
+  "chantier": "gouvernance Rick — audit adversarial",
+  "date": "2026-08-14",
+  "depot_audite": "omk/repos/coach-os/src/lib/tooling/, src/lib/cms/, src/stores/, api/",
+  "perimetre_lecture": true,
+  "perimetre_ecriture": [
+    "10_Tech_OS/00_Governance_Rick/RAPPORT_WARGAME_ACCES.md",
+    "10_Tech_OS/00_Governance_Rick/wargame_acces.json"
+  ],
+  "scenario_reference": "Melbourne, août 2026 — l'agent qui annule la réservation d'un tiers parce que l'API ne vérifie pas qui annule.",
+  "resume_attaquant": "Les six surfaces MCP/REST/CLI/in-app/skill/mcp-apps acceptent toutes un tenantId/actorId déclaré par l'appelant. Aucun adaptateur ne vérifie. Le store serveur n'a aucun filtre par tenant. L'agent peut donc lire les données d'un autre tenant, écrire des propositions sous son nom, et contaminer sa file d'approbation.",
+  "trouvailles": [
+    {
+      "id": "W01",
+      "titre": "Identité déclarée par l'appelant MCP",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(name='collection.read', arguments={__tenantId:'victim-coach', __actorId:'agent:victim', collectionId:'clients', limit:500})"
+      ],
+      "obtenu": "Lecture de tous les clients du tenant `victim-coach`. Aucun serveur ne vérifie que l'appelant appartient à ce tenant.",
+      "chemin": "src/lib/tooling/adapters/mcp.ts:104-113",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W02",
+      "titre": "Identité déclarée par l'appelant REST",
+      "surface": "rest",
+      "scenario": [
+        "POST /api/v1/collection.read avec header `x-coach-os-tenant: victim-coach` et `x-coach-os-actor: agent:victim` et body `{collectionId:'clients'}`"
+      ],
+      "obtenu": "Lecture de tous les clients du tenant victime. Le commentaire en rest.ts:30 l'admet : « Côté Vercel, ce sera posé par l'auth ; pour la V1, on retombe sur les défauts. »",
+      "chemin": "src/lib/tooling/adapters/rest.ts:31-35",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W03",
+      "titre": "Aucune auth sur les routes /api/v1/*",
+      "surface": "rest",
+      "scenario": [
+        "POST /api/v1/collection.create depuis Internet, sans Authorization header"
+      ],
+      "obtenu": "Création d'une proposition dans le tenant par défaut. Asymétrie : /api/chat (api/chat.ts:48) et /api/agent/invoke (api/agent/invoke.ts:57) appellent `verifierAcces`. /api/v1/[tool].ts et /api/v1/tools.ts ne l'appellent pas. La fonction existe mais n'est pas branchée sur ces routes.",
+      "chemin": "api/v1/[tool].ts:20-35",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W04",
+      "titre": "Identité déclarée par l'appelant CLI",
+      "surface": "cli",
+      "scenario": [
+        "coach-os collection.read clients --tenant victim-coach --actor agent:victim"
+      ],
+      "obtenu": "Lecture de tous les clients. Le shell étant déjà une surface de compromission totale, ce point n'est dangereux qu'en multi-utilisateur ou via un daemon — mais le défaut existe.",
+      "chemin": "src/lib/tooling/adapters/cli.ts:93-102,131-134",
+      "gravite": "serieux",
+      "cote": "interface"
+    },
+    {
+      "id": "W05",
+      "titre": "L'app MCP Apps forge son propre tenant",
+      "surface": "mcp-apps",
+      "scenario": [
+        "À l'intérieur du bac à sable, la page appelle window.pont.appelerOutil('collection.create', {__tenantId:'victim-coach', __actorId:'agent:victim', collectionId:'clients', fields:{name:'intruse', segment:'X', ticket:0, status:'Active'}})"
+      ],
+      "obtenu": "Une proposition « Créer Client : intruse » est déposée dans la file d'approbation du tenant victime, attribuée à `agent:victim`. Le pont JSON-RPC (mcp-apps.ts:138-156) ne filtre aucun argument : il poste `arguments: args || {}` tel quel. Le bac à sable protège le DOM parent — il ne nettoie pas le payload.",
+      "chemin": "src/lib/tooling/adapters/mcp-apps.ts:138-156",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W06",
+      "titre": "Ressource ui:// lue sans filtre",
+      "surface": "mcp",
+      "scenario": [
+        "resources/read uri='ui://coach-os/approbations' sur n'importe quel tenant"
+      ],
+      "obtenu": "La page HTML de la file d'approbation est rendue sans vérification de tenant. Un attaquant peut précharger l'UI de n'importe quel outil exposé en MCP Apps.",
+      "chemin": "src/lib/tooling/adapters/mcp.ts:70-76",
+      "gravite": "mineur",
+      "cote": "interface"
+    },
+    {
+      "id": "W07",
+      "titre": "serverStore : aucune partition par tenant",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(collection.read, {collectionId:'clients'}) — peu importe le __tenantId"
+      ],
+      "obtenu": "Lecture de TOUS les items, tous tenants confondus. `listItems(collectionId)` (serverStore.ts:149) renvoie `state.items[collectionId]` d'un singleton `_state`. Aucun filtre tenant n'est appliqué côté serveur.",
+      "chemin": "src/lib/tooling/serverStore.ts:149-153,166-198",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W08",
+      "titre": "scenarioId forgé dans la file du voisin",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(collection.delete, {__tenantId:'victim-coach', __actorId:'agent:victim', collectionId:'clients', id:'ava-chen'})"
+      ],
+      "obtenu": "Une proposition `p_<ts>.json` est écrite dans `_briefs/.../proposals/` avec `scenarioId: scn_victim-coach_<ts>` et `actorId: agent:victim`. La victime verra dans sa file d'approbation « Supprimer Client : Ava Chen » signée par son propre actor. Si elle approuve sans regarder, elle supprime sa propre cliente.",
+      "chemin": "src/lib/tooling/catalog/collection.ts:175-185",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W09",
+      "titre": "actorId forgé côté schéma",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(collection.create, {__tenantId:'victim-coach', actorId:'agent:victim', collectionId:'tasks', fields:{label:'Tâche factice'}})"
+      ],
+      "obtenu": "Le champ `actorId` est accepté dans le schéma Zod. La valeur `args.actorId` est utilisée telle quelle (collection.ts:117,150,182). Le mécanisme `ctx.actorId` est court-circuité.",
+      "chemin": "src/lib/tooling/catalog/collection.ts:93-117",
+      "gravite": "critique",
+      "cote": "interface"
+    },
+    {
+      "id": "W10",
+      "titre": "Énumération de la file d'approbation d'un autre tenant",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(scenario.list, {})"
+      ],
+      "obtenu": "`listProposals()` (serverStore.ts:248-261) lit TOUS les fichiers `.json` du PROPOSAL_DIR, sans filtre tenant. Un attaquant lit les propositions de tous les tenants.",
+      "chemin": "src/lib/tooling/catalog/scenario.ts:38-56",
+      "gravite": "serieux",
+      "cote": "interface"
+    },
+    {
+      "id": "W11",
+      "titre": "Lecture d'une proposition précise par id",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(scenario.read, {proposalId:'p_<deviné>'})"
+      ],
+      "obtenu": "`getProposal(id)` (serverStore.ts:263-273) lit le fichier JSON par son id. Aucun contrôle que l'appelant est l'auteur ou dans le bon tenant. Le format `p_<base36-ts>_<rand4>` est devinable : la base36 du timestamp est sur ~8 caractères, le rand fait 4.",
+      "chemin": "src/lib/tooling/catalog/scenario.ts:67-71",
+      "gravite": "serieux",
+      "cote": "interface"
+    },
+    {
+      "id": "W12",
+      "titre": "scenario.approve : instruction sans garde d'auteur",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(scenario.approve, {proposalId:'p_victime'})"
+      ],
+      "obtenu": "L'outil rend `{instruction:'approve_and_merge', clientCommand:{type:'approveProposal', proposalId:'p_victime'}}`. Aucun contrôle que l'appelant est l'auteur ou un humain. Si le client applique sans vérif, l'attaquant fait approuver une proposition qu'il n'a pas créée.",
+      "chemin": "src/lib/tooling/catalog/scenario.ts:79-102",
+      "gravite": "serieux",
+      "cote": "interface"
+    },
+    {
+      "id": "W13",
+      "titre": "Aucun plafond d'effets de bord par appel",
+      "surface": "mcp",
+      "scenario": [
+        "for i in 0..1000: tools/call(collection.create, {collectionId:'tasks', fields:{label:i}})"
+      ],
+      "obtenu": "Mille propositions, mille fichiers sur disque. Aucun rate limit, aucune garde sur le PROPOSAL_DIR côté serveur.",
+      "chemin": "src/lib/tooling/serverStore.ts:223-246",
+      "gravite": "mineur",
+      "cote": "interface"
+    },
+    {
+      "id": "W14",
+      "titre": "L'identité forgeable remonte jusqu'au scénario",
+      "surface": "mcp",
+      "scenario": [
+        "tools/call(collection.create, {__tenantId:'victim', __actorId:'agent:victim', actorId:'agent:victim', scenarioId:'scn_attacker_<libre>', collectionId:'clients', fields:{name:'X'}})"
+      ],
+      "obtenu": "Le scenarioId calculé est `scn_<ctx.tenantId>_<ts>` (collection.ts:107). L'attaquant peut forcer le tenant via `__tenantId` ET injecter un actor via `actorId` dans args. Les deux convergeant, le scénario ressemble à une proposition légitime de la victime.",
+      "chemin": "src/lib/tooling/catalog/collection.ts:107,117",
+      "gravite": "critique",
+      "cote": "interface"
+    }
+  ],
+  "tableau_par_gravite": [
+    ["W01", "critique", "mcp"],
+    ["W02", "critique", "rest"],
+    ["W03", "critique", "rest"],
+    ["W05", "critique", "mcp-apps"],
+    ["W07", "critique", "mcp"],
+    ["W08", "critique", "mcp"],
+    ["W09", "critique", "mcp"],
+    ["W14", "critique", "mcp"],
+    ["W04", "serieux", "cli"],
+    ["W10", "serieux", "mcp"],
+    ["W11", "serieux", "mcp"],
+    ["W12", "serieux", "mcp"],
+    ["W06", "mineur", "mcp"],
+    ["W13", "mineur", "mcp"]
+  ],
+  "surface_la_plus_faible": "REST — voir RAPPORT_WARGAME_ACCES.md §6",
+  "trois_questions_ouvertes": [
+    "Le client applique-t-il automatiquement un scenario.approve rendu via MCP Apps sans geste humain séparé ? Sans lecture du code d'in-app binding (catalog/_bind.ts, que le brief ne couvre pas), je ne peux pas trancher. Si oui, W12 monte en critique.",
+    "Le serverStore est-il remplacé par Supabase multi-tenant en prod ? Le commentaire serverStore.ts:7-10 l'annonce ; le cms.store.ts du navigateur l'a déjà fait. Si la prod utilise toujours serverStore, la fuite W07 est réelle. Si elle lit Supabase avec filtre tenant, W07 est corrigé mais W08 reste.",
+    "Y a-t-il un middleware Vercel (middleware.ts à la racine) qui ré-écrit x-coach-os-tenant depuis la session ? Aucun trouvé dans le périmètre lu. Si un middleware existe hors périmètre, l'impact de W02/W03/W04 chute ; si non, c'est exactement la faille de Melbourne."
+  ]
+}

@@ -93,6 +93,16 @@ def verifier(p: Path) -> int:
     return 1 if (morts or n == "non verifie") else 0
 
 
+# DISTINCTION POSEE LE 2026-08-30 : quatre des six fichiers marques `human:`
+# ne sont PAS des concepts -- ce sont la documentation du format elle-meme
+# (Format spec, Bundle guide, Quickstart, Bundle index). Les compter comme des
+# concepts relus gonflait le taux de revue humaine et masquait le vrai goulot.
+#
+# Un taux de verification calcule sur la mauvaise population est faux meme
+# quand chaque ligne est vraie.
+META = {"Format spec", "Bundle guide", "Quickstart", "Bundle index"}
+
+
 def auto_test() -> int:
     if not BUNDLE.is_dir():
         print(f"  ECHEC : bundle introuvable — {BUNDLE}")
@@ -100,6 +110,7 @@ def auto_test() -> int:
 
     par_niveau: dict[str, int] = {}
     humains: list[tuple[str, str]] = []
+    meta: list[str] = []
     total = 0
 
     for d, sd, fs in os.walk(BUNDLE):
@@ -115,6 +126,11 @@ def auto_test() -> int:
             fm = frontmatter(t)
             if fm is None:
                 continue
+            mt = re.search(r"^type:\s*(.+)$", fm, re.M)
+            ty = mt.group(1).strip() if mt else ""
+            if ty in META:
+                meta.append(f)
+                continue
             total += 1
             n = niveau(fm)
             par_niveau[n] = par_niveau.get(n, 0) + 1
@@ -122,7 +138,11 @@ def auto_test() -> int:
                 who = re.findall(r"human:([\w\-.]+)", fm)
                 humains.append((f, ", ".join(who) or "(non nomme)"))
 
-    print(f"  {total} concepts avec frontmatter\n")
+    print(f"  {total} concepts avec frontmatter")
+    if meta:
+        print(f"  ({len(meta)} fichiers de doc du format exclus du compte : "
+              f"{', '.join(sorted(meta))})")
+    print()
     for k in ("non verifie", "confirme par machine", "revu par un humain"):
         print(f"    {par_niveau.get(k, 0):>4}  {k}")
 
@@ -140,6 +160,12 @@ def auto_test() -> int:
         print("\n  Aucun concept revu par un humain.")
         print("  C'est le goulot P6, et il est honnetement affiche.")
 
+    # Le chiffre qui rend P6 lisible. Sans lui, on lit « 2 concepts revus »
+    # comme une bonne nouvelle au lieu d'un taux de 8 %.
+    revus = par_niveau.get("revu par un humain", 0)
+    pct = 100 * revus / total if total else 0
+    print(f"\n  Taux de revue humaine : {revus}/{total} concepts = {pct:.0f} %.")
+    print("  C'est P6 chiffre : la production depasse la verification.")
     print("\n  OK.")
     return 0
 

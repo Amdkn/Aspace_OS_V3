@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "source": "SESSION_2026-08-13_condense.md",
+    "total_lignes_condense": 29047,
+    "chantiers": ["site", "gauntlet", "canvas-ui", "ordonnanceur", "A0", "vision-v1", "ontologie", "life-os", "mcp"],
+    "extrait_par": "BRIEF_J_DECISIONS_OUBLIEES",
+    "regle": "Une ligne = affirmée ET actionnable ET rien dans la suite ne la déclare faite. Annulé par l'utilisateur = sorti."
+  },
+  "decisions": [
+    {
+      "id": "D01",
+      "quoi": "Corriger le port codé en dur dans tools/site-rondeur.mjs (4173 → 5173).",
+      "chantier": "site",
+      "source": "assistant",
+      "citation": "Rouge : site-rondeur — mais c'est un faux rouge : il vise le port 4173 (vite preview) alors que le serveur tourne sur 5173. ERR_CONNECTION_REFUSED, pas un défaut de la page. Q a codé le port en dur.",
+      "cible": "ASpace_OS_V2/.../coach-os/tools/site-rondeur.mjs",
+      "cout": "minute",
+      "bloque_par": "Le passage 'ce passage m'interdit de modifier le dépôt' (assistant en boucle de revue). Autorisation explicite = OK."
+    },
+    {
+      "id": "D02",
+      "quoi": "Supprimer les 21 lignes de règles CSS .fx-* mortes et les keyframes kf-liquid-wave, kf-shatter-pulse, kf-glyph-fall.",
+      "chantier": "site",
+      "source": "assistant",
+      "citation": "Il reste 21 lignes de CSS .fx-* qui ne sélectionnent plus rien. Je les ai laissées : styles.css est ouvert par la passe des 56 défauts du gauntlet, et deux chirurgies simultanées sur le même fichier, ce dépôt a déjà payé pour savoir.",
+      "cible": "public/site/styles.css",
+      "cout": "minute",
+      "bloque_par": "Risque de collision avec la passe des 56 défauts. Dépend de D03."
+    },
+    {
+      "id": "D03",
+      "quoi": "Corriger les 56 défauts du premier tour de gauntlet.",
+      "chantier": "gauntlet",
+      "source": "assistant",
+      "citation": "Le gauntlet a produit 56 défauts sur 15 critiques, et il vaut ce qu'il a coûté.",
+      "cible": "public/site/{index,methode,paliers,engagements,demo}.html",
+      "cout": "jour",
+      "bloque_par": "Passe toujours en cours. Plusieurs briefs en boucle au moment du condensé."
+    },
+    {
+      "id": "D04",
+      "quoi": "Imposer le contrat de format de critiques.md (1 critique sur 15 a rendu du JSON conforme).",
+      "chantier": "gauntlet",
+      "source": "assistant",
+      "citation": "Le contrat de format doit être imposé, pas espéré. Correction à faire dans critiques.md.",
+      "cible": ".claude/skills/gauntlet-loop/references/critiques.md",
+      "cout": "minute",
+      "bloque_par": "Sans suite explicite. Aucun agent ne reprend la consigne."
+    },
+    {
+      "id": "D05",
+      "quoi": "Déplacer @modelcontextprotocol/sdk de devDependencies vers dependencies dans coach-os/package.json.",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "mcp/server.mjs importe @modelcontextprotocol/sdk, mais le paquet est déclaré en devDependencies. Le dépôt publie un binaire (bin: coach-os) : à l'installation chez un tiers, npm n'installe pas les devDependencies. Le serveur MCP plante à l'import.",
+      "cible": "coach-os/package.json",
+      "cout": "minute",
+      "bloque_par": "Aucun — deux lignes, jamais exécuté."
+    },
+    {
+      "id": "D06",
+      "quoi": "Ajouter le champ files dans coach-os/package.json pour exclure le dépôt entier du paquet publié.",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "Et files n'est pas déclaré non plus, donc le paquet publierait tout le dépôt.",
+      "cible": "coach-os/package.json",
+      "cout": "minute",
+      "bloque_par": "Aucun — deux lignes, jamais exécuté."
+    },
+    {
+      "id": "D07",
+      "quoi": "Casser la falaise MCP : déclarer 2-3 serveurs critiques en direct dans ~/.mcp.json, hors gateway.",
+      "chantier": "mcp",
+      "source": "utilisateur",
+      "citation": "je veux que tu finalise la configuration antifragile des mcp",
+      "cible": "~/.mcp.json",
+      "cout": "minute",
+      "bloque_par": "Demande du dernier message, suivie du BIAS 'tu me fatique en parallèle' — pas exécutée dans le condensé."
+    },
+    {
+      "id": "D08",
+      "quoi": "Poser une sonde anti-fragile externe périodique sur le gateway (le gateway ne peut pas être son propre watchdog).",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "Le silence. Le gateway est mort depuis le début de la session sans que rien ne l'annonce. Il ne peut pas être son propre watchdog.",
+      "cible": "ASpace_OS_V3/00_Amadeus/20_Harness/agentgateway/ + tâche planifiée externe",
+      "cout": "heure",
+      "bloque_par": "Le gateway vit en SessionId 1 ; la session qui détecte la panne ne peut pas la réparer. Tâche planifiée en SessionId 1 nécessaire."
+    },
+    {
+      "id": "D09",
+      "quoi": "Bascule Claude Code sur le gateway hors session (la modification de .claude.json pendant une session ne tient pas).",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "Claude Code réécrit sa configuration en fin de session. Basculer CC sur le gateway en éditant .claude.json pendant que cette session tourne ne tiendra pas — la modification sera écrasée à la fermeture. Ce basculement doit se faire CC fermé.",
+      "cible": "C:\\Users\\amado\\.claude.json",
+      "cout": "minute",
+      "bloque_par": "Sortie de session puis édition. Fait en partie — la bascule finale n'est pas documentée dans le condensé."
+    },
+    {
+      "id": "D10",
+      "quoi": "Améliorer la sonde_identifiants.py pour conserver le corps de la réponse et le code HTTP (le code seul fabrique des diagnostics plausibles).",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "Un garde-fou qui rend un code sans motif fabrique des diagnostics plausibles.",
+      "cible": "ASpace_OS_V3/00_Amadeus/20_Harness/agentgateway/sonde_identifiants.py",
+      "cout": "minute",
+      "bloque_par": "Leçon écrite dans WATCHDOG.md, mais la règle 'toute sonde de ce depot conserve le corps de l'erreur' reste à appliquer partout."
+    },
+    {
+      "id": "D11",
+      "quoi": "Faire constater la falaise MCP sur un défaut connu (révoquer volontairement un jeton, vérifier que la sonde l'écarte et le nomme).",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "chacune de ces sondes doit être vue se déclencher sur un défaut connu : révoquer volontairement un jeton, vérifier que la sonde écarte le serveur et le nomme. Sinon on aura remplacé un faux vert par un autre.",
+      "cible": "ASpace_OS_V3/00_Amadeus/20_Harness/agentgateway/sonde_identifiants.py",
+      "cout": "minute",
+      "bloque_par": "Test à sec jamais exécuté. La sonde s'est déclenchée deux fois par accident, mais sur un artefact, pas sur un défaut nommé."
+    },
+    {
+      "id": "D12",
+      "quoi": "Instrumenter P0-1 (Rules of Hooks) et P0-2 (Plafond WebGL) avant toute correction dans Coach OS.",
+      "chantier": "canvas-ui",
+      "source": "assistant",
+      "citation": "P0-1 et P0-2 demandent une instrumentation avant d'y toucher. Je ne corrigerai pas sur une hypothèse.",
+      "cible": "ASpace_OS_V2/.../coach-os/src/components/AppFrame.tsx + canvasui/",
+      "cout": "heure",
+      "bloque_par": "Aucun audit post-création. L'épic ontologie a démarré une nouvelle boucle, ces P0 sont passés sous silence."
+    },
+    {
+      "id": "D13",
+      "quoi": "Tester les 4 effets Object restants (DitheredObject, GlassObject, LiquidObject, ParticleObject) avec captures.",
+      "chantier": "canvas-ui",
+      "source": "utilisateur",
+      "citation": "teste les 5 qui marchent avec captures",
+      "cible": "ASpace_OS_V2/.../coach-os/src/components/canvasui/v30/",
+      "cout": "heure",
+      "bloque_par": "L'automatisation navigateur ne reproduit pas la séquence de double-clic React. Abandon transitoire après AsciiObject."
+    },
+    {
+      "id": "D14",
+      "quoi": "Ranger le playground canvas-ui dans une page de l'app Design à côté des thèmes.",
+      "chantier": "canvas-ui",
+      "source": "utilisateur",
+      "citation": "je vais me redoudre a les reporter en retro- engineering de reconception de moteur et tous les dependances pour crée un playground et une implementation de canvas ui dans l'app design et page Sitting au côté des Themes dans le Web Dsktop pour detruire le degout d'avoir espérer rendre mon site digne de fierté.",
+      "cible": "ASpace_OS_V2/.../coach-os/src/apps/design/",
+      "cout": "jour",
+      "bloque_par": "L'utilisateur lui-même : 'Mais vu mon quotas et mon énervement, ce n'est pas le moment de nous lancer sur un tel chantier.' Mis de côté."
+    },
+    {
+      "id": "D15",
+      "quoi": "Implémenter le code de confirmation à 6 chiffres pour le rang 1 de ARCHITECTURE_V1 (séparer 'l'humain a lu' de 'l'humain a agi').",
+      "chantier": "vision-v1",
+      "source": "assistant",
+      "citation": "Le rang 1, et il y manque une chose précise : le code de confirmation à 6 chiffres. Zéro occurrence dans src/ — je l'ai cherché moi-même, grep revient vide.",
+      "cible": "ASpace_OS_V3/30_Business_OS/09_Blueprints/vision-v1/ARCHITECTURE_V1.md",
+      "cout": "heure",
+      "bloque_par": "Quotas Opus. L'agent lui-même propose de l'écrire quand l'utilisateur veut — non fait."
+    },
+    {
+      "id": "D16",
+      "quoi": "Écrire le test d'idempotence du merge atomique (rang 1 également ouvert).",
+      "chantier": "vision-v1",
+      "source": "assistant",
+      "citation": "L'échelle n'a pas six marches à construire. Elle en a une et demie : le code de confirmation, plus le test d'idempotence du merge.",
+      "cible": "ASpace_OS_V3/30_Business_OS/09_Blueprints/vision-v1/",
+      "cout": "heure",
+      "bloque_par": "Idem D15."
+    },
+    {
+      "id": "D17",
+      "quoi": "Réécrire WORKFLOWS_ACQUISITION_V1.md pour traiter la niche comme un point dans un espace à trois coordonnées (initiative, dette, horloge) et non un fork.",
+      "chantier": "vision-v1",
+      "source": "assistant",
+      "citation": "Pas de fork. Un graphe, et la niche est un paramètre à trois coordonnées : l'initiative, la dette, l'horloge.",
+      "cible": "ASpace_OS_V3/30_Business_OS/09_Blueprints/vision-v1/WORKFLOWS_ACQUISITION_V1.md",
+      "cout": "minute",
+      "bloque_par": "L'utilisateur a coupé : 'Laisse tomber. L'ontologie des trois couches, c'est le vrai sujet.'"
+    },
+    {
+      "id": "D18",
+      "quoi": "Ajouter deux axes à l'ontologie : la finalité (sert à → Ikigai) et le temps (valide de / à, remplacé par).",
+      "chantier": "ontologie",
+      "source": "assistant",
+      "citation": "Il manque deux axes, pas un. 1. La finalité — sert à. Celui que j'ai trouvé il y a vingt minutes. 2. Le temps — valide de / à, remplacé par. Celui que cette vidéo rend visible.",
+      "cible": "ASpace_OS_V3/.../coach-os/src/lib/ontology/relations.ts",
+      "cout": "jour",
+      "bloque_par": "Aucun. L'utilisateur a tourné la conversation sur la sync Supabase juste après."
+    },
+    {
+      "id": "D19",
+      "quoi": "Lancer une seconde vague d'agents M3 sur l'axe temporel (le brief I ne couvrait que la finalité).",
+      "chantier": "ontologie",
+      "source": "assistant",
+      "citation": "J'ai sous-cadré le brief I. Son §3 cherche tes phrases de finalité ; il ne cherche pas tes marqueurs de temps — 'remplacé par', 'périmé', 'v2', 'à jour au'. Son rapport sera donc à moitié complet. Je le laisse finir plutôt que de le tuer, et je passe une seconde vague sur l'axe temporel — c'est de la mesure, ça part sur M3.",
+      "cible": "ASpace_OS_V3/.../coach-os/_briefs/...",
+      "cout": "minute",
+      "bloque_par": "Aucun. Annoncé puis oublié — le message est immédiatement suivi de la bascule sur Life OS."
+    },
+    {
+      "id": "D20",
+      "quoi": "Rédiger CONSTITUTION.md (le fichier n'existe pas, mais l'Ikigai existe dans Supabase : écrire l'acte fondateur qui le relie au travail).",
+      "chantier": "ontologie",
+      "source": "assistant",
+      "citation": "CONSTITUTION.md n'existe pas. Ni l'Ikigai, ni H1/H10/H30/H90 ne sont déclarés nulle part — I va confirmer et chercher s'ils traînent dans un fragment. Tant qu'ils ne sont pas posés, l'axe de finalité n'a aucune valeur à pointer.",
+      "cible": "ASpace_OS_V3/.../CONSTITUTION.md",
+      "cout": "minute",
+      "bloque_par": "L'assistant lui-même : 'Je ne peux pas inventer ton Ikigai. C'est le seul endroit de tout ce chantier où le travail est le tien, et c'est aussi le plus court — quelques lignes.'"
+    },
+    {
+      "id": "D21",
+      "quoi": "Terminer la story 4 de l'épic ontologie (branche it-rd et operations sur le registre, avec ses trois cas limites non testés).",
+      "chantier": "ontologie",
+      "source": "assistant",
+      "citation": "la story 4 — celle qui branche it-rd et operations sur le registre — est restée incomplète, ses restes sont mis de côté dans .bmad-loop/story4-restes/.",
+      "cible": "ASpace_OS_V2/.../coach-os/.bmad-loop/story4-restes/",
+      "cout": "heure",
+      "bloque_par": "Aucun — restes mis de côté, story 4 réarmée puis coupée par la boucle. Reste 'J'ai aussi inclus dans la boucle' oubliée."
+    },
+    {
+      "id": "D22",
+      "quoi": "Compléter les 7 dettes restantes sur les apps (operations, sales, it-rd, growth, product, audit, _ui).",
+      "chantier": "site",
+      "source": "utilisateur",
+      "citation": "lance les 7 restantes",
+      "cible": "ASpace_OS_V2/.../coach-os/src/apps/{operations,sales,it-rd,growth,product,audit,_ui}/",
+      "cout": "jour",
+      "bloque_par": "Vague agents M3 lancée. Bilans partiels lus. Sortie au tour 95 pour cause de quotas — pas terminé dans le condensé."
+    },
+    {
+      "id": "D23",
+      "quoi": "Enrichir welcome (74 classes en dur restantes) et design (534 points, exclu à dessein).",
+      "chantier": "site",
+      "source": "assistant",
+      "citation": "Il reste welcome avec 74 classes en dur, _ui avec 31, et l'app design que j'ai volontairement laissée. Dis-moi si tu veux que j'enchaîne.",
+      "cible": "ASpace_OS_V2/.../coach-os/src/apps/welcome/ et design/",
+      "cout": "jour",
+      "bloque_par": "L'agent termine la phrase par 'tu me fatique' puis bascule sur la configuration antifragile MCP et la demande BRIEF_J."
+    },
+    {
+      "id": "D24",
+      "quoi": "Remplacer la trentaine de couleurs hexadécimales des pages de détail de people (radial-gradient bâtis sur accent) par des variables de thème.",
+      "chantier": "site",
+      "source": "utilisateur",
+      "citation": "corrige la cause avec M3",
+      "cible": "ASpace_OS_V2/.../coach-os/src/apps/people/details/PeopleItemDetail.tsx",
+      "cout": "jour",
+      "bloque_par": "L'utilisateur a dit 'go' sur la dette globale, mais l'assistant a lui-même écrit 'Si tu préfères que je le fasse corriger — c'est typiquement une tâche que M3 fait bien, et son quota est intact.' Pas exécuté."
+    },
+    {
+      "id": "D25",
+      "quoi": "Pousser les 70+ commits non poussés (push bloqué : Amdkn n'a pas les droits sur omk-services).",
+      "chantier": "site",
+      "source": "assistant",
+      "citation": "Le dépôt est à 70 commits d'avance sur origin — le blocage d'accès en écriture GitHub d'hier n'est toujours pas levé.",
+      "cible": "ASpace_OS_V2/.../coach-os (origin omk-services/OMK-DESKTOP-WEB-OS)",
+      "cout": "minute",
+      "bloque_par": "Droits GitHub. Le device code 49C3-8ED4 a été émis mais le flux n'a pas été complété par l'utilisateur."
+    },
+    {
+      "id": "D26",
+      "quoi": "Lancer les agents d'enrichissement sur les 9 autres apps (growth, finance, product, dashboard, audit, welcome, sales, legal, marketplace, tasks) à partir de la carte CARTE.md.",
+      "chantier": "site",
+      "source": "assistant",
+      "citation": "Le mécanisme est maintenant rodé — un brief par app, contenu tiré de la carte, vérification navigateur obligatoire. Dis-moi si j'enchaîne, et sur lesquelles.",
+      "cible": "ASpace_OS_V2/.../coach-os/src/apps/{...}/",
+      "cout": "semaine",
+      "bloque_par": "L'utilisateur fait pivoter vers la fin de session (Life OS sync, anti-fragile MCP, BRIEF_J)."
+    },
+    {
+      "id": "D27",
+      "quoi": "Restaurer coolify-mcp.py quand le VPS 148.230.92.235 est de nouveau disponible (script déclaré dans mcp_sources.json, écarté par le générateur).",
+      "chantier": "mcp",
+      "source": "utilisateur",
+      "citation": "Je voulais restaure le script coolify-mcp.py mais mon VPS est expired donc on attand",
+      "cible": "C:/Users/amado/.claude/mcp/coolify-mcp.py",
+      "cout": "minute",
+      "bloque_par": "VPS expiré. Reprise automatique au retour du VPS."
+    },
+    {
+      "id": "D28",
+      "quoi": "Faire migrer deux clés .wslconfig inconnues de la version Ubuntu actuelle — elles ne font rien.",
+      "chantier": "ordonnanceur",
+      "source": "assistant",
+      "citation": "Deux clés de mon .wslconfig sont inconnues de cette version — elles ne font donc rien. Je les retire plutôt que de laisser croire que la mémoire se récupère toute seule.",
+      "cible": "la suite — vérifier si la suppression a vraiment eu lieu (le condensé dit 'je les retire', mais on n'a pas de confirmation par diff).",
+      "cout": "minute",
+      "bloque_par": "Vérification absente du condensé."
+    },
+    {
+      "id": "D29",
+      "quoi": "Récupérer la clé anon Supabase de Life OS 2026 depuis Vercel (clé publique embarquée dans le bundle du déployé).",
+      "chantier": "life-os",
+      "source": "assistant",
+      "citation": "Récupérer la clé anon valide. Elle est dans les variables d'environnement Vercel du projet life-os-2026-amd-lab — c'est elle qui fait marcher le déployé. Copie-la dans .env, relance --check, et le palier 1 passe au vert.",
+      "cible": "ASpace_OS_V2/.../_Life-OS-2026-clone/.env",
+      "cout": "minute",
+      "bloque_par": "L'assistant a écrit la clé directement dans .env via le service_role (message 638), mais la question se reposera à chaque sync."
+    },
+    {
+      "id": "D30",
+      "quoi": "Compléter les 105 fichiers modifiés non commités + commit V0.7.8 dans _Life-OS-2026-clone.",
+      "chantier": "life-os",
+      "source": "assistant",
+      "citation": "Ton local a 105 fichiers modifiés non commités et un commit V0.7.8 jamais poussé. Le déployé n'est donc ni ton local, ni forcément ton main. Ça vaut un git status posé avant de conclure quoi que ce soit sur un écart de comportement.",
+      "cible": "ASpace_OS_V2/.../_Life-OS-2026-clone/",
+      "cout": "jour",
+      "bloque_par": "Aucun — l'utilisateur doit choisir : committer, pusher, ou jeter les modifications."
+    },
+    {
+      "id": "D31",
+      "quoi": "Combler l'écart Knowledge Config : routes REST répondent en POST et exigent en-têtes x-tdai-service-id + team_id.",
+      "chantier": "mcp",
+      "source": "assistant",
+      "citation": "Le bloc .mcp.json est prêt dans le rapport de M3. Je te le pose quand tu veux.",
+      "cible": "C:/Users/amado/.mcp.json ou via l'agentgateway",
+      "cout": "minute",
+      "bloque_par": "L'utilisateur n'a pas repris la demande. L'important a été absorbé par la ré-agrégation gateway (message 27)."
+    },
+    {
+      "id": "D32",
+      "quoi": "Lancer la délégalisation de l'A'I Native de Life OS (portage des 1450 lignes de tooling de Coach OS vers _Life-OS-2026-clone avec catalogue de 12 outils).",
+      "chantier": "life-os",
+      "source": "utilisateur",
+      "citation": "Life OS ia native de l'architecture v1 équivalent de coach os.",
+      "cible": "ASpace_OS_V2/.../_Life-OS-2026-clone/src/lib/tooling/",
+      "cout": "semaine",
+      "bloque_par": "L'utilisateur lui-même : 'tu me fatique en parallèle du AI Native de life os' — délégué lancé en arrière-plan, jamais terminé dans le condensé."
+    },
+    {
+      "id": "D33",
+      "quoi": "Ajouter un colonne vision_id sur SyncedRock et SyncedAmbition (axe explicite manquait — l'attachement se faisait par horizon, pas par référence).",
+      "chantier": "ontologie",
+      "source": "utilisateur",
+      "citation": "Le champ à ajouter est un vision_id sur SyncedRock et sur SyncedAmbition. Une colonne, pas une ontologie.",
+      "cible": "ASpace_OS_V2/.../supabase (ikigai_visions, fw_12wy, life_wheel_ambitions)",
+      "cout": "minute",
+      "bloque_par": "Migration non rédigée. Proposition formulée juste avant BRIEF_J."
+    }
+  ]
+}

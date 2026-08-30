@@ -1,0 +1,236 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:01.004 --> 00:00:16.380
+[Music] AIP empowers organizations to use large&nbsp;
+language models and other Cutting Edge AI safely&nbsp;&nbsp;
+
+00:00:16.380 --> 00:00:22.560
+and securely the platform allows you to do three&nbsp;
+things first AIP lets you deploy large language&nbsp;&nbsp;
+
+00:00:22.560 --> 00:00:28.620
+models and any other AI within your private&nbsp;
+Network anchored in your private data it helps you&nbsp;&nbsp;
+
+00:00:28.620 --> 00:00:33.720
+create a full Fidelity real-time representation&nbsp;
+of all the concepts actions and decisions within&nbsp;&nbsp;
+
+00:00:33.720 --> 00:00:39.240
+your business every truck every Warehouse every&nbsp;
+shipment every delay that can then be used by AI&nbsp;&nbsp;
+
+00:00:40.080 --> 00:00:44.460
+second it enables you to define the&nbsp;
+ground rules around which data llms&nbsp;&nbsp;
+
+00:00:44.460 --> 00:00:49.380
+and AI can and cannot see and what they&nbsp;
+can and cannot do on behalf of humans&nbsp;&nbsp;
+
+00:00:49.920 --> 00:00:54.960
+you can do this Based on data sensitivity laws&nbsp;
+and regulations and competencies of the model&nbsp;&nbsp;
+
+00:00:55.920 --> 00:01:00.960
+AIP provides the framework for AI to hand off&nbsp;
+tasks to other trusted task specific models&nbsp;&nbsp;
+
+00:01:00.960 --> 00:01:08.040
+as well as to trusted humans finally with this&nbsp;
+great power comes great responsibility AIP brings&nbsp;&nbsp;
+
+00:01:08.040 --> 00:01:12.660
+industry-leading guard rails to control govern&nbsp;
+and Trust the AI powered business of tomorrow&nbsp;&nbsp;
+
+00:01:13.440 --> 00:01:18.480
+AIP automatically captures a full digital&nbsp;
+footprint of all AI inputs outputs and&nbsp;&nbsp;
+
+00:01:18.480 --> 00:01:22.860
+actions including which AI was used for&nbsp;
+which decision which humans were in the&nbsp;&nbsp;
+
+00:01:22.860 --> 00:01:27.600
+loop and how they align with specific business&nbsp;
+purposes let's take a look at it in action&nbsp;&nbsp;
+
+00:01:29.400 --> 00:01:33.960
+in this demo let's say you're a leader at a&nbsp;
+us-based manufacturing company with customers&nbsp;&nbsp;
+
+00:01:33.960 --> 00:01:38.160
+all over the country you've just received an&nbsp;
+alert that a hurricane is forecasted to hit&nbsp;&nbsp;
+
+00:01:38.160 --> 00:01:41.700
+one of your major distribution centers in&nbsp;
+the South and you'll need to shut it down
+
+00:01:46.020 --> 00:01:50.580
+you want to know whether you should accelerate&nbsp;
+delay or cancel orders to your customers and other&nbsp;&nbsp;
+
+00:01:50.580 --> 00:01:56.400
+remediations you can take here in AIP terminal&nbsp;
+you can ask questions and collaborate with a&nbsp;&nbsp;
+
+00:01:56.400 --> 00:02:01.980
+large language model or llm to what extent will&nbsp;
+hurricane Cynthia affect our distribution centers&nbsp;&nbsp;
+
+00:02:01.980 --> 00:02:08.100
+in Louisiana as well as follow-ups how does this&nbsp;
+impact customer orders and Associated Revenue&nbsp;&nbsp;
+
+00:02:10.080 --> 00:02:15.060
+under the hood as you ask questions the llm is&nbsp;
+able to Traverse a data Foundation powered by&nbsp;&nbsp;
+
+00:02:15.060 --> 00:02:19.860
+real-time data feeds from all across your&nbsp;
+business importantly you can control which&nbsp;&nbsp;
+
+00:02:19.860 --> 00:02:24.660
+parts of the business the llm has access to&nbsp;
+for example we can see here that although the&nbsp;&nbsp;
+
+00:02:24.660 --> 00:02:29.880
+data Foundation contains employee level pii&nbsp;
+data the llm can't see or access that data&nbsp;&nbsp;
+
+00:02:30.600 --> 00:02:36.060
+this has been informative you want to understand&nbsp;
+your options and take action you can ask AIP to&nbsp;&nbsp;
+
+00:02:36.060 --> 00:02:40.560
+simulate a baseline scenario what would happen&nbsp;
+if we shut down the affected Distribution Center&nbsp;&nbsp;
+
+00:02:41.760 --> 00:02:46.740
+it uses a transportation Network Optimizer&nbsp;
+model and shows you the impact on backlogs&nbsp;&nbsp;
+
+00:02:46.740 --> 00:02:50.760
+revenue and commitments and highlights the&nbsp;
+impact on your highest priority customers&nbsp;&nbsp;
+
+00:02:51.660 --> 00:02:56.100
+you can also see which specific orders can be&nbsp;
+seamlessly fulfilled by other distribution centers&nbsp;&nbsp;
+
+00:02:58.020 --> 00:03:02.820
+this is a good start but you want to do more you&nbsp;
+want to know if you should Charter additional&nbsp;&nbsp;
+
+00:03:02.820 --> 00:03:08.220
+trucks to increase the volume of deliveries before&nbsp;
+and after the closure what are some options for&nbsp;&nbsp;
+
+00:03:08.220 --> 00:03:11.880
+chartering additional transportation&nbsp;
+for order fulfillment and the impact&nbsp;&nbsp;
+
+00:03:12.960 --> 00:03:16.740
+AIP offers three simulated courses&nbsp;
+of action alongside estimated cost&nbsp;&nbsp;
+
+00:03:17.580 --> 00:03:22.980
+option b a 20 truck capacity increase seems to&nbsp;
+have the best cost benefit trade-off in your&nbsp;&nbsp;
+
+00:03:22.980 --> 00:03:28.740
+highest priority orders will all be taken care of&nbsp;
+after validating it further you propose your plan&nbsp;&nbsp;
+
+00:03:28.740 --> 00:03:33.180
+for cross-functional sign-off for manufacturing&nbsp;
+supply chain and customer service stakeholders&nbsp;&nbsp;
+
+00:03:34.920 --> 00:03:39.480
+let's look under the hood again many of these&nbsp;
+steps required a deep understanding of how your&nbsp;&nbsp;
+
+00:03:39.480 --> 00:03:44.160
+business works L alums alone don't have the&nbsp;
+right context and we definitely don't want&nbsp;&nbsp;
+
+00:03:44.160 --> 00:03:50.520
+the llm to give answers not grinded in reality&nbsp;
+AIP connects llms with trusted models across&nbsp;&nbsp;
+
+00:03:50.520 --> 00:03:57.000
+your business including forecasting optimization&nbsp;
+machine learning and standard procedures AIP then&nbsp;&nbsp;
+
+00:03:57.000 --> 00:04:01.680
+facilitates a secure handoff between these models&nbsp;
+as needed which keeps each model in its own lane&nbsp;&nbsp;
+
+00:04:02.640 --> 00:04:06.840
+this lets you then use the llm plus&nbsp;
+all of your other models in concert&nbsp;&nbsp;
+
+00:04:06.840 --> 00:04:11.160
+safely to enable reasoning through the&nbsp;
+different scenarios and courses of action&nbsp;&nbsp;
+
+00:04:12.180 --> 00:04:16.860
+all stakeholders have approved your plan and you&nbsp;
+now want your operational team to get cracking&nbsp;&nbsp;
+
+00:04:17.400 --> 00:04:22.920
+much of the chartering and rerouting has already&nbsp;
+happened through automation as you authorized the&nbsp;&nbsp;
+
+00:04:22.920 --> 00:04:27.360
+operational team can monitor from their dedicated&nbsp;
+workspace and adjust as any surprises come up&nbsp;&nbsp;
+
+00:04:28.200 --> 00:04:32.400
+they'll also need to stay in the loop for&nbsp;
+certain steps by policy such as verifying&nbsp;&nbsp;
+
+00:04:32.400 --> 00:04:37.920
+customer consent for early deliveries as&nbsp;
+they make decisions and updates routing&nbsp;&nbsp;
+
+00:04:37.920 --> 00:04:43.020
+and optimization models rerun autonomously on&nbsp;
+their behalf within the limits around key kpis&nbsp;&nbsp;
+
+00:04:43.980 --> 00:04:48.960
+as decisions are made they are continually pushed&nbsp;
+to your operational systems triggering real world&nbsp;&nbsp;
+
+00:04:48.960 --> 00:04:55.740
+action they're also logged for future review let's&nbsp;
+go under the hood one last time and look at what&nbsp;&nbsp;
+
+00:04:55.740 --> 00:05:01.140
+enables your organization to safely govern llms&nbsp;
+and other AI to assist you through scenarios such&nbsp;&nbsp;
+
+00:05:01.140 --> 00:05:07.860
+as this one here in the AIP control panel you can&nbsp;
+set the guard rails and limits per model including&nbsp;&nbsp;
+
+00:05:07.860 --> 00:05:13.860
+which data objects they can see which actions they&nbsp;
+can recommend or take on behalf of humans which&nbsp;&nbsp;
+
+00:05:13.860 --> 00:05:19.860
+tasks and workflows they are trusted to drive&nbsp;
+who can use them how cost is attributed and so on
+
+00:05:23.640 --> 00:05:29.040
+you and your organization have formed an optimal&nbsp;
+multi-pronged plan of attack that are taking real&nbsp;&nbsp;
+
+00:05:29.040 --> 00:05:34.980
+world action within minutes all using natural&nbsp;
+language within AIP without a single line of code
+

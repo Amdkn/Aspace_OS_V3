@@ -1,0 +1,167 @@
+{
+ "_comment": "SOURCE DE VERITE des MCP agreges. Editer ICI, puis: python build_config.py",
+ "mcpServers": {
+  "context7": {
+   "command": "context7-mcp.cmd",
+   "args": []
+  },
+  "notion": {
+   "command": "notion-mcp-server.cmd",
+   "args": [],
+   "env": {
+    "OPENAPI_MCP_HEADERS": "{\"Authorization\":\"Bearer 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\",\"Notion-Version\":\"2022-06-28\"}"
+   }
+  },
+  "chrome-devtools": {
+   "command": "chrome-devtools-mcp.cmd",
+   "args": [
+    "--no-usage-statistics",
+    "--no-performance-crux"
+   ],
+   "env": {
+    "CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS": "1"
+   }
+  },
+  "playwright": {
+   "command": "playwright-mcp.cmd",
+   "args": []
+  },
+  "supabase": {
+   "command": "mcp-server-supabase.cmd",
+   "args": [],
+   "env": {
+    "SUPABASE_ACCESS_TOKEN": "sbp_02db5fc8263c6787b306df02263aa1525e1dbb53"
+   }
+  },
+  "vercel": {
+   "command": "vercel-mcp-pro.cmd",
+   "args": [],
+   "env": {
+    "VERCEL_TOKEN": "vcp_8BQJfQroIhdNcux3qsQJ1HXF2DX6dU89mEFi8qSTy29bfRAuXZ0DHWS3",
+    "VERCEL_TEAM_ID": "team_d3JjRK4fJUE9ACohbdlhv9Gc"
+   }
+  },
+  "hostinger-dns": {
+   "command": "hostinger-dns-mcp.cmd",
+   "args": [],
+   "env": {
+    "HOSTINGER_API_TOKEN": "${env:HOSTINGER_API_TOKEN}"
+   }
+  },
+  "supabase-omk": {
+   "command": "mcp-server-supabase.cmd",
+   "args": [],
+   "env": {
+    "SUPABASE_ACCESS_TOKEN": "sbp_f2af0f7154b6ee0975ae006026b0b9eafe345438"
+   }
+  },
+  "supabase-abc": {
+   "command": "mcp-server-supabase.cmd",
+   "args": [],
+   "env": {
+    "SUPABASE_ACCESS_TOKEN": "sbp_4121633effda50bfc25133e9b2eeda0860deb6ac"
+   }
+  },
+  "vercel-omk": {
+   "command": "vercel-mcp-pro.cmd",
+   "args": [],
+   "env": {
+    "VERCEL_TOKEN": "vcp_4z4bnWEcgJfWaIxA73OqAyqNplfVi1uBevxlreKmPmNojeAiqf3RlNHx",
+    "VERCEL_TEAM_ID": "team_FORMiTgW9YGd3JDRTaoaediq"
+   }
+  },
+  "vercel-abc": {
+   "command": "vercel-mcp-pro.cmd",
+   "args": [],
+   "env": {
+    "VERCEL_TOKEN": "vcp_4cyscQ8Ct7sNkHGAarhLML7xYaxASTnGyCyW3Hd3TthNlllN7R3NIFR2",
+    "VERCEL_TEAM_ID": "team_728Ds6fT5EPXWzYv1yP0T8W8"
+   }
+  },
+  "airtable": {
+   "command": "airtable-mcp-server.cmd",
+   "args": [],
+   "env": {
+    "AIRTABLE_API_KEY": "${env:AIRTABLE_API_KEY}",
+    "AIRTABLE_TOKEN": "${env:AIRTABLE_TOKEN}",
+    "AIRTABLE_PAT": "${env:AIRTABLE_PAT}"
+   }
+  },
+  "clickup": {
+   "command": "clickup-mcp-server.cmd",
+   "args": [],
+   "env": {
+    "CLICKUP_API_TOKEN": "${env:CLICKUP_API_TOKEN}",
+    "CLICKUP_API_KEY": "${env:CLICKUP_API_KEY}",
+    "CLICKUP_WORKSPACE_ID": "${env:CLICKUP_WORKSPACE_ID}"
+   }
+  },
+  "desktop-commander": {
+   "command": "C:/Users/amado/AppData/Roaming/npm/desktop-commander.cmd",
+   "args": []
+  },
+  "ade-bridge": {
+   "command": "C:/Python314/python.exe",
+   "args": [
+    "C:/Users/amado/ade-bridge/mcp_vscode_agent.py"
+   ]
+  },
+  "clara-voice": {
+   "type": "stdio",
+   "command": "node",
+   "args": [
+    "C:/Users/amado/.clara-voice/mcp/standalone.js"
+   ],
+   "env": {}
+  },
+  "knowledge": {
+   "type": "stdio",
+   "command": "node",
+   "args": [
+    "C:/Users/amado/TencentDB-Agent-Memory/MemoryKnowledge/start-mcp-windows.mjs"
+   ],
+   "env": {
+    "KNOWLEDGE_API_URL": "http://127.0.0.1:8421",
+    "KNOWLEDGE_SERVICE_ID": "cc-default"
+   }
+  },
+  "posthog": {
+   "type": "http",
+   "url": "https://mcp.posthog.com/mcp"
+  },
+  "coolify": {
+   "type": "stdio",
+   "command": "C:/Users/amado/.venv/Scripts/python.exe",
+   "args": [
+    "C:/Users/amado/.claude/mcp/coolify-mcp.py"
+   ],
+   "env": {
+    "COOLIFY_URL": "http://148.230.92.235:8000",
+    "COOLIFY_TOKEN": "3|Psdzc5vKUpLglsotBcFYzdJmfAqWP1NKWDu5VouL600d9ca2"
+   },
+   "_disabled_reason": "EN ATTENTE, ne pas supprimer. Le script coolify-mcp.py a disparu du disque et le VPS cible (148.230.92.235) a expire. build_config.py ecarte donc cette cible automatiquement — une cible morte ferait echouer tout l'initialize du gateway. Des que le VPS est renouvele et le script restaure, relancer build_config.py : la cible se reintegre sans autre changement."
+  },
+  "transcript-api": {
+   "type": "http",
+   "url": "https://transcriptapi.com/mcp",
+   "headers": {
+    "Authorization": "Bearer sk_Ajtxu29isCP9YMAGpPG6IMQ1rKnsI4VnaYvcHOQnxJo"
+   }
+  },
+  "github": {
+   "command": "npx",
+   "args": [
+    "-y",
+    "@modelcontextprotocol/server-github@2025.4.8"
+   ],
+   "env": {
+    "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+   }
+  },
+  "mobbin": {
+   "type": "http",
+   "url": "https://api.mobbin.com/mcp",
+   "_note": "Recherche d'inspiration UI. OAuth interactif : la premiere connexion ouvre un navigateur et exige une session Mobbin. Ajoute le 2026-08-06."
+  }
+ }
+}

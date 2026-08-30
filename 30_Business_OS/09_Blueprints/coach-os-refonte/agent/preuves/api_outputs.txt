@@ -1,0 +1,31 @@
+=== TEST 1 : GET /api/agent/roster ===
+{"agents":[{"id":"cerritos-holodeck","name":"Cerritos-HoloDeck","description":"USS Cerritos = Lower Deck = Holo Deck. Cascade GTD 5 etapes : Capture → Clarify → Organize → Reflect → Engage.","personnageId":"clippy","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-orville","name":"Squad-Orville","description":"USS Orville = A2 Meaning Engine. Ikigai 4 Pillars + 5 Horizons, verdict GO/NO-GO.","personnageId":"links","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-discovery","name":"Squad-Discovery","description":"USS Discovery = A2 Observation Engine. 8 Life Wheel drift detection.","personnageId":"rover","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-snw","name":"Squad-SNW","description":"USS SNW = A2 Execution Engine (Curie). 12WY sprint bridge.","personnageId":"merlin","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-enterprise","name":"Squad-Enterprise","description":"USS Enterprise = A2 Structure Engine. PARA canonization.","personnageId":"genie","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-protostar","name":"Squad-Protostar","description":"USS Protostar = A2 Liberation Engine. DEAL Define / Eliminate / Automate / Liberate.","personnageId":"peedy","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"squad-greenlantern","name":"Squad-GreenLantern-People","description":"nanoSquad X-Men sous GreenLantern-People-B2 (LD03 Health/People).","personnageId":"genius","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"jerry-systemize","name":"Jerry-SYSTEMIZE-Squad","description":"Jerry SYSTEMIZE E-Myth orchestrateur des 8 B2 DC-Hero VPs (V4 Triptyque).","personnageId":"rocky","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"kernel-core-13th","name":"Kernel-Core-13th","description":"L0 noyau, infra, harness (13e Docteur : Yaz, Ryan, Graham).","personnageId":"f1","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"life-core-11th","name":"Life-Core-11th","description":"L1 vie OS, logbook, santé (11e Docteur : Amy, Rory, River).","personnageId":"officelogo","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"buzz-core-12th","name":"Buzz-Core-12th","description":"L2 buzz, business OS (12e Docteur : Clara, Nardole, Bill). Branche Buzz locale.","personnageId":"saeko","backend":"buzz","provider":null,"buzzModel":"claude-haiku-4-5-20251001","multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"dlq-rick","name":"DLQ-Rick","description":"DLQ Rick — entrepreneur, dispatch DLQ critique vers les Doctors.","personnageId":"monkeyking","backend":"modele","provider":"minimax","buzzModel":null,"multicaAgentId":null,"multicaSquadId":null,"available":true},{"id":"a3-bortus-multica","name":"A3-Bortus (multica)","description":"Canal multica de test : delegue a l'agent A3-Bortus via `multica issue create`.","personnageId":"f1","backend":"multica","provider":null,"buzzModel":null,"multicaAgentId":"1f7cf1dd-e9af-4353-882f-f29fdd2b8264","multicaSquadId":null,"available":true}],"backends":[{"id":"modele","label":"Fournisseur LLM (in-process)","available":true},{"id":"multica","label":"Multica (CLI local)","available":true},{"id":"buzz","label":"Buzz (ACP, local)","available":true}],"providers":[{"id":"minimax","label":"MiniMax-M3 (via Anthropic)","model":"MiniMax-M3","available":true},{"id":"anthropic","label":"Anthropic Claude","model":"claude-sonnet-4-6","available":false},{"id":"openai","label":"OpenAI","model":"gpt-5.5","available":false},{"id":"google","label":"Google Gemini","model":"gemini-3-flash","available":false}],"count":13}
+HTTP_CODE=200
+
+=== TEST 2 : POST /api/agent/invoke (agent inexistant) ===
+{"error":"Agent inconnu : \"agent-qui-nexiste-pas\"."}
+HTTP_CODE=404
+
+=== TEST 3 : POST /api/agent/invoke (modele) ===
+event: delta
+data: {"type":"delta","text":"Carr"}
+
+event: delta
+data: {"type":"delta","text":"é, court, direct, sans détour."}
+
+event: done
+data: {"stopReason":"end_turn"}
+
+
+HTTP_CODE=200
+
+=== TEST 4 : POST /api/agent/invoke (buzz) ===
+event: delta
+data: {"type":"text","text":"PONG"}
+
+event: done
+data: {"stopReason":"end_turn"}
+
+
+HTTP_CODE=200
+

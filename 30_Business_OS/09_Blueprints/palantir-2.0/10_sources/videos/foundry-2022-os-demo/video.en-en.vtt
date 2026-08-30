@@ -1,0 +1,5383 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:11.060 --> 00:00:12.169
+Thank you, everybody, for joining us
+
+00:00:12.170 --> 00:00:13.669
+today to go through this walkthrough
+
+00:00:13.670 --> 00:00:15.589
+of the Foundry platform.
+
+00:00:15.590 --> 00:00:16.939
+There's a lot to cover, so it'll be
+
+00:00:16.940 --> 00:00:18.079
+a bit of a whirlwind tour.
+
+00:00:18.080 --> 00:00:19.009
+I won't be able to get to
+
+00:00:19.010 --> 00:00:20.749
+everything, but I'll try to give you
+
+00:00:20.750 --> 00:00:22.219
+a representative cross sample of
+
+00:00:22.220 --> 00:00:23.239
+kind of the key parts of the
+
+00:00:23.240 --> 00:00:24.679
+platform.
+
+00:00:24.680 --> 00:00:25.685
+Foundry behind the scenes is 100+
+
+00:00:26.720 --> 00:00:28.669
+different microservices kind
+
+00:00:28.670 --> 00:00:30.799
+of surfaced up as kind of two dozen
+
+00:00:30.800 --> 00:00:32.508
+different out-of-the-box user facing
+
+00:00:32.509 --> 00:00:34.429
+applications, actually a bit more.
+
+00:00:34.430 --> 00:00:36.289
+In addition to applications that you
+
+00:00:36.290 --> 00:00:38.149
+can also build. And these
+
+00:00:38.150 --> 00:00:39.559
+applications stretch across
+
+00:00:39.560 --> 00:00:41.419
+effectively every persona in
+
+00:00:41.420 --> 00:00:42.589
+the modern enterprise.
+
+00:00:42.590 --> 00:00:43.939
+So we'll try to take a tour through
+
+00:00:43.940 --> 00:00:45.679
+kind of some of those key personas
+
+00:00:45.680 --> 00:00:47.359
+and call out what kind of tools or
+
+00:00:47.360 --> 00:00:49.189
+services are used at every step
+
+00:00:49.190 --> 00:00:50.190
+along the journey.
+
+00:00:50.960 --> 00:00:51.859
+You know, we can think about the
+
+00:00:51.860 --> 00:00:53.269
+functionality and foundry kind of in
+
+00:00:53.270 --> 00:00:55.249
+three main parts.
+
+00:00:55.250 --> 00:00:57.109
+So there is the data and ontology
+
+00:00:57.110 --> 00:00:58.819
+piece. So how are we connecting to
+
+00:00:58.820 --> 00:01:00.469
+different data sources, data lakes,
+
+00:01:00.470 --> 00:01:02.389
+data warehouses and bringing that
+
+00:01:02.390 --> 00:01:04.219
+data together into a semantic
+
+00:01:04.220 --> 00:01:06.079
+foundation that can then be used by
+
+00:01:06.080 --> 00:01:07.639
+the entire organization.
+
+00:01:07.640 --> 00:01:09.169
+We call this an ontology.
+
+00:01:09.170 --> 00:01:10.549
+So we'll talk about the journey of
+
+00:01:10.550 --> 00:01:11.839
+how we connect into different data
+
+00:01:11.840 --> 00:01:13.759
+sources, refine them, build
+
+00:01:13.760 --> 00:01:15.919
+out data integrations with
+
+00:01:15.920 --> 00:01:17.659
+health checks, security, and kind of
+
+00:01:17.660 --> 00:01:19.549
+build out this ontology as
+
+00:01:19.550 --> 00:01:20.630
+sort of a starting place
+
+00:01:21.710 --> 00:01:23.209
+will then want to bring in kind of
+
+00:01:23.210 --> 00:01:25.069
+data science and modeling into that
+
+00:01:25.070 --> 00:01:25.999
+same foundation.
+
+00:01:26.000 --> 00:01:27.529
+So this is sort of the sphere of
+
+00:01:27.530 --> 00:01:29.209
+digital twin and modeling.
+
+00:01:29.210 --> 00:01:30.649
+So how do we think about leveraging
+
+00:01:30.650 --> 00:01:32.929
+business logic, data science,
+
+00:01:32.930 --> 00:01:34.909
+ML, LP models
+
+00:01:34.910 --> 00:01:36.709
+within the same foundation that
+
+00:01:36.710 --> 00:01:38.419
+we've built on the data side?
+
+00:01:38.420 --> 00:01:40.369
+So kind of trying to fuze data
+
+00:01:40.370 --> 00:01:42.499
+and models together into a common
+
+00:01:42.500 --> 00:01:43.916
+foundation through this ontology.
+
+00:01:45.050 --> 00:01:46.609
+And then kind of finally, we'll talk
+
+00:01:46.610 --> 00:01:48.379
+about how the combination of data
+
+00:01:48.380 --> 00:01:50.269
+and models comes together
+
+00:01:50.270 --> 00:01:52.249
+for different types of end users.
+
+00:01:52.250 --> 00:01:53.599
+So, you know, these are everyday
+
+00:01:53.600 --> 00:01:55.189
+users doing core operational
+
+00:01:55.190 --> 00:01:57.049
+functions in the organization,
+
+00:01:57.050 --> 00:01:59.209
+and this is 70 to 80 percent
+
+00:01:59.210 --> 00:02:01.519
+of users of Foundry in most contexts
+
+00:02:01.520 --> 00:02:02.419
+are sort of quote unquote
+
+00:02:02.420 --> 00:02:04.279
+non-technical users trying to
+
+00:02:04.280 --> 00:02:05.989
+make use of the fruits of all that
+
+00:02:05.990 --> 00:02:08.359
+labor towards real operational
+
+00:02:08.360 --> 00:02:10.189
+workflows and different
+
+00:02:10.190 --> 00:02:11.479
+applications that are kind of
+
+00:02:11.480 --> 00:02:13.369
+existential to the business.
+
+00:02:13.370 --> 00:02:15.199
+So let's start at the
+
+00:02:15.200 --> 00:02:17.059
+top with data and ontology.
+
+00:02:17.060 --> 00:02:18.289
+So what I want to do is first go
+
+00:02:18.290 --> 00:02:20.179
+into a first application
+
+00:02:20.180 --> 00:02:21.829
+here, which is called Monocle, which
+
+00:02:21.830 --> 00:02:23.339
+is sort of our data lineage graph
+
+00:02:23.340 --> 00:02:25.099
+for the story of kind of how the
+
+00:02:25.100 --> 00:02:26.419
+data comes together into an
+
+00:02:26.420 --> 00:02:27.409
+ontology.
+
+00:02:27.410 --> 00:02:28.759
+So here you'll see this is a pretty
+
+00:02:28.760 --> 00:02:29.539
+notional example.
+
+00:02:29.540 --> 00:02:31.189
+So it's a little bit simplified a
+
+00:02:31.190 --> 00:02:33.319
+supply chain ontology, right, which
+
+00:02:33.320 --> 00:02:35.269
+is showing me kind of the
+
+00:02:35.270 --> 00:02:36.709
+different concepts I'm going to work
+
+00:02:36.710 --> 00:02:38.779
+with in my supply chain demo.
+
+00:02:38.780 --> 00:02:40.639
+So I've put together common
+
+00:02:40.640 --> 00:02:42.619
+concepts, right? Like a supplier, an
+
+00:02:42.620 --> 00:02:45.319
+alert, a distribution center,
+
+00:02:45.320 --> 00:02:47.329
+plants, materials, et cetera.
+
+00:02:47.330 --> 00:02:49.249
+And each of these also have each
+
+00:02:49.250 --> 00:02:50.809
+of these objects have links between
+
+00:02:50.810 --> 00:02:51.919
+them. We'll go into how each of
+
+00:02:51.920 --> 00:02:53.419
+these objects also has actions
+
+00:02:53.420 --> 00:02:54.949
+associated with them.
+
+00:02:54.950 --> 00:02:56.719
+But the idea is, is that if we look
+
+00:02:56.720 --> 00:02:58.279
+at kind of any one of these objects,
+
+00:02:58.280 --> 00:02:59.329
+so we're going to go into the plant
+
+00:02:59.330 --> 00:03:02.029
+to begin with here to start.
+
+00:03:02.030 --> 00:03:03.559
+Each of these is the culmination of
+
+00:03:03.560 --> 00:03:04.969
+many different steps of data
+
+00:03:04.970 --> 00:03:06.019
+integration.
+
+00:03:06.020 --> 00:03:07.669
+So if we zoom out here, what we see
+
+00:03:07.670 --> 00:03:09.559
+kind of in this spiderweb diagram
+
+00:03:09.560 --> 00:03:11.419
+is the story of how we integrated
+
+00:03:11.420 --> 00:03:13.189
+different data sources to build this
+
+00:03:13.190 --> 00:03:14.899
+plant object to start with on the
+
+00:03:14.900 --> 00:03:16.249
+right hand side.
+
+00:03:16.250 --> 00:03:18.259
+So reading this from left to right,
+
+00:03:18.260 --> 00:03:19.459
+what we see here is we're actually
+
+00:03:19.460 --> 00:03:21.079
+pulling in kind of a couple
+
+00:03:21.080 --> 00:03:22.099
+different data sources.
+
+00:03:22.100 --> 00:03:23.569
+Typically, these diagrams are much,
+
+00:03:23.570 --> 00:03:24.769
+much larger, much, much more
+
+00:03:24.770 --> 00:03:26.509
+complex. But this is just a starting
+
+00:03:26.510 --> 00:03:28.309
+example of us connecting to.
+
+00:03:28.310 --> 00:03:30.289
+You'll see on the left hand side
+
+00:03:30.290 --> 00:03:32.599
+and SAP system as an example
+
+00:03:32.600 --> 00:03:34.279
+of one business system,
+
+00:03:34.280 --> 00:03:36.229
+Treasury.gov, which is an example
+
+00:03:36.230 --> 00:03:38.249
+of an open API-driven source
+
+00:03:38.250 --> 00:03:39.439
+for connecting to.
+
+00:03:39.440 --> 00:03:40.969
+And then I have a time series source
+
+00:03:40.970 --> 00:03:42.049
+here too, which is a synthetic
+
+00:03:42.050 --> 00:03:43.909
+sensor that I've set up just sort of
+
+00:03:43.910 --> 00:03:46.039
+in my environment to work with.
+
+00:03:46.040 --> 00:03:47.299
+And the idea is that every one of
+
+00:03:47.300 --> 00:03:48.499
+these steps, every one of these sort
+
+00:03:48.500 --> 00:03:50.059
+of rectangles or nodes you see in
+
+00:03:50.060 --> 00:03:52.039
+the graph is one step closer
+
+00:03:52.040 --> 00:03:54.229
+to refining, cleaning, joining,
+
+00:03:54.230 --> 00:03:55.999
+applying business logic to that data
+
+00:03:56.000 --> 00:03:57.439
+to get us to that semantic
+
+00:03:57.440 --> 00:03:58.729
+representation.
+
+00:03:58.730 --> 00:04:00.319
+So for instance, if I kind of take a
+
+00:04:00.320 --> 00:04:01.849
+look at one of these datasets, I can
+
+00:04:01.850 --> 00:04:03.589
+always sort of pop up and say, OK,
+
+00:04:03.590 --> 00:04:04.789
+what does this data actually look
+
+00:04:04.790 --> 00:04:06.619
+like? So let's take a look at the
+
+00:04:06.620 --> 00:04:08.509
+PySpark code here that
+
+00:04:08.510 --> 00:04:09.769
+actually shows us how we're actually
+
+00:04:09.770 --> 00:04:11.479
+applying logic at this step in the
+
+00:04:11.480 --> 00:04:12.769
+pipeline.
+
+00:04:12.770 --> 00:04:14.509
+If I select a different node, I can
+
+00:04:14.510 --> 00:04:15.529
+go and take a look at the history
+
+00:04:15.530 --> 00:04:17.539
+tab, and I can see that we have full
+
+00:04:17.540 --> 00:04:19.369
+data versioning for every
+
+00:04:19.370 --> 00:04:20.719
+version of the data that's updated
+
+00:04:20.720 --> 00:04:22.039
+in this particular part of the
+
+00:04:22.040 --> 00:04:23.929
+pipeline. And this is huge because
+
+00:04:23.930 --> 00:04:25.279
+I can go back and take a look and
+
+00:04:25.280 --> 00:04:27.199
+say, "OK, who actually updated
+
+00:04:27.200 --> 00:04:28.999
+this particular routine or this
+
+00:04:29.000 --> 00:04:30.559
+particular schedule of this data
+
+00:04:30.560 --> 00:04:31.699
+build?
+
+00:04:31.700 --> 00:04:33.589
+What was the actual result for this
+
+00:04:33.590 --> 00:04:34.729
+version of the data versus the
+
+00:04:34.730 --> 00:04:36.079
+current version of the data?
+
+00:04:36.080 --> 00:04:37.039
+And how can you actually roll
+
+00:04:37.040 --> 00:04:38.179
+forward and backwards through
+
+00:04:38.180 --> 00:04:40.249
+different versions of the data with
+
+00:04:40.250 --> 00:04:41.839
+the code and the metadata at each
+
+00:04:41.840 --> 00:04:42.919
+point in time?".
+
+00:04:42.920 --> 00:04:44.689
+So it's a powerful ability for me to
+
+00:04:44.690 --> 00:04:46.369
+not only look at data pipelines as
+
+00:04:46.370 --> 00:04:48.199
+they exist today, but also be able
+
+00:04:48.200 --> 00:04:49.339
+to look at historically how they
+
+00:04:49.340 --> 00:04:50.750
+might have changed over time.
+
+00:04:52.250 --> 00:04:53.719
+There's a few other things I want to
+
+00:04:53.720 --> 00:04:55.129
+make sure that we call out here kind
+
+00:04:55.130 --> 00:04:57.289
+of in this part of the
+
+00:04:57.290 --> 00:04:58.099
+Foundry platform.
+
+00:04:58.100 --> 00:05:00.169
+So kind of the build system for data
+
+00:05:00.170 --> 00:05:01.579
+or the data ops part of things.
+
+00:05:03.020 --> 00:05:04.159
+The first is, you see kind of these
+
+00:05:04.160 --> 00:05:06.139
+lines connecting all these different
+
+00:05:06.140 --> 00:05:07.819
+nodes together, and this is
+
+00:05:07.820 --> 00:05:09.679
+indication of of lineage
+
+00:05:09.680 --> 00:05:11.479
+and. Lineage is actually a concept
+
+00:05:11.480 --> 00:05:13.459
+that is intertwined with security
+
+00:05:13.460 --> 00:05:14.899
+in the Foundry platform.
+
+00:05:14.900 --> 00:05:16.759
+So we think about how we're securing
+
+00:05:16.760 --> 00:05:18.859
+data and how that security will flow
+
+00:05:18.860 --> 00:05:20.419
+into the ontology and into
+
+00:05:20.420 --> 00:05:22.159
+workflows. Beyond that, let's
+
+00:05:22.160 --> 00:05:23.479
+actually change the view here for a
+
+00:05:23.480 --> 00:05:24.919
+second to take a look.
+
+00:05:24.920 --> 00:05:26.299
+So we're going to change here to the
+
+00:05:26.300 --> 00:05:28.249
+permissions view and you'll see here
+
+00:05:28.250 --> 00:05:30.559
+that it's now showing me dynamically
+
+00:05:30.560 --> 00:05:31.939
+what my perms---, what my
+
+00:05:31.940 --> 00:05:33.499
+permissions are across this entire
+
+00:05:33.500 --> 00:05:34.309
+pipeline.
+
+00:05:34.310 --> 00:05:35.629
+So you'll see it's blue, I have
+
+00:05:35.630 --> 00:05:36.769
+access to everything here because
+
+00:05:36.770 --> 00:05:37.939
+I'm sort of the administrator here
+
+00:05:37.940 --> 00:05:38.940
+of this environment.
+
+00:05:39.740 --> 00:05:41.209
+But what's actually happening is
+
+00:05:41.210 --> 00:05:43.159
+we're assigning permissions
+
+00:05:43.160 --> 00:05:44.509
+to the data sources.
+
+00:05:44.510 --> 00:05:46.819
+So the SAP system, Treasury.gov,
+
+00:05:46.820 --> 00:05:48.019
+et cetera.
+
+00:05:48.020 --> 00:05:49.429
+Basically, the role based access
+
+00:05:49.430 --> 00:05:50.659
+permissions that might be coming in
+
+00:05:50.660 --> 00:05:52.699
+from an active directory system or
+
+00:05:52.700 --> 00:05:54.319
+some sort of other authorization
+
+00:05:54.320 --> 00:05:56.209
+scheme that an organization has,
+
+00:05:56.210 --> 00:05:57.739
+and we're then propagating those
+
+00:05:57.740 --> 00:05:59.269
+controls forward.
+
+00:05:59.270 --> 00:06:01.519
+So that means that every child
+
+00:06:01.520 --> 00:06:03.349
+will inherit the union of all the
+
+00:06:03.350 --> 00:06:05.329
+permissions of its parents
+
+00:06:05.330 --> 00:06:06.259
+to make that a little bit less
+
+00:06:06.260 --> 00:06:08.299
+esoteric, let's use another example.
+
+00:06:08.300 --> 00:06:09.829
+If I change this permissions view,
+
+00:06:09.830 --> 00:06:11.779
+which I can do as an admin, to my
+
+00:06:11.780 --> 00:06:13.939
+colleague Jason Richardson,
+
+00:06:13.940 --> 00:06:15.409
+we'll see that Jason doesn't have
+
+00:06:15.410 --> 00:06:17.119
+access to most things here.
+
+00:06:17.120 --> 00:06:18.139
+And that's because he didn't have
+
+00:06:18.140 --> 00:06:19.909
+access to anything except for the
+
+00:06:19.910 --> 00:06:21.439
+Treasury.gov source.
+
+00:06:21.440 --> 00:06:23.269
+And so when the permissions flow,
+
+00:06:23.270 --> 00:06:24.889
+he's going to lose access the moment
+
+00:06:24.890 --> 00:06:26.479
+we start to blend that source with
+
+00:06:26.480 --> 00:06:28.189
+other sources.
+
+00:06:28.190 --> 00:06:29.929
+You'll notice he actually has one
+
+00:06:29.930 --> 00:06:31.909
+sort of exceptional piece of access
+
+00:06:31.910 --> 00:06:34.189
+here where he should have known that
+
+00:06:34.190 --> 00:06:35.089
+he would have not had access
+
+00:06:35.090 --> 00:06:36.152
+originally, which is on this OFAC
+
+00:06:37.250 --> 00:06:38.959
+clean data set because we actually
+
+00:06:38.960 --> 00:06:41.149
+chose to situationally expand
+
+00:06:41.150 --> 00:06:43.009
+his permissions in this case,
+
+00:06:43.010 --> 00:06:44.509
+but not allow that to sort of
+
+00:06:44.510 --> 00:06:46.609
+propagate forward to any other
+
+00:06:46.610 --> 00:06:48.439
+pieces of the pipeline.
+
+00:06:48.440 --> 00:06:49.909
+The point here is is that we can mix
+
+00:06:49.910 --> 00:06:51.259
+and match very different types of
+
+00:06:51.260 --> 00:06:52.819
+security models to get very
+
+00:06:52.820 --> 00:06:54.649
+granular, robust results
+
+00:06:54.650 --> 00:06:56.269
+so we can intermingle role based
+
+00:06:56.270 --> 00:06:58.399
+access controls, classification
+
+00:06:58.400 --> 00:07:00.409
+based access controls and purpose
+
+00:07:00.410 --> 00:07:03.139
+based access controls all here.
+
+00:07:03.140 --> 00:07:04.429
+So we can have very fine grained
+
+00:07:04.430 --> 00:07:06.259
+control over who is doing what,
+
+00:07:06.260 --> 00:07:07.729
+with different personas, different
+
+00:07:07.730 --> 00:07:09.109
+parts of the organization through
+
+00:07:09.110 --> 00:07:10.279
+Foundry.
+
+00:07:10.280 --> 00:07:11.599
+And this was very much built from
+
+00:07:11.600 --> 00:07:12.799
+our own experience in the field as
+
+00:07:12.800 --> 00:07:14.479
+Palantir engineers, where if you
+
+00:07:14.480 --> 00:07:15.739
+thought about just doing security
+
+00:07:15.740 --> 00:07:17.839
+based off of the location of data
+
+00:07:17.840 --> 00:07:19.249
+and some sort of file system or some
+
+00:07:19.250 --> 00:07:21.139
+sort of bucket location, it became
+
+00:07:21.140 --> 00:07:22.909
+really hard to actually make sure
+
+00:07:22.910 --> 00:07:24.749
+that security was robust as that
+
+00:07:24.750 --> 00:07:26.209
+organization organically started to
+
+00:07:26.210 --> 00:07:28.669
+pull that data into other places.
+
+00:07:28.670 --> 00:07:30.799
+So data and security
+
+00:07:30.800 --> 00:07:32.539
+kind of flow together with lineage,
+
+00:07:32.540 --> 00:07:34.159
+and it's immutable as you work
+
+00:07:34.160 --> 00:07:35.299
+throughout the rest, throughout the
+
+00:07:35.300 --> 00:07:37.039
+entire platform or interact through
+
+00:07:37.040 --> 00:07:38.089
+the APIs.
+
+00:07:38.090 --> 00:07:40.039
+So that's sort of the first
+
+00:07:40.040 --> 00:07:42.269
+thing to call out here is security
+
+00:07:42.270 --> 00:07:43.519
+is sort of baked right in as part of
+
+00:07:43.520 --> 00:07:44.520
+the metadata in Foundry.
+
+00:07:45.440 --> 00:07:46.909
+The second piece I want to call out
+
+00:07:46.910 --> 00:07:47.959
+here as we kind of work through
+
+00:07:47.960 --> 00:07:49.699
+things is "OK, so I build out these
+
+00:07:49.700 --> 00:07:50.959
+pipelines that get to be quite
+
+00:07:50.960 --> 00:07:52.819
+robust to refreshing all the time.
+
+00:07:52.820 --> 00:07:54.829
+How do I keep these things healthy?"
+
+00:07:54.830 --> 00:07:57.109
+And so if I change this to now
+
+00:07:57.110 --> 00:07:59.029
+a data health view, what we're going
+
+00:07:59.030 --> 00:08:01.189
+to see here is this is a view into
+
+00:08:01.190 --> 00:08:02.389
+the parts of the pipeline that I've
+
+00:08:02.390 --> 00:08:04.249
+instrumented with data quality
+
+00:08:04.250 --> 00:08:06.079
+checks, and I can always kind of pop
+
+00:08:06.080 --> 00:08:07.549
+this open at the bottom to say,
+
+00:08:07.550 --> 00:08:08.899
+let's take a look at the checks that
+
+00:08:08.900 --> 00:08:10.279
+we have across this part of this
+
+00:08:10.280 --> 00:08:11.329
+pipeline.
+
+00:08:11.330 --> 00:08:13.939
+So I'm going to take a look here
+
+00:08:13.940 --> 00:08:15.919
+at one of these nodes, and we
+
+00:08:15.920 --> 00:08:17.539
+can take a look and say, let's add a
+
+00:08:17.540 --> 00:08:19.189
+data health check here.
+
+00:08:19.190 --> 00:08:20.809
+This is going to pull up a list of
+
+00:08:20.810 --> 00:08:22.339
+out-of-the-box health checks that we
+
+00:08:22.340 --> 00:08:23.449
+can sort of assign to different
+
+00:08:23.450 --> 00:08:24.709
+points in our pipelines.
+
+00:08:24.710 --> 00:08:26.929
+So is this data updating on time?
+
+00:08:26.930 --> 00:08:28.399
+Is it refreshing on the schedule
+
+00:08:28.400 --> 00:08:30.559
+that I expected? Are the files
+
+00:08:30.560 --> 00:08:31.769
+the size that I expect?
+
+00:08:31.770 --> 00:08:33.619
+And are we seeing the cardinality
+
+00:08:33.620 --> 00:08:35.298
+of different data columns with the
+
+00:08:35.299 --> 00:08:37.158
+statistical results that we expect?
+
+00:08:37.159 --> 00:08:38.089
+All of these things can be
+
+00:08:38.090 --> 00:08:38.899
+quantified here through
+
+00:08:38.900 --> 00:08:41.629
+point-and-click, but can also be set
+
+00:08:41.630 --> 00:08:43.189
+through code as well.
+
+00:08:43.190 --> 00:08:44.929
+So we'll go in in a second on how we
+
+00:08:44.930 --> 00:08:45.784
+actually author these
+transformations,
+
+00:08:45.785 --> 00:08:47.629
+but the data health
+
+00:08:47.630 --> 00:08:49.579
+component is key to keeping
+
+00:08:49.580 --> 00:08:51.349
+these pipelines healthy as they're
+
+00:08:51.350 --> 00:08:52.759
+sort of refreshing all the time.
+
+00:08:53.780 --> 00:08:55.729
+And so having these checks right
+
+00:08:55.730 --> 00:08:56.989
+here saves you having to go to a
+
+00:08:56.990 --> 00:08:58.699
+different platform to kind of see
+
+00:08:58.700 --> 00:08:59.989
+what's going on there before you
+
+00:08:59.990 --> 00:09:02.209
+kind of come back to this platform
+
+00:09:02.210 --> 00:09:03.259
+here.
+
+00:09:03.260 --> 00:09:04.099
+All right.
+
+00:09:04.100 --> 00:09:06.139
+So let's now switch back
+
+00:09:06.140 --> 00:09:08.119
+to our sort of, our default
+
+00:09:08.120 --> 00:09:09.679
+view, and let's take a look at more
+
+00:09:09.680 --> 00:09:11.119
+detail on what's actually going on
+
+00:09:11.120 --> 00:09:12.469
+in these individual steps.
+
+00:09:12.470 --> 00:09:14.419
+So I'm going to open up one of these
+
+00:09:14.420 --> 00:09:16.279
+sort of, these the steps
+
+00:09:16.280 --> 00:09:18.049
+of logic here, and we're going to go
+
+00:09:18.050 --> 00:09:20.449
+in and take a look at the repository
+
+00:09:20.450 --> 00:09:22.009
+and how this particular result was
+
+00:09:22.010 --> 00:09:23.010
+built.
+
+00:09:23.490 --> 00:09:24.839
+So this is going to launch me into
+
+00:09:24.840 --> 00:09:26.339
+another application in Foundry
+
+00:09:26.340 --> 00:09:28.169
+called Authoring, which is an
+
+00:09:28.170 --> 00:09:29.549
+IDE or an integrated development
+
+00:09:29.550 --> 00:09:31.679
+environment where I can see here
+
+00:09:31.680 --> 00:09:33.029
+how I can actually make changes to
+
+00:09:33.030 --> 00:09:34.259
+this part of this pipeline with kind
+
+00:09:34.260 --> 00:09:36.689
+of full change management built in.
+
+00:09:36.690 --> 00:09:38.069
+So the key thing here is that you'll
+
+00:09:38.070 --> 00:09:39.959
+see, like we saw in Monocle,
+
+00:09:39.960 --> 00:09:41.999
+the previous application, there's
+
+00:09:42.000 --> 00:09:43.499
+sort of this branch icon here at the
+
+00:09:43.500 --> 00:09:45.389
+top. And what this allows us to
+
+00:09:45.390 --> 00:09:47.399
+do is treat data
+
+00:09:47.400 --> 00:09:49.169
+the way that we treat code.
+
+00:09:49.170 --> 00:09:50.849
+And so instead of making changes on
+
+00:09:50.850 --> 00:09:52.769
+the master branch and trying to then
+
+00:09:52.770 --> 00:09:54.689
+propagate my changes through which
+
+00:09:54.690 --> 00:09:56.009
+could cause all sorts of downstream
+
+00:09:56.010 --> 00:09:57.959
+issues of not careful, what
+
+00:09:57.960 --> 00:09:59.939
+we've actually done is virtualized
+
+00:09:59.940 --> 00:10:01.889
+the entire change management process
+
+00:10:01.890 --> 00:10:03.539
+that would normally involve going to
+
+00:10:03.540 --> 00:10:05.399
+a UAT environment, but have done it
+
+00:10:05.400 --> 00:10:07.289
+directly here in one instance,
+
+00:10:07.290 --> 00:10:09.989
+a foundry using logical isolation
+
+00:10:09.990 --> 00:10:11.689
+in a cloud-native paradigm.
+
+00:10:11.690 --> 00:10:13.589
+So what I can do if I want to make
+
+00:10:13.590 --> 00:10:15.419
+changes here is I actually open
+
+00:10:15.420 --> 00:10:17.309
+up a branched version of this
+
+00:10:17.310 --> 00:10:18.659
+part of the pipeline.
+
+00:10:18.660 --> 00:10:20.249
+And then when I've made my changes
+
+00:10:20.250 --> 00:10:22.139
+on that branch, I then create
+
+00:10:22.140 --> 00:10:23.969
+a pull request to actually
+
+00:10:23.970 --> 00:10:26.369
+merge my changes back into
+
+00:10:26.370 --> 00:10:27.509
+the master branch.
+
+00:10:27.510 --> 00:10:28.889
+So if we go into some of the old
+
+00:10:28.890 --> 00:10:30.119
+pull requests, take a look at what
+
+00:10:30.120 --> 00:10:32.669
+these proposed changes look like, we
+
+00:10:32.670 --> 00:10:34.469
+can actually see line-by-line kind
+
+00:10:34.470 --> 00:10:36.269
+of what those changes were.
+
+00:10:36.270 --> 00:10:37.709
+And we can also get an impact
+
+00:10:37.710 --> 00:10:39.719
+analysis of, if we were to merge
+
+00:10:39.720 --> 00:10:41.399
+this into master, what would be
+
+00:10:41.400 --> 00:10:43.289
+affected? And because security again
+
+00:10:43.290 --> 00:10:44.429
+gets blended through different
+
+00:10:44.430 --> 00:10:45.569
+parent permissions and different
+
+00:10:45.570 --> 00:10:47.549
+role paradigms, what security
+
+00:10:47.550 --> 00:10:48.689
+changes would actually occur as
+
+00:10:48.690 --> 00:10:49.829
+well? And you'd see we didn't
+
+00:10:49.830 --> 00:10:51.029
+actually see any in this particular
+
+00:10:51.030 --> 00:10:52.109
+case.
+
+00:10:52.110 --> 00:10:53.879
+This is a huge difference from the
+
+00:10:53.880 --> 00:10:55.499
+normal process of saying, OK, if I
+
+00:10:55.500 --> 00:10:57.029
+wanted to make changes, I'd have to
+
+00:10:57.030 --> 00:10:59.069
+clone all my pipelines and data over
+
+00:10:59.070 --> 00:11:00.689
+to a UAT environment, separate
+
+00:11:00.690 --> 00:11:03.209
+environment, make some changes
+
+00:11:03.210 --> 00:11:05.189
+and then hopefully say a prayer
+
+00:11:05.190 --> 00:11:06.689
+and then port them back to master
+
+00:11:06.690 --> 00:11:07.619
+and hope that everything just sort
+
+00:11:07.620 --> 00:11:09.539
+of works. Here, we can
+
+00:11:09.540 --> 00:11:11.519
+actually do that entire process
+
+00:11:11.520 --> 00:11:13.409
+with total logical isolation, total
+
+00:11:13.410 --> 00:11:14.410
+sandboxing, here.
+
+00:11:14.760 --> 00:11:16.529
+We can iterate on these branched
+
+00:11:16.530 --> 00:11:18.299
+versions of the data and actually
+
+00:11:18.300 --> 00:11:19.949
+use different kind of analytics
+
+00:11:19.950 --> 00:11:21.899
+tools and visualization tools with
+
+00:11:21.900 --> 00:11:23.159
+that branch data that we'll look at
+
+00:11:23.160 --> 00:11:25.019
+later and then we can choose to
+
+00:11:25.020 --> 00:11:26.549
+come back and then merge that into
+
+00:11:26.550 --> 00:11:27.569
+master.
+
+00:11:27.570 --> 00:11:29.099
+And the most powerful thing about
+
+00:11:29.100 --> 00:11:31.019
+this is everything is sort of
+
+00:11:31.020 --> 00:11:32.729
+git-based in terms of semantics.
+
+00:11:32.730 --> 00:11:33.989
+You'll see here the clone icon at
+
+00:11:33.990 --> 00:11:35.729
+the top, which means if we ever want
+
+00:11:35.730 --> 00:11:37.289
+to go back to a prior version of
+
+00:11:37.290 --> 00:11:39.389
+master or any of the other branches,
+
+00:11:39.390 --> 00:11:41.129
+we have a full commit log as well.
+
+00:11:41.130 --> 00:11:43.049
+So we're never, sort of, out
+
+00:11:43.050 --> 00:11:44.579
+of luck if we merged something in
+
+00:11:44.580 --> 00:11:46.439
+that we realized later has to
+
+00:11:46.440 --> 00:11:47.639
+actually be undone.
+
+00:11:47.640 --> 00:11:49.529
+We can always just move back like
+
+00:11:49.530 --> 00:11:51.149
+we can in Git with code to a
+
+00:11:51.150 --> 00:11:53.199
+previous form of the data.
+
+00:11:53.200 --> 00:11:54.759
+And so being able to treat data like
+
+00:11:54.760 --> 00:11:56.679
+code, having tje health checks,
+
+00:11:56.680 --> 00:11:58.239
+having the integrated security, we
+
+00:11:58.240 --> 00:11:59.649
+think gives you the build system to
+
+00:11:59.650 --> 00:12:01.029
+be able to go really fast when it
+
+00:12:01.030 --> 00:12:02.709
+comes to assembling and growing
+
+00:12:02.710 --> 00:12:04.869
+these data pipelines organically,
+
+00:12:04.870 --> 00:12:06.169
+which is always the case, right?
+
+00:12:06.170 --> 00:12:07.629
+These never sort of, sort of,
+
+00:12:07.630 --> 00:12:09.189
+waterfall method to building these
+
+00:12:09.190 --> 00:12:10.749
+things upfront that never changes.
+
+00:12:10.750 --> 00:12:12.429
+It's always a constant sort of state
+
+00:12:12.430 --> 00:12:14.289
+of iteration and being able to try
+
+00:12:14.290 --> 00:12:15.680
+to keep up with the latest demands.
+
+00:12:16.840 --> 00:12:17.799
+I want to show you guys one more
+
+00:12:17.800 --> 00:12:19.749
+thing before we go into the ontology
+
+00:12:19.750 --> 00:12:21.159
+and kind of bump things up a level.
+
+00:12:22.180 --> 00:12:23.289
+We've talked a lot about being able
+
+00:12:23.290 --> 00:12:24.849
+to author kind of data pipelines
+
+00:12:24.850 --> 00:12:26.739
+here the way that you can actually
+
+00:12:26.740 --> 00:12:28.809
+author pipelines and Foundry
+
+00:12:28.810 --> 00:12:30.309
+is, you know, by default, we
+
+00:12:30.310 --> 00:12:32.229
+actually offer two out -of-the-box
+
+00:12:32.230 --> 00:12:33.069
+compute engines that are
+
+00:12:33.070 --> 00:12:34.059
+auto-scaling.
+
+00:12:34.060 --> 00:12:35.739
+So this is Flink.
+
+00:12:35.740 --> 00:12:36.669
+We're running on Kubernetes for
+
+00:12:36.670 --> 00:12:38.709
+streaming computation and spark
+
+00:12:38.710 --> 00:12:39.969
+running on Kubernetes for batch
+
+00:12:39.970 --> 00:12:40.959
+computation.
+
+00:12:40.960 --> 00:12:42.849
+And so you can do any
+
+00:12:42.850 --> 00:12:44.439
+you can basically use any languages
+
+00:12:44.440 --> 00:12:46.269
+that have bindings to those two
+
+00:12:46.270 --> 00:12:47.259
+runtimes.
+
+00:12:47.260 --> 00:12:48.579
+And so if we go back to kind of our
+
+00:12:48.580 --> 00:12:49.749
+repository here, we'll see where
+
+00:12:49.750 --> 00:12:51.609
+we're using PySpark, we can
+
+00:12:51.610 --> 00:12:53.829
+use Spark sequel, we can use Java,
+
+00:12:53.830 --> 00:12:54.879
+we can use Scala.
+
+00:12:54.880 --> 00:12:57.039
+We even have bindings for Groovy.
+
+00:12:57.040 --> 00:13:00.069
+And so we adhere to open standards
+
+00:13:00.070 --> 00:13:01.239
+all the way through when it comes to
+
+00:13:01.240 --> 00:13:03.099
+code authoring and critically when
+
+00:13:03.100 --> 00:13:04.689
+it comes to data formats as well.
+
+00:13:04.690 --> 00:13:05.949
+So if you ever want to look at
+
+00:13:05.950 --> 00:13:07.089
+what's happening with kind of the
+
+00:13:07.090 --> 00:13:09.039
+resulting data in any step
+
+00:13:09.040 --> 00:13:10.329
+of any sort of transformation in
+
+00:13:10.330 --> 00:13:12.249
+Foundry, if we kind of look
+
+00:13:12.250 --> 00:13:13.269
+at what's happening here in the
+
+00:13:13.270 --> 00:13:14.799
+preview or we go to the History tab
+
+00:13:14.800 --> 00:13:16.689
+here, we'll take a look and we can
+
+00:13:16.690 --> 00:13:18.669
+see that any of the data
+
+00:13:18.670 --> 00:13:20.499
+here is effectively
+
+00:13:20.500 --> 00:13:22.479
+just data that's in parquet or
+
+00:13:22.480 --> 00:13:24.219
+in Avro or in sort of any open
+
+00:13:24.220 --> 00:13:25.119
+format that I'd expect.
+
+00:13:25.120 --> 00:13:27.309
+So I can always interoperate easily
+
+00:13:27.310 --> 00:13:28.569
+with any of the data here in
+
+00:13:28.570 --> 00:13:29.529
+Foundry.
+
+00:13:29.530 --> 00:13:31.059
+And critically, even though we're
+
+00:13:31.060 --> 00:13:32.529
+using Spark and Flink as our
+
+00:13:32.530 --> 00:13:34.359
+runtimes, if we take a peek
+
+00:13:34.360 --> 00:13:35.439
+at what's actually happening under
+
+00:13:35.440 --> 00:13:36.609
+the hood with Foundry's build
+
+00:13:36.610 --> 00:13:38.859
+service, we'll see it's just calling
+
+00:13:38.860 --> 00:13:40.299
+those two runtimes because we've
+
+00:13:40.300 --> 00:13:41.949
+registered them with Foundry.
+
+00:13:41.950 --> 00:13:42.819
+And so if you have a high
+
+00:13:42.820 --> 00:13:44.379
+performance computing environment or
+
+00:13:44.380 --> 00:13:45.789
+you have something that's an
+
+00:13:45.790 --> 00:13:47.199
+external compute engine like you're
+
+00:13:47.200 --> 00:13:48.549
+using something like another Spark
+
+00:13:48.550 --> 00:13:50.559
+environment or a proprietary
+
+00:13:50.560 --> 00:13:52.209
+runtime, we can register that
+
+00:13:52.210 --> 00:13:54.099
+runtime with Foundry as an external
+
+00:13:54.100 --> 00:13:54.969
+build worker.
+
+00:13:54.970 --> 00:13:56.629
+And when we refresh these pipelines,
+
+00:13:56.630 --> 00:13:57.630
+you do the orchestrations, Foundry
+
+00:13:58.540 --> 00:14:00.339
+will know at certain steps to go and
+
+00:14:00.340 --> 00:14:02.259
+federate that computation to that
+
+00:14:02.260 --> 00:14:04.419
+build worker, which allows
+
+00:14:04.420 --> 00:14:05.499
+you again to have a totally
+
+00:14:05.500 --> 00:14:07.779
+extensible compute framework here
+
+00:14:07.780 --> 00:14:09.459
+with what we think is great starting
+
+00:14:09.460 --> 00:14:10.629
+defaults. But you're never sort of
+
+00:14:10.630 --> 00:14:12.099
+locked in to just using the compute
+
+00:14:12.100 --> 00:14:13.600
+that we provide as part of Foundry.
+
+00:14:14.940 --> 00:14:16.109
+All right.
+
+00:14:16.110 --> 00:14:17.759
+So one more thing to show you guys
+
+00:14:17.760 --> 00:14:19.229
+and then let's bump it up a level.
+
+00:14:19.230 --> 00:14:20.609
+So we talked about being able to
+
+00:14:20.610 --> 00:14:22.589
+compute these pipelines and
+
+00:14:22.590 --> 00:14:23.609
+author them manually.
+
+00:14:23.610 --> 00:14:25.229
+What about data systems that we've
+
+00:14:25.230 --> 00:14:26.969
+seen over and over again, like the
+
+00:14:26.970 --> 00:14:28.589
+SAP's and the other ERPs of the
+
+00:14:28.590 --> 00:14:30.119
+world or the CRMs?
+
+00:14:30.120 --> 00:14:32.009
+So what we try to do there
+
+00:14:32.010 --> 00:14:33.329
+is try to say, can we actually
+
+00:14:33.330 --> 00:14:34.319
+implement what we think of as
+
+00:14:34.320 --> 00:14:36.089
+software-defined data integrations
+
+00:14:36.090 --> 00:14:37.049
+where you don't have to manually
+
+00:14:37.050 --> 00:14:39.419
+redo the kind of cleaning
+
+00:14:39.420 --> 00:14:41.339
+and transforming work that we
+
+00:14:41.340 --> 00:14:43.079
+think is actually quite standardized
+
+00:14:43.080 --> 00:14:44.549
+and possible through kind of
+
+00:14:44.550 --> 00:14:46.679
+ML-assisted techniques?
+
+00:14:46.680 --> 00:14:47.729
+So what I'm going to do is actually
+
+00:14:47.730 --> 00:14:49.679
+open up the kind of data source
+
+00:14:49.680 --> 00:14:51.119
+for this SAP instance we're
+
+00:14:51.120 --> 00:14:52.859
+connected to internally.
+
+00:14:52.860 --> 00:14:54.359
+And we're going to take a look here
+
+00:14:54.360 --> 00:14:55.859
+at kind of how this looks.
+
+00:14:55.860 --> 00:14:58.199
+So this is the SAP explorer
+
+00:14:58.200 --> 00:14:59.699
+that we have kind of as a kind of a
+
+00:14:59.700 --> 00:15:01.799
+rich connection interface here.
+
+00:15:01.800 --> 00:15:02.909
+And you'll see it's showing me kind
+
+00:15:02.910 --> 00:15:05.099
+of all the modules in my ERP estate
+
+00:15:05.100 --> 00:15:07.679
+like my MM, my data dictionaries.
+
+00:15:07.680 --> 00:15:09.569
+And it's also even pre-populating
+
+00:15:09.570 --> 00:15:11.759
+some workflows I might want to do
+
+00:15:11.760 --> 00:15:14.219
+typically that are common for SAP.
+
+00:15:14.220 --> 00:15:15.749
+And the power here is that instead
+
+00:15:15.750 --> 00:15:17.069
+of having to think about browsing
+
+00:15:17.070 --> 00:15:18.479
+through all the individual tables
+
+00:15:18.480 --> 00:15:20.669
+myself, we have a
+
+00:15:20.670 --> 00:15:22.229
+native connector connecting at the
+
+00:15:22.230 --> 00:15:24.179
+application layer, which is called
+
+00:15:24.180 --> 00:15:25.829
+NetWeaver, and we're actually
+
+00:15:25.830 --> 00:15:27.839
+dynamically pulling out all the rich
+
+00:15:27.840 --> 00:15:29.699
+metadata that actually tells us
+
+00:15:29.700 --> 00:15:31.289
+much more than just the raw table
+
+00:15:31.290 --> 00:15:32.969
+information in SAP.
+
+00:15:32.970 --> 00:15:34.169
+Like we're able to see all the
+
+00:15:34.170 --> 00:15:36.599
+German acronyms auto-translated
+
+00:15:36.600 --> 00:15:37.739
+for me. We're able to see kind of
+
+00:15:37.740 --> 00:15:39.929
+the foreign keys, the relationships,
+
+00:15:39.930 --> 00:15:41.039
+and the idea here is that we can
+
+00:15:41.040 --> 00:15:42.779
+kind of derive out that federated
+
+00:15:42.780 --> 00:15:44.549
+lineage and then auto build
+
+00:15:44.550 --> 00:15:47.249
+pipelines and even starting objects
+
+00:15:47.250 --> 00:15:49.379
+in a matter of hours, as opposed
+
+00:15:49.380 --> 00:15:50.879
+to weeks or months of manually
+
+00:15:50.880 --> 00:15:53.369
+recreating SAP transformations
+
+00:15:53.370 --> 00:15:54.839
+on the Foundry side.
+
+00:15:54.840 --> 00:15:56.319
+And this applies critically not just
+
+00:15:56.320 --> 00:15:58.319
+to standard modules like MM
+
+00:15:58.320 --> 00:16:00.209
+or SD or DD, but also
+
+00:16:00.210 --> 00:16:01.499
+Z tables that you might have
+
+00:16:01.500 --> 00:16:02.879
+customized. Because we're not just
+
+00:16:02.880 --> 00:16:04.739
+doing static mapping, we're doing a
+
+00:16:04.740 --> 00:16:06.659
+dynamic inference of the metadata
+
+00:16:06.660 --> 00:16:07.739
+through NetWeaver.
+
+00:16:07.740 --> 00:16:09.609
+And so if you have a very custom SAP
+
+00:16:09.610 --> 00:16:11.339
+estate or CRM estate and many people
+
+00:16:11.340 --> 00:16:13.379
+do, it's very simple to
+
+00:16:13.380 --> 00:16:15.299
+install the SAP connector, which
+
+00:16:15.300 --> 00:16:17.699
+is, you know, certified native,
+
+00:16:17.700 --> 00:16:19.679
+and be able to browse around
+
+00:16:19.680 --> 00:16:20.969
+and then kind of in a shopping cart
+
+00:16:20.970 --> 00:16:22.859
+like experience, pull in the data
+
+00:16:22.860 --> 00:16:24.959
+that's of interest to you into
+
+00:16:24.960 --> 00:16:26.699
+a set of pipelines in Foundry that
+
+00:16:26.700 --> 00:16:27.899
+you then start to work with.
+
+00:16:27.900 --> 00:16:29.309
+And actually, that was how we
+
+00:16:29.310 --> 00:16:30.989
+created these green pipelines here
+
+00:16:30.990 --> 00:16:33.329
+that we saw before, and we saw
+
+00:16:33.330 --> 00:16:34.499
+what was actually produced was
+
+00:16:34.500 --> 00:16:35.519
+PySpark.
+
+00:16:35.520 --> 00:16:37.709
+So even if it gives us a starting
+
+00:16:37.710 --> 00:16:39.479
+set of pipelines, we can always
+
+00:16:39.480 --> 00:16:41.219
+choose to expand that.
+
+00:16:41.220 --> 00:16:42.179
+We're never sort of given some sort
+
+00:16:42.180 --> 00:16:43.769
+of black box output that we can't
+
+00:16:43.770 --> 00:16:44.669
+change.
+
+00:16:44.670 --> 00:16:46.499
+And so that's an example of,
+
+00:16:46.500 --> 00:16:48.449
+for more common systems, the
+
+00:16:48.450 --> 00:16:50.309
+CRMs, the ERPs, the others of
+
+00:16:50.310 --> 00:16:51.899
+the world, how we're trying to
+
+00:16:51.900 --> 00:16:53.789
+invest in speed, time
+
+00:16:53.790 --> 00:16:55.709
+to value speed for our customers
+
+00:16:55.710 --> 00:16:56.849
+to say "we don't want you to have to
+
+00:16:56.850 --> 00:16:58.529
+redo all those integrations if it's
+
+00:16:58.530 --> 00:16:59.530
+not required."
+
+00:17:00.560 --> 00:17:01.489
+All right.
+
+00:17:01.490 --> 00:17:03.199
+So we've talked a lot about, in this
+
+00:17:03.200 --> 00:17:04.789
+first mile, kind of getting data
+
+00:17:04.790 --> 00:17:05.989
+into the ontology.
+
+00:17:05.990 --> 00:17:07.098
+Now let's actually talk about the
+
+00:17:07.099 --> 00:17:08.568
+ontology itself and a little bit
+
+00:17:08.569 --> 00:17:09.529
+more depth.
+
+00:17:09.530 --> 00:17:11.479
+So I'm going to go now into one
+
+00:17:11.480 --> 00:17:12.979
+of these objects and kind of pop the
+
+00:17:12.980 --> 00:17:14.539
+hood on what's actually happening
+
+00:17:14.540 --> 00:17:16.068
+here. So to do that, I'm going to
+
+00:17:16.069 --> 00:17:18.289
+jump into our ontology management
+
+00:17:18.290 --> 00:17:19.309
+application.
+
+00:17:19.310 --> 00:17:20.629
+And this is a view that a data
+
+00:17:20.630 --> 00:17:22.578
+governance kind of team
+
+00:17:22.579 --> 00:17:24.229
+member or a part of the business
+
+00:17:24.230 --> 00:17:25.939
+working with it might start to get
+
+00:17:25.940 --> 00:17:27.139
+involved. Or they might say, "OK,
+
+00:17:27.140 --> 00:17:28.849
+we've done all the integration work
+
+00:17:28.850 --> 00:17:29.899
+now let's decide how we're going to
+
+00:17:29.900 --> 00:17:31.189
+actually make this appear to end
+
+00:17:31.190 --> 00:17:32.119
+users," right?
+
+00:17:32.120 --> 00:17:34.129
+So everything from this plant object
+
+00:17:34.130 --> 00:17:35.629
+we've been working with, is it a
+
+00:17:35.630 --> 00:17:37.099
+normally visible object?
+
+00:17:37.100 --> 00:17:39.079
+Is it hidden? Is it prominent?
+
+00:17:39.080 --> 00:17:40.369
+Is it something we're experimenting
+
+00:17:40.370 --> 00:17:41.779
+on? Or is it actually an active
+
+00:17:41.780 --> 00:17:43.099
+object that people should be using
+
+00:17:43.100 --> 00:17:45.379
+daily for different workflows?
+
+00:17:45.380 --> 00:17:47.059
+Literally, how are we mapping in
+
+00:17:47.060 --> 00:17:48.799
+every element from those kind of
+
+00:17:48.800 --> 00:17:50.629
+golden kind of datasets we
+
+00:17:50.630 --> 00:17:52.669
+produced into object
+
+00:17:52.670 --> 00:17:54.859
+form? So things like geospatial
+
+00:17:54.860 --> 00:17:56.359
+properties, how are those coming in?
+
+00:17:56.360 --> 00:17:57.889
+What is the API name for these
+
+00:17:57.890 --> 00:17:59.209
+different properties and the actual
+
+00:17:59.210 --> 00:18:00.049
+IDs as well?
+
+00:18:00.050 --> 00:18:01.339
+Because we're gonna want to use this
+
+00:18:01.340 --> 00:18:02.839
+with all of our different tools kind
+
+00:18:02.840 --> 00:18:04.459
+of in lots of different kind of
+
+00:18:04.460 --> 00:18:05.460
+architectures,
+
+00:18:06.650 --> 00:18:07.519
+and you'll see we have all this
+
+00:18:07.520 --> 00:18:08.749
+information kind of rolled up here,
+
+00:18:08.750 --> 00:18:10.249
+right? Including kind of the link
+
+00:18:10.250 --> 00:18:13.099
+types, usage information
+
+00:18:13.100 --> 00:18:14.599
+and on the sidebar here, we even
+
+00:18:14.600 --> 00:18:15.859
+have ways to go in and say, I want
+
+00:18:15.860 --> 00:18:17.779
+to apply additional security
+
+00:18:17.780 --> 00:18:18.979
+here, restricted views.
+
+00:18:18.980 --> 00:18:20.959
+I can do that here as well.
+
+00:18:20.960 --> 00:18:23.299
+I can also prime these objects
+
+00:18:23.300 --> 00:18:25.069
+for different types of workflows.
+
+00:18:25.070 --> 00:18:26.359
+So it might be the case that this
+
+00:18:26.360 --> 00:18:27.169
+plan objects going to be be
+
+00:18:27.170 --> 00:18:28.909
+primarily doing simulation based
+
+00:18:28.910 --> 00:18:31.129
+workflows or geospatial workflows.
+
+00:18:31.130 --> 00:18:32.269
+And what we can do here is sort of
+
+00:18:32.270 --> 00:18:34.099
+preset some metadata which
+
+00:18:34.100 --> 00:18:35.119
+you can always manually set
+
+00:18:35.120 --> 00:18:37.039
+ourselves that will just get us
+
+00:18:37.040 --> 00:18:38.869
+again time to value faster.
+
+00:18:38.870 --> 00:18:40.009
+Let's get these objects up and
+
+00:18:40.010 --> 00:18:41.239
+running so we can now start to work
+
+00:18:41.240 --> 00:18:42.169
+with them.
+
+00:18:42.170 --> 00:18:43.429
+And the idea is you do a little bit
+
+00:18:43.430 --> 00:18:44.989
+of configuration work here, which
+
+00:18:44.990 --> 00:18:46.519
+again can be templatized to a large
+
+00:18:46.520 --> 00:18:48.379
+degree, and business users can then
+
+00:18:48.380 --> 00:18:49.609
+dive in and immediately start to
+
+00:18:49.610 --> 00:18:51.499
+make use of this data in a host of
+
+00:18:51.500 --> 00:18:52.429
+different out-of-the-box
+
+00:18:52.430 --> 00:18:54.229
+applications in Foundry.
+
+00:18:54.230 --> 00:18:55.099
+So let's take a look at some of
+
+00:18:55.100 --> 00:18:56.389
+those applications that kind of come
+
+00:18:56.390 --> 00:18:58.129
+to life for a business user, for
+
+00:18:58.130 --> 00:18:59.629
+somebody who's non-technical, who
+
+00:18:59.630 --> 00:19:00.769
+probably isn't starting their
+
+00:19:00.770 --> 00:19:02.059
+journey in Foundry in the data
+
+00:19:02.060 --> 00:19:04.099
+lineage application, in the coding
+
+00:19:04.100 --> 00:19:05.989
+environments or kind of in the
+
+00:19:05.990 --> 00:19:07.129
+ontology management interface,
+
+00:19:07.130 --> 00:19:08.509
+either. They're probably starting in
+
+00:19:08.510 --> 00:19:10.999
+an application like Object Explorer,
+
+00:19:11.000 --> 00:19:12.109
+which is a kind of point-and-click
+
+00:19:12.110 --> 00:19:13.459
+way to be able to browse around
+
+00:19:13.460 --> 00:19:14.599
+different information in the
+
+00:19:14.600 --> 00:19:16.459
+ontology and sort of
+
+00:19:16.460 --> 00:19:18.319
+feel very familiar to folks who are
+
+00:19:18.320 --> 00:19:20.569
+kind of searching for information
+
+00:19:20.570 --> 00:19:21.799
+or kind of using kind of different
+
+00:19:21.800 --> 00:19:23.269
+sort of web applications day in and
+
+00:19:23.270 --> 00:19:24.049
+day out.
+
+00:19:24.050 --> 00:19:25.939
+So you'll see here that
+
+00:19:25.940 --> 00:19:27.049
+I have a lot of different objects
+
+00:19:27.050 --> 00:19:28.729
+here that are surface to me in
+
+00:19:28.730 --> 00:19:29.599
+Object Explorer.
+
+00:19:29.600 --> 00:19:31.159
+I've got my aircraft, my delays, my
+
+00:19:31.160 --> 00:19:33.469
+flights, from my aviation demo.
+
+00:19:33.470 --> 00:19:35.599
+I've got some marketing objects here
+
+00:19:35.600 --> 00:19:37.279
+called interactions campaigns,
+
+00:19:37.280 --> 00:19:39.139
+offers, things like that, and
+
+00:19:39.140 --> 00:19:40.249
+to search for something, it's as
+
+00:19:40.250 --> 00:19:41.929
+simple as searching for a type of
+
+00:19:41.930 --> 00:19:43.729
+object I'm looking for or any
+
+00:19:43.730 --> 00:19:45.589
+individual object property.
+
+00:19:45.590 --> 00:19:46.819
+So in this case, I want to look at
+
+00:19:46.820 --> 00:19:48.709
+those plants we saw before, and
+
+00:19:48.710 --> 00:19:50.029
+what this will do is actually launch
+
+00:19:50.030 --> 00:19:51.799
+me into an investigation or
+
+00:19:51.800 --> 00:19:53.509
+exploration that's been kind of
+
+00:19:53.510 --> 00:19:55.339
+pre-configured for me
+
+00:19:55.340 --> 00:19:56.689
+to be able to start to explore this
+
+00:19:56.690 --> 00:19:57.829
+data.
+
+00:19:57.830 --> 00:19:59.749
+So this is it's a very simple sort
+
+00:19:59.750 --> 00:20:01.009
+of set of visualizations here,
+
+00:20:01.010 --> 00:20:02.029
+right? It's showing me kind of where
+
+00:20:02.030 --> 00:20:04.249
+the where the plants are geospatial
+
+00:20:04.250 --> 00:20:05.509
+based on that geo data that we
+
+00:20:05.510 --> 00:20:06.559
+affixed.
+
+00:20:06.560 --> 00:20:07.429
+It's showing me some roll-up
+
+00:20:07.430 --> 00:20:08.599
+statistics like 30 days of
+
+00:20:08.600 --> 00:20:10.969
+inventory, production capacity,
+
+00:20:10.970 --> 00:20:12.109
+things like that.
+
+00:20:12.110 --> 00:20:13.999
+And if I want to go into a 360-view
+
+00:20:14.000 --> 00:20:15.199
+and one of these plants, I have a
+
+00:20:15.200 --> 00:20:16.759
+list here to be able to start to
+
+00:20:16.760 --> 00:20:18.619
+kind of dive in and take a look at
+
+00:20:18.620 --> 00:20:19.819
+some of this information at kind of
+
+00:20:19.820 --> 00:20:21.049
+a higher level.
+
+00:20:21.050 --> 00:20:22.729
+And the idea here is that, you know,
+
+00:20:22.730 --> 00:20:24.139
+it's intended to feel familiar again
+
+00:20:24.140 --> 00:20:25.759
+to folks who have worked with kind
+
+00:20:25.760 --> 00:20:27.559
+of business intelligence or
+
+00:20:27.560 --> 00:20:29.659
+visualization software and
+
+00:20:29.660 --> 00:20:31.189
+just roll up all that information
+
+00:20:31.190 --> 00:20:32.089
+that's coming from all those
+
+00:20:32.090 --> 00:20:33.469
+different data sources in a single
+
+00:20:33.470 --> 00:20:35.359
+view. Right. So I can see
+
+00:20:35.360 --> 00:20:36.589
+information about, like again, the
+
+00:20:36.590 --> 00:20:37.759
+geospatial information.
+
+00:20:37.760 --> 00:20:39.709
+It's address some unstructured
+
+00:20:39.710 --> 00:20:41.299
+data, like a schematic, maybe some
+
+00:20:41.300 --> 00:20:42.979
+risk factors or material information
+
+00:20:42.980 --> 00:20:44.569
+coming in from the ERP and EMS
+
+00:20:44.570 --> 00:20:46.189
+systems and even things like
+
+00:20:46.190 --> 00:20:48.139
+timelines as well here.
+
+00:20:48.140 --> 00:20:49.999
+And these, like 360 views, can look
+
+00:20:50.000 --> 00:20:51.799
+very custom and very different,
+
+00:20:51.800 --> 00:20:53.689
+depending on the user type or the
+
+00:20:53.690 --> 00:20:55.099
+business unit.
+
+00:20:55.100 --> 00:20:56.179
+And you might imagine that you know
+
+00:20:56.180 --> 00:20:57.109
+there are certain users that want to
+
+00:20:57.110 --> 00:20:58.969
+see IoT information or video
+
+00:20:58.970 --> 00:21:00.769
+information embedded here and others
+
+00:21:00.770 --> 00:21:01.699
+that want to see financial
+
+00:21:01.700 --> 00:21:03.649
+information or kind of more kind of
+
+00:21:03.650 --> 00:21:05.749
+CFO style of use.
+
+00:21:05.750 --> 00:21:07.189
+And so you can have different lenses
+
+00:21:07.190 --> 00:21:09.199
+or different kind of views assembled
+
+00:21:09.200 --> 00:21:11.389
+on the same types of objects here
+
+00:21:11.390 --> 00:21:12.929
+and the power of object you splurge
+
+00:21:12.930 --> 00:21:14.659
+that allows people to traverse the
+
+00:21:14.660 --> 00:21:15.859
+different objects in a completely
+
+00:21:15.860 --> 00:21:17.059
+security compliant way
+
+00:21:18.110 --> 00:21:19.219
+and at a scale which you could have
+
+00:21:19.220 --> 00:21:20.509
+millions or billions of different
+
+00:21:20.510 --> 00:21:22.069
+objects here where we're actually
+
+00:21:22.070 --> 00:21:23.269
+allowing people to kind of traverse
+
+00:21:23.270 --> 00:21:24.619
+in a way that that makes sense and
+
+00:21:24.620 --> 00:21:26.209
+isn't overwhelming.
+
+00:21:26.210 --> 00:21:27.979
+Or isn't too granular or unfamiliar
+
+00:21:27.980 --> 00:21:29.689
+for folks who are familiar with kind
+
+00:21:29.690 --> 00:21:31.677
+of -- more business centric tooling.
+
+00:21:32.880 --> 00:21:34.679
+So this is just one view into the
+
+00:21:34.680 --> 00:21:36.149
+data, though, I think it's important
+
+00:21:36.150 --> 00:21:37.529
+to realize that so you know, it's
+
+00:21:37.530 --> 00:21:38.909
+point and click, it's kind of based
+
+00:21:38.910 --> 00:21:40.739
+off of the object's in
+
+00:21:40.740 --> 00:21:41.759
+this paradigm.
+
+00:21:41.760 --> 00:21:43.019
+But if I'm somebody who is a more
+
+00:21:43.020 --> 00:21:45.629
+technical user like an engineer
+
+00:21:45.630 --> 00:21:47.069
+or somebody who's an analyst that
+
+00:21:47.070 --> 00:21:48.359
+maybe is used to working with series
+
+00:21:48.360 --> 00:21:50.489
+data, I might use a sibling
+
+00:21:50.490 --> 00:21:51.869
+application of object explorer,
+
+00:21:51.870 --> 00:21:53.729
+which is called Quiver. And Quiver
+
+00:21:53.730 --> 00:21:54.839
+here actually allows me to look at
+
+00:21:54.840 --> 00:21:56.849
+charting information on time
+
+00:21:56.850 --> 00:21:57.899
+dependent data coming in.
+
+00:21:57.900 --> 00:21:59.009
+So this is going to be streaming
+
+00:21:59.010 --> 00:22:00.859
+data coming in in real time
+
+00:22:00.860 --> 00:22:02.349
+in an oil and gas context or in
+
+00:22:02.350 --> 00:22:03.779
+utilities context.
+
+00:22:03.780 --> 00:22:05.309
+And as a user who might be using an
+
+00:22:05.310 --> 00:22:07.229
+application like this, I'm probably
+
+00:22:07.230 --> 00:22:08.519
+thinking in terms of not just
+
+00:22:08.520 --> 00:22:09.659
+point-and-click, but in terms of
+
+00:22:09.660 --> 00:22:11.579
+formulas and integrals
+
+00:22:11.580 --> 00:22:13.589
+and interpolation and scatter
+
+00:22:13.590 --> 00:22:15.509
+plots. And I can actually derive
+
+00:22:15.510 --> 00:22:16.349
+new data here.
+
+00:22:16.350 --> 00:22:17.669
+Just through point-and-click.
+
+00:22:17.670 --> 00:22:18.659
+So I can say, you know, give me the
+
+00:22:18.660 --> 00:22:19.834
+summation of these two series,
+
+00:22:19.835 --> 00:22:21.809
+produce another series.
+
+00:22:21.810 --> 00:22:23.729
+Let me actually look at the
+
+00:22:23.730 --> 00:22:25.499
+ongoing differential between these
+
+00:22:25.500 --> 00:22:27.059
+two pressures, and let's produce
+
+00:22:27.060 --> 00:22:28.319
+another pressure.
+
+00:22:28.320 --> 00:22:29.519
+I can even do things that are more
+
+00:22:29.520 --> 00:22:31.349
+sophisticated, like let me do a
+
+00:22:31.350 --> 00:22:32.969
+search across these series for any
+
+00:22:32.970 --> 00:22:34.799
+time the difference in these values
+
+00:22:34.800 --> 00:22:36.539
+is beyond a certain threshold.
+
+00:22:36.540 --> 00:22:37.679
+Or let me actually do a
+
+00:22:37.680 --> 00:22:39.479
+point-and-click training of a first
+
+00:22:39.480 --> 00:22:40.769
+approximation machine learning
+
+00:22:40.770 --> 00:22:42.329
+model. So I actually want to build a
+
+00:22:42.330 --> 00:22:44.459
+classifier, and maybe
+
+00:22:44.460 --> 00:22:45.839
+I kind of tinker with that here as
+
+00:22:45.840 --> 00:22:47.129
+somebody who is an engineer.
+
+00:22:47.130 --> 00:22:48.269
+And then I want to be able to then
+
+00:22:48.270 --> 00:22:50.249
+collaborate with somebody who's a
+
+00:22:50.250 --> 00:22:51.749
+data scientist on my team.
+
+00:22:51.750 --> 00:22:53.399
+And so I can export kind of my first
+
+00:22:53.400 --> 00:22:54.736
+approximation to Python
+
+00:22:56.310 --> 00:22:58.079
+code, kind of with full library
+
+00:22:58.080 --> 00:22:59.279
+semantics for interacting with this
+
+00:22:59.280 --> 00:23:01.289
+time series data in Python as well.
+
+00:23:02.310 --> 00:23:03.389
+And again, the power here is it
+
+00:23:03.390 --> 00:23:05.369
+looks pretty technical, looks pretty
+
+00:23:05.370 --> 00:23:06.899
+custom, but at the end of the day,
+
+00:23:06.900 --> 00:23:08.099
+I'm just interacting with those
+
+00:23:08.100 --> 00:23:10.049
+objects in my ontology like we saw
+
+00:23:10.050 --> 00:23:11.759
+before, so I can just kind of browse
+
+00:23:11.760 --> 00:23:13.679
+for more objects and plop them onto
+
+00:23:13.680 --> 00:23:15.569
+these plots to be able to use them.
+
+00:23:15.570 --> 00:23:17.399
+So another view into that
+
+00:23:17.400 --> 00:23:19.319
+ontology that we built that
+
+00:23:19.320 --> 00:23:21.269
+can be serviced by another type
+
+00:23:21.270 --> 00:23:22.439
+of user.
+
+00:23:22.440 --> 00:23:24.269
+If I think geospatial, let's say
+
+00:23:24.270 --> 00:23:26.249
+not just IoT centric or maybe object
+
+00:23:26.250 --> 00:23:28.139
+centric, I might want to use
+
+00:23:28.140 --> 00:23:30.389
+an application like the Foundry map,
+
+00:23:30.390 --> 00:23:31.529
+where I'm looking at kind of all my
+
+00:23:31.530 --> 00:23:33.359
+plants and distribution centers
+
+00:23:33.360 --> 00:23:34.829
+kind of here, and I can kind of
+
+00:23:34.830 --> 00:23:36.539
+toggle layers on and off as I
+
+00:23:36.540 --> 00:23:37.679
+expect.
+
+00:23:37.680 --> 00:23:38.939
+And I might want to say, you know,
+
+00:23:38.940 --> 00:23:40.889
+let's take a look at, you know, for
+
+00:23:40.890 --> 00:23:42.636
+this particular distribution center,
+
+00:23:42.637 --> 00:23:44.699
+show me kind of
+
+00:23:44.700 --> 00:23:46.049
+in a graph-oriented manner, all the
+
+00:23:46.050 --> 00:23:47.189
+customers connected to this
+
+00:23:47.190 --> 00:23:48.779
+distribution center, and it's going
+
+00:23:48.780 --> 00:23:50.249
+to visualize that here and allow me
+
+00:23:50.250 --> 00:23:52.079
+to kind of explore, you
+
+00:23:52.080 --> 00:23:53.579
+know, the different flows or kind of
+
+00:23:53.580 --> 00:23:55.319
+supply or logistics information that
+
+00:23:55.320 --> 00:23:57.269
+might pertain to the dependencies
+
+00:23:57.270 --> 00:23:58.649
+between different objects.
+
+00:23:58.650 --> 00:24:00.269
+And so this is another common view,
+
+00:24:00.270 --> 00:24:02.189
+again, looking at the same ontology
+
+00:24:02.190 --> 00:24:03.289
+just through a different lens.
+
+00:24:04.540 --> 00:24:06.069
+And so this hopefully gives you an
+
+00:24:06.070 --> 00:24:07.989
+idea of if you do that work of kind
+
+00:24:07.990 --> 00:24:09.999
+of hopefully being able to rapidly
+
+00:24:10.000 --> 00:24:11.709
+integrate in data from different
+
+00:24:11.710 --> 00:24:12.519
+sources, right?
+
+00:24:12.520 --> 00:24:14.349
+Or data lakes or data warehouses
+
+00:24:14.350 --> 00:24:16.599
+and layering in those health checks.
+
+00:24:16.600 --> 00:24:18.729
+Having that security built in allows
+
+00:24:18.730 --> 00:24:19.779
+you to quickly assemble this
+
+00:24:19.780 --> 00:24:21.879
+semantic model, which then opens
+
+00:24:21.880 --> 00:24:23.739
+the door to immediate access
+
+00:24:23.740 --> 00:24:25.239
+and exploration for different types
+
+00:24:25.240 --> 00:24:26.019
+of users.
+
+00:24:26.020 --> 00:24:27.549
+Whether it's an object explorer or
+
+00:24:27.550 --> 00:24:29.379
+it's in Quiver, or it's in sort of a
+
+00:24:29.380 --> 00:24:31.329
+map-based application.
+
+00:24:31.330 --> 00:24:32.409
+And that really is sort of the
+
+00:24:32.410 --> 00:24:34.359
+journey in a very, very
+
+00:24:34.360 --> 00:24:36.429
+short form of kind of the first mile
+
+00:24:36.430 --> 00:24:37.269
+of the platform, right?
+
+00:24:37.270 --> 00:24:39.159
+Which is sort of data and
+
+00:24:39.160 --> 00:24:40.160
+ontology.
+
+00:24:41.230 --> 00:24:43.389
+If we now think about how digital
+
+00:24:43.390 --> 00:24:45.009
+digital twins and modeling and data
+
+00:24:45.010 --> 00:24:46.869
+science come into this, it gets
+
+00:24:46.870 --> 00:24:48.099
+really exciting.
+
+00:24:48.100 --> 00:24:49.959
+And so the first thing I'll say
+
+00:24:49.960 --> 00:24:51.159
+here before we kind of go into the
+
+00:24:51.160 --> 00:24:53.170
+data science part of Foundry is
+
+00:24:54.190 --> 00:24:55.659
+if you talk to four or five data
+
+00:24:55.660 --> 00:24:57.579
+scientists inside of Palantir and
+
+00:24:57.580 --> 00:24:58.749
+ask them what tools they love to
+
+00:24:58.750 --> 00:25:00.129
+use, you'll get 10 different
+
+00:25:00.130 --> 00:25:02.019
+answers. People love to use,
+
+00:25:02.020 --> 00:25:03.459
+you know, Foundry's built in machine
+
+00:25:03.460 --> 00:25:04.629
+learning capabilities and authoring
+
+00:25:04.630 --> 00:25:05.709
+capabilities, but also they love to
+
+00:25:05.710 --> 00:25:07.869
+use data robot Dataiku,
+
+00:25:07.870 --> 00:25:09.729
+SageMaker, Azure ML,
+
+00:25:09.730 --> 00:25:10.809
+you name it.
+
+00:25:10.810 --> 00:25:12.189
+And so we've tried to build this
+
+00:25:12.190 --> 00:25:14.079
+part of the stack to set,
+
+00:25:14.080 --> 00:25:15.609
+with the philosophy in mind, of
+
+00:25:15.610 --> 00:25:17.469
+build anywhere and then when you're
+
+00:25:17.470 --> 00:25:19.299
+ready to deploy into operational
+
+00:25:19.300 --> 00:25:20.799
+applications, let's give you a
+
+00:25:20.800 --> 00:25:22.929
+streamlined way of doing that.
+
+00:25:22.930 --> 00:25:24.429
+And so as an example of how I might
+
+00:25:24.430 --> 00:25:26.559
+build a model end-to-end using
+
+00:25:26.560 --> 00:25:28.629
+Foundry's existing, kind of, data
+
+00:25:28.630 --> 00:25:30.429
+science tooling, I'm going to open
+
+00:25:30.430 --> 00:25:31.659
+up and kind of switch personas
+
+00:25:31.660 --> 00:25:33.309
+again. So we talked about the data
+
+00:25:33.310 --> 00:25:34.659
+engineering persona, some of the
+
+00:25:34.660 --> 00:25:36.339
+business personas, now let's think
+
+00:25:36.340 --> 00:25:38.109
+about the data science persona,
+
+00:25:38.110 --> 00:25:40.329
+where I'm now here in an environment
+
+00:25:40.330 --> 00:25:42.369
+that again looks kind of graph like
+
+00:25:42.370 --> 00:25:44.229
+or sort of a
+
+00:25:44.230 --> 00:25:46.119
+sort of lineage like, but
+
+00:25:46.120 --> 00:25:47.859
+is intended to feel very familiar to
+
+00:25:47.860 --> 00:25:49.179
+those who have used other data
+
+00:25:49.180 --> 00:25:51.009
+science tooling. So if I pop
+
+00:25:51.010 --> 00:25:53.079
+open one of the steps in my model
+
+00:25:53.080 --> 00:25:54.969
+here and I kind of zoom out, you'll
+
+00:25:54.970 --> 00:25:56.889
+see concepts like training sets
+
+00:25:56.890 --> 00:25:58.899
+and feature creation, kind
+
+00:25:58.900 --> 00:26:00.909
+of all the way back to
+
+00:26:00.910 --> 00:26:02.439
+the objects I'm actually pulling
+
+00:26:02.440 --> 00:26:03.489
+data from.
+
+00:26:03.490 --> 00:26:05.169
+And so every one of these nodes is a
+
+00:26:05.170 --> 00:26:07.149
+step of PySpark based
+
+00:26:07.150 --> 00:26:08.139
+transformation. I could be using
+
+00:26:08.140 --> 00:26:09.039
+Pandas.
+
+00:26:09.040 --> 00:26:10.757
+I can be intermixing R or Spark SQL.
+
+00:26:11.800 --> 00:26:13.089
+And you know, the joke that we have
+
+00:26:13.090 --> 00:26:14.139
+internally is that the most
+
+00:26:14.140 --> 00:26:15.429
+interesting thing off the bat to
+
+00:26:15.430 --> 00:26:17.131
+data scientists is the import data
+
+00:26:17.132 --> 00:26:18.132
+button.
+
+00:26:18.190 --> 00:26:19.179
+It's being able to say, "hey, you
+
+00:26:19.180 --> 00:26:21.009
+can get clean, consistent access
+
+00:26:21.010 --> 00:26:22.599
+to that data that you've built into
+
+00:26:22.600 --> 00:26:24.039
+the ontology or anywhere else in
+
+00:26:24.040 --> 00:26:25.959
+Foundry." And as a data scientist,
+
+00:26:25.960 --> 00:26:28.659
+I don't spend 80 percent of my time
+
+00:26:28.660 --> 00:26:30.489
+rebuilding these data pipelines
+
+00:26:30.490 --> 00:26:31.869
+myself. I can just tap into the good
+
+00:26:31.870 --> 00:26:34.149
+work of my data ops colleagues
+
+00:26:34.150 --> 00:26:35.919
+or my data engineering colleagues.
+
+00:26:35.920 --> 00:26:37.209
+And if anything goes wrong with
+
+00:26:37.210 --> 00:26:38.589
+those data pipelines like the ones
+
+00:26:38.590 --> 00:26:40.779
+we saw before, I can get immediately
+
+00:26:40.780 --> 00:26:42.099
+alerted to that because the health
+
+00:26:42.100 --> 00:26:43.599
+information will flow down to me as
+
+00:26:43.600 --> 00:26:44.379
+well.
+
+00:26:44.380 --> 00:26:46.119
+And so I have a stable, rich,
+
+00:26:46.120 --> 00:26:48.069
+healthy foundation to build on, and
+
+00:26:48.070 --> 00:26:49.929
+I can then kind of use all the
+
+00:26:49.930 --> 00:26:51.729
+packages and all the techniques that
+
+00:26:51.730 --> 00:26:53.859
+I am familiar with here to actually
+
+00:26:53.860 --> 00:26:55.719
+build out kind of different
+
+00:26:55.720 --> 00:26:57.879
+models end-to-end batch
+
+00:26:57.880 --> 00:26:59.829
+or live inference end points
+
+00:26:59.830 --> 00:27:01.389
+and then actually plug them directly
+
+00:27:01.390 --> 00:27:02.949
+into different operational
+
+00:27:02.950 --> 00:27:04.269
+workflows.
+
+00:27:04.270 --> 00:27:05.829
+And of course, I can make use of
+
+00:27:05.830 --> 00:27:07.449
+kind of all of the packages I would
+
+00:27:07.450 --> 00:27:09.279
+expect so we can mirror things
+
+00:27:09.280 --> 00:27:10.239
+like can't afford you.
+
+00:27:10.240 --> 00:27:11.229
+If you have your own package
+
+00:27:11.230 --> 00:27:13.059
+managers, we have the added
+
+00:27:13.060 --> 00:27:14.949
+benefit here of kind of
+
+00:27:14.950 --> 00:27:16.599
+you can set up custom profiles that
+
+00:27:16.600 --> 00:27:17.619
+not only have different sort of
+
+00:27:17.620 --> 00:27:19.569
+compute profiles
+
+00:27:19.570 --> 00:27:21.099
+associated with them, but also if
+
+00:27:21.100 --> 00:27:22.689
+you have particularly sensitive or
+
+00:27:22.690 --> 00:27:24.399
+license restricted libraries, you
+
+00:27:24.400 --> 00:27:25.749
+want only certain users to be able
+
+00:27:25.750 --> 00:27:26.649
+to use.
+
+00:27:26.650 --> 00:27:28.089
+We can enforce that to the same
+
+00:27:28.090 --> 00:27:30.429
+security perimeter that's enforcing
+
+00:27:30.430 --> 00:27:32.199
+data security and ontology security
+
+00:27:32.200 --> 00:27:33.639
+that we saw before.
+
+00:27:33.640 --> 00:27:34.839
+So it allows people to make kind of
+
+00:27:34.840 --> 00:27:36.879
+secure use of commercial libraries
+
+00:27:36.880 --> 00:27:37.880
+as well.
+
+00:27:38.590 --> 00:27:40.668
+And so the idea here is you
+
+00:27:40.669 --> 00:27:41.529
+know, build here. We think it's a
+
+00:27:41.530 --> 00:27:42.999
+great, streamlined set of tooling,
+
+00:27:43.000 --> 00:27:44.889
+or you can also connect in
+
+00:27:44.890 --> 00:27:45.999
+the same way that these tools are
+
+00:27:46.000 --> 00:27:47.019
+connecting.
+
+00:27:47.020 --> 00:27:48.369
+You can connect directly from the
+
+00:27:48.370 --> 00:27:50.199
+DataRobot to Dataiku, the
+
+00:27:50.200 --> 00:27:51.699
+SageMakers of the world to the
+
+00:27:51.700 --> 00:27:53.679
+ontology through open APIs
+
+00:27:53.680 --> 00:27:55.239
+or through Python clients that we
+
+00:27:55.240 --> 00:27:57.189
+provide to all to build your models
+
+00:27:57.190 --> 00:27:59.199
+and those environments as well.
+
+00:27:59.200 --> 00:28:01.209
+And you can connect via REST
+
+00:28:01.210 --> 00:28:03.339
+via JDBC via direct
+
+00:28:03.340 --> 00:28:04.179
+file access.
+
+00:28:04.180 --> 00:28:05.499
+We have an we have kind of a Foundry
+
+00:28:05.500 --> 00:28:07.389
+version of Hadoop FS, and
+
+00:28:07.390 --> 00:28:09.009
+it's super streamlined to get data
+
+00:28:09.010 --> 00:28:10.719
+sort of in and out of Foundry and
+
+00:28:10.720 --> 00:28:12.099
+not just data, but also lineage
+
+00:28:12.100 --> 00:28:13.299
+information, the semantic
+
+00:28:13.300 --> 00:28:15.069
+representations, all the versioning
+
+00:28:15.070 --> 00:28:16.489
+information, all that's available
+
+00:28:16.490 --> 00:28:17.769
+through the APIs.
+
+00:28:17.770 --> 00:28:19.479
+And so the idea is you build your
+
+00:28:19.480 --> 00:28:21.009
+models, you've built some here,
+
+00:28:21.010 --> 00:28:22.389
+you've built some on other tools.
+
+00:28:22.390 --> 00:28:23.829
+Now I want to be able to register
+
+00:28:23.830 --> 00:28:25.479
+them and use them in a variety of
+
+00:28:25.480 --> 00:28:27.429
+different end user applications.
+
+00:28:27.430 --> 00:28:28.389
+And so what I'm going to do now is
+
+00:28:28.390 --> 00:28:30.309
+open up my model objectives
+
+00:28:30.310 --> 00:28:31.219
+library.
+
+00:28:31.220 --> 00:28:32.769
+This is kind of mission control for
+
+00:28:32.770 --> 00:28:34.029
+all the models that I've been
+
+00:28:34.030 --> 00:28:35.649
+working with in this particular
+
+00:28:35.650 --> 00:28:36.609
+instance of Foundry that I have
+
+00:28:36.610 --> 00:28:37.869
+access to.
+
+00:28:37.870 --> 00:28:39.099
+And a lot of this paradigm was
+
+00:28:39.100 --> 00:28:40.449
+informed by some of our work in the
+
+00:28:40.450 --> 00:28:42.309
+defense space where
+
+00:28:42.310 --> 00:28:44.259
+there's kind of this three part sort
+
+00:28:44.260 --> 00:28:46.659
+of approach to deploying operational
+
+00:28:46.660 --> 00:28:48.849
+AI. There is, I first want to define
+
+00:28:48.850 --> 00:28:50.109
+the modeling problem, right?
+
+00:28:50.110 --> 00:28:50.949
+Not actually think about a
+
+00:28:50.950 --> 00:28:51.969
+particular model, but what is the
+
+00:28:51.970 --> 00:28:53.709
+objective I'm actually trying to run
+
+00:28:53.710 --> 00:28:54.609
+with here.
+
+00:28:54.610 --> 00:28:56.499
+I'm probably then testing dozens,
+
+00:28:56.500 --> 00:28:57.939
+if not more models against that
+
+00:28:57.940 --> 00:28:58.899
+objective.
+
+00:28:58.900 --> 00:29:00.159
+And then I'm figuring out how I want
+
+00:29:00.160 --> 00:29:02.079
+to then deploy
+
+00:29:02.080 --> 00:29:03.850
+the winning models into production.
+
+00:29:04.880 --> 00:29:07.099
+And so I'm going to open up a few of
+
+00:29:07.100 --> 00:29:08.629
+the objectives we have here so we
+
+00:29:08.630 --> 00:29:09.769
+can take a look at what's actually
+
+00:29:09.770 --> 00:29:10.770
+going on. And
+
+00:29:11.660 --> 00:29:13.399
+the critical thing here is this does
+
+00:29:13.400 --> 00:29:14.899
+not mean deployed in Foundry
+
+00:29:14.900 --> 00:29:16.039
+necessarily.
+
+00:29:16.040 --> 00:29:17.479
+Several of these models are living
+
+00:29:17.480 --> 00:29:19.499
+in other environments in Azure, in
+
+00:29:19.500 --> 00:29:21.469
+AWS and through managed services
+
+00:29:21.470 --> 00:29:22.470
+like DataRobot.
+
+00:29:22.880 --> 00:29:24.259
+And so we're just registering these
+
+00:29:24.260 --> 00:29:26.089
+models here, and we're going
+
+00:29:26.090 --> 00:29:27.529
+to basically have a holistic
+
+00:29:27.530 --> 00:29:29.479
+approach to comparing them as
+
+00:29:29.480 --> 00:29:30.679
+we think about which ones are going
+
+00:29:30.680 --> 00:29:32.749
+to be deployed into production.
+
+00:29:32.750 --> 00:29:34.489
+So if I open up my customer demand
+
+00:29:34.490 --> 00:29:36.739
+forecast, sort of objective here,
+
+00:29:36.740 --> 00:29:38.329
+you'll see at a top level it shows
+
+00:29:38.330 --> 00:29:40.219
+me all this kind of 360 information
+
+00:29:40.220 --> 00:29:41.309
+about the model, right?
+
+00:29:41.310 --> 00:29:42.319
+Hey, what are we trying to do with
+
+00:29:42.320 --> 00:29:43.339
+this?
+
+00:29:43.340 --> 00:29:44.659
+What's the approach kind of broadly
+
+00:29:44.660 --> 00:29:45.589
+defined?
+
+00:29:45.590 --> 00:29:46.909
+Some information about the latest
+
+00:29:46.910 --> 00:29:48.559
+releases, relevant files that
+
+00:29:48.560 --> 00:29:49.789
+actually informed or were  used to
+
+00:29:49.790 --> 00:29:51.709
+train this particular model that
+
+00:29:51.710 --> 00:29:52.909
+we're commonly used by every
+
+00:29:52.910 --> 00:29:54.739
+different model that we tested,
+
+00:29:54.740 --> 00:29:56.149
+and even lineage information about
+
+00:29:56.150 --> 00:29:57.289
+the applications that are going to
+
+00:29:57.290 --> 00:29:59.089
+be depending on this model.
+
+00:29:59.090 --> 00:30:00.829
+And also, as we'll see a little bit
+
+00:30:00.830 --> 00:30:02.749
+later on, some information that
+
+00:30:02.750 --> 00:30:04.429
+we can about how we're actually
+
+00:30:04.430 --> 00:30:05.569
+chaining this model with other
+
+00:30:05.570 --> 00:30:07.399
+models inside of simulation
+
+00:30:07.400 --> 00:30:08.689
+environments.
+
+00:30:08.690 --> 00:30:09.739
+And it's all of that is kind of
+
+00:30:09.740 --> 00:30:11.689
+rolled up here for me and
+
+00:30:11.690 --> 00:30:13.309
+I can go in on the sidebar here, for
+
+00:30:13.310 --> 00:30:14.839
+instance, take a look and say, let's
+
+00:30:14.840 --> 00:30:15.919
+take a look at all the models that
+
+00:30:15.920 --> 00:30:17.869
+we've actually proposed to be
+
+00:30:17.870 --> 00:30:19.429
+kind of deployed against this
+
+00:30:19.430 --> 00:30:20.209
+objective right now.
+
+00:30:20.210 --> 00:30:21.619
+See, some from my colleague Matt,
+
+00:30:21.620 --> 00:30:23.449
+some from my colleague Andrew, and I
+
+00:30:23.450 --> 00:30:24.709
+can always look back in time to say,
+
+00:30:24.710 --> 00:30:26.072
+OK, for like this lasso model, we
+
+00:30:27.260 --> 00:30:28.489
+actually can see the details about
+
+00:30:28.490 --> 00:30:30.379
+where it was built, when it was
+
+00:30:30.380 --> 00:30:32.329
+built, and also if it was rejected,
+
+00:30:32.330 --> 00:30:33.469
+why that was.
+
+00:30:33.470 --> 00:30:34.909
+And so kind of the full kind of life
+
+00:30:34.910 --> 00:30:36.709
+cycle around kind of the approval
+
+00:30:36.710 --> 00:30:38.569
+process like we saw with data,
+
+00:30:38.570 --> 00:30:39.570
+how we're treating data
+
+00:30:40.970 --> 00:30:42.229
+----- like code. We're also kind of
+
+00:30:42.230 --> 00:30:43.909
+treating models like code in kind of
+
+00:30:43.910 --> 00:30:45.349
+the same way the metadata around the
+
+00:30:45.350 --> 00:30:46.350
+approval process.
+
+00:30:47.750 --> 00:30:48.859
+And, you know, if I kind of switch
+
+00:30:48.860 --> 00:30:49.999
+over to another objective here,
+
+00:30:50.000 --> 00:30:51.289
+which might be my sort of campaign
+
+00:30:51.290 --> 00:30:53.029
+model, I can even go into the
+
+00:30:53.030 --> 00:30:54.619
+comparisons tab here and take a look
+
+00:30:54.620 --> 00:30:56.269
+and say, OK, so for different models
+
+00:30:56.270 --> 00:30:57.619
+that we're assessing, we rejected
+
+00:30:57.620 --> 00:30:58.969
+one of them, but let's still add it
+
+00:30:58.970 --> 00:31:00.169
+into the comparison.
+
+00:31:00.170 --> 00:31:01.699
+We have a random forest model and
+
+00:31:01.700 --> 00:31:03.169
+SVM model and then your regression
+
+00:31:03.170 --> 00:31:05.029
+model, and I want to I compare kind
+
+00:31:05.030 --> 00:31:06.259
+of the key theories, the key
+
+00:31:06.260 --> 00:31:07.789
+criteria across these models.
+
+00:31:07.790 --> 00:31:09.409
+So, you know, things like the ROC
+
+00:31:09.410 --> 00:31:11.269
+curves and how basically
+
+00:31:11.270 --> 00:31:12.799
+the different kind of core
+
+00:31:12.800 --> 00:31:14.689
+dimensions of evaluation
+
+00:31:14.690 --> 00:31:15.949
+are performing across these
+
+00:31:15.950 --> 00:31:17.329
+different models.
+
+00:31:17.330 --> 00:31:18.469
+And so you can kind of even
+
+00:31:18.470 --> 00:31:19.969
+customize very easily kind of what
+
+00:31:19.970 --> 00:31:21.979
+these core dimensions are,
+
+00:31:21.980 --> 00:31:23.749
+and you can even segment out things
+
+00:31:23.750 --> 00:31:24.859
+that are sensitive.
+
+00:31:24.860 --> 00:31:26.269
+So there might be, you know,
+
+00:31:26.270 --> 00:31:28.159
+personally identifiable information
+
+00:31:28.160 --> 00:31:29.509
+or things that have to be locked
+
+00:31:29.510 --> 00:31:30.529
+down.
+
+00:31:30.530 --> 00:31:32.269
+And you can actually cordon off that
+
+00:31:32.270 --> 00:31:33.439
+kind of feature comparison or that
+
+00:31:33.440 --> 00:31:35.629
+kind of dimensionality comparison
+
+00:31:35.630 --> 00:31:38.089
+inside of a different set of
+
+00:31:38.090 --> 00:31:39.949
+parts of the objective that are
+
+00:31:39.950 --> 00:31:41.719
+only open to certain types of people
+
+00:31:41.720 --> 00:31:42.709
+or certain folks with certain
+
+00:31:42.710 --> 00:31:43.710
+permissions.
+
+00:31:44.480 --> 00:31:46.519
+And so all this information is here,
+
+00:31:46.520 --> 00:31:47.749
+and the idea is that once you've
+
+00:31:47.750 --> 00:31:49.129
+sort of made our selection and
+
+00:31:49.130 --> 00:31:50.599
+tagged, the model is being ready for
+
+00:31:50.600 --> 00:31:51.919
+production.
+
+00:31:51.920 --> 00:31:53.329
+The kind of key step here, the kind
+
+00:31:53.330 --> 00:31:55.159
+of coronation is we're then
+
+00:31:55.160 --> 00:31:57.079
+going to actually bind this
+
+00:31:57.080 --> 00:31:58.999
+model to the ontology.
+
+00:31:59.000 --> 00:32:00.529
+Now this is key because this is
+
+00:32:00.530 --> 00:32:02.149
+basically giving us a type system
+
+00:32:02.150 --> 00:32:03.289
+for the models.
+
+00:32:03.290 --> 00:32:04.249
+And so what you see here at the
+
+00:32:04.250 --> 00:32:05.239
+bottom here with the modeling
+
+00:32:05.240 --> 00:32:07.249
+objective API is
+
+00:32:07.250 --> 00:32:08.329
+the winning model, which in this
+
+00:32:08.330 --> 00:32:10.279
+case was a SageMaker model
+
+00:32:10.280 --> 00:32:12.349
+is actually going to take,
+
+00:32:12.350 --> 00:32:14.209
+as two of its inputs, two
+
+00:32:14.210 --> 00:32:16.129
+properties from the ontology
+
+00:32:16.130 --> 00:32:17.629
+from from our supply chain ontology.
+
+00:32:17.630 --> 00:32:18.649
+We've been working with this entire
+
+00:32:18.650 --> 00:32:20.299
+time, so it's going to take the
+
+00:32:20.300 --> 00:32:21.559
+cost.
+
+00:32:21.560 --> 00:32:23.269
+It's going to take in the price into
+
+00:32:23.270 --> 00:32:25.039
+this live inference end point.
+
+00:32:25.040 --> 00:32:26.929
+And then every time it returns a
+
+00:32:26.930 --> 00:32:28.849
+value for the endpoint, we're going
+
+00:32:28.850 --> 00:32:30.172
+to basically take those three values
+
+00:32:30.173 --> 00:32:32.119
+- demand, capacity, inventory -
+
+00:32:32.120 --> 00:32:33.979
+and map those back onto the
+
+00:32:33.980 --> 00:32:35.989
+objects in our ontology as time
+
+00:32:35.990 --> 00:32:37.669
+dependent properties or, in this
+
+00:32:37.670 --> 00:32:38.959
+case, model dependent properties
+
+00:32:38.960 --> 00:32:39.919
+that could be time dependent as
+
+00:32:39.920 --> 00:32:41.659
+well. And so the idea is that we
+
+00:32:41.660 --> 00:32:43.579
+have configured the ontology
+
+00:32:43.580 --> 00:32:45.599
+to basically have
+
+00:32:45.600 --> 00:32:47.299
+to recognize to be aware of the fact
+
+00:32:47.300 --> 00:32:48.409
+that it's going to be receiving
+
+00:32:48.410 --> 00:32:50.089
+values from a model.
+
+00:32:50.090 --> 00:32:51.619
+And so this is huge because what
+
+00:32:51.620 --> 00:32:52.939
+this means is, with this binding in
+
+00:32:52.940 --> 00:32:54.889
+place, I can now use this
+
+00:32:54.890 --> 00:32:56.839
+model. That's sort of one,
+
+00:32:56.840 --> 00:32:58.789
+you know, ----- it's been competed,
+
+00:32:58.790 --> 00:32:59.989
+it's one it's now bound to the
+
+00:32:59.990 --> 00:33:00.829
+ontology.
+
+00:33:00.830 --> 00:33:02.509
+I can now through that ontology
+
+00:33:02.510 --> 00:33:04.069
+binding, insert the model into not
+
+00:33:04.070 --> 00:33:05.749
+just one application or five
+
+00:33:05.750 --> 00:33:06.889
+applications, but dozens of
+
+00:33:06.890 --> 00:33:08.389
+different applications and sort of
+
+00:33:08.390 --> 00:33:09.919
+seamlessly have it appear to end
+
+00:33:09.920 --> 00:33:10.969
+users.
+
+00:33:10.970 --> 00:33:12.649
+And so as an example of how that
+
+00:33:12.650 --> 00:33:13.879
+kind of comes together here in this
+
+00:33:13.880 --> 00:33:15.469
+kind of takes us to kind of our
+
+00:33:15.470 --> 00:33:17.119
+final mile, which is sort of
+
+00:33:17.120 --> 00:33:19.189
+operational applications.
+
+00:33:19.190 --> 00:33:20.839
+Let's open up a supply chain control
+
+00:33:20.840 --> 00:33:22.909
+tower example and take a look at how
+
+00:33:22.910 --> 00:33:24.559
+the data in the models kind of weave
+
+00:33:24.560 --> 00:33:26.359
+together for an end user
+
+00:33:26.360 --> 00:33:27.979
+application.
+
+00:33:27.980 --> 00:33:29.449
+And so what we're going to open up
+
+00:33:29.450 --> 00:33:31.279
+here is just an example of
+
+00:33:31.280 --> 00:33:32.899
+an application that again, might be
+
+00:33:32.900 --> 00:33:34.729
+a starting point for many users in
+
+00:33:34.730 --> 00:33:36.349
+the enterprise.
+
+00:33:36.350 --> 00:33:38.389
+This is sort of my top level control
+
+00:33:38.390 --> 00:33:39.799
+tower. It's showing me some roll-up
+
+00:33:39.800 --> 00:33:41.719
+statistics at the top, and
+
+00:33:41.720 --> 00:33:43.789
+I see here that we've got different
+
+00:33:43.790 --> 00:33:45.619
+objects here on a map.
+
+00:33:45.620 --> 00:33:47.209
+As an operational user, I probably
+
+00:33:47.210 --> 00:33:49.039
+don't care about what an ontology is
+
+00:33:49.040 --> 00:33:50.059
+or kind of all the things that we've
+
+00:33:50.060 --> 00:33:51.319
+been through. I just know that I
+
+00:33:51.320 --> 00:33:52.369
+have a job to do.
+
+00:33:52.370 --> 00:33:53.779
+So I see, you know, we have a plant
+
+00:33:53.780 --> 00:33:55.009
+here in Michigan that need to go
+
+00:33:55.010 --> 00:33:56.329
+take a look at actually that
+
+00:33:56.330 --> 00:33:57.589
+production capacity is starting to
+
+00:33:57.590 --> 00:33:59.449
+dip, and I want to know why.
+
+00:33:59.450 --> 00:34:01.159
+Maybe I received an alert about
+
+00:34:01.160 --> 00:34:02.429
+this, and so, you know, that alert
+
+00:34:02.430 --> 00:34:04.049
+could have come in via email or it
+
+00:34:04.050 --> 00:34:05.699
+could have come in via text or kind
+
+00:34:05.700 --> 00:34:06.899
+of any sort of integration with a
+
+00:34:06.900 --> 00:34:08.129
+messaging system.
+
+00:34:08.130 --> 00:34:10.259
+And I can go into my alerts tab now
+
+00:34:10.260 --> 00:34:11.189
+and take a look at kind of a
+
+00:34:11.190 --> 00:34:13.709
+prioritized ---- set of like
+
+00:34:13.710 --> 00:34:14.908
+kind of different alerts that I can
+
+00:34:14.909 --> 00:34:16.198
+start to action here.
+
+00:34:16.199 --> 00:34:17.369
+So you'll see there's all sorts of
+
+00:34:17.370 --> 00:34:18.439
+things that are coming in here, and
+
+00:34:18.440 --> 00:34:19.559
+maybe I just want to look at those
+
+00:34:19.560 --> 00:34:20.428
+that are high priority.
+
+00:34:20.429 --> 00:34:21.388
+So I'm going to filter here on the
+
+00:34:21.389 --> 00:34:23.009
+left hand side, and I'm going to
+
+00:34:23.010 --> 00:34:24.479
+take a look at one of these alerts
+
+00:34:24.480 --> 00:34:25.408
+here, which is a business
+
+00:34:25.409 --> 00:34:27.209
+interruption related to COVID.
+
+00:34:27.210 --> 00:34:28.229
+And you'll see that this is pulling
+
+00:34:28.230 --> 00:34:29.249
+together lots of different
+
+00:34:29.250 --> 00:34:30.479
+information from everything we've
+
+00:34:30.480 --> 00:34:31.738
+covered so far.
+
+00:34:31.739 --> 00:34:33.509
+Right. This alert was generated
+
+00:34:33.510 --> 00:34:35.579
+maybe by a model pipeline.
+
+00:34:35.580 --> 00:34:37.079
+It is pulling in data from the
+
+00:34:37.080 --> 00:34:38.638
+supplier, and the plants are
+
+00:34:38.639 --> 00:34:40.769
+different links in my ontology.
+
+00:34:40.770 --> 00:34:42.419
+It's showing me the impacted plant
+
+00:34:42.420 --> 00:34:44.428
+that this pertains to, and it's
+
+00:34:44.429 --> 00:34:45.839
+actually showing you recommended
+
+00:34:45.840 --> 00:34:47.698
+actions as well, which are in this
+
+00:34:47.699 --> 00:34:48.959
+case coming in from a model that
+
+00:34:48.960 --> 00:34:50.189
+I've built.
+
+00:34:50.190 --> 00:34:52.319
+The critical thing here
+
+00:34:52.320 --> 00:34:53.428
+is we're not just stopping with
+
+00:34:53.429 --> 00:34:55.109
+looking at this alert and saying,
+
+00:34:55.110 --> 00:34:56.279
+"well, OK, looks like we have a
+
+00:34:56.280 --> 00:34:57.959
+problem here." We're saying we want
+
+00:34:57.960 --> 00:34:59.399
+to be able to take action now to
+
+00:34:59.400 --> 00:35:00.308
+actually do something in response.
+
+00:35:00.309 --> 00:35:02.099
+And you'll see that we have
+
+00:35:02.100 --> 00:35:03.389
+different actions that we've
+
+00:35:03.390 --> 00:35:04.919
+actually pre-assembled for these
+
+00:35:04.920 --> 00:35:06.739
+users canceling an order
+
+00:35:06.740 --> 00:35:08.339
+or partially fulfilling an order or
+
+00:35:08.340 --> 00:35:09.539
+actually going into more advanced
+
+00:35:09.540 --> 00:35:11.519
+actions like reallocation that will
+
+00:35:11.520 --> 00:35:13.499
+look at in just a second.
+
+00:35:13.500 --> 00:35:14.939
+But if I hit this cancel customer
+
+00:35:14.940 --> 00:35:16.499
+order button, you'll see that it
+
+00:35:16.500 --> 00:35:18.509
+allows me now to sort of it kind of
+
+00:35:18.510 --> 00:35:20.279
+preconfigured and action I can take
+
+00:35:20.280 --> 00:35:21.839
+here on this particular alert or a
+
+00:35:21.840 --> 00:35:23.909
+related alert, and I can then choose
+
+00:35:23.910 --> 00:35:25.739
+to submit this in a way that
+
+00:35:25.740 --> 00:35:27.329
+will be nondestructively captured
+
+00:35:27.330 --> 00:35:28.949
+back into the ontology.
+
+00:35:28.950 --> 00:35:30.239
+And you might be asking, well, how
+
+00:35:30.240 --> 00:35:31.169
+does this work, right?
+
+00:35:31.170 --> 00:35:32.669
+I don't want any user to be able to
+
+00:35:32.670 --> 00:35:34.529
+take any action on any part
+
+00:35:34.530 --> 00:35:36.449
+of the ontology and start to update
+
+00:35:36.450 --> 00:35:37.559
+things right. That would be chaos.
+
+00:35:37.560 --> 00:35:38.819
+We can't have people modifying
+
+00:35:38.820 --> 00:35:39.840
+values willy nilly.
+
+00:35:40.890 --> 00:35:42.659
+Turns out, the way that actions work
+
+00:35:42.660 --> 00:35:43.979
+is they're actually part of the
+
+00:35:43.980 --> 00:35:46.049
+ontology at the core level.
+
+00:35:46.050 --> 00:35:48.119
+So if we go back to the ontology
+
+00:35:48.120 --> 00:35:49.559
+configuration interface that we saw
+
+00:35:49.560 --> 00:35:51.179
+before we were talking about
+
+00:35:51.180 --> 00:35:52.469
+bringing our plant together and all
+
+00:35:52.470 --> 00:35:54.239
+of the connections here, if we go
+
+00:35:54.240 --> 00:35:55.649
+back to kind of the main page, we'll
+
+00:35:55.650 --> 00:35:57.659
+see their object types, of course,
+
+00:35:57.660 --> 00:35:58.619
+that we're defining.
+
+00:35:58.620 --> 00:35:59.879
+There are link types which we've
+
+00:35:59.880 --> 00:36:01.589
+seen all throughout, but the
+
+00:36:01.590 --> 00:36:03.749
+critical third element is actions
+
+00:36:03.750 --> 00:36:05.489
+as well. And this is the dynamism
+
+00:36:05.490 --> 00:36:07.469
+here that kind of makes the ontology
+
+00:36:07.470 --> 00:36:09.389
+truly special is we're not
+
+00:36:09.390 --> 00:36:10.379
+just talking about kind of
+
+00:36:10.380 --> 00:36:12.029
+semantics, we're also talking about
+
+00:36:12.030 --> 00:36:13.019
+kinetics.
+
+00:36:13.020 --> 00:36:14.159
+We're talking about the kind of
+
+00:36:14.160 --> 00:36:16.079
+actions that can modify the
+
+00:36:16.080 --> 00:36:18.389
+state of the ontology in a compliant
+
+00:36:18.390 --> 00:36:19.439
+manner.
+
+00:36:19.440 --> 00:36:20.849
+And so if I, for instance, search
+
+00:36:20.850 --> 00:36:23.129
+for that cancel customer order
+
+00:36:23.130 --> 00:36:25.079
+action that we saw before, we'll see
+
+00:36:25.080 --> 00:36:27.389
+this is in our library of actions.
+
+00:36:27.390 --> 00:36:28.769
+And if I open this up, you'll see
+
+00:36:28.770 --> 00:36:30.239
+all sorts of related information
+
+00:36:30.240 --> 00:36:31.529
+like we have with other parts of the
+
+00:36:31.530 --> 00:36:33.719
+ontology, the API
+
+00:36:33.720 --> 00:36:35.489
+name for this, this cancel custom
+
+00:36:35.490 --> 00:36:37.379
+order, the actual ID that we can
+
+00:36:37.380 --> 00:36:38.609
+use, we can programmatically
+
+00:36:38.610 --> 00:36:40.349
+interact with this and the actual
+
+00:36:40.350 --> 00:36:42.299
+logic used to create this particular
+
+00:36:42.300 --> 00:36:44.309
+cancel customer order action.
+
+00:36:44.310 --> 00:36:45.310
+So we see here
+
+00:36:46.440 --> 00:36:48.329
+what objects that pertains to, what
+
+00:36:48.330 --> 00:36:50.279
+properties it will be updating,
+
+00:36:50.280 --> 00:36:52.229
+what parameters it takes and even
+
+00:36:52.230 --> 00:36:53.880
+what validations it uses as well.
+
+00:36:54.900 --> 00:36:56.429
+And this is all kind of configured
+
+00:36:56.430 --> 00:36:57.509
+here through point-and-click, but it
+
+00:36:57.510 --> 00:36:59.039
+could be configured through a much
+
+00:36:59.040 --> 00:37:00.149
+more kind of robust kind of
+
+00:37:00.150 --> 00:37:02.309
+code-based interface as well,
+
+00:37:02.310 --> 00:37:03.959
+using the authoring tools that we
+
+00:37:03.960 --> 00:37:05.939
+saw before here
+
+00:37:05.940 --> 00:37:07.259
+and kind of the more data ops part
+
+00:37:07.260 --> 00:37:08.260
+of the stack.
+
+00:37:08.970 --> 00:37:11.159
+And so with this action essentially
+
+00:37:11.160 --> 00:37:13.259
+defined every time I want to cancel
+
+00:37:13.260 --> 00:37:15.239
+a customer order, I can do so
+
+00:37:15.240 --> 00:37:17.549
+in a reliable, repeatable, auditable
+
+00:37:17.550 --> 00:37:18.359
+way.
+
+00:37:18.360 --> 00:37:19.739
+And so that means that every
+
+00:37:19.740 --> 00:37:20.909
+application builder isn't
+
+00:37:20.910 --> 00:37:22.589
+implementing their own version of
+
+00:37:22.590 --> 00:37:23.789
+what it means to cancel a custom
+
+00:37:23.790 --> 00:37:25.679
+order. It means they simply use
+
+00:37:25.680 --> 00:37:27.659
+this action of the library, and
+
+00:37:27.660 --> 00:37:29.459
+it knows intelligently how to
+
+00:37:29.460 --> 00:37:32.489
+basically modify different objects.
+
+00:37:32.490 --> 00:37:34.439
+It knows what sort of precautions
+
+00:37:34.440 --> 00:37:35.459
+to take. So if I'm a junior
+
+00:37:35.460 --> 00:37:37.349
+employee, it might be that when
+
+00:37:37.350 --> 00:37:38.789
+I click the cancel customer order,
+
+00:37:38.790 --> 00:37:40.709
+it's aware of who I am and it has
+
+00:37:40.710 --> 00:37:42.299
+to go and then get approval from my
+
+00:37:42.300 --> 00:37:44.519
+manager before it actually
+
+00:37:44.520 --> 00:37:45.659
+gets confirmed.
+
+00:37:45.660 --> 00:37:47.519
+And then it might be that the last
+
+00:37:47.520 --> 00:37:48.959
+part of this is a webhook or some
+
+00:37:48.960 --> 00:37:50.639
+sort of write-back routine that then
+
+00:37:50.640 --> 00:37:52.559
+actually synchronizes this change
+
+00:37:52.560 --> 00:37:54.419
+back to an ERP or back to
+
+00:37:54.420 --> 00:37:55.709
+an MES system.
+
+00:37:55.710 --> 00:37:56.909
+Again, all of that is a pretty
+
+00:37:56.910 --> 00:37:58.409
+complex flow for an action or a
+
+00:37:58.410 --> 00:38:00.119
+piece of logic that I don't want the
+
+00:38:00.120 --> 00:38:01.409
+application builder to have to think
+
+00:38:01.410 --> 00:38:02.669
+about. I just want them to be able
+
+00:38:02.670 --> 00:38:04.146
+to embed that piece of logic here as
+
+00:38:04.147 --> 00:38:06.179
+an action and have Foundry
+
+00:38:06.180 --> 00:38:07.319
+at a system level be able to deal
+
+00:38:07.320 --> 00:38:08.579
+with all that orchestration that
+
+00:38:08.580 --> 00:38:09.580
+happens thereafter.
+
+00:38:11.080 --> 00:38:12.969
+So we've kind of alluded to this,
+
+00:38:12.970 --> 00:38:14.019
+but what this means for the
+
+00:38:14.020 --> 00:38:15.909
+application builder is that even
+
+00:38:15.910 --> 00:38:17.019
+though these applications we've been
+
+00:38:17.020 --> 00:38:18.579
+looking at here in this particular
+
+00:38:18.580 --> 00:38:20.349
+supply chain control tower example
+
+00:38:20.350 --> 00:38:22.299
+looks very custom - It's
+
+00:38:22.300 --> 00:38:24.219
+actually all just built using a
+
+00:38:24.220 --> 00:38:25.629
+low code application builder, and in
+
+00:38:25.630 --> 00:38:26.979
+this case, a no code application
+
+00:38:26.980 --> 00:38:28.389
+builder. And if I want to add
+
+00:38:28.390 --> 00:38:29.469
+something here to the top, for
+
+00:38:29.470 --> 00:38:31.089
+instance, it's very simple, just a
+
+00:38:31.090 --> 00:38:33.249
+point-and-click my way into adding
+
+00:38:33.250 --> 00:38:35.349
+a new widget here in
+
+00:38:35.350 --> 00:38:36.819
+this particular view, so I could add
+
+00:38:36.820 --> 00:38:38.529
+an object table, for instance.
+
+00:38:38.530 --> 00:38:39.879
+And it's super simple to start to
+
+00:38:39.880 --> 00:38:41.919
+wire in different things
+
+00:38:41.920 --> 00:38:42.849
+into these views, right?
+
+00:38:42.850 --> 00:38:44.589
+Because I'm not dealing with pulling
+
+00:38:44.590 --> 00:38:46.479
+data into kind of a
+
+00:38:46.480 --> 00:38:48.219
+kind of siloed database and trying
+
+00:38:48.220 --> 00:38:49.539
+to do kind of things in a one-off
+
+00:38:49.540 --> 00:38:51.459
+manner. I'm connected directly to
+
+00:38:51.460 --> 00:38:53.649
+the ontology and so I can easily
+
+00:38:53.650 --> 00:38:55.809
+open up a set of objects
+
+00:38:55.810 --> 00:38:57.129
+you've been working with before,
+
+00:38:57.130 --> 00:38:58.959
+like the plants, and I can
+
+00:38:58.960 --> 00:39:01.329
+start to actually pull them in here
+
+00:39:01.330 --> 00:39:02.769
+and take a look at how they will
+
+00:39:02.770 --> 00:39:04.689
+actually get bound to these
+
+00:39:04.690 --> 00:39:06.399
+widgets that we've set up.
+
+00:39:06.400 --> 00:39:08.829
+And so here, I'll type in our MSC
+
+00:39:08.830 --> 00:39:10.689
+plant in this case, and
+
+00:39:10.690 --> 00:39:12.099
+it will now be able to pull in all
+
+00:39:12.100 --> 00:39:13.809
+that data in a way that is aware of
+
+00:39:13.810 --> 00:39:16.239
+who I am and my security profile.
+
+00:39:16.240 --> 00:39:17.739
+I can add all the properties here,
+
+00:39:17.740 --> 00:39:19.539
+and just like that, I've added in a
+
+00:39:19.540 --> 00:39:21.489
+new widget in the same
+
+00:39:21.490 --> 00:39:22.659
+way that I can add in data.
+
+00:39:22.660 --> 00:39:25.179
+I can add in those actions as well.
+
+00:39:25.180 --> 00:39:26.559
+And what this means is, as an
+
+00:39:26.560 --> 00:39:28.479
+application developer, I no longer
+
+00:39:28.480 --> 00:39:29.799
+have to think about the full stack
+
+00:39:29.800 --> 00:39:31.689
+of considerations myself every time
+
+00:39:31.690 --> 00:39:33.579
+I want to deploy a new operational
+
+00:39:33.580 --> 00:39:35.109
+workflow or application.
+
+00:39:35.110 --> 00:39:36.249
+I don't have to think about setting
+
+00:39:36.250 --> 00:39:37.929
+up a new hosting environment.
+
+00:39:37.930 --> 00:39:39.669
+The databases, the indexing, the
+
+00:39:39.670 --> 00:39:41.469
+compute, the storage, that's maybe
+
+00:39:41.470 --> 00:39:42.470
+non-database.
+
+00:39:42.670 --> 00:39:44.649
+How am I capturing back feedback
+
+00:39:44.650 --> 00:39:46.989
+from users? How am I binding models
+
+00:39:46.990 --> 00:39:48.459
+to the different application states?
+
+00:39:48.460 --> 00:39:49.719
+How am I capturing feedback from
+
+00:39:49.720 --> 00:39:50.649
+those models?
+
+00:39:50.650 --> 00:39:52.569
+All of that is taken care of below
+
+00:39:52.570 --> 00:39:54.549
+the level of the application because
+
+00:39:54.550 --> 00:39:56.019
+of what we saw in the data
+
+00:39:56.020 --> 00:39:57.849
+integration, in the set up of the
+
+00:39:57.850 --> 00:39:59.859
+ontology, and the actions in
+
+00:39:59.860 --> 00:40:02.049
+the actual wiring in of the models
+
+00:40:02.050 --> 00:40:03.189
+that come together in these
+
+00:40:03.190 --> 00:40:05.109
+objectives and the actual binding
+
+00:40:05.110 --> 00:40:06.819
+of the models to the ontology, to
+
+00:40:06.820 --> 00:40:08.559
+these objectives as well, which
+
+00:40:08.560 --> 00:40:10.179
+means you can do a fully feature
+
+00:40:10.180 --> 00:40:12.519
+rich compound applications
+
+00:40:12.520 --> 00:40:14.439
+in a couple of hours or
+
+00:40:14.440 --> 00:40:16.329
+a day or two, as opposed to
+
+00:40:16.330 --> 00:40:17.649
+spending months or quarters of
+
+00:40:17.650 --> 00:40:18.650
+effort.
+
+00:40:19.850 --> 00:40:21.169
+So we think this is a really
+
+00:40:21.170 --> 00:40:22.789
+powerful part of the platform, and
+
+00:40:22.790 --> 00:40:24.199
+oftentimes, you know, this is this
+
+00:40:24.200 --> 00:40:25.579
+is just, you know, an example of
+
+00:40:25.580 --> 00:40:27.379
+kind of where the kind of
+
+00:40:27.380 --> 00:40:28.729
+operational capability gets
+
+00:40:28.730 --> 00:40:29.929
+surfaced.
+
+00:40:29.930 --> 00:40:30.889
+Kind of what we've been looking at
+
+00:40:30.890 --> 00:40:32.809
+here is one example
+
+00:40:32.810 --> 00:40:34.219
+of an operational application
+
+00:40:34.220 --> 00:40:35.839
+builder called Workshop.
+
+00:40:35.840 --> 00:40:37.279
+There are other application builders
+
+00:40:37.280 --> 00:40:38.299
+in Foundry as well.
+
+00:40:38.300 --> 00:40:39.589
+So there's another one called Slate
+
+00:40:39.590 --> 00:40:41.419
+as sort of a sibling application.
+
+00:40:41.420 --> 00:40:42.769
+And the key thing here is, of
+
+00:40:42.770 --> 00:40:44.509
+course, you can go and you can build
+
+00:40:44.510 --> 00:40:46.279
+your own custom applications as
+
+00:40:46.280 --> 00:40:48.109
+well, and you can kind of do it an
+
+00:40:48.110 --> 00:40:50.059
+object oriented manner or even do
+
+00:40:50.060 --> 00:40:51.709
+it in a tabular manner or a more
+
+00:40:51.710 --> 00:40:53.539
+classical manner as well.
+
+00:40:53.540 --> 00:40:54.559
+There's kind of a full set of
+
+00:40:54.560 --> 00:40:56.179
+documentation here around not just
+
+00:40:56.180 --> 00:40:57.619
+sort of interacting with existing
+
+00:40:57.620 --> 00:40:59.479
+applications, but building your
+
+00:40:59.480 --> 00:41:01.909
+own applications, using the APIs
+
+00:41:01.910 --> 00:41:03.469
+and Foundry using every part of what
+
+00:41:03.470 --> 00:41:04.429
+we've talked about kind of
+
+00:41:04.430 --> 00:41:05.430
+throughout this demo.
+
+00:41:06.810 --> 00:41:07.799
+Awesome.
+
+00:41:07.800 --> 00:41:09.269
+Now I have one last thing to show
+
+00:41:09.270 --> 00:41:10.049
+you guys.
+
+00:41:10.050 --> 00:41:11.399
+And then then we'll sign off here
+
+00:41:11.400 --> 00:41:13.349
+for this particular demo,
+
+00:41:13.350 --> 00:41:14.759
+and that is kind of how these things
+
+00:41:14.760 --> 00:41:16.649
+start to come together in
+
+00:41:16.650 --> 00:41:18.119
+kind of a more strategic kind of
+
+00:41:18.120 --> 00:41:19.799
+digital twin paradigm.
+
+00:41:21.040 --> 00:41:22.929
+So what am I open up here is
+
+00:41:22.930 --> 00:41:24.429
+one final application here in
+
+00:41:24.430 --> 00:41:26.169
+Foundry that we call Vertex.
+
+00:41:26.170 --> 00:41:27.609
+Vertex is kind of like the map
+
+00:41:27.610 --> 00:41:28.959
+application in Foundry.
+
+00:41:28.960 --> 00:41:30.359
+Sorry, the graph application in
+
+00:41:30.360 --> 00:41:31.449
+Foundry you might think of, right?
+
+00:41:31.450 --> 00:41:32.349
+It's showing me kind of all the
+
+00:41:32.350 --> 00:41:34.299
+relationships here, kind
+
+00:41:34.300 --> 00:41:35.709
+of between all my different objects,
+
+00:41:35.710 --> 00:41:36.759
+right? Like if you were just to look
+
+00:41:36.760 --> 00:41:37.689
+at, we started here, you might think
+
+00:41:37.690 --> 00:41:38.649
+this looks kind of nuts, right?
+
+00:41:38.650 --> 00:41:40.629
+There's so much going on here,
+
+00:41:40.630 --> 00:41:42.099
+but now we know exactly what this
+
+00:41:42.100 --> 00:41:43.809
+is, right? These are this is just
+
+00:41:43.810 --> 00:41:45.249
+showing me kind of the kind of
+
+00:41:45.250 --> 00:41:46.629
+connection that I've built into my
+
+00:41:46.630 --> 00:41:47.919
+ontology, right, where every one of
+
+00:41:47.920 --> 00:41:49.959
+these object types has a lot of data
+
+00:41:49.960 --> 00:41:51.069
+being integrated into it.
+
+00:41:51.070 --> 00:41:52.599
+And then we've also overlaid the
+
+00:41:52.600 --> 00:41:53.829
+different machine learning models
+
+00:41:53.830 --> 00:41:55.629
+and data science approaches as well.
+
+00:41:55.630 --> 00:41:57.669
+So in this case, this is an example
+
+00:41:57.670 --> 00:41:59.619
+that's based off of
+
+00:41:59.620 --> 00:42:00.939
+one of our medical supplier
+
+00:42:00.940 --> 00:42:03.009
+customers, kind of loosely based
+
+00:42:03.010 --> 00:42:04.839
+off of anonymized, of course,
+
+00:42:04.840 --> 00:42:06.429
+from the work they did during COVID
+
+00:42:06.430 --> 00:42:08.319
+kind of the early phases of COVID,
+
+00:42:08.320 --> 00:42:09.399
+where they needed to really map out
+
+00:42:09.400 --> 00:42:10.869
+kind of the full flow of how they
+
+00:42:10.870 --> 00:42:11.799
+were building and shipping
+
+00:42:11.800 --> 00:42:13.689
+ventilators from everything
+
+00:42:13.690 --> 00:42:14.889
+from their upstream suppliers to
+
+00:42:14.890 --> 00:42:16.809
+intermediate goods to their plants
+
+00:42:16.810 --> 00:42:18.609
+all the way down to their actual
+
+00:42:18.610 --> 00:42:20.409
+distribution centers and their end
+
+00:42:20.410 --> 00:42:22.359
+customers themselves.
+
+00:42:22.360 --> 00:42:23.529
+And so what this is showing here is
+
+00:42:23.530 --> 00:42:24.999
+sort of the bird's eye view of the
+
+00:42:25.000 --> 00:42:26.319
+entire value chain, right?
+
+00:42:26.320 --> 00:42:27.699
+And being able to kind of scrub
+
+00:42:27.700 --> 00:42:29.019
+backwards and forwards in time and
+
+00:42:29.020 --> 00:42:30.729
+saying, show me where alerts are
+
+00:42:30.730 --> 00:42:32.169
+firing, where inventory is getting
+
+00:42:32.170 --> 00:42:34.029
+to dangerous levels, where we're
+
+00:42:34.030 --> 00:42:35.589
+basically experiencing kind of
+
+00:42:35.590 --> 00:42:37.539
+fundamental dislocations, right?
+
+00:42:37.540 --> 00:42:38.529
+And I can always kind of go
+
+00:42:38.530 --> 00:42:39.939
+backwards and forwards kind of scrub
+
+00:42:39.940 --> 00:42:41.799
+through kind of different points in
+
+00:42:41.800 --> 00:42:43.179
+time here to be able to look at kind
+
+00:42:43.180 --> 00:42:44.979
+of where things were in kind of the
+
+00:42:44.980 --> 00:42:46.509
+danger zone at different points in
+
+00:42:46.510 --> 00:42:47.759
+time.
+
+00:42:47.760 --> 00:42:49.139
+And so that's useful, of course, to
+
+00:42:49.140 --> 00:42:50.159
+be able to kind of be able to get
+
+00:42:50.160 --> 00:42:52.109
+visibility into the whole kind
+
+00:42:52.110 --> 00:42:53.519
+of connected chain here, which was
+
+00:42:53.520 --> 00:42:55.049
+spread across dozens of different
+
+00:42:55.050 --> 00:42:57.059
+data systems and models before.
+
+00:42:57.060 --> 00:42:58.379
+But the more important thing is, I
+
+00:42:58.380 --> 00:43:00.029
+need to now be able to kind of
+
+00:43:00.030 --> 00:43:01.710
+update my strategy and actually
+
+00:43:02.820 --> 00:43:04.859
+operate now in this sort of very
+
+00:43:04.860 --> 00:43:06.449
+volatile environment, which it was
+
+00:43:06.450 --> 00:43:07.529
+last year. Right. So there were
+
+00:43:07.530 --> 00:43:09.659
+simultaneous supply and demand
+
+00:43:09.660 --> 00:43:11.759
+shocks and kind of every pre-built
+
+00:43:11.760 --> 00:43:12.809
+model was kind of thrown out the
+
+00:43:12.810 --> 00:43:14.519
+window. And so they needed to be
+
+00:43:14.520 --> 00:43:16.079
+able to simulate kind of different
+
+00:43:16.080 --> 00:43:17.909
+scenarios that were exigent day in
+
+00:43:17.910 --> 00:43:19.109
+and day out.
+
+00:43:19.110 --> 00:43:20.219
+What would happen if one of our
+
+00:43:20.220 --> 00:43:21.989
+suppliers went completely offline
+
+00:43:21.990 --> 00:43:23.399
+given the pandemic?
+
+00:43:23.400 --> 00:43:25.289
+What would happen if one of our
+
+00:43:25.290 --> 00:43:26.999
+medical center customers had 10
+
+00:43:27.000 --> 00:43:28.469
+times normal demand they normally
+
+00:43:28.470 --> 00:43:29.699
+have for ventilators?
+
+00:43:29.700 --> 00:43:30.779
+How would we actually be able to
+
+00:43:30.780 --> 00:43:32.489
+meet these different requirements,
+
+00:43:32.490 --> 00:43:33.689
+given how we're currently doing
+
+00:43:33.690 --> 00:43:34.769
+allocation, how we're currently
+
+00:43:34.770 --> 00:43:37.229
+doing different supply tactics?
+
+00:43:37.230 --> 00:43:39.149
+And so what we can open up here is
+
+00:43:39.150 --> 00:43:41.129
+actually a simulation tab
+
+00:43:41.130 --> 00:43:42.539
+to think about running those
+
+00:43:42.540 --> 00:43:44.039
+simulations, those scenarios
+
+00:43:44.040 --> 00:43:45.869
+directly on top
+
+00:43:45.870 --> 00:43:47.939
+of sandbox versions of your
+
+00:43:47.940 --> 00:43:50.999
+world, right, of the full ontology.
+
+00:43:51.000 --> 00:43:52.079
+And so we can actually simulate
+
+00:43:52.080 --> 00:43:53.909
+directly here, given that we
+
+00:43:53.910 --> 00:43:55.079
+have the data in the models
+connected,
+
+00:43:55.080 --> 00:43:56.669
+what would happen if that supplier
+
+00:43:56.670 --> 00:43:58.499
+went offline, for instance, and you
+
+00:43:58.500 --> 00:44:00.299
+can kind of run these simulations as
+
+00:44:00.300 --> 00:44:02.309
+kind of contained case studies.
+
+00:44:02.310 --> 00:44:03.419
+And so in this case, I can make a
+
+00:44:03.420 --> 00:44:04.619
+very trivial change, right, where I
+
+00:44:04.620 --> 00:44:06.329
+could say, let's literally just
+
+00:44:06.330 --> 00:44:08.069
+update the valve price per unit.
+
+00:44:08.070 --> 00:44:09.270
+What if it dropped to four hundred?
+
+00:44:10.490 --> 00:44:12.589
+Let's literally now simulate across
+
+00:44:12.590 --> 00:44:14.449
+the entire chain what effects that
+
+00:44:14.450 --> 00:44:16.129
+would have across kind of every
+
+00:44:16.130 --> 00:44:17.719
+dependent property that we have
+
+00:44:17.720 --> 00:44:19.759
+here, kind of modeled
+
+00:44:19.760 --> 00:44:21.199
+in the ontology.
+
+00:44:21.200 --> 00:44:22.159
+And so that's a very trivial
+
+00:44:22.160 --> 00:44:24.019
+example. We can now kind of have
+
+00:44:24.020 --> 00:44:26.119
+this sort of modified simulation
+
+00:44:26.120 --> 00:44:28.189
+of the scenario state continuously
+
+00:44:28.190 --> 00:44:30.079
+run as new data comes in
+
+00:44:30.080 --> 00:44:31.129
+and we can kind of continuously
+
+00:44:31.130 --> 00:44:33.199
+assess what its impact is.
+
+00:44:33.200 --> 00:44:34.729
+And as you can imagine, it gets much
+
+00:44:34.730 --> 00:44:36.119
+more complicated and sophisticated
+
+00:44:36.120 --> 00:44:37.909
+when you're testing compound changes
+
+00:44:37.910 --> 00:44:39.889
+to parameters across not just one
+
+00:44:39.890 --> 00:44:41.419
+model, but potentially many
+
+00:44:41.420 --> 00:44:42.619
+different models. So you can say I'm
+
+00:44:42.620 --> 00:44:43.849
+not just taking one model in, but
+
+00:44:43.850 --> 00:44:45.469
+I'm going to chain different models
+
+00:44:45.470 --> 00:44:47.269
+together and run a compound
+
+00:44:47.270 --> 00:44:49.399
+simulation across kind of the entire
+
+00:44:49.400 --> 00:44:50.749
+state or the entire value chain.
+
+00:44:51.760 --> 00:44:53.629
+And this this is, I think, where we
+
+00:44:53.630 --> 00:44:55.789
+really see kind of the the
+
+00:44:55.790 --> 00:44:57.619
+progression of customers working
+
+00:44:57.620 --> 00:44:58.999
+with Foundry kind of kind of move
+
+00:44:59.000 --> 00:45:00.829
+towards where you first were working
+
+00:45:00.830 --> 00:45:02.839
+with point applications or
+
+00:45:02.840 --> 00:45:04.339
+kind of starting workflows to begin
+
+00:45:04.340 --> 00:45:05.659
+with. But really, it's about the
+
+00:45:05.660 --> 00:45:07.519
+connected operations paradigm that
+
+00:45:07.520 --> 00:45:09.289
+unfolds by virtue of bringing
+
+00:45:09.290 --> 00:45:10.519
+together the ontology kind of
+
+00:45:10.520 --> 00:45:12.409
+incrementally and, you know,
+
+00:45:12.410 --> 00:45:13.748
+as an example, in oil and gas,
+
+00:45:13.749 --> 00:45:15.619
+initially, they
+
+00:45:15.620 --> 00:45:16.609
+were doing kind of point
+
+00:45:16.610 --> 00:45:18.589
+optimizations and simulations
+
+00:45:18.590 --> 00:45:20.479
+for one part of kind
+
+00:45:20.480 --> 00:45:21.559
+of a connected value chain, right?
+
+00:45:21.560 --> 00:45:22.789
+Just the subsurface.
+
+00:45:22.790 --> 00:45:24.649
+So they had one team working on
+
+00:45:24.650 --> 00:45:26.689
+the subsurface, integrating data,
+
+00:45:26.690 --> 00:45:28.309
+building models and kind of just
+
+00:45:28.310 --> 00:45:29.659
+looking at that element of what was
+
+00:45:29.660 --> 00:45:30.829
+going on.
+
+00:45:30.830 --> 00:45:32.059
+But of course, it's part of a
+
+00:45:32.060 --> 00:45:33.469
+network, right? The subsurface
+
+00:45:33.470 --> 00:45:34.819
+connects to the top side, connects
+
+00:45:34.820 --> 00:45:36.019
+to the flow lines, connects to the
+
+00:45:36.020 --> 00:45:36.949
+onshore.
+
+00:45:36.950 --> 00:45:38.509
+Each of those different functions
+
+00:45:38.510 --> 00:45:40.035
+had their own kind of siloed
+
+00:45:41.300 --> 00:45:43.069
+simulation and optimization and data
+
+00:45:43.070 --> 00:45:45.259
+regimes, and to really understand
+
+00:45:45.260 --> 00:45:46.549
+how to optimize production as a
+
+00:45:46.550 --> 00:45:47.749
+whole, for instance, they had to
+
+00:45:47.750 --> 00:45:49.579
+connect together all of
+
+00:45:49.580 --> 00:45:50.479
+those different parts of the
+
+00:45:50.480 --> 00:45:52.609
+organization into one ontology,
+
+00:45:52.610 --> 00:45:53.899
+connect together all the different
+
+00:45:53.900 --> 00:45:55.129
+models into a single chain
+
+00:45:55.130 --> 00:45:56.299
+representation.
+
+00:45:56.300 --> 00:45:57.169
+And then they could actually try to
+
+00:45:57.170 --> 00:45:58.172
+run these full-scale
+
+00:45:59.480 --> 00:46:01.339
+continuous simulations and begin to
+
+00:46:01.340 --> 00:46:03.349
+optimize production in that case,
+
+00:46:03.350 --> 00:46:04.669
+a kind of a full scale.
+
+00:46:04.670 --> 00:46:05.809
+They started to work towards really
+
+00:46:05.810 --> 00:46:07.159
+connecting or reconnecting their
+
+00:46:07.160 --> 00:46:08.509
+operations.
+
+00:46:08.510 --> 00:46:09.799
+And we see this sort of again and
+
+00:46:09.800 --> 00:46:11.689
+again, across whether it's sort of
+
+00:46:11.690 --> 00:46:13.639
+industrials or its finance or
+
+00:46:13.640 --> 00:46:16.219
+its retail or its health care,
+
+00:46:16.220 --> 00:46:18.079
+you name it, that that being
+
+00:46:18.080 --> 00:46:19.639
+kind of the North Star for us is how
+
+00:46:19.640 --> 00:46:20.659
+are we helping our customers really
+
+00:46:20.660 --> 00:46:22.309
+re-engineer and reintegrate their
+
+00:46:22.310 --> 00:46:23.310
+operations.
+
+00:46:24.440 --> 00:46:26.539
+So I know we've covered a lot today,
+
+00:46:26.540 --> 00:46:28.399
+so I won't I won't keep keep
+
+00:46:28.400 --> 00:46:29.989
+yammering on longer, but I just want
+
+00:46:29.990 --> 00:46:31.369
+to make sure that we can recap here
+
+00:46:31.370 --> 00:46:33.079
+a bit of what we've been through.
+
+00:46:33.080 --> 00:46:34.519
+Just to leave you with this.
+
+00:46:34.520 --> 00:46:36.319
+So, you know, we started at the top
+
+00:46:36.320 --> 00:46:37.579
+here with how do we think about kind
+
+00:46:37.580 --> 00:46:39.109
+of data and ontology.
+
+00:46:39.110 --> 00:46:40.489
+So data coming together from many,
+
+00:46:40.490 --> 00:46:41.929
+many different sources, structured,
+
+00:46:41.930 --> 00:46:43.789
+IoT, unstructured, geospatial,
+
+00:46:43.790 --> 00:46:45.559
+you name it, over 200 plus
+
+00:46:45.560 --> 00:46:46.879
+out-of-the-box data connectors that
+
+00:46:46.880 --> 00:46:49.129
+we've built for Foundry and
+
+00:46:49.130 --> 00:46:50.809
+is extensible so you can build your
+
+00:46:50.810 --> 00:46:52.789
+own and being able to bring
+
+00:46:52.790 --> 00:46:54.439
+kind of all of those kind of
+
+00:46:54.440 --> 00:46:55.699
+different pieces of data together
+
+00:46:55.700 --> 00:46:57.679
+into a semantic representation that
+
+00:46:57.680 --> 00:46:59.059
+allows for people to instantly start
+
+00:46:59.060 --> 00:47:00.979
+to look, interact and kind of wield
+
+00:47:00.980 --> 00:47:02.479
+that data.
+
+00:47:02.480 --> 00:47:03.679
+The second piece is now how do we
+
+00:47:03.680 --> 00:47:05.929
+bring modeling, data science,
+
+00:47:05.930 --> 00:47:07.549
+linear programing into that same
+
+00:47:07.550 --> 00:47:09.289
+frame so we can actually overlay
+
+00:47:09.290 --> 00:47:11.269
+intelligence into that data and
+
+00:47:11.270 --> 00:47:12.559
+build out not just a semantic
+
+00:47:12.560 --> 00:47:13.999
+representation, but as we said
+
+00:47:14.000 --> 00:47:15.379
+before, a kinetic representation?
+
+00:47:15.380 --> 00:47:17.059
+So how does how do things actually
+
+00:47:17.060 --> 00:47:18.709
+flow or get dictated in business
+
+00:47:18.710 --> 00:47:20.719
+process based on what the models
+
+00:47:20.720 --> 00:47:21.499
+dictate?
+
+00:47:21.500 --> 00:47:23.119
+And how can you sort of build models
+
+00:47:23.120 --> 00:47:24.799
+within Foundry, but also outside of
+
+00:47:24.800 --> 00:47:26.629
+Foundry, and then bind those models
+
+00:47:26.630 --> 00:47:27.919
+to the ontology?
+
+00:47:27.920 --> 00:47:29.509
+So you can then insert those models
+
+00:47:29.510 --> 00:47:31.249
+into operations in a way where
+
+00:47:31.250 --> 00:47:33.439
+you're both allowing
+
+00:47:33.440 --> 00:47:35.329
+for very robust and safe deployment
+
+00:47:35.330 --> 00:47:37.069
+of models, but also very rich
+
+00:47:37.070 --> 00:47:38.659
+feedback to model builders who can
+
+00:47:38.660 --> 00:47:40.339
+know because of the data lineage,
+
+00:47:40.340 --> 00:47:42.199
+the model lineage, kind of all the
+
+00:47:42.200 --> 00:47:43.879
+bookkeeping that Foundry does,
+
+00:47:43.880 --> 00:47:45.799
+exactly how users are using those
+
+00:47:45.800 --> 00:47:48.019
+models in different applications
+
+00:47:48.020 --> 00:47:49.999
+and also in external applications
+
+00:47:50.000 --> 00:47:52.069
+that are using the APIs.
+
+00:47:52.070 --> 00:47:53.629
+And then finally, we talked about
+
+00:47:53.630 --> 00:47:55.489
+kind of how this all comes together
+
+00:47:55.490 --> 00:47:57.589
+in again, where 70
+
+00:47:57.590 --> 00:47:59.119
+to 80 percent of Foundry users live,
+
+00:47:59.120 --> 00:48:01.069
+which is operational applications,
+
+00:48:01.070 --> 00:48:02.809
+which you can build using low code,
+
+00:48:02.810 --> 00:48:04.489
+no code or pro code application
+
+00:48:04.490 --> 00:48:06.319
+builders and can also,
+
+00:48:06.320 --> 00:48:08.629
+of course, be surfaced directly
+
+00:48:08.630 --> 00:48:09.949
+via the APIs if you want to build
+
+00:48:09.950 --> 00:48:12.349
+external applications as well.
+
+00:48:12.350 --> 00:48:14.299
+So there's a lot more
+
+00:48:14.300 --> 00:48:16.009
+we can cover in follow-on sessions.
+
+00:48:16.010 --> 00:48:16.969
+You've only shown you kind of a
+
+00:48:16.970 --> 00:48:18.799
+glimpse of kind of how all these
+
+00:48:18.800 --> 00:48:20.119
+different tools come together and
+
+00:48:20.120 --> 00:48:22.399
+Foundry into a cohesive platform.
+
+00:48:22.400 --> 00:48:23.449
+We've only shown you a glimpse of
+
+00:48:23.450 --> 00:48:25.009
+kind of all the different
+interoperability
+
+00:48:25.010 --> 00:48:27.259
+patterns that exist in Foundry.
+
+00:48:27.260 --> 00:48:28.609
+We've only shown you a glimpse of
+
+00:48:28.610 --> 00:48:30.589
+how you can actually kind of
+
+00:48:30.590 --> 00:48:32.779
+deploy workflows using a workflow
+
+00:48:32.780 --> 00:48:34.249
+catalog out-of-the-box to get
+
+00:48:34.250 --> 00:48:35.629
+started really quickly, if you're
+
+00:48:35.630 --> 00:48:37.009
+doing an alerting workflow or an
+
+00:48:37.010 --> 00:48:38.599
+entity resolution workflow or a
+
+00:48:38.600 --> 00:48:40.579
+plant-360 or resource allocation
+
+00:48:40.580 --> 00:48:42.319
+workflow and all the pre-built
+
+00:48:42.320 --> 00:48:43.369
+templates we have for getting
+
+00:48:43.370 --> 00:48:45.139
+started super quickly.
+
+00:48:45.140 --> 00:48:47.059
+But we'll save a lot of that stuff
+
+00:48:47.060 --> 00:48:48.259
+for another time.
+
+00:48:48.260 --> 00:48:49.305
+Thank you everybody for listening
+
+00:48:49.306 --> 00:48:51.139
+and I hope
+
+00:48:51.140 --> 00:48:52.699
+we can talk to you guys soon.
+

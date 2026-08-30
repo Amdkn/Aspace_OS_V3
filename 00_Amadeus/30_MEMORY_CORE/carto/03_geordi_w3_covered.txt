@@ -1,0 +1,552 @@
+#14 Dry-Run (Propose→simulate→approval gate) — ★ PRIORITY 1
+#17 Reflexive Metacognitive (Self-aware capability routing) — ★ PRIORITY 2
+#34 RLHF Self-Improvement (Multi-dim deterministic scoring + archive)
+00_Index
+00_Index/FIX_KB_2026-08-02.md
+00_Index/FIX_KB_BRIEF.md
+00_Index/FIX_KB_BRIEF.md ligne 7 (brief initial)
+00_Index/GEORDI_KB_ROOT.md
+00_Index/GEORDI_KB_ROOT.md (le 2026-08-01, Geordi = racine de la KB Second Brain PARA)
+00_Index/GEORDI_KB_ROOT.md §1
+00_Index/GEORDI_KB_ROOT.md §1 (corrigé 2026-08-02) + SECOND_BRAIN_PARA_MAP.md table de vérité
+00_Index/INDEX_OF_INDEXES.md
+00_Index/INDEX_OF_INDEXES.md §Vue d'ensemble
+00_Index/JUNCTIONS_MAP_2026-08-02.md
+00_Index/JUNCTIONS_MAP_2026-08-02.md §Chiffres clés
+00_Index/JUNCTIONS_MAP_2026-08-02.md §Reserves
+00_Index/OKF_INDEX.md
+00_Index/OKF_INDEX.md §1
+00_Index/OKF_INDEX.md §Rôle d'OKF
+00_Index/PERF_OPTIM_2026-08-02.md
+00_Index/PERF_OPTIM_BRIEF.md
+00_Index/PLAN_META_MEMOIRE_2026-08-01.md
+00_Index/PLAN_META_MEMOIRE_2026-08-01.md §1.2 (baseline 2026-07-02)
+00_Index/PLAN_META_MEMOIRE_2026-08-01.md §1.4
+00_Index/PLAN_META_MEMOIRE_2026-08-01.md §1.4 (initial)
+00_Index/RESOURCES_INDEX.md
+00_Index/SECOND_BRAIN_PARA_MAP.md
+00_Index/TAGS.md
+00_Index/TAGS.md v1 (Doctor Who : 13thDoctor, Yaz, Ryan, Graham)
+00_Index/TAGS.md v2 (registre Star Trek arbitré 2026-08-01)
+00_Index/TAGS.md §v2
+00_Index/WIKI_LINT_BRIEF.md
+01_Guides
+01_Guides/ racine
+01_Guides/ racine (D1 2026-07-03 B1-filter sister canon par INDEX.md)
+01_Guides/00_KERNEL_OS/_INDEX.md (méta-OS, 4 fichiers squelette)
+01_Guides/01_Product/ (7 fichiers canon)
+01_Guides/01_Product/_INDEX.md (7 fichiers, Flash/Avengers, LD04_Cognition_Tilly)
+01_Guides/01_Product/_INDEX.md ⚠️ §B1-filter
+01_Guides/01_Product_Product
+01_Guides/01_Product_Product/ (dossier vide) + 6 autres doublons
+01_Guides/02_Ops/Dan_Martell
+01_Guides/02_Ops/_INDEX.md (30 fichiers, Batman/F4, LD02_Finance_Saru)
+01_Guides/02_Ops/_INDEX.md §Anchoring doctrinal (guide BI-MNjm1tTQ 22 708 chars)
+01_Guides/02_Ops/_INDEX.md ⚠️ §B1-filter
+01_Guides/02_Ops_Ops
+01_Guides/03_IT/GithubAwesome
+01_Guides/03_IT/_INDEX.md (39 fichiers, Cyborg/Kang, LD07_Creativity_Reno)
+01_Guides/03_IT/_INDEX.md ⚠️ §B1-filter
+01_Guides/03_IT_IT
+01_Guides/04_Finance/ (folder canon 16 fichiers)
+01_Guides/04_Finance/Codie_Sanchez
+01_Guides/04_Finance/Dan_Martell
+01_Guides/04_Finance/_INDEX.md (16 fichiers, Wonder Woman/Thunderbolts, LD02_Finance_Saru)
+01_Guides/04_Finance/_INDEX.md §⚡ MC Token Plan 5B/mois (sister canon 08_minimax-token-plan-config-20260516.md)
+01_Guides/04_Finance/_INDEX.md ⚠️ §B1-filter
+01_Guides/04_Finance_Finance
+01_Guides/04_Finance_Finance/ (dossier vide doublon)
+01_Guides/05_Legal/ (folder physique)
+01_Guides/05_Legal/Dan_Martell
+01_Guides/05_Legal/StorieRAP
+01_Guides/05_Legal/_INDEX.md (5 fichiers, Aquaman/Eternals, LD03_Health_Culber)
+01_Guides/05_Legal/_INDEX.md (folder canon physique, 5 fichiers canon)
+01_Guides/05_Legal/_INDEX.md §⚡ AI-Act 2026-08-02 driver (hard priority pour b3-8-ikaris)
+01_Guides/05_Legal/_INDEX.md ⚠️ §B1-filter
+01_Guides/05_People_People
+01_Guides/06_Sales/ 12WY_Area_Cadence/ + B1_Manifesto.md
+01_Guides/06_Sales/Dan_Martell
+01_Guides/06_Sales/SALES-FRAMEWORK-challenger_sale.md
+01_Guides/06_Sales/SALES-FRAMEWORK-gap_selling.md
+01_Guides/06_Sales/SALES-FRAMEWORK-million_dollar_weekend_the_ask.md
+01_Guides/06_Sales/SALES-FRAMEWORK-never_split_the_difference.md
+01_Guides/06_Sales/SALES-FRAMEWORK-spin_selling.md
+01_Guides/06_Sales/_INDEX.md (11 fichiers, John Jones/Illuminati, LD01_Business_Picard)
+01_Guides/06_Sales/_INDEX.md §Canon framework capsules
+01_Guides/06_Sales/_INDEX.md ⚠️ §B1-filter
+01_Guides/06_Sales_Sales
+01_Guides/07_Growth/Dan_Martell
+01_Guides/07_Growth/Yann_Leonardi
+01_Guides/07_Growth/_INDEX.md (9 fichiers, Superman/Guardians, LD07_Creativity_Reno)
+01_Guides/07_Growth/_INDEX.md (sister ADR-AAAS-ACQUISITION-DOCTRINE-001, valide ADR-L2-AAAS-001 Pilier 3 Sobriété)
+01_Guides/07_Growth/_INDEX.md ⚠️ §B1-filter
+01_Guides/07_Growth_Growth
+01_Guides/08_People/Ali_Abdaal
+01_Guides/08_People/Shubham_Sharma/ (Granola coach-meta ★)
+01_Guides/08_People/Tiago_Forte/ (PARA Building Second Brain)
+01_Guides/08_People/_INDEX.md (9 fichiers, Green Lantern/X-Men, LD06_Family_Burnham)
+01_Guides/08_People/_INDEX.md frontmatter total_files
+01_Guides/08_People/_INDEX.md §⚡ Granola coach-meta (Shubham Sharma) ★ sister canon — plan-minimax-l1-book-lune.md §6
+01_Guides/08_People/_INDEX.md ⚠️ §B1-filter
+01_Guides/0X_<Domain>/_INDEX.md (8 fichiers)
+01_Guides/0X_Domain/_INDEX.md (chaque Domain ↔ 1 LD)
+01_Guides/0X_Domain/_INDEX.md frontmatter sister_canon (8 _INDEX.md datés 2026-07-03)
+01_Guides/_BATCH_2026-06-19_INDEX.md structure
+01_Guides/_BATCH_2026-06-19_INDEX.md §D6 Lesson #42/#43
+01_Guides/_BATCH_RECLASSIFICATION_INDEX.md (001..011)
+01_Guides/_TRASH_* + 06_Claude_Code_Bare/_TRASH_* + _DRAFTS_PPR_LANE
+01_Product/_INDEX.md frontmatter (sister canon cité dans 7/9 _INDEX.md)
+02_Areas_Spock/J01.../B3_Squad_*/00_B3_SQUAD_CANON.md (sister canon — cité comme cross-ref)
+02_Areas_Spock/J02_Jerry_Bio/README.md (Life Domain ↔ 1 Jerry Area)
+02_Templates
+02_Templates/Claude Certified Architect Study Guide
+02_Templates/ClaudeClaw Mission Control Kit
+02_Templates/ClaudeClaw OS Blueprint Kit
+02_Templates/Enterprise_OS_Blueprint_Kit/ (5 specs + 4 examples)
+02_Templates/FULL Agentic Patterns Kit
+02_Templates/Fable Mindset
+02_Templates/Memory Architect Kit/ (incomplet : SKILL.md + Concept Walkthroughs.pdf)
+02_Templates/Memory Architect Kit/SKILL.md
+02_Templates/Second Brain - Principles and Starter Prompts.pdf (287 225 o)
+02_Templates/The AI Consultant Playbook for 2026.pdf (151 827 o)
+02_Templates/The Perfect Agentic OS Kit
+02_Templates/claude-plugins-summary.pdf (292 655 o)
+02_Templates/fable-5-extreme-use-cases-guide.pdf (318 496 o)
+02_Templates/fable-wargame-kit
+03_AQUAMAN_LEGAL_PRINCIPLES.md (Legal v4 + Abundance + Data-Rights + AI-Era Frontier, 25 principes L1-L25)
+03_BATMAN_OPS_PRINCIPLES.md (Ops v3, 22 principes P1-P22, sister 04_Ops_Batman_F4)
+03_CYBORG_IT_PRINCIPLES.md (IT v2, 18 principes P1-P18, sister 05_IT_Cyborg_Kang)
+03_FLASH_PRODUCT_PRINCIPLES.md (Product v3, 18 principes P1-P18)
+03_GREENLANTERN_PEOPLE_PRINCIPLES.md (People v6, 30 principes PE1-PE30 — off-by-1 dans frontmatter)
+03_IT/_INDEX.md frontmatter
+03_JOHNJONES_SALES_PRINCIPLES.md (Sales, 21 principes S1-S21)
+03_Memory_Unified
+03_Memory_Unified/LLM_Wiki/wiki/_CAPTURE_2026-08-01/ (117 fichiers, 11 junctions)
+03_Memory_Unified/LLM_Wiki/wiki/_INTAKE/ (inventaire, dedup, ADR 001/002)
+03_Memory_Unified/LLM_Wiki/wiki/graphify-out/GRAPH_REPORT.json
+03_Memory_Unified/LLM_Wiki/wiki/graphify-out/chunks
+03_Memory_Unified/LLM_Wiki/wiki/graphify-out/graph.json (4 065 164 o)
+03_Memory_Unified/LLM_Wiki/wiki/graphify-out/swarm_summary.json
+03_Memory_Unified/LLM_Wiki/wiki/index.md (canonical index live)
+03_Resources_Geordi/README.md §Mission
+03_SUPERMAN_GROWTH_PRINCIPLES.md (Growth v3, 18 principes P1-P18)
+03_WONDERWOMAN_FINANCE_PRINCIPLES.md (Finance v4, 25 principes F1-F25)
+04_Finance/_INDEX.md frontmatter
+04_From_V2_Root
+04_From_V2_Root/_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002 §C2 (sister scope)
+04_From_V2_Root/_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md §C2
+04_From_V2_Root/_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md §D1
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ (20 fichiers)
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LLM-COST-COMPARE-001_minimax-anthropic-openrouter.md
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-001_canon-loop-verification-first.md §Décision
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-002_queues-over-loops-hitl-rightward.md §Décision
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-003_orient-layer-signals-wagers.md
+04_From_V2_Root/_SPECS/ADR/L0_Tech_OS/ADR-LOOP-003_orient-layer-signals-wagers.md §4
+04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-001_anti-paresse-verify-before-assert.md §D1
+04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-002_autonomy-by-design.md revisions
+04_From_V2_Root/_SPECS/ADR/L1_Life_OS/ADR-META-002_autonomy-by-design.md §D10
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/*/03_*_PRINCIPLES.md (sweep audit Opus 2026-06-27)
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001_aaas-acquisition-doctrine.md §Context
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-AAAS-PRICING-001_aaas-pricing-canon.md status.amended
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-CANON-001_roster-source-of-truth.md §Decision
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-A2B2-MAP-001_framework-cadence-dynamic-bijection.md
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-A2B2-MAP-001_framework-cadence-dynamic-bijection.md §D2
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §D1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §D2
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §D4
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §D5
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-BDLD-MAP-001 + ADR-L2-AAAS-001 §D3 (RATIFIED)
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-BDLD-MAP-001 §D3 (RATIFIED 2026-06-27, bijection 8↔8 canon)
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-BDLD-MAP-001_business-domains-lifewheel-bijection.md §D3
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-BDLD-MAP-001_business-domains-lifewheel-bijection.md §D4
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-BDLD-MAP-001_business-domains-lifewheel-bijection.md §Verification
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-KARDASHEV-TYPE-FRACTAL-001_multiverse-architecture_RATIFIED_2026-07-16.md §1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-NAMING-CONVENTION-001_session-canon_RATIFIED_2026-07-15.md
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-NAMING-CONVENTION-001_session-canon_RATIFIED_2026-07-15.md §Context
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-001_governance-mirror-doctrine.md §1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-001_governance-mirror-doctrine.md §2
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-002_anti-paperclip-irony-doctrine.md §1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-003_paperclip-delegation-not-creation-doctrine.md §0
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-004_paperclip-calibration-doctrine_RATIFIED_2026-07-16.md §1.1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-004_paperclip-calibration-doctrine_RATIFIED_2026-07-16.md §1.2
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-L2-PAPERCLIPAI-004_paperclip-calibration-doctrine_RATIFIED_2026-07-16.md §provenance
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-LANDING-AESTHETIC-001_doctrine-esthetique.md §1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-LD01-BOOKS-FORK-001_ownerbook-playbook-runbook-cookbook_PROPOSED.md §C1
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-MARKET-STUDY-001_the-builders-2026.md
+04_From_V2_Root/_SPECS/ADR/L2_Business_OS/ADR-NEXUS-10-ICP-001_3-strates-10-cibles-canon.md §provenance
+04_From_V2_Root/_SPECS/ADR/META_Organization/ADR-AGENTIC-ARCH-001_fareedkhan-architectures-integration-RATIFIED_2026-07-26.md
+04_From_V2_Root/_SPECS/ADR/META_Organization/ADR-AGENTIC-ARCH-001_fareedkhan-architectures-integration-RATIFIED_2026-07-26.md §2
+05_From_V2_Domains
+05_From_V2_Domains/30_Business_OS/10_Projects/omk/MERGE_REPORT_2026-08-01.md (sister incident _from_coaching_premium, corrigé 2026-08-02 par os.rmdir)
+06_Claude_Code_Bare
+06_Claude_Code_Bare/AGENTS.md (identité canon)
+06_Claude_Code_Bare/CLAUDE.md (Dox canon long ~8,7K tokens)
+06_Claude_Code_Bare/CLAUDE.md ligne 3 (chemin absolu original)
+06_Claude_Code_Bare/CLAUDE.md §Comportement par défaut Article 2
+06_Claude_Code_Bare/CLAUDE.md §Doctrine Anti-Paresse
+06_Claude_Code_Bare/CLAUDE.md §Doctrine Anti-Paresse + AGENTS canon
+06_Claude_Code_Bare/CLAUDE.md §Phase 19
+06_Claude_Code_Bare/CLAUDE.md §Phase 5+18 distribution
+06_Claude_Code_Bare/CLAUDE.md §Sister ADRs
+06_Claude_Code_Bare/CLAUDE.md §Sister ADRs + mindsets/_DISCIPLINE_BASELINES.md
+06_Claude_Code_Bare/CLAUDE.md §Sister ADRs ratifiés 2026-07-26
+06_Claude_Code_Bare/CLAUDE.md §Squad canon + ADR-CANON-001 Roster
+06_Claude_Code_Bare/CLAUDE.md §V2 doctrine A+ Phase 19b
+06_Claude_Code_Bare/CLAUDE.md §V2 doctrine A+ Phase 19b (ligne 263-268)
+06_Claude_Code_Bare/CLAUDE.md §V2 doctrine A+ ligne 263-268
+06_Claude_Code_Bare/CLAUDE_INDEX.md (INDEX-ONLY canon, ~2K tokens)
+06_Claude_Code_Bare/agents/a1-*.md
+06_Claude_Code_Bare/agents/a1-beth-veto.md
+06_Claude_Code_Bare/agents/a1-morty-execution.md
+06_Claude_Code_Bare/agents/a1-rick-sovereignty.md
+06_Claude_Code_Bare/agents/a2-*.md
+06_Claude_Code_Bare/agents/a2-uss-cerritos-chaos.md (GTD)
+06_Claude_Code_Bare/agents/a2-uss-discovery-balance.md
+06_Claude_Code_Bare/agents/a2-uss-discovery-balance.md (LifeWheel)
+06_Claude_Code_Bare/agents/a2-uss-enterprise-structure.md (PARA)
+06_Claude_Code_Bare/agents/a2-uss-orville-meaning.md (Ikigai)
+06_Claude_Code_Bare/agents/a2-uss-protostar-liberation.md (DEAL)
+06_Claude_Code_Bare/agents/a2-uss-snw-execution.md (12WY)
+06_Claude_Code_Bare/agents/a3-*.md
+06_Claude_Code_Bare/agents/a3-enterprise-geordi.md
+06_Claude_Code_Bare/agents/b1-jerry-prime.md
+06_Claude_Code_Bare/agents/b1-jerry-prime.md (8 Business Domains)
+06_Claude_Code_Bare/agents/b1-summers-nexus-omk-bos.md (1 AaaS variant)
+06_Claude_Code_Bare/agents/b1-summers-orbiter-abc-os.md (1 AaaS variant)
+06_Claude_Code_Bare/agents/b1-summers-solaris-aaas.md (1 AaaS variant)
+06_Claude_Code_Bare/agents/b2-01-greenlantern-people.md
+06_Claude_Code_Bare/agents/b2-02-batman-ops.md
+06_Claude_Code_Bare/agents/b2-03-flash-product.md
+06_Claude_Code_Bare/agents/b2-04-superman-growth.md
+06_Claude_Code_Bare/agents/b2-05-johnjones-sales.md
+06_Claude_Code_Bare/agents/b2-06-cyborg-it.md
+06_Claude_Code_Bare/agents/b2-07-wonderwoman-finance.md
+06_Claude_Code_Bare/agents/b2-08-aquaman-legal.md
+06_Claude_Code_Bare/agents/b3-*-*.md (53 fichiers)
+06_Claude_Code_Bare/mindsets/B1_Manifesto.md
+06_Claude_Code_Bare/mindsets/B1_Manifesto.md §Sobriety gate
+06_Claude_Code_Bare/mindsets/B1_Manifesto.md §The dispatch law
+06_Claude_Code_Bare/mindsets/B2_Aquaman_Legal_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_Batman_Ops_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_Cyborg_IT_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_Flash_Product_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_GreenLantern_People_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_JohnJones_Sales_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_Superman_Growth_Dispatch.md
+06_Claude_Code_Bare/mindsets/B2_WonderWoman_Finance_Dispatch.md
+06_Claude_Code_Bare/plans/plan-L0-amodei-murderbot.md §1.4
+06_Claude_Code_Bare/plans/plan-L1-life-os.md §1.2 + §2
+06_Claude_Code_Bare/plans/plan-L1-morty-design-shotgun.md §2
+06_Claude_Code_Bare/plans/plan-L2-business-os.md §4
+06_Claude_Code_Bare/plans/plan-L2-dark-factory-book-coo-compression-12wy.md §5
+06_Claude_Code_Bare/plans/plan-l2-dark-factory-book-coo-compression-12wy.md §4
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §2
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §2 (2026-07-05)
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §2 (renumerotation 2026-07-05)
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §3.1
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §3.3
+06_Claude_Code_Bare/plans/plan-lightning-l+-skill-standard-transversal.md §4 + ADR-LD01-011
+06_Claude_Code_Bare/plans/plan-meta-memoire-okf-wiki-graphify-dox.md §2.1
+06_Claude_Code_Bare/plans/plan-meta-memoire-okf-wiki-graphify-dox.md §4
+06_Claude_Code_Bare/plans/plan-minimax-l1-book-lune.md §0
+06_Claude_Code_Bare/plans/wf*
+06_Claude_Code_Bare/plans/wf0_governance_spock.md
+06_Claude_Code_Bare/plans/wf0_governance_spock.md §4 Beth-compat (souveraineté santé/vie)
+06_Claude_Code_Bare/plans/wf1_pass_morty.md
+06_Claude_Code_Bare/plans/wf1_pass_morty.md §2
+06_Claude_Code_Bare/plans/wf2_book_tick.md
+06_Claude_Code_Bare/plans/wf{0,1,2}_*.md (2026-07-12)
+06_Claude_Code_Bare/projects/C--Users-amado/memory/MEMORY.md (INDEX-ONLY, ~2K tokens)
+06_Claude_Code_Bare/projects/C--Users-amado/memory/MEMORY_INDEX.md
+07_From_Home_Root_2026-08-01
+07_From_Home_Root_2026-08-01/README.md (130 fichiers, 5 dossiers _TRASH_*)
+07_Growth/_INDEX.md §Anchoring doctrinal
+08_Workspaces_Dormants_2026-08-01
+08_Workspaces_Dormants_2026-08-01/README.md (21 workspaces ≥30j inactifs, 571 Mo storage-audit)
+09_From_Home_Root_Batch2_2026-08-01
+09_From_Home_Root_Batch2_2026-08-01/MANIFEST.json (≥50 fichiers déplacés)
+09_Life_OS
+09_Life_OS/ + 8 _INDEX.md Domain dans 01_Guides
+09_Life_OS/LD01_Business_Picard/_INDEX.md (12 fichiers)
+09_Life_OS/LD02_Finance_Saru
+09_Life_OS/LD03_Health_Culber
+09_Life_OS/LD04_Cognition_Tilly/_INDEX.md (20 fichiers)
+09_Life_OS/LD05_Social_Stamets
+09_Life_OS/LD06_Family_Burnham
+09_Life_OS/LD07_Creativity_Reno
+09_Life_OS/LD08_Impact_Georgiou
+1. Meta Gouv (Green Lantern/X-Men) — folder 01_People
+12+ A3 USS-ship characters
+18 fichiers memory canon
+2. Ops ADR→SOP (Batman/F4) — folder 02_Ops
+3. Growth par Product (Flash/Avengers) — folder 07_Growth
+4. Cognition Sales OS (J'onn/Illuminati) — folder 04_Finance
+5. Capital Humain Superman (Superman/Guardians) — folder 05_People
+53 B3 agents (Marvel/DC)
+6. Capital Financier Wonder Woman (WW/Thunderbolts) — folder 04_Finance split
+7. R&D Cyborg (Light+Cyborg/Kang) — folder 03_IT
+8. Legal Aquaman (Aquaman/Eternals) — folder 05_Legal
+9 high-value patterns sélectionnés par match sister canon existants
+A3_Geordi_Resources_Spec.md frontmatter
+A3_Geordi_Resources_Spec.md §Alignement Plan §3.2
+A3_Geordi_Resources_Spec.md §Alignement Plan §3.7
+A3_Geordi_Resources_Spec.md §Boundaries
+A3_Geordi_Resources_Spec.md §Identity
+ADR-AAAS-ACQUISITION-DOCTRINE-001 (25 455 chars RATIFIED 2026-06-24)
+ADR-AAAS-FINANCE-CANON-001 (sister Finance)
+ADR-AAAS-PRICING-001 (5 Tiers USD RATIFIED + AMENDED)
+ADR-AGENTIC-LONG-HORIZON-001 §2.2
+ADR-AIRLOCK-001 (trois airlocks Beth capacité machine)
+ADR-EXTRA-PPR-001 Preventive Construction (build-ahead inventory × Token-ROI)
+ADR-ICP-NEXUS-001 (Pilier 5 Zero-PII)
+ADR-L2-AAAS-001 (3 Variants AaaS, RATIFIED 2026-06-21)
+ADR-L2-AAAS-001 + B1_Manifesto.md
+ADR-L2-KARDASHEV-TYPE-FRACTAL-001 §1 + AMEND-001 2026-07-16
+ADR-L2-PAPERCLIPAI-001 governance-mirror doctrine — 8 governance primitives MIRROR + MAXIMIZER MODE VETO
+ADR-L2-PAPERCLIPAI-001/002/003/004 (doctrine anti-paperclip)
+ADR-L2-PAPERCLIPAI-002 anti-paperclip irony — "Paperclipai comme ALLY, pas rival" + codename GOV-PRIMITIVE-MIRROR
+ADR-L2-PAPERCLIPAI-003 delegation-not-creation — HARD VETO "zero human company" framing + Nick LECTURE 2 verbatim
+ADR-L2-PAPERCLIPAI-004 calibration doctrine — Anti-Paperclip CARVED-OUT routine tasks T0/T1 vs T2-T5 (2026-07-16)
+ADR-LOOP-001 (canon loop verification-first, RATIFIED 2026-07-15)
+ADR-LOOP-002 (queues over loops + HITL rightward, RATIFIED 2026-07-15)
+ADR-LOOP-003 (orient + signals + wagers, RATIFIED 2026-07-15)
+ADR-LOOP-CADENCE-004 (heartbeat respiration cascade, RATIFIED)
+ADR-LOOP-CADENCE-005 (calendar by design, RATIFIED 2026-07-11)
+ADR-MARKET-STUDY-001 (The Builders 2026, 136,1 Mds$)
+ADR-META-002 §D10
+ADR-OMK-NEXUS-TRANSFORM-001 (PIVOT OMK → Nexus, RATIFIED 2026-06-24)
+ADR-SOBER-003 PPR parent (kernel)
+ADR-WARMODE-001/002/003/004 (posture inversion freins releases + portes over freins + fenêtre fable bypass + paperclip utile kardashev conduction)
+ASpace_OS_V2 (156 fichiers AGENTS.md au total — cité dans plan maître §1)
+ASpace_OS_V2/05_From_V2_Domains/00_Amadeus/01_Identity_Core/AGENTS.md (320 l.)
+ASpace_OS_V2/05_From_V2_Domains/00_Amadeus/01_Identity_Core/CONSTITUTION.md (71 lignes, 30 sec)
+Architecture ABC = .run(task) → ArchitectureResult (output + metadata) = drop-in wrapper
+Avengers (7) — b3-3
+B1_Manifesto.md
+B1_Manifesto.md §Applied Jerry Variant Principles
+B1_Manifesto.md §Sobriety gate
+B1_Manifesto.md §The isomorphism
+B1_Manifesto.md §The isomorphism (locked, Opus 4.8, 2026-06-25)
+B2_JohnJones_Sales_Dispatch.md §Applied Sales Principles
+B2_JohnJones_Sales_Dispatch.md §Heuristic
+Beast (R&D)
+CLAUDE.md racine + 06_Claude_Code_Bare/CLAUDE.md — Dox
+CLAUDE.md racine Geordi (Dox d'entrée KB)
+CLAUDE.md racine Geordi ligne 25 (chemin corrigé 2026-08-02 par FIX_KB_2026-08-02.md §B1)
+CanvasUI (David Haz, 07_IT, library)
+CanvasUI (David Haz, 07_IT, library, GPU-powered visual effects fire/liquid/glass/particles/VHS)
+Cerritos_Plane_Settings
+Cookbook — recettes opérationnelles (recettes)
+D1 verify-before-assert
+D1 verify-before-assert — aucune assertion factuelle sans preuve vérifiée dans le tour courant (loi cardinale)
+D10 local outbox escalation channel (amend 2026-06-14, replaces Telegram)
+D11 Fable metrics — score mesurable pour transactions (post-transcript recovery TBD)
+D2 research-first
+D2 research-first — search/find/web avant de répondre (paresse de recherche)
+D3 nuance
+D3 nuance — littéralisme sans nuance interdit, clarifier avant d'appliquer
+D4 append-only
+D4 append-only — pas de hard-delete (jamais destructif), canon muté par append
+D5 honest gaps
+D5 honest gaps — dire "HYPOTHÈSE non vérifiée" plutôt que affirmer faux
+D6 #42 guardrail (transcript bloqué → metadata shell honnête)
+D6 #43 TranscriptAPI MCP (paid A0 2026-06-19, 15K credits)
+D6 #43 dans _BATCH_2026-06-19_INDEX.md (TranscriptAPI.com, 15K credits, paid A0 2026-06-19)
+D6 #XX lesson catalog — journal append-only incidents (ADR-META-006)
+D6 honest
+D6 honest — root-cause explicite, pas glossed over
+D7 anti-paperclip (ORIGINEL = sain)
+D7 anti-paperclip — cost-of-escalation, hard veto kernel
+D8 cross-agent autonomie
+D8 cross-agent — canon pointe L0/L1/L2 pour qu'ANY executor pick up
+D9 self-choice default (ADR-META-002) — décision sans HITL + rollback trivial
+DLP-light middleware (Phase 2 OMK BOS, deploy local) — 9 patterns redaction PII avant réseau (Makkari pattern sister)
+DUO Finance/Legal W10-W12
+Duo — garde-fous (Finance WonderWoman/Thunderbolts · Legal Aquaman/Eternals)
+E1 Libre (décision + exécution + report, aucune escalade)
+E2 Notifié (outbox FYI)
+E3 Bloqué (aucune exécution : force-push, drop schema prod, rm -rf hors scope, delete user data, prod deploy, kill CC)
+Eternals (10) — b3-8
+FIX_KB_2026-08-02.md §B4 Divergence de comptage
+Fantastic Four (4) — b3-2
+GreenLantern_People_Principles corps (sweep M3 2026-06-25)
+Guardians of the Galaxy (6) — b3-4
+H1 immédiat (agression maximale)
+H10 (vitesse prioritaire, batch)
+H30 (consolidation, doc > nouveau code)
+H90 (anti-fragilité, préservation du legs)
+Illuminati (6) — b3-5
+Jakub Antalik components (Orbs/Beam/Metal, 07_IT, library)
+Jean Grey (Phoenix, scope creep detector)
+Kang Dynasty (6) — b3-6
+L+ Skill Standard transversal (META-couche, garde-fou qualite sur les 3 Lightning) — sister canon plan-L2-business-os §13 + plan-lightning-l+-skill-standard-transversal.md
+L0 CEO Bench (Book dojo, fondation ontologique, simulation 500 jours)
+L1 Miro Fish (Picard, quality measurement, scoring AAARR)
+L2 gstack (B1 Jerry/Summers, factory ship, /plan-ceo-review · /cso · /ship · /retro · /autoplan)
+Layer (Local | WSL | VPS)
+Local Outbox = canal d'escalade asynchrone (par ADR-META-002 D10 amend 2026-06-14, remplace Telegram)
+MEMORY.md + handoff_runners_respiration_multica_autopilot_2026-07-12
+Maker-checker — quand scoring porte l'enjeu (pattern Beth / Spock checker)
+Manager + helpers — scope parallélisable seulement (compression ×4)
+Multica HITL guardrail (Dev Gate autopilot 2dabf5b8, framing ADVISORY)
+Nexus OMK AaaS (omk-services LIVE, prod SHA 8ad94d1, 9 omk_saas.* tables + JWT hook e47f4aa1, A3 Saru LD02 + LD06 overlap + LD04)
+Nexus-OMK (b1-summers-nexus-omk-bos.md)
+Nightcrawler (bamf)
+OKF_INDEX.md (00_Index/) — standard de format, 4ᵉ pilier
+OKF_INDEX.md §2
+OKF_INDEX.md §2.2 matrice de conformité
+OKF_INDEX.md §3
+OKF_INDEX.md §3 + INDEX_OF_INDEXES.md §1
+Orbiter ABC AaaS (ABC-OS-Community en stabilisation, schema abc_os 17 tables + 85 rows, A3 Burnham LD06 + LD05 + LD08 — family-office heritage)
+Orbiter-ABC (b1-summers-orbiter-abc-os.md)
+Owner (registre Star Trek v2)
+P0 unification physique ✅ FAIT 2026-08-01
+P1 Standardisation OKF Wiki (W3→W4)
+P2 Réalignement Index + lint v2 (W4→W5)
+P3 Graphify re-sync (W5→W6)
+P4 Arbre DOX bi-famille AGENTS.md ∪ CLAUDE.md (W6→W7)
+P5 Boucle 12WY (continu dès W4)
+P6 Shadow Harnesses (E1 dès maintenant, E2-E4 gated Rick)
+PLAN_META_MEMOIRE_2026-08-01.md §1.2
+PLAN_META_MEMOIRE_2026-08-01.md §1.4 (corrigé 2026-08-02)
+PLAN_META_MEMOIRE_2026-08-01.md §3.1 + TAGS.md §Tag Strate
+PLAN_META_MEMOIRE_2026-08-01.md §3.2 #1
+PLAN_META_MEMOIRE_2026-08-01.md §3.2 #2
+PLAN_META_MEMOIRE_2026-08-01.md §3.3
+Phase A — Dry-Run wrapper (★ PRIORITY 1, before any D4 append-only write)
+Phase B — Reflexive Metacognitive router (★ PRIORITY 2)
+Professor X (stratégique)
+Purpose (PRD | Guide | Reference)
+Rogue (absorption)
+S0 Identité (06_Claude_Code_Bare/CLAUDE.md, AGENTS.md, MEMORY.md) — rot lent 1×/cycle 12WY
+S0 rot lent 1×/cycle 12WY (revue archivage fin de cycle)
+S1 Court terme (wiki/log.md, wiki/hand_offs/ 350 fiches, 4 daily notes) — rot continu compaction
+S1 rot continu (compaction au seuil)
+S2 Travail (wiki/_CAPTURE_2026-08-01/, _INTAKE/, projects/.../memory/) — rot rapide ≤7j
+S2 rot rapide ≤7j (signal)
+S3 Long terme (wiki/L0|J0x|concepts|entities, 01_Guides/, 09_Life_OS/, 02_Templates/) — rot moyen hebdo
+S3 rot moyen hebdo
+S4 Méta (00_Index/, wiki/index.md, wiki/ROT.md, 06_Claude_Code_Bare/CLAUDE_INDEX.md, graphify-out/) — par écriture
+S4 rot par écriture (régénéré)
+Safety & Routing family (3 archs canoniques)
+Shadow L0 Omnigent (C:/Users/amado/shadow-l0-omnigent, e8d21d0 2026-07-02, 2 781 fichiers, 84 MB)
+Shadow L1 Agent Zero (agent0ai/agent-zero, 186ca2f 2026-06-30, 2 573 fichiers)
+Shadow L2 MiroFish (666ghj/MiroFish, 96096ea 2026-05-25, 96 fichiers)
+Shelf (11thDoctor..Clara — scoped à 01_Guides/00_KERNEL_OS/)
+Solaris (b1-summers-solaris-aaas.md)
+Solaris AaaS (Life-OS-2026 LIVE, prod SHA b933e4e4, A3 Book LD01 + Saru LD02 + LD04 + LD07 — Kardashev Type 3)
+Solo loop — défaut 1 session + bon prompt (le plus sobre)
+Status (Draft | Active | Deprecated)
+Storm (météo)
+Strate (S0..S4)
+Strate A — Coaching Exécutif (Cisos/CA, coachs C-Suite, leadership grand volume, M&A/transition)
+Strate B — Croissance-Prospection prioritaire (B1 SDR/BDR · B2 Growth · B3 Enablement — 30 comptes étude Gemini)
+Strate C — Conseil Opérationnel (Fractional COOs, SOP vaulting, gestion patrimoine B2B, conduite du changement)
+T0 Routine — read/write/think/daemon restart/autopilot create — NO exempt
+T1 Internal deploy — commit local canon/sister repo sync wiki/log.md — NO flag not block
+T1 People/IT/Ops W1-W3
+T1 — Nexus Cabinet Standard (PME Solo Founder intro market, hypothèse A = $750 USD/an)
+T2 External publish — blog post/press release/investor update/public tweet — YES HITL required
+T2 Product/Growth/Sales W4-W9
+T2 — Nexus ($1000-1500/an, Coach premium spearhead)
+T3 Patrimoine — >$5K Stripe/payroll/vendor/contract — YES HITL required
+T3 — Nexus Group ($1500-2000 + 25% Whitelabel, multi-associés)
+T4 Contract — employment/vendor/partner/NDA/MOU — YES HITL required
+T4 — Nexus Enterprise ($5K-50K MRR, sovereign B2B)
+T5 Self-modifying — own code/canon non-PPR/agent auto-upgrade/daemon auto-extend — YES VETO (never fires)
+T5 Spearhead — One-shot premium engagements ($7.5-25K scanner + audit, side-by-side sans overlap)
+Telegram = DEFERRED (crash-prone, premortem fait, 4 activation gates pending, zero cron)
+Terminal (A0 lit la gate en-session et répond) — primary
+Thunderbolts (6) — b3-7
+Triptyque 1 — cœur empire (People GreenLantern/X-Men · Operation Batman/F4 · IT Cyborg/Kang) — bâti en 1er
+Triptyque 2 — go-to-market (Product Flash/Avengers · Growth Superman/Guardians · Sales JohnJones/Illuminati)
+Type 1 Continental — Continental (10^9 W) — A3 (35 agents canon) = "replique fractal Interne de A0" — L2 Business OS (A3 inspire L2 = Type 1 of L1)
+Type 2 Planet — Planet-level (10^10 W) — A2 (Orville/Discovery/Cerritos/Curie/Janeway/Computer) + A3 Per-Ship observers — L1+L2 Engines (Domain orchestrators Ikigai/Life Wheel/GTD/12WY/DEAL/Archives)
+Type 3 Solar — Sub-Galactic / Solar-system-level (10^12 W) — A1 (Beth/Morty/Rick) + B1 (Summers/Jerry/Prime) — L1+L2 Gatekeepers (Harness Engineering + Loop-Closing Learning)
+Type 4 — Galactic civilization (10^16 W) — A0 hyper-observateur Coach = "Coach in the Machine" — L1 Life OS
+VL1 auto-flip PROPOSED → RATIFIED (sister RATIFICATION-BATCH-03-POSTURE-PIVOT)
+VL2 X-Men Coach 4-lens cascade (sister ADR-RH-META-GOUVERNANCE-001-v3)
+VL3 5-dim scoring ≥ 0.7 (sister ADR-AGENTIC-ARCH-001)
+VL4 weekly cron dreaming (sister Lance Martin)
+W13 archivage + Libération Muse DEAL
+WF0 Spock airlock (gate d'orchestration seule escalade autorisée)
+WF0 Spock — Gouvernance GTD×PARA (airlock), adjudicateur logique, superviseur coachs LD01-LD08 Zora (wf0_governance_spock.md, 2026-07-12)
+WF1 Morty — Poupée russe 12WY ⊃ PARA ⊃ DEAL, compression ×4 soutenable ×8 plafond (wf1_pass_morty.md, 2026-07-12)
+WF2 Book — CEO-Bench H1 hebdo locké, bench Pipeline/MRR/Close-rate (wf2_book_tick.md, 2026-07-12)
+WF3 MiroFish — Predictive Swarm Simulation N cycles 12WY worktrees isoles (plan-L0-amodei-murderbot.md §3)
+Wargame (read-only, zéro risque, paper) — exempté GO
+Wolverine (adamantium)
+X-Men (8) — b3-1
+Youtube_Take_out
+_BATCH_2026-06-19_INDEX.md (15 vidéos : 13 DISTILLED_L1 + 2 BLOCKED)
+_BATCH_2026-06-19_INDEX.md D11 Fable Metrics (batch)
+_BATCH_RECLASSIFICATION_INDEX.md
+_BATCH_RECLASSIFICATION_INDEX.md (11 Premium Batches racine à reclassifier)
+_BATCH_RECLASSIFICATION_INDEX.md §Total
+_SPECS/ADR/ + 01_Identity_Core
+_SPECS/ADR/L2_Business_OS/ + sister canon cité dans _INDEX.md
+a1-beth-veto (🐴 Beth Smith, Pragmatic Protector, L1 Conscience, Veto power over reckless tasks, model=opus, ADRs META-001 D7 + META-002 D7 + Life Wheel 8 domains)
+a1-morty-execution (🐍 Morty Smith, Anxious Executor, L1 Execution, Hands — narrate + decompose + plan-gate + track, model=sonnet, ADRs META-001 D1-D5 + META-002 D9.5/D9.6/D9.7)
+a1-rick-sovereignty (🧪 Rick Sanchez, L0 Bedrock, Guardian of Kernel & Solarpunk Ethics, model=opus, ADRs META-001 D7 + RICK-001 + META-002 D9, motto "If it increases complexity without freedom, it's NON")
+a2-uss-cerritos-chaos (Holo Deck GTD, 5 stages: Mariner capture→Boimler clarify→Rutherford organize→Tendi reflect→Freeman engage)
+a2-uss-discovery-balance (Zora, Manager of Balance, Life Wheel Drift Detection, H3 medium-term)
+a2-uss-enterprise-structure (Computer, PARA Doctrine, Structure Engine L1, H10 cadences)
+a2-uss-orville-meaning (Ikigai pillars + horizons H1/H3/H10/H30/H90)
+a2-uss-protostar-liberation (DEAL 4H WW, Holo Janeway Liberation Muse par Conception)
+a2-uss-snw-execution (Curie 12WY, 5 disciplines: Pike vision · Una plan 7j · M'Benga focus · Ortegas execution · Chapel measure)
+b1-filter SKILL.md + ADR-LD01-BOOKS-FORK-001
+b2-01-greenlantern-people (X-Men, 8 B3, H10) — 28 PE1-PE30 principles (sweep People v6)
+b2-02-batman-ops (Fantastic Four, 4 B3, H3) — 22 P1-P22 principles (sweep Ops v3)
+b2-03-flash-product (Avengers, 7 B3, H10) — 18 P1-P18 principles
+b2-04-superman-growth (Guardians, 6 B3, H3) — 18 P1-P18 principles
+b2-05-johnjones-sales (Illuminati, 6 B3, H1 weekly pipeline + H3 close-rate audit) — 21 S1-S21 principles
+b2-06-cyborg-it (Kang Dynasty, 6 B3, H10) — 18 P1-P18 principles
+b2-07-wonderwoman-finance (Thunderbolts, 6 B3, H3) — 25 F1-F25 principles (sweep Finance v4)
+b2-08-aquaman-legal (Eternals, 10 B3, H90) — 25 L1-L25 principles v4 + AI-Act 2026-08-02 driver
+description (1 ligne non vide, bloquant)
+destructive_command_guard (Dicklesworthstone, 07_IT, soul_aware ★★★)
+deterministic-picker pattern (Python boolean, NOT LLM score) — universal escape from LLM-as-Scorer flat-band
+fable-last-week-aspace/wargames/LEDGER.md
+fable-last-week-aspace/wargames/LEDGER.md (12/12 wargames)
+graphify-out
+i-have-adhd (Ayghri, 01_RH_Méta-Gouv, soul_aware ★★★)
+ls 02_Templates/Memory Architect Kit
+no-ai-slop (Peter Yang, 01_RH_Méta-Gouv, soul_aware ★★)
+okf_version (réservé au index.md racine)
+plan-A0-L-jumeau-challenger.md (HERMES méta-couche)
+plan-meta-memoire-okf-wiki-graphify-dox.md §2.2
+plan-meta-memoire-okf-wiki-graphify-dox.md §3 #9
+plan-meta-memoire-okf-wiki-graphify-dox.md §4
+plan-meta-memoire-okf-wiki-graphify-dox.md §P4.0
+plan-meta-memoire-okf-wiki-graphify-dox.md §P6
+soul-destructive-command-guard-v1
+soul-i-have-adhd-v1
+soul-no-ai-slop-v1
+wiki/ (le bundle racine canon, okf_version 0.1)
+wiki/2026-07-20.md
+wiki/2026-07-21.md
+wiki/2026-07-27.md
+wiki/2026-07-30.md
+wiki/J01_Prime/ (1)
+wiki/J02_Bio/ (1)
+wiki/J03_Nexus/ (1)
+wiki/J04_Solarpunk/ (1)
+wiki/L0/ (36)
+wiki/L0/, wiki/concepts/, wiki/entities/, wiki/hand_offs/, wiki/J0x
+wiki/_CAPTURE_2026-08-01/ (117)
+wiki/_INTAKE
+wiki/audits/ (vide — wiki-lint.ps1 v2 doit produire)
+wiki/concepts/ (16)
+wiki/daily notes/ (4)
+wiki/entities/ (4 canon)
+wiki/entities/ (4)
+wiki/graphify-out/ (03_Memory_Unified/LLM_Wiki/wiki/graphify-out/) — graphe
+wiki/hand_offs/ (223/350 avec type:, 127 sans — dette P1.2)
+wiki/hand_offs/ (350)
+wiki/hand_offs/2026-08-01_phase49_memoire_unifiee_geordi.md
+wiki/hand_offs/mindsets_canon_2026-06-25.md (23 fichiers)
+wiki/hand_offs/sessions_archive/ (75+ canon, 2 phases)
+wiki/hand_offs/skills_queue.md
+wiki/index.md (03_Memory_Unified/LLM_Wiki/wiki/) — substrat macro
+wiki/log.md

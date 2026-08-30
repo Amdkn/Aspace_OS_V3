@@ -1,0 +1,474 @@
+[
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\RAPPORT_FIX_1.md",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\RAPPORT_FIX_1.md"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\RAPPORT_FIX_2.md",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\RAPPORT_FIX_2.md"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\RAPPORT_FIX_3.md",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\RAPPORT_FIX_3.md"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\RAPPORT_FIX_4.md",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\RAPPORT_FIX_4.md"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\RAPPORT_FIX_5.md",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\RAPPORT_FIX_5.md"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\01_dashboard_integrations_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\01_dashboard_integrations_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\01_dashboard_integrations_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\01_dashboard_integrations_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\02_dashboard_wind_direction_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\02_dashboard_wind_direction_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\02_dashboard_wind_direction_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\02_dashboard_wind_direction_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\03_dashboard_client_pipeline_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\03_dashboard_client_pipeline_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\04_dashboard_sessions_scrolled.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\04_dashboard_sessions_scrolled.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\04_dashboard_sessions_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\04_dashboard_sessions_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\05_dashboard_killswitches_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\05_dashboard_killswitches_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\05_dashboard_killswitches_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\05_dashboard_killswitches_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\06_dashboard_usage_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\06_dashboard_usage_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\07_dashboard_knowledge_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\07_dashboard_knowledge_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\after\\08_settings_canvas_fx_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\after\\08_settings_canvas_fx_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\01_dashboard_integrations_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\01_dashboard_integrations_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\02_dashboard_wind_direction_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\02_dashboard_wind_direction_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\03_dashboard_client_pipeline_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\03_dashboard_client_pipeline_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\04_dashboard_sessions_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\04_dashboard_sessions_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\05_dashboard_killswitches_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\05_dashboard_killswitches_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\06_dashboard_usage_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\06_dashboard_usage_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\07_dashboard_knowledge_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\07_dashboard_knowledge_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\before\\08_settings_canvas_fx_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\before\\08_settings_canvas_fx_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\01_people_overview_dark_oled.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\01_people_overview_dark_oled.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\02_growth_funnel_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\02_growth_funnel_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\03_product_roadmap_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\03_product_roadmap_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\04_audit_overview_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\04_audit_overview_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\05_finance_overview_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\05_finance_overview_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\06_operations_runbooks_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\06_operations_runbooks_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\07_operations_incidents_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\07_operations_incidents_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\08_tasks_dod_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\08_tasks_dod_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix1\\regression\\09_clients_directory_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix1\\regression\\09_clients_directory_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Boucles_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Boucles_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Boucles_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Boucles_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Deploys_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Deploys_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Deploys_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Deploys_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Drift_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Drift_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Drift_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Drift_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Evals_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Evals_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Evals_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Evals_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Experiments_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Experiments_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Experiments_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Experiments_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Journal_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Journal_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Journal_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Journal_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Kernel_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Kernel_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_itr_Kernel_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_itr_Kernel_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_onb_citadel_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_onb_citadel_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_ont_Contracts_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_ont_Contracts_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_ont_Entities_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_ont_Entities_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_ont_Relations_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_ont_Relations_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\after_ont_Versions_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\after_ont_Versions_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Boucles_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Boucles_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Boucles_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Boucles_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Deploys_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Deploys_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Deploys_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Deploys_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Drift_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Drift_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Drift_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Drift_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Evals_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Evals_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Evals_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Evals_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Experiments_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Experiments_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Experiments_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Experiments_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Journal_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Journal_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Journal_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Journal_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Kernel_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Kernel_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_itr_Kernel_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_itr_Kernel_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_onb_citadel_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_onb_citadel_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_ont_Contracts_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_ont_Contracts_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_ont_Entities_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_ont_Entities_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_ont_Relations_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_ont_Relations_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix2\\before_ont_Versions_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix2\\before_ont_Versions_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\01_clients_ip_vault_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\01_clients_ip_vault_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\02_clients_ip_vault_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\02_clients_ip_vault_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\03_ops_knowledge_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\03_ops_knowledge_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\04_ops_knowledge_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\04_ops_knowledge_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\05_product_backlog_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\05_product_backlog_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\06_product_backlog_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\06_product_backlog_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\07_product_releases_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\07_product_releases_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\08_finance_runway_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\08_finance_runway_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\09_finance_runway_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\09_finance_runway_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\10_product_specs_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\10_product_specs_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\12_finance_formes_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\12_finance_formes_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\apres\\13_finance_overview_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\apres\\13_finance_overview_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\01_clients_ip_vault_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\01_clients_ip_vault_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\02_clients_ip_vault_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\02_clients_ip_vault_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\03_ops_knowledge_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\03_ops_knowledge_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\04_product_backlog_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\04_product_backlog_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\05_product_specs_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\05_product_specs_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\06_product_releases_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\06_product_releases_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\07_finance_runway_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\07_finance_runway_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\08_finance_runway_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\08_finance_runway_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\09_finance_formes_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\09_finance_formes_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\10_finance_overview_warm.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\10_finance_overview_warm.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\11_ops_knowledge_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\11_ops_knowledge_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\12_product_backlog_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\12_product_backlog_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\13_finance_formes_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\13_finance_formes_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix3\\before\\14_product_releases_dark.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix3\\before\\14_product_releases_dark.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\00_audit_maturite_BEFORE.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\00_audit_maturite_BEFORE.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\00_legal_compliance_BEFORE.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\00_legal_compliance_BEFORE.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\00_sales_context_BEFORE.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\00_sales_context_BEFORE.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\00_welcome_active_sync_BEFORE.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\00_welcome_active_sync_BEFORE.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\00_welcome_pages_bandis_BEFORE.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\00_welcome_pages_bandis_BEFORE.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\01_welcome_pages_bandis.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\01_welcome_pages_bandis.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\02_welcome_pages_scrolled_right.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\02_welcome_pages_scrolled_right.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\03_welcome_active_sync_coach_demo.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\03_welcome_active_sync_coach_demo.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\04_sales_context_after.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\04_sales_context_after.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\05_sales_cognition_after.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\05_sales_cognition_after.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\06_legal_compliance_overdue.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\06_legal_compliance_overdue.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix4\\07_audit_maturite_after.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix4\\07_audit_maturite_after.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\01_dashboard_agents.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\01_dashboard_agents.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\02_sales_today.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\02_sales_today.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\03_marketplace_browse.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\03_marketplace_browse.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\04_script_section_inexistante.txt",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\04_script_section_inexistante.txt"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\05_audit_sidebar_titre_entier.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\05_audit_sidebar_titre_entier.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\06_finance_sidebar_titre_entier.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\06_finance_sidebar_titre_entier.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\07_desktop_rail_onboarding.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\07_desktop_rail_onboarding.png"
+  },
+  {
+    "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\correctifs\\preuves\\fix5\\08_cognition_dark_oled.png",
+    "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\correctifs\\preuves\\fix5\\08_cognition_dark_oled.png"
+  }
+]

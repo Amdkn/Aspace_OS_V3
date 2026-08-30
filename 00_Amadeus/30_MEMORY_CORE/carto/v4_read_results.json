@@ -1,0 +1,2261 @@
+[
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/01_StarLord_Story/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "OMK Business OS",
+  "squad_member": "StarLord",
+  "role": "Story"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/02_Rocket_Auto/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 617,
+  "project": "OMK Business OS",
+  "squad_member": "Rocket",
+  "role": "Auto"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/03_Gamora_Target/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "OMK Business OS",
+  "squad_member": "Gamora",
+  "role": "Target"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/04_Drax_Closing/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 620,
+  "project": "OMK Business OS",
+  "squad_member": "Drax",
+  "role": "Closing"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/05_Groot_Content/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "OMK Business OS",
+  "squad_member": "Groot",
+  "role": "Content"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/06_Mantis_VoC/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 614,
+  "project": "OMK Business OS",
+  "squad_member": "Mantis",
+  "role": "VoC"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/01_BlackBolt_Closer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 648,
+  "project": "OMK Business OS",
+  "squad_member": "BlackBolt",
+  "role": "Closer"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/02_IronMan_Demo/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "OMK Business OS",
+  "squad_member": "IronMan",
+  "role": "Demo"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/03_MrFantastic_Discovery/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 663,
+  "project": "OMK Business OS",
+  "squad_member": "MrFantastic",
+  "role": "Discovery"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/04_Namor_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "OMK Business OS",
+  "squad_member": "Namor",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/05_ProfessorX_BuyerRead/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 660,
+  "project": "OMK Business OS",
+  "squad_member": "ProfessorX",
+  "role": "BuyerRead"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/06_DoctorStrange_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 675,
+  "project": "OMK Business OS",
+  "squad_member": "DoctorStrange",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/01_CaptainAmerica_Vision/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 641,
+  "project": "OMK Business OS",
+  "squad_member": "CaptainAmerica",
+  "role": "Vision"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/02_IronMan_Architecture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 638,
+  "project": "OMK Business OS",
+  "squad_member": "IronMan",
+  "role": "Architecture"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/03_Thor_PowerFeatures/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 632,
+  "project": "OMK Business OS",
+  "squad_member": "Thor",
+  "role": "PowerFeatures"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/04_Hulk_QA/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 599,
+  "project": "OMK Business OS",
+  "squad_member": "Hulk",
+  "role": "QA"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/05_BlackWidow_Specs/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "OMK Business OS",
+  "squad_member": "BlackWidow",
+  "role": "Specs"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/06_Hawkeye_UX/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 608,
+  "project": "OMK Business OS",
+  "squad_member": "Hawkeye",
+  "role": "UX"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/03_Product_Flash_Avengers/07_ScarletWitch_DesignSystem/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 653,
+  "project": "OMK Business OS",
+  "squad_member": "ScarletWitch",
+  "role": "DesignSystem"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/01_MrFantastic_ProcessDesign/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "OMK Business OS",
+  "squad_member": "MrFantastic",
+  "role": "ProcessDesign"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/02_InvisibleWoman_Coordination/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 657,
+  "project": "OMK Business OS",
+  "squad_member": "InvisibleWoman",
+  "role": "Coordination"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/03_HumanTorch_Incidents/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "OMK Business OS",
+  "squad_member": "HumanTorch",
+  "role": "Incidents"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/04_TheThing_Execution/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "OMK Business OS",
+  "squad_member": "TheThing",
+  "role": "Execution"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/01_KangPrime_Infra/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 621,
+  "project": "OMK Business OS",
+  "squad_member": "KangPrime",
+  "role": "Infra"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/02_IronLad_Provisioning/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "OMK Business OS",
+  "squad_member": "IronLad",
+  "role": "Provisioning"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/03_ScarletCenturion_Security/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "OMK Business OS",
+  "squad_member": "ScarletCenturion",
+  "role": "Security"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/04_Immortus_Capacity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 627,
+  "project": "OMK Business OS",
+  "squad_member": "Immortus",
+  "role": "Capacity"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/05_VictorTimely_CICD/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 627,
+  "project": "OMK Business OS",
+  "squad_member": "VictorTimely",
+  "role": "CICD"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/06_RamaTut_Backup/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 618,
+  "project": "OMK Business OS",
+  "squad_member": "RamaTut",
+  "role": "Backup"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/01_BuckyBarnes_Cashflow/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 658,
+  "project": "OMK Business OS",
+  "squad_member": "BuckyBarnes",
+  "role": "Cashflow"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/02_YelenaBelova_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 670,
+  "project": "OMK Business OS",
+  "squad_member": "YelenaBelova",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/03_RedGuardian_Reporting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "OMK Business OS",
+  "squad_member": "RedGuardian",
+  "role": "Reporting"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/04_Ghost_CostOpt/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "OMK Business OS",
+  "squad_member": "Ghost",
+  "role": "CostOpt"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/05_Taskmaster_Repro/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "OMK Business OS",
+  "squad_member": "Taskmaster",
+  "role": "Repro"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/06_USAgent_Compliance/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 652,
+  "project": "OMK Business OS",
+  "squad_member": "USAgent",
+  "role": "Compliance"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/01_ProfessorX_Recruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 645,
+  "project": "OMK Business OS",
+  "squad_member": "ProfessorX",
+  "role": "Recruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/02_Cyclops_Onboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "OMK Business OS",
+  "squad_member": "Cyclops",
+  "role": "Onboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/03_JeanGrey_Culture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "OMK Business OS",
+  "squad_member": "JeanGrey",
+  "role": "Culture"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/04_Wolverine_PerfReviews/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 645,
+  "project": "OMK Business OS",
+  "squad_member": "Wolverine",
+  "role": "PerfReviews"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/05_Storm_OpsLeadership/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "OMK Business OS",
+  "squad_member": "Storm",
+  "role": "OpsLeadership"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/06_Beast_TechRecruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 642,
+  "project": "OMK Business OS",
+  "squad_member": "Beast",
+  "role": "TechRecruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/07_Nightcrawler_DistributedOnboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 684,
+  "project": "OMK Business OS",
+  "squad_member": "Nightcrawler",
+  "role": "DistributedOnboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/08_Rogue_SkillTransfer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "OMK Business OS",
+  "squad_member": "Rogue",
+  "role": "SkillTransfer"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/01_Ikaris_Strategy/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "OMK Business OS",
+  "squad_member": "Ikaris",
+  "role": "Strategy"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/02_Sersi_Jurisdiction/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 632,
+  "project": "OMK Business OS",
+  "squad_member": "Sersi",
+  "role": "Jurisdiction"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/03_Ajak_Mediation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 620,
+  "project": "OMK Business OS",
+  "squad_member": "Ajak",
+  "role": "Mediation"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/04_Kingo_PublicComms/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "OMK Business OS",
+  "squad_member": "Kingo",
+  "role": "PublicComms"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/05_Phastos_Templates/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "OMK Business OS",
+  "squad_member": "Phastos",
+  "role": "Templates"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/06_Sprite_IP/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 605,
+  "project": "OMK Business OS",
+  "squad_member": "Sprite",
+  "role": "IP"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/07_Druig_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "OMK Business OS",
+  "squad_member": "Druig",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/08_Thena_Litigation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "OMK Business OS",
+  "squad_member": "Thena",
+  "role": "Litigation"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/09_Gilgamesh_Enforcement/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 641,
+  "project": "OMK Business OS",
+  "squad_member": "Gilgamesh",
+  "role": "Enforcement"
+ },
+ {
+  "rel": "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/10_Makkari_Velocity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "OMK Business OS",
+  "squad_member": "Makkari",
+  "role": "Velocity"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md",
+  "status": "OK",
+  "lines": 38,
+  "chars": 1543,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/03_DECISION_CHARTER.md",
+  "status": "OK",
+  "lines": 1,
+  "chars": 1,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md",
+  "status": "OK",
+  "lines": 71,
+  "chars": 2038,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md",
+  "status": "OK",
+  "lines": 76,
+  "chars": 1498,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/01_StarLord_Story/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 634,
+  "project": "ABC OS & Child Care",
+  "squad_member": "StarLord",
+  "role": "Story"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/02_Rocket_Auto/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 625,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Rocket",
+  "role": "Auto"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/03_Gamora_Target/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 631,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Gamora",
+  "role": "Target"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/04_Drax_Closing/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 628,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Drax",
+  "role": "Closing"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/05_Groot_Content/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 631,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Groot",
+  "role": "Content"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/06_Mantis_VoC/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 622,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Mantis",
+  "role": "VoC"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/01_BlackBolt_Closer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 656,
+  "project": "ABC OS & Child Care",
+  "squad_member": "BlackBolt",
+  "role": "Closer"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/02_IronMan_Demo/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 644,
+  "project": "ABC OS & Child Care",
+  "squad_member": "IronMan",
+  "role": "Demo"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/03_MrFantastic_Discovery/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 671,
+  "project": "ABC OS & Child Care",
+  "squad_member": "MrFantastic",
+  "role": "Discovery"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/04_Namor_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 659,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Namor",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/05_ProfessorX_BuyerRead/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 668,
+  "project": "ABC OS & Child Care",
+  "squad_member": "ProfessorX",
+  "role": "BuyerRead"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/06_DoctorStrange_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 683,
+  "project": "ABC OS & Child Care",
+  "squad_member": "DoctorStrange",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/01_CaptainAmerica_Vision/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 649,
+  "project": "ABC OS & Child Care",
+  "squad_member": "CaptainAmerica",
+  "role": "Vision"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/02_IronMan_Architecture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "ABC OS & Child Care",
+  "squad_member": "IronMan",
+  "role": "Architecture"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/03_Thor_PowerFeatures/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 640,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Thor",
+  "role": "PowerFeatures"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/04_Hulk_QA/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 607,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Hulk",
+  "role": "QA"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/05_BlackWidow_Specs/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 634,
+  "project": "ABC OS & Child Care",
+  "squad_member": "BlackWidow",
+  "role": "Specs"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/06_Hawkeye_UX/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 616,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Hawkeye",
+  "role": "UX"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/03_Product_Flash_Avengers/07_ScarletWitch_DesignSystem/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "ABC OS & Child Care",
+  "squad_member": "ScarletWitch",
+  "role": "DesignSystem"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/01_MrFantastic_ProcessDesign/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 659,
+  "project": "ABC OS & Child Care",
+  "squad_member": "MrFantastic",
+  "role": "ProcessDesign"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/02_InvisibleWoman_Coordination/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 665,
+  "project": "ABC OS & Child Care",
+  "squad_member": "InvisibleWoman",
+  "role": "Coordination"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/03_HumanTorch_Incidents/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 644,
+  "project": "ABC OS & Child Care",
+  "squad_member": "HumanTorch",
+  "role": "Incidents"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/04_TheThing_Execution/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 638,
+  "project": "ABC OS & Child Care",
+  "squad_member": "TheThing",
+  "role": "Execution"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/01_KangPrime_Infra/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "ABC OS & Child Care",
+  "squad_member": "KangPrime",
+  "role": "Infra"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/02_IronLad_Provisioning/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 644,
+  "project": "ABC OS & Child Care",
+  "squad_member": "IronLad",
+  "role": "Provisioning"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/03_ScarletCenturion_Security/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 659,
+  "project": "ABC OS & Child Care",
+  "squad_member": "ScarletCenturion",
+  "role": "Security"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/04_Immortus_Capacity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 635,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Immortus",
+  "role": "Capacity"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/05_VictorTimely_CICD/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 635,
+  "project": "ABC OS & Child Care",
+  "squad_member": "VictorTimely",
+  "role": "CICD"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/06_RamaTut_Backup/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "ABC OS & Child Care",
+  "squad_member": "RamaTut",
+  "role": "Backup"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/01_BuckyBarnes_Cashflow/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 666,
+  "project": "ABC OS & Child Care",
+  "squad_member": "BuckyBarnes",
+  "role": "Cashflow"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/02_YelenaBelova_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 678,
+  "project": "ABC OS & Child Care",
+  "squad_member": "YelenaBelova",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/03_RedGuardian_Reporting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 669,
+  "project": "ABC OS & Child Care",
+  "squad_member": "RedGuardian",
+  "role": "Reporting"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/04_Ghost_CostOpt/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 645,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Ghost",
+  "role": "CostOpt"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/05_Taskmaster_Repro/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 654,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Taskmaster",
+  "role": "Repro"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/06_USAgent_Compliance/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 660,
+  "project": "ABC OS & Child Care",
+  "squad_member": "USAgent",
+  "role": "Compliance"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/01_ProfessorX_Recruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 653,
+  "project": "ABC OS & Child Care",
+  "squad_member": "ProfessorX",
+  "role": "Recruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/02_Cyclops_Onboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 644,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Cyclops",
+  "role": "Onboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/03_JeanGrey_Culture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 638,
+  "project": "ABC OS & Child Care",
+  "squad_member": "JeanGrey",
+  "role": "Culture"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/04_Wolverine_PerfReviews/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 653,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Wolverine",
+  "role": "PerfReviews"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/05_Storm_OpsLeadership/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 647,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Storm",
+  "role": "OpsLeadership"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/06_Beast_TechRecruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 650,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Beast",
+  "role": "TechRecruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/07_Nightcrawler_DistributedOnboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 692,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Nightcrawler",
+  "role": "DistributedOnboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/08_Rogue_SkillTransfer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 647,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Rogue",
+  "role": "SkillTransfer"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/01_Ikaris_Strategy/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 631,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Ikaris",
+  "role": "Strategy"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/02_Sersi_Jurisdiction/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 640,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Sersi",
+  "role": "Jurisdiction"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/03_Ajak_Mediation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 628,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Ajak",
+  "role": "Mediation"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/04_Kingo_PublicComms/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Kingo",
+  "role": "PublicComms"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/05_Phastos_Templates/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Phastos",
+  "role": "Templates"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/06_Sprite_IP/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 613,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Sprite",
+  "role": "IP"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/07_Druig_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Druig",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/08_Thena_Litigation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 634,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Thena",
+  "role": "Litigation"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/09_Gilgamesh_Enforcement/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 649,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Gilgamesh",
+  "role": "Enforcement"
+ },
+ {
+  "rel": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/10_Makkari_Velocity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 634,
+  "project": "ABC OS & Child Care",
+  "squad_member": "Makkari",
+  "role": "Velocity"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B1_Summer_Direction/03_DECISION_CHARTER.md",
+  "status": "OK",
+  "lines": 1,
+  "chars": 1,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md",
+  "status": "OK",
+  "lines": 87,
+  "chars": 4226,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/rilcot-os-v2/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md",
+  "status": "OK",
+  "lines": 142,
+  "chars": 7186,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/04_TheThing_Execution/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 640,
+  "project": "RILCOT Members Space",
+  "squad_member": "TheThing",
+  "role": "Execution"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/01_BuckyBarnes_Cashflow/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 668,
+  "project": "RILCOT Members Space",
+  "squad_member": "BuckyBarnes",
+  "role": "Cashflow"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/02_YelenaBelova_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 680,
+  "project": "RILCOT Members Space",
+  "squad_member": "YelenaBelova",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/03_RedGuardian_Reporting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 671,
+  "project": "RILCOT Members Space",
+  "squad_member": "RedGuardian",
+  "role": "Reporting"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/04_Ghost_CostOpt/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 647,
+  "project": "RILCOT Members Space",
+  "squad_member": "Ghost",
+  "role": "CostOpt"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/05_Taskmaster_Repro/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 656,
+  "project": "RILCOT Members Space",
+  "squad_member": "Taskmaster",
+  "role": "Repro"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/06_USAgent_Compliance/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 662,
+  "project": "RILCOT Members Space",
+  "squad_member": "USAgent",
+  "role": "Compliance"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/01_Ikaris_Strategy/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 633,
+  "project": "RILCOT Members Space",
+  "squad_member": "Ikaris",
+  "role": "Strategy"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/02_Sersi_Jurisdiction/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 642,
+  "project": "RILCOT Members Space",
+  "squad_member": "Sersi",
+  "role": "Jurisdiction"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/03_Ajak_Mediation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "RILCOT Members Space",
+  "squad_member": "Ajak",
+  "role": "Mediation"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/04_Kingo_PublicComms/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "RILCOT Members Space",
+  "squad_member": "Kingo",
+  "role": "PublicComms"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/05_Phastos_Templates/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "RILCOT Members Space",
+  "squad_member": "Phastos",
+  "role": "Templates"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/06_Sprite_IP/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 615,
+  "project": "RILCOT Members Space",
+  "squad_member": "Sprite",
+  "role": "IP"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/07_Druig_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "RILCOT Members Space",
+  "squad_member": "Druig",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/08_Thena_Litigation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "RILCOT Members Space",
+  "squad_member": "Thena",
+  "role": "Litigation"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/09_Gilgamesh_Enforcement/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "RILCOT Members Space",
+  "squad_member": "Gilgamesh",
+  "role": "Enforcement"
+ },
+ {
+  "rel": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/10_Makkari_Velocity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "RILCOT Members Space",
+  "squad_member": "Makkari",
+  "role": "Velocity"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B1_Summer_Direction/03_DECISION_CHARTER.md",
+  "status": "OK",
+  "lines": 1,
+  "chars": 1,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/01_Real_Estate/README.md",
+  "status": "OK",
+  "lines": 20,
+  "chars": 550,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/02_Holdings_Platform/README.md",
+  "status": "OK",
+  "lines": 20,
+  "chars": 550,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md",
+  "status": "OK",
+  "lines": 40,
+  "chars": 1164,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/alykaly-os/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/Alykaly Bana  Real Estates Front-End FR V2/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/alykaly-front/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/alykaly-holding-modern/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md",
+  "status": "OK",
+  "lines": 135,
+  "chars": 7295,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/01_StarLord_Story/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "StarLord",
+  "role": "Story"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/02_Rocket_Auto/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 627,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Rocket",
+  "role": "Auto"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/03_Gamora_Target/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 633,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Gamora",
+  "role": "Target"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/04_Drax_Closing/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Drax",
+  "role": "Closing"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/05_Groot_Content/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 633,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Groot",
+  "role": "Content"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/06_Mantis_VoC/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 624,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Mantis",
+  "role": "VoC"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/01_BlackBolt_Closer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 658,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "BlackBolt",
+  "role": "Closer"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/02_IronMan_Demo/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "IronMan",
+  "role": "Demo"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/03_MrFantastic_Discovery/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 673,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "MrFantastic",
+  "role": "Discovery"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/04_Namor_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Namor",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/05_ProfessorX_BuyerRead/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 670,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "ProfessorX",
+  "role": "BuyerRead"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/06_DoctorStrange_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 685,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "DoctorStrange",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/01_CaptainAmerica_Vision/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "CaptainAmerica",
+  "role": "Vision"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/02_IronMan_Architecture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 648,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "IronMan",
+  "role": "Architecture"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/03_Thor_PowerFeatures/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 642,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Thor",
+  "role": "PowerFeatures"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/04_Hulk_QA/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 609,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Hulk",
+  "role": "QA"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/05_BlackWidow_Specs/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "BlackWidow",
+  "role": "Specs"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/06_Hawkeye_UX/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 618,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Hawkeye",
+  "role": "UX"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/03_Product_Flash_Avengers/07_ScarletWitch_DesignSystem/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 663,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "ScarletWitch",
+  "role": "DesignSystem"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/01_MrFantastic_ProcessDesign/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "MrFantastic",
+  "role": "ProcessDesign"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/02_InvisibleWoman_Coordination/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 667,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "InvisibleWoman",
+  "role": "Coordination"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/03_HumanTorch_Incidents/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "HumanTorch",
+  "role": "Incidents"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/04_TheThing_Execution/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 640,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "TheThing",
+  "role": "Execution"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/01_KangPrime_Infra/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 631,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "KangPrime",
+  "role": "Infra"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/02_IronLad_Provisioning/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "IronLad",
+  "role": "Provisioning"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/03_ScarletCenturion_Security/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "ScarletCenturion",
+  "role": "Security"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/04_Immortus_Capacity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Immortus",
+  "role": "Capacity"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/05_VictorTimely_CICD/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "VictorTimely",
+  "role": "CICD"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/06_RamaTut_Backup/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 628,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "RamaTut",
+  "role": "Backup"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/01_BuckyBarnes_Cashflow/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 668,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "BuckyBarnes",
+  "role": "Cashflow"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/02_YelenaBelova_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 680,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "YelenaBelova",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/03_RedGuardian_Reporting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 671,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "RedGuardian",
+  "role": "Reporting"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/04_Ghost_CostOpt/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 647,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Ghost",
+  "role": "CostOpt"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/05_Taskmaster_Repro/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 656,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Taskmaster",
+  "role": "Repro"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/06_USAgent_Compliance/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 662,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "USAgent",
+  "role": "Compliance"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/01_ProfessorX_Recruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 655,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "ProfessorX",
+  "role": "Recruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/02_Cyclops_Onboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Cyclops",
+  "role": "Onboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/03_JeanGrey_Culture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 640,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "JeanGrey",
+  "role": "Culture"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/04_Wolverine_PerfReviews/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 655,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Wolverine",
+  "role": "PerfReviews"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/05_Storm_OpsLeadership/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 649,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Storm",
+  "role": "OpsLeadership"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/06_Beast_TechRecruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 652,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Beast",
+  "role": "TechRecruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/07_Nightcrawler_DistributedOnboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 694,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Nightcrawler",
+  "role": "DistributedOnboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/08_Rogue_SkillTransfer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 649,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Rogue",
+  "role": "SkillTransfer"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/01_Ikaris_Strategy/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 633,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Ikaris",
+  "role": "Strategy"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/02_Sersi_Jurisdiction/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 642,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Sersi",
+  "role": "Jurisdiction"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/03_Ajak_Mediation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Ajak",
+  "role": "Mediation"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/04_Kingo_PublicComms/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Kingo",
+  "role": "PublicComms"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/05_Phastos_Templates/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Phastos",
+  "role": "Templates"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/06_Sprite_IP/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 615,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Sprite",
+  "role": "IP"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/07_Druig_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Druig",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/08_Thena_Litigation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Thena",
+  "role": "Litigation"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/09_Gilgamesh_Enforcement/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Gilgamesh",
+  "role": "Enforcement"
+ },
+ {
+  "rel": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/10_Makkari_Velocity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Alikaly Bana Holding",
+  "squad_member": "Makkari",
+  "role": "Velocity"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B1_Summer_Direction/03_DECISION_CHARTER.md",
+  "status": "OK",
+  "lines": 1,
+  "chars": 1,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Marina Super Cleaners (Copy)/marina-cleaning/README.md",
+  "status": "OK",
+  "lines": 36,
+  "chars": 1450,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md",
+  "status": "OK",
+  "lines": 139,
+  "chars": 7442,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/01_StarLord_Story/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "Marina Cleaning",
+  "squad_member": "StarLord",
+  "role": "Story"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/02_Rocket_Auto/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 617,
+  "project": "Marina Cleaning",
+  "squad_member": "Rocket",
+  "role": "Auto"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/03_Gamora_Target/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "Marina Cleaning",
+  "squad_member": "Gamora",
+  "role": "Target"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/04_Drax_Closing/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 620,
+  "project": "Marina Cleaning",
+  "squad_member": "Drax",
+  "role": "Closing"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/05_Groot_Content/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "Marina Cleaning",
+  "squad_member": "Groot",
+  "role": "Content"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/06_Mantis_VoC/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 614,
+  "project": "Marina Cleaning",
+  "squad_member": "Mantis",
+  "role": "VoC"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/01_BlackBolt_Closer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 648,
+  "project": "Marina Cleaning",
+  "squad_member": "BlackBolt",
+  "role": "Closer"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/02_IronMan_Demo/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Marina Cleaning",
+  "squad_member": "IronMan",
+  "role": "Demo"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/03_MrFantastic_Discovery/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 663,
+  "project": "Marina Cleaning",
+  "squad_member": "MrFantastic",
+  "role": "Discovery"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/04_Namor_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "Marina Cleaning",
+  "squad_member": "Namor",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/05_ProfessorX_BuyerRead/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 660,
+  "project": "Marina Cleaning",
+  "squad_member": "ProfessorX",
+  "role": "BuyerRead"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/06_DoctorStrange_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 675,
+  "project": "Marina Cleaning",
+  "squad_member": "DoctorStrange",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/01_CaptainAmerica_Vision/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 641,
+  "project": "Marina Cleaning",
+  "squad_member": "CaptainAmerica",
+  "role": "Vision"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/02_IronMan_Architecture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 638,
+  "project": "Marina Cleaning",
+  "squad_member": "IronMan",
+  "role": "Architecture"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/03_Thor_PowerFeatures/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 632,
+  "project": "Marina Cleaning",
+  "squad_member": "Thor",
+  "role": "PowerFeatures"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/04_Hulk_QA/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 599,
+  "project": "Marina Cleaning",
+  "squad_member": "Hulk",
+  "role": "QA"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/05_BlackWidow_Specs/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "Marina Cleaning",
+  "squad_member": "BlackWidow",
+  "role": "Specs"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/06_Hawkeye_UX/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 608,
+  "project": "Marina Cleaning",
+  "squad_member": "Hawkeye",
+  "role": "UX"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/03_Product_Flash_Avengers/07_ScarletWitch_DesignSystem/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 653,
+  "project": "Marina Cleaning",
+  "squad_member": "ScarletWitch",
+  "role": "DesignSystem"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/01_MrFantastic_ProcessDesign/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "Marina Cleaning",
+  "squad_member": "MrFantastic",
+  "role": "ProcessDesign"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/02_InvisibleWoman_Coordination/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 657,
+  "project": "Marina Cleaning",
+  "squad_member": "InvisibleWoman",
+  "role": "Coordination"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/03_HumanTorch_Incidents/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Marina Cleaning",
+  "squad_member": "HumanTorch",
+  "role": "Incidents"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/04_Ops_Batman_Fantastic4/04_TheThing_Execution/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "Marina Cleaning",
+  "squad_member": "TheThing",
+  "role": "Execution"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/01_KangPrime_Infra/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 621,
+  "project": "Marina Cleaning",
+  "squad_member": "KangPrime",
+  "role": "Infra"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/02_IronLad_Provisioning/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Marina Cleaning",
+  "squad_member": "IronLad",
+  "role": "Provisioning"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/03_ScarletCenturion_Security/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 651,
+  "project": "Marina Cleaning",
+  "squad_member": "ScarletCenturion",
+  "role": "Security"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/04_Immortus_Capacity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 627,
+  "project": "Marina Cleaning",
+  "squad_member": "Immortus",
+  "role": "Capacity"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/05_VictorTimely_CICD/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 627,
+  "project": "Marina Cleaning",
+  "squad_member": "VictorTimely",
+  "role": "CICD"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/05_IT_Cyborg_KangDynasty/06_RamaTut_Backup/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 618,
+  "project": "Marina Cleaning",
+  "squad_member": "RamaTut",
+  "role": "Backup"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/01_BuckyBarnes_Cashflow/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 658,
+  "project": "Marina Cleaning",
+  "squad_member": "BuckyBarnes",
+  "role": "Cashflow"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/02_YelenaBelova_Forecasting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 670,
+  "project": "Marina Cleaning",
+  "squad_member": "YelenaBelova",
+  "role": "Forecasting"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/03_RedGuardian_Reporting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 661,
+  "project": "Marina Cleaning",
+  "squad_member": "RedGuardian",
+  "role": "Reporting"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/04_Ghost_CostOpt/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 637,
+  "project": "Marina Cleaning",
+  "squad_member": "Ghost",
+  "role": "CostOpt"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/05_Taskmaster_Repro/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 646,
+  "project": "Marina Cleaning",
+  "squad_member": "Taskmaster",
+  "role": "Repro"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/06_Finance_WonderWoman_Thunderbolts/06_USAgent_Compliance/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 652,
+  "project": "Marina Cleaning",
+  "squad_member": "USAgent",
+  "role": "Compliance"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/01_ProfessorX_Recruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 645,
+  "project": "Marina Cleaning",
+  "squad_member": "ProfessorX",
+  "role": "Recruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/02_Cyclops_Onboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 636,
+  "project": "Marina Cleaning",
+  "squad_member": "Cyclops",
+  "role": "Onboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/03_JeanGrey_Culture/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 630,
+  "project": "Marina Cleaning",
+  "squad_member": "JeanGrey",
+  "role": "Culture"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/04_Wolverine_PerfReviews/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 645,
+  "project": "Marina Cleaning",
+  "squad_member": "Wolverine",
+  "role": "PerfReviews"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/05_Storm_OpsLeadership/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "Marina Cleaning",
+  "squad_member": "Storm",
+  "role": "OpsLeadership"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/06_Beast_TechRecruiting/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 642,
+  "project": "Marina Cleaning",
+  "squad_member": "Beast",
+  "role": "TechRecruiting"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/07_Nightcrawler_DistributedOnboarding/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 684,
+  "project": "Marina Cleaning",
+  "squad_member": "Nightcrawler",
+  "role": "DistributedOnboarding"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/08_Rogue_SkillTransfer/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 639,
+  "project": "Marina Cleaning",
+  "squad_member": "Rogue",
+  "role": "SkillTransfer"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/01_Ikaris_Strategy/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 623,
+  "project": "Marina Cleaning",
+  "squad_member": "Ikaris",
+  "role": "Strategy"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/02_Sersi_Jurisdiction/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 632,
+  "project": "Marina Cleaning",
+  "squad_member": "Sersi",
+  "role": "Jurisdiction"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/03_Ajak_Mediation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 620,
+  "project": "Marina Cleaning",
+  "squad_member": "Ajak",
+  "role": "Mediation"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/04_Kingo_PublicComms/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "Marina Cleaning",
+  "squad_member": "Kingo",
+  "role": "PublicComms"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/05_Phastos_Templates/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "Marina Cleaning",
+  "squad_member": "Phastos",
+  "role": "Templates"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/06_Sprite_IP/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 605,
+  "project": "Marina Cleaning",
+  "squad_member": "Sprite",
+  "role": "IP"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/07_Druig_Negotiation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 629,
+  "project": "Marina Cleaning",
+  "squad_member": "Druig",
+  "role": "Negotiation"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/08_Thena_Litigation/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "Marina Cleaning",
+  "squad_member": "Thena",
+  "role": "Litigation"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/09_Gilgamesh_Enforcement/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 641,
+  "project": "Marina Cleaning",
+  "squad_member": "Gilgamesh",
+  "role": "Enforcement"
+ },
+ {
+  "rel": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/08_Legal_Aquaman_Eternals/10_Makkari_Velocity/README.md",
+  "status": "OK",
+  "lines": 9,
+  "chars": 626,
+  "project": "Marina Cleaning",
+  "squad_member": "Makkari",
+  "role": "Velocity"
+ },
+ {
+  "rel": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md",
+  "status": "OK",
+  "lines": 66,
+  "chars": 4079,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ },
+ {
+  "rel": "01_Projects_Picard/ClaudeClaw Agent/README.md",
+  "status": "OK",
+  "lines": 73,
+  "chars": 2425,
+  "project": null,
+  "squad_member": null,
+  "role": null
+ }
+]

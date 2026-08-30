@@ -1,0 +1,54 @@
+{
+  "tache": "Vague autonome 2026-08-30",
+  "ouvert": "2026-08-30T13:17:46+00:00",
+  "buts": [
+    {
+      "n": 1,
+      "but": "Mandat : ecrire la dispense de redemander",
+      "statut": "done",
+      "preuve": "mandat.py --verifier → 6/6 autorisations, dont dispense de redemander",
+      "bloqueur": null,
+      "a": "2026-08-30T13:19:00+00:00"
+    },
+    {
+      "n": 2,
+      "but": "Ontologie : combler verbes/ (vide)",
+      "statut": "done",
+      "preuve": "70_Onthologies/verbes/ : 6 fichiers, 85 predicats extraits des .ttl, 32 classes",
+      "bloqueur": null,
+      "a": "2026-08-30T13:22:54+00:00"
+    },
+    {
+      "n": 3,
+      "but": "Datasets : jeu d'eval GEPA depuis les echecs reels",
+      "statut": "done",
+      "preuve": "datasets/valider.py → rc=0, 13 correctifs tenus / 16 defauts",
+      "bloqueur": null,
+      "a": "2026-08-30T13:25:28+00:00"
+    },
+    {
+      "n": 4,
+      "but": "Bundle OKF : verifier les 6 human: attribuables",
+      "statut": "done",
+      "preuve": "verifier.py → 2/25 concepts revus = 8 %, 4 docs du format exclus",
+      "bloqueur": null,
+      "a": "2026-08-30T13:28:49+00:00"
+    },
+    {
+      "n": 5,
+      "but": "Agent OS : app Revue (concepts machine)",
+      "statut": "done",
+      "preuve": "app Revue sur 5555, onglet Concepts → 2/26 = 8 %, promotion human: cablee",
+      "bloqueur": null,
+      "a": "2026-08-30T13:35:44+00:00"
+    },
+    {
+      "n": 6,
+      "but": "Agent OS : app Contradictions (127 en attente)",
+      "statut": "done",
+      "preuve": "onglet Contradictions → 204 listees, 127 suggerables, POST /arbitrer HTTP 200",
+      "bloqueur": null,
+      "a": "2026-08-30T13:35:44+00:00"
+    }
+  ]
+}

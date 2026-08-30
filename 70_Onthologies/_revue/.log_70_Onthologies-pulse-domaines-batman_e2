@@ -1,0 +1,2 @@
+API Error: Request rejected (429) · [ollama/gpt-oss:120b] [429]: {"error":"you (amdkn777) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade (ref: 246de031-846f-405d-b6f9-3c44806d101d)"}
+ (reset after 2m 8s)

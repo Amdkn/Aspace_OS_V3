@@ -1,0 +1,51 @@
+{
+ "A": {
+  "root": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS",
+  "dossiers": 1881,
+  "fichiers": 17494,
+  "md": 6979,
+  "jonctions": [
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\alykaly-front",
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\arch",
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\deal",
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\gtd",
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\res",
+   "00_Jerry_Business_Pulse\\04_Business_Domains\\00_Links\\snw",
+   "00_Summers_QuickAccess\\00_Agency_aaS",
+   "00_Summers_QuickAccess\\01-omk-business-os",
+   "00_Summers_QuickAccess\\01_OMK_BOS",
+   "00_Summers_QuickAccess\\02_ABC_OS",
+   "00_Summers_QuickAccess\\03_RILCOT",
+   "00_Summers_QuickAccess\\04_Alikaly",
+   "00_Summers_QuickAccess\\05_Marina",
+   "10_Projects\\abc\\_doctrine",
+   "10_Projects\\abc\\apps\\ABC OS Community\\_app",
+   "10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B1",
+   "10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B2",
+   "10_Projects\\abc\\apps\\abc-childcare-portal\\_verse\\_Inbox\\B3",
+   "10_Projects\\alikaly\\_doctrine",
+   "10_Projects\\cerritos-gtd-dispatch\\_doctrine",
+   "10_Projects\\marina\\_doctrine",
+   "10_Projects\\omk\\_doctrine",
+   "10_Projects\\omk\\.claude\\skills\\aionui-config",
+   "10_Projects\\omk\\.claude\\skills\\cron",
+   "10_Projects\\omk\\.claude\\skills\\officecli",
+   "10_Projects\\omk\\.claude\\skills\\skill-creator",
+   "10_Projects\\omk\\.codex\\skills\\aionui-config",
+   "10_Projects\\omk\\.codex\\skills\\cron",
+   "10_Projects\\omk\\.codex\\skills\\officecli",
+   "10_Projects\\omk\\.codex\\skills\\skill-creator",
+   "10_Projects\\rilcot\\_doctrine",
+   "10_Projects\\solaris\\_doctrine"
+  ]
+ },
+ "B": {
+  "root": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\01_Projects_Picard\\01-omk-business-os",
+  "dossiers": 78,
+  "fichiers": 302,
+  "md": 137,
+  "jonctions": [
+   "B2_Business_Domains\\03_Product_Flash_Avengers\\02-omk-services-business-os"
+  ]
+ }
+}

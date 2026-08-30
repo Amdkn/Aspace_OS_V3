@@ -1,0 +1,116 @@
+---
+session: agent-a583bcb78d71d41fe
+origine: claude
+chemin_source: C:\Users\amado\ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\06_Claude_Code_Bare\projects\C--Users-amado\de35c5f1-6944-47f6-b8bc-849452b0313a\subagents\agent-a583bcb78d71d41fe.jsonl
+debut: 2026-07-25T22:37:57.199Z
+fin: 2026-07-25T22:40:36.540Z
+messages_utilisateur: 1
+reponses_assistant: 1
+titre: "You are sub-agent 2 of 3 for cron tick 001 of the A'Space OS V2 multi-workflow swarm cron (ID 75895645). Your …"
+---
+
+## >>> UTILISATEUR #1
+
+You are sub-agent 2 of 3 for cron tick 001 of the A'Space OS V2 multi-workflow swarm cron (ID 75895645). Your job: invoke the **X-Men Coach Review** on Domain 02 Ops (Batman × Fantastic Four) per sister canon `/youtube-to-B1filter` §13.
+
+## D2 research first
+
+Read these:
+1. `ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-CANON-001_roster-source-of-truth.md` — X-Men Coach mapping
+2. `ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-CANON-002_workflow-rha_RATIFIED_2026-07-15.md` — X-Men = SPAWN + AMÉLIORATION
+
+## X-Men Coach lenses (per `/youtube-to-B1filter` §13)
+
+Apply 3 lenses for BATMAN × F4 specifically:
+
+### Lens 1: Wolverine (adamantium durability)
+- Does the Ops architecture have break-glass recovery?
+- Are runbooks durable across memory wipes?
+- Single point of failure analysis
+
+### Lens 2: Jean Grey (Phoenix scope creep)
+- Is the Domain 02 scope tight (runbooks, SOPs, support) or expanding into Product / Finance territory?
+- Phoenix power = reality-bending scope. Is it contained?
+
+### Lens 3: Professor X (strategic alignment)
+- Does this domain align with AaaS canon (ADR-L2-AAAS-001)?
+- Does it serve US-only market (ADR-L2-AAAS-US-ONLY-001) or is it geo-neutral?
+- Strategic coherence with 8 SOA domains
+
+## Verdict taxonomy
+
+- **PASS** — no concerns, ship
+- **CONDITIONAL** — ship with fix tickets
+- **ESCALATE_B1** — fundamental flaw, Jerry Prime intervention needed
+- **REVISE** — major rework
+
+Verdict rules:
+- 3 PASS → SHIP
+- 1+ CONDITIONAL + 0 ESCALATE_B1 → REVISE with amendment tickets
+- 1+ ESCALATE_B1 → ESCALATE_B1
+
+## Deliverable (write to Coach_Review_Batman.md in /tmp)
+
+```
+# X-Men Coach Review — Domain 02 Ops (Batman × F4)
+D1 receipts : <files read>
+
+## Wolverine (adamantium durability)
+- <finding 1>
+- <finding 2>
+- Verdict: PASS | CONDITIONAL | ESCALATE_B1
+
+## Jean Grey (Phoenix scope creep)
+- <finding 1>
+- <finding 2>
+- Verdict: PASS | CONDITIONAL | ESCALATE_B1
+
+## Professor X (strategic alignment)
+- <finding 1>
+- <finding 2>
+- Verdict: PASS | CONDITIONAL | ESCALATE_B1
+
+## Overall verdict
+<SHIP | REVISE | ESCALATE_B1>
+
+## Amendment tickets (if REVISE)
+- Ticket O1: <fix description>
+- Ticket O2: <fix description>
+```
+
+## Constraints
+
+- M3-only, ~3K chars output max
+- D1 receipts mandatory
+- Honest, not promotional
+
+Return ONLY JSON:
+{
+  "file_written": "/tmp/Coach_Review_Batman.md",
+  "char_count": <number>,
+  "verdict": "SHIP|REVISE|ESCALATE_B1",
+  "tickets": ["ticket1", "ticket2"],
+  "d1_receipts": ["file1", "file2"]
+}
+
+### assistant
+
+```json
+{
+  "file_written": "C:\\Users\\amado\\AppData\\Local\\Temp\\Coach_Review_Batman.md",
+  "char_count": 2977,
+  "verdict": "REVISE",
+  "tickets": [
+    "O1: Add §X Durability Rehearsal Calendar — quarterly kill-the-prod drill with named dates, blast-radius cap, named-on-call (Wolverine CONDITIONAL)",
+    "O2: Inject §0 Domain Boundary Declaration — declare Mr Fantastic primary = Ops; subordinate Sales-Illuminati role (Jean Grey CONDITIONAL)",
+    "O3: Append §2.5.X SOUL Lifecycle Disclaimer — contract-only until ADR-AGENT-BENCH-SCHEMA-001 ratifies + SQL tables deploy (Professor X CONDITIONAL)"
+  ],
+  "d1_receipts": [
+    "ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-CANON-001_roster-source-of-truth.md",
+    "ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-OPS-001_batman-f4-foundation_PROPOSED_2026-07-25.md",
+    "ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-OPS-PROJECT-GATE-001_batman-f4-sister-gate.md",
+    "ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-AAAS-OPERATIONS-CANON-001_aaas-operations-canon.md",
+    "ASpace_OS_V2/_SPECS/ADR/L2_Business_OS/ADR-RH-META-GOUVERNANCE-001-canonical-v2_PROPOSED_2026-07-25.md"
+  ]
+}
+```

@@ -1,0 +1,81 @@
+---
+session: 3c9698a7-f41f-4cab-a5cc-0cafb0215abb
+projet: C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4d7e922d-workdir
+debut: 2026-08-08T02:52:55.486Z
+fin: 2026-08-08T02:57:26.109Z
+messages_utilisateur: 1
+reponses_assistant: 1
+---
+
+## >>> UTILISATEUR #1
+
+You are running as a local coding agent for a Multica workspace.
+
+This task was triggered by an Autopilot in run-only mode. There is no assigned Multica issue for this run.
+
+Autopilot run ID: 79073352-5ca3-4a22-a971-8075e7a2bfc2
+Autopilot ID: 86d8d4c9-3c82-4e97-89d1-458610462e6f
+Autopilot title: Rick heartbeat 15min — anti-app-morte
+Trigger source: schedule
+
+Autopilot instructions:
+# Heartbeat S1-Rick — run_only — invisible
+
+Tu es Rick (S1), Entrepreneur. **Ce mode est `run_only`** : tu ne crées
+**AUCUNE issue**, **AUCUN commentaire de journal de bord**, **AUCUN trace**
+dans le Kanban. Tu es un fantôme : tu fais ton travail et tu disparais.
+
+**Pourquoi `run_only`** : Amadou (Actionnaire) a interdit que les heartbeats
+polluent le Kanban avec des issues `done`/`cancelled` à chaque tir. Tu ne
+laisses aucune trace visible.
+
+**Ce que tu fais** (et c'est tout) :
+
+1. **Scan dormant** : `multica issue list --output json`.
+   - `in_review > 4h` avec assignee → ping le reviewer via commentaire.
+   - `in_progress > 24h` sans update → ping l'assignee.
+   - `todo avec assignee > 1h` → ping l'assignee (sub-issue oubliée).
+   - `blocked` dont dépendances sont `done` → commentaire de réévaluation.
+
+2. **Ping ciblé** : un seul commentaire `@<assignee>` par issue. Forme :
+   ```
+   **⚠ Heartbeat S1-Rick** — issue en `<status>` depuis Xh.
+   @<assignee> — <contexte>. Ping Rick si tu es bloqué.
+   ```
+
+3. **Anti-double-ping** : si tu as déjà pingé cette issue dans les 30 min,
+   skip.
+
+4. **Silence strict** : si rien à signaler, tu sors sans rien dire.
+   Pas de message "tout va bien". Pas de "Heartbeat terminé". Silence.
+
+**Tu ne fais PAS** :
+- Tu ne crées AUCUNE issue (mode run_only).
+- Tu ne modifies AUCUNE issue en `done`/`cancelled` pour journal de bord.
+- Tu ne commentes PAS sur des issues sans dormance détectée.
+- Tu ne touches PAS au prompt du fichier `autopilot_rick_heartbeat.md`
+  sur disque (c'est Rick qui le maintient).
+- Tu n'inondes JAMAIS Amadou. Si après 2 pings le Doctor n'a pas bougé,
+  tu lances un seul commentaire `@Amadou` sur l'issue dormante, puis
+  tu sors.
+
+**Contraintes statuts** : tu n'emploies que `todo`, `in_progress`,
+`in_review`, `done`, `blocked`, `backlog`, `cancelled` (lecture seule
+en pratique — tu commentes, tu ne transitionnes pas).
+
+**Sortie** : tu te termines. Aucun fichier produit. Aucun log.
+Le Kanban reste propre.
+
+Start by running `multica autopilot get 86d8d4c9-3c82-4e97-89d1-458610462e6f --output json` if you need the full autopilot configuration, then complete the instructions above.
+Do not run `multica issue get`; this run does not have an issue ID.
+
+### assistant
+
+Scan terminé. Aucune action requise :
+
+- **in_review > 4h** : 0 (2 issues in_review à 2.5h, sous le seuil)
+- **in_progress > 24h** : 0
+- **todo avec assignee > 1h** : 1 candidate réelle (`Pilote — acces au depot Coach OS`), mais déjà escaladée (2 pings Squad-A2-Enterprise + 1 ping @Amadou) — protocole épuisé
+- **blocked avec deps done** : 0
+
+Rien à pinger. Silence.

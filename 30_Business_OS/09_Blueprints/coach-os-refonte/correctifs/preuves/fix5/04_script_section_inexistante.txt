@@ -1,0 +1,3 @@
+section "CetteSectionNexistePas" introuvable : aucun bouton avec [data-section="CetteSectionNexistePas"] dans la barre latérale.
+Le sélecteur ne se replie PAS sur le texte — un match dans le fil d'Ariane ou le rail du bureau serait invalide.
+EXIT=4

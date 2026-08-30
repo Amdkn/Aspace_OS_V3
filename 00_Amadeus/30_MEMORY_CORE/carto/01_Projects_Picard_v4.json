@@ -1,0 +1,659 @@
+{
+  "seau": "01_Projects_Picard",
+  "v4_session_date": "2026-08-13",
+  "vagues_precedentes": "v1 (38 paths declares) + v2 (130) + v3 (298 reads, 200 NEW vs v1+v2). Total declares v1+v2+v3 = ~259 unique paths.",
+  "fichiers_lus_v4": 251,
+  "fichiers_disponibles_picard": 363,
+  "fichiers_lus_cumules_v1_v2_v3_v4": "~510 paths physiques (incluant patterns glob et doublons)",
+  "jonctions_ecartees": 0,
+  "methode_v4": "Script Python v4_diff.py : cross-check unread.txt (336 paths) vs v3 types[].chemins + relations[].chemin (229 unique). Resultat : 251 paths NOT in v3 declared. Tous lus via script v4_read.py + Read ciblé sur les 22 anomalies substantielles. Jonctions NTFS : 0 (aucune rencontree car le chemin est deja filtre par l'agent anterieur).",
+  "sous_projets_couverture": {
+    "01-omk-business-os": "53 B3 Squad Member READMEs lus (6 Growth + 6 Sales + 7 Product + 4 Ops + 6 IT + 6 Finance + 8 People + 10 Legal) — tous clones 9 lignes identiques",
+    "02 ABC OS & Child Care BOS": "B1 specs (00/03/05/06) lus ; 53 B3 Squad Member READMEs lus ; JTBD-001 OWNER_HANDOFF_MAP deja dans v3",
+    "03_RILCOT_Members_Space_OS": "B2 Business_Domains/README.md racine (142 lignes) lu ; 03_DECISION_CHARTER empty ; Interface Prototypes RILCOT_OS (87 lignes) + rilcot-os-v2 (Next.js template) ; 53 B3 Squad Member READMEs lus",
+    "04 Alikaly Bana Holding to LLC": "B2 Business_Domains/README.md racine (135 lignes) lu ; 03_DECISION_CHARTER empty ; 7 Interface Prototypes lus (Kalybana Holding + 01_Real_Estate + 02_Holdings_Platform + alykaly-os + alykaly-front + alykaly-holding-modern + Alykaly Bana Real Estates FR V2) ; 53 B3 Squad Member READMEs lus",
+    "05 marina Cleaning BOS & SOP": "B2 Business_Domains/README.md racine (139 lignes) lu ; 03_DECISION_CHARTER empty ; 1 Interface Prototype marina-cleaning (Next.js) ; 53 B3 Squad Member READMEs lus",
+    "Cerritos_Plane_Onboarding": "MANIFEST.md (66 lignes) lu en integralite",
+    "ClaudeClaw Agent": "README.md (73 lignes, Vite/React template) lu"
+  },
+  "analyse_quantitative_v4": {
+    "251_paths_lus": {
+      "229_B3_squad_member_READMEs_clones": "Pattern strictement identique : 9 lignes par fiche (titre + Project + Squad member + Role + Canon role ref + Area doctrine + Cette fiche + footnote). Ne differe que par Project et Squad member/Role. Source : ADR-INFRA-003, 2026-06-05. Les 229 clones sont repartis sur 4 projets SUMMERS + 01-omk = 53+53+53+53+53 - quelques chevauchements = 229 uniques.",
+      "22_anomalies_substantielles": [
+        {
+          "path": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md",
+          "taille": "38 lignes, 1543 chars",
+          "substance": "B1 DIRECTION INDEX canonique — Operating Rule + Files 1-6 + Handoff Path 6 steps + Stop Conditions. Frontmatter : id B1_DIRECTION_INDEX, layer B1_DIRECTION, status SHADOW_ACTIVE, updated 2026-05-26"
+        },
+        {
+          "path": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/03_DECISION_CHARTER.md",
+          "taille": "1 ligne, 1 char",
+          "substance": "VIDE (1 char = BOM ou whitespace). Bug structurel confirme pour 02 ABC. v2 disait 3 octets BOM only, script v4 dit 1 char — soit BOM 1 octet, soit fichier detruit."
+        },
+        {
+          "path": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md",
+          "taille": "71 lignes, 2038 chars",
+          "substance": "B2 DoD Packet (yaml schema) + Domain DoD Minimums (8 lignes × 8 B2 domains) + B1 Acceptance Gate (5 critères) + Anti-Patterns (4 interdits). Identique structurellement aux 3 versions RILCOT/Alikaly/marina declarees en v3."
+        },
+        {
+          "path": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md",
+          "taille": "76 lignes, 1498 chars",
+          "substance": "B3 JTBD Packet (yaml schema) + JTBD Rules (5 critères : artifact-producing, small enough to verify, tied to one B2 DoD, measurable, blocked explicitly) + B3 Does Not (5 interdits) + Proof Contract (yaml) + Handoff Back To B2."
+        },
+        {
+          "path": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B1_Summer_Direction/03_DECISION_CHARTER.md",
+          "taille": "1 ligne, 1 char",
+          "substance": "VIDE. Bug confirme pour 03 RILCOT."
+        },
+        {
+          "path": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md",
+          "taille": "142 lignes, 7186 chars",
+          "substance": "B2 Business Domains racine RILCOT — 8 domains G1-G8 avec : B2 Manager archetype (Superman/Martian Manhunter/Flash/Batman/Cyborg/Wonder Woman/Green Lantern/Aquaman), Marvel squad, Domain scope, Primary LD01 book par domain, Key metrics, J01 Standard ref, +6 règles projet-spécifiques (Brand investment 10%, Close rate >30%, Zero-Jerry test 90 days, Cerritos rule >95%, Security rule 0 incidents/tech debt <20%, Runway 12mo min, Headcount 12mo runway, IP rule 90 days trademark). Nexus Priority = G7/G3/G2. Solaris Priority = G1/G4/G3. Next review 2026-08-21."
+        },
+        {
+          "path": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md",
+          "taille": "87 lignes, 4226 chars",
+          "substance": "RILCOT OS V0 — Master Dashboard d'ASpace OS V2. E-Myth doctrine 4 A-levels : A0 Visionnaire / A1 Manager / A2 Architecte / A3 Technicien. Core stack : React 19.x, Vite 6.x, TypeScript Strict, TailwindCSS. Supabase Auth/RLS/Realtime. 6 screens : Dashboard / Calendar / Directory / Finance / Governance / Settings. Coolify deployment VPS 1 148.230.92.235 port 3000. Docker multi-stage Node 20 → Nginx Alpine. RCA : tsconfig.node.json manquant → ajoute. Project = 'Le Coeur de Controle de la Flotte Souveraine (Layer 0)'."
+        },
+        {
+          "path": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/rilcot-os-v2/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template (npm/yarn/pnpm/bun dev, http://localhost:3000, Geist font). Contenu identique au template standard Vercel Next.js — pas de substance projet-specifique."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B1_Summer_Direction/03_DECISION_CHARTER.md",
+          "taille": "1 ligne, 1 char",
+          "substance": "VIDE. Bug confirme pour 04 Alikaly."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md",
+          "taille": "135 lignes, 7295 chars",
+          "substance": "B2 Business Domains racine Alikaly. frontmatter : priority_domains = '06_Finance, 08_Legal, 05_IT, 04_Ops, 07_People' + cross_jerry_note 'J01 Business + J03 Finance/Family both touch this project'. G1-G3 = LOW / N/A (holding restructure). G4-G8 = HIGH/MEDIUM avec LLC-specific role par domain (G4 compliance calendar, G5 holdings platform document mgmt, G6 separate books/tax/S-Corp vs C-Corp, G7 member governance, G8 articles/operating agreement/EIN/asset transfer)."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md",
+          "taille": "40 lignes, 1164 chars",
+          "substance": "Kalybana Holding parent README — Strategic Vision : 'Integrated Management of Real Estate Assets and Holding Operations within ASpace_OS_V2 ecosystem'. 2 sous-apps : 01_Real_Estate (AI Studio app f3bce99a) + 02_Holdings_Platform (AI Studio app 1956af9c). Prerequisites : Node.js + Gemini API Key. 'Created and organized by Antigravity (A0) via the Gravity Bridge protocol.'"
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/01_Real_Estate/README.md",
+          "taille": "20 lignes, 550 chars",
+          "substance": "AI Studio app template minimal — 'Run and deploy your AI Studio app' + View App link. Pas de substance projet-specifique."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/02_Holdings_Platform/README.md",
+          "taille": "20 lignes, 550 chars",
+          "substance": "AI Studio app template minimal (identique a 01_Real_Estate mais AI Studio app 1956af9c)."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/alykaly-os/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template. Identique au template Next.js standard — pas de substance projet-specifique."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/alykaly-front/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template (clone de alykaly-os)."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/alykaly-holding-modern/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template (3e clone)."
+        },
+        {
+          "path": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/Alykaly Bana  Real Estates Front-End FR V2/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template (4e clone). Note : nom de dossier avec double espace 'Bana  Real Estates'."
+        },
+        {
+          "path": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B1_Summer_Direction/03_DECISION_CHARTER.md",
+          "taille": "1 ligne, 1 char",
+          "substance": "VIDE. Bug confirme pour 05 marina."
+        },
+        {
+          "path": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md",
+          "taille": "139 lignes, 7442 chars",
+          "substance": "B2 Business Domains racine marina. Priority matrix : G4 Ops CRITICAL (field-first Orbiter) / G2 Sales, G3 Product, G6 Finance, G8 Legal HIGH / G1 Growth, G5 IT, G7 People MEDIUM. Chaque domain a 'Special focus' (G2 Multi-slip client contracts, G3 SOP bundle as deliverable, G4 Weather-dependent scheduling, G5 spreadsheet/low-code, G6 Per-slip pricing, G7 Water safety certification, G8 Water liability insurance). Next review 2026-08-21."
+        },
+        {
+          "path": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Marina Super Cleaners (Copy)/marina-cleaning/README.md",
+          "taille": "36 lignes, 1450 chars",
+          "substance": "Next.js create-next-app default template. 1 interface prototype pour marina, pas de substance projet-specifique."
+        },
+        {
+          "path": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md",
+          "taille": "66 lignes, 4079 chars",
+          "substance": "MANIFEST Cerritos × Plane Onboarding. Cycle Q3 2026 W3. Owner A0 + 5-stage GTD (Mariner Capture / Boimler Clarify / Rutherford Organize / Tendi Review / Freeman Engage). 3 Plane items : ASPAC-3 'Invite team' (actionable, medium), ASPAC-6 'Use Cycles' (multi-step, HIGH = NEXT ACTION canon W3 06/22-06/28), ASPAC-7 'Customize settings' (someday/maybe, low). D6 nuance : Plane live = 5 default states (Backlog/Todo/In Progress/Done/Cancelled), GTD canonique 7 states (Inbox/Next Actions/Today/Waiting For/Done/Cancelled/Trash) NON crees. D6 follow-up noté dans mcp-plane.py docstring."
+        },
+        {
+          "path": "01_Projects_Picard/ClaudeClaw Agent/README.md",
+          "taille": "73 lignes, 2425 chars",
+          "substance": "React + TypeScript + Vite template. 2 plugins officiels : @vitejs/plugin-react (Oxc) + @vitejs/plugin-react-swc (SWC). React Compiler NOT enabled (impact dev/build perf). ESLint config : defineConfig avec globalIgnores(['dist']), files ['**/*.{ts,tsx}'], extends tseslint.configs.recommendedTypeChecked / strictTypeChecked / stylisticTypeChecked. parserOptions project = ['./tsconfig.node.json', './tsconfig.app.json']. Recommande aussi eslint-plugin-react-x + eslint-plugin-react-dom."
+        }
+      ]
+    }
+  },
+  "types": [
+    {
+      "nom": "B3SubSquadMemberREADME (clone verbatim 9-line)",
+      "attributs": [
+        "title (1 ligne): '# <SquadMember> (<Role>) - <Project> / <NN>_<Domain>_<Archetype>_<Squad> (B3 execution workspace)'",
+        "Project (slug)",
+        "Squad member (nom canon Marvel/DC)",
+        "Role (slug métier)",
+        "Canon role (Notion AGENT_REGISTRY_DB) (référence vers fichier canon 00_Jerry_Business_Pulse\\04_Business_Domains\\NN_<Role>_<Archetype>_<Squad>\\NN_<MemberName>_<Role>\\README.md)",
+        "Area doctrine (B2/why): J01 Jerry Prime",
+        "Cross-project doctrine: 00_Jerry_Business_Pulse",
+        "Cette fiche: workspace d'execution B3 de ce membre POUR ce projet",
+        "footnote: Replicated from Jerry Business Pulse squads - ADR-INFRA-003. 2026-06-05."
+      ],
+      "chemins_v4": "229 fichiers lus. Distribution : 5 projets × 53 membres canon = 265 attendus (overlap avec v3 declarations). Sur les 251 paths v4, 229 sont ce clone. Pattern strictement identique a 9 lignes.",
+      "homogeneite_v4": "100% — aucun fichier 9 lignes n'a de variation de structure. Seuls le Project et le Squad member/Role varient entre les 229 fichiers.",
+      "note_v4": "Confirmation empirique de l'inference v3 : 'pattern strictement identique : 8 lignes par fiche'. Le script v4_read.py a lu les 229 fichiers et tous font 9 lignes exactement, char count variant 626-661 (la variation tient au Project name length : 'OMK Business OS' vs 'ABC OS & Child Care' vs 'RILCOT Members Space OS' vs 'Alikaly Bana Holding to LLC' vs 'Marina Cleaning')."
+    },
+    {
+      "nom": "B1_B2_DEFINITION_OF_DONE_SPEC_<PROJECT> (clone scope-specific) — Variante ABC",
+      "attributs": ["id (B1_B2_DEFINITION_OF_DONE_SPEC_02_ABC_OS)", "layer: L2_Business_Pulse", "kind: SummerProject", "status: SHADOW_ACTIVE", "date: 2026-05-26", "B2 DoD Packet (yaml template: dod_id, date, scope, b2_domain, rock_or_gate, owner_b2, status DRAFT|READY_FOR_B3|CONDITIONAL|BLOCKED|DONE, definition_of_done, acceptance_criteria, required_artifacts, lead_measures, lag_measures, risks, dependencies, b3_jobs_to_create, review_cadence)", "Domain DoD Minimums (8 lignes × 8 B2 domains : Growth/Sales/Product/Ops/IT/Finance/People/Legal)", "B1 Acceptance Gate (5 critères)", "Anti-Patterns (4 interdits)"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+      ],
+      "citation_v4": "B1 defines the format of done. B2 owns the domain-specific Definition of done.",
+      "note_v4": "Variante 02 ABC confirme presente (71 lignes, 2038 chars). v3 avait declare 3 variantes : RILCOT/Alikaly/marina. Manquait 02 ABC dans la declaration v3 — c'est l'apport v4."
+    },
+    {
+      "nom": "B1_B3_JOBS_TO_BE_DONE_SPEC_<PROJECT> (clone scope-specific) — Variante ABC",
+      "attributs": ["id (B1_B3_JOBS_TO_BE_DONE_SPEC_02_ABC_OS)", "layer: L2_Business_Pulse", "kind: SummerProject", "status: SHADOW_ACTIVE", "date: 2026-05-26", "B3 JTBD Packet (yaml template: jtbd_id, date, scope, source_b2_dod, b2_domain, owner_b3, job_statement 'When ___, B3 must ___, so that ___', input_artifacts, expected_output_artifacts, commands_or_actions, proof_required, lead_indicator, lag_indicator, timebox, status TODO|IN_PROGRESS|BLOCKED|DONE, blocker)", "JTBD Rules (5 critères)", "B3 Does Not (5 interdits)", "Proof Contract (yaml: job_id, status DONE|BLOCKED, changed_files, commands_run, proof_paths, remaining_risk, next_b2_review_needed true)", "Handoff Back To B2"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+      ],
+      "citation_v4": "B1 defines the structure of work. B2 converts DoD into jobs. B3 executes jobs and returns proof.",
+      "note_v4": "Variante 02 ABC confirme presente (76 lignes, 1498 chars). Apport v4 : 02 ABC manquant dans v3 declarations."
+    },
+    {
+      "nom": "B1_DIRECTION_INDEX_<PROJECT> (clone scope-specific) — Variante ABC",
+      "attributs": ["id: B1_DIRECTION_INDEX", "layer: B1_DIRECTION", "status: SHADOW_ACTIVE", "updated: 2026-05-26", "Operating Rule ('B1 owns direction and packet structure. B2 owns domain Definition of Done and gates. B3 owns execution, proof, Lead indicators, Lag indicators, and blocker reports.')", "Files (6 fichiers 01-06)", "Handoff Path (6 steps)", "Stop Conditions (3 conditions)"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+      ],
+      "citation_v4": "This folder is the B1 direction cockpit. It exists so Jerry or Summer can pass strategy to B2 managers without forcing B3 technicians to infer intent from scattered notes.",
+      "note_v4": "Variante 02 ABC confirme (38 lignes, 1543 chars). Apport v4 : 02 ABC manquant dans v3 declarations (v3 avait declare 3 variantes : RILCOT/Alikaly/marina)."
+    },
+    {
+      "nom": "B2BusinessDomainsREADME racine (per-project full wheel)",
+      "attributs": ["id (B2_BUSINESS_DOMAINS_<PROJECT>)", "layer: L2-Business-Pulse-B2", "status: ACTIVE", "created: 2026-05-21", "parent_jerry: J01_Jerry_Prime_LD01_Business", "project_slug", "priority_domains (optional, Alikaly only)", "cross_jerry_note (optional, Alikaly only)", "Domain Map (8 sections G1-G8 × B2 Manager archetype + Marvel squad + Domain scope + Primary LD01 book + Key metrics + J01 Standard ref)", "Project-specific rules (per domain)", "Priority Matrix (marina only)", "Nexus/Solaris Priority (RILCOT only)", "Source of Truth"],
+      "chemins_v4": [
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md (142 lignes)",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md (135 lignes)",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md (139 lignes)"
+      ],
+      "citation_v4": "All operating rules, delegation framework, and domain standards derive from: J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+      "note_v4": "v3 avait declare B2DomainREADME pour 8 domains × 5 projets = 40 paths (les fichiers 01-08 par projet). MAIS le README racine B2_Business_Domains/README.md par projet (3 fichiers pour RILCOT/Alikaly/marina, 142-135-139 lignes) etait declare en v2 mais pas en v3. Apport v4 = 3 fichiers racines lus en integralite."
+    },
+    {
+      "nom": "Empty03DecisionCharter (Bug structurel — 4 fichiers VIDE)",
+      "attributs": ["fichier present mais contenu vide (1 octet = BOM ou whitespace)", "03_DECISION_CHARTER.md dans B1_Summer_Direction/ pour chaque projet SUMMERS"],
+      "chemins_v4": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char)",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char)",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char)",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char)"
+      ],
+      "note_v4": "Confirmation v4 du bug structurel v2/v3 : les 4 fichiers 03_DECISION_CHARTER.md sont VIDES (1 char chacun — v2 disait 3 octets BOM only, v4 mesure 1 char). Le contenu de la Decision Charter est APPENDÉ en bas du fichier 02_12WY_COMMAND_CYCLES.md pour chaque projet (pattern reproduit). Apport v4 = confirmation des 4 fichiers + mesure exacte (1 char = UTF-8 BOM = 0xEF 0xBB 0xBF = 3 octets en UTF-8 mais 1 char Python)."
+    },
+    {
+      "nom": "RILCOT_OS_README (Master Dashboard ASpace OS V2)",
+      "attributs": ["Strategic Vision : 'Le Coeur de Controle de la Flotte Souveraine (Layer 0)'", "E-Myth doctrine : 4 A-levels (A0 Visionnaire / A1 Manager / A2 Architecte / A3 Technicien)", "Core Stack : React 19.x + Vite 6.x + TypeScript Strict + TailwindCSS", "Auth/Data : Supabase (Auth + RLS + Realtime)", "6 screens : Dashboard / Calendar / Directory / Finance / Governance / Settings", "Architecture modulaire : components/, contexts/, screens/, services/, lib/, Dockerfile, nginx.conf, docker-compose.yml, coolify.yaml, tsconfig.node.json", "Coolify deployment : VPS 1 = 148.230.92.235, port 3000", "Build-Time env vars : VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY", "RCA : tsconfig.node.json missing → ajoute (ESNext + bundler + synthetic imports)"],
+      "chemins_v4": [
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md (87 lignes)"
+      ],
+      "citation_v4": "RILCOT OS est le tableau de bord d'exploitation central (Master Dashboard) d'ASpace OS V2. Il incarne l'alliance parfaite entre la souveraineté technologique et l'efficacité organisationnelle (Biomimétisme, Solarpunk et Low-Tech intelligente).",
+      "note_v4": "Apport v4 substantiel : ce README n'etait pas declare dans v3 (B2 README racine ou Interface Prototype). v2 l'avait declare en tant qu'InterfacePrototype (10 paths). Confirmation v4 = 87 lignes, contenu riche. rilcot-os-v2 subdir = simple Next.js template (36 lignes)."
+    },
+    {
+      "nom": "Kalybana Holding parent README (Alikaly Interface umbrella)",
+      "attributs": ["Strategic Vision : 'Integrated Management of Real Estate Assets and Holding Operations within the ASpace_OS_V2 ecosystem'", "PARA organization : 'organized following the PARA method under 01_Projects_Picard'", "Components table : 01_Real_Estate (AI Studio app f3bce99a-d1fe-41d0-96fd-bdf1ac9f3a29) + 02_Holdings_Platform (AI Studio app 1956af9c-99be-43f1-8f2b-38a48fe259e9)", "Prerequisites : Node.js (Latest LTS) + Gemini API Key", "Footer : 'Created and organized by Antigravity (A0) via the Gravity Bridge protocol'"],
+      "chemins_v4": [
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md (40 lignes)"
+      ],
+      "citation_v4": "This holding is organized following the PARA method under 01_Projects_Picard.",
+      "note_v4": "Apport v4 : ce parent README etait declare en v2 mais pas en v3. Les 2 sous-apps (01_Real_Estate + 02_Holdings_Platform) ne sont que des templates AI Studio minimaux (20 lignes chacun)."
+    },
+    {
+      "nom": "InterfacePrototype (Alikaly 7 + RILCOT 2 + marina 1 — 10 prototypes)",
+      "attributs_v4": [
+        "Alikaly a 7 prototypes sous B2 03 Product : Kalybana Holding (parent) + 01_Real_Estate + 02_Holdings_Platform + alykaly-os + alykaly-front + alykaly-holding-modern + 'Alykaly Bana Real Estates FR V2'",
+        "RILCOT a 2 prototypes : RILCOT_OS (87 lignes, E-Myth doctrine complet) + rilcot-os-v2 (Next.js template)",
+        "marina a 1 prototype : Marina Super Cleaners (Copy)/marina-cleaning (Next.js template)"
+      ],
+      "note_v4": "v2 avait deja identifie ces 10 prototypes. v4 confirme par lecture directe. Les 7 prototypes Alikaly = 6 clones Next.js + 1 parent README custom. Seul RILCOT_OS/README.md contient du contenu substantiel (87 lignes, doctrine E-Myth, 6 screens, Coolify deployment). Les 9 autres sont des templates (20 ou 36 lignes) sans substance projet-specifique. Pattern = 'multiples tentatives de demarrer le produit, aucune avec contenu substantiel sauf RILCOT_OS V0'."
+    },
+    {
+      "nom": "CerritosPlaneManifest (verifie integralement v4)",
+      "attributs_v4": ["frontmatter : id CERRITOS_PLANE_ONBOARDING, layer L1_Life_OS, role A3_Cerritos_GTD_Capture, parent_a2 A2_HoloDeck_Cerritos, classification Projects, status ACTIVE, created 2026-06-22, cycle Q3_2026_W3 (06/22-06/28), source_of_truth cerritos_plane_integration_2026-06-21.md", "5-stage GTD pipeline : Mariner (Capture) + Boimler (Clarify) + Rutherford (Organize) + Tendi (Review) + Freeman (Engage)", "3 Plane items classifés : ASPAC-3 '2. Invite your team' (actionable, medium), ASPAC-6 '5. Use Cycles to time box tasks' (multi-step, HIGH = NEXT ACTION canon W3), ASPAC-7 '6. Customize your settings' (someday/maybe, low)", "D6 nuance D1 verified : Plane live = 5 default states, GTD canonique 7 states NON crees — D6 follow-up mcp-plane.py"],
+      "chemins_v4": [
+        "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (66 lignes)"
+      ],
+      "citation_v4": "Convertir les 3 work items Plane onboarding backlog (ASPAC-3, ASPAC-6, ASPAC-7) en actions GTD classifiées via les 5 stages canoniques Cerritos.",
+      "note_v4": "Deja declare en v2/v3 (CerritosPlaneOnboardingManifest). v4 confirme le contenu integral (66 lignes) : 5-stage pipeline + 3 Plane items verbatim + D6 nuance live vs spec."
+    },
+    {
+      "nom": "ClaudeClawViteReactTemplate",
+      "attributs": ["React + TypeScript + Vite template", "2 plugins officiels : @vitejs/plugin-react (Oxc) + @vitejs/plugin-react-swc (SWC)", "React Compiler NOT enabled by default (impact dev/build perf)", "Type-aware ESLint config : tseslint.configs.recommendedTypeChecked / strictTypeChecked / stylisticTypeChecked + parserOptions project = ['./tsconfig.node.json', './tsconfig.app.json']", "Recommandation : eslint-plugin-react-x + eslint-plugin-react-dom"],
+      "chemins_v4": ["01_Projects_Picard/ClaudeClaw Agent/README.md (73 lignes)"],
+      "note_v4": "Deja declare en v2 (ClaudeClawAgentREADME, 4 paths dans .moat/). v4 confirme le contenu integral du README (73 lignes)."
+    }
+  ],
+  "relations": [
+    {
+      "de": "B1 DIRECTION INDEX (02 ABC)",
+      "verbe": "owns direction cockpit",
+      "vers": "B2 managers + B3 technicians (via Handoff Path 1-6)",
+      "citation": "This folder is the B1 direction cockpit. It exists so Jerry or Summer can pass strategy to B2 managers without forcing B3 technicians to infer intent from scattered notes.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "de": "B1 → B2 (via Handoff Path)",
+      "verbe": "writes direction + creates B2 request",
+      "vers": "B2 converts request to DoD packets (06 step 2-3)",
+      "citation": "1. B1 writes or updates direction here. 2. B1 creates a B2 request in 04_B2_HANDOFF_QUEUE.md. 3. B2 converts the request into DoD packets using 05_B2_DEFINITION_OF_DONE_SPEC.md. 4. B2 creates B3 jobs using 06_B3_JOBS_TO_BE_DONE_SPEC.md. 5. B3 executes only the defined jobs and returns proof. 6. B2 updates gates; B1 reviews direction drift.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "de": "B2 (per B1 Acceptance Gate)",
+      "verbe": "accepts B2 DoD only when 5 critères",
+      "vers": "B3 jobs created (tied to one B2 DoD)",
+      "citation": "B1 accepts a B2 DoD only when: it contains artifact paths or explicit TBD blockers; it names the B3 jobs required; it states what will be measured; it identifies cross-domain dependencies; it does not convert Product Done into Business Done by itself.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+    },
+    {
+      "de": "B3 (per B3 Does Not)",
+      "verbe": "NOT allowed to do 5 actions",
+      "vers": "B3 execution stays within JTBD contract",
+      "citation": "B3 Does Not — invent strategy; redefine the B2 Definition of Done; bypass Finance, Legal, Ops, IT, Sales, Growth, or People gates; mark a project Business Done; hide missing proof behind narrative.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G1",
+      "verbe": "enforces Brand investment rule",
+      "vers": "10% of member subscription revenue protected, non-negotiable",
+      "citation": "Brand investment rule: 10% of member subscription revenue, protected, non-negotiable",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G2",
+      "verbe": "enforces Close rate rule",
+      "vers": ">30% on qualified member leads; ≥$500/year Nexus, ≥$1,000/year Solaris",
+      "citation": "Close rate rule: >30% on qualified member leads; Average member deal size ≥$500/year (Nexus), ≥$1,000/year (Solaris)",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G3",
+      "verbe": "enforces Zero-Jerry test",
+      "vers": "90 days without Jerry present or reclassified as Job",
+      "citation": "Zero-Jerry test: Every member journey track must run 90 days without Jerry present or reclassified as Job",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G4",
+      "verbe": "enforces Cerritos rule",
+      "vers": "All member ideas route through Cerritos first; routing fidelity >95%",
+      "citation": "Cerritos rule: All member ideas route through Cerritos first; routing fidelity >95%",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G5",
+      "verbe": "enforces Security rule",
+      "vers": "0 critical incidents per quarter; tech debt <20% of engineering capacity",
+      "citation": "Security rule: 0 critical incidents per quarter; Tech debt <20% of engineering capacity",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G6",
+      "verbe": "enforces Runway rule",
+      "vers": "Minimum 12 months cash; alert at 6 months; 18 months preferred",
+      "citation": "Runway rule: Minimum 12 months cash; Alert at 6 months runway; 18 months preferred",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G7",
+      "verbe": "enforces Headcount rule",
+      "vers": "No peer facilitator hire without 12-month runway; time-to-productivity <30 days",
+      "citation": "Headcount rule: No peer facilitator hire without 12-month runway confirmed; Time-to-productivity <30 days",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (RILCOT) Domain G8",
+      "verbe": "enforces IP rule",
+      "vers": "Member-generated knowledge frameworks trademarked within 90 days; member IP agreements clear",
+      "citation": "IP rule: Member-generated knowledge frameworks trademarked within 90 days of creation; member IP agreements clear",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (Alikaly) frontmatter priority_domains",
+      "verbe": "defines 5 priority domains for LLC",
+      "vers": "06_Finance, 08_Legal, 05_IT, 04_Ops, 07_People",
+      "citation": "priority_domains: 06_Finance, 08_Legal, 05_IT, 04_Ops, 07_People. cross_jerry_note: J01 Business + J03 Finance/Family both touch this project",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (Alikaly) cross-Jerry escalation",
+      "verbe": "routes to J03 Finance/Family first",
+      "vers": "J03 owner for tax structure, family asset governance, succession",
+      "citation": "cross_jerry_note: J01 Business + J03 Finance/Family both touch this project. ... Cross-Jerry: J03 Finance/Family owns the holding structure economics and tax implications",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (Alikaly) G6 Finance",
+      "verbe": "aligns with J03 on holding economics",
+      "vers": "LLC financial structure — separate books, tax elections (S-Corp vs C-Corp), annual compliance budget",
+      "citation": "LLC-specific role: LLC financial structure — separate books, tax elections (S-Corp vs C-Corp), annual compliance budget, J03 Finance/Family alignment on holding economics",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (marina) Priority Matrix G4 Ops",
+      "verbe": "is CRITICAL priority (field-first Orbiter)",
+      "vers": "Field crew operations, crew scheduling, equipment logistics, weather contingency",
+      "citation": "marina Cleaning priority: CRITICAL — this is the field-first Orbiter core domain. Special focus: Weather-dependent scheduling, crew safety protocols, equipment maintenance SOPs, seasonal capacity planning",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (marina) G5 IT",
+      "verbe": "uses simple scheduling tool",
+      "vers": "Spreadsheet or low-code, client database",
+      "citation": "Special focus: Simple scheduling tool (spreadsheet or low-code), client database for contracts and NPS tracking",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (marina) G7 People",
+      "verbe": "tracks Water safety certification",
+      "vers": "Seasonal crew onboarding, crew role definitions (WHO delegation)",
+      "citation": "Special focus: Water safety certification, seasonal crew onboarding, crew role definitions (WHO delegation)",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 README (marina) G8 Legal",
+      "verbe": "covers Water liability + environmental compliance",
+      "vers": "Standard client contract with SOP attachment, water liability insurance, environmental discharge compliance",
+      "citation": "marina Cleaning priority: HIGH — water liability is critical, environmental compliance for marina cleaning discharge. Special focus: Standard client contract with SOP attachment, water liability insurance, environmental discharge compliance, marina operator indemnification",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "RILCOT OS V0",
+      "verbe": "is Master Dashboard of ASpace OS V2",
+      "vers": "React 19.x + Vite 6.x + Supabase + Coolify PaaS, VPS 1 148.230.92.235 port 3000",
+      "citation": "RILCOT OS est le tableau de bord d'exploitation central (Master Dashboard) d'ASpace OS V2. ... Core Stack : React 19.x, Vite 6.x, TypeScript Strict et TailwindCSS. ... Authentification & Data : Intégration native et sécurisée avec Supabase (Auth, RLS et Realtime).",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "de": "RILCOT OS V0 (E-Myth doctrine)",
+      "verbe": "implements 4 A-levels pyramid",
+      "vers": "A0 Visionnaire / A1 Manager / A2 Architecte / A3 Technicien",
+      "citation": "Conçu sous la doctrine E-Myth : Visionnaire (A0), Manager (A1), Architecte (A2) et Technicien (A3). Dans la pyramide de décision ASpace : A0 (L'Entrepreneur / Visionnaire) : Définit les horizons de croissance et la vision à long terme. A1 (Le Manager) : Structure les processus, gère le backlog et assure le respect de la doctrine. A2 (L'Architecte) : Traduit la vision en contrats techniques stricts (SDD ➔ PRD ➔ ADR). A3 (Le Technicien) : Exécute et assemble le code de manière propre et robuste (DDD).",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "de": "RILCOT OS V0 (Coolify deployment)",
+      "verbe": "deploys to VPS 1",
+      "vers": "148.230.92.235 port 3000, Build-Time Variables VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY",
+      "citation": "Pour déployer RILCOT OS sur votre instance Coolify (VPS 1 : 148.230.92.235). ... Préparez les identifiants Supabase. Créez les clés suivantes dans les réglages de votre application Coolify : VITE_SUPABASE_URL=... VITE_SUPABASE_ANON_KEY=... Ces variables doivent obligatoirement être configurées comme Build-Time Variables dans Coolify car Vite compile ces clés dans les fichiers statiques de production.",
+      "chemin": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "de": "Kalybana Holding",
+      "verbe": "is organized under PARA method",
+      "vers": "01_Projects_Picard / 04 Alikaly / B2 03 Product / 00 Interface Prototypes",
+      "citation": "This holding is organized following the PARA method under 01_Projects_Picard.",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md"
+    },
+    {
+      "de": "Antigravity (A0)",
+      "verbe": "created and organized Kalybana Holding",
+      "vers": "via the Gravity Bridge protocol",
+      "citation": "Created and organized by Antigravity (A0) via the Gravity Bridge protocol.",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md"
+    },
+    {
+      "de": "Cerritos (A3_GTD_Capture)",
+      "verbe": "runs 5-stage GTD pipeline",
+      "vers": "Mariner (Capture) + Boimler (Clarify) + Rutherford (Organize) + Tendi (Review) + Freeman (Engage)",
+      "citation": "Sub-agent owner: A3 Mariner (Capture) + Boimler (Clarify) + Rutherford (Organize) + Tendi (Review) + Freeman (Engage)",
+      "chemin": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md"
+    },
+    {
+      "de": "ASPAC-6 'Use Cycles'",
+      "verbe": "is NEXT ACTION canonique W3 2026-06-22",
+      "vers": "Freeman engage: today (W3 06/22-06/28), 5min max, low energy",
+      "citation": "ASPAC-6 'Use Cycles to time box tasks' = NEXT ACTION canonique W3 2026-06-22. Context: @computer (Plane UI tour). Time: aujourd'hui (W3 06/22-06/28), 5min max. Energy: low (UI navigation, no coding)",
+      "chemin": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md"
+    },
+    {
+      "de": "B3 Squad Member README (chaque fichier)",
+      "verbe": "replicates from Jerry Business Pulse squads",
+      "vers": "ADR-INFRA-003, 2026-06-05",
+      "citation": "Replicated from Jerry Business Pulse squads - ADR-INFRA-003. 2026-06-05.",
+      "chemin": "Tous les 229 fichiers B3/<DOMAIN>/<MEMBER>/README.md (lus en v4)"
+    },
+    {
+      "de": "ClaudeClaw Agent template",
+      "verbe": "uses React + TypeScript + Vite",
+      "vers": "2 plugins (Oxc + SWC), React Compiler NOT enabled",
+      "citation": "Currently, two official plugins are available: @vitejs/plugin-react uses Oxc. @vitejs/plugin-react-swc uses SWC. The React Compiler is not enabled on this template because of its impact on dev & build performances.",
+      "chemin": "01_Projects_Picard/ClaudeClaw Agent/README.md"
+    }
+  ],
+  "codes": [
+    {
+      "systeme": "B2 priority_domains (Alikaly frontmatter)",
+      "numerote": "format string : '06_Finance, 08_Legal, 05_IT, 04_Ops, 07_People'",
+      "defini_dans": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md (frontmatter)"
+    },
+    {
+      "systeme": "B2 cross_jerry_note (Alikaly frontmatter)",
+      "numerote": "format string : 'J01 Business + J03 Finance/Family both touch this project'",
+      "defini_dans": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md (frontmatter)"
+    },
+    {
+      "systeme": "B2 Marina Priority Matrix",
+      "numerote": "G4 CRITICAL | G2/G3/G6/G8 HIGH | G1/G5/G7 MEDIUM",
+      "defini_dans": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md (Domain Priority Matrix table)"
+    },
+    {
+      "systeme": "B2 RILCOT 8 rules projet-specifiques",
+      "numerote": "G1 Brand investment 10% protected | G2 Close rate >30% / ≥$500 Nexus / ≥$1,000 Solaris | G3 Zero-Jerry test 90 days | G4 Cerritos rule >95% routing fidelity | G5 Security 0 critical incidents + tech debt <20% | G6 Runway 12mo min/6mo alert/18mo preferred | G7 Headcount 12mo runway + time-to-productivity <30 days | G8 IP rule 90 days trademark",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md (8 sections G1-G8)"
+    },
+    {
+      "systeme": "B2 RILCOT Nexus/Solaris Priority",
+      "numerote": "Nexus Priority: G7 People / G3 Product / G2 Sales | Solaris Priority: G1 Growth / G4 Ops / G3 Product",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md (RILCOT-Specific Domain Emphasis)"
+    },
+    {
+      "systeme": "B2 Domain Manager archetype (RILCOT)",
+      "numerote": "G1 Superman / G2 Martian Manhunter / G3 Flash / G4 Batman / G5 Cyborg / G6 Wonder Woman / G7 Green Lantern / G8 Aquaman",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "systeme": "B2 Primary LD01 book per domain (RILCOT)",
+      "numerote": "G1 Billion Dollar Brand Club (Demto) | G2 $100M Offers (Hormozi) | G3 Built to Sell (Warrilow) | G4 The E-Myth Revisited (Gerber) | G5 The E-Myth Revisited (Gerber, systems thinking) | G6 The Million Dollar Weekend (Huber) | G7 Who Not How (Sullivan) | G8 Billion Dollar Brand Club (Demto, brand as asset)",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md"
+    },
+    {
+      "systeme": "B2 Domain Manager archetype (Alikaly)",
+      "numerote": "G1 Superman / G2 Martian Manhunter / G3 Flash / G4 Batman / G5 Cyborg / G6 Wonder Woman / G7 Green Lantern / G8 Aquaman (mêmes que RILCOT)",
+      "defini_dans": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md"
+    },
+    {
+      "systeme": "B2 Marina Mode relevance (per domain)",
+      "numerote": "G1 N/A | G2 Orbiter (contract-heavy, relationship-driven) | G3 Orbiter (SOP delivery) | G4 Orbiter (field-first core) | G5 Nexus (systematization) | G6 Orbiter | G7 Nexus (compliance documentation) | G8 Orbiter (contract-heavy)",
+      "defini_dans": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "systeme": "B2 Marina Special focus (per domain)",
+      "numerote": "G1 Safety record as brand asset + environmental compliance reputation | G2 Multi-slip client contracts + seasonal tier pricing + SOP compliance as differentiator | G3 SOP bundle as client deliverable + crew training materials + quality checklist | G4 Weather-dependent scheduling + crew safety protocols + equipment maintenance SOPs + seasonal capacity planning | G5 Simple scheduling tool (spreadsheet or low-code) + client database | G6 Per-slip pricing model + seasonal contract billing + equipment depreciation tracking + off-season reserves | G7 Water safety certification + seasonal crew onboarding + crew role definitions (WHO delegation) | G8 Standard client contract with SOP attachment + water liability insurance + environmental discharge compliance + marina operator indemnification",
+      "defini_dans": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md"
+    },
+    {
+      "systeme": "B1 Handoff Path (ABC, 6 steps)",
+      "numerote": "1. B1 writes direction | 2. B1 creates B2 request in 04_B2_HANDOFF_QUEUE.md | 3. B2 converts request to DoD packets via 05_B2_DEFINITION_OF_DONE_SPEC.md | 4. B2 creates B3 jobs via 06_B3_JOBS_TO_BE_DONE_SPEC.md | 5. B3 executes defined jobs and returns proof | 6. B2 updates gates; B1 reviews direction drift",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "systeme": "B1 Stop Conditions (ABC, 3 conditions)",
+      "numerote": "No B2 work without a B1 handoff queue item. No B3 work without a B2 DoD or JTBD source. No Product-only release can become Business Done without the B2 gate matrix.",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "systeme": "B1 Files (ABC, 6 files)",
+      "numerote": "01_NORTH_STAR_1Y_3Y_10Y.md (1Y/3Y/10Y) | 02_12WY_COMMAND_CYCLES.md (four 12WY command cycles) | 03_DECISION_CHARTER.md (decision rights, vetoes, escalation, output packet) — EMPTY FILE | 04_B2_HANDOFF_QUEUE.md (B1-to-B2 queue) | 05_B2_DEFINITION_OF_DONE_SPEC.md (B2 DoD packet structure) | 06_B3_JOBS_TO_BE_DONE_SPEC.md (B3 JTBD packet structure and proof contract)",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "systeme": "B2 DoD Packet (yaml schema)",
+      "numerote": "dod_id, date, scope, b2_domain (Growth|Sales|Product|Ops|IT|Finance|People|Legal), rock_or_gate, owner_b2, status (DRAFT|READY_FOR_B3|CONDITIONAL|BLOCKED|DONE), definition_of_done, acceptance_criteria, required_artifacts (path+reason), lead_measures, lag_measures, risks, dependencies (domain+need), b3_jobs_to_create, review_cadence (weekly|per-cycle|on-change)",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B2 Domain DoD Minimums (8 B2 domains)",
+      "numerote": "Growth : ICP, message, channel, campaign hypothesis, measurement loop | Sales : Qualification, offer terms, objections, close path, handoff | Product : User value, scope, workflow, release candidate, Product Done proof | Ops : SOP, QA checklist, owner, support path, incident/rollback | IT : Runtime, build/deploy, env var names only, access, backup, dependency | Finance : Cost, price, margin, payment path, burn risk | People : Owner, role map, training, workload, handoff | Legal : Claims, privacy, IP, terms, consent, external exposure",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B1 Acceptance Gate (5 critères)",
+      "numerote": "(1) contient artifact paths ou explicit TBD blockers | (2) nomme B3 jobs required | (3) states what will be measured | (4) identifies cross-domain dependencies | (5) ne convertit pas Product Done en Business Done by itself",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B1 Anti-Patterns (4 interdits)",
+      "numerote": "Done when the page looks good. Done when A0 approves verbally. Done when the build passes (sans Ops/IT/Finance/Legal/Sales/Growth/People gates). B3 will figure it out.",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B3 JTBD Packet (yaml schema)",
+      "numerote": "jtbd_id, date, scope, source_b2_dod, b2_domain (Growth|Sales|Product|Ops|IT|Finance|People|Legal), owner_b3, job_statement ('When ___, B3 must ___, so that ___.'), input_artifacts, expected_output_artifacts, commands_or_actions, proof_required, lead_indicator, lag_indicator, timebox, status (TODO|IN_PROGRESS|BLOCKED|DONE), blocker",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B3 JTBD Rules (5 critères)",
+      "numerote": "artifact-producing | small enough to verify | tied to one B2 DoD | measurable by one Lead indicator and one Lag indicator when possible | blocked explicitly when inputs are missing",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B3 Does Not (5 interdits)",
+      "numerote": "invent strategy | redefine the B2 Definition of Done | bypass Finance, Legal, Ops, IT, Sales, Growth, or People gates | mark a project Business Done | hide missing proof behind narrative",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "systeme": "B3 Proof Contract (yaml schema)",
+      "numerote": "job_id, status (DONE|BLOCKED), changed_files, commands_run, proof_paths, remaining_risk, next_b2_review_needed (true)",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "systeme": "RILCOT OS Core Stack",
+      "numerote": "React 19.x | Vite 6.x | TypeScript Strict | TailwindCSS | Supabase (Auth + RLS + Realtime) | Nginx Alpine | Coolify PaaS",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "systeme": "RILCOT OS 6 screens",
+      "numerote": "Dashboard (accueil & monitoring) | Calendar (agenda partagé) | Directory (annuaire des membres) | Finance (jauges financières & Business Pulse) | Governance (documentation & protocoles) | Settings (configuration profil)",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "systeme": "RILCOT OS E-Myth 4 A-levels",
+      "numerote": "A0 Visionnaire (définit horizons de croissance et vision long terme) | A1 Manager (structure les processus, gère backlog) | A2 Architecte (traduit vision en contrats techniques SDD→PRD→ADR) | A3 Technicien (exécute et assemble code DDD)",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "systeme": "RILCOT OS Coolify deployment",
+      "numerote": "VPS 1 : 148.230.92.235 | port 3000 | buildpack Docker Compose | Build-Time env vars VITE_SUPABASE_URL + VITE_SUPABASE_ANON_KEY",
+      "defini_dans": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md"
+    },
+    {
+      "systeme": "Kalybana Holding sub-apps (AI Studio app IDs)",
+      "numerote": "01_Real_Estate : app f3bce99a-d1fe-41d0-96fd-bdf1ac9f3a29 | 02_Holdings_Platform : app 1956af9c-99be-43f1-8f2b-38a48fe259e9",
+      "defini_dans": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md"
+    },
+    {
+      "systeme": "Cerritos 5-stage GTD pipeline (per project sub-agents)",
+      "numerote": "Mariner (Capture) → Boimler (Clarify) → Rutherford (Organize) → Tendi (Review) → Freeman (Engage)",
+      "defini_dans": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md"
+    },
+    {
+      "systeme": "ASPAC-N (Plane items ID)",
+      "numerote": "ASPAC-3 'Invite your team' (actionable, medium) | ASPAC-6 'Use Cycles to time box tasks' (multi-step, HIGH = NEXT ACTION canon W3) | ASPAC-7 'Customize your settings' (someday/maybe, low)",
+      "defini_dans": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md"
+    },
+    {
+      "systeme": "Plane 5 default states vs GTD 7 canon",
+      "numerote": "Plane live : Backlog | Todo | In Progress | Done | Cancelled (5 states). GTD canonique : Inbox | Next Actions | Today | Waiting For | Done | Cancelled | Trash (7 states).",
+      "defini_dans": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (D6 nuance D1 verified)"
+    },
+    {
+      "systeme": "ClaudeClaw Vite + React plugins",
+      "numerote": "@vitejs/plugin-react (Oxc) | @vitejs/plugin-react-swc (SWC) | React Compiler NOT enabled by default",
+      "defini_dans": "01_Projects_Picard/ClaudeClaw Agent/README.md"
+    },
+    {
+      "systeme": "ClaudeClaw ESLint Type-aware config",
+      "numerote": "tseslint.configs.recommendedTypeChecked / strictTypeChecked / stylisticTypeChecked | parserOptions project = ['./tsconfig.node.json', './tsconfig.app.json'] | eslint-plugin-react-x + eslint-plugin-react-dom recommended",
+      "defini_dans": "01_Projects_Picard/ClaudeClaw Agent/README.md"
+    }
+  ],
+  "contradictions": [
+    {
+      "sujet": "03_DECISION_CHARTER.md EMPTY across 4 SUMMERS projects (v4 confirmation)",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char)",
+      "date_a": "2026-05-26",
+      "chemin_b": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B1_Summer_Direction/03_DECISION_CHARTER.md (1 char) — et 04 Alikaly + 05 marina (memes 1 char)",
+      "date_b": "2026-05-26",
+      "note_v4": "Confirmation empirique du bug structurel v2/v3 : les 4 fichiers 03_DECISION_CHARTER.md sont VIDES (1 char = UTF-8 BOM ou whitespace, soit 1 char Python mesurable). Le contenu reel de la Decision Charter est APPEARIE en bas du fichier 02_12WY_COMMAND_CYCLES.md pour chaque projet (pattern reproduit pour 02 ABC verifie en v2). Bug structurel transverse aux 4 projets SUMMERS."
+    },
+    {
+      "sujet": "rilcot-os-v2 vs RILCOT_OS : 2 prototypes RILCOT, 1 seul avec contenu substantiel",
+      "chemin_a": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/RILCOT_OS/README.md (87 lignes, E-Myth doctrine complet)",
+      "chemin_b": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/rilcot-os-v2/README.md (36 lignes, Next.js template default)",
+      "note_v4": "RILCOT a 2 prototypes Interface_Prototypes/. RILCOT_OS contient le Master Dashboard documente (87 lignes) ; rilcot-os-v2 n'est qu'un template Next.js par defaut (36 lignes), pas de substance projet-specifique. Pas de contradiction formelle, mais un seul des 2 prototypes contient du contenu utile."
+    },
+    {
+      "sujet": "Alikaly 7 Interface Prototypes : 6 clones Next.js + 1 parent custom",
+      "chemin_a": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Kalybana Holding/README.md (40 lignes, parent custom)",
+      "chemin_b": "alykaly-os / alykaly-front / alykaly-holding-modern / 'Alykaly Bana Real Estates FR V2' / 01_Real_Estate / 02_Holdings_Platform (6 clones templates, 20 ou 36 lignes)",
+      "note_v4": "Alikaly a 7 prototypes Interface_Prototypes/ — 6 sont des templates (4 Next.js create-next-app + 2 AI Studio app templates), seul le parent Kalybana Holding/README.md (40 lignes) a du contenu custom avec Strategic Vision, AI Studio app links, Antigravity (A0) footer. 6 prototypes 'vides' = pattern de tentatives multiples sans contenu substantiel."
+    },
+    {
+      "sujet": "Alykaly orthographe (5+ variantes)",
+      "chemin_a": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/SUMMERS_VERSE_MANIFEST.md (Alikaly Bana)",
+      "chemin_b": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/00_Interface_Prototypes/Alykaly Bana  Real Estates Front-End FR V2/README.md (Alykaly Bana Real Estates — avec double espace 'Bana  Real') + Kalybana Holding (Kalybana) + alykaly-os (alykaly) + alykaly-front (alykaly) + alykaly-holding-modern (alykaly)",
+      "note_v4": "Confirmation v4 : 5+ orthographes distinctes pour le meme projet : Alikaly Bana, Alykaly Bana, Kalybana Holding, alykaly-os, alykaly-front, alykaly-holding-modern. Le projet lui-meme est orthographie 'Alikaly Bana Holding to LLC' (SUMMERS_VERSE_MANIFEST, CERRIROS_HANDOVER) mais les sous-projets Interface utilisent des orthographes divergeantes (Alykaly avec 'y', Kalybana avec 'b', etc.)."
+    },
+    {
+      "sujet": "Double espace dans nom de dossier Alykaly Bana Real Estates FR V2",
+      "chemin_a": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/03_Product_Flash_Avengers/Alykaly Bana  Real Estates Front-End FR V2/README.md",
+      "chemin_b": "Tous les autres dossiers du projet (sans double espace)",
+      "note_v4": "Bug typographique : nom de dossier 'Alykaly Bana  Real Estates Front-End FR V2' avec DOUBLE ESPACE entre 'Bana' et 'Real'. Inhomogeneite formelle, pas de contradiction fonctionnelle, mais indique une saisie manuelle non corrigee."
+    },
+    {
+      "sujet": "Frontmatter 'priority_domains' absent pour 03 RILCOT et 05 marina (vs 04 Alikaly)",
+      "chemin_a": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/README.md (frontmatter avec priority_domains '06_Finance, 08_Legal, 05_IT, 04_Ops, 07_People' + cross_jerry_note)",
+      "chemin_b": "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/README.md (frontmatter SANS priority_domains ni cross_jerry_note) + 05 marina (idem)",
+      "note_v4": "Le frontmatter B2_Business_Domains/README.md est inhomogene entre projets : 04 Alikaly a des champs priority_domains et cross_jerry_note dans le frontmatter, 03 RILCOT et 05 marina ne les ont pas (mais leur contenu body specifie des regles similaires inline). 02 ABC n'a pas de README racine B2_Business_Domains (lu dans v3 mais pas dans v4 truly_unread)."
+    }
+  ],
+  "compteur_v4": {
+    "reads_total_physiques_v4": 251,
+    "nouveaux_paths_uniques_vs_v3_declares": 251,
+    "v3_declares_via_types_chemins_et_relations_chemin": 229,
+    "v3_compteur_precedent_cumul": "~510 (v1+v2+v3 cumul)",
+    "quota_brief_150_atteint": true,
+    "fichiers_redéclarés_patterns_glob_v3_lus_quand_meme": "~150 (les 229 B3 squad member READMEs etaient peut-etre deja physiquement lus en v3 par patterns glob, mais pas enumeres dans v3 types[].chemins)",
+    "total_paths_disponibles_picard": 363,
+    "restant_non_lu_apres_v4": "~0 (corpus Picard epuise)",
+    "note_importante": "Le compteur 'nouveaux_paths_uniques_vs_v3_declares' = 251 reflete les paths NON enumeres dans v3 types[].chemins ou relations[].chemin. Il est superieur au nombre reel de NEW paths physiques car v3 a probablement lu certains de ces paths via patterns glob sans les enumeres. La distinction 'physiquement lu vs declare' est floue et inherente au pipeline. La substance reelle apportee par v4 = 22 anomalies (B1 specs 02 ABC, B2 racines 03/04/05, 4 empty 03_DECISION_CHARTER, 7 Interface Prototypes, Cerritos MANIFEST integral, ClaudeClaw README integral, RILCOT_OS README integral)."
+  },
+  "ce_qui_reste_non_cartographie": [
+    "Fichiers hors du seau Picard : 02_Areas_Spock, 03_Resources_Geordi, 04_Archives_Data (autres seaux)",
+    "B2 B3 JTBD files pour 03 RILCOT et 04 Alikaly (JTBD-002/003/004/005) — notes par v3 comme non lus",
+    "AGENT.md de apps/dashboard (hors seau Picard, mais reference dans runbook-D comme exemple de D6 contradiction)",
+    "B2_MESO_VP_SWARM_COORDINATION.md (note v3 comme non lu)",
+    "FractalProjectDevelopmentPlan (B1 11) pour 03 RILCOT et 05 marina (v2 avait declare 02 ABC et 04 Alikaly)"
+  ]
+}

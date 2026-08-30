@@ -1,0 +1,710 @@
+Building an agentic OS is probably one
+of the most over complicated concepts
+that I see in the AI space today. People
+have really overindexed on things like
+building the final dashboard that puts
+everything together or this fantasy of
+creating the final mission control where
+everything just works. But in reality,
+the dashboard is actually meaningless
+and worthless without all the plumbing
+that goes into the system itself. So
+everything happening underneath the hood
+is the entire [music] game of building a
+proper system. I've taught this mental
+model so much to companies around the
+world that I found the simplest way to
+explain this concept in just a few
+layers. The same way that the Earth has
+multiple layers in its crust, [music]
+you have multiple layers in an AIOS
+system. And once you understand how
+these layers work and the nuances
+between them, you'll never get confused
+ever again. [music] So, if you're tired
+of watching videos that make it seem
+like this is rocket science, then this
+is for you. And this mental model will
+apply to you whether you're building
+something for your [music] personal,
+your business, or both. Let's dive in.
+So to make this as clear as possible,
+we'll go through every single layer from
+the inside all the way out. And you'll
+see a lot of resemblances to the core of
+the earth all the way to the outer
+surface where the core is more stable
+and static and the outside is more
+subject to things like weather,
+different patterns, forecast that can
+change the way that you do business. So
+the first layer is identity. And
+identity is really what's called the
+soul file in a lot of these agent
+frameworks like openclaw hermes and any
+other agent like it. And then we have
+rules and hooks. And these are paradigms
+that span across clawed codecs and
+pretty much every single language model
+with a harness today. And the whole
+point of these is offering very strong
+suggestions to the AI as to what it
+should or shouldn't do in certain
+scenarios. And when it comes to hooks,
+these are things that are deterministic.
+technically the only deterministic parts
+of an AIOS system that can fire relative
+to specific events that happen. And then
+we have the skills layer where this is
+the one that most people fully
+understand where you have some form of
+process or workflow. And if you do the
+exact same workflow in similar ways over
+and over again, but it's still not fully
+deterministic, then it can deserve to be
+a slash command and a skill. And once
+you felt like you've mastered skills and
+you keep iterating on them to make them
+infinitely better, you might decide that
+it's time to employ some materialized or
+crystallized agents where you have a
+designated set of rules and
+responsibilities for tasks that have
+evolved beyond things like skills. And
+last but not least, we go to the tools,
+MCPs, and CLI where now you have a
+system. You might have primed your
+context. You have your identity of what
+the system is for. Is it for
+bookkeeping? Is it for your law
+practice? Is it for your personal taxes?
+It could be anything you want. Myself, I
+now have 20 different command centers.
+Each of which is meant to have this
+domain subject matter expertise that is
+composed of these five different layers.
+Now, there's one element to all of these
+that I've yet to mention, which is what
+I call the rot rate. And the rot rate is
+really the pace at which that specific
+piece of context has an expiration date.
+Because you could build the absolute
+perfect AIOS for whatever domain today,
+but in one month, 90 days, 180 days, let
+alone a year, it might be fully
+obsolete. So, you have to have systems
+in place to both detect and remedy any
+of these issues. So, to give a visual
+layer to this problem, imagine that we
+played out your AIOS over the course of
+a year. You'll notice that things like
+maybe the way you use your tools, MCPs,
+CLIs, the agents instructions, the
+skills they use, and even your identity
+will need to be updated over time
+because they will become deprecated,
+obsolete, out ofd, and that will poison
+the context window of whatever language
+model you choose. So based on this,
+let's take a fine tooth comb through
+every layer. And I'll also provide you
+some examples of operating systems that
+I've built as well. When it comes to the
+soul, this could be a physical soul file
+for your agent of choice or it could be
+an agents.md file or a cloud MD file if
+you're using cloud code. Now again, the
+identity or the soul layer is meant to
+be one of the most static layers where
+you don't update it as often and it's
+meant to have an upfront cost that's a
+bit higher than the other layers. But
+with that upfront cost, you only have to
+do slight modifications over time. Now
+this could be composed of a physical
+file called soul.md for your agents like
+Hermes, openclaw etc. or it could be
+something like an agents MD file or a
+cloud MD file if you're using something
+like cloud code. And in all of them a
+lot of these files will be composed of
+very similar characteristics. Number
+one, the identity, the personality, the
+way of working, the way of simplifying
+or over complicating an entire session
+with you the user. So, if you're talking
+about very complicated legal concepts
+and you always want your agent to break
+it down in a very easy to understand
+way, you might have this as a oneliner,
+explain everything at 7th grade reading
+levels for the very complex concepts I
+will ask you about. And the way that I
+use this layer is this becomes my
+inventory and pointer layer. And when I
+say pointer, it means that I will use my
+cloud MD file to point at all of the
+relevant rules, the relevant skills, and
+I just basically have a very short
+sentence, maybe a series of 20, 30
+sentences saying when we're doing XYZ,
+refer to these documents. Because I'm
+loading a very lean and mean Claude MD
+into every single one of my sessions, I
+can guarantee that all the core
+references it needs to be powerful and
+effective irrespective of whatever model
+I choose. It could even be an open-
+source model. It will know exactly where
+to refer to. When it comes to rules and
+hooks, this is not only one of the
+simplest layers, but it's also the one
+that you rarely will start with because
+you might not know the exact behaviors
+from the language model that you need to
+contain or create road maps around or
+SOPs until you run into issues. Let me
+give you an example. Let's say you were
+building yourself a business coach where
+it was trained on a compendium of files
+of all the relevant influencers
+information that you find helpful to
+help you take your business to the next
+level. It's only when you start
+interacting with said coach and it's
+giving you extremely generic advice or
+advice that's not localized to where
+your business lies is when you realize
+ah we should have a rule that says only
+give me feedback in this way or about
+said topic or at this level of
+granularity. And you know what? Anytime
+I want to push my changes to something
+like GitHub, I want to make sure that
+there's never any form of personal
+identifiable information. So then this
+is when you start employing a hook which
+is deterministic. It's attached and it's
+tethered to a specific event which in
+this case would be pushing and using the
+tool of GitHub. And by the way, if
+you're enjoying the content and you find
+it clear and tactical, this is only a
+glimpse of everything that I offer
+exclusively in my early AI adopters
+community. We have something called the
+claude code living course that I update
+every single week with a brand new
+module that you'll never see on YouTube.
+Just for this topic on AIOS engineering,
+I have close to a one-hour master class
+that [music] goes infinitely deeper on
+all the nuances in building these kind
+of systems. So, if you want access to
+resources like that on top of things
+like our clawed claw system that has
+gone through eight different generations
+of updates and [music] our new
+enterprise OS system, then check out the
+first link down below and I'll see you
+inside. All right, back to the video.
+When it comes to something like skills,
+people love building them, but they hate
+maintaining them. So, the core rules of
+thumb here is to imagine a skill as a
+specific workflow that you've done maybe
+5, 10, 15 times in ever so slightly
+similar ways, but typically they have
+some form of human in the loop element
+where you want to be involved as a part
+of the process. So, these are what I
+call processoriented skills, which are
+different from other skills. Let's say
+creating a skill to connect to your
+Fathom or your Fireflies to pull the
+latest transcript from all your
+meetings. That would be more of a
+functional skill, something that
+connects to an existing API and there's
+not a lot of nuance in what it has to
+do. This layer has a moderate rot rate
+where you will be updating or you should
+be updating a skill almost weekly, even
+if you've had it for months. Up until
+now, I have skills that I still change
+ever so slightly every single day,
+especially as I start pushing them and
+employing them on edge cases,
+irrespective of whatever it is I'm
+working on. And one of the many reasons
+why this will rot over time is as we get
+smarter models, sometimes some models
+need way less instruction to get to the
+exact same outcome with way less tokens.
+And at the same time, let's say you
+start pivoting to open- source models
+and having a hybrid model where you use
+an orchestrator that's closed source,
+let's say Opus, Fable, if it ever comes
+back out again or something else. And
+then you have executor agents that are
+all using open- source models like GLM,
+DeepSeek, etc. At that point, you might
+still need a lot of instruction for
+those models to follow and execute said
+skills. So you might eventually have
+different versions of the same skill
+that might work with different versions
+of language models. And one expert tip
+is if you want to continually improve
+your skills in a very efficient way, you
+could run something like slashgoal and
+with that goal basically tell it, I want
+to optimize it based on the latest and
+greatest best practices. So if we were
+to hop into a terminal real quick, it
+would look something like this where you
+would say /goal I want you to optimize
+Xkill in Yway according to the best
+practices as of today. And then if
+you're using cloud code then I like to
+do this thing like CC as if you're CCing
+someone on email. And then I will tag
+the clawed code guide agent because what
+will happen is it will use and fetch all
+the relevant documents to make sure that
+your skill is as optimized as it
+possibly can be. And if you want to take
+it to the next level and you want to
+make sure this happens without you even
+at the computer, you could do a slash
+schedule where every single week you
+have a process that ever so slightly
+prunes and optimizes every single skill
+that you have. And you can give it a
+rubric of criteria to decide what is
+worth updating versus what is worth
+maintaining. And naturally, you want to
+keep some logs to track all of these
+changes over time just in case it makes
+a change on your behalf that doesn't
+make it fire as well as it used to. Now,
+the same way that a skill is adjacent to
+a verb, an agent is adjacent to a role.
+So, once your skills seem to now create
+this aggregate overall person equivalent
+of a role, it makes sense to hire quote
+unquote an agent. And the way you do it,
+if you want to create materialized
+agents that are really detailed and
+things that you maintain over time, you
+want to decide as if you're a
+bootstrapped startup founder with no
+venture capital cash to throw at you.
+What is the best absolute first hire
+that you can have? And how far can you
+push this first hire agent before it
+makes sense to add another role? A lot
+of people get excited by the concept and
+the whimsy of having an army of agents,
+but they don't realize that having an
+army of agents is more of a maintenance
+nightmare than it is a blessing. So,
+let's say you create an agent that is
+taxoriented and you call it tax
+optimizer and its specific role is a
+senior tax strategist. So you basically
+have it scan all your transactions in
+the business. Maybe it liazes and double
+checks what region you're operating in
+and where can you actually save on tax
+and write things off legally in a way
+that you can lower your cost basis
+within this agent. Now that you have
+your infrastructure that you've built of
+skills, you tell it, I want you to do
+all of these roles and responsibilities
+and when it comes to bookkeeping and
+checking my tax structure, I want you to
+employ and use these skills in said way.
+Just in this example, hopefully you can
+see that this is very additive. If you
+had built agents without the skill
+infrastructure or the identity
+infrastructure and everything around it,
+these become a lot more frail and
+brittle. One last thing on this layer is
+that it rots at one of the fastest rates
+compared to the others. And the main
+reason is as we have brand new model
+releases, with each model, we get ever
+so slightly or sometimes vastly
+different behavior. when you have
+different behavior that culminates in
+different ways that you have to prompt
+it to get to the same outcome or better.
+Meaning that the prompt that you write
+today will become obsolete or dated as
+soon as a new version of the model
+you're using comes out. And if you work
+with things like codeex and claude code
+interchangeably like I do, you'll have
+to create a set of instructions that are
+as nuanced and neutral kind of
+Switzerland between both models
+behaviors as much as possible to make
+sure that it can fire the same way on
+both models. The last layer is the tools
+API MCP and CLI layer. And I know
+there's a lot of acronyms there, but all
+of them point to the same thing, which
+is that this is the data layer. This is
+where you enrich your process with live
+access to information which could be
+access to databases where you're pulling
+in information where you're writing and
+reading. Let's say a CRM, a HubSpot,
+[snorts]
+a QuickBooks. If we take that prior
+example, you would need something like a
+QuickBooks to go and pull all of your
+invoices, your accounting information.
+Maybe you somehow marry that with
+conversations that you've had with
+clients on something like Fathom or
+Fireflies to pull in the fact you have
+to write a proposal. They have to
+document that proposal. And this becomes
+a system that needs logic, an identity,
+a set of skills, maybe some agents, and
+finally that final layer that brings
+everything together and writes it to
+your CRM of choice. And one of the
+reasons why I tagged this as potentially
+not necessarily having one of the
+highest rot rates is as these APIs
+change, as they become deprecated,
+you're going to have to quickly pivot
+your entire system to adapt to the best
+way to pull that data in what way is
+being pulled. Because sometimes the data
+structure, the way you pull that
+information changes ever so slightly.
+Maybe the provider is providing some way
+to have more efficient gains in latency,
+in fluency, etc. So, you'll always have
+to look out for what's happening with
+this layer. And a prime example of this
+is that a few years ago, MCPs were the
+darling of AI. They were everything
+people could talk about. If you didn't
+have an MCP, you were not relevant to
+the conversation. Now, it appears that
+MCPs are on their way out. Some
+providers don't show their API and only
+show their MCP layer for whatever
+reason, but for the most part, command
+line interfaces have become one of the
+more popular tools just because they're
+a wrapper around the API, but they're a
+very command line interface friendly
+wrapper given that codecs and cloud code
+really deliver in that domain. So to
+make this tactical instead of just
+theoretical, let's look at two tangible
+examples. So let's say we have a my OS
+system and the whole point of my OS
+system is a pseudo mini CFO for my
+business. Just for all intents and
+purposes, you could just to give
+yourself the training wheel structure
+number and name each folder by that
+layer in your AIOS layers.
+Realistically, these rules and hooks
+should and will live in something like
+Claude where it hosts your hooks, your
+workflows, and everything else. But if
+it helps you initially simplify the
+mental model, you can put these in
+separate folders and then once you've
+materialized and finalized them, then
+you can graduate them to end up in the
+core.cloud folder where you know you
+have an inventory of all these assets.
+Now, naturally, we have a lot of assets
+here. So, let's put some color as to
+what's happening underneath the hood. If
+we flip over, you'll see that our
+general structure is composed of the
+folders that you saw before. And we have
+a substrate.wiki file. This is meant to
+build on top of the work of Andre
+Carpathy that basically built a second
+brain library that you can tap into. And
+I have a prompts folder. Now, this
+folder is specific for you to give you
+two options on ways to interview
+yourself to build a similar structure
+and approach to building each one of
+these layers. The claud is the nucleus
+of the entire system and it contains
+thing like the rule and responsibility
+which is the solo fractional CFO, the
+point of view which is to focus on
+things like cash flow, profit and loss,
+the fact that it should never blend or
+compare any two clients in the client
+folders and it points to different
+playbook files, additional files of
+context that I don't want to bloat my
+context window and my claude MD with.
+Then we have the rules and hooks layer
+where we have the always.mmarkdown file
+that contains nine rules on how to
+handle things like our finances and a
+never.md. Again, I'm simplifying the
+naming just to understand. Eight things
+to avoid and never do. Again, never
+blending clients and never outsourcing
+certain numbers that haven't been fully
+validated. And examples of hooks you
+could have are basically double-checking
+that before you send off any work to a
+client that you're double-checking that
+the data is coming from that exact
+client name in the database and that
+there's no confusion and maybe some
+level of PII guard to make sure that
+there are no names, emails, etc. in
+whatever is leaving either your email,
+your GitHub repo, etc. And when it comes
+to skills, you'll have ones like monthly
+close, which will go through all of the
+clients that you service as a fractional
+CFO and close on their income
+statements, cash flow statements,
+everything for the month, and draft them
+a report. And then you have the singular
+agent, which is called client portfolio
+markdown file, which is an overall
+strategist. And then you start drafting
+what the next agent could be, but you
+also outline criteria as to when it
+makes sense to hire said agent depending
+on circumstance. And on top of that, one
+file that people never create that I
+recommend you actually think about is
+creating a rot file. And if I open this
+up in Sublime Text here, you'll see how
+it's composed. It basically structures
+and tells Claude code, and you can store
+this as a pointer in your CloudMD at
+which rate you expect each layer to rot.
+And it's a lot easier to do this right
+after you've built the 80% or you've
+built V0ero versus a couple months down
+the line where you've kind of be
+comfortable, maybe not as proactive with
+building this to be as maintainable as
+possible. Now, one thing I didn't touch
+on in this video is that these layers
+will rot at different rates for
+different businesses in different
+industries. So you will have to be the
+judge of how often this thing called
+identity needs to change. How often your
+connection to some system or service
+will have to be updated or looked at.
+Now, like I said, I have another set of
+files in here in this prompts folder
+that I'm going to make available to you
+in the second link down below on top of
+a few other goodies to get you started
+on this journey or to help you improve
+what you already have. We have prompt A,
+the more simple one, and prompt B, which
+is more akin to helping you with
+workflows. So if we open prompt a
+naturally I'm not going to read this
+whole thing. AI helped me generate it
+based on a lot of the lessons that I've
+been teaching and the lessons that I've
+learned personally. So basically if we
+just zoom in a bit more it says you are
+an agentic OS architect. I want to set
+up a simple personal agentic operating
+system inside cloud code or the language
+model that you're using in this folder
+and I want you to walk me through it
+start to finish. Read all of these
+instructions. So, it will break down all
+of the layers that I've mentioned to you
+here over here. And then it will explain
+exactly how they interlink. If you want
+to include a wiki, an obsidian second
+brain, you could tap into that as well.
+And it will go through all the steps.
+So, it will ask you what is the file
+path we're going to be building this
+operating system in. Then, interview me.
+Go through and ask me what is my role?
+Who do I serve? What is my point of
+view? And it should be as relevant as
+possible to your specific business. And
+it will offer you in step two paths, two
+different ways that you could build your
+operating system. And it will create a
+blueprint file, an operating system
+blueprint file. And just to give you a
+little preview of that, if we zoom in
+and we take this to the side here, it
+will basically break down and say
+revisit my changes at this date because
+maybe it's interlin with a rawm file.
+And then as you scroll down, it will
+walk through and break down exactly
+every single layer, what should be in
+there. And then once you give this to
+Claude code in a brand new session, it
+should be able to use it as a blueprint
+and fully create a draft of your entire
+system end to end. Now will it build it
+perfectly and blow your mind the first
+time it attempts this? Absolutely not.
+But the whole point of these systems is
+that they are infinite games. They are
+things that you keep iterating on over
+and over again. So the same way you
+sharpen a sword, the moment you build an
+operating system, you're on the hook to
+maintain it and make sure it's always up
+to date. So that was a business example.
+Let me drive the point home by showing
+you a personal example. This is my
+health operating system and this is
+something that I built in public in
+front of my community for 15 days. And
+the goal was to build my own what I call
+a cla agent. Basically think of Hermes
+but better and uses your claw
+subscription. And I make it tailored to
+be my health coach. So it's aware of all
+of my DNA structure. It's aware of all
+of my blood panels. It's aware of my
+tendencies, my issues in the past,
+everything that it needs to help me
+focus on an ideal diet, an ideal
+exercise regimen, etc. And you'll notice
+here that we don't have numbered and
+named folders like we did with the demo
+example because as soon as you get the
+handle of it, you now have the training
+wheels off and you can start building
+operating systems with the general
+structure in mind. So here we have the
+extracted data from our raw documents.
+So these raw documents are my PDFs of
+all of my blood panels, all of my DNA
+analysis results, etc. And then we have
+the extraction piece that basically
+takes these PDFs and converts them into
+easy to read for an LLM markdown files.
+And then we have the data layer, which
+is the superbase that maintains every
+single thing that I eat. Now, my synced
+Whoop data via API every single morning.
+Anything you can imagine is stored in
+that superbase to help reinforce and
+inject in memory. So, I can have back
+and forths with a pseudo personal
+trainer. And the result is a system
+where I can take pictures of food that I
+eat. I can voice note exercises that
+I've done. I can take a video of what
+I'm attempting to eat or do or in the
+shopping aisle, and it will give me
+fully tailored advice to everything
+related to me, my last seven days of
+performance, sleep. If we pop into our
+little dashboard here, on top of the
+operating system, I have my goals in
+terms of weight, sleep, structure,
+protein to sodium to carbohydrates. You
+can make these operating systems very
+potent with only a few folders. The only
+thing you need to make these
+increasingly more sophisticated is the
+mental model of understanding what are
+we solving for? What is the subject
+matter expertise that we need to make
+this agent which is pulling from average
+training data specialized in one
+specific domain? And one last thing to
+note is whether we're talking about
+personal or even enterprise, this globe
+looks very similar. It might not be
+called identity, but it would be called
+data landscape. It won't be called
+necessarily rules and hooks, but it
+could be tool access in general,
+especially if there's some IT red tape
+in the mix. Then you have agentic
+systems in general versus just a
+markdown file. Then you have specific
+client software and overall operational
+systems. So this paradigm of the
+different layers and crusts of an
+operating system can apply to different
+domains either personal, small business
+or enterprise. So hopefully that
+breakdown with the visual aid with the
+examples show you that this is not very
+complicated. It's not rocket science.
+It's actually more of an art with the
+guard rails of science, which is
+understanding what is it that you need?
+How do you create that type of asset?
+How do you make sure you optimize that
+type of asset? But there's no one
+specific blueprint that applies to every
+single operating system like a lot of
+other creators are advertising. In a
+way, my operating system for health or
+finance or tax will be different from
+yours because the way we do things and
+the way we structure our businesses and
+the systems they talk to and the way we
+want them to deliver assets will be
+special snowflake assets. So, if this
+walkthrough helped break down some
+limiting beliefs that you can do it, I
+can tell you that you can do 80% in a
+weekend of this setup and then you'll
+spend the next weeks to maybe a couple
+months perfecting the system to a point
+where it is additive enough that it
+actually helps move the needle and
+delivers tangible outcomes. And like I
+said, I'm going to make available to you
+a care package of a couple prompts to
+get you on the journey or to optimize
+your existing one along with some other
+goodies in the second link for free down
+below. And if you found this helpful and
+you want to nerd out and go down the
+rabbit hole, I have almost a 1-hour
+addition to this YouTube video on top of
+some specific skills, my Claude Claw
+system that you can clone yourself and
+build through something like Telegram or
+Slack or Discord on top of everything
+else we offer in the community. [music]
+So, if you want to check that out and
+you really serious about harnessing and
+honing your operating system, check the
+first link down below and maybe I'll see
+you inside. And for the rest of you, if
+you found this clear and helpful, I'd
+super appreciate a like on the video, a
+comment if you so choose, and I'll see
+you in the next

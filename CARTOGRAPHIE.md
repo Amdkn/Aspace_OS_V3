@@ -1,6 +1,6 @@
 # Cartographie de A'Space OS V3
 
-> Genere par `scripts/cartographier_v3.py` le 2026-08-30 12:43 UTC, en 0.5 s.
+> Genere par `scripts/cartographier_v3.py` le 2026-08-30 13:36 UTC, en 0.7 s.
 > **Ne pas editer a la main** : une carte ecrite a la main vieillit et ment.
 > Regenerer par `python scripts/cartographier_v3.py`.
 
@@ -8,12 +8,12 @@
 
 | | |
 |---|---|
-| Fichiers | **10,784** |
+| Fichiers | **10,801** |
 | Poids | **2.8 Go** |
-| Documents `.md` | **6,565** |
+| Documents `.md` | **6,575** |
 | Triplets `.ttl` | 31 |
-| Substrat `.jsonl` | 45 |
-| Scripts `.py` | 290 |
+| Substrat `.jsonl` | 46 |
+| Scripts `.py` | 294 |
 
 Exclus du compte : `.cache`, `.git`, `.mypy_cache`, `.next`, `.nuxt`, `.obsidian`, `.pytest_cache`, `.venv`, `__pycache__`, `build`, `coverage`, `dist`, `node_modules`, `openwiki`, `site-packages`, `target`, `vendor`, `venv`.
 
@@ -29,16 +29,16 @@ etranger au notre.
 | `10_Tech_OS/` | 97 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
 | `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
 | `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
-| `40_Memory_Wiki_OKF/` | 38 | 38 | 259.4 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `40_Memory_Wiki_OKF/` | 39 | 39 | 278.5 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
 | `50_Distillation/` | 394 | 321 | 70.3 Mo | Methode, substrat, briefs de distillation |
 | `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
-| `70_Onthologies/` | 396 | 324 | 6.8 Mo | Sujets, triplets RDF, revue |
+| `70_Onthologies/` | 402 | 330 | 6.8 Mo | Sujets, triplets RDF, revue |
 | `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
-| `90-self-evolution/` | 15 | 8 | 68.5 Ko | Skills d'auto-amelioration — une par problematique mesuree |
+| `90-self-evolution/` | 24 | 11 | 113.6 Ko | Skills d'auto-amelioration — une par problematique mesuree |
 | `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109.2 Mo | Briefs archives de coach-os |
 | `_INBOX/` | 9 | 5 | 10.9 Ko | Capture GTD, non trie |
 | `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4.7 Mo | 26 sources consolidees pour la revue humaine |
-| `scripts/` | 29 | 0 | 243.1 Ko | Porte d'argent, cartographie, generateurs |
+| `scripts/` | 30 | 0 | 252.8 Ko | Porte d'argent, cartographie, generateurs |
 | *(racine)* | 8 | 6 | 79.8 Ko | fichiers de tete |
 
 ## Arborescence, 3 niveaux
@@ -199,8 +199,8 @@ ASpace_OS_V3/
 |   `-- 10_Projects/  (960 fich., 303 md, 20.7 Mo)
 |       `-- coach-os-app/  (959 fich., 303 md, 20.7 Mo)
 |           ... 29 sous-dossiers, non deplies
-|-- 40_Memory_Wiki_OKF/  (38 fich., 38 md, 259.4 Ko)
-|   |-- architecture/  (9 fich., 9 md, 56.5 Ko)
+|-- 40_Memory_Wiki_OKF/  (39 fich., 39 md, 278.5 Ko)
+|   |-- architecture/  (10 fich., 10 md, 75.5 Ko)
 |   |-- canon/  (4 fich., 4 md, 49.3 Ko)
 |   |-- integrations/  (8 fich., 8 md, 82.0 Ko)
 |   |-- learning/  (2 fich., 2 md, 8.9 Ko)
@@ -239,7 +239,7 @@ ASpace_OS_V3/
 |   |-- primitives/  (3 fich., 1 md, 17.5 Ko)
 |   |-- prompt-systeme/  (8 fich., 8 md, 32.1 Ko)
 |   `-- protocoles/  (12 fich., 12 md, 112.9 Ko)
-|-- 70_Onthologies/  (396 fich., 324 md, 6.8 Mo)
+|-- 70_Onthologies/  (402 fich., 330 md, 6.8 Mo)
 |   |-- _briefs/  (24 fich., 15 md, 150.7 Ko)
 |   |-- _revue/  (30 fich., 9 md, 170.4 Ko)
 |   |-- _structure/  (3 fich., 1 md, 595.7 Ko)
@@ -251,21 +251,22 @@ ASpace_OS_V3/
 |   |       ... 8 sous-dossiers, non deplies
 |   |-- sujets/  (20 fich., 1.6 Mo)
 |   |-- triplets/  (19 fich., 626.8 Ko)
-|   `-- verbes/  (0 fich.)
+|   `-- verbes/  (6 fich., 6 md, 8.6 Ko)
 |-- 80_Agent-OS/  (7 fich., 2 md, 64.3 Ko)
 |   |-- donnees/  (2 fich., 1 md, 13.2 Ko)
 |   |   |-- mermaid/  (1 fich., 1 md, 3.2 Ko)
 |   |   `-- schema/  (1 fich., 10.0 Ko)
 |   `-- tableaux/  (4 fich., 47.2 Ko)
 |       `-- reviews/  (3 fich., 36.7 Ko)
-|-- 90-self-evolution/  (15 fich., 8 md, 68.5 Ko)
-|   |-- datasets/  (0 fich.)
+|-- 90-self-evolution/  (24 fich., 11 md, 113.6 Ko)
+|   |-- datasets/  (3 fich., 1 md, 15.0 Ko)
 |   |-- evolution/  (2 fich., 1 md, 8.6 Ko)
-|   |-- reports/  (0 fich.)
-|   `-- skills/  (12 fich., 6 md, 55.7 Ko)
+|   |-- reports/  (2 fich., 1.7 Ko)
+|   |   `-- forum/  (0 fich.)
+|   `-- skills/  (16 fich., 8 md, 83.0 Ko)
 |       |-- p1-anti-rejeu/  (2 fich., 1 md, 10.9 Ko)
 |       |   ... 2 sous-dossiers, non deplies
-|       |-- p2-mandat-persistant/  (2 fich., 1 md, 11.6 Ko)
+|       |-- p2-mandat-persistant/  (2 fich., 1 md, 12.0 Ko)
 |       |   ... 2 sous-dossiers, non deplies
 |       |-- p3-point-entree/  (2 fich., 1 md, 7.6 Ko)
 |       |   ... 2 sous-dossiers, non deplies
@@ -273,7 +274,11 @@ ASpace_OS_V3/
 |       |   ... 2 sous-dossiers, non deplies
 |       |-- p5-plancher-contexte/  (2 fich., 1 md, 7.7 Ko)
 |       |   ... 2 sous-dossiers, non deplies
-|       `-- p6-verification-goulot/  (2 fich., 1 md, 8.5 Ko)
+|       |-- p6-verification-goulot/  (2 fich., 1 md, 9.9 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       |-- p7-memoire-travail/  (2 fich., 1 md, 11.5 Ko)
+|       |   ... 2 sous-dossiers, non deplies
+|       `-- p8-forum-agents/  (2 fich., 1 md, 14.1 Ko)
 |           ... 2 sous-dossiers, non deplies
 |-- _ARCHIVE_coach-os-briefs/  (349 fich., 154 md, 109.2 Mo)
 |   `-- _briefs/  (349 fich., 154 md, 109.2 Mo)
@@ -305,7 +310,7 @@ ASpace_OS_V3/
 |   `-- _refuses/  (2 fich., 2 md, 603 o)
 |       `-- S1_Rick/  (2 fich., 2 md, 603 o)
 |-- _REVIEW_NOTEBOOKLM/  (26 fich., 26 md, 4.7 Mo)
-`-- scripts/  (29 fich., 243.1 Ko)
+`-- scripts/  (30 fich., 252.8 Ko)
 ```
 
 ## Ou vit reellement la connaissance
@@ -343,7 +348,7 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 ### Le point qui compte
 
 Le `CLAUDE.md` designe `40_Memory_Wiki_OKF/` comme « la memoire du
-poste ». Ce bundle porte **38 fichiers `.md` sur 6,565**, soit **0.6 %** du corpus.
+poste ». Ce bundle porte **39 fichiers `.md` sur 6,575**, soit **0.6 %** du corpus.
 
 Chercher la et s'arreter, c'est manquer le reste. Le bundle est un
 **index de concepts consolides**, pas le corpus. Les deux tableaux

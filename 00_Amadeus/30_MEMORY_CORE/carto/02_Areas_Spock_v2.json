@@ -1,0 +1,2996 @@
+{
+  "seau": "02_Areas_Spock",
+  "fichiers_lus": 115,
+  "fichiers_disponibles": 95,
+  "fichiers_lus_vague_2": 68,
+  "fichiers_lus_structure_vague_2": 49,
+  "fichiers_lus_leaves_vague_2": 19,
+  "jonctions_ecartees": 0,
+  "agent": "claude-opus-4-7",
+  "mode": "exclusif sur 02_Areas_Spock",
+  "vague": 2,
+  "vague_1_heritage": {
+    "types_count_v1": 48,
+    "relations_count_v1": 50,
+    "codes_count_v1": 15,
+    "contradictions_count_v1": 8
+  },
+  "types": [
+    {
+      "nom": "Jerry Area",
+      "attributs": [
+        "id",
+        "layer: L2_Business_Pulse",
+        "life_domain(s)",
+        "status",
+        "created",
+        "owner",
+        "bibliography_alignment",
+        "scope"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/README.md"
+      ]
+    },
+    {
+      "nom": "B2 Domain",
+      "attributs": [
+        "numero (01..08)",
+        "nom",
+        "hero manager (DC)",
+        "squad (Marvel)",
+        "north star",
+        "KRs",
+        "principles_doctrine_path"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/README.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/README.md"
+      ]
+    },
+    {
+      "nom": "B3 Squad",
+      "attributs": [
+        "lead_character",
+        "canon_source (Notion AGENT_REGISTRY_DB UUID)",
+        "members",
+        "specialty",
+        "task_types",
+        "SOPs_managed",
+        "build_gates",
+        "anti_patterns",
+        "escalation_owner"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/B3_Squad_Fantastic4/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/B3_Squad_KangDynasty/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/B3_Squad_Thunderbolts/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/B3_Squad_XMen/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "B2 Hero Manager",
+      "attributs": [
+        "name",
+        "role (VP)",
+        "domain",
+        "non_delegables"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/B3_Squad_Fantastic4/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/B3_Squad_KangDynasty/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/B3_Squad_Thunderbolts/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/B3_Squad_XMen/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Cadence 12WY",
+      "attributs": [
+        "W01-W04",
+        "W05-W08",
+        "W09-W12",
+        "Rocks (<=4)",
+        "Lead metrics",
+        "Lag metrics",
+        "deliverables"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/12WY_Area_Cadence/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/12WY_Area_Cadence/README.md"
+      ]
+    },
+    {
+      "nom": "Cadence Phase",
+      "attributs": [
+        "name (Foundation/Scaling/Optimization ou Winter/Spring/Autumn)",
+        "weeks",
+        "Rocks",
+        "Lead/Lag"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W01_W04_Foundation/README.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W05_W08_Scaling/README.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W09_W12_Optimization/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/12WY_Area_Cadence/W01_W04_Foundation/README.md"
+      ]
+    },
+    {
+      "nom": "Operating Principle",
+      "attributs": [
+        "numero",
+        "source (livre)",
+        "rule",
+        "test",
+        "trigger",
+        "anti_pattern"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md"
+      ]
+    },
+    {
+      "nom": "Threshold Table",
+      "attributs": [
+        "signal",
+        "GREEN",
+        "ORANGE",
+        "RED",
+        "frequency"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B1_Area_Direction/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md"
+      ]
+    },
+    {
+      "nom": "Key Result (KR)",
+      "attributs": [
+        "id (KR-X)",
+        "metric",
+        "target",
+        "cadence",
+        "owner"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md"
+      ]
+    },
+    {
+      "nom": "ROCK",
+      "attributs": [
+        "name",
+        "start_state",
+        "end_state",
+        "deadline",
+        "B2_owner",
+        "success_metrics"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W01_W04_Foundation/README.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W05_W08_Scaling/README.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/W09_W12_Optimization/README.md"
+      ]
+    },
+    {
+      "nom": "SOP",
+      "attributs": [
+        "id (SOP-L2-<DOMAIN>-NNN)",
+        "name",
+        "cadence",
+        "steps",
+        "build_gate",
+        "version"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/B3_Squad_Fantastic4/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/B3_Squad_Thunderbolts/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/B3_Squad_KangDynasty/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/B3_Squad_XMen/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Contract Template",
+      "attributs": [
+        "name",
+        "jurisdiction (FR/EU/US)",
+        "signature_mode",
+        "linked_SOP"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "ADR",
+      "attributs": [
+        "id (ADR-<DOMAIN>-NNN)",
+        "status (RATIFIED/ACCEPTED)",
+        "date"
+      ],
+      "chemins": [
+        "02_Areas_Spock/N0_Coach_Client_Onboarding_KB.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/08_Contribution_Architecture_Integrated/README.md"
+      ]
+    },
+    {
+      "nom": "Pipeline Stage",
+      "attributs": [
+        "name",
+        "transition_to_stage",
+        "owner_squad",
+        "KPI_seuil"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Build Gate",
+      "attributs": [
+        "metric",
+        "green_threshold",
+        "owner"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/B3_Squad_Fantastic4/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/B3_Squad_KangDynasty/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Anti-Pattern",
+      "attributs": [
+        "description",
+        "rationale",
+        "escalation_if_violated"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Decision Charter",
+      "attributs": [
+        "decision_type",
+        "owns (A/R)",
+        "consulted (C)",
+        "vetoes",
+        "escalates_to"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+      ]
+    },
+    {
+      "nom": "Scorecard Snapshot",
+      "attributs": [
+        "date",
+        "week_N",
+        "lead_metrics",
+        "lag_metrics",
+        "zone (GREEN/ORANGE/RED)",
+        "decisions_needed",
+        "B2_owner_review"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/Lead_Lag_Logs/README.md"
+      ]
+    },
+    {
+      "nom": "Squad Member (sub-agent)",
+      "attributs": [
+        "name",
+        "archetype",
+        "lore_role",
+        "business_responsibility"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Domain Bibliography",
+      "attributs": [
+        "LD",
+        "title",
+        "author",
+        "B2_domain_mapping"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/README.md"
+      ]
+    },
+    {
+      "nom": "MUSE-eligible contribution",
+      "attributs": [
+        "criteria (7)",
+        "disqualifiers (5)",
+        "quota_Q1..Q4",
+        "output_artifact"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "Tenant",
+      "attributs": [
+        "id",
+        "slug",
+        "tier (start/sovereign/fleet)",
+        "config_json (branding+vocabulary)",
+        "subscription_status"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Offering",
+      "attributs": [
+        "id",
+        "name",
+        "price",
+        "root_sop_id (FK obligatoire Golden Rule)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "SOP-record",
+      "attributs": [
+        "id",
+        "tenant_id",
+        "title",
+        "department",
+        "content_markdown",
+        "video_url",
+        "estimated_time",
+        "is_template"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Project",
+      "attributs": [
+        "id",
+        "tenant_id",
+        "client_id",
+        "name",
+        "status",
+        "deadline"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Task",
+      "attributs": [
+        "id",
+        "tenant_id",
+        "project_id",
+        "sop_id (FK obligatoire)",
+        "title",
+        "status (todo/doing/done)",
+        "assigned_to"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Lead",
+      "attributs": [
+        "id",
+        "tenant_id",
+        "email",
+        "status (cold/warm/won/lost)",
+        "interested_in_offering_id",
+        "source (inbound)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Capacity Log",
+      "attributs": [
+        "id",
+        "tenant_id",
+        "user_id",
+        "week_start",
+        "hours_logged",
+        "stress_level (1-5)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Commercial Tier (AaaS)",
+      "attributs": [
+        "name",
+        "price",
+        "scope",
+        "revenue_event"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/02_Phase2_Project_Charter.md"
+      ]
+    },
+    {
+      "nom": "Jerry variant",
+      "attributs": [
+        "id (J01..J04)",
+        "scope (LDs)",
+        "mode",
+        "fractal_status"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Jerry_Areas_README.md",
+        "02_Areas_Spock/A1_Jerry_Areas_Spec.md"
+      ]
+    },
+    {
+      "nom": "Phase saisonniere Bio (J02)",
+      "attributs": [
+        "name (Winter/Spring/Summer-Autumn)",
+        "weeks",
+        "key_activities",
+        "biological_adjustments"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/12WY_Area_Cadence/README.md"
+      ]
+    },
+    {
+      "nom": "Mode (Area LD01)",
+      "attributs": [
+        "name",
+        "trigger (revenue threshold)",
+        "role",
+        "investment_priority"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "Account (banque automatisee J03)",
+      "attributs": [
+        "name (BUFFER/REINVEST/INDEPENDENCE/PROTECT/PLAY/GIVE)",
+        "purpose",
+        "trigger"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "Wealth Architecture Tier (J03)",
+      "attributs": [
+        "name (T1..T4)",
+        "definition",
+        "reinvestment_rule"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "Wealth Velocity Lane (J03)",
+      "attributs": [
+        "name (Slowlane/Fastlane/Sovereignty)",
+        "description",
+        "usage_rule"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md"
+      ]
+    },
+    {
+      "nom": "Operational Mode (J04 creativity gates)",
+      "attributs": [
+        "name (Gate 0/1/2/3)",
+        "trigger",
+        "creative_output_required"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md"
+      ]
+    },
+    {
+      "nom": "Forbidden Action",
+      "attributs": [
+        "subject",
+        "description",
+        "override_path"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B1_Area_Direction/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B1_Area_Direction/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "Escalation Threshold",
+      "attributs": [
+        "signal",
+        "threshold",
+        "escalates_to",
+        "cadence"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+      ]
+    },
+    {
+      "nom": "Output Packet (B1 decision)",
+      "attributs": [
+        "decision_id",
+        "date",
+        "type",
+        "trigger",
+        "options_considered",
+        "decision",
+        "owner",
+        "vetoes_applied",
+        "cascades_to"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+      ]
+    },
+    {
+      "nom": "Handoff Packet (JTBD)",
+      "attributs": [
+        "JTBD_id",
+        "job_statement",
+        "input_artifacts",
+        "expected_output_artifacts",
+        "proof_required",
+        "lead/lag_indicator",
+        "timebox",
+        "status"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/05_B2_DEFINITION_OF_DONE_SPEC.md"
+      ]
+    },
+    {
+      "nom": "Project Charter (AaaS)",
+      "attributs": [
+        "code_name",
+        "classification",
+        "date",
+        "commandant",
+        "mission",
+        "lois_d_acier",
+        "tiers",
+        "role_distribution"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/02_Phase2_Project_Charter.md"
+      ]
+    },
+    {
+      "nom": "Loi d'Acier / Golden Rule",
+      "attributs": [
+        "name",
+        "scope",
+        "enforcement"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/02_Phase2_Project_Charter.md",
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Sub-agent hero (Charter)",
+      "attributs": [
+        "name",
+        "role",
+        "livrable_prioritaire",
+        "directive_speciale"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/02_Phase2_Project_Charter.md"
+      ]
+    },
+    {
+      "nom": "AGENT_REGISTRY_DB entry (Notion)",
+      "attributs": [
+        "uuid",
+        "squad_name",
+        "notion_id",
+        "lore_summary"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_B3_SQUAD_CANON.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_B3_SQUAD_CANON.md"
+      ]
+    },
+    {
+      "nom": "Command Cycle (B1)",
+      "attributs": [
+        "name (C1..C4)",
+        "gate",
+        "lands_in"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/README.md"
+      ]
+    },
+    {
+      "nom": "Hierarchy Rank (A0-A3)",
+      "attributs": [
+        "name",
+        "role",
+        "example"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md",
+        "02_Areas_Spock/A3_Spock_Areas_Spec.md"
+      ]
+    },
+    {
+      "nom": "Cycle/Tick (12WY Q3)",
+      "attributs": [
+        "name",
+        "period",
+        "cadence"
+      ],
+      "chemins": [
+        "02_Areas_Spock/N0_Coach_Client_Onboarding_KB.md"
+      ]
+    },
+    {
+      "nom": "B0 Doctrine Layer (Self-Operating Business)",
+      "attributs": [
+        "name",
+        "source_livre",
+        "role",
+        "artifact"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/00_SOB_INDEX.md"
+      ]
+    },
+    {
+      "nom": "B2 Bio Domain (Vitality/Cognition)",
+      "attributs": [
+        "id (B2_DOMAIN_NN)",
+        "name (Sleep/Breath/Movement/Nutrition/Cold/Strength/Learning/Cognition)",
+        "LD (LD03 or LD04)",
+        "status (ACTIVE)",
+        "created",
+        "owner (B2 Domain Steward)",
+        "bibliography (real books)",
+        "threshold_table (GREEN/ORANGE/RED)",
+        "stewardship_protocol",
+        "ORANGE_recovery_protocol",
+        "connection_to_LD04_cascade",
+        "KR_status"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/01_Sleep_Recovery/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/02_Breath_Oxytocin/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/03_Movement_Outlive/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/04_Nutrition_4HB/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/05_Cold_Exposure_BLS/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/06_Strength_Supple_Leopard/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/07_Learning_How_to_Learn/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/08_Cognition_Mastery/README.md"
+      ]
+    },
+    {
+      "nom": "B2 Nexus Domain (Finance/Family)",
+      "attributs": [
+        "id (B2_NN)",
+        "name (Capital/CashFlow/Risk/Tax/Investment/Succession/Insurance/FamilyGovernance)",
+        "layer (L2_Business_Pulse)",
+        "type (STABILITY_PROTOCOL)",
+        "status (ACTIVE)",
+        "created",
+        "framework_refs (real books)",
+        "cross_connections (to other D0x)",
+        "target_metrics (target/acceptable/critical)",
+        "KR (KR01-04)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/01_Capital_Architecture/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/02_Cash_Flow_Architecture/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/03_Risk_Management/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/04_Tax_Optimization/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/05_Investment_Accumulation/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/06_Succession_Planning/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/07_Insurance_Protection/README.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/08_Family_Financial_Governance/README.md"
+      ]
+    },
+    {
+      "nom": "B2 Solarpunk Domain (Social/Creativity/Impact)",
+      "attributs": [
+        "id (B2_J04_D0N)",
+        "name (Relational/Network/Experiential/CreativityGates/SolarpunkDoctrine/MUSE/PublicBenefit/Contribution)",
+        "LD (LD05/LD07/LD08)",
+        "status (ACTIVE/SOVEREIGN_ACTIVE)",
+        "created",
+        "source_bibliography (real books)",
+        "owns",
+        "does_NOT_own",
+        "contribution_type",
+        "MUSE_eligible_context"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/01_Relational_Capital_LD05/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/02_Network_Activation_LD05/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/03_Experiential_Capital_LD07/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/04_Creativity_Gates_LD07/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Solar_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/07_Public_Benefit_Standards_LD08/README.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/08_Contribution_Architecture_Integrated/README.md"
+      ]
+    },
+    {
+      "nom": "JTBD Packet",
+      "attributs": [
+        "jtbd_id",
+        "source_rock",
+        "layer (B3_AREA_WARP_CORE)",
+        "surface",
+        "scope (Area | Project)",
+        "domain",
+        "b2_owner",
+        "squad_lead",
+        "supports",
+        "principles_ref",
+        "evidence_grade (HYPOTHESIS/VALIDATED)",
+        "status",
+        "updated",
+        "NSM (North Star Metric)",
+        "AARRR_focus",
+        "ICP_filter",
+        "VOC",
+        "painkiller_hypotheses",
+        "experiment (RICE)",
+        "build_gate",
+        "dod_checklist",
+        "handoff_authority"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/04_Ops_Batman_Fantastic4/JTBD-OPS-001_FANTASTIC4_DEAL_SOP_PACKET.md"
+      ]
+    },
+    {
+      "nom": "JTBD Job Statement",
+      "attributs": [
+        "job (When X needs Y, the Z does W, so that V)",
+        "lead",
+        "squad",
+        "evidence_grade_warning",
+        "Area_source_of_truth (DRY inheritance)",
+        "North_Star"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/04_Ops_Batman_Fantastic4/JTBD-OPS-001_FANTASTIC4_DEAL_SOP_PACKET.md"
+      ]
+    },
+    {
+      "nom": "ICP Filter (3 Rejection Criteria)",
+      "attributs": [
+        "R1 (Budget/ASP-fit)",
+        "R2 (Operator-ready)",
+        "R3 (Hors 80/20 — low recurrence/upside)",
+        "scoring (0=nurture, 1=nurture, 2+=decline)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md"
+      ]
+    },
+    {
+      "nom": "Painkiller Variant",
+      "attributs": [
+        "id (V1/V2/V3)",
+        "promise",
+        "target_pain (dépendance fondateur/absence SOP/méfiance post-échec)",
+        "drax_kill_gate"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md"
+      ]
+    },
+    {
+      "nom": "B2 Domain Control Room",
+      "attributs": [
+        "layer (B2_AREA_SUPERVISION)",
+        "surface",
+        "domain",
+        "b2_owner",
+        "b3_swarm",
+        "status (SHADOW_ACTIVE)",
+        "mission",
+        "responsibility (B2 receives intent from B1)",
+        "must_not (5 prohibitions)",
+        "swarm_scope",
+        "core_domain_surface",
+        "handoff_rule"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/00_B2_DOMAIN_CONTROL_ROOM.md"
+      ]
+    },
+    {
+      "nom": "Domain Pair Check",
+      "attributs": [
+        "pair (Growth+Sales/Sales+Ops/Product+Ops/Product+IT/Finance+Growth/Finance+Product/Legal+Growth/Legal+Product/People+All)",
+        "question",
+        "escalation_if_unresolved (B2 Council / B1 if structural)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"
+      ]
+    },
+    {
+      "nom": "Red Flag Combination",
+      "attributs": [
+        "combination (5 named — Product green/Ops IT red, Growth green/Sales red, Sales green/Ops People red, Finance red + Growth/Product green, Legal red + public-facing)",
+        "decision"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"
+      ]
+    },
+    {
+      "nom": "B1 Weekly Scan Output",
+      "attributs": [
+        "NO_CHANGE / B2_MANDATE / STRATEGIC_REBALANCE",
+        "balance_rules (6 named)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/08_BUSINESS_WHEEL_BALANCE_REVIEW.md"
+      ]
+    },
+    {
+      "nom": "B1 Domain Mandate Packet",
+      "attributs": [
+        "mandate_id (B1-B2-MANDATE-YYYY-NN)",
+        "source_north_star",
+        "cycle (C1/C2/C3/C4)",
+        "affected_domains",
+        "imbalance_type (empty/overloaded/blocked_gate/product_only_drift/cross_domain_conflict/missing_proof)",
+        "strategic_intent",
+        "constraints",
+        "success_signal",
+        "b2_expected_response",
+        "b1_decision_needed"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md"
+      ]
+    },
+    {
+      "nom": "Built to Sell Scorecard",
+      "attributs": [
+        "score_fields (Niche clarity / Repeatable offer / Delivery independence / Revenue logic / Lead source / Handoff proof)",
+        "scoring (0-3 each)",
+        "gate (12=SOB_INCUBATION, 16=OPERATING_BUSINESS_CANDIDATE)",
+        "evidence_required (proof path/Baserow/customer artifact/SOP)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/02_BUILT_TO_SELL_SCORECARD.md"
+      ]
+    },
+    {
+      "nom": "Area Domain Principles (Cluster)",
+      "attributs": [
+        "id (BIO/NX/SP-NN)",
+        "source (J02/J03/J04 AREA_STANDARD + bibliography real + value-canon)",
+        "date",
+        "type (area_domain_principles)",
+        "domain (L2_Business_Pulse/Jerry)",
+        "guardian (B1 — STOP/GO authority)",
+        "status (CANONICAL)",
+        "distillation_version (v1/v2/v3)",
+        "principles_count (28 BIO / 19 NX / 22 SP / 18 Superman / 20 JohnJones / 18 Flash / 25 Batman / etc.)",
+        "clusters (A-I)",
+        "theorem (Bio/Nexus/Solarpunk)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/03_JERRY_NEXUS_PRINCIPLES.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/03_SUPERMAN_GROWTH_PRINCIPLES.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/03_JOHNJONES_SALES_PRINCIPLES.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/03_FLASH_PRODUCT_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "BANT Qualification",
+      "attributs": [
+        "B (Budget)",
+        "A (Authority)",
+        "N (Need)",
+        "T (Timing)",
+        "red_flags (discount request/urgency sans budget/sur-mesure)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/04_Seed_Ops_SOPs.md"
+      ]
+    },
+    {
+      "nom": "Master SOP Template (5 Universelles)",
+      "attributs": [
+        "id",
+        "department (OPS/FINANCE/PRODUCT/GROWTH/PEOPLE)",
+        "department_icon (Lucide)",
+        "estimated_time (min)",
+        "is_template (true)",
+        "content_markdown (Objectif/Checklist/Règle d'Or/Automation)",
+        "Onboarding Client / Protocole Facturation / Livraison & Clôture / Script Qualification / Founder Reset"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/04_Seed_Ops_SOPs.md"
+      ]
+    },
+    {
+      "nom": "DEAL Framework",
+      "attributs": [
+        "D (Définir/Define — Muse identity)",
+        "E (Éliminer/Eliminate — kill list)",
+        "A (Automatiser/Automate)",
+        "L (Libérer/Liberate — owner out of loop)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/04_Ops_Batman_Fantastic4/JTBD-OPS-001_FANTASTIC4_DEAL_SOP_PACKET.md"
+      ]
+    },
+    {
+      "nom": "Tier (AaaS)",
+      "attributs": [
+        "id (Tier 1/2/3)",
+        "name (Start/Sovereign/Fleet)",
+        "price (300$/an / 700$/an / 1500$/an)",
+        "scope (Order/Identity/Business Model)",
+        "feature (no personalization / White Label / Franchise)",
+        "revenue_event"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+      ]
+    },
+    {
+      "nom": "AaaS Kill List (5 interdits)",
+      "attributs": [
+        "no internal chat (use Google Chat via MCP)",
+        "no heavy file storage (point to Google Drive)",
+        "no complex Gantt chart (simple 'My Day')",
+        "no custom invoicing (Stripe Checkout only)",
+        "no custom dev (Tier 2 special feature = NO)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+      ]
+    },
+    {
+      "nom": "Summer's Verse (Kernel SEO Fractal)",
+      "attributs": [
+        "Niveau 0 (Soleil — A'Space OS)",
+        "Niveau 1 (Planètes — niche sites)",
+        "Niveau 2 (Satellites — local/specific LP)",
+        "Kernel (Sun radiating content to planets)",
+        "BMad method (Brainstorming → Management → Architecting → Doer)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/00_Mission_Overview_SummerVerse.md"
+      ]
+    },
+    {
+      "nom": "Area Theorem (Jerry)",
+      "attributs": [
+        "name (Bio/Nexus/Solarpunk theorem)",
+        "form (one-sentence operating truth)",
+        "Bio: 'Le corps et l'esprit sont le premier actif — non-renouvelable'",
+        "Nexus: 'Money is fuel for family presence and generational transmission — never the master.'",
+        "Solarpunk: 'On ne garde que ce qu'on transmet.' (You only keep what you transmit)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/03_JERRY_NEXUS_PRINCIPLES.md",
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Hard Safety Doctrine (Beth HALT)",
+      "attributs": [
+        "trigger_condition (LD03 RED any OR LD03+LD04 ORANGE)",
+        "action (HARD FREEZE → all Jerry freeze)",
+        "notification (Beth within 24h)",
+        "recovery_protocol (sleep/HRV first, then cascade)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B1_Area_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "STOP Authority (Bio Bio27)",
+      "attributs": [
+        "issuer (Jerry Bio)",
+        "rule (Bio issues STOP, never GO)",
+        "trigger (substrate degradation)",
+        "effect (freezes expansion regardless of which Jerry owns the metric)",
+        "anti_pattern_guard (no Jerry, even Business, progresses by burning the body)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Founder Load Ceiling",
+      "attributs": [
+        "hard_limits (>45h/week cognitive load OR >3 concurrent execution projects)",
+        "trigger (auto ORANGE)",
+        "rationale (discipline includes the discipline to stop)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Centenarian Decathlon",
+      "attributs": [
+        "concept (Attia)",
+        "method (define physical tasks wanted at 90, reverse-engineer training now)",
+        "primary_metric (VO2max ≥35 mL/kg/min)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "First 20 Hours Rule",
+      "attributs": [
+        "concept (Josh Kaufman)",
+        "rule (a skill must produce measurable output within 20h)",
+        "rationale (acquisition without application is forgotten)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Investment in Loss",
+      "attributs": [
+        "concept (Waitzkin)",
+        "rule (accept losing while restructuring at deeper level)",
+        "rationale (Region-Beta refusal to settle for 'good enough')"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Grand Slam Offer",
+      "attributs": [
+        "concept (Hormozi)",
+        "criteria (complete / targeted / reassuring)",
+        "result ('feels stupid for not buying')"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/03_JOHNJONES_SALES_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Value Equation",
+      "attributs": [
+        "formula",
+        "components (Dream Outcome / Perceived Likelihood / Time Delay / Effort & Sacrifice)",
+        "rule (push numerator to infinity, denominator to zero)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/03_JOHNJONES_SALES_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Wealth Tier (T1-T4)",
+      "attributs": [
+        "id (T1/T2/T3/T4)",
+        "name (Safety/Independence/Acceleration/Sovereignty)",
+        "definition (T1=6mo cash, T2=index fund compound, T3=business equity stakes, T4=opportunistic real estate)",
+        "reinvestment_rule (≤20%/≤50%/gated by SURGE)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/05_Investment_Accumulation/README.md"
+      ]
+    },
+    {
+      "nom": "6-Account Banking Structure",
+      "attributs": [
+        "BUFFER (1 month essential burn)",
+        "REINVEST (15% of income — business growth)",
+        "INDEPENDENCE (20% of surplus — index funds)",
+        "PROTECT (insurance deductible reserve)",
+        "PLAY (5% — A0 presence fund)",
+        "GIVE (1% — charitable reserve)",
+        "automation_mandate (all allocations automatic on paydays)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/01_Capital_Architecture/README.md"
+      ]
+    },
+    {
+      "nom": "Tax Reserve Policy",
+      "attributs": [
+        "rule (25% of all revenue auto-streams quarterly)",
+        "purpose (no tax surprise at filing)",
+        "calendar (Q1 filing / Q2 mid-year / Q3 harvesting / Q4 planning)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/04_Tax_Optimization/README.md"
+      ]
+    },
+    {
+      "nom": "Asymmetric Bet Rule",
+      "attributs": [
+        "acceptable (upside > 3× downside AND downside does not breach RED tier)",
+        "unacceptable (any bet that could put runway into RED)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/03_Risk_Management/README.md"
+      ]
+    },
+    {
+      "nom": "Risk-Adjusted Runway",
+      "attributs": [
+        "formula (Effective Runway = Cash / (Monthly Burn + Risk Buffer))",
+        "Risk Buffer (Monthly Burn × Risk Multiplier)",
+        "multipliers (LOW=1.0, MEDIUM=1.25, HIGH=1.5)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/03_Risk_Management/README.md"
+      ]
+    },
+    {
+      "nom": "Family Load Score",
+      "attributs": [
+        "formula (10 - (Work Hours / Ideal Hours) × 10)",
+        "zones (>8 GREEN, 6-8 YELLOW, 4-6 ORANGE, <4 RED)",
+        "Hard_Things_monthly (3 non-negotiables: physical/learning/creative)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/08_Family_Financial_Governance/README.md"
+      ]
+    },
+    {
+      "nom": "Goggins Accountability (Monthly Hard Thing)",
+      "attributs": [
+        "count (3 completions/month)",
+        "categories (1 physical challenge / 1 learning challenge / 1 creative challenge)",
+        "consequence_if_missed (2 consecutive months missed → Family Presence compromised → Revenue expansion pauses)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/08_Family_Financial_Governance/README.md"
+      ]
+    },
+    {
+      "nom": "Flow Component (Csikszentmihalyi)",
+      "attributs": [
+        "clear_goals",
+        "immediate_feedback",
+        "challenge_skill_balance (4% above current)",
+        "deep_involvement",
+        "sense_of_control",
+        "loss_of_self_consciousness",
+        "transformation_of_time (time-boxed)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/03_Experiential_Capital_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "MDA Framework (Game Design)",
+      "attributs": [
+        "Mechanics (rules/structures)",
+        "Dynamics (player behavior)",
+        "Aesthetics (emotional experience)",
+        "anti_pattern (gamifying what should not be gamified)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/03_Experiential_Capital_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "True Fun vs False Fun Matrix",
+      "attributs": [
+        "True Fun (emerges naturally / intrinsically rewarding / enhances reality / freely chosen)",
+        "False Fun (compensates for deprivation / requires external triggers / numbs / performed)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/03_Experiential_Capital_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "Superbetter Quest Protocol",
+      "attributs": [
+        "Bandage (survive crisis)",
+        "Quest (next milestone)",
+        "Ally (find helper)",
+        "Bad Guy (name obstacle)",
+        "Power Up (recall past wins)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/03_Experiential_Capital_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "Creativity Gate",
+      "attributs": [
+        "id (Gate 0/1/2/3)",
+        "name (Operational/Quarterly Creative Sprint/New Project Evaluation/Anti-Fun Audit)",
+        "trigger",
+        "rule (when creative output mandatory vs voluntary)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/04_Creativity_Gates_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "Anti-Fun Audit Checklist",
+      "attributs": [
+        "q1_genuinely_necessary",
+        "q2_genuine_agency",
+        "q3_real_play_time",
+        "q4_freely_chosen",
+        "rule (any 'performance version of yes' → do not demand creative output)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/04_Creativity_Gates_LD07/README.md"
+      ]
+    },
+    {
+      "nom": "MUSE Qualifying Rule",
+      "attributs": [
+        "id (1-7)",
+        "name (Solarpunk thesis alignment / Public goods character / Relational capital growth / Experiential capital deepening / Biomimetisme presence / Circular thinking / Knowledge sharing intent)",
+        "test"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "MUSE Disqualifier",
+      "attributs": [
+        "id (1-5)",
+        "name (Extraction primary / Green veneer / Relational exploitation / Play deprivation / Knowledge hoarding)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Public Benefit Standard",
+      "attributs": [
+        "id (1-6)",
+        "name (Biomimetic foundation / Circular output / Local resilience / Knowledge contribution / Relational reciprocity / Authentic fun)",
+        "requirement",
+        "verification"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/07_Public_Benefit_Standards_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Anti-Extraction Checklist (7 questions)",
+      "attributs": [
+        "q1_commons_or_revenue",
+        "q2_local_or_global",
+        "q3_locked_or_open",
+        "q4_authentic_or_manufactured",
+        "q5_trust_increase_or_decrease",
+        "q6_cascade_or_no",
+        "q7_adequate_or_over_optimized"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/07_Public_Benefit_Standards_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Contribution Stack (LD05→LD07→LD08)",
+      "attributs": [
+        "L05 (Relational — trust assets → Network Activation)",
+        "L07 (Experiential — flow artifacts → Creativity Gates)",
+        "L08 (Regenerative — Solarpunk Doctrine → MUSE → Public Benefit)",
+        "Verification (Contribution Architecture D08)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/08_Contribution_Architecture_Integrated/README.md"
+      ]
+    },
+    {
+      "nom": "Cialdini 6 Principles of Action",
+      "attributs": [
+        "Reciprocity",
+        "Commitment",
+        "Social Proof",
+        "Authority",
+        "Liking",
+        "Scarcity"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/02_Network_Activation_LD05/README.md"
+      ]
+    },
+    {
+      "nom": "Carnegie Primitive",
+      "attributs": [
+        "Name (use names correctly)",
+        "Listening (full presence)",
+        "Smiling (warmth without falseness)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/01_Relational_Capital_LD05/README.md"
+      ]
+    },
+    {
+      "nom": "Voss Tactical Empathy",
+      "attributs": [
+        "Calibrated question",
+        "Label",
+        "Mirror",
+        "Dead-man's line"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/02_Network_Activation_LD05/README.md"
+      ]
+    },
+    {
+      "nom": "5 Love Languages (Diagnostic)",
+      "attributs": [
+        "Words of Affirmation",
+        "Quality Time",
+        "Gifts",
+        "Acts of Service",
+        "Physical Touch"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/01_Relational_Capital_LD05/README.md"
+      ]
+    },
+    {
+      "nom": "Circular Economy Hierarchy (9 levels)",
+      "attributs": [
+        "Redesign / Reuse / Repair / Refurbish / Remanufacture / Repurpose / Recycle / Recover / Dispose"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Urban Acupuncture Protocol (5 steps)",
+      "attributs": [
+        "Map pressure points / Find sensitive point / Intervene precisely / Read response / Iterate"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Blue Economy Model (5 dichotomies)",
+      "attributs": [
+        "Externalize → Internalize costs / Pollute+pay → Prevent at source / Expensive remediation → Cheap prevention / Scarcity thinking → Abundance from waste / Linear chains → Local circular"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "Low-Tech Lab Principle",
+      "attributs": [
+        "Appropriate technology",
+        "Autonomy over dependency",
+        "Local repairability",
+        "Human scale",
+        "Failure visibility"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "8-Domain Business Wheel (B1 view)",
+      "attributs": [
+        "Growth / Sales / Product / Ops / IT / Finance / People / Legal"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/08_BUSINESS_WHEEL_BALANCE_REVIEW.md"
+      ]
+    },
+    {
+      "nom": "Life Domain Bibliography (LD01-LD08)",
+      "attributs": [
+        "LD",
+        "6 books/title/author per LD",
+        "B2_domain_mapping",
+        "alignment_rationale",
+        "status (A0 CONFIRMÉ / A0 IDEAL / RESEARCH A3)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+      ]
+    },
+    {
+      "nom": "Bibliography Status Flag",
+      "attributs": [
+        "A0 CONFIRMÉ (doctrine ratified — LD01, LD08)",
+        "A0 IDEAL (corpus ratified — LD03, LD04)",
+        "RESEARCH A3 (research corpus — LD02, LD05, LD06, LD07)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+      ]
+    },
+    {
+      "nom": "ORANGE Recovery Protocol",
+      "attributs": [
+        "trigger (single GREEN threshold breached >24h)",
+        "immediate_actions (5-7 actions)",
+        "clearance_criteria (48h consecutive GREEN + behavioral compliance)",
+        "time_box (24h immediate actions)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/01_Sleep_Recovery/README.md"
+      ]
+    },
+    {
+      "nom": "Cognition Cascade (Sleep→HRV→Cognition)",
+      "attributs": [
+        "direction (LD03 → LD04)",
+        "examples (Sleep<6h → Working memory -20-60%, Nutrition ORANGE → LD04 ORANGE)",
+        "time_delay (Sleep debt → LD04 ORANGE within 48h)",
+        "rule (no Jerry expansion if cascade is ORANGE)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/01_Sleep_Recovery/README.md",
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/03_Movement_Outlive/README.md"
+      ]
+    },
+    {
+      "nom": "MUSE Quota (Quarterly + Annual)",
+      "attributs": [
+        "Q1 (3)",
+        "Q2 (3)",
+        "Q3 (4)",
+        "Q4 (4)",
+        "annual_minimum (14)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md"
+      ]
+    },
+    {
+      "nom": "12WY Command Cycle (C1-C4)",
+      "attributs": [
+        "id (C1/C2/C3/C4)",
+        "name (Direction Lock / Domain Activation / Execution Proof / Graduation or Archive)",
+        "goal",
+        "gate"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/02_12WY_COMMAND_CYCLES.md"
+      ]
+    },
+    {
+      "nom": "B1 Decision Charter",
+      "attributs": [
+        "decision_id",
+        "date",
+        "scope",
+        "question",
+        "options",
+        "recommendation",
+        "risk_if_wrong",
+        "reversibility",
+        "beth_status",
+        "b2_owner",
+        "b3_artifact_required",
+        "proof_path",
+        "next_review"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/02_12WY_COMMAND_CYCLES.md"
+      ]
+    },
+    {
+      "nom": "B1 Decision Rights",
+      "attributs": [
+        "may_decide (project direction / mode hypothesis / B2 handoff / product-only status / escalation)",
+        "may_not (execute B3 / bypass B2 gates / mark Business Done from Product / mutate config / hide risk)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/02_12WY_COMMAND_CYCLES.md"
+      ]
+    },
+    {
+      "nom": "Coverage Ratio",
+      "attributs": [
+        "formula (Monthly Passive Income / Monthly Essential Burn)",
+        "zones (<60% RED, 60-79% ORANGE, 80-99% YELLOW, 100%+ GREEN)",
+        "expansion_permission (RED=defend only, ORANGE=minimal if increases coverage 90d, YELLOW=20% reinvest, GREEN=normal expansion)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/02_Cash_Flow_Architecture/README.md"
+      ]
+    },
+    {
+      "nom": "Risk Category",
+      "attributs": [
+        "id (1-4)",
+        "name (Income Volatility / Market-Investment / Liability / Family Load)",
+        "mitigation (Emergency Reserve D01 / Diversified index / Insurance D07 / Family Stability)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/03_Risk_Management/README.md"
+      ]
+    },
+    {
+      "nom": "TIER Architecture (1-4)",
+      "attributs": [
+        "TIER 1 (Safety Core — 6mo runway cash, NOT investment)",
+        "TIER 2 (Compound Engine — VTI/VTWAX index funds, 20% of income)",
+        "TIER 3 (Business Equity — AaaS/Solaris/Nexus/Orbiter stakes, 15% via Reinvestment Pool)",
+        "TIER 4 (Opportunistic — Real estate/ventures/alternatives, gated by SURGE)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/05_Investment_Accumulation/README.md"
+      ]
+    },
+    {
+      "nom": "4% Withdrawal Rule",
+      "attributs": [
+        "formula (Target Portfolio = Annual Expenses × 25)",
+        "safety_margin (Target = Annual Expenses × 33 for 3% withdrawal)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/05_Investment_Accumulation/README.md"
+      ]
+    },
+    {
+      "nom": "Insurance Category",
+      "attributs": [
+        "Health (HSA-compatible)",
+        "Disability (own-occupation, 60-70% replacement)",
+        "Liability (umbrella $1-2M minimum)",
+        "Property (homeowner/business/key equipment)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/07_Insurance_Protection/README.md"
+      ]
+    },
+    {
+      "nom": "Estate Document",
+      "attributs": [
+        "Will (asset distribution)",
+        "Healthcare Directive (medical decision authority)",
+        "Power of Attorney (financial decision if incapacitated)",
+        "Beneficiary Designations (retirement/life insurance)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/06_Succession_Planning/README.md"
+      ]
+    },
+    {
+      "nom": "Entity Type",
+      "attributs": [
+        "S-Corp (self-employment income, pass-through taxation, reasonable salary)",
+        "LLC (business equity protection, liability shield)",
+        "C-Corp (investment holding, tax-advantaged retention)"
+      ],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/06_Succession_Planning/README.md"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "de": "Spock",
+      "verbe": "gouverne / owns",
+      "vers": "Areas",
+      "citation": "Spock governs Areas: ongoing standards, responsibilities, and health of Life OS / Business OS domains. Areas are not \"to-do\" projects; they are maintained systems.",
+      "chemin": "02_Areas_Spock/README.md"
+    },
+    {
+      "de": "Spock",
+      "verbe": "hosts (incubates)",
+      "vers": "Jerry Areas",
+      "citation": "Jerry lives in Spock's Areas because Jerry is an ongoing responsibility, not a finite project.",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "Picard",
+      "verbe": "owns (instantiates)",
+      "vers": "Summer Projects",
+      "citation": "Spock incubates Jerry as an Area. Picard creates a Summer's Verse as an active PARA Project",
+      "chemin": "02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md"
+    },
+    {
+      "de": "Jerry (macro)",
+      "verbe": "shares fractal with",
+      "vers": "Summer (micro)",
+      "citation": "Active fractal is A1 -> B2 Justice League/DC manager -> B3 Marvel squad. Jerry is macro/A1 for ongoing business responsibility; Summer is micro/A1 for active project execution.",
+      "chemin": "02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md"
+    },
+    {
+      "de": "A-rank (A0-A3)",
+      "verbe": "is expressed as",
+      "vers": "B-rank (B1-B3) in L2",
+      "citation": "B is not a different system — it is A, localized to L2 and drawn top-down as Direction → Domains → Execution",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B1",
+      "verbe": "owns",
+      "vers": "North Star, 12WY cycles, decision rights, handoff queue",
+      "citation": "B1 sets the WHY/WHERE, B2 sets the WHAT/gate, B3 produces the HOW/proof.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B2",
+      "verbe": "owns",
+      "vers": "domain DoD + gates, principles doctrine, control room",
+      "citation": "B2 — Domains (Meso) / A2 of L2 / the 8 hero-managers (...) / domain DoD + gates, the perpetual principles doctrine, the control room, meso coordination",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B3",
+      "verbe": "owns",
+      "vers": "JTBD execution, proof, lead/lag indicators",
+      "citation": "B3 — Warp Core (Execution) / A3 of L2 / the 8 squads (...) / JTBD execution, proof, lead/lag indicators, peer-unblocking, blocker reports",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B1",
+      "verbe": "hands off to",
+      "vers": "B2",
+      "citation": "B1 writes/updates direction. B1 writes one domain mandate per affected B2 (a B1-B2-MANDATE packet) — intent + constraints + success signal, not a step-by-step plan. Logged in 04_B2_HANDOFF_QUEUE.md.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B2",
+      "verbe": "converts (mandate -> Rock+DoD)",
+      "vers": "B3",
+      "citation": "B2 converts the mandate into a Rock + DoD packet (05_B2_DEFINITION_OF_DONE_SPEC.md) and then into B3 JTBD packets (06_B3_JOBS_TO_BE_DONE_SPEC.md).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B3",
+      "verbe": "returns proof to",
+      "vers": "B2",
+      "citation": "B3 returns proof to B2. B2 decides whether the DoD is satisfied. B1 decides whether the direction can advance.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/06_B3_JOBS_TO_BE_DONE_SPEC.md"
+    },
+    {
+      "de": "Jerry Area",
+      "verbe": "oversees",
+      "vers": "Picard Projects",
+      "citation": "Area 12WY cadence purpose: Review and update AREA_STANDARD.md; Track Area-level lead/lag indicators; Conduct B2 manager check-ins; Onboard new Picard projects",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/README.md"
+    },
+    {
+      "de": "Picard Project",
+      "verbe": "references (DRY)",
+      "vers": "Jerry Area",
+      "citation": "Projects graduate; the Area persists. (...) per-project B1/B2/B3 that reference the macro doctrine (DRY — never re-derive) and calibrate it to the project's mode (Solaris / Nexus / Orbiter).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "B2 Domain",
+      "verbe": "owns (1:1)",
+      "vers": "B3 Squad",
+      "citation": "one datum, one owner. Growth=acquisition, Sales=conversion, Product=value, Ops=repeatability, IT=substrate, Finance=solvency, People=team, Legal=protection. Domains point at each other's data; they never copy it.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md"
+    },
+    {
+      "de": "Beth",
+      "verbe": "HALTs (vetoes)",
+      "vers": "all Jerry expansion",
+      "citation": "Beth can halt all expansion if Life OS load, health, cognition, or finance signals turn red.",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "Beth HALT",
+      "verbe": "triggers on LD03+LD04 ORANGE",
+      "vers": "HARD FREEZE on all Jerry",
+      "citation": "LD03 ORANGE + LD04 ORANGE → Beth HALT AUTOMATIC. LD03 RED any → FULL STOP + 24h report to Beth.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B1_Area_Direction/README.md"
+    },
+    {
+      "de": "Jerry Bio (J02)",
+      "verbe": "vetoes",
+      "vers": "LD01 business expansion",
+      "citation": "LD01 expansion gating: When LD04 learning velocity gates LD01 business expansion.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B1_Area_Direction/README.md"
+    },
+    {
+      "de": "Wonder Woman (B2 Finance)",
+      "verbe": "vetoes",
+      "vers": "deals >15% discount",
+      "citation": "Finance (Wonder Woman) — veto on any deal/discount that breaks the margin floor or runway threshold (discount >15% requires her sign-off).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "Aquaman (B2 Legal)",
+      "verbe": "vetoes",
+      "vers": "public message / contract / IP",
+      "citation": "Aquaman (B2) — compliance gate / Aquaman (can veto a public message)",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "Cyborg (B2 IT)",
+      "verbe": "owns outright",
+      "vers": "IT architecture",
+      "citation": "IT architecture: Cyborg (B2) — Jerry does NOT decide",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "Green Lantern (B2 People)",
+      "verbe": "vetoes (with Finance)",
+      "vers": "headcount without 12-mo runway",
+      "citation": "Headcount / capsule onboarding: Green Lantern (B2); vetoes: Green Lantern + Finance",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "B3 peer",
+      "verbe": "vetoes (productive-disagreement)",
+      "vers": "JTBD affecting cost/legal/customer/quality",
+      "citation": "when a JTBD affects cost, legal exposure, customer promise, release quality, or operational load, at least one peer may block the first solution.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "Jerry Nexus (J03)",
+      "verbe": "automatically overrides",
+      "vers": "Summer's Verse expansion",
+      "citation": "Closure Rule: When runway enters ORANGE or RED, Jerry Nexus automatically overrides Summer's Verse expansion requests unless the expansion directly increases coverage ratio within 60 days.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md"
+    },
+    {
+      "de": "Solarpunk (J04)",
+      "verbe": "vetoes pure-extraction",
+      "vers": "projects that fail MUSE criteria",
+      "citation": "SP21 — Solarpunk vetoes pure-extraction. A project generating engagement/revenue with zero commons contribution does not qualify",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+    },
+    {
+      "de": "A0 Amadeus",
+      "verbe": "has absolute veto on",
+      "vers": "Intention",
+      "citation": "A0 Amadeus — absolute veto on Intention (what we pursue at all). Never overridden.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/03_DECISION_CHARTER.md"
+    },
+    {
+      "de": "Idea",
+      "verbe": "routes through",
+      "vers": "Cerritos -> Picard -> Summer's Verse",
+      "citation": "Ideas from Jerry pass through Cerritos/GTD before Picard instantiates a Summer's Verse.",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "Jerry (B1)",
+      "verbe": "does NOT receive ideas directly",
+      "vers": "Cerritos first, always",
+      "citation": "Every idea, opportunity, or strategic input routes through Cerritos first. Jerry's role is to set criteria, not to receive directly.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Cerritos",
+      "verbe": "routes idea within",
+      "vers": "48h to Picard",
+      "citation": "Routing SLA: Every idea routed to Picard within 48 hours",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Picard",
+      "verbe": "must action within",
+      "vers": "72h or Jerry escalates to B1",
+      "citation": "If Picard has not actioned within 72 hours → Jerry escalates to B1",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Mode AaaS",
+      "verbe": "triggered by",
+      "vers": "< $50K MRR",
+      "citation": "AaaS (Agency as a Service) | < $50K monthly revenue | Architect/Seller only — no ops overhead",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Mode Solaris",
+      "verbe": "triggered by",
+      "vers": "$50K-$200K MRR + visual offers",
+      "citation": "Solaris (Visual-first) | $50K-$200K MRR, visual offers | Add visual production, retain strategy",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Mode Nexus",
+      "verbe": "triggered by",
+      "vers": "$200K-$500K MRR + knowledge offers",
+      "citation": "Nexus (Data-first) | $200K-$500K MRR, knowledge offers",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "Mode Orbiter",
+      "verbe": "triggered by",
+      "vers": "> $500K MRR + logistics offers",
+      "citation": "Orbiter (Field-first) | > $500K MRR, logistics offers | Add field network, franchise execution",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md"
+    },
+    {
+      "de": "J01 Prime",
+      "verbe": "covers",
+      "vers": "LD01 (Career & Business)",
+      "citation": "J01_Jerry_Prime_LD01_Business | LD01 Career & Business; AaaS, Solaris, Nexus, Orbiter | ACTIVE_FIRST",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "J02 Bio",
+      "verbe": "covers",
+      "vers": "LD03 + LD04",
+      "citation": "J02_Jerry_Bio_LD03_LD04_Vitality_Cognition | Health + Cognition constraints for founder load | ACTIVE — VPP STANDARD",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "J03 Nexus",
+      "verbe": "covers",
+      "vers": "LD02 + LD06",
+      "citation": "J03_Jerry_Nexus_LD02_LD06_Finance_Family | Finance + Family/stability constraints | ACTIVE — FIP STANDARD",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "J04 Solarpunk",
+      "verbe": "covers",
+      "vers": "LD05 + LD07 + LD08",
+      "citation": "J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact | Social, creativity, impact, public contribution | ACTIVE — SCP STANDARD",
+      "chemin": "02_Areas_Spock/Jerry_Areas_README.md"
+    },
+    {
+      "de": "LD08",
+      "verbe": "est (is)",
+      "vers": "A0 SOVEREIGN DOCTRINE",
+      "citation": "LD08 is A0 SOVEREIGN DOCTRINE. This is not research. This is not hypothesis. Every rule in this section carries the weight of an A0 direct statement.",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/AREA_STANDARD.md"
+    },
+    {
+      "de": "Tenant",
+      "verbe": "owns (via tenant_id)",
+      "vers": "all tables",
+      "citation": "Note que chaque table (sops, tasks, leads...) possède une colonne tenant_id. C'est obligatoire.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+    },
+    {
+      "de": "Offering",
+      "verbe": "requires (FK)",
+      "vers": "root_sop_id (SOP Racine)",
+      "citation": "RÈGLE D'OR : On lie l'offre à une SOP Racine (ex: \"SOP Livraison Audit\")",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+    },
+    {
+      "de": "Task",
+      "verbe": "requires (FK)",
+      "vers": "sop_id (SOP obligatoire)",
+      "citation": "Une tâche ne peut exister sans SOP. Si un utilisateur veut créer une tâche \"floue\", le système le bloque",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+    },
+    {
+      "de": "Lead",
+      "verbe": "points to",
+      "vers": "interested_in_offering_id",
+      "citation": "On sait dès le début ce qu'on leur vend / interested_in_offering_id uuid references public.offerings",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+    },
+    {
+      "de": "Profile",
+      "verbe": "isolated by RLS",
+      "vers": "rows of same tenant",
+      "citation": "create policy \"Tenant Isolation\" on public.sops using (tenant_id = (select tenant_id from public.profiles where id = auth.uid()))",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/03_Phase3_Master_SQL_Schema.md"
+    },
+    {
+      "de": "Valeur Foi",
+      "verbe": "canon immutable",
+      "vers": "Jerry Wheel",
+      "citation": "Le canon de valeurs (§1) est immuable — comme AGENTS.md. Le changement de vie crée de nouvelles formes (nouveaux domaines, nouvelles offres), jamais de nouvelles valeurs.",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "Transformation Abou",
+      "verbe": "modèle de",
+      "vers": "J02 Bio discipline",
+      "citation": "Abou change de medium (rap→Afro→combat) mais garde foi/famille/discipline/transmission. C'est le modèle : muter la surface, préserver l'âme.",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "Hard Safety doctrine",
+      "verbe": "HALT vetoes cross-Jerry",
+      "vers": "« LD01 dévore la vie »",
+      "citation": "LD03 (santé) dégradée → LD04 (cognition) dégradée → Beth HALT veto → tous les Jerry freeze. C'est le garde-fou anti \"LD01 dévore la vie\".",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "Discipline",
+      "verbe": "bridge / pont",
+      "vers": "Abou (J02) ↔ business",
+      "citation": "La discipline est le pont (Abou) — la même répétition qui forge le freestyle forge le combat forge le business. J02 Bio est le gardien de cette discipline (corps+esprit).",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "Transmission",
+      "verbe": "sortie / output",
+      "vers": "J04 Solarpunk",
+      "citation": "La transmission est la sortie (Rentre dans le Cercle) — ce qu'on devient doit se transmettre (relais, child care, diaspora). J04 en est le gardien.",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "Ikigai",
+      "verbe": "aligns / centre",
+      "vers": "Wheel",
+      "citation": "L'Ikigai aligne le tout — c'est le centre du Wheel (USS Orville/LD-Ikigai en L1) ; chaque Jerry sert l'Ikigai, pas l'inverse.",
+      "chemin": "02_Areas_Spock/JERRY_WHEEL_ALIGNMENT_MINDSET_VALUES.md"
+    },
+    {
+      "de": "MUSE graduation",
+      "verbe": "requires (Gate)",
+      "vers": "contribution artifact, not revenue alone",
+      "citation": "The V0→V1 \"Muse\" graduation (Symphony SDD-010) requires a real contribution artifact, not revenue alone",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+    },
+    {
+      "de": "Jerry Bio (B1)",
+      "verbe": "issues STOP",
+      "vers": "all other Jerry (when substrate degrades)",
+      "citation": "Bio owns the STOP (thresholds, HALT, founder-load); all other Jerry own the GO. One datum, one owner.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Jerry Bio (J02)",
+      "verbe": "issues Beth HALT on",
+      "vers": "compound ORANGE (LD03+LD04)",
+      "citation": "When the substrate degrades, Bio freezes expansion regardless of which Jerry owns the metric (AREA_STANDARD §4 HALT tree)",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Founder Load",
+      "verbe": "is hard-gated by",
+      "vers": "auto ORANGE if >45h/week cognitive load or >3 concurrent execution projects without recovery",
+      "citation": "Expansion consumes a finite vitality/cognition pool; >45h/week cognitive load or >3 concurrent execution projects without recovery = automatic ORANGE (AREA_STANDARD §5). Discipline includes the discipline to stop.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Sleep ORANGE",
+      "verbe": "cascades to",
+      "vers": "LD04 ORANGE within 48h",
+      "citation": "Sleep ORANGE cascades to HRV within 48h, to cognition within 72h.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/01_Sleep_Recovery/README.md"
+    },
+    {
+      "de": "Sleep <6h for 3 nights",
+      "verbe": "produces",
+      "vers": "decision quality equivalent to legal intoxication",
+      "citation": "Sleep <6h for 3 nights → decision quality equivalent to legal intoxication",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/01_Sleep_Recovery/README.md"
+    },
+    {
+      "de": "Nutrition ORANGE",
+      "verbe": "cascades to",
+      "vers": "LD04 ORANGE (hippocampal function impaired)",
+      "citation": "Jerry Bio Rule: If Nutrition/4HB is ORANGE, no evening alcohol allowed → Learning velocity requires hippocampal function → Alcohol disrupts sleep-dependent memory consolidation",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/04_Nutrition_4HB/README.md"
+    },
+    {
+      "de": "Movement ORANGE",
+      "verbe": "requires",
+      "vers": "movement breaks every 45min during deep work",
+      "citation": "Jerry Bio Rule: If Movement/Outlive is ORANGE, deep work blocks require movement breaks → No 90min learning sessions without 10min movement break at 45min",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/03_Movement_Outlive/README.md"
+    },
+    {
+      "de": "Cold Exposure",
+      "verbe": "produces",
+      "vers": "15-20% focus improvement (when before learning)",
+      "citation": "Cold before learning = 15–20% improvement in focus metrics. Never cold exposure within 3h of sleep (disrupts sleep onset).",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/05_Cold_Exposure_BLS/README.md"
+    },
+    {
+      "de": "Learning/How to Learn ORANGE",
+      "verbe": "produces",
+      "vers": "LD04 ORANGE immediately (self-referential)",
+      "citation": "This domain is LD04's immune system → ORANGE in Learning/How to Learn → ORANGE in LD04 cognition immediately → RED in Learning/How to Learn → RED in LD04 cognition + Beth HALT",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/07_Learning_How_to_Learn/README.md"
+    },
+    {
+      "de": "Cognition/Mastery ORANGE",
+      "verbe": "reduces",
+      "vers": "LD01 ceiling (no new LD01 acquisition)",
+      "citation": "Jerry Bio Rule: Cognition/Mastery ORANGE → LD01 ceiling reduced → No new LD01 domain acquisition while Cognition/Mastery is ORANGE → Existing LD01 projects continue but no new commitments → Compound ORANGE (Cognition + any LD03) → Beth HALT",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/08_Cognition_Mastery/README.md"
+    },
+    {
+      "de": "AaaS (Phase 1 DEAL)",
+      "verbe": "EST un",
+      "vers": "Gouverneur de Souveraineté / Governance Infrastructure",
+      "citation": "AaaS n'est PAS un outil de gestion de projet (comme Monday ou Asana). AaaS EST un 'Gouverneur de Souveraineté' (Governance Infrastructure).",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Tier 1 Start (300$/an)",
+      "verbe": "vend",
+      "vers": "Ordre (Order), aucune personnalisation, notre marque",
+      "citation": "Tier 1 (Start - 300$/an) : Le Solopreneur. Il achète de l'Ordre. Il n'a droit à aucune personnalisation. Il utilise notre marque.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Tier 2 Sovereign (700$/an)",
+      "verbe": "vend",
+      "vers": "Identité (Identity), White Label, propre URL+Logo",
+      "citation": "Tier 2 (Sovereign - 700$/an) : La PME. Elle achète de l'Identité (White Label). Elle a son propre URL et Logo.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Tier 3 Fleet (1500$/an)",
+      "verbe": "vend",
+      "vers": "Business Model / Franchise",
+      "citation": "Tier 3 (Fleet - 1500$/an) : L'Agence AaaS. Elle achète un Business Model. Elle vend ses propres instances (Franchise).",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Software AaaS",
+      "verbe": "force séquence",
+      "vers": "OPS → PRODUCT → GROWTH (Règle d'Or)",
+      "citation": "Le logiciel force l'utilisateur à respecter la séquence OPS → PRODUCT → GROWTH. Le code empêche de créer une 'Offre' (Product) tant qu'une 'SOP' (Ops) n'est pas liée.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Tier 2 Client",
+      "verbe": "peut partir avec",
+      "vers": "ses données (Export JSON/SQL)",
+      "citation": "Le client Tier 2 doit pouvoir partir avec ses données (Export JSON/SQL). Il loue le moteur, mais il possède le carburant.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Batman (B2 OPS)",
+      "verbe": "conçoit",
+      "vers": "schéma sops+tasks (1 Tâche = 1 SOP, pas de sous-tâches)",
+      "citation": "Mission : Concevoir le schéma de la table sops et tasks. Contrainte Eliminate : Pas de sous-tâches infinies. 1 Tâche = 1 SOP.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Wonder Woman (B2 Finance)",
+      "verbe": "intègre",
+      "vers": "Stripe Connect avec Paiement Upfront uniquement",
+      "citation": "Mission : Intégration Stripe Connect. Contrainte Define : Paiement Upfront (d'avance) uniquement.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Aquaman (B2 Legal)",
+      "verbe": "fournit",
+      "vers": "Templates 'Terms of Service' pour SaaS",
+      "citation": "Mission : Templates de contrats 'Terms of Service' pour le SaaS.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "SOP Livraison",
+      "verbe": "déclenche",
+      "vers": "Boucle de Growth (NPS>8 → Review Google My Business)",
+      "citation": "Boucle de Growth : Si la note NPS est > 8/10, l'Agent Growth envoie automatiquement une demande de review Google My Business.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/04_Seed_Ops_SOPs.md"
+    },
+    {
+      "de": "BANT",
+      "verbe": "qualifie",
+      "vers": "prospects (Budget / Authority / Need / Timing)",
+      "citation": "Le Script (BANT) : 1. Budget : 'Avez-vous le budget sécurisé pour ce projet (à partir de X€) ?' 2. Authority : 'Êtes-vous le seul décideur ?' 3. Need : 'Quel problème essayez-vous de résoudre cette semaine ?' 4. Timing : 'Quand voulez-vous commencer ?'",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/04_Seed_Ops_SOPs.md"
+    },
+    {
+      "de": "Summer's Verse SEO Fractal",
+      "verbe": "structure en",
+      "vers": "3 niveaux (Soleil → Planètes → Satellites)",
+      "citation": "Niveau 0 (Le Soleil) : Ton site Mère (A'Space OS). Niveau 1 (Les Planètes) : Les sites niches (ex: gestion-cabinet-avocat.com). Niveau 2 (Les Satellites) : Les Landing Pages locales.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/00_Mission_Overview_SummerVerse.md"
+    },
+    {
+      "de": "Cyborg (B2 IT)",
+      "verbe": "gère",
+      "vers": "Technical SEO (Core Web Vitals / Schema Markup / Structure URLs)",
+      "citation": "Gère le 'Technical SEO' (Core Web Vitals, Schema Markup, Structure des URLs). C'est lui qui code les générateurs de pages statiques (Next.js SSG).",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/00_Mission_Overview_SummerVerse.md"
+    },
+    {
+      "de": "Coverage Ratio",
+      "verbe": "calcule comme",
+      "vers": "Monthly Passive Income / Monthly Essential Burn",
+      "citation": "Coverage Ratio = Monthly Passive Income / Monthly Essential Burn",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/02_Cash_Flow_Architecture/README.md"
+    },
+    {
+      "de": "Runway",
+      "verbe": "calcule comme",
+      "vers": "Cash on Hand / Monthly Net Burn",
+      "citation": "Runway = Cash on Hand / Monthly Net Burn",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/01_Capital_Architecture/README.md"
+    },
+    {
+      "de": "Coverage Ratio <60%",
+      "verbe": "produit",
+      "vers": "NO expansion (defend only)",
+      "citation": "< 60% RED NO expansion. Defend only.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/02_Cash_Flow_Architecture/README.md"
+    },
+    {
+      "de": "Runway <3 mois",
+      "verbe": "produit",
+      "vers": "RED (Full stop, no new commitments)",
+      "citation": "< 3 months RED Full stop. No new commitments.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/01_Capital_Architecture/README.md"
+    },
+    {
+      "de": "Family Load Score <4/10",
+      "verbe": "produit",
+      "vers": "RED (Full stop, revenue on hold)",
+      "citation": "< 4/10 RED Full stop. Revenue on hold.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/08_Family_Financial_Governance/README.md"
+    },
+    {
+      "de": "Goggins 2-month miss",
+      "verbe": "produit",
+      "vers": "Family Presence compromised → Revenue expansion pauses",
+      "citation": "If A0 misses 2 consecutive months of Hard Things, Family Presence is compromised — Revenue expansion pauses.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/08_Family_Financial_Governance/README.md"
+    },
+    {
+      "de": "Asymmetric Bet Rule",
+      "verbe": "exige",
+      "vers": "upside > 3× downside AND downside not in RED",
+      "citation": "Acceptable bet: Upside > 3× downside AND downside does not breach RED tier. Unacceptable bet: Any bet that could put runway into RED.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/03_Risk_Management/README.md"
+    },
+    {
+      "de": "TIER 4 deployment",
+      "verbe": "gated by",
+      "vers": "all gates are SURGE",
+      "citation": "TIER 4 — Opportunistic : Real estate, ventures, alternatives. Asymmetric bets only. Only when all gates are SURGE.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/05_Investment_Accumulation/README.md"
+    },
+    {
+      "de": "Tax Reserve",
+      "verbe": "égale",
+      "vers": "25% of all revenue auto-streams quarterly",
+      "citation": "Tax Reserve = Revenue × 0.25. This ensures no tax surprise at filing time.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B2_Area_Domains/04_Tax_Optimization/README.md"
+    },
+    {
+      "de": "Nexus theorem",
+      "verbe": "stipule que",
+      "vers": "Money is fuel for family presence and generational transmission — never the master.",
+      "citation": "The Nexus theorem: Money is fuel for family presence and generational transmission — never the master. The diaspora lesson: you build wealth to be present and to transmit (héritage), not to be absent chasing more.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/03_JERRY_NEXUS_PRINCIPLES.md"
+    },
+    {
+      "de": "Bio theorem",
+      "verbe": "stipule que",
+      "vers": "Le corps et l'esprit sont le premier actif — non-renouvelable.",
+      "citation": "The Bio theorem (the soul of this area): Le corps et l'esprit sont le premier actif — non-renouvelable. Business expansion that burns the substrate is not growth, it's debt.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Solarpunk theorem",
+      "verbe": "stipule que",
+      "vers": "On ne garde que ce qu'on transmet.",
+      "citation": "The Solarpunk theorem: On ne garde que ce qu'on transmet. The business exists to leave a mark and pass the flame (relais) — the cypher logic.",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+    },
+    {
+      "de": "LD08 (Solarpunk Doctrine)",
+      "verbe": "est",
+      "vers": "A0 SOVEREIGN DOCTRINE (cannot be overridden)",
+      "citation": "LD08 is A0 SOVEREIGN DOCTRINE. This is not research. This is not hypothesis. Every rule in this section carries the weight of an A0 direct statement.",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+    },
+    {
+      "de": "MUSE graduation",
+      "verbe": "requires",
+      "vers": "real contribution artifact, not revenue alone",
+      "citation": "The V0→V1 'Muse' graduation (Symphony SDD-010) requires a real contribution artifact, not revenue alone",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+    },
+    {
+      "de": "Project",
+      "verbe": "est",
+      "vers": "NOT Jerry Solarpunk si pure revenue (zero commons contribution)",
+      "citation": "Solarpunk vetoes pure-extraction. A project generating engagement/revenue with zero commons contribution does not qualify",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md"
+    },
+    {
+      "de": "Jerry Solarpunk",
+      "verbe": "STEWARDS (does NOT own)",
+      "vers": "LD08 doctrine (A0 owns it)",
+      "citation": "Jerry DOES NOT OWN LD08 doctrine. A0 owns it. Jerry stewards it. Jerry cannot modify, reinterpret, or deprioritize LD08 rules. Jerry's role is to operationalize LD08, not to question it.",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md"
+    },
+    {
+      "de": "LD08",
+      "verbe": "overrides",
+      "vers": "LD07 when in conflict (play that advances extraction = not acceptable)",
+      "citation": "LD08 (Regenerative Capital) always has priority over LD07 (Experiential Capital) when they conflict. Rationale: play that advances extraction is not acceptable. Creativity that destroys regenerative capacity is not acceptable.",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/04_Creativity_Gates_LD07/README.md"
+    },
+    {
+      "de": "MUSE Quota",
+      "verbe": "est",
+      "vers": "Q1:3 / Q2:3 / Q3:4 / Q4:4 (annual: 14 minimum)",
+      "citation": "Q1 3 / Q2 3 / Q3 4 / Q4 4 / Annual 14 minimum",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md"
+    },
+    {
+      "de": "Public Benefit Standards",
+      "verbe": "exigent 6 standards",
+      "vers": "all must be cleared for any solarpunk project",
+      "citation": "Any project or contribution claiming a solarpunk position must clear ALL of the following: Biomimetic foundation / Circular output / Local resilience / Knowledge contribution / Relational reciprocity / Authentic fun",
+      "chemin": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/07_Public_Benefit_Standards_LD08/README.md"
+    },
+    {
+      "de": "Jerry Bio (B1)",
+      "verbe": "cascades STOP",
+      "vers": "all Jerry if LD03+LD04 compound ORANGE",
+      "citation": "Cross-Jerry : LD03 degraded → LD04 degraded → Beth HALT → all Jerry freeze (the value-canon's hard safety law).",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Discipline",
+      "verbe": "est le pont entre",
+      "vers": "Abou's freestyle-prep = fight-prep = business-prep",
+      "citation": "Discipline is the bridge across all domains (the Abou principle). The same repeated discipline that forges the freestyle forges the fight forges the business. Bio is where that discipline is manufactured; it then exports to every other Jerry.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "8 Life Domains (LD01-LD08)",
+      "verbe": "ont",
+      "vers": "BIBLIOGRAPHY_ALIGNMENT → Jerry Areas (L1 → L2)",
+      "citation": "Maps the 8 Life Wheel bibliographies (LD01–LD08, A3 ZORA crew) to the 4 Jerry Areas in Spock's L2/Business_Pulse. Each Jerry area receives a knowledge stack that informs its Area Standards and portfolio stewardship.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+    },
+    {
+      "de": "LD01",
+      "verbe": "est",
+      "vers": "A0 CONFIRMÉ (doctrine ratified)",
+      "citation": "LD01 Bibliography (A0 — CONFIRMÉ A0)",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+    },
+    {
+      "de": "LD08",
+      "verbe": "est",
+      "vers": "A0 CONFIRMÉ — Solarpunk Direct",
+      "citation": "LD08 Bibliography (A0 CONFIRMÉ — Solarpunk Direct)",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+    },
+    {
+      "de": "LD03/LD04",
+      "verbe": "sont",
+      "vers": "Beth veto triggers, not business assets",
+      "citation": "J02 holds them as constraints, not opportunities. Beth HALT veto applies here — if LD03/LD04 go RED, all Jerry freeze.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md"
+    },
+    {
+      "de": "B1 Business Wheel Balance",
+      "verbe": "produit 3 outputs only",
+      "vers": "NO_CHANGE / B2_MANDATE / STRATEGIC_REBALANCE",
+      "citation": "B1 produces only three possible outputs: NO_CHANGE: B2s continue. B2_MANDATE: one or more domains receive a new mandate packet. STRATEGIC_REBALANCE: North Star, cycle priority, or risk appetite changes.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/08_BUSINESS_WHEEL_BALANCE_REVIEW.md"
+    },
+    {
+      "de": "B1",
+      "verbe": "intervient seulement quand",
+      "vers": "2+ B2 cannot resolve meso conflict OR North Star changes OR domain asks outside authority OR 8-domain wheel imbalanced",
+      "citation": "B1 intervenes only when: two or more B2 domains cannot resolve a meso conflict; the North Star or cycle priority must change; risk appetite changes; a domain asks for authority outside its mandate; the 8-domain wheel becomes structurally imbalanced. Otherwise B2 owns coordination and B3 owns execution.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md"
+    },
+    {
+      "de": "Product green + Ops/IT/Finance/Legal red",
+      "verbe": "produit",
+      "vers": "PRODUCT_ONLY_PROTOTYPE",
+      "citation": "Product green with Ops/IT/Finance/Legal red means PRODUCT_ONLY_PROTOTYPE.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/08_BUSINESS_WHEEL_BALANCE_REVIEW.md"
+    },
+    {
+      "de": "Legal red + public-facing work",
+      "verbe": "bloque",
+      "vers": "claims and launch",
+      "citation": "Legal red with public-facing work: hold claims and launch.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"
+    },
+    {
+      "de": "B2 Superman Growth",
+      "verbe": "non-délégable on",
+      "vers": "NSM (autonomy ratio / ICP-qualified pipeline)",
+      "citation": "Superman (P4/P5) : arbitre NSM + RICE ; escalade Jerry si CPQL > 150€ / 14j.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md"
+    },
+    {
+      "de": "Drax kill-gate",
+      "verbe": "kill",
+      "vers": "weak painkiller variants",
+      "citation": "Drax kill-gate : tout variant dont le CTR copy < baseline OU sans signal qualitatif Mantis = killed (P5/P6).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md"
+    },
+    {
+      "de": "AaaS",
+      "verbe": "vend transformation",
+      "vers": "service revenue → asset revenue (recurrent, productisé)",
+      "citation": "La Promesse Financière : Transformer des revenus de services (incertains, manuels) en revenus d'actifs (récurrents, produits).",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Batman (B2 OPS)",
+      "verbe": "non-delegable on",
+      "vers": "autonomy North Star + go/no-go automation investment",
+      "citation": "Batman non-delegable on autonomy North Star (P4) + go/no-go automation investment. Escalate Jerry if MTTR P0 >1h or onboarding >8h.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/04_Ops_Batman_Fantastic4/JTBD-OPS-001_FANTASTIC4_DEAL_SOP_PACKET.md"
+    },
+    {
+      "de": "DEAL loop",
+      "verbe": "produit",
+      "vers": "Definir → Eliminer → Automatiser → Liberer",
+      "citation": "Every job runs the loop Definir -> Eliminer -> Automatiser -> Liberer. Onboarding cycle <4h payment->active (squad canon).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/04_Ops_Batman_Fantastic4/JTBD-OPS-001_FANTASTIC4_DEAL_SOP_PACKET.md"
+    },
+    {
+      "de": "DEAL D (Définir)",
+      "verbe": "exige",
+      "vers": "automatisation (no human intervention after setup)",
+      "citation": "Automatisation (D) : Si une action demande une intervention humaine de notre part après le setup, elle est refusée.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "DEAL A (Automatiser)",
+      "verbe": "produit",
+      "vers": "réplique exacte du système Growth du Tier 3 (Fractale)",
+      "citation": "Fractale (A) : Le module 'Growth' d'un client Tier 3 est une réplique exacte de notre propre système de Growth.",
+      "chemin": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md"
+    },
+    {
+      "de": "Bio STOP authority",
+      "verbe": "s'étend à",
+      "vers": "all Jerry expansion when substrate degrades",
+      "citation": "Cross-Jerry : LD03 degraded → LD04 degraded → Beth HALT → all Jerry freeze",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/03_JERRY_BIO_PRINCIPLES.md"
+    },
+    {
+      "de": "Nexus STOP",
+      "verbe": "existe sur",
+      "vers": "revenue urgency qui vole stability/family",
+      "citation": "Nexus owns the STOP on revenue-urgency vs stability/family; not day-to-day ops (Summer) or tactics <30d.",
+      "chemin": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/03_JERRY_NEXUS_PRINCIPLES.md"
+    },
+    {
+      "de": "Built to Sell Scorecard <12",
+      "verbe": "produit",
+      "vers": "PRODUCT_ONLY_PROTOTYPE or SERVICE_EXPERIMENT (not SOB-ready)",
+      "citation": "If total score is below 12, the project remains PRODUCT_ONLY_PROTOTYPE or SERVICE_EXPERIMENT.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/02_BUILT_TO_SELL_SCORECARD.md"
+    },
+    {
+      "de": "Built to Sell Scorecard 12-15",
+      "verbe": "qualifie pour",
+      "vers": "SOB_INCUBATION",
+      "citation": "If 12-15, it can enter SOB_INCUBATION.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/02_BUILT_TO_SELL_SCORECARD.md"
+    },
+    {
+      "de": "Built to Sell Scorecard 16-18",
+      "verbe": "qualifie pour",
+      "vers": "OPERATING_BUSINESS_CANDIDATE",
+      "citation": "If 16-18, it can enter OPERATING_BUSINESS_CANDIDATE.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B0_Self_Operating_Business_Doctrine/02_BUILT_TO_SELL_SCORECARD.md"
+    }
+  ],
+  "codes": [
+    {
+      "systeme": "A0-A3 (hiérarchie OS-wide)",
+      "numerote": "rangs d'agents à travers tout l'OS",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md + 02_Areas_Spock/A3_Spock_Areas_Spec.md",
+      "valeurs": [
+        "A0",
+        "A1",
+        "A2",
+        "A3"
+      ]
+    },
+    {
+      "systeme": "B0-B3 (command stack L2)",
+      "numerote": "la stack verticale Direction → Domain → Execution au sein de L2 Business",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md",
+      "valeurs": [
+        "B0 (Self-Operating Business, J01 seulement)",
+        "B1 (Direction/Jerry-Summer)",
+        "B2 (Domains/hero-managers)",
+        "B3 (Warp Core/Marvel squads)"
+      ]
+    },
+    {
+      "systeme": "LD01-LD08 (Life Domains / Wheel)",
+      "numerote": "les 8 domaines de la vie",
+      "defini_dans": "02_Areas_Spock/A1_Jerry_Areas_Spec.md + 02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md",
+      "valeurs": [
+        "LD01 Career & Business (J01)",
+        "LD02 Finance (J03)",
+        "LD03 Vitality (J02)",
+        "LD04 Cognition (J02)",
+        "LD05 Social (J04)",
+        "LD06 Family (J03)",
+        "LD07 Creativity (J04)",
+        "LD08 Impact/Solarpunk (J04)"
+      ]
+    },
+    {
+      "systeme": "J01-J04 (Jerry variants)",
+      "numerote": "les 4 zones de l'Area Jerry",
+      "defini_dans": "02_Areas_Spock/Jerry_Areas_README.md + 02_Areas_Spock/A1_Jerry_Areas_Spec.md",
+      "valeurs": [
+        "J01_Jerry_Prime_LD01_Business (ACTIVE_FIRST)",
+        "J02_Jerry_Bio_LD03_LD04_Vitality_Cognition (ACTIVE — VPP STANDARD)",
+        "J03_Jerry_Nexus_LD02_LD06_Finance_Family (ACTIVE — FIP STANDARD)",
+        "J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact (ACTIVE — SCP STANDARD)"
+      ]
+    },
+    {
+      "systeme": "H1, H3, H10, H30, H90 (Horizons)",
+      "numerote": "horizons temporels de la responsabilité/du suivi",
+      "defini_dans": "02_Areas_Spock/A3_Spock_Areas_Spec.md (H30 = 30-day review aligned Areas doctrine)",
+      "valeurs": [
+        "H1",
+        "H3",
+        "H10",
+        "H30",
+        "H90"
+      ]
+    },
+    {
+      "systeme": "W01-W12 (12-Week Year cadence)",
+      "numerote": "les 12 semaines d'un cycle Area",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/README.md",
+      "valeurs": [
+        "W01-W04 (Foundation)",
+        "W05-W08 (Scaling)",
+        "W09-W12 (Optimization)"
+      ]
+    },
+    {
+      "systeme": "Q1-Q4 (trimestres)",
+      "numerote": "les 4 trimestres (parallèle à 12WY mais fiscal)",
+      "defini_dans": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/README.md",
+      "valeurs": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "systeme": "C1-C4 (B1 command cycles)",
+      "numerote": "les 4 gates du cycle 12WY",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/12WY_Area_Cadence/README.md",
+      "valeurs": [
+        "C1 Direction Lock (12WY Open)",
+        "C2 Domain Activation (end W4)",
+        "C3 Execution Proof (W5-W8)",
+        "C4 Graduation or Archive (W12)"
+      ]
+    },
+    {
+      "systeme": "T1-T4 (Wealth Architecture Tiers — J03)",
+      "numerote": "les 4 paliers de souveraineté financière",
+      "defini_dans": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md",
+      "valeurs": [
+        "T1 Safety",
+        "T2 Independence",
+        "T3 Acceleration",
+        "T4 Sovereignty"
+      ]
+    },
+    {
+      "systeme": "KR-X (Key Results)",
+      "numerote": "indicateurs d'un scorecard Area",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md + J02/J03/J04 AREA_STANDARD.md",
+      "valeurs": [
+        "KR-1 (Revenue Pipeline)",
+        "KR-2 (Business Wheel Health)",
+        "KR-3 (Cerritos Routing Fidelity)",
+        "KR-4 (Brand & Growth)",
+        "KR-5 (Runway & Financial Health)",
+        "KR-7a..d (People)",
+        "KR-8a..d (Legal)",
+        "KR-LD03-S1/H1/E1/B1",
+        "KR-LD04-C1/C2/L1/L2/L3/L4"
+      ]
+    },
+    {
+      "systeme": "SOP-L2-<DOMAIN>-NNN (Standard Operating Procedures)",
+      "numerote": "les procédures par squad B3",
+      "defini_dans": "8 squad canons (J01 B3)",
+      "valeurs": [
+        "SOP-L2-OPS-001..003",
+        "SOP-L2-FINANCE-001..004",
+        "SOP-L2-IT-001..004",
+        "SOP-L2-LEGAL-001..004",
+        "SOP-L2-PEOPLE-001..004",
+        "SOP-L2-SALES-001"
+      ]
+    },
+    {
+      "systeme": "ADR-<DOMAIN>-NNN (Architecture Decision Records)",
+      "numerote": "décisions architecturales",
+      "defini_dans": "02_Areas_Spock/N0_Coach_Client_Onboarding_KB.md §8",
+      "valeurs": [
+        "ADR-CANON-001 (ACCEPTED)",
+        "ADR-CANON-002 (RATIFIED)",
+        "ADR-RH-META-GOUVERNANCE-001-canonical-v3 (RATIFIED)",
+        "ADR-GSTACK-IMBRICATION-001 (RATIFIED)",
+        "ADR-OBSOLESCENCE-001 (RATIFIED)",
+        "ADR-OBS-AUDIT-001 (RATIFIED)",
+        "ADR-MEM-001 (RATIFIED)",
+        "ADR-L2-AAAS-US-ONLY-001 (RATIFIED)",
+        "ADR-PEOPLE-001 (RATIFIED)",
+        "ADR-FINANCE-001 (RATIFIED)",
+        "ADR-LEGAL-001 (RATIFIED)",
+        "ADR-AAAS-PRICING-001",
+        "ADR-AIACT-DEADLINE-001",
+        "ADR-MESH-L2-001",
+        "ADR-INFRA-001"
+      ]
+    },
+    {
+      "systeme": "SDD-NNN (Solution Design Documents)",
+      "numerote": "documents d'architecture dans le Tech OS",
+      "defini_dans": "02_Areas_Spock/A3_Spock_Areas_Spec.md + Business_Pulse/L2_Business_Pulse_References_Index.md",
+      "valeurs": [
+        "SDD-006_business-pulse-l2-pyramide",
+        "SDD-007_sob-factory-icp-variants",
+        "SDD-009_shadow-L2-business-os",
+        "SDD-010_meta-cloture-scope-13eme-semaine"
+      ]
+    },
+    {
+      "systeme": "V0 / V1 (Muse graduation)",
+      "numerote": "promotion vers Muse",
+      "defini_dans": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/03_JERRY_SOLARPUNK_PRINCIPLES.md",
+      "valeurs": [
+        "V0 (pre-Muse)",
+        "V1 (Muse)"
+      ]
+    },
+    {
+      "systeme": "Seuils colores (GREEN / YELLOW / ORANGE / RED)",
+      "numerote": "état d'un signal ou d'un système",
+      "defini_dans": "7+ tables de seuils (J02, J03, J04)",
+      "valeurs": [
+        "GREEN",
+        "YELLOW (J03 uniquement)",
+        "ORANGE",
+        "RED"
+      ]
+    },
+    {
+      "systeme": "KR-LD03-S/H/E/B/N/C/STR/MOB/POST/COLD (Bio Domain-Specific KRs)",
+      "numerote": "indicateurs biologiques par sous-domaine LD03/LD04",
+      "defini_dans": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B2_Area_Domains/0[1-8]_*/*.md",
+      "valeurs": [
+        "KR-LD03-S1, S2 (Sleep)",
+        "KR-LD03-B1 (Breath)",
+        "KR-LD03-E1, E2, E3 (Movement)",
+        "KR-LD03-H1, H2 (HRV)",
+        "KR-LD04-L1, L2, L3, L4 (Learning)",
+        "KR-LD04-C1, C2 (Cognition)",
+        "KR-DW-1, DW-2 (Deep Work)",
+        "KR-ER-1 (Emotional Regulation)",
+        "KR-NUTR-1..5 (Nutrition)",
+        "KR-COLD-1..3 (Cold)",
+        "KR-STR-1..3 (Strength)",
+        "KR-MOB-1, MOB-2 (Mobility)",
+        "KR-POST-1 (Posture)",
+        "KR-L4-5, L4-6 (Learning older)",
+        "KR-SUBJ (Subjective quality)"
+      ]
+    },
+    {
+      "systeme": "KC-01..05 / EC-01..05 / RC-01..06 (J04 KRs)",
+      "numerote": "Key Results par cluster LD05/LD07/LD08",
+      "defini_dans": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/B2_Area_Domains/01_Relational_Capital_LD05/README.md + 03_Experiential_Capital_LD07/README.md + 07_Public_Benefit_Standards_LD08/README.md",
+      "valeurs": [
+        "KC-01..05 (Relational Capital — Trusted partners / Give-Take / Trust velocity / Cross-domain depth / Events)",
+        "EC-01..05 (Experiential Capital — Flow artifacts / Creative sessions / Fun rituals / Micro-wins / MUSE-eligible experiential)",
+        "RC-01..06 (Public Benefit — Biomimetic / Cascade rate / Local sourcing / Zero-waste / Knowledge artifacts / Public events)"
+      ]
+    },
+    {
+      "systeme": "MUSE-NN / JTBD-XXX-NNN",
+      "numerote": "MUSE artifacts et Jobs To Be Done",
+      "defini_dans": "02_Areas_Spock/J04_.../B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md + 02_Areas_Spock/J01_.../B3_Area_Warp_Core/**/JTBD-*_PACKET.md",
+      "valeurs": [
+        "JTBD-GROWTH-001 (Guardians AaaS GTM)",
+        "JTBD-OPS-001 (Fantastic4 DEAL SOP)",
+        "MUSE-01 (MUSE contributions Q1)",
+        "MUSE-02..04 (Q2-Q4)",
+        "J01-B3-GROWTH-2026-001",
+        "J01-B3-OPS-2026-001"
+      ]
+    },
+    {
+      "systeme": "P1-P30+ (Perpetual Principles across Jerry Areas)",
+      "numerote": "Principes numérotés par domaine B2",
+      "defini_dans": "02_Areas_Spock/J0*/B2_Area_Domains/0?_*_*/03_*_PRINCIPLES.md + 03_JERRY_*_PRINCIPLES.md",
+      "valeurs": [
+        "BIO1..28 (Jerry Bio 28 principles across 8 clusters A-I)",
+        "NX1..19 (Jerry Nexus 19 principles across 8 clusters A-I)",
+        "SP1..22 (Jerry Solarpunk 22 principles across 8 clusters A-I)",
+        "P1..18 (Superman Growth)",
+        "S1..20 (JohnJones Sales — v3)",
+        "F1..18 (Flash Product)",
+        "P1..P25 (Batman Ops v4 — anti-pattern #9 Bleed time, #10 Harness-before-stability)"
+      ]
+    },
+    {
+      "systeme": "BANT (qualification script)",
+      "numerote": "4 axes de qualification Sales",
+      "defini_dans": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/04_Seed_Ops_SOPs.md",
+      "valeurs": [
+        "B (Budget)",
+        "A (Authority)",
+        "N (Need)",
+        "T (Timing)"
+      ]
+    },
+    {
+      "systeme": "DEAL (Méthode Tim Ferriss)",
+      "numerote": "4 phases de transformation AaaS",
+      "defini_dans": "02_Areas_Spock/Business_Pulse/docs/documentation/Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md",
+      "valeurs": [
+        "D (Définir — Muse identity)",
+        "E (Éliminer — Kill list)",
+        "A (Automatiser)",
+        "L (Libérer — owner out of loop)"
+      ]
+    },
+    {
+      "systeme": "AARRR (Growth Pirate Metrics)",
+      "numerote": "5 étapes du funnel Growth",
+      "defini_dans": "02_Areas_Spock/J01_.../B3_Area_Warp_Core/01_Growth_Superman_Guardians/JTBD-GROWTH-001_GUARDIANS_AAAS_GTM_PACKET.md + 03_SUPERMAN_GROWTH_PRINCIPLES.md",
+      "valeurs": [
+        "Acquisition / Activation / Retention / Referral / Revenue"
+      ]
+    },
+    {
+      "systeme": "RICE (Priorisation)",
+      "numerote": "4 dimensions de scoring",
+      "defini_dans": "02_Areas_Spock/J01_.../B2_Area_Domains/01_Growth_Superman_Guardians/03_SUPERMAN_GROWTH_PRINCIPLES.md (P5)",
+      "valeurs": [
+        "R (Reach)",
+        "I (Impact)",
+        "C (Confidence)",
+        "E (Ease)"
+      ]
+    },
+    {
+      "systeme": "Gates Area J03 (Coverage Ratio, Runway)",
+      "numerote": "états financiers",
+      "defini_dans": "02_Areas_Spock/J03_.../B2_Area_Domains/01_Capital_Architecture/README.md + 02_Cash_Flow_Architecture/README.md",
+      "valeurs": [
+        "Runway: <3 RED, 3-5 ORANGE, 6-11 YELLOW, 12+ GREEN",
+        "Coverage: <60 RED, 60-79 ORANGE, 80-99 YELLOW, 100+ GREEN",
+        "Family Load: <4 RED, 4-6 ORANGE, 6-8 YELLOW, >8 GREEN"
+      ]
+    },
+    {
+      "systeme": "BIBLIOGRAPHY STATUS (A0-confirmé / A0-ideal / Research A3)",
+      "numerote": "statut épistémique des corpus livres",
+      "defini_dans": "02_Areas_Spock/Business_Pulse/docs/documentation/BIBLIOGRAPHY_ALIGNMENT.md",
+      "valeurs": [
+        "A0 CONFIRMÉ (LD01, LD08 — doctrine ratified by A0)",
+        "A0 IDEAL (LD03, LD04 — corpus ratified, A0 ideal target)",
+        "RESEARCH A3 (LD02, LD05, LD06, LD07 — research corpus A3)"
+      ]
+    },
+    {
+      "systeme": "MUSE Qualifying (1-7) + Disqualifying (1-5)",
+      "numerote": "tests d'éligibilité MUSE",
+      "defini_dans": "02_Areas_Spock/J04_.../B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md",
+      "valeurs": [
+        "Qualifying (all required): Solarpunk thesis alignment, Public goods character, Relational capital growth, Experiential capital deepening, Biomimetisme presence, Circular thinking, Knowledge sharing intent",
+        "Disqualifying (any = NO): Extraction primary, Green veneer, Relational exploitation, Play deprivation, Knowledge hoarding"
+      ]
+    },
+    {
+      "systeme": "6 Public Benefit Standards",
+      "numerote": "6 standards obligatoires pour projet solarpunk",
+      "defini_dans": "02_Areas_Spock/J04_.../B2_Area_Domains/07_Public_Benefit_Standards_LD08/README.md",
+      "valeurs": [
+        "Biomimetic foundation",
+        "Circular output",
+        "Local resilience",
+        "Knowledge contribution",
+        "Relational reciprocity (Give/Take > 2:1)",
+        "Authentic fun"
+      ]
+    },
+    {
+      "systeme": "6-Account Banking (BUFFER/REINVEST/INDEPENDENCE/PROTECT/PLAY/GIVE)",
+      "numerote": "structure bancaire automatisée",
+      "defini_dans": "02_Areas_Spock/J03_.../B2_Area_Domains/01_Capital_Architecture/README.md",
+      "valeurs": [
+        "BUFFER (1 month essential burn — 1er)",
+        "REINVEST (15% of income — business growth)",
+        "INDEPENDENCE (20% of surplus — index funds)",
+        "PROTECT (insurance deductible reserve)",
+        "PLAY (5% — A0 presence fund)",
+        "GIVE (1% — charitable reserve)"
+      ]
+    },
+    {
+      "systeme": "4 Tiers (Wealth Architecture)",
+      "numerote": "4 paliers Wealth Architecture J03",
+      "defini_dans": "02_Areas_Spock/J03_.../B2_Area_Domains/01_Capital_Architecture/README.md + 05_Investment_Accumulation/README.md",
+      "valeurs": [
+        "T1 Safety (6mo cash, NOT investment)",
+        "T2 Independence (compound engine, 20% of surplus)",
+        "T3 Acceleration (business equity, 15% via Reinvestment)",
+        "T4 Sovereignty (opportunistic, gated by SURGE)"
+      ]
+    },
+    {
+      "systeme": "Creativity Gates (0-3)",
+      "numerote": "4 gates de gouvernance créative",
+      "defini_dans": "02_Areas_Spock/J04_.../B2_Area_Domains/04_Creativity_Gates_LD07/README.md",
+      "valeurs": [
+        "Gate 0 Operational Mode (default, creative voluntary)",
+        "Gate 1 Quarterly Creative Sprint (1 LD07 + 1 LD05 + 1 LD08)",
+        "Gate 2 New Project Evaluation (mandatory if public contribution / experiential)",
+        "Gate 3 Anti-Fun Audit (cancel if false fun symptoms)"
+      ]
+    },
+    {
+      "systeme": "8-Domain Business Wheel (B1 view)",
+      "numerote": "les 8 domaines business pour B1 weekly scan",
+      "defini_dans": "02_Areas_Spock/J01_.../B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md",
+      "valeurs": [
+        "Growth / Sales / Product / Ops / IT / Finance / People / Legal"
+      ]
+    },
+    {
+      "systeme": "B1 Domain Mandate ID",
+      "numerote": "B1->B2 mandats",
+      "defini_dans": "02_Areas_Spock/J01_.../B1_Area_Direction/07_B1_TO_B2_DOMAIN_GOVERNANCE_WORKFLOW.md",
+      "valeurs": [
+        "B1-B2-MANDATE-YYYY-NN",
+        "imbalance_type (empty/overloaded/blocked_gate/product_only_drift/cross_domain_conflict/missing_proof)"
+      ]
+    },
+    {
+      "systeme": "JTBD Packet ID",
+      "numerote": "Job To Be Done IDs",
+      "defini_dans": "02_Areas_Spock/J01_.../B3_Area_Warp_Core/**/JTBD-*_PACKET.md",
+      "valeurs": [
+        "J01-B3-GROWTH-2026-001 (Gamora lead, AARRR: Acquisition)",
+        "J01-B3-OPS-2026-001 (Mr Fantastic lead, DEAL loop)",
+        "principles_ref (P1-P25)"
+      ]
+    }
+  ],
+  "contradictions": [
+    {
+      "sujet": "Nombre de domaines Business Wheel",
+      "chemin_a": "SDD-006_business-pulse-l2-pyramide.md (cité dans 02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md)",
+      "date_a": "ancien",
+      "chemin_b": "02_Areas_Spock/Business_Pulse/L2_Business_Pulse_References_Index.md §Canonical Conflict Notes",
+      "date_b": "2026-05-21",
+      "note": "SDD-006 dit 7 domaines ; canon actif dit 8 (le manquant : Sales / Illuminati / John Jones). Le canon tranche pour 8."
+    },
+    {
+      "sujet": "Coquille « Creatry » vs « Creativity »",
+      "chemin_a": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creatry_Impact/ (dossier réel mais quasi-vide, absent de structure.txt)",
+      "date_b": "2026-05-21",
+      "note": "Coquille de nommage côté filesystem. Aucun fichier canonique ne pointe vers l'orthographe fautive. À nettoyer."
+    },
+    {
+      "sujet": "Caractère chinois dans une dimension d'évaluation",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md §P5 (« 独特 Selling Proposition »)",
+      "date_a": "2026-05-21",
+      "chemin_b": "Brief canonique d'Hormozi ($100M Offers) parle d'USP = Unique Selling Proposition",
+      "date_b": "n/a",
+      "note": "Corruption de texte. 独特 = « unique » en chinois. Ne touche pas la doctrine mais trahit une édition incomplète."
+    },
+    {
+      "sujet": "Présence de YELLOW (4e niveau entre GREEN et ORANGE)",
+      "chemin_a": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md + B1_Area_Direction/README.md",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/AREA_STANDARD.md + J04 AREA_STANDARD.md (3 niveaux seulement : GREEN/ORANGE/RED)",
+      "date_b": "2026-05-21",
+      "note": "Incohérence du modèle d'états : 3 vs 4 niveaux. J03 est le seul à 4 niveaux."
+    },
+    {
+      "sujet": "Numéro des règles J0X-XXX incohérents dans J03/AREA_STANDARD.md",
+      "chemin_a": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md §2 (J02-001..003)",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md §§3-5 (J03-001..003), §§6-8 (J04-001..004), §§5.x (J05-001..004), §§8 (J08-001..004)",
+      "date_b": "2026-05-21",
+      "note": "Préfixes incohérents dans un même fichier. Sections visiblement importées de plusieurs sources sans renumérotation."
+    },
+    {
+      "sujet": "Caractère chinois dans header YAML de J03",
+      "chemin_a": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/README.md (bibliography对齐)",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/AREA_STANDARD.md (bibliography_alignment)",
+      "date_b": "2026-05-21",
+      "note": "Corruption YAML (对齐 = « alignment » en chinois). Le header YAML n'est pas du YAML valide."
+    },
+    {
+      "sujet": "Sales B2 Manager — nommage",
+      "chemin_a": "02_Areas_Spock/A1_Jerry_Areas_Spec.md (Martian Manhunter seul)",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/00_L2_FRACTAL_B1B2B3_ARCHITECTURE.md §4 (John Jones (Martian Manhunter))",
+      "date_b": "2026-05-31",
+      "note": "Le nom complet « John Jones (Martian Manhunter) » est utilisé dans le fichier le plus récent. Probable évolution du lore — à confirmer."
+    },
+    {
+      "sujet": "Patches top-level A3 Spock — correction de Saru H1 / Book H10",
+      "chemin_a": "patch antérieur (Saru H1 + Book H10)",
+      "date_a": "avant 2026-06-21",
+      "chemin_b": "02_Areas_Spock/A3_Spock_Areas_Spec.md §D3 (Saru = H3, Book = H1)",
+      "date_b": "2026-06-21",
+      "note": "Patch top-level a corrigé une erreur antérieure. OK, non-contradictoire."
+    },
+    {
+      "sujet": "Nombre de domaines Business Wheel dans B1_Business_Wheel_Balance_Review",
+      "chemin_a": "02_Areas_Spock/J01_.../B1_Area_Direction/08_BUSINESS_WHEEL_BALANCE_REVIEW.md (2026-05-27) — utilise 'green/yellow/red'",
+      "date_a": "2026-05-27",
+      "chemin_b": "02_Areas_Spock/J01_.../AREA_STANDARD.md (2026-05-21) — utilise 'GREEN/ORANGE/RED'",
+      "date_b": "2026-05-21",
+      "note": "Même fichier récent, mais vocabulaire de seuils incohérent : yellow vs ORANGE. La cohérence est rompue."
+    },
+    {
+      "sujet": "Caractères chinois dans bibliographies (J04 B2)",
+      "chemin_a": "02_Areas_Spock/J04_.../B2_Area_Domains/README.md (2026-05-21)",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J04_.../B2_Area_Domains/0[1-8]_*/README.md — propre, sans corruption",
+      "date_b": "2026-05-21",
+      "note": "Le README parent des B2 J04 a des caractères chinois ; les 8 enfants sont propres. À nettoyer."
+    },
+    {
+      "sujet": "Format des KRs J02/J03/J04 B2",
+      "chemin_a": "J02 B2 utilise 'KR-LD03-S1', 'KR-LD03-E1', 'KR-LD03-H1', 'KR-LD04-L1', 'KR-LD04-C1', 'KR-NUTR-1..5', etc. — préfixe par domaine",
+      "date_a": "2026-05-21",
+      "chemin_b": "J03 B2 utilise 'KR01', 'KR02', 'KR03' — simple counter",
+      "date_b": "2026-05-21",
+      "note": "J02 a des KRs avec préfixe sémantique (S=sleep, E=exercise, H=HRV, B=breath, C=cognition, L=learning) ; J03 a un counter plat (KR01..04). Incohérence du format entre Jerry."
+    },
+    {
+      "sujet": "4 niveaux vs 3 niveaux dans J03 Capital Architecture",
+      "chemin_a": "J03/.../B2_Area_Domains/01_Capital_Architecture/README.md table 'Runway': <3 RED, 3-5 ORANGE, 6-11 YELLOW, 12+ GREEN — 4 niveaux",
+      "date_a": "2026-05-21",
+      "chemin_b": "J03/.../B2_Area_Domains/02_Cash_Flow_Architecture/README.md table 'Coverage': <60 RED, 60-79 ORANGE, 80-99 YELLOW, 100+ GREEN — 4 niveaux ; J02 et J04 restent 3 niveaux (GREEN/ORANGE/RED)",
+      "date_b": "2026-05-21",
+      "note": "Le J03 AREA_STANDARD utilise aussi YELLOW (entre GREEN et ORANGE), comme déjà noté en vague 1. Mais J03 B2 domains n'introduisent YELLOW que pour Capital (Runway) et Cash Flow (Coverage), pas pour Family Load Score (qui utilise aussi YELLOW). Le pattern : J03 = 4 niveaux (GREEN/YELLOW/ORANGE/RED)."
+    },
+    {
+      "sujet": "Status des B2 J04 LD08",
+      "chemin_a": "J04/.../B2_Area_Domains/05_Solarpunk_Doctrine_LD08/README.md — status: SOVEREIGN_ACTIVE",
+      "date_a": "2026-05-21",
+      "chemin_b": "J04/.../B2_Area_Domains/0[1-4,8]_*/README.md — status: ACTIVE (non-sovereign)",
+      "date_b": "2026-05-21",
+      "note": "Les 3 sous-domaines LD08 (D05 Doctrine, D06 MUSE, D07 Public Benefit) sont SOVEREIGN_ACTIVE alors que D08 (Contribution Architecture) est ACTIVE. Asymétrie à noter — probablement parce que D05/D06/D07 'définissent' LD08, et D08 les 'vérifie'."
+    },
+    {
+      "sujet": "MUSE Quota — J04 B2 vs J04 AREA_STANDARD",
+      "chemin_a": "J04/.../B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md §6 — Q1:3, Q2:3, Q3:4, Q4:4 (annual: 14)",
+      "date_a": "2026-05-21",
+      "chemin_b": "J04/.../B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md §7 MUSE Graduation Quota — Q1:1, Q2:2, Q3:3, Q4:4 (annual: 10)",
+      "date_b": "2026-05-21",
+      "note": "MÊME fichier : §6 'MUSE Quota' (contributions) vs §7 'MUSE Graduation Quota' (graduations) — deux systèmes parallèles, le premier demande 14/an, le second 10/an. Pas conflictuel mais deux compteurs."
+    },
+    {
+      "sujet": "Bibliography status — A0 confirmation",
+      "chemin_a": "BIBLIOGRAPHY_ALIGNMENT.md — LD01 'A0 CONFIRMÉ A0', LD08 'A0 CONFIRMÉ — Solarpunk Direct'",
+      "date_a": "2026-05-21",
+      "chemin_b": "BIBLIOGRAPHY_ALIGNMENT.md — LD03 'A0 IDEAL + RESEARCH A3' (mixte), LD04 'A0 IDEAL'",
+      "date_b": "2026-05-21",
+      "note": "Le statut épistémique des corpus est asymétrique : LD01 et LD08 sont pleinement A0-ratifiés, LD03/LD04 sont 'A0 ideal' (corpus cible), LD02/LD05/LD06/LD07 sont 'RESEARCH A3'. Significatif pour comprendre l'ontologie des sources."
+    },
+    {
+      "sujet": "Jerry Bio vs Jerry Nexus sur le STOP",
+      "chemin_a": "J02/03_JERRY_BIO_PRINCIPLES.md §BIO27 — 'Bio issues STOP, never GO; LD03→LD04→Beth HALT'",
+      "date_a": "2026-06-03",
+      "chemin_b": "J03/03_JERRY_NEXUS_PRINCIPLES.md §NX18 — 'Nexus issues STOP on revenue that steals stability or family'",
+      "date_b": "2026-06-03",
+      "note": "Deux Jerrys déclarent posséder un STOP. Pas contradictoire mais asymétrique : Bio STOP = sur le substrate (vitality/cognition) ; Nexus STOP = sur le revenu (revenue urgency vs stability). Les deux peuvent être en parallèle."
+    },
+    {
+      "sujet": "Jerry Bio STOP vs Jerry Solarpunk STOP (potentiel)",
+      "chemin_a": "J02/03_JERRY_BIO_PRINCIPLES.md — Bio owns STOP",
+      "date_a": "2026-06-03",
+      "chemin_b": "J04/03_JERRY_SOLARPUNK_PRINCIPLES.md §SP21 — 'Solarpunk vetoes pure-extraction'",
+      "date_b": "2026-06-03",
+      "note": "Solarpunk a un 'veto' (SP21) mais ne déclare pas explicitement un STOP comme Bio et Nexus. Veto ≠ STOP ? À clarifier dans l'ontologie."
+    },
+    {
+      "sujet": "Tier 1 (AaaS commercial) vs TIER 1 (Wealth Architecture J03)",
+      "chemin_a": "Canon_BMad_DEAL/01_Phase1_Definition_Elimination.md — Tier 1 Start 300$/an = Solopreneur",
+      "date_a": "2026-05-21",
+      "chemin_b": "J03/.../B2_Area_Domains/05_Investment_Accumulation/README.md — TIER 1 (Safety Core) = 6mo runway cash",
+      "date_b": "2026-05-21",
+      "note": "Deux systèmes de numérotation 'Tier 1' qui ne sont pas reliés. Tier (AaaS) = niveau commercial client. TIER (Wealth) = palier d'investissement. Aucune collision dans les fichiers eux-mêmes, mais confusion possible dans l'ontologie."
+    },
+    {
+      "sujet": "Bibliography status — LD03/04 sources",
+      "chemin_a": "BIBLIOGRAPHY_ALIGNMENT.md §J02 — LD03 Bibliography A0 IDEAL + RESEARCH A3",
+      "date_a": "2026-05-21",
+      "chemin_b": "J02/03_JERRY_BIO_PRINCIPLES.md header — 'bibliography (real sources)'",
+      "date_b": "2026-06-03",
+      "note": "Le J02 Principles file cite 'real sources' pour ses 28 principes, alors que le BIBLIOGRAPHY_ALIGNMENT marque les corpus LD03/LD04 comme 'A0 IDEAL' (cible, pas réalité ratifiée). Pas contradictoire mais tension épistémique."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+API Error: Request rejected (429) · [nvidia/z-ai/glm-5.2] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2m 16s)
+ 0 [main] sh 5375 dofork: child -1 - forked process 27680 died unexpectedly, retry 0, exit code 0xC0000142, errno 11
+/c/Users/amado/AppData/Roaming/npm/claude: fork: retry: Resource temporarily unavailable
+API Error: Request rejected (429) · [nvidia/z-ai/glm-5.2] [429]: {"status":429,"title":"Too Many Requests"} (reset after 2m 2s)

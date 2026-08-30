@@ -1,0 +1,5383 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:11.060 --> 00:00:12.169
+Merci à tous de nous avoir rejoints
+
+00:00:12.170 --> 00:00:13.669
+aujourd'hui pour cette présentation
+
+00:00:13.670 --> 00:00:15.589
+de la plateforme Foundry.
+
+00:00:15.590 --> 00:00:16.939
+Il y a beaucoup de choses à voir, donc ce sera une
+
+00:00:16.940 --> 00:00:18.079
+visite un peu éclair.
+
+00:00:18.080 --> 00:00:19.009
+Je ne pourrai pas
+
+00:00:19.010 --> 00:00:20.749
+tout aborder, mais je vais essayer de vous donner
+
+00:00:20.750 --> 00:00:22.219
+un aperçu représentatif des
+
+00:00:22.220 --> 00:00:23.239
+principaux éléments de la
+
+00:00:23.240 --> 00:00:24.679
+plateforme.
+
+00:00:24.680 --> 00:00:25.685
+Derrière Foundry, il y a plus de 100
+
+00:00:26.720 --> 00:00:28.669
+microservices différents qui se présentent sous la forme d'
+
+00:00:28.670 --> 00:00:30.799
+une vingtaine d'applications prêtes à
+
+00:00:30.800 --> 00:00:32.508
+l'emploi destinées aux utilisateurs, voire
+
+00:00:32.509 --> 00:00:34.429
+un peu plus.
+
+00:00:34.430 --> 00:00:36.289
+En plus des applications que vous
+
+00:00:36.290 --> 00:00:38.149
+pouvez également créer.  Et ces
+
+00:00:38.150 --> 00:00:39.559
+applications concernent
+
+00:00:39.560 --> 00:00:41.419
+pratiquement tous les profils au sein de
+
+00:00:41.420 --> 00:00:42.589
+l'entreprise moderne.
+
+00:00:42.590 --> 00:00:43.939
+Nous allons donc tenter de passer en revue certains
+
+00:00:43.940 --> 00:00:45.679
+de ces profils clés
+
+00:00:45.680 --> 00:00:47.359
+et de souligner quels types d'outils ou de
+
+00:00:47.360 --> 00:00:49.189
+services sont utilisés à chaque étape du
+
+00:00:49.190 --> 00:00:50.190
+parcours.
+
+00:00:50.960 --> 00:00:51.859
+Vous savez, on peut envisager la
+
+00:00:51.860 --> 00:00:53.269
+fonctionnalité et la fonderie en
+
+00:00:53.270 --> 00:00:55.249
+trois parties principales.
+
+00:00:55.250 --> 00:00:57.109
+Voilà donc la partie concernant les données et l'ontologie
+
+00:00:57.110 --> 00:00:58.819
+.  Comment se connecter aux
+
+00:00:58.820 --> 00:01:00.469
+différentes sources de données, aux lacs de données et aux
+
+00:01:00.470 --> 00:01:02.389
+entrepôts de données, et comment rassembler ces
+
+00:01:02.390 --> 00:01:04.219
+données dans une
+
+00:01:04.220 --> 00:01:06.079
+base sémantique qui puisse ensuite être utilisée par l'
+
+00:01:06.080 --> 00:01:07.639
+ensemble de l'organisation&nbsp;?
+
+00:01:07.640 --> 00:01:09.169
+Nous appelons cela une ontologie.
+
+00:01:09.170 --> 00:01:10.549
+Nous allons donc parler du processus de
+
+00:01:10.550 --> 00:01:11.839
+connexion à différentes
+
+00:01:11.840 --> 00:01:13.759
+sources de données, de leur affinement, de la mise en place d'
+
+00:01:13.760 --> 00:01:15.919
+intégrations de données avec des
+
+00:01:15.920 --> 00:01:17.659
+contrôles de santé et de sécurité, et de la
+
+00:01:17.660 --> 00:01:19.549
+construction de cette ontologie comme point de
+
+00:01:19.550 --> 00:01:20.630
+départ. Nous
+
+00:01:21.710 --> 00:01:23.209
+voudrons ensuite intégrer la
+
+00:01:23.210 --> 00:01:25.069
+science des données et la modélisation à cette
+
+00:01:25.070 --> 00:01:25.999
+même base.  C'est donc en quelque sorte
+
+00:01:26.000 --> 00:01:27.529
+le domaine du
+
+00:01:27.530 --> 00:01:29.209
+jumeau numérique et de la modélisation.
+
+00:01:29.210 --> 00:01:30.649
+Comment pouvons-nous donc envisager d'exploiter la
+
+00:01:30.650 --> 00:01:32.929
+logique métier, la science des données, le
+
+00:01:32.930 --> 00:01:34.909
+ML et les modèles LP
+
+00:01:34.910 --> 00:01:36.709
+au sein de la même infrastructure que
+
+00:01:36.710 --> 00:01:38.419
+nous avons mise en place côté données&nbsp;?  Il s'agit donc en quelque sorte de
+
+00:01:38.420 --> 00:01:40.369
+fusionner les données
+
+00:01:40.370 --> 00:01:42.499
+et les modèles en une
+
+00:01:42.500 --> 00:01:43.916
+base commune grâce à cette ontologie.
+
+00:01:45.050 --> 00:01:46.609
+Et enfin, nous aborderons la manière dont
+
+00:01:46.610 --> 00:01:48.379
+la combinaison de données
+
+00:01:48.380 --> 00:01:50.269
+et de modèles s'articule
+
+00:01:50.270 --> 00:01:52.249
+pour différents types d'utilisateurs finaux.
+
+00:01:52.250 --> 00:01:53.599
+Vous savez, il s'agit d'
+
+00:01:53.600 --> 00:01:55.189
+utilisateurs quotidiens qui effectuent des fonctions opérationnelles essentielles
+
+00:01:55.190 --> 00:01:57.049
+au sein de l'organisation,
+
+00:01:57.050 --> 00:01:59.209
+et 70 à 80 %
+
+00:01:59.210 --> 00:02:01.519
+des utilisateurs de Foundry, dans la plupart des contextes,
+
+00:02:01.520 --> 00:02:02.419
+sont des
+
+00:02:02.420 --> 00:02:04.279
+utilisateurs que l'on pourrait qualifier de « non techniques », qui tentent de tirer profit
+
+00:02:04.280 --> 00:02:05.989
+de tout ce
+
+00:02:05.990 --> 00:02:08.359
+travail pour mettre en œuvre de véritables
+
+00:02:08.360 --> 00:02:10.189
+flux de travail opérationnels et différentes
+
+00:02:10.190 --> 00:02:11.479
+applications qui sont en quelque sorte
+
+00:02:11.480 --> 00:02:13.369
+vitales pour l'entreprise.  Commençons donc par le commencement&nbsp;:
+
+00:02:13.370 --> 00:02:15.199
+
+
+00:02:15.200 --> 00:02:17.059
+les données et l’ontologie.
+
+00:02:17.060 --> 00:02:18.289
+Je vais donc commencer par aborder
+
+00:02:18.290 --> 00:02:20.179
+une première application
+
+00:02:20.180 --> 00:02:21.829
+, appelée Monocle, qui représente en quelque sorte
+
+00:02:21.830 --> 00:02:23.339
+notre graphe de traçabilité des données
+
+00:02:23.340 --> 00:02:25.099
+illustrant comment celles-ci
+
+00:02:25.100 --> 00:02:26.419
+s'assemblent pour former une
+
+00:02:26.420 --> 00:02:27.409
+ontologie.
+
+00:02:27.410 --> 00:02:28.759
+Vous verrez donc ici un
+
+00:02:28.760 --> 00:02:29.539
+exemple assez théorique.
+
+00:02:29.540 --> 00:02:31.189
+Il s'agit donc d'une
+
+00:02:31.190 --> 00:02:33.319
+ontologie de la chaîne d'approvisionnement un peu simplifiée, qui me
+
+00:02:33.320 --> 00:02:35.269
+montre en quelque sorte les
+
+00:02:35.270 --> 00:02:36.709
+différents concepts avec lesquels je vais travailler
+
+00:02:36.710 --> 00:02:38.779
+dans ma démonstration de la chaîne d'approvisionnement.
+
+00:02:38.780 --> 00:02:40.639
+J'ai donc rassemblé les
+
+00:02:40.640 --> 00:02:42.619
+concepts communs, n'est-ce pas ?  Comme un fournisseur, une
+
+00:02:42.620 --> 00:02:45.319
+alerte, un centre de distribution, des
+
+00:02:45.320 --> 00:02:47.329
+usines, des matériaux, etc.
+
+00:02:47.330 --> 00:02:49.249
+Et chacun de ces
+
+00:02:49.250 --> 00:02:50.809
+objets possède également des liens entre
+
+00:02:50.810 --> 00:02:51.919
+eux.  Nous allons maintenant examiner comment chacun de
+
+00:02:51.920 --> 00:02:53.419
+ces objets est
+
+00:02:53.420 --> 00:02:54.949
+associé à des actions.
+
+00:02:54.950 --> 00:02:56.719
+Mais l'idée, c'est que si nous regardons n'importe lequel
+
+00:02:56.720 --> 00:02:58.279
+de ces objets,
+
+00:02:58.280 --> 00:02:59.329
+nous allons donc commencer par entrer dans la plante
+
+00:02:59.330 --> 00:03:02.029
+.
+
+00:03:02.030 --> 00:03:03.559
+Chacune de ces étapes est l'aboutissement de
+
+00:03:03.560 --> 00:03:04.969
+nombreuses phases d'
+
+00:03:04.970 --> 00:03:06.019
+intégration de données.
+
+00:03:06.020 --> 00:03:07.669
+Si l'on prend du recul, ce que l'on voit
+
+00:03:07.670 --> 00:03:09.559
+dans ce diagramme en forme de toile d'araignée,
+
+00:03:09.560 --> 00:03:11.419
+c'est l'histoire de la façon dont nous avons intégré
+
+00:03:11.420 --> 00:03:13.189
+différentes sources de données pour construire cet
+
+00:03:13.190 --> 00:03:14.899
+objet plante, pour commencer sur la
+
+00:03:14.900 --> 00:03:16.249
+droite.  En
+
+00:03:16.250 --> 00:03:18.259
+lisant ceci de gauche à droite,
+
+00:03:18.260 --> 00:03:19.459
+on constate que nous utilisons en fait plusieurs
+
+00:03:19.460 --> 00:03:21.079
+
+
+00:03:21.080 --> 00:03:22.099
+sources de données différentes.
+
+00:03:22.100 --> 00:03:23.569
+En général, ces diagrammes sont beaucoup
+
+00:03:23.570 --> 00:03:24.769
+plus grands et beaucoup plus
+
+00:03:24.770 --> 00:03:26.509
+complexes.  Mais ce n'est qu'un premier
+
+00:03:26.510 --> 00:03:28.309
+exemple de notre façon de nous connecter.
+
+00:03:28.310 --> 00:03:30.289
+Vous verrez sur la gauche le
+
+00:03:30.290 --> 00:03:32.599
+système SAP comme exemple
+
+00:03:32.600 --> 00:03:34.279
+de système d'entreprise,
+
+00:03:34.280 --> 00:03:36.229
+Treasury.gov, qui est un exemple
+
+00:03:36.230 --> 00:03:38.249
+de source ouverte pilotée par API
+
+00:03:38.250 --> 00:03:39.439
+pour la connexion.
+
+00:03:39.440 --> 00:03:40.969
+J'ai également ici une source de séries temporelles
+
+00:03:40.970 --> 00:03:42.049
+, qui est un
+
+00:03:42.050 --> 00:03:43.909
+capteur synthétique que j'ai configuré
+
+00:03:43.910 --> 00:03:46.039
+dans mon environnement pour pouvoir travailler avec.
+
+00:03:46.040 --> 00:03:47.299
+L'idée est que chacune de
+
+00:03:47.300 --> 00:03:48.499
+ces étapes, chacun de ces
+
+00:03:48.500 --> 00:03:50.059
+rectangles ou nœuds que vous voyez dans
+
+00:03:50.060 --> 00:03:52.039
+le graphique, nous rapproche un peu plus
+
+00:03:52.040 --> 00:03:54.229
+du raffinement, du nettoyage, de la fusion et de l'
+
+00:03:54.230 --> 00:03:55.999
+application de la logique métier à ces données
+
+00:03:56.000 --> 00:03:57.439
+pour parvenir à cette
+
+00:03:57.440 --> 00:03:58.729
+représentation sémantique.
+
+00:03:58.730 --> 00:04:00.319
+Par exemple, si je jette un coup d'œil à l'
+
+00:04:00.320 --> 00:04:01.849
+un de ces ensembles de données, je peux
+
+00:04:01.850 --> 00:04:03.589
+toujours me dire : « OK, à
+
+00:04:03.590 --> 00:04:04.789
+quoi ressemblent réellement ces données
+
+00:04:04.790 --> 00:04:06.619
+? »  Examinons donc le
+
+00:04:06.620 --> 00:04:08.509
+code PySpark qui
+
+00:04:08.510 --> 00:04:09.769
+nous montre concrètement comment nous
+
+00:04:09.770 --> 00:04:11.479
+appliquons la logique à cette étape du
+
+00:04:11.480 --> 00:04:12.769
+pipeline.
+
+00:04:12.770 --> 00:04:14.509
+Si je sélectionne un autre nœud, je peux
+
+00:04:14.510 --> 00:04:15.529
+consulter l'
+
+00:04:15.530 --> 00:04:17.539
+onglet Historique et constater que nous disposons d'un
+
+00:04:17.540 --> 00:04:19.369
+versionnage complet des données pour chaque
+
+00:04:19.370 --> 00:04:20.719
+version des données mises à jour
+
+00:04:20.720 --> 00:04:22.039
+dans cette partie spécifique du
+
+00:04:22.040 --> 00:04:23.929
+pipeline.  Et c'est énorme, car
+
+00:04:23.930 --> 00:04:25.279
+je peux revenir en arrière, jeter un œil et me
+
+00:04:25.280 --> 00:04:27.199
+dire&nbsp;: «&nbsp;OK, qui a mis à jour
+
+00:04:27.200 --> 00:04:28.999
+cette routine ou ce
+
+00:04:29.000 --> 00:04:30.559
+calendrier de
+
+00:04:30.560 --> 00:04:31.699
+compilation de données&nbsp;?
+
+00:04:31.700 --> 00:04:33.589
+Quel a été le résultat réel pour cette
+
+00:04:33.590 --> 00:04:34.729
+version des données par rapport à la
+
+00:04:34.730 --> 00:04:36.079
+version actuelle&nbsp;?
+
+00:04:36.080 --> 00:04:37.039
+Et comment peut-on naviguer
+
+00:04:37.040 --> 00:04:38.179
+entre les
+
+00:04:38.180 --> 00:04:40.249
+différentes versions des données, avec
+
+00:04:40.250 --> 00:04:41.839
+le code et les métadonnées, à chaque instant
+
+00:04:41.840 --> 00:04:42.919
+?&nbsp;»
+
+00:04:42.920 --> 00:04:44.689
+C’est donc un atout précieux pour moi de pouvoir
+
+00:04:44.690 --> 00:04:46.369
+non seulement observer les pipelines de données tels
+
+00:04:46.370 --> 00:04:48.199
+qu’ils existent aujourd’hui, mais aussi de pouvoir
+
+00:04:48.200 --> 00:04:49.339
+analyser historiquement leur évolution
+
+00:04:49.340 --> 00:04:50.750
+au fil du temps.
+
+00:04:52.250 --> 00:04:53.719
+Il y a quelques autres points que je tiens à souligner concernant
+
+00:04:53.720 --> 00:04:55.129
+
+
+00:04:55.130 --> 00:04:57.289
+cette partie de la
+
+00:04:57.290 --> 00:04:58.099
+plateforme Foundry.
+
+00:04:58.100 --> 00:05:00.169
+Donc, en quelque sorte, le système de construction pour les données
+
+00:05:00.170 --> 00:05:01.579
+ou la partie opérations sur les données.
+
+00:05:03.020 --> 00:05:04.159
+La première chose, c'est que vous voyez des sortes de
+
+00:05:04.160 --> 00:05:06.139
+lignes reliant tous ces différents
+
+00:05:06.140 --> 00:05:07.819
+nœuds entre eux, et cela
+
+00:05:07.820 --> 00:05:09.679
+indique une lignée
+
+00:05:09.680 --> 00:05:11.479
+et.  La notion de lignée est en réalité intimement liée
+
+00:05:11.480 --> 00:05:13.459
+à la sécurité
+
+00:05:13.460 --> 00:05:14.899
+de la plateforme Foundry.
+
+00:05:14.900 --> 00:05:16.759
+Nous réfléchissons donc à la manière dont nous sécurisons les
+
+00:05:16.760 --> 00:05:18.859
+données et à la façon dont cette sécurité sera intégrée à
+
+00:05:18.860 --> 00:05:20.419
+l'ontologie et aux
+
+00:05:20.420 --> 00:05:22.159
+flux de travail.  Au-delà de ça,
+
+00:05:22.160 --> 00:05:23.479
+changeons un instant de perspective pour
+
+00:05:23.480 --> 00:05:24.919
+jeter un coup d'œil.
+
+00:05:24.920 --> 00:05:26.299
+Nous allons donc passer à la
+
+00:05:26.300 --> 00:05:28.249
+vue des autorisations et vous verrez qu'elle m'affiche
+
+00:05:28.250 --> 00:05:30.559
+désormais dynamiquement mes
+
+00:05:30.560 --> 00:05:31.939
+
+
+00:05:31.940 --> 00:05:33.499
+autorisations sur l'ensemble de ce
+
+00:05:33.500 --> 00:05:34.309
+pipeline.
+
+00:05:34.310 --> 00:05:35.629
+Vous voyez, c'est bleu. J'ai
+
+00:05:35.630 --> 00:05:36.769
+accès à tout ici car
+
+00:05:36.770 --> 00:05:37.939
+je suis en quelque sorte l'administrateur
+
+00:05:37.940 --> 00:05:38.940
+de cet environnement.
+
+00:05:39.740 --> 00:05:41.209
+Mais ce qui se passe réellement, c'est que
+
+00:05:41.210 --> 00:05:43.159
+nous attribuons des autorisations
+
+00:05:43.160 --> 00:05:44.509
+aux sources de données.
+
+00:05:44.510 --> 00:05:46.819
+Donc le système SAP, Treasury.gov,
+
+00:05:46.820 --> 00:05:48.019
+etc.
+
+00:05:48.020 --> 00:05:49.429
+En résumé, il s'agit des autorisations d'accès basées sur les rôles
+
+00:05:49.430 --> 00:05:50.659
+qui peuvent provenir
+
+00:05:50.660 --> 00:05:52.699
+d'un système Active Directory ou d'un
+
+00:05:52.700 --> 00:05:54.319
+autre
+
+00:05:54.320 --> 00:05:56.209
+système d'autorisation utilisé par l'organisation,
+
+00:05:56.210 --> 00:05:57.739
+et nous propageons ensuite ces
+
+00:05:57.740 --> 00:05:59.269
+contrôles.  Cela
+
+00:05:59.270 --> 00:06:01.519
+signifie donc que chaque enfant
+
+00:06:01.520 --> 00:06:03.349
+héritera de l'ensemble des
+
+00:06:03.350 --> 00:06:05.329
+permissions de ses parents.
+
+00:06:05.330 --> 00:06:06.259
+Pour rendre cela un peu moins
+
+00:06:06.260 --> 00:06:08.299
+ésotérique, prenons un autre exemple.
+
+00:06:08.300 --> 00:06:09.829
+Si je modifie cette vue des autorisations,
+
+00:06:09.830 --> 00:06:11.779
+ce que je peux faire en tant qu'administrateur, pour mon
+
+00:06:11.780 --> 00:06:13.939
+collègue Jason Richardson,
+
+00:06:13.940 --> 00:06:15.409
+nous verrons que Jason n'a pas
+
+00:06:15.410 --> 00:06:17.119
+accès à la plupart des éléments ici.
+
+00:06:17.120 --> 00:06:18.139
+Et c'est parce qu'il n'avait
+
+00:06:18.140 --> 00:06:19.909
+accès à rien d'autre qu'à la
+
+00:06:19.910 --> 00:06:21.439
+source Treasury.gov.
+
+00:06:21.440 --> 00:06:23.269
+Et donc, lorsque les autorisations seront accordées,
+
+00:06:23.270 --> 00:06:24.889
+il perdra l'accès dès que
+
+00:06:24.890 --> 00:06:26.479
+nous commencerons à combiner cette source avec
+
+00:06:26.480 --> 00:06:28.189
+d'autres sources.
+
+00:06:28.190 --> 00:06:29.929
+Vous remarquerez qu'il bénéficie ici d'un
+
+00:06:29.930 --> 00:06:31.909
+accès exceptionnel, alors qu'il aurait dû
+
+00:06:31.910 --> 00:06:34.189
+savoir qu'il n'y aurait
+
+00:06:34.190 --> 00:06:35.089
+pas eu accès
+
+00:06:35.090 --> 00:06:36.152
+initialement&nbsp;: il s'agit de cet
+
+00:06:37.250 --> 00:06:38.959
+ensemble de données conformes aux normes OFAC, car nous avons
+
+00:06:38.960 --> 00:06:41.149
+choisi d'étendre
+
+00:06:41.150 --> 00:06:43.009
+ses autorisations de manière situationnelle dans ce cas précis, sans pour autant
+
+00:06:43.010 --> 00:06:44.509
+permettre que cela se
+
+00:06:44.510 --> 00:06:46.609
+propage à d'autres
+
+00:06:46.610 --> 00:06:48.439
+éléments de la chaîne de traitement.
+
+00:06:48.440 --> 00:06:49.909
+L'idée ici est que nous pouvons combiner
+
+00:06:49.910 --> 00:06:51.259
+et associer différents types de
+
+00:06:51.260 --> 00:06:52.819
+modèles de sécurité pour obtenir des
+
+00:06:52.820 --> 00:06:54.649
+résultats très précis et robustes, ce qui
+
+00:06:54.650 --> 00:06:56.269
+nous permet d'intégrer ici des
+
+00:06:56.270 --> 00:06:58.399
+contrôles d'accès basés sur les rôles, des
+
+00:06:58.400 --> 00:07:00.409
+contrôles d'accès basés sur la classification et des
+
+00:07:00.410 --> 00:07:03.139
+contrôles d'accès basés sur la finalité.
+
+00:07:03.140 --> 00:07:04.429
+Nous pouvons ainsi exercer un
+
+00:07:04.430 --> 00:07:06.259
+contrôle très précis sur qui fait quoi,
+
+00:07:06.260 --> 00:07:07.729
+avec différents profils et différentes
+
+00:07:07.730 --> 00:07:09.109
+parties de l'organisation, grâce à
+
+00:07:09.110 --> 00:07:10.279
+Foundry.
+
+00:07:10.280 --> 00:07:11.599
+Et cela s'est largement inspiré de
+
+00:07:11.600 --> 00:07:12.799
+notre propre expérience sur le terrain en tant
+
+00:07:12.800 --> 00:07:14.479
+qu'ingénieurs chez Palantir. Si l'on
+
+00:07:14.480 --> 00:07:15.739
+envisageait de
+
+00:07:15.740 --> 00:07:17.839
+baser la sécurité uniquement sur l'emplacement des données
+
+00:07:17.840 --> 00:07:19.249
+et sur un système de fichiers ou un
+
+00:07:19.250 --> 00:07:21.139
+espace de stockage quelconque, il devenait
+
+00:07:21.140 --> 00:07:22.909
+très difficile de garantir une
+
+00:07:22.910 --> 00:07:24.749
+sécurité robuste à mesure que l'
+
+00:07:24.750 --> 00:07:26.209
+organisation commençait naturellement à
+
+00:07:26.210 --> 00:07:28.669
+transférer ces données vers d'autres emplacements.
+
+00:07:28.670 --> 00:07:30.799
+Ainsi, les données et la sécurité
+
+00:07:30.800 --> 00:07:32.539
+circulent de concert avec la traçabilité,
+
+00:07:32.540 --> 00:07:34.159
+et elles restent immuables tout au long de votre travail
+
+00:07:34.160 --> 00:07:35.299
+, sur l'
+
+00:07:35.300 --> 00:07:37.039
+ensemble de la plateforme ou lors de vos interactions via
+
+00:07:37.040 --> 00:07:38.089
+les API.  Le
+
+00:07:38.090 --> 00:07:40.039
+premier point
+
+00:07:40.040 --> 00:07:42.269
+à souligner est que la sécurité
+
+00:07:42.270 --> 00:07:43.519
+est en quelque sorte intégrée d'emblée aux
+
+00:07:43.520 --> 00:07:44.520
+métadonnées de Foundry.
+
+00:07:45.440 --> 00:07:46.909
+Le deuxième point que je souhaite aborder
+
+00:07:46.910 --> 00:07:47.959
+ici, au fur et à mesure que nous avançons,
+
+00:07:47.960 --> 00:07:49.699
+est le suivant : « OK, donc je mets en place ces
+
+00:07:49.700 --> 00:07:50.959
+pipelines qui deviennent assez
+
+00:07:50.960 --> 00:07:52.819
+robustes pour se rafraîchir constamment.
+
+00:07:52.820 --> 00:07:54.829
+Comment puis-je maintenir leur bon fonctionnement ? »  Donc,
+
+00:07:54.830 --> 00:07:57.109
+si je change ceci pour
+
+00:07:57.110 --> 00:07:59.029
+une vue de l'état des données, ce que nous allons
+
+00:07:59.030 --> 00:08:01.189
+voir ici, c'est une vue des
+
+00:08:01.190 --> 00:08:02.389
+parties du pipeline que j'ai
+
+00:08:02.390 --> 00:08:04.249
+instrumentées avec des contrôles de qualité des données
+
+00:08:04.250 --> 00:08:06.079
+, et je peux toujours ouvrir
+
+00:08:06.080 --> 00:08:07.549
+cette fenêtre en bas pour dire :
+
+00:08:07.550 --> 00:08:08.899
+jetons un coup d'œil aux contrôles que
+
+00:08:08.900 --> 00:08:10.279
+nous avons effectués sur cette partie du
+
+00:08:10.280 --> 00:08:11.329
+pipeline.
+
+00:08:11.330 --> 00:08:13.939
+Je vais donc examiner l'
+
+00:08:13.940 --> 00:08:15.919
+un de ces nœuds, et nous
+
+00:08:15.920 --> 00:08:17.539
+pouvons voir s'il est temps d'ajouter un
+
+00:08:17.540 --> 00:08:19.189
+contrôle d'intégrité des données.
+
+00:08:19.190 --> 00:08:20.809
+Cela va faire apparaître une liste de
+
+00:08:20.810 --> 00:08:22.339
+contrôles de santé prêts à l'emploi que nous
+
+00:08:22.340 --> 00:08:23.449
+pouvons en quelque sorte attribuer à différents
+
+00:08:23.450 --> 00:08:24.709
+points de nos pipelines.
+
+00:08:24.710 --> 00:08:26.929
+Ces données sont-elles mises à jour en temps voulu&nbsp;?
+
+00:08:26.930 --> 00:08:28.399
+Est-ce que la restauration se fait selon le calendrier
+
+00:08:28.400 --> 00:08:30.559
+que j'attendais ?  Les fichiers ont-ils
+
+00:08:30.560 --> 00:08:31.769
+la taille attendue&nbsp;?
+
+00:08:31.770 --> 00:08:33.619
+Et observons-nous la cardinalité
+
+00:08:33.620 --> 00:08:35.298
+des différentes colonnes de données avec les
+
+00:08:35.299 --> 00:08:37.158
+résultats statistiques attendus&nbsp;?
+
+00:08:37.159 --> 00:08:38.089
+Tous ces éléments peuvent être
+
+00:08:38.090 --> 00:08:38.899
+quantifiés ici par
+
+00:08:38.900 --> 00:08:41.629
+simple clic, mais peuvent également être définis
+
+00:08:41.630 --> 00:08:43.189
+par le biais de code.
+
+00:08:43.190 --> 00:08:44.929
+Nous allons donc aborder dans un instant la manière dont nous
+
+00:08:44.930 --> 00:08:45.784
+créons concrètement ces
+transformations,
+
+00:08:45.785 --> 00:08:47.629
+mais le composant de santé des données
+
+00:08:47.630 --> 00:08:49.579
+est essentiel pour maintenir
+
+00:08:49.580 --> 00:08:51.349
+ces pipelines en bon état, car ils sont en quelque sorte constamment actualisés
+
+00:08:51.350 --> 00:08:52.759
+.
+
+00:08:53.780 --> 00:08:55.729
+Ainsi, le fait d'avoir ces vérifications
+
+00:08:55.730 --> 00:08:56.989
+ici même vous évite d'avoir à aller sur une
+
+00:08:56.990 --> 00:08:58.699
+autre plateforme pour voir
+
+00:08:58.700 --> 00:08:59.989
+ce qui s'y passe avant de
+
+00:08:59.990 --> 00:09:02.209
+revenir sur celle-ci.  D'accord
+
+00:09:02.210 --> 00:09:03.259
+
+
+00:09:03.260 --> 00:09:04.099
+.  Revenons donc
+
+00:09:04.100 --> 00:09:06.139
+
+
+00:09:06.140 --> 00:09:08.119
+à notre
+
+00:09:08.120 --> 00:09:09.679
+vue par défaut et examinons plus en
+
+00:09:09.680 --> 00:09:11.119
+détail ce qui se passe réellement
+
+00:09:11.120 --> 00:09:12.469
+dans chacune de ces étapes.
+
+00:09:12.470 --> 00:09:14.419
+Je vais donc ouvrir l'un de ces éléments
+
+00:09:14.420 --> 00:09:16.279
+, qui illustrent les étapes
+
+00:09:16.280 --> 00:09:18.049
+logiques, et nous allons
+
+00:09:18.050 --> 00:09:20.449
+examiner le dépôt
+
+00:09:20.450 --> 00:09:22.009
+et la manière dont ce résultat particulier a été obtenu
+
+00:09:22.010 --> 00:09:23.010
+.  Je vais donc
+
+00:09:23.490 --> 00:09:24.839
+accéder à
+
+00:09:24.840 --> 00:09:26.339
+une autre application de Foundry
+
+00:09:26.340 --> 00:09:28.169
+appelée Authoring, un
+
+00:09:28.170 --> 00:09:29.549
+EDI (environnement de développement intégré) qui me permet de
+
+00:09:29.550 --> 00:09:31.679
+voir
+
+00:09:31.680 --> 00:09:33.029
+comment modifier
+
+00:09:33.030 --> 00:09:34.259
+cette partie du pipeline grâce à une
+
+00:09:34.260 --> 00:09:36.689
+gestion complète des modifications intégrée.
+
+00:09:36.690 --> 00:09:38.069
+
+
+00:09:38.070 --> 00:09:39.959
+Comme dans Monocle,
+
+00:09:39.960 --> 00:09:41.999
+l'application précédente, vous verrez une
+
+00:09:42.000 --> 00:09:43.499
+icône de branche en
+
+00:09:43.500 --> 00:09:45.389
+haut de l'écran.  Et cela nous permet de
+
+00:09:45.390 --> 00:09:47.399
+traiter les données de la même
+
+00:09:47.400 --> 00:09:49.169
+manière que le code.
+
+00:09:49.170 --> 00:09:50.849
+Ainsi, au lieu d'apporter des modifications sur
+
+00:09:50.850 --> 00:09:52.769
+la branche principale et d'essayer ensuite de
+
+00:09:52.770 --> 00:09:54.689
+propager ces modifications, ce qui
+
+00:09:54.690 --> 00:09:56.009
+pourrait entraîner toutes sortes de problèmes en aval
+
+00:09:56.010 --> 00:09:57.959
+par manque de vigilance,
+
+00:09:57.960 --> 00:09:59.939
+nous avons virtualisé
+
+00:09:59.940 --> 00:10:01.889
+l'ensemble du processus de gestion des changements
+
+00:10:01.890 --> 00:10:03.539
+qui impliquerait normalement de passer par
+
+00:10:03.540 --> 00:10:05.399
+un environnement de test utilisateur (UAT), mais nous l'avons réalisé
+
+00:10:05.400 --> 00:10:07.289
+directement ici, dans une instance unique,
+
+00:10:07.290 --> 00:10:09.989
+une fonderie utilisant l'isolation logique
+
+00:10:09.990 --> 00:10:11.689
+dans un paradigme natif du cloud.
+
+00:10:11.690 --> 00:10:13.589
+Donc, si je veux apporter des
+
+00:10:13.590 --> 00:10:15.419
+modifications ici, je peux
+
+00:10:15.420 --> 00:10:17.309
+ouvrir une version dérivée de cette
+
+00:10:17.310 --> 00:10:18.659
+partie du pipeline.  Une fois
+
+00:10:18.660 --> 00:10:20.249
+mes modifications effectuées
+
+00:10:20.250 --> 00:10:22.139
+sur cette branche, je crée
+
+00:10:22.140 --> 00:10:23.969
+une demande de fusion pour intégrer
+
+00:10:23.970 --> 00:10:26.369
+mes modifications dans
+
+00:10:26.370 --> 00:10:27.509
+la branche principale.
+
+00:10:27.510 --> 00:10:28.889
+Donc, si nous consultons certaines des anciennes
+
+00:10:28.890 --> 00:10:30.119
+demandes d'extraction, et que nous regardons à quoi ressemblent
+
+00:10:30.120 --> 00:10:32.669
+ces changements proposés, nous
+
+00:10:32.670 --> 00:10:34.469
+pouvons en fait voir ligne par ligne en quoi consistaient
+
+00:10:34.470 --> 00:10:36.269
+ces changements.
+
+00:10:36.270 --> 00:10:37.709
+Et nous pouvons également obtenir une
+
+00:10:37.710 --> 00:10:39.719
+analyse d'impact pour savoir, si nous devions fusionner
+
+00:10:39.720 --> 00:10:41.399
+cela dans la branche principale, ce qui serait
+
+00:10:41.400 --> 00:10:43.289
+affecté ?  Et comme la sécurité se
+
+00:10:43.290 --> 00:10:44.429
+trouve à nouveau mêlée à travers différentes
+
+00:10:44.430 --> 00:10:45.569
+autorisations parentales et différents
+
+00:10:45.570 --> 00:10:47.549
+paradigmes de rôles, quels
+
+00:10:47.550 --> 00:10:48.689
+changements de sécurité se produiraient réellement
+
+00:10:48.690 --> 00:10:49.829
+?  Et vous auriez constaté que nous n'en avons
+
+00:10:49.830 --> 00:10:51.029
+effectivement vu aucun dans ce
+
+00:10:51.030 --> 00:10:52.109
+cas précis.
+
+00:10:52.110 --> 00:10:53.879
+C'est très différent du
+
+00:10:53.880 --> 00:10:55.499
+processus habituel qui consiste à dire : « OK, si je
+
+00:10:55.500 --> 00:10:57.029
+veux apporter des modifications, je dois
+
+00:10:57.030 --> 00:10:59.069
+cloner tous mes pipelines et mes données dans
+
+00:10:59.070 --> 00:11:00.689
+un environnement de test utilisateur (UAT), un
+
+00:11:00.690 --> 00:11:03.209
+environnement séparé, effectuer quelques modifications,
+
+00:11:03.210 --> 00:11:05.189
+puis
+
+00:11:05.190 --> 00:11:06.689
+
+
+00:11:06.690 --> 00:11:07.619
+espérer que tout
+
+00:11:07.620 --> 00:11:09.539
+fonctionne correctement, et enfin les réimporter dans la branche principale. »  Ici, nous pouvons
+
+00:11:09.540 --> 00:11:11.519
+effectivement réaliser l'intégralité du processus
+
+00:11:11.520 --> 00:11:13.409
+avec une isolation logique totale, un environnement totalement
+
+00:11:13.410 --> 00:11:14.410
+isolé.
+
+00:11:14.760 --> 00:11:16.529
+Nous pouvons itérer sur ces
+
+00:11:16.530 --> 00:11:18.299
+versions dérivées des données et
+
+00:11:18.300 --> 00:11:19.949
+utiliser différents types d'
+
+00:11:19.950 --> 00:11:21.899
+outils d'analyse et de visualisation avec
+
+00:11:21.900 --> 00:11:23.159
+ces données dérivées que nous examinerons plus
+
+00:11:23.160 --> 00:11:25.019
+tard, puis nous pourrons choisir de
+
+00:11:25.020 --> 00:11:26.549
+revenir en arrière et de les fusionner avec la version
+
+00:11:26.550 --> 00:11:27.569
+principale.
+
+00:11:27.570 --> 00:11:29.099
+Et le plus puissant, c'est que
+
+00:11:29.100 --> 00:11:31.019
+tout est en quelque sorte
+
+00:11:31.020 --> 00:11:32.729
+basé sur Git en termes de sémantique.
+
+00:11:32.730 --> 00:11:33.989
+Vous verrez ici l'icône de clonage en
+
+00:11:33.990 --> 00:11:35.729
+haut, ce qui signifie que si nous voulons
+
+00:11:35.730 --> 00:11:37.289
+revenir à une version antérieure de
+
+00:11:37.290 --> 00:11:39.389
+master ou de l'une des autres branches,
+
+00:11:39.390 --> 00:11:41.129
+nous disposons également d'un historique complet des commits.
+
+00:11:41.130 --> 00:11:43.049
+Donc, en quelque sorte, nous ne sommes jamais vraiment
+
+00:11:43.050 --> 00:11:44.579
+démunis si nous avons intégré quelque chose dont
+
+00:11:44.580 --> 00:11:46.439
+nous réalisons plus tard qu'il faut en fait
+
+00:11:46.440 --> 00:11:47.639
+annuler la modification.
+
+00:11:47.640 --> 00:11:49.529
+On peut toujours revenir en arrière, comme
+
+00:11:49.530 --> 00:11:51.149
+on le fait avec Git pour le code, à une
+
+00:11:51.150 --> 00:11:53.199
+version antérieure des données.
+
+00:11:53.200 --> 00:11:54.759
+Ainsi, la possibilité de traiter les données comme
+
+00:11:54.760 --> 00:11:56.679
+du code, de disposer de contrôles d'intégrité et d'une
+
+00:11:56.680 --> 00:11:58.239
+sécurité intégrée, nous permet, selon nous, de disposer d'un
+
+00:11:58.240 --> 00:11:59.649
+système de construction
+
+00:11:59.650 --> 00:12:01.029
+capable d'aller très vite lorsqu'il s'agit d'
+
+00:12:01.030 --> 00:12:02.709
+assembler et de développer
+
+00:12:02.710 --> 00:12:04.869
+organiquement ces pipelines de données,
+
+00:12:04.870 --> 00:12:06.169
+ce qui est toujours le cas, n'est-ce pas ?  Il ne s'agit jamais d'une
+
+00:12:06.170 --> 00:12:07.629
+
+
+00:12:07.630 --> 00:12:09.189
+méthode en cascade, en quelque sorte, pour construire ces
+
+00:12:09.190 --> 00:12:10.749
+choses au départ, et cette méthode ne change jamais.
+
+00:12:10.750 --> 00:12:12.429
+Il s'agit d'un état
+
+00:12:12.430 --> 00:12:14.289
+d'itération constant, d'une tentative permanente de
+
+00:12:14.290 --> 00:12:15.680
+répondre aux dernières exigences.
+
+00:12:16.840 --> 00:12:17.799
+Je veux vous montrer une dernière
+
+00:12:17.800 --> 00:12:19.749
+chose avant de passer à l'ontologie
+
+00:12:19.750 --> 00:12:21.159
+et de passer à un niveau supérieur.
+
+00:12:22.180 --> 00:12:23.289
+Nous avons beaucoup parlé de la possibilité de
+
+00:12:23.290 --> 00:12:24.849
+créer des pipelines de données
+
+00:12:24.850 --> 00:12:26.739
+ici, de la manière dont vous pouvez réellement
+
+00:12:26.740 --> 00:12:28.809
+créer des pipelines, et Foundry propose,
+
+00:12:28.810 --> 00:12:30.309
+par défaut,
+
+00:12:30.310 --> 00:12:32.229
+deux
+
+00:12:32.230 --> 00:12:33.069
+moteurs de calcul prêts à l'emploi qui s'adaptent
+
+00:12:33.070 --> 00:12:34.059
+automatiquement.  Voici donc
+
+00:12:34.060 --> 00:12:35.739
+Flink.
+
+00:12:35.740 --> 00:12:36.669
+Nous utilisons Kubernetes pour
+
+00:12:36.670 --> 00:12:38.709
+le calcul en flux continu et Spark, également
+
+00:12:38.710 --> 00:12:39.969
+sur Kubernetes, pour
+
+00:12:39.970 --> 00:12:40.959
+le calcul par lots.
+
+00:12:40.960 --> 00:12:42.849
+Vous pouvez donc
+
+00:12:42.850 --> 00:12:44.439
+utiliser n'importe quel langage disposant d'une
+
+00:12:44.440 --> 00:12:46.269
+interface avec ces deux
+
+00:12:46.270 --> 00:12:47.259
+environnements d'exécution.
+
+00:12:47.260 --> 00:12:48.579
+Donc, si nous revenons à notre
+
+00:12:48.580 --> 00:12:49.749
+dépôt, nous verrons où
+
+00:12:49.750 --> 00:12:51.609
+nous utilisons PySpark, nous pouvons
+
+00:12:51.610 --> 00:12:53.829
+utiliser Spark Sequel, nous pouvons utiliser Java,
+
+00:12:53.830 --> 00:12:54.879
+nous pouvons utiliser Scala.
+
+00:12:54.880 --> 00:12:57.039
+Nous proposons même des liaisons pour Groovy.  C’est pourquoi
+
+00:12:57.040 --> 00:13:00.069
+nous adhérons systématiquement aux normes ouvertes en matière de
+
+00:13:00.070 --> 00:13:01.239
+
+
+00:13:01.240 --> 00:13:03.099
+création de code et, surtout, en matière de
+
+00:13:03.100 --> 00:13:04.689
+formats de données.
+
+00:13:04.690 --> 00:13:05.949
+Donc, si vous voulez voir
+
+00:13:05.950 --> 00:13:07.089
+ce qui se passe avec les
+
+00:13:07.090 --> 00:13:09.039
+données résultantes à n'importe quelle étape d'une
+
+00:13:09.040 --> 00:13:10.329
+transformation dans
+
+00:13:10.330 --> 00:13:12.249
+Foundry, si nous regardons
+
+00:13:12.250 --> 00:13:13.269
+ce qui se passe ici dans l'
+
+00:13:13.270 --> 00:13:14.799
+aperçu ou si nous allons dans l'onglet Historique
+
+00:13:14.800 --> 00:13:16.689
+, nous pourrons
+
+00:13:16.690 --> 00:13:18.669
+constater que toutes les données
+
+00:13:18.670 --> 00:13:20.499
+ici sont en fait des
+
+00:13:20.500 --> 00:13:22.479
+données au format Parquet,
+
+00:13:22.480 --> 00:13:24.219
+Avro ou dans tout autre
+
+00:13:24.220 --> 00:13:25.119
+format ouvert auquel je m'attends.
+
+00:13:25.120 --> 00:13:27.309
+Je peux donc toujours interagir facilement
+
+00:13:27.310 --> 00:13:28.569
+avec toutes les données présentes ici dans
+
+00:13:28.570 --> 00:13:29.529
+Foundry.
+
+00:13:29.530 --> 00:13:31.059
+Et surtout, même si nous
+
+00:13:31.060 --> 00:13:32.529
+utilisons Spark et Flink comme
+
+00:13:32.530 --> 00:13:34.359
+environnements d'exécution, si nous jetons un coup d'œil à ce qui se
+
+00:13:34.360 --> 00:13:35.439
+passe réellement en
+
+00:13:35.440 --> 00:13:36.609
+coulisses avec le service de compilation de Foundry
+
+00:13:36.610 --> 00:13:38.859
+, nous verrons qu'il appelle
+
+00:13:38.860 --> 00:13:40.299
+ces deux environnements d'exécution simplement parce que nous les avons
+
+00:13:40.300 --> 00:13:41.949
+enregistrés auprès de Foundry.
+
+00:13:41.950 --> 00:13:42.819
+Ainsi, si vous disposez d'un
+
+00:13:42.820 --> 00:13:44.379
+environnement de calcul haute performance ou d'
+
+00:13:44.380 --> 00:13:45.789
+un
+
+00:13:45.790 --> 00:13:47.199
+moteur de calcul externe, comme par exemple
+
+00:13:47.200 --> 00:13:48.549
+un autre
+
+00:13:48.550 --> 00:13:50.559
+environnement Spark ou un environnement
+
+00:13:50.560 --> 00:13:52.209
+d'exécution propriétaire, nous pouvons enregistrer cet environnement
+
+00:13:52.210 --> 00:13:54.099
+d'exécution auprès de Foundry en tant que processus de compilation externe
+
+00:13:54.100 --> 00:13:54.969
+.
+
+00:13:54.970 --> 00:13:56.629
+Et lorsque nous actualisons ces pipelines, que
+
+00:13:56.630 --> 00:13:57.630
+vous effectuez les orchestrations, Foundry
+
+00:13:58.540 --> 00:14:00.339
+saura à certaines étapes comment
+
+00:14:00.340 --> 00:14:02.259
+fédérer ce calcul vers ce
+
+00:14:02.260 --> 00:14:04.419
+nœud de calcul, ce qui
+
+00:14:04.420 --> 00:14:05.499
+vous permet à nouveau de disposer d'un
+
+00:14:05.500 --> 00:14:07.779
+framework de calcul totalement extensible
+
+00:14:07.780 --> 00:14:09.459
+avec ce que nous considérons comme d'excellents paramètres par défaut de départ
+
+00:14:09.460 --> 00:14:10.629
+.  Mais vous n'êtes jamais vraiment
+
+00:14:10.630 --> 00:14:12.099
+limité à l'utilisation des ressources de calcul
+
+00:14:12.100 --> 00:14:13.600
+que nous fournissons dans le cadre de Foundry.  D'accord
+
+00:14:14.940 --> 00:14:16.109
+.
+
+00:14:16.110 --> 00:14:17.759
+Alors, une dernière chose à vous montrer
+
+00:14:17.760 --> 00:14:19.229
+et ensuite on passe à la vitesse supérieure.
+
+00:14:19.230 --> 00:14:20.609
+Nous avons donc évoqué la possibilité de
+
+00:14:20.610 --> 00:14:22.589
+calculer ces pipelines et de
+
+00:14:22.590 --> 00:14:23.609
+les créer manuellement.
+
+00:14:23.610 --> 00:14:25.229
+Qu’en est-il des systèmes de données que nous avons
+
+00:14:25.230 --> 00:14:26.969
+vus maintes et maintes fois, comme
+
+00:14:26.970 --> 00:14:28.589
+SAP et les autres ERP du
+
+00:14:28.590 --> 00:14:30.119
+monde ou les CRM&nbsp;?  Ce que
+
+00:14:30.120 --> 00:14:32.009
+nous essayons de faire, c'est de déterminer si
+
+00:14:32.010 --> 00:14:33.329
+nous pouvons réellement mettre en
+
+00:14:33.330 --> 00:14:34.319
+œuvre ce que nous considérons comme des
+
+00:14:34.320 --> 00:14:36.089
+intégrations de données définies par logiciel,
+
+00:14:36.090 --> 00:14:37.049
+où il n'est pas nécessaire de
+
+00:14:37.050 --> 00:14:39.419
+refaire manuellement le type de
+
+00:14:39.420 --> 00:14:41.339
+travail de nettoyage et de transformation que nous
+
+00:14:41.340 --> 00:14:43.079
+estimons être assez standardisé
+
+00:14:43.080 --> 00:14:44.549
+et possible grâce à des
+
+00:14:44.550 --> 00:14:46.679
+techniques assistées par l'apprentissage automatique.
+
+00:14:46.680 --> 00:14:47.729
+Je vais donc
+
+00:14:47.730 --> 00:14:49.679
+ouvrir la source de données
+
+00:14:49.680 --> 00:14:51.119
+de cette instance SAP à laquelle nous sommes
+
+00:14:51.120 --> 00:14:52.859
+connectés en interne.
+
+00:14:52.860 --> 00:14:54.359
+Et nous allons examiner ici à quoi
+
+00:14:54.360 --> 00:14:55.859
+cela ressemble.
+
+00:14:55.860 --> 00:14:58.199
+Voici donc l'explorateur SAP,
+
+00:14:58.200 --> 00:14:59.699
+qui nous sert en quelque sorte d'
+
+00:14:59.700 --> 00:15:01.799
+interface de connexion riche.
+
+00:15:01.800 --> 00:15:02.909
+Et vous verrez qu'il m'affiche en quelque sorte
+
+00:15:02.910 --> 00:15:05.099
+tous les modules de mon système ERP,
+
+00:15:05.100 --> 00:15:07.679
+comme mon module MM et mes dictionnaires de données.
+
+00:15:07.680 --> 00:15:09.569
+Et il pré-remplit même
+
+00:15:09.570 --> 00:15:11.759
+certains flux de travail que je pourrais avoir besoin d'effectuer
+
+00:15:11.760 --> 00:15:14.219
+régulièrement et qui sont courants pour SAP.
+
+00:15:14.220 --> 00:15:15.749
+Et la force de cette solution réside dans le fait qu'au lieu de devoir
+
+00:15:15.750 --> 00:15:17.069
+parcourir moi-
+
+00:15:17.070 --> 00:15:18.479
+
+
+00:15:18.480 --> 00:15:20.669
+même chaque table, nous disposons d'un
+
+00:15:20.670 --> 00:15:22.229
+connecteur natif qui se connecte au
+
+00:15:22.230 --> 00:15:24.179
+niveau de l'application, appelé
+
+00:15:24.180 --> 00:15:25.829
+NetWeaver, et nous
+
+00:15:25.830 --> 00:15:27.839
+extrayons dynamiquement toutes les
+
+00:15:27.840 --> 00:15:29.699
+métadonnées riches qui nous en disent bien
+
+00:15:29.700 --> 00:15:31.289
+plus que les simples informations brutes des tables
+
+00:15:31.290 --> 00:15:32.969
+dans SAP.  Par exemple,
+
+00:15:32.970 --> 00:15:34.169
+tous les
+
+00:15:34.170 --> 00:15:36.599
+acronymes allemands sont automatiquement traduits
+
+00:15:36.600 --> 00:15:37.739
+pour moi.  Nous sommes en mesure de voir en quelque sorte
+
+00:15:37.740 --> 00:15:39.929
+les clés étrangères, les relations,
+
+00:15:39.930 --> 00:15:41.039
+et l'idée ici est que nous pouvons en quelque sorte
+
+00:15:41.040 --> 00:15:42.779
+déduire cette
+
+00:15:42.780 --> 00:15:44.549
+lignée fédérée, puis construire automatiquement des
+
+00:15:44.550 --> 00:15:47.249
+pipelines et même des objets de démarrage
+
+00:15:47.250 --> 00:15:49.379
+en quelques heures, au lieu de
+
+00:15:49.380 --> 00:15:50.879
+semaines ou de mois de
+
+00:15:50.880 --> 00:15:53.369
+recréation manuelle des transformations SAP
+
+00:15:53.370 --> 00:15:54.839
+côté Foundry.
+
+00:15:54.840 --> 00:15:56.319
+Et cela s'applique de manière cruciale non seulement
+
+00:15:56.320 --> 00:15:58.319
+aux modules standard comme MM,
+
+00:15:58.320 --> 00:16:00.209
+SD ou DD, mais aussi aux
+
+00:16:00.210 --> 00:16:01.499
+tables Z que vous avez pu
+
+00:16:01.500 --> 00:16:02.879
+personnaliser.  Car nous ne nous contentons pas d'un
+
+00:16:02.880 --> 00:16:04.739
+mappage statique, nous effectuons une
+
+00:16:04.740 --> 00:16:06.659
+inférence dynamique des métadonnées
+
+00:16:06.660 --> 00:16:07.739
+via NetWeaver.
+
+00:16:07.740 --> 00:16:09.609
+Ainsi, si vous disposez d'un
+
+00:16:09.610 --> 00:16:11.339
+environnement SAP ou CRM très personnalisé, comme c'est le cas pour beaucoup
+
+00:16:11.340 --> 00:16:13.379
+, il est très simple d'
+
+00:16:13.380 --> 00:16:15.299
+installer le connecteur SAP, qui est
+
+00:16:15.300 --> 00:16:17.699
+certifié natif,
+
+00:16:17.700 --> 00:16:19.679
+et de pouvoir naviguer
+
+00:16:19.680 --> 00:16:20.969
+et ensuite, dans une sorte d'expérience de panier d'achat
+
+00:16:20.970 --> 00:16:22.859
+, importer les données
+
+00:16:22.860 --> 00:16:24.959
+qui vous intéressent dans
+
+00:16:24.960 --> 00:16:26.699
+un ensemble de pipelines dans Foundry
+
+00:16:26.700 --> 00:16:27.899
+avec lesquels vous pouvez ensuite travailler.
+
+00:16:27.900 --> 00:16:29.309
+Et c'est en fait comme ça que nous avons
+
+00:16:29.310 --> 00:16:30.989
+créé ces pipelines verts
+
+00:16:30.990 --> 00:16:33.329
+que nous avons vus précédemment, et nous avons constaté que le produit obtenu
+
+00:16:33.330 --> 00:16:34.499
+était
+
+00:16:34.500 --> 00:16:35.519
+PySpark.
+
+00:16:35.520 --> 00:16:37.709
+Ainsi, même si cela nous fournit un
+
+00:16:37.710 --> 00:16:39.479
+ensemble initial de pipelines, nous pouvons toujours
+
+00:16:39.480 --> 00:16:41.219
+choisir de l'étendre.
+
+00:16:41.220 --> 00:16:42.179
+On ne nous fournit jamais une sorte
+
+00:16:42.180 --> 00:16:43.769
+de résultat opaque que nous ne pouvons pas
+
+00:16:43.770 --> 00:16:44.669
+modifier.  Voilà donc
+
+00:16:44.670 --> 00:16:46.499
+un exemple,
+
+00:16:46.500 --> 00:16:48.449
+pour les systèmes plus courants, les
+
+00:16:48.450 --> 00:16:50.309
+CRM, les ERP et autres
+
+00:16:50.310 --> 00:16:51.899
+, de la façon dont nous essayons d'
+
+00:16:51.900 --> 00:16:53.789
+investir dans la rapidité, la rapidité de
+
+00:16:53.790 --> 00:16:55.709
+rentabilisation pour nos clients, afin de leur
+
+00:16:55.710 --> 00:16:56.849
+dire : « Nous ne voulons pas que vous ayez à
+
+00:16:56.850 --> 00:16:58.529
+refaire toutes ces intégrations si ce n'est
+
+00:16:58.530 --> 00:16:59.530
+pas nécessaire. »  D'accord
+
+00:17:00.560 --> 00:17:01.489
+.
+
+00:17:01.490 --> 00:17:03.199
+Nous avons donc beaucoup parlé, au cours de cette
+
+00:17:03.200 --> 00:17:04.789
+première étape, de l'intégration des données
+
+00:17:04.790 --> 00:17:05.989
+dans l'ontologie.
+
+00:17:05.990 --> 00:17:07.098
+Parlons maintenant de l'
+
+00:17:07.099 --> 00:17:08.568
+ontologie elle-même et approfondissons un peu
+
+00:17:08.569 --> 00:17:09.529
+plus le sujet.
+
+00:17:09.530 --> 00:17:11.479
+Je vais donc maintenant examiner l'un
+
+00:17:11.480 --> 00:17:12.979
+de ces objets et tenter de lever le
+
+00:17:12.980 --> 00:17:14.539
+voile sur ce qui se passe réellement
+
+00:17:14.540 --> 00:17:16.068
+ici.  Pour ce faire, je vais me
+
+00:17:16.069 --> 00:17:18.289
+plonger dans notre application de gestion d'ontologies
+
+00:17:18.290 --> 00:17:19.309
+.
+
+00:17:19.310 --> 00:17:20.629
+Et c'est un point de vue qu'un membre de l'
+
+00:17:20.630 --> 00:17:22.578
+équipe de gouvernance des données
+
+00:17:22.579 --> 00:17:24.229
+ou une partie de l'entreprise
+
+00:17:24.230 --> 00:17:25.939
+travaillant avec pourrait commencer à adopter.
+
+00:17:25.940 --> 00:17:27.139
+Ou bien ils pourraient dire : « OK,
+
+00:17:27.140 --> 00:17:28.849
+nous avons terminé tout le travail d'intégration,
+
+00:17:28.850 --> 00:17:29.899
+voyons maintenant comment nous allons
+
+00:17:29.900 --> 00:17:31.189
+présenter cela aux
+
+00:17:31.190 --> 00:17:32.119
+utilisateurs finaux », n'est-ce pas ?
+
+00:17:32.120 --> 00:17:34.129
+Donc, tout ce qui provient de cet objet végétal
+
+00:17:34.130 --> 00:17:35.629
+avec lequel nous avons travaillé, est-ce un
+
+00:17:35.630 --> 00:17:37.099
+objet normalement visible ?
+
+00:17:37.100 --> 00:17:39.079
+Est-ce caché ?  Est-ce proéminent ?
+
+00:17:39.080 --> 00:17:40.369
+Est-ce quelque chose sur lequel nous faisons des expériences
+
+00:17:40.370 --> 00:17:41.779
+?  Ou s'agit-il en réalité d'un
+
+00:17:41.780 --> 00:17:43.099
+objet actif que les gens devraient utiliser
+
+00:17:43.100 --> 00:17:45.379
+quotidiennement pour différents flux de travail&nbsp;?
+
+00:17:45.380 --> 00:17:47.059
+Concrètement, comment convertissons-nous
+
+00:17:47.060 --> 00:17:48.799
+chaque élément de ces
+
+00:17:48.800 --> 00:17:50.629
+ensembles de données de grande qualité que nous avons
+
+00:17:50.630 --> 00:17:52.669
+produits en objets
+
+00:17:52.670 --> 00:17:54.859
+?  Alors, comment les éléments comme les
+
+00:17:54.860 --> 00:17:56.359
+propriétés géospatiales sont-ils intégrés ?
+
+00:17:56.360 --> 00:17:57.889
+Quel est le nom de l'API pour ces
+
+00:17:57.890 --> 00:17:59.209
+différentes propriétés et quels sont leurs
+
+00:17:59.210 --> 00:18:00.049
+identifiants respectifs&nbsp;?
+
+00:18:00.050 --> 00:18:01.339
+Parce que nous allons vouloir utiliser cela
+
+00:18:01.340 --> 00:18:02.839
+avec tous nos différents outils,
+
+00:18:02.840 --> 00:18:04.459
+dans de nombreux types d'
+
+00:18:04.460 --> 00:18:05.460
+architectures différentes,
+
+00:18:06.650 --> 00:18:07.519
+et vous verrez que toutes ces
+
+00:18:07.520 --> 00:18:08.749
+informations sont regroupées ici,
+
+00:18:08.750 --> 00:18:10.249
+n'est-ce pas ?  Y compris les différents
+
+00:18:10.250 --> 00:18:13.099
+types de liens, les informations d'utilisation
+
+00:18:13.100 --> 00:18:14.599
+et, dans la barre latérale, nous
+
+00:18:14.600 --> 00:18:15.859
+avons même des moyens d'
+
+00:18:15.860 --> 00:18:17.779
+appliquer une sécurité supplémentaire et de
+
+00:18:17.780 --> 00:18:18.979
+restreindre l'accès aux vues.
+
+00:18:18.980 --> 00:18:20.959
+Je peux le faire ici aussi.
+
+00:18:20.960 --> 00:18:23.299
+Je peux également préparer ces objets
+
+00:18:23.300 --> 00:18:25.069
+pour différents types de flux de travail.
+
+00:18:25.070 --> 00:18:26.359
+Il se pourrait donc que ce
+
+00:18:26.360 --> 00:18:27.169
+plan vise
+
+00:18:27.170 --> 00:18:28.909
+principalement à réaliser des
+
+00:18:28.910 --> 00:18:31.129
+flux de travail basés sur la simulation ou des flux de travail géospatiaux.  Ce que
+
+00:18:31.130 --> 00:18:32.269
+nous pouvons faire ici, c'est
+
+00:18:32.270 --> 00:18:34.099
+prédéfinir certaines métadonnées que
+
+00:18:34.100 --> 00:18:35.119
+vous pouvez toujours définir manuellement,
+
+00:18:35.120 --> 00:18:37.039
+ce qui nous permettra d'obtenir plus
+
+00:18:37.040 --> 00:18:38.869
+rapidement une valeur ajoutée.
+
+00:18:38.870 --> 00:18:40.009
+Mettons ces objets en
+
+00:18:40.010 --> 00:18:41.239
+marche afin que nous puissions commencer à travailler
+
+00:18:41.240 --> 00:18:42.169
+avec eux.
+
+00:18:42.170 --> 00:18:43.429
+L'idée est que vous effectuiez ici un petit
+
+00:18:43.430 --> 00:18:44.989
+travail de configuration, qui
+
+00:18:44.990 --> 00:18:46.519
+peut encore une fois être largement standardisé
+
+00:18:46.520 --> 00:18:48.379
+, et que les utilisateurs métiers puissent ensuite se lancer
+
+00:18:48.380 --> 00:18:49.609
+et commencer immédiatement à
+
+00:18:49.610 --> 00:18:51.499
+utiliser ces données dans une multitude d'
+
+00:18:51.500 --> 00:18:52.429
+
+
+00:18:52.430 --> 00:18:54.229
+applications prêtes à l'emploi dans Foundry.
+
+00:18:54.230 --> 00:18:55.099
+Alors, jetons un coup d'œil à certaines de
+
+00:18:55.100 --> 00:18:56.389
+ces applications qui prennent
+
+00:18:56.390 --> 00:18:58.129
+vie pour un utilisateur métier, pour
+
+00:18:58.130 --> 00:18:59.629
+quelqu'un qui n'est pas technicien, qui ne
+
+00:18:59.630 --> 00:19:00.769
+commence probablement pas son
+
+00:19:00.770 --> 00:19:02.059
+parcours dans Foundry par l'
+
+00:19:02.060 --> 00:19:04.099
+application de traçabilité des données, les
+
+00:19:04.100 --> 00:19:05.989
+environnements de codage ou l'
+
+00:19:05.990 --> 00:19:07.129
+interface de gestion des ontologies.
+
+00:19:07.130 --> 00:19:08.509
+Ils commencent probablement par utiliser
+
+00:19:08.510 --> 00:19:10.999
+une application comme Object Explorer,
+
+00:19:11.000 --> 00:19:12.109
+qui est une interface de type pointer-cliquer
+
+00:19:12.110 --> 00:19:13.459
+permettant de parcourir
+
+00:19:13.460 --> 00:19:14.599
+différentes informations dans l'
+
+00:19:14.600 --> 00:19:16.459
+ontologie et qui
+
+00:19:16.460 --> 00:19:18.319
+semble très familière aux personnes qui
+
+00:19:18.320 --> 00:19:20.569
+recherchent des informations
+
+00:19:20.570 --> 00:19:21.799
+ou utilisent quotidiennement différents
+
+00:19:21.800 --> 00:19:23.269
+types d'applications Web
+
+00:19:23.270 --> 00:19:24.049
+.
+
+00:19:24.050 --> 00:19:25.939
+Vous pouvez donc constater ici que
+
+00:19:25.940 --> 00:19:27.049
+j'ai beaucoup d'objets différents
+
+00:19:27.050 --> 00:19:28.729
+qui apparaissent à la surface dans l'
+
+00:19:28.730 --> 00:19:29.599
+explorateur d'objets.
+
+00:19:29.600 --> 00:19:31.159
+J'ai mon avion, mes retards, mes
+
+00:19:31.160 --> 00:19:33.469
+vols, de ma démonstration d'aviation.
+
+00:19:33.470 --> 00:19:35.599
+J'ai ici des objets marketing
+
+00:19:35.600 --> 00:19:37.279
+appelés campagnes d'interaction,
+
+00:19:37.280 --> 00:19:39.139
+offres, etc., et
+
+00:19:39.140 --> 00:19:40.249
+pour rechercher quelque chose, il suffit de
+
+00:19:40.250 --> 00:19:41.929
+rechercher un type d'
+
+00:19:41.930 --> 00:19:43.729
+objet ou une
+
+00:19:43.730 --> 00:19:45.589
+propriété individuelle de cet objet.
+
+00:19:45.590 --> 00:19:46.819
+Dans ce cas précis, je souhaite examiner à nouveau
+
+00:19:46.820 --> 00:19:48.709
+les plantes que nous avons vues précédemment, ce qui va
+
+00:19:48.710 --> 00:19:50.029
+
+
+00:19:50.030 --> 00:19:51.799
+me lancer dans une investigation ou une
+
+00:19:51.800 --> 00:19:53.509
+exploration en quelque sorte
+
+00:19:53.510 --> 00:19:55.339
+préconfigurée pour me permettre de
+
+00:19:55.340 --> 00:19:56.689
+commencer à explorer ces
+
+00:19:56.690 --> 00:19:57.829
+données.  Il s'agit
+
+00:19:57.830 --> 00:19:59.749
+donc d'un
+
+00:19:59.750 --> 00:20:01.009
+ensemble de visualisations très simples, n'est-ce
+
+00:20:01.010 --> 00:20:02.029
+pas ?  Cela me montre en quelque sorte où se situent
+
+00:20:02.030 --> 00:20:04.249
+les plantes géospatialement,
+
+00:20:04.250 --> 00:20:05.509
+en fonction des données géographiques que nous avons
+
+00:20:05.510 --> 00:20:06.559
+intégrées.
+
+00:20:06.560 --> 00:20:07.429
+Il m'affiche des
+
+00:20:07.430 --> 00:20:08.599
+statistiques agrégées comme les stocks sur 30 jours
+
+00:20:08.600 --> 00:20:10.969
+, la capacité de production, ce genre de
+
+00:20:10.970 --> 00:20:12.109
+choses.
+
+00:20:12.110 --> 00:20:13.999
+Et si je veux passer en vue à 360 degrés
+
+00:20:14.000 --> 00:20:15.199
+et examiner l'une de ces plantes, j'ai une
+
+00:20:15.200 --> 00:20:16.759
+liste ici qui me permet de commencer à
+
+00:20:16.760 --> 00:20:18.619
+explorer et à consulter
+
+00:20:18.620 --> 00:20:19.819
+ces informations à un
+
+00:20:19.820 --> 00:20:21.049
+niveau plus général.
+
+00:20:21.050 --> 00:20:22.729
+L'idée, c'est de redonner un
+
+00:20:22.730 --> 00:20:24.139
+sentiment de familiarité
+
+00:20:24.140 --> 00:20:25.759
+aux personnes ayant déjà travaillé avec des
+
+00:20:25.760 --> 00:20:27.559
+
+
+00:20:27.560 --> 00:20:29.659
+logiciels de veille stratégique ou de visualisation, et de
+
+00:20:29.660 --> 00:20:31.189
+rassembler toutes ces informations
+
+00:20:31.190 --> 00:20:32.089
+provenant de
+
+00:20:32.090 --> 00:20:33.469
+différentes sources de données dans une
+
+00:20:33.470 --> 00:20:35.359
+vue unique.  Droite.  Je peux donc voir
+
+00:20:35.360 --> 00:20:36.589
+des informations concernant, encore une fois, les
+
+00:20:36.590 --> 00:20:37.759
+informations géospatiales.
+
+00:20:37.760 --> 00:20:39.709
+Il s'agit de traiter des données non structurées
+
+00:20:39.710 --> 00:20:41.299
+, comme un schéma, peut-être des
+
+00:20:41.300 --> 00:20:42.979
+facteurs de risque ou des informations sur les matériaux
+
+00:20:42.980 --> 00:20:44.569
+provenant des systèmes ERP et EMS,
+
+00:20:44.570 --> 00:20:46.189
+et même des éléments comme les
+
+00:20:46.190 --> 00:20:48.139
+échéanciers.
+
+00:20:48.140 --> 00:20:49.999
+Et ces vues, tout comme les vues à 360 degrés, peuvent être
+
+00:20:50.000 --> 00:20:51.799
+très personnalisées et très différentes
+
+00:20:51.800 --> 00:20:53.689
+selon le type d'utilisateur ou l'
+
+00:20:53.690 --> 00:20:55.099
+unité commerciale.
+
+00:20:55.100 --> 00:20:56.179
+Et vous pouvez imaginer que vous savez qu'il existe
+
+00:20:56.180 --> 00:20:57.109
+certains utilisateurs qui souhaitent
+
+00:20:57.110 --> 00:20:58.969
+voir des informations IoT ou des
+
+00:20:58.970 --> 00:21:00.769
+informations vidéo intégrées ici, et d'autres
+
+00:21:00.770 --> 00:21:01.699
+qui souhaitent voir des
+
+00:21:01.700 --> 00:21:03.649
+informations financières ou une
+
+00:21:03.650 --> 00:21:05.749
+utilisation plus typique d'un directeur financier.
+
+00:21:05.750 --> 00:21:07.189
+Ainsi, vous pouvez avoir différents objectifs
+
+00:21:07.190 --> 00:21:09.199
+ou différents types de points de vue assemblés
+
+00:21:09.200 --> 00:21:11.389
+sur les mêmes types d'objets ici,
+
+00:21:11.390 --> 00:21:12.929
+et la puissance de l'objet que vous exploitez
+
+00:21:12.930 --> 00:21:14.659
+permet aux gens de parcourir les
+
+00:21:14.660 --> 00:21:15.859
+différents objets d'une
+
+00:21:15.860 --> 00:21:17.059
+manière totalement conforme aux normes de sécurité
+
+00:21:18.110 --> 00:21:19.219
+et à une échelle où vous pourriez avoir des
+
+00:21:19.220 --> 00:21:20.509
+millions ou des milliards d'
+
+00:21:20.510 --> 00:21:22.069
+objets différents ici, où nous
+
+00:21:22.070 --> 00:21:23.269
+permettons réellement aux gens de se déplacer d'une
+
+00:21:23.270 --> 00:21:24.619
+manière qui a du sens et qui n'est pas
+
+00:21:24.620 --> 00:21:26.209
+accablante.
+
+00:21:26.210 --> 00:21:27.979
+Ou bien il n'est pas trop détaillé ni trop inhabituel
+
+00:21:27.980 --> 00:21:29.689
+pour les personnes qui connaissent déjà ce type d'
+
+00:21:29.690 --> 00:21:31.677
+outils, plus axés sur le monde des affaires.  Il ne s'agit donc que d'
+
+00:21:32.880 --> 00:21:34.679
+une vision des
+
+00:21:34.680 --> 00:21:36.149
+données, mais je pense qu'il est important
+
+00:21:36.150 --> 00:21:37.529
+de comprendre que, comme son nom l'indique, c'est un système de
+
+00:21:37.530 --> 00:21:38.909
+pointage et de clic, basé sur
+
+00:21:38.910 --> 00:21:40.739
+les objets dans
+
+00:21:40.740 --> 00:21:41.759
+ce paradigme.
+
+00:21:41.760 --> 00:21:43.019
+Mais si je suis un
+
+00:21:43.020 --> 00:21:45.629
+utilisateur plus technique, comme un ingénieur
+
+00:21:45.630 --> 00:21:47.069
+ou un analyste habitué
+
+00:21:47.070 --> 00:21:48.359
+à travailler avec des
+
+00:21:48.360 --> 00:21:50.489
+données en série, je pourrais utiliser une
+
+00:21:50.490 --> 00:21:51.869
+application sœur d'Object Explorer,
+
+00:21:51.870 --> 00:21:53.729
+appelée Quiver.  Et Quiver me
+
+00:21:53.730 --> 00:21:54.839
+permet justement d'analyser des
+
+00:21:54.840 --> 00:21:56.849
+graphiques à partir de
+
+00:21:56.850 --> 00:21:57.899
+données temporelles.
+
+00:21:57.900 --> 00:21:59.009
+Il s'agit donc de
+
+00:21:59.010 --> 00:22:00.859
+données en flux continu, reçues en temps réel,
+
+00:22:00.860 --> 00:22:02.349
+dans le secteur pétrolier et gazier ou celui des
+
+00:22:02.350 --> 00:22:03.779
+services publics.
+
+00:22:03.780 --> 00:22:05.309
+Et en tant qu'utilisateur susceptible d'utiliser une
+
+00:22:05.310 --> 00:22:07.229
+application de ce type, je
+
+00:22:07.230 --> 00:22:08.519
+pense probablement non seulement en termes de
+
+00:22:08.520 --> 00:22:09.659
+pointer-cliquer, mais aussi en termes de
+
+00:22:09.660 --> 00:22:11.579
+formules, d'intégrales, d'
+
+00:22:11.580 --> 00:22:13.589
+interpolation et de
+
+00:22:13.590 --> 00:22:15.509
+nuages ​​de points.  Et je peux effectivement en tirer de
+
+00:22:15.510 --> 00:22:16.349
+nouvelles données.
+
+00:22:16.350 --> 00:22:17.669
+Simplement en pointant et en cliquant.
+
+00:22:17.670 --> 00:22:18.659
+Je peux donc dire : « Vous savez, faites le
+
+00:22:18.660 --> 00:22:19.834
+résumé de ces deux séries, et
+
+00:22:19.835 --> 00:22:21.809
+produisez-en une autre. »
+
+00:22:21.810 --> 00:22:23.729
+Examinons de plus près l'
+
+00:22:23.730 --> 00:22:25.499
+écart actuel entre ces
+
+00:22:25.500 --> 00:22:27.059
+deux pressions, et créons une
+
+00:22:27.060 --> 00:22:28.319
+autre pression.
+
+00:22:28.320 --> 00:22:29.519
+Je peux même faire des choses plus
+
+00:22:29.520 --> 00:22:31.349
+sophistiquées, comme effectuer une
+
+00:22:31.350 --> 00:22:32.969
+recherche dans ces séries pour trouver les
+
+00:22:32.970 --> 00:22:34.799
+moments où la différence entre ces valeurs
+
+00:22:34.800 --> 00:22:36.539
+dépasse un certain seuil.
+
+00:22:36.540 --> 00:22:37.679
+Ou laissez-moi procéder à un
+
+00:22:37.680 --> 00:22:39.479
+entraînement par simple clic d'un modèle d'
+
+00:22:39.480 --> 00:22:40.769
+apprentissage automatique de première approximation
+
+00:22:40.770 --> 00:22:42.329
+.  En fait, je souhaite construire un
+
+00:22:42.330 --> 00:22:44.459
+classificateur, et je vais peut-être y apporter quelques modifications
+
+00:22:44.460 --> 00:22:45.839
+ici, en tant
+
+00:22:45.840 --> 00:22:47.129
+qu'ingénieur.
+
+00:22:47.130 --> 00:22:48.269
+Et ensuite, je souhaite pouvoir
+
+00:22:48.270 --> 00:22:50.249
+collaborer avec un
+
+00:22:50.250 --> 00:22:51.749
+data scientist de mon équipe.
+
+00:22:51.750 --> 00:22:53.399
+Je peux donc exporter une sorte de première
+
+00:22:53.400 --> 00:22:54.736
+approximation en
+
+00:22:56.310 --> 00:22:58.079
+code Python, avec une sémantique de bibliothèque complète permettant d'
+
+00:22:58.080 --> 00:22:59.279
+interagir avec ces
+
+00:22:59.280 --> 00:23:01.289
+données de séries temporelles en Python.
+
+00:23:02.310 --> 00:23:03.389
+Et encore une fois, la force de cette approche réside dans son apparence : elle
+
+00:23:03.390 --> 00:23:05.369
+semble assez technique, très
+
+00:23:05.370 --> 00:23:06.899
+personnalisée, mais au final,
+
+00:23:06.900 --> 00:23:08.099
+je me contente d'interagir avec ces
+
+00:23:08.100 --> 00:23:10.049
+objets de mon ontologie comme nous l'avons vu
+
+00:23:10.050 --> 00:23:11.759
+précédemment. Je peux donc parcourir d'
+
+00:23:11.760 --> 00:23:13.679
+autres objets et les placer sur
+
+00:23:13.680 --> 00:23:15.569
+ces graphiques pour pouvoir les utiliser.  Voici donc
+
+00:23:15.570 --> 00:23:17.399
+une autre perspective sur cette
+
+00:23:17.400 --> 00:23:19.319
+ontologie que nous avons construite et qui
+
+00:23:19.320 --> 00:23:21.269
+peut être utilisée par un autre type
+
+00:23:21.270 --> 00:23:22.439
+d'utilisateur.
+
+00:23:22.440 --> 00:23:24.269
+Si je pense géospatial, disons
+
+00:23:24.270 --> 00:23:26.249
+pas seulement centré sur l'IoT ou peut-être
+
+00:23:26.250 --> 00:23:28.139
+centré sur les objets, je pourrais vouloir utiliser
+
+00:23:28.140 --> 00:23:30.389
+une application comme la carte Foundry,
+
+00:23:30.390 --> 00:23:31.529
+où je visualise toutes mes
+
+00:23:31.530 --> 00:23:33.359
+usines et mes centres de distribution,
+
+00:23:33.360 --> 00:23:34.829
+et je peux activer
+
+00:23:34.830 --> 00:23:36.539
+et désactiver les calques comme je le
+
+00:23:36.540 --> 00:23:37.679
+souhaite.
+
+00:23:37.680 --> 00:23:38.939
+Et je pourrais dire, vous savez,
+
+00:23:38.940 --> 00:23:40.889
+regardons, pour
+
+00:23:40.890 --> 00:23:42.636
+ce centre de distribution en particulier,
+
+00:23:42.637 --> 00:23:44.699
+montrez-moi, sous forme de
+
+00:23:44.700 --> 00:23:46.049
+graphique, tous les
+
+00:23:46.050 --> 00:23:47.189
+clients connectés à ce
+
+00:23:47.190 --> 00:23:48.779
+centre de distribution, et cela va se
+
+00:23:48.780 --> 00:23:50.249
+visualiser ici et me permettre d'
+
+00:23:50.250 --> 00:23:52.079
+explorer, vous
+
+00:23:52.080 --> 00:23:53.579
+savez, les différents flux ou types d'
+
+00:23:53.580 --> 00:23:55.319
+informations d'approvisionnement ou de logistique qui
+
+00:23:55.320 --> 00:23:57.269
+pourraient concerner les dépendances
+
+00:23:57.270 --> 00:23:58.649
+entre les différents objets.  Il
+
+00:23:58.650 --> 00:24:00.269
+s'agit donc d'un autre point de vue courant, qui consiste encore
+
+00:24:00.270 --> 00:24:02.189
+une fois à considérer la même ontologie sous
+
+00:24:02.190 --> 00:24:03.289
+un angle différent.
+
+00:24:04.540 --> 00:24:06.069
+Et donc, j'espère que cela vous donne une
+
+00:24:06.070 --> 00:24:07.989
+idée de ce que cela implique si vous effectuez ce travail, c'est-à-dire si vous êtes
+
+00:24:07.990 --> 00:24:09.999
+capable d'
+
+00:24:10.000 --> 00:24:11.709
+intégrer rapidement des données provenant de différentes
+
+00:24:11.710 --> 00:24:12.519
+sources, n'est-ce pas ?
+
+00:24:12.520 --> 00:24:14.349
+Ou encore des lacs de données ou des entrepôts de données,
+
+00:24:14.350 --> 00:24:16.599
+et la mise en place de ces contrôles de santé par couches successives.
+
+00:24:16.600 --> 00:24:18.729
+L'intégration de cette sécurité permet
+
+00:24:18.730 --> 00:24:19.779
+d'assembler rapidement ce
+
+00:24:19.780 --> 00:24:21.879
+modèle sémantique, ce qui ouvre ensuite
+
+00:24:21.880 --> 00:24:23.739
+la voie à un accès
+
+00:24:23.740 --> 00:24:25.239
+et une exploration immédiats pour différents types
+
+00:24:25.240 --> 00:24:26.019
+d'utilisateurs.
+
+00:24:26.020 --> 00:24:27.549
+Que ce soit dans un explorateur d'objets,
+
+00:24:27.550 --> 00:24:29.379
+dans Quiver ou dans une
+
+00:24:29.380 --> 00:24:31.329
+application de type carte.
+
+00:24:31.330 --> 00:24:32.409
+Et c'est vraiment, en résumé, le
+
+00:24:32.410 --> 00:24:34.359
+
+
+00:24:34.360 --> 00:24:36.429
+premier kilomètre
+
+00:24:36.430 --> 00:24:37.269
+du quai, n'est-ce pas ?
+
+00:24:37.270 --> 00:24:39.159
+Ce qui correspond en quelque sorte à des données et à une
+
+00:24:39.160 --> 00:24:40.160
+ontologie.
+
+00:24:41.230 --> 00:24:43.389
+Si l'on considère maintenant la manière dont les
+
+00:24:43.390 --> 00:24:45.009
+jumeaux numériques, la modélisation et la
+
+00:24:45.010 --> 00:24:46.869
+science des données entrent en jeu, cela devient
+
+00:24:46.870 --> 00:24:48.099
+vraiment passionnant.
+
+00:24:48.100 --> 00:24:49.959
+
+
+00:24:49.960 --> 00:24:51.159
+Avant d'aborder la
+
+00:24:51.160 --> 00:24:53.170
+partie data science de Foundry, je tiens à préciser une chose&nbsp;:
+
+00:24:54.190 --> 00:24:55.659
+si vous interrogez quatre ou cinq data
+
+00:24:55.660 --> 00:24:57.579
+scientists chez Palantir sur les
+
+00:24:57.580 --> 00:24:58.749
+outils qu'ils préfèrent
+
+00:24:58.750 --> 00:25:00.129
+utiliser, vous obtiendrez dix
+
+00:25:00.130 --> 00:25:02.019
+réponses différentes.  Les gens adorent utiliser les
+
+00:25:02.020 --> 00:25:03.459
+
+
+00:25:03.460 --> 00:25:04.629
+fonctionnalités intégrées d'apprentissage automatique et de création de contenu de Foundry
+
+00:25:04.630 --> 00:25:05.709
+, mais ils aiment aussi
+
+00:25:05.710 --> 00:25:07.869
+utiliser des outils comme Data Robot, Dataiku,
+
+00:25:07.870 --> 00:25:09.729
+SageMaker, Azure ML, etc.
+
+00:25:09.730 --> 00:25:10.809
+
+
+00:25:10.810 --> 00:25:12.189
+Nous avons donc essayé de concevoir cette
+
+00:25:12.190 --> 00:25:14.079
+partie de la pile en gardant à l'
+
+00:25:14.080 --> 00:25:15.609
+esprit la philosophie suivante&nbsp;:
+
+00:25:15.610 --> 00:25:17.469
+construire n'importe où, puis, lorsque vous êtes
+
+00:25:17.470 --> 00:25:19.299
+prêt à déployer dans
+
+00:25:19.300 --> 00:25:20.799
+des applications opérationnelles, vous proposer une
+
+00:25:20.800 --> 00:25:22.929
+méthode simplifiée pour y parvenir.
+
+00:25:22.930 --> 00:25:24.429
+Et donc, à titre d'exemple de la façon dont je pourrais
+
+00:25:24.430 --> 00:25:26.559
+construire un modèle de bout en bout en utilisant les outils de science des
+
+00:25:26.560 --> 00:25:28.629
+données existants de Foundry,
+
+00:25:28.630 --> 00:25:30.429
+je vais ouvrir
+
+00:25:30.430 --> 00:25:31.659
+et changer à nouveau de rôle
+
+00:25:31.660 --> 00:25:33.309
+.  Nous avons donc parlé du
+
+00:25:33.310 --> 00:25:34.659
+profil de l'ingénieur de données, de certains
+
+00:25:34.660 --> 00:25:36.339
+profils d'affaires ; penchons-nous maintenant
+
+00:25:36.340 --> 00:25:38.109
+sur le profil du data scientist,
+
+00:25:38.110 --> 00:25:40.329
+où je me trouve actuellement dans un environnement
+
+00:25:40.330 --> 00:25:42.369
+qui ressemble à nouveau à un graphique
+
+00:25:42.370 --> 00:25:44.229
+ou à une sorte
+
+00:25:44.230 --> 00:25:46.119
+de lignée, mais qui
+
+00:25:46.120 --> 00:25:47.859
+est conçu pour être très familier à
+
+00:25:47.860 --> 00:25:49.179
+ceux qui ont utilisé d'autres
+
+00:25:49.180 --> 00:25:51.009
+outils de science des données.  Donc, si j'ouvre
+
+00:25:51.010 --> 00:25:53.079
+une des étapes de mon modèle
+
+00:25:53.080 --> 00:25:54.969
+ici et que je dézoome un peu, vous
+
+00:25:54.970 --> 00:25:56.889
+verrez des concepts comme les ensembles d'entraînement
+
+00:25:56.890 --> 00:25:58.899
+et la création de caractéristiques, jusqu'aux
+
+00:25:58.900 --> 00:26:00.909
+
+
+00:26:00.910 --> 00:26:02.439
+objets à partir desquels j'extrais réellement les
+
+00:26:02.440 --> 00:26:03.489
+données.
+
+00:26:03.490 --> 00:26:05.169
+Ainsi, chacun de ces nœuds représente une
+
+00:26:05.170 --> 00:26:07.149
+étape de transformation basée sur PySpark
+
+00:26:07.150 --> 00:26:08.139
+.  Je pourrais utiliser
+
+00:26:08.140 --> 00:26:09.039
+Pandas.
+
+00:26:09.040 --> 00:26:10.757
+Je peux alterner entre R et Spark SQL.
+
+00:26:11.800 --> 00:26:13.089
+Et vous savez, la blague qu'on se fait en
+
+00:26:13.090 --> 00:26:14.139
+interne, c'est que la
+
+00:26:14.140 --> 00:26:15.429
+chose la plus intéressante pour les
+
+00:26:15.430 --> 00:26:17.131
+data scientists, au premier abord, c'est le bouton d'importation de données
+
+00:26:17.132 --> 00:26:18.132
+.
+
+00:26:18.190 --> 00:26:19.179
+Cela permet de dire : « Hé, vous
+
+00:26:19.180 --> 00:26:21.009
+pouvez accéder de manière claire et cohérente
+
+00:26:21.010 --> 00:26:22.599
+aux données que vous avez intégrées à
+
+00:26:22.600 --> 00:26:24.039
+l'ontologie ou ailleurs dans
+
+00:26:24.040 --> 00:26:25.959
+Foundry. »  Et en tant que data scientist,
+
+00:26:25.960 --> 00:26:28.659
+je ne passe pas 80 % de mon temps à
+
+00:26:28.660 --> 00:26:30.489
+reconstruire moi-même ces pipelines de données
+
+00:26:30.490 --> 00:26:31.869
+.  Je peux tout simplement tirer parti du bon
+
+00:26:31.870 --> 00:26:34.149
+travail de mes collègues des opérations de données
+
+00:26:34.150 --> 00:26:35.919
+ou de mes collègues de l'ingénierie des données.
+
+00:26:35.920 --> 00:26:37.209
+Et si un problème survient avec
+
+00:26:37.210 --> 00:26:38.589
+ces flux de données, comme ceux que
+
+00:26:38.590 --> 00:26:40.779
+nous avons vus précédemment, je peux en être immédiatement
+
+00:26:40.780 --> 00:26:42.099
+alerté car les
+
+00:26:42.100 --> 00:26:43.599
+informations de santé me seront également transmises
+
+00:26:43.600 --> 00:26:44.379
+.
+
+00:26:44.380 --> 00:26:46.119
+J'ai donc une base stable, riche et
+
+00:26:46.120 --> 00:26:48.069
+saine sur laquelle m'appuyer, et
+
+00:26:48.070 --> 00:26:49.929
+je peux ensuite utiliser tous les
+
+00:26:49.930 --> 00:26:51.729
+packages et toutes les techniques que
+
+00:26:51.730 --> 00:26:53.859
+je connais ici pour
+
+00:26:53.860 --> 00:26:55.719
+construire différents
+
+00:26:55.720 --> 00:26:57.879
+modèles de bout en bout, par lots
+
+00:26:57.880 --> 00:26:59.829
+ou en direct,
+
+00:26:59.830 --> 00:27:01.389
+et les intégrer directement
+
+00:27:01.390 --> 00:27:02.949
+dans différents
+
+00:27:02.950 --> 00:27:04.269
+flux de travail opérationnels.
+
+00:27:04.270 --> 00:27:05.829
+Et bien sûr, je peux utiliser
+
+00:27:05.830 --> 00:27:07.449
+tous les forfaits auxquels je
+
+00:27:07.450 --> 00:27:09.279
+m'attends, ce qui nous permet de reproduire des situations
+
+00:27:09.280 --> 00:27:10.239
+comme « je n'ai pas les moyens de te payer ».
+
+00:27:10.240 --> 00:27:11.229
+Si vous utilisez vos propres
+
+00:27:11.230 --> 00:27:13.059
+gestionnaires de paquets, vous bénéficiez
+
+00:27:13.060 --> 00:27:14.949
+ici d'un avantage supplémentaire&nbsp;: la possibilité de
+
+00:27:14.950 --> 00:27:16.599
+configurer des profils personnalisés qui
+
+00:27:16.600 --> 00:27:17.619
+non seulement associent différents types de
+
+00:27:17.620 --> 00:27:19.569
+profils de calcul
+
+00:27:19.570 --> 00:27:21.099
+, mais permettent également, si
+
+00:27:21.100 --> 00:27:22.689
+vous avez des bibliothèques particulièrement sensibles ou soumises à des
+
+00:27:22.690 --> 00:27:24.399
+restrictions de licence, de limiter leur utilisation à
+
+00:27:24.400 --> 00:27:25.749
+certains utilisateurs seulement
+
+00:27:25.750 --> 00:27:26.649
+.
+
+00:27:26.650 --> 00:27:28.089
+Nous pouvons appliquer cela au même
+
+00:27:28.090 --> 00:27:30.429
+périmètre de sécurité qui assure la
+
+00:27:30.430 --> 00:27:32.199
+sécurité des données et la sécurité de l'ontologie
+
+00:27:32.200 --> 00:27:33.639
+que nous avons vus précédemment.  Cela
+
+00:27:33.640 --> 00:27:34.839
+permet donc aux gens d'
+
+00:27:34.840 --> 00:27:36.879
+utiliser les bibliothèques commerciales de manière relativement sécurisée
+
+00:27:36.880 --> 00:27:37.880
+.
+
+00:27:38.590 --> 00:27:40.668
+L'idée, c'est donc de
+
+00:27:40.669 --> 00:27:41.529
+construire ici.  Nous pensons qu'il s'agit d'un
+
+00:27:41.530 --> 00:27:42.999
+ensemble d'outils performant et simplifié,
+
+00:27:43.000 --> 00:27:44.889
+mais vous pouvez également vous connecter de
+
+00:27:44.890 --> 00:27:45.999
+la même manière que ces outils se
+
+00:27:46.000 --> 00:27:47.019
+connectent.
+
+00:27:47.020 --> 00:27:48.369
+Vous pouvez vous connecter directement depuis
+
+00:27:48.370 --> 00:27:50.199
+DataRobot à Dataiku, les
+
+00:27:50.200 --> 00:27:51.699
+SageMakers du monde à l'
+
+00:27:51.700 --> 00:27:53.679
+ontologie via des API ouvertes
+
+00:27:53.680 --> 00:27:55.239
+ou via des clients Python que nous
+
+00:27:55.240 --> 00:27:57.189
+fournissons à tous pour construire vos modèles
+
+00:27:57.190 --> 00:27:59.199
+et ces environnements.
+
+00:27:59.200 --> 00:28:01.209
+Et vous pouvez vous connecter via REST,
+
+00:28:01.210 --> 00:28:03.339
+via JDBC ou via un
+
+00:28:03.340 --> 00:28:04.179
+accès direct aux fichiers.
+
+00:28:04.180 --> 00:28:05.499
+Nous avons une sorte de
+
+00:28:05.500 --> 00:28:07.389
+version Foundry de Hadoop FS, et
+
+00:28:07.390 --> 00:28:09.009
+elle est extrêmement simplifiée pour faire
+
+00:28:09.010 --> 00:28:10.719
+entrer et sortir des données de Foundry, et
+
+00:28:10.720 --> 00:28:12.099
+pas seulement des données, mais aussi des
+
+00:28:12.100 --> 00:28:13.299
+informations de traçabilité, les
+
+00:28:13.300 --> 00:28:15.069
+représentations sémantiques, toutes les
+
+00:28:15.070 --> 00:28:16.489
+informations de versionnage, tout ce qui est disponible
+
+00:28:16.490 --> 00:28:17.769
+via les API.
+
+00:28:17.770 --> 00:28:19.479
+L'idée est donc de construire vos
+
+00:28:19.480 --> 00:28:21.009
+modèles ; vous en avez construit certains ici, d'autres avec d'
+
+00:28:21.010 --> 00:28:22.389
+autres outils.
+
+00:28:22.390 --> 00:28:23.829
+Je souhaite maintenant pouvoir
+
+00:28:23.830 --> 00:28:25.479
+les enregistrer et les utiliser dans diverses
+
+00:28:25.480 --> 00:28:27.429
+applications destinées aux utilisateurs finaux.
+
+00:28:27.430 --> 00:28:28.389
+Je vais donc maintenant
+
+00:28:28.390 --> 00:28:30.309
+ouvrir ma bibliothèque d'objectifs de modèle
+
+00:28:30.310 --> 00:28:31.219
+.
+
+00:28:31.220 --> 00:28:32.769
+C'est en quelque sorte le centre de contrôle de
+
+00:28:32.770 --> 00:28:34.029
+tous les modèles
+
+00:28:34.030 --> 00:28:35.649
+avec lesquels j'ai travaillé dans cette
+
+00:28:35.650 --> 00:28:36.609
+instance particulière de Foundry à laquelle j'ai
+
+00:28:36.610 --> 00:28:37.869
+accès.
+
+00:28:37.870 --> 00:28:39.099
+Et une grande partie de ce paradigme a été
+
+00:28:39.100 --> 00:28:40.449
+influencée par certains de nos travaux dans le
+
+00:28:40.450 --> 00:28:42.309
+domaine de la défense, où il existe une approche en
+
+00:28:42.310 --> 00:28:44.259
+trois parties
+
+00:28:44.260 --> 00:28:46.659
+pour le déploiement de l'
+
+00:28:46.660 --> 00:28:48.849
+IA opérationnelle.  Oui, je veux d'abord définir
+
+00:28:48.850 --> 00:28:50.109
+le problème de modélisation, n'est-ce pas ?  Il ne s'agit
+
+00:28:50.110 --> 00:28:50.949
+pas de réfléchir à un
+
+00:28:50.950 --> 00:28:51.969
+modèle particulier, mais plutôt à l'
+
+00:28:51.970 --> 00:28:53.709
+objectif que je cherche réellement à atteindre
+
+00:28:53.710 --> 00:28:54.609
+.
+
+00:28:54.610 --> 00:28:56.499
+Je teste probablement alors des dizaines,
+
+00:28:56.500 --> 00:28:57.939
+voire plus, de modèles en fonction de cet
+
+00:28:57.940 --> 00:28:58.899
+objectif.
+
+00:28:58.900 --> 00:29:00.159
+Ensuite, je réfléchis à la manière de
+
+00:29:00.160 --> 00:29:02.079
+déployer
+
+00:29:02.080 --> 00:29:03.850
+les modèles gagnants en production.
+
+00:29:04.880 --> 00:29:07.099
+Je vais donc aborder quelques-uns de nos
+
+00:29:07.100 --> 00:29:08.629
+objectifs afin que nous
+
+00:29:08.630 --> 00:29:09.769
+puissions examiner ce qui se passe réellement
+
+00:29:09.770 --> 00:29:10.770
+.  Et
+
+00:29:11.660 --> 00:29:13.399
+le point crucial ici, c'est que cela ne
+
+00:29:13.400 --> 00:29:14.899
+signifie pas nécessairement un déploiement dans Foundry
+
+00:29:14.900 --> 00:29:16.039
+.
+
+00:29:16.040 --> 00:29:17.479
+Plusieurs de ces modèles sont hébergés
+
+00:29:17.480 --> 00:29:19.499
+dans d'autres environnements, notamment sur Azure,
+
+00:29:19.500 --> 00:29:21.469
+AWS et via des services gérés
+
+00:29:21.470 --> 00:29:22.470
+comme DataRobot.
+
+00:29:22.880 --> 00:29:24.259
+Nous enregistrons donc ces
+
+00:29:24.260 --> 00:29:26.089
+modèles ici, et nous allons adopter
+
+00:29:26.090 --> 00:29:27.529
+une
+
+00:29:27.530 --> 00:29:29.479
+approche globale pour les comparer afin de déterminer
+
+00:29:29.480 --> 00:29:30.679
+lesquels seront
+
+00:29:30.680 --> 00:29:32.749
+déployés en production.
+
+00:29:32.750 --> 00:29:34.489
+Donc si j'ouvre mes prévisions de la demande client
+
+00:29:34.490 --> 00:29:36.739
+, en quelque sorte mon objectif,
+
+00:29:36.740 --> 00:29:38.329
+vous verrez qu'au niveau supérieur, elles m'affichent
+
+00:29:38.330 --> 00:29:40.219
+toutes ces informations à 360 degrés
+
+00:29:40.220 --> 00:29:41.309
+sur le modèle, n'est-ce pas ?
+
+00:29:41.310 --> 00:29:42.319
+Hé, qu'est-ce qu'on essaie de faire avec
+
+00:29:42.320 --> 00:29:43.339
+ça ?  En
+
+00:29:43.340 --> 00:29:44.659
+quoi consiste cette approche, de manière générale
+
+00:29:44.660 --> 00:29:45.589
+?
+
+00:29:45.590 --> 00:29:46.909
+Des informations sur les dernières
+
+00:29:46.910 --> 00:29:48.559
+versions, les fichiers pertinents qui
+
+00:29:48.560 --> 00:29:49.789
+ont servi à l'
+
+00:29:49.790 --> 00:29:51.709
+entraînement de ce modèle particulier, que
+
+00:29:51.710 --> 00:29:52.909
+nous utilisons couramment pour tous les
+
+00:29:52.910 --> 00:29:54.739
+modèles que nous avons testés,
+
+00:29:54.740 --> 00:29:56.149
+et même des informations sur la provenance des
+
+00:29:56.150 --> 00:29:57.289
+applications qui vont
+
+00:29:57.290 --> 00:29:59.089
+dépendre de ce modèle.
+
+00:29:59.090 --> 00:30:00.829
+Et aussi, comme nous le verrons un peu plus
+
+00:30:00.830 --> 00:30:02.749
+tard, certaines informations que
+
+00:30:02.750 --> 00:30:04.429
+nous pouvons obtenir sur la manière dont nous enchaînons concrètement
+
+00:30:04.430 --> 00:30:05.569
+ce modèle avec d'autres
+
+00:30:05.570 --> 00:30:07.399
+modèles au sein d'
+
+00:30:07.400 --> 00:30:08.689
+environnements de simulation.
+
+00:30:08.690 --> 00:30:09.739
+Et tout cela est en quelque sorte
+
+00:30:09.740 --> 00:30:11.689
+regroupé ici pour moi, et
+
+00:30:11.690 --> 00:30:13.309
+je peux aller dans la barre latérale, par
+
+00:30:13.310 --> 00:30:14.839
+exemple, jeter un coup d'œil et dire :
+
+00:30:14.840 --> 00:30:15.919
+regardons tous les modèles que
+
+00:30:15.920 --> 00:30:17.869
+nous avons effectivement proposés pour être
+
+00:30:17.870 --> 00:30:19.429
+déployés en ce moment dans le cadre de cet
+
+00:30:19.430 --> 00:30:20.209
+objectif.
+
+00:30:20.210 --> 00:30:21.619
+Vous voyez, certaines proviennent de mon collègue Matt, d'
+
+00:30:21.620 --> 00:30:23.449
+autres de mon collègue Andrew, et je
+
+00:30:23.450 --> 00:30:24.709
+peux toujours me référer au passé pour dire&nbsp;: «
+
+00:30:24.710 --> 00:30:26.072
+OK, pour ce modèle en forme de lasso, nous
+
+00:30:27.260 --> 00:30:28.489
+pouvons en fait voir les détails concernant son lieu et sa date de
+
+00:30:28.490 --> 00:30:30.379
+
+
+00:30:30.380 --> 00:30:32.329
+construction, et également, s'il a été rejeté,
+
+00:30:32.330 --> 00:30:33.469
+pourquoi.&nbsp;»
+
+00:30:33.470 --> 00:30:34.909
+Et donc, en quelque sorte, tout le
+
+00:30:34.910 --> 00:30:36.709
+cycle de vie autour du
+
+00:30:36.710 --> 00:30:38.569
+processus d'approbation, comme nous l'avons vu avec les données, la
+
+00:30:38.570 --> 00:30:39.570
+façon dont nous traitons les données…
+
+00:30:40.970 --> 00:30:42.229
+comme du code.  Nous
+
+00:30:42.230 --> 00:30:43.909
+traitons aussi les modèles comme du code, un peu de la
+
+00:30:43.910 --> 00:30:45.349
+même manière que les métadonnées relatives au
+
+00:30:45.350 --> 00:30:46.350
+processus d'approbation.
+
+00:30:47.750 --> 00:30:48.859
+Et, vous savez, si je passe
+
+00:30:48.860 --> 00:30:49.999
+à un autre objectif, par exemple
+
+00:30:50.000 --> 00:30:51.289
+mon
+
+00:30:51.290 --> 00:30:53.029
+modèle de campagne, je peux même aller dans l'
+
+00:30:53.030 --> 00:30:54.619
+onglet des comparaisons et regarder
+
+00:30:54.620 --> 00:30:56.269
+et dire&nbsp;: OK, pour les différents modèles
+
+00:30:56.270 --> 00:30:57.619
+que nous évaluons, nous en avons rejeté
+
+00:30:57.620 --> 00:30:58.969
+un, mais ajoutons-le quand même
+
+00:30:58.970 --> 00:31:00.169
+à la comparaison.
+
+00:31:00.170 --> 00:31:01.699
+Nous avons un modèle de forêt aléatoire, un
+
+00:31:01.700 --> 00:31:03.169
+modèle SVM et ensuite votre
+
+00:31:03.170 --> 00:31:05.029
+modèle de régression, et je souhaite comparer
+
+00:31:05.030 --> 00:31:06.259
+les principales théories et les principaux
+
+00:31:06.260 --> 00:31:07.789
+critères entre ces modèles.
+
+00:31:07.790 --> 00:31:09.409
+Donc, vous savez, des choses comme les
+
+00:31:09.410 --> 00:31:11.269
+courbes ROC et la façon dont
+
+00:31:11.270 --> 00:31:12.799
+les différentes
+
+00:31:12.800 --> 00:31:14.689
+dimensions d'évaluation de base
+
+00:31:14.690 --> 00:31:15.949
+fonctionnent à travers ces
+
+00:31:15.950 --> 00:31:17.329
+différents modèles.
+
+00:31:17.330 --> 00:31:18.469
+Vous pouvez donc
+
+00:31:18.470 --> 00:31:19.969
+très facilement personnaliser
+
+00:31:19.970 --> 00:31:21.979
+ces dimensions de base
+
+00:31:21.980 --> 00:31:23.749
+et même segmenter les éléments
+
+00:31:23.750 --> 00:31:24.859
+sensibles.
+
+00:31:24.860 --> 00:31:26.269
+Il pourrait donc y avoir, vous savez,
+
+00:31:26.270 --> 00:31:28.159
+des informations personnelles identifiables
+
+00:31:28.160 --> 00:31:29.509
+ou des choses qui doivent être
+
+00:31:29.510 --> 00:31:30.529
+protégées.
+
+00:31:30.530 --> 00:31:32.269
+Et vous pouvez en fait isoler ce
+
+00:31:32.270 --> 00:31:33.439
+type de comparaison de fonctionnalités ou ce
+
+00:31:33.440 --> 00:31:35.629
+type de comparaison de dimensionnalité
+
+00:31:35.630 --> 00:31:38.089
+dans un ensemble différent de
+
+00:31:38.090 --> 00:31:39.949
+parties de l'objectif qui ne sont
+
+00:31:39.950 --> 00:31:41.719
+accessibles qu'à certains types de personnes
+
+00:31:41.720 --> 00:31:42.709
+ou à certaines personnes disposant de certaines
+
+00:31:42.710 --> 00:31:43.710
+autorisations.
+
+00:31:44.480 --> 00:31:46.519
+Toutes ces informations sont donc ici,
+
+00:31:46.520 --> 00:31:47.749
+et l'idée est qu'une fois que vous avez
+
+00:31:47.750 --> 00:31:49.129
+effectué votre sélection et l'avez
+
+00:31:49.130 --> 00:31:50.599
+étiquetée, le modèle est prêt pour la
+
+00:31:50.600 --> 00:31:51.919
+production.
+
+00:31:51.920 --> 00:31:53.329
+L'étape clé ici, la sorte
+
+00:31:53.330 --> 00:31:55.159
+de couronnement, consiste à
+
+00:31:55.160 --> 00:31:57.079
+lier concrètement ce
+
+00:31:57.080 --> 00:31:58.999
+modèle à l'ontologie.  C'est là un point
+
+00:31:59.000 --> 00:32:00.529
+essentiel, car cela
+
+00:32:00.530 --> 00:32:02.149
+nous fournit en quelque sorte un système de typage
+
+00:32:02.150 --> 00:32:03.289
+pour les modèles.
+
+00:32:03.290 --> 00:32:04.249
+Ce que vous voyez ici en
+
+00:32:04.250 --> 00:32:05.239
+bas, avec l'
+
+00:32:05.240 --> 00:32:07.249
+API d'objectif de modélisation, est
+
+00:32:07.250 --> 00:32:08.329
+le modèle gagnant, qui dans ce
+
+00:32:08.330 --> 00:32:10.279
+cas était un modèle SageMaker,
+
+00:32:10.280 --> 00:32:12.349
+va en fait prendre
+
+00:32:12.350 --> 00:32:14.209
+comme deux de ses entrées deux
+
+00:32:14.210 --> 00:32:16.129
+propriétés de l'ontologie
+
+00:32:16.130 --> 00:32:17.629
+de notre ontologie de chaîne d'approvisionnement.
+
+00:32:17.630 --> 00:32:18.649
+Nous travaillons avec ça depuis le début
+
+00:32:18.650 --> 00:32:20.299
+, donc ça va engendrer des
+
+00:32:20.300 --> 00:32:21.559
+coûts.
+
+00:32:21.560 --> 00:32:23.269
+Le prix sera intégré à
+
+00:32:23.270 --> 00:32:25.039
+ce point final d'inférence en direct.
+
+00:32:25.040 --> 00:32:26.929
+Et ensuite, chaque fois qu'il renvoie une
+
+00:32:26.930 --> 00:32:28.849
+valeur pour le point de terminaison, nous allons
+
+00:32:28.850 --> 00:32:30.172
+essentiellement prendre ces trois valeurs
+
+00:32:30.173 --> 00:32:32.119
+- demande, capacité, inventaire -
+
+00:32:32.120 --> 00:32:33.979
+et les réassocier aux
+
+00:32:33.980 --> 00:32:35.989
+objets de notre ontologie en tant que
+
+00:32:35.990 --> 00:32:37.669
+propriétés dépendantes du temps ou, dans ce
+
+00:32:37.670 --> 00:32:38.959
+cas, en tant que propriétés dépendantes du modèle
+
+00:32:38.960 --> 00:32:39.919
+qui pourraient également dépendre du temps
+
+00:32:39.920 --> 00:32:41.659
+.  L'idée est donc que nous
+
+00:32:41.660 --> 00:32:43.579
+avons configuré l'ontologie
+
+00:32:43.580 --> 00:32:45.599
+pour qu'elle doive essentiellement
+
+00:32:45.600 --> 00:32:47.299
+reconnaître, ou prendre conscience, qu'elle
+
+00:32:47.300 --> 00:32:48.409
+va recevoir des
+
+00:32:48.410 --> 00:32:50.089
+valeurs d'un modèle.  C'est donc un point crucial,
+
+00:32:50.090 --> 00:32:51.619
+car cela
+
+00:32:51.620 --> 00:32:52.939
+signifie qu'avec cette liaison en
+
+00:32:52.940 --> 00:32:54.889
+place, je peux maintenant utiliser ce
+
+00:32:54.890 --> 00:32:56.839
+modèle.  C'est en quelque sorte un cas,
+
+00:32:56.840 --> 00:32:58.789
+vous savez, ----- il a été finalisé,
+
+00:32:58.790 --> 00:32:59.989
+il est maintenant lié à l'
+
+00:32:59.990 --> 00:33:00.829
+ontologie.
+
+00:33:00.830 --> 00:33:02.509
+Grâce à cette liaison d'ontologie, je peux désormais
+
+00:33:02.510 --> 00:33:04.069
+insérer le modèle non pas dans
+
+00:33:04.070 --> 00:33:05.749
+une seule application ou cinq
+
+00:33:05.750 --> 00:33:06.889
+, mais dans des dizaines d'
+
+00:33:06.890 --> 00:33:08.389
+applications différentes, et le faire
+
+00:33:08.390 --> 00:33:09.919
+apparaître de manière quasi transparente aux
+
+00:33:09.920 --> 00:33:10.969
+utilisateurs finaux.
+
+00:33:10.970 --> 00:33:12.649
+Et donc, à titre d'exemple de la façon dont tout cela se concrétise
+
+00:33:12.650 --> 00:33:13.879
+ici, cela
+
+00:33:13.880 --> 00:33:15.469
+nous amène à notre
+
+00:33:15.470 --> 00:33:17.119
+dernière étape, qui est celle des
+
+00:33:17.120 --> 00:33:19.189
+applications opérationnelles.  Prenons l'exemple d'
+
+00:33:19.190 --> 00:33:20.839
+une tour de contrôle de la chaîne d'approvisionnement
+
+00:33:20.840 --> 00:33:22.909
+et voyons comment
+
+00:33:22.910 --> 00:33:24.559
+les données des modèles s'articulent
+
+00:33:24.560 --> 00:33:26.359
+pour une application destinée à l'utilisateur final
+
+00:33:26.360 --> 00:33:27.979
+.
+
+00:33:27.980 --> 00:33:29.449
+Nous allons donc vous présenter
+
+00:33:29.450 --> 00:33:31.279
+ici un exemple d'
+
+00:33:31.280 --> 00:33:32.899
+application qui pourrait constituer
+
+00:33:32.900 --> 00:33:34.729
+un point de départ pour de nombreux utilisateurs en
+
+00:33:34.730 --> 00:33:36.349
+entreprise.
+
+00:33:36.350 --> 00:33:38.389
+C'est en quelque sorte ma tour de contrôle principale
+
+00:33:38.390 --> 00:33:39.799
+.  Il m'affiche des
+
+00:33:39.800 --> 00:33:41.719
+statistiques agrégées en haut, et
+
+00:33:41.720 --> 00:33:43.789
+je vois ici que nous avons différents
+
+00:33:43.790 --> 00:33:45.619
+objets sur une carte.
+
+00:33:45.620 --> 00:33:47.209
+En tant qu'utilisateur opérationnel, je me fiche probablement de
+
+00:33:47.210 --> 00:33:49.039
+ce qu'est une ontologie
+
+00:33:49.040 --> 00:33:50.059
+ou de tout ce que nous avons
+
+00:33:50.060 --> 00:33:51.319
+traversé.  Je sais juste que j'ai
+
+00:33:51.320 --> 00:33:52.369
+un travail à faire.
+
+00:33:52.370 --> 00:33:53.779
+Je vois donc que nous avons une usine
+
+00:33:53.780 --> 00:33:55.009
+ici dans le Michigan qui doit être
+
+00:33:55.010 --> 00:33:56.329
+examinée, car sa
+
+00:33:56.330 --> 00:33:57.589
+capacité de production commence à
+
+00:33:57.590 --> 00:33:59.449
+diminuer, et je veux savoir pourquoi.
+
+00:33:59.450 --> 00:34:01.159
+J'ai peut-être reçu une alerte à
+
+00:34:01.160 --> 00:34:02.429
+ce sujet, et donc, vous savez, cette alerte
+
+00:34:02.430 --> 00:34:04.049
+aurait pu me parvenir par e-mail, par
+
+00:34:04.050 --> 00:34:05.699
+SMS ou via une quelconque
+
+00:34:05.700 --> 00:34:06.899
+intégration avec un
+
+00:34:06.900 --> 00:34:08.129
+système de messagerie.
+
+00:34:08.130 --> 00:34:10.259
+Et je peux maintenant aller dans mon onglet alertes
+
+00:34:10.260 --> 00:34:11.189
+et consulter une sorte d'
+
+00:34:11.190 --> 00:34:13.709
+ensemble priorisé d'
+
+00:34:13.710 --> 00:34:14.908
+alertes différentes sur lesquelles je peux
+
+00:34:14.909 --> 00:34:16.198
+commencer à agir.
+
+00:34:16.199 --> 00:34:17.369
+Vous verrez donc que toutes sortes de
+
+00:34:17.370 --> 00:34:18.439
+choses arrivent ici, et
+
+00:34:18.440 --> 00:34:19.559
+je voudrais peut-être me concentrer sur celles qui
+
+00:34:19.560 --> 00:34:20.428
+sont prioritaires.
+
+00:34:20.429 --> 00:34:21.388
+Je vais donc filtrer ici, à
+
+00:34:21.389 --> 00:34:23.009
+gauche, et
+
+00:34:23.010 --> 00:34:24.479
+examiner l'une de ces alertes
+
+00:34:24.480 --> 00:34:25.408
+, qui concerne une
+
+00:34:25.409 --> 00:34:27.209
+interruption d'activité liée à la COVID.
+
+00:34:27.210 --> 00:34:28.229
+Et vous verrez que cela rassemble de
+
+00:34:28.230 --> 00:34:29.249
+nombreuses
+
+00:34:29.250 --> 00:34:30.479
+informations différentes provenant de tout ce que nous avons
+
+00:34:30.480 --> 00:34:31.738
+abordé jusqu'à présent.
+
+00:34:31.739 --> 00:34:33.509
+Droite.  Cette alerte a
+
+00:34:33.510 --> 00:34:35.579
+peut-être été générée par un pipeline de modélisation.
+
+00:34:35.580 --> 00:34:37.079
+Il récupère des données du
+
+00:34:37.080 --> 00:34:38.638
+fournisseur, et les plantes sont des
+
+00:34:38.639 --> 00:34:40.769
+liens différents dans mon ontologie.
+
+00:34:40.770 --> 00:34:42.419
+Il m'indique l'usine concernée
+
+00:34:42.420 --> 00:34:44.428
+et il
+
+00:34:44.429 --> 00:34:45.839
+vous montre également les
+
+00:34:45.840 --> 00:34:47.698
+actions recommandées, qui proviennent dans ce
+
+00:34:47.699 --> 00:34:48.959
+cas d'un modèle que
+
+00:34:48.960 --> 00:34:50.189
+j'ai élaboré.
+
+00:34:50.190 --> 00:34:52.319
+L'essentiel, c'est de ne pas se contenter de
+
+00:34:52.320 --> 00:34:53.428
+
+
+00:34:53.429 --> 00:34:55.109
+regarder cette alerte et de dire :
+
+00:34:55.110 --> 00:34:56.279
+« Bon, d'accord, il semble que nous ayons un
+
+00:34:56.280 --> 00:34:57.959
+problème. »  Nous disons que nous voulons pouvoir
+
+00:34:57.960 --> 00:34:59.399
+agir maintenant pour réagir concrètement
+
+00:34:59.400 --> 00:35:00.308
+.
+
+00:35:00.309 --> 00:35:02.099
+Et vous verrez que nous avons préconfiguré
+
+00:35:02.100 --> 00:35:03.389
+différentes actions
+
+00:35:03.390 --> 00:35:04.919
+pour ces
+
+00:35:04.920 --> 00:35:06.739
+utilisateurs, qu'il s'agisse d'annuler une commande, de l'
+
+00:35:06.740 --> 00:35:08.339
+exécuter partiellement ou d'effectuer des actions
+
+00:35:08.340 --> 00:35:09.539
+plus avancées
+
+00:35:09.540 --> 00:35:11.519
+comme la réaffectation, que vous
+
+00:35:11.520 --> 00:35:13.499
+verrez dans un instant.
+
+00:35:13.500 --> 00:35:14.939
+Mais si je clique sur ce
+
+00:35:14.940 --> 00:35:16.499
+bouton d'annulation de commande client, vous verrez que cela
+
+00:35:16.500 --> 00:35:18.509
+me permet de
+
+00:35:18.510 --> 00:35:20.279
+préconfigurer une action que je peux entreprendre
+
+00:35:20.280 --> 00:35:21.839
+ici sur cette alerte particulière ou une
+
+00:35:21.840 --> 00:35:23.909
+alerte connexe, et je peux ensuite choisir
+
+00:35:23.910 --> 00:35:25.739
+de la soumettre d'une manière qui
+
+00:35:25.740 --> 00:35:27.329
+sera enregistrée de manière non destructive
+
+00:35:27.330 --> 00:35:28.949
+dans l'ontologie.
+
+00:35:28.950 --> 00:35:30.239
+Et vous vous demandez peut-être : « Mais comment
+
+00:35:30.240 --> 00:35:31.169
+ça marche, n'est-ce pas ? »
+
+00:35:31.170 --> 00:35:32.669
+Je ne veux pas qu'un utilisateur puisse
+
+00:35:32.670 --> 00:35:34.529
+agir sur quelque partie que ce soit
+
+00:35:34.530 --> 00:35:36.449
+de l'ontologie et commencer à la mettre à jour
+
+00:35:36.450 --> 00:35:37.559
+.  Ce serait le chaos.
+
+00:35:37.560 --> 00:35:38.819
+On ne peut pas laisser les gens modifier les
+
+00:35:38.820 --> 00:35:39.840
+valeurs à leur guise.  Il s'avère que
+
+00:35:40.890 --> 00:35:42.659
+le fonctionnement des actions repose en
+
+00:35:42.660 --> 00:35:43.979
+réalité sur le fait qu'elles font partie intégrante de l'
+
+00:35:43.980 --> 00:35:46.049
+ontologie au niveau le plus fondamental.
+
+00:35:46.050 --> 00:35:48.119
+Donc, si nous revenons à l'
+
+00:35:48.120 --> 00:35:49.559
+interface de configuration de l'ontologie que nous avons vue
+
+00:35:49.560 --> 00:35:51.179
+avant de parler de la
+
+00:35:51.180 --> 00:35:52.469
+mise en place de notre système et de toutes
+
+00:35:52.470 --> 00:35:54.239
+les connexions, si nous
+
+00:35:54.240 --> 00:35:55.649
+retournons à la page principale, nous
+
+00:35:55.650 --> 00:35:57.659
+verrons bien sûr les types d'objets
+
+00:35:57.660 --> 00:35:58.619
+que nous sommes en train de définir.
+
+00:35:58.620 --> 00:35:59.879
+Il existe des types de liens que nous avons
+
+00:35:59.880 --> 00:36:01.589
+vus tout au long de ce document, mais le
+
+00:36:01.590 --> 00:36:03.749
+troisième élément essentiel est
+
+00:36:03.750 --> 00:36:05.489
+également constitué par les actions.  Et c'est ce dynamisme
+
+00:36:05.490 --> 00:36:07.469
+qui rend cette ontologie
+
+00:36:07.470 --> 00:36:09.389
+vraiment spéciale : nous ne
+
+00:36:09.390 --> 00:36:10.379
+parlons pas seulement de
+
+00:36:10.380 --> 00:36:12.029
+sémantique, mais aussi de
+
+00:36:12.030 --> 00:36:13.019
+cinétique.
+
+00:36:13.020 --> 00:36:14.159
+Nous parlons des
+
+00:36:14.160 --> 00:36:16.079
+actions qui permettent de modifier l'
+
+00:36:16.080 --> 00:36:18.389
+état de l'ontologie de manière conforme
+
+00:36:18.390 --> 00:36:19.439
+.
+
+00:36:19.440 --> 00:36:20.849
+Ainsi, si je recherche, par exemple, l'action «
+
+00:36:20.850 --> 00:36:23.129
+annuler la commande du client »
+
+00:36:23.130 --> 00:36:25.079
+que nous avons vue précédemment, nous constaterons qu'elle se trouve
+
+00:36:25.080 --> 00:36:27.389
+dans notre bibliothèque d'actions.
+
+00:36:27.390 --> 00:36:28.769
+Et si j'ouvre ceci, vous verrez
+
+00:36:28.770 --> 00:36:30.239
+toutes sortes d'informations connexes,
+
+00:36:30.240 --> 00:36:31.529
+comme pour d'autres parties de l'
+
+00:36:31.530 --> 00:36:33.719
+ontologie&nbsp;: le
+
+00:36:33.720 --> 00:36:35.489
+nom de l'API pour cette annulation de
+
+00:36:35.490 --> 00:36:37.379
+commande personnalisée, l'identifiant réel que nous pouvons
+
+00:36:37.380 --> 00:36:38.609
+utiliser, avec lequel nous pouvons
+
+00:36:38.610 --> 00:36:40.349
+interagir par programmation, et la
+
+00:36:40.350 --> 00:36:42.299
+logique réelle utilisée pour créer cette
+
+00:36:42.300 --> 00:36:44.309
+action particulière d'annulation de commande client.
+
+00:36:44.310 --> 00:36:45.310
+Nous voyons donc ici à
+
+00:36:46.440 --> 00:36:48.329
+quels objets cela se rapporte, quelles
+
+00:36:48.330 --> 00:36:50.279
+propriétés cela mettra à jour,
+
+00:36:50.280 --> 00:36:52.229
+quels paramètres cela prend et même
+
+00:36:52.230 --> 00:36:53.880
+quelles validations cela utilise.
+
+00:36:54.900 --> 00:36:56.429
+Et tout cela se configure
+
+00:36:56.430 --> 00:36:57.509
+ici par simple clic, mais cela
+
+00:36:57.510 --> 00:36:59.039
+pourrait également se configurer via une interface beaucoup plus
+
+00:36:59.040 --> 00:37:00.149
+robuste
+
+00:37:00.150 --> 00:37:02.309
+basée sur le code, en
+
+00:37:02.310 --> 00:37:03.959
+utilisant les outils de création que nous avons
+
+00:37:03.960 --> 00:37:05.939
+vus précédemment
+
+00:37:05.940 --> 00:37:07.259
+et la partie
+
+00:37:07.260 --> 00:37:08.260
+de la pile qui gère davantage les opérations sur les données.  Ainsi,
+
+00:37:08.970 --> 00:37:11.159
+cette action étant
+
+00:37:11.160 --> 00:37:13.259
+définie de manière à ce que chaque fois que je souhaite annuler
+
+00:37:13.260 --> 00:37:15.239
+une commande client, je puisse le faire de façon
+
+00:37:15.240 --> 00:37:17.549
+fiable, reproductible et vérifiable
+
+00:37:17.550 --> 00:37:18.359
+.  Cela
+
+00:37:18.360 --> 00:37:19.739
+signifie donc que chaque
+
+00:37:19.740 --> 00:37:20.909
+développeur d'applications
+
+00:37:20.910 --> 00:37:22.589
+n'implémente pas sa propre version de
+
+00:37:22.590 --> 00:37:23.789
+ce que signifie annuler une
+
+00:37:23.790 --> 00:37:25.679
+commande personnalisée.  Cela signifie qu'ils utilisent simplement
+
+00:37:25.680 --> 00:37:27.659
+cette fonction de la bibliothèque, et
+
+00:37:27.660 --> 00:37:29.459
+celle-ci sait intelligemment comment
+
+00:37:29.460 --> 00:37:32.489
+modifier différents objets.
+
+00:37:32.490 --> 00:37:34.439
+Il sait quelles précautions
+
+00:37:34.440 --> 00:37:35.459
+prendre.  Donc, si je suis un
+
+00:37:35.460 --> 00:37:37.349
+employé junior, il se peut que lorsque
+
+00:37:37.350 --> 00:37:38.789
+je clique sur « Annuler la commande client »,
+
+00:37:38.790 --> 00:37:40.709
+le système sache qui je suis
+
+00:37:40.710 --> 00:37:42.299
+et doive obtenir l'approbation de mon
+
+00:37:42.300 --> 00:37:44.519
+responsable avant d'être
+
+00:37:44.520 --> 00:37:45.659
+confirmée.
+
+00:37:45.660 --> 00:37:47.519
+Et puis, il se peut que la dernière
+
+00:37:47.520 --> 00:37:48.959
+partie soit un webhook ou une
+
+00:37:48.960 --> 00:37:50.639
+sorte de routine de réécriture qui
+
+00:37:50.640 --> 00:37:52.559
+synchronise ensuite cette modification avec
+
+00:37:52.560 --> 00:37:54.419
+un système ERP ou
+
+00:37:54.420 --> 00:37:55.709
+un système MES.  Encore une fois
+
+00:37:55.710 --> 00:37:56.909
+, tout cela représente un
+
+00:37:56.910 --> 00:37:58.409
+flux assez complexe pour une action ou un
+
+00:37:58.410 --> 00:38:00.119
+élément de logique que je ne souhaite pas que le
+
+00:38:00.120 --> 00:38:01.409
+développeur d'applications ait à prendre en compte
+
+00:38:01.410 --> 00:38:02.669
+.  Je souhaite simplement qu'ils puissent
+
+00:38:02.670 --> 00:38:04.146
+intégrer cette logique ici en tant
+
+00:38:04.147 --> 00:38:06.179
+qu'action et que Foundry,
+
+00:38:06.180 --> 00:38:07.319
+au niveau système, puisse gérer
+
+00:38:07.320 --> 00:38:08.579
+toute l'orchestration qui
+
+00:38:08.580 --> 00:38:09.580
+s'ensuit.
+
+00:38:11.080 --> 00:38:12.969
+Nous l'avons quelque peu évoqué,
+
+00:38:12.970 --> 00:38:14.019
+mais ce que cela signifie pour le
+
+00:38:14.020 --> 00:38:15.909
+concepteur d'applications, c'est que même
+
+00:38:15.910 --> 00:38:17.019
+si les applications que nous avons
+
+00:38:17.020 --> 00:38:18.579
+examinées ici, dans cet
+
+00:38:18.580 --> 00:38:20.349
+exemple particulier de tour de contrôle de la chaîne d'approvisionnement,
+
+00:38:20.350 --> 00:38:22.299
+semblent très personnalisées, elles sont en
+
+00:38:22.300 --> 00:38:24.219
+réalité toutes construites à l'aide d'un
+
+00:38:24.220 --> 00:38:25.629
+concepteur d'applications à faible code, et dans
+
+00:38:25.630 --> 00:38:26.979
+ce cas, d'un concepteur d'applications sans code
+
+00:38:26.980 --> 00:38:28.389
+.  Et si je veux ajouter
+
+00:38:28.390 --> 00:38:29.469
+quelque chose ici en haut, par
+
+00:38:29.470 --> 00:38:31.089
+exemple, c'est très simple&nbsp;: il me suffit de
+
+00:38:31.090 --> 00:38:33.249
+pointer et de cliquer pour ajouter
+
+00:38:33.250 --> 00:38:35.349
+un nouveau widget dans
+
+00:38:35.350 --> 00:38:36.819
+cette vue particulière, je pourrais donc ajouter
+
+00:38:36.820 --> 00:38:38.529
+un tableau d'objets, par exemple.
+
+00:38:38.530 --> 00:38:39.879
+Et c'est super simple de commencer à
+
+00:38:39.880 --> 00:38:41.919
+intégrer différentes choses
+
+00:38:41.920 --> 00:38:42.849
+dans ces vues, n'est-ce pas ?
+
+00:38:42.850 --> 00:38:44.589
+Parce que je ne suis pas en train d'intégrer
+
+00:38:44.590 --> 00:38:46.479
+des données dans une
+
+00:38:46.480 --> 00:38:48.219
+base de données cloisonnée et de
+
+00:38:48.220 --> 00:38:49.539
+faire les choses de manière ponctuelle
+
+00:38:49.540 --> 00:38:51.459
+.  Je suis directement connecté à
+
+00:38:51.460 --> 00:38:53.649
+l'ontologie et je peux donc facilement
+
+00:38:53.650 --> 00:38:55.809
+ouvrir un ensemble d'objets
+
+00:38:55.810 --> 00:38:57.129
+avec lesquels vous avez déjà travaillé,
+
+00:38:57.130 --> 00:38:58.959
+comme les plantes, et je peux
+
+00:38:58.960 --> 00:39:01.329
+commencer à les importer ici
+
+00:39:01.330 --> 00:39:02.769
+et voir comment ils seront
+
+00:39:02.770 --> 00:39:04.689
+liés aux
+
+00:39:04.690 --> 00:39:06.399
+widgets que nous avons configurés.
+
+00:39:06.400 --> 00:39:08.829
+Je vais donc saisir ici le nom de notre
+
+00:39:08.830 --> 00:39:10.689
+usine MSC, et le système pourra alors
+
+00:39:10.690 --> 00:39:12.099
+extraire toutes
+
+00:39:12.100 --> 00:39:13.809
+ces données en tenant compte de
+
+00:39:13.810 --> 00:39:16.239
+mon identité et de mon profil de sécurité.
+
+00:39:16.240 --> 00:39:17.739
+Je peux ajouter toutes les propriétés ici,
+
+00:39:17.740 --> 00:39:19.539
+et voilà, j'ai ajouté un
+
+00:39:19.540 --> 00:39:21.489
+nouveau widget de la même
+
+00:39:21.490 --> 00:39:22.659
+manière que j'ajoute des données.
+
+00:39:22.660 --> 00:39:25.179
+Je peux également ajouter ces actions.
+
+00:39:25.180 --> 00:39:26.559
+Et cela signifie que, en tant que
+
+00:39:26.560 --> 00:39:28.479
+développeur d'applications, je n'ai plus à prendre en compte
+
+00:39:28.480 --> 00:39:29.799
+l'ensemble
+
+00:39:29.800 --> 00:39:31.689
+des éléments à considérer chaque fois que
+
+00:39:31.690 --> 00:39:33.579
+je souhaite déployer un nouveau
+
+00:39:33.580 --> 00:39:35.109
+flux de travail opérationnel ou une nouvelle application.
+
+00:39:35.110 --> 00:39:36.249
+Je n'ai pas à me soucier de la mise en place d'
+
+00:39:36.250 --> 00:39:37.929
+un nouvel environnement d'hébergement.
+
+00:39:37.930 --> 00:39:39.669
+Les bases de données, l'indexation, le
+
+00:39:39.670 --> 00:39:41.469
+calcul, le stockage, tout cela ne relève peut-être
+
+00:39:41.470 --> 00:39:42.470
+pas des bases de données.
+
+00:39:42.670 --> 00:39:44.649
+Comment est-ce que je recueille les commentaires
+
+00:39:44.650 --> 00:39:46.989
+des utilisateurs&nbsp;?  Comment puis-je lier les modèles
+
+00:39:46.990 --> 00:39:48.459
+aux différents états de l'application&nbsp;?
+
+00:39:48.460 --> 00:39:49.719
+Comment est-ce que je recueille les commentaires de
+
+00:39:49.720 --> 00:39:50.649
+ces modèles&nbsp;?
+
+00:39:50.650 --> 00:39:52.569
+Tout cela est pris en charge en dessous
+
+00:39:52.570 --> 00:39:54.549
+du niveau de l'application grâce à ce que
+
+00:39:54.550 --> 00:39:56.019
+nous avons constaté dans l'
+
+00:39:56.020 --> 00:39:57.849
+intégration des données, dans la configuration de l'
+
+00:39:57.850 --> 00:39:59.859
+ontologie et dans les actions de
+
+00:39:59.860 --> 00:40:02.049
+câblage réel des modèles
+
+00:40:02.050 --> 00:40:03.189
+qui convergent vers ces
+
+00:40:03.190 --> 00:40:05.109
+objectifs, ainsi que dans la liaison réelle
+
+00:40:05.110 --> 00:40:06.819
+des modèles à l'ontologie et à
+
+00:40:06.820 --> 00:40:08.559
+ces objectifs. Cela
+
+00:40:08.560 --> 00:40:10.179
+signifie que vous pouvez créer des
+
+00:40:10.180 --> 00:40:12.519
+applications composites riches en fonctionnalités
+
+00:40:12.520 --> 00:40:14.439
+en quelques heures ou
+
+00:40:14.440 --> 00:40:16.329
+un jour ou deux, au lieu de
+
+00:40:16.330 --> 00:40:17.649
+consacrer des mois ou des trimestres d'
+
+00:40:17.650 --> 00:40:18.650
+efforts.
+
+00:40:19.850 --> 00:40:21.169
+Nous pensons donc que c'est un
+
+00:40:21.170 --> 00:40:22.789
+élément très puissant de la plateforme, et bien
+
+00:40:22.790 --> 00:40:24.199
+souvent, c'est
+
+00:40:24.200 --> 00:40:25.579
+juste un exemple de la façon dont
+
+00:40:25.580 --> 00:40:27.379
+ce type de
+
+00:40:27.380 --> 00:40:28.729
+capacité opérationnelle se
+
+00:40:28.730 --> 00:40:29.929
+révèle.  Ce que
+
+00:40:29.930 --> 00:40:30.889
+nous avons examiné
+
+00:40:30.890 --> 00:40:32.809
+ici est un exemple
+
+00:40:32.810 --> 00:40:34.219
+de générateur d'applications opérationnelles
+
+00:40:34.220 --> 00:40:35.839
+appelé Workshop.  Foundry propose également d'
+
+00:40:35.840 --> 00:40:37.279
+autres outils de création d'applications
+
+00:40:37.280 --> 00:40:38.299
+.  Il existe
+
+00:40:38.300 --> 00:40:39.589
+donc une autre application appelée Slate, qui est en quelque sorte
+
+00:40:39.590 --> 00:40:41.419
+une application sœur.
+
+00:40:41.420 --> 00:40:42.769
+Et l'essentiel, c'est que
+
+00:40:42.770 --> 00:40:44.509
+vous pouvez bien sûr créer
+
+00:40:44.510 --> 00:40:46.279
+vos propres applications personnalisées
+
+00:40:46.280 --> 00:40:48.109
+, et ce, de
+
+00:40:48.110 --> 00:40:50.059
+manière orientée objet,
+
+00:40:50.060 --> 00:40:51.709
+tabulaire ou même plus
+
+00:40:51.710 --> 00:40:53.539
+classique.  Vous trouverez
+
+00:40:53.540 --> 00:40:54.559
+
+
+00:40:54.560 --> 00:40:56.179
+ici une documentation assez complète, non seulement sur l'
+
+00:40:56.180 --> 00:40:57.619
+interaction avec les
+
+00:40:57.620 --> 00:40:59.479
+applications existantes, mais aussi sur la création de vos
+
+00:40:59.480 --> 00:41:01.909
+propres applications, l'utilisation des API
+
+00:41:01.910 --> 00:41:03.469
+et de Foundry, en utilisant tous les éléments dont
+
+00:41:03.470 --> 00:41:04.429
+nous avons parlé tout au long de
+
+00:41:04.430 --> 00:41:05.430
+cette démonstration.
+
+00:41:06.810 --> 00:41:07.799
+Génial.
+
+00:41:07.800 --> 00:41:09.269
+Maintenant, j'ai une dernière chose à
+
+00:41:09.270 --> 00:41:10.049
+vous montrer.
+
+00:41:10.050 --> 00:41:11.399
+Et puis nous conclurons ici
+
+00:41:11.400 --> 00:41:13.349
+cette démonstration particulière,
+
+00:41:13.350 --> 00:41:14.759
+et c'est ainsi que ces éléments
+
+00:41:14.760 --> 00:41:16.649
+commencent à s'assembler dans une sorte de
+
+00:41:16.650 --> 00:41:18.119
+
+
+00:41:18.120 --> 00:41:19.799
+paradigme de jumeau numérique plus stratégique.  Ce que
+
+00:41:21.040 --> 00:41:22.929
+j'ouvre ici, c'est
+
+00:41:22.930 --> 00:41:24.429
+une dernière application de
+
+00:41:24.430 --> 00:41:26.169
+Foundry que nous appelons Vertex.
+
+00:41:26.170 --> 00:41:27.609
+Vertex est un peu comme l'
+
+00:41:27.610 --> 00:41:28.959
+application de cartographie de Foundry.
+
+00:41:28.960 --> 00:41:30.359
+Désolé,
+
+00:41:30.360 --> 00:41:31.449
+vous pensez peut-être à l'application graphique de Foundry, n'est-ce pas ?
+
+00:41:31.450 --> 00:41:32.349
+Ça me montre en quelque sorte toutes les
+
+00:41:32.350 --> 00:41:34.299
+relations ici,
+
+00:41:34.300 --> 00:41:35.709
+entre tous mes différents objets, n'est-ce
+
+00:41:35.710 --> 00:41:36.759
+pas ?  Si vous regardiez simplement
+
+00:41:36.760 --> 00:41:37.689
+, nous sommes partis d'ici, vous pourriez penser que ça a l'air un peu
+
+00:41:37.690 --> 00:41:38.649
+fou, non ?  Il se passe
+
+00:41:38.650 --> 00:41:40.629
+tellement de choses ici,
+
+00:41:40.630 --> 00:41:42.099
+mais maintenant nous savons exactement de quoi il
+
+00:41:42.100 --> 00:41:43.809
+s'agit, n'est-ce pas ?  Cela
+
+00:41:43.810 --> 00:41:45.249
+me montre simplement le type de
+
+00:41:45.250 --> 00:41:46.629
+connexion que j'ai intégrée à mon
+
+00:41:46.630 --> 00:41:47.919
+ontologie, où chaque
+
+00:41:47.920 --> 00:41:49.959
+type d'objet intègre de nombreuses données
+
+00:41:49.960 --> 00:41:51.069
+.
+
+00:41:51.070 --> 00:41:52.599
+Nous avons également superposé les
+
+00:41:52.600 --> 00:41:53.829
+différents modèles d'apprentissage automatique
+
+00:41:53.830 --> 00:41:55.629
+et les approches de science des données.
+
+00:41:55.630 --> 00:41:57.669
+Dans ce cas précis, il s'agit d'un exemple
+
+00:41:57.670 --> 00:41:59.619
+basé sur l'
+
+00:41:59.620 --> 00:42:00.939
+un de nos clients fournisseurs de matériel médical
+
+00:42:00.940 --> 00:42:03.009
+, plus ou moins
+
+00:42:03.010 --> 00:42:04.839
+anonymisé, bien sûr, à
+
+00:42:04.840 --> 00:42:06.429
+partir du travail qu'ils ont effectué pendant
+
+00:42:06.430 --> 00:42:08.319
+les premières phases de la COVID-19,
+
+00:42:08.320 --> 00:42:09.399
+où ils ont dû cartographier l'ensemble
+
+00:42:09.400 --> 00:42:10.869
+du processus de
+
+00:42:10.870 --> 00:42:11.799
+fabrication et d'expédition des
+
+00:42:11.800 --> 00:42:13.689
+respirateurs,
+
+00:42:13.690 --> 00:42:14.889
+depuis leurs fournisseurs en amont
+
+00:42:14.890 --> 00:42:16.809
+jusqu'aux biens intermédiaires, en passant par leurs usines, leurs
+
+00:42:16.810 --> 00:42:18.609
+
+
+00:42:18.610 --> 00:42:20.409
+centres de distribution et leurs
+
+00:42:20.410 --> 00:42:22.359
+clients finaux.  Ce graphique nous offre donc une
+
+00:42:22.360 --> 00:42:23.529
+
+
+00:42:23.530 --> 00:42:24.999
+vue d'ensemble de
+
+00:42:25.000 --> 00:42:26.319
+toute la chaîne de valeur, n'est-ce pas ?
+
+00:42:26.320 --> 00:42:27.699
+Et pouvoir remonter
+
+00:42:27.700 --> 00:42:29.019
+et descendre dans le temps et
+
+00:42:29.020 --> 00:42:30.729
+dire : montrez-moi où les alertes se
+
+00:42:30.730 --> 00:42:32.169
+déclenchent, où les stocks atteignent des
+
+00:42:32.170 --> 00:42:34.029
+niveaux dangereux, où nous
+
+00:42:34.030 --> 00:42:35.589
+subissons des
+
+00:42:35.590 --> 00:42:37.539
+dysfonctionnements fondamentaux, n'est-ce pas ?
+
+00:42:37.540 --> 00:42:38.529
+Et je peux toujours revenir en arrière
+
+00:42:38.530 --> 00:42:39.939
+et avancer, passer en revue
+
+00:42:39.940 --> 00:42:41.799
+différents moments dans le
+
+00:42:41.800 --> 00:42:43.179
+temps pour pouvoir voir
+
+00:42:43.180 --> 00:42:44.979
+où les choses se trouvaient dans la
+
+00:42:44.980 --> 00:42:46.509
+zone de danger à différents moments
+
+00:42:46.510 --> 00:42:47.759
+.
+
+00:42:47.760 --> 00:42:49.139
+Et c'est donc utile, bien sûr, de pouvoir avoir une
+
+00:42:49.140 --> 00:42:50.159
+
+
+00:42:50.160 --> 00:42:52.109
+vue d'ensemble de toute cette
+
+00:42:52.110 --> 00:42:53.519
+chaîne de données interconnectées, qui était auparavant
+
+00:42:53.520 --> 00:42:55.049
+répartie sur des dizaines de
+
+00:42:55.050 --> 00:42:57.059
+systèmes et de modèles différents.
+
+00:42:57.060 --> 00:42:58.379
+Mais le plus important, c'est que je
+
+00:42:58.380 --> 00:43:00.029
+dois maintenant pouvoir
+
+00:43:00.030 --> 00:43:01.710
+actualiser ma stratégie et
+
+00:43:02.820 --> 00:43:04.859
+opérer dans cet
+
+00:43:04.860 --> 00:43:06.449
+environnement très volatil, comme c'était le cas l'
+
+00:43:06.450 --> 00:43:07.529
+année dernière.  Droite.  Il y a donc eu des chocs
+
+00:43:07.530 --> 00:43:09.659
+simultanés sur l'offre et la demande,
+
+00:43:09.660 --> 00:43:11.759
+et en quelque sorte tous les
+
+00:43:11.760 --> 00:43:12.809
+modèles préétablis ont été balayés d'un revers de main
+
+00:43:12.810 --> 00:43:14.519
+.  Ils devaient donc être
+
+00:43:14.520 --> 00:43:16.079
+capables de simuler différents
+
+00:43:16.080 --> 00:43:17.909
+scénarios exigeants au quotidien
+
+00:43:17.910 --> 00:43:19.109
+.
+
+00:43:19.110 --> 00:43:20.219
+Que se passerait-il si l'un de nos
+
+00:43:20.220 --> 00:43:21.989
+fournisseurs cessait complètement son activité en
+
+00:43:21.990 --> 00:43:23.399
+raison de la pandémie ?
+
+00:43:23.400 --> 00:43:25.289
+Que se passerait-il si l'un de nos
+
+00:43:25.290 --> 00:43:26.999
+clients, un centre médical, avait une
+
+00:43:27.000 --> 00:43:28.469
+demande en
+
+00:43:28.470 --> 00:43:29.699
+respirateurs dix fois supérieure à la normale ?
+
+00:43:29.700 --> 00:43:30.779
+Comment pourrions-nous concrètement
+
+00:43:30.780 --> 00:43:32.489
+satisfaire à ces différentes exigences,
+
+00:43:32.490 --> 00:43:33.689
+compte tenu de notre mode de répartition actuel et des
+
+00:43:33.690 --> 00:43:34.769
+
+
+00:43:34.770 --> 00:43:37.229
+différentes tactiques d'approvisionnement que nous utilisons actuellement ?  Ce que
+
+00:43:37.230 --> 00:43:39.149
+nous pouvons ouvrir ici, c'est en
+
+00:43:39.150 --> 00:43:41.129
+fait un onglet de simulation
+
+00:43:41.130 --> 00:43:42.539
+pour envisager d'exécuter ces
+
+00:43:42.540 --> 00:43:44.039
+simulations, ces scénarios,
+
+00:43:44.040 --> 00:43:45.869
+directement sur des
+
+00:43:45.870 --> 00:43:47.939
+versions bac à sable de votre
+
+00:43:47.940 --> 00:43:50.999
+monde, c'est-à-dire de l'ontologie complète.
+
+00:43:51.000 --> 00:43:52.079
+Nous pouvons donc simuler
+
+00:43:52.080 --> 00:43:53.909
+directement ici, étant donné que
+
+00:43:53.910 --> 00:43:55.079
+les données des modèles sont
+connectées,
+
+00:43:55.080 --> 00:43:56.669
+ce qui se passerait si ce fournisseur
+
+00:43:56.670 --> 00:43:58.499
+tombait en panne, par exemple, et vous
+
+00:43:58.500 --> 00:44:00.299
+pouvez en quelque sorte exécuter ces simulations comme des
+
+00:44:00.300 --> 00:44:02.309
+études de cas isolées.
+
+00:44:02.310 --> 00:44:03.419
+Dans ce cas précis, je peux apporter une
+
+00:44:03.420 --> 00:44:04.619
+modification très mineure, par exemple en
+
+00:44:04.620 --> 00:44:06.329
+disant : mettons simplement à
+
+00:44:06.330 --> 00:44:08.069
+jour le prix unitaire de la vanne.
+
+00:44:08.070 --> 00:44:09.270
+Et si ce chiffre tombait à quatre cents ?
+
+00:44:10.490 --> 00:44:12.589
+Simulons maintenant, littéralement, sur l'
+
+00:44:12.590 --> 00:44:14.449
+ensemble de la chaîne, les effets que cela aurait
+
+00:44:14.450 --> 00:44:16.129
+sur chaque
+
+00:44:16.130 --> 00:44:17.719
+propriété dépendante que nous avons
+
+00:44:17.720 --> 00:44:19.759
+ici, modélisée
+
+00:44:19.760 --> 00:44:21.199
+dans l'ontologie.  Voilà donc
+
+00:44:21.200 --> 00:44:22.159
+un exemple très trivial
+
+00:44:22.160 --> 00:44:24.019
+.  Nous pouvons désormais faire fonctionner en continu
+
+00:44:24.020 --> 00:44:26.119
+cette sorte de simulation modifiée
+
+00:44:26.120 --> 00:44:28.189
+de l'état du scénario à mesure que de
+
+00:44:28.190 --> 00:44:30.079
+nouvelles données arrivent,
+
+00:44:30.080 --> 00:44:31.129
+et nous pouvons ainsi
+
+00:44:31.130 --> 00:44:33.199
+évaluer en permanence son impact.
+
+00:44:33.200 --> 00:44:34.729
+Et comme vous pouvez l'imaginer, cela devient beaucoup
+
+00:44:34.730 --> 00:44:36.119
+plus compliqué et sophistiqué
+
+00:44:36.120 --> 00:44:37.909
+lorsqu'il s'agit de tester des modifications composées de
+
+00:44:37.910 --> 00:44:39.889
+paramètres non pas sur un seul
+
+00:44:39.890 --> 00:44:41.419
+modèle, mais potentiellement sur plusieurs
+
+00:44:41.420 --> 00:44:42.619
+modèles différents.  On peut donc dire que je ne me contente pas d'
+
+00:44:42.620 --> 00:44:43.849
+utiliser un seul modèle, mais que
+
+00:44:43.850 --> 00:44:45.469
+je vais enchaîner différents modèles
+
+00:44:45.470 --> 00:44:47.269
+et exécuter une
+
+00:44:47.270 --> 00:44:49.399
+simulation composite sur l'ensemble de l'
+
+00:44:49.400 --> 00:44:50.749
+État ou sur toute la chaîne de valeur.
+
+00:44:51.760 --> 00:44:53.629
+Et c'est là, je pense, que l'on
+
+00:44:53.630 --> 00:44:55.789
+observe réellement la
+
+00:44:55.790 --> 00:44:57.619
+progression des clients travaillant
+
+00:44:57.620 --> 00:44:58.999
+avec Foundry, qui passent progressivement de l'
+
+00:44:59.000 --> 00:45:00.829
+utilisation d'
+
+00:45:00.830 --> 00:45:02.839
+applications ponctuelles à la mise en place de
+
+00:45:02.840 --> 00:45:04.339
+flux de travail initiaux
+
+00:45:04.340 --> 00:45:05.659
+.  Mais en réalité, il s'agit du
+
+00:45:05.660 --> 00:45:07.519
+paradigme des opérations connectées qui se
+
+00:45:07.520 --> 00:45:09.289
+déploie en rassemblant progressivement
+
+00:45:09.290 --> 00:45:10.519
+l'ontologie
+
+00:45:10.520 --> 00:45:12.409
+et, vous savez,
+
+00:45:12.410 --> 00:45:13.748
+par exemple, dans le secteur pétrolier et gazier,
+
+00:45:13.749 --> 00:45:15.619
+initialement, ils
+
+00:45:15.620 --> 00:45:16.609
+effectuaient des
+
+00:45:16.610 --> 00:45:18.589
+optimisations et des simulations ponctuelles
+
+00:45:18.590 --> 00:45:20.479
+pour une partie d'
+
+00:45:20.480 --> 00:45:21.559
+une chaîne de valeur connectée, n'est-ce pas ?
+
+00:45:21.560 --> 00:45:22.789
+Juste le sous-sol.
+
+00:45:22.790 --> 00:45:24.649
+Ils avaient donc une équipe qui travaillait sur
+
+00:45:24.650 --> 00:45:26.689
+le sous-sol, intégrant les données,
+
+00:45:26.690 --> 00:45:28.309
+construisant des modèles et
+
+00:45:28.310 --> 00:45:29.659
+analysant cet aspect de la situation
+
+00:45:29.660 --> 00:45:30.829
+.
+
+00:45:30.830 --> 00:45:32.059
+Mais bien sûr, cela fait partie d'un
+
+00:45:32.060 --> 00:45:33.469
+réseau, n'est-ce pas ?  Le sous-sol est
+
+00:45:33.470 --> 00:45:34.819
+relié à la surface,
+
+00:45:34.820 --> 00:45:36.019
+aux conduites d'écoulement et à la zone
+
+00:45:36.020 --> 00:45:36.949
+terrestre.
+
+00:45:36.950 --> 00:45:38.509
+Chacune de ces différentes fonctions
+
+00:45:38.510 --> 00:45:40.035
+avait son propre système cloisonné de
+
+00:45:41.300 --> 00:45:43.069
+simulation, d'optimisation et de données
+
+00:45:43.070 --> 00:45:45.259
+, et pour vraiment comprendre
+
+00:45:45.260 --> 00:45:46.549
+comment optimiser la production dans son
+
+00:45:46.550 --> 00:45:47.749
+ensemble, par exemple, il fallait
+
+00:45:47.750 --> 00:45:49.579
+relier toutes
+
+00:45:49.580 --> 00:45:50.479
+ces différentes parties de l'
+
+00:45:50.480 --> 00:45:52.609
+organisation dans une seule ontologie,
+
+00:45:52.610 --> 00:45:53.899
+relier tous les différents
+
+00:45:53.900 --> 00:45:55.129
+modèles dans une représentation en chaîne unique
+
+00:45:55.130 --> 00:45:56.299
+.
+
+00:45:56.300 --> 00:45:57.169
+Et ensuite, ils pourraient tenter de
+
+00:45:57.170 --> 00:45:58.172
+réaliser ces
+
+00:45:59.480 --> 00:46:01.339
+simulations continues à grande échelle et commencer à
+
+00:46:01.340 --> 00:46:03.349
+optimiser la production dans ce cas, à une
+
+00:46:03.350 --> 00:46:04.669
+échelle réelle.
+
+00:46:04.670 --> 00:46:05.809
+Ils ont commencé à travailler à la
+
+00:46:05.810 --> 00:46:07.159
+connexion ou à la reconnexion de leurs
+
+00:46:07.160 --> 00:46:08.509
+opérations.
+
+00:46:08.510 --> 00:46:09.799
+Et nous le constatons sans cesse, que ce soit dans l'
+
+00:46:09.800 --> 00:46:11.689
+
+
+00:46:11.690 --> 00:46:13.639
+industrie, la finance, le commerce de détail, la santé, etc., notre objectif principal
+
+00:46:13.640 --> 00:46:16.219
+
+
+00:46:16.220 --> 00:46:18.079
+
+
+00:46:18.080 --> 00:46:19.639
+est de savoir comment
+
+00:46:19.640 --> 00:46:20.659
+aider nos clients à
+
+00:46:20.660 --> 00:46:22.309
+repenser et à réintégrer leurs
+
+00:46:22.310 --> 00:46:23.310
+opérations.
+
+00:46:24.440 --> 00:46:26.539
+Je sais que nous avons abordé beaucoup de choses aujourd'hui,
+
+00:46:26.540 --> 00:46:28.399
+donc je ne vais pas
+
+00:46:28.400 --> 00:46:29.989
+m'éterniser, mais je voulais juste
+
+00:46:29.990 --> 00:46:31.369
+m'assurer que nous puissions récapituler ici
+
+00:46:31.370 --> 00:46:33.079
+un peu ce que nous avons vu.  Je
+
+00:46:33.080 --> 00:46:34.519
+vous laisse avec ceci.
+
+00:46:34.520 --> 00:46:36.319
+Donc, vous savez, nous avons commencé par le commencement, en nous demandant
+
+00:46:36.320 --> 00:46:37.579
+comment nous envisageons le type de
+
+00:46:37.580 --> 00:46:39.109
+données et l'ontologie.
+
+00:46:39.110 --> 00:46:40.489
+Ainsi, les données provenant de très nombreuses
+
+00:46:40.490 --> 00:46:41.929
+sources différentes (structurées,
+
+00:46:41.930 --> 00:46:43.789
+IoT, non structurées, géospatiales, etc.) sont agrégées grâce à
+
+00:46:43.790 --> 00:46:45.559
+plus de 200
+
+00:46:45.560 --> 00:46:46.879
+connecteurs de données prêts à l'emploi que
+
+00:46:46.880 --> 00:46:49.129
+nous avons conçus pour Foundry et qui
+
+00:46:49.130 --> 00:46:50.809
+sont extensibles, vous permettant ainsi de créer les
+
+00:46:50.810 --> 00:46:52.789
+vôtres et de rassembler toutes
+
+00:46:52.790 --> 00:46:54.439
+ces
+
+00:46:54.440 --> 00:46:55.699
+différentes données
+
+00:46:55.700 --> 00:46:57.679
+dans une représentation sémantique qui
+
+00:46:57.680 --> 00:46:59.059
+permet aux utilisateurs de commencer instantanément
+
+00:46:59.060 --> 00:47:00.979
+à les consulter, à interagir avec elles et à les exploiter
+
+00:47:00.980 --> 00:47:02.479
+.
+
+00:47:02.480 --> 00:47:03.679
+La deuxième question est maintenant de savoir comment intégrer la
+
+00:47:03.680 --> 00:47:05.929
+modélisation, la science des données et la
+
+00:47:05.930 --> 00:47:07.549
+programmation linéaire dans ce même
+
+00:47:07.550 --> 00:47:09.289
+cadre afin de pouvoir superposer de l'
+
+00:47:09.290 --> 00:47:11.269
+intelligence à ces données et
+
+00:47:11.270 --> 00:47:12.559
+construire non seulement une
+
+00:47:12.560 --> 00:47:13.999
+représentation sémantique, mais aussi, comme nous l'avons dit
+
+00:47:14.000 --> 00:47:15.379
+précédemment, une représentation cinétique&nbsp;?
+
+00:47:15.380 --> 00:47:17.059
+Alors, comment les choses se
+
+00:47:17.060 --> 00:47:18.709
+déroulent-elles réellement ou sont-elles dictées dans les
+
+00:47:18.710 --> 00:47:20.719
+processus métier en fonction de ce que prévoient les modèles
+
+00:47:20.720 --> 00:47:21.499
+?
+
+00:47:21.500 --> 00:47:23.119
+Et comment peut-on construire des modèles
+
+00:47:23.120 --> 00:47:24.799
+au sein de Foundry, mais aussi en dehors de
+
+00:47:24.800 --> 00:47:26.629
+Foundry, puis lier ces modèles
+
+00:47:26.630 --> 00:47:27.919
+à l'ontologie&nbsp;?
+
+00:47:27.920 --> 00:47:29.509
+Vous pouvez ainsi intégrer ces modèles
+
+00:47:29.510 --> 00:47:31.249
+dans les opérations de manière à la fois à
+
+00:47:31.250 --> 00:47:33.439
+permettre un
+
+00:47:33.440 --> 00:47:35.329
+déploiement très robuste et sûr
+
+00:47:35.330 --> 00:47:37.069
+des modèles, mais aussi à fournir un
+
+00:47:37.070 --> 00:47:38.659
+retour d'information très riche aux créateurs de modèles qui, grâce à la
+
+00:47:38.660 --> 00:47:40.339
+traçabilité des données, à la
+
+00:47:40.340 --> 00:47:42.199
+traçabilité des modèles et à toute la
+
+00:47:42.200 --> 00:47:43.879
+comptabilité effectuée par Foundry, peuvent savoir
+
+00:47:43.880 --> 00:47:45.799
+exactement comment les utilisateurs utilisent ces
+
+00:47:45.800 --> 00:47:48.019
+modèles dans différentes applications, y compris
+
+00:47:48.020 --> 00:47:49.999
+dans des applications externes
+
+00:47:50.000 --> 00:47:52.069
+utilisant les API.
+
+00:47:52.070 --> 00:47:53.629
+Et enfin, nous avons parlé de la façon dont tout cela se rejoint dans ce qui concerne
+
+00:47:53.630 --> 00:47:55.489
+
+
+00:47:55.490 --> 00:47:57.589
+70
+
+00:47:57.590 --> 00:47:59.119
+à 80 % des utilisateurs de Foundry&nbsp;: les
+
+00:47:59.120 --> 00:48:01.069
+applications opérationnelles,
+
+00:48:01.070 --> 00:48:02.809
+que vous pouvez créer à l’aide de générateurs d’applications low-code,
+
+00:48:02.810 --> 00:48:04.489
+no-code ou pro-code
+
+00:48:04.490 --> 00:48:06.319
+et qui peuvent également,
+
+00:48:06.320 --> 00:48:08.629
+bien sûr, être exposées directement
+
+00:48:08.630 --> 00:48:09.949
+via les API si vous souhaitez
+
+00:48:09.950 --> 00:48:12.349
+également créer des applications externes.
+
+00:48:12.350 --> 00:48:14.299
+
+
+00:48:14.300 --> 00:48:16.009
+Nous pourrons donc aborder beaucoup d'autres sujets lors des prochaines séances.
+
+00:48:16.010 --> 00:48:16.969
+Vous n'avez montré qu'un
+
+00:48:16.970 --> 00:48:18.799
+aperçu de la manière dont tous ces
+
+00:48:18.800 --> 00:48:20.119
+différents outils s'assemblent et forment
+
+00:48:20.120 --> 00:48:22.399
+une plateforme cohérente avec Foundry.
+
+00:48:22.400 --> 00:48:23.449
+Nous ne vous avons montré qu'un aperçu des
+
+00:48:23.450 --> 00:48:25.009
+différents
+
+
+00:48:25.010 --> 00:48:27.259
+modèles d'interopérabilité qui existent dans Foundry.
+
+00:48:27.260 --> 00:48:28.609
+Nous vous avons seulement montré un aperçu de la
+
+00:48:28.610 --> 00:48:30.589
+façon dont vous pouvez
+
+00:48:30.590 --> 00:48:32.779
+déployer des flux de travail à l'aide d'un catalogue de flux de travail
+
+00:48:32.780 --> 00:48:34.249
+prêt à l'emploi pour
+
+00:48:34.250 --> 00:48:35.629
+démarrer très rapidement, que ce soit pour
+
+00:48:35.630 --> 00:48:37.009
+un flux de travail d'alerte, un flux de travail de
+
+00:48:37.010 --> 00:48:38.599
+résolution d'entités, un flux de travail
+
+00:48:38.600 --> 00:48:40.579
+Plant-360 ou un flux de travail d'allocation de ressources,
+
+00:48:40.580 --> 00:48:42.319
+et tous les
+
+00:48:42.320 --> 00:48:43.369
+modèles préconfigurés que nous proposons pour un
+
+00:48:43.370 --> 00:48:45.139
+démarrage ultra-rapide.
+
+00:48:45.140 --> 00:48:47.059
+Mais nous garderons beaucoup de ces choses
+
+00:48:47.060 --> 00:48:48.259
+pour une autre fois.
+
+00:48:48.260 --> 00:48:49.305
+Merci à tous de m'avoir écouté
+
+00:48:49.306 --> 00:48:51.139
+et j'espère que
+
+00:48:51.140 --> 00:48:52.699
+nous pourrons vous reparler bientôt.
+

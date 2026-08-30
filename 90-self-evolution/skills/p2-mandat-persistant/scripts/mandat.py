@@ -47,7 +47,12 @@ DEMARRAGE = [
 # style. On cherche donc des formulations d'autorisation, pas de prohibition.
 MARQUEURS = [
     (r"\bagis\b|\bexecute[sz]?\b|\bexecuter\b", "ordre d'agir"),
-    (r"sans (?:me )?demander|sans redemander|ne (?:pas )?demander",
+    # Motif elargi le 2026-08-30 : la version etroite exigeait « sans
+    # demander » et rendait « introuvable » sur « ne redemande pas », qui dit
+    # exactement la meme chose. Une sonde qui rate la formulation reelle accuse
+    # un mandat correct -- meme famille que LinkType et que les accents.
+    (r"sans (?:me )?demander|sans redemander|ne redemande|"
+     r"ne (?:pas )?demander|pas a la demander|ne s'eteint pas",
      "dispense de redemander"),
     (r"une seule branche|branche defendable|defendable", "regle de tranchage"),
     (r"comment la defaire|reversib", "exigence de reversibilite"),

@@ -1,0 +1,415 @@
+00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-affine.spec.md
+00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-baserow.spec.md
+00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-obsidian.spec.md
+00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-plane.spec.md
+00_Amadeus/40_SYMPHONY_BUS/.state.lock
+00_Amadeus/40_SYMPHONY_BUS/.state.lock (lock)
+00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md
+00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md (canonique)
+00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md (state.json next_step)
+00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md §Loi lock atomique ligne 48
+00_Amadeus/40_SYMPHONY_BUS/hand_offs/inbox/
+00_Amadeus/40_SYMPHONY_BUS/hand_offs/inbox/ (Mariner captures)
+00_Amadeus/40_SYMPHONY_BUS/hand_offs/outbox/
+00_Amadeus/40_SYMPHONY_BUS/hand_offs/outbox/ (dispatch A3→B1/B2/B3)
+00_Amadeus/40_SYMPHONY_BUS/state.json
+00_Amadeus/40_SYMPHONY_BUS/state.json (runtime)
+00_Amadeus/40_SYMPHONY_BUS/state.json.prev
+00_Amadeus/40_SYMPHONY_BUS/state.json.prev (rotation)
+00_Amadeus/40_SYMPHONY_BUS/state_writer.py
+00_Amadeus/40_SYMPHONY_BUS/state_writer.py (helper)
+00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md
+00_Amadeus/Manifesto.md
+00_Amadeus/Manifesto.md (Layer 0, Guardian: A0)
+00_Amadeus/README.md + 10_Tech_OS/README.md + 20_Life_OS/README.md + 30_Business_OS/README.md
+00_Amadeus/README.md + 10_Tech_OS/README.md + 20_Life_OS/README.md + 30_Business_OS/README.md + _root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1
+00_Amadeus/README.md §Layer 2 (7 domaines 01_People..07_Legal, omet Sales)
+00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md
+00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md (W13 = review meta-cycle, 12-18/10)
+00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md ligne 3
+00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md ligne 57
+01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard G2 = Martian Manhunter / Illuminati)
+01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard G2 = Martian Manhunter)
+01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard canon)
+01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard seau)
+01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md
+01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md (Picard seau, cité verbatim)
+01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (parent_a2: A2_HoloDeck_Cerritos — vu Picard seau)
+01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (parent_a2: A2_HoloDeck_Cerritos)
+04_Archives_Data/A3_Data_Archives_Spec.md §Boundaries ligne 43
+04_Archives_Data/A3_Data_Archives_Spec.md §Boundaries lignes 44-46
+04_Archives_Data/A3_Data_Archives_Spec.md §D3 nuance critique ligne 64
+10_Tech_OS/Manifesto.md
+10_Tech_OS/Manifesto.md (Layer 0, Guardian: Rick)
+20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md
+20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md ligne 100
+20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md
+20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md (canonical schema)
+20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md ligne 115
+20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/
+20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/
+20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md
+20_Life_OS/21_Ikigai_Orville/README.md
+20_Life_OS/21_Ikigai_Orville/README.md ligne 100
+20_Life_OS/21_Ikigai_Orville/README.md ligne 99
+20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md
+20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md ligne 78
+20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md
+20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/
+20_Life_OS/22_Wheel_Discovery/README.md
+20_Life_OS/22_Wheel_Discovery/README.md ligne 50
+20_Life_OS/23_12WY_SNW/01_Vision_Pike/
+20_Life_OS/23_12WY_SNW/02_Planning_Una/
+20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md
+20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md ligne 130
+20_Life_OS/23_12WY_SNW/A3_SNW_References_Index.md
+20_Life_OS/23_12WY_SNW/README.md
+20_Life_OS/23_12WY_SNW/README.md §Matrice 5 disciples × 5 horizons lignes 72-76
+20_Life_OS/23_12WY_SNW/README.md §Total ligne 90
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md (Computer = A2 framework manager of PARA)
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md (parent_a2 canon = A2_Computer_Enterprise pour projets PARA)
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md ligne 18
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md lignes 90-98
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md §A3 Findings Contract lignes 60-66
+20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md §Crew canon lignes 100-110
+20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md
+20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Canonical Crew ligne 15
+20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 24
+20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 25
+20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 26
+20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md
+20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Swarm_Inspiration_Index.md
+20_Life_OS/24_PARA_Enterprise/README.md
+20_Life_OS/24_PARA_Enterprise/README.md §Triptyque MORTY ligne 78
+20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner/
+20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/
+20_Life_OS/25_GTD_Cerritos/03_Organize_Rutherford/
+20_Life_OS/25_GTD_Cerritos/04_Review_Tendi/
+20_Life_OS/25_GTD_Cerritos/05_Engage_Freeman/
+20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md
+20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md (Rutherford = Organize canon local actif 2026-05-20)
+20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md (Rutherford = Organize, Tendi = Review)
+20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md §Anchor canon ligne 87
+20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md §Anchor canon ligne 88
+20_Life_OS/25_GTD_Cerritos/A3_Cerritos_References_Index.md
+20_Life_OS/25_GTD_Cerritos/README.md
+20_Life_OS/25_GTD_Cerritos/README.md ligne 70
+20_Life_OS/25_GTD_Cerritos/README.md §Matrice canon ligne 74
+20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/
+20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/A3_Dal_Definition_Spec.md
+20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/
+20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/A3_RokTahk_Elimination_Spec.md
+20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/
+20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md
+20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/
+20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md
+20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md
+20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md lignes 106-111
+20_Life_OS/26_DEAL_Protostar/A3_Protostar_References_Index.md
+20_Life_OS/26_DEAL_Protostar/README.md
+20_Life_OS/26_DEAL_Protostar/README.md §Karpathy loop ligne 101
+20_Life_OS/Manifesto.md
+20_Life_OS/Manifesto.md (Layer 1, Guardian: Beth & Morty)
+21_Ikigai_Orville/README.md + A2_Discovery_ZORA_Spec.md
+21_Ikigai_Orville/README.md + A2_Orville_Spec.md
+22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md §D3 nuance critique (Saru H3, Book H1)
+22_Wheel_Discovery/README.md + A2_Discovery_ZORA_Spec.md
+22_Wheel_Discovery/README.md + A2_Discovery_ZORA_Spec.md + ADR-MEM-002 §D1
+23_12WY_SNW/A2_Curie_SNW_Spec.md (5 disciples : Pike/Una/M'Benga/Chapel/Ortegas)
+23_12WY_SNW/README.md
+23_12WY_SNW/README.md (Curie) + Cerritos_Plane_Onboarding/MANIFEST.md (Picard)
+23_12WY_SNW/README.md (W13 = 09/14, semaine #13 après démarrage)
+23_12WY_SNW/README.md + A2_Curie_SNW_Spec.md
+23_12WY_SNW/README.md + Cerritos_Plane_Onboarding/MANIFEST.md
+23_12WY_SNW/README.md + Cerritos_Plane_Onboarding/MANIFEST.md (Picard seau)
+25_GTD_Cerritos/README.md + A2_HoloDeck_Cerritos_Spec.md
+25_GTD_Cerritos/README.md + A2_HoloDeck_Cerritos_Spec.md (D3 nuance : Tendi=Review local actif vs Tendi=Organize dans fancy-hugging §15.1)
+26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md + ADR-L2-AAAS-001
+26_DEAL_Protostar/README.md §Karpathy loop
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/01_Growth_Superman_Guardians/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/02_Sales_MartianManhunter_Illuminati/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/03_Product_Flash_Avengers/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/04_Ops_Batman_Fantastic4/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/05_IT_Cyborg_KangDynasty/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/06_Finance_WonderWoman_Thunderbolts/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/07_People_GreenLantern_XMen/
+30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/08_Legal_Aquaman_Eternals/
+30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/00_B1_DIRECTION_INDEX.md
+30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/03_DECISION_CHARTER.md
+30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/03_Phase3_Master_SQL_Schema.md
+30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/05_B2_DEFINITION_OF_DONE_SPEC.md
+30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/06_B3_JOBS_TO_BE_DONE_SPEC.md
+30_Business_OS/00_Summers_Verse/state/SCHEMA.md
+30_Business_OS/10_Projects/<proj>/MANIFEST.md
+30_Business_OS/10_Projects/abc-community-os/
+30_Business_OS/10_Projects/abc/
+30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md
+30_Business_OS/10_Projects/ceo-desktop/_doctrine/_manifest/
+30_Business_OS/10_Projects/ceo-desktop/_doctrine/_manifest/ (présumé)
+30_Business_OS/10_Projects/omk-services/
+30_Business_OS/10_Projects/omk/
+30_Business_OS/10_Projects/omk/CLAUDE.md
+30_Business_OS/10_Projects/omk/CLAUDE.md (manifest racine projet)
+30_Business_OS/10_Projects/solaris/
+30_Business_OS/Manifesto.md
+30_Business_OS/Manifesto.md (Layer 2, Guardian: Jerry)
+30_Business_OS/README.md §Domains (01-08) (08_Sales = John Jones)
+30_Business_OS/README.md §Domains (01-08) (8 domaines, inclut 08_Sales)
+30_Business_OS/README.md §Domains + 30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/02_Sales_MartianManhunter_Illuminati/ (alias John Jones)
+40_Fable_Banque/TEMPORAL-CANON.md
+40_Fable_Banque/TEMPORAL-CANON.md preamble ligne 3
+40_Fable_Banque/wargames/17-manifest-dispatch-a2-a3-lifeos.md
+40_Fable_Banque/wargames/19-delegation-chaine-cc-m3-standard-fable.md
+40_Fable_Banque/wargames/21-fable-mode-standard-agnostique.md
+60_Citadel/README.md §Doctrine anti-Ultron ligne 49
+60_Citadel/README.md §Méthodologie (cite LD01/10_methodology/00_fable5_jack_roberts_meta_strategy.md)
+60_Citadel/loops/ARCHITECTURE.md
+60_Citadel/loops/ARCHITECTURE.md ligne 4
+60_Citadel/loops/ARCHITECTURE.md lignes 22-23
+60_Citadel/loops/ARCHITECTURE.md §6
+60_Citadel/loops/artifacts/docs/
+60_Citadel/loops/artifacts/signals/
+60_Citadel/loops/artifacts/tasks/
+60_Citadel/loops/artifacts/tickets/
+60_Citadel/loops/domains/w-star/README.md
+60_Citadel/loops/domains/w-star/README.md (présumé)
+60_Citadel/loops/domains/wf0-spock/README.md
+60_Citadel/loops/domains/wf0-spock/README.md (présumé)
+60_Citadel/loops/domains/wf1-morty/README.md
+60_Citadel/loops/domains/wf1-morty/README.md (présumé)
+60_Citadel/loops/domains/wf2-book/README.md
+60_Citadel/loops/domains/wf2-book/README.md (présumé)
+60_Citadel/loops/domains/wf3-mirofish/README.md
+60_Citadel/loops/domains/wf3-mirofish/README.md (présumé)
+ADR-L2-AAAS-001 §C1 / D4
+ADR-L2-AAAS-001 §D2 + A2_Discovery_ZORA_Spec.md
+Business_Pulse_B3_Notion_Canon_Lore_Index.md + 30_Business_OS/Manifesto.md
+Business_Pulse_B3_Notion_Canon_Lore_Index.md + 30_Business_OS/Manifesto.md + ADR-CANON-001
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description §B2 Swarm Supervision Rooms)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description §B3 Squad Swarm Configurations)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit (7 artefacts : 00..06)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit (B1 = 7 artefacts H10/H3)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit (B1 = direction cockpit)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix (8 obligatoires)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix lignes 47-61
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Swarm Supervision Rooms ligne 72
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B3 Squad Swarm Configurations
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B3 Squad Swarm Configurations ligne 86
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Non-Negotiables ligne 40
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §PARA Placement ligne 17-19
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer (B0_SOB macro above B1/B2/B3)
+Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer ligne 147
+Index L2_Business_OS (pas d'ADR-LANDING-ANTI-PAPERCLIP-001 distinct)
+L0_Kernel_OS/ADR-AGENT-BOUNDARY-001
+L0_Kernel_OS/ADR-CONSENSUS-002
+L0_Kernel_OS/ADR-HERMES-001
+L0_Kernel_OS/ADR-INFRA-001
+L0_Kernel_OS/ADR-LLM-001
+L0_Kernel_OS/ADR-META-006 (droid-whispering)
+L0_Kernel_OS/ADR-META-006 §Décision
+L0_Kernel_OS/ADR-META-006_droid-whispering-doctrine.md
+L0_Kernel_OS/ADR-META-006_droid-whispering-doctrine.md (ACCEPTED 2026-06-22)
+L0_Kernel_OS/ADR-OPS-002
+L0_Kernel_OS/ADR-REG-001
+L0_Kernel_OS/ADR-RICK-001
+L0_Kernel_OS/ADR-SECURITY-001
+L0_Kernel_OS/ADR-SOBER-002
+L0_Kernel_OS/ADR-SOBER-002 (L0 Kernel — Rick veto)
+L0_Kernel_OS/ADR-SOBER-002 §D3 + Annexe B
+L0_Kernel_OS/ADR-WORKFLOW-001
+L0_Kernel_OS/ADR-WORKFLOW-001 §2
+L0_Kernel_OS/ADR-WORKFLOW-001 §2-5
+L0_Kernel_OS/ADR-WORKFLOW-001_orchestration-topologies.md
+L1_Life_OS/ADR-CORE-006
+L1_Life_OS/ADR-CORE-006 §Table #10 (PARTIAL → W4-W5)
+L1_Life_OS/ADR-INFRA-004
+L1_Life_OS/ADR-INFRA-005
+L1_Life_OS/ADR-INFRA-006
+L1_Life_OS/ADR-INFRA-MCP-001
+L1_Life_OS/ADR-L1-WF-001
+L1_Life_OS/ADR-L1-WF-001 §D2
+L1_Life_OS/ADR-LIFE-013
+L1_Life_OS/ADR-LIFE-013_validation-contract-pattern.md
+L1_Life_OS/ADR-LIFE-014
+L1_Life_OS/ADR-LIFE-015
+L1_Life_OS/ADR-LIFE-015_mission-control-ui-canon.md
+L1_Life_OS/ADR-MEM-001
+L1_Life_OS/ADR-MEM-002
+L1_Life_OS/ADR-MEMO-000
+L1_Life_OS/ADR-MEMO-000 §Vue d'ensemble
+L1_Life_OS/ADR-MEMO-000_auto-research-karpathy-loop-claude-code_DRAFT.md
+L1_Life_OS/ADR-META-001
+L1_Life_OS/ADR-META-002
+L1_Life_OS/ADR-META-003
+L1_Life_OS/ADR-META-004
+L1_Life_OS/ADR-META-005
+L1_Life_OS/ADR-META-005 §D3
+L1_Life_OS/ADR-META-005_hooks-automation.md
+L1_Life_OS/ADR-META-006 (d6-root-causes)
+L1_Life_OS/ADR-META-006_d6-root-causes-catalog.md (ACCEPTED 2026-06-23)
+L1_Life_OS/ADR-Meta-000
+L1_Life_OS/ADR-OBSERVABILITY-001
+L1_Life_OS/ADR-SNW-001
+L2_Business_OS/ADR-A11Y-001
+L2_Business_OS/ADR-A11Y-001_wcag-2-2-aa.md
+L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001
+L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001 (Acquisition-First MedVie canon sister)
+L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001 §Principe directeur
+L2_Business_OS/ADR-AAAS-CONTENT-CANON-001
+L2_Business_OS/ADR-AAAS-FINANCE-CANON-001
+L2_Business_OS/ADR-AAAS-IT-CANON-001
+L2_Business_OS/ADR-AAAS-IT-EXT-CANON-001
+L2_Business_OS/ADR-AAAS-OPERATIONS-CANON-001
+L2_Business_OS/ADR-AAAS-OPERATIONS-CANON-001 (Structuration-First Pilier 1 — AI Employee vs AI Agent)
+L2_Business_OS/ADR-AAAS-PRICING-001
+L2_Business_OS/ADR-AAAS-PRICING-001_aaas-pricing-canon.md
+L2_Business_OS/ADR-ABCOS-001
+L2_Business_OS/ADR-ABCOS-002
+L2_Business_OS/ADR-AGENTIC-001
+L2_Business_OS/ADR-AIACT-DEADLINE-001
+L2_Business_OS/ADR-AIACT-DEADLINE-001 §1 + L2_Business_OS/ADR-ANTI-PAPERCLIP-001 §1 + L0_Kernel_OS/ADR-SOBER-002 §1
+L2_Business_OS/ADR-AIACT-DEADLINE-001 §D2
+L2_Business_OS/ADR-AIACT-DEADLINE-001_ai-act-2026-08-02-project-gate.md
+L2_Business_OS/ADR-ANTI-PAPERCLIP-001
+L2_Business_OS/ADR-ANTI-PAPERCLIP-001 (L2 Business OS — landing pages surface)
+L2_Business_OS/ADR-ANTI-PAPERCLIP-001_landing-paperclip-policy.md
+L2_Business_OS/ADR-ANTI-PAPERCLIP-001_landing-paperclip-policy.md (sister scope surface landing pages)
+L2_Business_OS/ADR-ANTI-TEMPLATE-001
+L2_Business_OS/ADR-ANTI-TEMPLATE-001_banned-patterns-landing.md
+L2_Business_OS/ADR-CANON-001
+L2_Business_OS/ADR-DEPLOY-001
+L2_Business_OS/ADR-DEPLOY-001 §Related
+L2_Business_OS/ADR-DEPLOY-001_github-vercel-pipeline.md
+L2_Business_OS/ADR-DESIGN-SYSTEM-001
+L2_Business_OS/ADR-DESIGN-SYSTEM-001_tokens-atoms-layered-depth.md
+L2_Business_OS/ADR-ICP-NEXUS-001
+L2_Business_OS/ADR-ICP-ORBITER-001
+L2_Business_OS/ADR-ICP-SOLARIS-001
+L2_Business_OS/ADR-INFRA-002
+L2_Business_OS/ADR-INFRA-003
+L2_Business_OS/ADR-INFRA-003 §D1 (Picard H10 sprint canon projects owner)
+L2_Business_OS/ADR-INFRA-003 §D1 amended
+L2_Business_OS/ADR-L2-A2B2-MAP-001
+L2_Business_OS/ADR-L2-AAAS-001
+L2_Business_OS/ADR-L2-AAAS-001 Annexe C
+L2_Business_OS/ADR-L2-AAAS-001 §D2
+L2_Business_OS/ADR-L2-AAAS-001 §D2 + A2_Discovery_ZORA_Spec.md
+L2_Business_OS/ADR-L2-AAAS-001 §D2 + _SPECS/REGISTRY/supabase_schemas.md
+L2_Business_OS/ADR-L2-AAAS-001 §D4
+L2_Business_OS/ADR-L2-AAAS-001 §D6
+L2_Business_OS/ADR-L2-BDLD-MAP-001
+L2_Business_OS/ADR-L2-MESH-001
+L2_Business_OS/ADR-L2-PROJECT-GATE-META-001
+L2_Business_OS/ADR-L2-PROJECT-GATE-META-001_meta-adr-project-gates-wf2.md
+L2_Business_OS/ADR-LANDING-AESTHETIC-001
+L2_Business_OS/ADR-LANDING-AESTHETIC-001_doctrine-esthetique.md
+L2_Business_OS/ADR-LANDING-COPY-001
+L2_Business_OS/ADR-LANDING-COPY-001_doctrine-copywriting.md
+L2_Business_OS/ADR-LANDING-CRAFT-001
+L2_Business_OS/ADR-LANDING-CRAFT-001_meta-process-creation.md
+L2_Business_OS/ADR-LANDING-QA-001
+L2_Business_OS/ADR-LANDING-QA-001_5-criteres-self-critique.md
+L2_Business_OS/ADR-MARKET-STUDY-001
+L2_Business_OS/ADR-MULTIPAGE-001
+L2_Business_OS/ADR-MULTIPAGE-001_wireframe-sitemap.md
+L2_Business_OS/ADR-NEXUS-10-ICP-001
+L2_Business_OS/ADR-NEXUS-10-ICP-001 §Décision
+L2_Business_OS/ADR-NEXUS-10-ICP-001_3-strates-10-cibles-canon.md
+L2_Business_OS/ADR-NEXUS-LANDING-PERSONAS-001
+L2_Business_OS/ADR-NEXUS-LANDING-PERSONAS-001_3-landings-distinctes-icp.md
+L2_Business_OS/ADR-NEXUS-NICHE-001
+L2_Business_OS/ADR-OBSERVABILITY-001 (d11-lead-lag)
+L2_Business_OS/ADR-OBSERVABILITY-001_d11-lead-lag.md
+L2_Business_OS/ADR-OMK-001
+L2_Business_OS/ADR-OMK-002
+L2_Business_OS/ADR-OMK-003
+L2_Business_OS/ADR-OMK-004
+L2_Business_OS/ADR-OMK-005
+L2_Business_OS/ADR-OMK-NEXUS-TRANSFORM-001
+L2_Business_OS/ADR-OMK-PRODUCTS-001
+L2_Business_OS/ADR-OMK-PRODUCTS-001 §D1
+L2_Business_OS/ADR-OPS-009
+L2_Business_OS/ADR-OPS-PROJECT-GATE-001
+L2_Business_OS/ADR-OPS-PROJECT-GATE-001_batman-f4-sister-gate.md
+L2_Business_OS/ADR-PERFORMANCE-001
+L2_Business_OS/ADR-PERFORMANCE-001_cwv-budgets.md
+L2_Business_OS/ADR-REF-PERSONAS-001
+L2_Business_OS/ADR-REF-PERSONAS-001_differenciation-stricte.md
+L2_Business_OS/ADR-REFERENCES-001
+L2_Business_OS/ADR-REFERENCES-001_godly-awwwards-pipeline.md
+L2_Business_OS/ADR-SKILLS-CANON-001
+L2_Business_OS/ADR-SKILLS-CANON-001_inventory-skills-landing.md
+L2_Business_OS/ADR-SUPABASE-001
+L2_Business_OS/ADR-VERSION-001
+L2_Business_OS/ADR-VERSION-001_cycle-v1-v2-v3.md
+L2_Business_OS/ADR-WORKFLOW-001
+L2_Business_OS/ADR-WORKFLOW-001_multi-workflow-swarm-orchestrator.md
+Lecture rapide (à confirmer ailleurs)
+Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-ALA-001_ALA_Standard.md
+Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-V0.3.5_DoctrineBeth.md
+Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/DDD/DDD-V0.3.5_DoctrineBeth.md
+Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/PRD/PRD-V0.3.5_DoctrineBeth.md
+_SPECS/ADR/INDEX.md
+_SPECS/ADR/INDEX.md (29 ADR avec doctrine_anchors field, 100% coverage)
+_SPECS/ADR/INDEX.md (5 ADR ratifiés manquants listés)
+_SPECS/ADR/INDEX.md + ADR-META-001
+_SPECS/ADR/INDEX.md preamble (table partiellement stale : L2=14 vs table dit 10 = à corriger formellement)
+_SPECS/ADR/INDEX.md preamble (table partiellement stale : L2=14 vs table dit 10)
+_SPECS/ADR/INDEX.md §D1 receipts finaux (table corrigée L2=14)
+_SPECS/ADR/L0_Kernel_OS/ADR-LLM-001_fable-5-discontinuation-decision.md (PROPOSED→ACCEPTED 2026-06-15)
+_SPECS/ADR/L0_Kernel_OS/ADR-RICK-001_openharness-incarnation.md
+_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md
+_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md (7 hard-stop triggers)
+_SPECS/ADR/L1_Life_OS/ADR-MEM-002_wiki-lifewheel-mapping-doctrine.md
+_SPECS/ADR/L1_Life_OS/ADR-META-001_anti-paresse-verify-before-assert.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001_aaas-acquisition-doctrine.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-CONTENT-CANON-001_aaas-content-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-FINANCE-CANON-001_aaas-finance-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-IT-CANON-001_aaas-it-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-IT-EXT-CANON-001_aaas-it-ext-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-OPERATIONS-CANON-001_aaas-operations-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-AAAS-PRICING-001_aaas-pricing-canon.md
+_SPECS/ADR/L2_Business_OS/ADR-ICP-NEXUS-001_icp-nexus-structuration.md
+_SPECS/ADR/L2_Business_OS/ADR-ICP-ORBITER-001_icp-orbiter-structuration.md
+_SPECS/ADR/L2_Business_OS/ADR-ICP-SOLARIS-001_icp-solaris-structuration.md
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §C4 ligne 62
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §C4 ligne 62
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 78
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 79
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 80
+_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D3 ligne 86
+_SPECS/ADR/L2_Business_OS/ADR-OMK-001_dual-product-dashboard-multitenant.md
+_SPECS/ADR/L2_Business_OS/ADR-SUPABASE-001_self-hosted-multi-tenancy-schemas.md
+_SPECS/PRD/PRD-NEXUS-EVOLUTION-IA-001_offre-2026-landing-icp.md
+_SPECS/REGISTRY/supabase_schemas.md
+_SPECS/REGISTRY/supabase_schemas.md (registry canon unique)
+_SPECS/REGISTRY/supabase_schemas.md §Hosting pivot ligne 11
+_V3_STRUCTURE_2026-08-02/README.md §La source vivante ligne 62
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1 + A2 specs
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1 + L2_Business_OS/ADR-L2-AAAS-001 §D4
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §3 ligne 72
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §3 ligne 80
+_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §5 ligne 100
+fancy-hugging-bengio.md §15.1 (Tendi = Organize canon twin protostar)
+fancy-hugging-bengio.md §15.1 (Tendi = Organize)
+fancy-hugging-bengio.md §4 + A2_Curie_SNW_Spec.md §6
+wiki/hand_offs/handoff_wargame_wf2_b1_jerry_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b1_summers_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_aquaman_legal_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_batman_ops_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_cyborg_it_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_flash_product_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_greenlantern_people_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_johnjones_sales_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_superman_growth_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_b2_wonderwoman_finance_lens_2026-07-06.md
+wiki/hand_offs/handoff_wargame_wf2_synthesis_book_coaching_2026-07-06.md

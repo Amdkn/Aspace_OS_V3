@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "mesure_le": "2026-08-13",
+    "tableau_original_date": "2026-08-07",
+    "depot_mesure": "repos/coach-os",
+    "regle_verdict": "CONFIRME = ligne exacte du tableau encore vraie | PERIME = ligne contredite par le code | PARTIEL = partie valide, partie fausse"
+  },
+  "rangs": [
+    {
+      "rang": 0,
+      "affirmation_2026_08_07": "createItem / deleteItem dans le CMS (n'existe pas), boutons de création dans les apps (Tasks, etc.), applicateurs pour les nouveaux outils",
+      "mesure_2026_08_13": "Le CMS expose bien addItem et removeItem (et leurs variantes multi-tenant addItemFor/removeItemFor). Au moins 11 des 19 apps ont un bouton de création routé via addItem. Les applicateurs sont implémentés (applyCreerItem, applySupprimerItem, applyModifierItem) et passent par mergeAtomically.",
+      "verdict": "PERIME",
+      "preuves": [
+        "src/lib/cms/cms.store.ts:77-78 — interface addItem + removeItem",
+        "src/lib/cms/cms.store.ts:92-101 — addItemFor + removeItemFor (multi-tenant)",
+        "src/lib/cms/cms.store.ts:252-275 — implémentation addItemFor",
+        "src/lib/cms/cms.store.ts:283-316 — implémentation removeItemFor",
+        "src/apps/tasks/TasksApp.tsx:191 — Tasks lit addItem depuis useCmsStore",
+        "src/apps/tasks/TasksApp.tsx:208 — submitNewTask utilise addItem('tasks', ...)",
+        "src/apps/sales/SalesApp.tsx:1630 — Sales crée des deals via addItem('deals', ...)",
+        "src/apps/clients/ClientsApp.tsx:83 — Clients via addItem('clients', ...)",
+        "src/apps/finance/FinanceApp.tsx:228 — Finance via addItem('invoices', ...)",
+        "src/apps/operations/OperationsApp.tsx:165,202 — Operations via addItem('changes', ...) et addItem('alerts', ...)",
+        "src/apps/growth/GrowthApp.tsx:306,581 — Growth via addItem('growth_acquisition', ...) et addItem('growth_partenariats', ...)",
+        "src/apps/it-rd/ItRdApp.tsx:131,562 — IT-RD via addItem('it_journal', ...) et addItem('it_drift', ...)",
+        "src/apps/cognition/CognitionApp.tsx:342 — Cognition via addItem(ROUTINE_COLLECTION, ...)",
+        "src/apps/product/ProductApp.tsx:505 — Product via addItem('product_mvps', ...)",
+        "src/apps/legal/ProwlerImport.tsx:109 — Legal via addItem('legal_gaps', ...)",
+        "src/agent/tools.ts:345-350 — creerItem dépose via addProposal (outillage agent)",
+        "src/agent/tools.ts:359-373 — applyCreerItem capture addItem et fournit un revert removeItem"
+      ],
+      "ligne_corrigee": "Rang 0 globalement couvert : CMS a addItem/removeItem (+ variantes tenant-aware), 11 apps ont un bouton de création, applicateurs en place avec revert. Reste : ~8 apps sans bouton (audit, auth, dashboard, design, marketplace, onboarding, ontology, settings, welcome) — pour certaines c'est par design (auth, dashboard, settings), pour d'autres c'est un reliquat."
+    },
+    {
+      "rang": 1,
+      "affirmation_2026_08_07": "scenarios.store.ts, scenarios.ts, mergeAtomically (tout-ou-rien + revert), ApprovalsView.tsx (715 lignes, 134 mentions scenario/proposal). Manque : tester le merge sur plus de 2 propositions, tester l'idempotence des reverts, code de confirmation style Lumail pour les outils à effet de bord externe",
+      "mesure_2026_08_13": "scenarios.store.ts (412 lignes) + scenarios.ts (127 lignes) + mergeAtomically présents. ApprovalsView.tsx fait 952 lignes (et non 715). Tests : mergeAtomically est testé avec 2 ET 3 propositions (cf. scenarios.test.ts lignes 54-86 — test « CAS CRITIQUE » avec incA, explode, incB). L'idempotence des reverts N'est PAS testée : aucun test ne vérifie qu'appeler approveAndMerge deux fois donne le même résultat. Aucun code de confirmation à 6 chiffres n'existe (recherche confirmationCode, otpCode, sixDigit, etc. = zéro match).",
+      "verdict": "PARTIEL",
+      "preuves": [
+        "src/stores/scenarios.store.ts — fichier présent, 412 lignes",
+        "src/agent/scenarios.ts:42-126 — mergeAtomically (tout-ou-rien)",
+        "src/apps/people/ApprovalsView.tsx — fichier présent, 952 lignes (pas 715 comme annoncé)",
+        "src/agent/scenarios.test.ts:54-86 — test avec 3 propositions (incA, explode, incB) ; étape 2 échoue → aucune fuite",
+        "src/stores/scenarios.store.test.ts — 9 tests, dont approveAndMerge applique et revert",
+        "src/stores/scenarios.store.ts:310-353 — approveAndMerge ne vérifie PAS si le scénario est déjà merged ou approved → appelable deux fois",
+        "src/agent/scenarios.ts:62-80 — mergeAtomically applique séquentiellement sans garde anti-double-appel",
+        "Recherche « confirmationCode | otpCode | sixDigit | 6-digit » → 0 résultat dans src/"
+      ],
+      "ligne_corrigee": "Rang 1 partiellement couvert : scénarios + approbation + tests merge 3 propositions en place. Manque : (a) test d'idempotence (approveAndMerge appelé deux fois sur un scénario déjà merged doit être no-op, pas une ré-application) ; (b) ApprovalsView.tsx a grandi de 715 → 952 lignes, les 134 mentions scenario/proposal sont probablement plus maintenant ; (c) code de confirmation Lumail (6 chiffres) pour les outils à effet de bord externe — zéro dans la codebase, alors que c'est la mesure citée comme nécessaire pour éviter l'envoi sortant automatique."
+    },
+    {
+      "rang": 2,
+      "affirmation_2026_08_07": "rien — tour de boucle uniquement",
+      "mesure_2026_08_13": "Aucun package langgraph/langchain dans package.json. Aucune occurrence de StateGraph, stateGraph, ou import du module langgraph dans src/. La seule mention textuelle est dans src/lib/cms/seed.ts:160 (« LangGraph supervisor » comme note de planning dans une fiche CMS, pas du code). Le tour de boucle de l'agent est resté tel quel.",
+      "verdict": "CONFIRME",
+      "preuves": [
+        "package.json — dépendances : @ai-sdk/* + usertour + posthog + react + zustand. Aucune trace de @langchain/langgraph ni langgraph",
+        "package.json devDependencies — idem",
+        "src/ — recherche « langgraph | StateGraph | stateGraph » → 0 import, 0 usage réel. Une seule mention textuelle dans src/lib/cms/seed.ts:160 (« LangGraph supervisor »), c'est du contenu CMS, pas du code",
+        "src/agent/ — contient tools.ts, scenarios.ts, voice.ts, characters.ts. Pas de fichier graphe"
+      ],
+      "ligne_corrigee": "Rang 2 confirmé : pas de graphe d'état, tour de boucle uniquement. Mais le tableau est cohérent avec ce constat."
+    },
+    {
+      "rang": 3,
+      "affirmation_2026_08_07": "aucun serveur MCP dans le dépôt (grep confirme)",
+      "mesure_2026_08_13": "Faux. Le dépôt a un serveur MCP stdio multiplexe : mcp/server.ts (14 lignes, délègue à runMcpStdio) + mcp/server.mjs (build) + src/lib/tooling/adapters/mcp.ts (128 lignes, construit le Server officiel du SDK). Le SDK @modelcontextprotocol/sdk 1.30.0 est dans devDependencies. n8n n'est PAS dans le dépôt, mais ce n'était pas exigé : le tableau dit « installer n8n (self-hosté) » comme plan, pas comme existant.",
+      "verdict": "PERIME",
+      "preuves": [
+        "package.json devDependencies — @modelcontextprotocol/sdk: ^1.30.0",
+        "mcp/server.ts — entrée du serveur MCP stdio",
+        "mcp/server.mjs — version compilée pour lancement Node",
+        "src/lib/tooling/adapters/mcp.ts:11 — import Server depuis @modelcontextprotocol/sdk/server/index.js",
+        "src/lib/tooling/adapters/mcp.ts:28 — buildMcpServer() construit une Server officielle",
+        "src/lib/tooling/adapters/mcp.ts:42-50 — handler ListToolsRequestSchema branché sur list()",
+        "src/lib/tooling/adapters/mcp.ts:52-115 — handler CallToolRequestSchema exécute tool.execute",
+        "src/lib/tooling/adapters/mcp.ts:122-128 — runMcpStdio() : connexion StdioServerTransport",
+        "coach-os-plugin/mcp.json:3-12 — déclaration stdio du serveur « coach-os »"
+      ],
+      "ligne_corrigee": "Rang 3 obsolète sur la forme : un serveur MCP stdio multiplexe les 13 outils existe (mcp/server.mjs + src/lib/tooling/adapters/mcp.ts) et est déjà déclaré dans coach-os-plugin/mcp.json. Reste l'idée n8n self-hosté, mais c'était un plan, pas un constat. Le vrai manque du tableau d'origine (pas de serveur MCP joignable) est faux."
+    },
+    {
+      "rang": 4,
+      "affirmation_2026_08_07": "in-app ✅, Skills partiel (prompt serveur), MCP ❌, CLI ❌, API REST partiel. Manque : adaptateurs (cf. Melvynx) : defineTool → MCP, CLI, Skill. Documentation one-shot sur URL publique.",
+      "mesure_2026_08_13": "Tous présents. Les 6 adaptateurs existent : cli.ts, in-app.ts, mcp.ts, mcp-schema.ts, rest.ts, skill.ts (+ zod-introspect.ts comme helper). Le binaire CLI est déclaré dans package.json (bin: coach-os → ./cli/coach-os.mjs) et le .mjs délègue à runCli. La documentation one-shot est dans coach-os-plugin/skills/INSTALL.md avec les snippets par client (Claude Code, Codex, Cursor, Hermes).",
+      "verdict": "PERIME",
+      "preuves": [
+        "src/lib/tooling/adapters/ — 7 fichiers : cli.ts, in-app.ts, mcp.ts, mcp-schema.ts, rest.ts, skill.ts, zod-introspect.ts",
+        "src/lib/tooling/adapters/cli.ts:39-143 — runCli parse argv, résout outil, appelle execute",
+        "src/lib/tooling/adapters/mcp.ts — adaptateur MCP complet (cf. rang 3)",
+        "src/lib/tooling/adapters/skill.ts:21-29 — buildSkill + buildAllSkills génèrent les SKILL.md",
+        "src/lib/tooling/adapters/in-app.ts:49-50 — registerInApp pour binding client",
+        "src/lib/tooling/adapters/rest.ts:40-52 — manifestTools pour OpenAPI-ish",
+        "package.json:6-8 — bin: { \"coach-os\": \"./cli/coach-os.mjs\" }",
+        "cli/coach-os.mjs:11-18 — runCli({argv: process.argv, color: ...}) puis exit",
+        "coach-os-plugin/skills/INSTALL.md:8-15 — snippets Claude Code / Codex / Cursor / Hermes"
+      ],
+      "ligne_corrigee": "Rang 4 obsolète : in-app, MCP, CLI, REST, Skill sont tous branchés via les 6 adaptateurs, le binaire coach-os est dans package.json, et la doc one-shot est dans INSTALL.md. La mention « documentation sur URL publique » reste partiellement fausse (le fichier INSTALL.md est versionné dans le dépôt, pas sur coach-os.com/install)."
+    },
+    {
+      "rang": 5,
+      "affirmation_2026_08_07": "rien",
+      "mesure_2026_08_13": "Faux. coach-os-plugin/ existe avec : plugin.json conforme (name=coach-os, $schema valide, version 0.1.0, MIT, keywords, extensions), mcp.json avec un serveur stdio multiplexe, et 13 SKILL.md générés par outils (un par outil du catalogue). INSTALL.md est aussi versionné à côté.",
+      "verdict": "PERIME",
+      "preuves": [
+        "coach-os-plugin/plugin.json:1-19 — manifeste conforme : $schema, name=coach-os, version=0.1.0, description, author, homepage, repository, license=MIT, keywords, extensions.claude-code",
+        "coach-os-plugin/mcp.json:1-12 — un seul serveur stdio multiplexe « coach-os », args pointent sur ${PLUGIN_ROOT}/../mcp/server.mjs",
+        "coach-os-plugin/skills/ — 14 entrées : 13 dossiers <outil>/ + INSTALL.md",
+        "coach-os-plugin/skills/collection.list/SKILL.md — frontmatter name + description + corps",
+        "coach-os-plugin/skills/section.goto/SKILL.md — idem",
+        "coach-os-plugin/skills/INSTALL.md:8-15 — snippets d'install par client",
+        "plugin.json:5 — description mentionne explicitement « 13 outils (collection, app, scenario) »"
+      ],
+      "ligne_corrigee": "Rang 5 obsolète : plugin.json, mcp.json, 13 SKILL.md et INSTALL.md sont en place et conformes à la spec Agent Plugins 1.0.0 (avec extensions claude-code). Ce qui manque éventuellement : publication aux marketplaces (Cursor, VS Code) — c'est une étape de distribution, pas une absence de code."
+    }
+  ],
+  "mesures_chiffres": {
+    "outils_declares_defineTool": 13,
+    "outils_par_catalogue": {
+      "collection": 6,
+      "app": 3,
+      "scenario": 4
+    },
+    "outils_lecture": 6,
+    "outils_navigation": 4,
+    "outils_ecriture_propose_uniquement": 3,
+    "outils_avec_effet_de_bord_direct": 0,
+    "apps_avec_bouton_creation_addItem": 11,
+    "apps_sans_bouton_creation": 9,
+    "adaptateurs_outillage": 6,
+    "skills_md_generes": 13,
+    "tests_total": 138,
+    "tests_passes": 136,
+    "tests_echoues": 2,
+    "build_status": "succès",
+    "build_chunks_gzip_kb": 628.11,
+    "details_echecs_tests": [
+      "src/lib/themes/orphan-css-vars.test.ts — 22 variables CSS orphelines détectées (--landing-text-muted, --landing-sans, --landing-canvas, etc.) ; elles sont consommées par var(--xxx) dans le code mais ni écrites dans applyThemeTokens ni déclarées dans :root ou [data-theme].",
+      "src/lib/themes/orphan-css-vars.test.ts — garde-fou REGRESSION_9_ALIAS_REMOVED : 9 alias story-1 manquent dans applyThemeTokens (--theme-muted, --canvas, --panel, --panel-solid, --panel-border, --panel-border-subtle, --hairline, --shadow-panel, --shadow-window)."
+    ]
+  },
+  "premier_rang_non_pose": "Rang 1 (scénarios + approbation). Le code de confirmation Lumail à 6 chiffres pour les outils à effet de bord externe est absent — c'est la mesure citée comme nécessaire pour empêcher l'envoi sortant automatique au nom de la marque (cf. ARCHITECTURE_V1 §Risque 1). Les autres manques du rang 1 (idempotence des reverts, ApprovalsView plus complet) sont secondaires : approveAndMerge ne vérifie pas le statut avant d'appliquer, mais tant qu'il n'y a pas d'outil sortant (envoyer un message, poster un message LinkedIn), le risque est nul. Le vrai point bloquant est la séparation « effet de bord externe » — elle n'existe qu'au niveau du contrat (les outils 'ecriture' déposent une proposition), pas au niveau d'un mécanisme runtime qui empêche un applicateur d'envoyer un email."
+}

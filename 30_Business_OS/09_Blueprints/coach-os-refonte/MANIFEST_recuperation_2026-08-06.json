@@ -1,0 +1,21 @@
+{
+ "raison": "chemins Windows absolus ecrits depuis WSL : le ':' devient U+F03A et Windows cree un dossier au lieu d'ecrire sur le disque",
+ "deplacements": [
+  {
+   "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_APP_tasks.md",
+   "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_APP_tasks.md"
+  },
+  {
+   "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_LEGAL.md",
+   "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_LEGAL.md"
+  },
+  {
+   "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_SETTINGS.md",
+   "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_SETTINGS.md"
+  },
+  {
+   "src": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\30_Business_OS\\10_Projects\\omk\\repos\\coach-os\\C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_THEME_A.md",
+   "dst": "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\09_Blueprints\\coach-os-refonte\\RAPPORT_THEME_A.md"
+  }
+ ]
+}

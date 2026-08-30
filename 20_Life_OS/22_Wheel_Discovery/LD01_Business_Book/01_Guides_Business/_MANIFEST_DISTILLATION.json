@@ -1,0 +1,36 @@
+{
+  "date": "2026-08-02",
+  "executeur": "MiniMax-M3[1m]",
+  "fichiers_indexes": 15560,
+  "par_domaine": {
+    "1": 659,
+    "2": 348,
+    "3": 907,
+    "4": 135,
+    "5": 598,
+    "6": 419,
+    "7": 11620,
+    "8": 68,
+    "0": 806
+  },
+  "hors_perimetre": 806,
+  "confiance": {
+    "haute": 13870,
+    "moyenne": 907,
+    "basse": 783
+  },
+  "doublons_suspects": [
+    "01_Product/ + 01_Product_Product/ = doublonnage structurel hérité (signalé 03_Productization)",
+    "02_Ops/ + 02_Ops_Ops/ = doublonnage structurel hérité (signalé 02_Operations)",
+    "03_IT/ + 03_IT_IT/ = doublonnage structurel hérité (signalé 07_RD_et_IT)",
+    "04_Finance/ + 04_Finance_Finance/ = doublonnage structurel hérité (signalé 06_Finance)",
+    "05_People/ + 05_People_People/ = doublonnage structurel hérité (signalé 01_RH_Meta)",
+    "07_Growth/ + 07_Growth_Growth/ = doublonnage structurel hérité (signalé 05_People_Brand)",
+    "08_Legal/Geordi_YT-1AkJHe0he_E.md présent dans 05_Legal/ ET 08_Legal/ (doublon contenu)",
+    "06_Sales_Sales/Geordi_YT-CHQD0AtUj_Q.md doublon cross-domaine avec 06_Sales/"
+  ],
+  "distillations_ecrites": ["08_Legal_et_Compliance.md", "04_Sales_et_Cognition.md", "01_RH_Meta_Gouvernance.md", "02_Operations_en_Loops.md", "06_Finance_et_ROI.md", "05_People_et_Brand.md", "03_Productization_des_Besoins.md", "07_RD_et_IT.md"],
+  "non_traite": [],
+  "jonctions_evitees": 0,
+  "erreurs": 0
+}

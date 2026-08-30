@@ -1,0 +1,11 @@
+foundry-2022-os-demo : 294 images, 15 planches
+agentic-os-aipcon6 : ECHEC telechargement
+aip-capabilities-shyam : 118 images, 6 planches
+ontology-governance : 184 images, 10 planches
+pipeline-builder : 52 images, 3 planches
+vibe-coding-aip : 56 images, 3 planches
+architecture-speedrun : 79 images, 4 planches
+introducing-aip : ECHEC telechargement
+ontology-overview : ECHEC telechargement
+foundry-21-demoday : 187 images, 10 planches
+=== TERMINE ===

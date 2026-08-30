@@ -1,0 +1,170 @@
+{
+  "geordi_path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi",
+  "fichiers_md_total": 59265,
+  "jonctions": 159,
+  "fichiers_scannes": 59265,
+  "erreurs": 0,
+  "octets_lus": 308050113,
+  "selection_20": [
+    {
+      "fichier": "01_Guides/02_Ops/resource_sushi_ceo_25_ans_100m_turnaround.md",
+      "ligne": 59,
+      "tournure": "sert à",
+      "clef": "sert_a",
+      "phrase": "Alex positionne sa série YouTube non pas comme du contenu éducatif formaté mais comme un \"video diary réaliste\" — montrant les hauts, les bas, les vagues d'optimisme et de pessimisme. Cette transparence radicale sert à la fois de branding authentique et d'outil de réflexion personnelle."
+    },
+    {
+      "fichier": "01_Guides/01_Product/Dan_Martell/resource_hSGt_rhu49U.md",
+      "ligne": 47,
+      "tournure": "afin de",
+      "clef": "afin_de",
+      "phrase": "Contrairement aux méthodes classiques prônant de commencer par des tâches faciles pour générer une dynamique, ce protocole exige d'attaquer directement la tâche la plus complexe et la plus stratégique dès le début de la journée. Cette tâche unique représente le \"premier domino\", celui dont la résolu"
+    },
+    {
+      "fichier": "01_Guides/03_IT/itssssss-jack/its-a-great-day-to-be-in-pre-k-jack-hartmann.md",
+      "ligne": 25,
+      "tournure": "contribue à",
+      "clef": "contribue_a",
+      "phrase": "- **<Mémoire Distribuée et Blockchain de Connaissance>** : L'apprentissage collectif dans une classe de pré-K équivaut à une base de connaissances distribuée où chaque nœud contribue à l'agrégation de la vérité. L'architecture A'Space OS utilise cette structure pour créer une blockchain de connaissa"
+    },
+    {
+      "fichier": "01_Guides/08_People/Tiago_Forte/resource_notion_second_brain.md",
+      "ligne": 27,
+      "tournure": "rattachée à",
+      "clef": "rattache_a",
+      "phrase": "Pour y parvenir, l'auteur utilise deux armes redoutables. D'abord, une page Notion spécifiquement optimisée pour le téléphone mobile. Cette page est composée d'une seule colonne avec de très gros boutons d'action au sommet (\"Quick Capture button for Task\", etc.). En moins de 30 secondes, que tu sois"
+    },
+    {
+      "fichier": "01_Guides/07_Growth/Yann_Leonardi/resource_duolingo.md",
+      "ligne": 57,
+      "tournure": "au service de",
+      "clef": "au_service_de",
+      "phrase": "### A. La Gamification Positive au service de la Souveraineté (Habit-Building)"
+    },
+    {
+      "fichier": "01_Guides/01_Product/n8NtmXLJoX0.md",
+      "ligne": 8,
+      "tournure": "répond à",
+      "clef": "repond_a",
+      "phrase": "{\"content\":\"# Metadata\\n## Title: Pourquoi Musk rachète t-il un éditeur de code ?\\n## Author: IA et Stratégie | Le SamourAI\\n## Author URL: https://www.youtube.com/channel/UC2UmrCDeb8CEB7t6v6Kqt7A\\n## Thumbnail: https://i.ytimg.com/vi_webp/n8NtmXLJoX0/sddefault.webp\\n\\n# Transcript\\n[0.16s] SpaceX e"
+    },
+    {
+      "fichier": "01_Guides/02_Ops/business-is-hard-until-you-build-systems-like-this.md",
+      "ligne": 21,
+      "tournure": "vise à",
+      "clef": "vise_a",
+      "phrase": "- **<Cartographie des Flux Opérationnels (Process Mapping)>** : La fondation de toute systématisation réussie réside dans la documentation précise de l'état actuel (As-Is) pour créer une cartographie numérique des flux de données et identifier les points de friction manuels. Cette phase technique vi"
+    },
+    {
+      "fichier": "01_Guides/03_IT/Dan_Martell/resource_biAYfwX4bkY.md",
+      "ligne": 92,
+      "tournure": "Sert à",
+      "clef": "sert_a",
+      "phrase": "| **Notion** | Base de données de connaissances | Sert à centraliser et structurer les insights et les one-liners extraits des transcriptions de formations |"
+    },
+    {
+      "fichier": "01_Guides/01_Product/Dan_Martell/resource_Mxy6MVbpNhg.md",
+      "ligne": 30,
+      "tournure": "afin de",
+      "clef": "afin_de",
+      "phrase": "Ce guide détaille les mécanismes techniques pour configurer, connecter et exploiter ces outils afin de maximiser le retour sur investissement temporel de tout entrepreneur ou chef de produit."
+    },
+    {
+      "fichier": "01_Guides/03_IT/itssssss-jack/the-jack-ranked-experience.md",
+      "ligne": 36,
+      "tournure": "contribue à",
+      "clef": "contribue_a",
+      "phrase": "La transposition du concept de \"Ranked Experience\" dans l'architecture d'A'Space OS V2 nécessite une réinvention radicale du paradigme de classement pour éviter la centralisation et la surveillance. Plutôt que de s'appuyer sur des serveurs tiers pour évaluer la performance des agents, l'OS doit dépl"
+    },
+    {
+      "fichier": "03_Memory_Unified/LLM_Wiki/wiki/Gemini_Takeout_2026/2026-03_conversations.md",
+      "ligne": 5835,
+      "tournure": "rattachée à",
+      "clef": "rattache_a",
+      "phrase": "Une ambition naît dans l'Ikigai (Horizon H3). Elle est rattachée à un domaine précis de la"
+    },
+    {
+      "fichier": "01_Guides/07_Growth/Yann_Leonardi/resource_marketing-de-meero-analysis-of-meeros-marketing-and-growth-strategy.md",
+      "ligne": 63,
+      "tournure": "au service de",
+      "clef": "au_service_de",
+      "phrase": "1. **L'IA au service de l'hôte, pas de la plateforme** : Plutôt que de confier nos traitements de données à des IA cloud tierces qui exploitent notre travail, nous faisons tourner nos propres pipelines de traitement locaux (modèles d'analyse textuelle et de retouche d'images)."
+    },
+    {
+      "fichier": "01_Guides/02_Ops/Geordi_YT-ewkw9ioRc9Y.md",
+      "ligne": 3,
+      "tournure": "répond à",
+      "clef": "repond_a",
+      "phrase": "title: \"Adam Driver répond à la question la plus philosophique de Cannes\""
+    },
+    {
+      "fichier": "01_Guides/02_Ops/la-cte-divoire-fabrique-maintenant-ses-propres-smartphones.md",
+      "ligne": 36,
+      "tournure": "vise à",
+      "clef": "vise_a",
+      "phrase": "L'émergence de la fabrication locale de smartphones en Côte d’Ivoire constitue un cas d'école parfait pour la systématisation des opérations d'A'Space OS. Il s'agit de passer d'une architecture de consommation passive à une architecture de production active et souveraine. L'objectif est de déconstru"
+    },
+    {
+      "fichier": "01_Guides/03_IT/Dan_Martell/resource_dyrr4eAdnhg.md",
+      "ligne": 38,
+      "tournure": "sert à",
+      "clef": "sert_a",
+      "phrase": "L'Ikigai est traditionnellement perçu comme un outil de développement personnel et d'auto-réflexion spirituelle visant à trouver sa raison d'être dans la vie. Cependant, dans cette approche pragmatique, l'Ikigai est détourné pour devenir un protocole rigoureux de validation de marché, où l'intersect"
+    },
+    {
+      "fichier": "01_Guides/01_Product/Dan_Martell/resource_reR_EtTCkW4.md",
+      "ligne": 37,
+      "tournure": "afin de",
+      "clef": "afin_de",
+      "phrase": "La dispersion est le principal ennemi de l'efficacité opérationnelle. Pour y remédier, la méthodologie impose de lister l'ensemble de ses objectifs professionnels et personnels afin de n'en retenir qu'un seul et unique. Ce but suprême doit être celui qui, s'il était pleinement atteint, rendrait tous"
+    },
+    {
+      "fichier": "01_Guides/03_IT/RoboNuggets/robonuggets-community-review.md",
+      "ligne": 44,
+      "tournure": "contribue à",
+      "clef": "contribue_a",
+      "phrase": "| **Libérer** | Diffuser les résultats de la revue sous forme de données ouvertes (Open Data) au sein du réseau local pour enrichir la matrice de connaissances. | Créer une boucle d'amélioration collective où chaque revue contribue à l'auto-amélioration de l'OS pour tous les nœuds. |"
+    },
+    {
+      "fichier": "03_Memory_Unified/LLM_Wiki/wiki/graphify-out/chunks/chunk_000/2026-03_conversations.md",
+      "ligne": 5835,
+      "tournure": "rattachée à",
+      "clef": "rattache_a",
+      "phrase": "Une ambition naît dans l'Ikigai (Horizon H3). Elle est rattachée à un domaine précis de la"
+    },
+    {
+      "fichier": "01_Guides/07_Growth/Yann_Leonardi/resource_marketing-de-starbucks-marketing-and-branding-strategy-analysis.md",
+      "ligne": 43,
+      "tournure": "au service de",
+      "clef": "au_service_de",
+      "phrase": "Dans A'Space OS, le module USS Enterprise (Structure Engine / PARA) et le module d'Interface gèrent l'espace documentaire et de vie intellectuelle de l'utilisateur. La personnalisation extrême que Starbucks utilise à des fins commerciales est ici réappropriée au service de la productivité personnell"
+    },
+    {
+      "fichier": "01_Guides/03_IT/Dan_Martell/resource_bkM-lYgAxh0.md",
+      "ligne": 48,
+      "tournure": "répond à",
+      "clef": "repond_a",
+      "phrase": "L'utilisateur répond à cet entretien en utilisant le mode vocal pour fluidifier la saisie, puis ordonne à l'IA de synthétiser ces réponses sous la forme d'un document réutilisable. Ce profil de rôle, sauvegardé en PDF, sert ensuite de base contextuelle pour toutes les conversations futures, permetta"
+    }
+  ],
+  "par_tournure_brut": {
+    "sert_a": 212,
+    "afin_de": 1079,
+    "contribue_a": 48,
+    "rattache_a": 20,
+    "au_service_de": 119,
+    "repond_a": 116,
+    "vise_a": 488,
+    "pour": 155491
+  },
+  "par_tournure_total": {
+    "sert_a": 212,
+    "afin_de": 1079,
+    "contribue_a": 48,
+    "rattache_a": 20,
+    "au_service_de": 119,
+    "repond_a": 116,
+    "vise_a": 488,
+    "pour": 155491
+  }
+}

@@ -1,0 +1,328 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:03.760 --> 00:00:06.390 align:start position:0%
+ 
+Skills<00:00:04.280><c> and</c><00:00:04.440><c> MCP</c><00:00:04.920><c> servers</c><00:00:05.440><c> are</c><00:00:05.560><c> making</c><00:00:05.920><c> agents</c>
+
+00:00:06.390 --> 00:00:06.400 align:start position:0%
+Skills and MCP servers are making agents
+ 
+
+00:00:06.400 --> 00:00:09.070 align:start position:0%
+Skills and MCP servers are making agents
+more<00:00:06.640><c> capable</c><00:00:07.480><c> and</c><00:00:07.640><c> plugins</c><00:00:08.320><c> give</c><00:00:08.520><c> developers</c>
+
+00:00:09.070 --> 00:00:09.080 align:start position:0%
+more capable and plugins give developers
+ 
+
+00:00:09.080 --> 00:00:10.950 align:start position:0%
+more capable and plugins give developers
+a<00:00:09.160><c> way</c><00:00:09.240><c> to</c><00:00:09.400><c> package</c><00:00:09.800><c> those</c><00:00:09.960><c> capabilities</c><00:00:10.840><c> so</c>
+
+00:00:10.950 --> 00:00:10.960 align:start position:0%
+a way to package those capabilities so
+ 
+
+00:00:10.960 --> 00:00:12.990 align:start position:0%
+a way to package those capabilities so
+they<00:00:11.080><c> can</c><00:00:11.200><c> be</c><00:00:11.320><c> shared</c><00:00:11.840><c> and</c><00:00:11.960><c> reused.</c><00:00:12.840><c> But</c>
+
+00:00:12.990 --> 00:00:13.000 align:start position:0%
+they can be shared and reused. But
+ 
+
+00:00:13.000 --> 00:00:15.550 align:start position:0%
+they can be shared and reused. But
+today,<00:00:13.840><c> every</c><00:00:14.240><c> agent</c><00:00:14.560><c> product</c><00:00:15.000><c> expects</c><00:00:15.480><c> a</c>
+
+00:00:15.550 --> 00:00:15.560 align:start position:0%
+today, every agent product expects a
+ 
+
+00:00:15.560 --> 00:00:17.670 align:start position:0%
+today, every agent product expects a
+different<00:00:15.920><c> manifest,</c><00:00:16.760><c> folder</c><00:00:17.080><c> structure,</c>
+
+00:00:17.670 --> 00:00:17.680 align:start position:0%
+different manifest, folder structure,
+ 
+
+00:00:17.680 --> 00:00:19.470 align:start position:0%
+different manifest, folder structure,
+and<00:00:17.840><c> setup</c><00:00:18.080><c> process.</c><00:00:18.840><c> That's</c><00:00:19.160><c> why</c>
+
+00:00:19.470 --> 00:00:19.480 align:start position:0%
+and setup process. That's why
+ 
+
+00:00:19.480 --> 00:00:22.950 align:start position:0%
+and setup process. That's why
+contributors<00:00:20.080><c> from</c><00:00:20.360><c> AWS,</c><00:00:21.280><c> Cursor,</c><00:00:22.120><c> GitHub,</c>
+
+00:00:22.950 --> 00:00:22.960 align:start position:0%
+contributors from AWS, Cursor, GitHub,
+ 
+
+00:00:22.960 --> 00:00:25.990 align:start position:0%
+contributors from AWS, Cursor, GitHub,
+Microsoft,<00:00:23.880><c> OpenAI,</c><00:00:24.720><c> and</c><00:00:24.840><c> Vercel</c><00:00:25.720><c> came</c>
+
+00:00:25.990 --> 00:00:26.000 align:start position:0%
+Microsoft, OpenAI, and Vercel came
+ 
+
+00:00:26.000 --> 00:00:28.350 align:start position:0%
+Microsoft, OpenAI, and Vercel came
+together<00:00:26.440><c> to</c><00:00:26.560><c> create</c><00:00:26.920><c> agent</c><00:00:27.240><c> plugins,</c><00:00:28.120><c> an</c>
+
+00:00:28.350 --> 00:00:28.360 align:start position:0%
+together to create agent plugins, an
+ 
+
+00:00:28.360 --> 00:00:30.390 align:start position:0%
+together to create agent plugins, an
+open<00:00:28.720><c> vendor-neutral</c><00:00:29.480><c> way</c><00:00:30.040><c> package</c>
+
+00:00:30.390 --> 00:00:30.400 align:start position:0%
+open vendor-neutral way package
+ 
+
+00:00:30.400 --> 00:00:32.390 align:start position:0%
+open vendor-neutral way package
+extensions<00:00:31.080><c> for</c><00:00:31.280><c> agents.</c>
+
+00:00:32.390 --> 00:00:32.400 align:start position:0%
+extensions for agents.
+ 
+
+00:00:32.400 --> 00:00:34.390 align:start position:0%
+extensions for agents.
+One<00:00:32.640><c> format</c><00:00:33.080><c> for</c><00:00:33.160><c> people</c><00:00:33.440><c> building</c><00:00:33.720><c> plugins</c>
+
+00:00:34.390 --> 00:00:34.400 align:start position:0%
+One format for people building plugins
+ 
+
+00:00:34.400 --> 00:00:36.630 align:start position:0%
+One format for people building plugins
+and<00:00:34.560><c> one</c><00:00:34.720><c> predictable</c><00:00:35.320><c> way</c><00:00:35.520><c> for</c><00:00:35.720><c> agent</c><00:00:36.040><c> tools</c>
+
+00:00:36.630 --> 00:00:36.640 align:start position:0%
+and one predictable way for agent tools
+ 
+
+00:00:36.640 --> 00:00:39.150 align:start position:0%
+and one predictable way for agent tools
+to<00:00:36.720><c> find</c><00:00:36.960><c> them.</c><00:00:37.640><c> At</c><00:00:37.800><c> its</c><00:00:37.960><c> simplest,</c><00:00:38.600><c> an</c><00:00:38.840><c> agent</c>
+
+00:00:39.150 --> 00:00:39.160 align:start position:0%
+to find them. At its simplest, an agent
+ 
+
+00:00:39.160 --> 00:00:41.510 align:start position:0%
+to find them. At its simplest, an agent
+plugin<00:00:39.560><c> is</c><00:00:39.760><c> just</c><00:00:40.000><c> a</c><00:00:40.040><c> folder</c><00:00:40.800><c> with</c><00:00:40.920><c> a</c><00:00:41.000><c> manifest</c>
+
+00:00:41.510 --> 00:00:41.520 align:start position:0%
+plugin is just a folder with a manifest
+ 
+
+00:00:41.520 --> 00:00:44.390 align:start position:0%
+plugin is just a folder with a manifest
+called<00:00:41.840><c> plugin.json</c><00:00:42.840><c> at</c><00:00:43.000><c> the</c><00:00:43.120><c> root.</c><00:00:44.080><c> This</c>
+
+00:00:44.390 --> 00:00:44.400 align:start position:0%
+called plugin.json at the root. This
+ 
+
+00:00:44.400 --> 00:00:46.470 align:start position:0%
+called plugin.json at the root. This
+first<00:00:44.720><c> release</c><00:00:45.160><c> focuses</c><00:00:45.680><c> on</c><00:00:45.880><c> two</c><00:00:46.120><c> things</c>
+
+00:00:46.470 --> 00:00:46.480 align:start position:0%
+first release focuses on two things
+ 
+
+00:00:46.480 --> 00:00:48.510 align:start position:0%
+first release focuses on two things
+developers<00:00:47.040><c> already</c><00:00:47.440><c> use,</c><00:00:47.815><c> [music]</c><00:00:48.120><c> agent</c>
+
+00:00:48.510 --> 00:00:48.520 align:start position:0%
+developers already use, [music] agent
+ 
+
+00:00:48.520 --> 00:00:50.430 align:start position:0%
+developers already use, [music] agent
+skills<00:00:49.080><c> for</c><00:00:49.280><c> reusable</c><00:00:49.800><c> instructions</c><00:00:50.320><c> and</c>
+
+00:00:50.430 --> 00:00:50.440 align:start position:0%
+skills for reusable instructions and
+ 
+
+00:00:50.440 --> 00:00:52.790 align:start position:0%
+skills for reusable instructions and
+workflows,<00:00:51.280><c> and</c><00:00:51.480><c> MCP</c><00:00:51.960><c> servers,</c><00:00:52.600><c> which</c>
+
+00:00:52.790 --> 00:00:52.800 align:start position:0%
+workflows, and MCP servers, which
+ 
+
+00:00:52.800 --> 00:00:55.430 align:start position:0%
+workflows, and MCP servers, which
+connect<00:00:53.160><c> agents</c><00:00:53.560><c> to</c><00:00:53.720><c> tools</c><00:00:54.200><c> and</c><00:00:54.320><c> data.</c>
+
+00:00:55.430 --> 00:00:55.440 align:start position:0%
+connect agents to tools and data.
+ 
+
+00:00:55.440 --> 00:00:56.790 align:start position:0%
+connect agents to tools and data.
+You<00:00:55.480><c> can</c><00:00:55.640><c> put</c><00:00:55.840><c> these</c><00:00:56.040><c> resources</c><00:00:56.600><c> in</c><00:00:56.720><c> the</c>
+
+00:00:56.790 --> 00:00:56.800 align:start position:0%
+You can put these resources in the
+ 
+
+00:00:56.800 --> 00:00:59.030 align:start position:0%
+You can put these resources in the
+standard<00:00:57.200><c> locations</c><00:00:58.080><c> and</c><00:00:58.200><c> the</c><00:00:58.280><c> same</c><00:00:58.640><c> package</c>
+
+00:00:59.030 --> 00:00:59.040 align:start position:0%
+standard locations and the same package
+ 
+
+00:00:59.040 --> 00:01:00.710 align:start position:0%
+standard locations and the same package
+is<00:00:59.200><c> much</c><00:00:59.520><c> easier</c><00:00:59.800><c> to</c><00:00:59.920><c> support</c><00:01:00.360><c> across</c>
+
+00:01:00.710 --> 00:01:00.720 align:start position:0%
+is much easier to support across
+ 
+
+00:01:00.720 --> 00:01:02.110 align:start position:0%
+is much easier to support across
+different<00:01:01.040><c> products.</c>
+
+00:01:02.110 --> 00:01:02.120 align:start position:0%
+different products.
+ 
+
+00:01:02.120 --> 00:01:04.350 align:start position:0%
+different products.
+For<00:01:02.240><c> plugin</c><00:01:02.640><c> authors,</c><00:01:03.280><c> the</c><00:01:03.400><c> payoff</c><00:01:03.840><c> is</c><00:01:04.040><c> less</c>
+
+00:01:04.350 --> 00:01:04.360 align:start position:0%
+For plugin authors, the payoff is less
+ 
+
+00:01:04.360 --> 00:01:06.750 align:start position:0%
+For plugin authors, the payoff is less
+platform-specific<00:01:05.320><c> glue</c><00:01:05.840><c> and</c><00:01:06.080><c> one</c><00:01:06.400><c> version</c>
+
+00:01:06.750 --> 00:01:06.760 align:start position:0%
+platform-specific glue and one version
+ 
+
+00:01:06.760 --> 00:01:08.430 align:start position:0%
+platform-specific glue and one version
+format<00:01:07.160><c> to</c><00:01:07.240><c> build</c><00:01:07.440><c> against.</c>
+
+00:01:08.430 --> 00:01:08.440 align:start position:0%
+format to build against.
+ 
+
+00:01:08.440 --> 00:01:11.385 align:start position:0%
+format to build against.
+Agent<00:01:08.760><c> products</c><00:01:09.160><c> can</c><00:01:09.280><c> support</c><00:01:10.200><c> skills,</c><00:01:10.920><c> MCPs,</c>
+
+00:01:11.385 --> 00:01:11.395 align:start position:0%
+Agent products can support skills, MCPs,
+ 
+
+00:01:11.395 --> 00:01:13.790 align:start position:0%
+Agent products can support skills, MCPs,
+[music]<00:01:11.760><c> or</c><00:01:11.880><c> both</c><00:01:12.760><c> and</c><00:01:12.880><c> extend</c><00:01:13.320><c> the</c><00:01:13.400><c> format</c>
+
+00:01:13.790 --> 00:01:13.800 align:start position:0%
+[music] or both and extend the format
+ 
+
+00:01:13.800 --> 00:01:15.990 align:start position:0%
+[music] or both and extend the format
+without<00:01:14.120><c> changing</c><00:01:14.440><c> its</c><00:01:14.640><c> portable</c><00:01:15.000><c> core.</c>
+
+00:01:15.990 --> 00:01:16.000 align:start position:0%
+without changing its portable core.
+ 
+
+00:01:16.000 --> 00:01:17.950 align:start position:0%
+without changing its portable core.
+This<00:01:16.280><c> spec</c><00:01:16.600><c> standardizes</c><00:01:17.240><c> packaging</c><00:01:17.840><c> and</c>
+
+00:01:17.950 --> 00:01:17.960 align:start position:0%
+This spec standardizes packaging and
+ 
+
+00:01:17.960 --> 00:01:19.710 align:start position:0%
+This spec standardizes packaging and
+discovery,<00:01:18.720><c> not</c><00:01:18.960><c> marketplaces,</c>
+
+00:01:19.710 --> 00:01:19.720 align:start position:0%
+discovery, not marketplaces,
+ 
+
+00:01:19.720 --> 00:01:21.670 align:start position:0%
+discovery, not marketplaces,
+permissions,<00:01:20.280><c> or</c><00:01:20.440><c> runtimes.</c>
+
+00:01:21.670 --> 00:01:21.680 align:start position:0%
+permissions, or runtimes.
+ 
+
+00:01:21.680 --> 00:01:23.790 align:start position:0%
+permissions, or runtimes.
+Agent<00:01:21.960><c> plugins</c><00:01:22.440><c> is</c><00:01:22.680><c> open</c><00:01:23.040><c> and</c><00:01:23.240><c> ready</c><00:01:23.440><c> to</c><00:01:23.560><c> build</c>
+
+00:01:23.790 --> 00:01:23.800 align:start position:0%
+Agent plugins is open and ready to build
+ 
+
+00:01:23.800 --> 00:01:24.670 align:start position:0%
+Agent plugins is open and ready to build
+with.
+
+00:01:24.670 --> 00:01:24.680 align:start position:0%
+with.
+ 
+
+00:01:24.680 --> 00:01:26.550 align:start position:0%
+with.
+Package<00:01:25.000><c> a</c><00:01:25.040><c> capability,</c><00:01:26.000><c> add</c><00:01:26.160><c> support</c><00:01:26.480><c> in</c>
+
+00:01:26.550 --> 00:01:26.560 align:start position:0%
+Package a capability, add support in
+ 
+
+00:01:26.560 --> 00:01:27.870 align:start position:0%
+Package a capability, add support in
+your<00:01:26.680><c> product,</c><00:01:27.280><c> and</c><00:01:27.400><c> go</c><00:01:27.520><c> check</c><00:01:27.720><c> it</c><00:01:27.800><c> out</c>
+
+00:01:27.870 --> 00:01:27.880 align:start position:0%
+your product, and go check it out
+ 
+
+00:01:27.880 --> 00:01:29.590 align:start position:0%
+your product, and go check it out
+yourself.<00:01:28.720><c> Get</c><00:01:28.920><c> started</c><00:01:29.400><c> at</c>
+
+00:01:29.590 --> 00:01:29.600 align:start position:0%
+yourself. Get started at
+ 
+
+00:01:29.600 --> 00:01:32.600 align:start position:0%
+yourself. Get started at
+agentplugins.org.
+

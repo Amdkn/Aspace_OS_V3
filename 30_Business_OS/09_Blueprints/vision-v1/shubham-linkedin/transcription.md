@@ -1,0 +1,611 @@
+ok alors j'ai réussi à construire un
+truc de dingue je vous montre là j'ai
+une liste de prospects avec leur
+LinkedIn je lance mon automatisation et
+là ça commence à me générer des vidéos
+ultra personnalisées regardez le
+résultat salut Sophie j'espère que tu
+vas bien salut Tibo j'espère que tu vas
+bien salut Benjamin j'espère que tu vas
+bien en fait je suis tombé sur ton
+profil en traînant un petit peu sur
+lingine en regardant un peu tes
+activités et je me suis rendu compte que
+tu correspondais parfaitement au profil
+qu'on est en train de chercher tout dans
+cette vidéo est généré par uneia en gros
+voici ce qui se passe je viens
+superposer un scrolling LinkedIn sur
+lequel je viens mettre une vidéo générée
+par DEA sur lequel je viens mettre des
+sous-titres bref c'est fou et derrière
+ça envoie tout sur Linkedin avec en plus
+la prévisualisation pour donner envie de
+cliquer un taux de réponse 20 fois
+supérieur au texte car tout est hyper
+personnalisé et le truc de dingue c'est
+que là je l'utilise pour du recrutement
+mais on peut l'utiliser pour de
+l'onboarding client pour des paniers
+abandonnés pour de la prospection
+commerciale il y a juste aucune limite
+dans cette vidéo je vous montre quels
+sont les outils que j'ai utilisé et
+comment j'ai construit cette
+automatisation parce que je me suis pas
+mal casser les dents et le but c'est que
+si vous voulez faire la même chose vous
+évitiez tous les problèmes que moi j'ai
+eu et bref je vous avoue que le degré de
+personnalisation là auquel on vient
+d'arriver il fait un peu flippé mais en
+même temps je fais cette vidéo parce que
+c'est important que vous sachiez
+jusqu'où peut aller lia l'automatisation
+et la personnalisation aujourd'hui alors
+on va regarder maintenant un tout petit
+peu plus en détail quels sont le genre
+de vidéos qui peuvent être généré donc
+là j'en ai une première qui a un panier
+abandonné par exemple bonjour Martin
+j'ai vu que vous étiez passé sur mon
+site et que la tasse vous aait plu mais
+malheureusement vous l'avez laissé dans
+votre panier je peux vous proposer un
+code promo si ça vous intéresse vous
+avez vu là il y a le code promo qui
+apparaît avec le nom de Martin c'est une
+variable qui a été prise depis mon
+ATABLE qui a été injecté là ce qui est
+écrit et injecté automatiquement aussi
+et aussi le site qui est en train de
+scroller derrière et bien il est il est
+tout à fait dynamique pareil pour ma
+tête elle est tout à fait générée et on
+va regarder le deuxième exemple qui est
+avec LinkedIn ça c'est celui que vous
+avez vu tout à l'heure salut Benjamin
+j'espère que tu vas bien en fait je suis
+tombé sur ton profil en traînant un
+petit peu je sais pas si vous avez vu
+mais il y a pareil euh à droite ici
+Benjamin qui est écrit et après il y a
+le bouton Play ici qui est affiché pour
+donner une impression quand on est sur
+Linkedin que c'est une vidéo à à lire et
+du coup de donner envie de cliquer ma
+tête est tout à fait dynamique et pareil
+pour le fond derrière donc le site
+derrière il est dynamique vous allez
+voir je vais relancer la vidéo on est en
+train de
+chercher avec les mêmes expériences que
+tu as eu donc je sais qu' aujourd'hui tu
+es dans une boîte et et donc je veux
+voyez ça le le petit transfert image il
+est tout à fait dynamique et c'est parce
+que c'est du montage qui est fait
+automatiquement avec une automatisation
+que je vais vous présenter je veux
+absolument pas que ça paraisse comme un
+truc où je viens te débaucher mais juste
+si on pouvait commencer à discuter pour
+potentiellement collaborer vous avez vu
+les sous-titres aussi sont dynamique en
+fonction de ce que dit mon avatar et la
+dernierre exemple admettons moi je suis
+BIA bayur je fais des pubs Facebook pour
+mes clients et là j'ai envie de
+démarcher la marque Jim Shark et je sais
+que la personne qui bogche chez eux
+s'appelle Samia par exemple tout ça je
+vais les avoir de manière dynamique et
+ça va donner ça salut Samia je suis
+tombé sur une pub de Gy Shark et il me
+semble que c'est toi qui gère ça chez
+eux là en gros je suis en train de
+montrer les pubs qui sont sur Gy Shark
+et je suis en train de les commenter de
+manière tout à fait dynamique bref je
+vais vous montrer maintenant comment
+tout ça fonctionne sous le capot parce
+que c'est juste incroyable alors tout va
+partir de là ici on est sur airtable
+dans lequel j'ai une liste de de
+contacts LinkedIn avec leur lien et un
+petit script ici que dans lequel j'ai
+juste remplacé le prénom et ce script là
+vous allez voir c'est la partie custom
+qu'on va venir générer en gros si je
+vous présente un peu toute
+l'automatisation la première chose qu'on
+va venir faire c'est récupérer la liste
+de contacts juste après on va utiliser
+un outil qui s'appelle hey pour pouvoir
+générer une vidéo personnalisée par Unia
+avec notre tête et en train de dire des
+choses notamment le script après on va
+enregistrer le site web LinkedIn c'est
+ce que vous voyez défiler derrière pour
+pouvoir en fait le le mettre sur la
+vidéo derrière on va venir faire du
+montage vidéo automatique avec un
+template qu'on va générer grâce à un
+outil ici que je vais vous présenter
+également que j'ai mis pas mal de temps
+à trouver je vous avoue et là aussi
+c'est une API pour faire des screenshots
+donc une fois qu'on a fait tout ça la
+dernière étape qui nous reste et bien
+c'est d'envoyer ce message sur Linkedin
+ici parce que c'est du LinkedIn je l'ai
+fait sur Linkedin mais on aurait pu
+faire ça par mail on aurait pu faire ça
+sur n'importe quel social medéia ou même
+WhatsApp par exemple et ça c'est un peu
+le cœur de notre automatisation un petit
+peu comment est-ce qu'elle va
+fonctionner alors tout cela je l'ai mis
+en quatre étapes et du coup c'est les
+quatre étapes de cette vidéo j'ai mis
+une étape zéro parce qu'au final ça
+c'est assez simple à faire mais je vais
+vous le montrer quand même même et donc
+cette vidéo va être en quatre parties
+quatre grandes parties voici à quoi
+ressemble la vraie automatisation je
+l'ai fait sur un outil que j'affectionne
+particulièrement parce que je l'utilise
+maintenant depuis je pense plus de 4 ans
+qui s'appelle make make c'est un outil
+d'automatisation qui est hyper puissant
+parce qu'il va vous permettre de
+connecter plein de type d'app
+différentes et d'ailleurs ils ont un
+catalogue d'app qui est monstrueux et à
+la fois c'est un outil qui est plus
+simple à prendre en main qu'un outil
+comme n8n par exemple qui va être
+beaucoup plus complexe dans un premier
+temps et en plus je suis très content
+parce qu'ils sont sponsors de cette
+vidéo merci à eux pour ceux qui n'ont
+pas encore de compte make vous avez un
+lien en description qui va vous
+permettre d'avoir un mois gratuit sur le
+Plan Pro vous avez des templates
+d'automatisation déjà tout fait vous
+avez la plupart des outils il a qui sont
+compatibles bref sur ma chaîne vous
+allez voir plein plein de tutos si ça
+vous intéresse merci encore à eux pour
+leur soutien et maintenant on continue
+avec cette automatisation du coup les
+parties une 2 et 3 et 4 et bien ell vont
+se refléter comme ça dans cette
+automatisation donc on commence tout de
+suite avec la première le but ça va être
+de récupérer la liste de contacts qu'on
+a sur airtable et générer pour chaque
+contact en fait une vidéo personnel
+comment est-ce qu'on va faire ça et bien
+airtable c'est un outil un petit peu
+comme Excel plus intelligent qui va nous
+aider parce qu'il est très bien connecté
+à me et heyen c'est un outil que je vous
+avais déjà montré sur cette chaîne qui
+va permettre de générer en fait à partir
+d'un avatar des vidéos personnalisées
+donc je vous montre un petit peu hen à
+quoi ça ressemble hen c'est un outil
+qu'on va pouvoir utiliser via API donc
+c'est-à-dire de manière automatique et
+on peut normalement quand on est
+utilisateur avec l'interface graphique
+demander à ce que Agen en sélectionnant
+un de nos avatars vous voyez j'ai plein
+plein plein d'avatars moi enregistrés
+sur Agen que j'utilise beaucoup et là je
+vais prendre par exemple un avatar et je
+veux lui faire dire des choses sauf que
+moi je vais pas lui faire dire des
+choses sur l'interface je vais lui faire
+dire des choses sur Make et donc
+maintenant dans cette première étape
+d'automatisation ce qu'on va vouloir
+faire c'est du coup lire tous nos
+éléments qu'on a ici dans ma base
+airtable que je vous ai montré et pour
+chacun de ces éléments créer une vidéo
+une vidéo personnalisée avec un script
+qui va être prix du airtable et donc ici
+je vais configurer le module pour faire
+en sorte que ça fonctionne bien je vais
+le lancer et vous allez voir quand je
+vais le lancer je l'ai configuré pour
+qu'il ne prenne que deux éléments de ici
+mon mon ma liste airtable et donc je
+fais ça je lance ça commence à se lancer
+et vous voyez il met des des hen ID ici
+c'est juste pour pouvoir retrouver en
+gros la vidéo qui qui va être généré et
+pendant ce temps-là sur Agen normalement
+si on va sur l'interface principale il y
+a deux vidéos qui sont en train d'être
+généré parce que on vient de le demander
+et une fois qu'elles seront générées on
+va voir ce qu'on va faire pour la suite
+donc on attend que ça se génère pendant
+ce temps-là nous maintenant qu'on a fait
+cette première partie 0 et1 on va passer
+à la troème vous allez voir pourquoi pas
+à la deuxième tout de suite c'est parce
+que nous on a besoin de venir coller une
+fois que la vidéo sera prête on a besoin
+de venir coller cette vidéo
+personnalisée dans notre vidéo
+principale et pour ça normalement on
+aurait utilisé un outil comme Final Cut
+d Vinci ou première pour pouvoir le
+faire faire sauf que là on veut le faire
+de manière automatique comment est-ce
+qu'on fait ça parce qu'on a besoin de
+coller à la fois la vidéo qui va être
+créée les sous-titres ainsi que le nom
+de la personne et aussi la vidéo ou le
+screenshot du site web ou du profil
+Linkedin qui est en train de défiler
+derrière et en réalité ce que ça donne
+c'est ici le site web qui est en train
+de défiler derrière ici ma vidéo
+personnalisée j'aurais généré avec Haen
+dans lequel je donne le nom le prénom et
+puis ici la suite de la vidéo et oui ça
+je vous l'avais pas dit mais en fait il
+y a une partie de la vidéo qui est une
+vraie vidéo enregistrée par moi et ce
+qui fait que dans cette vidéo je peux
+faire des gestes je peux faire plein de
+choses et juste une partie de la vidéo
+et générer pas de li pas toute la vidéo
+ce qui fait que les même les gens qui
+auraient un doute vont se dire non mais
+attends il fait trop de Gest dans cette
+vidéo il est pas en train de regarder la
+caméra c'est pas possible que ça soit
+généré para et c'est avec cette
+technique qu'en fait c'est quasiment ind
+indistingable de d'une vraie vidéo et en
+plus de ça on va venir ajouter une ligne
+audessus où on va mettre le texte et
+cetera comment est-ce qu'on fait ça pour
+ça j'ai testé deux outils principalement
+j'en ai testé plusieurs mais il y en a
+deux qui ont retenu mon attention un qui
+est JSON do videoo et l'autre qui est
+creatomate et en fait JSON do videoé
+franchement il est très très cool aussi
+le seul problème avec c'est que moi Jon
+to viéo donc en fait ce qu'on fait hein
+c'est qu'on met du JSON d'un côté et
+derrière ça génère une vidéo c'est top
+ça va assez vite c'est même beaucoup
+plus rapide que l'autre mais je trouvais
+que d'un point de vue édition on pouvait
+que l'éditeur il était assez limité en
+tout cas c'était pas très très user
+friendly et surtout pour un truc que moi
+je veux faire c'était pas possible
+c'estàdire que moi ce que j'aimerais
+faire dans dans cette vidéo c'est à un
+moment donné faire ce petit truc où vous
+voyez il y a le le l'image qui se
+déplace comme ça et en fait ça sur J
+vidéo c'était assez compliqué à faire et
+donc c'est pourquoi je suis parti vers
+creatomate et creatomate c'est un outil
+qui est je trouve un petit peu plus cher
+mais il y a une vraie timeline on va
+pouvoir comme dans Final Cut et cetera
+faire exactement les mouvements qu'on
+veut les transition qu'on veut et cetera
+et une fois qu'on a configuré notre
+template on va pouvoir l'appeler donc
+l'utiliser depuis make donc je vous
+montre moi j'ai plusieurs templates ici
+par exemple ça c'est un un template
+j'utilise hop ici pour pour mes
+formations ça c'est un autre template et
+ça c'est le template final non c'est pas
+celui-là ça c'est le template final que
+j'utilise pour pour cette vidéo donc en
+gros ce qui se passe je vais peut-être
+hop réduire comme ça comme ça vous allez
+voir un petit peu tout ce qu'il y a dans
+la timeline voilà donc ça c'est le
+template de la vidéo en question en gros
+moi dans ce template j'ai plein
+d'éléments et j'ai des éléments qui sont
+eux dynamiques ça veut dire que là là et
+bien je vais devoir ajouter des
+variables depuis mec donc là vous voyez
+il y a les sous-titres il y a la suite
+il y a le média qui est complètement
+dynamique il y a le lien LinkedIn
+derrière il y a le profil Linkedin le
+post LinkedIn et le screenshot bref tout
+ça on va venir remplir ça en live avec
+Make du coup on retourne sur Make et
+c'est ce qui qui nous amène dans la
+deuxième étape là on va attendre de
+recevoir la vidéo sur hejen une fois
+qu'elle sera terminé on va aller
+chercher dans airtable la vidéo avec
+l'ID en question et c'est pour ça qu'on
+avait besoin de l'ID tout à l'heure ici
+dans airtable c'est ça qu'on qu'on va
+qu'on va utiliser et on va venir render
+et template ça veut dire créer la vidéo
+en question et donc là vous voyez je
+mets les informations en question et je
+crée avec le template et je mets à jour
+le airtable avec notamment la vidéo
+custom qui va être ajoutée dans ces
+champs là donc on essaye on va lancer ça
+hop donc là il a récupéré l'élément
+depuistable il est en train de render
+les template et si je vais dans mon
+creatomate ici je vois qu'il y a un
+élément qui est en train d'être rendered
+et donc qui est en train d'être créé
+pendant que ça c'est en train d'avoir
+lieu on va passer à la prochaine étape
+parce qu'il y a un truc qui manquait
+tout à l'heure c'était bah l'étape 2 le
+fait qu'on montre dans le template et
+bien le screenshot du profil Linkedin de
+la personne pour l'instant en fait on a
+un truc par défaut c'est que ici quand
+dans mon template je donne aucune
+information derrière et bien il me met
+un profil par défaut en fait le LinkedIn
+profile là ici c'est un profil par
+défaut mais moi étant donné que je l'ai
+rendu dynamique j'ai envie et bien de
+venir injecter le lien là qu'il y a ici
+j'ai envie de venir injecter ce lien là
+pour que selon la personne à qui je suis
+en train de créer le profil VO voit bien
+son profil Linkedin derrière mais avant
+de vous montrer comment est-ce que je
+vais faire ça je vais essayer de voir si
+l'automatisation est terminée ou pas
+donc là c'est terminé ça veut dire que
+dans creatomate normalement ici dans API
+log j'ai succès vous allez voir ça a
+bien Benjamin fait l'information sauf
+que ça m'a pas mis mon nom enfin ça a
+pas mis le nom de Benjamin ici le profil
+derrière bah c'est toujours pas celui de
+Benjamin et puis même derrière les posts
+c'est le poste de quelqu'un mais pas
+celui de Benjamin en plus il y a pas les
+sous-tites qui apparaissent bref il y a
+des choses qui vont pas et donc c'est ça
+qu'on va venir corriger avec cette étape
+donc pour faire cette étape bah on a
+besoin d'une API qui puisse prendre des
+screenshots des API qui puissent prendre
+des screenshots il y en a plein et j'en
+ai testé plein notamment une qui est API
+flash que j'ai que j'ai utilisé et très
+honnêtement elle est très cool donc
+c'est API flash chacune de ces API ont
+toujours des crédits gratuits et cetera
+la manière dont ça fonctionne c'est
+qu'on va venir donner le lien du site
+dont on veut prendre le screenshot on va
+donner des informations sur le viewport
+donc çaà dire quelle est la longueur la
+largeur et cetera et derrière lui il va
+tout simplement nous donner le
+screenshot il y en a plein le problème
+avec ça c'est que aucune de ces API ne
+fait des vidéos personne personne fait
+des vidéos de moi en train de scroller
+et moi je voulais absolument que ça se
+fasse pour plusieurs raisons c'est que
+le fait de voir son screenshot derrière
+c'est une chose mais le fait de voir la
+vidéo c'est une autre moi le résultat
+voulais c'était ça c'est que la vidéo
+derrière Vienne se scroller pour que la
+personne se dise attends en fait pendant
+qu'il est en train de me parler il est
+en train de scroller en fait derrière et
+ce Tru j'ai galéré et en fait résultat
+j'ai pas trouvé j'ai dû créer une espèce
+d'apay maison moi-même en utilisant chat
+GPT cursor et cetera pour qu'elle me
+donne à la fois des screenshots et à la
+fois des vidéos donc elle me permet de
+faire des screenshots et des vidéos et
+donc c'est après que j'ai réussi à voir
+ça et donc ça qu'est-ce que ça donne
+donc ça c'est mon automatisation tout à
+l'heure et donc là avant de faire le
+create Omage je vais venir prendre les
+screenshots j'ai besoin de deux
+screenshots un screenshot du profil et
+un screenshot des posts et donc là vous
+voyez j'appelle API flash et cetera sauf
+que ça ça m'allait pas et du coup je
+suis passé à ma propre version où j'ai
+le screenshot le profil en train de
+scroller et le poste en train de
+scroller j'ai utilisé ma propre API et
+du coup à chaque fois je balance le lien
+LinkedIn ici reçu derrière dans
+creatomate vous allez voir du coup que
+j'utilise le bon template et je remplis
+bien les euh et les cases que m'avait
+demandé ici creatomate dans mon propre
+template c'estàdire que je vais à la
+fois fournir le name la vidéo custom
+généré par heyen le profil le poste et
+cetera et donc ça va me donner ça je
+vais venir peupler en fait les
+informations dedans et là je fais Save
+et là on passe maintenant à la dernière
+étape qui est l'étape où on va envoyer
+la vidéo générée en fait à la personne
+sur Linkedin comment est-ce qu'on fait
+ça alors déjà LinkedIn normalement nous
+permet pas de faire ça et là j'ai trouvé
+une pépite de dingue très honnêtement je
+savais pas que ça existait c'est unipile
+unipile c'est un espèce d'agrégateur
+d'API pour pouvoir envoyer des messages
+mais pas uniquement sur Linkedin sur
+insta sur WhatsApp WhatsApp qui est très
+très compliqué à configurer et bien eux
+ils peuvent le faire c'est juste dingue
+vous avez d'ailleurs là aussi un lien si
+jamais ça vous intéresse mais moi un
+truc qui m'avait étonné c'est dans
+LinkedIn la capacité à envoyer des
+vidéos la capacité à envoyer des vidéos
+pour que ça fasse quelque chose comme ça
+en fait quand on va ici dans dans
+message dans messagerie en fait que le
+le fait que la vidéo apparaisse avec la
+prévisualisation et ça j'ai réussi à le
+faire sur unipile j'ai assez galéré mais
+j'y suis arrivé et en fait ça du coup
+cette API va me permettre de faire ce
+truc et heureusement parce que sans ça
+j'aurais pas réussi à leur envoyer le
+truc sur Ling et donc là on va voir à
+quoi ressemble l'automatisation finale
+mais avant ça si jamais vous êtes en
+train d'apprendre des choses dans cette
+vidéo n'hésitez pas à mettre un petit
+like les amis ça m'aide beaucoup donc si
+jamais ça vous intéresse que je continue
+n'hésitez pas à également vous abonner
+je reviens ici j'ai Agen qui va attendre
+une nouvelle vidéo il va aller chercher
+sur airtable la vidéo en question en
+tout cas le profil en question il va
+venir prendre le screenshot le profile
+scroll et le post scroll donc scroller
+sur les différents liens que je lui ai
+donné ici donc là il y en a que
+quelques-uns il y a le lien du profil et
+le lien des posts euh donc en fait là
+c'est juste une formule que j'ai faite
+ici pour avoir les posts parce que c'est
+toujours la même URL pour les postes une
+fois que j'ai pris tous les screenshots
+je vais venir faire le montage
+automatique avec romate mettre ça à jour
+et enfin envoyer avec unipile et là vous
+allez voir ce que ça va donner quand on
+va lancer toute la machine là ce que je
+vais faire dans le truc initial c'est
+que là je vais pas me limiter à deux je
+vais faire ça pour 10 comme ça on aura
+tout le monde ça va venir créer des
+éléments sur hen à chaque fois je vais
+venir supprimer ça comme ça vous allez
+voir ça va venir créer pour chacune de
+ces personnes et bien la vidéo ça va
+venir le mettre cette vidéo finale et la
+vidéo custom ici et ça va venir à chaque
+fois leur envoyer sur Linkedin vous êtes
+prêt c'est parti donc je lance ça là
+c'est en train normalement de mettre à
+jour les Haen ID à chaque fois ici sur
+hen c'est en train normalement de créer
+voilà parapays pour tout le monde c'est
+en train de faire les vidéos parapays
+ici ce que je vais faire c'est je vais
+lancer ça et pendant que c'est en train
+d'attendre je vous parler un peu du prix
+parce qu'évidemment tout ça c'est pas
+gratuit bon make moi c'est un abonnement
+que j'ai parce que j'ai plus d'une
+soixantaine d'automatisation qui tourne
+heyen pour avoir la version API c'est je
+crois 50 ou non c'est 100 € par mois
+vous pouvez le prendre juste le moment
+où vous en avez besoin ça ben je l'ai
+fait maison mais sinon ça coûte pas très
+cher du coup c'est c'est quelques
+dizaines d'euros si vous prenez beaucoup
+de screenshot creatomate je crois que
+c'est 50 pareil par mois quelque chose
+comme ça et unipile là aussi je crois
+que c'est un abonnement à une trentaine
+d'euros mais très honnêtement par
+rapport à ce que j'ai réussi à faire les
+€ que j'ai mis dedans je m'en fous parce
+qu'en fait si je suis une agence et que
+je fais de la prospection c'est très
+vite rentabilisé ah oui et là ce que
+c'est en train de me faire d'ailleurs
+c'est que vu que j'ai fait l'outil
+maison il est en train de tourner sur
+mon ordi donc vous voyez là j'ai les
+mains ici et en fait il va venir
+scroller et pendant ce temps-là il est
+en train de prendre la vidéo en fait de
+cet écran ce qui est juste dingue et il
+va se fermer et pendant ce temps-là vous
+voyez là le make continue et il va
+maintenant aller regarder les activités
+de ravier et il va venir scroller bref
+c'est c'est juste je reviens à ce que
+j'étais en train de dire c'est
+grossièrement si je suis une agence si
+je suis même un sas ou si je suis
+quelqu'un qui fait de l'onboarding
+client comme moi je l'utilise et bien
+c'est très facilement on va dire
+rentabilisé et dernier élément que je
+voulais vous dire c'était que si jamais
+ça vous intéresse de faire ça pour vous
+je vous mets un petit lien en fait c'est
+une liste d'attente un peu comme ce que
+j'avais fait pour inbox zé je vais
+prendre un certain nombre de clients
+chez qui je vais l'implémenter ce truc-
+donc si jamais ça ça vous intéresse
+n'hésitez pas à à remplir le petit
+formulaire ou à me dire en commentaires
+les choses que vous avez pas compris et
+peut-être que je pourrais faire une v2
+de cette vidéo pour pour que vous
+compreniez un peu mieux pendant que
+cette vidéo là est en train d'être
+générée sur cré etom du coup je vous
+incite aussi à potentiellement si vous
+voulez aller plus loin sur Make et ben
+d'aller regarder ma formation sur Make
+dans lesquel on aborde plein de points
+hyper spécifiques sur Make elle est
+quelque part aussi en description bref
+j'en ai marre de meubler donc on va
+aller regarder dans ma messagerie s'il y
+a des vidéos qui ont été envoyées et là
+on regarde hop hop il y a une vidéo qui
+a été envoyée il y a une vidéo qui a été
+envoyée il y a une c'est juste dingue
+bref si cette vidéo vous a plu jeis
+certain que celle-là va vous plaire dans
+lequelle j'automatise ma boîte mail ou
+alors c'est celle-là dans laquelle je
+parle de toutes les automatisations que
+j'ai dans ma boîte quant à moi je vous
+dis à très vite pour une nouvelle vidéo
+ciao ciao

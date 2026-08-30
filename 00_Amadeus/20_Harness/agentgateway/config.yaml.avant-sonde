@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=https://agentgateway.dev/schema/config
+#
+# GENERE PAR build_config.py — ne pas editer a la main.
+# Source : mcp_sources.json — editer LA, jamais ce fichier-ci.
+# 19 serveurs MCP agreges derriere un seul endpoint.
+
+binds:
+  - port: 3300
+    listeners:
+      - routes:
+          - backends:
+              - mcp:
+                  targets:
+                    - name: "ade-bridge"
+                      stdio:
+                        cmd: "C:/Python314/python.exe"
+                        args:
+                          - "C:/Users/amado/ade-bridge/mcp_vscode_agent.py"
+                    - name: "airtable"
+                      stdio:
+                        cmd: "airtable-mcp-server.cmd"
+                        env:
+                          AIRTABLE_API_KEY: "patxieFn45M3luYWb.82059afafb3cb81008618a7c43e754f5d06f31a70df7a175518b329316076f41"
+                          AIRTABLE_TOKEN: "patxieFn45M3luYWb.82059afafb3cb81008618a7c43e754f5d06f31a70df7a175518b329316076f41"
+                          AIRTABLE_PAT: "pathRubST1d3zeEHX.a8fbddbfbf88774cf175f040ad7d1e0fa5b8ef85a6ff42ee323370fe0795fb6c"
+                    - name: "chrome-devtools"
+                      stdio:
+                        cmd: "chrome-devtools-mcp.cmd"
+                        args:
+                          - "--no-usage-statistics"
+                          - "--no-performance-crux"
+                        env:
+                          CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS: "1"
+                    - name: "clara-voice"
+                      stdio:
+                        cmd: "node"
+                        args:
+                          - "C:/Users/amado/.clara-voice/mcp/standalone.js"
+                    - name: "clickup"
+                      stdio:
+                        cmd: "clickup-mcp-server.cmd"
+                        env:
+                          CLICKUP_API_TOKEN: "pk_50111322_AJFMK8ZSQ9W7GUVCX78HTR50WWC9JQXI"
+                          CLICKUP_API_KEY: "pk_50111322_AJFMK8ZSQ9W7GUVCX78HTR50WWC9JQXI"
+                          CLICKUP_WORKSPACE_ID: "90141225938"
+                    - name: "context7"
+                      stdio:
+                        cmd: "context7-mcp.cmd"
+                    - name: "desktop-commander"
+                      stdio:
+                        cmd: "C:/Users/amado/AppData/Roaming/npm/desktop-commander.cmd"
+                    - name: "github"
+                      stdio:
+                        cmd: "npx"
+                        args:
+                          - "-y"
+                          - "@modelcontextprotocol/server-github@2025.4.8"
+                        env:
+                          GITHUB_PERSONAL_ACCESS_TOKEN: "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"
+                    - name: "hostinger-dns"
+                      stdio:
+                        cmd: "hostinger-dns-mcp.cmd"
+                        env:
+                          HOSTINGER_API_TOKEN: "Cmj9iJHG1AhMRz89DAgRK86isSE4CIV25ZV1tQog1bc60fc0"
+                    - name: "knowledge"
+                      stdio:
+                        cmd: "node"
+                        args:
+                          - "C:/Users/amado/TencentDB-Agent-Memory/MemoryKnowledge/start-mcp-windows.mjs"
+                        env:
+                          KNOWLEDGE_API_URL: "http://127.0.0.1:8421"
+                          KNOWLEDGE_SERVICE_ID: "cc-default"
+                    - name: "notion"
+                      stdio:
+                        cmd: "notion-mcp-server.cmd"
+                        env:
+                          OPENAPI_MCP_HEADERS: "{\"Authorization\":\"Bearer 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\",\"Notion-Version\":\"2022-06-28\"}"
+                    - name: "playwright"
+                      stdio:
+                        cmd: "playwright-mcp.cmd"
+                    - name: "shadcn"
+                      stdio:
+                        cmd: "npx.cmd"
+                        args:
+                          - "-y"
+                          - "shadcn@latest"
+                          - "mcp"
+                    - name: "supabase"
+                      stdio:
+                        cmd: "mcp-server-supabase.cmd"
+                        env:
+                          SUPABASE_ACCESS_TOKEN: "sbp_02db5fc8263c6787b306df02263aa1525e1dbb53"
+                    - name: "supabase-abc"
+                      stdio:
+                        cmd: "mcp-server-supabase.cmd"
+                        env:
+                          SUPABASE_ACCESS_TOKEN: "sbp_4121633effda50bfc25133e9b2eeda0860deb6ac"
+                    - name: "supabase-omk"
+                      stdio:
+                        cmd: "mcp-server-supabase.cmd"
+                        env:
+                          SUPABASE_ACCESS_TOKEN: "sbp_f2af0f7154b6ee0975ae006026b0b9eafe345438"
+                    - name: "vercel"
+                      stdio:
+                        cmd: "vercel-mcp-pro.cmd"
+                        env:
+                          VERCEL_TOKEN: "vcp_8BQJfQroIhdNcux3qsQJ1HXF2DX6dU89mEFi8qSTy29bfRAuXZ0DHWS3"
+                          VERCEL_TEAM_ID: "team_d3JjRK4fJUE9ACohbdlhv9Gc"
+                    - name: "vercel-abc"
+                      stdio:
+                        cmd: "vercel-mcp-pro.cmd"
+                        env:
+                          VERCEL_TOKEN: "vcp_4cyscQ8Ct7sNkHGAarhLML7xYaxASTnGyCyW3Hd3TthNlllN7R3NIFR2"
+                          VERCEL_TEAM_ID: "team_728Ds6fT5EPXWzYv1yP0T8W8"
+                    - name: "vercel-omk"
+                      stdio:
+                        cmd: "vercel-mcp-pro.cmd"
+                        env:
+                          VERCEL_TOKEN: "vcp_4z4bnWEcgJfWaIxA73OqAyqNplfVi1uBevxlreKmPmNojeAiqf3RlNHx"
+                          VERCEL_TEAM_ID: "team_FORMiTgW9YGd3JDRTaoaediq"

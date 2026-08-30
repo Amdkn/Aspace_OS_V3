@@ -1,0 +1,579 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.360 --> 00:00:04.120
+please welcome AIP lead at palen here Jack
+
+00:00:04.120 --> 00:00:16.880
+Dobson hello welcome to AIP con I'm Jack&nbsp;
+Dobson AIP lead at palente and today I'm&nbsp;&nbsp;
+
+00:00:16.880 --> 00:00:22.680
+excited to be presenting to you the next&nbsp;
+generation of AIP and how it's transforming&nbsp;&nbsp;
+
+00:00:22.680 --> 00:00:30.120
+end to-end operations for our customers every&nbsp;
+pented deployment exists to drive operational&nbsp;&nbsp;
+
+00:00:30.120 --> 00:00:36.720
+outcomes against our customers core Mission and&nbsp;
+the critical role that they play in the world from&nbsp;&nbsp;
+
+00:00:36.720 --> 00:00:43.080
+the factory floor to the hospital Ward and from&nbsp;
+the battlefield to the boardroom that requires&nbsp;&nbsp;
+
+00:00:43.080 --> 00:00:50.280
+an unwavering focus on empowering the operator at&nbsp;
+the front line explicitly moving beyond analysis&nbsp;&nbsp;
+
+00:00:50.280 --> 00:00:57.320
+and insight and instead owning the outcome of&nbsp;
+every decision the Relentless pursuit of this&nbsp;&nbsp;
+
+00:00:57.320 --> 00:01:03.640
+across our customers continues to expose where&nbsp;
+the traditional software Playbook falls short&nbsp;&nbsp;
+
+00:01:03.640 --> 00:01:10.480
+the market is saturated with light unopinionated&nbsp;
+tooling thin wrappers on existing process that&nbsp;&nbsp;
+
+00:01:10.480 --> 00:01:17.520
+provide Insight without action all forcing the&nbsp;
+buyer to conform their business to the constraints&nbsp;&nbsp;
+
+00:01:17.520 --> 00:01:23.440
+of their software AI Solutions have only further&nbsp;
+cluttered the landscape with everything from&nbsp;&nbsp;
+
+00:01:23.440 --> 00:01:30.160
+surface level chatbots to llm infr Solutions all&nbsp;
+competing for their place in the architecture&nbsp;&nbsp;
+
+00:01:30.160 --> 00:01:37.920
+diagram without any of them truly closing the&nbsp;
+loop to decisions that impact the business pentes&nbsp;&nbsp;
+
+00:01:37.920 --> 00:01:43.640
+customers sit at the bleeding edge they operate&nbsp;
+in some of the most Mission critical sensitive&nbsp;&nbsp;
+
+00:01:43.640 --> 00:01:51.480
+and competitive environments they therefore demand&nbsp;
+more from the systems on which they build and run&nbsp;&nbsp;
+
+00:01:51.480 --> 00:01:59.320
+their operations this ambition requires building&nbsp;
+not just point Solutions or a set of use cases&nbsp;&nbsp;
+
+00:01:59.320 --> 00:02:06.400
+but instead a connected operating system for the&nbsp;
+Enterprise let's look at this from the perspective&nbsp;&nbsp;
+
+00:02:06.400 --> 00:02:13.840
+of one company a notional organization called Onyx&nbsp;
+Incorporated which represents the culmination of&nbsp;&nbsp;
+
+00:02:13.840 --> 00:02:21.280
+hundreds of production AIP deployments globally&nbsp;
+this notional Enterprise is a global Healthcare&nbsp;&nbsp;
+
+00:02:21.280 --> 00:02:29.320
+manufacturer and distributor onyx's operations&nbsp;
+are run on palen with ontology as the connective&nbsp;&nbsp;
+
+00:02:29.320 --> 00:02:37.320
+tissue across all Enterprise context operational&nbsp;
+logic and decisionmaking this enables workflows&nbsp;&nbsp;
+
+00:02:37.320 --> 00:02:43.600
+that are incredibly rich and detailed integrating&nbsp;
+down to the sensor level of every machine and the&nbsp;&nbsp;
+
+00:02:43.600 --> 00:02:50.760
+raw materials behind every product this Foundation&nbsp;
+is intrinsically cross domain every function of&nbsp;&nbsp;
+
+00:02:50.760 --> 00:02:59.320
+the business operating on the same ground truth&nbsp;
+enabling chained optimization like never before&nbsp;&nbsp;
+
+00:02:59.320 --> 00:03:05.360
+most critical basically this Rich connected&nbsp;
+ontology serves as a foundation for a new&nbsp;&nbsp;
+
+00:03:05.360 --> 00:03:11.560
+approach to decision making core functions of&nbsp;
+the business are now agent driven with human&nbsp;&nbsp;
+
+00:03:11.560 --> 00:03:19.000
+operators refocused to only the most critical&nbsp;
+complex and valuable of actions requiring their&nbsp;&nbsp;
+
+00:03:19.000 --> 00:03:27.040
+involvement these agent-driven workflows span the&nbsp;
+interconnected operations of Onyx Incorporated so&nbsp;&nbsp;
+
+00:03:27.040 --> 00:03:33.840
+let's dive into one of these workflows in more&nbsp;
+detail starting with order fulfillment this is&nbsp;&nbsp;
+
+00:03:33.840 --> 00:03:38.920
+our inventory manager here I can monitor the&nbsp;
+movement of every customer order through the&nbsp;&nbsp;
+
+00:03:38.920 --> 00:03:45.480
+automated flow that takes orders through every&nbsp;
+core stage of fulfillment from initial review&nbsp;&nbsp;
+
+00:03:45.480 --> 00:03:50.920
+of the incoming order including attachments&nbsp;
+comments and Communications from the customer&nbsp;&nbsp;
+
+00:03:50.920 --> 00:03:57.880
+to allocation of inventory to every order and then&nbsp;
+assigning of those orders to shipments optimizing&nbsp;&nbsp;
+
+00:03:57.880 --> 00:04:05.600
+for ontime delivery and minimizing shipment costs&nbsp;
+my automations are set up in a way that every new&nbsp;&nbsp;
+
+00:04:05.600 --> 00:04:11.600
+order is worked on in parallel allowing hundreds&nbsp;
+if not thousands of orders to be processed every&nbsp;&nbsp;
+
+00:04:11.600 --> 00:04:20.400
+minute this human AI teeming is made possible by a&nbsp;
+core principle of AIP that every primitive of the&nbsp;&nbsp;
+
+00:04:20.400 --> 00:04:28.280
+ontology can be leveraged by both human operators&nbsp;
+and AI agents jumping under the hood of this&nbsp;&nbsp;
+
+00:04:28.280 --> 00:04:34.160
+workflow we see the circuitry of the ontology that&nbsp;
+connects the context of my Enterprise the logic&nbsp;&nbsp;
+
+00:04:34.160 --> 00:04:40.440
+of my business processes and the actions that&nbsp;
+enact decisions these are the building blocks&nbsp;&nbsp;
+
+00:04:40.440 --> 00:04:46.040
+of my Enterprise operating system with every&nbsp;
+one of those building blocks a common interface&nbsp;&nbsp;
+
+00:04:46.040 --> 00:04:52.840
+between human users and AI agents zooming in even&nbsp;
+further we see how this operational layer is the&nbsp;&nbsp;
+
+00:04:52.840 --> 00:04:59.960
+culmination of all existing components and systems&nbsp;
+across my Enterprise wherever data and logic&nbsp;&nbsp;
+
+00:04:59.960 --> 00:05:07.400
+sit in whatever form storage or compute aip's&nbsp;
+multimodal data plane enables us to ingest or&nbsp;&nbsp;
+
+00:05:07.400 --> 00:05:13.680
+virtualize it into the ontology as well as right&nbsp;
+back to the systems of action that need to be&nbsp;&nbsp;
+
+00:05:13.680 --> 00:05:20.800
+orchestrated to enact operator decisions this is&nbsp;
+the core of palente platform enabling the building&nbsp;&nbsp;
+
+00:05:20.800 --> 00:05:27.120
+of an ontology to drive decisionmaking at the&nbsp;
+front line agnostic to the architecture that sits&nbsp;&nbsp;
+
+00:05:27.120 --> 00:05:36.800
+beneath it whilst maintaining granular control of&nbsp;
+permissions data health and change management so&nbsp;&nbsp;
+
+00:05:36.800 --> 00:05:43.680
+how does this ontology Drive agent automation at&nbsp;
+Onyx well let's look at one of the agents involved&nbsp;&nbsp;
+
+00:05:43.680 --> 00:05:50.080
+in this process to see that in action this is AIP&nbsp;
+logic an application for building evaluating and&nbsp;&nbsp;
+
+00:05:50.080 --> 00:05:57.160
+deploying agents all built with the same building&nbsp;
+blocks of the ontology logic allows me to serve&nbsp;&nbsp;
+
+00:05:57.160 --> 00:06:03.880
+these Primitives to llms of my choice as tools&nbsp;
+allowing us to automate the manual repetitive&nbsp;&nbsp;
+
+00:06:03.880 --> 00:06:11.600
+workflows that draw my operator's time from the&nbsp;
+actions uniquely requiring their expertise this&nbsp;&nbsp;
+
+00:06:11.600 --> 00:06:17.400
+involves combining multiple llm blocks providing&nbsp;
+llm of my choosing with the instructions the&nbsp;&nbsp;
+
+00:06:17.400 --> 00:06:24.680
+context and the tools to drive decisions across&nbsp;
+my ontology object query tools allow my agents&nbsp;&nbsp;
+
+00:06:24.680 --> 00:06:30.280
+to reach out to specific parts of my ontology&nbsp;
+to retrieve context relevant to their inputs&nbsp;&nbsp;
+
+00:06:30.280 --> 00:06:35.680
+and the tasks that they're carrying out we also&nbsp;
+provide action tools the very same actions that&nbsp;&nbsp;
+
+00:06:35.680 --> 00:06:41.760
+a human operator would use to enact cisions logic&nbsp;
+allows me to give those same actions to the llm&nbsp;&nbsp;
+
+00:06:41.760 --> 00:06:48.960
+to use without any additional configuration&nbsp;
+required to ready these tools for AI as we&nbsp;&nbsp;
+
+00:06:48.960 --> 00:06:53.840
+further explore this inventory allocation agent&nbsp;
+we see how these tools allow the agent to query&nbsp;&nbsp;
+
+00:06:53.840 --> 00:06:59.960
+real-time inventory levels and even unstructured&nbsp;
+documentation to identify relevant procedures&nbsp;&nbsp;
+
+00:06:59.960 --> 00:07:07.480
+and Sops and our agents are built to reason and&nbsp;
+solution adverse situations based on the logic&nbsp;&nbsp;
+
+00:07:07.480 --> 00:07:14.480
+that I encode for example this agent has some&nbsp;
+options for dealing with inventory shortages in&nbsp;&nbsp;
+
+00:07:14.480 --> 00:07:20.440
+this case the agent has access to a function tool&nbsp;
+to run an inventory reallocation model this will&nbsp;&nbsp;
+
+00:07:20.440 --> 00:07:25.720
+scenario Model A movement of inventory from one&nbsp;
+Distribution Center to another to see if there&nbsp;&nbsp;
+
+00:07:25.720 --> 00:07:32.000
+will be any adverse Downstream effects based&nbsp;
+on my order back log and my sales forecasts we&nbsp;&nbsp;
+
+00:07:32.000 --> 00:07:36.760
+can also provide our agent with our product&nbsp;
+documentation to determine whether a skew&nbsp;&nbsp;
+
+00:07:36.760 --> 00:07:44.280
+substitution is possible to alleviate a shortage&nbsp;
+what can and can't be automated can be controlled&nbsp;&nbsp;
+
+00:07:44.280 --> 00:07:49.800
+granularly at the logic level but then also&nbsp;
+part of the automation that defines when this&nbsp;&nbsp;
+
+00:07:49.800 --> 00:07:56.200
+agent is triggered this automation provides me&nbsp;
+with the controls over agent trigger criteria&nbsp;&nbsp;
+
+00:07:56.200 --> 00:08:03.040
+as well as whether edits to the ontology can&nbsp;
+be made or autonomously by the automation I&nbsp;&nbsp;
+
+00:08:03.040 --> 00:08:09.320
+also have control over Dynamic retries and other&nbsp;
+safety nets to ensure maximum reliability of my&nbsp;&nbsp;
+
+00:08:09.320 --> 00:08:17.120
+in production agents with these granular controls&nbsp;
+AI automation becomes a dial that I can tune up or&nbsp;&nbsp;
+
+00:08:17.120 --> 00:08:23.920
+down depending on the maturity and the impact&nbsp;
+of my workflow speaking of impr production as&nbsp;&nbsp;
+
+00:08:23.920 --> 00:08:30.240
+we increase the breadth and depth of automation&nbsp;
+across the Enterprise it's critical to maintain&nbsp;&nbsp;
+
+00:08:30.240 --> 00:08:37.880
+visibility of how my agents are performing&nbsp;
+for this we have AIP evals evals allow me to&nbsp;&nbsp;
+
+00:08:37.880 --> 00:08:43.440
+set up any number of test cases and evaluators&nbsp;
+against my logic everything from checking for&nbsp;&nbsp;
+
+00:08:43.440 --> 00:08:50.160
+specific outputs to rubric graders where I can&nbsp;
+use another llm as a judge to evaluate my logic&nbsp;&nbsp;
+
+00:08:50.160 --> 00:08:56.240
+against a defined criteria and since changing&nbsp;
+llms is as simple as a dropdown I can very&nbsp;&nbsp;
+
+00:08:56.240 --> 00:09:05.600
+quickly run tests to see what combination of LMS&nbsp;
+is optimal for each individual agent so we've seen&nbsp;&nbsp;
+
+00:09:05.600 --> 00:09:12.920
+how agents have built tested and deployed let's&nbsp;
+Zoom back out to our inventory manager workflow&nbsp;&nbsp;
+
+00:09:12.920 --> 00:09:20.760
+to see how this enables my operators to work in&nbsp;
+collaboration with my agents we can see all of&nbsp;&nbsp;
+
+00:09:20.760 --> 00:09:25.400
+those customer orders have now been processed&nbsp;
+with the majority being fulfilled autonomously&nbsp;&nbsp;
+
+00:09:25.400 --> 00:09:33.600
+by my network of Agents but a subset have been&nbsp;
+flaged for user action jumping in as the operator&nbsp;&nbsp;
+
+00:09:33.600 --> 00:09:40.080
+I now have a full action log handled by the agent&nbsp;
+I can see what data was accessed what tools were&nbsp;&nbsp;
+
+00:09:40.080 --> 00:09:46.760
+used and how that all contributed to the agent's&nbsp;
+final decision this becomes valuable context as I&nbsp;&nbsp;
+
+00:09:46.760 --> 00:09:54.040
+pick up where the agent left off and take the&nbsp;
+required actions to move this order forward I&nbsp;&nbsp;
+
+00:09:54.040 --> 00:10:01.320
+now have a bespoke view in order to review an&nbsp;
+action on the ERS being flagged by my agents I&nbsp;&nbsp;
+
+00:10:01.320 --> 00:10:07.920
+can review agent proposals mitigating the need&nbsp;
+for me to manually run through scenarios myself&nbsp;&nbsp;
+
+00:10:07.920 --> 00:10:16.120
+and instead I can just review edit and feedback on&nbsp;
+these proposed actions as needed and as the user&nbsp;&nbsp;
+
+00:10:16.120 --> 00:10:21.960
+I can approve this recommendation to enact the&nbsp;
+proposed actions and get this customer order back&nbsp;&nbsp;
+
+00:10:21.960 --> 00:10:28.560
+in the agent orchestrated flow my actions are set&nbsp;
+up to write back to my source systems my MRP my&nbsp;&nbsp;
+
+00:10:28.560 --> 00:10:35.000
+production schedule and all relevant scenarios&nbsp;
+keeping everything in sync for our customers&nbsp;&nbsp;
+
+00:10:35.000 --> 00:10:42.840
+building with warp speed this is transforming how&nbsp;
+they respond to rapidly changing supply and demand&nbsp;&nbsp;
+
+00:10:42.840 --> 00:10:49.320
+and this decision doesn't just become exhaust Into&nbsp;
+The Ether every response to an agent proposal is&nbsp;&nbsp;
+
+00:10:49.320 --> 00:10:55.120
+captured in the ontology as shown previously the&nbsp;
+same tools available to my agent to propose this&nbsp;&nbsp;
+
+00:10:55.120 --> 00:11:01.880
+action are available to me as the operator to&nbsp;
+take alternative action as I see fit including&nbsp;&nbsp;
+
+00:11:01.880 --> 00:11:09.120
+triggering new purchase orders or alternative&nbsp;
+allocations of inventory and I can also add&nbsp;&nbsp;
+
+00:11:09.120 --> 00:11:15.000
+commentary on the agent specific working to call&nbsp;
+out errors or maybe even add missing context that&nbsp;&nbsp;
+
+00:11:15.000 --> 00:11:21.120
+may have materially impacted the decision here I'm&nbsp;
+contributing back to the ontology in a way that&nbsp;&nbsp;
+
+00:11:21.120 --> 00:11:29.240
+informs a feedback loop for this workflow based on&nbsp;
+context that may not currently exist in any system&nbsp;&nbsp;
+
+00:11:30.120 --> 00:11:35.880
+this tribal knowledge capture is now happening&nbsp;
+continually across all workflows all of the&nbsp;&nbsp;
+
+00:11:35.880 --> 00:11:41.760
+context the experience and the logic being&nbsp;
+incorporated into decisions that lives only&nbsp;&nbsp;
+
+00:11:41.760 --> 00:11:47.240
+in the minds of your operators you can now manage&nbsp;
+it as a workflow not only tracking and reviewing&nbsp;&nbsp;
+
+00:11:47.240 --> 00:11:54.920
+this context but deploying it back into your&nbsp;
+workflows as a governed feedback loop so this&nbsp;&nbsp;
+
+00:11:54.920 --> 00:12:01.720
+process has been redefined around human AI teaming&nbsp;
+our operators working collaboratively with our AI&nbsp;&nbsp;
+
+00:12:01.720 --> 00:12:08.720
+agents with actions and their outcomes continually&nbsp;
+enriching the Enterprise context captured in the&nbsp;&nbsp;
+
+00:12:08.720 --> 00:12:15.360
+ontology zooming out further we see this as&nbsp;
+just a subset of the overall process we see&nbsp;&nbsp;
+
+00:12:15.360 --> 00:12:20.680
+that every state change of the order fulfillment&nbsp;
+process is not only tracked in the platform but&nbsp;&nbsp;
+
+00:12:20.680 --> 00:12:27.440
+also augmented by AI agent automations as we&nbsp;
+start chaining these agents together you're&nbsp;&nbsp;
+
+00:12:27.440 --> 00:12:35.240
+establishing a limitlessly scalable AI labor that&nbsp;
+can operate autonomously alongside other users&nbsp;&nbsp;
+
+00:12:35.240 --> 00:12:42.440
+this becomes the foundations of the kinetics of my&nbsp;
+business and this AI labor isn't just reactive to&nbsp;&nbsp;
+
+00:12:42.440 --> 00:12:49.640
+triggers my agents can also proactively monitor&nbsp;
+my assets to get ahead of potential risks to&nbsp;&nbsp;
+
+00:12:49.640 --> 00:12:56.080
+my operations looking Upstream of fulfillment&nbsp;
+now to manufacturing our maintenance workflow&nbsp;&nbsp;
+
+00:12:56.080 --> 00:13:03.000
+centers around equipment failure risks generating&nbsp;
+by an ml model running against live Telemetry from&nbsp;&nbsp;
+
+00:13:03.000 --> 00:13:08.920
+our production Machinery we then have a similar&nbsp;
+chained agent process as we saw in the previous&nbsp;&nbsp;
+
+00:13:08.920 --> 00:13:14.240
+workflow but of course this one with brand new&nbsp;
+agents specialized for getting ahead of this&nbsp;&nbsp;
+
+00:13:14.240 --> 00:13:21.520
+event and preventing downtime our first agent is&nbsp;
+regularly running this failure risk model against&nbsp;&nbsp;
+
+00:13:21.520 --> 00:13:27.400
+all machines on all production lines globally this&nbsp;
+model will take in realtime Telemetry from the&nbsp;&nbsp;
+
+00:13:27.400 --> 00:13:34.320
+machine which we have flowing into the ontology&nbsp;
+and run anomaly detection to identify the risk of&nbsp;&nbsp;
+
+00:13:34.320 --> 00:13:42.040
+imminent failure this agent then chains multiple&nbsp;
+Downstream models to contextualize and prioritize&nbsp;&nbsp;
+
+00:13:42.040 --> 00:13:47.640
+this risk including calculating the maintenance&nbsp;
+cost to repair the machine and the revenue loss if&nbsp;&nbsp;
+
+00:13:47.640 --> 00:13:54.440
+the production line goes down these are powerful&nbsp;
+models brought to the business by the ontology and&nbsp;&nbsp;
+
+00:13:54.440 --> 00:14:03.760
+democratized to both human operators and AI agents&nbsp;
+these agent identified failure risks then trigger&nbsp;&nbsp;
+
+00:14:03.760 --> 00:14:09.800
+a dedicated agent chain for the process including&nbsp;
+identifying a recommended solution for every alert&nbsp;&nbsp;
+
+00:14:09.800 --> 00:14:16.200
+based on documentation historic maintenance and&nbsp;
+of course our Enterprise feedback loop then we&nbsp;&nbsp;
+
+00:14:16.200 --> 00:14:22.400
+have Dynamic scheduling for the maintenance to go&nbsp;
+to an optimal technician based on skill set and&nbsp;&nbsp;
+
+00:14:22.400 --> 00:14:29.240
+availability all of this dynamically prioritized&nbsp;
+based on that calculated dollar risk of&nbsp;&nbsp;
+
+00:14:29.240 --> 00:14:35.520
+the downtime the result of this chained agent flow&nbsp;
+well now my technicians have their own dedicated&nbsp;&nbsp;
+
+00:14:35.520 --> 00:14:41.800
+work cues geared towards providing operators with&nbsp;
+all the context and the guidance to interpret and&nbsp;&nbsp;
+
+00:14:41.800 --> 00:14:49.040
+action on issues quickly every machine is entirely&nbsp;
+ontologized meaning each alert is tied to the&nbsp;&nbsp;
+
+00:14:49.040 --> 00:14:55.640
+specific component I need to repair or replace&nbsp;
+to prevent this predicted downtime leveraging&nbsp;&nbsp;
+
+00:14:55.640 --> 00:15:01.720
+all of the context of the component's position in&nbsp;
+the machine it's a Associated sensor data and of&nbsp;&nbsp;
+
+00:15:01.720 --> 00:15:08.560
+course our maintenance history and then finally we&nbsp;
+again have that opportunity to capture context and&nbsp;&nbsp;
+
+00:15:08.560 --> 00:15:13.960
+the outcome of this maintenance action from the&nbsp;
+field contributing back to our feedback loop and&nbsp;&nbsp;
+
+00:15:13.960 --> 00:15:20.920
+leveling up this workflow with every work order&nbsp;
+yet another workflow building on and contributing&nbsp;&nbsp;
+
+00:15:20.920 --> 00:15:28.960
+back to our Enterprise operating system spanning&nbsp;
+the full value chain of Onyx Incorporated&nbsp;&nbsp;
+
+00:15:29.520 --> 00:15:37.200
+so to conclude the ontology enables a connected&nbsp;
+operating system required by these institutions&nbsp;&nbsp;
+
+00:15:37.200 --> 00:15:43.200
+operating at the bleeding edge it serves as&nbsp;
+a common interface for both humans and AI&nbsp;&nbsp;
+
+00:15:43.200 --> 00:15:50.280
+agents across all types of applications enabling&nbsp;
+Enterprises to steadily and smoothly increase AI&nbsp;&nbsp;
+
+00:15:50.280 --> 00:15:56.200
+driven automation redefining the operations&nbsp;
+of the business as the world evolves around&nbsp;&nbsp;
+
+00:15:56.200 --> 00:16:04.360
+it the infusion and scaling of AI should enable&nbsp;
+organizations to better meet their core Ambitions&nbsp;&nbsp;
+
+00:16:04.360 --> 00:16:11.920
+to remove latency between strategic shifts and&nbsp;
+operational action and ultimately to optimally&nbsp;&nbsp;
+
+00:16:11.920 --> 00:16:28.920
+deliver against the organization's mission in&nbsp;
+whatever way that manifests thank you very much
+

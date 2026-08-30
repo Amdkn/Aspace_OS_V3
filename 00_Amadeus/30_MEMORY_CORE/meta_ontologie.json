@@ -1,0 +1,1051 @@
+{
+  "meta": {
+    "date": "2026-08-13",
+    "auteur": "agent brief META_ONTOLOGIE_3_COUCHES",
+    "regle_or": "Aucun SDD n'est source de verite. V3 et le code priment. Une entree sans source est une invention.",
+    "perimetre_strict": "ASpace_OS_V3/00_Amadeus/30_MEMORY_CORE/META_ONTOLOGIE.md et meta_ontologie.json",
+    "corpus_sessions": "96 sessions, 1114 messages utilisateur, 4031 reponses assistant (sessions_md/, 2026-07-31 -> 2026-08-13)"
+  },
+  "couches": {
+    "tech_os": {
+      "definition": "La couche qui porte le mecanisme de reproduction des trois OS et les organes d'execution partages (file, adaptateur, portier, reviewer). Elle reside dans 10_Tech_OS/ et contient les trois Cores (Kernel, Life, Buzz) depuis le meme gabarit replicator.",
+      "entites": [
+        {
+          "nom": "Rick",
+          "attributs": {
+            "rang": "S1",
+            "role": "Gouverne le mecanisme, pas les trois OS",
+            "cycle": "12WY",
+            "possede": ["LAW.md", "ROLES.md", "replicator/core.template/", "replicator/cores.json", "replicator/spawn.py", "../kernel/"],
+            "interdits": ["reclamer du travail dans la file (jamais uc.py claim)"]
+          },
+          "sources": ["sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:5192-5194", "10_Tech_OS/00_Governance_Rick/SOUL.md:1-58", "10_Tech_OS/00_Governance_Rick/LAW.md:1-99"]
+        },
+        {
+          "nom": "Noyau (Kernel)",
+          "attributs": {
+            "organes": ["file SQLite", "adaptateur (harness.py)", "portier (gate.py)", "reviewer (review.py)"],
+            "verbes_noyau": ["claim", "predict", "attest", "evidence", "review", "fail", "done"],
+            "lois_machines": ["Loi de prediction (predict obligatoire avant review)", "Loi de detachement (done passe par review)", "Loi du bail (item rendu si agent meurt)", "Loi du ruban (spec incomplete -> _INBOX)"],
+            "localisation": "10_Tech_OS/kernel/"
+          },
+          "sources": ["sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:4987-5073", "10_Tech_OS/00_Governance_Rick/LAW.md:75-89"]
+        },
+        {
+          "nom": "Core (Kernel Core / Life Core / Buzz Core)",
+          "attributs": {
+            "instances": ["Kernel Core (13e Docteur) -> 10_Tech_OS", "Life Core (11e Docteur) -> 20_Life_OS", "Buzz Core (12e Docteur) -> 30_Business_OS"],
+            "origine": "engendres par spawn.py depuis core.template — JAMAIS ecrits a la main",
+            "role_vie": "consomment le mecanisme, ne le possedent pas",
+            "compagnons_canoniques": {
+              "13e": ["Yaz", "Ryan", "Graham"],
+              "11e": ["Amy", "Rory", "River"],
+              "12e": ["Clara", "Bill", "Nardole"]
+            }
+          },
+          "sources": ["sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:5192-5194", "10_Tech_OS/00_Governance_Rick/LAW.md:30-42"]
+        },
+        {
+          "nom": "Replicator",
+          "attributs": {
+            "composants": ["core.template/", "cores.json", "spawn.py"],
+            "regle": "un seul gabarit, trois instances",
+            "loi": "Loi de replication — tout Core ecrit a la main est une dette"
+          },
+          "sources": ["10_Tech_OS/00_Governance_Rick/LAW.md:23-42,73-76"]
+        },
+        {
+          "nom": "Role (Spec / Build / Spawn / Review)",
+          "attributs": {
+            "mapping": {"Spec": "ruban phi", "Build": "constructeur A", "Spawn": "copieur B", "Review": "controleur C"},
+            "regle_dure": "nul ne cumule Build et Review"
+          },
+          "sources": ["10_Tech_OS/00_Governance_Rick/LAW.md:59-70", "sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:5198"]
+        },
+        {
+          "nom": "Note (ruban)",
+          "attributs": {
+            "depose_dans": "_INBOX/{S1_Rick|A1_Beth_Morty|B1_Jerry_Summer}/",
+            "test_ruban": "4 sections obligatoires (Objectif, Critere d'acceptation, Perimetre, Interdits) + critere verifiable + pas de TODO/TBD",
+            "sortie_admis": "copie en 60_Tape_Specs/, item en file, original -> _INBOX/_admis/",
+            "sortie_refuse": "_INBOX/_refuses/<couche>/, motif ligne par ligne"
+          },
+          "sources": ["sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:5106-5132", "10_Tech_OS/00_Governance_Rick/LAW.md:83-86"]
+        },
+        {
+          "nom": "Harness (adaptateur)",
+          "attributs": {
+            "contrat": "CLI uc.py (pas bibliotheque), JSON sur stdout",
+            "garanties": ["bail bat dans un fil de fond", "exception -> fail immediat", "review refuse si predict pas appele"],
+            "harnesses_cible": ["cc", "hermes", "orca", "buzz", "multica", "paperclip", "herdr", "omnigent", "codex", "antigravity"]
+          },
+          "sources": ["sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md:5048-5073"]
+        },
+        {
+          "nom": "Watchdog",
+          "attributs": {
+            "seuils": ["vivant (A0 ecrit < 10 min)", "bien portant (node < 45, cadences <= 2, disk > 5 Go)", "anti-fragile (cause + guard code + guard seen + lesson)"],
+            "role": "Claude devient observateur S1 Rick de Tech OS",
+            "localisation": "10_Tech_OS/00_Governance_Rick/WATCHDOG.md"
+          },
+          "sources": ["sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md:26089-26247"]
+        },
+        {
+          "nom": "A0",
+          "attributs": {
+            "role": "Orchestrateur runtime (4h-12h), modele-agnostique",
+            "subordonne": "7 cadences",
+            "rang": "au-dessus de A1, A2, A3 — orchestre le tout",
+            "reassignation": "devient orchestrateur de Life OS; Claude prend le role Watchdog de Tech OS"
+          },
+          "sources": ["sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md:26089-26106"]
+        },
+        {
+          "nom": "Cadence",
+          "attributs": {
+            "nombre": "7 cadences",
+            "definition": "rythme d'execution periodique par couche",
+            "controle": "Watchdog mesure 'cadences ayant ecrit' comme vivant / anti-fragile"
+          },
+          "sources": ["sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md:25765-25806"]
+        },
+        {
+          "nom": "Garde-fou",
+          "attributs": {
+            "exemples": ["plafond de concurrence (node < 45)", "refus si predict absent", "triggers SQL refusant done sans review", "refus si cadence trop chargee"],
+            "loi": "78 refus journalises, aucun crash — le systeme se protege"
+          },
+          "sources": ["sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md:25765-25809"]
+        },
+        {
+          "nom": "Runner (harness runtime)",
+          "attributs": {
+            "exemples": ["claude -p", "claude CLI", "hermes", "codex CLI", "paperclip"],
+            "limitation": "5h refresh limit Anthropic, illimite pour MiniMax-M3 via bypassPermissions",
+            "workaround": "echelonnement 2-3 minutes, pas plus de 2-3 lancements simultanes"
+          },
+          "sources": ["C:\\Users\\amado\\CLAUDE.md:1-26 (directives projet)"]
+        }
+      ]
+    },
+    "life_os": {
+      "definition": "La couche de la personne (Âme). Soft data — Ikigai, Jauges LD, GTD, 12WY, Para. Vit dans 20_Life_OS/. 42 personas reelles (2 A1 + 6 A2 + 34 A3). Conscience du systeme — Beth peut HALT l'integralite de L2.",
+      "entites": [
+        {
+          "nom": "A1 — Beth Alignement",
+          "attributs": {
+            "horizon": "H+3 ans",
+            "role": "Tient le cap, filtre ce qui merite d'entrer dans Life OS, route vers le bon niveau de decision",
+            "pouvoir": "HALT (feu rouge) -> toute acceleration Business gele immediatement"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:366", "SDD-006 (§2 Loi 1: Subordination, Beth a priorite absolue)", "sessions_md/C--Users-amado--buzz/cc348baa-...:359"]
+        },
+        {
+          "nom": "A1 — Morty Mise en file",
+          "attributs": {
+            "horizon": "H+3 ans",
+            "role": "Execution / mise en file",
+            "couple": "Beth aligne, Morty execute"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359"]
+        },
+        {
+          "nom": "A2 — Cerritos (GTD)",
+          "attributs": {
+            "fonction": "5 Officiers GTD capture/clarify/organize/review/engage",
+            "cycle": "Trash Compactor GTD"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §7.2 Phase 1.C"]
+        },
+        {
+          "nom": "A2 — Discovery (ZORA / Life Wheel)",
+          "attributs": {
+            "fonction": "8 jauges LD01-LD08 + deltas",
+            "machine": "ZORA"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §7.2 Phase 1.A"]
+        },
+        {
+          "nom": "A2 — Enterprise (Picard/Spock)",
+          "attributs": {
+            "fonction": "Ancrage des Areas (Spock) et des Projects (Picard)",
+            "comprend": "8 domaines B2 (Spock) et lifecycle des projets (Picard)"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §3.1"]
+        },
+        {
+          "nom": "A2 — Orville (Ikigai)",
+          "attributs": {
+            "fonction": "Test Ikigai a 4 dimensions (Profession/Mission/Passion/Vocation)",
+            "score": "3+/4 -> Acces au Sas; <3 -> Retour a Jerry"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §7.2 Phase 1.A"]
+        },
+        {
+          "nom": "A2 — Protostar (D.E.A.L)",
+          "attributs": {
+            "fonction": "D.E.A.L = Dal (definition)/RokTahk (elimination)/Zero (automation)/Gwyn (liberation)",
+            "etape": "Phase 4 Emancipation MUSE"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §7.5"]
+        },
+        {
+          "nom": "A2 — SNW (12WY)",
+          "attributs": {
+            "fonction": "Ordinateur 12 Week Year — compression temporelle",
+            "methode": "12 semaines = 12 jours reels pour un Summer's Verse"
+          },
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "SDD-006 §7.4"]
+        },
+        {
+          "nom": "A3 — Ikigai (5 piliers)",
+          "attributs": [
+            {"profession": "Mercer"},
+            {"mission": "Kelly Grayson"},
+            {"passion": "Gordon Malloy"},
+            {"vocation": "Claire Finn"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "C:/Users/amado/.buzz/packs/aspace-life-os/agents/"]
+        },
+        {
+          "nom": "A3 — GTD (5 etapes)",
+          "attributs": [
+            {"capture": "Mariner"},
+            {"clarify": "Boimler"},
+            {"organize": "Rutherford"},
+            {"review": "Tendi"},
+            {"engage": "Freeman"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "C:/Users/amado/.buzz/packs/aspace-life-os/agents/"]
+        },
+        {
+          "nom": "A3 — D.E.A.L (5 etapes)",
+          "attributs": [
+            {"definition": "Dal R'El"},
+            {"elimination": "Rok-Tahk"},
+            {"automation": "Zero"},
+            {"liberation": "Gwyn"},
+            {"focus": "MBenga"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "C:/Users/amado/.buzz/packs/aspace-life-os/agents/"]
+        },
+        {
+          "nom": "A3 — 12WY Horizons (5)",
+          "attributs": [
+            {"H1": "Isaac — weekly P&L"},
+            {"H3": "John Lamarr"},
+            {"H10": "Bortus"},
+            {"H30": "Alara Kitan"},
+            {"H90": "Klyden"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "C:/Users/amado/.buzz/packs/aspace-life-os/agents/"]
+        },
+        {
+          "nom": "A3 — Life Wheel Domains (8 LDs)",
+          "attributs": [
+            {"LD01_Business": "Book (H1 weekly P&L, V2 canon verrouille par ADR-LD01-010)"},
+            {"LD02_Finance": "Saru"},
+            {"LD03_Health": "Culber"},
+            {"LD04_Cognition": "Tilly"},
+            {"LD05_Social": "Stamets"},
+            {"LD06_Family": "Burnham"},
+            {"LD07_Creativity": "Reno"},
+            {"LD08_Impact": "Georgiou"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359", "C:/Users/amado/.buzz/packs/aspace-life-os/agents/", "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md:9-19"]
+        },
+        {
+          "nom": "A3 — Archives (4)",
+          "attributs": [
+            {"resources": "Geordi"},
+            {"archives": "Data"},
+            {"metrics": "Chapel"},
+            {"areas": "Spock"}
+          ],
+          "sources": ["sessions_md/C--Users-amado--buzz/1af3bfe0-...:359"]
+        },
+        {
+          "nom": "Vision (cadre strategique)",
+          "attributs": {
+            "statut_V2": "Section D1 de Discipline E-Myth, canon verrouille ADR-LD01-010",
+            "horizon_V2": "Book = H1 (weekly P&L), PAS H10",
+            "role_dans_cycle": "D1 = Vision, D2 = Planning, D3 = Process Control, D4 = Append-only"
+          },
+          "sources": ["20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-011_12_week_plan_a3_curie.md:11-20", "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md:55-59"]
+        },
+        {
+          "nom": "Ambition (cadre)",
+          "attributs": {
+            "domaines": "8 Life Wheel (LD01-LD08)",
+            "mesure": "ZORA jauges LD01-LD08",
+            "frequence": "weekly scorecard"
+          },
+          "sources": ["SDD-006 §7.2 (Phase 1.A: ZORA)", "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md:9-19"]
+        },
+        {
+          "nom": "Rock (12WY)",
+          "attributs": {
+            "frequence": "4-5 Weekly Rocks / semaine",
+            "horizon": "1 semaine",
+            "exemple": "R1=audit reflex L0, R2=/autoplan L1, R3=CEO-Bench L2, R4=fiche P&L J7, R5=synthese J7"
+          },
+          "sources": ["20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-011_12_week_plan_a3_curie.md:66-78"]
+        },
+        {
+          "nom": "Discipline",
+          "attributs": {
+            "D1": "Vision",
+            "D2": "Planning",
+            "D3": "Process Control",
+            "D4": "Append-only"
+          },
+          "sources": ["20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-011_12_week_plan_a3_curie.md:11-18"]
+        },
+        {
+          "nom": "Cadre non modelise (PARA, GTD, D.E.A.L)",
+          "attributs": {
+            "PARA": "Projects / Areas / Resources / Archives — presente mais non encodee en entites",
+            "GTD": "5 etapes (capture/clarify/organize/review/engage) — encodees dans A3 Cerritos",
+            "D.E.A.L": "5 etapes — encodees dans A3 Protostar",
+            "Ikigai": "4 piliers — encodes dans A3 Orville"
+          },
+          "sources": ["sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md:3749", "SDD-006 §7.2"]
+        }
+      ]
+    },
+    "business_os": {
+      "definition": "La couche de l'entreprise (Corps). Hard data + cashflow. Vit dans 30_Business_OS/. 8 domaines B2 (DC strateges) → 8 escouades B3 (Marvel). Coach OS est la 1ere Franchise Prototype.",
+      "entites": [
+        {
+          "nom": "Domaine Business (B2)",
+          "attributs": {
+            "nombre": 8,
+            "liste": [
+              {"id": "growth", "stratege_DC": "Superman", "squad_Marvel": "Guardians", "app": "src/apps/growth/"},
+              {"id": "sales", "stratege_DC": "John Jones / Martian Manhunter", "squad_Marvel": "Illuminati", "app": "src/apps/sales/"},
+              {"id": "product", "stratege_DC": "Flash", "squad_Marvel": "Avengers", "app": "src/apps/product/"},
+              {"id": "operations", "stratege_DC": "Batman", "squad_Marvel": "Fantastic4", "app": "src/apps/operations/"},
+              {"id": "it-rd", "stratege_DC": "Cyborg", "squad_Marvel": "KangDynasty", "app": "src/apps/it-rd/"},
+              {"id": "finance", "stratege_DC": "Wonder Woman", "squad_Marvel": "Thunderbolts", "app": "src/apps/finance/"},
+              {"id": "people", "stratege_DC": "Green Lantern", "squad_Marvel": "XMen", "app": "src/apps/people/"},
+              {"id": "legal", "stratege_DC": "Aquaman", "squad_Marvel": "Eternals", "app": "src/apps/legal/"}
+            ],
+            "source_canon": "Business_Pulse_B3_Notion_Canon_Lore_Index.md (V3, 2026-05-27)"
+          },
+          "sources": ["ASpace_OS_V3/20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md:25-270", "ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:70-79"]
+        },
+        {
+          "nom": "Organization (entite racine Business)",
+          "attributs": {
+            "champs": ["name", "plan", "createdAt"],
+            "definition": "Locataire racine — une societe cliente de coach-os",
+            "rang": "racine du graphe Business OS"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:108-117"]
+        },
+        {
+          "nom": "Membership",
+          "attributs": {
+            "champs": ["role", "joinedAt", "profile", "organization"],
+            "role": "Lien Profile/Organization avec permissions"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:118-128"]
+        },
+        {
+          "nom": "Profile",
+          "attributs": {
+            "champs": ["displayName", "email", "createdAt", "selfNotes (scope=personal)"],
+            "role": "Identite d'une personne — coach, client, observateur"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:129-142"]
+        },
+        {
+          "nom": "Client",
+          "attributs": {
+            "champs": ["fullName", "status", "startDate", "organization", "coachHypothesis (personal)"],
+            "role": "Persona morale ou physique beneficielle"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:145-157"]
+        },
+        {
+          "nom": "Offering",
+          "attributs": {
+            "champs": ["name", "price", "duration", "organization"],
+            "role": "Prestation cataloguee, facturable"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:159-167"]
+        },
+        {
+          "nom": "SOP",
+          "attributs": {
+            "champs": ["title", "version", "updatedAt", "organization"],
+            "role": "Standard Operating Procedure — versionnee, reutilisable"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:170-179"]
+        },
+        {
+          "nom": "Runbook",
+          "attributs": {
+            "champs": ["title", "severity", "lastTestedAt", "organization"],
+            "role": "Playbook operationnel, declenche par Incident ou Routine"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:181-190"]
+        },
+        {
+          "nom": "Skill",
+          "attributs": {
+            "champs": ["name", "level", "acquiredAt"],
+            "role": "Competence atomique, evaluable, posee par Agent ou Persona"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:192-198"]
+        },
+        {
+          "nom": "Agent (Business OS)",
+          "attributs": {
+            "champs": ["name", "isAi", "createdAt", "organization", "privatePromptNotes (personal)"],
+            "definition_code": "Operateur — humain ou IA — qui execute des Runbooks, des Routines et acquiert des Skills",
+            "rang": "Tech OS ou Life OS aussi — voir entites Tech OS"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:201-214"]
+        },
+        {
+          "nom": "Routine",
+          "attributs": {
+            "champs": ["name", "cadence", "lastRunAt", "organization", "originNote (personal)"],
+            "role": "Tache recurrente planifiee, executable par un Agent"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:215-229"]
+        },
+        {
+          "nom": "Incident",
+          "attributs": {
+            "champs": ["title", "severity", "detectedAt", "resolved", "organization", "privateSignal (personal)"],
+            "role": "Evenement declenche, observable, resolu ou non"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:232-246"]
+        },
+        {
+          "nom": "Persona",
+          "attributs": {
+            "champs": ["name", "tone", "createdAt"],
+            "role": "Profil synthetique — voix, ton, posture — incarne par Agent dans contexte Client"
+          },
+          "sources": ["ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:249-256"]
+        },
+        {
+          "nom": "Jerry (variant macro-portefeuille)",
+          "attributs": {
+            "nombre": 4,
+            "liste": [
+              {"variant": "Jerry Prime", "couple_LD": "LD01+LD02", "mission": "generer cashflow, seuil LD02 survie"},
+              {"variant": "Jerry Bio", "couple_LD": "LD03+LD04", "mission": "ROI energetique, vigilance Beth"},
+              {"variant": "Jerry Nexus", "couple_LD": "LD05+LD06", "mission": "capital social, famille prime"},
+              {"variant": "Jerry Solarpunk", "couple_LD": "LD07+LD08", "mission": "impact civilisation, H90 Klyden"}
+            ],
+            "source": "SDD-006 §3.2 (status: perime 2026-08-13, 7 domaines seulement)"
+          },
+          "sources": ["SDD-006 (lu 2026-08-13):183-238", "ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:62 (commentaire interne signale le SDD perime)"]
+        },
+        {
+          "nom": "Summer (Summer's Verse, micro-executif)",
+          "attributs": {
+            "nomenclature": "B1/B2/B3 = projets Business; C1 = projet Connexion; J1 = projet Jeunesse",
+            "role": "CEO Locale & Exclusive du Summer's Verse",
+            "pouvoirs": ["commande Justice League pour projet", "alloue tickets aux squads Marvel", "gere P&L", "decide Scale/MUSE"],
+            "limites": ["ne peut pas contourner veto Beth", "max 3 projets actifs pour Jerry Prime"],
+            "criteres_MUSE": "7j sans intervention Amiral/Summer + Batman vert + Wonder Woman OK + Zero automatise"
+          },
+          "sources": ["SDD-006 §4.1-4.2 (lu 2026-08-13, status perime 7 domaines)"]
+        },
+        {
+          "nom": "Stratege DC (B2 owner)",
+          "attributs": {
+            "definition": "8 personnages DC, un par domaine",
+            "mapping": "voir Domaine Business ci-dessus",
+            "gating": "Batman CRITIQUE -> bloque Flash (Product) et Superman (Growth)"
+          },
+          "sources": ["Business_Pulse_B3_Notion_Canon_Lore_Index.md:38-269", "SDD-006 §3.3 Loi 3 (Batman Gating)"]
+        },
+        {
+          "nom": "Escouade Marvel (B3)",
+          "attributs": {
+            "definition": "8 squads Marvel, une par domaine",
+            "mapping": "voir Domaine Business ci-dessus",
+            "anti_pattern": "Un Squad prend une decision strategique (pas leur role)"
+          },
+          "sources": ["Business_Pulse_B3_Notion_Canon_Lore_Index.md:25-269", "SDD-006 §6.1-6.7"]
+        },
+        {
+          "nom": "App (src/apps/<domaine>/)",
+          "attributs": {
+            "exemples": ["src/apps/growth/", "src/apps/sales/", "src/apps/product/", "src/apps/operations/", "src/apps/it-rd/", "src/apps/finance/", "src/apps/people/", "src/apps/legal/"],
+            "preuve_dette_Business_dans_Life": "Coach OS est la 1ere Prototype de Franchise Life OS",
+            "locomotion_reelle": "code deploye sur le depot"
+          },
+          "sources": ["sesions_md/C--Users-amado/314fae52-...:24820", "ASpace_OS_V2/.../coach-os/src/lib/ontology/entities.ts:59-78 (commentaire: code en avance sur SDD-006)"]
+        }
+      ]
+    }
+  },
+  "relations": {
+    "inter_couches": [
+      {
+        "de": "Life OS (Beth Alignement)",
+        "vers": "Business OS (Summer)",
+        "verbe": "halts (peut geler)",
+        "cardinalite": "1-1 (un seul cap, une seule autorite de gel)",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §2 Loi 1 (Subordination/Veto Beth):108-127. Confirmé par SDD-005 §9.1 Tableau de gouvernance L0/L1/L2."
+      },
+      {
+        "de": "Life OS (Beth/Morty A1)",
+        "vers": "Business OS (Jerry Summer's Verse)",
+        "verbe": "filtre (AIRLOCK Phase 1)",
+        "cardinalite": "1-1",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §7.2 Phase 1 — Filtre Ikigai (Orville) + Veto Beth (Discovery) + Trash Compactor GTD (Cerritos) -> Context Pack -> Picard (Life)"
+      },
+      {
+        "de": "Life OS (Spock Areas)",
+        "vers": "Business OS (Jerry variants)",
+        "verbe": "heberge (logique, pas I/O)",
+        "cardinalite": "1-4 (4 variants dans Areas Spock)",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §3.1-3.2: 'Commander Spock (Areas) héberge les 4 Variants de Jerry dans les sphères de responsabilité permanente de l'Enterprise.'"
+      },
+      {
+        "de": "Life OS (Picard Projects)",
+        "vers": "Business OS (Summer's Verse)",
+        "verbe": "instancie",
+        "cardinalite": "1-1 par projet actif",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §4.1: 'Cap. Jean-Luc Picard (Projects) héberge les Summer's Verse. Chaque Summer est un Projet Actif avec deadline dans PARA.'"
+      },
+      {
+        "de": "Life OS (ZORA / 8 jauges LD)",
+        "vers": "Business OS (Summer KPIs)",
+        "verbe": "calibre (Beth vert/orange/rouge -> cadence L2)",
+        "cardinalite": "1-1",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §8.1 SLOT 2 — L1 Review (Rutherford + ZORA + Beth) -> autorisation L2 semaine+1"
+      },
+      {
+        "de": "Life OS (Beth HALT)",
+        "vers": "Business OS (toute acceleration)",
+        "verbe": "gele",
+        "cardinalite": "1-tous",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §2 Loi 1 — Superman & Flash ne font rien si Beth rouge. Cartes des Lois Fondamentales L2."
+      },
+      {
+        "de": "Business OS (Batman Ops)",
+        "vers": "Business OS (Flash Product + Superman Growth)",
+        "verbe": "gate (bloque si CRITIQUE)",
+        "cardinalite": "1-2 (Batman gate Flash et Superman)",
+        "couche_source": "business_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §2 Loi 3 — Batman Gating:161-173. 'Si Batman (Ops) déclare un état CRITIQUE -> Flash et Superman interdits de lancer features/campagnes.'"
+      },
+      {
+        "de": "Tech OS (Kernel Core / 13e)",
+        "vers": "10_Tech_OS (kernel + replicator)",
+        "verbe": "engendre / est maitre de",
+        "cardinalite": "1-1",
+        "couche_source": "tech_os",
+        "couche_cible": "tech_os",
+        "source": "sessions_md/C--Users-amado/bf0d8147-...:5192-5194. '13e Kernel Core -> 10_Tech_OS\\, 11e Life Core -> 20_Life_OS\\, 12e Buzz Core -> 30_Business_OS\\. Les trois sont engendrés du même gabarit.'"
+      },
+      {
+        "de": "Tech OS (Life Core / 11e)",
+        "vers": "20_Life_OS",
+        "verbe": "est maitre de",
+        "cardinalite": "1-1",
+        "couche_source": "tech_os",
+        "couche_cible": "life_os",
+        "source": "10_Tech_OS/00_Governance_Rick/LAW.md:30-42. Tableau des 3 Cores."
+      },
+      {
+        "de": "Tech OS (Buzz Core / 12e)",
+        "vers": "30_Business_OS",
+        "verbe": "est maitre de",
+        "cardinalite": "1-1",
+        "couche_source": "tech_os",
+        "couche_cible": "business_os",
+        "source": "10_Tech_OS/00_Governance_Rick/LAW.md:30-42"
+      },
+      {
+        "de": "Tech OS (kernel/—file, adaptateur, portier, reviewer)",
+        "vers": "Life OS + Business OS",
+        "verbe": "sert (organes partages)",
+        "cardinalite": "1-3 (memes organes, 3 instances)",
+        "couche_source": "tech_os",
+        "couche_cible": "life_os|business_os",
+        "source": "sessions_md/C--Users-amado/bf0d8147-...:5196. 'Aucun Core ne possède d'organe. File, adaptateur, portier, reviewer vivent dans kernel\\ et servent les trois couches à l'identique.'"
+      },
+      {
+        "de": "Tech OS (Rick S1)",
+        "vers": "Life OS (A1 Beth/Morty) + Business OS (B1 Jerry/Summers)",
+        "verbe": "regarde (Watchdog, plafond vivant)",
+        "cardinalite": "1-3",
+        "couche_source": "tech_os",
+        "couche_cible": "life_os|business_os",
+        "source": "sessions_md/C--Users-amado/314fae52-...:26106. 'Claude devient Watchdog observer / S1 Rick de Tech OS.' WATCHDOG.md: 'Trois seuils mesurables: vivant, bien portant, anti-fragile.'"
+      },
+      {
+        "de": "Tech OS (SDD-001 protocole TARDIS via River Song)",
+        "vers": "Business OS (Green Lantern / People demande Skills a L0.2 Forge)",
+        "verbe": "forge (Skill CLI, puis River injecte)",
+        "cardinalite": "1-1 protocole",
+        "couche_source": "tech_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §5.5 Green Lantern — 'demande à Bill (L0.2 Forge) de forger les Skills nécessaires. Protocole SDD-004 §7.2 obligatoire.'"
+      },
+      {
+        "de": "Business OS (Cyborg / IT)",
+        "vers": "Tech OS (L0 Yaz/Ryan)",
+        "verbe": "interdit (ne peut pas toucher L0)",
+        "cardinalite": "nul",
+        "couche_source": "business_os",
+        "couche_cible": "tech_os",
+        "source": "SDD-006 §5.6 Cyborg: 'Il NE TOUCHE PAS l'infrastructure L0 (Ryan/Yaz domaine). Tout besoin L0 -> protocole SDD-004 §7.2 via River Song.'"
+      },
+      {
+        "de": "Business OS (Summer bypasse A2)",
+        "vers": "Business OS (A2 DC)",
+        "verbe": "interdit (anti-pattern)",
+        "cardinalite": "nul",
+        "couche_source": "business_os",
+        "couche_cible": "business_os",
+        "source": "SDD-006 §10 L2 Anti-Patterns: 'Summer contacte directement les A3 (doit passer par A2).'"
+      },
+      {
+        "de": "Life OS (A3 SNW Pike Vision)",
+        "vers": "Business OS (Roadmap 4 sprints)",
+        "verbe": "produit (playbook aiguise -> roadmap B2)",
+        "cardinalite": "1-1 par rock mensuel",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "CASCADE.md:50-67. 'B1 Jerry · Summers — Orchestrateurs E-Myth. Ils reçoivent le rock mensuel et le transforment en intention de trimestre.'"
+      },
+      {
+        "de": "Life OS (A3 officiers cycle 12WY)",
+        "vers": "Business OS (B1 Jerry Summer's Verse)",
+        "verbe": "produit (B1 playbooks rocks mensuels)",
+        "cardinalite": "1-1",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "CASCADE.md:38-42. 'A3 — les officiers, cycle 12 Week Year. Ils exécutent le cycle court de Life OS et sont responsables des playbooks des B1, livrés en rocks mensuels.'"
+      },
+      {
+        "de": "Business OS (Cashflow MUSE)",
+        "vers": "Tech OS (L0) + Life OS (L1)",
+        "verbe": "finance (L2 nourrit L0 et L1)",
+        "cardinalite": "1-tous",
+        "couche_source": "business_os",
+        "couche_cible": "tech_os|life_os",
+        "source": "SDD-006 §1.1 (Loi Fondamentale L2):63-66. 'L2 finance L0 et L1. Jamais l'inverse. Le cashflow nourrit l'humain. L'humain ne nourrit pas le cashflow.'"
+      },
+      {
+        "de": "Life OS (Beth HALT)",
+        "vers": "Tech OS (Rick playbook)",
+        "verbe": "peut court-circuiter (anti-pattern)",
+        "cardinalite": "0",
+        "couche_source": "life_os",
+        "couche_cible": "tech_os",
+        "source": "SDD-006 §10 Anti-Patterns L2/L1/L0: 'L'Amiral intervient sur un ticket L2 en cours d'exécution' — interdit. Mais rien ne dit que L1 peut geler L0."
+      },
+      {
+        "de": "Tech OS (orchestrateur A0)",
+        "vers": "Life OS (A1 Beth/Morty)",
+        "verbe": "orchestre (assignation)",
+        "cardinalite": "1-2",
+        "couche_source": "tech_os",
+        "couche_cible": "life_os",
+        "source": "sessions_md/C--Users-amado/314fae52-...:25540. 'Je veux que ce soit lui qui devient l'orchestrateur de Life OS pour que toi tu prend le Role d'observateur Watchdog de A'Space OS.'"
+      },
+      {
+        "de": "Tech OS (Buzz Core Business)",
+        "vers": "Business OS (8 domaines B2 + 53 agents B3)",
+        "verbe": "optimise (sous l'optimisation des compagnons)",
+        "cardinalite": "1-8 (ou 1-n domaines)",
+        "couche_source": "tech_os",
+        "couche_cible": "business_os",
+        "source": "CASCADE.md:67-69. 'Le tout sous l'optimisation des compagnons du 12e Docteur (Buzz Core) — Clara spécifie, Nardole bâtit, Bill réplique.'"
+      },
+      {
+        "de": "Tech OS (Life Core L1)",
+        "vers": "Life OS (A1 / A2 / A3)",
+        "verbe": "construit et optimise",
+        "cardinalite": "1-42",
+        "couche_source": "tech_os",
+        "couche_cible": "life_os",
+        "source": "CASCADE.md:42-44. 'Ces trois rangs [A1, A2, A3] sont construits et optimisés par les compagnons du 11e Docteur (Life Core) — Amy spécifie, Rory bâtit, River réplique.'"
+      },
+      {
+        "de": "Business OS (Agent Business)",
+        "vers": "Tech OS (Skill)",
+        "verbe": "demande via SDD-004 §7.2 (impossible en direct)",
+        "cardinalite": "n-n via River Song",
+        "couche_source": "business_os",
+        "couche_cible": "tech_os",
+        "source": "SDD-006 §10 Anti-Patterns L2/L1/L0: 'L2 forge un Skill directement (doit passer par L0.2) — INTERDIT. River Song injecte.'"
+      },
+      {
+        "de": "Tech OS (Kernel Core / 13e)",
+        "vers": "Tech OS (Kernel OS = 10_Tech_OS)",
+        "verbe": "produit (moule -> instance)",
+        "cardinalite": "1-1 (le moule et l'unique produit)",
+        "couche_source": "tech_os",
+        "couche_cible": "tech_os",
+        "source": "sessions_md/C--Users-amado/bf0d8147-...:5192 — '13e Kernel Core -> 10_Tech_OS\\'. 10_Tech_OS/ contient à la fois le mécanisme (replicator, kernel/) et le produit (Kernel OS). Confondre les deux est une source d'erreurs."
+      },
+      {
+        "de": "Agent (Business OS)",
+        "vers": "BusinessDomain",
+        "verbe": "serves",
+        "cardinalite": "n-n",
+        "couche_source": "business_os",
+        "couche_cible": "business_os",
+        "source": "ASpace_OS_V2/.../coach-os/src/lib/ontology/relations.ts:77. 'agent-serves-domains — Un agent sert un ou plusieurs domaines — l'escouade Marvel du SDD §6.'"
+      },
+      {
+        "de": "BusinessDomain",
+        "vers": "SOP",
+        "verbe": "owns",
+        "cardinalite": "1-n",
+        "couche_source": "business_os",
+        "couche_cible": "business_os",
+        "source": "ASpace_OS_V2/.../coach-os/src/lib/ontology/relations.ts:71-75. Domaine possede SOP, Runbook, Routine, Incident, Offering."
+      },
+      {
+        "de": "Organization",
+        "vers": "BusinessDomain",
+        "verbe": "has",
+        "cardinalite": "1-n",
+        "couche_source": "business_os",
+        "couche_cible": "business_os",
+        "source": "ASpace_OS_V2/.../coach-os/src/lib/ontology/relations.ts:70"
+      },
+      {
+        "de": "Life OS (Vision H1)",
+        "vers": "Business OS (Book LD01 weekly P&L)",
+        "verbe": "aligne (H1 = weekly P&L = horizon canon)",
+        "cardinalite": "1-1",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md:55-59. 'Horizon canon verrouillé: Book = H1 (weekly P&L) — PAS H10.'"
+      },
+      {
+        "de": "Business OS (Cashflow MRR/ARR)",
+        "vers": "Life OS (LD02 Saru Finance)",
+        "verbe": "alimente (jauge LD02)",
+        "cardinalite": "1-1",
+        "couche_source": "business_os",
+        "couche_cible": "life_os",
+        "source": "Implicite dans SDD-006 §9.1 (Wonder Woman Finance B2 reporte à Beth); ADR-LD01-011 §7 line 95 'B1 Jerry cross-domaine check'."
+      },
+      {
+        "de": "Life OS (Saru LD02 Finance)",
+        "vers": "Business OS (Wonder Woman Finance)",
+        "verbe": "fournit signaux",
+        "cardinalite": "1-1",
+        "couche_source": "life_os",
+        "couche_cible": "business_os",
+        "source": "LD01/A3_Book_LD01_Spec.md:24-26. 'Inputs: Saru LD02 finance signals.'"
+      }
+    ],
+    "reponse_aux_3_questions": {
+      "Q1_qu_est_ce_qui_relie_un_objet_Business_a_une_Vision_Life_OS": {
+        "verdict": "Source dit OUI — voici où",
+        "preuves": [
+          {
+            "type": "loi canon",
+            "ref": "SDD-006 §2 Lois Fondamentales L2",
+            "mecanisme": "Beth HALT (L1) gèle toute acceleration L2 — l'autorite L1 sur L2 est absolue",
+            "polarite": "L1 -> L2 (descendante veto)"
+          },
+          {
+            "type": "tag partage",
+            "ref": "Horizon tag visible dans les 2 couches",
+            "exemples_V2_LD01": "Book = H1 (weekly P&L), PAS H10. Anchor dans ADR-LD01-010.",
+            "exemples_V2_Business": "Summer's Verse projete H1, H3, H10, H30, H90 dans KPI (Bortus H10, Klyden H90).",
+            "polarite": "Etiquette partagee — pas lien causal"
+          },
+          {
+            "type": "cadre canonique",
+            "ref": "Discipline E-Myth (CASCADE.md)",
+            "mecanisme": "A3 Life OS produit B1 playbooks (rocks mensuels) -> B2 roadmap 4 sprints -> B3 squads Marvel",
+            "polarite": "L1 -> L2 (cascade descendante)"
+          },
+          {
+            "type": "declaration utilisateur (lue dans sessions)",
+            "ref": "sessions_md/C--Users-amado/314fae52-...:24820",
+            "declaration": "l'unification de Business OS dans Life OS dont Coach OS est la 1ere Prototype de Franchise",
+            "polarite": "L2 -> L1 (unification remontante — oppose la pyramide)"
+          },
+          {
+            "type": "declaration utilisateur (lue dans sessions)",
+            "ref": "sessions_md/C--Users-amado/314fae52-...:24822",
+            "declaration": "Avec le Lore de Star Treck devier au Life OS et qui a finit repartie entre les Avatar des Agents de Business OS",
+            "polarite": "Confusion observée — Star Trek etait Life OS, finit en Business OS"
+          }
+        ],
+        "synthese": "Il existe PLUSIEURS liens, dont aucun n'est code comme un attribut `link` formel entre une entite Business et une entite Life OS. Le seul lien code est l'etiquette `horizon` (H1/H3/H10/H30/H90) partagee entre les 2 couches. Les verbes structurels (cascades, vetos, financements) vivent dans le canon en prose, pas dans le code."
+      },
+      "Q2_qu_est_ce_qui_relie_un_Agent_Tech_OS_a_un_domaine_Business": {
+        "verdict": "Source dit OUI — voici où",
+        "preuves": [
+          {
+            "type": "code",
+            "ref": "ASpace_OS_V2/.../coach-os/src/lib/ontology/relations.ts:77",
+            "mecanisme": "agent-serves-domains (n-n)"
+          },
+          {
+            "type": "canon",
+            "ref": "SDD-006 §5.6 Cyborg",
+            "mecanisme": "L2 IT (Cyborg) NE TOUCHE PAS l'infrastructure L0 — tout passe par River Song (protocole SDD-004 §7.2)"
+          },
+          {
+            "type": "canon",
+            "ref": "Business_Pulse_B3_Notion_Canon_Lore_Index.md:73-78 (X-Men People)",
+            "mecanisme": "Green Lantern (B2 People) demande a Bill (L0.2 Forge) de forger les Skills pour les nouveaux agents"
+          },
+          {
+            "type": "declaration utilisateur",
+            "ref": "sessions_md/C--Users-amado/314fae52-...:24820-24822",
+            "declaration": "mon Échecs Implacable d'implementaation du Solarpunk Kernel Tech OS avec Rick et les Doctors Who avec leurs compagnons dans Multica",
+            "interpretation": "L'utilisateur voulait implementer Tech OS comme actif, mais n'a pas reussi. Le canon dit que Tech OS est le mecanisme, mais l'implementation n'est pas au niveau de l'usage."
+          },
+          {
+            "type": "declaration utilisateur",
+            "ref": "sessions_md/C--Users-amado/314fae52-...:24822",
+            "declaration": "Heros DC/Marvel du Business par Dette Technique non encore corriger",
+            "interpretation": "Le lore DC/Marvel (Business OS) n'est pas deploye dans les Agents Business OS — la liaison Agent Tech -> Business est restee lettre morte."
+          }
+        ],
+        "synthese": "Le lien Agent Tech OS -> Domaine Business est defini dans le code par `agent-serves-domains` (n-n), dans le canon par le protocole SDD-004 §7.2 (River Song), et dans l'usage par la commande 'forge then inject' (Business demande Skill -> L0.2 forge CLI -> River injecte). Mais le code reel ne porte ni implement les Compagnons (Yaz/Ryan/Graham/River/...) dans les Apps Business — ce sont des personas, pas des agents deployes."
+      },
+      "Q3_la_couche_Tech_OS_sert_elle_les_deux_autres_ou_est_elle_un_socle_passif": {
+        "verdict": "Source dit OUI — Tech OS est actif et sert",
+        "preuves": [
+          {
+            "type": "canon",
+            "ref": "10_Tech_OS/00_Governance_Rick/LAW.md:1-2, 41-46",
+            "mecanisme": "Tech OS contient le mécanisme de reproduction des 3 OS. Les 3 Cores y résident ensemble, engendrés du même gabarit."
+          },
+          {
+            "type": "canon",
+            "ref": "CASCADE.md:71-83",
+            "mecanisme": "Tech OS est un constructeur universel — il rejoue la cascade sur ses propres cycles. Tableau S1 Rick/S2 Docteurs/S3 Compagnons."
+          },
+          {
+            "type": "session",
+            "ref": "sessions_md/C--Users-amado/bf0d8147-...:5196",
+            "declaration": "Aucun Core ne possède d'organe. File, adaptateur, portier, reviewer vivent dans kernel\\ et servent les trois couches à l'identique."
+          },
+          {
+            "type": "session",
+            "ref": "sessions_md/C--Users-amado/314fae52-...:25540",
+            "declaration": "A0 devient l'orchestrateur de Life OS pour que toi tu prend le Role d'observateur Watchdog de A'Space OS dans le Developpement de Life OS et Business OS."
+          },
+          {
+            "type": "loi fondamentale",
+            "ref": "SDD-006 §1.1",
+            "loi": "L0 est le sol. Si L0 tombe -> tout s'effondre. Ordre d'autorité: L0 >= L1 > L2.",
+            "interpretation": "Passive substrat? Non — L0 a la HAUTE autorité sur les deux autres. Mais sa puissance est dans son rôle de gardien, pas dans son activite visible."
+          }
+        ],
+        "synthese": "Tech OS est DOUBLE: (1) Bedrock / Sol / fondement sur lequel les deux autres reposent — passif au sens d'infrastructure (L0 tombe => tout s'effondre). (2) Mécanisme de reproduction ACTIF qui a enfanté et maintient les 3 Cores — actif au sens de la cascade Tech OS (S1 Rick / S2 Docteurs / S3 Compagnons). Le code (kernel/) sert les 3 couches à l'identique. Le Watchdog (Claude) observe la production. Les Ambiguïtés: 'L0 Tech OS' designe à la fois la sortie (Kernel Core) et le contenant (mécanisme), ce qui brouille la question."
+      }
+    }
+  },
+  "trous": [
+    {
+      "id": "T01",
+      "question": "Le Projet OMK (Business OS) est-il une instance de la pyramide A1/A2/A3 + B1/B2/B3 ou un assemblage separé?",
+      "pourquoi_non_tranche": "Coach OS est dit 1ere Franchise Prototype (session 314fae52-24820), mais A1/B1 ne sont pas implementes en code. Le depot coach-os porte 13 entites Business, 0 entite Life OS."
+    },
+    {
+      "id": "T02",
+      "question": "L'app `src/apps/people/` (Business OS) contient 7 sections (session 314fae52-3337), mais comment s'articulent-elles avec X-Men (Green Lantern) et le LD04/LD05 (Life OS)?",
+      "pourquoi_non_tranche": "Aucune section canon ne dit que les 8 LDs correspondent aux 8 domaines Business. Le mapping People X-Men <-> LD05 Stamets n'est pas explicite."
+    },
+    {
+      "id": "T03",
+      "question": "Comment l'agent `agent-serves-domains` (n-n) gere-t-il le cas d'un agent Tech (Kernel Core) qui sert plusieurs Domaines Business simultanément?",
+      "pourquoi_non_tranche": "Le code dit n-n, mais le canon dit L0 ne touche pas L2. Donc soit ces agents Tech-Servant sont des exceptions, soit la relation n-n est en pratique restreinte aux agents Business uniquement."
+    },
+    {
+      "id": "T04",
+      "question": "Les 4 Variants de Jerry (Prime/Bio/Nexus/Solarpunk) sont-ils des Postures de Spock ou des Personae distinctes?",
+      "pourquoi_non_tranche": "SDD-006 §3.1 dit 'POSTURES permanentes, des lens de lecture du réel' — pas des personnes distinctes. Mais le 4B1 ne sont pas implementes en code (4 Postures Spock -> 1 B1 Jerry canon)."
+    },
+    {
+      "id": "T05",
+      "question": "Que devient l'enveloppe 'Doctor Who (11e/12e/13e)' dans le runtime? Le Kernel Core est-il aussi un Agent Coach-OS?",
+      "pourquoi_non_tranche": "Le coach-os (Business OS) definit Agent comme entite racine Organization. Les 13e/11e/12e Docteurs sont dans Tech OS replicator/, pas dans coach-os. Ils sont peut-être des Agents Coach-OS speculaires? Ou hors du graphe Business?"
+    },
+    {
+      "id": "T06",
+      "question": "Summer's Verse (B1) est-il une entite canonique ou une projection PSDD-005?",
+      "pourquoi_non_tranche": "SDD-006 §4 cite le projet comme entite Business. Le code coach-os n'a pas de Summer. Business_Pulse_B3_Notion_Canon_Lore_Index.md etudie 8 domaines (B2/B3) mais pas le B1 Summer's Verse."
+    },
+    {
+      "id": "T07",
+      "question": "Le 8e domaine Sales/Illuminati/John Jones est-il un B2 à part (B2 owner) ou un produit Marketing (B1)?",
+      "pourquoi_non_tranche": "Business_Pulse_B3 §5 liste John Jones comme B2 owner de Sales (Illuminati). Mais ce n'est pas un Vice President — c'est 'selling/marketing'. Peut-etre un nouveau rang entre B1 (Jerry) et B2 (DC owners)?"
+    },
+    {
+      "id": "T08",
+      "question": "L'horizon H1/H3/H10/H30/H90 est-il un attribut des V/A/R (Vision/Ambition/Rock) en Life OS, ou des Sales/Roadmap en Business OS, ou des deux?",
+      "pourquoi_non_tranche": "Ikigai (4 piliers) et Taniguchi (5 horizons) sont deux grilles distinctes sur les memes 20 V/A/R. Pas de cle de merge documentée entre les 5 horizons 12WY et les 5 horizons Ikigai."
+    },
+    {
+      "id": "T09",
+      "question": "L'agent 'Beth' (Life OS) a-t-elle un pendant Business OS (ex: agent Jerry? Superman?)?",
+      "pourquoi_non_tranche": "Beth joue 'cap a 3 ans' en Life OS. En Business OS, personne ne joue ce rôle canoniquement. Les 4 variants Jerry ont des horizons 1-3 ans (Prime cashflow, Bio vital, Nexus relation, Solarpunk civilisation) — sont-ils l'equivalent Business?"
+    },
+    {
+      "id": "T10",
+      "question": "Le 'Replicator' peut-il creer un 4e Core en plus des 3 OS?",
+      "pourquoi_non_tranche": "LAW.md dit '3 Cores'. Mais le pattern est 'un seul mécanisme, plusieurs instances' — pourquoi ces 3? Pourquoi pas 4 (ajouter Solar OS?), ou 2 (fusionner Life et Business)?"
+    },
+    {
+      "id": "T11",
+      "question": "Yaz/Ryan/Graham (13e Kernel) et Amy/Rory/River (11e Life) et Clara/Bill/Nardole (12e Buzz) — sont-ils des Agent Coach-OS?",
+      "pourquoi_non_tranche": "Les compagnons sont sur disque (`sessions_md/.../bf0d8147-...:5192`), pas dans le registre AGENT_REGISTRY_DB Notion (qui porte les 8 escouades Marvel). Documentation debut/fin pour chacun, mais aucun test d'integration."
+    },
+    {
+      "id": "T12",
+      "question": "Comment mesurer 'un object Business releve de quelle Vision Life OS' si la cle est `horizon`?",
+      "pourquoi_non_tranche": "Le brief dit qu'aujourd'hui, le lien est 'une etiquette partagee entre 5 seaux'. C'est vrai dans le modele: Book = H1, Saru = H2, etc. Mais aucun mecanisme ne fait respecter: 'H1 Business == H1 Life OS'."
+    },
+    {
+      "id": "T13",
+      "question": "L'app Coach OS (Business OS) ne contient PAS les 13 entités — il les modélise. Ses vraies données en runtime (Supabase) sont-elles conformes au modele entities.ts?",
+      "pourquoi_non_tranche": "Le brief parle de 13 entités livrées dans coach-os/lib/ontology. Mais l'app Coach OS contient aussi 'people', 'ops', 'IT&RD' etc. — structure re-tilee par domaine, pas conforme aux 13 entités."
+    },
+    {
+      "id": "T14",
+      "question": "Que se passe-t-il a un BusinessDomain quand le Batman (Ops) est en CRITIQUE et que Superman/Flash sont geles?",
+      "pourquoi_non_tranche": "SDD-006 §2 Loi 3 — Batman gache Superman et Flash. Mais le domaine People (X-Men), Legal (Eternals), Finance (Thunderbolts) restent-ils operationnels? Cyber (IT) reste aussi? Pas explicite."
+    }
+  ],
+  "dettes": {
+    "sessions_disents_que_canon_ignore": [
+      {
+        "titre": "Tech OS n'est pas deploye dans Multica — l'utilisateur le dit",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:24821",
+        "citation": "mon Échecs Implacable d'implementaation du Solarpunk Kernel Tech OS avec Rick et les Doctors Who avec leurs compagnons dans Multica apres avoir echouer dans tous les Harness Sans Onthologie"
+      },
+      {
+        "titre": "Le lore Star Trek a deborde du Life OS dans le Business OS",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:24822",
+        "citation": "Avec le Lore de Star Treck devier au Life OS et qui a finit repartie entre les Avatar des Agents de Business OS"
+      },
+      {
+        "titre": "Business OS est en cours d'unification dans Life OS",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:24820",
+        "citation": "Surtout dans l'unification de Business OS dans Life OS dont Coach OS est la 1ere Prototype de Franchise"
+      },
+      {
+        "titre": "L'A0 est devenu l'orchestrateur de Life OS, pas de Tech OS",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:25540,26106",
+        "citation": "Je veux que ce soit lui qui devient l'orchestrateur de Life OS. Claude prend le Role d'observateur Watchdog de A'Space OS dans le Developpement de Life OS et Business OS."
+      },
+      {
+        "titre": "A2 = 7 cadences, A1 = spec-loop + babysitter, A3 = gstack/superpowers/GSD",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:26105",
+        "citation": "A0 = immortal runtime (4h-12h), A1 = spec-loop + babysitter, A2 = 7 cadences, A3 = gstack/superpowers/GSD nesting"
+      },
+      {
+        "titre": "Le 7e (etait) pour 7 cadences incl. pourrait-etre agentpulse",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:25553-25555",
+        "declaration": "La structure V3 existe deja, et elle nomme les trois Cores: 11_Kernel_Core_13th, 12_Life_Core_11th, 13_Buzz_Core_12th, sous 00_Governance_Rick."
+      },
+      {
+        "titre": "Le repertoire Geordi est a 159 jonctions NTFS, pas 47 comme dit le canon",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:25847",
+        "citation": "Geordi cartographié en intégral: 99 423 fichiers, 7,71 Go, 159 jonctions NTFS détectées et non suivies — le canon en annonçait 47."
+      },
+      {
+        "titre": "Le Coach OS contient 18 apps / 161 sections / 0 erreur console",
+        "source_session": "sessions_md/C--Users-amado/314fae52-...:25845",
+        "citation": "Coach OS: tsc propre, 52 tests, build vert, audit 18 apps / 161 sections / 0 erreur console."
+      }
+    ],
+    "canon_affirme_que_aucune_session_ne_confirme": [
+      {
+        "titre": "21 zones V3 a remplir",
+        "canon": "entities.ts/A2_Computer_Enterprise_Spec.md: '21 zones, des .gitkeep, aucun runtime'",
+        "absence_session": "Aucun message utilisateur ne confirme ou deconfirme les 21 zones comme spec — l'utilisateur dit 'V3 est exactement ce qu'etait V2: une description bien rangee'."
+      },
+      {
+        "titre": "Discipline D3 Process Control",
+        "canon": "ADR-LD01-011 §6: 'Tactics pour Process Control (D3, semaine prochaine)'",
+        "absence_session": "Aucune session ne parle de D3 Process Control comme doctrine vivante. Aucun agent ne produit de 'quadrantic mode'."
+      },
+      {
+        "titre": "Les 4 Lois Fondamentales L2 (Subordination/Avengers Rule/Batman Gating)",
+        "canon": "SDD-006 §2 Lois Fondamentales L2",
+        "absence_session": "Aucune session ne mentionne 'HALT Beth' ou 'Batman Gating' en operation. Les sessions ne parlent que d'inbox, de Tech OS, de Coach OS."
+      },
+      {
+        "titre": "Summer's Verse en production",
+        "canon": "SDD-006 §4 Summer's Verse comme micro-executif",
+        "absence_session": "Aucune session ne montre une Summer operative. Les 4 variants de Jerry (Prime/Bio/Nexus/Solarpunk) ne sont pas deployes dans Coach OS."
+      },
+      {
+        "titre": "Le 8e domaine Sales (Illuminati)",
+        "canon": "Business_Pulse_B3_Notion_Canon_Lore_Index.md (2026-05-27)",
+        "absence_session": "Aucune session n'evoque Sales high-ticket, John Jones, ou les Illuminati. Coach OS a 18 apps (session 314fae52-25845) mais la liste ne dit pas si 'sales' en est une."
+      },
+      {
+        "titre": "Vignette Crystal Memory (S4 meta-strate)",
+        "canon": "PLAN_META_MEMOIRE_2026-08-01.md: '4 strates S0→S4, 10 étapes ordonnées'",
+        "absence_session": "Les sessions discutent de la creation/manipulation des fichiers INDEX mais aucune ne mesure le tableau RESULTS/CRYSTAL MEMORY de la strate S4."
+      },
+      {
+        "titre": "Les 22 agents canon + 5 Hero = 27 agents",
+        "canon": "ADR-LD01-011 §7: '27 agents (22 canon + 5 Hero): Planning assume l'organigramme. 4 sessions Hero spawned: Book/Zora/Morty/Amodei'",
+        "absence_session": "Aucune session ne montre les 22 agents canon deployes. Les 42 personas Buzz Pack sont une liste, pas des agents deployes."
+      },
+      {
+        "titre": "Cyborg (IT) / Yaz & Ryan (Kernel) ne touche pas L0",
+        "canon": "SDD-006 §5.6 Cyborg",
+        "absence_session": "Aucune session ne declare 'Cyborg n'a pas touche L0'. La separation Cyborg/IT et Yaz/Ryan/Kernel n'est pas operationnellement verifiee."
+      }
+    ]
+  },
+  "sources": {
+    "primaires": [
+      "ASpace_OS_V3/10_Tech_OS/00_Governance_Rick/SOUL.md",
+      "ASpace_OS_V3/10_Tech_OS/00_Governance_Rick/LAW.md",
+      "ASpace_OS_V3/10_Tech_OS/00_Governance_Rick/CASCADE.md",
+      "ASpace_OS_V3/20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md",
+      "ASpace_OS_V3/20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md",
+      "ASpace_OS_V3/20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/30_decisions/ADR-LD01-011_12_week_plan_a3_curie.md",
+      "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/10_Tech_OS/12_Blueprints/01-SDD/SDD-006_business-pulse-l2-pyramide.md (perime, 7 domaines, lu a des fins de reference)",
+      "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/30_Business_OS/10_Projects/omk/repos/coach-os/src/lib/ontology/entities.ts",
+      "ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains/30_Business_OS/10_Projects/omk/repos/coach-os/src/lib/ontology/relations.ts",
+      "C:/Users/amado/.buzz/packs/aspace-life-os/agents/ (42 personas md)",
+      "C:/Users/amado/.buzz/packs/aspace-life-core/agents/ (Life Core 11e compagnons)"
+    ],
+    "sessions_cles": [
+      "sessions_md/C--Users-amado/bf0d8147-2bf5-4bb4-84bf-a254bd46999e.md (la session de refonte V3: replicateur, kernel, gate, review, 18 450 fichiers, 3 Cores)",
+      "sessions_md/C--Users-amado/314fae52-4862-483a-a656-954d6c56b983.md (canonique 521 messages — Coach OS, A0, Watchdog, Multica, Solarpunk Kernel)",
+      "sessions_md/C--Users-amado--buzz/1af3bfe0-ac1c-4288-9af6-b8ba442584e8.md (42 personas Life OS importees dans Buzz)",
+      "sessions_md/C--Users-amado--buzz/cc348baa-7de2-43c9-a0b1-89b41a5c8e0c.md (meme session, redemarrage)",
+      "sessions_md/C--Users-amado/18288c06-737e-42cb-8a51-1bd62dcc0406.md (Geordi KB root, INDEX_OF_INDEXES, OKF 4e pilier)",
+      "sessions_md/C--Users-amado/2201605f-9e1f-4c57-91ab-3fd8a6ed68d4.md (Coach OS localhost:5174, omk-services/OMK-DESKTOP-WEB-OS)"
+    ],
+    "fichiers_consultes": 28,
+    "recherche_fusionnee": "Voir meta_ontologie.json et META_ONTOLOGIE.md dans le meme repertoire"
+  }
+}

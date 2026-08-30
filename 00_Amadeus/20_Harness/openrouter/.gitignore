@@ -1,0 +1,11 @@
+# Les sauvegardes contiennent des secrets EN CLAIR — c'est le prix de la
+# restauration : un backup chiffre qu'on ne sait pas relire ne restaure rien.
+# Ils ne doivent jamais quitter ce disque.
+#
+#   backups/settings.*.json  -> copies de ~/.claude/settings.json
+#                               (ANTHROPIC_API_KEY, SUPABASE_*, VERCEL_TOKEN,
+#                                COMPOSIO_CONSUMER_KEY)
+#   backups/env_registre.json -> valeurs de HKCU:\Environment
+#
+# Canon §5 : scanner les secrets AVANT tout deplacement vers un depot.
+backups/

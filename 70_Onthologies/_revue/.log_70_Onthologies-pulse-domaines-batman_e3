@@ -1,0 +1,2 @@
+API Error: Request rejected (429) · [ollama/nemotron-3-ultra] [429]: {"error":"you (amdkn777) have reached your weekly usage limit, upgrade for higher limits: https://ollama.com/upgrade (ref: 92b11354-ac63-42c2-97ee-717d3ff69d70)"}
+ (reset after 4m 16s)

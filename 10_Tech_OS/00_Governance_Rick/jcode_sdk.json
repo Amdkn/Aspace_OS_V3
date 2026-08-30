@@ -1,0 +1,23 @@
+{
+  "point_extension": false,
+  "chemins": [
+    "sdk/typescript/README.md",
+    "crates/jcode-sdk/src/lib.rs",
+    "crates/jcode-sdk/src/launch.rs",
+    "crates/jcode-harness-api/src/lib.rs",
+    "crates/jcode-harness-api/src/requests.rs",
+    "crates/jcode-harness-api/src/events.rs",
+    "crates/jcode-tool-core/src/lib.rs",
+    "crates/jcode-app-core/src/tool/mod.rs",
+    "crates/jcode-base/src/registry.rs",
+    "crates/jcode-base/src/mcp/client.rs",
+    "crates/jcode-command-risk/src/lib.rs",
+    "docs/HOOKS.md",
+    "docs/SPAWN_HOOK.md",
+    "README.md"
+  ],
+  "sandbox": false,
+  "mcp_role": "client",
+  "types_publics_a_toucher": 2,
+  "verdict": "Non. jcode n'expose pas de plugin runtime, ni trait d'extension public pour ajouter une capacité sans forker, ni hôte d'outils, ni sandbox d'exécution. Le seul trait d'extension plausible (jcode_tool_core::Tool) existe mais n'est pas publié sur crates.io, et la liste des outils est hardcodée dans jcode-app-core/src/tool/mod.rs:190 (base_tools). L'API wire (jcode-harness-api) est un protocole fermé avec catch-all forward-compat qui ne sert qu'à ignorer des frames inconnues, pas à enregistrer des capacités. jcode est exclusivement client MCP (spawn de tokio::process::Command vers serveurs tiers). Aucun hook (lifecycle/spawn) n'ajoute une capacité : ce sont des programmes externes déclarés en config. L'auteur assume la posture (README.md:620) : 'One that doesn't limit you to what a plugin or extension can do' — l'extension est par fork + self-dev. Pour un Sandbox Gateway, deux chemins seulement : (A) bundler un tool dans jcode en forkant (2 types publics touchés : Tool trait + insertion dans base_tools), ou (B) implémenter un serveur MCP tiers que jcode consomme (0 type public jcode touché, couplage protocolaire MCP)."
+}

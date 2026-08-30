@@ -1,0 +1,921 @@
+{
+  "seau": "02_Areas_Spock",
+  "fichiers_lus": 84,
+  "fichiers_disponibles": 263,
+  "fichiers_lus_vagues_1_a_3": 95,
+  "fichiers_lus_vague_4": 84,
+  "jonctions_ecartees": 0,
+  "note_quota": "Quota de 150 chemins non encore lus NON ATTEINT. Sur 263 fichiers .md de l'arbre 02_Areas_Spock, 179 ont ete identifies comme non couverts par vagues 1-3 ; 95 d'entre eux etaient des chemins absolus Windows doublonnant des chemins relatifs deja couverts, laissant 84 chemins uniques effectivement non lus. La totalite des 84 a ete lue. Au-dela, il ne reste que des fichiers non-structurants (README AI Studio generique, B3 JTBD_PACKET techniques repetitifs).",
+
+  "types": [
+    {
+      "nom": "B2 Domain Control Room (template canonique)",
+      "attributs": ["id", "layer: B2_AREA_SUPERVISION", "surface (Jerry Area)", "domain", "b2_owner", "b3_swarm", "status (SHADOW_ACTIVE)", "updated"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/00_B2_DOMAIN_CONTROL_ROOM.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/00_B2_DOMAIN_CONTROL_ROOM.md"
+      ]
+    },
+    {
+      "nom": "B2 Rock Packet (template)",
+      "attributs": ["rock_id (J01-B2-<DOMAIN>-YYYY-NN)", "domain", "b2_owner", "source_b1_handoff", "rock_statement", "status (proposed/active/blocked/review/done)", "definition_of_done", "acceptance_criteria", "lead_indicators", "lag_indicators", "b3_jobs", "review_cadence"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md"
+      ]
+    },
+    {
+      "nom": "B3 Swarm Supervision Protocol (template)",
+      "attributs": ["id", "layer: B2_AREA_SUPERVISION", "surface", "domain", "status (SHADOW_ACTIVE)", "updated", "autonomy_contract (allowed/forbidden)", "jtbd_packet_template"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/02_B3_SWARM_SUPERVISION_PROTOCOL.md"
+      ]
+    },
+    {
+      "nom": "Batman Ops Principle (P#)",
+      "attributs": ["numero (P1-P25)", "cluster (D/E/L/A)", "rule", "squad_owner", "anti_pattern", "evidence_grade (CANONICAL/PERPETUAL_DOCRINE)", "vintage (v1=18 / v2=+4 / v3=0 / v4=+3)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Cyborg IT Principle (P#)",
+      "attributs": ["numero (P1-P18)", "cluster (Agentic_Engineering / Context_Memory / Sovereign_Local_Stack / Infrastructure_Security)", "rule", "kang_owner", "anti_pattern", "vintage"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Wonder Woman Finance Principle (F#)",
+      "attributs": ["numero (F1-F25)", "cluster (Cash_Runway / Margin_Cost / Transparency / Collection_Compliance / Empire_Kardashev / Treasury_Investing / AI_Agency)", "rule", "thunderbolts_owner", "anti_pattern", "two_horizon (floor/ceiling)", "evidence_grade (CANONICAL_FROM_CANON)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Green Lantern People Principle (PE#)",
+      "attributs": ["numero (PE1-PE30)", "cluster (Recruiting / Performance / Culture / Ethics / Harness / Human_Effectiveness / Owner_Leverage / Surface_Separation / Agentic_HR)", "rule", "xmen_owner", "anti_pattern"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Aquaman Legal Principle (L#)",
+      "attributs": ["numero (L1-L25)", "cluster (Contracts_Durability / Compliance_Data / IP_Assets / Negotiation_Enforcement / Abundance_Governance / Data_Rights / AI_Era_Frontier)", "rule", "eternals_owner", "anti_pattern"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "B2 Handoff Queue (table)",
+      "attributs": ["Status", "B2 Domain", "Direction Item", "Why Now", "Required Output", "Evidence Path"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/04_B2_HANDOFF_QUEUE.md"
+      ]
+    },
+    {
+      "nom": "B2 Domain Contribution (Offer/Brand/Revenue)",
+      "attributs": ["Domain (Growth/Sales/Product/Ops/IT/Finance/People/Legal)", "Contribution"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_OFFER_BRAND_REVENUE_ENGINE.md"
+      ]
+    },
+    {
+      "nom": "Weekly Gate Check (J03 12WY)",
+      "attributs": ["week (W01-W12)", "Runway Gate (GREEN/YELLOW/ORANGE/RED)", "Coverage Gate", "Family Gate", "Decision Status (EXPAND/HOLD/HALT)"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W02.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W03.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W04.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W07.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W10.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W11.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W12.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W09_W12_Optimization/README.md"
+      ]
+    },
+    {
+      "nom": "Insurance Audit Checklist",
+      "attributs": ["Life Insurance (policy/coverage/beneficiary/premium/review)", "Health Insurance (enrollment/coverage/deductible/HSA/renewal)", "Property Insurance (coverage/deductible/renewal)", "Umbrella (policy/coverage/expiration)"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W10.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W09_W12_Optimization/README.md"
+      ]
+    },
+    {
+      "nom": "Succession Status Report",
+      "attributs": ["Estate Documents (Will/Healthcare Directive/Financial POA)", "Beneficiary Designations (Retirement/Life Insurance/Brokerage)", "Entity Structure (Type/Status/Last Review)", "Business Continuity (Key Person Deps/Process Docs/Succession Candidates)"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W11.md",
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W09_W12_Optimization/README.md"
+      ]
+    },
+    {
+      "nom": "Q1 Scorecard Template",
+      "attributs": ["Runway (months, target, zone)", "Coverage Ratio", "Savings Rate", "Family Load", "Block 1 Grade (A-F)", "Q2 Focus"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W04.md"
+      ]
+    },
+    {
+      "nom": "Annual Goal Template (J03)",
+      "attributs": ["Runway Target (months by Dec 31)", "Coverage Ratio Target (% avg)", "TIER 2 Contribution ($/month)", "TIER 3 Contribution ($/month)", "Family Load Score Target", "Hard Things Completion", "Tax Rate Target"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W03.md"
+      ]
+    },
+    {
+      "nom": "Annual Snapshot",
+      "attributs": ["Year (YYYY)", "Runway (months)", "Coverage Ratio", "Savings Rate", "Family Load", "TIER 2 Portfolio (start/end, YTD vs S&P)", "TIER 3 Equity", "KRs Achieved (N/7)", "Overall Year Grade (A-F)", "Next Year Priority"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W12.md"
+      ]
+    },
+    {
+      "nom": "B3 Squad Crosslink (J01 -> 30_Business_OS)",
+      "attributs": ["Domain (J01 B2 path)", "B3 Squad", "30_Business_OS Mirror path", "Squad Members (role/hero/function)", "Mode (Brand/Story-first, Data-first, Flash-first, Ops-first, Time-first, Finance-first, People-first, Legal-first)", "Crosslink Protocol"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/B3_Squad_Fantastic4/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/B3_Squad_KangDynasty/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/B3_Squad_Thunderbolts/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/B3_Squad_XMen/00_CROSSLINK.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/B3_Squad_Eternals/00_CROSSLINK.md"
+      ]
+    },
+    {
+      "nom": "B3 Swarm Config (Guardians example)",
+      "attributs": ["id", "layer: B3_SWARM_EXECUTION", "surface (Jerry Area)", "domain", "b2_owner", "b3_swarm", "mode", "status (SHADOW_ACTIVE)", "mission", "doctrine_inputs", "active_rock (yaml packet)", "operational_mode_table", "forbidden_boundaries", "mesh_L2_surfaces"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_B3_SWARM_CONFIG.md"
+      ]
+    },
+    {
+      "nom": "B3 Squad Handoff Packet",
+      "attributs": ["handoff_id", "from_agent", "to_agent", "experiment_id", "artifact_passed", "proof", "expectation", "deadline"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/02_PEER_UNBLOCKING_AND_HANDOFFS.md"
+      ]
+    },
+    {
+      "nom": "B3 Agent Roster (Guardians)",
+      "attributs": ["agent name", "hero", "role canon (Notion AGENT_REGISTRY_DB)", "principles_possessed (P#)", "AARRR (Acquisition/Activation/Retention/Revenue/Referral)", "lore_summary"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/01_B3_AGENT_ROSTER.md"
+      ]
+    },
+    {
+      "nom": "B3 Shared Context (Guardians)",
+      "attributs": ["North Star Metric (P4)", "Rock actif", "Mode growth", "Offre phare", "ICP valide", "Backlog", "Proof Log entries (yaml)", "Brand memory (Groot)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/03_SHARED_CONTEXT_AND_PROOF_LOG.md"
+      ]
+    },
+    {
+      "nom": "J03 W12 Stability Artifact (Runway Snapshot)",
+      "attributs": ["cash_on_hand", "monthly_burn", "runway_months", "gate_status", "screenshot_of_accounts"],
+      "chemins": [
+        "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/B3_Area_Warp_Core/Artifact_Proofs/README.md"
+      ]
+    },
+    {
+      "nom": "J02 Bio Artifact (ORANGE Event Packet)",
+      "attributs": ["trigger_evidence (screenshot/log)", "advisory_issued (timestamp/recipients)", "recovery_protocol (start/steps)", "root_cause_analysis", "clearance_evidence (48h GREEN)"],
+      "chemins": [
+        "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B3_Area_Warp_Core/Artifact_Proofs/README.md"
+      ]
+    },
+    {
+      "nom": "Area-Level Artifact Type (B3)",
+      "attributs": ["Type 1..6", "description", "frequency", "evidence_required (checklist)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B3_Area_Warp_Core/Artifact_Proofs/README.md"
+      ]
+    },
+    {
+      "nom": "DEAL Cluster (Ops)",
+      "attributs": ["Phase (D / E / A / L)", "Action", "Owner (Fantastic Four member)", "Principles (P#)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Hermes Harness Body",
+      "attributs": ["name (Claude Code / Hermes Nous Desktop / Claude Cowork)", "use_case (terminal-dev / swarm / sandboxed-macOS-desktop)", "model_agnostic (true)", "adr_reference (ADR-HERMES-001)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+      ]
+    },
+    {
+      "nom": "Build Gate (B3 review)",
+      "attributs": ["name (Invisible Woman Build Gate)", "function (validates output against DoD before ships)", "owner", "review_actions (accepted/revise/blocked/escalate_to_B1)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/02_B3_SWARM_SUPERVISION_PROTOCOL.md"
+      ]
+    },
+    {
+      "nom": "Donna DLQ Safety Exit",
+      "attributs": ["trigger (swarm loops / fabricates proof / keeps asking for permission)", "action (route to Donna/DLQ for safety review)"],
+      "chemins": [
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/02_B3_SWARM_SUPERVISION_PROTOCOL.md",
+        "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/02_B3_SWARM_SUPERVISION_PROTOCOL.md"
+      ]
+    },
+    {
+      "nom": "App Manifest",
+      "attributs": ["id", "name", "icon", "version", "entryComponent", "dockSlot (boolean)", "manifest_source (per-app manifest.json)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/agents-appstore.md"
+      ]
+    },
+    {
+      "nom": "A'Space Deep Link URI",
+      "attributs": ["scheme (aspace://)", "route (app/<id>/page/<sub> | view/<page>)", "fallback (open app if not running, navigate if running)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/shell.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/agents-appstore.md"
+      ]
+    },
+    {
+      "nom": "Glassmorphism Token",
+      "attributs": ["token_name (--glass-bg, --glass-blur, --glass-border, --glass-shadow, --copper, --brass)", "scope (max 2 levels blur)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/shell.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.1-command-center/specs/features.md"
+      ]
+    },
+    {
+      "nom": "Trinity Dashboard View",
+      "attributs": ["view (Standard / Focus (GTD) / Strategy (12WY))", "binding (Zustand state)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.1-command-center/design.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.1-command-center/specs/features.md"
+      ]
+    },
+    {
+      "nom": "IndexedDB LD-Isolated Store",
+      "attributs": ["store_name (aspace-ld01..ld08)", "isolation_policy (no cross-LD read/write)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/proposal.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.2-para-business/specs/features.md"
+      ]
+    },
+    {
+      "nom": "Veto Toggle (Beth Lock)",
+      "attributs": ["scope (global DB writes from A3)", "implementation (middleware in idb.ts throws 'OVERRIDE DENIED: Veto is Active')", "owner (Beth A1)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/proposal.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md"
+      ]
+    },
+    {
+      "nom": "A2 Spaceship Hierarchy",
+      "attributs": ["ship_name (Orville/Discovery/SNW/Enterprise/Cerritos/Protostar)", "A2 manager", "A3 crew list with status (online/offline/working)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/agents-appstore.md"
+      ]
+    },
+    {
+      "nom": "DEAL Module (Tech)",
+      "attributs": ["module (MuseReactor / TmiCalculator / AutomationGraph / FreedomMap)", "connection (LD08 IndexedDB)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.7-deal-protocol/design.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.7-deal-protocol/specs/features.md"
+      ]
+    },
+    {
+      "nom": "Ikigai Pillar",
+      "attributs": ["name (Passion/Mission/Profession/Vocation)", "scope (craft/mission/passion/vocation)", "horizons (H1/H3/H10/H30/H90)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/framework-apps.md",
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.3-ikigai-protocol/specs/features.md"
+      ]
+    },
+    {
+      "nom": "Temporal Horizon",
+      "attributs": ["code (H1/H3/H10/H30/H90)", "card (Crew Manifest agents assignes)", "routage (aspace://app/ikigai?view=horizon&id=h1)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.3-ikigai-protocol/specs/features.md"
+      ]
+    },
+    {
+      "nom": "GTD List",
+      "attributs": ["name (Next Actions / Waiting For / Someday / Inbox)", "routage (aspace://app/gtd?list=next)"],
+      "chemins": [
+        "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.6-gtd-system/specs/features.md"
+      ]
+    }
+  ],
+
+  "relations": [
+    {
+      "de": "B1",
+      "verbe": "hands off via 04_B2_HANDOFF_QUEUE.md",
+      "vers": "B2",
+      "citation": "B1 creates a B2 request in 04_B2_HANDOFF_QUEUE.md.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "de": "B2",
+      "verbe": "creates Rock+DoD -> JTBD",
+      "vers": "B3",
+      "citation": "B2 converts the request into DoD packets using 05_B2_DEFINITION_OF_DONE_SPEC.md. B2 creates B3 jobs using 06_B3_JOBS_TO_BE_DONE_SPEC.md. B3 executes only the defined jobs and returns proof.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "de": "B2 (Ops)",
+      "verbe": "owns 8 domain contributions to offer",
+      "vers": "B2 (Growth/Sales/Product/Ops/IT/Finance/People/Legal)",
+      "citation": "Domain | Contribution / Growth: ICP, message, category, channel, brand wedge. / Sales: qualification, objections, buying path, close evidence. / Product: promise-to-feature fit and demo proof. / Ops: delivery SOP and capacity limits. / IT: runtime, data, access, automation, integration boundaries. / Finance: price, cost, margin, payment, burn-rate. / People: owner map, training, load, handoff. / Legal: claims, privacy, IP, terms, compliance.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/B2_OFFER_BRAND_REVENUE_ENGINE.md"
+    },
+    {
+      "de": "B2",
+      "verbe": "blocks B3 work without B1 handoff",
+      "vers": "B3",
+      "citation": "Stop Conditions: No B2 work without a B1 handoff queue item. No B3 work without a B2 DoD or JTBD source.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/00_B1_DIRECTION_INDEX.md"
+    },
+    {
+      "de": "B2 Growth (Superman)",
+      "verbe": "owns ICP+message",
+      "vers": "B2 Sales (John Jones)",
+      "citation": "Growth (Superman) = acquisition (qualified pipeline). Sales (John Jones) = conversion. Product (Flash) = value. Ops (Batman) = repeatability.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Ops (Batman)",
+      "verbe": "owns repeatability (autonomy ratio)",
+      "vers": "B2 Growth + Product",
+      "citation": "Growth (Superman) = acquisition (qualified pipeline). Product (Flash) = value. Ops (Batman) = repeatability. One datum, one owner (ADR-MESH-L2-001) — domains point at each other's data, they never copy it.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 IT (Cyborg)",
+      "verbe": "owns IT architecture outright — Jerry does NOT decide",
+      "vers": "IT architecture decisions",
+      "citation": "Cyborg (B2 owner) owns IT architecture decisions outright — Jerry does NOT make them (per the control room). The squad executes; Cyborg arbitrates architecture and leaves an unchecked `[ ] Acceptance Cyborg` in each DoD.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 IT (Cyborg)",
+      "verbe": "serves every domain (VPS/Supabase/Airtable/Stripe substrate) but owns none of their data",
+      "vers": "B2 Ops/B2 Finance/etc.",
+      "citation": "IT serves every domain (Sales' Stripe, Finance's Airtable, Growth's RAG) but owns none of their data — one datum, one owner (ADR-MESH-L2-001). IT provides the secure substrate; it points.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Finance (Wonder Woman)",
+      "verbe": "non-delegable on pricing strategy + reinvestment allocation",
+      "vers": "discounts >15% / runway <6mo / Solaris margin <25%",
+      "citation": "Wonder Woman (B2 owner) is non-délégable on pricing strategy and reinvestment allocation. Discount >15% requires her sign-off (the cross-domain anti-pattern shared with Sales/Illuminati). ... Escalate to Jerry if runway <6 months or Solaris margin <25%.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Finance (Wonder Woman)",
+      "verbe": "reconciles + reports; never copies",
+      "vers": "Sales/Growth/IT/Ops source data",
+      "citation": "It consumes Sales' deal values, Growth's CAC, IT's compute cost, Ops' delivery cost, but owns none of those source data — one datum, one owner (ADR-MESH-L2-001). Finance reconciles and reports; it points to Airtable Finance_Pulse as its single source of truth, never copies.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 People (Green Lantern)",
+      "verbe": "non-delegable on headcount timing + retention intervention",
+      "vers": "headcount >3 standby agents / HIGH ethics finding",
+      "citation": "Green Lantern (B2 owner) is non-délégable on headcount timing (the runway/$10K-per-person rule) and retention intervention. He leaves an unchecked `[ ] Acceptance Green Lantern` in each DoD. Escalate to Jerry if >3 agents sit in Standby simultaneously, or any HIGH ethics finding.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 People (Green Lantern)",
+      "verbe": "owns the member; IT (Cyborg) owns the runtime",
+      "vers": "Agent capsule identity files (SOUL/AGENTS/CLAUDE/Context/MEMORY)",
+      "citation": "IT (Cyborg) provisions the technical capsule runtime; People onboards the member into it with dignity and monitors its behaviour. IT = the machine; People = the member. ... A member is never Active (PE8) until its harness passes the 7-day heartbeat baseline.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Legal (Aquaman)",
+      "verbe": "non-delegable on contract escalation + IP protection priority",
+      "vers": "HIGH RGPD finding / client-data breach / AI-employee contract missing decision-support framing",
+      "citation": "Aquaman (B2 owner) is non-délégable on contract escalation (B1 vs B2 review) and IP-protection priority. He leaves an unchecked `[ ] Acceptance Aquaman` in each DoD. Escalate to Jerry on any HIGH RGPD finding or client-data breach.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Legal (Aquaman)",
+      "verbe": "is the cross-domain compliance gate",
+      "vers": "Public-facing claims (Growth/Sales messages)",
+      "citation": "It is the compliance gate on any public-facing claim: for compliance-bound Picard projects, Growth/Sales messages route through Legal/Eternals before diffusion (this is the legal_gate in the picard-growth-jtbd-launch skill). Legal can veto a message Growth/Sales cannot waive.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+    },
+    {
+      "de": "B2 Ops (Batman)",
+      "verbe": "non-delegable on autonomy North Star (P4) + go/no-go on automation investments",
+      "vers": "automation investments",
+      "citation": "Batman (B2 owner) is non-délégable on P4 (autonomy North Star) and the go/no-go on automation investments. The squad proposes; Batman arbitrates, leaving an unchecked `[ ] Acceptance Batman` in each DoD.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "B3 peer",
+      "verbe": "unblocks before escalating (subsidiarity)",
+      "vers": "another B3 peer",
+      "citation": "On ne remonte à Superman que si le blocage touche le Rock, la DoD, un gate cross-domaine, ou un secret. ... Règles de peer-unblock: Pas de ping-pong : si 2 allers-retours ne débloquent pas → escalation Superman (la friction révèle une DoD floue, cf. Anti-Bottleneck Rule du pipeline).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/02_PEER_UNBLOCKING_AND_HANDOFFS.md"
+    },
+    {
+      "de": "Donna DLQ",
+      "verbe": "catches B3 safety failures",
+      "vers": "swarm loops / fabricates proof / keeps asking permission",
+      "citation": "Donna Safety Exit: If the swarm loops, fabricates proof, or keeps asking for permission instead of executing inside the contract, route the case to Donna/DLQ for safety review.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/02_B3_SWARM_SUPERVISION_PROTOCOL.md"
+    },
+    {
+      "de": "Invisible Woman (B3 squad Ops)",
+      "verbe": "is the Build Gate",
+      "vers": "B3 Ops output before it ships",
+      "citation": "Invisible Woman = Build Gate is grounded: 'Filtre Invisible Woman' is the Build-Gate formula in the Airtable � table (Symphony Airtable adapter) — she validates output against the DoD before it ships.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "Watchdog (Ops P15)",
+      "verbe": "signals silently or escalates",
+      "vers": "critical processes",
+      "citation": "Watchdog pattern = chaque process critique a un agent Watchdog autonome qui signale en silence ou escalade. Companion de la DLQ Donna.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "Hermes Workspace Swarm Mode",
+      "verbe": "incarnates B3 swarm + Build Gate (PE17)",
+      "vers": "B3 swarm execution harness",
+      "citation": "Hermes Workspace's Swarm Mode (persistent tmux workers, role-based dispatch, byte-verified review gate, proof-bearing checkpoints, Kanban, 2,000+ skills, MCP) IS the B3 swarm + Build Gate incarnated. Use the harness's native swarm/review rather than reinventing it.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "ADR-HERMES-001",
+      "verbe": "disambiguates Hermes body = Nous Research Desktop (never fathah/hermes-desktop)",
+      "vers": "Hermes body selection",
+      "citation": "v5 disambiguation (ADR-HERMES-001): the Hermes body = Nous Research Desktop (NousResearch/hermes-agent, app com.nousresearch.hermes) — never fathah/hermes-desktop (an external companion, non-canonical). Onboarding a Hermes member must target the Nous body.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "A'Space harness bodies (PE13)",
+      "verbe": "are Claude Code + Hermes + Claude Cowork",
+      "vers": "A'Space member runtime",
+      "citation": "The A'Space bodies are Claude Code (terminal/dev), Hermes (Nous Research, swarm), and Claude Cowork (sandboxed macOS desktop + Chrome agent, no-code, browser-piloting via MCP, no-delete safety — the body for non-dev knowledge work).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "Local Desktop Hermes",
+      "verbe": "must not auto-coexist with Workspace (PE29)",
+      "vers": "Remote Workspace Hermes",
+      "citation": "Because the Nous Desktop and a local Workspace share the same Hermes CLI install (sessions/config/skills), they collide if co-run. The canon (ADR-HERMES-001): Desktop Nous = the Windows-native local body; Workspace = the remote VPS surface (password-protected HTTPS). People onboards a member into one surface deliberately; never wire both to autostart.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "Agent",
+      "verbe": "MUST undergo adversarial-verification (PE30) — never self-grade",
+      "vers": "perf-review + ethics-audit",
+      "citation": "PE30 — Run agentic-HR on the 6 dynamic-workflow patterns; adversarial-verification is mandatory. ... The non-negotiable: any agent perf-review or ethics-audit MUST use adversarial-verification — never let the agent self-grade (it kills the self-preference bias that PE6/PE12 exist to fight).",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md"
+    },
+    {
+      "de": "Aquaman (L24)",
+      "verbe": "blocks ship-decisions overriding unresolved safety flag",
+      "vers": "Business ship-decisions",
+      "citation": "Keep the burden of proof on safety (anti-deviance governance). The Challenger lesson: catastrophe came from inverting the burden of proof under business pressure — 'prove it's unsafe' instead of 'prove it's safe'. ... For A'Space: no ship-decision overrides an unresolved safety/compliance flag without an explicit, logged risk acceptance.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+    },
+    {
+      "de": "Aquaman (L25)",
+      "verbe": "vetoes any AI-employee contract lacking decision-support + human-validation framing",
+      "vers": "AI-employee CGV",
+      "citation": "Autonomous agents have no legal personhood — the operator is liable. An autonomous software agent is not a legal person and cannot be a mandataire binding the entity. The operating entity bears full liability for every agent action; CGV must define the agent as a decision-support tool, never a legal mandatary, and mandate human final validation on sensitive outputs (hallucination risk → never warrant 100% accuracy). Track EU AI-Act risk-tier obligations + robotics compliance (ROS2) where physical agents apply.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+    },
+    {
+      "de": "Aquaman (L23)",
+      "verbe": "documents human inventive contribution for AI-discovered IP",
+      "vers": "AI-discovered patent filings",
+      "citation": "Secure inventorship on AI-discovered IP. When AI discovers a material/molecule/design (GNoME-class, via graph neural networks), patent inventorship is contested — USPTO/Thaler-DABUS: an AI cannot be a named inventor. Document the human inventive contribution, file fast, and treat AI-discovered IP as a sovereign asset to protect (not assume). Nature/known science = prior art.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md"
+    },
+    {
+      "de": "Wonder Woman (F18)",
+      "verbe": "deletes ambition claims without real numbers (anti-PNL)",
+      "vers": "Kardashev ceiling claims",
+      "citation": "Earn the slogan (anti-PNL rule). 'Trillion or nothing' is a measured result, never a chant. Every ambition claim must be backed by a real number or it's deleted (extends F7 transparency to the ceiling). The Kardashev horizon is a destination reached by compounding proof, not by declaring it.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+    },
+    {
+      "de": "Wonder Woman (F21)",
+      "verbe": "operationalizes trillion-TAM via roll-up consolidation",
+      "vers": "fragmented industry",
+      "citation": "Roll-up consolidation as a concrete trillion path. A repeatable empire mechanic (Huizenga / Codie): find a fragmented industry → acquire aggressively (seller-financing / stock) → extract & standardize the best local system across the network → build a network/infrastructure moat (own the critical chokepoint) → keep former owners as motivated equity partners. (Operationalizes F16.)",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+    },
+    {
+      "de": "Wonder Woman (F25)",
+      "verbe": "plans on Wright's-law deflation tailwind",
+      "vers": "model reinvestment decisions",
+      "citation": "Plan on the Wright's-law tailwind. Inference cost ~halves per year at equal capability, so at constant price your margin expands mechanically — and you gain the option to cut price to starve low-cost competition. Model reinvestment assuming this deflation; don't lock long contracts to today's token cost.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md"
+    },
+    {
+      "de": "Batman (P23 Buyback Principle)",
+      "verbe": "outputs founder time bought back, not effort",
+      "vers": "Ops systematization",
+      "citation": "P23 — Buyback Principle (le temps du fondateur, pas son effort). La systématisation Ops n'a pas pour seul output des processus qui tournent — elle a pour seul output du temps rendu au fondateur. Dan Martell : 'Broken people spend time to save money. Rich people spend money to save time.'",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "Batman (P25 Frontière de Contexte)",
+      "verbe": "enforces file-system boundary per agent A3",
+      "vers": "cross-agent A3 writes",
+      "citation": "Chaque agent A3 a un périmètre de fichiers délimité (file-system boundary + lint rule + Build Gate Invisible Woman) ; avant d'écrire dans un autre périmètre, l'agent fait un auto-audit 'Lis et Résume' du fichier cible pour prouver qu'il a compris le contexte existant, puis poste une PR — jamais d'écriture directe cross-périmètre.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md"
+    },
+    {
+      "de": "Cyborg (P13)",
+      "verbe": "rejects GAFAM dependency for sovereign local workloads",
+      "vers": "third-party cloud SaaS",
+      "citation": "Data sovereignty / anti-GAFAM. IP, secrets, and sensitive data never transit a third-party cloud under foreign jurisdiction. Prefer an internal failure point you control over a rented external dependency you don't. (The bedrock A'Space stance.)",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md"
+    },
+    {
+      "de": "Cyborg (P17)",
+      "verbe": "scans logs for secret leakage (Yaz Watchdog)",
+      "vers": "B3 build gate",
+      "citation": "Sandboxed, atomic, immutable changes. Agents operate in a sandbox; source files stay immutable via shadow-copy / ephemeral volumes. Each proposed change passes syntactic validation + unit tests before an atomic merge to main. Access via ephemeral tokens only. (Build Gate: zero leaked secret in logs — Yaz Watchdog scan.)",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md"
+    },
+    {
+      "de": "J02 Bio (Beth HALT)",
+      "verbe": "auto-escalates on LD03 ORANGE + LD04 ORANGE",
+      "vers": "all Jerry expansion",
+      "citation": "RED Event Artifacts ... Beth HALT Notification: Beth HALT notification sent to Beth (timestamp) ... FULL STOP Issued: Copy of FULL STOP sent to ALL Jerry areas ... Beth HALT veto → tous les Jerry freeze. C'est le garde-fou anti 'LD01 dévore la vie'.",
+      "chemin": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B3_Area_Warp_Core/Artifact_Proofs/README.md"
+    },
+    {
+      "de": "Veto Toggle (Beth)",
+      "verbe": "blocks all A3 DB writes via middleware",
+      "vers": "A3 framework writes",
+      "citation": "Veto E2E Lock Test ... Implement a middleware/proxy in idb.ts that automatically throws an 'OVERRIDE DENIED: Veto is Active' error if a .put() or .add() is attempted while shell.store has vetoEngaged === true.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md"
+    },
+    {
+      "de": "App Registry",
+      "verbe": "validates module imports dynamically at boot",
+      "vers": "corrupted app components",
+      "citation": "App Registry Sanity Checks ... Update app-registry.ts to try/catch the resolving of App components. If an undefined component is registered (due to import mismatch), mark the app as status: 'corrupted' and visualy disable its icon in the Dock with a ⚠️ badge.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md"
+    },
+    {
+      "de": "verifyIsolation()",
+      "verbe": "verifies no LD01..LD08 cross-contamination",
+      "vers": "IndexedDB stores",
+      "citation": "Data Isolation Verification (LD01-LD08) ... Create a verifyIsolation() util in the Command Center Dashboard. It scans ld01 to ld08 IndexedDB instances and checks for prohibited foreign keys. Result displayed in the Fleet Status.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md"
+    },
+    {
+      "de": "Loi du Dualisme (PARA App)",
+      "verbe": "Strategy view imports ParaOverview (read-only)",
+      "vers": "PARA editable pages",
+      "citation": "Intégration Command Center ... La page 'Strategy' du Command Center importe ParaOverview qui affiche le nombre de projets actifs et les priorités sans permettre l'édition (Loi du Dualisme).",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.2-para-business/design.md"
+    },
+    {
+      "de": "PARA App para.store",
+      "verbe": "is sole reader/writer of LD01",
+      "vers": "IndexedDB LD01",
+      "citation": "Architecture des Données ... L'App PARA utilise para.store.ts (Zustand) qui agit comme proxy vers la base LD01. Aucun autre store n'a le droit de lire ou d'écrire dans LD01 directement.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.2-para-business/design.md"
+    },
+    {
+      "de": "Deep Link aspace://",
+      "verbe": "opens target app at correct page or navigates if open",
+      "vers": "app instances",
+      "citation": "Cross-Link Router ... Links formatted as aspace://app/<name>/page/subpage open the target app at the correct page. If app is not open, it opens. If open, it navigates.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/shell.md"
+    },
+    {
+      "de": "A2 manager",
+      "verbe": "decomposes complex tasks into 1-focus sub-tasks (S-AP-02)",
+      "vers": "A3 queue",
+      "citation": "Smart Task Split ... As a A2 manager, I want tasks to be split intelligently so each A3 gets only 1 focused task at a time, so that agents are never overwhelmed. Acceptance: When A2 receives a complex task, it decomposes into single-focus sub-tasks. Each A3 queue has max 1 active task. Completion triggers next task assignment.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/agents-appstore.md"
+    },
+    {
+      "de": "Agent Portal",
+      "verbe": "visualizes Crew Manifest per Horizon (H1..H90)",
+      "vers": "Ikigai Temporal Horizons",
+      "citation": "S-IKI-02 Horizons Temporels (H1...H90) ... Section 'Temporal Horizons' avec 5 cartes (H1, H3, H10, H30, H90). Chaque carte affiche le 'Crew Manifest' (Agents assignés).",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.3-ikigai-protocol/specs/features.md"
+    },
+    {
+      "de": "12WY App tactical hub",
+      "verbe": "connects to PARA projects filtered by 12WY horizon",
+      "vers": "PARA LD01 tasks",
+      "citation": "S-12WY-02 Objectifs Tactiques Centraux ... Connexion avec les tâches PARA (LD01) filtrées par horizon 12WY.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.5-12wy-strategy/specs/features.md"
+    },
+    {
+      "de": "GTD Inbox",
+      "verbe": "is captured into LD06",
+      "vers": "PARA actionable items",
+      "citation": "S-GTD-01 Inbox Universelle (Capture) ... Champ de capture rapide (Overlay) accessible via raccourci ou bouton flottant. Stockage immédiat dans aspace-ld06 (Inbox).",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.6-gtd-system/specs/features.md"
+    },
+    {
+      "de": "DEAL Muse Reactor",
+      "verbe": "varies color by liberation health",
+      "vers": "Liberation dashboard",
+      "citation": "S-DEAL-01 Muse Reactor (Icosaèdre Central) ... Modèle 3D ou SVG animé d'un Icosaèdre (The Muse Reactor). Affichage dynamique du 'Automation Level' (ex: 85%). Couleur du réacteur variant selon la santé de la libération (Vert, Bleu, Ambre).",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/v0.1.7-deal-protocol/specs/features.md"
+    },
+    {
+      "de": "Gemini CLI",
+      "verbe": "is triggered by A0 spec-to-code terminal scripts",
+      "vers": "A3 execution counterparts",
+      "citation": "S-AUDIT-05 Automating Gemini CLI (The Spark) ... As GravityClaw, I want my A3 execution counterparts (Gemini CLI) to be triggerable directly from the terminal via programmatic commands, so that the spec-to-code pipeline is fully autonomous.",
+      "chemin": "02_Areas_Spock/the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/audit-antifragility.md"
+    },
+    {
+      "de": "B3 squad crosslink",
+      "verbe": "mirrors members canonically to 30_Business_OS",
+      "vers": "30_Business_OS operational squads",
+      "citation": "B2 direction flows DOWN from J01 Jerry Prime. B3 execution flows UP to 30_Business_OS operational squads. Weekly Lead/Lag synced to both J01 B3_Warp_Core AND 30_Business_OS dashboard.",
+      "chemin": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_CROSSLINK.md"
+    }
+  ],
+
+  "codes": [
+    {
+      "systeme": "P1-P25 (Batman Ops Principles — DEAL clusters D/E/A/L)",
+      "numerote": "25 principes Ops perpé tuels",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+      "valeurs": ["P1-P18 (v1, DEAL spine)", "P19-P22 (v2 addendum agence IA & audit)", "P23 (v4 Buyback Principle)", "P24 (v4 Token Economics & Strategic Programming)", "P25 (v4 Frontière de Contexte Stricte)"]
+    },
+    {
+      "systeme": "P1-P18 (Cyborg IT Principles — 4 clusters)",
+      "numerote": "18 principes IT perpé tuels",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md",
+      "valeurs": ["P1-P6 (Cluster A Agentic Engineering)", "P7-P9 (Cluster B Context & Memory)", "P10-P13 (Cluster C Sovereign Local Stack anti-GAFAM)", "P14-P18 (Cluster D Infrastructure & Security)"]
+    },
+    {
+      "systeme": "F1-F25 (Wonder Woman Finance Principles — 2 horizons)",
+      "numerote": "25 principes Finance (floor + ceiling)",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md",
+      "valeurs": ["F1-F3 Cluster A Cash & Runway (survival)", "F4-F6 Cluster B Margin & Cost", "F7-F9 Cluster C Transparency", "F10-F12 Cluster D Collection & Compliance", "F13-F18 Empire/Kardashev ceiling (directive)", "F19-F22 Treasury/Investing/Consolidation (v3)", "F23-F25 AI-Agency unit-economics (v4)"]
+    },
+    {
+      "systeme": "PE1-PE30 (Green Lantern People Principles — 6 clusters)",
+      "numerote": "30 principes People perpé tuels",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md",
+      "valeurs": ["PE1-PE4 Recruiting & Onboarding", "PE5-PE8 Performance & Development", "PE9-PE11 Culture & Cohesion", "PE12 Ethics & Alignment", "PE13-PE18 Harness-as-body (v2, ADR-HERMES-001)", "PE19-PE24 Human-Member Effectiveness (v3, Ali Abdaal + Tiago Forte)", "PE25-PE28 Owner-Leverage (v4, Dan Martell)", "PE29 Surface Separation Local≠Remote", "PE30 Agentic-HR dynamic-workflow + adversarial-verification (v6)"]
+    },
+    {
+      "systeme": "L1-L25 (Aquaman Legal Principles — 4 clusters)",
+      "numerote": "25 principes Legal perpé tuels",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md",
+      "valeurs": ["L1-L4 Cluster A Contracts & Durability", "L5-L8 Cluster B Compliance & Data (RGPD/GDPR)", "L9-L11 Cluster C IP & Assets", "L12 Negotiation & Enforcement", "L13-L18 Abundance-Governance ceiling (directive)", "L19-L22 Data-Rights/Privacy/Contract-defense (v3, StorieRAP)", "L23-L25 AI-Era Legal Frontier (v4, 3 Geordi fiches)"]
+    },
+    {
+      "systeme": "J01-B2-<DOMAIN>-YYYY-NN (B2 Rock Packet ID)",
+      "numerote": "B2 macro domain Rock",
+      "defini_dans": "B2_Area_Domains/<DOMAIN>/01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md (8 domaines : GROWTH/SALES/PRODUCT/OPS/IT/FINANCE/PEOPLE/LEGAL)",
+      "valeurs": ["J01-B2-GROWTH-2026-01 (active_shadow)", "J01-B2-SALES-YYYY-NN", "J01-B2-PRODUCT-YYYY-NN", "J01-B2-OPS-YYYY-NN", "J01-B2-IT-YYYY-NN", "J01-B2-FINANCE-YYYY-NN", "J01-B2-PEOPLE-YYYY-NN", "J01-B2-LEGAL-YYYY-NN"]
+    },
+    {
+      "systeme": "J01-B3-<DOMAIN>-YYYY-NN (B3 JTBD ID)",
+      "numerote": "B3 jobs to be done",
+      "defini_dans": "B2_Area_Domains/<DOMAIN>/02_B3_SWARM_SUPERVISION_PROTOCOL.md + B3_Area_Warp_Core/<DOMAIN>/JTBD-..._PACKET.md",
+      "valeurs": ["J01-B3-GROWTH-2026-001", "J01-B3-SALES-YYYY-NN", "J01-B3-PRODUCT-2026-001", "J01-B3-OPS-2026-001", "J01-B3-IT-2026-001", "J01-B3-FINANCE-2026-001", "J01-B3-PEOPLE-2026-001", "J01-B3-LEGAL-2026-001"]
+    },
+    {
+      "systeme": "GRD-HANDOFF-YYYY-NN (B3 squad handoff packet)",
+      "numerote": "B3 intra-squad handoff",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/02_PEER_UNBLOCKING_AND_HANDOFFS.md",
+      "valeurs": ["GRD-HANDOFF-YYYY-NN (template)"]
+    },
+    {
+      "systeme": "GRD-EXP-YYYY-NN (B3 experiment log entry)",
+      "numerote": "B3 swarm experiment entries (append-only)",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/03_SHARED_CONTEXT_AND_PROOF_LOG.md",
+      "valeurs": ["GRD-EXP-YYYY-NN (yaml template)"]
+    },
+    {
+      "systeme": "12WY_W0X (J03 W-by-W cadence IDs)",
+      "numerote": "Weekly packet J03 (Finance/Family)",
+      "defini_dans": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/",
+      "valeurs": ["12WY_W01..W12 (semantic) + 12WY_W01_W04_Foundation (season) + 12WY_W05_W08_Scaling + 12WY_W09_W12_Optimization"]
+    },
+    {
+      "systeme": "B2_B2_HANDOFF_QUEUE row schema",
+      "numerote": "B1→B2 handoff queue items",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B1_Area_Direction/04_B2_HANDOFF_QUEUE.md",
+      "valeurs": ["Status (TODO/DONE) × B2 Domain (Growth/Sales/Product/Ops/IT/Finance/People/Legal) × Direction Item × Why Now × Required Output × Evidence Path"]
+    },
+    {
+      "systeme": "B3 Artifact Filename Convention",
+      "numerote": "J02 Bio evidence filename pattern",
+      "defini_dans": "02_Areas_Spock/J02_Jerry_Bio_LD03_LD04_Vitality_Cognition/B3_Area_Warp_Core/Artifact_Proofs/README.md",
+      "valeurs": ["ORANGE_HRV_20260521_083000.png", "RED_SLEEP_20260521_220000.pdf", "BETH_HALT_20260521_220500.txt", "CLEARANCE_LD03_20260523_070000.jpg"]
+    },
+    {
+      "systeme": "SOP-L2-<DOMAIN>-NNN (Wonder Woman Finance canonical list)",
+      "numerote": "Finance SOPs (Symphony)",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md",
+      "valeurs": ["SOP-L2-FINANCE-001 Send Stripe invoice", "SOP-L2-FINANCE-002 Monthly MRR reconciliation", "SOP-L2-FINANCE-003 Quarterly margin analysis (MRR vs Compute)", "SOP-L2-FINANCE-004 Annual tax filing"]
+    },
+    {
+      "systeme": "SOP-L2-IT-001..004 (Cyborg IT SOPs)",
+      "numerote": "IT substrate SOPs",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md",
+      "valeurs": ["SOP-L2-IT-001 Provision VPS Nexus", "SOP-L2-IT-002 Deploy Solaris via Dokploy", "SOP-L2-IT-003 Rotate Hostinger API keys (quarterly)", "SOP-L2-IT-004 VPS backup snapshot (weekly)"]
+    },
+    {
+      "systeme": "SOP-L2-PEOPLE-001..004 (Green Lantern People SOPs)",
+      "numerote": "People/harness lifecycle SOPs",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md",
+      "valeurs": ["SOP-L2-PEOPLE-001 Onboard capsule", "SOP-L2-PEOPLE-002 Weekly perf review", "SOP-L2-PEOPLE-003 Quarterly ethics audit", "SOP-L2-PEOPLE-004 Decommission (archive memory/)"]
+    },
+    {
+      "systeme": "SOP-L2-LEGAL-001..004 (Aquaman Legal SOPs)",
+      "numerote": "Legal protection SOPs",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/08_Legal_Aquaman_Eternals/03_AQUAMAN_LEGAL_PRINCIPLES.md",
+      "valeurs": ["SOP-L2-LEGAL-001 New client contract (MSA+DPA per tier)", "SOP-L2-LEGAL-002 Quarterly RGPD audit", "SOP-L2-LEGAL-003 IP filing/renewal", "SOP-L2-LEGAL-004 DPA breach notification (72h)"]
+    },
+    {
+      "systeme": "TIER 1..4 (Wealth Architecture Tiers — J03)",
+      "numerote": "4 paliers de souveraineté financière (rappel v3, précisés par F19)",
+      "defini_dans": "J03 12WY W03.md + Wonder Woman F19 pyramid",
+      "valeurs": ["TIER 1 (Safety Core) = 6mo runway cash", "TIER 2 (ETF/Passive Index)", "TIER 3 (Equity/Real Estate)", "TIER 4 (Sovereignty)"]
+    },
+    {
+      "systeme": "KR-5a..g (Cyborg IT KRs) + KR-7a..d (Green Lantern People KRs) + KR-8a..d (Aquaman Legal KRs)",
+      "numerote": "Domain-level Key Results",
+      "defini_dans": "Each <DOMAIN>/03_<HERO>_<DOMAIN>_PRINCIPLES.md control room section",
+      "valeurs": ["KR-5a 0 critical / <3 medium security incidents/quarter", "KR-5b weekly backup verified quarterly", "KR-5c tech debt <20% engineering capacity", "KR-7a 12-month retention >85%", "KR-7b time-to-productivity <60 days", "KR-7c culture index >75%", "KR-7d no hire without 12-month runway", "KR-8a contract turnaround <5d/<15d complex", "KR-8b 100% compliance per geography", "KR-8c trademark within 90 days", "KR-8d annual entity review", "KR-5d MRR growth >10% MoM", "KR-5e gross margin >60%", "KR-5f runway ≥12mo (18 preferred)", "KR-5g escalate to Jerry at 6mo runway"]
+    },
+    {
+      "systeme": "TVR (Teachable/Valuable/Repeatable)",
+      "numerote": "Acceptance criteria triplet for OS specs",
+      "defini_dans": "the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/* (et 5 fichiers spec V0.1.x)",
+      "valeurs": ["✅T Teachable", "✅V Valuable", "✅R Repeatable"]
+    },
+    {
+      "systeme": "S-AP-01..03 + S-AS-01..03 + S-SHELL-01..08 + S-AUDIT-01..05 + S-PARA-01..03 + S-IKI-01..03 + S-FW-01..06 + S-DASH-01 + S-CORE-01 + S-STYLE-01 + S-12WY-01..03 + S-GTD-01..03 + S-DEAL-01..03 + S-AGENT-01..03 + S-STORE-01 + S-SET-01..02",
+      "numerote": "Web OS spec story IDs",
+      "defini_dans": "the-bridge-__-life-os/openspec/changes/*/specs/features.md",
+      "valeurs": ["S-AP Agent Portal", "S-AS App Store/Drawer", "S-SHELL Shell", "S-AUDIT Audit/Antifragility", "S-PARA PARA", "S-IKI Ikigai", "S-FW Framework Apps", "S-DASH Trinity Dashboard", "S-CORE Deep Linking", "S-STYLE Archaeo-Futurist", "S-12WY Strategy", "S-GTD GTD", "S-DEAL Liberation", "S-AGENT Agent Portal v0.1.8", "S-STORE App Store v0.1.9", "S-SET Settings v0.1.9"]
+    },
+    {
+      "systeme": "aspace://<scheme>/<path> (deep-link URI)",
+      "numerote": "URI scheme for cross-app navigation",
+      "defini_dans": "the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/shell.md + agents-appstore.md",
+      "valeurs": ["aspace://app/<id>/page/<sub>", "aspace://view/<page>", "aspace://app/para?view=area&id=<uuid>", "aspace://app/ikigai?view=horizon&id=h1", "aspace://app/gtd?list=next", "aspace://view/dashboard/strategy?domain=ld02"]
+    },
+    {
+      "systeme": "Hermes Body types (PE13)",
+      "numerote": "A'Space harness body surfaces",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md + ADR-HERMES-001",
+      "valeurs": ["Claude Code (terminal/dev)", "Hermes Nous Research Desktop (swarm, NEVER fathah/hermes-desktop)", "Claude Cowork (sandboxed macOS desktop + Chrome agent)"]
+    },
+    {
+      "systeme": "DEAL execution protocol (Ops)",
+      "numerote": "DEAL = Définir → Éliminer → Automatiser → Libérer",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+      "valeurs": ["D Définir (Mr. Fantastic, P1-P4)", "E Éliminer (Mr. Fantastic + The Thing, P5-P8)", "A Automatiser (Human Torch, P9-P13)", "L Libérer (The Thing + Invisible Woman, P14-P18)"]
+    },
+    {
+      "systeme": "LWAS (Learn→Wire→Automate→Scale)",
+      "numerote": "AI-first ops framework, cousin of DEAL",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md (F21)",
+      "valeurs": ["Learn (comprendre le flux manuel)", "Wire (câbler l'existant)", "Automate (automatiser le répétitif)", "Scale (scaler sans embauche)"]
+    },
+    {
+      "systeme": "NYX stack (N8n+YouTube+X)",
+      "numerote": "LWAS canon stack solopreneur IA-first",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md (v4 P21 extension)",
+      "valeurs": ["N N8n (orchestration)", "Y YouTube (capture/distribution)", "X X/Twitter (broadcast)"]
+    },
+    {
+      "systeme": "Buyback Rate",
+      "numerote": "Founder hourly delegation ceiling (Ops P23)",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+      "valeurs": ["Buyback Rate = (revenu annuel + dividendes + bénéfices) / 2 000 h / 4 = plafond $/h de délégation rentable (cible ROI 400%)"]
+    },
+    {
+      "systeme": "Camcorder Method (Ops P12 ext.)",
+      "numerote": "Founder records screen once; delegate writes SOP",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md (v4)",
+      "valeurs": ["Founder = enregistre", "Delegate = écrit la SOP"]
+    },
+    {
+      "systeme": "10/80/10 Rule (Ops P23 ext.)",
+      "numerote": "Définition → Production → Intégration",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+      "valeurs": ["10% definition", "80% production", "10% integration"]
+    },
+    {
+      "systeme": "1-3-1 Rule (Ops P16 ext.)",
+      "numerote": "A3 escalation packet shape",
+      "defini_dans": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/04_Ops_Batman_Fantastic4/03_BATMAN_OPS_PRINCIPLES.md",
+      "valeurs": ["1 problème", "3 options", "1 recommandation"]
+    },
+    {
+      "systeme": "Glassmorphism CSS tokens",
+      "numerote": "Design system tokens",
+      "defini_dans": "the-bridge-__-life-os/openspec/changes/aspace-web-os/specs/shell.md",
+      "valeurs": ["--glass-bg", "--glass-blur", "--glass-border", "--glass-shadow", "--copper: #b87333", "--brass: #e1b382"]
+    }
+  ],
+
+  "contradictions": [
+    {
+      "sujet": "Coverage J03 — W02 mentionne 'WEEK 2 — [DATE]' (placeholder non rempli)",
+      "chemin_a": "02_Areas_Spock/J03_Jerry_Nexus_LD02_LD06_Finance_Family/12WY_Area_Cadence/W02.md",
+      "date_a": "2026-05-21",
+      "chemin_b": "vague 3 — J03/.../SUMMERS_VERSE_TEMPLATE.md §2.4 + B2_D05 README",
+      "date_b": "2026-05-21",
+      "note": "Coherence OK (templates vierges, semantique du gate Runway/Coverage/Family identique) — les templates W02..W12 sont des canevas ; le SUMMERS_VERSE les remplit avec les valeurs reelles."
+    },
+    {
+      "sujet": "B2 squad roster (Avengers) — 4 vs 4+1 membres",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/00_B2_DOMAIN_CONTROL_ROOM.md",
+      "date_a": "2026-05-27",
+      "chemin_b": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/03_Product_Flash_Avengers/B3_Squad_Avengers/00_CROSSLINK.md",
+      "date_b": "2026-05-22",
+      "note": "B2 control room cite 'Captain America QA, Iron Man build, Thor ship, Black Widow research' (4) ; CROSSLINK vers 30_Business_OS cite 'IronMan_Interface, Vision_DataCore, Captain_QA, Marina_Frontend' (4 differents). Incoherence mineure — le CROSSLINK refleté est 30_Business_OS et non le canon Notion AGENT_REGISTRY_DB. A clarifier."
+    },
+    {
+      "sujet": "Squad Members '30_Business_OS mirror' — incomplet vs canon Notion pour Sales/Illuminati",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/01_Growth_Superman_Guardians/B3_Squad_Guardians/00_CROSSLINK.md (6 membres canon Notion : Star-Lord/Gamora/Rocket/Groot/Drax/Mantis)",
+      "date_a": "2026-05-29",
+      "chemin_b": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/02_Sales_MartianManhunter_Illuminati/B3_Squad_Illuminati/00_CROSSLINK.md (seulement 2 dossiers 30_Business_OS : JohnJones_Discovery + MartianManhunter_Closing)",
+      "date_b": "2026-05-22",
+      "note": "Asymetrie : Guardians (Growth) a 6 membres alignés canon Notion ; Illuminati (Sales) n'a que 2 dossiers. Soit la dette est ouverte pour Sales, soit le canon Sales est effectivement plus petit. A verifier en consultant le Squad Canon Notion AGENT_REGISTRY_DB."
+    },
+    {
+      "sujet": "Statut de l'Area J04 — B2 dossier manquant vs J01/J02/J03",
+      "chemin_a": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/",
+      "date_b": "2026-05-27",
+      "note": "J04 n'a pas de B2_Area_Domains/ structure ni de fichiers 03_*_PRINCIPLES.md equivalents aux 8 B2 J01. Le seul contenu J04 est 03_JERRY_SOLARPUNK_PRINCIPLES.md (A1 niveau, pas A2). Incoherence de maturite entre J01 (8 B2 completes) et J04 (0 B2 documentee)."
+    },
+    {
+      "sujet": "Cohabitation 'Creatry' vs 'Creativity' (rappel v3)",
+      "chemin_a": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Social_Creativity_Impact/",
+      "date_a": "2026-05-21",
+      "chemin_b": "02_Areas_Spock/J04_Jerry_Solarpunk_LD05_LD07_LD08_Solar_Creativity_Impact/B2_Area_Domains/06_MUSE_Eligible_Criteria_LD08/README.md",
+      "date_b": "2026-05-21",
+      "note": "La coquille 'Solar_Creativity' (note 'Creatry') reapparait dans cette vague avec un README MUSE dedouble. A nettoyer cote filesystem ; aucun fichier canonique ne pointe vers l'orthographe fautive."
+    },
+    {
+      "sujet": "Cyborg IT principles — 'v2 (re-distilled 2026-06-25)' header cite 12 nouveaux guides mais 'no new P-numbers warranted'",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/05_IT_Cyborg_KangDynasty/03_CYBORG_IT_PRINCIPLES.md (v2 re-distillation)",
+      "date_a": "2026-06-25",
+      "chemin_b": "v1 P1-P18 (corpus initial 322 fiches) — canon anterieur",
+      "date_b": "2026-05-31",
+      "note": "Honest gap : 12 nouveaux guides 2026-06-02→2026-06-25 n'ont pas ajoute de P#. La doctrine tient sans croissance. Risque : si un futur corpus ajoute 5+ guides dans un nouveau secteur (ex: hardware), la doctrine devra etre re-indexee — Opus audit pending."
+    },
+    {
+      "sujet": "Wonder Woman Finance — F13-F18 'directive frame only' (v2) puis 'field-grounded' (v3)",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/06_Finance_WonderWoman_Thunderbolts/03_WONDERWOMAN_FINANCE_PRINCIPLES.md (v3 field-grounding)",
+      "date_a": "2026-06-02",
+      "chemin_b": "memo v2 anterieur — F13-F18 'directive' (A0 only)",
+      "date_b": "2026-05-31",
+      "note": "Evolution assumee et documentee : F13-F18 sont passes de 'directive frame' (auteur A0) a 'grounded by real sources' (YC/Vori + Money Radar 84T + Codie Sanchez + Jay-Z). F19-F22 (Treasury) et F23-F25 (AI-Agency) sont ajoutes dans la foullee. Pas une contradiction mais une mise a jour tracee."
+    },
+    {
+      "sujet": "Green Lantern PE29 — surface separation Hermes Desktop vs Workspace",
+      "chemin_a": "02_Areas_Spock/J01_Jerry_Prime_LD01_Business/B2_Area_Domains/07_People_GreenLantern_XMen/03_GREENLANTERN_PEOPLE_PRINCIPLES.md (PE29 v5 — ADR-HERMES-001)",
+      "date_a": "2026-06-03",
+      "chemin_b": "autres mentions Hermes Workspace (PE17) qui ne distinguaient pas Desktop vs Workspace",
+      "date_b": "avant 2026-06-03",
+      "note": "PE29 a ete ajoute pour corriger une ambiguite anterieure : les deux surfaces (Local Nous Desktop + Remote Workspace VPS) partagent le meme Hermes CLI et ne doivent pas co-runner. Patch top-level OK, non-contradictoire (evolution tracee)."
+    }
+  ]
+}

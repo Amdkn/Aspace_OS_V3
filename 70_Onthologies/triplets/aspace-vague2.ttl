@@ -1,0 +1,36 @@
+# A'Space OS reconstitue en triplets — genere par
+# scripts/valider_triplets_aspace.py. NE PAS EDITER A LA MAIN.
+
+@prefix aspace: <urn:aspace:ns:> .
+@prefix ent:    <urn:aspace:entity:> .
+
+<urn:aspace:entity:j01-prime> aspace:covers <urn:aspace:entity:ld01> .
+#   J01 Jerry Prime (B1 captain E-Myth SYSTEMIZE) couvre LD01 transversalement
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:j02-bio> aspace:covers <urn:aspace:entity:ld03-ld04> .
+#   J02 Jerry Bio (B1 captain) couvre LD03+LD04 Vitality+Cognition transversalement
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:j03-nexus> aspace:covers <urn:aspace:entity:ld02-ld06> .
+#   J03 Jerry Nexus (B1 captain FIP STANDARD) couvre LD02+LD06 Finance+Family transversalement
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:j04-solarpunk> aspace:covers <urn:aspace:entity:ld05-ld07-ld08> .
+#   J04 Jerry Solarpunk (B1 captain) couvre LD05+LD07+LD08 Social+Creativity+Impact transversalement
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:sunday-uplink> aspace:appliesTo <urn:aspace:entity:discovery-zora> .
+#   Sunday Uplink s'applique à Discovery/ZORA state consolidation
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:sunday-uplink> aspace:appliesTo <urn:aspace:entity:chapel-scorecard> .
+#   Sunday Uplink s'applique à Chapel/SNW Scorecard 12WY
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:fip-standard> aspace:covers <urn:aspace:entity:j03-ld02-ld06> .
+#   FIP STANDARD = Finance Independence + Presence stability = J03 Jerry Nexus (LD02+LD06)
+#   src: README.md [haute] (dom-life-wheel)
+<urn:aspace:entity:vague2-canon> aspace:appliesTo <urn:aspace:entity:vague1-life-wheel-concept> .
+#   Vague 2 canon appliesTo vague 1 life-wheel-8-domaines-zora concept (refine, drill down 8 LDs)
+#   src: index.md [haute] (dom-life-wheel)
+<urn:aspace:entity:claudeclaw-mission-control-v3> aspace:supersedes <urn:aspace:entity:claudeclaw-os-blueprint-v2> .
+#   ClaudeClaw Mission Control Kit V3 supersede entièrement ClaudeClaw OS Blueprint Kit V2 — V3 contient V3_ASSESSMENT, V3_POWER_PACKS, V3_REBUILD dans so
+#   src: README.md [haute] (dom-templates)
+<urn:aspace:entity:full-agentic-21-patterns> aspace:partOf <urn:aspace:entity:langchain-ai-upstream> .
+#   FULL Agentic Patterns Kit fait partie du dépôt amont langchain-ai/agentic-design-patterns-docs — un clone GitHub, pas un kit original
+#   src: README.md [haute] (dom-templates)

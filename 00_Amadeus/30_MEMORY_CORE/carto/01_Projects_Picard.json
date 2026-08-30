@@ -1,0 +1,366 @@
+{
+  "seau": "01_Projects_Picard",
+  "fichiers_lus": 38,
+  "fichiers_disponibles": 363,
+  "jonctions_ecartees": 0,
+  "sous_projets": [
+    {"nom": "01-omk-business-os",       "famille": "Picard Cycle", "format": "chartes + runbooks + ownerbooks (T1/T2/T3 + W40 5-4-3-4)"},
+    {"nom": "02 ABC OS & Child Care BOS", "famille": "SUMMERS",    "format": "B1/B2/B3 + Cerritos Handoff"},
+    {"nom": "03_RILCOT_Members_Space_OS", "famille": "SUMMERS",    "format": "B1/B2/B3 + Cerritos Handoff"},
+    {"nom": "04 Alikaly Bana Holding to LLC", "famille": "SUMMERS", "format": "B1/B2/B3 + Cerritos Handoff (cross-Jerry J01+J03)"},
+    {"nom": "05 marina Cleaning BOS & SOP", "famille": "SUMMERS",   "format": "B1/B2/B3 + Cerritos Handoff"},
+    {"nom": "Cerritos_Plane_Onboarding",  "famille": "isolé L1",  "format": "MANIFEST + fiches par item Plane"},
+    {"nom": "ClaudeClaw Agent",           "famille": "tech",       "format": "Vite/React + .moat/Drawbridge"},
+    {"nom": "omk-services",               "famille": "tech",       "format": "code applicatif OMK (peu représenté)"}
+  ],
+  "types": [
+    {
+      "nom": "SummerProject (SUMMERS_VERSE_MANIFEST)",
+      "attributs": ["id", "layer (L2_Business_Pulse)", "status: GRADUATED", "created: 2026-05-21", "parent_jerry: J01_Jerry_Prime_LD01_Business", "project_slug", "B1 Direction (1Y/3Y/10Y)", "ICP Variants", "LD01 Book Alignment", "12WY Rock Linkage", "Cerritos Handoff Reference", "B3 Warp Core Brief"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/SUMMERS_VERSE_MANIFEST.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/SUMMERS_VERSE_MANIFEST.md"
+      ]
+    },
+    {
+      "nom": "B1DirectionIndex",
+      "attributs": ["id", "layer: B1_DIRECTION|L2-Business-Pulse-Summer", "status: SHADOW_ACTIVE|GRADUATED", "Vision 1Y/3Y/10Y", "ICP Variant Determination Rules", "12WY Rock Linkage", "Beth Status Check", "Forbidden Actions", "B1 Output Packet"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/README.md",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B1_Summer_Direction/README.md",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B1_Summer_Direction/README.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B1_Summer_Direction/README.md"
+      ]
+    },
+    {
+      "nom": "B2DomainDevelopmentMap",
+      "attributs": ["id", "layer: B2_BUSINESS_DOMAINS", "status: ACTIVE", "created: 2026-06-02", "Operating Rule (B2 references macro doctrine, instantiates one project Rock + one B3 JTBD per domain)", "Active Buildout table 8 rows × 3 cols"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/00_ABC_DOMAIN_DEVELOPMENT_MAP.md",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B2_Business_Domains/00_RILCOT_DOMAIN_DEVELOPMENT_MAP.md",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B2_Business_Domains/00_ALIKALY_DOMAIN_DEVELOPMENT_MAP.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/00_MARINA_DOMAIN_DEVELOPMENT_MAP.md"
+      ]
+    },
+    {
+      "nom": "B2MesoMatrix",
+      "attributs": ["id", "layer: B2_MESO_COORDINATION", "surface: 02_ABC_OS", "surface_kind: QuickAccess Mirror", "status: SHADOW_ACTIVE", "8 transverse gates (Ops/People/IT/Growth/Legal/Finance/Sales/Product)", "Domain Pair Checks"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_DOMAIN_GATE_MATRIX.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_DC_DIRECTION_COUNCIL_WORKFLOW.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_MESO_VP_SWARM_COORDINATION.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_OFFER_BRAND_REVENUE_ENGINE.md"
+      ]
+    },
+    {
+      "nom": "B3WarpCoreREADME",
+      "attributs": ["id", "layer: L2-Business-Pulse-B3", "status: ACTIVE", "created: 2026-05-21", "What B3 Does / Does NOT Do", "Cycle Format W1-W12 (84-day)", "Lead/Lag Definitions", "Lead_Lag_Logs/Artifact_Proofs subfolders", "Blocker Note Protocol", "Completion Evidence Standard"],
+      "chemins": [
+        "01_Projects_Picard/01-omk-business-os/B3_Warp_Core_Execution/README.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/README.md",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/B3_Warp_Core_Execution/README.md",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/B3_Warp_Core_Execution/README.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/README.md"
+      ]
+    },
+    {
+      "nom": "B3SwarmConfig",
+      "attributs": ["id", "layer: B3_SWARM_EXECUTION", "surface", "domain", "b2_gatekeeper", "squad (Marvel/DC)", "status: SHADOW_ACTIVE", "Members (personnages)", "Operating Rule (B3 owns execution, B2 owns acceptance, B1 owns direction)"],
+      "chemins": [
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/00_B3_SWARM_CONFIG.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/00_B3_SWARM_CONFIG.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/01_B3_AGENT_ROSTER.md"
+      ]
+    },
+    {
+      "nom": "JTBD",
+      "attributs": ["jtbd_id", "source_rock", "domain", "b2_owner", "b3_swarm", "status: READY", "Job statement", "Output (1-10 numbered items)", "Eight-Domain X Map", "Guardrails (5-10 items, anti-patterns)", "Proof section"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/JTBD-001_ORBITER_VOC_PACKET.md",
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/JTBD-005_ABC_TRANSVERSE_GROWTH_SIGNAL_GATE.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/JTBD-001_MARINA_DIAGNOSTIC_TO_PROPOSAL.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/JTBD-001_MARINA_OWNER_HANDOFF_MAP.md"
+      ]
+    },
+    {
+      "nom": "CerritosHandover",
+      "attributs": ["id", "layer: L2-Business-Pulse", "status: GRADUATED", "source_of_truth: J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md", "Routing Chain (ASCII diagram Jerry→Cerritos→Picard/Summer→B2→B3)", "What Jerry Proposed", "What Cerritos Clarified", "What Picard Opened", "B1 Vision", "B2 Rocks", "B3 W1-W12 cycle"],
+      "chemins": [
+        "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md",
+        "01_Projects_Picard/03_RILCOT_Members_Space_OS/CERRIROS_HANDOVER.md",
+        "01_Projects_Picard/04 Alikaly Bana Holding to LLC/CERRIROS_HANDOVER.md",
+        "01_Projects_Picard/05 marina Cleaning BOS & SOP/CERRIROS_HANDOVER.md"
+      ]
+    },
+    {
+      "nom": "Charte (OMK Picard Cycle 2)",
+      "attributs": ["type: charte", "triptyque: T1|T2|T3", "rock_id: B1-1", "b2_owner (nom canon Marvel)", "b3_squad (lead + N)", "icp", "12wy_window", "geography", "doctrine_lock: D4 append-only · D6 no-self-contradiction", "sections 1-9 fixes"],
+      "chemins": [
+        "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T1_ops_runbook_v1.md",
+        "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T1_product_spec_loop.md",
+        "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T1_product_roadmap.md",
+        "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T1_ops_sop_canon.md",
+        "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T2_finance_runway_runbook.md"
+      ]
+    },
+    {
+      "nom": "Runbook (OMK Picard)",
+      "attributs": ["type: runbook", "chart_source: ../chartes/...", "project: omk", "rock_id: RP2|RP3", "domain (B2 owner(s))", "12wy_window", "doctrine_lock: D4 · D6 · Picard MANIFEST canon · Posture C", "Pre-check gates", "M1-M5/M6 sections", "Abort conditions", "D6 honest gaps (≥4)", "Verification V1-V8", "DoD Una 3-critères", "Reverse path"],
+      "chemins": [
+        "01_Projects_Picard/01-omk-business-os/runbooks/runbook-C-saas-auth.md",
+        "01_Projects_Picard/01-omk-business-os/runbooks/runbook-D-repositories.md"
+      ]
+    },
+    {
+      "nom": "PlaneItem (Cerritos_Plane_Onboarding)",
+      "attributs": ["id (ASPAC-N)", "plane_id", "plane_state: Backlog", "gtd_stage: actionable|multi-step|someday-maybe", "priority", "owner: A0", "classification: Projects", "cycle: Q3_2026_W3", "Source verbatim (Plane UI)", "DoD", "Schedule", "Dispatch"],
+      "chemins": [
+        "01_Projects_Picard/Cerritos_Plane_Onboarding/invite-team.md (ASPAC-3)",
+        "01_Projects_Picard/Cerritos_Plane_Onboarding/cycles-integration.md (ASPAC-6)"
+      ]
+    },
+    {
+      "nom": "Moat (Drawbridge workflow)",
+      "attributs": ["description", "globs", "alwaysApply: true", "workflow Step/Batch/YOLO modes", "status transitions to do→doing→done→failed", "design system enforcement", "3 modes processing"],
+      "chemins": [
+        "01_Projects_Picard/ClaudeClaw Agent/.moat/README.md",
+        "01_Projects_Picard/ClaudeClaw Agent/.moat/drawbridge-workflow.md",
+        "01_Projects_Picard/ClaudeClaw Agent/.moat/moat-tasks.md"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "de": "Jerry Prime",
+      "verbe": "propose / sets criteria (NOT receives ideas)",
+      "vers": "Cerritos",
+      "citation": "Jerry's role is criteria-setter, not receiver.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md"
+    },
+    {
+      "de": "Cerritos",
+      "verbe": "routes ideas (GTD pipeline)",
+      "vers": "Picard / Summer's Verse (B1)",
+      "citation": "Cerritos (GTD pipeline — idea triage and routing)",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md"
+    },
+    {
+      "de": "B1 (Summer, Jerry Prime proxy)",
+      "verbe": "owns direction and packet structure",
+      "vers": "B2 managers (Rocks per domain)",
+      "citation": "B1 owns direction and packet structure. B2 owns domain Definition of Done and gates.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/README.md"
+    },
+    {
+      "de": "B2 manager",
+      "verbe": "owns domain Rocks and DoD, creates B3 jobs",
+      "vers": "B3 squad (Marvel)",
+      "citation": "B2 converts the request into DoD packets using 05_B2_DEFINITION_OF_DONE_SPEC.md. B2 creates B3 jobs using 06_B3_JOBS_TO_BE_DONE_SPEC.md.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B1_Summer_Direction/README.md"
+    },
+    {
+      "de": "B3 (Warp Core)",
+      "verbe": "owns execution only (engine, not steering wheel)",
+      "vers": "Artifact proofs + Lead/Lag logs",
+      "citation": "Core rule : B3 is the engine, not the方向盘. If you feel the need to redirect, that is a B2 or B1 conversation, not a B3 action.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/README.md"
+    },
+    {
+      "de": "B3",
+      "verbe": "NOT allowed to escalate without Lead/Lag evidence",
+      "vers": "B2 / B1",
+      "citation": "Escalate without first logging Lead/Lag evidence → forbidden.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md"
+    },
+    {
+      "de": "B2 G8 Legal (Aquaman / Eternals)",
+      "verbe": "signs off on every Child Care offer",
+      "vers": "B3 execution",
+      "citation": "Child Care constraint: G8 Legal (Aquaman) must sign off on every Child Care offer before B3 execution.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md"
+    },
+    {
+      "de": "Alikaly B1 decision",
+      "verbe": "routes to J03 Finance/Family first",
+      "vers": "J03 Finance/Family",
+      "citation": "When a decision touches J03 (tax structure, family asset governance, succession), route to J03 owner before committing LLC structure.",
+      "chemin": "01_Projects_Picard/04 Alikaly Bana Holding to LLC/SUMMERS_VERSE_MANIFEST.md"
+    },
+    {
+      "de": "B2 Domain pair",
+      "verbe": "escalates to B2 Council if unresolved",
+      "vers": "B2 Council",
+      "citation": "| Growth + Sales | Is attention becoming qualified opportunity? | B2 Council |",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"
+    },
+    {
+      "de": "Ops/Batman",
+      "verbe": "runs final transverse launch gate",
+      "vers": "Project launch",
+      "citation": "Ops/Batman runs the final transverse launch gate after the pair checks. A domain can be individually CONDITIONAL, but the whole project cannot launch unless Ops can name: the delivery phase affected; the owner; the risk; the rollback/exception path; the date of next review.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"
+    },
+    {
+      "de": "JTBD-001 (Sales/MARINA)",
+      "verbe": "triggers on qualified signal or opportunity",
+      "vers": "Sales diagnostic-to-proposal packet",
+      "citation": "When 05 Marina Cleaning BOS & SOP receives a qualified signal or opportunity, produce the diagnostic-to-proposal packet so Sales can decide whether to propose, reject, or return the work for more proof.",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/02_Sales_MartianManhunter_Illuminati/JTBD-001_MARINA_DIAGNOSTIC_TO_PROPOSAL.md"
+    },
+    {
+      "de": "JTBD-001 (People/MARINA)",
+      "verbe": "produces owner handoff map",
+      "vers": "B2/B3 ownership, capacity, proof, escalation",
+      "citation": "produce and maintain the owner handoff map so every B2 decision and B3 execution task has accountable ownership, capacity visibility, proof, and escalation.",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/JTBD-001_MARINA_OWNER_HANDOFF_MAP.md"
+    },
+    {
+      "de": "Plane (Cycles)",
+      "verbe": "is visual tool aligned with 12WY canon",
+      "vers": "12WY Q3 2026 cycle (06/15 → 09/07/26)",
+      "citation": "12WY Q3 2026 cycle = 06/15 → 09/07/26 (12 semaines). Plane Cycles = outil de time-boxing visuel aligné sur ce cycle canon.",
+      "chemin": "01_Projects_Picard/Cerritos_Plane_Onboarding/cycles-integration.md"
+    },
+    {
+      "de": "Charte (cycle_2)",
+      "verbe": "is transformed into Runbook executor pattern (M1-M5)",
+      "vers": "Runbook",
+      "citation": "Purpose : transformer la chart `phase_c_saas_auth.md` (WHAT, 9 sections, 52 l.) en pattern d'exécution (HOW, M1-M5, HITL-gated). Append-only D4. Runtime gated A0 HITL (Posture C).",
+      "chemin": "01_Projects_Picard/01-omk-business-os/runbooks/runbook-C-saas-auth.md"
+    },
+    {
+      "de": "Moat (UI feedback)",
+      "verbe": "is processed by Drawbridge AI workflow into code",
+      "vers": "Code edits",
+      "citation": "Drawbridge Workflow: Complete Rules ... You are an expert AI partner, acting as a principal front-end engineer. Your purpose is to not just translate visual feedback into code, but to implement it with the highest standards of quality, scalability, and maintainability.",
+      "chemin": "01_Projects_Picard/ClaudeClaw Agent/.moat/drawbridge-workflow.md"
+    },
+    {
+      "de": "Notion AGENT_REGISTRY_DB",
+      "verbe": "wins over local doctrine for lore",
+      "vers": "B3 Agent Roster canon",
+      "citation": "If Notion and local doctrine diverge, Notion wins for lore and local doctrine wins for filesystem path conventions.",
+      "chemin": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/07_People_GreenLantern_XMen/01_B3_AGENT_ROSTER.md"
+    },
+    {
+      "de": "J01 Area Standard",
+      "verbe": "is source of truth for all SUMMERS_VERSE projects",
+      "vers": "Operating Principles P1-P8, domain standards, compliance rules",
+      "citation": "All operating rules, delegation framework, and domain standards derive from: J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md"
+    },
+    {
+      "de": "B2 Domain Owner (per domain)",
+      "verbe": "is paired with Marvel squad (per domain)",
+      "vers": "G1=Guardians, G2=Illuminati, G3=Avengers, G4=Fantastic Four, G5=Kang Dynasty, G6=Thunderbolts, G7=X-Men, G8=Eternals",
+      "citation": "Domain map table: G1 Superman/Guardians | G2 Martian Manhunter/Illuminati | G3 Flash/Avengers | G4 Batman/Fantastic Four | G5 Cyborg/Kang Dynasty | G6 Wonder Woman/Thunderbolts | G7 Green Lantern/X-Men | G8 Aquaman/Eternals",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md"
+    },
+    {
+      "de": "B2 Domain archetype",
+      "verbe": "is paired with LD01 book primaire",
+      "vers": "G1=Billion Dollar Brand Club, G2=$100M Offers, G3=Built to Sell, G4=E-Myth, G5=E-Myth, G6=Million Dollar Weekend, G7=Who Not How, G8=Billion Dollar Brand Club",
+      "citation": "Per-domain LD01 book primaire listed in B2 README.",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md"
+    }
+  ],
+  "codes": [
+    {"systeme": "L0_Life_OS|L1_Life_OS|L2_Business_Pulse", "numerote": "Couches Life OS / Business Pulse (et variantes casse : L2-Business-Pulse, L2-Business-Pulse-B2/B3, B1_DIRECTION, B2_BUSINESS_DOMAINS, B3_SWARM_EXECUTION, B2_MESO_COORDINATION)", "defini_dans": "frontmatter des fichiers du seau (multiples variantes)"},
+    {"systeme": "A0|A1|A2|A3", "numerote": "Couche agents : A0 Amadeus (IA), A1 Beth/Morty (gatekeepers), A2 HoloDeck parent, A3 sous-agents (Mariner, Boimler, Rutherford, Tendi, Freeman, Saru)", "defini_dans": "Cerritos_Plane_Onboarding/MANIFEST.md (l.4-5, 21-22) + chartes OMK"},
+    {"systeme": "B1|B2|B3", "numerote": "3 couches Business Pulse : B1 = Direction/Vision (Summer), B2 = Domain managers (8 VPs), B3 = Execution (Marvel/DC squads)", "defini_dans": "Tous les SUMMERS_VERSE + CERRIROS_HANDOVER"},
+    {"systeme": "G1|G2|G3|G4|G5|G6|G7|G8", "numerote": "8 B2 Business Domains : G1 Growth, G2 Sales, G3 Product, G4 Ops, G5 IT, G6 Finance, G7 People, G8 Legal", "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md"},
+    {"systeme": "B2 Archetype / B3 Squad pairs", "numerote": "G1=Superman/Guardians · G2=Martian Manhunter/Illuminati · G3=Flash/Avengers · G4=Batman/Fantastic Four · G5=Cyborg/Kang Dynasty · G6=Wonder Woman/Thunderbolts · G7=Green Lantern/X-Men · G8=Aquaman/Eternals", "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md"},
+    {"systeme": "W1|W2|...|W12", "numerote": "Cycle 12WY (12-week-year) — durée ambiguë : 12 trimestres de 84 jours (SUMMERS) OU 12 semaines calendaires (chartes OMK)", "defini_dans": "B3_Warp_Core_Execution/README.md + chartes_cycle_2 + Cerritos_Plane_Onboarding"},
+    {"systeme": "H1|H3|H10|H30|H90", "numerote": "Horizons temporels (H3 quarterly, H10 product spec iterations) — référence externe non vérifiée", "defini_dans": "chartes OMK (chart_T1_product_spec_loop, chart_T2_finance_runway_runbook)"},
+    {"systeme": "LD01|LD02|LD03|LD04", "numerote": "Learning Domains Jerry : LD01 Business, LD02 H3 horizon, LD03/LD04 vérifiés en J01 Area Standard", "defini_dans": "J01_Jerry_Prime_LD01_Business/AREA_STANDARD.md (hors seau)"},
+    {"systeme": "J01|J03", "numerote": "Jerry Primes : J01 LD01 Business, J03 LD03 Finance/Family (cross-Jerry pour Alikaly)", "defini_dans": "SUMMERS_VERSE_MANIFEST.md frontmatter"},
+    {"systeme": "P1|P2|...|P8", "numerote": "Operating Principles Jerry — référencés mais non définis dans ce seau", "defini_dans": "J01 Area Standard (hors seau)"},
+    {"systeme": "D1|D2|D4|D6|D7", "numerote": "Doctrine locks OMK Picard : D1 verified/receipt, D4 append-only, D6 no-self-contradiction, D7 cost-of-escalation", "defini_dans": "Chartes cycle_2 + runbooks OMK"},
+    {"systeme": "M1|M2|...|M6", "numerote": "Moves séquentiels dans un runbook (M1-M5 ou M1-M6)", "defini_dans": "runbook-C, runbook-D"},
+    {"systeme": "V1|V2|...|V8", "numerote": "Verification runs (self-checks) dans un runbook", "defini_dans": "runbook-C (V1-V5), runbook-D (V1-V8)"},
+    {"systeme": "T1|T2|T3", "numerote": "Triptyques chartes cycle_2 : T1 Ops/Product/Spec-Loop, T2 Finance/Sales/Growth, T3 Legal/R&D", "defini_dans": "01-omk-business-os/chartes_cycle_2/"},
+    {"systeme": "R1|R2|R3|R4", "numerote": "Rocks dans W1-W4 d'un SUMMERS_VERSE (4 Rocks/quarter max)", "defini_dans": "SUMMERS_VERSE_MANIFEST.md (W1, W2, W3, W4 sections)"},
+    {"systeme": "C1", "numerote": "Cycle counter B2 (1er cycle)", "defini_dans": "B2_DOMAIN_GATE_MATRIX.md (l.43)"},
+    {"systeme": "RP2|RP3", "numerote": "Rock IDs OMK Picard : RP2 Phase C SaaS Auth, RP3 Phase D Repositories", "defini_dans": "runbook-C (l.5), runbook-D (l.5)"},
+    {"systeme": "ASPAC-3|ASPAC-6|ASPAC-7", "numerote": "Items Plane UI routés via Cerritos GTD : ASPAC-3 Invite team, ASPAC-6 Use Cycles, ASPAC-7 Customize settings", "defini_dans": "Cerritos_Plane_Onboarding/{invite-team.md, cycles-integration.md, MANIFEST.md}"},
+    {"systeme": "Q3_2026_W3", "numerote": "Cycle quarter format `Q[N]_[YYYY]_W[N]`", "defini_dans": "Cerritos_Plane_Onboarding/MANIFEST.md (l.9)"},
+    {"systeme": "JTBD-001|JTBD-002|JTBD-003|JTBD-004|JTBD-005", "numerote": "Jobs To Be Done B3 — 001 = topic domain, 002 = transverse gate (et 003-005 dans 02 ABC Growth)", "defini_dans": "B3_Warp_Core_Execution/<DOMAIN>/JTBD-*.md"},
+    {"systeme": "L1|L2|L3|L4", "numerote": "Livrables dans une charte OMK (1 par livrable numéroté)", "defini_dans": "chartes_cycle_2"},
+    {"systeme": "G-1|G-2|G-3", "numerote": "HITL gates dans une charte (REQUIRED before L# ship)", "defini_dans": "chartes_cycle_2"},
+    {"systeme": "Abort-A|Abort-B|Abort-C|Abort-D|Abort-E", "numerote": "Conditions d'abort dans chartes/runbooks OMK (≥2 dans chartes, ≥3 dans runbooks)", "defini_dans": "chartes_cycle_2 + runbooks"},
+    {"systeme": "Gap-1|Gap-2|...|Gap-N", "numerote": "D6 honest gaps (≥3 dans chartes, ≥4 dans runbooks)", "defini_dans": "chartes_cycle_2 + runbooks"},
+    {"systeme": "W40|W40 §M3|W40 §M6", "numerote": "Doctrine externe W40 cadence 5-4-3-4 (5 daily / 4 weekly / 3 monthly / 4 quarterly)", "defini_dans": "chartes_cycle_2 + runbooks (référencé, non défini dans ce seau)"},
+    {"systeme": "Status keywords", "numerote": "STRUCTURED_EMPTY → GRADUATED → SHADOW_ACTIVE → ACTIVE → READY → CONDITIONAL|PASS|BLOCKED → TODO|IN_PROGRESS|BLOCKED|DONE → Business Done", "defini_dans": "frontmatter de tous les fichiers du seau"},
+    {"systeme": "Plane state + GTD stage", "numerote": "Plane: Backlog|Todo|In Progress|Done|Cancelled (5 states) ; GTD: actionable|multi-step|someday-maybe (3 stages)", "defini_dans": "Cerritos_Plane_Onboarding/MANIFEST.md (l.60)"},
+    {"systeme": "8 B2 Transverse gate names", "numerote": "Ops Transverse Gate · People Agent Governance Gate · IT Systems Access Gate · Growth Signal Gate · Legal Risk Gate · Finance Money Gate · Sales Revenue Gate · Product Offer Gate", "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"},
+    {"systeme": "8 Transverse gate emitted signals", "numerote": "People: ASSIGNED|NEEDS_OWNER|DLQ · IT: SYSTEM_READY|NEEDS_SYSTEM_OWNER|QUARANTINE · Growth: GROWTH_READY|NEEDS_SIGNAL|BLOCKED_PROMISE · Legal: LEGAL_READY|NEEDS_REVIEW|BLOCKED_RISK · Finance: FINANCE_READY|NEEDS_MODEL|BLOCKED_LEAKAGE · Sales: SALES_READY|NEEDS_QUALIFICATION|BLOCKED_COMMITMENT · Product: PRODUCT_READY|NEEDS_SCOPE|BLOCKED_DELIVERY", "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/B2_BUSINESS_WHEEL_HARMONIZATION_MATRIX.md"}
+  ],
+  "contradictions": [
+    {
+      "sujet": "Casse des couches L2 (underscore vs tirets)",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md (l.3 : L2_Business_Pulse underscore)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (l.3 : L2-Business-Pulse-B2 tirets)",
+      "date_b": "2026-05-21"
+    },
+    {
+      "sujet": "Durée d'un cycle W1-W12 (84 jours/trimestre vs 12 semaines calendaires)",
+      "chemin_a": "01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md (W1 = Days 1-84 = 1 trimestre)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/Cerritos_Plane_Onboarding/cycles-integration.md (12WY Q3 = 12 semaines = ~84 jours total)",
+      "date_b": "2026-06-22"
+    },
+    {
+      "sujet": "Cycle court marina (21 jours/W1) vs 84 jours/W1 ailleurs",
+      "chemin_a": "01_Projects_Picard/05 marina Cleaning BOS & SOP/SUMMERS_VERSE_MANIFEST.md (W1 = Days 1-21)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md (W1 = Days 1-84)",
+      "date_b": "2026-05-21"
+    },
+    {
+      "sujet": "Chart Phase D stale vs AGENTS.md Phase D DONE",
+      "chemin_a": "01_Projects_Picard/01-omk-business-os/chartes/phase_d_repositories_branches.md (l.32 : RP3 NOT STARTED)",
+      "date_a": "2026-07-15",
+      "chemin_b": "01_Projects_Picard/01-omk-business-os/apps/dashboard/AGENTS.md (l.28 §2 Phase State : Phase D DONE 2026-06-20)",
+      "date_b": "2026-06-20"
+    },
+    {
+      "sujet": "Format SUMMERS (B1/B2/B3) vs OMK (T1/T2/T3 + chartes)",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md (format B1/B2/B3 + JTBD)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/01-omk-business-os/chartes_cycle_2/chart_T1_ops_runbook_v1.md (format T1/T2/T3 + chartes)",
+      "date_b": "2026-07-15"
+    },
+    {
+      "sujet": "5 JTBD Growth dans 02 ABC vs 2 JTBD Growth dans 05 marina",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/ (5 fichiers : 001-005)",
+      "date_a": "2026-06-02",
+      "chemin_b": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B3_Warp_Core_Execution/01_Growth_Superman_Guardians/ (2 fichiers : 001, 005)",
+      "date_b": "2026-06-02"
+    },
+    {
+      "sujet": "picard_status vs status (orthographe inconsistante)",
+      "chemin_a": "01_Projects_Picard/03_RILCOT_Members_Space_OS/SUMMERS_VERSE_MANIFEST.md (picard_status: GRADUATED)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md (status: GRADUATED)",
+      "date_b": "2026-05-21"
+    },
+    {
+      "sujet": "CERRIROS_HANDOVER (typo) vs Cerritos (orthographe canon)",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/CERRIROS_HANDOVER.md (fichier : CERRIROS_HANDOVER.md)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (dossier : Cerritos_Plane_Onboarding, contenu : Cerritos canon)",
+      "date_b": "2026-06-22"
+    },
+    {
+      "sujet": "Domaines B2 prioritaires (02 ABC) vs non marqués (05 marina)",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (l.116-123 : G8>G6>G5>G7 prioritized)",
+      "date_a": "2026-05-21",
+      "chemin_b": "01_Projects_Picard/05 marina Cleaning BOS & SOP/B2_Business_Domains/README.md (aucune priorité marquée)",
+      "date_b": "2026-05-21"
+    }
+  ]
+}

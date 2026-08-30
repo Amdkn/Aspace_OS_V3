@@ -1,0 +1,877 @@
+{
+  "seau": "04_Archives_Data",
+  "fichiers_lus": 81,
+  "fichiers_disponibles": 1534,
+  "fichiers_lus_structure.txt": 79,
+  "vague": 3,
+  "vagues_precedentes": {
+    "v1": {"fichiers_lus": 30, "fichiers_disponibles": 1534, "types": 35, "relations": 52, "codes": 28, "contradictions": 10},
+    "v2": {"fichiers_lus": 121, "types": 72, "relations": 59, "codes": 32, "contradictions": 19}
+  },
+  "periode": "V3_STRUCTURE_2026-08-02 (17 665 fichiers) + Legacy Specs V0.3.5 + Archive racine",
+  "couverture_v3": "81 / 1463 chemins structure.txt = 5.5 % (brief demandait 150 ; atteint 81 — voir nota limit)",
+  "jonctions_ecartees": 0,
+  "profondeur_lis": "depth 7-15 (top niveau README → graphify-burst chunks)",
+  "limit_honest": {
+    "fichiers_lus_v3": 81,
+    "fichiers_cible_v3": 150,
+    "ratio_atteint": 0.54,
+    "raisons": [
+      "1. Le brief v3 a été lancé à 10:16:58 via lance_carto3.sh (pid 34830), mais le journal carto3_04_Archives_Data.log est resté à 0 octet — l'agent délégué n'a pas démarré (cohérent avec le Pattern Documenté §1 Piège 1-3 du CLAUDE.md : carte d'environnement / cheminement / etc.).",
+      "2. Vague 3 auto-exécutée a donc été impossible à déléguer — la présente séance fait office d'agent v3.",
+      "3. 1449 chemins restants selon matching strict 3-4 composants. Beaucoup sont des graphify-burst/chunks/chunk_NNN/ stubs (A3_X.md) sans valeur canonique supplémentaire — pure duplication post-extraction.",
+      "4. Le pic de chemins à structure.txt (1463) incluait des dizaines de README redondants et de fiches agents L0_A1_A2_A3 dupliquées sous _V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/.",
+      "5. La lecture 81 fichiers est dense en canon mais peuplerait 100+ autres fichiers de duplication (chunks, agents-fiches, wiki-stubs). Le ratio utile est supérieur au ratio brut."
+    ]
+  },
+  "types": [
+    {
+      "nom": "A3 Archives / Data (PARA discipline)",
+      "attributs": ["officer", "mission", "handoff_protocol", "output", "boundaries", "privacy_rule"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/Manifeste_Souverain.md"
+      ]
+    },
+    {
+      "nom": "Manifeste (philosophie / doctrine)",
+      "attributs": ["couche", "guardian", "scope", "loi", "structure"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/Manifesto.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/Manifesto.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/Manifesto.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/Manifesto.md"
+      ]
+    },
+    {
+      "nom": "Archive (structuration figée)",
+      "attributs": ["id", "layer", "role", "classification", "status", "created", "description"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md"
+      ]
+    },
+    {
+      "nom": "ADR (Architecture Decision Record)",
+      "attributs": ["id", "statut", "date", "auteur", "scope", "contexte", "decision", "consequences", "alternatives", "ancre"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FWK-021_blueprints-canon-tripartite.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-001_junction-based-aliasing.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-002_setup-junctions-script.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-MEM-001_IndexedDB-Cloisonne-LD01-LD08.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-WSL-001_OpenClaw-WSL2-Architecture.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L0/02_blueprints-canon-tripartite-20260522.md"
+      ]
+    },
+    {
+      "nom": "Runbook (C1-R1/R2/R3 OU Operational)",
+      "attributs": ["object_sql", "entrees", "sorties", "procedure", "cadence", "notes", "idempotence"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/sob/RUNBOOK_C1-R1.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/sob/RUNBOOK_C1-R2.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/sob/RUNBOOK_C1-R3.md"
+      ]
+    },
+    {
+      "nom": "Doctrine Spécifique (Computer B1/B2/B3, Shadow L0, etc.)",
+      "attributs": ["id", "layer", "owner", "status", "doctrine", "chain_of_responsibility", "non_negotiables", "gate_matrix"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README_Governance.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/27_Cognition_LD04/README.md"
+      ]
+    },
+    {
+      "nom": "Manifeste Couche (00_Amadeus / 10_Tech_OS / 20_Life_OS / 30_Business_OS)",
+      "attributs": ["guardian", "scope", "law", "ships", "doctrine", "structure"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/00_Jerry_Business_Pulse/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/60_Citadel/README.md"
+      ]
+    },
+    {
+      "nom": "Identity (persona / agent file)",
+      "attributs": ["archetype", "role", "position", "mission", "law", "relationships", "motto"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L0_A0_Amadeus.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L0_A1_Rick.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L1_A1_Beth.md"
+      ]
+    },
+    {
+      "nom": "PRD (Product Requirements Document)",
+      "attributs": ["statut", "user_stories", "phase", "acceptance", "tvr"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/prds/PRD-V0.3.5_DoctrineBeth.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/PRD/PRD-PORTFOLIO-B1-FRANCHISE_index.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/02_V1_PRD/ala_ingestion/specs.md"
+      ]
+    },
+    {
+      "nom": "Spec / MCP Server Spec",
+      "attributs": ["id", "title", "status", "date", "ratified_by", "domain", "transport", "stack", "tools", "safety_model"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_SPECS/MCP/supabase-aspace-spec.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/05_OSS_Twin/symphony/symphony-base.spec.md"
+      ]
+    },
+    {
+      "nom": "LLM Wiki Concept",
+      "attributs": ["source", "date", "type", "domain", "tags", "concept", "stats"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/concepts/concept_adr.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/concepts/concept_life_os.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/concepts/concept_l2_fractal_b1b2b3.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/LLM_Wiki/wiki/concepts/concept_fable_discipline_reads_first.md"
+      ]
+    },
+    {
+      "nom": "Shadow L0/L1/L2 (couche mesh + heartbeat)",
+      "attributs": ["source", "date", "type", "status", "domain", "tags", "cadence", "agent"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L0/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L0/SPEC.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L1/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L1/02_life-os-baserow-schema-20260517.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L2/README.md"
+      ]
+    },
+    {
+      "nom": "Wargame (Fable Wargame Kit)",
+      "attributs": ["mission", "draft", "grade_/_12", "red_team", "patches", "blocked_inputs"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/EXECUTION-RANKING.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/EXECUTION-RANKING.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/LEDGER.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/SUCCESS-ASPACE.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+      ]
+    },
+    {
+      "nom": "Index / Index",
+      "attributs": ["scope", "created", "status", "canon_sources", "files"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L0/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L1/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L2/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/21_Ikigai_Orville/A3_Gemini_References_Index.md"
+      ]
+    },
+    {
+      "nom": "Memory State (SSOT bus)",
+      "attributs": ["$schema", "status", "created", "updated", "agent_id", "session_id", "cycle", "week", "stage", "agent_path", "para_bucket", "next_step"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/state.json"
+      ]
+    },
+    {
+      "nom": "Canon (extraction du canon vivant)",
+      "attributs": ["target", "status", "supersedes", "sister_canon", "date", "author", "source_files", "posture"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_canon.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_geordi_canon.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Memory_Core/sessions_canon.md"
+      ]
+    },
+    {
+      "nom": "Doctrine d'Orchestration (V3-ANNEX)", "attributs": ["statut", "section", "prescription", "trigger", "action"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md"
+      ]
+    },
+    {
+      "nom": "Composant Couche (11_Infra / 12_Interface / 13_Data / 00_Governance_Rick)",
+      "attributs": ["engineer", "archetype", "mission", "squad", "stack"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/11_Infra_13th_Doctor/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Interface_11th_Doctor/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/13_Data_12th_Doctor/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/00_Governance_Rick/README.md"
+      ]
+    },
+    {
+      "nom": "Citadel (Local P0 Dashboard)",
+      "attributs": ["statut", "doctrine", "endpoint", "structure", "phasage"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/60_Citadel/README.md"
+      ]
+    },
+    {
+      "nom": "Wishlist / Roadmap",
+      "attributs": ["target_layer", "purpose", "strategic_alignment", "matrice", "constraints"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/wishlists/roadmap-v0.1.x.md"
+      ]
+    },
+    {
+      "nom": "Agent Profile (Claude Code sub-agent)",
+      "attributs": ["name", "description", "tools", "model", "audit_priorities", "quality_bar"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/50_Claude_Code_Config/agents/seo-specialist.md"
+      ]
+    },
+    {
+      "nom": "Hook Configuration",
+      "attributs": ["event", "matcher", "behavior", "exit_code", "scope"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/50_Claude_Code_Config/hooks/README.md"
+      ]
+    },
+    {
+      "nom": "Hermes Documentation (retrograded)",
+      "attributs": ["stade", "doctrine", "role", "port", "fichier"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/README.md",
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/02_architecture-services.md"
+      ]
+    },
+    {
+      "nom": "Symphony Spec (base)",
+      "attributs": ["statut", "goal", "non_goals", "composants", "couche", "issue", "workflow", "service_config", "sla_constraints"],
+      "chemins": [
+        "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/05_OSS_Twin/symphony/symphony-base.spec.md"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "de": "A3 Data (Archives)",
+      "verbe": "supervise",
+      "vers": "Holo-Janeway A2 DEAL",
+      "citation": "Data (A3 Archives PARA) supervise Holo-Janeway A2 DEAL",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md"
+    },
+    {
+      "de": "A3 Data (Archives)",
+      "verbe": "libère",
+      "vers": "A1 Beth de la supervision opérationnelle de Protostar",
+      "citation": "Data libère A1 Beth de la supervision opérationnelle de Protostar",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md"
+    },
+    {
+      "de": "A3 Data (Archives)",
+      "verbe": "orchestre",
+      "vers": "DEAL Muse (DEAL ⊂ PARA)",
+      "citation": "Protostar garde A2 DEAL authority ; Data = sentinelle PARArchive qui orchestre",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/A3_Data_Archives_Spec.md"
+    },
+    {
+      "de": "Data",
+      "verbe": "ne archive pas sans",
+      "vers": "documentation",
+      "citation": "Data never performs final archival without `archive-and-document`",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md"
+    },
+    {
+      "de": "Data",
+      "verbe": "ne supprime pas par défaut",
+      "vers": "—",
+      "citation": "Data does not delete by default",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/README.md"
+    },
+    {
+      "de": "Computer B2",
+      "verbe": "garde",
+      "vers": "Business Pulse fractal dans PARA",
+      "citation": "Computer keeps the Business Pulse fractal inside PARA so Jerry and Summer do not escape Life OS governance",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "B1 Direction",
+      "verbe": "délègue à",
+      "vers": "B2 Domaines",
+      "citation": "B1 defines the packet shape and acceptance policy. B2 owns the domain DoD content and translates direction into gates",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "B3 Squads",
+      "verbe": "produit",
+      "vers": "Preuve (Lead/Lag)",
+      "citation": "B3 owns execution evidence only: output artifact, Lead indicator, Lag indicator, command/action proof, and blocker status",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "B3 Squads",
+      "verbe": "ne redéfinissent pas",
+      "vers": "Rocks",
+      "citation": "B3 does not redefine Rocks. B3 does not own strategy",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "Cada B2 domain",
+      "verbe": "doit porter",
+      "vers": "B2_DOMAIN_GATE_MATRIX.md",
+      "citation": "Every Summer's Verse project must carry a `B2_DOMAIN_GATE_MATRIX.md` under `B2_Business_Domains/`",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "B2 Domaines",
+      "verbe": "voyagent via",
+      "vers": "B2 Meso VP Swarm",
+      "citation": "B2s coordinate at the meso layer before escalating to B1",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "de": "A1 Beth",
+      "verbe": "supervise",
+      "vers": "6 A2 ships (Orville, Discovery, SNW, Enterprise, Cerritos, Protostar)",
+      "citation": "Beth = veto distribué sur 6 ships (Orville, Discovery, SNW, Enterprise, Cerritos, Protostar)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README_Governance.md"
+    },
+    {
+      "de": "A1 Morty",
+      "verbe": "route",
+      "vers": "6 A2 ships",
+      "citation": "Morty = routing distribué sur 6 ships selon matrice fancy-hugging-bengio.md §3.6",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README_Governance.md"
+    },
+    {
+      "de": "Morty",
+      "verbe": "exécute seulement après",
+      "vers": "Context Pack complet avec clearance Beth",
+      "citation": "Morty executes only after a complete Context Pack has Beth clearance",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README_Governance.md"
+    },
+    {
+      "de": "Rick",
+      "verbe": "audit",
+      "vers": "Doctors (A2)",
+      "citation": "You audit the Architects (Doctors). If they build something that needs Amadeus to fix it, they failed",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L0_A1_Rick.md"
+    },
+    {
+      "de": "A0 Amadeus",
+      "verbe": "supervise",
+      "vers": "Beth/Rick/Morty/Jerry/Summer",
+      "citation": "you live in the Control Room; You supervise the entire system via Rick; Beth/Morty/Jerry/Summer are your avatars",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L0_A0_Amadeus.md"
+    },
+    {
+      "de": "Beth",
+      "verbe": "surveille",
+      "vers": "Rick",
+      "citation": "Monitors: A1 Rick (keeps him in check)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L1_A1_Beth.md"
+    },
+    {
+      "de": "A1 Amadeus",
+      "verbe": "passe par",
+      "vers": "MDA: CLARIFY → SCORE → ROUTE",
+      "citation": "A0 fait trois choses : 1. CLARIFY — Transformer l'entropie brute en intention formulée... 2. SCORE — 3. ROUTE",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/a0_reasoning_map.md"
+    },
+    {
+      "de": "Beth",
+      "verbe": "veto sur",
+      "vers": "Santé/Énergie Négatif",
+      "citation": "Si ❤️ Santé/Énergie = Négatif → 🔴 STOP. Aucun score ne compense",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/a0_reasoning_map.md"
+    },
+    {
+      "de": "Symphony",
+      "verbe": "remplace",
+      "vers": "N8N",
+      "citation": "N8N est marqué LEGACY au 2026-05-26. Aucun nouveau workflow N8N ne sera créé",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md"
+    },
+    {
+      "de": "Symphony",
+      "verbe": "détecte",
+      "vers": "rate-limits",
+      "citation": "Symphony détecte les rate-limits via le code de retour CLI et bascule automatiquement vers le fallback",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md"
+    },
+    {
+      "de": "Symphony",
+      "verbe": "ne fait pas de writes",
+      "vers": "tracker",
+      "citation": "Symphony ne fait pas de writes. C'est l'agent (Claude Code / OpenHarness) qui écrit dans le tracker via tooling",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/05_OSS_Twin/symphony/symphony-base.spec.md"
+    },
+    {
+      "de": "Tri-Plateforme Doctrine",
+      "verbe": "sépare",
+      "vers": "Notion / ClickUp / Airtable",
+      "citation": "Notion = WHAT (Doctrine) ; ClickUp = WHEN/WHO (Exécution) ; Airtable = HOW MUCH (Données)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "de": "Notion",
+      "verbe": "stocke",
+      "vers": "Doctrine seulement",
+      "citation": "Toute SOP, KPI, anti-pattern, identité agent vit uniquement dans Notion",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "de": "ClickUp",
+      "verbe": "exécute",
+      "vers": "Tâches opérationnelles",
+      "citation": "Chaque task ClickUp doit comporter dans son titre le préfixe [SOP-L2-{DOMAIN}-{NN}]",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "de": "Airtable",
+      "verbe": "stocke",
+      "vers": "Données quantitatives",
+      "citation": "Airtable ne contient pas de SOPs. Les briefs (🦇 table) référencent une SOP par son SOP_ID",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "de": "Hermes",
+      "verbe": "a été rétrogradé en",
+      "vers": "Archive (2026-05-17)",
+      "citation": "Hermes Agent is no longer a required runtime for A'Space L0. It is now an archive and abstraction source for LLM_Wiki",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/README.md"
+    },
+    {
+      "de": "V3 structure",
+      "verbe": "archive",
+      "vers": "V2 → V3 integrazione (2026-08-02)",
+      "citation": "17 665 fichiers versés le 2026-08-02 depuis C:\\Users\\amado\\ASpace_OS_V3",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md"
+    },
+    {
+      "de": "V3",
+      "verbe": "déplace",
+      "vers": "V2 (jamais réécrit)",
+      "citation": "Conformément à l'ADR anti-paperclip (ADR-SOBER-002), rien n'a été re-dérivé : tout est déplacé, ni réécrit ni supprimé",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md"
+    },
+    {
+      "de": "V3",
+      "verbe": "publie (échec)",
+      "vers": "GitHub origin",
+      "citation": "Ce dépôt a un remote GitHub et HEAD est identique à origin/main : son contenu est publié",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md"
+    },
+    {
+      "de": "Tripartite Blueprints",
+      "verbe": "remplace",
+      "vers": "_SPECS/ racine",
+      "citation": "_SPECS deprecated comme canon → devient _SPECS\\_INBOX (zone brouillons)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FWK-021_blueprints-canon-tripartite.md"
+    },
+    {
+      "de": "Junction-Based Aliasing",
+      "verbe": "remplace",
+      "vers": "robocopy / rsync 2-way",
+      "citation": "Trois couches d'aliasing filesystem complémentaires, basées sur les NTFS Junctions, jamais sur la copie",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FS-001_junction-based-aliasing.md"
+    },
+    {
+      "de": "Zora-shadow",
+      "verbe": "consolide",
+      "vers": "Outputs Symphony Bus",
+      "citation": "state.json = SSOT bus entre A0 → A1 → A2 → A3",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "de": "Computer (A2)",
+      "verbe": "supervise",
+      "vers": "13th Doctor / 11th Doctor / 12th Doctor",
+      "citation": "Rick (A1) supervise les Doctors (A2) : 13th (Infra), 11th (Interface), 12th (Data)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/README.md"
+    },
+    {
+      "de": "Citadel",
+      "verbe": "respect doctrine",
+      "vers": "Lecture seule / Anti-Ultron",
+      "citation": "Doctrine anti-Ultron: Lecture seule par défaut : serve.py lit UNIQUEMENT data/*.json",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/60_Citadel/README.md"
+    },
+    {
+      "de": "Sub-agent",
+      "verbe": "doit produire",
+      "vers": "livrable A3 (README + SKILL.md + tests)",
+      "citation": "Tout A3/B3 produit un livrable avec : README.md, SKILL.md ou AGENTS.md, Tests, Append-only",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md"
+    },
+    {
+      "de": "GO triennal",
+      "verbe": "renouvelle",
+      "vers": "A1 Spock",
+      "citation": "GO triennal 2026-07-05 → 2029-07-05, renouvelable",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+    },
+    {
+      "de": "Fable (wargame)",
+      "verbe": "respecte",
+      "vers": "≤ 15%/sem (cadence)",
+      "citation": "Fable ≤ 15 %/sem, reset dimanche 18:59",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+    },
+    {
+      "de": "RAM airlock",
+      "verbe": "veto sur",
+      "vers": "GREEN > 6 GB / YELLOW 3-6 / RED < 3",
+      "citation": "RAM airlock (Beth-capacité) GREEN > 6 GB free · YELLOW 3-6 · RED < 3 GB",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+    },
+    {
+      "de": "Hermes",
+      "verbe": "remplace par",
+      "vers": "LLM_Wiki + Symphony + Shadow L0 Executor Mesh",
+      "citation": "For live work, use LLM_Wiki + Symphony + Shadow L0 Executor Mesh (Codex CLI, Gemini CLI, Claude Code CLI via MiniMax)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/README.md"
+    },
+    {
+      "de": "PARA Object Storage",
+      "verbe": "isole",
+      "vers": "8 LD IndexedDB séparés",
+      "citation": "Créer 8 bases IndexedDB séparées (pas 8 stores dans 1 base, mais 8 bases distinctes)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-MEM-001_IndexedDB-Cloisonne-LD01-LD08.md"
+    },
+    {
+      "de": "L0",
+      "verbe": "supervise",
+      "vers": "OpenClaw Gateway port 18790",
+      "citation": "OpenClaw Gateway — Port 18790, Systemd service : openclaw.service",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-WSL-001_OpenClaw-WSL2-Architecture.md"
+    },
+    {
+      "de": "Telegram",
+      "verbe": "doit isoler",
+      "vers": "Bot Token par instance",
+      "citation": "Chaque instance A0 persistante DOIT avoir son propre bot Telegram (ex: @Amadeus_A0_WSL_bot, @Amadeus_A1_Win_bot). Aucun partage de Token",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-WSL-001_OpenClaw-WSL2-Architecture.md"
+    },
+    {
+      "de": "CEO-BENCH",
+      "verbe": "informe",
+      "vers": "Runbook S4 (8 B2 domains)",
+      "citation": "Les 8 catégories d'action = tes 8 B2 (CEO-BENCH: Monetization → Finance)",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "de": "SpecLoop",
+      "verbe": "impose",
+      "vers": "Information hiding",
+      "citation": "SpecLoop interdit de montrer les logs du vérificateur au reconstructeur — sinon il court-circuite la spec",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "de": "SpecLoop",
+      "verbe": "exige",
+      "vers": "Format structuré (Objectif/Entrées/Sorties/Procédure/Cadence/Notes)",
+      "citation": "Format Runbook (1 page max) : Objectif (1 métrique SQL) / Entrées / Sorties / Procédure / Cadence / Notes",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/sob/RUNBOOK_C1-R1.md"
+    },
+    {
+      "de": "SpecLoop",
+      "verbe": "produit",
+      "vers": "RR-Score (% scrums PASS)",
+      "citation": "La qualité d'un Runbook = % de scrums PASS sans demande de contexte",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "de": "5 ADR framework manquants",
+      "verbe": "à fermer",
+      "vers": "DEAL/GTD/PARA/LIFE-WHEEL/SYMPHONY",
+      "citation": "5 ADRs Life OS framework manquants (gap L0 à fermer post-cycle foundering) : ADR-DEAL-001, ADR-GTD-001, ADR-PARA-001, ADR-LIFE-WHEEL-001, ADR-SYMPHONY-001",
+      "chemin": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README.md"
+    }
+  ],
+  "codes": [
+    {
+      "systeme": "LD01-LD08",
+      "numerote": "8 Life Domains (Carrière/Finance/Santé/Cognition/Relations/Habitat/Créativité/Impact)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README.md (aussi: 00_Amadeus/30_MEMORY_CORE/Shadow_L1/02_life-os-baserow-schema-20260517.md)"
+    },
+    {
+      "systeme": "H1/H3/H10/H30/H90",
+      "numerote": "Horizons temporels (1an, 3ans, 10ans, 30ans, 90ans)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/a0_reasoning_map.md (aussi: 20_Life_OS/21_Ikigai_Orville/A3_Gemini_References_Index.md)"
+    },
+    {
+      "systeme": "A0/A1/A2/A3",
+      "numerote": "Hiérarchie agent (Amadeus / Gatekeeper / Manager / Technicien)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/L0_A0_Amadeus.md + L0_A1_Rick.md + L1_A1_Beth.md"
+    },
+    {
+      "systeme": "B1/B2/B3",
+      "numerote": "Business fractal (Direction / Domaines / Squads)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "systeme": "C1-C11",
+      "numerote": "11 composants CEO-BENCH (Chen/Narasimhan/Liu, Princeton)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "systeme": "S1-S7",
+      "numerote": "7 composants SpecLoop (NTU/MediaTek)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "systeme": "E.1-E.4",
+      "numerote": "Taxonomie d'erreurs SpecLoop (non-verifiable / compile mismatch / tourne mais mismatch / inconclusif)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "systeme": "C1-R1/R2/R3",
+      "numerote": "Cycle 1 Runbooks 1/2/3 (mois 1/2/3)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/sob/RUNBOOK_C1-R1.md, C1-R2.md, C1-R3.md"
+    },
+    {
+      "systeme": "WF0/WF1/WF2",
+      "numerote": "Workflow strata (Spock governance / Morty execution / Book CEO-Bench)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md (aussi 60_Citadel/CLAUDE.md cité en v1/v2)"
+    },
+    {
+      "systeme": "D1-D7",
+      "numerote": "Doctrines numérotées (receipts, no-contradiction, no-hard-delete, append-only, signal-prioritaire, anti-collapse, sister-notify)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Shadow_L0/02_blueprints-canon-tripartite-20260522.md (aussi fancy-hugging-bengio.md)"
+    },
+    {
+      "systeme": "W1-W13",
+      "numerote": "13 semaines 12WY (semaine 13 = cloture meta)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "systeme": "G1-G5",
+      "numerote": "Gates de validation (proposed→accepted→ratified→amended→superseded)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "systeme": "12WY disciplines",
+      "numerote": "5 disciplines (Vision / Planning / Measure / Focus / Execution)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "systeme": "stage enum",
+      "numerote": "GTD stages (captured / clarified / organized / reviewed / engaged)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "systeme": "para_bucket",
+      "numerote": "4 buckets PARA (01_Projects / 02_Areas / 03_Resources / 04_Archives)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "systeme": "Tri-Plateforme",
+      "numerote": "Notion/ClickUp/Airtable (WHAT/WHEN/HOWMUCH)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "systeme": "PORTS agents",
+      "numerote": "18789 (Win A'0) / 18790 (WSL A0) / 8000 (Mission Control) / 8642 (Hermes API) / 9119 (Hermes Dashboard)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-WSL-001_OpenClaw-WSL2-Architecture.md + Hermes Agent/02_architecture-services.md"
+    },
+    {
+      "systeme": "4 cycle 12WY",
+      "numerote": "P0/P1/P2/P3 (leadership / products / leverage / team)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/INTEGRATION_CEOBENCH_SPECLOOP.md"
+    },
+    {
+      "systeme": "Compression CAP",
+      "numerote": "x4 sustainable / x8 risque (jamais soutenu)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+    },
+    {
+      "systeme": "DOCTYPE ADR",
+      "numerote": "ADR-FWK-021 à 022 (L0 doctrine) / ADR-FS-001 à 003 (L0 filesystem) / ADR-SYMPH-001 à 003 (L0 orchestration) / ADR-MESH-L2-001 (L2 mesh) / ADR-LD01-001 à 008 (LD01 Business Book)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ + 30_Business_OS/09_Blueprints/02-ADR/"
+    },
+    {
+      "systeme": "4 pillars KB",
+      "numerote": "OKF / Wiki / Graphify / Dox",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md (aussi 03_Resources_Geordi/CLAUDE.md)"
+    },
+    {
+      "systeme": "RAM airlock",
+      "numerote": "GREEN > 6 GB / YELLOW 3-6 / RED < 3",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md"
+    },
+    {
+      "systeme": "Notion canon",
+      "numerote": "AGENT_REGISTRY_DB / MASTER_SOP_DB / 8 squads B2",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md"
+    },
+    {
+      "systeme": "V0.1-V0.9",
+      "numerote": "Versions Web OS (V0.1.1 V0.1.9 piliers → V0.2 → V0.9 Nexus)",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/Life_Reality_map.md (aussi Legacy_LifeOS_App_Specs_2026-05-22/_SPECS/wishlists/roadmap-v0.1.x.md)"
+    },
+    {
+      "systeme": "Symphony tick cycle",
+      "numerote": "WAKE → PROBE → DECIDE → EXECUTE → OBSERVE → LEARN → SIGNAL → SLEEP",
+      "defini_dans": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md"
+    }
+  ],
+  "contradictions": [
+    {
+      "sujet": "5 modules Solarpunk (Kernel/Life/Electrons/Fractal/IPBD) vs 3 couches L0/L1/L2",
+      "chemin_a": "30_MEMORY_CORE/Gemini_Takeout_2026/2025-08_conversations.md (référencé en a0_l_canon.md §1)",
+      "date_a": "2025-08-15",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_canon.md §1",
+      "date_b": "2026-06-28",
+      "note": "Convergence 5->3 non documentée dans canon L0"
+    },
+    {
+      "sujet": "Hospital Planet L1 vs Life OS canon",
+      "chemin_a": "30_MEMORY_CORE/Gemini_Takeout_2026/2026-05_conversations.md:27152 (référencé)",
+      "date_a": "2026-05",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_canon.md §7",
+      "date_b": "2026-06-28",
+      "note": "Label canon orphelin — promote à IDENTITY.md"
+    },
+    {
+      "sujet": "Sales / John Jones / Illuminati (8ème B2 domain)",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/README.md",
+      "date_a": "2026-08-02",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/README.md",
+      "date_b": "2026-08-02",
+      "note": "30_Business_OS README inclut 08_Sales (John Jones) ; 00_Amadeus/README ne liste que 7 domaines (01-07_Legal). Canon 2026-Q2 ADRs incluent Sales — le 00_Amadeus/README est périmé."
+    },
+    {
+      "sujet": "Symphony Router pré-May 2026 vs Hermes canon",
+      "chemin_a": "30_MEMORY_CORE/Gemini_Takeout_2026/2026-03_conversations.md (référencé N8N remplacé par Symphony)",
+      "date_a": "2026-03",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-SYMPH-001_symphony-replaces-n8n.md",
+      "date_b": "2026-05-26",
+      "note": "Le takeout dit Symphony Router ; ADR-SYMPH-001 ratifie Symphony bus = files only (pas runtime). Précision orthogonale, pas rupture."
+    },
+    {
+      "sujet": "Hermes runtime actif vs Hermes retrograded",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/02_architecture-services.md",
+      "date_a": "2026-05-15",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/30_MEMORY_CORE/Hermes Agent/README.md",
+      "date_b": "2026-05-17",
+      "note": "02_architecture-services documente Hermes ACTIF (gateway run, ports 8642/9119) ; README annonce retrogradation 2026-05-17. Cohérent dans le shadow : 02 est historique, README est canon."
+    },
+    {
+      "sujet": "Notion source de vérité (BUSINESS PULSE KB) vs AaaS 3 Variants",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/30_Business_OS/09_Blueprints/02-ADR/ADR-MESH-L2-001_tri-plateforme-doctrine.md",
+      "date_a": "2026-05-27",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_canon.md §5",
+      "date_b": "2026-06-28",
+      "note": "Master SOC term (takeout) vs AaaS 3 Variants canon. Tri-plateforme documente 3 plateformes SaaS distinctes ; a0_l_canon note que Master SOC est renommé en AaaS 3 Variants mais reste non-réconcilié."
+    },
+    {
+      "sujet": "RAM airlock calibration v2 vs Sketch initiale",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md",
+      "date_a": "2026-07-07",
+      "chemin_b": "wargame 15 M1 (antérieur, calibration v1 — GREEN > 8GB / YELLOW 4-8 / RED < 4)",
+      "date_b": "2026-06-25",
+      "note": "Calibration v2 (ratifiée A+ 2026-07-07) affine les seuils. TEMPORAL-CANON ne cite que v2 — v1 archivé."
+    },
+    {
+      "sujet": "GO perpétuel vs GO triennal",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/EXECUTION-RANKING.md §v2",
+      "date_a": "2026-07-12",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/40_Fable_Banque/fable-last-week-aspace/TEMPORAL-CANON.md",
+      "date_b": "2026-07-07",
+      "note": "EXECUTION-RANKING v1 parle 'GO Perpétuel' (fichier d'état sans date d'expiration) ; TEMPORAL-CANON v2 ratifie 'GO triennal 2026-07-05 → 2029-07-05'. AMENDED wargame 15."
+    },
+    {
+      "sujet": "V3 publié sur GitHub (dette secret) vs V3 remise à zéro",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md",
+      "date_a": "2026-08-02",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/README.md",
+      "date_b": "2026-08-02",
+      "note": "V3 archive lu dans V2 : 11 fichiers porteurs de secrets, GitHub origin = public (commit 41c19a5). V3 remise à zéro (vide) ne les supprime pas — ils restent chez V2 et continueront d'être publiés tant que l'historique git n'est pas rewrite."
+    },
+    {
+      "sujet": "Companion Roles — Nardole & Donna",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Interface_11th_Doctor/README.md (Nardole absent, list Amy/Rory/River/Bill)",
+      "date_a": "2026-08-02",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/13_Data_12th_Doctor/README.md (Nardole listé sous A2A)",
+      "date_b": "2026-08-02",
+      "note": "Nardole apparaît dans 12_Interface (A2A Orchestrator) ET 13_Data (A2A Orchestrator). Doublon de scope — canon flou. v1 ou v2 wave 1 n'a pas capturé cette contradiction."
+    },
+    {
+      "sujet": "V0.9 Nexus Convergence — En cours vs Construit",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/Life_Reality_map.md",
+      "date_a": "2026-04-09",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/Reality_map.md",
+      "date_b": "2026-07-19",
+      "note": "V0.9 = 'En Cours' (Phase A+B faits, Phase C en cours) ; v2 documente constellation 17/17 composants portés. Pas une contradiction directe — measures différentes (construit vs cible)."
+    },
+    {
+      "sujet": "Bilbo Express mode (fable-mode) standard vs ancré à plan",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/a0_l_canon.md (note: not referenced — concept post-canon)",
+      "date_a": "2026-06-28",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §2 (Fable Class Standard 5-gate loop)",
+      "date_b": "2026-08-02",
+      "note": "fable-mode skill créé 2026-07-07 (wargame 21) ; canon a0_l_canon pre-Fable cite 'fable-mode' comme trigger sans le définir (2026-06-28). Postériorité OK — pas de contradiction."
+    },
+    {
+      "sujet": "ADR-FWK-022 amendement vs canon ADR-FWK-021",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FWK-022_quick-access-summers-and-inbox-pattern.md",
+      "date_a": "2026-05-22",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/10_Tech_OS/12_Blueprints/02-ADR/ADR-FWK-021_blueprints-canon-tripartite.md",
+      "date_b": "2026-05-22",
+      "note": "ADR-FWK-022 annule la mention _SPECS\\_INBOX § D1 de l'ADR-FWK-021. Le reste de la doctrine tripartite tient. Append-only, pas contradiction."
+    },
+    {
+      "sujet": "5 ADR framework manquants dans shadow L0 vs canon",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/00_Gatekeepers_Beth_Morty/README.md",
+      "date_a": "2026-06-21",
+      "chemin_b": "wave 2 (journal_carto2_04_Archives_Data.log §13)",
+      "date_b": "2026-09-13",
+      "note": "Wave 2 dit '5 ADR framework restent manquants (DEAL/GTD/PARA/LIFE-WHEEL/SYMPHONY) — à extraire depuis la Mère V2 §3.1' ; la recherche dans _V3_STRUCTURE ne les a pas trouvés dans 20_Life_OS/ — ils restent dans _SPECS legacy ou _V3_STRUCTURE non encore lu."
+    },
+    {
+      "sujet": "stocks de polices harmonisées : Anti-Paperclip vs Anti-Paperclip doctrine",
+      "chemin_a": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §3",
+      "date_a": "2026-08-02",
+      "chemin_b": "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/_root_and_shells_2026-08-02/README.md",
+      "date_b": "2026-08-02",
+      "note": "Doctrine mentions 'ADR anti-paperclip (ADR-SOBER-002)' ; ce ADR n'a pas été lu dans la vague 3. À vérifier — probablement stocké sous 20_Life_OS/24_PARA_Enterprise/.. ou _SPECS/L2_Business_OS/."
+    }
+  ],
+  "limites_honnetes": {
+    "fichiers_lus_v3": 81,
+    "fichiers_cible_v3": 150,
+    "ratio_atteint": 0.54,
+    "raisons": [
+      "1. Le brief v3 a été lancé à 10:16:58 via lance_carto3.sh (pid 34830), mais le journal carto3_04_Archives_Data.log est resté à 0 octet — l'agent délégué n'a pas démarré (cohérent avec le Pattern Documenté §4 Piège 1-3 du CLAUDE.md : carte d'environnement / cheminement / etc.).",
+      "2. Vague 3 auto-exécutée a donc été impossible à déléguer — la présente séance fait office d'agent v3.",
+      "3. 1449 chemins restants selon matching strict 3-4 composants. Beaucoup sont des graphify-burst/chunks/chunk_NNN/ stubs (A3_X.md) sans valeur canonique supplémentaire — pure duplication post-extraction.",
+      "4. Le pic de chemins à structure.txt (1463) incluait des dizaines de README redondants et de fiches agents L0_A1_A2_A3 dupliquées sous _V3_STRUCTURE_2026-08-02/00_Amadeus/01_Identity_Core/agents/.",
+      "5. La lecture 81 fichiers est dense en canon mais peuplerait 100+ autres fichiers de duplication (chunks, agents-fiches, wiki-stubs). Le ratio utile est supérieur au ratio brut."
+    ]
+  },
+  "nouveautes_v3_vs_v1_v2": {
+    "a_decouvrir": [
+      "Computer_B1_B2_B3_Business_Pulse_Doctrine.md (B2 Gate Matrix canon, 8 B2 domains × 3 stages, SOB Artifacts)",
+      "A3_Data_Archives_Spec.md (Data cheffe d'orchestre DEAL ⊂ PARA)",
+      "INTEGRATION_CEOBENCH_SPECLOOP.md (18 composants C1-C11 + S1-S7, E.1-E.4, RR-Score)",
+      "00_Amadeus/a0_reasoning_map.md (MDA: CLARIFY→SCORE→ROUTE)",
+      "00_Amadeus/01_Identity_Core/a0_l_canon.md + a0_l_geordi_canon.md (canon vivant vs codifié)",
+      "Manifeste_Souverain.md (Local → WSL → VPS)",
+      "ADR-FWK-021 (Canon Tripartite L0/L1/L2 blueprints)",
+      "ADR-FS-001 (Junction-Based Aliasing)",
+      "ADR-SYMPH-001 (Symphony remplace N8N)",
+      "ADR-MESH-L2-001 (Tri-Plateforme Notion/ClickUp/Airtable)",
+      "40_Fable_Banque/EXECUTION-RANKING.md §v2 (table 11 rangs corrigés par dépendances)",
+      "Herems Agent README (retrograded 2026-05-17)",
+      "Shadow_L0/SPEC.md (Codex/Claude/Gemini fallback chain)",
+      "Shadow_L1/02_life-os-baserow-schema-20260517.md (LD00-LD09 plan)",
+      "60_Citadel/README.md (Local P0 dashboard, anti-Ultron)",
+      "50_Claude_Code_Config/hooks/README.md (PreToolUse/PostToolUse/Lifecycle hooks)",
+      "27_Cognition_LD04/README.md (A2 Discovery Handoff)",
+      "21_Ikigai_Orville/A3_Gemini_References_Index.md (Ed/Kelly/Gordon/Claire + Isaac/Lamarr/Bortus/Alara/Klyden)"
+    ],
+    "delta_canon": [
+      "AJOUT: Tri-Plateforme Doctrine (Notion=WHAT / ClickUp=WHEN/WHO / Airtable=HOWMUCH)",
+      "AJOUT: Junction-Based Aliasing (3 couches, NTFS junctions only)",
+      "AJOUT: Canon Tripartite Blueprints (12_Blueprints/28_Blueprints/09_Blueprints)",
+      "AJOUT: V3 Doctrine Orchestration (7 task completions, /mythos skill, 3-Harness)",
+      "AJOUT: CEO-BENCH × SpecLoop (18 composants, RR-Score, E.1-E.4)",
+      "AJOUT: B1/B2/B3 Fractal (B2 Meso VP Swarm, B1 Direction Cockpit, SOB Artifacts)",
+      "AJOUT: A3 Data Archives = sentinelle PARArchive (DEAL ⊂ PARA)",
+      "AJOUT: 5 ADR framework manquants (DEAL/GTD/PARA/LIFE-WHEEL/SYMPHONY) — gap reconnu"
+    ]
+  }
+}

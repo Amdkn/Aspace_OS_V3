@@ -1,0 +1,584 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.400 --> 00:00:04.560
+hi I'm Chad walquist I'm an architect here at&nbsp;
+paler I've been working in the data analytics&nbsp;&nbsp;
+
+00:00:04.560 --> 00:00:09.880
+and AI space for the last 15 plus years I have&nbsp;
+seen these architectures and systems evolve over&nbsp;&nbsp;
+
+00:00:09.880 --> 00:00:14.280
+time and the enterprise software landscape is&nbsp;
+more fragmented now than ever it has turned&nbsp;&nbsp;
+
+00:00:14.280 --> 00:00:18.920
+into a true Tower of Babel where no one can&nbsp;
+seem to communicate or work together different&nbsp;&nbsp;
+
+00:00:18.920 --> 00:00:24.640
+scaling functions security mechanisms data format&nbsp;
+instead each promotes their own isolated interest&nbsp;&nbsp;
+
+00:00:24.640 --> 00:00:30.400
+at the expense of the system as a whole however&nbsp;
+though in Enterprise it's a system of systems&nbsp;&nbsp;
+
+00:00:30.400 --> 00:00:35.600
+I see some of the most viral posts online about&nbsp;
+these hyper complex Market Maps open- Source tools&nbsp;&nbsp;
+
+00:00:35.600 --> 00:00:41.480
+and VC backed vendors pitching their easy to sell&nbsp;
+box on someone's architecture diagram the problem&nbsp;&nbsp;
+
+00:00:41.480 --> 00:00:46.080
+with this is the focus is not on how the system&nbsp;
+as a whole will add value to your organization but&nbsp;&nbsp;
+
+00:00:46.080 --> 00:00:51.800
+how each point solution can be sold Enterprises&nbsp;
+are already facing increased complexity and now&nbsp;&nbsp;
+
+00:00:51.800 --> 00:00:57.000
+you layer in AI on top of that what I see&nbsp;
+is AI adding a nonlinear stepwise increase&nbsp;&nbsp;
+
+00:00:57.000 --> 00:01:02.560
+in that complexity to the entire software stack&nbsp;
+threatening to topple this Tower when customers&nbsp;&nbsp;
+
+00:01:02.560 --> 00:01:08.200
+come to AIP con or analysts talk to our customers&nbsp;
+with AIP use cases in production they ask the same&nbsp;&nbsp;
+
+00:01:08.200 --> 00:01:14.120
+thing how is paler the only one enabling AI in&nbsp;
+production operations we've spent the last 20&nbsp;&nbsp;
+
+00:01:14.120 --> 00:01:18.560
+plus years in operational use cases in the&nbsp;
+toughest environments in the world we have&nbsp;&nbsp;
+
+00:01:18.560 --> 00:01:23.600
+hundreds of our forward deployed Engineers on the&nbsp;
+ground at the edge with our customers eating the&nbsp;&nbsp;
+
+00:01:23.600 --> 00:01:28.800
+pain and building the product that matters to&nbsp;
+our customers not for an architecture diagram&nbsp;&nbsp;
+
+00:01:28.800 --> 00:01:31.840
+so how are we doing this today I'm going&nbsp;
+to walk you through how we approach this
+
+00:01:31.840 --> 00:01:38.120
+differently all right before we get into&nbsp;
+the architecture we're going to show you&nbsp;&nbsp;
+
+00:01:38.120 --> 00:01:42.120
+from an operational application back to the&nbsp;
+sources so you have a point of reference so&nbsp;&nbsp;
+
+00:01:42.120 --> 00:01:46.560
+this is a workshop application of a supply&nbsp;
+chain control tower that allows me to build&nbsp;&nbsp;
+
+00:01:46.560 --> 00:01:50.960
+these data Rich applications that are&nbsp;
+bidirectional and right back I can take&nbsp;&nbsp;
+
+00:01:50.960 --> 00:01:55.320
+action through these applications it's not&nbsp;
+just a report we also have ai agents embedded&nbsp;&nbsp;
+
+00:01:55.320 --> 00:01:59.960
+in here so I have agents seeing and looking&nbsp;
+as data is coming in through my platform and&nbsp;&nbsp;
+
+00:01:59.960 --> 00:02:04.360
+helping me reason through how to resolve different&nbsp;
+issues whether they can do it autonomously or even&nbsp;&nbsp;
+
+00:02:04.360 --> 00:02:10.000
+exit and ask for human help this is AI and human&nbsp;
+teaming if we then look at those agents you can&nbsp;&nbsp;
+
+00:02:10.000 --> 00:02:14.760
+see here this is AIP logic I actually have&nbsp;
+the ability to create system promps I give&nbsp;&nbsp;
+
+00:02:14.760 --> 00:02:19.000
+it access to tools I can I give it access to&nbsp;
+data I can give it access to functions or it&nbsp;&nbsp;
+
+00:02:19.000 --> 00:02:24.600
+can apply actions or take actions on my behalf&nbsp;
+I can call forecasting functions all of this in&nbsp;&nbsp;
+
+00:02:24.600 --> 00:02:30.280
+one interface and I can then even switch out which&nbsp;
+models I want from a model catalog that I can pop&nbsp;&nbsp;
+
+00:02:30.280 --> 00:02:34.360
+with a default set or I can even bring my own&nbsp;
+model endpoints or my own finetune models if I&nbsp;&nbsp;
+
+00:02:34.360 --> 00:02:39.520
+would like and then each logic block can actually&nbsp;
+use different model so the right model for the&nbsp;&nbsp;
+
+00:02:39.520 --> 00:02:44.560
+different proms so you can mix and match and use&nbsp;
+them together this is super powerful and then if&nbsp;&nbsp;
+
+00:02:44.560 --> 00:02:49.520
+we look at workflow Builder here this is that same&nbsp;
+application and all of the ontology objects that&nbsp;&nbsp;
+
+00:02:49.520 --> 00:02:54.880
+it's using to actually represent this application&nbsp;
+which is great and the cool thing is that I can&nbsp;&nbsp;
+
+00:02:54.880 --> 00:02:58.640
+also take those same functions I build in this&nbsp;
+application and then build a custom application&nbsp;&nbsp;
+
+00:02:58.640 --> 00:03:02.760
+custom integration on top of their so in this&nbsp;
+example I also have on that same set of ontology&nbsp;&nbsp;
+
+00:03:02.760 --> 00:03:08.160
+objects a Titan satellite tasking application&nbsp;
+that's built on our ontology SDK the ontology&nbsp;&nbsp;
+
+00:03:08.160 --> 00:03:14.360
+SDK here actually generates a custom SDK based on&nbsp;
+your ontology objects it creates the documentation&nbsp;&nbsp;
+
+00:03:14.360 --> 00:03:19.960
+everything you need to know and the packages&nbsp;
+to integrate on top of ontology even pick your&nbsp;&nbsp;
+
+00:03:19.960 --> 00:03:25.640
+language of choice here very cool then if we get&nbsp;
+back to the ontology when we talk about ontology&nbsp;&nbsp;
+
+00:03:25.640 --> 00:03:30.160
+object this is actually an ontology object&nbsp;
+normally you would have a dimension a data&nbsp;&nbsp;
+
+00:03:30.160 --> 00:03:35.560
+warehouse that is a tabular data set you can see&nbsp;
+how rich this is I also have streams I have link&nbsp;&nbsp;
+
+00:03:35.560 --> 00:03:42.000
+data I have geospatial I have schematics I can&nbsp;
+have video images all of that in one ontology&nbsp;&nbsp;
+
+00:03:42.000 --> 00:03:47.840
+object no longer just tabular data how do we&nbsp;
+populate onology objects the ontology objects are&nbsp;&nbsp;
+
+00:03:47.840 --> 00:03:53.160
+the blue objects over here on the right these are&nbsp;
+the nouns and verbs that make up the data logic&nbsp;&nbsp;
+
+00:03:53.160 --> 00:03:57.800
+and actions of your business so that you can make&nbsp;
+decisions so how do we hydrate that that's through&nbsp;&nbsp;
+
+00:03:57.800 --> 00:04:02.560
+all these pipelines you can see running here here&nbsp;
+so these different data pipelines can be proc code&nbsp;&nbsp;
+
+00:04:02.560 --> 00:04:09.400
+or low code so you can run python Java SQL to&nbsp;
+transform your data across these pipelines to&nbsp;&nbsp;
+
+00:04:09.400 --> 00:04:15.320
+hydrate these objects you can also have multimodal&nbsp;
+data I can look here and I have snowflake so I can&nbsp;&nbsp;
+
+00:04:15.320 --> 00:04:19.560
+register data through virtual tables from your&nbsp;
+own data warehouse without copying it I can get&nbsp;&nbsp;
+
+00:04:19.560 --> 00:04:26.160
+apis I can get sap I can use our hyper Auto&nbsp;
+to actually build these transforms for me I&nbsp;&nbsp;
+
+00:04:26.160 --> 00:04:32.480
+also have streaming data from opcua all of those&nbsp;
+things com together in one single pan of glass&nbsp;&nbsp;
+
+00:04:32.480 --> 00:04:36.800
+into these ontology objects that I build these&nbsp;
+data Rich applications all right that's top to
+
+00:04:36.800 --> 00:04:47.360
+bottom this is the paler AI mesh architecture&nbsp;
+these eight core capabilities are essential&nbsp;&nbsp;
+
+00:04:47.360 --> 00:04:52.520
+for delivering true Enterprise AI at scale&nbsp;
+today we'll explore how these components&nbsp;&nbsp;
+
+00:04:52.520 --> 00:04:57.360
+integrate in our interoperable with your existing&nbsp;
+landscape starting with outcomes in mind we have&nbsp;&nbsp;
+
+00:04:57.360 --> 00:05:02.560
+a product Building Services there are two main&nbsp;
+areas first up is our pre-built AI products we&nbsp;&nbsp;
+
+00:05:02.560 --> 00:05:07.080
+have AIP now offerings that can be installed&nbsp;
+in minutes integrated with your unique data&nbsp;&nbsp;
+
+00:05:07.080 --> 00:05:13.760
+logic and actions and then customize as needed&nbsp;
+this is an easy button for Enterprise apps we&nbsp;&nbsp;
+
+00:05:13.760 --> 00:05:19.520
+also have build with AIP a set of developer Focus&nbsp;
+starter packs to accelerate time to delivery of&nbsp;&nbsp;
+
+00:05:19.520 --> 00:05:24.680
+things like LM Vision models to extract data from&nbsp;
+unstructured sources it's pretty cool for custom&nbsp;&nbsp;
+
+00:05:24.680 --> 00:05:29.920
+build applications we offer a suite of tools for&nbsp;
+analytics whether it be Time series geospatial&nbsp;&nbsp;
+
+00:05:29.920 --> 00:05:35.400
+AI assisted deep Dives additionally we provide&nbsp;
+operational app building ranging from low code to&nbsp;&nbsp;
+
+00:05:35.400 --> 00:05:41.520
+full Pro code and even mixed reality our developer&nbsp;
+tool chain focuses on getting your work into&nbsp;&nbsp;
+
+00:05:41.520 --> 00:05:47.280
+production whether through the ontology SDK for&nbsp;
+fully custom apps or Integrations a Marketplace to&nbsp;&nbsp;
+
+00:05:47.280 --> 00:05:52.920
+consume from or contribute to or even integrated&nbsp;
+devops tool chain the key theme Here is building&nbsp;&nbsp;
+
+00:05:52.920 --> 00:05:59.640
+integrated AI experiences and getting them into&nbsp;
+production as quickly and safely as possible
+
+00:06:01.160 --> 00:06:06.320
+all of the analytics and applications within&nbsp;
+AIP are built upon the ontology the ontology&nbsp;&nbsp;
+
+00:06:06.320 --> 00:06:11.720
+is designed to represent the decisions in an&nbsp;
+Enterprise not merely the data IT addresses&nbsp;&nbsp;
+
+00:06:11.720 --> 00:06:17.240
+the core challenge that every organization faces&nbsp;
+executing the best possible decisions often in&nbsp;&nbsp;
+
+00:06:17.240 --> 00:06:23.320
+real time amidst constantly changing internal and&nbsp;
+external conditions the ontology facilitates deep&nbsp;&nbsp;
+
+00:06:23.320 --> 00:06:28.080
+TOA interoperability with existing Enterprise&nbsp;
+systems so this setup enables the rapid&nbsp;&nbsp;
+
+00:06:28.080 --> 00:06:33.360
+development of operational applications with&nbsp;
+AI teaming in addition to Conventional business&nbsp;&nbsp;
+
+00:06:33.360 --> 00:06:38.160
+intelligence and analytics workflows every&nbsp;
+decision can be broken down into three core&nbsp;&nbsp;
+
+00:06:38.160 --> 00:06:44.240
+components data logic and actions so we about data&nbsp;
+these are the relevant facts or truths about your&nbsp;&nbsp;
+
+00:06:44.240 --> 00:06:50.720
+world the nouns and verbs of your operation that&nbsp;
+form the context for each decision then logic this&nbsp;&nbsp;
+
+00:06:50.720 --> 00:06:55.200
+encompasses the organizational and business rules&nbsp;
+that act as the guard rails for your decisions&nbsp;&nbsp;
+
+00:06:55.200 --> 00:06:59.760
+each includes understanding of the probabilities&nbsp;
+of certain outcomes under different assumptions&nbsp;&nbsp;
+
+00:06:59.760 --> 00:07:05.480
+past experiences in similar situations and&nbsp;
+inputs from forecast and optimization models&nbsp;&nbsp;
+
+00:07:05.480 --> 00:07:10.320
+and then actions these represent the kinetics&nbsp;
+or the effects of a decision they describe&nbsp;&nbsp;
+
+00:07:10.320 --> 00:07:14.960
+how the decision manifests in the real world&nbsp;
+and the detailed steps needed to translate a&nbsp;&nbsp;
+
+00:07:14.960 --> 00:07:20.680
+decision with an AIP to a tangible outcome in&nbsp;
+a production setting okay so by automatically&nbsp;&nbsp;
+
+00:07:20.680 --> 00:07:26.120
+integrating all these components the ontology not&nbsp;
+only simplifies but also accelerates the journey&nbsp;&nbsp;
+
+00:07:26.120 --> 00:07:32.400
+from decision making to real world action this&nbsp;
+is key to enabling AI as the ontology grounds&nbsp;&nbsp;
+
+00:07:32.400 --> 00:07:38.120
+LMS in the truth of your business operations&nbsp;
+and decisions this is crucial because when&nbsp;&nbsp;
+
+00:07:38.120 --> 00:07:42.960
+you're modeling the digital twin of your business&nbsp;
+process in the ontology it's not just data it's a&nbsp;&nbsp;
+
+00:07:42.960 --> 00:07:48.600
+digitized business process that is the backbone&nbsp;
+of your operation that also acts as the semantic&nbsp;&nbsp;
+
+00:07:48.600 --> 00:07:54.640
+layer for LMS to bring reasoning and automation&nbsp;
+capabilities all of this is secured with a full&nbsp;&nbsp;
+
+00:07:54.640 --> 00:07:59.600
+audit Trail explainable Chain of Thought&nbsp;
+reasoning and gives a level of transparency&nbsp;&nbsp;
+
+00:07:59.600 --> 00:08:05.840
+that human and AI work together this shared&nbsp;
+decision model is key to adoption integrity at
+
+00:08:05.840 --> 00:08:14.160
+scale all right moving down the stack from the&nbsp;
+ontology we have data services AI services and&nbsp;&nbsp;
+
+00:08:14.160 --> 00:08:18.720
+workflow Services let's dive a little bit deeper&nbsp;
+into the data services we think of this in three&nbsp;&nbsp;
+
+00:08:18.720 --> 00:08:24.720
+main areas connectivity integration and management&nbsp;
+you can ingest and process in batch micro batch&nbsp;&nbsp;
+
+00:08:24.720 --> 00:08:30.520
+CDC and streaming as a first class citizen&nbsp;
+so AI thrives on stream data for realtime&nbsp;&nbsp;
+
+00:08:30.520 --> 00:08:35.600
+feedback loops and we'll get to that more in the&nbsp;
+AI services in a minute you have over 150 outof&nbsp;&nbsp;
+
+00:08:35.600 --> 00:08:40.200
+the boox connections plus the ability to build&nbsp;
+your own connector I have yet to find a system&nbsp;&nbsp;
+
+00:08:40.200 --> 00:08:45.520
+we can't connect to our hyper Auto Tool automates&nbsp;
+data Transformations turning complex systems like&nbsp;&nbsp;
+
+00:08:45.520 --> 00:08:51.840
+sap into usable ontologies within hours and days&nbsp;
+pipeline Builder it's from multimodal data think&nbsp;&nbsp;
+
+00:08:51.840 --> 00:08:58.920
+of structured unstructured media PDF images stream&nbsp;
+building llm processing blocks for inline context&nbsp;&nbsp;
+
+00:08:58.920 --> 00:09:04.280
+and reason all of this on an ultra scalable&nbsp;
+infrastructure all of these tools support data&nbsp;&nbsp;
+
+00:09:04.280 --> 00:09:11.120
+as code allow me to Branch my data along with my&nbsp;
+code versioning lineage tracking all of this built&nbsp;&nbsp;
+
+00:09:11.120 --> 00:09:16.760
+upon the same unified and security and governance&nbsp;
+even this in the data services we have AIP assist&nbsp;&nbsp;
+
+00:09:16.760 --> 00:09:21.360
+integrated for help with pipeline building&nbsp;
+air resolution offering up code suggestions&nbsp;&nbsp;
+
+00:09:21.360 --> 00:09:28.080
+and explanations in real time if we take a step&nbsp;
+over to AI Services we have three main areas model&nbsp;&nbsp;
+
+00:09:28.080 --> 00:09:33.120
+connectivity model train in model operation in&nbsp;
+model connectivity we have many ways to integrate&nbsp;&nbsp;
+
+00:09:33.120 --> 00:09:38.520
+models that you've built bought or download&nbsp;
+an open source one you can host models in AIP&nbsp;&nbsp;
+
+00:09:38.520 --> 00:09:43.720
+externally and register them bring containerized&nbsp;
+model that have robust dependencies or select from&nbsp;&nbsp;
+
+00:09:43.720 --> 00:09:48.600
+an open source model that you can use out of the&nbsp;
+box the idea here is any model anywhere can be&nbsp;&nbsp;
+
+00:09:48.600 --> 00:09:54.480
+integrated into a workflow in AIP then to model&nbsp;
+training you have a secure hosted jupyter lab&nbsp;&nbsp;
+
+00:09:54.480 --> 00:09:59.320
+notebook R Studio code workbooks you can even use&nbsp;
+pipeline builds or with a containerized training&nbsp;&nbsp;
+
+00:10:00.080 --> 00:10:05.840
+the idea is you have all the tools you need inside&nbsp;
+the secure Enclave of AIP to prepare cleanse your&nbsp;&nbsp;
+
+00:10:05.840 --> 00:10:11.280
+data and then securely train your models lastly&nbsp;
+is model operations let's get it to production&nbsp;&nbsp;
+
+00:10:11.280 --> 00:10:16.480
+at scale right we have the concept of modeling&nbsp;
+objectives that facilitates multiple scientists&nbsp;&nbsp;
+
+00:10:16.480 --> 00:10:20.960
+and Builders building submitting and comparing&nbsp;
+models against each other or scoring against a&nbsp;&nbsp;
+
+00:10:20.960 --> 00:10:27.600
+thirdparty model as well all towards the same goal&nbsp;
+of a better model you can evaluate release host&nbsp;&nbsp;
+
+00:10:27.600 --> 00:10:33.000
+and monitor your models all all of this comes&nbsp;
+together in an integrated nnml Ops framework&nbsp;&nbsp;
+
+00:10:33.000 --> 00:10:38.360
+again built on the same security and governance&nbsp;
+foundations now in workflow Services we have three&nbsp;&nbsp;
+
+00:10:38.360 --> 00:10:43.120
+areas workflow building decision orchestration and&nbsp;
+Edge integration starting in workflow building we&nbsp;&nbsp;
+
+00:10:43.120 --> 00:10:47.240
+have an aptly named workflow Builder that&nbsp;
+we showed you earlier modelbased execution&nbsp;&nbsp;
+
+00:10:47.240 --> 00:10:52.360
+process mining automation framework in decision&nbsp;
+orchestration we have batch CDC and streaming&nbsp;&nbsp;
+
+00:10:52.360 --> 00:10:57.720
+right back along with even native client right&nbsp;
+back like sap boopies then in Edge Integrations&nbsp;&nbsp;
+
+00:10:57.720 --> 00:11:02.680
+we have Edge pipelines Edge mod models and Edge&nbsp;
+objects bring your own device or Apollo manage&nbsp;&nbsp;
+
+00:11:02.680 --> 00:11:07.480
+devices the idea here is we meet you where you are&nbsp;
+and this is super powerful to model your business
+
+00:11:07.480 --> 00:11:16.200
+processes next up we have security and governance&nbsp;
+which spans infrastructure platform and Enterprise&nbsp;&nbsp;
+
+00:11:16.200 --> 00:11:22.120
+security this includes automated security patching&nbsp;
+continuous monitoring secure model hubs role-based&nbsp;&nbsp;
+
+00:11:22.120 --> 00:11:26.960
+marking based and purpose-based access controls&nbsp;
+approval Frameworks and even granular audit and&nbsp;&nbsp;
+
+00:11:26.960 --> 00:11:31.840
+logging and at the base it's Apollo of product&nbsp;
+we developed to deploy and manage software like&nbsp;&nbsp;
+
+00:11:31.840 --> 00:11:37.920
+AIP and Foundry Apollo orchestrates hundreds of&nbsp;
+microservices enabling quick deployment updates&nbsp;&nbsp;
+
+00:11:37.920 --> 00:11:42.880
+and even things out to the edge this foundational&nbsp;
+erir ensures our forward deployed Engineers can&nbsp;&nbsp;
+
+00:11:42.880 --> 00:11:48.040
+innovate rapidly and deploy new features for&nbsp;
+you at the edge as we talked about before this&nbsp;&nbsp;
+
+00:11:48.040 --> 00:11:52.160
+is just a small slice of what there is but if you&nbsp;
+think about it just these two bottom boxes alone&nbsp;&nbsp;
+
+00:11:52.160 --> 00:11:56.400
+this would be a myriad of tools that you have to&nbsp;
+stitch together and everything above it would be&nbsp;&nbsp;
+
+00:11:56.400 --> 00:12:02.720
+even harder to implement AI needs this secure&nbsp;
+Foundation across the board and we need tools&nbsp;&nbsp;
+
+00:12:02.720 --> 00:12:08.120
+like Apollo to deploy and innovate rapidly all&nbsp;
+right I know that was a speedrun through the AI&nbsp;&nbsp;
+
+00:12:08.120 --> 00:12:12.600
+mesh architecture but I hope you get the point&nbsp;
+that at the end of the day it's about how do I&nbsp;&nbsp;
+
+00:12:12.600 --> 00:12:17.680
+drive outcomes in this integrated platform with&nbsp;
+a unified security governance and deployment&nbsp;&nbsp;
+
+00:12:17.680 --> 00:12:23.200
+model allows you to move quickly the speed of&nbsp;
+your thought to drive outcomes not worry about&nbsp;&nbsp;
+
+00:12:23.200 --> 00:12:27.840
+stitching all these tools together and how do&nbsp;
+you do it in a safe and secure way so when you&nbsp;&nbsp;
+
+00:12:27.840 --> 00:12:34.160
+layer gen AI on top of this these models are very&nbsp;
+unpredictable they hallucinate how do you manage&nbsp;&nbsp;
+
+00:12:34.160 --> 00:12:37.960
+that how do you evaluate how do you pick the right&nbsp;
+model for The Right Use cases how do you do that&nbsp;&nbsp;
+
+00:12:37.960 --> 00:12:43.680
+in a production Manner and manage it over time&nbsp;
+all these tool sets only add an extra level of&nbsp;&nbsp;
+
+00:12:43.680 --> 00:12:49.120
+complexity across your entire Tex stack now this&nbsp;
+is where the AI mesh comes in because it also&nbsp;&nbsp;
+
+00:12:49.120 --> 00:12:55.600
+integrates with your existing tool sets so we can&nbsp;
+integrate through apis SDK it's an unwalled Garden&nbsp;&nbsp;
+
+00:12:55.600 --> 00:13:05.517
+for your Enterprise so at the end of the day if&nbsp;
+it's not in uction it's not adding value [Music]
+

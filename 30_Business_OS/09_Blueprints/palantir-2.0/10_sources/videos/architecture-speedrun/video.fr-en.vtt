@@ -1,0 +1,584 @@
+WEBVTT
+Kind: captions
+Language: fr
+
+00:00:00.400 --> 00:00:04.560
+Bonjour, je suis Chad Walquist, architecte chez
+Paler. Je travaille dans le domaine de l'analyse de données
+
+00:00:04.560 --> 00:00:09.880
+et de l'IA depuis plus de 15 ans. J'ai
+vu ces architectures et systèmes évoluer au fil du
+
+00:00:09.880 --> 00:00:14.280
+temps, et le paysage des logiciels d'entreprise est
+plus fragmenté que jamais. Il s'est transformé
+
+00:00:14.280 --> 00:00:18.920
+en une véritable Tour de Babel où la
+communication et la collaboration semblent impossibles. Les différentes
+
+00:00:18.920 --> 00:00:24.640
+fonctions de mise à l'échelle, les mécanismes de sécurité et les formats de données sont autant d'éléments disparates.
+Chacun défend ses propres intérêts isolés
+
+00:00:24.640 --> 00:00:30.400
+au détriment du système dans son ensemble. Pourtant, même si l'
+entreprise est un système de systèmes,
+
+00:00:30.400 --> 00:00:35.600
+je vois souvent des publications virales en ligne sur
+ces cartographies de marché hyper complexes, les outils open source
+
+00:00:35.600 --> 00:00:41.480
+et les fournisseurs financés par des fonds de capital-risque qui présentent leur solution facile à vendre
+sur un schéma d'architecture. Le problème, c'est que l'
+
+00:00:41.480 --> 00:00:46.080
+accent n'est pas mis sur la
+valeur ajoutée du système dans son ensemble pour l'organisation, mais sur la manière de
+
+00:00:46.080 --> 00:00:51.800
+vendre chaque solution ponctuelle. Les entreprises
+sont déjà confrontées à une complexité accrue, et l'ajout de l'IA ne fait qu'aggraver les choses. Ce que
+
+00:00:51.800 --> 00:00:57.000
+je constate, c'est que l'
+IA ajoute un  L'augmentation non linéaire et progressive de la
+
+00:00:57.000 --> 00:01:02.560
+complexité de l'ensemble de la pile logicielle
+menace de faire s'effondrer cette tour. Lorsque les clients
+
+00:01:02.560 --> 00:01:08.200
+viennent à la conférence AIP ou que les analystes discutent avec nos clients
+utilisant AIP en production, ils posent la même question :
+
+00:01:08.200 --> 00:01:14.120
+comment se fait-il que Paler soit le seul à permettre l'IA dans les
+opérations de production ? Nous avons passé plus de 20
+
+00:01:14.120 --> 00:01:18.560
+ans à travailler sur des cas d'utilisation opérationnels dans les
+environnements les plus difficiles au monde. Nous avons des
+
+00:01:18.560 --> 00:01:23.600
+centaines d'ingénieurs déployés sur le
+terrain, à la pointe de la technologie, avec nos clients. Ils encaissent les
+
+00:01:23.600 --> 00:01:28.800
+chocs et construisent le produit qui compte vraiment pour eux. Ce n'est pas un simple
+schéma d'architecture, mais plutôt une
+
+00:01:28.800 --> 00:01:31.840
+ 
+approche
+
+00:01:31.840 --> 00:01:38.120
+différente. Avant d'aborder
+l'architecture, nous allons vous montrer le cheminement d'
+
+00:01:38.120 --> 00:01:42.120
+une application opérationnelle jusqu'aux
+sources, afin que vous ayez un point de référence. Il s'agit d'
+
+00:01:42.120 --> 00:01:46.560
+une application d'atelier, une
+tour de contrôle de la chaîne d'approvisionnement, qui me permet de créer des
+
+00:01:46.560 --> 00:01:50.960
+applications riches en données,
+bidirectionnelles, et de prendre des mesures en retour.
+
+00:01:50.960 --> 00:01:55.320
+Ce n'est pas qu'un simple
+rapport.  Des agents d'IA sont intégrés
+
+00:01:55.320 --> 00:01:59.960
+ici. Ils analysent les
+données qui arrivent sur ma plateforme et m'aident à trouver des solutions aux
+
+00:01:59.960 --> 00:02:04.360
+différents
+problèmes, qu'ils soient autonomes ou qu'ils doivent
+
+00:02:04.360 --> 00:02:10.000
+demander l'intervention d'un humain. C'est le principe de la collaboration entre l'IA et l'humain.
+Si nous observons ces agents, vous pouvez
+
+00:02:10.000 --> 00:02:14.760
+voir ici la logique AIP. Je peux
+créer des invites système, leur donner
+
+00:02:14.760 --> 00:02:19.000
+accès à des outils, des
+données et des fonctions, ou encore leur permettre d'appliquer
+
+00:02:19.000 --> 00:02:24.600
+ou d'effectuer des actions en mon nom.
+Je peux appeler des fonctions de prévision, le tout dans une seule
+
+00:02:24.600 --> 00:02:30.280
+interface. Je peux même sélectionner les
+modèles souhaités à partir d'un catalogue contenant
+
+00:02:30.280 --> 00:02:34.360
+un ensemble par défaut, ou importer mes propres
+points de terminaison de modèle ou mes propres modèles personnalisés. Chaque
+
+00:02:34.360 --> 00:02:39.520
+bloc logique peut
+utiliser un modèle différent, adapté à chaque
+
+00:02:39.520 --> 00:02:44.560
+invite. On peut donc les combiner et les utiliser
+ensemble. C'est extrêmement puissant. Et si
+
+00:02:44.560 --> 00:02:49.520
+nous regardons le générateur de flux de travail…  Il s'agit de la même
+application et de tous les objets d'ontologie qu'elle
+
+00:02:49.520 --> 00:02:54.880
+utilise pour la représenter, ce qui
+est formidable. L'avantage, c'est que je peux
+
+00:02:54.880 --> 00:02:58.640
+également utiliser ces mêmes fonctions pour
+créer une application personnalisée, une
+
+00:02:58.640 --> 00:03:02.760
+intégration personnalisée. Dans cet
+exemple, j'ai aussi, sur ce même ensemble d'
+
+00:03:02.760 --> 00:03:08.160
+objets d'ontologie, une application de planification des missions du satellite Titan,
+construite sur notre SDK d'ontologie. Ce SDK
+
+00:03:08.160 --> 00:03:14.360
+génère un SDK personnalisé à partir de
+vos objets d'ontologie&nbsp;; il crée la documentation,
+
+00:03:14.360 --> 00:03:19.960
+tout ce que vous devez savoir, et les packages
+pour l'intégration à l'ontologie. Vous pouvez même choisir votre
+
+00:03:19.960 --> 00:03:25.640
+langage de programmation. C'est vraiment génial&nbsp;! Revenons
+à l'ontologie&nbsp;: lorsqu'on parle d'
+
+00:03:25.640 --> 00:03:30.160
+objet d'ontologie, il s'agit d'un objet d'ontologie.
+Normalement, on aurait une dimension, un
+
+00:03:30.160 --> 00:03:35.560
+entrepôt de données (un ensemble de données tabulaires). Vous voyez sa
+richesse&nbsp;? J'ai aussi des flux, des liens, des
+
+00:03:35.560 --> 00:03:42.000
+données géospatiales, des schémas, et je peux
+avoir des images vidéo, tout cela dans un seul
+
+00:03:42.000 --> 00:03:47.840
+objet d'ontologie. Ce n'est plus seulement…  Comment
+alimenter les objets d'ontologie avec des données tabulaires ?
+
+00:03:47.840 --> 00:03:53.160
+Ces objets bleus, ici à droite, représentent
+les noms et les verbes qui constituent la logique
+
+00:03:53.160 --> 00:03:57.800
+et les actions de votre entreprise, vous permettant ainsi de prendre des
+décisions. Comment les alimenter ? Grâce à
+
+00:03:57.800 --> 00:04:02.560
+tous ces pipelines visibles ici.
+Ces différents pipelines de données peuvent être du code procédural
+
+00:04:02.560 --> 00:04:09.400
+ou du low-code. Vous pouvez exécuter Python, Java ou SQL pour
+transformer vos données et
+
+00:04:09.400 --> 00:04:15.320
+alimenter ces objets. Vous pouvez également gérer des
+données multimodales. Par exemple, j'utilise Snowflake pour
+
+00:04:15.320 --> 00:04:19.560
+enregistrer des données via des tables virtuelles provenant de votre
+propre entrepôt de données, sans les copier.
+
+00:04:19.560 --> 00:04:26.160
+Je peux utiliser des API, SAP, et HyperAuto
+pour générer automatiquement ces transformations. J'ai
+
+00:04:26.160 --> 00:04:32.480
+également des données en flux continu provenant d'OPCUA. Tous ces éléments
+convergent vers
+
+00:04:32.480 --> 00:04:36.800
+ces objets d'ontologie, qui me permettent de construire des
+applications riches en données.
+
+00:04:36.800 --> 00:04:47.360
+Voilà pour l'architecture Paler AI Mesh, composée de
+huit cœurs.  Les capacités sont essentielles
+
+00:04:47.360 --> 00:04:52.520
+pour déployer une véritable IA d'entreprise à grande échelle.
+Aujourd'hui, nous allons explorer comment ces composants
+
+00:04:52.520 --> 00:04:57.360
+s'intègrent à notre
+environnement interopérable, en commençant par les résultats. Nous proposons des
+
+00:04:57.360 --> 00:05:02.560
+services de création de produits, articulés autour de deux
+axes principaux. Tout d'abord, nos produits d'IA préconfigurés : les
+
+00:05:02.560 --> 00:05:07.080
+offres AIP, installables
+en quelques minutes, intégrables à vos données,
+
+00:05:07.080 --> 00:05:13.760
+logiques et actions spécifiques, puis personnalisables selon vos besoins.
+Une solution simple pour les applications d'entreprise. Nous proposons
+
+00:05:13.760 --> 00:05:19.520
+également «&nbsp;Build with AIP&nbsp;», un ensemble de
+kits de démarrage pour développeurs, afin d'accélérer la mise en œuvre de
+
+00:05:19.520 --> 00:05:24.680
+solutions telles que les modèles LM Vision pour extraire des données de
+sources non structurées. Idéal pour les
+
+00:05:24.680 --> 00:05:29.920
+applications sur mesure. Nous offrons une suite d'outils d'
+analyse, qu'il s'agisse de séries temporelles, de données géospatiales ou d'analyses
+
+00:05:29.920 --> 00:05:35.400
+approfondies assistées par l'IA. De plus, nous proposons la
+création d'applications opérationnelles, du low-code au
+
+00:05:35.400 --> 00:05:41.520
+code professionnel complet, et même la réalité mixte. Notre
+chaîne d'outils pour développeurs vise à mettre votre travail en
+
+00:05:41.520 --> 00:05:47.280
+production, que ce soit via le SDK d'ontologie pour des
+applications entièrement personnalisées, des intégrations, une Marketplace pour
+
+00:05:47.280 --> 00:05:52.920
+consommer ou contribuer, ou encore des
+outils DevOps intégrés.  La chaîne est le thème clé. Il s'agit de créer des
+
+00:05:52.920 --> 00:05:59.640
+expériences d'IA intégrées et de les mettre en
+production aussi rapidement et sûrement que possible.
+
+00:06:01.160 --> 00:06:06.320
+Toutes les analyses et applications au sein d'
+AIP sont construites sur l'ontologie. L'ontologie
+
+00:06:06.320 --> 00:06:11.720
+est conçue pour représenter les décisions d'une
+entreprise, et pas seulement les données. Elle répond au
+
+00:06:11.720 --> 00:06:17.240
+défi fondamental auquel chaque organisation est confrontée : prendre les
+meilleures décisions possibles, souvent en temps réel, dans un contexte
+
+00:06:17.240 --> 00:06:23.320
+interne et
+externe en constante évolution. L'ontologie facilite une
+
+00:06:23.320 --> 00:06:28.080
+interopérabilité TOA profonde avec les systèmes d'entreprise existants.
+Cette configuration permet ainsi le
+
+00:06:28.080 --> 00:06:33.360
+développement rapide d'applications opérationnelles avec l'
+IA, en plus des
+
+00:06:33.360 --> 00:06:38.160
+flux de travail classiques de veille stratégique et d'analyse. Chaque
+décision peut être décomposée en trois
+
+00:06:38.160 --> 00:06:44.240
+composantes principales : les données, la logique et les actions. Par données, nous entendons
+les faits ou vérités pertinents concernant votre
+
+00:06:44.240 --> 00:06:50.720
+environnement, les noms et les verbes de votre opération qui
+constituent le contexte de chaque décision. Ensuite, la logique
+
+00:06:50.720 --> 00:06:55.200
+englobe les règles organisationnelles et commerciales
+qui servent de garde-fous à vos décisions.
+
+00:06:55.200 --> 00:06:59.760
+Chacune inclut la compréhension des probabilités
+de certains résultats selon différentes hypothèses, les
+
+00:06:59.760 --> 00:07:05.480
+expériences passées dans des situations similaires, etc.  Les
+entrées issues des modèles de prévision et d'optimisation,
+
+00:07:05.480 --> 00:07:10.320
+puis les actions, représentent la cinétique
+ou les effets d'une décision. Elles décrivent
+
+00:07:10.320 --> 00:07:14.960
+comment la décision se manifeste dans le monde réel
+et les étapes détaillées nécessaires pour traduire une
+
+00:07:14.960 --> 00:07:20.680
+décision prise avec un processus d'intégration IA (AIP) en un résultat tangible en
+production. En
+
+00:07:20.680 --> 00:07:26.120
+intégrant automatiquement tous ces composants, l'ontologie
+simplifie et accélère le passage
+
+00:07:26.120 --> 00:07:32.400
+de la prise de décision à l'action concrète. C'est
+essentiel pour l'IA, car l'ontologie ancre le
+
+00:07:32.400 --> 00:07:38.120
+LMS dans la réalité de vos opérations
+et décisions métier. C'est crucial, car lorsque
+
+00:07:38.120 --> 00:07:42.960
+vous modélisez le jumeau numérique de votre
+processus métier dans l'ontologie, il ne s'agit pas seulement de données, mais d'un
+
+00:07:42.960 --> 00:07:48.600
+processus métier numérisé qui constitue l'épine dorsale
+de votre opération et sert également de
+
+00:07:48.600 --> 00:07:54.640
+couche sémantique pour le LMS, apportant des capacités de raisonnement et d'automatisation.
+Tout cela est sécurisé par une
+
+00:07:54.640 --> 00:07:59.600
+piste d'audit complète, une chaîne de pensée explicable
+et un niveau de transparence garantissant la collaboration entre
+
+00:07:59.600 --> 00:08:05.840
+humains et IA. Ce
+modèle de décision partagé est essentiel à l'adoption et à l'intégrité à grande
+
+00:08:05.840 --> 00:08:14.160
+échelle. Passons maintenant à la suite de la pile.  À partir de l'
+ontologie, nous avons des services de données, des services d'IA et
+
+00:08:14.160 --> 00:08:18.720
+des services de workflow. Approfondissons
+les services de données&nbsp;: nous les envisageons sous trois
+
+00:08:18.720 --> 00:08:24.720
+angles principaux&nbsp;: connectivité, intégration et gestion.
+Vous pouvez ingérer et traiter par lots, micro-lots,
+
+00:08:24.720 --> 00:08:30.520
+CDC et streaming comme des éléments de premier ordre. L'
+IA s'épanouit donc grâce aux données en flux continu pour des
+
+00:08:30.520 --> 00:08:35.600
+boucles de rétroaction en temps réel. Nous y reviendrons plus en détail dans la section consacrée aux
+services d'IA. Vous disposez de plus de 150
+
+00:08:35.600 --> 00:08:40.200
+connexions prêtes à l'emploi, ainsi que de la possibilité de créer
+votre propre connecteur. Je n'ai pas encore trouvé de système auquel
+
+00:08:40.200 --> 00:08:45.520
+nous ne puissions pas nous connecter. L'outil HyperAuto automatise les
+transformations de données, transformant des systèmes complexes comme
+
+00:08:45.520 --> 00:08:51.840
+SAP en ontologies utilisables en quelques heures ou quelques jours. Le
+générateur de pipelines prend en charge les données multimodales (pensez aux
+
+00:08:51.840 --> 00:08:58.920
+médias structurés et non structurés, aux PDF, aux images), la
+création de flux, les blocs de traitement LLM pour le contexte
+
+00:08:58.920 --> 00:09:04.280
+et le raisonnement en ligne. Tout cela sur une infrastructure ultra-évolutive.
+Tous ces outils prennent en charge les données en tant que
+
+00:09:04.280 --> 00:09:11.120
+code, ce qui me permet de créer des branches de données avec mon
+code, de gérer les versions et le suivi de la lignée.  S'appuyant
+
+00:09:11.120 --> 00:09:16.760
+sur les mêmes principes unifiés de sécurité et de gouvernance,
+même dans nos services de données, nous avons intégré AIP Assist
+
+00:09:16.760 --> 00:09:21.360
+pour faciliter la création de pipelines et la
+résolution des problèmes en proposant des suggestions de code
+
+00:09:21.360 --> 00:09:28.080
+et des explications en temps réel. Côté
+services d'IA, nous proposons trois domaines principaux : la connectivité des modèles, l'entraînement des modèles et l'exploitation des modèles. Pour la
+
+00:09:28.080 --> 00:09:33.120
+ 
+connectivité des modèles, plusieurs options s'offrent à vous pour intégrer des
+
+00:09:33.120 --> 00:09:38.520
+modèles que vous avez créés, achetés ou téléchargés (y compris des modèles
+open source). Vous pouvez héberger des modèles externes dans AIP
+
+00:09:38.520 --> 00:09:43.720
+et les enregistrer, importer des
+modèles conteneurisés avec des dépendances robustes ou sélectionner
+
+00:09:43.720 --> 00:09:48.600
+un modèle open source prêt à l'emploi.
+L'idée est que n'importe quel modèle, où qu'il soit, peut être
+
+00:09:48.600 --> 00:09:54.480
+intégré à un flux de travail dans AIP. Pour
+l'entraînement des modèles, vous disposez d'un environnement sécurisé : Jupyter Lab
+
+00:09:54.480 --> 00:09:59.320
+Notebook, R Studio Code, Workbooks. Vous pouvez même utiliser des
+pipelines ou un entraînement conteneurisé.
+
+00:10:00.080 --> 00:10:05.840
+L'objectif est de vous fournir tous les outils nécessaires au sein de
+l'enclave sécurisée d'AIP pour préparer, nettoyer
+
+00:10:05.840 --> 00:10:11.280
+et entraîner vos modèles en toute sécurité. Enfin, l'
+exploitation des modèles permet leur mise en production
+
+00:10:11.280 --> 00:10:16.480
+à grande échelle.  Nous avons le concept de modélisation des
+objectifs qui facilite la collaboration entre plusieurs scientifiques
+
+00:10:16.480 --> 00:10:20.960
+et développeurs pour la création, la soumission et la comparaison de
+modèles, ou leur évaluation par rapport à un
+
+00:10:20.960 --> 00:10:27.600
+modèle tiers, le tout dans le but d'obtenir
+un meilleur modèle. Vous pouvez évaluer, déployer, héberger
+
+00:10:27.600 --> 00:10:33.000
+et surveiller vos modèles. L'
+ensemble de ces éléments est intégré dans un framework NNML Ops, lui aussi
+
+00:10:33.000 --> 00:10:38.360
+construit sur les mêmes fondements de sécurité et de gouvernance. Dans les
+services de workflow, nous avons trois
+
+00:10:38.360 --> 00:10:43.120
+domaines&nbsp;: la création de workflows, l'orchestration des décisions et l'
+intégration Edge. Concernant la création de workflows, nous disposons d'un outil bien
+
+00:10:43.120 --> 00:10:47.240
+nommé, Workflow Builder, que
+nous vous avons présenté précédemment&nbsp;: un
+
+00:10:47.240 --> 00:10:52.360
+framework d'automatisation pour l'exécution basée sur les modèles et l'exploration de processus. Pour l'
+orchestration des décisions, nous proposons le traitement par lots, la capture de données modifiées (CDC) et le streaming, ainsi que des
+
+00:10:52.360 --> 00:10:57.720
+clients natifs
+comme SAP Boopies. Quant aux intégrations Edge,
+
+00:10:57.720 --> 00:11:02.680
+nous avons les pipelines Edge, les modèles Edge Mod et les
+objets Edge, permettant d'utiliser vos propres appareils ou de gérer les
+
+00:11:02.680 --> 00:11:07.480
+appareils avec Apollo. L'idée est de vous accompagner là où vous êtes, ce qui
+est extrêmement puissant pour modéliser vos
+
+00:11:07.480 --> 00:11:16.200
+processus métier. Enfin, nous avons la sécurité et la gouvernance,
+qui couvrent la plateforme d'infrastructure et la sécurité d'entreprise, y
+
+00:11:16.200 --> 00:11:22.120
+compris la sécurité automatisée.  Correctifs,
+surveillance continue, hubs de modèles sécurisés, contrôles d'accès basés sur les rôles, le marquage
+
+00:11:22.120 --> 00:11:26.960
+et la finalité,
+cadres d'approbation, audit granulaire et
+
+00:11:26.960 --> 00:11:31.840
+journalisation&nbsp;: à la base, il y a Apollo, un produit que
+nous avons développé pour déployer et gérer des logiciels comme
+
+00:11:31.840 --> 00:11:37.920
+AIP et Foundry. Apollo orchestre des centaines de
+microservices, permettant des mises à jour de déploiement rapides, même en
+
+00:11:37.920 --> 00:11:42.880
+périphérie. Cette infrastructure fondamentale
+garantit que nos ingénieurs déployés en amont peuvent
+
+00:11:42.880 --> 00:11:48.040
+innover rapidement et déployer de nouvelles fonctionnalités pour
+vous en périphérie. Comme nous l'avons évoqué précédemment, ce n'est qu'un
+
+00:11:48.040 --> 00:11:52.160
+petit aperçu de ce qui existe, mais si vous y
+réfléchissez, ces deux éléments seulement représenteraient
+
+00:11:52.160 --> 00:11:56.400
+une myriade d'outils à
+assembler, et tout ce qui se trouve au-dessus serait
+
+00:11:56.400 --> 00:12:02.720
+encore plus difficile à mettre en œuvre. L'IA a besoin de cette
+base sécurisée à tous les niveaux, et nous avons besoin d'outils
+
+00:12:02.720 --> 00:12:08.120
+comme Apollo pour déployer et innover rapidement. Bon,
+je sais que c'était un survol rapide de l'
+
+00:12:08.120 --> 00:12:12.600
+architecture du maillage d'IA, mais j'espère que vous comprenez qu'au
+final, il s'agit de savoir comment obtenir
+
+00:12:12.600 --> 00:12:17.680
+des résultats dans cette plateforme intégrée.
+Un modèle unifié de gouvernance et de déploiement de la sécurité
+
+00:12:17.680 --> 00:12:23.200
+vous permet d'agir rapidement, au rythme de
+votre réflexion, pour obtenir des résultats concrets. Plus besoin de vous soucier de l'
+
+00:12:23.200 --> 00:12:27.840
+intégration de tous ces outils ni de la manière de le
+faire de façon sûre et sécurisée. Lorsque vous
+
+00:12:27.840 --> 00:12:34.160
+ajoutez de l'IA générale, ces modèles sont très
+imprévisibles et peuvent générer des hallucinations. Comment gérer cela&nbsp;?
+
+00:12:34.160 --> 00:12:37.960
+Comment évaluer&nbsp;? Comment choisir le
+modèle adapté à chaque cas d'utilisation&nbsp;? Comment le mettre
+
+00:12:37.960 --> 00:12:43.680
+en production et le gérer dans le temps&nbsp;?
+Tous ces ensembles d'outils ajoutent un niveau de
+
+00:12:43.680 --> 00:12:49.120
+complexité supplémentaire à votre infrastructure technique. C'est là qu'intervient
+le maillage d'IA, car il
+
+00:12:49.120 --> 00:12:55.600
+s'intègre également à vos outils existants. Nous pouvons l'
+intégrer via des API et des SDK. C'est un environnement ouvert
+
+00:12:55.600 --> 00:13:05.517
+pour votre entreprise. En fin de compte, si
+ce n'est pas en action, cela n'apporte aucune valeur ajoutée. [Musique]
+

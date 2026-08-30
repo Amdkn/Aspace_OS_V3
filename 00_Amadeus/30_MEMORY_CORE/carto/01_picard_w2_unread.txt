@@ -1,0 +1,333 @@
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\ClaudeClaw Agent\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\Cerritos_Plane_Onboarding\MANIFEST.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B1_Summer_Direction\03_DECISION_CHARTER.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B1_Summer_Direction\03_DECISION_CHARTER.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B1_Summer_Direction\03_DECISION_CHARTER.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B1_Summer_Direction\00_B1_DIRECTION_INDEX.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B1_Summer_Direction\00_B1_DIRECTION_INDEX.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B1_Summer_Direction\00_B1_DIRECTION_INDEX.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B1_Summer_Direction\03_DECISION_CHARTER.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B1_Summer_Direction\00_B1_DIRECTION_INDEX.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B1_Summer_Direction\06_B3_JOBS_TO_BE_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B1_Summer_Direction\06_B3_JOBS_TO_BE_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B1_Summer_Direction\06_B3_JOBS_TO_BE_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B1_Summer_Direction\05_B2_DEFINITION_OF_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B1_Summer_Direction\05_B2_DEFINITION_OF_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B1_Summer_Direction\06_B3_JOBS_TO_BE_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B1_Summer_Direction\05_B2_DEFINITION_OF_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B1_Summer_Direction\05_B2_DEFINITION_OF_DONE_SPEC.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B2_Business_Domains\05_IT_Cyborg_KangDynasty\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B2_Business_Domains\04_Ops_Batman_Fantastic4\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B2_Business_Domains\08_Legal_Aquaman_Eternals\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B2_Business_Domains\07_People_GreenLantern_XMen\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\05_IT_Cyborg_KangDynasty\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\04_Ops_Batman_Fantastic4\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\05_IT_Cyborg_KangDynasty\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\04_Ops_Batman_Fantastic4\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\08_Legal_Aquaman_Eternals\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\03_Product_Flash_Avengers\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\08_Legal_Aquaman_Eternals\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\03_Product_Flash_Avengers\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\05_IT_Cyborg_KangDynasty\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\04_Ops_Batman_Fantastic4\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\08_Legal_Aquaman_Eternals\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\03_Product_Flash_Avengers\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\07_People_GreenLantern_XMen\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\07_People_GreenLantern_XMen\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B2_Business_Domains\06_Finance_WonderWoman_Thunderbolts\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\05_IT_Cyborg_KangDynasty\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\04_Ops_Batman_Fantastic4\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\01_Growth_Superman_Guardians\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\01_Growth_Superman_Guardians\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\07_People_GreenLantern_XMen\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\08_Legal_Aquaman_Eternals\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\01_Growth_Superman_Guardians\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\07_People_GreenLantern_XMen\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\01_Growth_Superman_Guardians\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\06_Finance_WonderWoman_Thunderbolts\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\06_Finance_WonderWoman_Thunderbolts\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\02_Sales_MartianManhunter_Illuminati\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B2_Business_Domains\02_Sales_MartianManhunter_Illuminati\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\06_Finance_WonderWoman_Thunderbolts\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\02_Sales_MartianManhunter_Illuminati\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\06_Finance_WonderWoman_Thunderbolts\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\02_Sales_MartianManhunter_Illuminati\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\JTBD-001_ABC_OWNER_HANDOFF_MAP.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\JTBD-001_RILCOT_OWNER_HANDOFF_MAP.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\JTBD-001_ALIKALY_OWNER_HANDOFF_MAP.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\04_Hulk_QA\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\06_Sprite_IP\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\06_Hawkeye_UX\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\06_RamaTut_Backup\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\06_Mantis_VoC\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\03_Ajak_Mediation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\01_KangPrime_Infra\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\02_Rocket_Auto\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\04_Hulk_QA\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\04_Hulk_QA\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\01_Ikaris_Strategy\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\04_Drax_Closing\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\10_Makkari_Velocity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\08_Thena_Litigation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\05_VictorTimely_CICD\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\04_Immortus_Capacity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\05_BlackWidow_Specs\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\05_Groot_Content\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\03_Gamora_Target\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\04_Hulk_QA\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\06_Sprite_IP\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\06_Sprite_IP\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\07_Druig_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\05_Phastos_Templates\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\04_Kingo_PublicComms\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\04_TheThing_Execution\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\01_StarLord_Story\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\06_Hawkeye_UX\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\06_Hawkeye_UX\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\02_Sersi_Jurisdiction\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\03_JeanGrey_Culture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\03_Thor_PowerFeatures\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\06_Sprite_IP\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\04_Hulk_QA\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\alykaly-front\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\02_IronLad_Provisioning\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\03_HumanTorch_Incidents\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\06_Hawkeye_UX\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\02_Cyclops_Onboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\02_IronMan_Architecture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\06_Sprite_IP\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\06_RamaTut_Backup\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\06_Mantis_VoC\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\06_RamaTut_Backup\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\06_Mantis_VoC\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\09_Gilgamesh_Enforcement\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\08_Rogue_SkillTransfer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\05_Storm_OpsLeadership\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\01_CaptainAmerica_Vision\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\06_Hawkeye_UX\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\03_Ajak_Mediation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\01_KangPrime_Infra\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\02_Rocket_Auto\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\03_Ajak_Mediation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\01_KangPrime_Infra\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\02_Rocket_Auto\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\06_Beast_TechRecruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\06_RamaTut_Backup\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\06_Mantis_VoC\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\01_Ikaris_Strategy\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\04_Drax_Closing\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\01_Ikaris_Strategy\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\04_Drax_Closing\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\04_Wolverine_PerfReviews\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\01_ProfessorX_Recruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\04_Ghost_CostOpt\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\02_IronMan_Demo\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\03_Ajak_Mediation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\01_KangPrime_Infra\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\02_Rocket_Auto\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\10_Makkari_Velocity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\08_Thena_Litigation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\05_VictorTimely_CICD\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\04_Immortus_Capacity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\05_BlackWidow_Specs\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\05_Groot_Content\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\03_Gamora_Target\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\10_Makkari_Velocity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\08_Thena_Litigation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\05_VictorTimely_CICD\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\04_Immortus_Capacity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\05_BlackWidow_Specs\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\05_Groot_Content\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\03_Gamora_Target\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\03_ScarletCenturion_Security\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\01_MrFantastic_ProcessDesign\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\01_Ikaris_Strategy\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\04_Drax_Closing\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\06_RamaTut_Backup\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\06_Mantis_VoC\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\07_Druig_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\05_Phastos_Templates\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\04_Kingo_PublicComms\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\04_TheThing_Execution\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\01_StarLord_Story\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\07_Druig_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\05_Phastos_Templates\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\04_Kingo_PublicComms\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\04_TheThing_Execution\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\01_StarLord_Story\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\03_Product_Flash_Avengers\07_ScarletWitch_DesignSystem\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\10_Makkari_Velocity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\08_Thena_Litigation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\05_VictorTimely_CICD\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\04_Immortus_Capacity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\05_BlackWidow_Specs\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\05_Groot_Content\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\03_Gamora_Target\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\03_Ajak_Mediation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\01_KangPrime_Infra\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\02_Rocket_Auto\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\02_Sersi_Jurisdiction\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\03_JeanGrey_Culture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\03_Thor_PowerFeatures\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\02_Sersi_Jurisdiction\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\03_JeanGrey_Culture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\03_Thor_PowerFeatures\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\05_Taskmaster_Repro\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\02_InvisibleWoman_Coordination\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\07_Druig_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\05_Phastos_Templates\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\04_Kingo_PublicComms\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\04_TheThing_Execution\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\01_StarLord_Story\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\01_Ikaris_Strategy\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\04_Drax_Closing\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\02_IronLad_Provisioning\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\03_HumanTorch_Incidents\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\02_IronLad_Provisioning\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\03_HumanTorch_Incidents\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\01_BlackBolt_Closer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\02_Sersi_Jurisdiction\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\03_JeanGrey_Culture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\03_Thor_PowerFeatures\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\10_Makkari_Velocity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\08_Thena_Litigation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\05_VictorTimely_CICD\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\04_Immortus_Capacity\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\05_BlackWidow_Specs\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\05_Groot_Content\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\03_Gamora_Target\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\alykaly-holding-modern\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\02_Cyclops_Onboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\02_IronMan_Architecture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\02_Cyclops_Onboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\02_IronMan_Architecture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\06_USAgent_Compliance\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\04_Namor_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\02_IronLad_Provisioning\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\03_HumanTorch_Incidents\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\07_Druig_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\05_Phastos_Templates\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\04_Kingo_PublicComms\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\04_TheThing_Execution\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\01_Growth_Superman_Guardians\01_StarLord_Story\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\09_Gilgamesh_Enforcement\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\08_Rogue_SkillTransfer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\05_Storm_OpsLeadership\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\01_CaptainAmerica_Vision\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\09_Gilgamesh_Enforcement\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\08_Rogue_SkillTransfer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\05_Storm_OpsLeadership\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\01_CaptainAmerica_Vision\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\02_Cyclops_Onboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\02_IronMan_Architecture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\02_Sersi_Jurisdiction\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\03_JeanGrey_Culture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\03_Thor_PowerFeatures\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\06_Beast_TechRecruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\06_Beast_TechRecruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\01_BuckyBarnes_Cashflow\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\09_Gilgamesh_Enforcement\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\08_Rogue_SkillTransfer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\05_Storm_OpsLeadership\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\01_CaptainAmerica_Vision\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\02_IronLad_Provisioning\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\03_HumanTorch_Incidents\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\04_Wolverine_PerfReviews\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\01_ProfessorX_Recruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\04_Ghost_CostOpt\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\02_IronMan_Demo\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\04_Wolverine_PerfReviews\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\01_ProfessorX_Recruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\04_Ghost_CostOpt\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\02_IronMan_Demo\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\03_RedGuardian_Reporting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\05_ProfessorX_BuyerRead\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\06_Beast_TechRecruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\02_Cyclops_Onboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\02_IronMan_Architecture\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\03_ScarletCenturion_Security\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\01_MrFantastic_ProcessDesign\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\03_ScarletCenturion_Security\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\01_MrFantastic_ProcessDesign\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\03_MrFantastic_Discovery\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\04_Wolverine_PerfReviews\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\01_ProfessorX_Recruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\04_Ghost_CostOpt\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\02_IronMan_Demo\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\08_Legal_Aquaman_Eternals\09_Gilgamesh_Enforcement\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\08_Rogue_SkillTransfer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\05_Storm_OpsLeadership\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\01_CaptainAmerica_Vision\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\07_ScarletWitch_DesignSystem\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\03_Product_Flash_Avengers\07_ScarletWitch_DesignSystem\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\03_ScarletCenturion_Security\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\01_MrFantastic_ProcessDesign\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\06_Beast_TechRecruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\05_Taskmaster_Repro\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\02_InvisibleWoman_Coordination\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\05_Taskmaster_Repro\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\02_InvisibleWoman_Coordination\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\02_YelenaBelova_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\03_Product_Flash_Avengers\07_ScarletWitch_DesignSystem\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\04_Wolverine_PerfReviews\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\01_ProfessorX_Recruiting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\04_Ghost_CostOpt\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\02_IronMan_Demo\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\01_BlackBolt_Closer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\01_BlackBolt_Closer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\05_Taskmaster_Repro\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\02_InvisibleWoman_Coordination\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\05_IT_Cyborg_KangDynasty\03_ScarletCenturion_Security\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\01_MrFantastic_ProcessDesign\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\06_USAgent_Compliance\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\04_Namor_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\06_USAgent_Compliance\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\04_Namor_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\07_Nightcrawler_DistributedOnboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\01-omk-business-os\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\06_DoctorStrange_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\01_BlackBolt_Closer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\03_Product_Flash_Avengers\07_ScarletWitch_DesignSystem\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\06_USAgent_Compliance\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\04_Namor_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\05_Taskmaster_Repro\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\04_Ops_Batman_Fantastic4\02_InvisibleWoman_Coordination\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\01_BuckyBarnes_Cashflow\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\01_BuckyBarnes_Cashflow\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\01_BlackBolt_Closer\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\03_RedGuardian_Reporting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\05_ProfessorX_BuyerRead\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\03_RedGuardian_Reporting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\05_ProfessorX_BuyerRead\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\01_BuckyBarnes_Cashflow\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\06_USAgent_Compliance\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\04_Namor_Negotiation\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\03_MrFantastic_Discovery\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\03_MrFantastic_Discovery\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\03_RedGuardian_Reporting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\05_ProfessorX_BuyerRead\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\03_MrFantastic_Discovery\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\01_BuckyBarnes_Cashflow\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\02_YelenaBelova_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\02_YelenaBelova_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\03_RedGuardian_Reporting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\05_ProfessorX_BuyerRead\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\02_YelenaBelova_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\03_MrFantastic_Discovery\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\07_Nightcrawler_DistributedOnboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\06_DoctorStrange_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\07_Nightcrawler_DistributedOnboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\02 ABC OS & Child Care BOS\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\06_DoctorStrange_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\07_Nightcrawler_DistributedOnboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\06_DoctorStrange_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\06_Finance_WonderWoman_Thunderbolts\02_YelenaBelova_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\07_People_GreenLantern_XMen\07_Nightcrawler_DistributedOnboarding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B3_Warp_Core_Execution\02_Sales_MartianManhunter_Illuminati\06_DoctorStrange_Forecasting\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\Alykaly Bana  Real Estates Front-End FR V2\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\RILCOT_OS\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\03_RILCOT_Members_Space_OS\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\rilcot-os-v2\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\Kalybana Holding\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\Kalybana Holding\alykaly-os\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\Kalybana Holding\01_Real_Estate\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\04 Alikaly Bana Holding to LLC\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\Kalybana Holding\02_Holdings_Platform\README.md
+C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise\01_Projects_Picard\05 marina Cleaning BOS & SOP\B2_Business_Domains\03_Product_Flash_Avengers\00_Interface_Prototypes\Marina Super Cleaners (Copy)\marina-cleaning\README.md

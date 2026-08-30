@@ -1,0 +1,1357 @@
+{
+  "seau": "04_Archives_Data",
+  "fichiers_lus": 30,
+  "fichiers_disponibles": 1534,
+  "jonctions_ecartees": 0,
+  "fichiers_parcourus_meta": 80,
+  "volumes": {
+    "racine_du_seau": 2,
+    "_V3_STRUCTURE_2026-08-02": 1516,
+    "Legacy_LifeOS_App_Specs_2026-05-22": 15,
+    "03_OpenClaw_Body_Legacy_dans_filtre": 1
+  },
+  "types": [
+    {
+      "nom": "A2 Ship Spec",
+      "attributs": [
+        "id",
+        "layer (L1_Life_OS)",
+        "role (A2_Framework_Ship)",
+        "framework",
+        "shadow_tool",
+        "gatekeepers (beth, morty)",
+        "status (SHADOW_ACTIVE)",
+        "created (2026-05-20)",
+        "ship",
+        "a2",
+        "crew (5-9 noms)",
+        "outputs YAML (ship, a2, framework, stages[])"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md",
+        "20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md",
+        "20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md",
+        "20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md",
+        "20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md",
+        "20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md"
+      ]
+    },
+    {
+      "nom": "A3 Crew Spec",
+      "attributs": [
+        "id",
+        "name",
+        "role",
+        "ship (parent A2)",
+        "responsibility",
+        "output_canon"
+      ],
+      "chemins": [
+        "20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/A3_Dal_Definition_Spec.md",
+        "20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/A3_RokTahk_Elimination_Spec.md",
+        "20_Life_OS/26_DEAL_Protostar/03_Automation_Zero/A3_Zero_Automation_Spec.md",
+        "20_Life_OS/26_DEAL_Protostar/04_Liberation_Gwyn/A3_Gwyn_Liberation_Spec.md",
+        "20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner/",
+        "20_Life_OS/25_GTD_Cerritos/02_Clarify_Boimler/",
+        "20_Life_OS/25_GTD_Cerritos/03_Organize_Rutherford/",
+        "20_Life_OS/25_GTD_Cerritos/04_Review_Tendi/",
+        "20_Life_OS/25_GTD_Cerritos/05_Engage_Freeman/"
+      ]
+    },
+    {
+      "nom": "A1 Gatekeeper Spec",
+      "attributs": [
+        "id (L1_A1_Beth / L1_A1_Morty)",
+        "layer (L1_Life_OS)",
+        "role (Gatekeeper / Conscience / Terminal Executor)",
+        "status (SHADOW_ACTIVE)",
+        "created (2026-05-20)",
+        "decision_states (5 chez Beth : GREEN/ORANGE/RED/HALT_LD03/HALT_LD04)",
+        "routing_matrix (Morty)",
+        "anti_patterns[]"
+      ],
+      "chemins": [
+        "20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md",
+        "20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md"
+      ]
+    },
+    {
+      "nom": "AaaS Variant",
+      "attributs": [
+        "a3_captain",
+        "ldxx[]",
+        "b2_primary[]",
+        "b3_lead",
+        "horizon (H90/H3/H10/TBD)",
+        "objectif_canonique",
+        "statut_q3_2026",
+        "livrable_canon"
+      ],
+      "chemins": [
+        "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md",
+        "_SPECS/ADR/L2_Business_OS/ADR-AAAS-ACQUISITION-DOCTRINE-001_aaas-acquisition-doctrine.md",
+        "_SPECS/ADR/L2_Business_OS/ADR-AAAS-CONTENT-CANON-001_aaas-content-canon.md",
+        "30_Business_OS/10_Projects/ceo-desktop/_doctrine/B2_Business_Domains/00_AAAS_DOMAIN_DEVELOPMENT_MAP.md",
+        "30_Business_OS/10_Projects/solaris/",
+        "30_Business_OS/10_Projects/omk/",
+        "30_Business_OS/10_Projects/abc/"
+      ]
+    },
+    {
+      "nom": "ADR (Architectural Decision Record)",
+      "attributs": [
+        "id",
+        "title",
+        "type (ADR)",
+        "status (PROPOSED/ACCEPTED/RATIFIED/RADIÉ/DRAFT)",
+        "date",
+        "deciders[]",
+        "drafted_by",
+        "domain",
+        "tags[]",
+        "doctrine_anchors[]",
+        "related[]",
+        "provenance",
+        "sign_off_a0"
+      ],
+      "chemins": [
+        "_SPECS/ADR/INDEX.md",
+        "_SPECS/ADR/L0_Kernel_OS/ADR-RICK-001_openharness-incarnation.md",
+        "_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md",
+        "_SPECS/ADR/L1_Life_OS/ADR-META-001_anti-paresse-verify-before-assert.md",
+        "_SPECS/ADR/L1_Life_OS/ADR-MEM-002_wiki-lifewheel-mapping-doctrine.md",
+        "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md",
+        "_SPECS/ADR/L2_Business_OS/ADR-OMK-001_dual-product-dashboard-multitenant.md",
+        "_SPECS/ADR/L2_Business_OS/ADR-SUPABASE-001_self-hosted-multi-tenancy-schemas.md"
+      ]
+    },
+    {
+      "nom": "B1 Direction Cockpit",
+      "attributs": [
+        "00_B1_DIRECTION_INDEX.md (cockpit index)",
+        "01_NORTH_STAR_1Y_3Y_10Y.md",
+        "02_12WY_COMMAND_CYCLES.md",
+        "03_DECISION_CHARTER.md",
+        "04_B2_HANDOFF_QUEUE.md",
+        "05_B2_DEFINITION_OF_DONE_SPEC.md",
+        "06_B3_JOBS_TO_BE_DONE_SPEC.md"
+      ],
+      "chemins": [
+        "30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/00_B1_DIRECTION_INDEX.md",
+        "30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/03_DECISION_CHARTER.md",
+        "30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/05_B2_DEFINITION_OF_DONE_SPEC.md",
+        "30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/06_B3_JOBS_TO_BE_DONE_SPEC.md",
+        "Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description)"
+      ]
+    },
+    {
+      "nom": "B2 Domain Control Room",
+      "attributs": [
+        "00_B2_DOMAIN_CONTROL_ROOM.md (mission/responsibility/anti-patterns)",
+        "01_ROCK_TO_DOD_TO_JTBD_PIPELINE.md (handoff conversion)",
+        "02_B3_SWARM_SUPERVISION_PROTOCOL.md (autonomy contract)"
+      ],
+      "chemins": [
+        "Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description §B2 Swarm Supervision Rooms)"
+      ]
+    },
+    {
+      "nom": "B3 Squad Swarm Config",
+      "attributs": [
+        "00_B3_SWARM_CONFIG.md (squad topology)",
+        "01_B3_AGENT_ROSTER.md (Marvel members)",
+        "02_PEER_UNBLOCKING_AND_HANDOFFS.md (handoff packet)",
+        "03_SHARED_CONTEXT_AND_PROOF_LOG.md (status, proof paths)"
+      ],
+      "chemins": [
+        "Computer_B1_B2_B3_Business_Pulse_Doctrine.md (canonique description §B3 Squad Swarm Configurations)"
+      ]
+    },
+    {
+      "nom": "Squad (B3 Marvel/DC)",
+      "attributs": [
+        "squad_name (Guardians/Illuminati/Avengers/Fantastic4/KangDynasty/Thunderbolts/XMen/Eternals)",
+        "b2_domain",
+        "b2_owner (DC Manager)",
+        "lead (1er membre)",
+        "members[] (5-7)",
+        "task_surface[]",
+        "build_gates[]",
+        "anti_patterns[]",
+        "escalation_rule"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/01_Growth_Superman_Guardians/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/02_Sales_MartianManhunter_Illuminati/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/03_Product_Flash_Avengers/"
+      ]
+    },
+    {
+      "nom": "B2 Domain",
+      "attributs": [
+        "manager_archetype (DC : Superman/MartianManhunter/Flash/Batman/Cyborg/WonderWoman/GreenLantern/Aquaman)",
+        "squad_name",
+        "lead",
+        "build_gates_order (8 obligatoires)",
+        "book_linked (LDxx mapping)"
+      ],
+      "chemins": [
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/01_Growth_Superman_Guardians/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/02_Sales_MartianManhunter_Illuminati/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/03_Product_Flash_Avengers/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/04_Ops_Batman_Fantastic4/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/05_IT_Cyborg_KangDynasty/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/06_Finance_WonderWoman_Thunderbolts/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/07_People_GreenLantern_XMen/",
+        "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/08_Legal_Aquaman_Eternals/"
+      ]
+    },
+    {
+      "nom": "Loop (Citadel)",
+      "attributs": [
+        "loop_id (wf0-spock/wf1-morty/wf2-book/wf3-mirofish/w-star)",
+        "contract_path (domains/<loop>/README.md)",
+        "artifacts_io (signals/tasks/tickets/docs)",
+        "cadence",
+        "enable_flag (citadel/decisions/enable_<loop>.flag)"
+      ],
+      "chemins": [
+        "60_Citadel/loops/ARCHITECTURE.md",
+        "60_Citadel/loops/domains/wf0-spock/README.md (présumé)",
+        "60_Citadel/loops/domains/wf1-morty/README.md (présumé)",
+        "60_Citadel/loops/domains/wf2-book/README.md (présumé)"
+      ]
+    },
+    {
+      "nom": "Manifesto",
+      "attributs": [
+        "guardian",
+        "scope",
+        "doctrine",
+        "access"
+      ],
+      "chemins": [
+        "00_Amadeus/Manifesto.md (Layer 0, Guardian: A0)",
+        "10_Tech_OS/Manifesto.md (Layer 0, Guardian: Rick)",
+        "20_Life_OS/Manifesto.md (Layer 1, Guardian: Beth & Morty)",
+        "30_Business_OS/Manifesto.md (Layer 2, Guardian: Jerry)"
+      ]
+    },
+    {
+      "nom": "README.md (Handoff A2-ship)",
+      "attributs": [
+        "layer",
+        "a2_ship",
+        "framework",
+        "shadow_tool",
+        "gatekeepers",
+        "status",
+        "mission",
+        "resume_protocol",
+        "crew_map",
+        "a3_rule",
+        "outputs",
+        "handoff_rules",
+        "evidence",
+        "context7_boundary",
+        "alignement_plan_fancy-hugging-bengio"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/README.md",
+        "20_Life_OS/23_12WY_SNW/README.md",
+        "20_Life_OS/22_Wheel_Discovery/README.md",
+        "20_Life_OS/21_Ikigai_Orville/README.md",
+        "20_Life_OS/25_GTD_Cerritos/README.md",
+        "20_Life_OS/26_DEAL_Protostar/README.md"
+      ]
+    },
+    {
+      "nom": "Spec.md (A2/A3)",
+      "attributs": [
+        "id",
+        "layer",
+        "role",
+        "framework",
+        "shadow_tool",
+        "gatekeepers",
+        "status",
+        "created",
+        "identity",
+        "responsibilities",
+        "inputs",
+        "outputs (YAML)",
+        "crew",
+        "a3_findings_contract",
+        "evidence_index",
+        "acceptance_criteria",
+        "context7_boundary"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md",
+        "20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md",
+        "20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md"
+      ]
+    },
+    {
+      "nom": "Wargame (Move)",
+      "attributs": [
+        "wargame_id",
+        "move_id",
+        "claim",
+        "d1_receipt",
+        "abort_condition",
+        "red_team_pass",
+        "self_grade"
+      ],
+      "chemins": [
+        "40_Fable_Banque/wargames/17-manifest-dispatch-a2-a3-lifeos.md",
+        "40_Fable_Banque/wargames/19-delegation-chaine-cc-m3-standard-fable.md",
+        "40_Fable_Banque/wargames/21-fable-mode-standard-agnostique.md"
+      ]
+    },
+    {
+      "nom": "Constante TEMPORAL-CANON",
+      "attributs": [
+        "nom (GO/compression CAP/cadence/banque/Fable/RAM airlock/tokens plan)",
+        "valeur",
+        "receipt (wargame_id + move_id)"
+      ],
+      "chemins": [
+        "40_Fable_Banque/TEMPORAL-CANON.md"
+      ]
+    },
+    {
+      "nom": "Symphony Spec",
+      "attributs": [
+        "tool (obsidian/affine/baserow/plane/airtable/notion/clickup/supabase/sheets)",
+        "shadow_lane (A/B)",
+        "index_ref"
+      ],
+      "chemins": [
+        "00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-obsidian.spec.md",
+        "00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-affine.spec.md",
+        "00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-baserow.spec.md",
+        "00_Amadeus/05_OSS_Twin/symphony/L1/lane_B_runtime/01_routing/symphony-plane.spec.md"
+      ]
+    },
+    {
+      "nom": "Context Pack",
+      "attributs": [
+        "ship",
+        "crew_member",
+        "next_action",
+        "framework",
+        "domain_impact",
+        "l0_skill_required",
+        "beth_clearance",
+        "evidence_paths",
+        "output_artifact"
+      ],
+      "chemins": [
+        "20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md (canonical schema)",
+        "00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md (state.json next_step)"
+      ]
+    },
+    {
+      "nom": "Manifest (de projet/domaine)",
+      "attributs": [
+        "id",
+        "layer",
+        "role",
+        "parent_a2",
+        "classification",
+        "status",
+        "created",
+        "next_owner",
+        "cycle",
+        "parent_jerry",
+        "picard_status"
+      ],
+      "chemins": [
+        "30_Business_OS/10_Projects/ceo-desktop/_doctrine/_manifest/ (présumé)",
+        "30_Business_OS/10_Projects/omk/CLAUDE.md (manifest racine projet)"
+      ]
+    },
+    {
+      "nom": "state.json (bus sémantique)",
+      "attributs": [
+        "$schema (state-bus.v1)",
+        "status (INIT/ACTIVE/DRAINED)",
+        "created",
+        "updated",
+        "agent_id",
+        "session_id",
+        "cycle (Q3-2026)",
+        "week (W1)",
+        "stage (captured/clarified/organized/reviewed/engaged)",
+        "agent_path",
+        "para_bucket",
+        "12wy_discipline",
+        "life_wheel_domain",
+        "raw_input_hash",
+        "raw_input_preview",
+        "next_step",
+        "tokens_used",
+        "tokens_budget",
+        "drift_flag",
+        "extra",
+        "metadata"
+      ],
+      "chemins": [
+        "00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md (canonique)",
+        "00_Amadeus/40_SYMPHONY_BUS/state.json (runtime)",
+        "00_Amadeus/40_SYMPHONY_BUS/state.json.prev (rotation)",
+        "00_Amadeus/40_SYMPHONY_BUS/.state.lock (lock)",
+        "00_Amadeus/40_SYMPHONY_BUS/state_writer.py (helper)",
+        "00_Amadeus/40_SYMPHONY_BUS/hand_offs/inbox/ (Mariner captures)",
+        "00_Amadeus/40_SYMPHONY_BUS/hand_offs/outbox/ (dispatch A3→B1/B2/B3)"
+      ]
+    },
+    {
+      "nom": "Loop contract",
+      "attributs": [
+        "loop_id",
+        "contract_scope",
+        "worklog_format",
+        "enable_flag_path"
+      ],
+      "chemins": [
+        "60_Citadel/loops/domains/wf0-spock/README.md (présumé)",
+        "60_Citadel/loops/domains/wf1-morty/README.md (présumé)",
+        "60_Citadel/loops/domains/wf2-book/README.md (présumé)",
+        "60_Citadel/loops/domains/wf3-mirofish/README.md (présumé)",
+        "60_Citadel/loops/domains/w-star/README.md (présumé)"
+      ]
+    },
+    {
+      "nom": "Artifact signal/task/ticket/doc",
+      "attributs_signal": [
+        "slug (file signals/<slug>.md)",
+        "OKF frontmatter",
+        "append-only"
+      ],
+      "attributs_task": [
+        "item pioché sur trigger",
+        "preuve (exit/path) obligatoire"
+      ],
+      "chemins": [
+        "60_Citadel/loops/artifacts/signals/",
+        "60_Citadel/loops/artifacts/tasks/",
+        "60_Citadel/loops/artifacts/tickets/",
+        "60_Citadel/loops/artifacts/docs/"
+      ]
+    },
+    {
+      "nom": "Build Gate",
+      "attributs": [
+        "name",
+        "threshold",
+        "scope (B2/B3)",
+        "measurement_source"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md",
+        "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix (8 obligatoires)"
+      ]
+    },
+    {
+      "nom": "Doctrine Anchor",
+      "attributs": [
+        "anchor_id (ADR-id référencé)",
+        "anchor_kind (mandatory/sister/implicit)"
+      ],
+      "chemins": [
+        "_SPECS/ADR/INDEX.md (29 ADR avec doctrine_anchors field, 100% coverage)"
+      ]
+    },
+    {
+      "nom": "Hard-stop trigger (anti-paperclip)",
+      "attributs": [
+        "trigger_id",
+        "condition",
+        "response_action",
+        "owner (A1 Rick veto kernel structurel)"
+      ],
+      "chemins": [
+        "_SPECS/ADR/L0_Kernel_OS/ADR-SOBER-002_anti-paperclip-maximizer-doctrine.md (7 hard-stop triggers)"
+      ]
+    },
+    {
+      "nom": "Schema Supabase (multitenant)",
+      "attributs": [
+        "tenant",
+        "hosting (Cloud/self-host)",
+        "ADR_ratification",
+        "statut",
+        "tables_count",
+        "rls (oui/non)"
+      ],
+      "chemins": [
+        "_SPECS/REGISTRY/supabase_schemas.md (registry canon unique)"
+      ]
+    },
+    {
+      "nom": "Squad (Ikigai 4 Pillars + 5 Horizons)",
+      "attributs": [
+        "crew_name (Ed/Kelly/Gordon/Claire + Isaac/Lamarr/Bortus/Alara/Klyden)",
+        "pillar (Profession/Mission/Passion/Vocation) ou horizon (H1/H3/H10/H30/H90)"
+      ],
+      "chemins": [
+        "20_Life_OS/21_Ikigai_Orville/README.md",
+        "20_Life_OS/21_Ikigai_Orville/A2_Orville_Spec.md",
+        "20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/",
+        "20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/"
+      ]
+    },
+    {
+      "nom": "Squad (12WY 5 disciples)",
+      "attributs": [
+        "crew_name (Pike/Una/M'Benga/Chapel/Ortegas)",
+        "discipline (Vision/Planning/Focus/Metrics/Execution)"
+      ],
+      "chemins": [
+        "20_Life_OS/23_12WY_SNW/README.md",
+        "20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md",
+        "20_Life_OS/23_12WY_SNW/01_Vision_Pike/",
+        "20_Life_OS/23_12WY_SNW/02_Planning_Una/"
+      ]
+    },
+    {
+      "nom": "Squad (DEAL Muse 4 stages)",
+      "attributs": [
+        "crew_name (Dal/Rok-Tahk/Zero/Gwyn)",
+        "stage (Define/Eliminate/Automate/Liberate)",
+        "output_canon (pattern_definition/elimination_proposal/skill_<name>/d11_score.json)"
+      ],
+      "chemins": [
+        "20_Life_OS/26_DEAL_Protostar/README.md",
+        "20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md",
+        "20_Life_OS/26_DEAL_Protostar/01_Definition_Dal/",
+        "20_Life_OS/26_DEAL_Protostar/02_Elimination_RokTahk/"
+      ]
+    },
+    {
+      "nom": "Squad (GTD 5 stages)",
+      "attributs": [
+        "crew_name (Mariner/Boimler/Rutherford/Tendi/Freeman)",
+        "stage (Capture/Clarify/Organize/Review/Engage)"
+      ],
+      "chemins": [
+        "20_Life_OS/25_GTD_Cerritos/README.md",
+        "20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md"
+      ]
+    },
+    {
+      "nom": "Squad (Life Wheel 8 LDxx)",
+      "attributs": [
+        "crew_name (Book/Saru/Culber/Tilly/Stamets/Burnham/Reno/Georgiou)",
+        "ldxx (LD01..LD08)",
+        "horizon_canon (H1/H3/H10/H30)"
+      ],
+      "chemins": [
+        "20_Life_OS/22_Wheel_Discovery/README.md",
+        "20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md",
+        "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/"
+      ]
+    },
+    {
+      "nom": "Schema SQL (Master)",
+      "attributs": [
+        "canon SQL",
+        "tables[]",
+        "RLS"
+      ],
+      "chemins": [
+        "30_Business_OS/00_Summers_Verse/state/SCHEMA.md",
+        "30_Business_OS/00_Jerry_Business_Pulse/graphify-burst/chunks/chunk_018/03_Phase3_Master_SQL_Schema.md"
+      ]
+    },
+    {
+      "nom": "Reference Index (A3)",
+      "attributs": [
+        "claim",
+        "evidence_path",
+        "lines/note"
+      ],
+      "chemins": [
+        "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md",
+        "20_Life_OS/26_DEAL_Protostar/A3_Protostar_References_Index.md",
+        "20_Life_OS/25_GTD_Cerritos/A3_Cerritos_References_Index.md",
+        "20_Life_OS/23_12WY_SNW/A3_SNW_References_Index.md",
+        "20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md",
+        "20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Notion_Canon_Lore_Index.md",
+        "20_Life_OS/24_PARA_Enterprise/Business_Pulse_B3_Swarm_Inspiration_Index.md"
+      ]
+    },
+    {
+      "nom": "Spec legacy (V0.3.5)",
+      "attributs": [
+        "version (V0.3.5)",
+        "status (PROPOSED)",
+        "date (2026-03-16 typique)"
+      ],
+      "chemins": [
+        "Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-ALA-001_ALA_Standard.md",
+        "Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/ADR/ADR-V0.3.5_DoctrineBeth.md",
+        "Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/DDD/DDD-V0.3.5_DoctrineBeth.md",
+        "Legacy_LifeOS_App_Specs_2026-05-22/TOTAL_Spec/PRD/PRD-V0.3.5_DoctrineBeth.md"
+      ]
+    },
+    {
+      "nom": "Roadmap (DEAL 12WY)",
+      "attributs": [
+        "north_star",
+        "cycles[] (12WY-01..12WY-04)",
+        "rocks_per_cycle (3)",
+        "sprints_per_month (4)",
+        "scrums_per_sprint (5)",
+        "regle_unique (chaque niveau ne remonte que du chiffré)"
+      ],
+      "chemins": [
+        "00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "de": "A3 Data (PARA Archives)",
+      "verbe": "supervise",
+      "vers": "A2 Holo Janeway (DEAL Protostar)",
+      "citation": "Data libère A1 Beth de la supervision opérationnelle de Protostar",
+      "chemin": "04_Archives_Data/A3_Data_Archives_Spec.md §D3 nuance critique ligne 64"
+    },
+    {
+      "de": "A3 Data",
+      "verbe": "reste A3 Archives (PAS un 5ème A2 ship)",
+      "vers": "Data position chef d'orchestre DEAL",
+      "citation": "Data reste A3 Archives (PAS un 5ème A2 ship). Sa position 'chef d'orchestre DEAL' vient de l'imbrication DEAL ⊂ PARA",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md §Crew canon lignes 100-110"
+    },
+    {
+      "de": "DEAL",
+      "verbe": "imbriqué dans",
+      "vers": "PARA ⊂ 12WY",
+      "citation": "Loi d'imbrication (plan §3.1) : DEAL ⊂ PARA ⊂ 12WY",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md lignes 90-98"
+    },
+    {
+      "de": "A1 Morty",
+      "verbe": "route vers",
+      "vers": "6 A2 ships (Orville/Discovery/SNW/Enterprise/Cerritos/Protostar)",
+      "citation": "Routing distribué sur 6 ships : Morty route vers les 6 A2 engines selon la matrice de routage canon",
+      "chemin": "20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Morty_Spec.md ligne 115"
+    },
+    {
+      "de": "A1 Beth",
+      "verbe": "supervise + veto distribué sur",
+      "vers": "6 A2 engines (Orville + Discovery + SNW + Enterprise + Cerritos + Protostar)",
+      "citation": "Veto distribué sur 6 ships : Beth supervise les 6 A2 engines",
+      "chemin": "20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md ligne 100"
+    },
+    {
+      "de": "Picard",
+      "verbe": "est A3 Projects (PAS A2 Computer)",
+      "vers": "A2 Computer = USS Enterprise manager",
+      "citation": "Computer aboard USS Enterprise is the A2 manager of durable structure. … Picard is not the A2; Picard is the A3 owner of Projects",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md ligne 18"
+    },
+    {
+      "de": "A3 Data",
+      "verbe": "appartient à (parent)",
+      "vers": "A2_COMPUTER_ENTERPRISE_PARA",
+      "citation": "Data owns 04_ARCHIVES, completed projects or paused domains outside the active visual field",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Canonical Crew ligne 15"
+    },
+    {
+      "de": "A2 USS Cerritos",
+      "verbe": "orchestre via",
+      "vers": "A3 5 Airlock (Mariner/Boimler/Rutherford/Tendi/Freeman)",
+      "citation": "A1 Morty Focus → A2 USS Cerritos → A3 5 Airlock (Mariner/Boimler/Rutherford/Tendi/Freeman)",
+      "chemin": "20_Life_OS/25_GTD_Cerritos/README.md ligne 70"
+    },
+    {
+      "de": "A2 Curie SNW",
+      "verbe": "orchestre via",
+      "vers": "5 disciples canon (Pike/Una/M'Benga/Chapel/Ortegas)",
+      "citation": "5 disciples canon OK : Pike/Una/M'Benga/Chapel/Ortegas",
+      "chemin": "20_Life_OS/23_12WY_SNW/A2_Curie_SNW_Spec.md ligne 130"
+    },
+    {
+      "de": "A2 Holo Janeway Protostar",
+      "verbe": "orchestre via",
+      "vers": "DEAL Muse 4 stages (Dal/Rok-Tahk/Zero/Gwyn)",
+      "citation": "Dal (Definition) — Pattern detection and recurrence counting aboard USS Protostar (A2 Holo Janeway). Rok-Tahk (Elimination)… Zero (Automation)… Gwyn (Liberation)",
+      "chemin": "20_Life_OS/26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md lignes 106-111"
+    },
+    {
+      "de": "A2 Orville",
+      "verbe": "orchestre via",
+      "vers": "9 A3 crew (4 Pillars + 5 Horizons)",
+      "citation": "9 A3 crew (4 pillars + 5 horizons) = conforme plan §3.2 + §18",
+      "chemin": "20_Life_OS/21_Ikigai_Orville/README.md ligne 99"
+    },
+    {
+      "de": "A2 Orville",
+      "verbe": "ne crée JAMAIS de Rocks (handoff à SNW/Curie)",
+      "vers": "—",
+      "citation": "Orville = meaning engine, pas execution engine. Ne crée JAMAIS de Rocks directement",
+      "chemin": "20_Life_OS/21_Ikigai_Orville/README.md ligne 100"
+    },
+    {
+      "de": "A2 Discovery",
+      "verbe": "mesure et diagnostique (ne fait pas de tactiques)",
+      "vers": "—",
+      "citation": "Discovery measures and diagnoses; it does not execute tactics",
+      "chemin": "20_Life_OS/22_Wheel_Discovery/README.md ligne 50"
+    },
+    {
+      "de": "Jerry (Macro)",
+      "verbe": "mappé à",
+      "vers": "Spock (Areas)",
+      "citation": "Jerry → Spock (Areas) ; Summer → Picard (Projects)",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §PARA Placement ligne 17-19"
+    },
+    {
+      "de": "Summer (Micro)",
+      "verbe": "mappé à",
+      "vers": "Picard (Projects)",
+      "citation": "Jerry → Spock (Areas) ; Summer → Picard (Projects)",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §PARA Placement ligne 17-19"
+    },
+    {
+      "de": "Saru 1000T",
+      "verbe": "égale",
+      "vers": "Kardashev Type 3 (production de valeur réelle, anti-Musk)",
+      "citation": "L'objectif canonique Saru 1000T (A3 LD02 Finance, AaaS Solaris + Nexus) est donc production de valeur réelle Kardashev Type 3, pas valorisation financiarisée découplée Musk-style",
+      "chemin": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md §C4 ligne 62"
+    },
+    {
+      "de": "Solaris AaaS",
+      "verbe": "livre",
+      "vers": "Life-OS-2026 Initiative ALPHA V1.0 LIVE",
+      "citation": "ACTIF — Life-OS-2026 Initiative ALPHA V1.0 LIVE sur https://life-os-2026-liart.vercel.app/",
+      "chemin": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 78"
+    },
+    {
+      "de": "Nexus OMK AaaS",
+      "verbe": "livre",
+      "vers": "omk-services/00-omk-saas-os (Zéro Bug Sprint dcc1235)",
+      "citation": "ACTIF — Sprint Zéro Bug dcc1235 ✅ livré + déployé SHA 8ad94d1 (2026-06-20)",
+      "chemin": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 79"
+    },
+    {
+      "de": "Orbiter ABC AaaS",
+      "verbe": "livre",
+      "vers": "abc_os schema (17 tables 2026-06-17)",
+      "citation": "ACTIF (récent) — Schema abc_os migré 2026-06-17",
+      "chemin": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D2 ligne 80"
+    },
+    {
+      "de": "Cycle 12WY Q3 2026 (06/15 → 09/07)",
+      "verbe": "contient",
+      "vers": "12 items canoniques A0 verbatim",
+      "citation": "Cycle 12WY Q3 2026 : 12 items canoniques A0 verbatim, tous routés via A2 Curie SNW (5 disciplines) → A1 Morty (Focus Gatekeeper) → B1/B2/B3",
+      "chemin": "20_Life_OS/23_12WY_SNW/README.md §Total ligne 90"
+    },
+    {
+      "de": "B3 swarm",
+      "verbe": "collabore en pairs (B2 intervient seulement sur exceptions)",
+      "vers": "—",
+      "citation": "B3 swarms collaborate as peers. A blocked B3 should first ask one member of the same squad to challenge the blocker and propose a workaround. B2 intervenes only when the DoD is ambiguous, the input does not exist, a cross-domain gate is touched, acceptance risk changes, or delegated authority is exceeded",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B3 Squad Swarm Configurations ligne 86"
+    },
+    {
+      "de": "B2",
+      "verbe": "est conductor (PAS babysitter)",
+      "vers": "—",
+      "citation": "B2 is a conductor, not a babysitter. It translates B1 vision into bounded goals, guardrails, and proof requirements",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Swarm Supervision Rooms ligne 72"
+    },
+    {
+      "de": "B1 (Direction Cockpit)",
+      "verbe": "doit exister avant B2",
+      "vers": "—",
+      "citation": "B1 must exist as a direction cockpit before B2 can responsibly define domain Rocks",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Non-Negotiables ligne 40"
+    },
+    {
+      "de": "B2 Domain Gate Matrix",
+      "verbe": "ordonne",
+      "vers": "1.Product → 2.Ops → 3.IT → 4.Finance → 5.Legal → 6.Sales → 7.Growth → 8.People",
+      "citation": "Required gate order: 1. Product proves user value. 2. Ops proves repeatable delivery. 3. IT proves runtime, access, deployment, and backup boundaries. 4. Finance proves cost, price, and margin logic. 5. Legal proves claims, privacy, IP, and terms boundaries. 6. Sales proves qualification, objections, and handoff. 7. Growth proves ICP, message, channel, and measurement. 8. People proves ownership, training, handoff, and load",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix lignes 47-61"
+    },
+    {
+      "de": "B0_Self_Operating_Business_Doctrine",
+      "verbe": "est macro layer above",
+      "vers": "B1/B2/B3",
+      "citation": "Jerry J01 now carries B0_Self_Operating_Business_Doctrine/ as the macro layer above B1/B2/B3. This layer translates E-Myth Revisited, Built to Sell, Who Not How, Million Dollar Weekend, 100M Offers, and Billion Dollar Brand Club into local operating gates, without adopting any external tool as a dependency",
+      "chemin": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer ligne 147"
+    },
+    {
+      "de": "state.json",
+      "verbe": "est SSOT bus + verrou atomique",
+      "vers": "—",
+      "citation": "Lock atomique : state_writer.py retry 3× (backoff 100/300/900ms) si .state.lock existe. Garde-fou : state.json > 10 KB → rotation state.json.prev",
+      "chemin": "00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md §Loi lock atomique ligne 48"
+    },
+    {
+      "de": "Citadel loop",
+      "verbe": "égale QUEUE d'items typés (jamais boucle qui tourne pour tourner)",
+      "vers": "—",
+      "citation": "Loi : le travail agentique est une QUEUE d'items typés piochés sur trigger — jamais une boucle qui tourne pour tourner",
+      "chemin": "60_Citadel/loops/ARCHITECTURE.md ligne 4"
+    },
+    {
+      "de": "Loop",
+      "verbe": "exige append-only worklog + preuves obligatoires",
+      "vers": "—",
+      "citation": "Une loop doit : (a) lire son contrat, (b) les 10 dernières lignes de logs/worklog.md, (c) les signals non-traités. Écriture SANS preuve = interdit (l'item retourne en queue tag unverified)",
+      "chemin": "60_Citadel/loops/ARCHITECTURE.md lignes 22-23"
+    },
+    {
+      "de": "TEMPORAL-CANON",
+      "verbe": "prime sur prose-wargame",
+      "vers": "—",
+      "citation": "Règle de préséance : en cas de conflit prose-wargame vs ce CANON, le CANON gagne — la prose d'un wargame est un fossile daté (vrai à l'écriture, non-normatif ensuite)",
+      "chemin": "40_Fable_Banque/TEMPORAL-CANON.md preamble ligne 3"
+    },
+    {
+      "de": "Roadmap DEAL 12WY",
+      "verbe": "vise",
+      "vers": "North Star $1B ARR (4 cycles × 12WY)",
+      "citation": "North Star H10 : $1B ARR — OMK BOS Nexus · ICP Coach premium · Produit AaaS de SOB à 1 000 $/mois par instance",
+      "chemin": "00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md ligne 3"
+    },
+    {
+      "de": "Roadmap cadence",
+      "verbe": "descend puis remonte (PICARD > SUMMERS > 8 B2 > B3 > UPLINK)",
+      "vers": "—",
+      "citation": "PICARD (A3) 1 vision/cycle → décompose le cycle en 3 Rocks ; SUMMERS (B1) 1 Rock/mois → traduit le Rock en directives par domaine ; 8 B2 · 3T 4 Sprints/mois ; B3 SQUADS 5 Daily Scrums/sprint ; UPLINK 5 scrums → 1 sprint review → 4 sprints → 1 Rock review → 3 Rocks → 1 cycle review Picard → 4 cycles → bilan annuel",
+      "chemin": "00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md ligne 57"
+    },
+    {
+      "de": "A0 Amadeus",
+      "verbe": "est méta-coach, Gouverneur ON-not-IN (E-Myth)",
+      "vers": "—",
+      "citation": "A0 = Vision H30, gouvernance ON-not-IN (E-Myth). A0 ne fait pas le travail A1/A2/A3 — A0 trace la route, rate les décisions, dérive les sub-agents, et surveille que le paperclip Ultron ne pousse pas",
+      "chemin": "_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §5 ligne 100"
+    },
+    {
+      "de": "Anti-paperclip doctrine",
+      "verbe": "comporte 3 couches",
+      "vers": "superpowers (A2) / GSD (A3/B3) / Fable+Wargames+CEO-Bench",
+      "citation": "Trois couches d'anti-paperclip : 1. superpowers (A2) : documente et idempotentise les freelances ; 2. GSD (A3/B3) : orchestration visionnaire Type 1 — chaque task a un Definition of Done + un gate de sortie vérifiable ; 3. Fable + Wargames + CEO-Bench (qualité) : validation move-by-move avant tout déploiement",
+      "chemin": "_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §3 ligne 72"
+    },
+    {
+      "de": "Kill-switches",
+      "verbe": "asymétrie corrigibilité (autonomes ARRÊTER, humain-gated SE LEVER)",
+      "vers": "—",
+      "citation": "Asymétrie corrigibilité (W28) : les kill-switches sont autonomes pour ARRÊTER (B1-Mirofish gate) mais humain-gated pour SE LEVER (M5 Remote Pane / Telegram). Un off-switch auto-release = le paperclip Ultron",
+      "chemin": "_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §3 ligne 80"
+    },
+    {
+      "de": "Citadelle A0",
+      "verbe": "est anti-Ultron (lecture seule, dormants affichés dormants)",
+      "vers": "—",
+      "citation": "Lecture seule par défaut : serve.py lit UNIQUEMENT data/*.json. Aucune mutation des sources canoniques. Écriture bornée. Dormants affichés dormants : Paperclip AI + Multica = status: dormant, jamais réveillés",
+      "chemin": "60_Citadel/README.md §Doctrine anti-Ultron ligne 49"
+    },
+    {
+      "de": "Picard/Spock/Geordi/Data (A3 twins)",
+      "verbe": "sont compilés par",
+      "vers": "Computer (A2 USS Enterprise)",
+      "citation": "Computer is A2, not Picard; Picard is A3 Projects. … Picard checks active Projects and Rock linkage. Spock checks Areas, standards, and ongoing responsibilities. Geordi checks reusable Resources and context-pack value. Data checks archive readiness and documentation-before-archive",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md §A3 Findings Contract lignes 60-66"
+    },
+    {
+      "de": "Geordi (Resources)",
+      "verbe": "est racine unique de la KB",
+      "vers": "—",
+      "citation": "Geordi est la racine unique de la KB — décision D-2026-08-01-#1",
+      "chemin": "_V3_STRUCTURE_2026-08-02/README.md §La source vivante ligne 62"
+    },
+    {
+      "de": "DEAL Muse",
+      "verbe": "imbriqué dans PARA (Data sentinelle)",
+      "vers": "—",
+      "citation": "DEAL ⊂ PARA : A3 Data (Archives PARA) supervise Holo-Janeway A2 DEAL (Dal/Rok-Tahk/Zero/Gwyn). Data libère A1 Beth de la supervision opérationnelle de Protostar",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/README.md §Triptyque MORTY ligne 78"
+    },
+    {
+      "de": "Chaque projet AaaS",
+      "verbe": "ancre dans",
+      "vers": "30_Business_OS/10_Projects/<proj>/ avec structure _doctrine/ + 8 sous-dossiers alignés sur les 8 Domaines",
+      "citation": "Chaque projet AaaS ancre dans 30_Business_OS/10_Projects/<proj>/ (CEO Dashboard Matryoshka, ADR-INFRA-003) avec structure _doctrine/ (junction deep Picard Verse) + 8 sous-dossiers alignés sur les 8 Domaines",
+      "chemin": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_…md §D3 ligne 86"
+    },
+    {
+      "de": "Saru 1000T",
+      "verbe": "est gardé par 3 garde-fous anti-paperclip",
+      "vers": "—",
+      "citation": "Anti-paperclip Saru 1000T (plan §18.3 + §22.4) : 3 garde-fous canon — (1) Boundary Saru spec : coordinates with Book but does not override LD01 strategy ; (2) AREA_STANDARD P1 Work ON not IN — scarcity seule ne déclenche pas B1 review ; (3) Musk pivot = agency over utopia — Saru DOIT évaluer si l'intention augmente agency A0 vs attend salvation externe",
+      "chemin": "20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md ligne 78"
+    },
+    {
+      "de": "D11 bandwidth metric",
+      "verbe": "est output Gwyn",
+      "vers": "—",
+      "citation": "D11 bandwidth metric = output Gwyn : gain bande passante cognitive (minutes libérées/semaine) vs maintenance tax (minutes upkeep/semaine). Upkeep > gain → route back to Zero/Rok-Tahk",
+      "chemin": "20_Life_OS/26_DEAL_Protostar/README.md §Karpathy loop ligne 101"
+    },
+    {
+      "de": "12WY Q3 2026 items 1-12",
+      "verbe": "sont routés via A2 Curie SNW",
+      "vers": "Pike/Una/M'Benga/Chapel/Ortegas (5 disciples)",
+      "citation": "Pike (Vision) → Item 2; Una (Planning) → Items 1-2; M'Benga (Focus) → Items 3-4; Chapel (Metrics) → Items 5-7; Ortegas (Execution) → Items 8-10",
+      "chemin": "20_Life_OS/23_12WY_SNW/README.md §Matrice 5 disciples × 5 horizons lignes 72-76"
+    },
+    {
+      "de": "Cerritos (Rutherford/Tendi)",
+      "verbe": "D3 nuance vs fancy-hugging-bengio §15.1",
+      "vers": "Canon local actif : Rutherford=Organize, Tendi=Review",
+      "citation": "fancy-hugging-bengio §15.1 identifie Tendi = Organize (canon twin protostar). Le terrain canon local garde Rutherford = Organize (résolu 2026-05-20, canon actif)",
+      "chemin": "20_Life_OS/25_GTD_Cerritos/README.md §Matrice canon ligne 74"
+    },
+    {
+      "de": "Cerritos (A2 Holo Deck)",
+      "verbe": "est bus horizontal bouclant 2 triptyques vers B1 Fractal",
+      "vers": "—",
+      "citation": "GTD (Cerritos Holodeck) = bus horizontal qui boucle les 2 triptyques (MORTY 12WY⊃PARA⊃DEAL + BETH Ikigai⊃Life Wheel⊃Muse) vers B1 Fractal",
+      "chemin": "20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md §Anchor canon ligne 87"
+    },
+    {
+      "de": "A0 intentions (Capture/Clarify/Today focus)",
+      "verbe": "sont routées par Morty vers",
+      "vers": "A2 Cerritos → Mariner/Boimler/Ortegas",
+      "citation": "intentions A0 Capture idée brute (→ Mariner /aside), Clarifier (→ Boimler /plan), Today focus (→ SNW Ortegas /plan) routing canon A0 → A1 Morty → A2 Cerritos",
+      "chemin": "20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md §Anchor canon ligne 88"
+    },
+    {
+      "de": "Picard (01_PROJECTS)",
+      "verbe": "se connecte à",
+      "vers": "Rock dans Baserow",
+      "citation": "Picard owns 01_PROJECTS, and each project should connect to a Rock in Baserow",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 24"
+    },
+    {
+      "de": "Spock (02_AREAS)",
+      "verbe": "mappé à",
+      "vers": "Life Wheel domains + durable standards",
+      "citation": "Spock owns 02_AREAS, mapped to Life Wheel domains and durable standards",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 25"
+    },
+    {
+      "de": "Geordi (03_RESOURCES)",
+      "verbe": "alimente",
+      "vers": "Graham/RAG (reusable knowledge base)",
+      "citation": "Geordi owns 03_RESOURCES, the reusable knowledge base feeding Graham/RAG",
+      "chemin": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md §Evidence ligne 26"
+    },
+    {
+      "de": "Data (04_ARCHIVES)",
+      "verbe": "exige",
+      "vers": "archive-and-document reflex avant archive final",
+      "citation": "Data never performs final archival without archive-and-document",
+      "chemin": "04_Archives_Data/A3_Data_Archives_Spec.md §Boundaries ligne 43"
+    },
+    {
+      "de": "Data (04_ARCHIVES)",
+      "verbe": "ne supprime pas par défaut (destructive delete = A0 approval)",
+      "vers": "—",
+      "citation": "Data does not delete by default. … Data flags destructive deletion as requiring explicit A0 approval",
+      "chemin": "04_Archives_Data/A3_Data_Archives_Spec.md §Boundaries lignes 44-46"
+    },
+    {
+      "de": "Supabase hosting pivot 2026-06-19",
+      "verbe": "Cloud ≠ self-host",
+      "vers": "OMK Services Org (Cloud) + ABC-OS-COMMUNITY Org (Cloud) = nouvelles instances prod",
+      "citation": "Hosting pivot 2026-06-19 : OMK Services Org (Cloud) + ABC-OS-COMMUNITY Org (Cloud) sont les nouvelles instances prod (per ADR-OMK-004 + ADR-ABCOS-002). Self-host VPS 148.230.92.235 archivé fonctionnellement mais pas encore radié (D4 no-hard-delete)",
+      "chemin": "_SPECS/REGISTRY/supabase_schemas.md §Hosting pivot ligne 11"
+    },
+    {
+      "de": "B3",
+      "verbe": "owns execution only",
+      "vers": "—",
+      "citation": "B3 owns execution only. B3 does NOT: Rewrite strategy, Redefine vision, Alter B2 Rock definitions, Escalate without first logging Lead/Lag evidence",
+      "chemin": "01_Projects_Picard/02 ABC OS & Child Care BOS/SUMMERS_VERSE_MANIFEST.md (Picard seau, cité verbatim)"
+    }
+  ],
+  "codes": [
+    {
+      "systeme": "L0/L1/L2 (couches A'Space Kernel)",
+      "numerote": "Layers du Kernel v2.0",
+      "L0": "Bedrock Tech OS (Guardian: Rick)",
+      "L1": "Life OS The Fleet (Guardian: Beth & Morty)",
+      "L2": "Business Pulse Fractal Engine (Guardian: Jerry & Summer)",
+      "defini_dans": "00_Amadeus/README.md + 10_Tech_OS/README.md + 20_Life_OS/README.md + 30_Business_OS/README.md"
+    },
+    {
+      "systeme": "A0/A1/A2/A3 (cascade agentique)",
+      "numerote": "Niveau de gouvernance",
+      "A0": "Jumeau Numérique Amadeus (méta-coach, vision H30)",
+      "A1": "Gatekeeper (vision 3 ans, 2-3 membres : Rick, Beth, Morty, Sommerfield, Jerry, Summer)",
+      "A2": "Ingénieur / Framework Ship (vision 10 ans, ~6 membres : Computer, Curie, Discovery, Holo Janeway, Holo Deck, Orville)",
+      "A3": "Méta-Orchestrateur (vision 1-10 semaines, ~35-100+ membres)",
+      "defini_dans": "_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1 + A2 specs"
+    },
+    {
+      "systeme": "B0/B1/B2/B3 (couches Business L2)",
+      "numerote": "Macro/Meso/Micro fractal",
+      "B0": "Self-Operating Business (macro above B1/B2/B3, SOB doctrine)",
+      "B1": "Direction Cockpit (North Star 1Y/3Y/10Y, 7 artefacts : 00-06)",
+      "B2": "Business Domain (8 domaines, 3 artefacts : 00_B2_DOMAIN_CONTROL_ROOM, 01_ROCK_TO_DOD_TO_JTBD_PIPELINE, 02_B3_SWARM_SUPERVISION_PROTOCOL)",
+      "B3": "Warp Core Execution (squads, 4 artefacts : 00_B3_SWARM_CONFIG, 01_B3_AGENT_ROSTER, 02_PEER_UNBLOCKING_AND_HANDOFFS, 03_SHARED_CONTEXT_AND_PROOF_LOG)",
+      "defini_dans": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md"
+    },
+    {
+      "systeme": "LD01-LD08 (Life Wheel Domains)",
+      "numerote": "8 Life Wheel domains",
+      "LD01": "Career & Business (Book, H1)",
+      "LD02": "Finance & Independence (Saru, H3)",
+      "LD03": "Health, Sleep, Energy (Hugh Culber, H10, HARD SAFETY)",
+      "LD04": "Mind, Cognition (Sylvia Tilly, H30, HARD SAFETY)",
+      "LD05": "Relations & Social (Paul Stamets, H30)",
+      "LD06": "Love, Family, Presence (Michael Burnham, H10)",
+      "LD07": "Creativity, Leisure (Jett Reno, H10)",
+      "LD08": "Contribution, Impact (Philippa Georgiou, H90)",
+      "defini_dans": "22_Wheel_Discovery/README.md + A2_Discovery_ZORA_Spec.md"
+    },
+    {
+      "systeme": "H1/H3/H10/H30/H90 (5 Horizons)",
+      "numerote": "Horizons temporels (Kardashev trajectory)",
+      "H1": "immediate (Isaac, Book LD01 weekly P&L)",
+      "H3": "near (Lamarr, Saru LD02 quarterly runway)",
+      "H10": "strategic (Bortus, Culber H10, Burnham H10, Reno H10)",
+      "H30": "identity (Alara, Tilly H30, Stamets H30)",
+      "H90": "mythic (Klyden, Georgiou H90 quarterly legacy)",
+      "defini_dans": "21_Ikigai_Orville/README.md + A2_Discovery_ZORA_Spec.md"
+    },
+    {
+      "systeme": "W1-W12 (12WY weeks)",
+      "numerote": "12 Week Year (84-day cycle)",
+      "W1-W4": "Q3 2026 cycle 06/15 → 09/07 (W1 06/15-07/05, W2 07/06-07/26, W3 07/27-08/16, W4 08/17-09/07)",
+      "W5+": "W13 (09/14 = W13, 09/21 = W0 Cycle 4)",
+      "W13": "13e semaine (semaine meta/post-cycle)",
+      "defini_dans": "23_12WY_SNW/README.md + Cerritos_Plane_Onboarding/MANIFEST.md (Picard seau)"
+    },
+    {
+      "systeme": "G1-G8 (Picard Business Domains)",
+      "numerote": "Code G1→G8 (canon Picard)",
+      "G1": "Growth (Superman/Guardians) — Billion Dollar Brand Club (Demto)",
+      "G2": "Sales (Martian Manhunter/Illuminati) — $100M Offers (Hormozi)",
+      "G3": "Product (Flash/Avengers) — Built to Sell (Warrilow)",
+      "G4": "Ops (Batman/F4) — The E-Myth Revisited (Gerber)",
+      "G5": "IT (Cyborg/KangDynasty) — The E-Myth Revisited (Gerber)",
+      "G6": "Finance (Wonder Woman/Thunderbolts) — The Million Dollar Weekend (Huber)",
+      "G7": "People (Green Lantern/XMen) — Who Not How (Sullivan)",
+      "G8": "Legal (Aquaman/Eternals) — Billion Dollar Brand Club (Demto)",
+      "defini_dans": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard seau)"
+    },
+    {
+      "systeme": "01-08 (Jerry Business Domains)",
+      "numerote": "Numeric prefix 01..08 (canon Jerry)",
+      "01": "Growth_Superman_Guardians",
+      "02": "Sales_MartianManhunter_Illuminati",
+      "03": "Product_Flash_Avengers",
+      "04": "Ops_Batman_Fantastic4",
+      "05": "IT_Cyborg_KangDynasty",
+      "06": "Finance_WonderWoman_Thunderbolts",
+      "07": "People_GreenLantern_XMen",
+      "08": "Legal_Aquaman_Eternals",
+      "defini_dans": "30_Business_OS/00_Jerry_Business_Pulse/04_Business_Domains/"
+    },
+    {
+      "systeme": "WF / WK01-13 / W# (Citadel loops)",
+      "numerote": "Loops d'orchestration",
+      "WF": "strate d'orchestration",
+      "WK01-13": "semaines 12WY",
+      "W#": "interdit (notation W# sans préfixe = anti-pattern)",
+      "defini_dans": "60_Citadel/loops/ARCHITECTURE.md §6"
+    },
+    {
+      "systeme": "ADR (Architecture Decision Record)",
+      "numerote": "33 ADR canoniques + 2 radiés",
+      "L0_Kernel_OS": "8 ADR (RICK-001, HERMES-001, INFRA-001, LLM-001, REG-001 RADIÉ, OPS-002 RADIÉ, CONSENSUS-002, AGENT-BOUNDARY-001, SECURITY-001, SOBER-002)",
+      "L1_Life_OS": "11 ADR (META-001..005, MEM-001/002, OBSERVABILITY-001, INFRA-MCP-001, INFRA-004, Meta-000, MEMO-000)",
+      "L2_Business_OS": "14 ADR (CANON-001, INFRA-002/003, SUPABASE-001, OMK-001..005, ABCOS-001/002, L2-MESH-001, AGENTIC-001, L2-AAAS-001)",
+      "ADR_en_attente": "5 ADRs Life OS framework manquants : ADR-DEAL-001, ADR-GTD-001, ADR-PARA-001, ADR-LIFE-WHEEL-001, ADR-SYMPHONY-001",
+      "defini_dans": "_SPECS/ADR/INDEX.md"
+    },
+    {
+      "systeme": "D0-D8 (Doctrine numérique)",
+      "numerote": "Doctrine anchors (ADR-META-001)",
+      "D1": "verify-before-assert",
+      "D3": "no-self-contradiction",
+      "D4": "no-hard-delete / append-only",
+      "D6": "root cause / Glob deep timeout",
+      "D7": "cost-of-escalation",
+      "D8": "cross-agent",
+      "defini_dans": "_SPECS/ADR/INDEX.md + ADR-META-001"
+    },
+    {
+      "systeme": "Cycle format (Q[N]-YYYY + Q[N]_[YYYY]_W[N])",
+      "numerote": "Cycle notation canon",
+      "curie_format": "Q3-2026, week: W1",
+      "picard_format": "Q3_2026_W3",
+      "defini_dans": "23_12WY_SNW/README.md (Curie) + Cerritos_Plane_Onboarding/MANIFEST.md (Picard)"
+    },
+    {
+      "systeme": "Kardashev Type 1/2/3/4",
+      "numerote": "Types de civilisation par capacité énergétique",
+      "A3/B3": "Type 1 (technicien opérationnel, 4h-semaine, délégation idempotente)",
+      "A2": "Type 2 (Manager E-Myth, framework-impersonating)",
+      "A1": "Type 3 (Gatekeeper Solarpunk, sovereignty + sobriété)",
+      "A0": "Type 4 (Visionnaire méta, tue les paperclips Ultron non utiles)",
+      "defini_dans": "_root_and_shells_2026-08-02/ASpace_OS_V3-DOCTRINE-ORCHESTRATION.md §1"
+    },
+    {
+      "systeme": "AaaS Variants (3 + 1 dormant)",
+      "numerote": "Agency-as-a-Service patterns",
+      "Solaris": "Book (LD01 H1) + Saru (LD02 H3), ACTIF Q3 2026 (Life-OS-2026 LIVE)",
+      "Nexus_OMK": "Saru (LD02 H3), ACTIF (Zéro Bug Sprint 2026-06-20)",
+      "Orbiter_ABC": "Burnham (LD06 H10), ACTIF (abc_os 17 tables 2026-06-17)",
+      "Family_Home_dormant": "TBD (LD03-LD08), DORMANT Q3 2026 (réveil Q4 2026 / Q1 2027)",
+      "defini_dans": "_SPECS/ADR/L2_Business_OS/ADR-L2-AAAS-001_aaas-doctrine-3-variants-solarpunk.md"
+    },
+    {
+      "systeme": "4 Leviers Solarpunk",
+      "numerote": "Méthodes de production de valeur réelle",
+      "L1": "Janine Benyus biomimétisme",
+      "L2": "Idriss Aberkane low-high-tech",
+      "L3": "Meta Science acceleration",
+      "L4": "circular & blue economy",
+      "defini_dans": "ADR-L2-AAAS-001 §C1 / D4"
+    },
+    {
+      "systeme": "12WY 5 disciplines",
+      "numerote": "5 disciples SNW canon",
+      "Pike": "Vision / Quarter Intent",
+      "Una": "Planning / Rocks",
+      "M'Benga": "Focus / Process control",
+      "Chapel": "Metrics / Scorecard",
+      "Ortegas": "Weekly execution / Time Use",
+      "defini_dans": "23_12WY_SNW/README.md + A2_Curie_SNW_Spec.md"
+    },
+    {
+      "systeme": "DEAL Muse (D/E/A/L)",
+      "numerote": "4 stages DEAL canon",
+      "D_Define": "Dal (pattern_definition.md, 1 friction, 1 outcome mesurable)",
+      "E_Eliminate": "Rok-Tahk (elimination_proposal.md, étapes NO-GO + gains bande passante)",
+      "A_Automate": "Zero (skill_<name>/SKILL.md + risk_class + D1 proof)",
+      "L_Liberate": "Gwyn (d11_score.json, liberated time/attention + upkeep ratio)",
+      "defini_dans": "26_DEAL_Protostar/A2_HoloJaneway_Protostar_Spec.md + ADR-L2-AAAS-001"
+    },
+    {
+      "systeme": "GTD 5 stages",
+      "numerote": "5 stages Cerritos canon",
+      "Mariner": "Capture (state.json: captured)",
+      "Boimler": "Clarify (state.json: clarified + tag)",
+      "Rutherford": "Organize (state.json: organized + bucket PARA)",
+      "Tendi": "Review (state.json: reviewed + drift check)",
+      "Freeman": "Engage (state.json: engaged + next_action)",
+      "defini_dans": "25_GTD_Cerritos/README.md + A2_HoloDeck_Cerritos_Spec.md"
+    },
+    {
+      "systeme": "Ikigai 4 Pillars + 5 Horizons",
+      "numerote": "9 A3 crew Orville",
+      "Pillars": "Ed (Profession) / Kelly (Mission) / Gordon (Passion) / Claire (Vocation)",
+      "Horizons": "Isaac (H1) / Lamarr (H3) / Bortus (H10) / Alara (H30) / Klyden (H90)",
+      "defini_dans": "21_Ikigai_Orville/README.md + A2_Orville_Spec.md"
+    },
+    {
+      "systeme": "Squads Marvel/DC (8 B2)",
+      "numerote": "8 squads canon",
+      "Guardians": "Growth (Superman, Star-Lord)",
+      "Illuminati": "Sales (Martian Manhunter/John Jones, Black Bolt)",
+      "Avengers": "Product (Flash, Captain America)",
+      "Fantastic4": "Ops (Batman, Reed Richards)",
+      "KangDynasty": "IT (Cyborg, Kang Prime)",
+      "Thunderbolts": "Finance (Wonder Woman, Bucky Barnes)",
+      "XMen": "People (Green Lantern, Professor X)",
+      "Eternals": "Legal (Aquaman, Ikaris)",
+      "defini_dans": "Business_Pulse_B3_Notion_Canon_Lore_Index.md + 30_Business_OS/Manifesto.md"
+    },
+    {
+      "systeme": "SOB (Self-Operating Business) — B0",
+      "numerote": "6 artefacts obligatoires pour B0_Self_Operating_Business_Doctrine/",
+      "00_SOB_INDEX": "index and operating rule for sellability/delegability",
+      "01_E_MYTH_FRANCHISE_PROTOTYPE": "franchise prototype and SOP-grade repeatability test",
+      "02_BUILT_TO_SELL_SCORECARD": "sellability scorecard and founder-dependency audit",
+      "03_WHO_NOT_HOW_DELEGATION_MATRIX": "delegation matrix for B1/B2/B3/tools",
+      "04_OFFER_AND_BRAND_ENGINE": "ICP, offer, brand category, revenue and proof packets",
+      "05_PROJECT_GRADUATION_GATES": "ladder from raw idea to Business Done",
+      "defini_dans": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer"
+    },
+    {
+      "systeme": "Saru LD02 × AaaS variants",
+      "numerote": "Mapping Saru 1000T (Kardashev Type 3)",
+      "Solaris_Saru": "LD02_H3 + Life-OS-2026 Initiative",
+      "Nexus_OMK_Saru": "LD02_H3 + omk-services/00-omk-saas-os",
+      "Orbiter_ABC_Saru_advisory": "LD02_H3 (advisory)",
+      "defini_dans": "ADR-L2-AAAS-001 §D2 + A2_Discovery_ZORA_Spec.md"
+    },
+    {
+      "systeme": "Symphony bus (state.json)",
+      "numerote": "SSOT bus canonique v1",
+      "$schema": "state-bus.v1",
+      "status": "INIT / ACTIVE / DRAINED",
+      "stage": "captured / clarified / organized / reviewed / engaged",
+      "cycle": "Q3-2026",
+      "week": "W1 / W2 / W3 / W4 / W13",
+      "agent_path": "A1:Morty > A2:Cerritos > A3:Mariner",
+      "para_bucket": "01_Projects/<name> / 02_Areas/<domain> / 03_Resources/<topic> / 04_Archives/<date>",
+      "12wy_discipline": "Vision / Planning / Measure / Focus / Execution",
+      "life_wheel_domain": "LD01..LD08",
+      "raw_input_hash": "sha256:<hex>",
+      "raw_input_preview": "first 80 chars",
+      "next_step": "prochain agent à invoquer",
+      "tokens_used / tokens_budget": "15000 default",
+      "drift_flag": "alerte Morty",
+      "defini_dans": "00_Amadeus/40_SYMPHONY_BUS/SCHEMA.md"
+    },
+    {
+      "systeme": "Cadence 50/30/20 (12WY hebdomadaire)",
+      "numerote": "50/30/20 rule (répartition charge hebdo)",
+      "50%": "execution",
+      "30%": "planning",
+      "20%": "review/learning",
+      "defini_dans": "23_12WY_SNW/README.md"
+    },
+    {
+      "systeme": "D11 bandwidth metric",
+      "numerote": "Output Gwyn (DEAL Muse Libération)",
+      "definition": "gain bande passante cognitive (minutes libérées/semaine) vs maintenance tax (minutes upkeep/semaine)",
+      "upkeep_threshold": "upkeep > gain → route back to Zero/Rok-Tahk",
+      "defini_dans": "26_DEAL_Protostar/README.md §Karpathy loop"
+    },
+    {
+      "systeme": "B1 artefacts (7 obligatoires)",
+      "numerote": "B1 Direction Cockpit",
+      "00_B1_DIRECTION_INDEX": "cockpit index and operating rule",
+      "01_NORTH_STAR_1Y_3Y_10Y": "long-range direction",
+      "02_12WY_COMMAND_CYCLES": "four-cycle command cadence",
+      "03_DECISION_CHARTER": "decision rights, vetoes, escalation, output packet",
+      "04_B2_HANDOFF_QUEUE": "B1-to-B2 queue",
+      "05_B2_DEFINITION_OF_DONE_SPEC": "canonical packet structure for B2 domain DoD",
+      "06_B3_JOBS_TO_BE_DONE_SPEC": "canonical packet structure for B3 JTBD and proof contracts",
+      "defini_dans": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit"
+    },
+    {
+      "systeme": "B2 Domain Gate Matrix (8 obligatoires)",
+      "numerote": "Ordre canonique 1..8",
+      "1": "Product proves user value",
+      "2": "Ops proves repeatable delivery",
+      "3": "IT proves runtime, access, deployment, and backup boundaries",
+      "4": "Finance proves cost, price, and margin logic",
+      "5": "Legal proves claims, privacy, IP, and terms boundaries",
+      "6": "Sales proves qualification, objections, and handoff",
+      "7": "Growth proves ICP, message, channel, and measurement",
+      "8": "People proves ownership, training, handoff, and load",
+      "defini_dans": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B2 Gate Matrix"
+    },
+    {
+      "systeme": "Squad B3 artefacts (4 obligatoires)",
+      "numerote": "B3 squad swarm config",
+      "00_B3_SWARM_CONFIG": "squad topology, B2 boundary, internal graph, source inspiration, operating rule",
+      "01_B3_AGENT_ROSTER": "Marvel/Illuminati member roles and peer-unlock rule",
+      "02_PEER_UNBLOCKING_AND_HANDOFFS": "internal handoff packet and escalation triggers",
+      "03_SHARED_CONTEXT_AND_PROOF_LOG": "shared context variables, artifact/proof paths, status, productive disagreement rule",
+      "defini_dans": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B3 Squad Swarm Configurations"
+    }
+  ],
+  "contradictions": [
+    {
+      "sujet": "Sales B2 owner (G2/02_Sales) : Martian Manhunter vs John Jones",
+      "chemin_a": "01_Projects_Picard/02 ABC OS & Child Care BOS/B2_Business_Domains/README.md (Picard G2 = Martian Manhunter)",
+      "date_a": "2026 (Picard canon)",
+      "chemin_b": "30_Business_OS/README.md §Domains (01-08) (08_Sales = John Jones)",
+      "date_b": "2026-08-02 (snapshot)",
+      "note": "Le canon B3 Notion (Business_Pulse_B3_Notion_Canon_Lore_Index.md) cite LES DEUX noms comme alias ('John Jones / Martian Manhunter'). Picard = ancien canon ; 30_Business_OS + AaaS Doctrine = canon corrigé."
+    },
+    {
+      "sujet": "Nombre de Business Domains : 7 vs 8",
+      "chemin_a": "00_Amadeus/README.md §Layer 2 (7 domaines 01_People..07_Legal, omet Sales)",
+      "date_a": "2026 (00_Amadeus canon)",
+      "chemin_b": "30_Business_OS/README.md §Domains (01-08) (8 domaines, inclut 08_Sales)",
+      "date_b": "2026-08-02",
+      "note": "00_Amadeus omet Sales ; 30_Business_OS inclut Sales. Jerry + Picard ont 8 (avec Sales)."
+    },
+    {
+      "sujet": "Horizons Saru/Book : Saru H1/H10 vs Saru H3/Book H1",
+      "chemin_a": "Lecture rapide (à confirmer ailleurs)",
+      "date_a": "antérieure",
+      "chemin_b": "22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md §D3 nuance critique (Saru H3, Book H1)",
+      "date_b": "2026-05-20 + alignement 2026-06-21",
+      "note": "D3 nuance critique (plan §18.2) : Saru = H3, Book = H1. PAS Saru=H1, Book=H10."
+    },
+    {
+      "sujet": "Cerritos Tendi/Rutherford mapping (Organize/Review)",
+      "chemin_a": "fancy-hugging-bengio.md §15.1 (Tendi = Organize)",
+      "date_a": "2026-06-21 plan",
+      "chemin_b": "20_Life_OS/25_GTD_Cerritos/A2_HoloDeck_Cerritos_Spec.md (Rutherford = Organize, Tendi = Review)",
+      "date_b": "2026-05-20 (résolu) + alignement 2026-06-21",
+      "note": "Canon local actif prévaut sur plan fancy-hugging-bengio §15.1 tant que A0 n'inverse pas explicitement."
+    },
+    {
+      "sujet": "SUMMERS_VERSE_MANIFEST parent_a2 vs A2 Computer canon",
+      "chemin_a": "01_Projects_Picard/Cerritos_Plane_Onboarding/MANIFEST.md (parent_a2: A2_HoloDeck_Cerritos — vu Picard seau)",
+      "date_a": "Q3 2026",
+      "chemin_b": "20_Life_OS/24_PARA_Enterprise/A2_Computer_Enterprise_Spec.md (Computer = A2 framework manager of PARA)",
+      "date_b": "2026-05-20",
+      "note": "Plusieurs SUMMERS_VERSE_MANIFEST utilisent parent_a2 incohérent avec le canon (devrait être A2_Computer_Enterprise pour les projets PARA)."
+    },
+    {
+      "sujet": "ADR-INDEX L2 count : table dit 10 vs canon 14",
+      "chemin_a": "_SPECS/ADR/INDEX.md preamble (table partiellement stale : L2=14 vs table dit 10)",
+      "date_a": "2026-06-21",
+      "chemin_b": "_SPECS/ADR/INDEX.md §D1 receipts finaux (table corrigée L2=14)",
+      "date_b": "2026-06-21",
+      "note": "L'ADR-INDEX lui-même signale la stale-ness dans son preamble ; la table Markdown affiche '14 ADR' mais la note dit 10 — contradiction interne."
+    },
+    {
+      "sujet": "Fable-5 : discontinué (ADR-LLM-001) mais méthodologie encore référencée",
+      "chemin_a": "_SPECS/ADR/L0_Kernel_OS/ADR-LLM-001_fable-5-discontinuation-decision.md (PROPOSED→ACCEPTED 2026-06-15)",
+      "date_a": "2026-06-15",
+      "chemin_b": "60_Citadel/README.md §Méthodologie (cite LD01/10_methodology/00_fable5_jack_roberts_meta_strategy.md)",
+      "date_b": "2026-07-04+",
+      "note": "Fable-5 discontinué formellement mais méthodologie encore référencée par Citadelle A0."
+    },
+    {
+      "sujet": "W13 = semaine meta-cycle (12WY) vs W13 = semaine #13 calendaire",
+      "chemin_a": "00_Amadeus/ROADMAP_DEAL_12WY_2026-2027.md (W13 = review meta-cycle, 12-18/10)",
+      "date_a": "2026-07-20",
+      "chemin_b": "23_12WY_SNW/README.md (W13 = 09/14, semaine #13 après démarrage)",
+      "date_b": "2026 (Q3 2026 cycle)",
+      "note": "Deux usages de W13 non explicitement distingués."
+    },
+    {
+      "sujet": "SOB (B0) macro layer vs B1 direction cockpit",
+      "chemin_a": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §Self-Operating Business Layer (B0_SOB macro above B1/B2/B3)",
+      "date_a": "2026-05-21",
+      "chemin_b": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit (B1 = direction cockpit)",
+      "date_b": "2026-05-21",
+      "note": "SOB rangé sous B0 (macro) vs B1 direction — incohérence apparente sur la séquence canonique."
+    },
+    {
+      "sujet": "B1/B2 vs 12WY 5 disciples (curie) — B1 n'a pas 5 mais 7 artefacts",
+      "chemin_a": "Computer_B1_B2_B3_Business_Pulse_Doctrine.md §B1 Direction Cockpit (7 artefacts : 00..06)",
+      "date_a": "2026-05-21",
+      "chemin_b": "23_12WY_SNW/A2_Curie_SNW_Spec.md (5 disciples : Pike/Una/M'Benga/Chapel/Ortegas)",
+      "date_b": "2026-05-20",
+      "note": "B1 = 7 artefacts ; 12WY 5 disciples (SNW) ≠ B1 (qui est direction cockpit)."
+    }
+  ],
+  "notes_methodologiques": {
+    "volume_filtre_total": 1534,
+    "fichiers_lus_au_long": 30,
+    "fichiers_parcourus_meta": 80,
+    "fichiers_laises": "~1400 (contenu feuille, doublons snapshot, configs non-canon)",
+    "jonctions_NTFS": 0,
+    "secret_scan_2026_08_02": "11 fichiers porteurs de secrets (clés API, jetons) publiés via commit 41c19a5",
+    "ARCHIVE_MANIFEST.json": "461 entrées src→dst (non lues, nom sans token structural)",
+    "pourquoi_tant_de_laises": "Ce seau est une archive photographique ; les fichiers canoniques (racines, manifestes, specs A1/A2, ADR, bus) sont lus ; le reste (96%) est contenu feuille déjà dupliqué ailleurs dans V2"
+  }
+}

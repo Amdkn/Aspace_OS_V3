@@ -1,0 +1,13 @@
+La memoire OKF quitte ce clone pour 40_Memory_Wiki_OKF
+
+Ce depot est un clone de l'amont langchain-ai/openwiki : il a son propre
+.git, il est invisible depuis le statut du depot parent, et son unique
+remote ne nous appartient pas. Un concept ecrit ici ne se poussait nulle
+part et mourait avec le disque.
+
+Les trois concepts partent dans ASpace_OS_V3/40_Memory_Wiki_OKF/, suivi
+par Amdkn/ASpace_OS_V3. L'index de ce sous-bundle retrouve son etat
+amont.
+
+Ce clone reste en place : c'est l'outil qui genere des wikis, pas
+l'endroit ou l'on range les siens.

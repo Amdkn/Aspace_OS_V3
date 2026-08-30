@@ -1,0 +1,75 @@
+{
+  "id": "73371753-bea0-42dc-9b55-020bfa211822",
+  "createdAt": 1786021493287,
+  "appVersion": "0.1.0",
+  "counts": {
+    "memories": 1,
+    "app_state": 4
+  },
+  "payload": {
+    "memories": [
+      {
+        "id": "5b85a0a7-e726-4e2d-a1ec-e7990ce8bdf9",
+        "title": "sans titre",
+        "body": "",
+        "tags": [],
+        "createdAt": 1786021480663,
+        "updatedAt": 1786021480663
+      }
+    ],
+    "app_state": [
+      {
+        "key": "external/4e0c8b5f-eca3-4bb0-a9ed-19aa49eaf05b",
+        "appId": "external",
+        "windowId": "4e0c8b5f-eca3-4bb0-a9ed-19aa49eaf05b",
+        "state": {
+          "x": 0,
+          "y": 250,
+          "w": 720,
+          "h": 480,
+          "payload": {}
+        },
+        "updatedAt": 1786021466679
+      },
+      {
+        "key": "memories/212a0d7e-b347-4499-97da-e50b25370672",
+        "appId": "memories",
+        "windowId": "212a0d7e-b347-4499-97da-e50b25370672",
+        "state": {
+          "x": 130,
+          "y": 80,
+          "w": 720,
+          "h": 480,
+          "payload": {}
+        },
+        "updatedAt": 1786021466679
+      },
+      {
+        "key": "memories/da1c6e27-b9bd-462a-8f85-280ef6cc3941",
+        "appId": "memories",
+        "windowId": "da1c6e27-b9bd-462a-8f85-280ef6cc3941",
+        "state": {
+          "x": 0,
+          "y": 250,
+          "w": 720,
+          "h": 480,
+          "payload": {}
+        },
+        "updatedAt": 1786021466679
+      },
+      {
+        "key": "observers/d5aa8ef4-6e53-4b3b-afa1-3eec1f7f493a",
+        "appId": "observers",
+        "windowId": "d5aa8ef4-6e53-4b3b-afa1-3eec1f7f493a",
+        "state": {
+          "x": 158,
+          "y": 80,
+          "w": 720,
+          "h": 480,
+          "payload": {}
+        },
+        "updatedAt": 1786021466679
+      }
+    ]
+  }
+}

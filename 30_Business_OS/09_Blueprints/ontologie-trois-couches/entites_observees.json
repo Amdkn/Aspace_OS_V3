@@ -1,0 +1,327 @@
+{
+  "geordi_path": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi",
+  "fichiers_md_total": 59265,
+  "jonctions": 159,
+  "noms_scannes": 29,
+  "resultats": [
+    {
+      "nom": "Agent",
+      "fichiers_distincts": 15147,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/FIX_KB_2026-08-02.md",
+        "00_Index/GEORDI_KB_ROOT.md",
+        "00_Index/INDEX_OF_INDEXES.md"
+      ]
+    },
+    {
+      "nom": "Client",
+      "fichiers_distincts": 7333,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Geordi_YT-AWtej6xTtp8.md",
+        "01_Guides/01_Product/Geordi_YT-f0kVApX58jo.md",
+        "01_Guides/01_Product/Geordi_YT-q4j6y-Yjp90.md"
+      ]
+    },
+    {
+      "nom": "Objectif",
+      "fichiers_distincts": 6511,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-18_musk-rachete-cursor-compute-ownership-supply-chain.md",
+        "01_Guides/01_Product/Dan_Martell/resource_0hOrbnA_1JI.md",
+        "01_Guides/01_Product/Dan_Martell/resource_Gw4zffTgcrI.md"
+      ]
+    },
+    {
+      "nom": "Skill",
+      "fichiers_distincts": 6414,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/INDEX_OF_INDEXES.md",
+        "00_Index/PERF_OPTIM_2026-08-02.md",
+        "00_Index/PLAN_META_MEMOIRE_2026-08-01.md"
+      ]
+    },
+    {
+      "nom": "Contexte",
+      "fichiers_distincts": 5845,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/PERF_OPTIM_2026-08-02.md",
+        "00_Index/PLAN_META_MEMOIRE_2026-08-01.md",
+        "00_Index/WIKI_LINT_BRIEF.md"
+      ]
+    },
+    {
+      "nom": "SOP",
+      "fichiers_distincts": 5074,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/01_Product/Dan_Martell/resource_reR_EtTCkW4.md",
+        "01_Guides/01_Product/Leo_Grindarss/resource_saas-200k-en-2-mois.md"
+      ]
+    },
+    {
+      "nom": "Domaine",
+      "fichiers_distincts": 4603,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/FIX_KB_BRIEF.md",
+        "00_Index/JUNCTIONS_MAP_2026-08-02.md",
+        "00_Index/TAGS.md"
+      ]
+    },
+    {
+      "nom": "Ressource",
+      "fichiers_distincts": 3611,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/INDEX_OF_INDEXES.md",
+        "00_Index/OKF_INDEX.md",
+        "00_Index/PLAN_META_MEMOIRE_2026-08-01.md"
+      ]
+    },
+    {
+      "nom": "Projet",
+      "fichiers_distincts": 3427,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/FIX_KB_2026-08-02.md",
+        "00_Index/JUNCTIONS_MAP_2026-08-02.md",
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md"
+      ]
+    },
+    {
+      "nom": "Area",
+      "fichiers_distincts": 2087,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/JUNCTIONS_MAP_2026-08-02.md",
+        "01_Guides/01_Product/WgmseucKcCA.md",
+        "01_Guides/02_Ops/2026-06-18_gregory-projets-ia-organisation-frontiere-contexte.md"
+      ]
+    },
+    {
+      "nom": "H1",
+      "fichiers_distincts": 2069,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/WIKI_LINT_BRIEF.md",
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/01_Product/Dan_Martell/resource_0hOrbnA_1JI.md"
+      ]
+    },
+    {
+      "nom": "Persona",
+      "fichiers_distincts": 2038,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Romain_Brunel/resource_14-agents-ia-travaillent-pour-moi-openclaw.md",
+        "01_Guides/02_Ops/solopreneur-ai-agent-business-BI-MNjm1tTQ.md",
+        "01_Guides/02_Ops/_INDEX.md"
+      ]
+    },
+    {
+      "nom": "Archive",
+      "fichiers_distincts": 1884,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/FIX_KB_BRIEF.md",
+        "00_Index/JUNCTIONS_MAP_2026-08-02.md",
+        "00_Index/SECOND_BRAIN_PARA_MAP.md"
+      ]
+    },
+    {
+      "nom": "Horizon",
+      "fichiers_distincts": 1782,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Dan_Martell/resource_reR_EtTCkW4.md",
+        "01_Guides/01_Product/Geordi_YT-0vvBSqFEdiE.md",
+        "01_Guides/01_Product/Geordi_YT-5xxGf5iVLag.md"
+      ]
+    },
+    {
+      "nom": "Semaine",
+      "fichiers_distincts": 1778,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/00_KERNEL_OS/Geordi_YT-S5_F0UkAfv4.md",
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/01_Product/Dan_Martell/resource_Gw4zffTgcrI.md"
+      ]
+    },
+    {
+      "nom": "Routine",
+      "fichiers_distincts": 1672,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Dan_Martell/resource_Gw4zffTgcrI.md",
+        "01_Guides/01_Product/Dan_Martell/resource_hSGt_rhu49U.md",
+        "01_Guides/02_Ops/Dan_Martell/resource_9w0INwjTYdU.md"
+      ]
+    },
+    {
+      "nom": "Profile",
+      "fichiers_distincts": 1521,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Ot582-E61ac.md",
+        "01_Guides/01_Product/zbmuiaPuiNM.md",
+        "01_Guides/03_IT/2026-06-25_google-ai-coding-masterclass-summary-zbmuiaPuiNM.md"
+      ]
+    },
+    {
+      "nom": "Cadence",
+      "fichiers_distincts": 1151,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-18_musk-rachete-cursor-compute-ownership-supply-chain.md",
+        "01_Guides/02_Ops/2026-06-24_7-metrics-all-small-businesses-should-be-tracking-tov_Xe5xZmU.md",
+        "01_Guides/02_Ops/2026-06-24_i-copied-a-100m-saas-undercut-prices-hit-10k-month_KaFS4Dxs5k.md"
+      ]
+    },
+    {
+      "nom": "Ikigai",
+      "fichiers_distincts": 1101,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/02_Ops/2026-06-24_i-copied-a-100m-saas-undercut-prices-hit-10k-month_KaFS4Dxs5k.md",
+        "01_Guides/02_Ops/solopreneur-ai-agent-business-BI-MNjm1tTQ.md",
+        "01_Guides/03_IT/2026-06-25_google-ai-coding-masterclass-summary-zbmuiaPuiNM.md"
+      ]
+    },
+    {
+      "nom": "Incident",
+      "fichiers_distincts": 1069,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/02_Ops/ultimate-guide-to-systemize-your-business-in-2026.md",
+        "01_Guides/03_IT/2026-07-02_wtf-is-loop-engineer-ai-jason.md",
+        "01_Guides/03_IT/ai-stack-engineer/should-you-become-a-full-stack-developer.md"
+      ]
+    },
+    {
+      "nom": "Organization",
+      "fichiers_distincts": 780,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/zbmuiaPuiNM.md",
+        "01_Guides/03_IT/2026-07-26_keycloak-sso-multi-tenancy-passkeys-yt-pSPZJy8qwD8.md",
+        "02_Templates/Enterprise_OS_Blueprint_Kit/specs/system_spec_omk_nexus.md"
+      ]
+    },
+    {
+      "nom": "H10",
+      "fichiers_distincts": 737,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/02_Ops/2026-06-24_7-metrics-all-small-businesses-should-be-tracking-tov_Xe5xZmU.md",
+        "01_Guides/02_Ops/_INDEX.md"
+      ]
+    },
+    {
+      "nom": "H90",
+      "fichiers_distincts": 560,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/03_IT/2026-06-25_every-folder-on-my-computer-full-reveal-tiago-forte-A0pdL3MS_7E.md",
+        "01_Guides/03_IT/2026-07-26_claude-long-horizon-lance-martin-9QebvrrY3KY.md"
+      ]
+    },
+    {
+      "nom": "Runbook",
+      "fichiers_distincts": 542,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "00_Index/PLAN_META_MEMOIRE_2026-08-01.md",
+        "01_Guides/01_Product/Romain_Brunel/resource_14-agents-ia-travaillent-pour-moi-openclaw.md",
+        "01_Guides/02_Ops/claude-code-just-got-a-life-os-personal-ai-infrastructure.md"
+      ]
+    },
+    {
+      "nom": "H30",
+      "fichiers_distincts": 499,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/2026-06-25_design-skills-that-actually-work-Ot582-E61ac.md",
+        "01_Guides/03_IT/2026-06-17_top-10-free-ai-agent-tools-github-radar.md",
+        "01_Guides/03_IT/2026-06-25_every-folder-on-my-computer-full-reveal-tiago-forte-A0pdL3MS_7E.md"
+      ]
+    },
+    {
+      "nom": "Membership",
+      "fichiers_distincts": 355,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/03_IT/Dan_Martell/resource_FEex8E1yDj4.md",
+        "01_Guides/04_Finance/Dan_Martell/resource_5a9f0eIVhF0.md",
+        "01_Guides/06_Sales/Dan_Martell/resource_oMFJKZMl1Po.md"
+      ]
+    },
+    {
+      "nom": "Occurrence",
+      "fichiers_distincts": 174,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/01_Product/Dan_Martell/resource_0hOrbnA_1JI.md",
+        "01_Guides/03_IT/2026-07-02_wtf-is-loop-engineer-ai-jason.md",
+        "01_Guides/03_IT/itssssss-jack/its-a-mad-mad-mad-mad-world-jack-benny.md"
+      ]
+    },
+    {
+      "nom": "Charter",
+      "fichiers_distincts": 158,
+      "couche_supposee": "Life OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/03_IT/2026-07-11_how-to-run-your-entire-business-with-claude-code-EQq_qQ_P67c.md",
+        "01_Guides/04_Finance/2026-07-26_learn-10x-faster-in-10-minutes_YT-sbmP6i-MChk.md",
+        "02_Templates/fable-wargame-kit/fable-last-week/LEDGER.md"
+      ]
+    },
+    {
+      "nom": "Offering",
+      "fichiers_distincts": 90,
+      "couche_supposee": "Business OS",
+      "seuil": ">=5",
+      "exemples": [
+        "01_Guides/09_Life_OS/5fS-lD1nFxM.md",
+        "01_Guides/09_Life_OS/BI-MNjm1tTQ.md",
+        "01_Guides/_TRASH_2026-06-24_swarm_chunks/BI-MNjm1tTQ.chunks/chunk_00.md"
+      ]
+    }
+  ]
+}

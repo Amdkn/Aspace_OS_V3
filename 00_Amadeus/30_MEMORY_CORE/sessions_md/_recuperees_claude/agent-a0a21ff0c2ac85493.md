@@ -1,0 +1,26 @@
+---
+session: agent-a0a21ff0c2ac85493
+origine: claude
+chemin_source: C:\Users\amado\ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\06_Claude_Code_Bare\projects\C--Users-amado\3ba354b0-6040-4e51-a5fd-79783d1d1a31\subagents\workflows\wf_0942671b-b56\agent-a0a21ff0c2ac85493.jsonl
+debut: 2026-06-28T08:02:35.417Z
+fin: 2026-06-28T08:02:41.738Z
+messages_utilisateur: 1
+reponses_assistant: 0
+titre: "List files in C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\01_Guides\\08_Peopl…"
+---
+
+## >>> UTILISATEUR #1
+
+List files in C:\Users\amado\ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\01_Guides\08_People (use Bash: ls -la "C:\Users\amado\ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\01_Guides\08_People" 2>&1), then Read up to 10 most relevant .md files (frontmatter / first 50 lines each is enough). DO NOT full-read all 30+ files.
+
+Return compact JSON only:
+{
+  "subdir": "<e.g. 06_Sales>",
+  "file_count": <int>,
+  "files_sampled": [<max 10 names>],
+  "themes": [<max 7 short strings>],
+  "ldxx_pivot": "<LD01-LD08 or null>",
+  "b2_domain": "<same as subdir e.g. 06_Sales>"
+}
+
+No commentary, JSON only.
