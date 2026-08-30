@@ -315,3 +315,9 @@ python C:/Users/amado/ASpace_OS_V3/scripts/indexer_distillations.py
 
 Si le compte diffère d'un `find` sur `RAPPORT_*.md`, c'est l'instrument
 qu'il faut réparer, pas le chiffre qu'il faut ajuster.
+
+## Les problématiques converties en skills
+
+Les six problématiques mesurées du rapport d'intentions ont chacune leur skill
+exécutable dans [`90-self-evolution/`](90-self-evolution/README.md) — format Hermes,
+portes G1–G5 scriptées, revue humaine non scriptable.
