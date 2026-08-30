@@ -1,6 +1,6 @@
 # Cartographie de A'Space OS V3
 
-> Genere par `scripts/cartographier_v3.py` le 2026-08-30 04:30 UTC, en 0.3 s.
+> Genere par `scripts/cartographier_v3.py` le 2026-08-30 07:11 UTC, en 0.4 s.
 > **Ne pas editer a la main** : une carte ecrite a la main vieillit et ment.
 > Regenerer par `python scripts/cartographier_v3.py`.
 
@@ -8,9 +8,9 @@
 
 | | |
 |---|---|
-| Fichiers | **10,731** |
+| Fichiers | **10,734** |
 | Poids | **2.8 Go** |
-| Documents `.md` | **6,531** |
+| Documents `.md` | **6,534** |
 | Triplets `.ttl` | 31 |
 | Substrat `.jsonl` | 45 |
 | Scripts `.py` | 282 |
@@ -29,8 +29,8 @@ etranger au notre.
 | `10_Tech_OS/` | 97 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
 | `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
 | `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
-| `40_Memory_Wiki_OKF/` | 36 | 36 | 239.5 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
-| `50_Distillation/` | 362 | 299 | 69.9 Mo | Methode, substrat, briefs de distillation |
+| `40_Memory_Wiki_OKF/` | 38 | 38 | 256.1 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `50_Distillation/` | 363 | 300 | 69.9 Mo | Methode, substrat, briefs de distillation |
 | `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
 | `70_Onthologies/` | 396 | 324 | 6.8 Mo | Sujets, triplets RDF, revue |
 | `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
@@ -198,14 +198,14 @@ ASpace_OS_V3/
 |   `-- 10_Projects/  (960 fich., 303 md, 20.7 Mo)
 |       `-- coach-os-app/  (959 fich., 303 md, 20.7 Mo)
 |           ... 29 sous-dossiers, non deplies
-|-- 40_Memory_Wiki_OKF/  (36 fich., 36 md, 239.5 Ko)
-|   |-- architecture/  (7 fich., 7 md, 47.7 Ko)
-|   |-- canon/  (4 fich., 4 md, 40.1 Ko)
-|   |-- integrations/  (8 fich., 8 md, 79.9 Ko)
+|-- 40_Memory_Wiki_OKF/  (38 fich., 38 md, 256.1 Ko)
+|   |-- architecture/  (9 fich., 9 md, 56.5 Ko)
+|   |-- canon/  (4 fich., 4 md, 45.9 Ko)
+|   |-- integrations/  (8 fich., 8 md, 82.0 Ko)
 |   |-- learning/  (2 fich., 2 md, 8.9 Ko)
-|   |-- operations/  (8 fich., 8 md, 40.7 Ko)
+|   |-- operations/  (8 fich., 8 md, 40.6 Ko)
 |   `-- security/  (3 fich., 3 md, 10.6 Ko)
-|-- 50_Distillation/  (362 fich., 299 md, 69.9 Mo)
+|-- 50_Distillation/  (363 fich., 300 md, 69.9 Mo)
 |   |-- _briefs/  (24 fich., 16 md, 145.2 Ko)
 |   |-- _briefs_domaines/  (14 fich., 9 md, 84.7 Ko)
 |   |-- _briefs_vague2/  (14 fich., 9 md, 83.4 Ko)
@@ -323,7 +323,7 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 ### Le point qui compte
 
 Le `CLAUDE.md` designe `40_Memory_Wiki_OKF/` comme « la memoire du
-poste ». Ce bundle porte **36 fichiers `.md` sur 6,531**, soit **0.6 %** du corpus.
+poste ». Ce bundle porte **38 fichiers `.md` sur 6,534**, soit **0.6 %** du corpus.
 
 Chercher la et s'arreter, c'est manquer le reste. Le bundle est un
 **index de concepts consolides**, pas le corpus. Les deux tableaux

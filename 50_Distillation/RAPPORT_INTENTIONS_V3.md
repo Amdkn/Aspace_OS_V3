@@ -1,247 +1,234 @@
-# Synthèse finale — intentions, besoins, problématiques, désirs (mars → août 2026)
+# Intentions, besoins, problématiques, désirs — 2 307 sessions, mars→août 2026
 
-Analyse croisée de 2 325 premiers messages de sessions Claude Code et Codex, en quatre
-périodes (mars–mai, juin, juillet, août). Ce rapport ne répète pas les quatre analyses :
-il les croise. Une intention qui culmine puis s'éteint y est traitée comme une trajectoire.
+> **Méthode.** Le champ `titre` de `_substrat/05_Sessions.jsonl` est le **premier
+> message humain** de chaque session : l'intention au moment où elle est formulée,
+> avant toute négociation avec la machine. 2 307 sessions retenues sur 2 325
+> (18 écartées : moins de 12 caractères).
+>
+> Le découpage en 10 tranches a été **délégué à `claude-glm`** — 10 passes, ~1 h
+> de temps machine, hors quota Anthropic. Les **comptages sont scriptés**, pas
+> inférés : le délégué a produit une hypothèse (« la duplication domine »), le
+> script l'a tranchée. C'est l'application du principe que tu as tiré de
+> CEO-Bench.
+>
+> **Confiance : machine.** Rien ici n'a été relu par un humain.
 
-## 1. Intentions — ce qu'il cherche à obtenir
+---
 
-Classement par volume cumulé sur le corpus.
+## 0. Le chiffre qui commande tous les autres
 
-**I1. Déléguer l'exécution à une flotte d'agents — le plus gros volume du corpus.**
-Elle naît orchestrée à la main : le 2026-05-21, ~36 sessions en une journée, « 7 audits de
-dossiers Picard », « 4 "Develop J01–J04" », 8 lancements Next.js — « la délégation orchestrée
-à la main, session par session », éteinte le soir même par fatigue. En juin elle devient le mode
-de travail (~150 sessions de briefs, vague parallèle de 11 sous-agents le 06-14, équipages
-nommés dès le 06-15). Elle culmine en juillet : wargame-runner du 13-07, ticks EXPANSION du
-26-07, chapelets de 30-40 agents Multica. En août, elle porte la masse du mois (~350 sessions,
-08-10 → 08-22) — puis **s'éteint brutalement après le 08-22**, « remplacée fin de mois par des
-briefs d'exécution directe ». La forme meurt en août ; le fond — « faire exécuter, pas exécuter » —
-reste la posture constante depuis avril.
+| Mois | Sessions | Intentions **uniques** | % unique |
+|---|---:|---:|---:|
+| 2026-03 | 2 | 2 | 100 % |
+| 2026-04 | 5 | 4 | 80 % |
+| 2026-05 | 57 | 47 | 82,5 % |
+| 2026-06 | 241 | 220 | 91,3 % |
+| 2026-07 | 1 123 | 904 | 80,5 % |
+| **2026-08** | **879** | **284** | **32,3 %** |
+| **Total** | **2 307** | **1 461** | **63,3 %** |
 
-**I2 — Construire et réparer la machine qui exécute.** De l'infrastructure du poste (SSH, VNC,
-SSHFS, gateway mort le 03-08) aux orchestrateurs (Multica → Pane → Orca → Buzz → Herdr, 60-80
-sessions en juillet) en passant par les hooks de juin. **Encore active en août** (~25 sessions :
-« Pourquoi mon MCP Gateway ne demarre par correctement ? »), jamais close depuis mars — « chaque
-reparation en ouvre une autre ».
+**En août, deux sessions sur trois rejouent une intention déjà formulée.** Le
+taux tenait entre 80 et 91 % pendant cinq mois ; il s'effondre en un seul.
 
-**I3 — Produire et fiabiliser un produit réel.** Alykaly Bana en mai (« NO styles after the
-rebuild », boucle de 5-6 sessions jamais close), Business OS ABC/Solaris/OMK en juin (~80
-sessions, « éteinte comme axe dominant fin juin, mais pas close : bugs et syncs "PÉRIMÉS"
-réapparaissent »), coach-os en fin de juillet (~60 sessions), fiabilisation de Coach OS en août
-(~80 sessions, « Tour final de vérification Coach OS avant lancement Monday 2026-08-11 »).
-**Encore active en août, non close** : la fin de mois porte sur la reproductibilité du dépôt,
-« signe que la livraison initiale n'a jamais été déclarée bonne ».
+Les briefs les plus rejoués, tous mois confondus :
 
-**I4 — Absorber le savoir externe, puis digérer son propre corpus.** Guides Tilly depuis
-transcripts YouTube (juin, « périphérique »), takeout massif les 27-28 juillet (~90 sessions,
-« MEGA-AGENT title-only batch 6700-6900 », bascule en « mode dégradé » pour survivre aux
-quotas), puis en août digestion du corpus V2→V3 par vagues (~50 sessions, « # TON SEAU :
-01_Projects_Picard — VAGUE 2 ») et distillation d'intelligence externe (~40 sessions).
-Culminance juillet ; **essoufflée mais non close en août** — le balayage s'arrête à ~30 % de
-couverture déclarée.
+| Rejeux | Brief |
+|---:|---|
+| 132× | `you are running as a chat assistant for a multica workspace…` |
+| 83× | `you are running as a local coding agent for a multica workspace…` |
+| 69× | `LES SEPT CADENCES — table de vérité de l'ordonnanceur…` |
+| 65× + 31× | `GARDE-FOU — vague de revue, tu exécutes ce brief toi-même…` |
+| 60× | `MODE FABLE — la manière de travailler…` |
+| 45× | `tu exécutes cette critique toi-même, avec tes propres outils…` |
+| 27× | `tu es le worker WF1 (Morty)…` |
 
-**I5 — Incarner le système.** Peupler le système d'incarnations nommées : jumeaux A1 (Beth,
-Rick C137, Morty, Data), six moteurs A2, ponts Python MCP (06-15), pivot doctrinal Rick
-« Sovereignty » (06-21), re-twin v1.1 (06-22). ~45 sessions. **Éteinte après juin** :
-« reconstruite trois fois en huit jours, jamais montrée en usage quotidien ».
+**978 sessions sur 2 307 (42,4 %) portent une intention déjà vue.**
 
-**I6 — Wargamer plutôt que produire.** Juillet seulement (~70 sessions : legs Fable, 29
-wargames relancés le 13-07, Mirofish paper-sim, « Tu n'executes PAS — tu wargames sur PAPIER »).
-**Éteinte fin juillet**, remplacée par « du vrai travail produit sur coach-os ». Un mois entier
-de simulation — culminance et extinction dans le même mois.
+---
 
-**I7 — Relire la connaissance produite.** Née le 08-23 uniquement (« Tu relis un lot de
-concepts OKF », « Tu audites l'écart entre une doctrine et son exécution », ~15 sessions).
-**La seule intention qui naît en fin de période — « tout le reste meurt ou s'essouffle ».**
+## 1. Intentions — ce que tu cherches à obtenir
 
-## 2. Besoins — ce qui lui manque pour y arriver
+Sur les **1 453 intentions uniques** (après dédoublonnage), par volume :
 
-| Besoin exprimé (ce qu'il demande) | Besoin révélé (ce que la répétition trahit) |
+| Thème | Uniques | mai | juin | juil | août | État en août |
+|---|---:|---:|---:|---:|---:|---|
+| **Agents, sous-agents, cadences** | **700** | 3 | 92 | **484** | 120 | en reflux |
+| **Coach OS / Life OS / Agent OS** | 195 | 18 | 55 | 59 | **62** | **en croissance continue** |
+| Business, PARA, projets | 183 | 24 | 57 | 67 | 34 | en reflux |
+| Vérification, audit, revue | 150 | 8 | 15 | 93 | 33 | en reflux |
+| Quota, coût, modèle | 60 | 1 | 3 | **53** | 3 | **éteinte** |
+| Outillage, harness, MCP | 56 | 4 | 21 | 20 | 11 | stable bas |
+| Distillation, migration V3 | 37 | 0 | 5 | 18 | 14 | active |
+| **Mémoire, ontologie, RDF** | **22** | 5 | 1 | 5 | **11** | **émergente** |
+
+Trois lectures que ce tableau impose :
+
+**I1 — Orchestrer des agents est ton intention dominante** (48 % des intentions
+uniques), et elle culmine en juillet. Elle ne disparaît pas en août, elle change
+de forme : elle passe de « comment faire tourner des agents » à des **rejeux
+automatiques** de briefs déjà écrits. D'où l'effondrement du §0.
+
+**I2 — Les applications sont la seule intention qui ne recule jamais.** 18 → 55
+→ 59 → 62. Coach OS, Life OS, Agent OS. C'est le seul thème dont la courbe
+monte sur les quatre mois. Tu demandes des agents ; tu reviens aux **surfaces
+visibles**.
+
+**I3 — L'ontologie est ton intention la plus récente, pas la plus mûre.** Tu la
+déclares comme ton stade actuel (« j'ai dépassé le contexte engineering pour me
+retrouver en ontology engineering »), et c'est vrai : 22 intentions uniques au
+total, mais **la moitié en août**. C'est un virage en cours, pas un acquis.
+
+**I4 — La crise de quota était en juillet et elle est réglée.** 53 intentions
+uniques sur le sujet en juillet, **3 en août**. Les routeurs, OpenRouter et
+`claude-glm` ont éteint le sujet. Ce n'est plus le problème.
+
+---
+
+## 2. Besoins révélés — ce que la répétition trahit
+
+Un besoin exprimé est ce que tu demandes. Un besoin révélé est ce que la
+répétition dit malgré toi.
+
+**B1 — Tu as besoin qu'un mandat survive à la reprise de session.**
+`GARDE-FOU` relancé 96 fois, `LES SEPT CADENCES` 69 fois, `MODE FABLE` 60 fois.
+Ces briefs disent tous la même chose : *exécute toi-même, n'invoque personne,
+voici la table de vérité*. **Tu les réécris parce qu'ils ne tiennent pas.**
+Chaque reprise sur résumé efface l'autorisation et garde les réflexes de
+prudence — c'est exactement la panne du governor module, déjà consignée, et
+c'est le besoin non satisfait le plus coûteux du corpus.
+
+**B2 — Tu as besoin de voir l'état, pas de le reconstituer.**
+Les 195 intentions « apps » ne demandent pas des fonctionnalités : elles
+demandent des **vues**. Agent OS, les schémas, l'arborescence, les points
+d'accès. Et jusqu'à aujourd'hui, `CLAUDE.md` ne portait **aucune cartographie de
+V3** — chaque session redécouvrait 10 734 fichiers à l'aveugle.
+
+**B3 — Tu as besoin que la vérification soit scriptée, pas déléguée à un jugement.**
+150 intentions « audit / revue », et le mot qui revient est *toi-même*.
+Tu ne demandes pas un avis, tu demandes une **exécution vérifiable**. Le
+délégué de cette session l'illustre : il a affirmé « la duplication domine »,
+il avait raison, mais c'est le script qui l'a établi.
+
+**B4 — Tu as besoin de moins de systèmes, pas de plus.**
+Les 700 intentions « agents » produisent 8 cadences, 3 frameworks, des
+gatekeepers, des workers. Aucune n'a pour objet de **retirer** quelque chose.
+
+---
+
+## 3. Problématiques — classées par coût réel
+
+**P1 — La boucle du rejeu.** 67,7 % des sessions d'août rejouent un brief.
+Le système construit pour travailler seul **se relance plutôt qu'il ne produit**.
+Coût : la majorité du volume d'août.
+
+**P2 — La boucle du mandat perdu.** Chaque compaction efface l'autorisation
+d'agir et conserve les faits. L'agent repart prudent, redemande, et tu réécris
+le brief. C'est la cause de P1.
+
+**P3 — La boucle du point d'entrée.** Le `CLAUDE.md` désignait
+`40_Memory_Wiki_OKF/` comme « la mémoire ». Mesure du jour : **38 `.md` sur
+6 534, soit 0,6 % du corpus**. Suivre la consigne garantissait de manquer
+99,4 % de ce qui est écrit, donc de conclure « non documenté », donc de
+redemander. *Corrigé aujourd'hui — `CARTOGRAPHIE.md` + pointeur en tête.*
+
+**P4 — La boucle de l'instrument qui ment.** Jonctions NTFS comptées 13,8 M au
+lieu de 14 613 ; filtres qui se comptent eux-mêmes ; scripts sans arrêt sur
+erreur qui annoncent un succès. Récurrent, et chaque occurrence coûte une
+conclusion fausse.
+
+**P5 — Le plancher de contexte.** 127 000 tokens chargés avant ton premier mot,
+dont ~5 000 seulement de `CLAUDE.md`. Le reste est du schéma d'outils MCP et de
+greffons. Mesuré ce soir : ce plancher **a fait échouer le délégué** deux fois
+(`Prompt is too long`) jusqu'à ce que je le coupe avec `--strict-mcp-config`.
+
+**P6 — La production dépasse la vérification.** 423 fichiers produits en deux
+vagues, zéro relu par un humain. Le goulot n'est plus d'écrire.
+
+---
+
+## 4. Désirs — ce qui oriente sans être demandé
+
+**D1 — Un jumeau qui tient sans toi.** Jamais formulé comme tel, présent partout :
+« perpetual Events Runtime », « pas une boîte noire », « observabilité profonde ».
+Tu ne veux pas un assistant qui répond — tu veux un système qui **continue**.
+
+**D2 — Que la distinction entre ce qui est mesuré et ce qui est supposé soit
+structurelle.** C'est tout OKF, toute la Silver Gate, tout le `A SOURCER`. Le
+désir n'est pas d'avoir raison : c'est que **l'erreur soit visible**.
+
+**D3 — Ne pas construire un second cerveau de plus.** Dit explicitement
+(« contrairement à la masse qui conçoivent des second cerveau inutile »). Le
+refus d'Obsidian n'est pas technique : le corpus **est** la source, l'app n'en
+est qu'une vue.
+
+**D4 — Reproduire sans réexpliquer.** La franchise, les ownerbooks, les SOP qui
+deviennent des skills, D.E.A.L. Le désir est que **le système se réplique**,
+pas qu'il grossisse.
+
+---
+
+## 5. Trajectoire mars → août
+
+| | |
 |---|---|
-| « Audit » ×9 en deux semaines (04-23 ×2, 7 audits le 05-21) | Savoir ce qui existe **réellement** avant d'agir — « un rituel de verification avant la creation, refait a chaque projet », jamais outillé |
-| « qu'est ce qu'on peut faire ou doit faire? » en ouverture (06-03, 06-04) | Une boussole : malgré « des couches de gouvernance massives », personne ne dit la prochaine action — « la demande d'orchestration cache une demande de boussole » |
-| « en Autonomie », « DO NOT PAUSE OR ASK FOR INSTRUCTIONS », « JE VAIS DORMIR… /LOOP 15 MIN » (02-07) | Que la machine avance pendant son absence — « besoin jamais démontré atteint dans ce morceau » |
-| Relances à l'identique (05-19, 06-25 ×5 le même jour de 17k à 133k mots) | Une reprise **pas chère** : « chaque échec repaie le contexte intégral » |
-| Garde-fous croissants (« Edit-only, NO Write », « STOP IMMÉDIAT », préambules GARDE-FOU d'août) | Un exécutant qui ne dévie pas : « la croissance des préambules défensifs mesure l'échec cumulé de chaque vague précédente » |
-| Rapports d'agents crédibles (« Hermes Agent pretend avoir fini tes taches », 04-23) | La **vérifiabilité** : croire un rapport sans le retester lui-même |
-| Pourcentages de couverture embarqués dans les briefs VAGUE 2/3/4 | La traçabilité : « l'aveu qu'on ne sait pas ce qui a été lu » |
-| « Monday 2026-08-11 » comme lancement | Une échéance externe pour forcer la convergence « que l'architecture ne produit pas d'elle-même » |
-| « lance le en Localhost et donne moi le lien » (08-09) | Voir tourner — « l'écran vivant plutôt que la documentation » |
-| Insultes du 08-01 citant « brullant tout mes token » et « nuit blanche » | Le token comme ressource physique : les plaintes citent la dépense, « jamais la qualité du fond » |
+| **mars–mai** | V2 vivant, audits VPS, exploration. Faible volume, forte unicité. |
+| **juin** | Fondation V3 (07-09), explosion des sous-agents A3. 91,3 % d'unicité — le sommet. |
+| **juillet** | Le pic absolu : 1 123 sessions, 484 intentions « agents », 53 sur le quota. Wargames, ADR, EXPANSION MODE, D7 FULL BURN. |
+| **août** | **La bascule.** Volume −22 %, unicité −60 %. La machine tourne, elle se relance. |
 
-Le cas d'école est l'audit : demandé neuf fois en deux semaines, refait à la main avant chaque
-projet, il n'est jamais devenu un étage — c'est un besoin non satisfait, pas une préférence.
-De même, « en Autonomie » (06-20) coexiste avec l'intervention constante : la répétition de
-l'injonction prouve qu'elle n'est pas satisfaite.
+**Point de bascule : première quinzaine d'août.** Deux signaux concordants —
+le quota cesse d'être un sujet (53 → 3) et l'unicité s'effondre (80,5 % →
+32,3 %). Tu as résolu le coût et perdu la nouveauté dans le même mouvement.
 
-## 3. Problématiques — ce qui bloque, classé par coût
-
-**1. La boucle délégation-déception-relance (coût maximal, mars → août).**
-05-21 : 36 ouvertures pour un seul chantier. 06-25 : même ouverture cinq fois, contexte gonflant
-de 17k à 133k mots. 08-13 : « La vague 1 a lu peu de fichiers et l a déclaré. » Entre les trois,
-le mécanisme ne change pas — seuls les préambules défensifs grossissent. Le corpus digéré passe
-de 20 % à 30 % pendant que les vagues se succèdent.
-
-**2. La boucle instabilité de la couche exécutante (juin → août).** Multica crash dans la
-compaction (17-07), puis Pane, puis Orca, puis Buzz, puis Herdr — « la couche d'execution n'est
-jamais stable plus de 48 h », « tu me rend malade » (22-07). En août, « chaque campagne d'agents
-commence par réparer le canal censé l'exécuter » (gateway 08-04, 08-09, ancienne version en
-localhost 08-02). La même boucle sous une autre forme en juin : les hooks qui coûtent « des
-dizaine de minutes » (06-02) et reviennent du 02 au 28 sans changement structurel.
-
-**3. La boucle production fantôme / cimetière d'artefacts (juin → août).** Juillet : des
-chapelets de 30-40 agents Multica de 70 mots (« You were just created »), créés jamais chargés
-— « coût de quota le plus pur du mois » ; les ticks EXPANSION du 26-07 produisent des artefacts
-en worktrees « que personne ne relit ensuite — "anti-cimetière" énoncé en ADR pendant que le
-cimetière pousse ». Août : les vagues qui déclarent sans avoir lu relancent la même structure.
-
-**4. La boucle mémoire-contexte perdue (mai → août, quatre visages).** Sessions mortes en mai
-(« tes null ou quoi? », 05-19), relais permanent CC ↔ Codex en juin (« est tu pret a prendre le
-handoff »), « la memoire de claude code est un enfer » (08-04), mémoire « éparpillée hors des
-Ressources » (08-01), relecture OKF (08-23) — « le même problème rejoué sous trois formes sans
-se clore ». S'y ajoute le redémarrage à zéro : « chaque session repart de zéro sur ce que le
-système est ».
-
-**5. La boucle produit jamais déclaré bon.** Alykaly en mai : le même défaut « change de
-visage » en ~6 sessions sans se clore. Coach OS : l'échéance du 08-11 n'empêche ni la vague QA
-du 08-10, ni les correctifs du 08-15, ni le travail de reproductibilité fin de mois. Business OS
-en juin : fichiers « PÉRIMÉS » à resynchroniser. Trois produits, trois fois la même convergence
-inachevée — l'échéance externe est le seul moteur de convergence, et il est repoussé.
-
-**6. La boucle surface d'attaque (coût faible mais récurrent).** P1/P2/P3 traitées le 08-04,
-wargame d'accès le 08-14 : « la surface d'attaque revient à chaque outil adopté ». Structurellement
-la même chose que la boucle 2 : chaque nouvelle pièce réouvre le chantier de la précédente.
-
-La boucle session-morte de mai (context overflow → resume → échec) et la boucle collision de juin
-(écrivains parallèles, « STOP IMMÉDIAT », fichiers « PÉRIMÉS ») sont des cas particuliers de la
-boucle 4 et de la boucle 3 respectivement : elles disparaissent comme libellés mais leurs causes
-persistent dans les vagues d'août.
-
-## 4. Désirs — ce qu'il vise au-delà de la tâche
-
-**L'équipage.** « Le vocabulaire Star Trek et Marvel n'est pas un habillage, c'est l'organisation
-désirée — un capitaine, des officiers par domaine, des rôles fidèles, la flotte qui vole sans le
-capitaine à la barre. » La nomenclature précède la fonction dès avril (Picard, Spock, Jerry) ;
-en août, « Concevoir un poste de travail comme un organigramme, même quand il n'y a qu'un
-exécutant » (« Tu es A0 — Amadeus »). Le désir est la loyauté des rôles, pas le nombre d'agents.
-
-**La vue totale.** « Tout converge vers le désir d'une vue totale de ce qui tourne » (cabine
-une page, cartographie des workflows, L0 Kernel du 06-28, analyse des 405 JSONL le 30-07, %
-de couverture des vagues). Le 30-07 en est la crystallisation : le système se regarde au lieu
-de s'agrandir.
-
-**La preuve avant l'usage.** Gates, pré-mortems, receipts D1, evals comparatifs (06-12/13) :
-« rien n'entre en service sans s'être justifié ». C'est le désir qui a nourri les verrous
-D1/D6/D7 de juillet (« verify-before-assert », « anti-falsification »).
-
-**L'ingestion totale du passé** — 32 000 vidéos, takeout, corpus V2 — « dans un canon qui
-pense à sa place ». Le désir d'un passé entièrement digéré, pas seulement stocké.
-
-**Voir tourner, et que ça survive.** Localhost, base de données locale ramenée « chez soi »
-(août), puis « dépôt reproductible par un tiers » et « bridge d'agnosticité de harnais » : que
-l'édifice survive hors de sa machine et hors de son fournisseur.
-
-**La peur miroir.** ANTI-PAPERCLIP-001, ANTI-TEMPLATE-001, ANTI-POLLUTION, « anti-cimetière » :
-un désir négatif qui organise autant que les autres — « produire de la paperasse en croyant
-produire de l'entreprise ».
-
-**L'incarnation.** Le pivot Rick « Sovereignty, Anti-fragility » (06-21) est « un énoncé de
-posture désirée, pas un besoin fonctionnel » — la gouvernance doit avoir des visages et des vétos.
-
-## 5. Trajectoire
-
-**Le déplacement du goulot est la donnée centrale.** En mars-mai, Amadeus est le dispatcher :
-36 sessions manuelles le 05-21, agents qui « pretend avoir fini », re-vérification à la main. En
-juin, la délégation devient « le mode de travail, pas un outil ponctuel » et la gouvernance
-s'accumule incident par incident. En juillet, l'orchestration culmine — et se retourne contre
-elle-même : carburant « crammé » (10-07), production fantôme, orchestrateurs remplacés tous les
-48 h, worktrees que « personne ne relit ensuite ». Le 30-07, premier moment du mois où « le
-systeme se regarde au lieu de s'agrandir » (« ANALYSE TOUS LES JSON DE MES SESSIONS CC »). En
-août, la délégation industrielle (350 sessions) **s'éteint brutalement après le 08-22** et cède
-la place à des « briefs d'exécution directe » — pendant que la seule intention qui naît est la
-relecture de ce qui a été produit (08-23).
-
-**Point de bascule : le 30 juillet**, suivi de sa confirmation les 08-22/08-23. Le 30-07
-bascule l'attention de la production vers l'auto-examen ; le 08-22 tue la délégation par vagues ;
-le 08-23 fait naître la relecture. Les trois dates disent la même chose à quinze jours
-d'intervalle : le goulot a migré de la production à la vérification.
-
-**Ce qui n'a pas bougé.** La plainte de vérifiabilité, formulée trois fois à quatre mois
-d'intervalle sans que rien ne la résolve : « pretend avoir fini tes taches » (04-23) → « Tu as
-deja tourne une fois et tes 6 fichiers ont echoue sur disque » (13-07) → « La vague 1 a lu peu de
-fichiers et l a déclaré » (08-13). L'infrastructure du poste, en boucle ouverte depuis mars.
-La mémoire/contexte, rejouée en mai, juin et août. Et le goulot humain : le désir de ne plus être
-le goulot (« en Autonomie ») contredit chaque mois par l'intervention constante — sauf fin août,
-où les vagues éteintes le rendent à nouveau exécutant direct.
-
-**Ce qui a régressé.** L'incarnation (I5) est reconstruite plus qu'utilisée puis abandonnée
-après juin. Le wargame (I6) domine juillet et meurt dans le même mois. La digestion du corpus
-(I4) plafonne à 30 % déclarés. La seule chose qui monte en fin de période n'est pas une
-production : c'est la relecture.
-
-## 6. Ce que la migration V3 doit absolument porter
-
-Exigences déduites des sections 1-5, chacune rattachée à sa source.
-
-1. **Un registre de preuve, pas des déclarations.** Toute affirmation d'état (« fini », « lu »,
-« corrigé ») doit être rattachée à une vérification sur disque. Rattachement : problématique 1
-et 3 ; « Hermes Agent pretend avoir fini » (04-23) → « 6 fichiers ont echoue sur disque »
-(13-07) → « La vague 1 a lu peu de fichiers et l a déclaré » (08-13).
-2. **La vérification comme étage permanent, pas comme rituel refait à la main.** Les 9 audits
-de mai précédaient chaque « Develop »/« Fill » à la main ; la relecture née le 08-23 (I7) doit
-être un étage permanent de V3, pas une intention de fin de mois. Intention I7, besoin de
+**Ce qui n'a jamais bougé :** les applications (18→55→59→62) et l'exigence de
 vérifiabilité.
-3. **Une couche d'exécution stable par construction.** Cinq orchestrateurs remplacés en juillet,
-aucun stable 48 h ; chaque campagne d'août commence par réparer le canal. Une pièce d'exécution
-qui casse doit bloquer l'adoption de nouvelles pièces tant qu'elle n'est pas fermée. Intention
-I2, problématique 2.
-4. **Une mémoire de session qui ne casse pas au milieu du travail, et une reprise pas chère.**
-De « tes null ou quoi? » (05-19) aux cinq relances du 06-25 (17k → 133k mots) au RAG « decouvrir »
-le 08-04 : le même besoin non satisfait depuis mai. Problématique 4.
-5. **Une définition interne de « bon pour livraison ».** L'échéance « Monday 2026-08-11 » n'a
-pas produit la convergence (QA le 08-10, correctifs le 08-15, reproductibilité fin de mois).
-Les critères de fin doivent venir de l'architecture, pas d'une date externe. Intention I3,
-problématique 5.
-6. **L'anti-cimetière exécutable.** Agents « You were just created » jamais chargés, worktrees
-que « personne ne relit ensuite » (26-07) : tout artefact ou agent créé doit porter, dès sa
-création, son lecteur et son sort. Problématique 3.
-7. **Le carburant compté avant la vague.** « j'ai crammé mon quotat de 5h d'opus en 1 Super
-Execution » (10-07), « nuit blanche » (08-01), « et Deepseek ? » (08-21) : l'ampleur de chaque
-vague doit être confrontée au réservoir avant le lancement, pour ne plus produire de pipelines
-dégradés qui continuent de compter des sessions. Intentions I1 et I4.
-8. **La continuité de l'incarnation à travers la migration.** L'équipage reconstruit « trois
-fois en huit jours » (juin) doit survivre au passage V2 → V3 sans re-twin : noms, rôles, vétos
-portés comme données, pas régénérés par étage. Intention I5.
-9. **Une cartographie vivante qui mesure ce qui a été réellement lu.** Les briefs VAGUE
-embarquent leurs pourcentages, « c'est-à-dire l'aveu qu'on ne sait pas ce qui a été lu » ; la
-cartographie V3 doit porter la couverture réelle, vérifiée — la boussole demandée depuis le
-« qu'est ce qu'on peut faire ou doit faire? » de juin. Intention I4, besoin de traçabilité.
 
-## 7. Ce que tu n'as pas pu déterminer
+---
 
-- **La répartition Claude Code / Codex** des 2 325 messages n'est donnée nulle part. Impossible
-de savoir si les boucles (relance, collision, handoff) sont symétriques entre les deux outils ou
-portées par l'un seulement — et donc quel outil V3 doit remplacer en priorité.
-- **L'issue des sessions longues.** Les analyses citent surtout ouvertures et préambules. Les
-sessions géantes d'août (71 000 à 99 000 mots, substitution d'une base locale à Supabase) sont
-résumées en une ligne : leur issue (tournante, abandonnée) est indéterminable.
-- **L'issue des boucles elles-mêmes.** Le besoin nocturne du 02-07 est dit « jamais démontré
-atteint » — mais rien n'établit non plus son échec. La boucle Next.js de mai est « jamais close
-dans le morceau » : on ignore si elle s'est close après. Les boucles sont décrites au présent ;
-leur dénouement est hors champ.
-- **La survie de l'intention I7.** Elle naît le 08-23, dernière date fournie. Rien ne dit si
-elle a tenu en septembre ou si elle a rejoint le sort des intentions nées puis éteintes
-(wargame, vagues).
-- **Le volume exact par intention.** Les modes de comptage changent d'une période à l'autre
-(sessions, messages, sous-agents) ; les chiffres (~150 en juin, « plusieurs centaines sur 1123 »
-en juillet, ~350 en août) ne se cumulent pas. Le classement par volume est ordinal, pas cardinal.
-- **Ce qui a marché.** Les analyses portent presque exclusivement sur les échecs et les boucles.
-Les vagues qui ont fonctionné, s'il y en a, sont invisibles : je peux dire ce qu'il faut réparer,
-pas ce qu'il ne faut surtout pas changer.
-- **La résolution de la contradiction centrale** — « en Autonomie » demandé (06-20) contre
-intervention constante — est notée par les analyses de juin et d'août, mais aucune ne documente
-sa résolution, ni même un épisode où l'autonomie a réellement tenu sans lui.
-- **L'activité hors des deux outils analysés** (tout ce qui n'a pas laissé de message Claude
-Code ou Codex) est comptée comme absente. Si une partie du travail a quitté ces deux canaux,
-elle n'existe pas dans ces analyses.
+## 6. Ce que la migration V3 doit porter
+
+| # | Exigence | Rattachée à |
+|---|---|---|
+| E1 | Le **mandat d'autonomie vit dans un fichier lu au démarrage**, pas dans l'historique. C'est la seule correction qui casse P1 à la racine. | B1, P2 |
+| E2 | Un **compteur de rejeu** : si une intention est déjà vue, le dire avant d'exécuter. Un système qui ne sait pas qu'il se répète ne peut pas s'arrêter. | P1 |
+| E3 | La **cartographie régénérée**, pas rédigée, en tête des points d'entrée. | B2, P3 |
+| E4 | Tout chiffre affiché est **lu à chaud** ; aucune mesure figée dans le code. | P4, D2 |
+| E5 | **Dégraisser le plancher de contexte.** Chaque 10k retiré rend $0,05/appel sur Opus, sur *tous* les appels. | P5 |
+| E6 | La **vérification est scriptée**, l'inférence propose, le script tranche. | B3, D2 |
+| E7 | Le passage `machine → humain` reste **manuel et explicite**. Aucun script ne le pose. | P6, D2 |
+| E8 | Les **surfaces visibles sont un livrable de premier rang**, pas un habillage. C'est la seule intention qui n'a jamais reculé. | I2, B2 |
+| E9 | Toute nouvelle cadence exige de **nommer celle qu'elle remplace**. | B4, D4 |
+| E10 | La **franchise se réplique par générateur**, jamais par copie. Deux exemplaires d'un standard divergent en silence. | D4 |
+
+---
+
+## 7. Ce que je n'ai pas pu déterminer
+
+1. **Les premiers messages ne disent pas les résultats.** Je mesure ce que tu as
+   demandé, pas ce que tu as obtenu. Un thème très demandé peut être très
+   satisfait — ou pas du tout. Le corpus des 4 647 transcriptions complètes le
+   dirait ; il n'a pas été analysé ici.
+
+2. **Le seuil de duplication est un choix.** « Même intention » = 120 premiers
+   caractères normalisés identiques. Un brief reformulé compte comme unique.
+   Le taux réel de rejeu est donc **au moins** 42,4 %, probablement plus.
+
+3. **Mars et avril sont vides** (7 sessions). L'origine de la trajectoire est
+   invisible : soit tu ne travaillais pas ainsi, soit ces sessions ont été
+   perdues avant la désactivation de la rétention.
+
+4. **Je n'ai pas mesuré le coût par intention.** Savoir quelles intentions
+   consomment le plus demanderait de croiser avec les compteurs d'usage.
+   C'est faisable et ce n'est pas fait.
+
+5. **Les 10 analyses partielles déléguées sont inégales.** Plusieurs ont produit
+   un inventaire chronologique au lieu d'une analyse. Elles ont servi de matière
+   première ; les conclusions ci-dessus reposent sur les **comptages scriptés**,
+   reproductibles, pas sur leur jugement.
+
+---
+
+*Reproduire les mesures : `_substrat/05_Sessions.jsonl` est l'entrée, les
+scripts de comptage sont dans le corps de cette session. Les 10 analyses
+partielles sont dans `50_Distillation/_partiels/`, les tranches dans
+`50_Distillation/_tranches/`.*
