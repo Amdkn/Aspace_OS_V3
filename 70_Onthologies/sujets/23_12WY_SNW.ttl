@@ -1,0 +1,103 @@
+@prefix aspace: <urn:aspace:> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Domaine 23_12WY_SNW — genere par porte_argent.py le 2026-08-30T02:18:00Z
+# 16 documents. Triplets mecaniques : le fichier est le sujet,
+# chaque cle de frontmatter un predicat, chaque valeur un objet.
+
+<urn:aspace:23-12wy-snw-01-vision-pike-a3-pike-vision-spec-md> a aspace:Document ;
+    rdfs:label "A3 Pike Spec - Vision / Quarter Intent" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 197 .
+
+<urn:aspace:23-12wy-snw-01-vision-pike-readme-md> a aspace:Document ;
+    rdfs:label "01_Vision_Pike" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 159 .
+
+<urn:aspace:23-12wy-snw-02-planning-una-a3-una-planning-spec-md> a aspace:Document ;
+    rdfs:label "A3 Una Spec - Planning / Rocks" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 200 .
+
+<urn:aspace:23-12wy-snw-02-planning-una-readme-md> a aspace:Document ;
+    rdfs:label "02_Planning_Una" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 156 .
+
+<urn:aspace:23-12wy-snw-03-focus-mbenga-a3-mbenga-focus-spec-md> a aspace:Document ;
+    rdfs:label "A3 M'Benga Spec - Process Control / Focus" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 239 .
+
+<urn:aspace:23-12wy-snw-03-focus-mbenga-readme-md> a aspace:Document ;
+    rdfs:label "03_Focus_MBenga" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 161 .
+
+<urn:aspace:23-12wy-snw-04-metrics-chapel-a3-chapel-metrics-spec-md> a aspace:Document ;
+    rdfs:label "A3 Chapel Spec - Metrics / Scorecard" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 235 .
+
+<urn:aspace:23-12wy-snw-04-metrics-chapel-readme-md> a aspace:Document ;
+    rdfs:label "04_Metrics_Chapel" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 163 .
+
+<urn:aspace:23-12wy-snw-05-execution-ortegas-a3-ortegas-execution-spec-md> a aspace:Document ;
+    rdfs:label "A3 Ortegas Spec - Weekly Execution / Time Use" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 256 .
+
+<urn:aspace:23-12wy-snw-05-execution-ortegas-readme-md> a aspace:Document ;
+    rdfs:label "05_Execution_Ortegas" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 161 .
+
+<urn:aspace:23-12wy-snw-a2-curie-snw-spec-md> a aspace:Document ;
+    rdfs:label "A2 Curie / SNW Spec - 12 Week Year Execution Engine" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 570 .
+
+<urn:aspace:23-12wy-snw-a3-snw-references-index-md> a aspace:Document ;
+    rdfs:label "A3 SNW References Index" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 466 .
+
+<urn:aspace:23-12wy-snw-readme-md> a aspace:Document ;
+    rdfs:label "23_12WY_SNW - Handoff A2" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 561 .
+
+<urn:aspace:23-12wy-snw-w1-item2-13e-semaine-rock-decomposition-md> a aspace:Document ;
+    rdfs:label "W1 Item 2 — Rock Decomposition 13e Semaine (Una H10 Planning)" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 364 .
+
+<urn:aspace:23-12wy-snw-w1-quarter-intent-q3-2026-md> a aspace:Document ;
+    rdfs:label "W1 Quarter Intent Q3 2026 — Vision Pike" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 318 .
+
+<urn:aspace:23-12wy-snw-w1-shadow-tools-routing-md> a aspace:Document ;
+    rdfs:label "\"Symphony Runtime : Supabase → Baserow → Obsidian → Affine → Plane.so\"" ;
+    aspace:seau <urn:aspace:23-12wy-snw> ;
+    dct:modified "2026-06-21" ;
+    aspace:mots 727 .

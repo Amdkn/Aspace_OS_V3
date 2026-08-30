@@ -1,0 +1,36 @@
+{
+ "domaine": "23_12WY_SNW",
+ "source": "C:\\Users\\amado\\ASpace_OS_V2\\20_Life_OS\\24_PARA_Enterprise\\03_Resources_Geordi\\05_From_V2_Domains\\20_Life_OS\\23_12WY_SNW",
+ "genere": "2026-08-30T02:18:00Z",
+ "distillation": {
+  "lus": 16,
+  "echecs": 0,
+  "fichiers": 16
+ },
+ "methodologique": {
+  "echelles": {
+   "semaine": 16,
+   "jour": 4,
+   "deep-work": 11
+  },
+  "modes": {
+   "collaboratif": 9,
+   "autonome": 7
+  },
+  "gtd": {
+   "capture": 2,
+   "clarify": 14,
+   "organize": 13,
+   "review": 9,
+   "engage": 16
+  },
+  "sans_rattachement": [],
+  "couverture_echelle": 100
+ },
+ "ontologie": {
+  "triplets": 80,
+  "sujets": 16
+ },
+ "verdict": "passe",
+ "reserves": []
+}

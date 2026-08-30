@@ -57,4 +57,5 @@ pas l'endroit où l'on **range** les siens.
 - [canon](canon/) - Sauvegarde des deux `CLAUDE.md` qui pilotent l'agent et vivent hors de tout dépôt.
 - [integrations](integrations/) - Ce qui est branché à quoi, et ce que ça a coûté d'y arriver.
 - [operations](operations/) - Playbooks, runbooks, gestes de remise en route.
+- [learning](learning/) - Les echecs mesures, pour ne pas les rejouer.
 - [security](security/) - Modèles de sécurité, vulnérabilités, cloisonnements.
