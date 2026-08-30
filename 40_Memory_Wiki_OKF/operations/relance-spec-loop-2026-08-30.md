@@ -102,7 +102,8 @@ Le répertoire d'état `Temp/ordonnanceur` avait de surcroît été nettoyé.
   des morts.
 - Les six autres cadences (5 m à 30 m) pointent vers des cibles V2 à
   requalifier une par une avant réactivation.
-- `babysitter` (Morty en tant qu'outil) reste non installé — Morty tourne en
-  discipline inline dans le programme, comme Beth.
+- `babysitter` v6.0.0 installé à 15:00 (`npm i -g @a5c-ai/babysitter`, test :
+  `babysitter --version`). Morty tourne toujours en discipline inline ; le
+  brancher sur `run:create` / `session:*` est le chemin ouvert suivant.
 - Surveiller le plancher de tokens du routeur 8792 et le plafond
   `MAX_NODE=45`.

@@ -55,6 +55,18 @@ exactement ce que cet audit reproche au worker de référence. Les capacités 3
 et 5 de la définition falsifiable — *construire un artefact réel*, *scorer une
 prédiction* — restent ouvertes.
 
+**La cadence aussi est détachée** (ajouté le 2026-08-30 16:00). `A0.sh` tourne
+une fenêtre bornée — 4 h par défaut — puis s'arrête. GLM 5.3 Flash l'a signalé
+en fin de son second passage : « sans tâche planifiée de relance, il faudra
+relancer à la main après ». C'était la capacité 8 ouverte pour la cadence, alors
+qu'elle venait d'être fermée pour le kernel.
+
+`ordonnanceur/relancer_a0.sh`, tâche `ASpace_A0_Relance` toutes les 10 min. Il
+ne relance que sur **silence de `etat_1m.md` au-delà de 6 min**, et refuse s'il
+voit déjà un `A0.sh` : deux ordonnanceurs concurrents produiraient les doublons
+que `p8-forum-agents` existe pour empêcher. Vérifié `rc=0` **et** ligne écrite
+au journal — un code de retour seul n'aurait pas prouvé qu'il a agi.
+
 **Le battement est détaché.** Tâche planifiée `ASpace_V3_Battement`, toutes les
 15 minutes, `StartWhenAvailable` — donc elle rattrape après une extinction.
 C'est la capacité 8, *recommencer après redémarrage*, et elle est fermée.

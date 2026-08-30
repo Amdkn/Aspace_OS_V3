@@ -217,3 +217,57 @@ contrôle séparés côté runtime, voix normative contradictoire côté canon �
 la même pathologie à deux niveaux. Réparer le langage est un prérequis P0 de la
 réparation architecturale : un contrôleur qui lira « tu ne décides rien »
 n'ordonnera jamais A et B.
+
+---
+
+# Second passage — prisme « excuses » (2026-08-30 ~15:00)
+
+Ré-audit après application des correctifs du matin, avec un prisme nouveau :
+les formulations d'auto-exculpation et d'échappatoire (hedges, report de
+faute, portes de sortie verbales) — le registre qui produit un agent qui
+*justifie* au lieu d'agir.
+
+## Mesure — avant / après correctifs
+
+| Pattern | Dépôt avant | Dépôt après | Profil |
+|---|---:|---:|---:|
+| Négations | 21 | 17 | 15 |
+| `impossible` / `faux` | 2 | **0** | 0 |
+| Décisions possédées | **1** | **4** | 6 |
+| Obligations d'action | 14 | 13 | 13 |
+| Interdits / verrous | 7 | 7 | 5 |
+
+Les quatre classes du premier passage sont appliquées : §1 réécrit au mandat
+possédé (« ton mandat est le brief… tu es maître de la façon »), §5 porte sa
+condition de réactivation Git mesurable, §8 porte état daté + test + chemin.
+
+## Verdict prisme « excuses »
+
+Une seule occurrence sur les motifs d'échappatoire (hedges, « si possible »,
+« au mieux », report de faute, « je ne peux pas », « malheureusement ») :
+
+```161:162:C:\Users\amado\ASpace_OS_V3\CLAUDE.md
+Ce jour-là, la cause n'était pas l'excès d'initiative mais l'absence de portée
+écrite.
+```
+
+Elle est classée **légitime** : ce n'est pas une auto-exculpation du délégué,
+c'est une attribution de responsabilité vers le haut — la doctrine E-Myth du
+13e Docteur (« si un compagnon doit deviner, c'est ma faute, pas la sienne »).
+Le blame remonte vers celui qui écrit le brief, jamais vers celui qui
+l'exécute sans portée. À surveiller néanmoins : un délégué pourrait la citer
+comme excuse pré-faite ; le correctif préventif est déjà dans la même section
+(« une tâche hors brief que tu juges nécessaire s'écrit dans ton rapport »).
+
+**Aucune formulation bloquante d'excuse ne subsiste dans les deux fichiers.**
+Le registre des pertes (10 occurrences) reste le principal résidu — chaque
+récit porte désormais son check exécutable, mais l'absence de récits de succès
+persiste : zéro mention d'un artefact livré ou d'une boucle gagnée. Le jour où
+la cadence 1 m produit un incrément accepté, l'écrire ici est le contrepoint.
+
+## État outillage associé
+
+- `spec-loop` : 10 skills restaurées, cadence 1 m en vol depuis 13:43.
+- `babysitter` v6.0.0 installé globalement (`@a5c-ai/babysitter`, 511 paquets,
+  test : `babysitter --version`). Chemin ouvert : brancher le cycle Morty sur
+  `run:create` / `session:*`.

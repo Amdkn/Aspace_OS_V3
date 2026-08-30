@@ -296,8 +296,9 @@ Les écraser rend l'architecture illisible et fait proposer des remplacements
 d'étage là où il ne s'agit que d'outillage. Affectation donnée par le
 propriétaire : **gstack → B1, superpowers → B2, GSD → B3**.
 
-**État au 2026-08-30 :** `spec-loop` (cadence 1 m, Beth/Morty) tourne — test :
+**État au 2026-08-30 15:05 :** `spec-loop` (cadence 1 m, Beth/Morty) tourne — test :
 `type %TEMP%\ordonnanceur\etat_1m.md`, relance : `bash A0.sh 4` via
-`claude-glm.cmd`. `babysitter` est configuré mais pas installé ; l'installer
-est un chemin ouvert, pas une porte fermée. Détail :
+`claude-glm.cmd`. `babysitter` v6.0.0 est installé (test : `babysitter --version`) ;
+brancher le cycle Morty sur `babysitter run:create` / `session:*` est le chemin
+ouvert suivant. Détail :
 `40_Memory_Wiki_OKF/operations/relance-spec-loop-2026-08-30.md`.
