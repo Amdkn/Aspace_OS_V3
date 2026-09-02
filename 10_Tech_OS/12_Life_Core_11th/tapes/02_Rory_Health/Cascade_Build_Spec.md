@@ -34,7 +34,7 @@ Le script exécutable est `apply_life_os_cascade.sh` (17865 B, attachment id `01
 9. (séparation) 11e Docteur prononce 'done' après vérification humaine.
 ```
 
-## Critères de fin vérifiables
+## Critère d'acceptation
 
 | # | Critère | Attestation |
 |---|---|---|

@@ -5,6 +5,7 @@ description: Remplacer le composant dans le manifeste ferme toutes les portes d'
 tags: [coach-os, architecture, registre, feature-flag, bundle]
 generated: { by: claude-opus-5, at: 2026-08-17T19:10:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:36:01Z }
   - { by: process:curl-bundle-prod, at: 2026-08-17T19:05:00Z }
 sources:
   - id: mesure-bundle

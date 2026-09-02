@@ -5,6 +5,7 @@ description: 866 plugins au catalogue ; sur 36 manifestes lus, 13 déclarent win
 tags: [herdr, plugins, windows, wsl, marketplace, compatibilite, orchestration, llmtrim, securite]
 generated: { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:33:21Z }
   - { by: claude-opus-5, at: 2026-08-29T01:05:00Z }
   - { by: claude-opus-5, at: 2026-08-29T01:30:00Z }
 sources:

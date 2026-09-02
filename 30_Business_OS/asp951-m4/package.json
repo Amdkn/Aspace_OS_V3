@@ -1,0 +1,11 @@
+{
+  "name": "asp951-m4",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.9"
+  }
+}

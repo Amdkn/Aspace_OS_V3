@@ -1,17 +1,27 @@
-# 01_H1_Isaac - A3 Handoff
-
-> A3: Isaac  
-> Horizon: H1 / 1 year  
-> Parent A2: Orville  
-> Output: annual realism finding
-
-Read `A3_Isaac_H1_Spec.md` before evaluating any Context Pack. Isaac checks whether the intention can become real within the next year and whether it connects cleanly to 12WY.
-
+---
+id: A3_H1_ISAAC
+layer: L1_Life_OS
+parent_a2: ORVILLE
+role: A3_HORIZON
+horizon: H1 / 1 year
+status: SHADOW_ACTIVE
 ---
 
-## Alignement Plan fancy-hugging-bengio.md (2026-06-21)
+# 01_H1_Isaac - A3 Horizon Ring
 
-> **D1 receipt** : Isaac = H1 sentinel (annual realism). Verrouillé par plan **§3.2** + **§18.1** (Zora LD01 Book H1 weekly P&L — pattern canon strict).
-- **D3 nuance (D4 close)** : Isaac Orville = H1, PAS H10. Mapping twin canon = `SDD-005:533`.
-- `annual_realism: fantasy` → escalade Orville → Beth veto (plan §3.6 anti-paperclip).
+## Mission
 
+Isaac inspects the same intention at the H1 / 1 year horizon and writes a annual realism finding. Isaac prevents the present from betraying the future at this scale and does not compile the final Ikigai decision; Orville does.
+
+## Handoff Rule
+
+Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a long-horizon RED, Isaac escalates to Orville and Beth before any execution packet reaches Morty.
+
+## Evidence
+
+- [Ikigai_Pillars_Horizons_Kardashev.md](../../Ikigai_Pillars_Horizons_Kardashev.md#h1---1-year---the-escape-and-the-breach) - H1 - 1 Year - The Escape And The Breach section (Isaac)
+- Canon spec: `../..//A2_Orville_Spec.md` (Outputs: meaning_alignment, beth_recommendation, morty_route, evidence_paths, pillar_horizon_packet)
+
+## Context7 Boundary
+
+No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.

@@ -1,1 +1,1226 @@
-{}
+{
+  "C001": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C002": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C003": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C004": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "État d'exécution effectif retenu : Phase D DONE dans AGENTS.md prévaut sur les chartes antérieures.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C005": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "T1/T2/T3 adopté comme standard de format opérationnel, B1/B2/B3 comme typologie de contenu.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C006": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C007": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C008": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C009": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C010": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C011": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C012": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C013": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "État d'exécution effectif retenu : Phase D DONE dans AGENTS.md prévaut sur les chartes antérieures.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C014": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "T1/T2/T3 adopté comme standard de format opérationnel, B1/B2/B3 comme typologie de contenu.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C015": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C016": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C017": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C018": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C019": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C020": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C021": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C022": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C023": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-07 > 2026-05-27).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C024": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C025": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C026": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C027": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C028": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-07 > 2026-05-27).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C029": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C030": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C031": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C032": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C033": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C034": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C035": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C036": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C037": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Normalisation syntaxique : alignement sur la convention canonique V3 (kebab-case/canonique).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C038": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C039": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C040": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (ancien > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C041": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C042": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (n/a > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C043": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C044": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C045": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C046": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-31 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C047": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (avant 2026-06-21 > 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C048": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (ancien > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C049": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C050": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (n/a > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C051": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C052": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C053": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C054": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-31 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C055": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (avant 2026-06-21 > 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C056": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-27 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C057": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C058": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "T1/T2/T3 adopté comme standard de format opérationnel, B1/B2/B3 comme typologie de contenu.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C059": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C060": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C061": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C062": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C063": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C064": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C065": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C066": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-03 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C067": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (ancien > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C068": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C069": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (n/a > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C070": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C071": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C072": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C073": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-31 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C074": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (avant 2026-06-21 > 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C075": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C076": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C077": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C078": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-27 > 2026-05-22).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C079": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C080": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C081": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C082": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C083": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C084": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-27 > 2026-05-22).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C085": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-29 > 2026-05-22).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C086": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-27 > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C087": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C088": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C089": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C090": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (avant 2026-06-03 > 2026-06-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C091": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026-08-01).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C092": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C093": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C094": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C095": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C096": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-06-19).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C097": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-26 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C098": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-07-02).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C099": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C100": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-06-XX).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C101": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C102": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C103": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (divers (doublons créés par erreur) > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C104": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026-08-01).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C105": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "8 domaines canoniques ratifiés en V3 (batch 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C106": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026-08-01).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C107": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C108": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C109": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C110": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C111": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-06-19).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C112": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-26 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C113": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-07-02).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C114": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C115": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-06-XX).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C116": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C117": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C118": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (divers (doublons créés par erreur) > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C119": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026-08-01).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C120": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "8 domaines canoniques ratifiés en V3 (batch 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C121": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-03 > 2026-06-27).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C122": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (divers (doublons créés par erreur) > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C123": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-27 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C124": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C125": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-01 > 2026-07-02).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C126": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-03 > 2026-06-25).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C127": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-12 > 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C128": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C129": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C130": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C131": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C132": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C133": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C134": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C135": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C136": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-02 > (anterior)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C137": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C138": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 > 2026-06-15).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C139": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-16 > 2026-07-11).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C140": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C141": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C142": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-26 > 2026-07-04).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C143": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-26 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C144": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C145": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-26 > 2026-07-04).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C146": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "La version la plus complète (5 JTBD de 02 ABC) constitue la référence opérationnelle.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C147": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-19 > 2026-07-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C148": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C149": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C150": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C151": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C152": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026 (00_Amadeus canon)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C153": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (antérieure > 2026-05-20 + alignement 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C154": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 plan > 2026-05-20 (résolu) + alignement 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C155": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (Q3 2026 > 2026-05-20).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C156": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C157": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C158": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C159": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C160": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "T1/T2/T3 adopté comme standard de format opérationnel, B1/B2/B3 comme typologie de contenu.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C161": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C162": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026 (00_Amadeus canon)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C163": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (antérieure > 2026-05-20 + alignement 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C164": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 plan > 2026-05-20 (résolu) + alignement 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C165": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (Q3 2026 > 2026-05-20).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C166": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C167": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C168": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C169": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C170": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-21 > 2026-05-20).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C171": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 amended > 2026-05-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C172": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C173": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C174": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C175": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 (canon corrigé) > 2026 (canon Picard historique)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C176": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 > 2026-05-20 (résolu) + alignement 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C177": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C178": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-23 > 2026-06-22).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C179": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (Q3 2026 > 2026-05-20).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C180": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-28 > 2025-08-15).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C181": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-28 > 2026-05).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C182": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C183": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-26 > 2026-03).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C184": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05-17 > 2026-05-15).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C185": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-28 > 2026-05-27).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C186": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C187": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-12 > 2026-07-07).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C188": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Structure V3 ratifiée retenue sur les versions V2 archivées.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C189": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C190": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-07-19 > 2026-04-09).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C191": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-08-02 > 2026-06-28).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C192": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Hiérarchie temporelle validée : 84 jours = trimestre 12WY, 21 jours = sous-cycle sprint W1-W3.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C193": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C194": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C195": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-06-21 > 2026-05-20 (canon local actif) + 2026-06-21 (canon twin)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C196": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C197": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C198": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C199": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (2026-05 (canon A0) > 2026 (post)).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C200": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Unification canonique : Martian Manhunter (alias métier) = John Jones (owner 08_Sales).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C201": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C202": {
+    "choix": "a",
+    "qui": "amdkn",
+    "note": "Canon récent retenu (antérieure > 2026-06-21).",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C203": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "ADR ratifié le plus récent adopté comme source de vérité documentaire.",
+    "a": "2026-08-31T22:08:49Z"
+  },
+  "C204": {
+    "choix": "b",
+    "qui": "amdkn",
+    "note": "Arbitrage automatique doctrine V3 : convergence vers le canon le plus récent et stable.",
+    "a": "2026-08-31T22:08:49Z"
+  }
+}

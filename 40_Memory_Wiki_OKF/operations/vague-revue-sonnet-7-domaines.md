@@ -5,6 +5,7 @@ description: Sept domaines relus intégralement par des sous-agents Sonnet 5 ; l
 tags: [revue, okf, sonnet, sous-agents, verification, notebooklm, confiance, 8-domaines]
 generated: { by: "claude-opus-5", at: "2026-08-22T22:00:00Z" }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:36:52Z }
   - { by: "claude-opus-5", at: "2026-08-22T22:00:00Z" }
   - { by: "process:revue-sonnet-5", at: "2026-08-22T22:00:00Z" }
 sources:

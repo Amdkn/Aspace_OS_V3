@@ -5,6 +5,7 @@ description: Audit mesuré des deux CLAUDE.md qui pilotent chaque session. Ident
 tags: [aspace-v3, langage, impuissance-acquise, canon, claude-md, autonomie, vivance]
 generated: { by: verdent-gpt-5.6-sol, at: 2026-08-30T12:42:03-04:00 }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:34:48Z }
   - { by: verdent-gpt-5.6-sol, at: 2026-08-30T12:55:00-04:00 }
 sources:
   - id: depot-claude-md

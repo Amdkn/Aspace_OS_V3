@@ -1,0 +1,32 @@
+[
+  {
+    "domaine": "Architecture agentique",
+    "apprentissage": "Le modele des cinq couches (Identity, Rules/hooks, Skills, Agents, Tools/MCP/CLI) est ordonne par stabilite : les agents perissent le plus vite (rot rate maximal, prompt dedate par chaque nouveau modele), l'identite le moins. Le rot rate doit etre declare explicitement par couche plutot que redécouvert. Ne compter comme primitive que ce qui apparait dans au moins 3 des 7 sources (memoire unifiee 6/7, skills 6/7, dashboard 6/7, agents specialises 6/7) ; le reste (3D, voix, bridge Telegram) est opinion.",
+    "source": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/09_Blueprints/agentic-os/SYNTHESE_AGENTIC_OS.md"
+  },
+  {
+    "domaine": "Coach OS / Ontologie metier",
+    "apprentissage": "Quatre agents sur cinq, sur corpus disjoints, ont propose le meme objet central (graphe d'entites et processus metier) sous quatre noms et quatre emplacements : signature d'une couche transversale, pas d'une app. Le defaut de Coach OS est l'absence de modele : Person, Squad, Agent, Runbook, Incident, Deploy manipules dans 19 apps sans etre nommes. L'app manquante est 'ontology' (interface de curation, pas base de graphe).",
+    "source": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/09_Blueprints/coach-os-refonte/SYNTHESE.md"
+  },
+  {
+    "domaine": "Coach OS / These FDE",
+    "apprentissage": "La these agent-FDE tient partiellement : cinq gestes techniques s'automatisent (ontologie, plan, configuration d'agents, evals, deploiement partiel), quatre gestes politiques restent irreductibles (engager les proprietaires de donnees, capturer les chemins non-ecrits, arbitrer le risque, promouvoir un constat en primitive). Decision strategique : le garant est le sponsor du client lui-meme, seul montage ou l'acces politique cesse d'etre un point de rupture — coherent avec la doctrine E-Myth.",
+    "source": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/09_Blueprints/coach-os-refonte/SYNTHESE.md"
+  },
+  {
+    "domaine": "Machine d'acquisition",
+    "apprentissage": "Cinq briques dont l'ordre est non negociable : (0) couche d'ecriture (Coach OS n'a aucune surface d'ecriture verifiee), (1) scenarios + approbation humaine (une machine qui se trompe contacte de vraies personnes ; un contenu peut donner des ordres a l'agent), (2) graphe d'etat (une chaine en 5 etapes avec approbation ne tient pas dans un tour de boucle), (3) workflows N8N/Make executes par MCP pilotés par agents, (4) capacites exposees Skills/MCP/CLI, (5) format Agent Plugins 1.0.0 pour la marque blanche. Sauter un rang, c'est batir sur du vide.",
+    "source": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/09_Blueprints/vision-v1/VISION.md"
+  },
+  {
+    "domaine": "Memoire unifiee",
+    "apprentissage": "Quatre sources de memoire (TencentDB-Agent-Memory, pocketbase-vec, Geordi KB, Agent OS) coexistent sans arbitrage. Regle : le contenu canonique (valide, signe) vit dans Geordi, le brut ingere dans TencentDB, les chunks RAG dans PocketBase — aucune promotion automatique entre les trois, pont manuel ou assiste. Le canon wiki est selection, pas trace. Toute affirmation de volume non adossee a un find/wc execute est marquee '(a mesurer)' ou non faite.",
+    "source": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/09_Blueprints/agentic-os/ARCHITECTURE_MEMOIRE_UNIFIEE.md"
+  },
+  {
+    "domaine": "Intentions Business/PARA (trajectoire)",
+    "apprentissage": "Sur 1453 intentions uniques (mars-aout 2026) : 'Business, PARA, projets' = 183 (24-57-67-34 par mois, en reflux) ; 'Coach OS / Life OS / Agent OS' = 195 (18-55-59-62, seule intention en croissance continue). Le proprietaire ne demande plus des systemes business de plus mais des vues sur l'etat (B2) : les surfaces visibles sont un livrable de premier rang (E8), et toute nouvelle cadence doit nommer celle qu'elle remplace (E9) — aucune des 700 intentions d'orchestration n'a jamais eu pour objet de retirer quelque chose (B4).",
+    "source": "C:/Users/amado/ASpace_OS_V3/50_Distillation/RAPPORT_INTENTIONS_V3.md (sections Business/PARA: tableau I2, B2, B4, E8-E9)"
+  }
+]

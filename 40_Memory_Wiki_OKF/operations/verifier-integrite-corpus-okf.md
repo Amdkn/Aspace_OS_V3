@@ -5,6 +5,7 @@ description: Un script mesure ce que le canon exigeait de la seule vigilance hum
 tags: [okf, integrite, liens-morts, verification, corpus]
 generated: { by: claude-opus-5, at: 2026-08-24T21:40:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:36:19Z }
   - { by: process:verifier_okf, at: 2026-08-24T21:40:00Z }
 sources:
   - id: script

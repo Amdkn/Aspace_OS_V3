@@ -5,6 +5,7 @@ description: Analyse du dépôt jaredrhod/barehands. Sa licence AGPL interdit de
 tags: [barehands, airglass, jarvis, revue, agpl, mediapipe, three-js, jumeau-numerique, okf, confiance]
 generated: { by: claude-opus-5, at: 2026-08-19T10:00:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:34:00Z }
   - { by: process:github-mcp-lecture-directe, at: 2026-08-19T09:50:00Z }
 sources:
   - id: readme

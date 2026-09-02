@@ -5,6 +5,7 @@ description: Comment `scripts/porte_argent.py` applique les trois filtres (disti
 tags: [porte-argent, triptyque, para, gtd, verdict, inertie, v3]
 generated: { by: claude-sonnet-4-6, at: 2026-08-30T01:10:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:28:01Z }
   - { by: claude-sonnet-4-6, at: 2026-08-30T01:10:00Z }
 sources:
   - id: script

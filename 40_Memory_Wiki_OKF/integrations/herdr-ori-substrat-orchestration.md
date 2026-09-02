@@ -5,6 +5,7 @@ description: Herdr expose 25 événements runtime et un wait bloquant sur l'éta
 tags: [herdr, ori, orchestration, runtime, events, mcp, skills, schedules, wsl, openrouter, config, audit]
 generated: { by: claude-opus-5, at: 2026-08-28T18:40:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:27:15Z }
   - { by: claude-opus-5, at: 2026-08-28T18:40:00Z }
   - { by: claude-opus-5, at: 2026-08-29T00:36:00Z }
 sources:

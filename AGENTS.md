@@ -124,3 +124,9 @@ Toute réponse substantielle, à son terme, actualise les trois organes cognitif
 - Lookup → context-mode FTS5 (`~/.pi/context-mode/`)
 
 *Ajouté 2026-08-17 sur directive A+. Voir `~/.pi/agent/AGENTS.md` §12 pour la procédure opérationnelle détaillée.*
+
+---
+
+## 9. Loi du langage actif — anti-impuissance acquise
+
+- **2026-08-30 — Audit linguistique des deux `CLAUDE.md`.** Le fichier dépôt porte 21 négations pour 1 décision possédée, et son langage enseigne aux workers « tu ne décides rien », « jamais cru sur parole », « impossible ». Toute règle normative doit répondre à *que faire ?*, pas seulement *que ne pas faire ?* : un état négatif sans test exécutable ni chemin de réparation est une porte murée — dette d'obscurité au sens de §8. Interdits réservés aux actes irréversibles ; tout autre interdit porte sa condition de levée. Détail et patrons : `40_Memory_Wiki_OKF/canon/audit-langage-impuissance-claude-md-2026-08-30.md`.

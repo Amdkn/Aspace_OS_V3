@@ -5,6 +5,7 @@ description: CORRIGÉ 2026-08-29 — la validation de nom ne s'applique qu'en mo
 tags: [openrouter, claude-code-cli, glm, qwen, relais, ori, correction, cles]
 generated: { by: claude-opus-5, at: 2026-08-28T21:05:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:33:40Z }
   - { by: claude-opus-5, at: 2026-08-28T21:02:00Z }
   - { by: claude-sonnet-4-6, at: 2026-08-29T04:40:00Z }
   - { by: claude-sonnet-4-6, at: 2026-08-30T05:10:00Z }

@@ -5,6 +5,7 @@ description: Onze hooks pointaient vers un endpoint Orca éteint ; quatre tiraie
 tags: [claude-code, hooks, windows, orca, settings-json, diagnostic]
 generated: { by: claude-opus-5, at: 2026-08-29T00:10:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:35:34Z }
   - { by: claude-opus-5, at: 2026-08-29T00:05:00Z }
 sources:
   - id: settings-hooks

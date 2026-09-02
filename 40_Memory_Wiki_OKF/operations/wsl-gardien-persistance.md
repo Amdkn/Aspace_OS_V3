@@ -5,6 +5,7 @@ description: La distro tombe dans un etat "Running mais injoignable" qui tue les
 tags: [wsl, ori, persistance, antifragile, powershell, tache-planifiee, windows]
 generated: { by: claude-opus-5, at: 2026-08-28T20:15:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:37:30Z }
   - { by: claude-opus-5, at: 2026-08-28T20:15:00Z }
 sources:
   - id: mesure-chute

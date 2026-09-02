@@ -5,6 +5,7 @@ description: L'ontologie et les concepts des 8 domaines existent, mais les agent
 tags: [multica, agents, couche-b, ontologie, coach-os, business-os, 8-domaines, rdf]
 generated: { by: "claude-opus-5", at: "2026-08-21T08:10:00Z" }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:37:47Z }
   - { by: "claude-opus-5", at: "2026-08-21T08:10:00Z" }
 sources:
   - id: multica-live

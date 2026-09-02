@@ -5,6 +5,7 @@ description: Audit falsifiable du runtime V3, de ses quatre organes, de ses lois
 tags: [aspace-v3, autonomie, runtime, vivance, replication, kernel, controle]
 generated: { by: verdent-gpt-5.6-sol, at: 2026-08-30T09:07:06-04:00 }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:26:29Z }
   - { by: verdent-gpt-5.6-sol, at: 2026-08-30T09:45:00-04:00 }
 sources:
   - id: kernel

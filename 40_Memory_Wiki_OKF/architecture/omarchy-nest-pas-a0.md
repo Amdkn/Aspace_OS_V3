@@ -5,6 +5,7 @@ description: Deux gardes d'installation sont inatteignables sous WSL (bootloader
 tags: [omarchy, wsl, a0, architecture, jumeau-numerique, herdr, ori, arch, hyprland]
 generated: { by: claude-opus-5, at: 2026-08-29T02:00:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:31:58Z }
   - { by: claude-opus-5, at: 2026-08-29T02:00:00Z }
 sources:
   - id: omarchy-guard

@@ -5,6 +5,7 @@ description: Comment `01-omk-business-os` sert de gabarit aux quatre autres proj
 tags: [franchise, ownerbook, runbook, picard, jerry, triptyque, para, b2, b3]
 generated: { by: claude-opus-5, at: 2026-08-30T00:40:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:38:30Z }
   - { by: claude-opus-5, at: 2026-08-30T00:40:00Z }
 sources:
   - id: prototype

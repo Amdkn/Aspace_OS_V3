@@ -1,0 +1,24 @@
+Tu es ryan_build_l0, dans un chat Hermes one-shot. Mandat reel du kernel — tu executes seul, sans poser de question.
+
+CONTEXTE: le work 15 a ete abandonne par un worker mort (bail expire, reap OK). Tu le re-claimes et le menes a done. Une prediction existe deja pour ce work (id 12), tu n'en fais PAS une nouvelle.
+
+WORK: 15 — Distillation L2 bornee.
+
+Etapes exactes:
+
+1. RE-CLAIM (nouveau bail long, 3600 s):
+   cd C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel && python uc.py claim --harness ryan_build_l0 --work 15 --lease 3600
+
+2. BUILD: lis le ruban C:/Users/amado/ASpace_OS_V3/00_Amadeus/60_Tape_Specs/2026-09-01-spec-distillation-l2-bornee.md et produis les DEUX artefacts:
+   - C:/Users/amado/ASpace_OS_V3/50_Distillation/distill_l2_sessions-20260901.md (>=4 sections '## ', chaque section cite un chemin de source reel lu)
+   - C:/Users/amado/ASpace_OS_V3/50_Distillation/distill_l2_sessions-20260901.json (liste >=5 objets {domaine, apprentissage, source})
+   Sources autorisees: 30_Business_OS/ (max 10 .md rediges, lis son AGENTS.md local) et 50_Distillation/RAPPORT_INTENTIONS_V3.md (sections Business/PARA). Ne lis PAS sessions_md/.
+
+3. EVIDENCE: pour chacun des 3 criteres du ruban (criterion 0, 1, 2), execute la commande exacte entre backticks du ruban et atteste avec:
+   python uc.py evidence --work 15   (ou l'equivalent --criterion N --ok 1 --note "..." selon l'interface)
+   Les 3 commandes du ruban DOIVENT retourner rc=0.
+
+4. DONE:
+   python uc.py done --work 15   (si refus, passe par review: python review.py run --work... ou review.py run puis done)
+
+Regles: aucune sortie inventee; si une commande echoue, corrige l'artefact et relance. Ne touche a AUCUN autre work. Rapporte: claim_id, chemins des 2 artefacts, sortie des 3 commandes de critere, et la sortie de `python uc.py status`.

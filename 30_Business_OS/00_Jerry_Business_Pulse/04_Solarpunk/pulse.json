@@ -1,0 +1,11 @@
+{
+  "id": "solarpunk",
+  "nom": "Jerry Solarpunk",
+  "domaine": "solaire/durabilite",
+  "metriques": {
+    "revenus_mois": 0,
+    "clients_actifs": 0,
+    "offres_lancees": 0
+  },
+  "statut": "v1-initialise"
+}

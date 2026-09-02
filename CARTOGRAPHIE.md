@@ -1,6 +1,6 @@
 # Cartographie de A'Space OS V3
 
-> Genere par `scripts/cartographier_v3.py` le 2026-08-30 13:36 UTC, en 0.7 s.
+> Genere par `scripts/cartographier_v3.py` le 2026-08-31 06:15 UTC, en 0.6 s.
 > **Ne pas editer a la main** : une carte ecrite a la main vieillit et ment.
 > Regenerer par `python scripts/cartographier_v3.py`.
 
@@ -8,12 +8,12 @@
 
 | | |
 |---|---|
-| Fichiers | **10,801** |
+| Fichiers | **10,806** |
 | Poids | **2.8 Go** |
-| Documents `.md` | **6,575** |
+| Documents `.md` | **6,578** |
 | Triplets `.ttl` | 31 |
 | Substrat `.jsonl` | 46 |
-| Scripts `.py` | 294 |
+| Scripts `.py` | 296 |
 
 Exclus du compte : `.cache`, `.git`, `.mypy_cache`, `.next`, `.nuxt`, `.obsidian`, `.pytest_cache`, `.venv`, `__pycache__`, `build`, `coverage`, `dist`, `node_modules`, `openwiki`, `site-packages`, `target`, `vendor`, `venv`.
 
@@ -25,27 +25,28 @@ etranger au notre.
 
 | Etage | Fichiers | dont `.md` | Poids | Ce qu'il porte |
 |---|---:|---:|---:|---|
-| `00_Amadeus/` | 5,132 | 4,705 | 228.9 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
-| `10_Tech_OS/` | 97 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
+| `00_Amadeus/` | 868 | 441 | 128.5 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
+| `10_Tech_OS/` | 98 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
 | `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
 | `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
-| `40_Memory_Wiki_OKF/` | 39 | 39 | 278.5 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `40_Memory_Wiki_OKF/` | 41 | 41 | 302.0 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
 | `50_Distillation/` | 394 | 321 | 70.3 Mo | Methode, substrat, briefs de distillation |
 | `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
 | `70_Onthologies/` | 402 | 330 | 6.8 Mo | Sujets, triplets RDF, revue |
 | `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
 | `90-self-evolution/` | 24 | 11 | 113.6 Ko | Skills d'auto-amelioration — une par problematique mesuree |
 | `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109.2 Mo | Briefs archives de coach-os |
+| `_ARCHIVE_sessions_zombies/` | 4,265 | 4,265 | 101.1 Mo | — |
 | `_INBOX/` | 9 | 5 | 10.9 Ko | Capture GTD, non trie |
 | `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4.7 Mo | 26 sources consolidees pour la revue humaine |
-| `scripts/` | 30 | 0 | 252.8 Ko | Porte d'argent, cartographie, generateurs |
-| *(racine)* | 8 | 6 | 79.8 Ko | fichiers de tete |
+| `scripts/` | 31 | 0 | 256.9 Ko | Porte d'argent, cartographie, generateurs |
+| *(racine)* | 8 | 6 | 80.6 Ko | fichiers de tete |
 
 ## Arborescence, 3 niveaux
 
 ```
 ASpace_OS_V3/
-|-- 00_Amadeus/  (5132 fich., 4705 md, 228.9 Mo)
+|-- 00_Amadeus/  (868 fich., 441 md, 128.5 Mo)
 |   |-- 10_Observers/  (9 fich., 3.7 Ko)
 |   |   |-- _placeholder_agent-os_2026-08-06/  (1 fich.)
 |   |   |-- agent-os/  -> JONCTION (non suivie)
@@ -58,8 +59,8 @@ ASpace_OS_V3/
 |   |   |-- phoenix/  (1 fich.)
 |   |   |-- pocketbase-vec/  -> JONCTION (non suivie)
 |   |   `-- super-simple-software-factory/  -> JONCTION (non suivie)
-|   |-- 20_Harness/  (300 fich., 33 md, 110.4 Mo)
-|   |   |-- agentgateway/  (24 fich., 95.5 Mo)
+|   |-- 20_Harness/  (301 fich., 34 md, 111.1 Mo)
+|   |   |-- agentgateway/  (24 fich., 95.7 Mo)
 |   |   |-- antigravity/  (1 fich.)
 |   |   |-- bmad-loop/  (225 fich., 28 md, 9.5 Mo)
 |   |   |   ... 5 sous-dossiers, non deplies
@@ -75,11 +76,11 @@ ASpace_OS_V3/
 |   |   |   ... 1 sous-dossiers, non deplies
 |   |   |-- orca/  (1 fich.)
 |   |   |-- paperclip/  (2 fich., 1 md, 3.6 Ko)
-|   |   `-- routers/  (6 fich., 1.8 Mo)
-|   |-- 30_MEMORY_CORE/  (4794 fich., 4670 md, 118.5 Mo)
+|   |   `-- routers/  (6 fich., 2.4 Mo)
+|   |-- 30_MEMORY_CORE/  (529 fich., 405 md, 17.4 Mo)
 |   |   |-- carto/  (103 fich., 17 md, 7.8 Mo)
 |   |   |   ... 1 sous-dossiers, non deplies
-|   |   `-- sessions_md/  (4647 fich., 4647 md, 109.8 Mo)
+|   |   `-- sessions_md/  (382 fich., 382 md, 8.6 Mo)
 |   |       ... 304 sous-dossiers, non deplies
 |   |-- 30_Shadow/  (3 fich., 578 o)
 |   |   |-- l0-omnigent/  (1 fich.)
@@ -107,7 +108,7 @@ ASpace_OS_V3/
 |   |   `-- mythos/  (1 fich.)
 |   `-- 90_Doctrine/  (1 fich.)
 |       `-- adr/  (1 fich.)
-|-- 10_Tech_OS/  (97 fich., 71 md, 2.2 Mo)
+|-- 10_Tech_OS/  (98 fich., 71 md, 2.2 Mo)
 |   |-- 00_Governance_Rick/  (35 fich., 22 md, 2.0 Mo)
 |   |   |-- Donna_DLQ/  (1 fich., 1 md, 308 o)
 |   |   `-- replicator/  (7 fich., 5 md, 21.8 Ko)
@@ -125,7 +126,7 @@ ASpace_OS_V3/
 |   |   |-- compagnons/  (12 fich., 12 md, 13.1 Ko)
 |   |   |   ... 3 sous-dossiers, non deplies
 |   |   `-- tapes/  (1 fich.)
-|   `-- kernel/  (10 fich., 1 md, 94.3 Ko)
+|   `-- kernel/  (11 fich., 1 md, 108.1 Ko)
 |       `-- agentpulse/  -> JONCTION (non suivie)
 |-- 20_Life_OS/  (361 fich., 291 md, 1.0 Go)
 |   |-- 00_Gatekeepers_Beth_Morty/  (8 fich., 7 md, 35.6 Ko)
@@ -191,20 +192,20 @@ ASpace_OS_V3/
 |   |   |-- ontologie-vocale/  (373 fich., 6 md, 214.0 Mo)
 |   |   |   ... 3 sous-dossiers, non deplies
 |   |   |-- outils-micro-saas/  (74 fich., 3 md, 74.0 Mo)
-|   |   |   ... 2 sous-dossiers, non deplies
+|   |   |   ... 1 sous-dossiers, non deplies
 |   |   |-- palantir-2.0/  (1055 fich., 1 md, 253.1 Mo)
-|   |   |   ... 4 sous-dossiers, non deplies
+|   |   |   ... 3 sous-dossiers, non deplies
 |   |   `-- vision-v1/  (353 fich., 11 md, 180.7 Mo)
 |   |       ... 4 sous-dossiers, non deplies
 |   `-- 10_Projects/  (960 fich., 303 md, 20.7 Mo)
 |       `-- coach-os-app/  (959 fich., 303 md, 20.7 Mo)
 |           ... 29 sous-dossiers, non deplies
-|-- 40_Memory_Wiki_OKF/  (39 fich., 39 md, 278.5 Ko)
-|   |-- architecture/  (10 fich., 10 md, 75.5 Ko)
-|   |-- canon/  (4 fich., 4 md, 49.3 Ko)
+|-- 40_Memory_Wiki_OKF/  (41 fich., 41 md, 302.0 Ko)
+|   |-- architecture/  (10 fich., 10 md, 79.2 Ko)
+|   |-- canon/  (5 fich., 5 md, 63.2 Ko)
 |   |-- integrations/  (8 fich., 8 md, 82.0 Ko)
 |   |-- learning/  (2 fich., 2 md, 8.9 Ko)
-|   |-- operations/  (8 fich., 8 md, 40.6 Ko)
+|   |-- operations/  (9 fich., 9 md, 46.5 Ko)
 |   `-- security/  (3 fich., 3 md, 10.6 Ko)
 |-- 50_Distillation/  (394 fich., 321 md, 70.3 Mo)
 |   |-- _briefs/  (24 fich., 16 md, 145.2 Ko)
@@ -265,21 +266,21 @@ ASpace_OS_V3/
 |   |   `-- forum/  (0 fich.)
 |   `-- skills/  (16 fich., 8 md, 83.0 Ko)
 |       |-- p1-anti-rejeu/  (2 fich., 1 md, 10.9 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p2-mandat-persistant/  (2 fich., 1 md, 12.0 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p3-point-entree/  (2 fich., 1 md, 7.6 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p4-instrument-honnete/  (2 fich., 1 md, 9.3 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p5-plancher-contexte/  (2 fich., 1 md, 7.7 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p6-verification-goulot/  (2 fich., 1 md, 9.9 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       |-- p7-memoire-travail/  (2 fich., 1 md, 11.5 Ko)
-|       |   ... 2 sous-dossiers, non deplies
+|       |   ... 1 sous-dossiers, non deplies
 |       `-- p8-forum-agents/  (2 fich., 1 md, 14.1 Ko)
-|           ... 2 sous-dossiers, non deplies
+|           ... 1 sous-dossiers, non deplies
 |-- _ARCHIVE_coach-os-briefs/  (349 fich., 154 md, 109.2 Mo)
 |   `-- _briefs/  (349 fich., 154 md, 109.2 Mo)
 |       |-- 2026-08-09_prod/  (14 fich., 12 md, 72.9 Ko)
@@ -301,6 +302,312 @@ ASpace_OS_V3/
 |       |-- 2026-08-17_CANON_UUID/  (4 fich., 2 md, 23.0 Ko)
 |       |-- 2026-08-17_CORRECTIFS_M3/  (26 fich., 17 md, 199.6 Ko)
 |       `-- 2026-08-17_PENTEST_M3/  (12 fich., 8 md, 98.3 Ko)
+|-- _ARCHIVE_sessions_zombies/  (4265 fich., 4265 md, 101.1 Mo)
+|   `-- 2026-08-31/  (4265 fich., 4265 md, 101.1 Mo)
+|       |-- C--Users-amado/  (26 fich., 26 md, 9.3 Mo)
+|       |-- C--Users-amado--buzz/  (7 fich., 7 md, 29.7 Ko)
+|       |-- C--Users-amado--claude-skills-ordonnanceur/  (75 fich., 75 md, 613.7 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-projects-c509993c-4aaf-477d-8212-7390d3006d87-0f34f6ba-ef73-4d60-85c8-8fee89c02324--default/  (4 fich., 4 md, 36.2 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-51a5971a-915e-4a5e-a01a-d9f11367768c/  (1 fich., 1 md, 9.9 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-58f414dd-cc72-47fd-9dc1-9dc73ec569d6/  (1 fich., 1 md, 11.4 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-6d02440b-83a4-418c-91aa-6a3286cf06ed/  (1 fich., 1 md, 10.6 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-709f4504-9147-4ed2-88fc-c54812953c9c/  (1 fich., 1 md, 11.2 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-8541d9b1-8aff-4824-bf9b-7c8778cec083/  (1 fich., 1 md, 10.8 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-89a5fed7-cc0d-4d8f-9983-962d0d1dcf44/  (1 fich., 1 md, 11.4 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-95704673-bebf-4672-aa22-0618f33c39f4/  (2 fich., 2 md, 18.0 Ko)
+|       |-- C--Users-amado--paperclip-instances-default-workspaces-fc0be78f-ea24-411b-8204-eb27a99ffc98/  (1 fich., 1 md, 10.8 Ko)
+|       |-- C--Users-amado-ASpace-OS-V2-20-Life-OS-24-PARA-Enterprise-03-Resources-Geordi-04-From-V2-Root--Life-OS-2026-clone/  (1 fich., 1 md, 11.1 Ko)
+|       |-- C--Users-amado-ASpace-OS-V2-20-Life-OS-24-PARA-Enterprise-03-Resources-Geordi-05-From-V2-Domains-30-Business-OS-10-Projects-omk-repos-coach-os/  (147 fich., 147 md, 2.0 Mo)
+|       |-- C--Users-amado-ASpace-OS-V3/  (17 fich., 17 md, 172.4 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-00-Amadeus-30-MEMORY-CORE/  (21 fich., 21 md, 188.2 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-10-Tech-OS-00-Governance-Rick/  (3 fich., 3 md, 19.1 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-30-Business-OS-09-Blueprints-coach-os-refonte/  (18 fich., 18 md, 149.8 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-30-Business-OS-09-Blueprints-gateways/  (2 fich., 2 md, 20.2 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-30-Business-OS-09-Blueprints-ontologie-trois-couches/  (1 fich., 1 md, 10.3 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-30-Business-OS-09-Blueprints-vision-v1/  (1 fich., 1 md, 7.6 Ko)
+|       |-- C--Users-amado-ASpace-OS-V3-60-Implementation-M-thodologiques--loop/  (57 fich., 57 md, 328.1 Ko)
+|       |-- C--Users-amado-AppData-Local-Temp-audit-2026-08-04/  (4 fich., 4 md, 34.0 Ko)
+|       |-- C--Users-amado-AppData-Local-Temp-audit2-2026-08-04/  (1 fich., 1 md, 23.5 Ko)
+|       |-- C--Users-amado-TencentDB-Agent-Memory/  (1 fich., 1 md, 5.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-0035171d-workdir/  (1 fich., 1 md, 4.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-02a021df-workdir/  (1 fich., 1 md, 1.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-03a6f60b-workdir/  (1 fich., 1 md, 2.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-03dc333c-workdir/  (1 fich., 1 md, 4.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-08948e11-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-0b39d4a0-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-0eaf6450-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-0f459909-workdir/  (1 fich., 1 md, 12.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-0ff9cd68-workdir/  (1 fich., 1 md, 3.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-1417bd75-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-165025f6-workdir/  (1 fich., 1 md, 5.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-1c1bef30-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-1cfe78b6-workdir/  (1 fich., 1 md, 12.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2051a664-workdir/  (1 fich., 1 md, 7.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2193062e-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-22ccd7f3-workdir/  (1 fich., 1 md, 10.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-276bc15b-workdir/  (1 fich., 1 md, 4.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-279cb7c1-workdir/  (1 fich., 1 md, 1.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-28147a9e-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2a1b24e1-workdir/  (1 fich., 1 md, 5.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2c90ece4-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2d22fbbd-workdir/  (1 fich., 1 md, 2.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2f576ef3-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-2f665e23-workdir/  (1 fich., 1 md, 5.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-300f9937-workdir/  (1 fich., 1 md, 1.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-31682f1d-workdir/  (1 fich., 1 md, 4.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-33989eca-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-362b5533-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-385e84f5-workdir/  (1 fich., 1 md, 17.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-3ca12a09-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-3d63a52b-workdir/  (1 fich., 1 md, 2.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-40b9e730-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-40c182b8-workdir/  (2 fich., 2 md, 30.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-40dc7ef5-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4236e9de-workdir/  (1 fich., 1 md, 143.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-432d53b8-workdir/  (1 fich., 1 md, 83.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4476d3b8-workdir/  (1 fich., 1 md, 5.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-455be7af-workdir/  (1 fich., 1 md, 3.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4a469b56-workdir/  (1 fich., 1 md, 4.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4d7e922d-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4d8ec545-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-4eb1e2c0-workdir/  (1 fich., 1 md, 6.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-50af6a85-workdir/  (1 fich., 1 md, 22.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-50bb8449-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-51172aae-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-51774686-workdir/  (1 fich., 1 md, 32.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5187d382-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-519c711a-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-538a91b1-workdir/  (1 fich., 1 md, 4.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-53ade364-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-553a7d3d-workdir/  (1 fich., 1 md, 2.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-579cad48-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-57f30c14-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5935bb33-workdir/  (1 fich., 1 md, 4.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5bf52657-workdir/  (1 fich., 1 md, 25.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5d060bf8-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5d2b9e62-workdir/  (1 fich., 1 md, 3.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-5e0b6ddd-workdir/  (1 fich., 1 md, 3.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-601cbde7-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-60796162-workdir/  (1 fich., 1 md, 21.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-61aaec16-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-66ba16a8-workdir/  (1 fich., 1 md, 3.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-67a0bc0c-workdir/  (1 fich., 1 md, 2.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-67ef9112-workdir/  (1 fich., 1 md, 2.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-688bd9dc-workdir/  (1 fich., 1 md, 4.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-689cb26e-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-69437450-workdir/  (1 fich., 1 md, 3.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-69f388a1-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6b39e00c-workdir/  (1 fich., 1 md, 2.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6c3d2995-workdir/  (1 fich., 1 md, 4.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6e545142-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6ef2e8ad-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6f1ffbcb-workdir/  (1 fich., 1 md, 14.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-6f74c971-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-70c74068-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-71353516-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-71b72fe7-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-71f70048-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-74775c3a-workdir/  (1 fich., 1 md, 32.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-77fd697c-workdir/  (1 fich., 1 md, 4.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-79504381-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-79e24122-workdir/  (1 fich., 1 md, 3.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-79fadcff-workdir/  (1 fich., 1 md, 15.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-7b02a799-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-7b1f92d3-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-7c1128ba-workdir/  (1 fich., 1 md, 2.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-80cc51c6-workdir/  (1 fich., 1 md, 16.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-83b41322-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8475cf0b-workdir/  (1 fich., 1 md, 14.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-84bd98f8-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-852c9572-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-85530829-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-85af66c4-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-86eb886c-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-89ae95c0-workdir/  (1 fich., 1 md, 19.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8d790982-workdir/  (1 fich., 1 md, 4.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8dbbf020-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8f030a49-workdir/  (1 fich., 1 md, 53.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8f2b2a80-workdir/  (1 fich., 1 md, 2.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-8f3b54ee-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-9038f164-workdir/  (1 fich., 1 md, 15.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-9400a145-workdir/  (1 fich., 1 md, 18.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-941d7578-workdir/  (1 fich., 1 md, 19.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-9590121c-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-97495397-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-98194723-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-9c12372f-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-9d9982a2-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a2c0cf17-workdir/  (1 fich., 1 md, 5.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a3925987-workdir/  (1 fich., 1 md, 20.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a4863e32-workdir/  (1 fich., 1 md, 5.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a74d861a-workdir/  (1 fich., 1 md, 2.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a7b9afb4-workdir/  (1 fich., 1 md, 7.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a8963299-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a89d2363-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-a9fd50ea-workdir/  (1 fich., 1 md, 32.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-aaae30f6-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-aab7af01-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-aea15ea1-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-af095a12-workdir/  (1 fich., 1 md, 3.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b01b0dbe-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b03e89de-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b223ddd5-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b3fac9c3-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b44588ea-workdir/  (1 fich., 1 md, 4.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b45a7418-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b67e81e1-workdir/  (1 fich., 1 md, 4.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b686dffa-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b812621c-workdir/  (1 fich., 1 md, 4.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-b8473bef-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-bd32b535-workdir/  (1 fich., 1 md, 5.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-bda14daf-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-be1f33ea-workdir/  (1 fich., 1 md, 1.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-be5caaa4-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-be7a5eb5-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-bf366379-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-c64f49de-workdir/  (1 fich., 1 md, 2.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-c7c585f9-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-c7cac3e5-workdir/  (1 fich., 1 md, 4.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-c7eb6eaf-workdir/  (1 fich., 1 md, 1.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-c90c24ee-workdir/  (1 fich., 1 md, 16.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ca423928-workdir/  (1 fich., 1 md, 3.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-cea1b09a-workdir/  (1 fich., 1 md, 5.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d0369aa2-workdir/  (1 fich., 1 md, 8.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d0ed54b3-workdir/  (1 fich., 1 md, 2.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d18a6273-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d5841f72-workdir/  (1 fich., 1 md, 2.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d6133fee-workdir/  (1 fich., 1 md, 4.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d81f7c11-workdir/  (1 fich., 1 md, 4.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d820a538-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-d9938810-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-db12d5fc-workdir/  (1 fich., 1 md, 5.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-db9e0ad5-workdir/  (1 fich., 1 md, 3.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-de876268-workdir/  (1 fich., 1 md, 12.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-df17ad59-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-df7aa6aa-workdir/  (1 fich., 1 md, 1.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-df86f6d7-workdir/  (1 fich., 1 md, 8.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e472593f-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e8b63db1-workdir/  (1 fich., 1 md, 20.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e8ce0f29-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e936f3f5-workdir/  (1 fich., 1 md, 9.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e9ccf6d9-workdir/  (1 fich., 1 md, 1.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-e9d02f6c-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-eaa4dd20-workdir/  (1 fich., 1 md, 3.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ec02c326-workdir/  (1 fich., 1 md, 4.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ec5c4f3b-workdir/  (1 fich., 1 md, 3.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ec858319-workdir/  (1 fich., 1 md, 58.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ed2304d6-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-edc201a6-workdir/  (1 fich., 1 md, 1.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-f06f787d-workdir/  (1 fich., 1 md, 1.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-f3dc788a-workdir/  (1 fich., 1 md, 20.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-f8060715-workdir/  (1 fich., 1 md, 8.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-f98a885b-workdir/  (1 fich., 1 md, 5.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-fa20f93f-workdir/  (1 fich., 1 md, 6.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-fa8c9436-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-fb2c0f73-workdir/  (1 fich., 1 md, 4.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ff5402d4-workdir/  (1 fich., 1 md, 12.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ff61f75f-workdir/  (1 fich., 1 md, 2.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ffc8d635-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-1ae43c2b-c443-4896-8afe-b15bec691b9e-ffce3b26-workdir/  (1 fich., 1 md, 5.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-0383605e-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-08df10f5-workdir/  (1 fich., 1 md, 2.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-09d31a08-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-0b6cc232-workdir/  (1 fich., 1 md, 9.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-0fbb06c0-workdir/  (1 fich., 1 md, 4.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-18784b4a-workdir/  (1 fich., 1 md, 6.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-19a59bdb-workdir/  (1 fich., 1 md, 5.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-252f6c85-workdir/  (1 fich., 1 md, 2.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-25dbc2b0-workdir/  (1 fich., 1 md, 4.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-27a77fdf-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-29162fe8-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-2a96f7de-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-3036f3c3-workdir/  (1 fich., 1 md, 20.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-322a721f-workdir/  (1 fich., 1 md, 2.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-339aee35-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-3933858c-workdir/  (1 fich., 1 md, 71.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-3adc9e5b-workdir/  (1 fich., 1 md, 6.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-3e298030-workdir/  (1 fich., 1 md, 4.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-51123935-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-5170e4b2-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-644fff0d-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-654ba669-workdir/  (1 fich., 1 md, 7.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-66604962-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-67bd8f7b-workdir/  (1 fich., 1 md, 1.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-68a33f73-workdir/  (1 fich., 1 md, 7.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-6cf36742-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-6eb59dce-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-6fdf68b2-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-708f9a38-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-719d566f-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-75757bf6-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-79551909-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-7a2d4acf-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-7ba8cba5-workdir/  (1 fich., 1 md, 4.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-7f0442d1-workdir/  (1 fich., 1 md, 11.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-815965a5-workdir/  (1 fich., 1 md, 7.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-8165b928-workdir/  (1 fich., 1 md, 7.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-82e8c0cb-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-82f05fb5-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-83fe6a7e-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-84f6c693-workdir/  (1 fich., 1 md, 4.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-851d4a1d-workdir/  (1 fich., 1 md, 2.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-8d65367d-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-8e081692-workdir/  (1 fich., 1 md, 8.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-98bcfa67-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-992542ff-workdir/  (1 fich., 1 md, 2.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-9a04e207-workdir/  (1 fich., 1 md, 2.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-9b1ae1da-workdir/  (1 fich., 1 md, 16.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-9d25b492-workdir/  (1 fich., 1 md, 3.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-9f51a42a-workdir/  (1 fich., 1 md, 3.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-9f5e2d49-workdir/  (1 fich., 1 md, 20.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a0135605-workdir/  (1 fich., 1 md, 4.2 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a0ce9336-workdir/  (1 fich., 1 md, 22.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a1682073-workdir/  (1 fich., 1 md, 18.0 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a244c942-workdir/  (1 fich., 1 md, 5.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a62a46f3-workdir/  (1 fich., 1 md, 2.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-a86b00b7-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-b3c52bcb-workdir/  (1 fich., 1 md, 3.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-b6b17f6a-workdir/  (1 fich., 1 md, 3.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-b8ee33a3-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-bab38d1a-workdir/  (1 fich., 1 md, 2.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-bc03a7cc-workdir/  (1 fich., 1 md, 1.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-bc2c3477-workdir/  (1 fich., 1 md, 3.8 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-be26d586-workdir/  (1 fich., 1 md, 16.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-ca1f6c7e-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-cd16be9f-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-d88a2c1b-workdir/  (1 fich., 1 md, 3.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-db559ca4-workdir/  (1 fich., 1 md, 3.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-de841c44-workdir/  (1 fich., 1 md, 3.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-dfed5fdb-workdir/  (1 fich., 1 md, 16.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-ec893d1a-workdir/  (1 fich., 1 md, 4.9 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-ed3db959-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-edb35bf2-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-ee135d05-workdir/  (1 fich., 1 md, 28.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-f38b20c8-workdir/  (1 fich., 1 md, 3.3 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-f5cb360c-workdir/  (1 fich., 1 md, 3.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-f6170998-workdir/  (1 fich., 1 md, 19.5 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-f891599e-workdir/  (1 fich., 1 md, 1.6 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-fbab0671-workdir/  (1 fich., 1 md, 2.4 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-fc1b2a9f-workdir/  (1 fich., 1 md, 16.1 Ko)
+|       |-- C--Users-amado-multica-workspaces-desktop-api-multica-ai-1ae43c2b-c443-4896-8afe-b15bec691b9e-fe5eb533-workdir/  (1 fich., 1 md, 1.7 Ko)
+|       |-- C--Users-amado-pocketbase-vec/  (1 fich., 1 md, 1.5 Ko)
+|       |-- _03_Resources_Geordi_06_Claude_Code_Bare/  (1351 fich., 1351 md, 34.1 Mo)
+|       |   ... 3 sous-dossiers, non deplies
+|       |-- _codex_archived_sessions/  (8 fich., 8 md, 586.6 Ko)
+|       |-- _codex_sessions/  (8 fich., 8 md, 412.5 Ko)
+|       |   ... 1 sous-dossiers, non deplies
+|       |-- _recuperees_claude/  (2115 fich., 2115 md, 49.7 Mo)
+|       |-- _recuperees_codex/  (16 fich., 16 md, 1002.7 Ko)
+|       |-- subagents/  (56 fich., 56 md, 460.9 Ko)
+|       |-- wf_19839229-c96/  (1 fich., 1 md, 4.9 Ko)
+|       |-- wf_42ed1d32-751/  (5 fich., 5 md, 31.2 Ko)
+|       |-- wf_5e48efbb-609/  (13 fich., 13 md, 68.4 Ko)
+|       |-- wf_5f28d2df-41e/  (3 fich., 3 md, 10.1 Ko)
+|       |-- wf_7d4379b1-b43/  (2 fich., 2 md, 6.6 Ko)
+|       |-- wf_bdced047-a27/  (3 fich., 3 md, 15.1 Ko)
+|       |-- wf_d1e09957-b2d/  (4 fich., 4 md, 24.5 Ko)
+|       |-- wf_e400c295-377/  (7 fich., 7 md, 24.3 Ko)
+|       `-- wf_fb83832a-a82/  (15 fich., 15 md, 82.8 Ko)
 |-- _INBOX/  (9 fich., 5 md, 10.9 Ko)
 |   |-- A1_Beth_Morty/  (2 fich., 1 md, 8.7 Ko)
 |   |-- B1_Jerry_Summers/  (1 fich.)
@@ -310,7 +617,7 @@ ASpace_OS_V3/
 |   `-- _refuses/  (2 fich., 2 md, 603 o)
 |       `-- S1_Rick/  (2 fich., 2 md, 603 o)
 |-- _REVIEW_NOTEBOOKLM/  (26 fich., 26 md, 4.7 Mo)
-`-- scripts/  (30 fich., 252.8 Ko)
+`-- scripts/  (31 fich., 256.9 Ko)
 ```
 
 ## Ou vit reellement la connaissance
@@ -322,33 +629,33 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 
 | Dossier | `.md` |
 |---|---:|
+| `_ARCHIVE_sessions_zombies/2026-08-31/_recuperees_claude` | 2,115 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/de35c5f1-6944-47f6-b8bc-849452b0313a/subagents` | 405 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado-ASpace-OS-V2-20-Life-OS-24-PARA-Enterprise-03-Resources-Geordi-05-From-V2-Domains-30-Business-OS-10-Projects-omk-repos-coach-os` | 147 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/7293fe1b-1492-4245-b0bd-8b51f58f9b39/subagents` | 82 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/_ARCHIVE_2026-06-16_sessions/projects/C--Users-amado/9627821e-356b-43f0-b67d-695b6e8979c9/subagents` | 78 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado--claude-skills-ordonnanceur` | 75 |
 | `30_Business_OS/09_Blueprints/coach-os-refonte` | 70 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado-ASpace-OS-V3-60-Implementation-M-thodologiques--loop` | 57 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/subagents` | 56 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado` | 53 |
 | `_ARCHIVE_coach-os-briefs/_briefs/2026-08-11_production` | 52 |
-| `70_Onthologies/pulse/domaines/wonder-woman` | 35 |
-| `70_Onthologies/pulse/domaines/green-lantern` | 35 |
-| `70_Onthologies/pulse/domaines/flash` | 35 |
-| `70_Onthologies/pulse/domaines/batman` | 33 |
-| `70_Onthologies/pulse/domaines/superman` | 32 |
-| `50_Distillation/domaines/amadeus` | 32 |
-| `70_Onthologies/pulse/domaines/john-jones` | 30 |
-| `70_Onthologies/pulse/domaines/cyborg` | 30 |
-| `70_Onthologies/pulse/domaines/aquaman` | 28 |
-| `60_Implementation_Méthodologiques/_loop` | 28 |
+| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/dd69d16d-679d-4693-a435-32ed70af4cf6/subagents` | 46 |
 
 ### Vidages de sessions (matiere premiere, pas connaissance)
 
 | Dossier | `.md` |
 |---|---:|
-| `00_Amadeus/30_MEMORY_CORE/sessions_md/_recuperees_claude` | 2,305 |
-| `00_Amadeus/30_MEMORY_CORE/sessions_md/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/de35c5f1-6944-47f6-b8bc-849452b0313a/subagents` | 412 |
-| `00_Amadeus/30_MEMORY_CORE/sessions_md/C--Users-amado-ASpace-OS-V2-20-Life-OS-24-PARA-Enterprise-03-Resources-Geordi-05-From-V2-Domains-30-Business-OS-10-Projects-omk-repos-coach-os` | 150 |
-| `00_Amadeus/30_MEMORY_CORE/sessions_md/_03_Resources_Geordi_06_Claude_Code_Bare/_ARCHIVE_2026-06-16_sessions/projects/C--Users-amado/9627821e-356b-43f0-b67d-695b6e8979c9/subagents` | 88 |
-| `00_Amadeus/30_MEMORY_CORE/sessions_md/C--Users-amado-ASpace-OS-V3` | 85 |
+| `00_Amadeus/30_MEMORY_CORE/sessions_md/_recuperees_claude` | 190 |
+| `00_Amadeus/30_MEMORY_CORE/sessions_md/C--Users-amado-ASpace-OS-V3` | 68 |
+| `00_Amadeus/30_MEMORY_CORE/sessions_md/C--Users-amado--buzz` | 12 |
+| `00_Amadeus/30_MEMORY_CORE/sessions_md/_03_Resources_Geordi_06_Claude_Code_Bare/_ARCHIVE_2026-06-16_sessions/projects/C--Users-amado/9627821e-356b-43f0-b67d-695b6e8979c9/subagents` | 10 |
+| `00_Amadeus/30_MEMORY_CORE/sessions_md/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/21ca0e06-7995-4739-a556-eaeb8c0a34ef/subagents` | 9 |
 
 ### Le point qui compte
 
 Le `CLAUDE.md` designe `40_Memory_Wiki_OKF/` comme « la memoire du
-poste ». Ce bundle porte **39 fichiers `.md` sur 6,575**, soit **0.6 %** du corpus.
+poste ». Ce bundle porte **41 fichiers `.md` sur 6,578**, soit **0.6 %** du corpus.
 
 Chercher la et s'arreter, c'est manquer le reste. Le bundle est un
 **index de concepts consolides**, pas le corpus. Les deux tableaux

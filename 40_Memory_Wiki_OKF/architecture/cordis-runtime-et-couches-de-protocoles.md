@@ -5,6 +5,7 @@ description: dsh est bâti sur Cordis (cordiverse/cordis) ; MCP, A2A, AG-UI, ACP
 tags: [cordis, deepseek-harness, mcp, a2a, ag-ui, acp, litert, adaptateur, coach-os]
 generated: { by: claude-opus-5, at: 2026-08-17T23:30:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:36:37Z }
   - { by: process:web-search, at: 2026-08-17T23:25:00Z }
   - { by: process:grep-coach-os, at: 2026-08-17T23:10:00Z }
 sources:

@@ -5,6 +5,7 @@ description: L'échec central de Multica, identifié le 2026-07-05 et écrit dan
 tags: [multica, governor-module, autonomie, gates, impuissance-apprise, a0, echec]
 generated: { by: claude-opus-5, at: 2026-08-29T22:30:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:37:52Z }
   - { by: claude-opus-5, at: 2026-08-29T22:30:00Z }
 sources:
   - id: a0-instructions

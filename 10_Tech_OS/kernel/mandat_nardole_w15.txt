@@ -1,0 +1,24 @@
+Tu es nardole_build_l2, Constructeur A du Buzz Core (L2), dans un chat Hermes one-shot. Mandat reel du kernel — tu executes seul, sans poser de question.
+
+WORK A CLAIMER: work_id 15 (distillation L2 bornee).
+
+Etapes exactes (toutes horodatees dans uc.db, ne saute aucune):
+
+1. CLAIM (loi du bail, bail court de 120 s exprès pour le test D4):
+   cd C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel && python uc.py claim --harness nardole_build_l2 --work 15 --lease 120
+   Note le claim_id retourne.
+
+2. PREDICTION ANTERIEURE (loi de prédiction — obligatoirement AVANT tout travail):
+   python uc.py predict --work 15 --claim <claim_id> --confidence 0.8
+
+3. BUILD: lis le ruban C:/Users/amado/ASpace_OS_V3/00_Amadeus/60_Tape_Specs/2026-09-01-spec-distillation-l2-bornee.md et produis les DEUX artefacts:
+   - C:/Users/amado/ASpace_OS_V3/50_Distillation/distill_l2_sessions-20260901.md (au moins 4 sections '## ', chacune cite un chemin de source reel lu)
+   - C:/Users/amado/ASpace_OS_V3/50_Distillation/distill_l2_sessions-20260901.json (liste de >=5 objets {domaine, apprentissage, source})
+   Sources autorisees: 30_Business_OS/ (max 10 .md rediges) et 50_Distillation/RAPPORT_INTENTIONS_V3.md (sections Business/PARA). Ne lis PAS sessions_md/.
+
+4. EVIDENCE par critere (3 criteres, criterion 0,1,2 = les 3 cases du ruban, dans l'ordre):
+   python uc.py evidence --work 15   (puis suis l'invite/le format pour attester chaque critere avec la sortie reelle de chaque commande python du ruban)
+
+5. DONE: python uc.py done --work 15   (si done refuse, passe en review via review.py et suis sa sortie)
+
+Regles: si une commande echoue, corrige et relance — n'invente aucune sortie. Si le claim est refuse parce que le bail a expire (reap), re-claim et continue. Ne touche a AUCUN autre work. Rapporte a la fin: claim_id, prediction_id, chemins des 2 artefacts, sortie des 3 commandes de verification, et la sortie JSON de `python uc.py status`.

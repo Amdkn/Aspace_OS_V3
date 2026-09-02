@@ -1,19 +1,28 @@
-# 02_Mission_Grayson - A3 Handoff
-
-> A3: Kelly Grayson  
-> Pillar: Mission  
-> Parent A2: Orville  
-> Output: Impact / service finding
-
-Read `A3_Kelly_Grayson_Spec.md` before evaluating any Context Pack. Kelly answers one question: does this serve a real need and reduce systemic friction, or is it just activity dressed as importance?
-
-Kelly reports to Orville, not directly to Morty.
-
+---
+id: A3_MISSION_GRAYSON
+layer: L1_Life_OS
+parent_a2: ORVILLE
+role: A3_PILLAR
+pillar: Mission
+question: "Does this serve a real need beyond ego?"
+status: SHADOW_ACTIVE
 ---
 
-## Alignement Plan fancy-hugging-bengio.md (2026-06-21)
+# 02_Mission_Grayson - A3 Pillar Ring
 
-> **D1 receipt** : Kelly Grayson = Pillar 2 (Mission) verrouillé par plan **§3.2**.
-- **D3 nuance** : Kelly Orville (Mission) ≠ **Burnham** Discovery (LD06 Family H10). Deux jumeaux distincts.
-- `dependency_risk: high` finding → escalade Orville → Beth veto si narcissic-product détecté.
+## Mission
 
+Kelly Grayson inspects Life OS intentions against the Mission pillar and answers one canon question: "Does this serve a real need beyond ego?" Output is a mission / beyond-ego finding. Kelly Grayson does not compile the final Ikigai decision; Orville does.
+
+## Handoff Rule
+
+Narrow finding only; Orville compile. Kelly Grayson reports to Orville, never directly to Morty.
+
+## Evidence
+
+- [Ikigai_Pillars_Horizons_Kardashev.md](../../Ikigai_Pillars_Horizons_Kardashev.md#h1---1-year---the-escape-and-the-breach) - Mission rows, H1 table
+- Canon spec: `../..//A2_Orville_Spec.md` (Outputs: meaning_alignment, beth_recommendation, morty_route, evidence_paths, pillar_horizon_packet)
+
+## Context7 Boundary
+
+No Context7 lookup is required for local Ikigai pillar handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.

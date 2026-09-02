@@ -5,6 +5,7 @@ description: Pourquoi `CARTOGRAPHIE.md` et le §0 du CLAUDE.md racine sont gén�
 tags: [cartographie, arborescence, jonction-ntfs, quota, sessions_md, mesure]
 generated: { by: claude-sonnet-4-6, at: 2026-08-30T01:00:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:28:13Z }
   - { by: claude-sonnet-4-6, at: 2026-08-30T01:00:00Z }
 sources:
   - id: generateur

@@ -5,6 +5,7 @@ description: Pourquoi la cadence 1 m (Beth/Morty, spec-loop) ne tournait plus â€
 tags: [aspace-v3, spec-loop, ordonnanceur, a0, cadences, relance, minimax, claude-glm]
 generated: { by: verdent-gpt-5.6-sol, at: 2026-08-30T13:55:00-04:00 }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:30:59Z }
   - { by: verdent-gpt-5.6-sol, at: 2026-08-30T13:55:00-04:00 }
 sources:
   - id: ordonnanceur

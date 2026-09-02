@@ -5,6 +5,7 @@ description: Câblage des deux routeurs LLM locaux au boot, ports séparés, lia
 tags: [routeur, llm, autostart, windows, openrouter, agentrouter, orcarouter, 9router, omniroute]
 generated: { by: "claude-opus-5", at: "2026-08-21T07:30:00Z" }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:27:31Z }
   - { by: "claude-opus-5", at: "2026-08-21T07:30:00Z" }
 sources:
   - id: disque-local

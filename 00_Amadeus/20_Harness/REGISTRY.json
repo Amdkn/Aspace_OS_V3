@@ -76,6 +76,16 @@
    "present": false,
    "depot_git": false,
    "remote": null
+  },
+  "deepseek-harness": {
+   "nom": "deepseek-harness",
+   "chemin": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/20_Harness/deepseek-harness",
+   "present": true,
+   "depot_git": true,
+   "remote": "https://github.com/deepseek-ai/deepseek-harness",
+   "cli": "dsh (npm global @deepseek-ai/dsh)",
+   "web_port": 3080,
+   "note": "DeepSeek Harness (dsh) v0.1.1 — architecture tout-plugin Cordis. Web UI sur :3080."
   }
  }
 }

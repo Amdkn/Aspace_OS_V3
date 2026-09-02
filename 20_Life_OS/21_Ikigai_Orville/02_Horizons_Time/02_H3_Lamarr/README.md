@@ -1,17 +1,27 @@
-# 02_H3_Lamarr - A3 Handoff
-
-> A3: John Lamarr  
-> Horizon: H3 / 3 years  
-> Parent A2: Orville  
-> Output: strategic options finding
-
-Read `A3_John_Lamarr_H3_Spec.md` before evaluating any Context Pack. Lamarr checks whether the intention builds platforms, options, and adaptive capacity over the next three years.
-
+---
+id: A3_H3_LAMARR
+layer: L1_Life_OS
+parent_a2: ORVILLE
+role: A3_HORIZON
+horizon: H3 / 3 years
+status: SHADOW_ACTIVE
 ---
 
-## Alignement Plan fancy-hugging-bengio.md (2026-06-21)
+# 02_H3_Lamarr - A3 Horizon Ring
 
-> **D1 receipt** : John Lamarr = H3 sentinel (strategic options / 3-year platforms). Verrouillé par plan **§3.2** + **§18.1** (Saru H3 quarterly runway — pattern canon strict).
-- **D3 nuance (D4 close)** : Lamarr Orville = H3, PAS H1. Mapping twin canon = `SDD-005:534`.
-- `obsolescence_risk: high` finding → escalade Orville (Beth veto si tech devient obsolète avant H3 payoff).
+## Mission
 
+John Lamarr inspects the same intention at the H3 / 3 years horizon and writes a strategic platform finding. John Lamarr prevents the present from betraying the future at this scale and does not compile the final Ikigai decision; Orville does.
+
+## Handoff Rule
+
+Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a long-horizon RED, John Lamarr escalates to Orville and Beth before any execution packet reaches Morty.
+
+## Evidence
+
+- [Ikigai_Pillars_Horizons_Kardashev.md](../../Ikigai_Pillars_Horizons_Kardashev.md#h3---3-years---the-autonomous-fleet) - H3 - 3 Years - The Autonomous Fleet section (John Lamarr)
+- Canon spec: `../..//A2_Orville_Spec.md` (Outputs: meaning_alignment, beth_recommendation, morty_route, evidence_paths, pillar_horizon_packet)
+
+## Context7 Boundary
+
+No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.

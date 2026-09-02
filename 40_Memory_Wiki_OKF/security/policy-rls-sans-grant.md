@@ -5,6 +5,7 @@ description: Postgres vérifie le privilège de table avant la policy. Une polic
 tags: [supabase, rls, postgres, grant, jwt, hook, coach-os, auth]
 generated: { by: claude-opus-5, at: 2026-08-17T18:35:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:30:31Z }
   - { by: process:supabase-auth-logs, at: 2026-08-17T18:30:00Z }
   - { by: process:supabase-management-api, at: 2026-08-17T18:32:00Z }
 sources:

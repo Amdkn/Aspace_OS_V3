@@ -5,6 +5,7 @@ description: 688 concepts OKF dans V3 dont 30 dans le bundle désigné comme « 
 tags: [audit, memoire, ontologie, a0, cascade, contradictions, distillation, okf]
 generated: { by: claude-opus-5, at: 2026-08-29T03:20:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:32:23Z }
   - { by: claude-opus-5, at: 2026-08-29T03:20:00Z }
 sources:
   - id: comptage-okf

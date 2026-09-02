@@ -1,0 +1,19 @@
+MANDAT AUTONOME — aucune question possible, le ruban fait foi.
+work_id: 11
+layer: L0
+titre: ASP-951 M4 AsyncMessages.create monkey-patch
+tape_id: 4
+ruban: C:\Users\amado\AppData\Local\Temp\multica-task-396254240\spec-loop__nodejs-port.md
+sha256 ruban: 67d3af3167c2731c7bf447274e46fb8ea07a3c348d4c4730eb152351dfb56909
+attempts: 1
+
+=== RUBAN φ ===
+A SOURCER — ruban absent ou manquant.
+
+=== PROTOCOLE ===
+1. claim:   python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py claim --work 11 --lease 45 --harness ryan_build_l0
+2. predict: python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py predict --work 11 --confiance <0.0-1.0> --note '<prediction anterieure a l acte>'
+3. build:   realiser le ruban. Un critere d'acceptation = une commande `cmd` executee avec rc.
+4. review:  python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py review --work 11 (revue par doctor13_review_l0, preuve par critere)
+5. done:    python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py done --work 11
+Interdits: pas de question a l operateur (ruban incomplet = fail --work 11 --note 'ruban incomplet'). Personne ne cumule Build et Review.

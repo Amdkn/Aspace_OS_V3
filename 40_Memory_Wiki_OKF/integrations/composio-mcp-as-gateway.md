@@ -6,6 +6,7 @@ resource: https://connect.composio.dev/mcp
 tags: [composio, mcp, cloud-gateway, for-you]
 generated: { by: human:amdkn, at: 2026-08-17T03:55:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:59:00Z }
   - { by: process:test-key-pragma, at: 2026-08-17T03:55:00Z }
 sources:
   - id: composio-skill

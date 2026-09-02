@@ -1,0 +1,35 @@
+{
+  "version": "v2",
+  "date_init": "2026-09-03",
+  "historisation": {
+    "dossier": "00_Registre/historique",
+    "format": "hist-<variante>-<AAAA-MM>.json",
+    "actif": true
+  },
+  "variantes": [
+    {
+      "id": "prime",
+      "nom": "Jerry Prime",
+      "dossier": "01_Prime",
+      "cree": "2026-09-03"
+    },
+    {
+      "id": "bio",
+      "nom": "Jerry Bio",
+      "dossier": "02_Bio",
+      "cree": "2026-09-03"
+    },
+    {
+      "id": "nexus",
+      "nom": "Jerry Nexus",
+      "dossier": "03_Nexus",
+      "cree": "2026-09-03"
+    },
+    {
+      "id": "solarpunk",
+      "nom": "Jerry Solarpunk",
+      "dossier": "04_Solarpunk",
+      "cree": "2026-09-03"
+    }
+  ]
+}

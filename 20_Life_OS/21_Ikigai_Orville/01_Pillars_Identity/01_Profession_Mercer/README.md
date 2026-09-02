@@ -1,19 +1,28 @@
-# 01_Profession_Mercer - A3 Handoff
-
-> A3: Ed Mercer  
-> Pillar: Profession  
-> Parent A2: Orville  
-> Output: Craft / economic-role finding
-
-Read `A3_Ed_Mercer_Spec.md` before evaluating any Context Pack. Ed answers one question: does this strengthen the craft, the professional role, and the value capture without pushing A0 back into technician mode?
-
-Ed reports to Orville, not directly to Morty.
-
+---
+id: A3_PROFESSION_MERCER
+layer: L1_Life_OS
+parent_a2: ORVILLE
+role: A3_PILLAR
+pillar: Profession
+question: "Does this strengthen the craft and economic role?"
+status: SHADOW_ACTIVE
 ---
 
-## Alignement Plan fancy-hugging-bengio.md (2026-06-21)
+# 01_Profession_Mercer - A3 Pillar Ring
 
-> **D1 receipt** : Ed Mercer = Pillar 1 (Profession) verrouillé par plan **§3.2** (matrice A2 Orville × 9 A3 twins) + **§3.4** (AaaS 3 variants — Solaris = LD01 Business via Book, PAS Ed).
-- **D3 nuance** : Ed Orville (Profession) ≠ **Book** Discovery (LD01 Business H1). Deux jumeaux distincts, deux horizons distincts.
-- Ed = craft/pillar Ikigai. Book = weekly P&L H1 LD01. Pas de chevauchement canon.
+## Mission
 
+Ed Mercer inspects Life OS intentions against the Profession pillar and answers one canon question: "Does this strengthen the craft and economic role?" Output is a craft / economic-role finding. Ed Mercer does not compile the final Ikigai decision; Orville does.
+
+## Handoff Rule
+
+Narrow finding only; Orville compile. Ed Mercer reports to Orville, never directly to Morty.
+
+## Evidence
+
+- [Ikigai_Pillars_Horizons_Kardashev.md](../../Ikigai_Pillars_Horizons_Kardashev.md#h1---1-year---the-escape-and-the-breach) - Profession rows, H1 table
+- Canon spec: `../..//A2_Orville_Spec.md` (Outputs: meaning_alignment, beth_recommendation, morty_route, evidence_paths, pillar_horizon_packet)
+
+## Context7 Boundary
+
+No Context7 lookup is required for local Ikigai pillar handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.

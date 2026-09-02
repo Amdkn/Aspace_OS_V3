@@ -191,3 +191,35 @@ la precedente ; la cinquieme aurait coute quatre agents pour deux points.
 
 **689 relations, toutes citees, zero sans source.** C'est la seule metrique dont
 je reponds : rien dans ce document n'est invente, sauf le §5, qui le declare.
+
+---
+
+## §7 · Amendement distillation L2 — contradictions de sessions (2026-09-01)
+
+Ajoute par la distillation des 2 325 sessions (work 12, agents PARA, rapports
+dans `50_Distillation/_briefs/RAPPORT_l2_sessions_{areas,projets,archives,ressources}.md`).
+Contradictions **nommees, non tranchees** — l'arbitrage reste au propriétaire.
+Elles s'ajoutent aux 204 du §4 (non deduites de ce décompte).
+
+1. **V2 vs V3** : V3 fondée le 2026-07-09, mais V2 reste plus citee que V3 dans
+   les sessions d'aout (32 vs 21 mentions). Source : `RAPPORT_l2_sessions_projets.md`.
+2. **Graduation sans operation** : Summer's Verse « GRADUATED 2026-05-21 » vs
+   developpement fractal actif jusqu'au 2026-08-02 ; ABC OS « armature complete,
+   zero client ».
+3. **Canon fige vs execution** : canon des domaines Areas fige depuis le
+   2026-07-26 pendant que les rituels (GARDE-FOU x155, SEPT CADENCES x69,
+   MODE FABLE x60) explosent en aout — la boucle du rejeu (P1) vue depuis les
+   sessions.
+4. **7 vs 8 domaines** du Business Wheel (§5 deja arbitre en faveur de 8 ; les
+   sessions continuent de produire des registres a 7).
+5. **Autonomie reclamee (D1) vs rejeu de masse** : l'orchestration autonome
+   (Multica 594 sessions, stubs x45, ticks x150) est le premier producteur de
+   rejeu, pas de travail.
+6. **Fiasco Agent OS 08-09** vs port 5555 fonctionnel ensuite — le diagnostic
+   et la survie du systeme coexistent.
+7. **Abandon d'outil sans retrait de doctrine** : Antigravity abandonne en mars,
+   sa doctrine de mandat encore importee dans `CLAUDE.md`, 302 fichiers Geordi
+   non purges.
+
+Sources detaillees par contradiction : voir les 4 rapports ci-dessus.
+

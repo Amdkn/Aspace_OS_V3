@@ -5,6 +5,7 @@ description: Le briefing D.E.A.L attribue aux deux dépôts des architectures qu
 tags: [ceobench, specloop, deal, lights-out, verification, benchmark, b1-summers, confiance]
 generated: { by: "claude-opus-5", at: "2026-08-22T22:40:00Z" }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:31:25Z }
   - { by: "claude-opus-5", at: "2026-08-22T22:40:00Z" }
 sources:
   - id: ceobench-repo

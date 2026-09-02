@@ -5,6 +5,7 @@ description: Sans règle de repli dans vercel.json, tout chemin profond d'une SP
 tags: [vercel, spa, oauth, routage, coach-os, 404]
 generated: { by: claude-opus-5, at: 2026-08-17T16:20:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:35:40Z }
   - { by: process:curl-prod, at: 2026-08-17T16:18:00Z }
 sources:
   - id: mesure-avant

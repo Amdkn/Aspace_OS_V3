@@ -5,6 +5,7 @@ description: Sept cibles sur huit renvoient X-Frame-Options ou frame-ancestors r
 tags: [iframe, x-frame-options, csp, coach-os, app-store]
 generated: { by: claude-opus-5, at: 2026-08-17T13:45:00Z }
 verified:
+  - { by: human:amdkn, at: 2026-08-31T21:35:07Z }
   - { by: process:curl-head, at: 2026-08-17T13:30:00Z }
 sources:
   - id: mesure-directe
