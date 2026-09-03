@@ -1,0 +1,36 @@
+{
+  "registre": "summers_verse_horizon_12wy",
+  "tape": "00_Amadeus/60_Tape_Specs/2026-09-03-summers-verse-horizon-12wy-pour-le-prochain-proj.md",
+  "work_id": 38,
+  "created": "2026-09-03",
+  "source": {
+    "path": "20_Life_OS/22_Wheel_Discovery/state.json",
+    "signal": "LD01 GREEN load low",
+    "note": "lu, non modifie",
+    "routes_SNW_12WY": ["LD02", "LD04"]
+  },
+  "beth": {
+    "arbitre": "30_Business_OS/AGENTS.md",
+    "action": "none",
+    "veto": "non"
+  },
+  "prochain_projet": {
+    "route": "SNW_12WY",
+    "framework": "20_Life_OS/23_12WY_SNW",
+    "titre": "12 Week Year - prochain projet",
+    "horizons": {
+      "H1": "Semaine 1 : definir l'objectif 12 semaines du projet SNW_12WY et son indicateur unique",
+      "H3": "Semaine 3 : plan d'execution hebdomadaire verrouille, premier cycle de mesure",
+      "H10": "Semaine 10 : revue a mi-course, ajustement des blocs hebdomadaires",
+      "H30": "Jour 30 : checkpoint mensuel, load re-verifie via Wheel Discovery",
+      "H90": "Fin des 12 semaines : bilan complet, decision re-engage ou pivot"
+    },
+    "load": "low",
+    "zora_state": "GREEN"
+  },
+  "contraintes_respectees": [
+    "20_Life_OS non modifie",
+    "10_Tech_OS/kernel non modifie",
+    "prediction pre-enregistree avant build (uc.db prediction id 49)"
+  ]
+}

@@ -36,7 +36,7 @@ UC    = os.path.join(HERE, "uc.py")
 PORTIERS = {
     "S1_Rick":         "L0",   # noyau, infra, harness
     "A1_Beth_Morty":   "L1",   # identite, observation, vie
-    "B1_Jerry_Summer": "L2",   # valeur externe
+    "B1_Jerry_Summers": "L2",  # valeur externe
 }
 
 SECTIONS = ["Objectif", "Critère d'acceptation", "Périmètre", "Interdits"]
@@ -78,9 +78,55 @@ def parse(txt: str) -> tuple[dict, dict]:
     return fm, {k: "\n".join(v).strip() for k, v in secs.items()}
 
 
+def test_intent(txt: str, nom_fichier: str = "") -> dict:
+    """Test du ruban appliqué au format INTENT (contrat d'entrée).
+
+    Une intent sans critère mesurable — ou non gelée par l'Originator —
+    retourne à l'Originator. Binaire, comme le test du ruban.
+    """
+    fm, secs = parse(txt)
+    m_statut = re.search(r"\*\*Statut:\*\*\s*(\S+)", txt)
+    statut = (fm.get("statut") or (m_statut.group(1) if m_statut else "")).strip().upper()
+    manques: list[str] = []
+
+    if not fm.get("title"):
+        manques.append("frontmatter `title:` absent")
+
+    requis = ["Irritant", "Résultat visé", "Contraintes", "Definition of Done"]
+    for s in requis:
+        corps = next((v for k, v in secs.items() if s.lower()[:9] in k.lower()), None)
+        if corps is None:
+            manques.append(f"section intent `## {s}` absente")
+        elif len(corps) < 12:
+            manques.append(f"section intent `## {s}` vide ou trop courte")
+
+    if statut != "FROZEN":
+        manques.append(f"statut `{statut or 'absent'}` : seule l'Originator gèle "
+                       "(FROZEN) — DRAFT retourne à l'Originator")
+
+    dod = next((v for k, v in secs.items() if "definition of done" in k.lower()), "")
+    if dod and not VERIFIABLE.search(dod):
+        manques.append("Definition of Done sans critère mesurable : "
+                       "aucun chiffre, comparaison, commande ni case à cocher "
+                       "— refusée vers l'Originator")
+
+    for m in set(x.group(0) for x in BLOQUANTS.finditer(txt)):
+        manques.append(f"question non résolue dans le texte : « {m} »")
+
+    return {"complet": not manques, "manques": manques,
+            "title": fm.get("title"), "layer": fm.get("layer"),
+            "format": "intent", "statut": statut}
+
+
 def test_du_ruban(path: str) -> dict:
-    """Le ruban est-il complet ? Binaire, avec la liste de ce qui manque."""
+    """Le ruban est-il complet ? Binaire, avec la liste de ce qui manque.
+
+    Les fichiers `intent-*.md` sont jugés au format INTENT (contrat d'entrée),
+    les autres au format de note classique.
+    """
     txt = open(path, encoding="utf-8", errors="ignore").read()
+    if re.match(r"^intent-", os.path.basename(path).lower()):
+        return test_intent(txt, os.path.basename(path))
     fm, secs = parse(txt)
     manques: list[str] = []
 

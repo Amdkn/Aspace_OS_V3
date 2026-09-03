@@ -1,0 +1,38 @@
+{
+  "verse": "Summers Verse",
+  "ingestion": "Solaris",
+  "source_work": 37,
+  "tape": "00_Amadeus/60_Tape_Specs/2026-09-03-summers-verse-ingestion-solaris-registre-des-sou.md",
+  "date": "2026-09-03",
+  "origin": {
+    "signal": "Wheel Discovery work 35 — LD01 GREEN, load low, route PROTOSTAR_DEAL",
+    "beth_action": "none",
+    "statut": "traduit en work L2 de production de valeur"
+  },
+  "sources": [
+    {
+      "id": "SRC-001",
+      "nom": "Wheel Discovery state",
+      "chemin": "20_Life_OS/22_Wheel_Discovery/state.json",
+      "type": "signal metabolique",
+      "acces": "lecture seule",
+      "registre_le": false,
+      "note": "source declaree par le ruban; contenu non interprete (L2 ne touche pas 20_Life_OS)"
+    },
+    {
+      "id": "SRC-002",
+      "nom": "Ruban (tape spec frozen)",
+      "chemin": "00_Amadeus/60_Tape_Specs/2026-09-03-summers-verse-ingestion-solaris-registre-des-sou.md",
+      "type": "spec",
+      "acces": "lecture",
+      "registre_le": true,
+      "note": "definition du DoD de cette ingestion"
+    }
+  ],
+  "verifier": "verifier_solaris.py",
+  "contraintes": [
+    "Portier _INBOX/B1_Jerry_Summers/ -> gate.py run (L2)",
+    "Pyramide L0 >= L1 > L2 — Beth veto, 30_Business_OS/AGENTS.md",
+    "Ne pas toucher 10_Tech_OS/kernel/ ni 20_Life_OS/"
+  ]
+}

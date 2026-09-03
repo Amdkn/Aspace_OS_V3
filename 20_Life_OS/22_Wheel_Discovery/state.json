@@ -1,0 +1,64 @@
+{
+  "ship": "DISCOVERY",
+  "framework": "Life Wheel / ZORA",
+  "updated": "2026-09-02T22:21:52",
+  "domains": {
+    "LD01": {
+      "persona": "Book",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "ENTERPRISE_PARA"
+    },
+    "LD02": {
+      "persona": "Saru",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "SNW_12WY"
+    },
+    "LD03": {
+      "persona": "Culber",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "PROTOSTAR_DEAL"
+    },
+    "LD04": {
+      "persona": "Tilly",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "SNW_12WY"
+    },
+    "LD05": {
+      "persona": "Stamets",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "CERRITOS_GTD"
+    },
+    "LD06": {
+      "persona": "Burnham",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "ORVILLE_IKIGAI"
+    },
+    "LD07": {
+      "persona": "Reno",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "PROTOSTAR_DEAL"
+    },
+    "LD08": {
+      "persona": "Georgiou",
+      "zora_state": "GREEN",
+      "load_signal": "low",
+      "beth_action": "none",
+      "morty_route": "ENTERPRISE_PARA"
+    }
+  },
+  "evidence_paths": []
+}

@@ -1,0 +1,26 @@
+{
+  "version": "v0",
+  "date_init": "2026-09-04",
+  "framework": "PARA Enterprise",
+  "projects": [],
+  "areas": [],
+  "resources": [
+    "05_BuildIt_Prompt_Pack.pdf",
+    "BLUEPRINT.md",
+    "CHECKLIST.md",
+    "COMMANDS.md",
+    "Enterprise_OS_On_One_Page.pdf",
+    "FAQ.md",
+    "FIRST_SESSION.md",
+    "GLOSSARY.md",
+    "QUICKSTART.md",
+    "README.md",
+    "The_Enterprise_OS_Blueprint.pdf",
+    "TROUBLESHOOTING.md",
+    "examples",
+    "prompts",
+    "specs",
+    "Takeout"
+  ],
+  "archives": []
+}

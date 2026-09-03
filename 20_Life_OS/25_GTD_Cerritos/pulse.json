@@ -1,0 +1,42 @@
+{
+  "version": "v0",
+  "date_init": "2026-09-03",
+  "framework": "GTD Cerritos",
+  "canon_5_stages": [
+    {
+      "stage": "capture",
+      "dossier": "01_Inbox_Mariner",
+      "persona": "Mariner",
+      "spec": "A3_Mariner_Capture_Spec.md",
+      "artefact": "inbox.md"
+    },
+    {
+      "stage": "clarify",
+      "dossier": "02_Clarify_Boimler",
+      "persona": "Boimler",
+      "spec": "A3_Boimler_Clarify_Spec.md",
+      "artefact": "ADR-GTD-001.md"
+    },
+    {
+      "stage": "organize",
+      "dossier": "03_Organize_Rutherford",
+      "persona": "Rutherford",
+      "spec": "A3_Rutherford_Organize_Spec.md",
+      "artefact": null
+    },
+    {
+      "stage": "review",
+      "dossier": "04_Review_Tendi",
+      "persona": "Tendi",
+      "spec": "A3_Tendi_Review_Spec.md",
+      "artefact": null
+    },
+    {
+      "stage": "engage",
+      "dossier": "05_Engage_Freeman",
+      "persona": "Freeman",
+      "spec": "A3_Freeman_Engage_Spec.md",
+      "artefact": null
+    }
+  ]
+}

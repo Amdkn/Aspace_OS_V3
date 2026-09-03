@@ -87,7 +87,7 @@ binds:
                 VERCEL_TOKEN: vcp_5po26Cc7JVaMKrun9YwRGTdAlUmHMA6hrLrHR86u64k3giUnzd0TPSAk
                 VERCEL_TEAM_ID: team_FORMiTgW9YGd3JDRTaoaediq
 mcp:
-  port: 3000
+  port: 15001
   targets: []
 llm:
   port: 4000

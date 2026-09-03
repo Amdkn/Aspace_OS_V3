@@ -14,6 +14,7 @@ c'est exactement comme ça qu'un système autonome s'arrête sans prévenir.
 """
 from __future__ import annotations
 import argparse, json, os, re, sqlite3, subprocess, sys
+from datetime import date
 from collections import Counter
 
 sys.path.insert(0, os.path.expanduser("~/agentpulse"))
@@ -116,12 +117,77 @@ def cmd_rendre(a):
     print(json.dumps({"ok": ok, "work_id": a.work}, ensure_ascii=False))
 
 
+def cmd_intent(a):
+    """Donna rédige l'intent.md de diagnostic d'un échec qualifié.
+
+    Ne décide rien : elle documente (famille d'échec + preuve) et dépose dans
+    _INBOX/S1_Rick/ en DRAFT. Rick tranche -> FROZEN -> Yaz spec -> cycle.
+    """
+    c = cx()
+    r = c.execute("SELECT id, title, layer, attempts FROM work WHERE id=?",
+                  (a.work,)).fetchone()
+    if not r:
+        print(json.dumps({"ok": False, "erreur": f"work {a.work} inexistant"},
+                         ensure_ascii=False)); return
+    e = c.execute("SELECT payload FROM event WHERE work_id=? AND kind='escalade' "
+                  "ORDER BY id DESC LIMIT 1", (a.work,)).fetchone()
+    p = json.loads(e["payload"]) if e and e["payload"] else {}
+    motif = p.get("motif") or dernier_motif(c, a.work)
+    fam = p.get("famille") or famille(motif)
+    today = date.today().isoformat()
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", r["title"])[:40].strip("-").lower()
+    inbox = os.path.join(os.path.dirname(DB), "..", "..", "_INBOX", "S1_Rick")
+    inbox = os.path.abspath(inbox)
+    os.makedirs(inbox, exist_ok=True)
+    dest = os.path.join(inbox, f"intent-diagnostic-work{a.work}-{today}.md")
+    txt = f"""# INTENT: diagnostic-work{a.work}
+**Layer:** {r["layer"] or "L0"}
+**Originator:** Donna (dlq.py) — maintenance autonome
+**Date:** {today}
+**Statut:** DRAFT
+
+## 1. Irritant réel
+
+Échec répété (famille : {fam}) sur le work {a.work} « {r["title"]} »,
+{r["attempts"]} tentative(s). Le work est en attente d'arbitrage Rick ; sans
+tranche, il bloque la branche et l'opérateur redevient le superviseur.
+
+Motif enregistré : {motif[:400]}
+
+## 2. Résultat visé (mesurable)
+
+Le work {a.work} ressort de l'arbitrage avec un statut terminal vérifiable :
+soit `pending` (rendre) soit `done`, et plus aucun échec de la famille
+« {fam} » n'atteint {a.seuil} tentatives au prochain passage de `dlq.py run`.
+
+## 3. Contraintes non-négociables
+
+- Blast radius : {a.blast}
+- Aucun contournement de la preuve : les critères restent exécutables.
+- La tranche appartient à Rick ; Donna ne modifie pas le statut elle-même.
+
+## 4. Definition of Done
+
+- [ ] `python 10_Tech_OS/kernel/dlq.py rapport` ne liste plus le work {a.work}
+- [ ] `python 10_Tech_OS/kernel/uc.py status` rend `{r["layer"] or "L0"}` done/pending sans `blocked`
+"""
+    with open(dest, "w", encoding="utf-8") as f:
+        f.write(txt)
+    print(json.dumps({"ok": True, "intent": os.path.relpath(dest, os.path.dirname(DB)),
+                      "famille": fam}, ensure_ascii=False))
+
+
 P = argparse.ArgumentParser(description="Donna — DLQ et Super Uplink vers Rick")
 S = P.add_subparsers(dest="cmd", required=True)
 p = S.add_parser("run"); p.add_argument("--seuil", type=int, default=3); p.set_defaults(f=cmd_run)
 S.add_parser("rapport").set_defaults(f=cmd_rapport)
 p = S.add_parser("rendre"); p.add_argument("--work", type=int, required=True)
 p.add_argument("--note"); p.set_defaults(f=cmd_rendre)
+p = S.add_parser("intent"); p.add_argument("--work", type=int, required=True)
+p.add_argument("--seuil", type=int, default=3)
+p.add_argument("--blast", default="dossiers touchés : aucun au-delà du work cité ; interdits : kernel/uc.db en écriture directe, 00_Amadeus/")
+p.set_defaults(f=cmd_intent)
+
 
 if __name__ == "__main__":
     a = P.parse_args(); a.f(a)

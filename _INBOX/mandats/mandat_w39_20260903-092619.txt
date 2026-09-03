@@ -1,0 +1,302 @@
+MANDAT AUTONOME — aucune question possible, le ruban fait foi.
+work_id: 39
+layer: L1
+titre: GTD Cerritos pulse v0: registre 5 stages + verify_gtd.py dans 25_GTD_Cerritos
+tape_id: 31
+ruban: C:/Users/amado/ASpace_OS_V3/00_Amadeus/60_Tape_Specs/2026-09-03-spec-gtd-cerritos-pulse-v0.md
+sha256 ruban: b3179244030bf1cfe8061632b3ec25cc5fe8f653b0d13d798dcbd5acf3cc9b7f
+attempts: 0
+
+=== RUBAN φ ===
+# Spec — GTD Cerritos Pulse v0 : verifier.py + pulse.json (registre + verifier, pattern prouve)
+
+- Rôle : Spec (ruban φ), L1 Life Core (11e Docteur) — pour 20_Life_OS/25_GTD_Cerritos.
+- Date : 2026-09-03 · Statut : executable, aucune question requise par le constructeur (test du ruban OK).
+- Spec amont : `2026-09-02-spec-gtd-cerritos-inbox.md` (conservée, non modifiée).
+
+## Contexte — etat mesure au 2026-09-03
+
+Mesure directe de `C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/` :
+- Les 5 dossiers de stage existent : `01_Inbox_Mariner/` (avec `inbox.md` et
+  `README_workflow.md` crees par le ruban du 2026-09-02), `02_Clarify_Boimler/`
+  (avec `ADR-GTD-001.md`), `03_Organize_Rutherford/`, `04_Review_Tendi/`,
+  `05_Engage_Freeman/` (chacun porte `A3_*_Spec.md`, `AGENT.md`, `README.md`, `SOUL.md`).
+- **Aucun verifier n'existe** dans ce framework. Le framework voisin
+  `22_Wheel_Discovery/` porte `verify_wheel.py` + `state.json` (pattern prouve :
+  verifier stdlib qui affiche `*_OK`/`*_KO` et retourne rc 0/1).
+- `24_PARA_Enterprise/`, `23_12WY_SNW/`, `26_DEAL_Protostar/` n'ont pas de verifier
+  non plus ; 22 est le seul. Le ruban n'est donc pas redondant.
+
+## Objectif
+
+Ajouter a `25_GTD_Cerritos/` son premier etat mesurable, sur le pattern deja prouve
+de Jerry Business Pulse v1 (`00_Amadeus/60_Tape_Specs/2026-09-03-spec-jerry-business-pulse-v1.md`)
+adapté a la structure GTD :
+
+1. `pulse.json` a la racine du framework : le registre-pulse GTD (5 stages,
+   leurs personas canon actif, chemins des artefacts, version v0).
+2. `verify_gtd.py` a la racine du framework : verifier stdlib qui valide la
+   structure des 5 stages, le frontmatter des specs, l'inbox, et le pulse.json.
+
+Python stdlib uniquement (json, os, sys), ASCII sans accents dans le code,
+contenus en français. Aucune dependance pip.
+
+## Quoi batir — OU (chemins absolus exacts)
+
+Base : `C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/`
+
+### 1. Fichier `C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/pulse.json` — contenu EXACT
+
+```json
+{
+  "version": "v0",
+  "date_init": "2026-09-03",
+  "framework": "GTD Cerritos",
+  "canon_5_stages": [
+    {
+      "stage": "capture",
+      "dossier": "01_Inbox_Mariner",
+      "persona": "Mariner",
+      "spec": "A3_Mariner_Capture_Spec.md",
+      "artefact": "inbox.md"
+    },
+    {
+      "stage": "clarify",
+      "dossier": "02_Clarify_Boimler",
+      "persona": "Boimler",
+      "spec": "A3_Boimler_Clarify_Spec.md",
+      "artefact": "ADR-GTD-001.md"
+    },
+    {
+      "stage": "organize",
+      "dossier": "03_Organize_Rutherford",
+      "persona": "Rutherford",
+      "spec": "A3_Rutherford_Organize_Spec.md",
+      "artefact": null
+    },
+    {
+      "stage": "review",
+      "dossier": "04_Review_Tendi",
+      "persona": "Tendi",
+      "spec": "A3_Tendi_Review_Spec.md",
+      "artefact": null
+    },
+    {
+      "stage": "engage",
+      "dossier": "05_Engage_Freeman",
+      "persona": "Freeman",
+      "spec": "A3_Freeman_Engage_Spec.md",
+      "artefact": null
+    }
+  ]
+}
+```
+
+Convention : encodage UTF-8 sans BOM, fin de ligne LF, indentation 2 espaces,
+aucune cle supplementaire, aucune cle manquante. `artefact: null` signifie
+"aucun artefact de donnees encore produit a ce stage" — verifie comme `null`.
+
+### 2. Fichier `C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/verify_gtd.py` — source complet
+
+```python
+#!/usr/bin/env python3
+# -*- coding: ascii -*-
+"""verify_gtd.py - GTD Cerritos Pulse v0.
+
+Verifie la structure du framework GTD Cerritos :
+  [1] pulse.json present, JSON valide, version v0, date_init, 5 stages dans l'ordre
+  [2] les 5 dossiers de stage existent
+  [3] chaque stage porte sa spec A3_*_Spec.md non vide, son AGENT.md, son README.md, son SOUL.md
+  [4] artefact canon actif present quand non null :
+      01_Inbox_Mariner/inbox.md (non vide, contient un titre '# GTD Inbox')
+      02_Clarify_Boimler/ADR-GTD-001.md (non vide)
+  [5] inbox.md a une section '## Items' (structure capture)
+
+Affiche GTD_OK et retourne rc=0 si tout passe, sinon GTD_KO et rc=1.
+Stdlib uniquement. Spec : 00_Amadeus/60_Tape_Specs/2026-09-03-spec-gtd-cerritos-pulse-v0.md
+"""
+
+import json
+import os
+import sys
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+
+STAGES = ["capture", "clarify", "organize", "review", "engage"]
+DOSSIERS = {
+    "capture": "01_Inbox_Mariner",
+    "clarify": "02_Clarify_Boimler",
+    "organize": "03_Organize_Rutherford",
+    "review": "04_Review_Tendi",
+    "engage": "05_Engage_Freeman",
+}
+PERSONAS = {
+    "capture": "Mariner",
+    "clarify": "Boimler",
+    "organize": "Rutherford",
+    "review": "Tendi",
+    "engage": "Freeman",
+}
+SPECS = {
+    "capture": "A3_Mariner_Capture_Spec.md",
+    "clarify": "A3_Boimler_Clarify_Spec.md",
+    "organize": "A3_Rutherford_Organize_Spec.md",
+    "review": "A3_Tendi_Review_Spec.md",
+    "engage": "A3_Freeman_Engage_Spec.md",
+}
+ARTEFACTS = {
+    "capture": "inbox.md",
+    "clarify": "ADR-GTD-001.md",
+    "organize": None,
+    "review": None,
+    "engage": None,
+}
+
+
+def lire_texte(p):
+    with open(p, "r", encoding="utf-8") as f:
+        return f.read()
+
+
+def main():
+    erreurs = []
+
+    # 1. pulse.json
+    pulse_path = os.path.join(BASE, "pulse.json")
+    if not os.path.isfile(pulse_path):
+        erreurs.append("pulse.json manquant")
+    else:
+        try:
+            pulse = json.load(open(pulse_path, "r", encoding="utf-8"))
+        except (ValueError, OSError) as e:
+            pulse = None
+            erreurs.append("pulse.json illisible: " + str(e))
+        if pulse is not None:
+            if pulse.get("version") != "v0":
+                erreurs.append("pulse.json: version != v0 (trouve " + repr(pulse.get("version")) + ")")
+            if pulse.get("date_init") != "2026-09-03":
+                erreurs.append("pulse.json: date_init != 2026-09-03")
+            if pulse.get("framework") != "GTD Cerritos":
+                erreurs.append("pulse.json: framework != GTD Cerritos")
+            stages = [s.get("stage") for s in pulse.get("canon_5_stages", [])]
+            if stages != STAGES:
+                erreurs.append("pulse.json: stages != " + str(STAGES) + " (trouve " + str(stages) + ")")
+            for s in pulse.get("canon_5_stages", []):
+                st = s.get("stage")
+                if st not in STAGES:
+                    erreurs.append("pulse.json: stage inconnu " + repr(st))
+                    continue
+                if s.get("dossier") != DOSSIERS[st]:
+                    erreurs.append("pulse.json: " + st + " dossier != " + DOSSIERS[st])
+                if s.get("persona") != PERSONAS[st]:
+                    erreurs.append("pulse.json: " + st + " persona != " + PERSONAS[st])
+                if s.get("spec") != SPECS[st]:
+                    erreurs.append("pulse.json: " + st + " spec != " + SPECS[st])
+                if s.get("artefact") != ARTEFACTS[st]:
+                    erreurs.append("pulse.json: " + st + " artefact != " + repr(ARTEFACTS[st]))
+
+    # 2 + 3. dossiers, specs, AGENT/README/SOUL
+    for st in STAGES:
+        d = os.path.join(BASE, DOSSIERS[st])
+        if not os.path.isdir(d):
+            erreurs.append("dossier manquant: " + DOSSIERS[st])
+            continue
+        for nom in [SPECS[st], "AGENT.md", "README.md", "SOUL.md"]:
+            p = os.path.join(d, nom)
+            if not os.path.isfile(p):
+                erreurs.append(DOSSIERS[st] + "/" + nom + " manquant")
+            elif os.path.getsize(p) == 0:
+                erreurs.append(DOSSIERS[st] + "/" + nom + " vide")
+
+    # 4 + 5. artefacts canon actifs
+    inbox = os.path.join(BASE, "01_Inbox_Mariner", "inbox.md")
+    if os.path.isfile(inbox):
+        if os.path.getsize(inbox) == 0:
+            erreurs.append("01_Inbox_Mariner/inbox.md vide")
+        else:
+            contenu = lire_texte(inbox)
+            if "# GTD Inbox" not in contenu:
+                erreurs.append("inbox.md sans titre '# GTD Inbox'")
+            if "## Items" not in contenu:
+                erreurs.append("inbox.md sans section '## Items'")
+    else:
+        erreurs.append("01_Inbox_Mariner/inbox.md manquant")
+
+    adr = os.path.join(BASE, "02_Clarify_Boimler", "ADR-GTD-001.md")
+    if not os.path.isfile(adr):
+        erreurs.append("02_Clarify_Boimler/ADR-GTD-001.md manquant")
+    elif os.path.getsize(adr) == 0:
+        erreurs.append("02_Clarify_Boimler/ADR-GTD-001.md vide")
+
+    if erreurs:
+        print("GTD_KO")
+        for e in erreurs:
+            print("  ERREUR: " + e)
+        return 1
+
+    print("GTD_OK")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
+```
+
+### 3. Ce qui ne change PAS
+
+- Aucun fichier existant de `25_GTD_Cerritos/` n'est modifie ni supprime.
+- Aucun nouveau dossier. Aucun fichier hors de `25_GTD_Cerritos/`.
+- `10_Tech_OS/kernel/uc.db` : non touche. Ruban amont du 2026-09-02 : non modifie.
+
+## Etapes executables sans question
+
+1. Ecrire `pulse.json` avec le contenu exact du bloc 1.
+2. Ecrire `verify_gtd.py` avec le source exact du bloc 2 (UTF-8, LF).
+3. Lancer le verifier ; si `GTD_KO`, corriger l'objet nomme par l'erreur
+   (jamais le verifier) et relancer.
+4. Test negatif une fois, puis retablissement :
+   - renommer `inbox.md` en `inbox.md.bak` → verifier doit afficher `GTD_KO` rc=1 ;
+   - renommer en arriere → `GTD_OK` rc=0.
+
+## Criteres de verification (commande + rc attendu)
+
+```
+python C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/verify_gtd.py
+```
+Attendu : `GTD_OK` sur stdout, rc=0.
+
+```
+python -c "import json;d=json.load(open(r'C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/pulse.json',encoding='utf-8'));assert d['version']=='v0' and len(d['canon_5_stages'])==5"
+```
+Attendu : rc=0.
+
+```
+python -c "import py_compile;py_compile.compile(r'C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/verify_gtd.py',doraise=True)"
+```
+Attendu : rc=0.
+
+## Prediction verifiable (loi de prédiction — enregistrer AVANT execution)
+
+- Prediction P1 : le verifier v0 affiche `GTD_OK` et retourne rc=0 au premier
+  lancement apres ecriture des 2 fichiers, sans modification d'un fichier
+  existant. Verifiable par la commande ci-dessus.
+- Prediction P2 : le test negatif (renommer inbox.md) produit `GTD_KO` rc=1 avec
+  exactement 1 ligne `ERREUR:` mentionnant `inbox.md`. Verifiable par l'etape 4.
+- Si P1 echoue, la prediction est marquee `FALSIFIEE` dans le retour de review —
+  pas de reecriture retroactive.
+
+## Contraintes
+
+- Ne rien ecrire hors `C:/Users/amado/ASpace_OS_V3/20_Life_OS/25_GTD_Cerritos/`.
+- Python stdlib uniquement (json, os, sys) — aucune dependance pip.
+- Tout le code Python en ASCII sans accents (coding: ascii), contenus en francais.
+- Ne pas prononcer `done` : detache par le 11e Docteur depuis `review` seulement.
+
+
+=== PROTOCOLE ===
+1. claim:   python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py claim --work 39 --lease 45 --harness rory_build_l1
+2. predict: python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py predict --work 39 --confiance <0.0-1.0> --note '<prediction anterieure a l acte>'
+3. build:   realiser le ruban. Un critere d'acceptation = une commande `cmd` executee avec rc.
+4. review:  python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py review --work 39 (revue par doctor11_review_l1, preuve par critere)
+5. done:    python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py done --work 39
+Interdits: pas de question a l operateur (ruban incomplet = fail --work 39 --note 'ruban incomplet'). Personne ne cumule Build et Review.

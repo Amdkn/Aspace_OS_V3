@@ -1,0 +1,19 @@
+MANDAT AUTONOME — aucune question possible, le ruban fait foi.
+work_id: 30
+layer: L1
+titre: Re-scope cascade verify: preuve par re-mesure multica du jour (intent rescope-cascade FROZEN 2026-09-02)
+tape_id: None
+ruban: A SOURCER (work sans ruban)
+sha256 ruban: A SOURCER
+attempts: 0
+
+=== RUBAN φ ===
+A SOURCER — ruban absent ou manquant.
+
+=== PROTOCOLE ===
+1. claim:   python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py claim --work 30 --lease 45 --harness rory_build_l1
+2. predict: python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py predict --work 30 --confiance <0.0-1.0> --note '<prediction anterieure a l acte>'
+3. build:   realiser le ruban. Un critere d'acceptation = une commande `cmd` executee avec rc.
+4. review:  python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py review --work 30 (revue par doctor11_review_l1, preuve par critere)
+5. done:    python C:\Users\amado\ASpace_OS_V3\10_Tech_OS\kernel\uc.py done --work 30
+Interdits: pas de question a l operateur (ruban incomplet = fail --work 30 --note 'ruban incomplet'). Personne ne cumule Build et Review.
