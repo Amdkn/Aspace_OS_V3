@@ -1,132 +1,77 @@
-# AGENTS.md — canon A'Space OS V3
+# AGENTS.md — Canon A'Space OS V3 & Meta-Routeur DOX
 
 > **Loi L0 — Rick.** *Un système qui ne sait pas se répliquer n'est pas un système,
 > c'est un document.*
-
-Cette loi remplace l'ancienne — « la sobriété est la clé de la liberté », adossée à la peur
-du paperclip. Elle est abrogée le 2026-08-02. La sobriété était une prudence ; elle n'a produit
-aucune valeur, elle a produit 48 000 fichiers de description et un opérateur en goulot
-d'étranglement. La nouvelle loi n'est pas prudentielle, elle est **constructive**.
+> 
+> **Architecture Souveraine & Pyramide Déterministe à 7 Niveaux.**
+> Ce fichier racine agit comme le **Meta-Routeur du War Room (Hivemind)**. Il ne centralise plus artificiellement les détails locaux mais aiguille le trafic vers les `AGENTS.md` arborescents (DOX) de chaque sous-dossier maître pour éliminer la famine de contexte et économiser le Tool Calling.
 
 ---
 
-## 1. Le théorème fondateur
-
-Von Neumann, années 1940 : quel est le minimum requis pour qu'une machine construise une
-copie fonctionnelle d'elle-même ?
-
-Le paradoxe : si une machine se copie, la copie a besoin d'une description complète de la
-machine — mais la description fait partie de la machine, donc elle a besoin de sa propre
-description. Régression infinie.
-
-**L'échappatoire est la dualité du ruban.** La description est utilisée deux fois, de deux
-manières incompatibles :
-
-- le **constructeur** la *lit et l'interprète* pour bâtir ;
-- le **copieur** la *duplique en aveugle*, sans jamais la comprendre.
-
-C'est cette asymétrie, et rien d'autre, qui brise la régression.
-
-## 2. Les quatre organes
-
-| Organe | Symbole | Rôle | Où, dans V3 |
-|---|---|---|---|
-| Ruban | φ | la description, complète | `00_Amadeus/60_Tape_Specs/` |
-| Constructeur | A | bâtit depuis φ | `10/20/30_*_OS/` |
-| Copieur | B | duplique φ sans l'interpréter | `10_Tech_OS/kernel/` |
-| Contrôleur | C | ordonne A et B, **puis détache** | `_INBOX/` + `kernel/uc.db` |
-
-Le dernier verbe est le seul qui compte : **détacher**. Un agent qu'on invoque n'est pas
-autonome, quel que soit le nombre de threads. V2 avait φ et rien d'autre.
-
-## 3. Le test du ruban
-
-> Si un constructeur doit poser une question à l'opérateur, le ruban est incomplet.
-
-C'est le critère opérationnel, et il est binaire. Une spec qui exige une clarification humaine
-n'est pas une spec : c'est une note. Elle retourne à `_INBOX`.
-
-## 4. Ce que Conway impose à la structure
-
-Trois règles suffisent à atteindre la Turing-complétude. La complexité du Jeu de la Vie n'est
-jamais déclarée — elle **émerge** de l'interaction de cellules idiotes.
-
-Deux conséquences, non négociables :
-
-**La racine reste minimale.** Chaque dossier ajouté est une règle en plus, et les règles en
-plus ne créent pas de capacité : elles la figent. Une taxonomie riche est inerte par
-construction — c'est l'erreur exacte de V2.
-
-**Un agent n'est pas un dossier.** Un planeur n'est pas une structure : c'est un motif qui
-persiste en se déplaçant, sans qu'aucune cellule ne voyage. Dans V3, un agent est un **item
-qui traverse des états dans la file**, pas un répertoire. Ce qui bouge, c'est l'agencement.
-
-## 5. Les lois tenues par la machine
-
-Ces règles ne dépendent d'aucune discipline. Elles sont dans le schéma SQL, et la base refuse
-la transaction qui les viole.
-
-**Loi de prédiction.** Rien n'atteint `review` ni `done` sans qu'une prédiction ait été
-enregistrée *avant* l'exécution. Une prédiction postérieure à l'acte n'est pas une
-vérification, c'est une justification.
-
-**Loi de détachement.** `done` n'est atteignable que depuis `review`. La descendance est
-lâchée parce qu'elle a prouvé, jamais parce qu'on l'espère.
-
-**Loi du bail.** Tout travail réclamé porte une échéance. Un agent qui meurt rend son travail
-à la file tout seul. Sans elle, une panne bloque une branche pour toujours et l'opérateur
-redevient le superviseur.
-
-## 6. Ce que V3 n'est pas
-
-V3 **n'archive pas** et **ne documente pas son propre passé**. Le savoir réutilisable vit dans
-la base de connaissance V2 :
+## 1. La Pyramide à 7 Niveaux d'A'Space OS V3
 
 ```
-ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\
+      ▲
+     / \     [7D] HIVEMIND & WAR ROOM : 13e Docteur / Arbitrage transversal Amadou Kone
+    /---\
+   / 6D  \   [6D] IDENTITÉS & SOUL FILES : CLAUDE.md / GEMINI.md / Soul.md (Air Traffic Control)
+  /-------\
+ /   5D    \ [5D] HOOKS & VALIDATION GATES : Coupe-circuit déterministe, Veto PII, Gates SSSF
+/-----------\
+|    4D     | [4D] CRONS & HEARTBEATS : Télémétrie 60s Yas, Tâche hebdo Distillation 50_
+|-----------|
+|    3D     | [3D] SKILLS & SERVEURS MCP : Ryan ADW, Tool Calling, Antigravity SDK
+|-----------|
+| SUBSTRAT  | [MACRO] WEBHOOKS & BROKERS : Event Log append-only uc.db (Zero Kafka lourd)
+|-----------|
+|  PANTRY   | [MICRO] SILVER PLATTER & MÉMOIRE : SQLite WAL, Semantica RDF Graham, OKF 0.2
+└───────────┘
 ```
 
-V2 est la mémoire. V3 est le runtime. Un fichier qui n'exécute rien et contre lequel rien ne
-s'exécute n'a pas sa place ici — il appartient à Geordi.
+---
 
-## 7. Chaîne d'outils
+## 2. Meta-Routeur DOX — Cartographie des Sub-AGENTS.md
 
-| Étape | Outil | Produit |
-|---|---|---|
-| écrire le ruban | `/spec-loop` · `/bmad` | φ dans `60_Tape_Specs/` |
-| bâtir | `/gstack` · `/superpower` · `/gsd` | l'artefact |
-| prédire puis vérifier | `/sim-mirofish` | `prediction` pré-enregistrée, puis scorée |
-| mesurer | `/ceo-bench` — sqlite + sqlite-vec | calibration |
-| boucler | `/loopany` · `/wargames` | la descendance |
+Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent charge **exclusivement** le `AGENTS.md` du sous-dossier concerné :
+
+| Organe / Dossier | Rôle dans V3 & Niveau Pyramide | Fichier d'Aiguillage Dédié |
+| :--- | :--- | :--- |
+| **`50_Distillation/`** | **LE GATE D'ENTRÉE INVIOLABLE** [5D]. Rien n'entre sans ce sas. | [`50_Distillation/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/50_Distillation/AGENTS.md) |
+| **`70_Onthologies/`** | **VÉRITÉ FORMELLE RDF** [Pantry / 6D]. Gardien : Graham (1 681+ nœuds). | [`70_Onthologies/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/70_Onthologies/AGENTS.md) |
+| **`40_Memory_Wiki_OKF/`** | **MÉMOIRE LONGUE CERTIFIÉE** [Pantry / 6D]. Format OKF v0.2. | [`40_Memory_Wiki_OKF/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/40_Memory_Wiki_OKF/AGENTS.md) |
+| **`90-self-evolution/`** | **SYSTÈME IMMUNITAIRE ANTI-REJEU** [5D / 6D]. Patterns P1-P6. | [`90-self-evolution/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/90-self-evolution/AGENTS.md) |
+| **`60_Implementation_...`**| **CADRE & SOPS D'EXÉCUTION** [5D]. Standards de compilation. | [`60_Implementation_Méthodologiques/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/60_Implementation_M%C3%A9thodologiques/AGENTS.md) |
+| **`10_Tech_OS/`** | **PLOMBERIE, KERNEL & RUNTIME** [Substrat / 3D]. Ryan & Yaz. | [`10_Tech_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/10_Tech_OS/AGENTS.md) |
+| **`20_Life_OS/`** | **VIE, SANTÉ, RITUELS & IKIGAI** [L1 Action]. Amy, Rory. | [`20_Life_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/20_Life_OS/AGENTS.md) |
+| **`30_Business_OS/`** | **CASH-FLOW & OFFRES RÉELLES** [L2 Action]. Clara, Bill. | [`30_Business_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/30_Business_OS/AGENTS.md) |
+| **`_INBOX/`** | **RÉCEPTION INTENTS BRUTS** [Contrôleur C]. Sas d'arbitrage. | [`_INBOX/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/_INBOX/AGENTS.md) |
 
 ---
 
-*Canon V3, 2026-08-02. Abroge et remplace le canon V2 hérité.*
+## 3. Les Invariants Transversaux Inviolables
 
-
----
-
-## 8. Mémoire de fin de réponse — OpenWiki + OKF + DOX
-
-Toute réponse substantielle, à son terme, actualise les trois organes cognitifs :
-
-- **OpenWiki** : la mémoire longue (φ-mémoire). Nouvelle page ou amendement.
-- **OKF 0.2** : le format canonique. Frontmatter complet. Pas de markdown nu pour le savoir canonique.
-- **DOX** : la hiérarchie `AGENTS.md` arborescente. Append-only D4.
-
-**Anti-dette d'obscurité.** Ce qui n'est ni tracé dans OpenWiki, ni formaté en OKF, ni append dans un `AGENTS.md` local, **n'existe pas pour les agents futurs**. C'est de l'obscurité — une dette qui grossit à chaque tour.
-
-**Règle de Conway appliquée** : chaque réponse laisse la machine un peu plus réplicable qu'avant. Une réponse qui n'actualise pas la mémoire casse l'invariant.
-
-**Outillage :**
-- Ontologie → **OpenWiki** (mémoire) + **OKF** (forme)
-- Hiérarchie `AGENTS.md` → **DOX** (append-only)
-- Lookup → context-mode FTS5 (`~/.pi/context-mode/`)
-
-*Ajouté 2026-08-17 sur directive A+. Voir `~/.pi/agent/AGENTS.md` §12 pour la procédure opérationnelle détaillée.*
+1. **Règle d'or 1 : Le Gate Inviolable (`50_Distillation/`)**
+   - Aucun fichier brut, aucune note non triée n'entre en direct dans la mémoire ou le graphe.
+2. **Règle d'or 2 : Les 4 Organes Souverains au-dessus de tout**
+   - `70_Onthologies/`, `40_Memory_Wiki_OKF/`, `60_Implementation_Méthodologiques/` et `90-self-evolution/` gouvernent les 3 OS applicatifs (`10_Tech_OS`, `20_Life_OS`, `30_Business_OS`).
+   - Tech OS est un serviteur silencieux : interdiction formelle de cannibaliser le système.
+3. **Règle d'or 3 : Le Couplage Déterministe (Hooks & Webhooks)**
+   - Les agents ne s'exécutent jamais sans intercepteurs runtime (`10_Tech_OS/kernel/hooks/`).
+   - Le "Rot Rate" et les fuites de secrets (PII) sont bloqués net par veto déterministe.
 
 ---
 
-## 9. Loi du langage actif — anti-impuissance acquise
+## 4. Chaîne d'Outils & Résolution de Conway
 
-- **2026-08-30 — Audit linguistique des deux `CLAUDE.md`.** Le fichier dépôt porte 21 négations pour 1 décision possédée, et son langage enseigne aux workers « tu ne décides rien », « jamais cru sur parole », « impossible ». Toute règle normative doit répondre à *que faire ?*, pas seulement *que ne pas faire ?* : un état négatif sans test exécutable ni chemin de réparation est une porte murée — dette d'obscurité au sens de §8. Interdits réservés aux actes irréversibles ; tout autre interdit porte sa condition de levée. Détail et patrons : `40_Memory_Wiki_OKF/canon/audit-langage-impuissance-claude-md-2026-08-30.md`.
+- **La racine reste minimale :** Le présent fichier route les requêtes sans encombrer le contexte.
+- **Un agent est un item qui traverse des états :** Géré via `uc.db` et les validation gates SSSF.
+- **Loi d'observation dynamique (D3) :** Le disque physique est l'unique source de vérité (`python scripts/cartographier_v3.py`).
+
+---
+
+## 5. Mémoire de Fin de Réponse — DOX & OKF
+
+Toute modification structurelle ou apprentissage système est :
+- Inscrit dans le sous-registre `AGENTS.md` du composant concerné (Append-Only D4).
+- Formalisé en OKF v0.2 dans `40_Memory_Wiki_OKF/concepts/`.
+- Validé par synthèse vocale sans conflit mutex.
