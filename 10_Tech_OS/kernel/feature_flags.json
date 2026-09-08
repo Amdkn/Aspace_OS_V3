@@ -1,0 +1,65 @@
+[
+  {
+    "id": "dark_factory_auto",
+    "name": "Dark Factory Auto-Pilot",
+    "description": "Exécution autonome de bout en bout L0-L2 sans intervention humaine (Intent -> Gate -> Nardole -> UC DB).",
+    "enabled": true,
+    "type": "operational",
+    "blastRadius": "L0-L2 Kernel",
+    "environment": "local-first"
+  },
+  {
+    "id": "yas_llm_telemetry",
+    "name": "Yas LLM Tracing & Token Cost",
+    "description": "Capture automatique des tokens in/out, latences et coûts USD de chaque inférence Gemini/Claude/DeepSeek.",
+    "enabled": true,
+    "type": "observability",
+    "blastRadius": "Cross-OS",
+    "environment": "local-first"
+  },
+  {
+    "id": "antigravity_tts_vocal",
+    "name": "Voice Loop & Anti-Surdité",
+    "description": "Restitution vocale automatique via edge-tts (fr-FR-DeniseNeural) avec verrou mutex anti-superposition.",
+    "enabled": true,
+    "type": "operational",
+    "blastRadius": "Audio Desktop",
+    "environment": "local-first"
+  },
+  {
+    "id": "deep_research_subagents",
+    "name": "Deep Subagents Pro Swarm",
+    "description": "Invocation d'équipes de subagents spécialisés en tâche de fond pour l'exploration du codebase.",
+    "enabled": true,
+    "type": "experiment",
+    "blastRadius": "Tokens & Memory",
+    "environment": "local-first"
+  },
+  {
+    "id": "local_llm_offline_fallback",
+    "name": "Ollama Local-First Fallback",
+    "description": "Bascule automatique en cas de rupture réseau vers le runtime local DeepSeek/Qwen.",
+    "enabled": false,
+    "type": "experiment",
+    "blastRadius": "Inférence Locale",
+    "environment": "local-first"
+  },
+  {
+    "id": "beth_irreversible_veto",
+    "name": "Beth Veto System (5 Portes)",
+    "description": "Verrouillage absolu des 5 portes irréversibles : CA racine, push divergent, virement, suppression de données, inversion de confiance.",
+    "enabled": true,
+    "type": "veto_gate",
+    "blastRadius": "Sécurité Souveraine",
+    "environment": "inviolable"
+  },
+  {
+    "id": "self_driving_auto_patch",
+    "name": "Donna DLQ -> Ryan Auto-Patch",
+    "description": "Boucle fermée de remédiation : détection d'exception dans la Dead Letter Queue et suggestion automatique de correctif.",
+    "enabled": true,
+    "type": "operational",
+    "blastRadius": "Self-Healing",
+    "environment": "local-first"
+  }
+]
