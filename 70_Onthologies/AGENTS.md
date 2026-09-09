@@ -31,3 +31,6 @@
 ## 4. Journal Append-Only (DOX)
 
 - `2026-09-08` : Raccordement au routeur Meta AGENTS.md V3. Clarification du rôle de Graham comme pourvoyeur du Ruban $\phi$ formel.
+
+## Journal Append-Only (DOX)
+- `2026-09-09` : Modélisation du découplage mémoire/ontologie inspiré de Qwen Engram / Qwen Flash Next. Alignement du vocabulaire RDF et des pointeurs d'ontologie. (Nardole).
