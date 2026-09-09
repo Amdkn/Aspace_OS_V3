@@ -95,16 +95,24 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
    * L'autorisation d'agir et de modifier le système est **permanente et acquise**.
    * L'agent ne redemande jamais d'autorisation pour accomplir le travail demandé.
    * L'agent ne perd pas le contexte d'architecture lors des reprises de session.
-4. **Append-Only Systématique de la Mémoire (Loi de Persistance Cognitive) :**
-   * À la fin de chaque réponse substantielle, l'agent doit impérativement inscrire ou append-only le résumé de ses découvertes et décisions dans la mémoire active (`40_Memory_Wiki_OKF/`, OpenWiki et DOX `AGENTS.md`).
-   * Ce qui n'est pas écrit sur disque n'existe pas pour les sessions futures.
-5. **Canal Vocal & Restitution TTS Systématique (Anti-Surdité Opérateur) :**
-   * Tout tour de parole substantiel s'accompagne obligatoirement de son élocution vocale sur l'environnement Windows.
-   * **Pipeline d'élocution certifié & Anti-Superposition :**
-     1. Le démon `10_Tech_OS/kernel/antigravity_tts_daemon.py` surveille en continu le transcript actif de la session (`transcript.jsonl`).
-     2. Dès qu'une réponse finale de l'assistant (`PLANNER_RESPONSE`, sans appel d'outil) est émise, le démon extrait et énonce automatiquement le texte nettoyé via `edge-tts` (`fr-FR-DeniseNeural`).
-     3. **Protection Mutex Anti-Superposition :** Un verrou global de parole (`tts_playing.lock`) interdit formellement à deux flux audio de s'exécuter en parallèle.
-     4. L'agent ne déclenche pas manuellement `--speak` si le démon de fond est actif, afin d'éviter le dédoublement de voix sur l'environnement sonore.
+4. **Obligation Absolue de Mémorisation & Structuration Vivante (Loi de Persistance Cognitive Souveraine) :**
+   * **Ce qui n'est pas inscrit sur le disque physique n'existe pas.** Les pensées volatiles, les conversations et les contextes éphémères meurent dès la fin de session.
+   * **Protocole Tripartite de Fin de Tâche :** Dès qu'un apprentissage, une décision d'architecture, un correctif ou une intégration est achevé, l'agent exécute impérativement :
+     1. **Structuration Open Wiki (`40_Memory_Wiki_OKF/concepts/` ou `architecture/`) :** Rédiger ou mettre à jour la fiche au format **OKF v0.2** strict (frontmatter obligatoire avec `type`, `title`, `description`, `tags`, `generated`, `verified`, `sources`, `okf_version: "0.2"`). Mettre à jour l'index `40_Memory_Wiki_OKF/index.md`.
+     2. **Registre DOX Local (`AGENTS.md`) :** Inscrire en mode **append-only** l'événement daté et son impact dans la section `## Journal Append-Only (DOX)` du sous-dossier concerné (`40_Memory_Wiki_OKF/AGENTS.md`, `10_Tech_OS/AGENTS.md`, `30_Business_OS/AGENTS.md`, etc.).
+     3. **Vérité Formelle Ontologique (`70_Onthologies/`) :** Les entités stables et leurs relations doivent être consolidées dans le graphe formel RDF sous l'égide de Graham (`onto_gate.py`).
+   * **Respect Absolu des Organes Souverains :**
+     - **`50_Distillation/` (Le Sas Inviolable) :** Tout vrac externe (transcripts, exports ChatGPT/Gemini, notes brutes) doit passer par la distillation sémantique avant d'entrer en mémoire. Aucune note brute n'est injectée directement dans le système.
+     - **`60_Implementation_Méthodologiques/` (Le Cadre d'Implémentation) :** Les SOPs et invariants techniques (`tsc --noEmit` à 0 erreur, typage Python strict, SQLite WAL) sont respectés sans déviation.
+     - **`90-self-evolution/` (Le Système Immunitaire Anti-Rejeu P1-P6) :** Tout bug résolu, toute panne détectée (comme le problème d'écho TTS ou les erreurs de déploiement) alimente la mémoire immunitaire pour empêcher formellement toute régression future.
+5. **Canal Vocal 2-en-1 & Restitution TTS Systématique (Anti-Surdité Opérateur) :**
+   * Tout tour de parole substantiel s'accompagne obligatoirement de son élocution vocale sur l'environnement Windows ET d'un lien d'écoute manuelle réutilisable.
+   * **Architecture 2-en-1 (Automatique + Manuel Zéro-Token) :**
+     1. Le démon `10_Tech_OS/kernel/antigravity_tts_daemon.py` écoute le transcript actif (`transcript.jsonl`).
+     2. **Pré-indexation Anti-Écho au redémarrage :** À l'initialisation ou redémarrage du démon, les messages déjà consignés dans les 64 derniers Ko sont scannés et indexés dans `seen_step_indices`. Seule la réponse NOUVELLE est énoncée, éliminant tout rejeu intempestif des réponses passées.
+     3. **Miroir Fixe & Écoute Manuelle :** Chaque réponse vocalisée est dupliquée vers `C:\Users\amado\.antigravity_voice_cache\latest_speech.mp3`.
+     4. **Bouton / Lien d'Écoute en Fin de Message (Muet en Audio) :** En fin de chaque réponse substantielle, l'agent intègre le lien cliquable vers le fichier audio généré ou la commande rapide de relecture `python 10_Tech_OS/kernel/antigravity_tts_daemon.py --replay`. Cette section finale est **automatiquement filtrée et ignorée par le démon TTS** afin de ne pas infliger la lecture monotone du pied de page à chaque tour.
+     5. **Protection Mutex :** Le verrou global `tts_playing.lock` garantit qu'aucune superposition audio ne survient.
 6. **Distillation Périodique Planifiée (Scheduled Tasks Hebdomadaires) :**
    * La mémoire accumulée ne doit jamais stagner en vrac. Une tâche planifiée hebdomadaire (via le planificateur Windows et les tâches de fond) est mandatée pour faire passer la mémoire vive par le sas `50_Distillation/`.
    * Cette distillation consolide de façon incrémentale :
@@ -117,14 +125,51 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
 8. **Économie de Tool Calling & Routage DOX Sub-AGENTS.md :**
    * Interdiction de balayer à l'aveugle des dizaines de fichiers ou de refaire des recherches globales lourdes si la documentation ou les fiches OKF existent.
    * L'agent consulte prioritairement le `AGENTS.md` local du sous-dossier concerné (aiguillé par le Meta-Routeur racine) et s'appuie sur le "Silver Platter" de Graham pour préserver les quotas de tokens.
+9. **Mode Full Économie par Orchestration de Jules & Gatekeeper Stitch :**
+   * **Principe Fondamental :** Antigravity / Gemini agit en **Chef d'Orchestre minimaliste (Zéro Implémentation Lourde en Quota Direct)**. Tout travail de code volumineux, de composant ou de refactor est délégué à **Jules (Google Labs)** via PRs asynchrones.
+   * **Vraie Limite de Jules = Sessions par Dépôt GitHub :** La contrainte n'est pas le nombre de tâches globales, mais le plafond de sessions concurrentes par repository (`Amdkn/Agent-OS-Desktop`, `Amdkn/Business-Office-3-OS`, `Amdkn/The-OMK-Mobile-Back-Office`, etc.).
+   * **Délégation par Briefs Physiques Dédiés (Zéro Prompt Flou) :**
+     - Ne jamais donner d'instructions vagues par simple message de session.
+     - Toujours rédiger et déposer un brief Markdown complet dans le dossier dédié du repo concerné (ex: `delegation-a-jules/PRD-*.md`).
+     - Le prompt transmis à Jules se résume à pointer vers ce dossier : *"Exécute rigoureusement les directives du dossier delegation-a-jules/"*.
+   * **Rôle de Stitch (Gatekeeper & UI/UX Design System) :**
+     - Stitch agit comme gatekeeper visuel et validateur des composants UI/UX avant fusion.
+     - Jules utilise l'intégration MCP Stitch (`https://stitch.googleapis.com/mcp`) pour auditer et aligner les composants sur le design system canon.
+   * **Configurations MCP Clés en Main :**
+     - **Serveur MCP Jules (`google-jules-mcp`) :**
+       Repo : `https://github.com/samihalawa/google-jules-mcp.git`
+       Clé API Jules : Configurée dans `.env` / `JULES_API_KEY`
+     - **Serveur MCP Stitch (Google Labs) :**
+       Endpoint : `https://stitch.googleapis.com/mcp`
+       Header `X-Goog-Api-Key` : Configurée dans `.env` / `STITCH_API_KEY`
+     - Déclaration dans `mcpServers` :
+       ```json
+       {
+         "jules": {
+           "command": "npx",
+           "args": ["-y", "google-jules-mcp"],
+           "env": {
+             "JULES_API_KEY": "${JULES_API_KEY}"
+           }
+         },
+         "stitch": {
+           "serverUrl": "https://stitch.googleapis.com/mcp",
+           "headers": {
+             "X-Goog-Api-Key": "${STITCH_API_KEY}"
+           }
+         }
+       }
+       ```
 
 ---
 
 ## 6. PROTOCOLE D'EXÉCUTION SYSTÉMATIQUE
 
 1. **Sondage Dynamique & Inspection directe :** Lire le disque en temps réel, découvrir les fichiers récents sans présumer d'un état figé.
-2. **Implémentation complète :** Coder l'intégralité du composant ou du backend sans omettre de cas limites.
+2. **Implémentation complète ou Orchestration Déléguée :**
+   * En mode normal : Coder l'intégralité du composant sans omettre de cas limites.
+   * En mode Économie : Rédiger le brief dans `delegation-a-jules/`, dispatcher à Jules via MCP/CLI, et vérifier la PR produite.
 3. **Vérification automatique :**
    * Compiler avec TypeScript (`tsc`).
    * Vérifier l'absence d'erreurs d'exécution ou de ports bloqués.
-4. **Actualisation Mémoire & Émission Vocale :** Inscrire les faits acquis dans la mémoire active (`40_Memory_Wiki_OKF`), rapporter les faits mesurés en quelques lignes concises et vocalisées sur le canal TTS certifié.
+4. **Actualisation Mémoire & Émission Vocale :** Inscrire impérativement les faits acquis dans la mémoire active (`40_Memory_Wiki_OKF/concepts/`), mettre à jour le journal DOX du `AGENTS.md` du dossier concerné, et rapporter les faits mesurés en quelques lignes concises et vocalisées sur le canal TTS certifié.
