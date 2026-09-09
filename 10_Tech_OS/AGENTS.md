@@ -29,3 +29,4 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 
 ## Journal Append-Only (DOX)
 - `2026-09-09` : Implémentation du moteur Engram (`engram_loader.py`), du Gatekeeper A1 Beth (`beth_filter.py`) et de la suite de tests unitaires (`test_engram.py`). Validation binaire py_compile à 0 erreur. (Bill Potts & Nardole).
+- `2026-09-09` : Ajout du script de compilation automatique RDF vers Engram (`scripts/compile_engram_from_rdf.py`) selon SPEC-002 Solarpunk.

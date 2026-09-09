@@ -4,7 +4,11 @@
   "storage_backend": "mmap_nvme",
   "entries": {
     "LD01_SOB": {
-      "ngram": ["self", "operating", "business"],
+      "ngram": [
+        "self",
+        "operating",
+        "business"
+      ],
       "dimension": "7D",
       "resolution_type": "ONTOLOGY_POINTER",
       "uri": "aspace://70_Onthologies/LD01_Business_SOB.rdf",
@@ -15,42 +19,93 @@
       }
     },
     "LD02_SANTE_VIGUEUR": {
-      "ngram": ["sante", "energie", "vigueur"],
+      "ngram": [
+        "sante",
+        "energie",
+        "vigueur"
+      ],
       "dimension": "1D",
       "resolution_type": "LIFE_METRIC",
       "target_sleep_hours": 7.5,
       "biomarkers_sync": "TIMESFM_SYNC"
     },
     "13TH_DOCTOR_KERNEL": {
-      "ngram": ["treizieme", "docteur", "kernel"],
+      "ngram": [
+        "treizieme",
+        "docteur",
+        "kernel"
+      ],
       "dimension": "5D",
       "resolution_type": "STATIC_DISPATCH",
-      "triad": ["YAZ_MONITOR", "RYAN_BUILD", "GRAHAM_MEMORY"],
+      "triad": [
+        "YAZ_MONITOR",
+        "RYAN_BUILD",
+        "GRAHAM_MEMORY"
+      ],
       "dlq_sink": "DONNA_DLQ"
     },
     "11TH_DOCTOR_LIFE": {
-      "ngram": ["onzieme", "docteur", "life"],
+      "ngram": [
+        "onzieme",
+        "docteur",
+        "life"
+      ],
       "dimension": "6D",
       "resolution_type": "LIFE_ORCHESTRATOR",
-      "triad": ["AMY_VISION", "RORY_GROUNDING", "RIVER_TIME"]
+      "triad": [
+        "AMY_VISION",
+        "RORY_GROUNDING",
+        "RIVER_TIME"
+      ]
     },
     "12TH_DOCTOR_BUSINESS": {
-      "ngram": ["douzieme", "docteur", "business"],
+      "ngram": [
+        "douzieme",
+        "docteur",
+        "business"
+      ],
       "dimension": "6D",
       "resolution_type": "BUSINESS_ORCHESTRATOR",
-      "triad": ["CLARA_PRODUCT", "BILL_OPERATIONS", "NARDOLE_LOGISTICS"]
+      "triad": [
+        "CLARA_PRODUCT",
+        "BILL_OPERATIONS",
+        "NARDOLE_LOGISTICS"
+      ]
     },
     "DOD_BINARY_GATE": {
-      "ngram": ["definition", "of", "done"],
+      "ngram": [
+        "definition",
+        "of",
+        "done"
+      ],
       "dimension": "5D",
       "resolution_type": "DETERMINISTIC_EVAL",
-      "rules": ["tsc_no_emit_0", "zero_empty_mocks", "exit_code_0"]
+      "rules": [
+        "tsc_no_emit_0",
+        "zero_empty_mocks",
+        "exit_code_0"
+      ]
     },
     "OS_HYOIDE_BUFFER": {
-      "ngram": ["os", "hyoide", "resilience"],
+      "ngram": [
+        "os",
+        "hyoide",
+        "resilience"
+      ],
       "dimension": "5D",
       "resolution_type": "CIRCUIT_BREAKER",
       "action": "DISSIPATE_ASYNC_QUEUE"
+    },
+    "ACT_75_GOVERNANCE_GATE": {
+      "ngram": [
+        "actes",
+        "gouvernance",
+        "omk"
+      ],
+      "dimension": "7D",
+      "resolution_type": "GOVERNANCE_DISPATCH",
+      "uri": "aspace://70_Onthologies/75_Actes_Gouvernance.rdf",
+      "total_acts": 75
     }
   }
 }

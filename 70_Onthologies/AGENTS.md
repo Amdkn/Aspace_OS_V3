@@ -34,3 +34,4 @@
 
 ## Journal Append-Only (DOX)
 - `2026-09-09` : Modélisation du découplage mémoire/ontologie inspiré de Qwen Engram / Qwen Flash Next. Alignement du vocabulaire RDF et des pointeurs d'ontologie. (Nardole).
+- `2026-09-09` : Pipeline de compilation automatique RDF vers Engram raccordé (`scripts/compile_engram_from_rdf.py`).
