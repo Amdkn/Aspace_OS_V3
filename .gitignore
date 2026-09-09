@@ -96,3 +96,4 @@ _REVIEW_NOTEBOOKLM/
 # Pages de revue regenerables : la source de verite reste les concepts
 80_Front-Office/reviews/*.html
 90_Back-Office/_exports/*.db
+70_Onthologies/_cold_archive/  

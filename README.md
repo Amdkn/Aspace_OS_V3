@@ -1,204 +1,96 @@
-# A'Space OS V3
+# A'Space OS V3 — Le Jumeau Numérique Opérationnel d'Amadou Kone
 
-> **Loi L0 — Rick.** *Un système qui ne sait pas se répliquer n'est pas un système, c'est un
-> document.* Von Neumann : ruban + constructeur + copieur + contrôleur.
-> Conway : trois règles suffisent, la complexité émerge, jamais déclarée.
+> **Loi L0 — Rick.** *Un système qui ne sait pas se répliquer n'est pas un système, c'est un document.*  
+> **Principe D3.** *Le corpus sur disque est l'unique source de vérité.*  
+> **Mandat Permanent.** *Proactivité absolue, zéro question d'évidence, zéro dette technique.*
 
-**V2 est la mémoire. V3 est le runtime.**
+A'Space OS V3 est le système d'exploitation agentique et le jumeau numérique souverain d'**Amadou Kone (`amdkn`)**. Il transforme la connaissance en capacité d'action autonome, au service exclusif de sa vie (**Life OS**) et de la rentabilité de ses entreprises (**Business OS**).
 
 ---
 
-## État au 2026-08-02
+## 1. L'Ordre Fondamental & Architecture Souveraine
 
-**165 dossiers, 350 fichiers réels.** Tout ce qui existe ici sert au fonctionnement.
-
-| Zone | Fichiers | État |
-|---|---|---|
-| `10_Tech_OS/` | 72 | noyau exécutable + réplicateur + 3 Cores engendrés |
-| `20_Life_OS/` | 249 | arbre canonique complet, **34 unités A3** équipées |
-| `30_Business_OS/` | 204 | structure canonique + **entreprise Coach OS** engendrée (197 f.) |
-| `00_Amadeus/` | 71 | Observateur Méta, registres, contrat d'adaptateur |
-| `_INBOX/` | 7 | trois portiers |
-
-Les 17 665 fichiers de l'ancienne structuration sont archivés, réversibles, dans
-`ASpace_OS_V2\...\04_Archives_Data\_V3_STRUCTURE_2026-08-02\` (manifeste de 471 entrées).
-
-## Arborescence
+L'architecture transversale d'A'Space OS V3 est régie par une hiérarchie stricte et inviolable :
 
 ```
-_INBOX/                          admission — S1_Rick · A1_Beth_Morty · B1_Jerry_Summers
-00_Amadeus/                      A0 Observateur Méta
-  10_Observers/                  opik · agentpulse · aios · agents-observe · phoenix · langsmith · agent-os
-  20_Harness/                    ADAPTER.md · ORG.json · registres
-  30_Shadow/ 40_Predictions/ 50_Bench/ 60_Tape_Specs/ 70_Skills/ 90_Doctrine/
-10_Tech_OS/
-  00_Governance_Rick/            LAW · CASCADE · PLAYBOOK · AGENT · SOUL · replicator/ · Donna_DLQ/
-  kernel/                        uc · harness · gate · review · dlq · bridge_paperclip
-  11_Kernel_Core_13th/           13e — maître de 10_Tech_OS
-  12_Life_Core_11th/             11e — maître de 20_Life_OS
-  13_Buzz_Core_12th/             12e — maître de 30_Business_OS
-20_Life_OS/                      6 frameworks + gatekeepers + blueprints
-30_Business_OS/                  8 domaines
-  10_Projects/coach-os/          entreprise — Summers CEO · 8 VP DC · 53 techniciens Marvel
+                   ┌────────────────────────────────────────────────────────┐
+                   │    50_Distillation (LE GATE D'ENTRÉE INVIOLABLE)       │
+                   │    Rien n'entre dans V3 sans passer par ce sas         │
+                   └──────────────────────────┬─────────────────────────────┘
+                                              ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│               LES 4 ORGANES SOUVERAINS & TRANSVERSAUX (AU-DESSUS DE TOUT)                 │
+│                                                                                           │
+│  70_Onthologies                40_Memory_Wiki_OKF                                         │
+│  (Vérité formelle RDF)         (Mémoire longue certifiée)                                 │
+│                                                                                           │
+│  60_Implementation_            90-self-evolution                                          │
+│  Méthodologiques (Cadre)       (Système immunitaire anti-rejeu P1-P6)                     │
+└─────────────────────────────────────────────┬─────────────────────────────────────────────┘
+                                              │ Gouvernent et cadrent
+                                              ▼
+┌───────────────────────────────────────────────────────────────────────────────────────────┐
+│                    LES 3 OS APPLICATIFS SUBORDONNÉS (DOMAINES D'ACTION)                   │
+│                                                                                           │
+│  10_Tech_OS                    20_Life_OS                  30_Business_OS                 │
+│  (Plomberie & Runtime)         (Vie, Santé, Rituels)       (OMK, Coach OS, Entreprises)   │
+│  *Serviteur silencieux*        *Énergie & Équilibre*       *Cash-flow & Valeur réelle*    │
+└───────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Rien ne se crée à la racine.** Ce qui n'est ni Tech, ni Life, ni Business va dans `00_Amadeus/`.
+### Le Gate Inviolable de la Distillation (`50_Distillation/`)
+* **Rien n'entre dans V3 en direct.** Tout document brut, note historique ou nouvel apport doit obligatoirement être filtré, réduit mécaniquement et distillé sémantiquement par le sas de `50_Distillation/` avant d'accéder à la mémoire ou à l'ontologie.
 
-## Les quatre organes — tous exécutables
+### La Transversalité des 4 Piliers Maîtres
+* **`70_Onthologies/`**, **`40_Memory_Wiki_OKF/`**, **`60_Implementation_Méthodologiques/`** et **`90-self-evolution/`** sont au-dessus de tout et s'appliquent transversalement à l'ensemble du système.
+* **Interdiction de cannibalisation par Tech OS :** `10_Tech_OS` n'est qu'une plomberie d'infrastructure subordonnée (noyau SQLite, baux, routeurs). Le temps, le calcul et les tokens sont prioritairement alloués aux résultats réels de **Life OS** et **Business OS**.
 
-| Organe | Fichier | Rôle |
-|---|---|---|
-| Ruban φ | `00_Amadeus/60_Tape_Specs/` | la description |
-| Constructeur A | `kernel/harness.py` · `worker_example.py` | bâtit depuis le ruban |
-| Copieur B | `00_Governance_Rick/replicator/spawn.py` | duplique sans interpréter |
-| Contrôleur C | `kernel/uc.py` · `gate.py` · `review.py` · `dlq.py` | admet, revoit, **détache** |
+---
 
-### Les lois, tenues par la base
+## 2. Rôles des Étagères du Corpus
 
-| Loi | Mécanisme |
+| Étage | Rôle dans l'Architecture V3 |
 |---|---|
-| **Prédiction** | trigger SQL — pas de `review`/`done` sans prédiction préalable |
-| **Détachement** | trigger SQL — `done` seulement depuis `review`, preuve par critère |
-| **Bail** | `reap` — un agent qui meurt rend son travail |
-| **Ruban** | `gate.py` — critère non vérifiable, la note repart avec le motif |
-| **Réplication** | `spawn.py` — un Core ne s'écrit pas, il s'engendre |
+| **`50_Distillation/`** | **Sas d'entrée inviolable.** Réduction mécanique sans LLM et fiches de distillation sémantique par branche de projet (`omk`, `abc`, `alikaly`, `marina`, `rilcot`, `jerry-pulse`). |
+| **`40_Memory_Wiki_OKF/`** | **Mémoire longue canonique.** Fiches certifiées OKF v0.2 (`architecture`, `canon`, `integrations`, `operations`, `learning`). Ce qu'on lit avant d'agir et où l'on écrit après avoir produit. |
+| **`70_Onthologies/`** | **Graphe de vérité formelle.** Triplets RDF Sujet-Verbe-Objet (`triplets/`, `sujets/`) et garde de la `_cold_archive` scellée de V2. |
+| **`60_Implementation_Méthodologiques/`** | **Cadre d'ingénierie.** Protocoles de Prompt as Code, échelle d'autonomie des agents et verdicts d'évaluation du triptyque. |
+| **`90-self-evolution/`** | **Système immunitaire.** Compétences Hermes anti-rejeu (`p1` à `p8`) pour empêcher les agents de répéter les mêmes boucles, et table des 204 contradictions arbitrées. |
+| **`00_Amadeus/`** | **Cœur d'orchestration.** Rubans de spécifications (`60_Tape_Specs/`), observateurs passifs (`10_Observers/`), et harnais d'exécution (`20_Harness/`). |
+| **`10_Tech_OS/`** | **Infrastructure & Runtime.** Noyau universel (`kernel/uc.db`, `controleur.py`, `dlq.py`), cascade E-Myth et ordonnanceurs d'arrière-plan. |
+| **`20_Life_OS/`** | **Énergie & Vie d'Amadou.** Les 8 jauges Discovery, l'Ikigai Orville, le cycle 12 Week Year (SNW), le PARA Enterprise et la boucle GTD Cerritos. |
+| **`30_Business_OS/`** | **Entreprises & Valeur.** The OMK Office, Coach OS, franchises Summer Verse, acquisition client, délivrance de valeur et cash-flow ($10k/mois). |
+| **`80_Agent-OS/`** | **Observabilité.** Tableaux de bord de revue et schéma de cadences. |
+| **`_INBOX/`** | **Sas de capture GTD.** Réception des nouveaux mandats et requêtes brutes avant traitement. |
 
-Les quatre premières sont tenues par la machine. La cinquième par Rick.
+---
 
-### Cycle complet
+## 3. Loi d'Observation Dynamique (Anti-Dette Structurelle)
 
-```bash
-python 10_Tech_OS/kernel/gate.py run        # le portier admet ou refuse
-python 10_Tech_OS/kernel/worker_example.py --harness cc --layer L2 --max 1
-python 10_Tech_OS/kernel/review.py run      # preuves exigées, puis détachement
-python 10_Tech_OS/kernel/dlq.py rapport     # ce qui attend Rick
-python 10_Tech_OS/kernel/bridge_paperclip.py scan   # échecs L2 → Donna → Rick
-```
+Le corpus sur disque est vivant. Figer des inventaires manuels ou des nombres de fichiers dans la documentation crée de la dette d'obscurité et invisibilise les ajouts futurs d'Amadou Kone.
 
-## Hiérarchie et cascade
+* **Tout ajout sur disque est vivant et souverain immédiatement.**
+* **L'unique autorité de mesure du disque est le script dynamique :**
+  ```bash
+  python scripts/cartographier_v3.py
+  ```
+  Exécuté en ~11 secondes, il met à jour `CARTOGRAPHIE.md` sans jamais figer la doctrine.
 
-`ORG.json` fait foi · détail dans `10_Tech_OS/00_Governance_Rick/CASCADE.md`.
+---
 
-| Rang | Rôle E-Myth | Artefact | Cycle |
-|---|---|---|---|
-| **S1 Rick** | Entrepreneur | `PLAYBOOK.md` | 12WY |
-| **S2 les 3 Docteurs** | Manager | `ROADMAP.md` | mensuel |
-| **S3 les 9 compagnons** | Technicien | `RUNBOOK.md` | hebdomadaire |
-| **Donna** | Gatekeeper du visionnaire | — | à l'événement |
+## 4. Topologie Réseau & Points d'Accès
 
-Un rang ne produit jamais l'artefact du rang voisin. Ce qui remonte n'est jamais une décision :
-seulement un fait — un échec avec son motif, une prédiction avec son résultat.
+* **Port 5555 — Agent OS Desktop :** Dashboard unifié Vite 6 + React 19 (`agent-os/desktop`).
+  * Watcher restreint aux dossiers vivants (< 190 Mo RAM, latence HTTP < 15 ms).
+  * APIs connectées au disque : `/api/corpus`, `/api/tech-os`, `/api/arms`, `/api/revue`, `/api/routeurs`.
+* **Port 20128 — 9Router :** Gestionnaire d'infrastructure LLM multi-fournisseurs (Next.js, HTTP 200).
+* **Port 20129 — OmniRoute :** Passerelle d'aiguillage d'inférence (HTTP 307).
 
-**Cascade amont** — A1 Beth·Morty `H+3 ans` → A2 les 6 frameworks `H+1 an` → A3 les officiers
-`12WY` → B1 rocks mensuels → B2 8 VP `4 sprints` → B3 squads Marvel `5 scrums/sprint`.
+---
 
-Trios canoniques : `Doctor_13_Yaz_Ryan_Graham` · `Doctor_11_Amy_Rory_River` ·
-`Doctor_12_Clara_Nardole_Bill`.
+## 5. Lois Tenues par la Machine (`10_Tech_OS/kernel/uc.db`)
 
-## Harness
-
-| Couche | Harness | État |
-|---|---|---|
-| `L0` | **Multica** 0.4.4 | **14 agents · 4 squads** — instructions complètes |
-| `L1` | **Buzz** | shim PATH · pack `aspace-life-core` validé — **agents A1/A2/A3 à créer** |
-| `L2` | **Paperclip** 2026.722.0 | **en ligne** `127.0.0.1:3100` · garde-fous posés |
-| `A0` | Hermes · CC | skill `aspace-orchestrate` |
-
-Contrat commun : `00_Amadeus/20_Harness/ADAPTER.md` — cinq verbes, quatre obligations,
-trois épreuves de conformité.
-
-### Garde-fous Paperclip
-
-| | |
-|---|---|
-| Modèle par défaut | **MiniMax-M3[1m]** — 8 variables sur l'environnement `Local` (`defaultForInstance`) |
-| Plafond mensuel | 5 000 ¢ · **hard stop actif** · alerte à 80 % |
-| Approbation des nouveaux agents | requise |
-| Exposition | `private`, loopback uniquement |
-| Échec répété | → `bridge_paperclip.py` → Donna → Rick |
-
-## Life OS — arbre canonique
-
-**34 unités A3**, chacune avec sa spec V2 copiée, son `SOUL.md` et son `AGENT.md` engendrés
-depuis cette spec.
-
-| Framework | A2 | Unités A3 |
-|---|---|---|
-| `21_Ikigai_Orville` | Orville | 4 piliers + 5 horizons |
-| `22_Wheel_Discovery` | Discovery ZORA | LD01 → LD08 |
-| `23_12WY_SNW` | Curie SNW | Pike · Una · M'Benga · Chapel · Ortegas |
-| `24_PARA_Enterprise` | Computer | Picard · Spock · Geordi · Data |
-| `25_GTD_Cerritos` | HoloDeck | Mariner · Boimler · Rutherford · Tendi · Freeman |
-| `26_DEAL_Protostar` | HoloJaneway | Dal · Rok-Tahk · Zero · Gwyn |
-
-PARA n'existe que dans `24_PARA_Enterprise` — c'est un framework, pas une méta-couche.
-
-### LD01 Book — la distillation des guides
-
-`22_Wheel_Discovery/LD01_Business_Book/01_Guides_Business/` · délégué à **MiniMax-M3**, vérifié
-par A0 le 2026-08-02 (`_VERIFICATION_A0.md`).
-
-**15 561 guides** de `03_Resources_Geordi/01_Guides/` indexés mécaniquement
-(`_INDEX_GUIDES.tsv`), puis distillés en **8 fichiers**, un par domaine Business.
-Classement à **89 % de confiance haute**. 806 guides hors périmètre, aucun supprimé.
-
-Le corpus est à **74,7 % du domaine 7 R&D & IT** — conforme au pivot W40 qui donne la veille à
-Cyborg. Deux angles morts documentaires signalés : Sales & Cognition (0,9 %) et Legal (0,4 %).
-
-## Business OS — l'entreprise Coach OS
-
-`30_Business_OS/10_Projects/coach-os/` · engendrée le 2026-08-02 · **196 fichiers**
-Canon `ADR-CANON-001` : 8 B2 + 8 squads B3 + **53 B3**.
-
-| Rang | Qui | Rôle E-Myth | Artefact | Cycle |
-|---|---|---|---|---|
-| **B1** | Summers, CEO | Entrepreneur | `ROCKS.md` | 1 rock/mois, 3/12WY |
-| **B2** | les 8 VP (héros DC) | Manager | `SPRINTS.md` | 4 sprints/mois |
-| **B3** | les 53 techniciens (squads Marvel) | Technicien | `SCRUMS.md` | 5 scrums/semaine |
-
-| # | Domaine | VP | Squad | B3 |
-|---|---|---|---|---|
-| 1 | RH & Méta Gouvernance | Green Lantern | X-Men | 8 |
-| 2 | Opérations en Loops | Batman | Fantastic Four | 4 |
-| 3 | Productization des Besoins | Flash | Avengers | 7 |
-| 4 | Sales & Cognition | Martian Manhunter | Illuminati | 6 |
-| 5 | People & Brand | Superman | Guardians | 6 |
-| 6 | Finance & ROI | Wonder Woman | Thunderbolts | 6 |
-| 7 | R&D & IT | Cyborg | Kang Dynasty | 6 |
-| 8 | Legal & Compliance | Aquaman | Eternals | 10 · **dormant** |
-
-`coach-os/ORG.json` fait foi. L'arborescence **s'engendre** — le moule est dans
-`coach-os/02_Meta_Factory/spawn_coach_os.py`.
-
-Deux statuts particuliers : le domaine **7 R&D & IT** porte le pipeline de veille depuis le
-pivot IT→R&D (spec W40, 2026-07-13) — guides YouTube → distillation 8 domaines → Last30days →
-**≤3** améliorations/mois. Le domaine **8 Legal** est dormant jusqu'au premier fichier déposé
-dans `00_Summers_CEO/03_Master_Agreements/`.
-
-## La mémoire est dans V2
-
-```
-ASpace_OS_V2\20_Life_OS\24_PARA_Enterprise\03_Resources_Geordi\
-```
-
-Point d'entrée `03_Resources_Geordi/CLAUDE.md`. Les 4 piliers : **OKF** · **Wiki** ·
-**Graphify** · **Dox**. Un fichier qui n'exécute rien et contre lequel rien ne s'exécute
-appartient à Geordi, pas ici.
-
-## Prochaine étape
-
-**Créer les agents A1, A2, A3 de Life OS dans Buzz**, organisés en **teams par channels** —
-A1 Beth·Morty en gatekeepers, A2 les six frameworks, A3 les 34 unités. C'est la couche L1 qui
-alimente le playbook de Rick. *Bloqué* : la mise à jour de Buzz a retiré l'import de personas
-`.md` au profit de snapshots `.agent.json` dont le schéma n'est pas documenté.
-
-Ensuite : brancher le cycle **Last30days** du domaine 7 de Coach OS sur les 8 distillations —
-≤3 améliorations actionnables par mois, candidates au rock de Summers.
-
-## ⚠ Secrets publiés
-
-Ce dépôt a un remote GitHub. Son historique contient au moins 11 fichiers porteurs de
-credentials, poussés via le commit `41c19a5`. **Faire tourner ces clés** est prioritaire sur
-toute réécriture d'historique — celle-ci ne révoque rien. Ne rien pousser avant.
-
-Licence : **MIT**.
+1. **Loi de Prédiction :** Aucun travail n'atteint `review` ou `done` sans prédiction enregistrée *avant* l'exécution.
+2. **Loi de Détachement :** Le statut `done` n'est accessible que depuis `review`, après attestation des preuves par critères vérifiables.
+3. **Loi du Bail :** Tout travail réclamé porte une échéance. Un agent disparu rend son travail à la file via le battement automatique du contrôleur (`ASpace_V3_Battement`, toutes les 15 minutes).
+4. **Requeue Sélective & DLQ :** Les travaux qualifiés terminaux (arbitrage Rick/Donna) sont exclus de la relance pour éliminer définitivement la boucle de rejeu.

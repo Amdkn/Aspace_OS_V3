@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS event (
 );
 CREATE INDEX IF NOT EXISTS event_work ON event(work_id, id);
 
--- ============================================================== LOIS DUREES
+-- ================================================== BRIOCHES ANTIGRAVITY (ADR-0007)
 -- Ces regles sont tenues par la base, pas par la discipline de l'agent.
 
 -- Loi de prediction : rien n'atteint 'review' ou 'done' sans prediction prealable.
@@ -107,3 +107,37 @@ CREATE VIEW IF NOT EXISTS v_calibration AS
          avg(outcome)         AS taux_reel
   FROM prediction WHERE outcome IS NOT NULL
   GROUP BY bucket ORDER BY bucket;
+
+-- ================================================== BRIOCHES ANTIGRAVITY (ADR-0007)
+-- Prompt-as-Code : blueprints compiles par nardole_assembler.py. SQLite local,
+-- zero dependance Supabase.
+CREATE TABLE IF NOT EXISTS prompt_blueprints (
+  id                TEXT PRIMARY KEY,        -- UUID
+  slug              TEXT NOT NULL UNIQUE,
+  layer             TEXT NOT NULL CHECK (layer IN ('A0','L0','L1','L2')),
+  target_role       TEXT NOT NULL,
+  template_body     TEXT NOT NULL,
+  max_token_ceiling INTEGER NOT NULL DEFAULT 2048,
+  version           INTEGER NOT NULL DEFAULT 1,
+  sha256            TEXT NOT NULL
+);
+
+-- Regles de domaine B2.
+CREATE TABLE IF NOT EXISTS domain_rules_b2 (
+  id         TEXT PRIMARY KEY,               -- UUID
+  domain     TEXT NOT NULL,
+  rule       TEXT NOT NULL,
+  severity   TEXT NOT NULL DEFAULT 'soft' CHECK (severity IN ('soft','hard')),
+  active     INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Personas B3.
+CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
+  id         TEXT PRIMARY KEY,               -- UUID
+  codename   TEXT NOT NULL UNIQUE,
+  role       TEXT NOT NULL,
+  persona    TEXT NOT NULL,
+  active     INTEGER NOT NULL DEFAULT 1,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);

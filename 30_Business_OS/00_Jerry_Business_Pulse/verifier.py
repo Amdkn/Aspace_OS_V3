@@ -223,6 +223,47 @@ def main():
                     "historique/" + nom_fichier + ": horodatage absent ou vide"
                 )
 
+    # 7. [v1 Rock] pulse_hebdo.md date de la semaine courante
+    ph_path = os.path.join(BASE, "00_Registre", "pulse_hebdo.md")
+    if not os.path.isfile(ph_path) or os.path.getsize(ph_path) == 0:
+        erreurs.append("00_Registre/pulse_hebdo.md manquant ou vide")
+    else:
+        with open(ph_path, "r", encoding="utf-8") as f:
+            ph = f.read()
+        # Semaine courante = lundi de cette semaine au dimanche (date du jour
+        # generee = date de la semaine courante).
+        from datetime import timedelta as _td
+        lundi = datetime.now() - _td(days=datetime.now().weekday())
+        ok_date = False
+        for i in range(7):
+            if (lundi + _td(days=i)).strftime("%Y-%m-%d") in ph:
+                ok_date = True
+                break
+        if not ok_date:
+            erreurs.append(
+                "pulse_hebdo.md: aucune date de la semaine courante (debut "
+                + lundi.strftime("%Y-%m-%d") + ") trouvee"
+            )
+        if "Rock_00_Business_Pulse_12WY" not in ph:
+            erreurs.append("pulse_hebdo.md: titre Rock absent")
+
+    # 8. [v1 Rock] consultations.json lisible, compteur entier >= 0
+    cons_path = os.path.join(BASE, "00_Registre", "consultations.json")
+    if not os.path.isfile(cons_path):
+        erreurs.append("00_Registre/consultations.json manquant")
+    else:
+        try:
+            with open(cons_path, "r", encoding="utf-8") as f:
+                cons = json.load(f)
+            n = cons.get("compteur")
+            if not isinstance(n, int) or isinstance(n, bool) or n < 0:
+                erreurs.append(
+                    "consultations.json: compteur non entier >= 0 (trouve "
+                    + repr(n) + ")"
+                )
+        except (ValueError, OSError) as e:
+            erreurs.append("consultations.json illisible: " + str(e))
+
     if erreurs:
         print("PULSE_KO")
         for e in erreurs:

@@ -65,6 +65,25 @@ OS, et 2 embryons (Cerritos × Plane, ClaudeClaw Moat).
 - [Picard Project Pattern](picard-project-pattern.md) - Audit technique Antigravity IDE (Gemini CLI Full-Spectrum), score Design/Infra, plan 4 phases, gating d'approbation.
 - [graphify-out — Les 1208 sorties générées](graphify-out-outputs.md) - Tiers des fichiers .md du seau, correction de mesure : corpus écrit à la main ≈ 946 fichiers, pas 2154.
 
+## Concepts migration V2→V3 par gates (2026-09-03, mission t_d19297c9)
+
+- [OMK Nexus Pivot & Rebuild 8 phases](omk-nexus-pivot-rebuild-2026-09.md) - Repo unique + Vercel + mode Nexus, contrat REBUILD_WORKFLOW A→H.
+- [ABC Child Care BOS](abc-child-care-bos-2026-09.md) - Coopérative double entité, gouvernance MANIFEST Picard.
+- [Alikaly Ownerbook Phase 0](alikaly-ownerbook-phase0-2026-09.md) - Recovery LOCKED Phase 0 SPEC, parent_canon par chemins.
+- [Marina WAR MODE & SOP](marina-war-mode-sop-2026-09.md) - Default-GO avec 3 stops (deletes, >800 l., secrets).
+- [RILCOT Members Space](rilcot-members-space-parent-2026-09.md) - Décision D6 PARENT : doctrine junction, app possédée.
+- [Jerry Pulse B2/B3 origin](jerry-pulse-b2b3-origin-2026-09.md) - 8 domaines DC × squads Marvel, origine du canon SDD-006.
+- [SOB source confirmée](sob-v2-source-confirmee-2026-09.md) - 00_Amadeus/sob : trace Gate 1 branche 00_Amadeus.
+- [Wheel Discovery source confirmée](wheel-discovery-v2-source-confirmee-2026-09.md) - LD01-LD08 ZORA, trace Gate 1 branche 20_Life_OS.
+
+## Gates 2 & 3 (2026-09-03, run 22)
+
+- Gate 2 IMPLEMENTATION : `30_Business_OS/verifier.py` BUSINESS_OS_OK rc=0 — registre
+  Coach OS (`00_Registre/registre.json` + pulse.json/tuiles) ; aucun artefact V2 vivant
+  ne passe seul le gate (ils restent chez Geordi V2, loi §6).
+- Gate 3 ONTHOLOGIE : 15 triplets dans `70_Onthologies/triplets/migration-v2-gates-2026-09.jsonl`.
+- `20_Life_OS/24_PARA_Enterprise/registre_para.json` : projects non vide (9 entrées).
+
 # Directories
 
 _(ce bundle ne contient que des fichiers plats — pas de sous-répertoires de regroupement.)_

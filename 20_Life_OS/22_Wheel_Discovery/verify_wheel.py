@@ -30,8 +30,7 @@ schema_valid = (bus.get("ship") == "DISCOVERY"
                 and bus.get("framework") == "Life Wheel / ZORA"
                 and "updated" in bus
                 and isinstance(bus.get("domains"), dict)
-                and set(bus["domains"]) == set(PERSONAS)
-                and bus.get("evidence_paths") == [])
+                and set(bus["domains"]) == set(PERSONAS))  # critere 4 [a] : == [] supprime
 if not schema_valid:
     fail("bus state.json schema")
 
@@ -61,11 +60,47 @@ for ld, persona in PERSONAS.items():
         continue
     n_ok += 1
 
+# Critere 4 [a] : evidence_paths non vide, exactement 8 elements (== [] supprime)
+ev = bus.get("evidence_paths")
+ev_ok = (isinstance(ev, list) and len(ev) == 8
+         and len(set(ev)) == 8)
+if not ev_ok:
+    fail("evidence_paths vide, doublon ou != 8 elements")
+
+# Critere 4 [b]/[c] : chaque chemin existe sous ROOT, pointe vers
+# evidence_log.json du dossier FOLDERS[LD] attendu, 1 chemin par LD, pas de doublon
+ev_n_ok = 0
+for ld, folder in FOLDERS.items():
+    expected = folder + "/evidence_log.json"
+    found = [p for p in (ev or []) if p.replace("\\", "/") == expected]
+    if len(found) != 1:
+        fail("evidence_paths %s: chemin attendu %s absent ou duplique" % (ld, expected))
+        continue
+    if not os.path.exists(os.path.join(ROOT, found[0])):
+        fail("evidence_paths %s: chemin inexistant sur disque" % ld)
+        continue
+    ev_n_ok += 1
+
+# verification des cles du log d'evidence (criteres ruban 3)
+for ld, folder in FOLDERS.items():
+    lp = os.path.join(ROOT, folder, "evidence_log.json")
+    try:
+        log = load(lp)
+        keys_ok = (set(log.keys()) == {"ld", "persona", "date", "sources", "notes"}
+                   and log.get("ld") == ld)
+    except Exception as e:
+        fail("evidence_log %s: %s" % (ld, e))
+        continue
+    if not keys_ok:
+        fail("evidence_log %s: cles invalides" % ld)
+
 size_ok = os.path.getsize(bus_path) < 10240
 if not size_ok:
     fail("bus size >= 10240")
 
 print("domains_ok=%d/8" % n_ok)
+print("evidence_ok=%d/8" % ev_n_ok)
 print("schema_valid=%s" % str(schema_valid).lower())
 print("bus_size_ok=%s" % str(size_ok).lower())
-sys.exit(0 if (ok and n_ok == 8 and schema_valid) else 1)
+print("WHEEL_OK" if (ok and n_ok == 8 and ev_n_ok == 8 and schema_valid) else "WHEEL_FAIL")
+sys.exit(0 if (ok and n_ok == 8 and ev_n_ok == 8 and schema_valid) else 1)

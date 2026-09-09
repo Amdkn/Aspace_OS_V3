@@ -1,35 +1,40 @@
 {
-  "version": "v0",
+  "version": "v1",
   "date_init": "2026-09-03",
   "framework": "DEAL Protostar",
+  "date_pulse": "2026-09-05",
   "canon_4_stages": [
     {
       "stage": "definition",
       "dossier": "01_Definition_Dal",
       "persona": "Dal",
       "spec": "A3_Dal_Definition_Spec.md",
-      "artefact": null
+      "artefact": null,
+      "source_ok": 1
     },
     {
       "stage": "elimination",
       "dossier": "02_Elimination_RokTahk",
       "persona": "RokTahk",
       "spec": "A3_RokTahk_Elimination_Spec.md",
-      "artefact": null
+      "artefact": null,
+      "source_ok": 1
     },
     {
       "stage": "automation",
       "dossier": "03_Automation_Zero",
       "persona": "Zero",
       "spec": "A3_Zero_Automation_Spec.md",
-      "artefact": null
+      "artefact": null,
+      "source_ok": 1
     },
     {
       "stage": "liberation",
       "dossier": "04_Liberation_Gwyn",
       "persona": "Gwyn",
       "spec": "A3_Gwyn_Liberation_Spec.md",
-      "artefact": null
+      "artefact": null,
+      "source_ok": 1
     }
   ]
 }

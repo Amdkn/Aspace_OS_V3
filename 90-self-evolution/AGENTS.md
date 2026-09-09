@@ -33,6 +33,4 @@
 ## 4. Journal Append-Only (DOX)
 
 - `2026-09-08` : Rattachement au routeur Meta AGENTS.md V3. Formalisation du rôle d'immunité cybernétique en liaison avec PostHog DLQ.
-
-## Journal Append-Only (DOX)
-- `2026-09-09` : Intégration du principe de Circuit Breaker déterministe Engram A1 comme filtre d'immunité anti-rejeu avant génération LLM. (Nardole).
+- `2026-09-09` : Immunité P5 (Anti-Surdité & Anti-Écho) : neutralisation définitive de la boucle de rejeu vocal après redémarrage via pré-indexation mémoire des 64 Ko de transcripts récents (`antigravity_tts_daemon.py`).

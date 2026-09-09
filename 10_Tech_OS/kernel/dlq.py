@@ -67,11 +67,26 @@ def famille(motif: str) -> str:
     return "autre"
 
 
+def est_terminal(c, work_id: int) -> bool:
+    """Vrai si Rick a pose une cloture terminale sur ce work (event arbitrage
+    avec terminal=true). Un failed arbitre terminal n'est plus une DLQ."""
+    r = c.execute("SELECT payload FROM event WHERE work_id=? AND kind='arbitrage' "
+                  "ORDER BY id DESC LIMIT 1", (work_id,)).fetchone()
+    if not r or not r["payload"]:
+        return False
+    try:
+        return bool(json.loads(r["payload"]).get("terminal"))
+    except json.JSONDecodeError:
+        return False
+
+
 def cmd_run(a):
     c = cx()
     pris = []
     for r in c.execute("SELECT id, title, layer, attempts FROM work "
                        "WHERE status='failed' AND attempts >= ? ORDER BY id", (a.seuil,)):
+        if est_terminal(c, r["id"]):
+            continue
         motif = dernier_motif(c, r["id"])
         c.execute("UPDATE work SET status='blocked' WHERE id=?", (r["id"],))
         c.execute("INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
@@ -106,15 +121,51 @@ def cmd_rapport(a):
 
 
 def cmd_rendre(a):
+    """Retour en file UNIQUEMENT si Rick l'autorise explicitement (--autorise).
+
+    Sans --autorise, refus : c'est ce requeue silencieux qui a fait tourner le
+    ping-pong failed/requeue des works fantomes 47/48/71/72/73 (2026-09-04).
+    """
     c = cx()
+    if not a.autorise:
+        print(json.dumps({"ok": False,
+                          "erreur": "requeue refuse: passer --autorise \"<justification Rick>\""},
+                         ensure_ascii=False))
+        sys.exit(3)
     c.execute("UPDATE work SET status='pending', attempts=0 WHERE id=? AND status='blocked'",
               (a.work,))
     ok = c.total_changes > 0
     if ok:
         c.execute("INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
                   (a.work, "rick", "arbitrage",
-                   json.dumps({"decision": a.note or "remis en file"}, ensure_ascii=False)))
+                   json.dumps({"decision": "requeue autorise: " + (a.note or "remis en file"),
+                               "autorise_par": "rick"}, ensure_ascii=False)))
     print(json.dumps({"ok": ok, "work_id": a.work}, ensure_ascii=False))
+
+
+def cmd_cloturer(a):
+    """Cloture TERMINALE d'un blocked: decision Rick, pas de requeue possible.
+
+    Contourne loi_detachement (done exige review) parce que le verdict n'est pas
+    une construction reussie mais un constat: doublon/vestige/fantome d'un
+    objectif DEJA prouve par le parent. Statut 'failed' definitive (le seul
+    etat terminal accessible depuis blocked), attempts fige, reason horodatee.
+    """
+    c = cx()
+    r = c.execute("SELECT id, status FROM work WHERE id=?", (a.work,)).fetchone()
+    if not r or r["status"] != "blocked":
+        print(json.dumps({"ok": False,
+                          "erreur": f"work {a.work} absent ou non blocked"}, ensure_ascii=False))
+        sys.exit(3)
+    c.execute("UPDATE work SET status='failed' WHERE id=?", (a.work,))
+    c.execute("DELETE FROM claim WHERE work_id=?", (a.work,))
+    c.execute("INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
+              (a.work, "rick", "arbitrage",
+               json.dumps({"decision": "CLOTURE TERMINALE: " + a.motif,
+                           "terminal": True, "autorise_par": "rick"},
+                          ensure_ascii=False)))
+    print(json.dumps({"ok": True, "work_id": a.work, "status": "failed (terminal)"},
+                     ensure_ascii=False))
 
 
 def cmd_intent(a):
@@ -182,7 +233,12 @@ S = P.add_subparsers(dest="cmd", required=True)
 p = S.add_parser("run"); p.add_argument("--seuil", type=int, default=3); p.set_defaults(f=cmd_run)
 S.add_parser("rapport").set_defaults(f=cmd_rapport)
 p = S.add_parser("rendre"); p.add_argument("--work", type=int, required=True)
-p.add_argument("--note"); p.set_defaults(f=cmd_rendre)
+p.add_argument("--note")
+p.add_argument("--autorise", help="justification Rick obligatoire pour tout requeue")
+p.set_defaults(f=cmd_rendre)
+p = S.add_parser("cloturer"); p.add_argument("--work", type=int, required=True)
+p.add_argument("--motif", required=True)
+p.set_defaults(f=cmd_cloturer)
 p = S.add_parser("intent"); p.add_argument("--work", type=int, required=True)
 p.add_argument("--seuil", type=int, default=3)
 p.add_argument("--blast", default="dossiers touchés : aucun au-delà du work cité ; interdits : kernel/uc.db en écriture directe, 00_Amadeus/")

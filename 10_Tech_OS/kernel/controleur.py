@@ -96,12 +96,31 @@ def etat() -> dict:
             morts.append({"id": r["id"], "titre": r["title"],
                           "depuis_h": round((maintenant() - u).total_seconds() / 3600, 1)})
 
+    # Requeue selective : un work porte une qualification terminale (escalade
+    # Donna ou arbitrage Rick) n'est PAS du travail dormant, c'est du dechet
+    # tranche. Relancer un tranche, c'est annuler l'arbitrage — le parasite
+    # du 2026-09-04. dlq.py rendre exige --autorise ; l'UPDATE direct ne doit
+    # jamais le contourner.
     relancables = [dict(r) for r in c.execute(
-        "SELECT id, title, attempts FROM work WHERE status='failed' AND attempts < ?",
+        "SELECT id, title, attempts FROM work WHERE status='failed' AND attempts < ? "
+        "AND NOT EXISTS (SELECT 1 FROM event e WHERE e.work_id=work.id "
+        "                AND e.kind IN ('escalade','arbitrage'))",
         (MAX_TENTATIVES,))]
     epuises = c.execute(
-        "SELECT COUNT(*) n FROM work WHERE status='failed' AND attempts >= ?",
+        "SELECT COUNT(*) n FROM work WHERE status='failed' AND attempts >= ? "
+        "AND NOT EXISTS (SELECT 1 FROM event e WHERE e.work_id=work.id "
+        "                AND e.kind IN ('escalade','arbitrage'))",
         (MAX_TENTATIVES,)).fetchone()["n"]
+
+    # Le test de vivance : un runtime silencieux depuis plus d'une heure
+    # avec du travail en attente n'est pas au repos, il est arrete.
+    # En revanche, sans travail pending/claimed et sans echecs orphelins,
+    # il est en veille nominale, pret pour la prochaine vague.
+    a_du_travail_en_souffrance = (par_statut.get("pending", 0) > 0 or
+                                  par_statut.get("claimed", 0) > 0 or
+                                  epuises > 0 or
+                                  len(morts) > 0)
+    vivant = bool((silence and silence < timedelta(hours=1)) or not a_du_travail_en_souffrance)
 
     return {
         "par_statut": par_statut,
@@ -110,9 +129,7 @@ def etat() -> dict:
         "baux_morts": morts,
         "relancables": relancables,
         "epuises": epuises,
-        # Le test de vivance : un runtime silencieux depuis plus d'une heure
-        # avec du travail en attente n'est pas au repos, il est arrete.
-        "vivant": bool(silence and silence < timedelta(hours=1)),
+        "vivant": vivant,
     }
 
 
@@ -174,6 +191,12 @@ def battre(tours: int, pause: float) -> int:
         if e["relancables"]:
             c = cx()
             ids = [r["id"] for r in e["relancables"]]
+            # Garde-fou en profondeur : re-verifier la qualification terminale
+            # a l'instant du write (une qualification peut tomber entre etat()
+            # et l'UPDATE). Un id qualifie est retire, jamais relance.
+            ids = [i for i in ids if c.execute(
+                "SELECT COUNT(*) n FROM event WHERE work_id=? "
+                "AND kind IN ('escalade','arbitrage')", (i,)).fetchone()["n"] == 0]
             c.executemany(
                 "UPDATE work SET status='pending', updated_at=? WHERE id=? AND status='failed'",
                 [(maintenant().isoformat(timespec="seconds"), i) for i in ids])

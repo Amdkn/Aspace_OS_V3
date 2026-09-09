@@ -81,7 +81,10 @@ def executer(ligne: str, cwd: str) -> tuple[bool, str] | None:
         return None
     cmd = m.group(1).strip()
     try:
-        p = subprocess.run(shlex.split(cmd), cwd=cwd, capture_output=True,
+        # executable=git-bash : les criteres du ruban sont des commandes POSIX
+        # (pipes, grep -E, guillemets simples) — cmd.exe casse les pipes/regex.
+        bash = os.environ.get("BASH_EXE", "C:/Program Files/Git/bin/bash.exe")
+        p = subprocess.run([bash, "-c", cmd], cwd=cwd, capture_output=True,
                            text=True, timeout=300)
         return p.returncode == 0, f"exit={p.returncode} {(p.stderr or p.stdout).strip()[:160]}"
     except Exception as e:

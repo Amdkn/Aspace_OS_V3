@@ -44,3 +44,8 @@ réutilisable chez Geordi, un état révolu chez Data.
 ## Source
 
 `A2_Computer_Enterprise_Spec.md` fait foi. `SOUL.md` en donne l'intention.
+
+## D4 append-only — journal
+
+- **2026-09-04 — Reparation pulse PARA (Doctor 11, cron).** `verify_para.py` crashait (`TypeError: '<' not supported between dict and dict`) : `registre_para.json` avait ete pollue par des entrees dict de migration Gate 2 au lieu des noms de fichiers mesures sur le disque (criteres [1]/[3] du ruban 2026-09-04-spec-para-enterprise-pulse-v0.md). Corrections : (1) verifier durci — entree non string = erreur nommee au lieu de crash ; (2) registre restaure a la verite du disque (projects=[], areas=[], archives=[], resources=16 entrees 03_Resources_Geordi hors exclusions). Les 9 entrees de migration preservees dans `registre_migration_preserve_2026-09-04.json`. Preuve : `PARA_OK rc=0`.
+- **2026-09-04 — PARA Enterprise pulse v0 détaché (work 63, Doctor 11 cron).** Cycle complet sur ruban gate-compliant tape 37 (`2026-09-04-spec-para-enterprise-pulse-v0.md`, corrigé: `title:` + `## Critère d'acceptation` + `## Périmètre`/`## Interdits` — gate.py complet=true, leçon work 49 appliquée). rory_build_l1: claim → prédiction #82 (outcome=1, scorée) → 6/6 attest → review → done. Preuve: `python verify_para.py` → PARA_OK rc=0 (re-exécuté par Doctor 11). Registre collé au disque (projects=[Rock_00_Business_Pulse_12WY]). Les 6 modules A2 ont désormais tous leur pulse + verify.

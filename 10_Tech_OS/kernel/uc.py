@@ -59,6 +59,17 @@ def cmd_init(a):
         "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")]})
 
 
+def cmd_migrate(a):
+    """Applique schema.sql (idempotent, CREATE IF NOT EXISTS) — jamais de hack direct sur uc.db."""
+    with open(os.path.join(HERE, "schema.sql"), encoding="utf-8") as f:
+        sql = f.read()
+    c = cx(); c.executescript(sql)
+    tables = [r[0] for r in c.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")]
+    log(c, None, "uc.py", "migrate", {"tables": tables})
+    out({"ok": True, "db": DB, "tables": tables})
+
+
 def cmd_submit(a):
     c = cx(); tape_id = None
     if a.tape:
@@ -84,6 +95,19 @@ def cmd_claim(a):
         if a.work:                      # reclamation ciblee : un pont sait quel item il traite
             row = c.execute("SELECT id FROM work WHERE id=? AND status IN ('pending','failed')",
                             (a.work,)).fetchone()
+            # cloture terminale Rick : un work arbitre terminal n'est plus claimable
+            if row:
+                ev = c.execute("SELECT payload FROM event WHERE work_id=? AND kind='arbitrage' "
+                               "ORDER BY id DESC LIMIT 1", (a.work,)).fetchone()
+                if ev and ev["payload"]:
+                    try:
+                        if json.loads(ev["payload"]).get("terminal"):
+                            c.execute("COMMIT")
+                            out({"ok": True, "work": None,
+                                 "refus": "work arbitre terminal (cloture Rick), non claimable"})
+                            return
+                    except json.JSONDecodeError:
+                        pass
         else:
             row = c.execute(
                 "SELECT id FROM work WHERE status='pending' AND (? IS NULL OR layer=?) "
@@ -184,6 +208,7 @@ def cmd_status(a):
 P = argparse.ArgumentParser(description="constructeur universel A'Space V3")
 S = P.add_subparsers(dest="cmd", required=True)
 S.add_parser("init").set_defaults(f=cmd_init)
+S.add_parser("migrate").set_defaults(f=cmd_migrate)
 p = S.add_parser("submit"); p.add_argument("--layer", required=True, choices=["A0", "L0", "L1", "L2"])
 p.add_argument("--title", required=True); p.add_argument("--tape"); p.add_argument("--parent", type=int)
 p.add_argument("--priority", type=int, default=0); p.set_defaults(f=cmd_submit)

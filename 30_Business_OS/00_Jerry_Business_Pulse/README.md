@@ -20,6 +20,20 @@ python C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Jerry_Business_Pulse/verifi
 
 `PULSE_OK` + rc=0 si tout passe, sinon `PULSE_KO` + rc=1.
 
+## Consulter le pulse hebdo (v1, Rock_00_Business_Pulse_12WY)
+
+```bash
+# Publier le pulse hebdo (genere depuis les registres mesures)
+python C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Jerry_Business_Pulse/snapshot.py --publie
+
+# Consulter (incremente le compteur de consultations)
+python C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Jerry_Business_Pulse/snapshot.py --consulte
+```
+
+Le pulse hebdo est ecrit dans `00_Registre/pulse_hebdo.md` : date de
+generation, etat du Rock (sources `registre_para.json` + `registre.json`),
+compteur de consultations (`00_Registre/consultations.json`).
+
 ## Contraintes v0
 
 - Squelette fonctionnel : aucune donnée business réelle.

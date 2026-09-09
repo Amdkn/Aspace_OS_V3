@@ -75,6 +75,8 @@ def main():
             liste = registre.get(cat)
             if not isinstance(liste, list):
                 erreurs.append("registre: " + cat + " n'est pas une liste")
+            elif any(not isinstance(x, str) for x in liste):
+                erreurs.append("registre: " + cat + " contient des entrees non string (objet dict au lieu de nom de fichier)")
             elif sorted(liste) != reel:
                 manquants = sorted(set(reel) - set(liste))
                 surplus = sorted(set(liste) - set(reel))

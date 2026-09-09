@@ -1,6 +1,6 @@
 # Cartographie de A'Space OS V3
 
-> Genere par `scripts/cartographier_v3.py` le 2026-08-31 06:15 UTC, en 0.6 s.
+> Genere par `scripts/cartographier_v3.py` le 2026-09-07 20:07 UTC, en 4.6 s.
 > **Ne pas editer a la main** : une carte ecrite a la main vieillit et ment.
 > Regenerer par `python scripts/cartographier_v3.py`.
 
@@ -8,12 +8,12 @@
 
 | | |
 |---|---|
-| Fichiers | **10,806** |
-| Poids | **2.8 Go** |
-| Documents `.md` | **6,578** |
-| Triplets `.ttl` | 31 |
-| Substrat `.jsonl` | 46 |
-| Scripts `.py` | 296 |
+| Fichiers | **143,643** |
+| Poids | **29.5 Go** |
+| Documents `.md` | **67,303** |
+| Triplets `.ttl` | 35 |
+| Substrat `.jsonl` | 1,775 |
+| Scripts `.py` | 4,474 |
 
 Exclus du compte : `.cache`, `.git`, `.mypy_cache`, `.next`, `.nuxt`, `.obsidian`, `.pytest_cache`, `.venv`, `__pycache__`, `build`, `coverage`, `dist`, `node_modules`, `openwiki`, `site-packages`, `target`, `vendor`, `venv`.
 
@@ -25,28 +25,29 @@ etranger au notre.
 
 | Etage | Fichiers | dont `.md` | Poids | Ce qu'il porte |
 |---|---:|---:|---:|---|
-| `00_Amadeus/` | 868 | 441 | 128.5 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
-| `10_Tech_OS/` | 98 | 71 | 2.2 Mo | Gouvernance Rick, cascade E-Myth |
-| `20_Life_OS/` | 361 | 291 | 1.0 Go | Domaines de vie migres depuis V2 |
-| `30_Business_OS/` | 3,750 | 538 | 1.3 Go | Projets, blueprints, coach-os |
-| `40_Memory_Wiki_OKF/` | 41 | 41 | 302.0 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
-| `50_Distillation/` | 394 | 321 | 70.3 Mo | Methode, substrat, briefs de distillation |
-| `60_Implementation_Méthodologiques/` | 173 | 76 | 1.3 Mo | Verdicts du triptyque par domaine |
-| `70_Onthologies/` | 402 | 330 | 6.8 Mo | Sujets, triplets RDF, revue |
+| `00_Amadeus/` | 13,948 | 1,598 | 233.7 Mo | Ontologie V2, MEMORY_CORE, cartographie des contradictions, sessions |
+| `10_Tech_OS/` | 159 | 74 | 6.2 Mo | Gouvernance Rick, cascade E-Myth |
+| `20_Life_OS/` | 4,479 | 625 | 2.2 Go | Domaines de vie migres depuis V2 |
+| `30_Business_OS/` | 3,828 | 551 | 1.3 Go | Projets, blueprints, coach-os |
+| `40_Memory_Wiki_OKF/` | 57 | 57 | 370.6 Ko | Bundle OKF v0.2 — integrations, operations, securite, learning |
+| `50_Distillation/` | 447 | 360 | 73.5 Mo | Methode, substrat, briefs de distillation |
+| `60_Implementation_Méthodologiques/` | 179 | 79 | 1.3 Mo | Verdicts du triptyque par domaine |
+| `70_Onthologies/` | 115,641 | 59,424 | 25.5 Go | Sujets, triplets RDF, revue |
 | `80_Agent-OS/` | 7 | 2 | 64.3 Ko | Observabilite — tableaux de revue et schema de cadence |
-| `90-self-evolution/` | 24 | 11 | 113.6 Ko | Skills d'auto-amelioration — une par problematique mesuree |
+| `90-self-evolution/` | 45 | 25 | 244.7 Ko | Skills d'auto-amelioration — une par problematique mesuree |
 | `_ARCHIVE_coach-os-briefs/` | 349 | 154 | 109.2 Mo | Briefs archives de coach-os |
 | `_ARCHIVE_sessions_zombies/` | 4,265 | 4,265 | 101.1 Mo | — |
-| `_INBOX/` | 9 | 5 | 10.9 Ko | Capture GTD, non trie |
+| `_INBOX/` | 142 | 56 | 622.1 Ko | Capture GTD, non trie |
 | `_REVIEW_NOTEBOOKLM/` | 26 | 26 | 4.7 Mo | 26 sources consolidees pour la revue humaine |
-| `scripts/` | 31 | 0 | 256.9 Ko | Porte d'argent, cartographie, generateurs |
-| *(racine)* | 8 | 6 | 80.6 Ko | fichiers de tete |
+| `_tmp_kanban/` | 6 | 0 | 4.0 Ko | — |
+| `scripts/` | 56 | 0 | 346.5 Ko | Porte d'argent, cartographie, generateurs |
+| *(racine)* | 9 | 7 | 137.2 Ko | fichiers de tete |
 
 ## Arborescence, 3 niveaux
 
 ```
 ASpace_OS_V3/
-|-- 00_Amadeus/  (868 fich., 441 md, 128.5 Mo)
+|-- 00_Amadeus/  (13948 fich., 1598 md, 233.7 Mo)
 |   |-- 10_Observers/  (9 fich., 3.7 Ko)
 |   |   |-- _placeholder_agent-os_2026-08-06/  (1 fich.)
 |   |   |-- agent-os/  -> JONCTION (non suivie)
@@ -59,14 +60,16 @@ ASpace_OS_V3/
 |   |   |-- phoenix/  (1 fich.)
 |   |   |-- pocketbase-vec/  -> JONCTION (non suivie)
 |   |   `-- super-simple-software-factory/  -> JONCTION (non suivie)
-|   |-- 20_Harness/  (301 fich., 34 md, 111.1 Mo)
-|   |   |-- agentgateway/  (24 fich., 95.7 Mo)
+|   |-- 20_Harness/  (13314 fich., 1124 md, 216.0 Mo)
+|   |   |-- agentgateway/  (24 fich., 95.9 Mo)
 |   |   |-- antigravity/  (1 fich.)
 |   |   |-- bmad-loop/  (225 fich., 28 md, 9.5 Mo)
 |   |   |   ... 5 sous-dossiers, non deplies
 |   |   |-- buzz/  (1 fich.)
 |   |   |-- cc/  (1 fich.)
 |   |   |-- codex/  (1 fich.)
+|   |   |-- deepseek-harness/  (13013 fich., 1090 md, 104.5 Mo)
+|   |   |   ... 9 sous-dossiers, non deplies
 |   |   |-- herdr/  (1 fich.)
 |   |   |-- hermes/  (1 fich.)
 |   |   |-- multica/  (1 fich.)
@@ -76,7 +79,7 @@ ASpace_OS_V3/
 |   |   |   ... 1 sous-dossiers, non deplies
 |   |   |-- orca/  (1 fich.)
 |   |   |-- paperclip/  (2 fich., 1 md, 3.6 Ko)
-|   |   `-- routers/  (6 fich., 2.4 Mo)
+|   |   `-- routers/  (6 fich., 2.5 Mo)
 |   |-- 30_MEMORY_CORE/  (529 fich., 405 md, 17.4 Mo)
 |   |   |-- carto/  (103 fich., 17 md, 7.8 Mo)
 |   |   |   ... 1 sous-dossiers, non deplies
@@ -91,7 +94,7 @@ ASpace_OS_V3/
 |   |-- 50_Bench/  (2 fich.)
 |   |   |-- ceo-bench/  (1 fich.)
 |   |   `-- vec/  (1 fich.)
-|   |-- 60_Tape_Specs/  (16 fich., 1 md, 427 o)
+|   |-- 60_Tape_Specs/  (83 fich., 68 md, 310.7 Ko)
 |   |   |-- ADR/  (7 fich.)
 |   |   |   ... 6 sous-dossiers, non deplies
 |   |   |-- MCP/  (1 fich.)
@@ -108,7 +111,7 @@ ASpace_OS_V3/
 |   |   `-- mythos/  (1 fich.)
 |   `-- 90_Doctrine/  (1 fich.)
 |       `-- adr/  (1 fich.)
-|-- 10_Tech_OS/  (98 fich., 71 md, 2.2 Mo)
+|-- 10_Tech_OS/  (159 fich., 74 md, 6.2 Mo)
 |   |-- 00_Governance_Rick/  (35 fich., 22 md, 2.0 Mo)
 |   |   |-- Donna_DLQ/  (1 fich., 1 md, 308 o)
 |   |   `-- replicator/  (7 fich., 5 md, 21.8 Ko)
@@ -117,57 +120,68 @@ ASpace_OS_V3/
 |   |   |-- compagnons/  (10 fich., 10 md, 26.0 Ko)
 |   |   |   ... 3 sous-dossiers, non deplies
 |   |   `-- tapes/  (1 fich.)
-|   |-- 12_Life_Core_11th/  (16 fich., 15 md, 23.6 Ko)
+|   |-- 12_Life_Core_11th/  (19 fich., 16 md, 33.2 Ko)
 |   |   |-- compagnons/  (9 fich., 9 md, 9.9 Ko)
 |   |   |   ... 3 sous-dossiers, non deplies
-|   |   `-- tapes/  (2 fich., 1 md, 3.7 Ko)
+|   |   `-- tapes/  (5 fich., 2 md, 13.3 Ko)
 |   |       ... 1 sous-dossiers, non deplies
 |   |-- 13_Buzz_Core_12th/  (18 fich., 17 md, 21.4 Ko)
 |   |   |-- compagnons/  (12 fich., 12 md, 13.1 Ko)
 |   |   |   ... 3 sous-dossiers, non deplies
 |   |   `-- tapes/  (1 fich.)
-|   `-- kernel/  (11 fich., 1 md, 108.1 Ko)
-|       `-- agentpulse/  -> JONCTION (non suivie)
-|-- 20_Life_OS/  (361 fich., 291 md, 1.0 Go)
-|   |-- 00_Gatekeepers_Beth_Morty/  (8 fich., 7 md, 35.6 Ko)
-|   |   |-- Beth_Alignment_Log/  (1 fich., 1 md, 4.7 Ko)
+|   |-- kernel/  (63 fich., 3 md, 4.1 Mo)
+|   |   |-- adr/  (2 fich., 2 md, 3.9 Ko)
+|   |   `-- checkpoints/  (12 fich., 3.2 Mo)
+|   |       ... 6 sous-dossiers, non deplies
+|   |-- reports/  (2 fich., 1.4 Ko)
+|   |-- scheduler/  (2 fich., 8.7 Ko)
+|   `-- subagents/  (1 fich., 3.9 Ko)
+|-- 20_Life_OS/  (4479 fich., 625 md, 2.2 Go)
+|   |-- 00_Gatekeepers_Beth_Morty/  (15 fich., 11 md, 54.9 Ko)
+|   |   |-- Beth_Alignment_Log/  (5 fich., 5 md, 12.8 Ko)
 |   |   |-- Morty_Global_Queue/  (1 fich., 1 md, 5.5 Ko)
 |   |   `-- Sunday_Uplink_Protocols/  (1 fich., 1 md, 5.3 Ko)
-|   |-- 21_Ikigai_Orville/  (53 fich., 53 md, 78.3 Ko)
-|   |   |-- 01_Pillars_Identity/  (21 fich., 21 md, 26.2 Ko)
+|   |-- 21_Ikigai_Orville/  (56 fich., 54 md, 91.3 Ko)
+|   |   |-- 00_Orville_Packet/  (1 fich., 1 md, 1.6 Ko)
+|   |   |-- 01_Pillars_Identity/  (21 fich., 21 md, 27.4 Ko)
 |   |   |   ... 4 sous-dossiers, non deplies
-|   |   `-- 02_Horizons_Time/  (26 fich., 26 md, 29.5 Ko)
+|   |   `-- 02_Horizons_Time/  (26 fich., 26 md, 31.5 Ko)
 |   |       ... 5 sous-dossiers, non deplies
-|   |-- 22_Wheel_Discovery/  (113 fich., 109 md, 3.1 Mo)
-|   |   |-- LD01_Business_Book/  (72 fich., 68 md, 3.0 Mo)
+|   |-- 22_Wheel_Discovery/  (142 fich., 117 md, 3.1 Mo)
+|   |   |-- LD01_Business_Book/  (75 fich., 69 md, 3.0 Mo)
 |   |   |   ... 6 sous-dossiers, non deplies
-|   |   |-- LD02_Finance_Saru/  (5 fich., 5 md, 7.2 Ko)
-|   |   |-- LD03_Health_Culber/  (5 fich., 5 md, 6.2 Ko)
-|   |   |-- LD04_Cognition_Tilly/  (5 fich., 5 md, 6.3 Ko)
-|   |   |-- LD05_Social_Stamets/  (5 fich., 5 md, 6.2 Ko)
-|   |   |-- LD06_Family_Burnham/  (6 fich., 6 md, 11.2 Ko)
-|   |   |-- LD07_Creativity_Reno/  (5 fich., 5 md, 5.8 Ko)
-|   |   `-- LD08_Impact_Georgiou/  (5 fich., 5 md, 6.4 Ko)
-|   |-- 23_12WY_SNW/  (28 fich., 28 md, 61.4 Ko)
+|   |   |-- LD02_Finance_Saru/  (8 fich., 6 md, 8.1 Ko)
+|   |   |-- LD03_Health_Culber/  (8 fich., 6 md, 7.1 Ko)
+|   |   |-- LD04_Cognition_Tilly/  (8 fich., 6 md, 7.2 Ko)
+|   |   |-- LD05_Social_Stamets/  (8 fich., 6 md, 7.1 Ko)
+|   |   |-- LD06_Family_Burnham/  (9 fich., 7 md, 12.2 Ko)
+|   |   |-- LD07_Creativity_Reno/  (8 fich., 6 md, 6.7 Ko)
+|   |   `-- LD08_Impact_Georgiou/  (8 fich., 6 md, 7.4 Ko)
+|   |-- 23_12WY_SNW/  (37 fich., 34 md, 82.5 Ko)
+|   |   |-- 01_Projects_Picard/  (1 fich., 1 md, 389 o)
 |   |   |-- 01_Vision_Pike/  (4 fich., 4 md, 5.4 Ko)
+|   |   |-- 02_Areas_Spock/  (1 fich., 1 md, 346 o)
 |   |   |-- 02_Planning_Una/  (4 fich., 4 md, 5.4 Ko)
 |   |   |-- 03_Focus_MBenga/  (4 fich., 4 md, 5.9 Ko)
+|   |   |-- 03_Resources_Geordi/  (1 fich., 1 md, 356 o)
+|   |   |-- 04_Archives_Data/  (2 fich., 2 md, 2.2 Ko)
 |   |   |-- 04_Metrics_Chapel/  (4 fich., 4 md, 5.9 Ko)
 |   |   `-- 05_Execution_Ortegas/  (4 fich., 4 md, 6.1 Ko)
-|   |-- 24_PARA_Enterprise/  (108 fich., 47 md, 1.0 Go)
+|   |-- 24_PARA_Enterprise/  (4171 fich., 359 md, 2.2 Go)
 |   |   |-- 00_Links/  (1 fich.)
-|   |   |-- 01_Projects_Picard/  (2 fich., 2 md, 2.3 Ko)
+|   |   |-- 01_Projects_Picard/  (8 fich., 4 md, 16.0 Ko)
+|   |   |   ... 1 sous-dossiers, non deplies
 |   |   |-- 02_Areas_Spock/  (3 fich., 3 md, 4.8 Ko)
-|   |   |-- 03_Resources_Geordi/  (91 fich., 31 md, 1.0 Go)
-|   |   |   ... 4 sous-dossiers, non deplies
+|   |   |-- 03_Resources_Geordi/  (4145 fich., 341 md, 2.2 Go)
+|   |   |   ... 7 sous-dossiers, non deplies
 |   |   `-- 04_Archives_Data/  (3 fich., 3 md, 5.6 Ko)
-|   |-- 25_GTD_Cerritos/  (25 fich., 25 md, 41.5 Ko)
-|   |   |-- 01_Inbox_Mariner/  (4 fich., 4 md, 4.9 Ko)
-|   |   |-- 02_Clarify_Boimler/  (4 fich., 4 md, 4.6 Ko)
+|   |-- 25_GTD_Cerritos/  (30 fich., 28 md, 55.2 Ko)
+|   |   |-- 01_Inbox_Mariner/  (6 fich., 6 md, 7.7 Ko)
+|   |   |-- 02_Clarify_Boimler/  (5 fich., 5 md, 9.6 Ko)
 |   |   |-- 03_Organize_Rutherford/  (4 fich., 4 md, 6.0 Ko)
 |   |   |-- 04_Review_Tendi/  (4 fich., 4 md, 5.5 Ko)
 |   |   `-- 05_Engage_Freeman/  (4 fich., 4 md, 5.3 Ko)
-|   |-- 26_DEAL_Protostar/  (21 fich., 21 md, 36.1 Ko)
+|   |-- 26_DEAL_Protostar/  (23 fich., 21 md, 44.4 Ko)
 |   |   |-- 01_Definition_Dal/  (4 fich., 4 md, 4.9 Ko)
 |   |   |-- 02_Elimination_RokTahk/  (4 fich., 4 md, 4.9 Ko)
 |   |   |-- 03_Automation_Zero/  (4 fich., 4 md, 5.0 Ko)
@@ -177,11 +191,25 @@ ASpace_OS_V3/
 |       |-- 02-ADR/  (1 fich.)
 |       |-- 03-PRD/  (1 fich.)
 |       `-- 04-DDD/  (1 fich.)
-|-- 30_Business_OS/  (3750 fich., 538 md, 1.3 Go)
-|   |-- 00_Jerry_Business_Pulse/  (1 fich.)
-|   |-- 00_Summers_QuickAccess/  (1 fich.)
-|   |-- 00_Summers_Verse/  (1 fich.)
-|   |-- 02_Meta_Factory/  (1 fich.)
+|-- 30_Business_OS/  (3828 fich., 551 md, 1.3 Go)
+|   |-- 00_Jerry_Business_Pulse/  (20 fich., 7 md, 27.4 Ko)
+|   |   |-- 00_Registre/  (8 fich., 2 md, 4.5 Ko)
+|   |   |   ... 1 sous-dossiers, non deplies
+|   |   |-- 01_Prime/  (2 fich., 1 md, 512 o)
+|   |   |-- 02_Bio/  (2 fich., 1 md, 531 o)
+|   |   |-- 03_Nexus/  (2 fich., 1 md, 526 o)
+|   |   `-- 04_Solarpunk/  (2 fich., 1 md, 555 o)
+|   |-- 00_Registre/  (2 fich., 1.9 Ko)
+|   |-- 00_Summers_QuickAccess/  (3 fich., 2.1 Ko)
+|   |-- 00_Summers_Verse/  (35 fich., 2 md, 55.3 Ko)
+|   |   |-- 00_Registre/  (2 fich., 2.2 Ko)
+|   |   `-- projects/  (12 fich., 2 md, 15.4 Ko)
+|   |       ... 1 sous-dossiers, non deplies
+|   |-- 02_Meta_Factory/  (8 fich., 3 md, 10.9 Ko)
+|   |   |-- 00_Registre/  (1 fich., 385 o)
+|   |   |-- autolab/  (1 fich., 1 md, 305 o)
+|   |   |-- jcode/  (1 fich., 1 md, 266 o)
+|   |   `-- primeagent/  (3 fich., 1 md, 8.7 Ko)
 |   |-- 09_Blueprints/  (2784 fich., 234 md, 1.3 Go)
 |   |   |-- agentic-os/  (116 fich., 13 md, 99.1 Mo)
 |   |   |   ... 8 sous-dossiers, non deplies
@@ -197,27 +225,32 @@ ASpace_OS_V3/
 |   |   |   ... 3 sous-dossiers, non deplies
 |   |   `-- vision-v1/  (353 fich., 11 md, 180.7 Mo)
 |   |       ... 4 sous-dossiers, non deplies
-|   `-- 10_Projects/  (960 fich., 303 md, 20.7 Mo)
-|       `-- coach-os-app/  (959 fich., 303 md, 20.7 Mo)
-|           ... 29 sous-dossiers, non deplies
-|-- 40_Memory_Wiki_OKF/  (41 fich., 41 md, 302.0 Ko)
-|   |-- architecture/  (10 fich., 10 md, 79.2 Ko)
-|   |-- canon/  (5 fich., 5 md, 63.2 Ko)
-|   |-- integrations/  (8 fich., 8 md, 82.0 Ko)
-|   |-- learning/  (2 fich., 2 md, 8.9 Ko)
-|   |-- operations/  (9 fich., 9 md, 46.5 Ko)
+|   |-- 10_Projects/  (968 fich., 304 md, 21.5 Mo)
+|   |   `-- coach-os-app/  (967 fich., 304 md, 21.5 Mo)
+|   |       ... 29 sous-dossiers, non deplies
+|   `-- asp951-m4/  (5 fich., 48.4 Ko)
+|       |-- src/  (2 fich., 1.4 Ko)
+|       `-- tests/  (1 fich., 1.7 Ko)
+|-- 40_Memory_Wiki_OKF/  (57 fich., 57 md, 370.6 Ko)
+|   |-- architecture/  (23 fich., 23 md, 137.0 Ko)
+|   |-- canon/  (5 fich., 5 md, 63.3 Ko)
+|   |-- integrations/  (8 fich., 8 md, 82.3 Ko)
+|   |-- learning/  (3 fich., 3 md, 12.2 Ko)
+|   |-- operations/  (11 fich., 11 md, 52.2 Ko)
 |   `-- security/  (3 fich., 3 md, 10.6 Ko)
-|-- 50_Distillation/  (394 fich., 321 md, 70.3 Mo)
-|   |-- _briefs/  (24 fich., 16 md, 145.2 Ko)
+|-- 50_Distillation/  (447 fich., 360 md, 73.5 Mo)
+|   |-- _b4_recheck_out/  (1 fich., 1 md, 1.3 Ko)
+|   |-- _briefs/  (28 fich., 20 md, 157.0 Ko)
 |   |-- _briefs_domaines/  (14 fich., 9 md, 84.7 Ko)
 |   |-- _briefs_vague2/  (14 fich., 9 md, 83.4 Ko)
 |   |-- _mesures/  (4 fich., 33.1 Ko)
 |   |-- _partiels/  (21 fich., 11 md, 35.3 Ko)
 |   |-- _substrat/  (25 fich., 1 md, 65.5 Mo)
 |   |-- _substrat_domaines/  (9 fich., 4 md, 1.7 Mo)
+|   |-- _test_out/  (1 fich., 1 md, 1.3 Ko)
 |   |-- _tranches/  (10 fich., 10 md, 379.9 Ko)
-|   |-- archives/  (17 fich., 17 md, 86.4 Ko)
-|   |-- areas/  (22 fich., 22 md, 136.0 Ko)
+|   |-- archives/  (18 fich., 18 md, 94.9 Ko)
+|   |-- areas/  (23 fich., 23 md, 144.1 Ko)
 |   |-- domaines/  (161 fich., 161 md, 654.8 Ko)
 |   |   |-- amadeus/  (32 fich., 32 md, 103.6 Ko)
 |   |   |-- business/  (20 fich., 20 md, 93.0 Ko)
@@ -228,22 +261,29 @@ ASpace_OS_V3/
 |   |   |-- tech/  (16 fich., 16 md, 57.4 Ko)
 |   |   `-- templates/  (14 fich., 14 md, 77.0 Ko)
 |   |-- ontologie/  (20 fich., 9 md, 1.3 Mo)
-|   |-- projets/  (21 fich., 21 md, 96.5 Ko)
-|   `-- ressources/  (27 fich., 27 md, 129.8 Ko)
-|-- 60_Implementation_Méthodologiques/  (173 fich., 76 md, 1.3 Mo)
+|   |-- projets/  (30 fich., 30 md, 122.0 Ko)
+|   `-- ressources/  (40 fich., 40 md, 172.3 Ko)
+|-- 60_Implementation_Méthodologiques/  (179 fich., 79 md, 1.3 Mo)
+|   |-- _b4_recheck_out/  (1 fich., 1.9 Ko)
 |   |-- _briefs/  (5 fich., 3 md, 19.3 Ko)
 |   |-- _loop/  (100 fich., 28 md, 914.7 Ko)
 |   |-- _sources/  (2 fich., 2 md, 12.4 Ko)
+|   |-- _test_out/  (1 fich., 2.4 Ko)
 |   |-- autonomie-agents/  (6 fich., 6 md, 27.9 Ko)
 |   |-- domaines/  (28 fich., 8 md, 131.1 Ko)
-|   |-- frameworks/  (6 fich., 6 md, 39.8 Ko)
+|   |-- frameworks/  (9 fich., 9 md, 47.7 Ko)
 |   |-- primitives/  (3 fich., 1 md, 17.5 Ko)
 |   |-- prompt-systeme/  (8 fich., 8 md, 32.1 Ko)
 |   `-- protocoles/  (12 fich., 12 md, 112.9 Ko)
-|-- 70_Onthologies/  (402 fich., 330 md, 6.8 Mo)
+|-- 70_Onthologies/  (115641 fich., 59424 md, 25.5 Go)
+|   |-- _b4_recheck_out/  (1 fich., 3.0 Ko)
 |   |-- _briefs/  (24 fich., 15 md, 150.7 Ko)
+|   |-- _cold_archive/  (115193 fich., 59081 md, 25.5 Go)
+|   |   `-- ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/  (115185 fich., 59081 md, 7.5 Go)
+|   |       ... 4 sous-dossiers, non deplies
 |   |-- _revue/  (30 fich., 9 md, 170.4 Ko)
-|   |-- _structure/  (3 fich., 1 md, 595.7 Ko)
+|   |-- _structure/  (40 fich., 14 md, 1.9 Mo)
+|   |-- _test_out/  (1 fich., 4.0 Ko)
 |   |-- pulse/  (298 fich., 298 md, 3.7 Mo)
 |   |   |-- b1/  (15 fich., 15 md, 127.5 Ko)
 |   |   |-- b2/  (12 fich., 12 md, 109.9 Ko)
@@ -251,7 +291,7 @@ ASpace_OS_V3/
 |   |   `-- domaines/  (259 fich., 259 md, 3.3 Mo)
 |   |       ... 8 sous-dossiers, non deplies
 |   |-- sujets/  (20 fich., 1.6 Mo)
-|   |-- triplets/  (19 fich., 626.8 Ko)
+|   |-- triplets/  (24 fich., 655.6 Ko)
 |   `-- verbes/  (6 fich., 6 md, 8.6 Ko)
 |-- 80_Agent-OS/  (7 fich., 2 md, 64.3 Ko)
 |   |-- donnees/  (2 fich., 1 md, 13.2 Ko)
@@ -259,16 +299,22 @@ ASpace_OS_V3/
 |   |   `-- schema/  (1 fich., 10.0 Ko)
 |   `-- tableaux/  (4 fich., 47.2 Ko)
 |       `-- reviews/  (3 fich., 36.7 Ko)
-|-- 90-self-evolution/  (24 fich., 11 md, 113.6 Ko)
+|-- 90-self-evolution/  (45 fich., 25 md, 244.7 Ko)
 |   |-- datasets/  (3 fich., 1 md, 15.0 Ko)
+|   |-- distilled/  (2 fich., 2 md, 6.7 Ko)
 |   |-- evolution/  (2 fich., 1 md, 8.6 Ko)
-|   |-- reports/  (2 fich., 1.7 Ko)
-|   |   `-- forum/  (0 fich.)
-|   `-- skills/  (16 fich., 8 md, 83.0 Ko)
+|   |-- ontology/  (2 fich., 2 md, 23.6 Ko)
+|   |-- reports/  (4 fich., 37.8 Ko)
+|   |   |-- forum/  (0 fich.)
+|   |   `-- states/  (2 fich., 1.3 Ko)
+|   `-- skills/  (31 fich., 18 md, 147.7 Ko)
+|       |-- distilled/  (3 fich., 3 md, 7.3 Ko)
+|       |-- grill-me-intent/  (1 fich., 1 md, 3.9 Ko)
+|       |-- ontology/  (3 fich., 3 md, 29.2 Ko)
 |       |-- p1-anti-rejeu/  (2 fich., 1 md, 10.9 Ko)
 |       |   ... 1 sous-dossiers, non deplies
-|       |-- p2-mandat-persistant/  (2 fich., 1 md, 12.0 Ko)
-|       |   ... 1 sous-dossiers, non deplies
+|       |-- p2-mandat-persistant/  (3 fich., 2 md, 16.1 Ko)
+|       |   ... 2 sous-dossiers, non deplies
 |       |-- p3-point-entree/  (2 fich., 1 md, 7.6 Ko)
 |       |   ... 1 sous-dossiers, non deplies
 |       |-- p4-instrument-honnete/  (2 fich., 1 md, 9.3 Ko)
@@ -279,7 +325,13 @@ ASpace_OS_V3/
 |       |   ... 1 sous-dossiers, non deplies
 |       |-- p7-memoire-travail/  (2 fich., 1 md, 11.5 Ko)
 |       |   ... 1 sous-dossiers, non deplies
-|       `-- p8-forum-agents/  (2 fich., 1 md, 14.1 Ko)
+|       |-- p8-forum-agents/  (2 fich., 1 md, 14.1 Ko)
+|       |   ... 1 sous-dossiers, non deplies
+|       |-- skill-state/  (2 fich., 1 md, 7.0 Ko)
+|       |   ... 1 sous-dossiers, non deplies
+|       |-- v3-gates/  (3 fich., 7.8 Ko)
+|       |   ... 1 sous-dossiers, non deplies
+|       `-- wikiskill/  (2 fich., 1 md, 5.3 Ko)
 |           ... 1 sous-dossiers, non deplies
 |-- _ARCHIVE_coach-os-briefs/  (349 fich., 154 md, 109.2 Mo)
 |   `-- _briefs/  (349 fich., 154 md, 109.2 Mo)
@@ -608,16 +660,25 @@ ASpace_OS_V3/
 |       |-- wf_d1e09957-b2d/  (4 fich., 4 md, 24.5 Ko)
 |       |-- wf_e400c295-377/  (7 fich., 7 md, 24.3 Ko)
 |       `-- wf_fb83832a-a82/  (15 fich., 15 md, 82.8 Ko)
-|-- _INBOX/  (9 fich., 5 md, 10.9 Ko)
-|   |-- A1_Beth_Morty/  (2 fich., 1 md, 8.7 Ko)
+|-- _INBOX/  (142 fich., 56 md, 622.1 Ko)
+|   |-- A1_Beth_Morty/  (1 fich.)
 |   |-- B1_Jerry_Summers/  (1 fich.)
-|   |-- S1_Rick/  (1 fich.)
-|   |-- _admis/  (1 fich., 1 md, 427 o)
-|   |   `-- B1_Jerry_Summers/  (1 fich., 1 md, 427 o)
-|   `-- _refuses/  (2 fich., 2 md, 603 o)
-|       `-- S1_Rick/  (2 fich., 2 md, 603 o)
+|   |-- S1_Rick/  (5 fich., 4 md, 10.0 Ko)
+|   |   `-- DOCTOR13_REVIEW/  (4 fich., 4 md, 10.0 Ko)
+|   |-- _admis/  (22 fich., 22 md, 37.4 Ko)
+|   |   |-- A1_Beth_Morty/  (3 fich., 3 md, 10.6 Ko)
+|   |   |-- B1_Jerry_Summers/  (17 fich., 17 md, 21.7 Ko)
+|   |   `-- S1_Rick/  (1 fich., 1 md, 4.3 Ko)
+|   |-- _refuses/  (27 fich., 27 md, 39.8 Ko)
+|   |   |-- A1_Beth_Morty/  (2 fich., 2 md, 9.1 Ko)
+|   |   |-- B1_Jerry_Summers/  (11 fich., 11 md, 8.2 Ko)
+|   |   `-- S1_Rick/  (14 fich., 14 md, 22.5 Ko)
+|   |-- brouillons/  (1 fich., 1 md, 390.8 Ko)
+|   |-- handoffs/  (1 fich., 1 md, 2.8 Ko)
+|   `-- mandats/  (81 fich., 138.7 Ko)
 |-- _REVIEW_NOTEBOOKLM/  (26 fich., 26 md, 4.7 Mo)
-`-- scripts/  (31 fich., 256.9 Ko)
+|-- _tmp_kanban/  (6 fich., 4.0 Ko)
+`-- scripts/  (56 fich., 346.5 Ko)
 ```
 
 ## Ou vit reellement la connaissance
@@ -629,18 +690,18 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 
 | Dossier | `.md` |
 |---|---:|
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides/03_IT` | 10,189 |
 | `_ARCHIVE_sessions_zombies/2026-08-31/_recuperees_claude` | 2,115 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides/09_Life_OS` | 1,571 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides/01_Product` | 871 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides/07_Growth` | 465 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/04_Archives_Data/_V3_STRUCTURE_2026-08-02/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides` | 426 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/01_Guides` | 426 |
 | `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/de35c5f1-6944-47f6-b8bc-849452b0313a/subagents` | 405 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado-ASpace-OS-V2-20-Life-OS-24-PARA-Enterprise-03-Resources-Geordi-05-From-V2-Domains-30-Business-OS-10-Projects-omk-repos-coach-os` | 147 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/7293fe1b-1492-4245-b0bd-8b51f58f9b39/subagents` | 82 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/_ARCHIVE_2026-06-16_sessions/projects/C--Users-amado/9627821e-356b-43f0-b67d-695b6e8979c9/subagents` | 78 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado--claude-skills-ordonnanceur` | 75 |
-| `30_Business_OS/09_Blueprints/coach-os-refonte` | 70 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/C--Users-amado-ASpace-OS-V3-60-Implementation-M-thodologiques--loop` | 57 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/subagents` | 56 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado` | 53 |
-| `_ARCHIVE_coach-os-briefs/_briefs/2026-08-11_production` | 52 |
-| `_ARCHIVE_sessions_zombies/2026-08-31/_03_Resources_Geordi_06_Claude_Code_Bare/projects/C--Users-amado/dd69d16d-679d-4693-a435-32ed70af4cf6/subagents` | 46 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/aspace-graphify-out/chunks/chunk_002` | 370 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/aspace-graphify-out/chunks/chunk_003` | 366 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/aspace-graphify-out/chunks/chunk_001` | 365 |
+| `70_Onthologies/_cold_archive/ASpace_OS_V2_COLD_SNAPSHOT_2026-09-05/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/04_From_V2_Root/aspace-graphify-out/chunks/chunk_015` | 363 |
 
 ### Vidages de sessions (matiere premiere, pas connaissance)
 
@@ -655,7 +716,7 @@ ecrasent tout en volume sans etre de la connaissance **redigee**.
 ### Le point qui compte
 
 Le `CLAUDE.md` designe `40_Memory_Wiki_OKF/` comme « la memoire du
-poste ». Ce bundle porte **41 fichiers `.md` sur 6,578**, soit **0.6 %** du corpus.
+poste ». Ce bundle porte **57 fichiers `.md` sur 67,303**, soit **0.1 %** du corpus.
 
 Chercher la et s'arreter, c'est manquer le reste. Le bundle est un
 **index de concepts consolides**, pas le corpus. Les deux tableaux

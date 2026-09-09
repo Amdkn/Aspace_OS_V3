@@ -1,5 +1,6 @@
 ---
 id: spec-para-enterprise-pulse-v0
+title: "PARA Enterprise pulse v0 : registre 4 categories PARA + verify_para.py dans 24_PARA_Enterprise"
 date: 2026-09-04
 layer: L1
 status: active
@@ -26,7 +27,7 @@ sur GTD Cerritos (pulse.json + verify_gtd.py) et DEAL Protostar (verify_deal.py)
 python stdlib uniquement, francais ASCII sans accents, criteres numerotes,
 sortie OK/KO, rc 0/1.
 
-## Criteres d'acceptation (numerotes, verifiables)
+## Critère d'acceptation
 
 1. `C:/Users/amado/ASpace_OS_V3/20_Life_OS/24_PARA_Enterprise/registre_para.json`
    existe, est un JSON valide et porte exactement les 4 cles :
@@ -70,10 +71,14 @@ python -c "import json;d=json.load(open('registre_para.json'));print(sorted(d.ke
 
 Preuve attendue : `PARA_OK`, `rc=0`, cles `['areas','archives','projects','resources']`.
 
-## Portee et interdits
+## Périmètre
 
 - Ce ruban ne cree que `registre_para.json` et `verify_para.py` a la racine du
   framework (admises par le portier). Aucun fichier existant n'est modifie.
-- Pas de dependance hors stdlib. Pas d'accents ni de caracteres non ASCII.
 - Test du ruban (AGENTS.md racine, §3) : un constructeur doit pouvoir executer
   sans poser une seule question a l'operateur.
+
+## Interdits
+
+- Pas de dependance hors stdlib. Pas d'accents ni de caracteres non ASCII
+  dans le code et les donnees produites.

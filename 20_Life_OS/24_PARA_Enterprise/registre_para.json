@@ -2,7 +2,9 @@
   "version": "v0",
   "date_init": "2026-09-04",
   "framework": "PARA Enterprise",
-  "projects": [],
+  "projects": [
+    "Rock_00_Business_Pulse_12WY"
+  ],
   "areas": [],
   "resources": [
     "05_BuildIt_Prompt_Pack.pdf",
@@ -15,12 +17,12 @@
     "GLOSSARY.md",
     "QUICKSTART.md",
     "README.md",
-    "The_Enterprise_OS_Blueprint.pdf",
     "TROUBLESHOOTING.md",
+    "Takeout",
+    "The_Enterprise_OS_Blueprint.pdf",
     "examples",
     "prompts",
-    "specs",
-    "Takeout"
+    "specs"
   ],
   "archives": []
-}
+}

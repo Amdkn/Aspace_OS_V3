@@ -1,7 +1,7 @@
 {
   "ship": "DISCOVERY",
   "framework": "Life Wheel / ZORA",
-  "updated": "2026-09-02T22:21:52",
+  "updated": "2026-09-04T06:08:21",
   "domains": {
     "LD01": {
       "persona": "Book",
@@ -60,5 +60,14 @@
       "morty_route": "ENTERPRISE_PARA"
     }
   },
-  "evidence_paths": []
+  "evidence_paths": [
+    "LD01_Business_Book/evidence_log.json",
+    "LD02_Finance_Saru/evidence_log.json",
+    "LD03_Health_Culber/evidence_log.json",
+    "LD04_Cognition_Tilly/evidence_log.json",
+    "LD05_Social_Stamets/evidence_log.json",
+    "LD06_Family_Burnham/evidence_log.json",
+    "LD07_Creativity_Reno/evidence_log.json",
+    "LD08_Impact_Georgiou/evidence_log.json"
+  ]
 }
