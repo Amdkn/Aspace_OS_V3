@@ -26,3 +26,6 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 ## D4 append-only — audits de vivance
 
 - **2026-08-30 — Preuve de vivance.** Un port qui écoute, un roster peuplé, une base avec des items ou un gardien WSL ne prouvent pas qu'A'Space agit. Toute affirmation « V3 est vivant » doit montrer un cycle continu et horodaté `ruban complet → claim → prédiction antérieure au started_at → construction réelle → revue indépendante → scoring → descendance`, après démarrage à froid et avec reprise d'un worker tué. Tant que ce certificat n'existe pas, qualifier séparément les primitives disponibles, l'infrastructure joignable et l'agence autonome.
+
+## Journal Append-Only (DOX)
+- `2026-09-09` : Implémentation du moteur Engram (`engram_loader.py`), du Gatekeeper A1 Beth (`beth_filter.py`) et de la suite de tests unitaires (`test_engram.py`). Validation binaire py_compile à 0 erreur. (Bill Potts & Nardole).

@@ -1,53 +1,38 @@
 ---
-type: concept
-title: "Architecture Engram Phrase Book et Gatekeepers A1 (Zero-Token Overhead)"
-description: "Découplage déterministe entre calcul actif et mémoire ontologique statique via tables NVMe mmap inspirées de Qwen Engram, Marin et MiniMind"
-tags:
-  - architecture
-  - engram
-  - zero-token
-  - mmap
-  - gatekeeper
-  - life-os
-  - tech-os
-generated: "2026-09-09"
+type: Architecture Concept
+title: Engram Phrasebook & Gatekeeper A1 Beth
+description: Moteur résolveur Engram zero-RAM O(1) sur SSD NVMe et filtre de garde déterministe A1 Beth pour A'Space OS V3.
+tags: [engram, phrasebook, gatekeeper, beth, okf]
+generated: { by: "agent:bill-potts", at: "2026-09-09T10:00:00Z" }
 verified:
-  by: "human:amdkn"
-  date: "2026-09-09"
+  - { by: "human:amdkn", at: "2026-09-09T10:00:00Z" }
 sources:
-  - "http://www.youtube.com/watch?v=IH8XmxiwliQ (Codacus - Local Frontier Models Analysis)"
-  - "c:\\Users\\amado\\ASpace_OS_V3\\10_Tech_OS\\kernel\\engram\\phrase_book_aspace.json"
-  - "c:\\Users\\amado\\ASpace_OS_V3\\10_Tech_OS\\kernel\\engram\\engram_loader.py"
+  - id: sdd-001
+    resource: "delegation-a-jules/SDD-001-ASPACE-STRUCTURE-AND-12TH-DOCTOR.md"
+    title: "SDD-001 Structure & 12th Doctor"
+    last_modified: 2026-09-09
+  - id: prd-a1
+    resource: "delegation-a-jules/PRD-A1-ENGRAM-PHRASEBOOK.md"
+    title: "PRD-A1 Engram Phrasebook"
+    last_modified: 2026-09-09
 okf_version: "0.2"
 ---
 
-# Architecture Engram Phrase Book & Gatekeepers A1 (Zero-Token Overhead)
+> **Niveau de confiance : confirmé par machine & revu.** Code source compilé (py_compile 0 erreur) et 6 tests unitaires passés à 100%.
 
-> **Principe Cardinal :** Cesser d'injecter des milliers de tokens de règles, de Lore et de schémas ontologiques dans chaque fenêtre de contexte. Le cerveau actif calcule le raisonnement ; la mémoire ontologique immuable réside sur le SSD NVMe et est résolue en $O(1)$ par memory mapping (`mmap`).
+# Engram Phrasebook & Gatekeeper A1 Beth
 
----
+## 1. Description & Objectif Cybernétique
+L'architecture **Engram Phrasebook** a pour but d'éliminer l'overhead de tokens lors de l'injection répétitive des invariants, règles et lore d'A'Space OS V3. Les ontologies et invariants sont stockés dans une lookup table `10_Tech_OS/kernel/engram/phrase_book_aspace.json` mappée en mémoire (`mmap`) via `engram_loader.py`.
 
-## 1. Fondements Cybernétiques & Matériels
+Le composant **BethFilter** (`10_Tech_OS/kernel/engram/beth_filter.py`) agit comme le Gatekeeper A1. Il intercepte chaque intention entrante avant sa transmission aux agents A2/A3 pour valider les règles et exercer un veto immédiat en cas de circuit breaker (ex. `OS_HYOIDE_BUFFER`).
 
-L'analyse empirique de Codacus sur les modèles frontières locaux (177B tournant sur RTX 3060 12 Go) démontre la rupture entre calcul tensoriel et lecture de table :
-- **Modèle conventionnel :** Chaque mot ou concept récurrent consomme des couches d'attention et des mégaoctets de VRAM/RAM.
-- **Modèle Engram Phrase Book :** Les n-grams récurrents (*"LD01"*, *"Definition of Done"*, *"13e Docteur"*) sont résolus directement dans une table d'indexation NVMe sans activation de couches d'inférence.
+## 2. Composants Forgés
+- **Lookup Table :** `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (mappings 1D-7D, LD01-LD08, Docteurs, DoD).
+- **Moteur Résolveur :** `10_Tech_OS/kernel/engram/engram_loader.py` (résolution $O(1)$ par `mmap`).
+- **Filtre Gatekeeper A1 :** `10_Tech_OS/kernel/engram/beth_filter.py` (évaluation déterministe & veto).
+- **Suite de Tests :** `10_Tech_OS/kernel/engram/test_engram.py` (6 unit tests passing).
 
----
-
-## 2. Implémentation A'Space OS V3
-
-1. **Substrat Déterministe (`10_Tech_OS/kernel/engram/`) :**
-   - `phrase_book_aspace.json` : Répertoire canonique des entités 1D à 7D (LD01-LD08, Triades des 11e, 12e et 13e Docteurs, Invariants SSSF).
-   - `engram_loader.py` : Moteur de résolution instantané exploitant `mmap` en mode lecture seule (`ACCESS_READ`).
-2. **Front de Capture A1 (Gatekeepers Beth & Morty) :**
-   - **Beth (Gouvernance 5D/6D) :** Valide la conformité sémantique et la non-dilution de la trajectoire d'A0.
-   - **Morty (Substrat 3D/4D) :** Pilote la résolution déterministe hors-cloud et le cadencement sans calcul lourd.
-
----
-
-## 3. Impact Économique & Performance
-
-- **Token overhead d'initialisation :** 0 token payé aux APIs cloud pour réexpliquer le système.
-- **Empreinte RAM :** Proche de 0 Mo additionnels grâce au paging virtuel du kernel OS.
-- **Résolution :** < 1 milliseconde par intention.
+## 3. Câblage Inter-Composants (Dispatch Nardole)
+- **Tech OS Kernel :** Interception des événements dans `10_Tech_OS/kernel/`.
+- **Life OS A1 Gatekeepers :** Alignement déterministe avec Beth (`20_Life_OS/00_Gatekeepers_Beth_Morty/`).
