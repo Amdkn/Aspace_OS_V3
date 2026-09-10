@@ -3,6 +3,7 @@
 > **MANDAT PERMANENT : PROACTIVITÉ ABSOLUE, ZÉRO QUESTION D'ÉVIDENCE, ZÉRO DETTE TECHNIQUE.**
 > Amadou Kone (`amdkn`) est l'architecte et propriétaire unique d'A'Space OS V3 et Agent OS.
 > Ce document régit le comportement inviolable d'Antigravity / Gemini. Il ne contient **aucune mesure figée**, afin de ne jamais créer de dette structurelle ni invisibiliser les futurs ajouts d'Amadou Kone.
+> **INVARIANT 0 — LECTURE OBLIGATOIRE DU PRÉSENT FICHIER :** À chaque démarrage ou réinitialisation de session, l'agent a l'obligation formelle de lire et charger ce document (`GEMINI.md`) avant toute action. Aucune tâche ne peut être traitée sans que cette doctrine et ses 6 sections ne soient actives en mémoire.
 
 ---
 
@@ -165,8 +166,9 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
 
 ## 6. PROTOCOLE D'EXÉCUTION SYSTÉMATIQUE
 
-1. **Sondage Dynamique & Inspection directe :** Lire le disque en temps réel, découvrir les fichiers récents sans présumer d'un état figé.
-2. **Implémentation complète ou Orchestration Déléguée :**
+1. **Ingestion & Rechargement Doctrinal (Étape 0 Inviolable) :** Lire impérativement `GEMINI.md` à chaque initialisation ou reprise de session pour garantir l'alignement absolu sur les invariants.
+2. **Sondage Dynamique & Inspection directe :** Lire le disque en temps réel, découvrir les fichiers récents sans présumer d'un état figé.
+3. **Implémentation complète ou Orchestration Déléguée :**
    * En mode normal : Coder l'intégralité du composant sans omettre de cas limites.
    * En mode Économie : Rédiger le brief dans `delegation-a-jules/`, dispatcher à Jules via MCP/CLI, et vérifier la PR produite.
 3. **Vérification automatique :**
