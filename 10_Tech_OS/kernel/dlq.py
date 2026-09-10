@@ -19,13 +19,15 @@ from collections import Counter
 
 sys.path.insert(0, os.path.expanduser("~/agentpulse"))
 sys.path.insert(0, os.path.expanduser("~"))
-from agentpulse.sdk import instrument
-
-instrument(
-    task_type="dlq-triage",
-    prompt_version=1,
-    db_name="kernel-dlq",
-)
+try:
+    from agentpulse.sdk import instrument
+    instrument(
+        task_type="dlq-triage",
+        prompt_version=1,
+        db_name="kernel-dlq",
+    )
+except ImportError:
+    pass
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
