@@ -149,6 +149,17 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 - Endpoints Tech OS ajoutés et validés : `GET /api/tech-os/graham/checkpoints`, `POST /api/tech-os/graham/action`.
 - Validation stricte : `npm run typecheck` à 0 erreur ; `verif_marqueurs.mjs` à 0 placeholder ; `verif_http.mjs` à 100% 200 OK.
 
+## D4 — 2026-09-09 — Validation de Run Souveraine Kernel Core (13e Docteur, Yaz, Ryan, Graham)
+
+- **[YAZ] Audit & Intégrité Runtime / uc.db :**
+  - Ajout des garde-fous `try...except (ImportError, ModuleNotFoundError)` sur les imports `agentpulse` dans l'ensemble des scripts `10_Tech_OS/kernel/` (`uc.py`, `gate.py`, `review.py`, `dlq.py`, `harness.py`, `bridge_paperclip.py`).
+  - Migration schéma SQLite effectuée (`uc.py migrate`) et vérification d'intégrité validée (`PRAGMA integrity_check` -> `ok`).
+- **[GRAHAM] Synchronisation Engram Phrase Book, Ontologies & OKF :**
+  - Synchronisation du Phrase Book Engram `10_Tech_OS/kernel/engram/phrase_book_aspace.json` avec la référence Turtle `aspace://70_Onthologies/sujets/J01_Jerry_Prime_LD01_Business.ttl` et OKF v0.2 `aspace://40_Memory_Wiki_OKF/concepts/engram_phrasebook_architecture.md`.
+  - Exécution réussie des 6 unit tests (`10_Tech_OS/kernel/engram/test_engram.py` -> 6/6 tests OK).
+- **[RYAN] Compilation & Definition of Done :**
+  - Compilation `python -m py_compile` de l'ensemble des modules Python modifiés (0 erreur, exit code 0).
+  - Enregistrement, prédiction, revue, attestation et clôture `done` des 3 issues Kernel Core dans `uc.db` (3/3 items détachés avec calibration 100%).
 
 
 

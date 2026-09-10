@@ -7,7 +7,8 @@
       "ngram": ["self", "operating", "business"],
       "dimension": "7D",
       "resolution_type": "ONTOLOGY_POINTER",
-      "uri": "aspace://70_Onthologies/LD01_Business_SOB.rdf",
+      "uri": "aspace://70_Onthologies/sujets/J01_Jerry_Prime_LD01_Business.ttl",
+      "okf_reference": "aspace://40_Memory_Wiki_OKF/concepts/engram_phrasebook_architecture.md",
       "invariants": {
         "unit_price": 300,
         "referral_bounty": 50,

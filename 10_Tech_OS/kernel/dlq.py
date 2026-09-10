@@ -17,15 +17,18 @@ import argparse, json, os, re, sqlite3, subprocess, sys
 from datetime import date
 from collections import Counter
 
-sys.path.insert(0, os.path.expanduser("~/agentpulse"))
-sys.path.insert(0, os.path.expanduser("~"))
-from agentpulse.sdk import instrument
+try:
+    sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+    sys.path.insert(0, os.path.expanduser("~"))
+    from agentpulse.sdk import instrument
 
-instrument(
-    task_type="dlq-triage",
-    prompt_version=1,
-    db_name="kernel-dlq",
-)
+    instrument(
+        task_type="dlq-triage",
+        prompt_version=1,
+        db_name="kernel-dlq",
+    )
+except (ImportError, ModuleNotFoundError):
+    pass
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
