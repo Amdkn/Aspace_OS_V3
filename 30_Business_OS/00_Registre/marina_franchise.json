@@ -1,0 +1,24 @@
+{
+  "id": "marina",
+  "name": "Marina Cleaning BOS & SOP",
+  "mode": "Orbiter primary, Nexus secondary",
+  "parent": "J01_Jerry_Prime_LD01_Business",
+  "b2_b3_harmonization_matrix": {
+    "T1": {
+      "b2": "GreenLantern + Batman + Flash",
+      "b3": "X-Men + Fantastic Four + Avengers",
+      "focus": "SOP Library & Field Crew Dispatch"
+    },
+    "T2": {
+      "b2": "Superman + JohnJones + WonderWoman",
+      "b3": "Guardians of the Galaxy + Illuminati + Thunderbolts",
+      "focus": "Contract Cleaning Sales & Billing"
+    },
+    "T3": {
+      "b2": "Aquaman + Cyborg",
+      "b3": "Eternals + Kang Dynasty",
+      "focus": "Safety Compliance & Weather Ops API"
+    }
+  },
+  "status": "ACTIVE"
+}
