@@ -161,6 +161,13 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
          }
        }
        ```
+10. **Auto-Enchaînement Autonome des Next Actions (Zéro Passivité Opérateur) :**
+    * **Interdiction formelle de s'arrêter en disant « J'attends tes ordres » :** L'agent ne s'arrête jamais passivement après un bilan ou une réponse.
+    * Dès qu'un jalon est posé, l'agent déduit immédiatement les **Next Actions** à partir :
+      1. Des résumés et synthèses de session (`summary` / context checkpoints).
+      2. Des bases physiques d'événements (`uc.db`, baux expirés, files d'attente d'actes).
+      3. De la mémoire pérenne (`40_Memory_Wiki_OKF/index.md`, `70_Onthologies/`).
+    * **Action Directe :** L'agent initie, exécute ou délègue à Jules/Hermes l'action prioritaire suivante de façon proactive, sans attendre que l'opérateur ait à lui réexpliquer quoi faire.
 
 ---
 
