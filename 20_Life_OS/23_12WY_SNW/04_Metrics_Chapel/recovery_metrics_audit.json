@@ -1,0 +1,44 @@
+{
+  "audit_date": "2026-09-07T12:00:00Z",
+  "auditor": "Rory Williams (Life Core - 11th Doctor Squad)",
+  "framework": "12 Week Year / ZORA Discovery",
+  "domains_audited": {
+    "LD03_Health_Culber": {
+      "persona": "Culber",
+      "zora_state": "GREEN",
+      "metrics": {
+        "sleep_score_avg": 88,
+        "deep_sleep_hours": 1.8,
+        "rem_sleep_hours": 2.1,
+        "hrv_baseline_ms": 65,
+        "recovery_status": "OPTIMAL"
+      },
+      "threshold_check": "PASS"
+    },
+    "LD04_Cognition_Tilly": {
+      "persona": "Tilly",
+      "zora_state": "GREEN",
+      "metrics": {
+        "cognitive_load_signal": "low",
+        "focus_sprints_completed": 12,
+        "context_switch_rate": "NORMAL",
+        "mental_energy_capacity_pct": 92
+      },
+      "threshold_check": "PASS"
+    },
+    "04_Metrics_Chapel": {
+      "persona": "Chapel",
+      "discipline": "Metrics & Scorecard",
+      "execution_score_pct": 87.5,
+      "lead_indicators_met": 5,
+      "lead_indicators_total": 5,
+      "lag_indicators": {
+        "sprint_velocity_ok": true,
+        "drift_detected": false
+      },
+      "threshold_check": "PASS"
+    }
+  },
+  "overall_verdict": "GREEN",
+  "notes": "Recovery and sleep metrics are within optimal thresholds. Cognitive load signal remains 'low'. System cleared for next 12WY temporal sprint."
+}

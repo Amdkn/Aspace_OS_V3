@@ -1,0 +1,10 @@
+{
+  "ld": "LD05",
+  "persona": "Stamets",
+  "date": "2026-09-07",
+  "sources": [
+    "ZORA_DISCOVERY_CHECK",
+    "LIFE_CORE_RUN"
+  ],
+  "notes": "Verified alignment for LD05 (Stamets) during 11th Doctor Life Core orchestration run."
+}
