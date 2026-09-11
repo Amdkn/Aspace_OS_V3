@@ -8,6 +8,7 @@
   "areas": [],
   "resources": [
     "05_BuildIt_Prompt_Pack.pdf",
+    "Articles_Recherche",
     "BLUEPRINT.md",
     "CHECKLIST.md",
     "COMMANDS.md",
@@ -22,6 +23,8 @@
     "The_Enterprise_OS_Blueprint.pdf",
     "examples",
     "prompts",
+    "repos_innovations",
+    "semantica",
     "specs"
   ],
   "archives": []
