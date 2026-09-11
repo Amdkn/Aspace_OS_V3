@@ -168,12 +168,14 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
       2. Des bases physiques d'événements (`uc.db`, baux expirés, files d'attente d'actes).
       3. De la mémoire pérenne (`40_Memory_Wiki_OKF/index.md`, `70_Onthologies/`).
     * **Action Directe :** L'agent initie, exécute ou délègue à Jules/Hermes l'action prioritaire suivante de façon proactive, sans attendre que l'opérateur ait à lui réexpliquer quoi faire.
-    * **Heartbeat Daemon Autonome (Auto-Relance Déterministe) :**
-      - L'agent maintient un heartbeat daemon récurrent (`schedule` avec `CronExpression: "*/5 * * * *"`) actif en arrière-plan.
-      - À chaque cycle (toutes les 5 minutes), l'agent se réveille automatiquement sans aucune intervention humaine pour :
+    * **Heartbeat Daemon Autonome (Auto-Relance Déterministe 15 Min & Plancher Jules >= 3) :**
+      - L'agent maintient un heartbeat daemon récurrent (`schedule` avec `CronExpression: "*/15 * * * *"`, `IsDaemon: true`) actif en arrière-plan.
+      - À chaque cycle (toutes les 15 minutes), l'agent se réveille automatiquement sans aucune intervention humaine pour :
         1. Poller les sessions Jules asynchrones (`jules_list_sessions`) et les PRs GitHub (`gh pr list`).
-        2. Vérifier et faire battre la file d'actes et baux (`uc.db`, `controleur.py --battre`).
-        3. Enchaîner et fusionner les livrables dès qu'ils sont prêts, sans attendre de message de l'opérateur.
+        2. **Garantie de Concurrence Jules (Plancher >= 3) :** Vérifier que le cluster Jules compte en permanence au moins 3 sessions concurrentes en cours (`IN_PROGRESS`). Si une session se termine et que l'effectif actif passe sous 3, lancer immédiatement la session suivante depuis `delegation-a-jules/` ou les besoins du système.
+        3. Vérifier et faire battre la file d'actes et baux (`uc.db`, `controleur.py --battre`).
+        4. Enchaîner et fusionner les livrables dès qu'ils sont prêts, sans attendre de message de l'opérateur.
+        5. **Préservation Stricte des Quotas Antigravity :** Déporter l'effort de calcul et d'implémentation sur Jules Pro pour préserver la jauge hebdomadaire Antigravity.
 
 ---
 
