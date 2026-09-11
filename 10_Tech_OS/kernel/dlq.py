@@ -38,6 +38,13 @@ DB   = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))
 def cx():
     c = sqlite3.connect(DB, isolation_level=None, timeout=10)
     c.row_factory = sqlite3.Row
+    # Auto-initialize schema if uninitialized (Jules session 18214439155436997252)
+    tables = [r[0] for r in c.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()]
+    if "work" not in tables:
+        schema_path = os.path.join(HERE, "schema.sql")
+        if os.path.exists(schema_path):
+            with open(schema_path, encoding="utf-8") as f:
+                c.executescript(f.read())
     return c
 
 
