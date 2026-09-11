@@ -186,3 +186,14 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 - **[AMADOU KONE & ANTIGRAVITY] Déploiement Brief Asynchrone Morty SLM :**
   - Déploiement de `delegation-a-jules/PRD-MORTY-LOCAL-ENGINE.md` pour implémentation asynchrone par Jules sans consommation de quota Antigravity direct.
 
+## D4 — 2026-09-11 — Implémentation Locale SLM Morty & Compilateur de Dataset Marin
+
+- **[MORTY & GRAHAM] Compilateur de Dataset d'Alignement Marin :**
+  - Implémentation de `10_Tech_OS/kernel/slm/marin_dataset_extractor.py`.
+  - Extraction automatique des concepts certifiés `40_Memory_Wiki_OKF/concepts/*.md` et des relations ontologiques de `70_Onthologies/triplets/*.jsonl`.
+  - Génération du premier jeu d'alignement `marin_alignment_dataset.jsonl` (77 entrées instruction tuning déterministes).
+- **[MORTY & RICK] Moteur d'Inférence Déterministe CPU (MiniMind + TimesFM Fallback) :**
+  - Implémentation de `10_Tech_OS/kernel/slm/morty_engine.py` (`MortyLocalEngine`).
+  - Projection des séries chronobiologiques H1 à H90 (lissage Holt-Winters cyclique) et arbitrage symbolique instantané sur CPU (< 1 ms, zéro quota cloud).
+  - Validation complète de la suite unitaire `10_Tech_OS/kernel/slm/test_morty_engine.py` (3/3 tests OK en 0.101s).
+
