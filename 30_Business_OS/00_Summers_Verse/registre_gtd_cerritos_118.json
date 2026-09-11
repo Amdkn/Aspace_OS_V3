@@ -1,0 +1,41 @@
+{
+    "registre": "summers_verse_cerritos_gtd_w118",
+    "tape": "00_Amadeus/60_Tape_Specs/2026-09-10-summers-verse-boucle-gtd-cerritos-appliquee-au-p-2.md",
+    "tape_sha256": "87ec31daf4e4d02d64517458b969c00e7de0926fa4c592a373bb77931761ee02",
+    "tape_id": 89,
+    "work_id": 118,
+    "created": "2026-09-10",
+    "harness": "nardole_build_l2",
+    "prediction_id": 148,
+    "source": {
+        "path": "20_Life_OS/22_Wheel_Discovery/state.json",
+        "signal_ruban": "LD01 GREEN load low, route CERRITOS_GTD",
+        "signal_mesure_2026-09-10": "LD05 GREEN load low, route CERRITOS_GTD",
+        "note": "lu, non modifie"
+    },
+    "beth": {
+        "arbitre": "30_Business_OS/AGENTS.md",
+        "action": "none",
+        "veto": "non"
+    },
+    "boucle_gtd": {
+        "projet_actif": "projects/coach-os-app (registre.json statut: actif)",
+        "framework": "projects/coach-os-app/gtd/gtd.json (5 stages canon: capture, clarify, organize, review, engage)",
+        "moteur": "projects/coach-os-app/gtd/apply_gtd.py",
+        "verifier": "projects/coach-os-app/gtd/verifier.py"
+    },
+    "livrables": {
+        "registre": "00_Summers_Verse/registre_gtd_cerritos_118.json",
+        "verifier": "00_Summers_Verse/verifier_gtd_cerritos_118.py"
+    },
+    "precedent": {
+        "work_id": 113,
+        "tape_id": 84,
+        "registre": "00_Summers_Verse/registre_gtd_cerritos_113.json"
+    },
+    "contraintes_respectees": [
+        "20_Life_OS non modifie",
+        "10_Tech_OS/kernel non modifie",
+        "prediction pre-enregistree avant build (uc.db prediction id 148)"
+    ]
+}
