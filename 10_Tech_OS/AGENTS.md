@@ -161,5 +161,16 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Compilation `python -m py_compile` de l'ensemble des modules Python modifiés (0 erreur, exit code 0).
   - Enregistrement, prédiction, revue, attestation et clôture `done` des 3 issues Kernel Core dans `uc.db` (3/3 items détachés avec calibration 100%).
 
+## D4 — 2026-09-10 — Compilation RDF Engram NVMe (1 378 Invariants) & Daemon TTS Anti-Écho
 
+- **[GRAHAM & RYAN] Compilateur RDF -> Engram NVMe :**
+  - Implémentation de `10_Tech_OS/kernel/engram/compile_engram_from_rdf.py`.
+  - Scan de 20 fichiers `.jsonl` dans `70_Onthologies/triplets/` (1 462 triplets parsés).
+  - Compilation de **1 378 nouveaux invariants** déterministes dans `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (portant le volume total à 1 385 entrées actives).
+  - Validation complète des tests unitaires Engram (`10_Tech_OS/kernel/engram/test_engram.py` : 6/6 tests passés en 0.104s).
+- **[YAZ & RICK] Daemon TTS Résilient (`antigravity_tts_daemon.py`) :**
+  - Réduction du seuil de verrou obsolète `tts_playing.lock` de 90s à 30s pour éliminer les blocages en cascade.
+  - Pré-indexation anti-écho des 64 Ko passés au démarrage pour empêcher tout rejeu de messages archivés.
+  - Filtrage automatique des blocs de pied de page Markdown (liens audio / commandes de relecture muettes).
+  - Processus pérennisé en tâche de fond sous Windows avec sortie audio `fr-FR-DeniseNeural` via `edge-tts`.
 
