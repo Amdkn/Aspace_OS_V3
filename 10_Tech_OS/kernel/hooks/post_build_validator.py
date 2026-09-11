@@ -37,7 +37,7 @@ def validate_typescript(project_dir: Path) -> dict:
         return {"ok": False, "error": str(e)}
 
 if __name__ == "__main__":
-    target = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("C:/Users/amado/agent-os/desktop")
+    target = Path(sys.argv[1]) if len(sys.argv) > 1 else Path.cwd()
     report = validate_typescript(target)
     print(json.dumps(report, indent=2))
     sys.exit(0 if report["ok"] else 1)
