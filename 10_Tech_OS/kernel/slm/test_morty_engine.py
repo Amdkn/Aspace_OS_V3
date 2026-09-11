@@ -51,6 +51,8 @@ class TestMortyLocalEngine(unittest.TestCase):
         eval_canon = self.engine.evaluate_decision(ctx_canon)
         self.assertIn("canonical_alignment_index", eval_canon)
         self.assertGreater(eval_canon["canonical_alignment_index"], 0.0)
+        self.assertIn("validated_concepts", eval_canon)
+        self.assertGreater(len(eval_canon["validated_concepts"]), 0)
         
         # Contexte hors canon
         ctx_hors_canon = {"intent": "do some random stuff completely unrelated", "energy": 0.9, "urgency": 0.5}
@@ -58,6 +60,8 @@ class TestMortyLocalEngine(unittest.TestCase):
         self.assertEqual(eval_hors_canon["canonical_alignment_index"], 0.0)
         self.assertGreater(len(eval_hors_canon["missing_concepts"]), 0)
         self.assertIn("OUT_OF_CANON_INTENT", eval_hors_canon["violated_concepts"])
+        self.assertIn("validated_concepts", eval_hors_canon)
+        self.assertEqual(len(eval_hors_canon["validated_concepts"]), 0)
 
     def test_05_predict_horizon_onnx_fallback(self):
         # Setup engine with fake ONNX path
@@ -69,6 +73,27 @@ class TestMortyLocalEngine(unittest.TestCase):
         res = engine_fake_onnx.predict_horizon(series, horizon=3)
         self.assertEqual(res["backend"], "cpu_deterministic_fallback")
         self.assertEqual(len(res["predictions"]), 3)
+
+    def test_06_dynamic_model_loading(self):
+        models_dir = HERE / "models"
+        models_dir.mkdir(exist_ok=True)
+        fake_model = models_dir / "fake_model.pt"
+        fake_model.touch()
+
+        try:
+            # Instantiate without specifying model_path, it should find fake_model.pt
+            engine = MortyLocalEngine()
+            self.assertEqual(engine.model_path, fake_model)
+
+            # Predict horizon should gracefully fallback because this is a fake file and not a real model
+            res = engine.predict_horizon([1.0, 2.0, 3.0], horizon=2)
+            self.assertEqual(res["backend"], "cpu_deterministic_fallback")
+        finally:
+            fake_model.unlink()
+            try:
+                models_dir.rmdir()
+            except OSError:
+                pass
 
 
 if __name__ == "__main__":

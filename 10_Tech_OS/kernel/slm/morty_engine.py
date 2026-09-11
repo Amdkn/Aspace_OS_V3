@@ -27,6 +27,15 @@ class MortyLocalEngine:
 
     def __init__(self, model_path: Optional[Path] = None):
         self.model_path = model_path
+
+        if self.model_path is None:
+            models_dir = Path(__file__).resolve().parent / "models"
+            if models_dir.exists() and models_dir.is_dir():
+                for ext in ["*.onnx", "*.pt", "*.pth"]:
+                    found = list(models_dir.glob(ext))
+                    if found:
+                        self.model_path = found[0]
+                        break
         
         self._is_torch_available = False
         try:
@@ -130,6 +139,7 @@ class MortyLocalEngine:
         canonical_alignment_index = 0.0
         missing_concepts = []
         violated_concepts = []
+        validated_concepts = []
         
         if intent and okf_concepts:
             # Clean and split intent into words
@@ -161,6 +171,7 @@ class MortyLocalEngine:
                 # Calculate simple alignment index based on whether we hit any core OKF concepts
                 if matched_concepts:
                     canonical_alignment_index = min(1.0, len(matched_concepts) / float(max(1, len(okf_concepts) // 2)))
+                    validated_concepts = list(matched_concepts)
                 else:
                     # Intention seems completely decoupled from canon, mark missing
                     canonical_alignment_index = 0.0
@@ -178,7 +189,8 @@ class MortyLocalEngine:
             "engine": "MiniMind-64M-CPU",
             "canonical_alignment_index": round(canonical_alignment_index, 2),
             "missing_concepts": missing_concepts,
-            "violated_concepts": violated_concepts
+            "violated_concepts": violated_concepts,
+            "validated_concepts": validated_concepts
         }
 
 
