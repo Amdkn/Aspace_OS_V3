@@ -8,13 +8,63 @@
     "tuiles": "00_Registre/tuiles.json"
   },
   "domains": [
-    {"id": "b1", "name": "Jerry Business Pulse", "path": "00_Jerry_Business_Pulse", "role": "B1 vision/strategy"},
-    {"id": "b2", "name": "Summers QuickAccess", "path": "00_Summers_QuickAccess", "role": "micro-executif"},
-    {"id": "b3", "name": "Summers Verse", "path": "00_Summers_Verse", "role": "projets par domaine"},
-    {"id": "meta-factory", "name": "Meta Factory", "path": "02_Meta_Factory", "role": "factory B3 (AutoLab/PrimeAgent/Jcode)"},
-    {"id": "blueprints", "name": "Blueprints", "path": "09_Blueprints", "role": "ADR/PRD/onboarding"},
-    {"id": "projects", "name": "Active Projects", "path": "10_Projects", "role": "Picard owner convention"}
+    {
+      "id": "b1",
+      "name": "Jerry Business Pulse",
+      "path": "00_Jerry_Business_Pulse",
+      "role": "B1 vision/strategy"
+    },
+    {
+      "id": "b2",
+      "name": "Summers QuickAccess",
+      "path": "00_Summers_QuickAccess",
+      "role": "micro-executif"
+    },
+    {
+      "id": "b3",
+      "name": "Summers Verse",
+      "path": "00_Summers_Verse",
+      "role": "projets par domaine"
+    },
+    {
+      "id": "meta-factory",
+      "name": "Meta Factory",
+      "path": "02_Meta_Factory",
+      "role": "factory B3 (AutoLab/PrimeAgent/Jcode)"
+    },
+    {
+      "id": "blueprints",
+      "name": "Blueprints",
+      "path": "09_Blueprints",
+      "role": "ADR/PRD/onboarding"
+    },
+    {
+      "id": "projects",
+      "name": "Active Projects",
+      "path": "10_Projects",
+      "role": "Picard owner convention"
+    }
   ],
-  "projects_distilled_v2": ["omk", "abc", "alikaly", "marina", "rilcot", "jerry-pulse-b2b3"],
-  "gate2_note": "Aucun artefact vivant V2 ABC/RILCOT/Alikaly/Marina ne passe le Gate 2 seul — Coach OS est l'app vivante template; les projets V2 restent chez Geordi jusqu'à app vivante."
+  "projects_distilled_v2": [
+    "omk",
+    "abc",
+    "alikaly",
+    "marina",
+    "rilcot",
+    "jerry-pulse-b2b3"
+  ],
+  "gate2_note": "Aucun artefact vivant V2 ABC/RILCOT/Alikaly/Marina ne passe le Gate 2 seul — Coach OS est l'app vivante template; les projets V2 restent chez Geordi jusqu'à app vivante.",
+  "franchises": [
+    {
+      "id": "omk",
+      "name": "OMK Nexus Premium",
+      "mode": "Nexus + US Coach"
+    },
+    {
+      "id": "abc_os",
+      "name": "ABC OS & Child Care BOS",
+      "mode": "Orbiter + Compliance",
+      "parent": "J01_Jerry_Prime_LD01_Business"
+    }
+  ]
 }

@@ -1,0 +1,21 @@
+{
+  "id": "abc_os",
+  "name": "ABC OS & Child Care BOS",
+  "mode": "Orbiter + Compliance",
+  "parent": "J01_Jerry_Prime_LD01_Business",
+  "b2_b3_harmonization_matrix": {
+    "T1": {
+      "b2": "GreenLantern + Batman + Flash",
+      "b3": "X-Men + Fantastic Four + Avengers"
+    },
+    "T2": {
+      "b2": "Superman + JohnJones + WonderWoman",
+      "b3": "Guardians of the Galaxy + Illuminati + Thunderbolts"
+    },
+    "T3": {
+      "b2": "Aquaman + Cyborg",
+      "b3": "Eternals + Kang Dynasty"
+    }
+  },
+  "status": "ACTIVE"
+}
