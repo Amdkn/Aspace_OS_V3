@@ -34,3 +34,4 @@
 
 - `2026-09-08` : Rattachement au routeur Meta AGENTS.md V3. Formalisation du rôle d'immunité cybernétique en liaison avec PostHog DLQ.
 - `2026-09-09` : Immunité P5 (Anti-Surdité & Anti-Écho) : neutralisation définitive de la boucle de rejeu vocal après redémarrage via pré-indexation mémoire des 64 Ko de transcripts récents (`antigravity_tts_daemon.py`).
+- `2026-09-11` : Immunité P1 (Anti-Passivité Opérateur) : Interdiction formelle de solliciter des instructions de l'opérateur lorsque les 4 organes souverains (`70_Onthologies`, `40_Memory_Wiki_OKF`, `60_Implementation`, `90-self-evolution`) fournissent le graphe de vérité, les SOPs de compilation et les verificateurs déterministes. L'agent déduit la prochaine action du disque et l'exécute directement.
