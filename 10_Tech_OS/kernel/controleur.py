@@ -48,6 +48,12 @@ ICI = Path(__file__).resolve().parent
 DB = ICI / "uc.db"
 UC = ICI / "uc.py"
 
+try:
+    from engram.beth_filter import BethFilter
+    _beth_filter = BethFilter()
+except Exception:
+    _beth_filter = None
+
 # Un bail de plus de 15 min sans battement est considere mort. Les deux `claimed`
 # du 3 aout le sont depuis 27 jours : sans reaper, un worker mort retient son
 # travail pour toujours.
@@ -190,13 +196,31 @@ def battre(tours: int, pause: float) -> int:
         #    plafond de tentatives est du travail dormant, pas du dechet.
         if e["relancables"]:
             c = cx()
-            ids = [r["id"] for r in e["relancables"]]
             # Garde-fou en profondeur : re-verifier la qualification terminale
             # a l'instant du write (une qualification peut tomber entre etat()
             # et l'UPDATE). Un id qualifie est retire, jamais relance.
-            ids = [i for i in ids if c.execute(
-                "SELECT COUNT(*) n FROM event WHERE work_id=? "
-                "AND kind IN ('escalade','arbitrage')", (i,)).fetchone()["n"] == 0]
+            valid_items = []
+            for r in e["relancables"]:
+                i = r["id"]
+                titre = r.get("title", "")
+                if c.execute(
+                    "SELECT COUNT(*) n FROM event WHERE work_id=? "
+                    "AND kind IN ('escalade','arbitrage')", (i,)).fetchone()["n"] > 0:
+                    continue
+                # Évaluation Engram Gatekeeper A1 Beth
+                if _beth_filter and titre:
+                    eval_b = _beth_filter.evaluate_intent(titre)
+                    if eval_b.get("veto"):
+                        c.execute(
+                            "INSERT INTO event(work_id, harness, kind, payload, at) VALUES(?,?,?,?,?)",
+                            (i, "beth_gatekeeper", "veto", eval_b.get("reason"),
+                             maintenant().isoformat(timespec="seconds")))
+                        c.commit()
+                        print(f"  tour {t} : veto Beth A1 sur #{i} ({titre[:30]}) -> non relancé")
+                        continue
+                valid_items.append(i)
+
+            ids = valid_items
             c.executemany(
                 "UPDATE work SET status='pending', updated_at=? WHERE id=? AND status='failed'",
                 [(maintenant().isoformat(timespec="seconds"), i) for i in ids])

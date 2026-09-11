@@ -35,6 +35,12 @@ INBOX = os.path.join(V3, "_INBOX")
 TAPES = os.path.join(V3, "00_Amadeus", "60_Tape_Specs")
 UC    = os.path.join(HERE, "uc.py")
 
+try:
+    from engram.beth_filter import BethFilter
+    _beth_filter = BethFilter()
+except Exception:
+    _beth_filter = None
+
 # Un portier par couche. Le dossier decide de la couche : pas d'ambiguite.
 PORTIERS = {
     "S1_Rick":         "L0",   # noyau, infra, harness
@@ -116,6 +122,12 @@ def test_intent(txt: str, nom_fichier: str = "") -> dict:
     for m in set(x.group(0) for x in BLOQUANTS.finditer(txt)):
         manques.append(f"question non résolue dans le texte : « {m} »")
 
+    # Évaluation Gatekeeper A1 Beth via Engram (O(1) circuit breaker / invariants)
+    if _beth_filter and (fm.get("title") or txt):
+        eval_res = _beth_filter.evaluate_intent(fm.get("title") or txt[:500])
+        if eval_res.get("veto"):
+            manques.append(f"VETO BETH A1 (Engram) : {eval_res.get('reason')}")
+
     return {"complet": not manques, "manques": manques,
             "title": fm.get("title"), "layer": fm.get("layer"),
             "format": "intent", "statut": statut}
@@ -151,6 +163,12 @@ def test_du_ruban(path: str) -> dict:
 
     for m in set(x.group(0) for x in BLOQUANTS.finditer(txt)):
         manques.append(f"question non résolue dans le texte : « {m} »")
+
+    # Évaluation Gatekeeper A1 Beth via Engram (O(1) circuit breaker / invariants)
+    if _beth_filter and fm.get("title"):
+        eval_res = _beth_filter.evaluate_intent(fm.get("title"))
+        if eval_res.get("veto"):
+            manques.append(f"VETO BETH A1 (Engram) : {eval_res.get('reason')}")
 
     return {"complet": not manques, "manques": manques,
             "title": fm.get("title"), "layer": fm.get("layer")}
