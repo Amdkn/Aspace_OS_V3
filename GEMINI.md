@@ -179,6 +179,10 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
         6. **Zéro Blocage d'Approbation (Anti-Stall Jules) :**
            - Toute session créée par `jules_create_session` doit impérativement spécifier `requirePlanApproval: false` et `automationMode: 'AUTO_CREATE_PR'`.
            - Si une session Jules passe en `AWAITING_USER_FEEDBACK` sur un plan, l'orchestrateur Antigravity déclenche immédiatement `jules_approve_plan` ou un message `jules_send_message` pour valider le plan sans jamais bloquer l'opérateur devant une modale ou attendre un clic humain.
+        7. **Contrat de Valeur Réelle & Anti-Illusion Documentaire (Audit Hermes) :**
+           - Interdiction formelle de créer des tâches `uc.db` ou d'engager des runs pour fabriquer des séries de registres vides ou répétitifs (`registre_enterprise_para_w...`) sans valeur produit mesurée.
+           - Toute tâche nouvelle doit valider les 4 critères : Bénéficiaire, Obstacle retiré, Différence observable avant/après, et Remplacement concret.
+           - Priorité d'arbitrage donnée aux livrables applicatifs (JaaS Landing, JaaS Mobile) et aux gains réels de tokens/latence.
 
 ---
 
