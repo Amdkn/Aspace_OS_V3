@@ -1,0 +1,41 @@
+{
+  "registre": "summers_verse_enterprise_para_w120_v1",
+  "tape": "00_Amadeus/60_Tape_Specs/2026-09-11-summers-verse-v-1-prochaine-franchise-coach-os-a.md",
+  "tape_id": 91,
+  "work_id": 120,
+  "created": "2026-09-11",
+  "harness": "nardole_build_l2",
+  "prediction_id": 150,
+  "source": {
+    "path": "20_Life_OS/22_Wheel_Discovery/state.json",
+    "signal": "LD01 GREEN load low, route ENTERPRISE_PARA",
+    "note": "lu, non modifie (mesure 2026-09-11)"
+  },
+  "beth": {
+    "arbitre": "30_Business_OS/AGENTS.md",
+    "action": "none",
+    "veto": "non"
+  },
+  "franchise": {
+    "route": "ENTERPRISE_PARA",
+    "projet_actif": "projects/coach-os-app (registre.json statut: actif)",
+    "framework_para": "20_Life_OS/24_PARA_Enterprise (canon PARA: registre_para.json, verify_para.py)",
+    "titre": "Summers Verse v+1: prochaine franchise coach-os-app — registre + verifier"
+  },
+  "livrables": {
+    "registre": "00_Summers_Verse/registre_enterprise_para_w120.json",
+    "verifier": "00_Summers_Verse/verifier_enterprise_para_w120.py"
+  },
+  "antecedent": {
+    "work_110": "registre_enterprise_para_w110.json (2026-09-09, tape_id 81, prediction 140)",
+    "relation": "reinjection du signal sous work 120 (tape 91) - livrable dedie v+1, meme pattern works 80/88/93/100/105/110"
+  },
+  "canon_para_mesure": {
+    "verify_para.py": "PARA_OK (rc=0) mesure 2026-09-11: registre_para.json resynchronise avec le disque physique"
+  },
+  "contraintes_respectees": [
+    "20_Life_OS non modifie",
+    "10_Tech_OS/kernel non modifie",
+    "prediction pre-enregistree avant build (uc.db prediction id 150)"
+  ]
+}
