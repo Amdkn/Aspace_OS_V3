@@ -1,0 +1,67 @@
+{
+  "verse": "Summers Verse",
+  "ingestion": "Solaris - registre des sources",
+  "source_work": 116,
+  "tape": "00_Amadeus/60_Tape_Specs/2026-09-10-summers-verse-ingestion-solaris-registre-des-sou.md",
+  "tape_sha256": "5955bad8332aee06a309bb7ad70223ade0ef7124f3eb0fb8e90d7b78446d7428",
+  "date": "2026-09-10",
+  "builder": "nardole_build_l2 (Doctor 12, constructeur A)",
+  "origin": {
+    "signal": "Wheel Discovery work 35 - LD01 GREEN, load low, route PROTOSTAR_DEAL",
+    "beth_action": "none",
+    "wheel_updated": "2026-09-10T21:23:09",
+    "wheel_routes_mesurees": {
+      "LD01": "ENTERPRISE_PARA",
+      "LD03": "PROTOSTAR_DEAL",
+      "LD07": "PROTOSTAR_DEAL"
+    },
+    "statut": "ingestion L2 de production de valeur v+2 (work 116, 2026-09-10) étendue"
+  },
+  "sources": [
+    {
+      "id": "SRC-001",
+      "nom": "Wheel Discovery state",
+      "chemin": "20_Life_OS/22_Wheel_Discovery/state.json",
+      "type": "signal metabolique",
+      "acces": "lecture seule",
+      "registre_le": true,
+      "note": "source declaree par le ruban; lue en lecture seule (L2 ne touche pas 20_Life_OS)"
+    },
+    {
+      "id": "SRC-002",
+      "nom": "Ruban (tape spec frozen) work 116",
+      "chemin": "00_Amadeus/60_Tape_Specs/2026-09-10-summers-verse-ingestion-solaris-registre-des-sou.md",
+      "type": "spec",
+      "acces": "lecture",
+      "registre_le": true,
+      "note": "definition du DoD de cette ingestion; sha256 verifie egal au sha du mandat"
+    },
+    {
+      "id": "SRC-003",
+      "nom": "Registre Solaris v0 (work 37)",
+      "chemin": "30_Business_OS/00_Summers_Verse/registre_solaris.json",
+      "type": "registre precedant",
+      "acces": "lecture",
+      "registre_le": true,
+      "note": "v0 du 2026-09-03, work 37 done"
+    },
+    {
+      "id": "SRC-004",
+      "nom": "Registre Solaris sources w111 (work 111)",
+      "chemin": "30_Business_OS/00_Summers_Verse/registre_solaris_sources_w111.json",
+      "type": "registre precedant",
+      "acces": "lecture",
+      "registre_le": true,
+      "note": "v+1 du 2026-09-09, work 111 done; etend les sources Solaris"
+    },
+    {
+      "id": "SRC-005",
+      "nom": "Moteur Local Morty SLM (TimesFM / Fallback CPU)",
+      "chemin": "10_Tech_OS/kernel/slm/morty_engine.py",
+      "type": "runtime local slm",
+      "acces": "lecture",
+      "registre_le": true,
+      "note": "nouveau moteur prédictif et symbolique local de Morty déployé"
+    }
+  ]
+}
