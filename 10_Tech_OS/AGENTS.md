@@ -197,3 +197,11 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Projection des séries chronobiologiques H1 à H90 (lissage Holt-Winters cyclique) et arbitrage symbolique instantané sur CPU (< 1 ms, zéro quota cloud).
   - Validation complète de la suite unitaire `10_Tech_OS/kernel/slm/test_morty_engine.py` (3/3 tests OK en 0.101s).
 
+## D4 — 2026-09-11 — Intégration du Patch Jules (Session 18214439155436997252) & Auto-Bootstrap DLQ
+
+- **[JULES & RICK SANCHEZ] Auto-Bootstrapping DLQ & Robustesse L0 :**
+  - Ingestion directe du patch issu de la session Jules #18214439155436997252.
+  - Auto-initialisation du schéma SQLite (`schema.sql`) dans `10_Tech_OS/kernel/dlq.py` (`cx()`) en cas de base vierge sans table `work`.
+  - Déploiement de `pytest.ini` à la racine pour préserver l'exécution unitaire des répertoires non-unitaires (`50_Distillation`, `openwiki/evals`).
+  - Validation de non-régression via `10_Tech_OS/kernel/test_l0_kernel.py` (2/2 tests OK en 55.7s).
+
