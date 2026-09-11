@@ -1,0 +1,13 @@
+{
+  "version": "v0",
+  "date": "2026-09-03",
+  "template": "Coach OS",
+  "tuiles": [
+    {"id": "pulse", "label": "Jerry Business Pulse", "target": "00_Jerry_Business_Pulse/", "kind": "b1"},
+    {"id": "registre", "label": "Registre franchises", "target": "00_Registre/registre.json", "kind": "meta"},
+    {"id": "projects", "label": "Projets actifs", "target": "10_Projects/", "kind": "b3"},
+    {"id": "blueprints", "label": "Blueprints", "target": "09_Blueprints/", "kind": "meta"},
+    {"id": "meta-factory", "label": "Meta Factory", "target": "02_Meta_Factory/", "kind": "b3"},
+    {"id": "summers-verse", "label": "Summers Verse", "target": "00_Summers_Verse/", "kind": "b3"}
+  ]
+}
