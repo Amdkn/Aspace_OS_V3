@@ -174,3 +174,15 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Filtrage automatique des blocs de pied de page Markdown (liens audio / commandes de relecture muettes).
   - Processus pérennisé en tâche de fond sous Windows avec sortie audio `fr-FR-DeniseNeural` via `edge-tts`.
 
+## D4 — 2026-09-10 — Intégration PR Jules #4 (L0 Test Suite) & Câblage Engram BethFilter
+
+- **[RICK & 13e DOCTEUR] PR Jules #4 & Suite de Tests L0 :**
+  - Fusion et validation de la PR Jules #4 (`L0 Rick Sanchez Audit & Kernel Replication Suite`).
+  - Purge intégrale du code mort dans `_tmp_kanban/` (`purge_qualif.py`, `read_schema.py`, etc.).
+  - Validation réussie de `10_Tech_OS/kernel/test_l0_kernel.py` (2 tests, exit code 0, 100% conformité L0 réplication).
+- **[BETH & RICK] Câblage Déterministe O(1) Engram dans le Noyau :**
+  - Intégration de `BethFilter` dans `10_Tech_OS/kernel/gate.py` (admission SSSF) et `10_Tech_OS/kernel/controleur.py` (systole requeue).
+  - Tout intent ou work item violant un circuit-breaker Engram subit un veto immédiat sans rejeu parasite.
+- **[AMADOU KONE & ANTIGRAVITY] Déploiement Brief Asynchrone Morty SLM :**
+  - Déploiement de `delegation-a-jules/PRD-MORTY-LOCAL-ENGINE.md` pour implémentation asynchrone par Jules sans consommation de quota Antigravity direct.
+
