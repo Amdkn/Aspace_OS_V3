@@ -1,0 +1,37 @@
+{
+  "registre": "summers_verse_horizon_12wy_w117",
+  "tape": "00_Amadeus/60_Tape_Specs/2026-09-10-summers-verse-horizon-12wy-pour-le-prochain-proj.md",
+  "tape_sha256": "88a0e834889172cf9cc810ddbc24ccf6bdcad352477b11b9705357ed20277204",
+  "work_id": 117,
+  "created": "2026-09-10",
+  "source": {
+    "path": "20_Life_OS/22_Wheel_Discovery/state.json",
+    "signal": "LD01 GREEN load low",
+    "note": "lu, non modifie",
+    "route": "SNW_12WY"
+  },
+  "beth": {
+    "arbitre": "30_Business_OS/AGENTS.md",
+    "action": "none",
+    "veto": "non"
+  },
+  "prochain_projet": {
+    "route": "SNW_12WY",
+    "framework": "20_Life_OS/23_12WY_SNW",
+    "titre": "12 Week Year - prochain projet Summers Verse",
+    "horizons": {
+      "H1": "Semaine 1 : cadrage 12WY et intégration de la trajectoire Morty SLM",
+      "H3": "Semaine 3 : consolidation des métriques de vélocité et prévision H14",
+      "H10": "Semaine 10 : revue de mi-parcours et calage des baux autonomes",
+      "H30": "Jour 30 : checkpoint mensuel d'impact business et pulse de valeur",
+      "H90": "Fin de cycle 12WY : clôture canonique et réplication sans dette"
+    },
+    "load": "low",
+    "zora_state": "GREEN"
+  },
+  "contraintes_respectees": [
+    "20_Life_OS non modifie",
+    "10_Tech_OS/kernel non modifie",
+    "prediction pre-enregistree avant build (uc.db prediction id 147)"
+  ]
+}
