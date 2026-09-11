@@ -176,6 +176,9 @@ Toute interaction et tout code doivent respecter strictement la hiérarchie tran
         3. Vérifier et faire battre la file d'actes et baux (`uc.db`, `controleur.py --battre`).
         4. Enchaîner et fusionner les livrables dès qu'ils sont prêts, sans attendre de message de l'opérateur.
         5. **Préservation Stricte des Quotas Antigravity :** Déporter l'effort de calcul et d'implémentation sur Jules Pro pour préserver la jauge hebdomadaire Antigravity.
+        6. **Zéro Blocage d'Approbation (Anti-Stall Jules) :**
+           - Toute session créée par `jules_create_session` doit impérativement spécifier `requirePlanApproval: false` et `automationMode: 'AUTO_CREATE_PR'`.
+           - Si une session Jules passe en `AWAITING_USER_FEEDBACK` sur un plan, l'orchestrateur Antigravity déclenche immédiatement `jules_approve_plan` ou un message `jules_send_message` pour valider le plan sans jamais bloquer l'opérateur devant une modale ou attendre un clic humain.
 
 ---
 
