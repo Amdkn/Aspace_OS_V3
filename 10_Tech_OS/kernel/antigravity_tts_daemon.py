@@ -39,9 +39,12 @@ def clean_text_for_speech(text: str) -> str:
     # Nettoyer les puces
     text = re.sub(r'^\s*[-*+]\s+', '', text, flags=re.MULTILINE)
     text = re.sub(r'^\s*\d+\.\s+', '', text, flags=re.MULTILINE)
-    # Retirer le footer répétitif de lecture manuelle (Lecteur Audio de cette réponse...)
+    # Retirer le footer répétitif de lecture manuelle (Lecteur Audio, Écoute manuelle...)
+    text = re.sub(r'---\s*\n\s*\*?\*?Écoute manuelle[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'\*?Écoute manuelle\s*:[\s\S]*$', '', text, flags=re.IGNORECASE)
     text = re.sub(r'🎧\s*\**Lecteur Audio[\s\S]*$', '', text, flags=re.IGNORECASE)
     text = re.sub(r'Lecteur Audio de cette réponse[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'python\s+10_Tech_OS/kernel/antigravity_tts_daemon\.py\s+--replay[\s\S]*$', '', text, flags=re.IGNORECASE)
     # Normaliser les espaces
     text = re.sub(r'\s+', ' ', text).strip()
     return text
