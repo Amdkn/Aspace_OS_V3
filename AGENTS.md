@@ -75,3 +75,17 @@ Toute modification structurelle ou apprentissage système est :
 - Inscrit dans le sous-registre `AGENTS.md` du composant concerné (Append-Only D4).
 - Formalisé en OKF v0.2 dans `40_Memory_Wiki_OKF/concepts/`.
 - Validé par synthèse vocale sans conflit mutex.
+
+## D4 — 2026-09-12 — Validation du Run Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
+
+- **[YAZ] Audit Runtime, uc.db & Scripts Kernel :**
+  - Migration du schéma `uc.db` effectuée (`uc.py migrate`) et intégrité SQLite validée (`PRAGMA integrity_check` -> `ok`).
+  - Validation réussie de la suite complète de tests unitaires Kernel (`pytest 10_Tech_OS/kernel/` -> 18/18 tests OK).
+- **[GRAHAM] Synchronisation Engram Phrase Book, Ontologies & OKF :**
+  - Synchronisation confirmée entre `70_Onthologies/`, `40_Memory_Wiki_OKF/` et `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (1 385 entrées déterministes actives).
+  - Validation unitaire Engram (`pytest 10_Tech_OS/kernel/engram/test_engram.py` -> 6/6 tests OK).
+- **[RYAN] Compilation Python & Definition of Done :**
+  - Compilation `py_compile` de l'ensemble des scripts Python sous `10_Tech_OS/kernel/` et `scripts/` (0 erreur, exit code 0).
+  - Definition of Done 100% satisfaite.
+- **[13e DOCTEUR] Gouvernance MCP Linear :**
+  - Exécution de `scripts/log_kernel_mcp_update.py` consignant la mise à jour des tickets Linear "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
