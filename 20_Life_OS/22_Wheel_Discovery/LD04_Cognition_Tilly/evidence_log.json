@@ -1,0 +1,10 @@
+{
+  "ld": "LD04",
+  "persona": "Tilly",
+  "date": "2026-09-12T12:00:00Z",
+  "sources": [
+    "ZORA_DISCOVERY",
+    "LIFE_CORE_AUDIT"
+  ],
+  "notes": "Audité et aligné par AMY pour le run Life Core LD04"
+}
