@@ -16,6 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 UC_PATH = os.path.join(HERE, "uc.py")
 DLQ_PATH = os.path.join(HERE, "dlq.py")
 GATE_PATH = os.path.join(HERE, "gate.py")
+MANDAT_PATH = os.path.join(HERE, "mandat_docteur.py")
 
 class TestL0Kernel(unittest.TestCase):
     def setUp(self):
@@ -116,6 +117,30 @@ class TestL0Kernel(unittest.TestCase):
         row = conn.execute("SELECT status FROM work WHERE id=?", (work_id,)).fetchone()
         self.assertEqual(row[0], "failed")
         conn.close()
+
+    def test_03_mandat_docteur(self):
+        # 1. Init DB
+        self.run_cmd(UC_PATH, "init")
+
+        # 2. Test when no pending work exists
+        p = self.run_cmd(MANDAT_PATH, "--layer", "L0")
+        self.assertEqual(p.returncode, 0)
+        res = json.loads(p.stdout)
+        self.assertIsNone(res.get("candidat"))
+
+        # 3. Submit a pending work item
+        p = self.run_cmd(UC_PATH, "submit", "--layer", "L0", "--title", "Mandat Selection Test Work")
+        self.assertEqual(p.returncode, 0)
+        work_id = json.loads(p.stdout)["work_id"]
+
+        # 4. Pick candidate and generate mandate file
+        out_mandats = os.path.join(self.tmp_dir.name, "mandats")
+        p = self.run_cmd(MANDAT_PATH, "--layer", "L0", "--db", self.db_path, "--out", out_mandats)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
+        res = json.loads(p.stdout)
+        self.assertIsNotNone(res.get("candidat"))
+        self.assertEqual(res["candidat"]["work_id"], work_id)
+        self.assertTrue(os.path.exists(res["mandat_path"]))
 
 if __name__ == "__main__":
     unittest.main()
