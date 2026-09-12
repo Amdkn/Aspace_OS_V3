@@ -20,8 +20,14 @@ def log_event():
     
     event_data = {
         "team": "Kernel Core",
-        "governor": "13th Doctor",
+        "governor": "Rick Sanchez (Visionnaire L0)",
         "action": "linear_mcp_issue_update",
+        "labels": ["role:manager", "l0-audit"],
+        "audit": {
+            "code_mort_et_orphelins": "0 fonction orpheline trouvee. Test ajoute pour mandat_docteur.py dans test_l0_kernel.py.",
+            "ressources_10_Tech_OS": "Conforme. 10_Tech_OS reste un serviteur silencieux sans cannibalisation.",
+            "dlq_status": "0 echec recurrent. File DLQ propre et bureau de Rick libre."
+        },
         "issues": [
             {
                 "id": "KFR-1",
@@ -43,6 +49,14 @@ def log_event():
                 "status": "Verified Canon",
                 "assignee": "Ryan",
                 "layer": "3D / Build"
+            },
+            {
+                "id": "KFR-4",
+                "title": "L0 Audit Governance & DLQ Triage",
+                "status": "Verified Canon",
+                "assignee": "Rick Sanchez",
+                "layer": "L0 Visionnaire",
+                "labels": ["role:manager"]
             }
         ],
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
