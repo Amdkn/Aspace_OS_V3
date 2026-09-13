@@ -1,0 +1,10 @@
+{
+  "ld": "LD01",
+  "persona": "Book",
+  "date": "2026-09-07",
+  "sources": [
+    "Baserow LD00 table",
+    "Life OS domain state"
+  ],
+  "notes": "Jauge LD01 (Book) GREEN - Alignement valide pour cycle W4."
+}
