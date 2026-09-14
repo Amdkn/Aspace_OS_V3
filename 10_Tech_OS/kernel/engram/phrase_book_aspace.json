@@ -20926,6 +20926,2061 @@
       "phrase": "Chaque compagnon porte une spécialité héritée de V2 (SecOps, SysAdmin, Backup-DBA, Social, Health, Knowledge, MCP, A2A, AG-UI) — deux compagnons de même organe sur deux couches ne font pas le même travail",
       "source_file": "v3-tech.jsonl",
       "confidence": "haute"
+    },
+    "ONTO_DOCTOR-13_STEWARDS_10-TECH-OS": {
+      "ngram": [
+        "doctor-13",
+        "stewards",
+        "10-tech-os"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "doctor-13",
+      "predicate": "stewards",
+      "object": "10-tech-os",
+      "phrase": "doctor_13 (S2 Kernel Core) revoit, exige les preuves, score et détache la couche 10_Tech_OS, depuis son harness multica",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DOCTOR-11_STEWARDS_20-LIFE-OS": {
+      "ngram": [
+        "doctor-11",
+        "stewards",
+        "20-life-os"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "doctor-11",
+      "predicate": "stewards",
+      "object": "20-life-os",
+      "phrase": "doctor_11 (S2 Life Core) revoit, exige les preuves, score et détache la couche 20_Life_OS, depuis son harness buzz",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DOCTOR-12_STEWARDS_30-BUSINESS-OS": {
+      "ngram": [
+        "doctor-12",
+        "stewards",
+        "30-business-os"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "doctor-12",
+      "predicate": "stewards",
+      "object": "30-business-os",
+      "phrase": "doctor_12 (S2 Buzz Core) revoit, exige les preuves, score et détache la couche 30_Business_OS, depuis son harness paperclip",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DONNA_DEPENDSON_KERNEL-DLQ-PY": {
+      "ngram": [
+        "donna",
+        "dependson",
+        "kernel-dlq-py"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "donna",
+      "predicate": "dependsOn",
+      "object": "kernel-dlq-py",
+      "phrase": "Donna s'incarne dans l'outil kernel/dlq.py (run, rapport, rendre), localisé dans 10_Tech_OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_AGENTGATEWAY_PARTOF_20-HARNESS": {
+      "ngram": [
+        "agentgateway",
+        "partof",
+        "20-harness"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "agentgateway",
+      "predicate": "partOf",
+      "object": "20-harness",
+      "phrase": "agentgateway est le runner qui agrège 17 sources MCP derrière un binaire natif Windows unique — pas de Docker",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_AGENTGATEWAY_DEPENDSON_MCP-SOURCES-JSON": {
+      "ngram": [
+        "agentgateway",
+        "dependson",
+        "mcp-sources-json"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "agentgateway",
+      "predicate": "dependsOn",
+      "object": "mcp-sources-json",
+      "phrase": "agentgateway lit 20_Harness/agentgateway/mcp_sources.json comme source de vérité des MCP déclarés",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_RUBAN_PARTOF_60-TAPE-SPECS": {
+      "ngram": [
+        "ruban",
+        "partof",
+        "60-tape-specs"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ruban",
+      "predicate": "partOf",
+      "object": "60-tape-specs",
+      "phrase": "Le ruban φ vit dans 60_Tape_Specs/ — c'est la description que le constructeur lit et le copieur duplique",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CONSTRUCTEUR_DEPENDSON_10-20-30-OS": {
+      "ngram": [
+        "constructeur",
+        "dependson",
+        "10-20-30-os"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "constructeur",
+      "predicate": "dependsOn",
+      "object": "10-20-30-os",
+      "phrase": "Le constructeur A loge dans 10_Tech_OS/, 20_Life_OS/, 30_Business_OS/ — chacun bâtit depuis φ pour sa couche",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CONTROLEUR_DEPENDSON_INBOX-ET-KERNEL-UC-DB": {
+      "ngram": [
+        "controleur",
+        "dependson",
+        "inbox-et-kernel-uc-db"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "controleur",
+      "predicate": "dependsOn",
+      "object": "inbox-et-kernel-uc-db",
+      "phrase": "Le contrôleur C loge dans _INBOX/ (portiers par couche) et kernel/uc.db (file durable)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_30-MEMORY-CORE_APPLIESTO_ARCHIVAL-CANDIDATE": {
+      "ngram": [
+        "30-memory-core",
+        "appliesto",
+        "archival-candidate"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "30-memory-core",
+      "predicate": "appliesTo",
+      "object": "archival-candidate",
+      "phrase": "30_MEMORY_CORE/ est marqué ARCHIVAL CANDIDATE dans 00_Amadeus/AGENTS.md : la mémoire ne devrait pas vivre dans 00_Amadeus",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_30-MEMORY-CORE_DEPENDSON_GEORDI-V2": {
+      "ngram": [
+        "30-memory-core",
+        "dependson",
+        "geordi-v2"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "30-memory-core",
+      "predicate": "dependsOn",
+      "object": "geordi-v2",
+      "phrase": "30_MEMORY_CORE/ doit retourner dans Geordi V2 (ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/) en tant que ressources canoniques arch",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_30-MEMORY-CORE_PARTOF_DOCTRINE-OPENWIKI-OKF-DOX": {
+      "ngram": [
+        "30-memory-core",
+        "partof",
+        "doctrine-openwiki-okf-dox"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "30-memory-core",
+      "predicate": "partOf",
+      "object": "doctrine-openwiki-okf-dox",
+      "phrase": "La doctrine 30_MEMORY_CORE/ pose : mémoire long terme = OpenWiki + OKF 0.2 (format) + DOX (AGENTS.md hiérarchique) + Geordi V2 (canon historique)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_META-ONTOLOGIE-MD_SUPERSEDES_SDD-006": {
+      "ngram": [
+        "meta-ontologie-md",
+        "supersedes",
+        "sdd-006"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "meta-ontologie-md",
+      "predicate": "supersedes",
+      "object": "sdd-006",
+      "phrase": "META_ONTOLOGIE.md (2026-08-13) écrase SDD-006 Geordi : aucun SDD n'est source de vérité, V3 + code priment ; SDD-006 décrit 7 domaines Business, le ca",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_HASVETOOVER_PRIORITY-INCOHERENCE": {
+      "ngram": [
+        "beth",
+        "hasvetoover",
+        "priority-incoherence"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "hasVetoOver",
+      "object": "priority-incoherence",
+      "phrase": "Beth peut bloquer une exécution si la priorité contredit la cohérence Life OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_PRODUCES_PRD-L1-DECISION": {
+      "ngram": [
+        "beth",
+        "produces",
+        "prd-l1-decision"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "produces",
+      "object": "prd-l1-decision",
+      "phrase": "Beth écrit les décisions PRD-L1 de Life OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_PRODUCES_BETH-VETO-RECORD": {
+      "ngram": [
+        "beth",
+        "produces",
+        "beth-veto-record"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "produces",
+      "object": "beth-veto-record",
+      "phrase": "Beth produit des enregistrements de veto dans Beth_Alignment_Log",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_STEWARDS_FILESYSTEM-CONSCIENCE": {
+      "ngram": [
+        "beth",
+        "stewards",
+        "filesystem-conscience"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "stewards",
+      "object": "filesystem-conscience",
+      "phrase": "Beth est la personification de la conscience du système de fichiers Life OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-ORVILLE": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-orville"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-orville",
+      "phrase": "Beth supervise le ship USS Orville (Ikigai)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-DISCOVERY": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-discovery"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-discovery",
+      "phrase": "Beth supervise le ship USS Discovery (Life Wheel / ZORA)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-SNW": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-snw"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-snw",
+      "phrase": "Beth supervise le ship USS SNW (12WY)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-ENTERPRISE": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-enterprise"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-enterprise",
+      "phrase": "Beth supervise le ship USS Enterprise (PARA)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-CERRITOS": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-cerritos"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-cerritos",
+      "phrase": "Beth supervise le ship USS Cerritos (GTD)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_COVERS_A2-PROTOSTAR": {
+      "ngram": [
+        "beth",
+        "covers",
+        "a2-protostar"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "covers",
+      "object": "a2-protostar",
+      "phrase": "Beth supervise le ship USS Protostar (DEAL)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BETH_DEPENDSON_FILESYSTEM-EVIDENCE": {
+      "ngram": [
+        "beth",
+        "dependson",
+        "filesystem-evidence"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "beth",
+      "predicate": "dependsOn",
+      "object": "filesystem-evidence",
+      "phrase": "Beth ne statue que sur preuves lues dans le système de fichiers",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_INSTANTIATES_CONTEXT-PACK-GATE": {
+      "ngram": [
+        "morty",
+        "instantiates",
+        "context-pack-gate"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "instantiates",
+      "object": "context-pack-gate",
+      "phrase": "Morty est le gardien d'exécution qui exige un Context Pack complet avant d'agir",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-ORVILLE": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-orville"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-orville",
+      "phrase": "Morty route un Context Pack Ikigai vers USS Orville via Obsidian",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-DISCOVERY": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-discovery"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-discovery",
+      "phrase": "Morty route un Context Pack Life Wheel / ZORA vers USS Discovery via Baserow",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-SNW-CURIE": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-snw-curie"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-snw-curie",
+      "phrase": "Morty route Rocks / Tactics vers USS SNW / Curie via Baserow",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-ENTERPRISE-COMPUTER": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-enterprise-computer"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-enterprise-computer",
+      "phrase": "Morty route la structure Project/Area vers USS Enterprise / Computer via Obsidian PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-CERRITOS-HOLODECK": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-cerritos-holodeck"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-cerritos-holodeck",
+      "phrase": "Morty route inbox et next actions vers USS Cerritos via Plane",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MORTY_ROUTES_A2-PROTOSTAR-HOLO-JANEWAY": {
+      "ngram": [
+        "morty",
+        "routes",
+        "a2-protostar-holo-janeway"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "morty",
+      "predicate": "routes",
+      "object": "a2-protostar-holo-janeway",
+      "phrase": "Morty route DEAL automation/liberation vers USS Protostar via Affine",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-ORVILLE_INSTANTIATES_IKIGAI-MEANING-ENGINE": {
+      "ngram": [
+        "a2-orville",
+        "instantiates",
+        "ikigai-meaning-engine"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-orville",
+      "predicate": "instantiates",
+      "object": "ikigai-meaning-engine",
+      "phrase": "Le ship USS Orville instantie le moteur de sens Ikigai",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-ORVILLE_COMPILES_NINE-A3-FINDINGS": {
+      "ngram": [
+        "a2-orville",
+        "compiles",
+        "nine-a3-findings"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-orville",
+      "predicate": "compiles",
+      "object": "nine-a3-findings",
+      "phrase": "Orville compile les neuf findings A3 (4 piliers + 5 horizons) en un verdict Ikigai unique",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-ORVILLE_PRODUCES_PILLAR-HORIZON-KARDASHEV-PACKET": {
+      "ngram": [
+        "a2-orville",
+        "produces",
+        "pillar-horizon-kardashev-packet"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-orville",
+      "predicate": "produces",
+      "object": "pillar-horizon-kardashev-packet",
+      "phrase": "Orville produit un packet pillar x horizon Kardashev quand la question touche la trajectoire",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-ORVILLE_GOVERNS_FRAMEWORK-IKIGAI": {
+      "ngram": [
+        "a2-orville",
+        "governs",
+        "framework-ikigai"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-orville",
+      "predicate": "governs",
+      "object": "framework-ikigai",
+      "phrase": "Orville gouverne le framework Ikigai dans la couche Life OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-ORVILLE_DEPENDSON_BETH-CLEARANCE": {
+      "ngram": [
+        "a2-orville",
+        "dependson",
+        "beth-clearance"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-orville",
+      "predicate": "dependsOn",
+      "object": "beth-clearance",
+      "phrase": "Orville produit un alignment `meaning_alignment` GREEN|YELLOW|RED transmis à Beth pour clearance",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ED-MERCER_PAIREDWITH_CRAFT-AND-ECONOMIC-ROLE": {
+      "ngram": [
+        "ed-mercer",
+        "pairedwith",
+        "craft-and-economic-role"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ed-mercer",
+      "predicate": "pairedWith",
+      "object": "craft-and-economic-role",
+      "phrase": "Ed Mercer garde craft et rôle économique payé du Life OS",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ED-MERCER_APPLIESTO_TECHNICIAN-RISK-GUARD": {
+      "ngram": [
+        "ed-mercer",
+        "appliesto",
+        "technician-risk-guard"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ed-mercer",
+      "predicate": "appliesTo",
+      "object": "technician-risk-guard",
+      "phrase": "Ed détecte le risque de tomber dans le piège E-Myth du technicien sous-payé",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ED-MERCER_ESCALATES_A2-ORVILLE": {
+      "ngram": [
+        "ed-mercer",
+        "escalates",
+        "a2-orville"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ed-mercer",
+      "predicate": "escalates",
+      "object": "a2-orville",
+      "phrase": "Un finding technician_risk: high chez Ed déclenche une escalade vers Orville",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GORDON-MALLOY_PAIREDWITH_ENERGY-CURIOSITY-JOY": {
+      "ngram": [
+        "gordon-malloy",
+        "pairedwith",
+        "energy-curiosity-joy"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gordon-malloy",
+      "predicate": "pairedWith",
+      "object": "energy-curiosity-joy",
+      "phrase": "Gordon Malloy garde énergie, curiosité et joie pour éviter l'OS efficient sans âme",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GORDON-MALLOY_APPLIESTO_FRICTION-PATTERN-ESCALATION": {
+      "ngram": [
+        "gordon-malloy",
+        "appliesto",
+        "friction-pattern-escalation"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gordon-malloy",
+      "predicate": "appliesTo",
+      "object": "friction-pattern-escalation",
+      "phrase": "Gordon escalade les friction patterns vers Orville puis Protostar/DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GORDON-MALLOY_PRODUCES_DEAL-CANDIDATE-SIGNAL": {
+      "ngram": [
+        "gordon-malloy",
+        "produces",
+        "deal-candidate-signal"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gordon-malloy",
+      "predicate": "produces",
+      "object": "deal-candidate-signal",
+      "phrase": "Gordon émet un signal `deal_candidate: true|false` pour Protostar",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KELLY-GRAYSON_PAIREDWITH_IMPACT-BEYOND-EGO": {
+      "ngram": [
+        "kelly-grayson",
+        "pairedwith",
+        "impact-beyond-ego"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "kelly-grayson",
+      "predicate": "pairedWith",
+      "object": "impact-beyond-ego",
+      "phrase": "Kelly Grayson garde l'utilité et l'impact au-delà de l'ego et de la dépendance",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KELLY-GRAYSON_APPLIESTO_DEPENDENCY-RISK-GUARD": {
+      "ngram": [
+        "kelly-grayson",
+        "appliesto",
+        "dependency-risk-guard"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "kelly-grayson",
+      "predicate": "appliesTo",
+      "object": "dependency-risk-guard",
+      "phrase": "Kelly escalade dépendance et risque ego-product vers Orville et Beth",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KELLY-GRAYSON_APPLIESTO_SOLARPUNK-ALIGNMENT": {
+      "ngram": [
+        "kelly-grayson",
+        "appliesto",
+        "solarpunk-alignment"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "kelly-grayson",
+      "predicate": "appliesTo",
+      "object": "solarpunk-alignment",
+      "phrase": "Kelly vérifie l'alignement avec la direction Solarpunk",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CLAIRE-FINN_PAIREDWITH_ZONE-OF-GENIUS-AND-NON-NEGOTIABLES": {
+      "ngram": [
+        "claire-finn",
+        "pairedwith",
+        "zone-of-genius-and-non-negotiables"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "claire-finn",
+      "predicate": "pairedWith",
+      "object": "zone-of-genius-and-non-negotiables",
+      "phrase": "Claire garde la zone de génie et les frontières non-négociables",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CLAIRE-FINN_HASVETOOVER_NON-NEGOTIABLE-VIOLATION": {
+      "ngram": [
+        "claire-finn",
+        "hasvetoover",
+        "non-negotiable-violation"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "claire-finn",
+      "predicate": "hasVetoOver",
+      "object": "non-negotiable-violation",
+      "phrase": "Un finding Claire de `non_negotiable_risk: high` déclenche un Beth veto recommandé",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CLAIRE-FINN_REFINES_WHO-NOT-HOW-PRESSURE": {
+      "ngram": [
+        "claire-finn",
+        "refines",
+        "who-not-how-pressure"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "claire-finn",
+      "predicate": "refines",
+      "object": "who-not-how-pressure",
+      "phrase": "Claire route la pression de délégation Who Not How vers Orville et Morty",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ISAAC_PAIREDWITH_ANNUAL-REALISM": {
+      "ngram": [
+        "isaac",
+        "pairedwith",
+        "annual-realism"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "isaac",
+      "predicate": "pairedWith",
+      "object": "annual-realism",
+      "phrase": "Isaac sert de pont entre Ikigai et SNW 12WY sur 12 mois",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ISAAC_ROUTES_A2-SNW-CURIE": {
+      "ngram": [
+        "isaac",
+        "routes",
+        "a2-snw-curie"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "isaac",
+      "predicate": "routes",
+      "object": "a2-snw-curie",
+      "phrase": "Si un finding H1 déclenche `snw_route_needed: true`, Isaac le transmet à Orville qui route SNW/Curie",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_JOHN-LAMARR_GOVERNS_HORIZON-H3": {
+      "ngram": [
+        "john-lamarr",
+        "governs",
+        "horizon-h3"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "john-lamarr",
+      "predicate": "governs",
+      "object": "horizon-h3",
+      "phrase": "John Lamarr gouverne l'horizon H3 / 3 ans",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_JOHN-LAMARR_PAIREDWITH_STRATEGIC-OPTIONS-AND-PLATFORMS": {
+      "ngram": [
+        "john-lamarr",
+        "pairedwith",
+        "strategic-options-and-platforms"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "john-lamarr",
+      "predicate": "pairedWith",
+      "object": "strategic-options-and-platforms",
+      "phrase": "Lamarr garde options stratégiques et plateformes sur 3 ans",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_JOHN-LAMARR_ROUTES_A2-ENTERPRISE-PARA": {
+      "ngram": [
+        "john-lamarr",
+        "routes",
+        "a2-enterprise-para"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "john-lamarr",
+      "predicate": "routes",
+      "object": "a2-enterprise-para",
+      "phrase": "Lamarr route vers A2 Enterprise / Computer pour les plateformes 3 ans",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BORTUS_PAIREDWITH_DURABLE-SYSTEMS-RESILIENCE": {
+      "ngram": [
+        "bortus",
+        "pairedwith",
+        "durable-systems-resilience"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "bortus",
+      "predicate": "pairedWith",
+      "object": "durable-systems-resilience",
+      "phrase": "Bortus garde durabilité et résilience sur 10 ans (Solarpunk counter-infrastructure)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BORTUS_APPLIESTO_ANTI-FRAGILITY-CHECK": {
+      "ngram": [
+        "bortus",
+        "appliesto",
+        "anti-fragility-check"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "bortus",
+      "predicate": "appliesTo",
+      "object": "anti-fragility-check",
+      "phrase": "Bortus impose un anti-fragility check : la proposition doit traverser un cycle Burnham H10 sans casser",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BORTUS_ROUTES_A2-ENTERPRISE-ARCHIVES": {
+      "ngram": [
+        "bortus",
+        "routes",
+        "a2-enterprise-archives"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "bortus",
+      "predicate": "routes",
+      "object": "a2-enterprise-archives",
+      "phrase": "Bortus route les assets durables GREEN vers Enterprise / Picard Archives canon",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ALARA-KITAN_GOVERNS_HORIZON-H30": {
+      "ngram": [
+        "alara-kitan",
+        "governs",
+        "horizon-h30"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "alara-kitan",
+      "predicate": "governs",
+      "object": "horizon-h30",
+      "phrase": "Alara Kitan gouverne l'horizon H30 / 30 ans",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ALARA-KITAN_PAIREDWITH_EXPANSION-AND-CEILING-BREAK": {
+      "ngram": [
+        "alara-kitan",
+        "pairedwith",
+        "expansion-and-ceiling-break"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "alara-kitan",
+      "predicate": "pairedWith",
+      "object": "expansion-and-ceiling-break",
+      "phrase": "Alara garde expansion et brise-plafond sur 30 ans (Solarpunk civilization engine)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ALARA-KITAN_APPLIESTO_KARDASHEV3-TRAJECTORY": {
+      "ngram": [
+        "alara-kitan",
+        "appliesto",
+        "kardashev3-trajectory"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "alara-kitan",
+      "predicate": "appliesTo",
+      "object": "kardashev3-trajectory",
+      "phrase": "Alara aligne les verdicts H30 avec la trajectoire Kardashev-3 (continental tipping point)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KLYDEN_PAIREDWITH_SOLARPUNK-LEGACY-CIVILIZATION-SCALE": {
+      "ngram": [
+        "klyden",
+        "pairedwith",
+        "solarpunk-legacy-civilization-scale"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "klyden",
+      "predicate": "pairedWith",
+      "object": "solarpunk-legacy-civilization-scale",
+      "phrase": "Klyden garde legacy, transmission et impact à l'échelle civilisationnelle",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KLYDEN_ESCALATES_A1-BETH": {
+      "ngram": [
+        "klyden",
+        "escalates",
+        "a1-beth"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "klyden",
+      "predicate": "escalates",
+      "object": "a1-beth",
+      "phrase": "Tout conflit H1/H3 avec H90 est escaladé vers Orville et Beth par Klyden",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_KLYDEN_APPLIESTO_TRANSMISSION-AND-COMMONS": {
+      "ngram": [
+        "klyden",
+        "appliesto",
+        "transmission-and-commons"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "klyden",
+      "predicate": "appliesTo",
+      "object": "transmission-and-commons",
+      "phrase": "Klyden exige `legacy_signal: strengthens` pour un signal H90 GREEN",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_IKIGAI-PILLARS-HORIZONS-KARDASHEV_APPLIESTO_KARDASHEV4-TRAJ": {
+      "ngram": [
+        "ikigai-pillars-horizons-kardashev",
+        "appliesto",
+        "kardashev4-trajectory"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ikigai-pillars-horizons-kardashev",
+      "predicate": "appliesTo",
+      "object": "kardashev4-trajectory",
+      "phrase": "Le document Kardashev encode la trajectoire Kardashev-4 héritée de l'Identity Core",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_IKIGAI-PILLARS-HORIZONS-KARDASHEV_REFINES_ORVILLE-MEANING-C": {
+      "ngram": [
+        "ikigai-pillars-horizons-kardashev",
+        "refines",
+        "orville-meaning-compass"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ikigai-pillars-horizons-kardashev",
+      "predicate": "refines",
+      "object": "orville-meaning-compass",
+      "phrase": "Le document Kardashev sert de boussole de sens à Orville avant Beth ou Morty",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-DISCOVERY_INSTANTIATES_LIFE-WHEEL-ZORA": {
+      "ngram": [
+        "a2-discovery",
+        "instantiates",
+        "life-wheel-zora"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-discovery",
+      "predicate": "instantiates",
+      "object": "life-wheel-zora",
+      "phrase": "Le ship USS Discovery instantie le moteur Life Wheel / ZORA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-DISCOVERY_COVERS_LD01-TO-LD08": {
+      "ngram": [
+        "a2-discovery",
+        "covers",
+        "ld01-to-ld08"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-discovery",
+      "predicate": "covers",
+      "object": "ld01-to-ld08",
+      "phrase": "Discovery maintient l'état ZORA sur les 8 domaines LD01 à LD08",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-DISCOVERY_PROTECTS_LD03-HEALTH-HARD-SAFETY": {
+      "ngram": [
+        "a2-discovery",
+        "protects",
+        "ld03-health-hard-safety"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-discovery",
+      "predicate": "protects",
+      "object": "ld03-health-hard-safety",
+      "phrase": "Discovery protège LD03 Health comme hard safety",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-DISCOVERY_PROTECTS_LD04-COGNITION-HARD-SAFETY": {
+      "ngram": [
+        "a2-discovery",
+        "protects",
+        "ld04-cognition-hard-safety"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-discovery",
+      "predicate": "protects",
+      "object": "ld04-cognition-hard-safety",
+      "phrase": "Discovery protège LD04 Cognition comme hard safety",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-DISCOVERY_ROUTES_A1-BETH-VIA-RECOVERY-FIRST": {
+      "ngram": [
+        "a2-discovery",
+        "routes",
+        "a1-beth-via-recovery-first"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-discovery",
+      "predicate": "routes",
+      "object": "a1-beth-via-recovery-first",
+      "phrase": "Discovery peut recommander un recovery-first halt à Beth via beth_action: recovery_first",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOOK_COVERS_LD01-CAREER-BUSINESS": {
+      "ngram": [
+        "book",
+        "covers",
+        "ld01-career-business"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "book",
+      "predicate": "covers",
+      "object": "ld01-career-business",
+      "phrase": "Book (LD01) couvre le domaine Career & Business",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOOK_PAIREDWITH_LD01-LOAD-SIGNAL": {
+      "ngram": [
+        "book",
+        "pairedwith",
+        "ld01-load-signal"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "book",
+      "predicate": "pairedWith",
+      "object": "ld01-load-signal",
+      "phrase": "Book remonte un load_signal low/medium/high/critical à Discovery",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOOK_ESCALATES_A2-DISCOVERY-AND-A1-BETH": {
+      "ngram": [
+        "book",
+        "escalates",
+        "a2-discovery-and-a1-beth"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "book",
+      "predicate": "escalates",
+      "object": "a2-discovery-and-a1-beth",
+      "phrase": "Book escalade vers Discovery et Beth si LD01 consomme plus que la bande passante sûre",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_SARU_COVERS_LD02-FINANCE-INDEPENDENCE": {
+      "ngram": [
+        "saru",
+        "covers",
+        "ld02-finance-independence"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "saru",
+      "predicate": "covers",
+      "object": "ld02-finance-independence",
+      "phrase": "Saru (LD02) couvre le domaine Finance et indépendance",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CULBER_COVERS_LD03-HEALTH-SLEEP-ENERGY": {
+      "ngram": [
+        "culber",
+        "covers",
+        "ld03-health-sleep-energy"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "culber",
+      "predicate": "covers",
+      "object": "ld03-health-sleep-energy",
+      "phrase": "Hugh Culber (LD03) couvre le domaine Health, sleep et energy",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_TILLY_COVERS_LD04-MIND-COGNITION-LOAD": {
+      "ngram": [
+        "tilly",
+        "covers",
+        "ld04-mind-cognition-load"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "tilly",
+      "predicate": "covers",
+      "object": "ld04-mind-cognition-load",
+      "phrase": "Sylvia Tilly (LD04) couvre le domaine Mind, cognition, charge mentale",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_STAMETS_COVERS_LD05-SOCIAL-RELATIONS": {
+      "ngram": [
+        "stamets",
+        "covers",
+        "ld05-social-relations"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "stamets",
+      "predicate": "covers",
+      "object": "ld05-social-relations",
+      "phrase": "Paul Stamets (LD05) couvre le domaine Social relations",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BURNHAM_COVERS_LD06-LOVE-FAMILY": {
+      "ngram": [
+        "burnham",
+        "covers",
+        "ld06-love-family"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "burnham",
+      "predicate": "covers",
+      "object": "ld06-love-family",
+      "phrase": "Michael Burnham (LD06) couvre le domaine Love, family, présence",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_RENO_COVERS_LD07-CREATIVITY-LEISURE": {
+      "ngram": [
+        "reno",
+        "covers",
+        "ld07-creativity-leisure"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "reno",
+      "predicate": "covers",
+      "object": "ld07-creativity-leisure",
+      "phrase": "Jett Reno (LD07) couvre le domaine Creativity, leisure, flow",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GEORGIOU_COVERS_LD08-IMPACT-LEGACY": {
+      "ngram": [
+        "georgiou",
+        "covers",
+        "ld08-impact-legacy"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "georgiou",
+      "predicate": "covers",
+      "object": "ld08-impact-legacy",
+      "phrase": "Philippa Georgiou (LD08) couvre le domaine Contribution, impact, héritage Solarpunk",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-CURIE_INSTANTIATES_TWELVE-WEEK-YEAR-ENGINE": {
+      "ngram": [
+        "a2-curie",
+        "instantiates",
+        "twelve-week-year-engine"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-curie",
+      "predicate": "instantiates",
+      "object": "twelve-week-year-engine",
+      "phrase": "Le ship USS SNW / Curie instantie le moteur 12 Week Year",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-CURIE_COMPILES_FIVE-A3-FINDINGS": {
+      "ngram": [
+        "a2-curie",
+        "compiles",
+        "five-a3-findings"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-curie",
+      "predicate": "compiles",
+      "object": "five-a3-findings",
+      "phrase": "Curie compile les 5 findings A3 du SNW (Pike/Una/M'Benga/Chapel/Ortegas)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-CURIE_APPLIESTO_50_30_20_LOAD_RULE": {
+      "ngram": [
+        "a2-curie",
+        "appliesto",
+        "load",
+        "rule"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-curie",
+      "predicate": "appliesTo",
+      "object": "50_30_20_load_rule",
+      "phrase": "Curie maintient la règle de charge 50/30/20 sur le cycle actif",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-CURIE_PRODUCES_CYCLE-Q3-2026-12-ITEMS": {
+      "ngram": [
+        "a2-curie",
+        "produces",
+        "cycle-q3-2026-12-items"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-curie",
+      "predicate": "produces",
+      "object": "cycle-q3-2026-12-items",
+      "phrase": "Curie produit le cycle Q3 2026 composé de 12 items canon",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_PIKE_COVERS_VISION-QUARTER-INTENT": {
+      "ngram": [
+        "pike",
+        "covers",
+        "vision-quarter-intent"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "pike",
+      "predicate": "covers",
+      "object": "vision-quarter-intent",
+      "phrase": "Pike couvre la discipline Vision / Quarter Intent du 12WY",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_PIKE_PAIREDWITH_NORTH-STAR-12WY": {
+      "ngram": [
+        "pike",
+        "pairedwith",
+        "north-star-12wy"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "pike",
+      "predicate": "pairedWith",
+      "object": "north-star-12wy",
+      "phrase": "Pike garde le Star North du 12 Week Year pour éviter la dérive tactique",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_UNA_COVERS_PLANNING-ROCKS": {
+      "ngram": [
+        "una",
+        "covers",
+        "planning-rocks"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "una",
+      "predicate": "covers",
+      "object": "planning-rocks",
+      "phrase": "Una couvre la discipline Planning / Rocks du 12WY",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_UNA_PRODUCES_ROCK-DEFINITION-OF-DONE": {
+      "ngram": [
+        "una",
+        "produces",
+        "rock-definition-of-done"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "una",
+      "predicate": "produces",
+      "object": "rock-definition-of-done",
+      "phrase": "Una exige que chaque Rock ait une Definition of Done citée en evidence",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MBENGA_COVERS_PROCESS-CONTROL-FOCUS": {
+      "ngram": [
+        "mbenga",
+        "covers",
+        "process-control-focus"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "mbenga",
+      "predicate": "covers",
+      "object": "process-control-focus",
+      "phrase": "M'Benga couvre la discipline Process Control / Focus du 12WY",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MBENGA_APPLIESTO_50-30-20-OVERLOAD-GUARD": {
+      "ngram": [
+        "mbenga",
+        "appliesto",
+        "50-30-20-overload-guard"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "mbenga",
+      "predicate": "appliesTo",
+      "object": "50-30-20-overload-guard",
+      "phrase": "M'Benga diagnostique les violations de la règle 50/30/20 et signale overload à Curie",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MBENGA_ROUTES_A2-PROTOSTAR-VIA-DEAL": {
+      "ngram": [
+        "mbenga",
+        "routes",
+        "a2-protostar-via-deal"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "mbenga",
+      "predicate": "routes",
+      "object": "a2-protostar-via-deal",
+      "phrase": "En cas d'overload durable, M'Benga route vers Protostar (DEAL Eliminate ou Automate)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CHAPEL_COVERS_METRICS-SCORECARD": {
+      "ngram": [
+        "chapel",
+        "covers",
+        "metrics-scorecard"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "chapel",
+      "predicate": "covers",
+      "object": "metrics-scorecard",
+      "phrase": "Chapel couvre la discipline Metrics / Scorecard du 12WY",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CHAPEL_APPLIESTO_LEAD-LAG-INDICATOR-DISTINCTION": {
+      "ngram": [
+        "chapel",
+        "appliesto",
+        "lead-lag-indicator-distinction"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "chapel",
+      "predicate": "appliesTo",
+      "object": "lead-lag-indicator-distinction",
+      "phrase": "Chapel impose la distinction entre lead indicators et lag indicators pour auditer les Rocks",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_CHAPEL_REJECTS_VANITY-METRICS": {
+      "ngram": [
+        "chapel",
+        "rejects",
+        "vanity-metrics"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "chapel",
+      "predicate": "rejects",
+      "object": "vanity-metrics",
+      "phrase": "Chapel rejette les vanity metrics sans décision ni comportement attaché",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ORTEGAS_COVERS_WEEKLY-EXECUTION-TIME-USE": {
+      "ngram": [
+        "ortegas",
+        "covers",
+        "weekly-execution-time-use"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ortegas",
+      "predicate": "covers",
+      "object": "weekly-execution-time-use",
+      "phrase": "Ortegas couvre la discipline Weekly Execution / Time Use du 12WY",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ORTEGAS_PRODUCES_EXECUTABLE-CONTEXT-PACK": {
+      "ngram": [
+        "ortegas",
+        "produces",
+        "executable-context-pack"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ortegas",
+      "predicate": "produces",
+      "object": "executable-context-pack",
+      "phrase": "Ortegas émet une readiness de Context Pack exécutable vers A1 Morty",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ORTEGAS_ROUTES_A2-CERRITOS-HOLODECK": {
+      "ngram": [
+        "ortegas",
+        "routes",
+        "a2-cerritos-holodeck"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "ortegas",
+      "predicate": "routes",
+      "object": "a2-cerritos-holodeck",
+      "phrase": "En cas d'overload, Ortegas route vers Cerritos (GTD engage) avant dispatch Morty",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-COMPUTER_INSTANTIATES_PARA-STRUCTURE-ENGINE": {
+      "ngram": [
+        "a2-computer",
+        "instantiates",
+        "para-structure-engine"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-computer",
+      "predicate": "instantiates",
+      "object": "para-structure-engine",
+      "phrase": "Le ship USS Enterprise / Computer instantie le moteur de structure PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-COMPUTER_CLASSIFIES_PARA-PROJECT-AREA-RESOURCE-ARCHIVE": {
+      "ngram": [
+        "a2-computer",
+        "classifies",
+        "para-project-area-resource-archive"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-computer",
+      "predicate": "classifies",
+      "object": "para-project-area-resource-archive",
+      "phrase": "Computer classifie chaque artefact comme Project, Area, Resource ou Archive",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-COMPUTER_COMPILES_FOUR-A3-FINDINGS": {
+      "ngram": [
+        "a2-computer",
+        "compiles",
+        "four-a3-findings"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-computer",
+      "predicate": "compiles",
+      "object": "four-a3-findings",
+      "phrase": "Computer compile les 4 findings A3 (Picard/Spock/Geordi/Data) en classification PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_PICARD_COVERS_PARA-PROJECTS": {
+      "ngram": [
+        "picard",
+        "covers",
+        "para-projects"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "picard",
+      "predicate": "covers",
+      "object": "para-projects",
+      "phrase": "Picard couvre la classification Projects dans PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_SPOCK_COVERS_PARA-AREAS-STANDARDS": {
+      "ngram": [
+        "spock",
+        "covers",
+        "para-areas-standards"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "spock",
+      "predicate": "covers",
+      "object": "para-areas-standards",
+      "phrase": "Spock couvre la classification Areas et les standards PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_SPOCK_PAIREDWITH_ONGOING-STANDARDS-OVER-TIME": {
+      "ngram": [
+        "spock",
+        "pairedwith",
+        "ongoing-standards-over-time"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "spock",
+      "predicate": "pairedWith",
+      "object": "ongoing-standards-over-time",
+      "phrase": "Spock protège les standards durables qui empêchent le Life OS de se dissoudre en projets",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GEORDI_COVERS_PARA-RESOURCES": {
+      "ngram": [
+        "geordi",
+        "covers",
+        "para-resources"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "geordi",
+      "predicate": "covers",
+      "object": "para-resources",
+      "phrase": "Geordi couvre la classification Resources dans PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GEORDI_PAIREDWITH_REUSABLE-INFRASTRUCTURE-FOR-AGENTS": {
+      "ngram": [
+        "geordi",
+        "pairedwith",
+        "reusable-infrastructure-for-agents"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "geordi",
+      "predicate": "pairedWith",
+      "object": "reusable-infrastructure-for-agents",
+      "phrase": "Geordi transforme les connaissances en infrastructure réutilisable pour les agents futurs",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLODECK_INSTANTIATES_GTD-CHAOS-ENGINE": {
+      "ngram": [
+        "a2-holodeck",
+        "instantiates",
+        "gtd-chaos-engine"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holodeck",
+      "predicate": "instantiates",
+      "object": "gtd-chaos-engine",
+      "phrase": "Le ship USS Cerritos / Holo Deck instantie le moteur de chaos GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLODECK_COMPILES_FIVE-A3-FINDINGS-GTD": {
+      "ngram": [
+        "a2-holodeck",
+        "compiles",
+        "five-a3-findings-gtd"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holodeck",
+      "predicate": "compiles",
+      "object": "five-a3-findings-gtd",
+      "phrase": "Holo Deck compile les 5 findings A3 (Mariner/Boimler/Rutherford/Tendi/Freeman)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MARINER_COVERS_GTD-CAPTURE": {
+      "ngram": [
+        "mariner",
+        "covers",
+        "gtd-capture"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "mariner",
+      "predicate": "covers",
+      "object": "gtd-capture",
+      "phrase": "Mariner couvre le stage Capture de la chaîne GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_MARINER_ROUTES_A3-BOIMLER-CLARIFY": {
+      "ngram": [
+        "mariner",
+        "routes",
+        "a3-boimler-clarify"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "mariner",
+      "predicate": "routes",
+      "object": "a3-boimler-clarify",
+      "phrase": "Mariner route l'input brut vers Boimler (Clarify) sans organiser elle-même",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOIMLER_COVERS_GTD-CLARIFY": {
+      "ngram": [
+        "boimler",
+        "covers",
+        "gtd-clarify"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "boimler",
+      "predicate": "covers",
+      "object": "gtd-clarify",
+      "phrase": "Boimler couvre le stage Clarify de la chaîne GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOIMLER_PRODUCES_ACTIONABILITY-DECISION": {
+      "ngram": [
+        "boimler",
+        "produces",
+        "actionability-decision"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "boimler",
+      "predicate": "produces",
+      "object": "actionability-decision",
+      "phrase": "Boimler transforme le bruit capturé en décision d'actionnabilité (next_action|project|resource|someday|trash|blocked)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_BOIMLER_ROUTES_A3-RUTHERFORD-ORGANIZE": {
+      "ngram": [
+        "boimler",
+        "routes",
+        "a3-rutherford-organize"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "boimler",
+      "predicate": "routes",
+      "object": "a3-rutherford-organize",
+      "phrase": "Boimler route l'item clarifié vers Rutherford (Organize) sauf s'il faut escalader à Picard ou Data",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_RUTHERFORD_COVERS_GTD-ORGANIZE": {
+      "ngram": [
+        "rutherford",
+        "covers",
+        "gtd-organize"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "rutherford",
+      "predicate": "covers",
+      "object": "gtd-organize",
+      "phrase": "Rutherford couvre le stage Organize de la chaîne GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_RUTHERFORD_ROUTES_A3-TENDI-REVIEW": {
+      "ngram": [
+        "rutherford",
+        "routes",
+        "a3-tendi-review"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "rutherford",
+      "predicate": "routes",
+      "object": "a3-tendi-review",
+      "phrase": "Rutherford route l'item organisé vers Tendi (Review) avec son bucket PARA",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_TENDI_COVERS_GTD-REVIEW": {
+      "ngram": [
+        "tendi",
+        "covers",
+        "gtd-review"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "tendi",
+      "predicate": "covers",
+      "object": "gtd-review",
+      "phrase": "Tendi couvre le stage Review de la chaîne GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_TENDI_DETECTS_STALE-BLOCKED-REPEATED-GRADUATION-CANDIDATES": {
+      "ngram": [
+        "tendi",
+        "detects",
+        "stale-blocked-repeated-graduation-candidates"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "tendi",
+      "predicate": "detects",
+      "object": "stale-blocked-repeated-graduation-candidates",
+      "phrase": "Tendi identifie items stales, bloqués, répétés, ou candidats à la graduation",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_TENDI_ESCALATES_A2-PROTOSTAR-VIA-REPEATED-WORK": {
+      "ngram": [
+        "tendi",
+        "escalates",
+        "a2-protostar-via-repeated-work"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "tendi",
+      "predicate": "escalates",
+      "object": "a2-protostar-via-repeated-work",
+      "phrase": "Tendi escalade le travail répété (>3 fois) vers Protostar/DEAL pour élimination",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_FREEMAN_COVERS_GTD-ENGAGE": {
+      "ngram": [
+        "freeman",
+        "covers",
+        "gtd-engage"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "freeman",
+      "predicate": "covers",
+      "object": "gtd-engage",
+      "phrase": "Freeman couvre le stage Engage de la chaîne GTD",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_FREEMAN_ROUTES_A1-MORTY": {
+      "ngram": [
+        "freeman",
+        "routes",
+        "a1-morty"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "freeman",
+      "predicate": "routes",
+      "object": "a1-morty",
+      "phrase": "Freeman fait passer une next action prête vers A1 Morty (next_action_router)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLO-JANEWAY_INSTANTIATES_DEAL-LIBERATION-ENGINE": {
+      "ngram": [
+        "a2-holo-janeway",
+        "instantiates",
+        "deal-liberation-engine"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holo-janeway",
+      "predicate": "instantiates",
+      "object": "deal-liberation-engine",
+      "phrase": "Le ship USS Protostar / Holo Janeway instantie le moteur de libération DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLO-JANEWAY_APPLIESTO_DEAL-D-E-A-L-PIPELINE": {
+      "ngram": [
+        "a2-holo-janeway",
+        "appliesto",
+        "deal-d-e-a-l-pipeline"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holo-janeway",
+      "predicate": "appliesTo",
+      "object": "deal-d-e-a-l-pipeline",
+      "phrase": "Holo Janeway applique la pipeline D-E-A-L (Define / Eliminate / Automate / Liberate)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLO-JANEWAY_COMPILES_FOUR-A3-FINDINGS-DEAL": {
+      "ngram": [
+        "a2-holo-janeway",
+        "compiles",
+        "four-a3-findings-deal"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holo-janeway",
+      "predicate": "compiles",
+      "object": "four-a3-findings-deal",
+      "phrase": "Holo Janeway compile les 4 findings A3 (Dal / Rok-Tahk / Zero / Gwyn)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A2-HOLO-JANEWAY_ROUTES_A2-ENTERPRISE-COMPUTER-VIA-MUSE": {
+      "ngram": [
+        "a2-holo-janeway",
+        "routes",
+        "a2-enterprise-computer-via-muse"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a2-holo-janeway",
+      "predicate": "routes",
+      "object": "a2-enterprise-computer-via-muse",
+      "phrase": "Holo Janeway route les blueprints durables vers Enterprise / Computer (PARA Archives)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DAL_COVERS_DEAL-DEFINE": {
+      "ngram": [
+        "dal",
+        "covers",
+        "deal-define"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "dal",
+      "predicate": "covers",
+      "object": "deal-define",
+      "phrase": "Dal couvre le stage D (Define) de la pipeline DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DAL_PRODUCES_PATTERN-DEFINITION-MD": {
+      "ngram": [
+        "dal",
+        "produces",
+        "pattern-definition-md"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "dal",
+      "predicate": "produces",
+      "object": "pattern-definition-md",
+      "phrase": "Dal produit pattern_definition.md (1 friction, 1 outcome mesurable)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ROKTAHK_COVERS_DEAL-ELIMINATE": {
+      "ngram": [
+        "roktahk",
+        "covers",
+        "deal-eliminate"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "roktahk",
+      "predicate": "covers",
+      "object": "deal-eliminate",
+      "phrase": "Rok-Tahk couvre le stage E (Eliminate) de la pipeline DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ROKTAHK_PRODUCES_ELIMINATION-PROPOSAL-MD": {
+      "ngram": [
+        "roktahk",
+        "produces",
+        "elimination-proposal-md"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "roktahk",
+      "predicate": "produces",
+      "object": "elimination-proposal-md",
+      "phrase": "Rok-Tahk produit elimination_proposal.md avec étapes NO-GO et gains de bande passante",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ROKTAHK_PAIREDWITH_NO-AUTOMATION-BEFORE-ELIMINATION": {
+      "ngram": [
+        "roktahk",
+        "pairedwith",
+        "no-automation-before-elimination"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "roktahk",
+      "predicate": "pairedWith",
+      "object": "no-automation-before-elimination",
+      "phrase": "Rok-Tahk empêche d'automatiser un gaspillage (E avant A)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ZERO_COVERS_DEAL-AUTOMATE": {
+      "ngram": [
+        "zero",
+        "covers",
+        "deal-automate"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "zero",
+      "predicate": "covers",
+      "object": "deal-automate",
+      "phrase": "Zero couvre le stage A (Automate) de la pipeline DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ZERO_PRODUCES_SKILL-BLUEPRINT-MD": {
+      "ngram": [
+        "zero",
+        "produces",
+        "skill-blueprint-md"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "zero",
+      "predicate": "produces",
+      "object": "skill-blueprint-md",
+      "phrase": "Zero produit un blueprint d'automation (skill_<name>/SKILL.md + risk_class + D1 proof)",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ZERO_DEPENDSON_A1-BETH-HIGH-RISK-APPROVAL": {
+      "ngram": [
+        "zero",
+        "dependson",
+        "a1-beth-high-risk-approval"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "zero",
+      "predicate": "dependsOn",
+      "object": "a1-beth-high-risk-approval",
+      "phrase": "Zero requiert Beth approval pour toute automation à risque high",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GWYN_COVERS_DEAL-LIBERATE": {
+      "ngram": [
+        "gwyn",
+        "covers",
+        "deal-liberate"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gwyn",
+      "predicate": "covers",
+      "object": "deal-liberate",
+      "phrase": "Gwyn couvre le stage L (Liberate) de la pipeline DEAL",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GWYN_PRODUCES_D11-BANDWIDTH-SCORE": {
+      "ngram": [
+        "gwyn",
+        "produces",
+        "d11-bandwidth-score"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gwyn",
+      "predicate": "produces",
+      "object": "d11-bandwidth-score",
+      "phrase": "Gwyn produit d11_score.json mesurant le temps/attention libérés vs upkeep tax",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_GWYN_REJECTS_LIBERATION-CLAIM-WITHOUT-METRIC": {
+      "ngram": [
+        "gwyn",
+        "rejects",
+        "liberation-claim-without-metric"
+      ],
+      "dimension": "3D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "gwyn",
+      "predicate": "rejects",
+      "object": "liberation-claim-without-metric",
+      "phrase": "Gwyn refuse toute revendication de libération sans métrique",
+      "source_file": "aspace-v3.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_ANTI-PATTERN-RIGIDIT_APPLIESTO_ASSIGNATION-MODELE-COUCHE": {
+      "ngram": [
+        "anti-pattern-rigidit",
+        "appliesto",
+        "assignation-modele-couche"
+      ],
+      "dimension": "7D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "anti-pattern-rigidit",
+      "predicate": "appliesTo",
+      "object": "assignation-modele-couche",
+      "phrase": "L'anti-pattern rigidite s'applique a l'assignation modele->couche (Claude=L0, GPT=L1, Gemini=L2)",
+      "source_file": "aspace-domaines.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_DONNA-R-GLE-DES-3_GOVERNS_ESCALADE-A3": {
+      "ngram": [
+        "donna-r-gle-des-3",
+        "governs",
+        "escalade-a3"
+      ],
+      "dimension": "7D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "donna-r-gle-des-3",
+      "predicate": "governs",
+      "object": "escalade-a3",
+      "phrase": "La Donna Règle des 3 govern l'escalade A3 (Niveau 1 Doctor x 3, Niveau 2 Rick x 3, Niveau 3 A0)",
+      "source_file": "aspace-domaines.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_A0_ROUTES_CL-S-API": {
+      "ngram": [
+        "routes",
+        "cl-s-api"
+      ],
+      "dimension": "7D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "a0",
+      "predicate": "routes",
+      "object": "cl-s-api",
+      "phrase": "A0 Amadeus distribue les clés API aux agents concernes (jamais en automatique)",
+      "source_file": "aspace-domaines.ttl",
+      "confidence": "haute"
+    },
+    "ONTO_PRICING-1K-MOIS_GENERATES_1-2M-ARR-BASELINE": {
+      "ngram": [
+        "pricing-1k-mois",
+        "generates",
+        "1-2m-arr-baseline"
+      ],
+      "dimension": "7D",
+      "resolution_type": "ONTOLOGY_TRIPLET",
+      "subject": "pricing-1k-mois",
+      "predicate": "generates",
+      "object": "1-2m-arr-baseline",
+      "phrase": "Pricing 1 000 $/mois × 100 clients premium = 1,2 M$ ARR baseline",
+      "source_file": "aspace-domaines.ttl",
+      "confidence": "haute"
     }
   }
 }

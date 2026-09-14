@@ -40,56 +40,122 @@ def compile_triplets():
         }
 
     entries = phrasebook.setdefault("entries", {})
-    triplet_files = list(TRIPLETS_DIR.glob("*.jsonl"))
+    jsonl_files = list(TRIPLETS_DIR.glob("*.jsonl"))
+    ttl_files = list(TRIPLETS_DIR.glob("*.ttl"))
+    triplet_files = jsonl_files + ttl_files
     total_triplets = 0
     added_keys = 0
 
+    ttl_triple_pattern = re.compile(
+        r"^\s*<urn:aspace:entity:([^>]+)>\s+aspace:([\w\-]+)\s+(?:<urn:aspace:entity:([^>]+)>|\"([^\"]+)\")\s*\."
+    )
+    ttl_src_pattern = re.compile(r"\[([^\]]+)\]\s*\(([^)]+)\)")
+
     for tf in triplet_files:
-        with open(tf, "r", encoding="utf-8", errors="ignore") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
-                total_triplets += 1
-                try:
-                    data = json.loads(line)
-                    sujet = data.get("sujet", "")
-                    verbe = data.get("verbe", "")
-                    objet = data.get("objet", "")
-                    phrase = data.get("phrase", "")
-                    confiance = data.get("confiance", "moyenne")
+        if tf.suffix == ".jsonl":
+            with open(tf, "r", encoding="utf-8", errors="ignore") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    total_triplets += 1
+                    try:
+                        data = json.loads(line)
+                        sujet = data.get("sujet", "")
+                        verbe = data.get("verbe", "")
+                        objet = data.get("objet", "")
+                        phrase = data.get("phrase", "")
+                        confiance = data.get("confiance", "moyenne")
 
-                    if not sujet or not verbe:
+                        if not sujet or not verbe:
+                            continue
+
+                        key = f"ONTO_{sujet.upper()}_{verbe.upper()}_{objet.upper()}"[:64]
+                        ngram = normalize_words(f"{sujet} {verbe} {objet}")
+                        if not ngram:
+                            continue
+
+                        dim = "5D"
+                        if "business" in tf.name or "sob" in tf.name:
+                            dim = "7D"
+                        elif "life" in tf.name:
+                            dim = "1D"
+                        elif "tech" in tf.name or "kernel" in tf.name:
+                            dim = "3D"
+
+                        if key not in entries:
+                            entries[key] = {
+                                "ngram": ngram[:4],
+                                "dimension": dim,
+                                "resolution_type": "ONTOLOGY_TRIPLET",
+                                "subject": sujet,
+                                "predicate": verbe,
+                                "object": objet,
+                                "phrase": phrase,
+                                "source_file": tf.name,
+                                "confidence": confiance
+                            }
+                            added_keys += 1
+                    except Exception:
                         continue
 
-                    key = f"ONTO_{sujet.upper()}_{verbe.upper()}_{objet.upper()}"[:64]
-                    ngram = normalize_words(f"{sujet} {verbe} {objet}")
-                    if not ngram:
-                        continue
+        elif tf.suffix == ".ttl":
+            with open(tf, "r", encoding="utf-8", errors="ignore") as f:
+                lines = f.readlines()
 
-                    dim = "5D"
-                    if "business" in tf.name or "sob" in tf.name:
-                        dim = "7D"
-                    elif "life" in tf.name:
-                        dim = "1D"
-                    elif "tech" in tf.name or "kernel" in tf.name:
-                        dim = "3D"
+            i = 0
+            while i < len(lines):
+                line = lines[i].strip()
+                m = ttl_triple_pattern.match(line)
+                if m:
+                    total_triplets += 1
+                    sujet = m.group(1)
+                    verbe = m.group(2)
+                    objet = m.group(3) or m.group(4) or ""
+                    phrase = ""
+                    confiance = "moyenne"
 
-                    if key not in entries:
-                        entries[key] = {
-                            "ngram": ngram[:4],
-                            "dimension": dim,
-                            "resolution_type": "ONTOLOGY_TRIPLET",
-                            "subject": sujet,
-                            "predicate": verbe,
-                            "object": objet,
-                            "phrase": phrase,
-                            "source_file": tf.name,
-                            "confidence": confiance
-                        }
-                        added_keys += 1
-                except Exception:
-                    continue
+                    j = i + 1
+                    while j < len(lines):
+                        next_line = lines[j].strip()
+                        if next_line.startswith("#   src:"):
+                            cm = ttl_src_pattern.search(next_line)
+                            if cm:
+                                confiance = cm.group(1)
+                            j += 1
+                        elif next_line.startswith("#"):
+                            if not phrase:
+                                phrase = next_line.lstrip("#").strip()
+                            j += 1
+                        else:
+                            break
+
+                    if sujet and verbe:
+                        key = f"ONTO_{sujet.upper()}_{verbe.upper()}_{objet.upper()}"[:64]
+                        ngram = normalize_words(f"{sujet} {verbe} {objet}")
+                        if ngram:
+                            dim = "5D"
+                            if "business" in tf.name or "sob" in tf.name or "domaines" in tf.name:
+                                dim = "7D"
+                            elif "life" in tf.name or "vague2" in tf.name:
+                                dim = "1D"
+                            elif "tech" in tf.name or "kernel" in tf.name or "os" in tf.name or "v3" in tf.name:
+                                dim = "3D"
+
+                            if key not in entries:
+                                entries[key] = {
+                                    "ngram": ngram[:4],
+                                    "dimension": dim,
+                                    "resolution_type": "ONTOLOGY_TRIPLET",
+                                    "subject": sujet,
+                                    "predicate": verbe,
+                                    "object": objet,
+                                    "phrase": phrase,
+                                    "source_file": tf.name,
+                                    "confidence": confiance
+                                }
+                                added_keys += 1
+                i += 1
 
     with open(PHRASEBOOK_PATH, "w", encoding="utf-8") as f:
         json.dump(phrasebook, f, indent=2, ensure_ascii=False)
