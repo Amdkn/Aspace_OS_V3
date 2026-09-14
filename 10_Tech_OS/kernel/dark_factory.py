@@ -58,7 +58,7 @@ def main():
     json.dump(blueprint, tmp)
     tmp.close()
     state_path = os.path.join(V3, '20_Life_OS', '22_Wheel_Discovery', 'LD01_Business_Book', 'state.json')
-    rc, out = run(['C:/Users/amado/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe', ASSEMBLER, '--blueprint', tmp.name, '--state', state_path])
+    rc, out = run([sys.executable, ASSEMBLER, '--blueprint', tmp.name, '--state', state_path])
     print(f'[3/5] nardole_assembler rc={rc}')
     if rc != 0:
         print(f'ASSEMBLER ECHEC COMPLET:\n{out}'); return 1
@@ -66,7 +66,7 @@ def main():
 
     # 4. Soumet le work dans uc.db
     title = os.path.basename(args.intent).replace('.md', '')
-    rc, out = run(['C:/Users/amado/AppData/Local/hermes/hermes-agent/venv/Scripts/python.exe', UC, 'submit', '--title', title, '--layer', 'L2'])
+    rc, out = run([sys.executable, UC, 'submit', '--title', title, '--layer', 'L2'])
     print(f'[4/5] uc.py submit rc={rc} -> {out[:100]}')
     if rc != 0:
         print(f'SUBMIT ECHEC'); return 1

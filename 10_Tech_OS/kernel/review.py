@@ -12,7 +12,7 @@ constate pas, il **exige des preuves**. Un critère sans attestation vaut faux.
     python review.py show --work N
 """
 from __future__ import annotations
-import argparse, json, os, re, shlex, subprocess, sys, sqlite3
+import argparse, json, os, re, shlex, shutil, subprocess, sys, sqlite3
 
 try:
     sys.path.insert(0, os.path.expanduser("~/agentpulse"))
@@ -86,7 +86,7 @@ def executer(ligne: str, cwd: str) -> tuple[bool, str] | None:
     try:
         # executable=git-bash : les criteres du ruban sont des commandes POSIX
         # (pipes, grep -E, guillemets simples) — cmd.exe casse les pipes/regex.
-        bash = os.environ.get("BASH_EXE", "C:/Program Files/Git/bin/bash.exe")
+        bash = os.environ.get("BASH_EXE", shutil.which("bash") or "C:/Program Files/Git/bin/bash.exe")
         p = subprocess.run([bash, "-c", cmd], cwd=cwd, capture_output=True,
                            text=True, timeout=300)
         return p.returncode == 0, f"exit={p.returncode} {(p.stderr or p.stdout).strip()[:160]}"

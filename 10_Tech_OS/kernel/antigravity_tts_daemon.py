@@ -8,9 +8,13 @@ import asyncio
 import threading
 import subprocess
 import edge_tts
-import win32com.client
+try:
+    import win32com.client
+except ImportError:
+    win32com = None
+from pathlib import Path
 
-AUDIO_CACHE_DIR = os.path.join(os.environ.get("USERPROFILE", r"C:\Users\amado"), ".antigravity_voice_cache")
+AUDIO_CACHE_DIR = os.path.join(str(Path.home()), ".antigravity_voice_cache")
 os.makedirs(AUDIO_CACHE_DIR, exist_ok=True)
 
 DEFAULT_VOICE = "fr-FR-DeniseNeural"  # Options: fr-FR-DeniseNeural, fr-FR-HenriNeural, fr-FR-EloiseNeural
@@ -104,11 +108,12 @@ def play_audio(file_path: str):
     except Exception as e:
         print(f"[Audio Error] {e}", file=sys.stderr)
         # Fallback SAPI
-        try:
-            speaker = win32com.client.Dispatch("SAPI.SpVoice")
-            speaker.Speak("Audio de réponse disponible.")
-        except Exception:
-            pass
+        if win32com is not None:
+            try:
+                speaker = win32com.client.Dispatch("SAPI.SpVoice")
+                speaker.Speak("Audio de réponse disponible.")
+            except Exception:
+                pass
 
 def speak(text: str, voice: str = DEFAULT_VOICE, auto_play: bool = True):
     """Synthèse et lecture vocale d'un texte protégée par verrou global anti-superposition.
@@ -151,7 +156,7 @@ def replay_latest():
 
 def find_active_transcript() -> str:
     """Trouve le transcript le plus récemment modifié parmi toutes les sessions Antigravity."""
-    pattern = r"C:\Users\amado\.gemini\antigravity\brain\*\.system_generated\logs\transcript.jsonl"
+    pattern = os.path.join(str(Path.home()), ".gemini", "antigravity", "brain", "*", ".system_generated", "logs", "transcript.jsonl")
     files = glob.glob(pattern)
     if not files:
         return ""

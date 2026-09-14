@@ -18,7 +18,7 @@ from pathlib import Path
 
 KERNEL_DIR = Path(__file__).resolve().parent.parent
 UC_DB = KERNEL_DIR / "uc.db"
-SSSF_DB = Path("C:/Users/amado/super-simple-software-factory/adws/adw_data/sssf.db")
+SSSF_DB = Path.home() / "super-simple-software-factory/adws/adw_data/sssf.db"
 
 def get_silver_platter(domain: str = "l0-tech") -> dict:
     platter = {
