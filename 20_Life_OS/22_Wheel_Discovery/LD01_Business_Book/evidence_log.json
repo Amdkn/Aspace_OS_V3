@@ -1,0 +1,9 @@
+{
+  "ld": "LD01",
+  "persona": "Book",
+  "date": "2026-09-07",
+  "sources": [
+    "20_Life_OS/22_Wheel_Discovery/LD01_Business_Book/A3_Book_LD01_Spec.md"
+  ],
+  "notes": "Alignement du domaine Business avec l'architecture Enterprise PARA."
+}
