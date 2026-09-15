@@ -16,6 +16,7 @@ sys.path.insert(0, str(KERNEL_DIR))
 
 import pre_tool_guard
 import post_build_validator
+import silver_platter
 from webhooks import yas_alert_sink
 
 
@@ -54,3 +55,11 @@ def test_yas_alert_sink_handle_alert():
     assert res["ok"] is True
     assert res["action"] == "DLQ_RECORDED"
     assert "entry_id" in res
+
+
+def test_silver_platter():
+    platter = silver_platter.get_silver_platter("l0-tech")
+    assert platter["domain"] == "l0-tech"
+    assert "L0" in platter["invariants"]
+    assert "system_status" in platter
+    assert platter["system_status"]["uc_db_connected"] is True

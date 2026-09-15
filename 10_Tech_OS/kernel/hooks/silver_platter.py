@@ -11,6 +11,7 @@ contenant uniquement le sous-contexte strict nécessaire :
 - Évite l'empoisonnement du contexte et économise 80% de tokens.
 """
 
+import os
 import sys
 import json
 import sqlite3
@@ -18,7 +19,8 @@ from pathlib import Path
 
 KERNEL_DIR = Path(__file__).resolve().parent.parent
 UC_DB = KERNEL_DIR / "uc.db"
-SSSF_DB = Path("C:/Users/amado/super-simple-software-factory/adws/adw_data/sssf.db")
+SSSF_DB_ENV = os.environ.get("SSSF_DB_PATH")
+SSSF_DB = Path(SSSF_DB_ENV) if SSSF_DB_ENV else Path.home() / "super-simple-software-factory" / "adws" / "adw_data" / "sssf.db"
 
 def get_silver_platter(domain: str = "l0-tech") -> dict:
     platter = {

@@ -20,7 +20,8 @@ def log_event():
     
     event_data = {
         "team": "Kernel Core",
-        "governor": "13th Doctor",
+        "governor": "Rick Sanchez",
+        "labels": ["role:manager", "governance", "kernel-l0", "audit-purge", "role:dlq"],
         "action": "linear_mcp_issue_update",
         "issues": [
             {
@@ -43,6 +44,14 @@ def log_event():
                 "status": "Verified Canon",
                 "assignee": "Ryan",
                 "layer": "3D / Build"
+            },
+            {
+                "id": "KFR-4",
+                "title": "Audit L0 Rick Sanchez - Portabilité Hooks, Servitude Silencieuse & Couverture de Tests",
+                "status": "Verified Canon",
+                "assignee": "Rick Sanchez",
+                "layer": "L0 / Manager",
+                "labels": ["role:manager", "governance", "kernel-l0", "audit-purge"]
             }
         ],
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
@@ -50,7 +59,7 @@ def log_event():
 
     cursor.execute(
         "INSERT INTO event (work_id, harness, kind, payload) VALUES (?, ?, ?, ?)",
-        (1, "13th_doctor", "linear_mcp_update", json.dumps(event_data))
+        (1, "rick_sanchez", "linear_mcp_update", json.dumps(event_data))
     )
     conn.commit()
     conn.close()

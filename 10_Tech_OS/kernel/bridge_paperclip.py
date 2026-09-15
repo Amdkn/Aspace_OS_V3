@@ -22,7 +22,7 @@ jusqu'à l'organe qui sait quoi en faire.
     python bridge_paperclip.py etat
 """
 from __future__ import annotations
-import argparse, json, os, re, sqlite3, subprocess, sys, time
+import argparse, json, os, re, shutil, sqlite3, subprocess, sys, time
 
 try:
     sys.path.insert(0, os.path.expanduser("~/agentpulse"))
@@ -59,9 +59,9 @@ def uc(*args) -> dict:
 
 def pc(*args, t=120):
     """Appelle paperclipai. Rend (ok, sortie)."""
-    exe = "paperclipai"
+    exe = shutil.which("paperclipai") or shutil.which("paperclip") or "paperclipai"
     npm = "C:/Users/amado/AppData/Roaming/npm/paperclipai.cmd"
-    if os.path.exists(npm):
+    if not shutil.which("paperclipai") and os.path.exists(npm):
         exe = npm
     p = subprocess.run([exe] + list(args), capture_output=True, text=True,
                        timeout=t, encoding="utf-8", errors="replace")
