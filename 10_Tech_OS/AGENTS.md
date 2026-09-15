@@ -218,3 +218,18 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Exécution complète de la suite de tests (`pytest 10_Tech_OS/kernel/` -> 14/14 tests OK).
 - **[13e DOCTEUR] Mise à jour de la Gouvernance MCP Linear :**
   - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des issues "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
+
+## D4 — 2026-09-12 — Validation de Run Souveraine Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
+
+- **[YAZ] Audit & Intégrité Runtime / uc.db :**
+  - Initialisation et vérification d'intégrité de `10_Tech_OS/kernel/uc.db` (`PRAGMA integrity_check` -> `ok`).
+  - Validation de l'ensemble de la suite de tests du noyau (`pytest` -> 18/18 tests passés avec succès).
+- **[GRAHAM] Synchronisation Engram, Ontologies & OKF :**
+  - Extension du compilateur RDF `10_Tech_OS/kernel/engram/compile_engram_from_rdf.py` pour supporter le parsing natif des fichiers Turtle (`.ttl`) et JSONL dans `70_Onthologies/triplets/`.
+  - Compilation de 747 nouveaux invariants ontologiques dans `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (volume porté à 2 132 entrées actives).
+  - Validation des tests unitaires Engram (`10_Tech_OS/kernel/engram/test_engram.py` -> 6/6 tests OK).
+- **[RYAN] Compilation Python & Definition of Done :**
+  - Compilation `py_compile` de tous les scripts Python kernel et scripts de gouvernance (0 erreur, exit code 0).
+  - Validation complète de la Definition of Done (DoD).
+- **[13e DOCTEUR] Gouvernance MCP Linear :**
+  - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant la mise à jour des issues "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.

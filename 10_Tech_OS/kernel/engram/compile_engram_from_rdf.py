@@ -40,29 +40,45 @@ def compile_triplets():
         }
 
     entries = phrasebook.setdefault("entries", {})
-    triplet_files = list(TRIPLETS_DIR.glob("*.jsonl"))
+    triplet_files = sorted(list(TRIPLETS_DIR.glob("*.jsonl")) + list(TRIPLETS_DIR.glob("*.ttl")))
     total_triplets = 0
     added_keys = 0
+
+    ttl_re = re.compile(r'^(?:<urn:aspace:entity:([^>]+)>|(\S+))\s+(?:aspace:(\S+)|(\S+))\s+(?:<urn:aspace:entity:([^>]+)>|"([^"]+)"|(\S+))\s*\.')
 
     for tf in triplet_files:
         with open(tf, "r", encoding="utf-8", errors="ignore") as f:
             for line in f:
                 line = line.strip()
-                if not line:
+                if not line or line.startswith("#") or line.startswith("@prefix"):
                     continue
                 total_triplets += 1
                 try:
-                    data = json.loads(line)
-                    sujet = data.get("sujet", "")
-                    verbe = data.get("verbe", "")
-                    objet = data.get("objet", "")
-                    phrase = data.get("phrase", "")
-                    confiance = data.get("confiance", "moyenne")
+                    if tf.suffix == ".ttl":
+                        m = ttl_re.match(line)
+                        if not m:
+                            continue
+                        sujet = m.group(1) or m.group(2) or ""
+                        verbe = m.group(3) or m.group(4) or ""
+                        objet = m.group(5) or m.group(6) or m.group(7) or ""
+                        phrase = f"{sujet} {verbe} {objet}"
+                        confiance = "haute"
+                    else:
+                        data = json.loads(line)
+                        sujet = data.get("sujet", "")
+                        verbe = data.get("verbe", "")
+                        objet = data.get("objet", "")
+                        phrase = data.get("phrase", "")
+                        confiance = data.get("confiance", "moyenne")
 
                     if not sujet or not verbe:
                         continue
 
-                    key = f"ONTO_{sujet.upper()}_{verbe.upper()}_{objet.upper()}"[:64]
+                    clean_sujet = re.sub(r"[^A-Za-z0-9_]", "_", sujet.upper())
+                    clean_verbe = re.sub(r"[^A-Za-z0-9_]", "_", verbe.upper())
+                    clean_objet = re.sub(r"[^A-Za-z0-9_]", "_", objet.upper())
+
+                    key = f"ONTO_{clean_sujet}_{clean_verbe}_{clean_objet}"[:64]
                     ngram = normalize_words(f"{sujet} {verbe} {objet}")
                     if not ngram:
                         continue
