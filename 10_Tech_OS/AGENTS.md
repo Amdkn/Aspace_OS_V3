@@ -218,3 +218,17 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Exécution complète de la suite de tests (`pytest 10_Tech_OS/kernel/` -> 14/14 tests OK).
 - **[13e DOCTEUR] Mise à jour de la Gouvernance MCP Linear :**
   - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des issues "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
+
+## D4 — 2026-09-16 — Validation du Run Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
+
+- **[YAZ] Audit & Intégrité Runtime / uc.db :**
+  - Migration du schéma SQLite validée (`uc.py migrate`) et vérification d'intégrité de `10_Tech_OS/kernel/uc.db` (`PRAGMA integrity_check` -> `ok`).
+  - Validation de l'intégrité du runtime et des scripts du dossier `10_Tech_OS/kernel/`.
+- **[GRAHAM] Synchronisation Engram Phrase Book, Ontologies & OKF :**
+  - Validation de la synchronisation entre `70_Onthologies/`, `40_Memory_Wiki_OKF/` et le Phrase Book Engram `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (1 385 entrées actives).
+  - Validation réussie des tests unitaires Engram (`pytest 10_Tech_OS/kernel/engram/test_engram.py` -> 6/6 tests OK).
+- **[RYAN] Compilation Python & Definition of Done :**
+  - Compilation `py_compile` réussie de l'ensemble des modules Python sous `10_Tech_OS/kernel/` (0 erreur).
+  - Validation complète de la suite de tests du noyau (`pytest 10_Tech_OS/kernel/` -> 18/18 tests OK).
+- **[13e DOCTEUR] Mise à jour de la Gouvernance MCP Linear :**
+  - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des issues Kernel Core (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
