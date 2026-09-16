@@ -1,24 +1,25 @@
-# Initialisation Sprint Temporel W4 — Cycle 12WY Q3 2026
+# Initialisation Sprint Temporel W4/W5 — Cycle 12WY Q3 2026
 
-**Date d'initialisation** : 2026-09-07
+**Date d'initialisation** : 2026-09-16
 **Responsable Temporal Sprint** : River Song (Life Core - 11e Docteur Squad)
 **Équipe / Harness** : Life Core (11e Docteur, Amy, Rory, River)
 
 ---
 
-## Objectifs du Sprint W4 (2026-09-07 $\rightarrow$ 2026-09-13)
+## Objectifs du Sprint (2026-09-16 $\rightarrow$ 2026-09-22)
 
-- **Cadence & Horizon** : 12WY W4 — Focus & Execution (`snw_execution`)
+- **Cadence & Horizon** : 12WY W4/W5 — Focus & Execution (`snw_execution`)
 - **Focus Principal** :
   1. Maintenir le retour au VERT déterministe sur les 8 jauges LD01-LD08.
   2. Consolider le cadencement des boucles GTD/PARA sous le filtre A1 Beth.
   3. Aligner les flux d'exécution Life Core avec le dispatch n8n et le tableau de bord Agent OS 5555.
+  4. Suivi et audit continu des métriques de sommeil, récupération et charge cognitive sous plafond `low`.
 
 ---
 
 ## Matrice de Coordination Life Core
 
-| Rôle | Persona / Compagnon | Domaine / Discipline | Action Clé Sprint W4 |
+| Rôle | Persona / Compagnon | Domaine / Discipline | Action Clé Sprint |
 | :--- | :--- | :--- | :--- |
 | **Orchestrateur** | 11e Docteur | Supervision Life Core | Maintien de l'harmonie temporelle et gouvernance |
 | **Alignement** | Amy Pond | Discovery Wheel (LD01-LD08) | Suivi continu des signaux de jauge et des logs d'évidence |
@@ -27,4 +28,4 @@
 
 ---
 
-*Sprint W4 initialisé avec succès et validé A1 Beth Greenlight.*
+*Sprint initialisé avec succès et validé A1 Beth Greenlight.*

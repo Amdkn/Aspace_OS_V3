@@ -1,16 +1,17 @@
 {
-  "audit_date": "2026-09-07T12:00:00Z",
+  "audit_date": "2026-09-16T11:35:00Z",
   "auditor": "Rory Williams (Life Core - 11th Doctor Squad)",
   "framework": "12 Week Year / ZORA Discovery",
+  "run_id": "RUN_LIFE_CORE_11TH_DOCTOR_20260916",
   "domains_audited": {
     "LD03_Health_Culber": {
       "persona": "Culber",
       "zora_state": "GREEN",
       "metrics": {
-        "sleep_score_avg": 88,
-        "deep_sleep_hours": 1.8,
-        "rem_sleep_hours": 2.1,
-        "hrv_baseline_ms": 65,
+        "sleep_score_avg": 89,
+        "deep_sleep_hours": 1.85,
+        "rem_sleep_hours": 2.15,
+        "hrv_baseline_ms": 67,
         "recovery_status": "OPTIMAL"
       },
       "threshold_check": "PASS"
@@ -20,16 +21,16 @@
       "zora_state": "GREEN",
       "metrics": {
         "cognitive_load_signal": "low",
-        "focus_sprints_completed": 12,
+        "focus_sprints_completed": 14,
         "context_switch_rate": "NORMAL",
-        "mental_energy_capacity_pct": 92
+        "mental_energy_capacity_pct": 94
       },
       "threshold_check": "PASS"
     },
     "04_Metrics_Chapel": {
       "persona": "Chapel",
       "discipline": "Metrics & Scorecard",
-      "execution_score_pct": 87.5,
+      "execution_score_pct": 90.0,
       "lead_indicators_met": 5,
       "lead_indicators_total": 5,
       "lag_indicators": {
