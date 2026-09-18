@@ -157,3 +157,8 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Validation du build de production (
 pm run build en 7,95s) et commit canonique certifié (cfebeb3) poussé sur Amdkn/Life-OS-2026.
   - Fiche concept OKF v0.2 scellée dans 40_Memory_Wiki_OKF/concepts/ikigai_constitution_2026.md et indexée.
+
+- **2026-09-17 20:50 (EDT - Kentucky/Ohio) — Calibrage Initial 0% des 20 Visions IKIGAI (Antigravity).**
+  - Réinitialisation déterministe de `alignmentLevel: 0` sur l'ensemble des 20 visions canoniques dans `src/stores/fw-ikigai.store.ts` et persistance `ld01/resources`.
+  - Matrice et barres de progression affichant désormais 0% au démarrage (prêtes pour la progression active d'Amadou Kone).
+  - Build validé (`npm run build` en 11,28s) et poussé sur `Amdkn/Life-OS-2026` (`d5a74af`).
