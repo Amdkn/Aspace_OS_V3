@@ -20,8 +20,9 @@ def log_event():
     
     event_data = {
         "team": "Kernel Core",
-        "governor": "13th Doctor",
+        "governor": "Rick Sanchez / 13th Doctor",
         "action": "linear_mcp_issue_update",
+        "labels": ["role:manager", "role:dlq", "layer:5D-Gate", "status:verified-canon"],
         "issues": [
             {
                 "id": "KFR-1",
@@ -43,6 +44,14 @@ def log_event():
                 "status": "Verified Canon",
                 "assignee": "Ryan",
                 "layer": "3D / Build"
+            },
+            {
+                "id": "RICK-L0-1",
+                "title": "Purge code mort, servitude 10_Tech_OS et qualification DLQ",
+                "status": "Verified Canon",
+                "assignee": "Rick Sanchez",
+                "layer": "L0",
+                "labels": ["role:manager", "role:dlq"]
             }
         ],
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
