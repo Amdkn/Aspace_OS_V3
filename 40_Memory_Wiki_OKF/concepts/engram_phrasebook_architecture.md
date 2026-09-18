@@ -33,6 +33,8 @@ Le composant **BethFilter** (`10_Tech_OS/kernel/engram/beth_filter.py`) agit com
 - **Filtre Gatekeeper A1 :** `10_Tech_OS/kernel/engram/beth_filter.py` (évaluation déterministe & veto).
 - **Suite de Tests :** `10_Tech_OS/kernel/engram/test_engram.py` (6 unit tests passing).
 
-## 3. Câblage Inter-Composants (Dispatch Nardole)
+## 3. Câblage Inter-Composants & Hooks Natifs (Dispatch Nardole & Antigravity)
 - **Tech OS Kernel :** Interception des événements dans `10_Tech_OS/kernel/`.
 - **Life OS A1 Gatekeepers :** Alignement déterministe avec Beth (`20_Life_OS/00_Gatekeepers_Beth_Morty/`).
+- **Hook PreInvocation Natif Antigravity (`pre_invocation_sovereign_guard.py`) :** Branchement direct du résolveur `EngramPhraseBook` à chaque tour modèle. Résolution des ancres 7D (`A0_SOVEREIGN_POSTURE`, `ASTRA_EXECUTION_MANDATE`, `GOLDRATT_BOTTLENECK_LAW`, `LIFE_OS_AUTONOMOUS_HEXAD`) injectées dans les messages éphémères sans consommer de tokens d'appel LLM.
+
