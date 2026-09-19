@@ -59,10 +59,8 @@ def uc(*args) -> dict:
 
 def pc(*args, t=120):
     """Appelle paperclipai. Rend (ok, sortie)."""
-    exe = "paperclipai"
-    npm = "C:/Users/amado/AppData/Roaming/npm/paperclipai.cmd"
-    if os.path.exists(npm):
-        exe = npm
+    import shutil
+    exe = shutil.which("paperclipai") or "paperclipai"
     p = subprocess.run([exe] + list(args), capture_output=True, text=True,
                        timeout=t, encoding="utf-8", errors="replace")
     return p.returncode == 0, (p.stdout or "") + (p.stderr or "")

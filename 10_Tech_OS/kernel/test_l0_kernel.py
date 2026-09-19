@@ -117,5 +117,41 @@ class TestL0Kernel(unittest.TestCase):
         self.assertEqual(row[0], "failed")
         conn.close()
 
+    def test_03_controleur_beat_and_state(self):
+        # 1. Init DB
+        self.run_cmd(UC_PATH, "init")
+
+        ctrl_path = os.path.join(HERE, "controleur.py")
+        p = self.run_cmd(ctrl_path, "--etat")
+        self.assertEqual(p.returncode, 0)
+        self.assertIn("Etat du runtime", p.stdout)
+
+        p = self.run_cmd(ctrl_path, "--auto-test")
+        self.assertEqual(p.returncode, 0)
+        self.assertIn("OK", p.stdout)
+
+    def test_04_mandat_docteur_generation(self):
+        # 1. Init DB and submit L0 work
+        self.run_cmd(UC_PATH, "init")
+        p = self.run_cmd(UC_PATH, "submit", "--layer", "L0", "--title", "Mandat Task Test")
+        self.assertEqual(p.returncode, 0)
+
+        mandat_path = os.path.join(HERE, "mandat_docteur.py")
+        p = self.run_cmd(mandat_path, "--layer", "L0", "--db", self.db_path, "--out", self.tmp_dir.name)
+        self.assertEqual(p.returncode, 0, f"Error: {p.stderr}")
+        res = json.loads(p.stdout)
+        self.assertIsNotNone(res.get("candidat"))
+        self.assertIn("mandat_path", res)
+
+    def test_05_beth_and_wheel_consumers(self):
+        beth_path = os.path.join(HERE, "beth_consumer.py")
+        p = self.run_cmd(beth_path)
+        # Should return exit code 0 or 1 depending on LD states, but run cleanly without exception
+        self.assertIn(p.returncode, [0, 1])
+
+        wheel_path = os.path.join(HERE, "wheel_consumer.py")
+        p = self.run_cmd(wheel_path, "run", "--dry")
+        self.assertEqual(p.returncode, 0)
+
 if __name__ == "__main__":
     unittest.main()
