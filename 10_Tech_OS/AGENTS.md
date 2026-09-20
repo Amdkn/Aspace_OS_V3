@@ -277,7 +277,20 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Enrichissement de la lookup table `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (1 390 entrées) avec les ancres fondamentales A0 (`A0_SOVEREIGN_POSTURE`, `ASTRA_EXECUTION_MANDATE`, `GOLDRATT_BOTTLENECK_LAW`, `LIFE_OS_AUTONOMOUS_HEXAD`, `ENGRAM_ZERO_TOKEN_NVME`).
   - Intégration directe du résolveur `EngramPhraseBook` dans le hook natif `C:\Users\amado\.gemini\config\hooks\pre_invocation_sovereign_guard.py`.
   - Résolution déterministe O(1) par memory mapping (`mmap`) sans consommation de token LLM.
-  - Injection automatique des ancres d'intention et des règles d'alignement à chaque tour modèle via message éphémère.
-  - Test unitaire d'exécution validé avec `returncode: 0`.
+## D4 — 2026-09-20 — Revue & Fusion de la PR #38 (KER-8 / work_id: 169) · Goal/Round/Work Semantics
+
+- **[KERNEL CORE · WORKGRAPH V2 ORCHESTRATION] :**
+  - Revue indépendante et fusion de la PR #38 (`feat(kernel): implement Goal/Round/Work orchestration semantics in uc_workgraph.py`) pour `KER-8` (`work_id: 169`).
+  - Implémentation native de l'énumération `GoalOutcome` (`DONE`, `WAIT`, `ABANDON`, `NEXT_ROUND`) et de la classe `WorkGraph` :
+    - `create_goal(layer, title) -> goal_id`
+    - `create_round(goal_id) -> round_id` (avec hiérarchie parent `work.parent_id`)
+    - `create_work(round_id, title) -> task_id`
+    - `review_goal(goal_id, round_id, outcome, notes) -> event_id` (Goal Review explicite découplé des tâches d'évidence).
+  - Gestion sécurisée des connexions SQLite avec fermeture explicite (`try/finally c.close()`), évitant tout verrouillage résiduel sur Windows.
+  - Enrichissement du banc de tests `10_Tech_OS/kernel/test_uc_workgraph.py` avec `test_workgraph_orchestration` validant l'intégrité FK, le parentage strict et la sérialisation des événements.
+  - Tests unitaires validés avec succès : `Ran 2 tests in 23.594s — OK`.
+  - Commit de fusion : `037587251785fe7754b2d86c8d76db781eb8989f` pushé sur `origin/main`.
+  - Évidence enregistrée dans `uc.db` pour `work_id: 169` (prédiction, transition `review` -> `done`, artifact `git-commit` #3, gate `CODE_REVIEW` verdict `pass`, session binding Jules `2579532014043635508` closed).
+
 
 
