@@ -54,3 +54,20 @@ def test_yas_alert_sink_handle_alert():
     assert res["ok"] is True
     assert res["action"] == "DLQ_RECORDED"
     assert "entry_id" in res
+
+
+def test_hook_anti_drift():
+    import hook_anti_drift
+    clean_text = "Validation du goulot LD01 Book et des generateurs de Life OS"
+    res_clean = hook_anti_drift.check_text_drift(clean_text)
+    assert res_clean["ok"] is True
+
+    passive_text = "J'attends vos instructions pour continuer"
+    res_passive = hook_anti_drift.check_text_drift(passive_text)
+    assert res_passive["ok"] is False
+    assert len(res_passive["violations"]) > 0
+
+    english_text = "As an AI, I cannot fulfill this request"
+    res_english = hook_anti_drift.check_text_drift(english_text)
+    assert res_english["ok"] is False
+

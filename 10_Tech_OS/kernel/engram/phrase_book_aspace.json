@@ -3,6 +3,75 @@
   "version": "1.0.0",
   "storage_backend": "mmap_nvme",
   "entries": {
+    "A0_SOVEREIGN_POSTURE": {
+      "ngram": [
+        "amadou",
+        "kone",
+        "actionnaire",
+        "visionnaire"
+      ],
+      "dimension": "7D",
+      "resolution_type": "STATIC_CANON",
+      "posture": "Actionnaire Visionnaire 7D (Solarpunk Kardashev 2, 3, 4 / H90)",
+      "rule": "Interdiction formelle de lui demander des instructions ou de le réduire en exécutant/prompt engineer 3D/4D."
+    },
+    "ASTRA_EXECUTION_MANDATE": {
+      "ngram": [
+        "regle",
+        "astra",
+        "engagement",
+        "priorite"
+      ],
+      "dimension": "7D",
+      "resolution_type": "DETERMINISTIC_EVAL",
+      "directive": "Continue l engagement autorise, sous la priorite la plus recente, avec une preuve du resultat dans le systeme concerne.",
+      "anti_surrender": true
+    },
+    "GOLDRATT_BOTTLENECK_LAW": {
+      "ngram": [
+        "goldratt",
+        "bottleneck",
+        "goulot",
+        "etranglement"
+      ],
+      "dimension": "7D",
+      "resolution_type": "OPERATIONAL_FLOW",
+      "bottleneck": "LD01_BOOK_H1",
+      "rule": "LD01 est le couloir exclusif de flux de valeur reelle. Interdiction d étrangler l opérateur avec des vérifications circulaires."
+    },
+    "LIFE_OS_AUTONOMOUS_HEXAD": {
+      "ngram": [
+        "life",
+        "wheel",
+        "12wy",
+        "para",
+        "gtd",
+        "deal",
+        "ikigai"
+      ],
+      "dimension": "6D",
+      "resolution_type": "LIFE_ORCHESTRATOR",
+      "hexad": [
+        "Life Wheel",
+        "12WY",
+        "PARA",
+        "GTD",
+        "DEAL",
+        "Ikigai"
+      ],
+      "rule": "Gestion 3D/4D 100% autonome par A0. Decharge totale d Amadou Kone."
+    },
+    "ENGRAM_ZERO_TOKEN_NVME": {
+      "ngram": [
+        "engram",
+        "phrasebook",
+        "zero",
+        "token"
+      ],
+      "dimension": "5D",
+      "resolution_type": "MEMORY_LOOKUP",
+      "rule": "Resolution O(1) sans token LLM via memory-mapped phrase_book_aspace.json sur SSD NVMe."
+    },
     "LD01_SOB": {
       "ngram": [
         "self",

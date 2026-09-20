@@ -1,7 +1,8 @@
 {
-  "version": "v0",
+  "version": "v1",
   "date_init": "2026-09-03",
   "framework": "GTD Cerritos",
+  "date_pulse": "2026-09-18",
   "canon_5_stages": [
     {
       "stage": "capture",

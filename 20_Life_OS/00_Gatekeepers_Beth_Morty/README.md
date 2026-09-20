@@ -1,88 +1,105 @@
 # 00_Gatekeepers_Beth_Morty
 
-> Layer: L1 Life OS
-> Status: SHADOW_ACTIVE
-> Last updated: 2026-05-20
-> Canonical sources: SDD-005, SDD-008, SDD-010, Shadow_L1, LLM Wiki
+|> Layer: L1 Life OS
+|> Status: IMPLEMENTATION_IN_PROGRESS
+|> Last updated: 2026-09-09
+|> Canonical sources: A1_Beth_Spec.md, A1_Morty_Spec.md, fancy-hugging-bengio.md §4, SDD-005 life-os-l1-integration
+|
+This folder implements the A1 layer gatekeeper system for Life OS.
 
-This folder defines the two A1 gatekeepers of Life OS:
+## Current State
 
-- Beth = conscience, filesystem guardian, veto, PRD-L1 authority.
-- Morty = terminal executor, routing layer, Context Pack gate, no autonomous decision.
+**Implementation 5D** in progress per `EXECUTION_CONTRACT.md`. Livrables:
 
-The practical Shadow L1 stack is:
+1. `life_gate.py` — Module gatekeeper A1 pivotant entre Beth et Morty.
+   - **read-only evaluation (`eval`)** : extrait état numérique LD03/LD04 source-sécurisé, frais, numérique fini ; vérifie GTD inbox manquant/invalide ; rend ordonnance beth_green_authorized ; structure distincte vs état mesuré, provenance machine.
+   - **capture (`capture <file>`)** : saisie GTD markdown locale via chemin déterministe et exclusif ; préserve littéralement ; hash content ; rejette même chemin / trace de traversal ; idempotent.
+   - **validation (`validate`)** : fait passer tout JSON Context Pack (9 champs canon) et vérifie clearance Beth par rapport à contenu/hash ; rejette bool/NaN/non-numeric observations ; bloque les shell arbitraires.
 
-| Framework | A2 / Ship | Shadow tool | Role |
-|---|---|---|---|
-| Ikigai | USS Orville | Obsidian / notes | meaning, H1-H90 alignment |
-| Life Wheel / ZORA | USS Discovery | Baserow `LD00 ZORA` | health, load, domain drift |
-| 12WY | USS SNW / Curie | Baserow `12WY Warp Core` | rocks, tactics, scorecard, time use |
-| PARA | USS Enterprise / Picard | Obsidian | project/area source of truth |
-| GTD | USS Cerritos | Plane | capture, clarify, organize, reflect, engage |
-| DEAL | USS Protostar / Holo Janeway | Affine | liberation blueprints and automation ideas |
+2. `test_life_gate.py` — Paire de tests stdlib pour validations négatives, timestamps futurs/stalés, données booléennes/NaN, manquants, couleurs fabriquées, payloads modifiés, captures duplicates, chemins dangereux, snapshot invalide.
 
-## Operating Law
-
-Beth reads the filesystem and life telemetry before authorizing work. Morty routes only executable Context Packs.
-
-No L1 action is valid unless it can answer:
-
-1. Which domain or framework is affected?
-2. Which A2 ship owns the decision?
-3. Which A3 crew member owns the next action?
-4. Which evidence path proves the request?
-5. Did Beth clear the execution?
+3. **README implémentation section** : précisément l'ajout ci-dessus.
 
 ## Files
 
 | File | Purpose |
-|---|---|
-| `A1_Beth_Spec.md` | Strategic/veto specification for Beth |
-| `A1_Morty_Spec.md` | Execution/router specification for Morty |
-| `ContextPack.template.yml` | Required handoff contract before Morty executes |
-| `README_Governance.md` | Compact governance rule |
-| `Beth_Alignment_Log/` | Future Beth decisions and veto records |
-| `Morty_Global_Queue/` | Future executable queue and dry-runs |
-| `Sunday_Uplink_Protocols/` | Weekly review and ZORA uplink rituals |
+|------|---------|
+| `life_gate.py` | Gatekeeper module avec CLI eval/capture/validate |
+| `test_life_gate.py` | Tests unitaires pour le module gatekeeper |
+| `A1_Beth_Spec.md` | Spécification stratégique/veto Beth |
+| `A1_Morty_Spec.md` | Spécification exécuteur/routage Morty |
+| `ContextPack.template.yml` | Contrat de handoff requis pour Morty |
+| `README_Governance.md` | Règle de gouvernance compacte |
+| `Beth_Alignment_Log/` | Enregistrements de décisions et veto Beth |
+| `Morty_Global_Queue/` | File d'attente exécutable et dry-runs |
+| `Sunday_Uplink_Protocols/` | Revues hebdo et rituels uplink ZORA |
 
-## Alignement Plan fancy-hugging-bengio.md (2026-06-21)
+## Operating Law
 
-> **D1 receipt** : ce dossier est aligné avec le plan canonique `C:\Users\amado\.claude\plans\fancy-hugging-bengio.md` (33 sections, verrouillé 2026-06-21).
+Beth lit le filesystem et la télémétrie de vie avant d'autoriser le travail. Morty route seulement les Context Packs validés.
 
-### Doctrine verrouillée
+Aucune action L1 n'est valide à moins qu'elle ne puisse répondre à :
 
-- **A1 Beth = conscience + veto + PRD-L1 authority** (peut intervenir/sanctionner sur les 6 A2 ships : Orville, Discovery, SNW, Enterprise, Cerritos, Protostar).
-- **A1 Morty = terminal executor + Context Pack gate + routing** (peut router vers les 6 A2 ships selon routing matrix `A1_Morty_Spec.md`).
-- **Pas d'exclusivité 3+3 ships** comme une lecture rapide de §3.5 du plan pourrait suggérer. La répartition du plan §3.5 = **responsabilité principale** (Beth = Ikigai+Life Wheel+DEAL ; Morty = 12WY+PARA+GTD), pas exclusivité d'intervention.
-- **A1 Rick Sobriété = différé Q4 2026 / Q1 2027** (`SDD-010` veto 90j jusqu'au 2026-08-11 + `fancy-hugging-bengio.md §3.9`).
-- **A0 Amadeus = board observer PASSIF** — n'intervient qu'aux milestones H30/H90 + veto kernel Rick + pivot Meta-OS.
+1. Quel domaine ou framework est affecté ?
+2. Quel A2 ship possède la décision ?
+3. Quel A3 crew member possède la prochaine action ?
+4. Quel evidence path prouve la requête ?
+5. Did Beth clear l'exécution ?
 
-### Bus sémantique d'état
+## Module Usage
 
-- **`state.json`** (`00_Amadeus/40_SYMPHONY_BUS/state.json`) = SSOT bus entre A0 → A1 → A2 → A3.
-- Chaque décision Beth/Morty écrit dans `state.json` (stage + agent_path + evidence_paths + next_step).
-- Hook `mariner-capture.ps1` capture les intentions A0 dans `state.json` avant routage.
+```bash
+# Évaluation beth-ordonnée machine (aujourd'hui en GREEN si santé/cognition OK)
+python life_gate.py eval
 
-### Contexte opérationnel courant
+# Capture GTD markdown source (source repo)
+python life_gate.py capture /chemin/vers/inbox.md
 
-- **Cycle 12WY Q3 2026** (06/15 → 09/07/26) = 12 items verbatim A0 manuscrits (plan §4). W1 = Items 1-2 (terrain A0), W2-W4 = orchestration A1/A2/A3.
-- **Items 1-2 = terrain A0** (hors session CC). **Items 3-12 = orchestration A1/A2/A3** = scope Morty/Cerritos/Curie/Enterprise/Picard/Spock.
-- **5 ADRs Life OS framework manquants** (gap L0 à fermer post-cycle foundering) : ADR-DEAL-001, ADR-GTD-001, ADR-PARA-001, ADR-LIFE-WHEEL-001, ADR-SYMPHONY-001.
+# Valider context pack depuis stdin
+cat > cp.json <<EOF
+{"ship": "USS Cerritos", "crew_member": "Spock", "next_action": "capture GTD", "framework": "GTD", "domain_impact": "life", "l0_skill_required": "terminal", "beth_clearance": "GREEN", "evidence_paths": ["path/to/ev1.json"], "output_artifact": "path/to/out.md"}
+EOF
+cat cp.json | python life_gate.py validate
+```
 
-### D4 self-contradiction fermée
+## Purpose
 
-- A1_Beth_Spec.md supervise 6 ships (cohérent avec veto distribué).
-- A1_Morty_Spec.md routing matrix couvre 6 ships (cohérent avec routing distribué).
-- Plan §3.5 = simplification didactique. Le terrain (ce dossier) est plus juste.
+Ce module implémente les gates de décision au niveau A1 qui protègent les 6 ships A2 :
+- **USS Orville** (Ikigai)
+- **USS Discovery** (Life Wheel / ZORA)
+- **USS SNW** (12WY)
+- **USS Enterprise** (PARA)
+- **USS Cerritos** (GTD)
+- **USS Protostar** (DEAL)
 
-## Evidence Index
+Il applique les règles verrouillées du plan `fancy-hugging-bengio.md` §3.5-3.8, y compris les seuils SDD-005:
 
-- `C:\Users\amado\ASpace_OS_V2\10_Tech_OS\12_Blueprints\01-SDD\SDD-005_life-os-l1-integration.md`
-- `C:\Users\amado\ASpace_OS_V2\10_Tech_OS\12_Blueprints\01-SDD\SDD-008_shadow-L1-life-os.md`
-- `C:\Users\amado\ASpace_OS_V2\10_Tech_OS\12_Blueprints\01-SDD\SDD-010_meta-cloture-scope-13eme-semaine.md`
-- `C:\Users\amado\ASpace_OS_V2\00_Amadeus\30_MEMORY_CORE\LLM_Wiki\wiki\concepts\concept_life_os.md`
-- `C:\Users\amado\ASpace_OS_V2\00_Amadeus\30_MEMORY_CORE\Shadow_L1\03_life-os-baserow-database-analysis-20260517.md`
-- `C:\Users\amado\ASpace_OS_V2\00_Amadeus\30_MEMORY_CORE\Shadow_L1\HEARTBEAT_PROTOCOL.md`
-- `C:\Users\amado\ASpace_OS_V2\00_Amadeus\05_OSS_Twin\symphony\README.md`
-- `C:\Users\amado\.openclaw\workspace\agents_runtime\L1\L1_A1_Beth.md`
-- `C:\Users\amado\.openclaw\workspace\agents_runtime\L1\L1_A1_Morty.md`
+```yaml
+beth_thresholds:
+  LD03_minimum: 4.0
+  LD04_minimum: 3.5
+  multi_domain_alert: 3
+```
+
+Le module est **fail-closed**, utilisant uniquement le stdlib Python, sans exécution shell arbitraire, et mettant en œuvre une gestion de fichier sécurisée et déterministe.
+
+## Evidence & Integration
+
+- `SDD-005_life-os-l1-integration.md` : Beth comme Life Core Guardian, HALT authority, PRD-L1 validator.
+- `SDD-008_shadow-L1-life-os.md` : Shadow L1 tool mapping.
+- `SDD-010_meta-cloture-scope-13eme-semaine.md` : Beth split stratégique et L2 nested dans L1 PARA.
+- `.openclaw/workspace/agents_runtime/L1/L1_A1_Beth.md` : historical minimal Beth.
+- `Shadow_L1/03_life-os-baserow-database-analysis-20260517.md` : concrete `Veto Beth` and `Morty Routing` fields.
+
+## Self-Consistency
+
+> **Règle d'or 1 : Le Gate Inviolable (`50_Distillation/`)**
+>   Aucun fichier brut, aucune note non triée n'entre en direct dans la mémoire ou le graphe.
+>
+> **Règle d'or 2 : Les 4 Organes Souverains au-dessus de tout**
+>   `70_Onthologies/`, `40_Memory_Wiki_OKF/`, `60_Implementation_Méthodologiques/` et `90-self-evolution/` gouvernent les 3 OS applicatifs (`10_Tech_OS`, `20_Life_OS`, `30_Business_OS`).
+>
+> **Règle d'or 3 : Le Couplage Déterministe (Hooks & Webhooks)**
+>   Les agents ne s'exécutent jamais sans intercepteurs runtime (`10_Tech_OS/kernel/hooks/`).
+
+Ce module respecte ces invariants tout en implémentant les gates concret de niveau A1 pour Life OS.

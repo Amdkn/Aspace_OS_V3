@@ -14,12 +14,23 @@ AUDIO_CACHE_DIR = os.path.join(os.environ.get("USERPROFILE", r"C:\Users\amado"),
 os.makedirs(AUDIO_CACHE_DIR, exist_ok=True)
 
 DEFAULT_VOICE = "fr-FR-DeniseNeural"  # Options: fr-FR-DeniseNeural, fr-FR-HenriNeural, fr-FR-EloiseNeural
+TTS_LOCK_FILE = os.path.join(AUDIO_CACHE_DIR, "tts_playing.lock")
 
 def clean_text_for_speech(text: str) -> str:
     """Nettoie le texte markdown pour une lecture vocale fluide et naturelle."""
     if not text:
         return ""
-    # Retirer les blocs de code volumineux ```...```
+
+    # 1. Couper net le bloc footer audio à la fin du message s'il existe
+    # Découpage sur la balise <audio-control> ou les séparateurs usuels en fin de message
+    text = re.sub(r'<audio-control>[\s\S]*?</audio-control>', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'---\s*\n\s*<audio-control>[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'---\s*\n\s*🔊[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'---\s*\n\s*\*?\*?Écoute manuelle[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'🔊\s*\**Audio HD[\s\S]*$', '', text, flags=re.IGNORECASE)
+    text = re.sub(r'Relecture manuelle[\s\S]*$', '', text, flags=re.IGNORECASE)
+
+    # 2. Retirer les blocs de code volumineux ```...```
     text = re.sub(r'```[\s\S]*?```', ' [Bloc de code technique omis]. ', text)
     # Retirer le code inline
     text = re.sub(r'`([^`]+)`', r'\1', text)
@@ -34,17 +45,11 @@ def clean_text_for_speech(text: str) -> str:
     text = re.sub(r'\|', ', ', text)
     # Nettoyer le gras et l'italique * ou _
     text = re.sub(r'[*_]{1,3}([^*_]+)[*_]{1,3}', r'\1', text)
-    # Nettoyer les balises HTML
+    # Nettoyer les balises HTML sans détruire le texte
     text = re.sub(r'<[^>]+>', '', text)
     # Nettoyer les puces
     text = re.sub(r'^\s*[-*+]\s+', '', text, flags=re.MULTILINE)
     text = re.sub(r'^\s*\d+\.\s+', '', text, flags=re.MULTILINE)
-    # Retirer le footer répétitif de lecture manuelle (Lecteur Audio, Écoute manuelle...)
-    text = re.sub(r'---\s*\n\s*\*?\*?Écoute manuelle[\s\S]*$', '', text, flags=re.IGNORECASE)
-    text = re.sub(r'\*?Écoute manuelle\s*:[\s\S]*$', '', text, flags=re.IGNORECASE)
-    text = re.sub(r'🎧\s*\**Lecteur Audio[\s\S]*$', '', text, flags=re.IGNORECASE)
-    text = re.sub(r'Lecteur Audio de cette réponse[\s\S]*$', '', text, flags=re.IGNORECASE)
-    text = re.sub(r'python\s+10_Tech_OS/kernel/antigravity_tts_daemon\.py\s+--replay[\s\S]*$', '', text, flags=re.IGNORECASE)
     # Normaliser les espaces
     text = re.sub(r'\s+', ' ', text).strip()
     return text
@@ -54,61 +59,97 @@ async def generate_tts(text: str, output_path: str, voice: str = DEFAULT_VOICE):
     communicate = edge_tts.Communicate(text, voice)
     await communicate.save(output_path)
 
-TTS_LOCK_FILE = os.path.join(AUDIO_CACHE_DIR, "tts_playing.lock")
+def is_pid_running(pid: int) -> bool:
+    """Vérifie si un processus avec ce PID tourne encore sur le système Windows."""
+    try:
+        import psutil
+        return psutil.pid_exists(pid)
+    except Exception:
+        return False
 
-def acquire_tts_lock():
-    """Acquiert le verrou global de parole pour empêcher toute superposition."""
+def acquire_tts_lock() -> bool:
+    """Acquiert le verrou global de parole de manière atomique (O_CREAT | O_EXCL).
+    Vérifie la vivacité du PID propriétaire si le fichier existe pour éviter tout blocage orphelin."""
+    pid = os.getpid()
     for _ in range(50):
         try:
-            if os.path.exists(TTS_LOCK_FILE):
-                # Vérifier si le verrou est orphelin (plus vieux de 30 secondes)
-                mtime = os.path.getmtime(TTS_LOCK_FILE)
-                if time.time() - mtime > 30:
-                    try:
-                        os.remove(TTS_LOCK_FILE)
-                    except Exception:
-                        pass
-                else:
-                    time.sleep(0.2)
-                    continue
-            with open(TTS_LOCK_FILE, "w", encoding="utf-8") as f:
-                f.write(str(os.getpid()))
+            # Acquisition atomique native de l'OS
+            fd = os.open(TTS_LOCK_FILE, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                f.write(str(pid))
             return True
+        except FileExistsError:
+            # Le verrou existe : vérifier si le propriétaire est encore vivant
+            try:
+                with open(TTS_LOCK_FILE, "r", encoding="utf-8") as f:
+                    owner_pid_str = f.read().strip()
+                if owner_pid_str.isdigit():
+                    owner_pid = int(owner_pid_str)
+                    if not is_pid_running(owner_pid):
+                        # Propriétaire mort : suppression sécurisée du verrou orphelin
+                        try:
+                            os.remove(TTS_LOCK_FILE)
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+            time.sleep(0.2)
         except Exception:
             time.sleep(0.2)
     return False
 
 def release_tts_lock():
-    """Libère le verrou global de parole."""
+    """Libère le verrou global de parole UNIQUEMENT si le processus courant en est le propriétaire."""
     try:
         if os.path.exists(TTS_LOCK_FILE):
-            os.remove(TTS_LOCK_FILE)
+            with open(TTS_LOCK_FILE, "r", encoding="utf-8") as f:
+                owner = f.read().strip()
+            if owner == str(os.getpid()):
+                os.remove(TTS_LOCK_FILE)
     except Exception:
         pass
 
+FFPLAY_BIN = r"C:\Users\amado\AppData\Local\Microsoft\WinGet\Links\ffplay.exe"
+
 def play_audio(file_path: str):
-    """Joue l'audio via PowerShell PresentationCore MediaPlayer (fiable sur Windows)."""
+    """Joue l'audio MP3 haute fidélité via ffplay natif avec fallback WMPlayer COM."""
     if not os.path.exists(file_path):
         return
-    ps_cmd = (
-        f"Add-Type -AssemblyName presentationCore; "
-        f"$p = New-Object System.Windows.Media.MediaPlayer; "
-        f"$p.Open([System.Uri]'{file_path}'); "
-        f"$p.Play(); "
-        f"while ($p.NaturalDuration.HasTimeSpan -eq $false -or $p.Position -lt $p.NaturalDuration.TimeSpan) {{ "
-        f"  Start-Sleep -Milliseconds 250 "
-        f"}}"
-    )
-    try:
-        subprocess.run(["powershell", "-NoProfile", "-Command", ps_cmd], check=True)
-    except Exception as e:
-        print(f"[Audio Error] {e}", file=sys.stderr)
-        # Fallback SAPI
+    
+    # 1. Priorité absolue : ffplay natif (qualité studio DeniseNeural, 0 dégradation)
+    if os.path.exists(FFPLAY_BIN):
         try:
-            speaker = win32com.client.Dispatch("SAPI.SpVoice")
-            speaker.Speak("Audio de réponse disponible.")
-        except Exception:
-            pass
+            subprocess.run(
+                [FFPLAY_BIN, "-nodisp", "-autoexit", "-loglevel", "quiet", os.path.abspath(file_path)],
+                timeout=1800,
+                check=True
+            )
+            return
+        except Exception as e:
+            print(f"[Audio Warning / ffplay] {e}", file=sys.stderr)
+
+    # 2. Fallback secondaire : WMPlayer COM direct sur le fichier MP3
+    try:
+        wmp = win32com.client.Dispatch("WMPlayer.OCX")
+        media = wmp.newMedia(os.path.abspath(file_path))
+        wmp.currentPlaylist.appendItem(media)
+        wmp.controls.play()
+        
+        for _ in range(25):
+            time.sleep(0.1)
+            if wmp.playState == 3:
+                break
+        
+        max_wait = 450
+        while max_wait > 0:
+            time.sleep(0.1)
+            max_wait -= 1
+            state = wmp.playState
+            if state in (1, 8, 10):
+                break
+        wmp.close()
+    except Exception as e:
+        print(f"[Audio Error / WMPlayer] {e}", file=sys.stderr)
 
 def speak(text: str, voice: str = DEFAULT_VOICE, auto_play: bool = True):
     """Synthèse et lecture vocale d'un texte protégée par verrou global anti-superposition.
@@ -209,6 +250,7 @@ class TranscriptWatcher:
             new_lines = f.readlines()
             self.last_pos = f.tell()
 
+        latest_planner_response = None
         for line in new_lines:
             line = line.strip()
             if not line:
@@ -228,10 +270,15 @@ class TranscriptWatcher:
                 if step_type == "PLANNER_RESPONSE" and source == "MODEL":
                     tool_calls = data.get("tool_calls", [])
                     if not tool_calls and content:
-                        print(f"\n[TTS] Élocution de la réponse de l'assistant (Step {step_idx})...")
-                        speak(content, self.voice, auto_play=True)
+                        latest_planner_response = (step_idx, content)
             except Exception:
                 pass
+
+        # Ne vocaliser QUE le tout dernier message sans appel d'outil du lot
+        if latest_planner_response:
+            s_idx, s_content = latest_planner_response
+            print(f"\n[TTS] Élocution de la réponse finale de l'assistant (Step {s_idx})...")
+            speak(s_content, self.voice, auto_play=True)
 
     def run_loop(self, poll_interval: float = 1.0):
         print(f"=== Antigravity Voice Daemon 2-en-1 Initialisé ===")
@@ -244,7 +291,7 @@ class TranscriptWatcher:
             time.sleep(poll_interval)
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "--speak":
+    if len(sys.argv) > 1 and sys.argv[1] in ("--speak", "--say"):
         raw_text = " ".join(sys.argv[2:])
         speak(raw_text)
     elif len(sys.argv) > 1 and sys.argv[1] == "--replay":

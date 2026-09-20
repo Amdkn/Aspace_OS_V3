@@ -22,4 +22,6 @@
 
 ## 3. Journal Append-Only (DOX)
 
+- `2026-09-18` : Chaîne méthodologique étendue : IPBD -> SDD -> ADR -> PRD -> TDD -> Work Graph -> Evidence -> Gates -> DONE. Orca est l'ADE d'ingénierie par défaut.
+
 - `2026-09-08` : Rattachement au Meta-Routeur V3 et alignement sur la doctrine de validation déterministe (Hooks & Gates).

@@ -96,3 +96,14 @@ Un harness qui ne passe pas ces trois épreuves n'est pas conforme.
 `REGISTRY.json` de ce dossier liste les harnesses connus, avec leur présence réelle sur
 disque — sondée, jamais déclarée. Un harness absent y figure avec `present: false` plutôt que
 d'être passé sous silence.
+
+## Harness Capability Contract — v1
+
+Rick sélectionne une capacité prouvée, pas un nom de harness. Les capacités canoniques sont :
+`START, AUTH, MODEL_DISCOVERY, STREAM, STEER, INTERRUPT, RESUME, SANDBOX, FAILURE_SIGNAL, RECOVER`.
+
+Niveaux de preuve : `DECLARED < DOCUMENTED < SYNTHETIC < NATIVE < CANARY`.
+Le registre canonique est `harness_capability` dans `uc.db`; chaque ligne porte harness, capability, evidence_level, status, evidence_ref et checked_at.
+Un incident réel peut donc promouvoir ou dégrader une capacité sans déclarer le harness entier « disponible » ou « cassé ».
+
+Exemple actuel : Antigravity/AUTH = CANARY/pass après récupération OAuth via LLMTrim le 2026-09-19; Jules/START = NATIVE/pass et Jules/AUTH = CANARY/pass via le bridge :43118.

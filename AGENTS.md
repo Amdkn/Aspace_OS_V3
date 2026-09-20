@@ -69,9 +69,26 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 
 ---
 
+## Baseline A0 / ADE / Factory — 2026-09-18
+
+- **A0 :** Amadeus ↔ Kirby, même niveau visionnaire; Kirby n'est ni Rick, ni Doctor, ni Companion.
+- **ADE par défaut :** Orca. Il peut imbriquer Herdr et tout CLI de harness; il n'est pas source de vérité.
+- **Meta-Harness Fabric :** Herdr=runtime persistant; Multica=workforce management; Buzz=collaboration/event/identity; capacités composables, non étages exclusifs.
+- **Souveraineté :** `uc.py/uc.db` garde l'identité canonique du travail; Rick/S1 compose; Agent OS projette vers A0.
+- **Compilation :** `IPBD (Intention, Problématiques, Besoins, Désirs) → SDD → ADR → PRD → TDD → Work Graph → Evidence → Gates → DONE`.
+- Canon détaillé : `40_Memory_Wiki_OKF/architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md`.
+
 ## 5. Mémoire de Fin de Réponse — DOX & OKF
 
 Toute modification structurelle ou apprentissage système est :
 - Inscrit dans le sous-registre `AGENTS.md` du composant concerné (Append-Only D4).
 - Formalisé en OKF v0.2 dans `40_Memory_Wiki_OKF/concepts/`.
 - Validé par synthèse vocale sans conflit mutex.
+
+
+## Baseline Hermes — Visionnaire de terrain — 2026-09-19
+
+- **A0 Amadeus/Kirby** agit en propriétaire/actionnaire : fixe ambition, finalités, contraintes et greenlights; reçoit des rapports compressés plutôt que de surveiller les harnesses.
+- **Hermes** devient le visionnaire de terrain / executive operator : maintient la situation, orchestre l'exécution via Orca/Rick, exploite Jules et les autres workers selon capacité et quota, puis remonte Evidence, risques et arbitrages irréductibles.
+- **FreeLLMAPI** est le plan d'inférence par défaut de Hermes quand disponible; l'identité de Hermes ne dépend pas du modèle routé.
+- Canon opérationnel : `40_Memory_Wiki_OKF/architecture/hermes_field_visionary_orca_jules_2026-09-19.md`.

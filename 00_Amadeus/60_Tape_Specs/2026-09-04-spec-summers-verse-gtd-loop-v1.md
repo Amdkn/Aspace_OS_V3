@@ -294,3 +294,10 @@ fichier du kernel.
   n'a besoin de poser une question - chemin exact, contenu verbatim, regles
   de classification, valeurs attendues, commande de verification, seuil de
   prediction et rollback sont tous fixes dans ce fichier.
+
+
+## Critère d'acceptation
+
+- `cd C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Summers_Verse/projects/coach-os-app/gtd && python verifier.py` affiche `GTDLOOP_OK` avec les 6 lignes `OK: [1]`..`OK: [6]`, rc=0
+- `python -m json.tool C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Summers_Verse/projects/coach-os-app/gtd/gtd.json` rc=0
+- `python C:/Users/amado/ASpace_OS_V3/30_Business_OS/00_Summers_Verse/projects/coach-os-app/gtd/apply_gtd.py` rc=0 avec `GTDLOOP_APPLY_OK`, idempotent (deux tirs = memes JSON)

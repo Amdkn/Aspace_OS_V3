@@ -16,6 +16,7 @@ Verifie la structure du framework DEAL Protostar :
       toute divergence pulse <-> recalcul est une erreur
   [8] unicite du registre : chaque dossier de canon_4_stages existe reelslement
       a la racine du framework (pas de dossier fantome)
+  [9] date_pulse == date du jour au format %Y-%m-%d (datetime.date.today())
 
 Affiche DEAL_OK et retourne rc=0 si tout passe, sinon DEAL_KO et rc=1.
 Stdlib uniquement. Spec : 00_Amadeus/60_Tape_Specs/2026-09-05-spec-deal-protostar-pulse-v1.md
@@ -24,7 +25,7 @@ Stdlib uniquement. Spec : 00_Amadeus/60_Tape_Specs/2026-09-05-spec-deal-protosta
 import json
 import os
 import sys
-from datetime import datetime
+from datetime import date, datetime
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
@@ -112,6 +113,12 @@ def main():
             datetime.strptime(dp, "%Y-%m-%d")
         except (TypeError, ValueError):
             erreurs.append("pulse.json: date_pulse non parseable %Y-%m-%d (trouve " + repr(dp) + ")")
+
+    # 9. date_pulse == date du jour
+    if pulse is not None:
+        dp = pulse.get("date_pulse")
+        if dp != date.today().isoformat():
+            erreurs.append("[9] date_pulse " + repr(dp) + " != date du jour " + date.today().isoformat())
 
     # 2 + 3. dossiers, specs, AGENT/README/SOUL
     for st in STAGES:

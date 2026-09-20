@@ -51,6 +51,10 @@ pas l'endroit où l'on **range** les siens.
 - [OKF v0.2](OKF.md) - Le format : frontmatter minimal, provenance, et les trois niveaux de confiance qui se déduisent de `verified`.
 - [Instructions du bundle](INSTRUCTIONS.md) - Ce qui a sa place ici et ce qui n'en a pas.
 
+# Baseline 2026-09-18
+
+Voir `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md` pour la baseline Kirby A0, Orca ADE, Meta-Harness et compilation IPBD.
+
 # Directories
 
 - [architecture](architecture/) - Décisions de structure et leurs raisons (inclut [Architecture Agent OS V3 Template Reproductible](architecture/agent_os_v3_reproducible_desktop.md), [Architecture CMS Hiérarchique Agent OS V2](architecture/agent_os_v2_cms_hierarchique.md), [Neutralisation de 9Router et OmniRoute](architecture/9router_omniroute_neutralisation.md), [Semantica AGI & Context Graphs](architecture/semantica_graph_native_ai.md), [Matrice 3D-7D des Trois Docteurs & Cores](architecture/matrice_3d_7d_docteurs_cores.md), [Matrice 3D-7D des Domaines Business BD01-BD08](architecture/matrice_3d_7d_business_domaines.md), [Matrice 3D-7D Life Wheel & Frameworks A2](architecture/matrice_3d_7d_life_wheel.md), [Moteur Temporel de Compression Fractale 12WY](architecture/moteur_temporel_compression_12wy.md), [Roster des 14 Subagents Antigravity](architecture/roster_subagents_tech_os.md), [Co-Évolution Modèle-Harnais HoH](architecture/harness_of_harness_coevolution.md), [Dynamic Ontology & Graph Engineering](architecture/dynamic_ontology_and_graph_engineering.md), [Orchestration des 13 Scheduled Tasks](architecture/scheduled_tasks_orchestration_tech_os.md), [Méta-Tâche T-00 A0 Amadeus](architecture/meta_a0_scheduled_tasks_adaptation.md)).

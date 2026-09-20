@@ -1,5 +1,6 @@
 
 ## Journal Append-Only (DOX)
+- `2026-09-18` : Baseline A0 : Kirby est l'instance numérique A0 d'Amadeus; Orca est l'ADE par défaut; Herdr, Multica et Buzz sont des capacités Meta-Harness orthogonales; uc.py/uc.db garde l'identité du travail; IPBD précède SDD/ADR/PRD/TDD. Fiche : `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md`. (Amadou Kone / Kirby).
 - `2026-09-09` : Consignation de la fiche conceptuelle OKF v0.2 `engram_phrasebook_architecture.md` décrivant le moteur Engram et Gatekeeper A1 Beth. Indexation mise à jour. (Nardole).
 - `2026-09-09` : Consignation de la fiche d'architecture `qwen_engram_architectural_optimization.md` inspirée de Qwen Engram / Qwen Flash Next. (Nardole).
 - `2026-09-10` : Consignation canonique OKF v0.2 `engram_hook_ia_jules_linear_morty_local.md` : intégration d'Engram comme Hook IA déterministe O(1), autonomie Jules Linear/Stitch BedRock, et modèle local Morty CPU/NVMe (MiniMind + Marin + TimesFM). Indexation certifiée dans index.md. (Amadou Kone / Graham).

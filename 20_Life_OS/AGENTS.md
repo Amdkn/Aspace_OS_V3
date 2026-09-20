@@ -24,9 +24,11 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 
 - Root: [`/AGENTS.md`](../../AGENTS.md)
 - Geordi V2: `~/.claude/.../03_Resources_Geordi/` — origin sources for V3 mappings.
-- OpenWiki: `~/.openwiki/wiki/`.
+- OpenWiki/OKF durable memory: `C:\Users\amado\ASpace_OS_V3\40_Memory_Wiki_OKF\`.
 
-## D4 append-only — journal L1
+## D4 append-only
+
+- **2026-09-18 — Projection Life de la baseline A0 :** Life OS consomme les travaux compilés depuis IPBD; Buzz peut porter des personas/teams Life mais n'est plus ontologiquement figé comme « L1 ». L'identité du travail reste Kernel/uc; Orca est l'ADE d'ingénierie et Herdr/Multica/Buzz sont des capacités transversales. — journal L1
 
 - **2026-09-04 — Ikigai Orville pulse v0 détaché (work 50).** Cycle complet amy_spec_l1 (ruban 2026-09-05-spec-ikigai-orville-pulse-v0.md) → rory_build_l1 (claim→predict #63→attest 6/6→review→done, outcome=1). Artefacts: `21_Ikigai_Orville/pulse.json` + `verify_ikigai.py` (IKIGAI_OK rc=0). Leçon kernel: `review.py` ne lit que l'en-tête singulier `## Critère d'acceptation` — un ruban pluriel produit 0 critère lu et un `failed` (work 49). Beth: Wheel 8/8 GREEN. Reste: pulse 12WY SNW.
 
@@ -169,3 +171,6 @@ pm run build en 7,95s) et commit canonique certifié (cfebeb3) poussé sur Amdkn
   - Génération des objectifs trimestriels `WyGoal` (W1 à W12) rattachés aux 4 visions H1 prioritaires (ALPHA V1.0, 12 items verbatim, Karpathy loop, 12WY Curie).
   - Génération des tactiques binaires hebdomadaires `WyTactic` avec persistance `ld01/resources`.
   - Build validé (`npm run build` en 7,42s) et synchronisé sur `Amdkn/Life-OS-2026` (`d6ade8a`).
+
+- **2026-09-17 (cron, Doctor 11) - Dixieme re-verification work 35.** uc.db (10_Tech_OS/kernel/uc.db, table work): work 35 status=done, attempts=1, updated_at=2026-09-03 02:28:08. Mandat "pending depuis 09-03" definitivement perime (file pending: vide; immunite P1 anti-rejeu, aucun re-claim). Preuve environnement re-run independant: verify_wheel.py -> domains_ok=8/8, evidence_ok=8/8, schema_valid=true, bus_size_ok=true, WHEEL_OK rc=0. Aucune action.
+- **2026-09-18 (cron, Doctor 11) - Onzieme re-verification work 35.** uc.db (10_Tech_OS/kernel/uc.db, table work): work 35 status=done, attempts=1, updated_at=2026-09-03 02:28:08. Mandat "pending depuis 09-03" definitivement perime (immunite P1 anti-rejeu, aucun re-claim). Preuve environnement re-run independant: verify_wheel.py -> domains_ok=8/8, evidence_ok=8/8, schema_valid=true, bus_size_ok=true, WHEEL_OK rc=0; state.json updated 2026-09-04T06:08:21, 8 LD + evidence_paths. File pending: #160 seulement (hors mandat). Aucune action.
