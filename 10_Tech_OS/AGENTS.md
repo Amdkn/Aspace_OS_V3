@@ -218,3 +218,17 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Exécution complète de la suite de tests (`pytest 10_Tech_OS/kernel/` -> 14/14 tests OK).
 - **[13e DOCTEUR] Mise à jour de la Gouvernance MCP Linear :**
   - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des issues "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
+
+## D4 — 2026-09-12 — Audit & Validation Souveraine Kernel Core (13e Docteur & Compagnons)
+
+- **[YAZ] Audit & Intégrité Runtime / uc.db :**
+  - Exécution de `python3 10_Tech_OS/kernel/uc.py init` et validation de l'intégrité de la base SQLite `uc.db` (`PRAGMA integrity_check` -> `ok`).
+  - Passage au vert de la suite de tests unitaires du noyau `pytest 10_Tech_OS/kernel/` (18/18 tests passés).
+- **[GRAHAM] Synchronisation Engram, Ontologies & OKF :**
+  - Vérification du Phrase Book Engram `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (1 385 entrées actives) et de sa parfaite synchronisation avec `70_Onthologies/` et `40_Memory_Wiki_OKF/`.
+  - Exécution avec succès de `10_Tech_OS/kernel/engram/test_engram.py` (6/6 tests OK).
+- **[RYAN] Compilation & Definition of Done :**
+  - Compilation réussie avec `py_compile` de l'ensemble des modules Python sous `10_Tech_OS/kernel/` (0 erreur).
+  - Validation intégrale de la Definition of Done.
+- **[13e DOCTEUR] Mise à jour Gouvernance MCP Linear :**
+  - Journalisation de la mise à jour de gouvernance MCP Linear pour l'équipe Kernel Core (KFR-1, KFR-2, KFR-3) via `scripts/log_kernel_mcp_update.py` dans la table `event` de `uc.db`.
