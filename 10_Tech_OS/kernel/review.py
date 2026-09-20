@@ -14,18 +14,19 @@ constate pas, il **exige des preuves**. Un critère sans attestation vaut faux.
 from __future__ import annotations
 import argparse, json, os, re, shlex, subprocess, sys, sqlite3
 
-try:
-    sys.path.insert(0, os.path.expanduser("~/agentpulse"))
-    sys.path.insert(0, os.path.expanduser("~"))
-    from agentpulse.sdk import instrument
+if os.environ.get("AGENTPULSE_ENABLED") == "1":
+    try:
+        sys.path.insert(0, os.path.expanduser("~/agentpulse"))
+        sys.path.insert(0, os.path.expanduser("~"))
+        from agentpulse.sdk import instrument
 
-    instrument(
-        task_type="review-attest",
-        prompt_version=1,
-        db_name="kernel-review",
-    )
-except (ImportError, ModuleNotFoundError):
-    pass
+        instrument(
+            task_type="review-attest",
+            prompt_version=1,
+            db_name="kernel-review",
+        )
+    except (ImportError, ModuleNotFoundError, Exception):
+        pass
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UC   = os.path.join(HERE, "uc.py")
