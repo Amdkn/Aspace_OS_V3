@@ -6,9 +6,99 @@ Expose:
 - Sélecteur de capacités de harness (Harness Capability Selector via get_harnesses)
 """
 import argparse, hashlib, json, os, sqlite3, sys, uuid
+from enum import Enum
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))
+
+class GoalOutcome(str, Enum):
+    DONE = "DONE"
+    WAIT = "WAIT"
+    ABANDON = "ABANDON"
+    NEXT_ROUND = "NEXT_ROUND"
+
+class WorkGraph:
+    """
+    WorkGraph V2 orchestration semantics.
+    Implements Goal -> Round -> Work hierarchy and Goal Review,
+    preserving uc.db identities and FK integrity.
+    """
+    def __init__(self, db_path: str):
+        self.db_path = db_path
+
+    def cx(self):
+        c = sqlite3.connect(self.db_path, isolation_level=None, timeout=10)
+        c.row_factory = sqlite3.Row
+        c.execute("PRAGMA foreign_keys=ON")
+        return c
+
+    def create_goal(self, layer: str, title: str) -> int:
+        """Create a new Goal (represented as a root work item)."""
+        c = self.cx()
+        try:
+            cur = c.execute("INSERT INTO work(layer, title) VALUES(?, ?)", (layer, title))
+            return cur.lastrowid
+        finally:
+            c.close()
+
+    def create_round(self, goal_id: int) -> int:
+        """Create a new Round for a given Goal."""
+        c = self.cx()
+        try:
+            row = c.execute("SELECT layer FROM work WHERE id=?", (goal_id,)).fetchone()
+            if not row:
+                raise ValueError(f"Goal {goal_id} not found")
+            cur = c.execute("INSERT INTO work(layer, title, parent_id) VALUES(?, ?, ?)",
+                            (row['layer'], f"Round for Goal {goal_id}", goal_id))
+            return cur.lastrowid
+        finally:
+            c.close()
+
+    def create_work(self, round_id: int, title: str) -> int:
+        """Create a new Work item (task) for a given Round."""
+        c = self.cx()
+        try:
+            row = c.execute("SELECT layer FROM work WHERE id=?", (round_id,)).fetchone()
+            if not row:
+                raise ValueError(f"Round {round_id} not found")
+            cur = c.execute("INSERT INTO work(layer, title, parent_id) VALUES(?, ?, ?)",
+                            (row['layer'], title, round_id))
+            return cur.lastrowid
+        finally:
+            c.close()
+
+    def review_goal(self, goal_id: int, round_id: int, outcome: GoalOutcome, notes: str = "") -> int:
+        """
+        Record an independent Goal Review.
+        Task completion is just evidence; only this explicit review sets the terminal outcome.
+        """
+        c = self.cx()
+        try:
+            # Verify FK logic
+            goal = c.execute("SELECT id FROM work WHERE id=?", (goal_id,)).fetchone()
+            if not goal:
+                raise ValueError(f"Goal {goal_id} not found")
+            r = c.execute("SELECT id, parent_id FROM work WHERE id=?", (round_id,)).fetchone()
+            if not r:
+                raise ValueError(f"Round {round_id} not found")
+            if r['parent_id'] != goal_id:
+                raise ValueError(f"Round {round_id} is not a child of Goal {goal_id}")
+
+            payload = json.dumps({
+                "round_id": round_id,
+                "outcome": outcome.value,
+                "notes": notes
+            })
+            cur = c.execute(
+                "INSERT INTO event(work_id, harness, kind, payload) VALUES(?, 'workgraph', 'goal_review', ?)",
+                (goal_id, payload)
+            )
+            return cur.lastrowid
+        finally:
+            c.close()
+
+
+
 
 def db(path=None):
     target_db = path or DB
