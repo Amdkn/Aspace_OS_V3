@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Fix import path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from dc_recovery_daemon import get_clean_env, is_dc_running
+from dc_recovery_daemon import get_clean_env, is_dc_running, get_dc_status
 
 class TestDCRecovery(unittest.TestCase):
     def setUp(self):
@@ -40,6 +40,14 @@ class TestDCRecovery(unittest.TestCase):
         """Vérifie que la détection d'instance saine ne crashe pas."""
         res = is_dc_running()
         self.assertIsInstance(res, bool)
+
+    def test_get_dc_status(self):
+        """Vérifie la structure du statut vivant."""
+        status = get_dc_status()
+        self.assertIn("running", status)
+        self.assertIn("sentinel_status", status)
+        self.assertIn("details", status)
+        self.assertIsInstance(status["running"], bool)
 
 if __name__ == '__main__':
     unittest.main()
