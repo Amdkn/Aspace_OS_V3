@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+import json
+import os
+import sqlite3
+import tempfile
+import unittest
+import subprocess
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+UC_PATH = os.path.join(HERE, "uc.py")
+WORKGRAPH_PATH = os.path.join(HERE, "uc_workgraph.py")
+
+class TestWorkgraph(unittest.TestCase):
+    def setUp(self):
+        self.tmp_dir = tempfile.TemporaryDirectory()
+        self.db_path = os.path.join(self.tmp_dir.name, "test_uc.db")
+        self.env = os.environ.copy()
+        self.env["ASPACE_DB"] = self.db_path
+
+        cmd = [sys.executable, UC_PATH, "init"]
+        subprocess.run(cmd, env=self.env, check=True, capture_output=True)
+
+    def tearDown(self):
+        self.tmp_dir.cleanup()
+
+    def add_event(self, harness, payload):
+        conn = sqlite3.connect(self.db_path)
+        conn.execute(
+            "INSERT INTO event(work_id, harness, kind, payload) VALUES(NULL, ?, 'capability', ?)",
+            (harness, json.dumps(payload))
+        )
+        conn.commit()
+        conn.close()
+
+    def run_selector(self, caps, min_ev):
+        cmd = [sys.executable, WORKGRAPH_PATH]
+        for cap in caps:
+            cmd.extend(["--require-capability", cap])
+        cmd.extend(["--min-evidence-level", str(min_ev)])
+        p = subprocess.run(cmd, env=self.env, capture_output=True, text=True)
+        self.assertEqual(p.returncode, 0)
+        return json.loads(p.stdout)
+
+    def test_selector(self):
+        self.add_event("h1", {"capability": "C1", "status": "pass", "evidence_level": 3})
+        self.add_event("h2", {"capability": "C1", "status": "pass", "evidence_level": 1})
+        self.add_event("h3", {"capability": "C1", "status": "fail", "evidence_level": 5})
+
+        # Test capability C1 with min evidence 1
+        res = self.run_selector(["C1"], 1)
+        self.assertEqual(res, ["h1", "h2"])
+
+        # Test capability C1 with min evidence 2
+        res = self.run_selector(["C1"], 2)
+        self.assertEqual(res, ["h1"])
+
+        # Test capability C2
+        res = self.run_selector(["C2"], 1)
+        self.assertEqual(res, [])
+
+        # Update h2 to fail
+        self.add_event("h2", {"capability": "C1", "status": "fail", "evidence_level": 1})
+        res = self.run_selector(["C1"], 1)
+        self.assertEqual(res, ["h1"])
+
+    def test_workgraph_orchestration(self):
+        from uc_workgraph import WorkGraph, GoalOutcome
+
+        wg = WorkGraph(self.db_path)
+
+        # Create Goal
+        goal_id = wg.create_goal("L2", "My Test Goal")
+        self.assertTrue(goal_id > 0)
+
+        # Create Round
+        round_id = wg.create_round(goal_id)
+        self.assertTrue(round_id > goal_id)
+
+        # Create Work (Task)
+        task_id = wg.create_work(round_id, "Task 1")
+        self.assertTrue(task_id > round_id)
+
+        # Verify FK validation for review
+        with self.assertRaises(ValueError):
+            wg.review_goal(999, round_id, GoalOutcome.DONE)
+
+        with self.assertRaises(ValueError):
+            wg.review_goal(goal_id, 999, GoalOutcome.DONE)
+
+        # Verify parent check
+        other_goal = wg.create_goal("L2", "Other Goal")
+        with self.assertRaises(ValueError):
+            wg.review_goal(other_goal, round_id, GoalOutcome.DONE)
+
+        # Valid review
+        event_id = wg.review_goal(goal_id, round_id, GoalOutcome.NEXT_ROUND, "Need more info")
+        self.assertTrue(event_id > 0)
+
+        # Fetch event directly to verify payload
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        ev = conn.execute("SELECT payload FROM event WHERE id=?", (event_id,)).fetchone()
+        payload = json.loads(ev["payload"])
+        self.assertEqual(payload["outcome"], "NEXT_ROUND")
+        self.assertEqual(payload["round_id"], round_id)
+        self.assertEqual(payload["notes"], "Need more info")
+        conn.close()
+
+if __name__ == "__main__":
+    unittest.main()
