@@ -201,3 +201,17 @@ sans `User-Agent` avait rendu 403 sur 23 registres Canvas UI, ce qui se lisait c
 - **Le blocage structurel.** Le gateway vit en SessionId 1 ; la session qui detecte
   la panne ne peut pas la reparer. Tant que c'est vrai, chaque chute coute
   l'attention de l'humain.
+
+### 2026-09-19 · 10:00 — LLMTrim/proxy outage kills Desktop Commander recovery channel
+
+**Symptome.** Remote children failed on external fetch while inheriting dead proxy; proxy-free supervisor restored service.
+
+**Cause.** Desktop Commander was inheriting a dead proxy (LLMTrim), causing it to fail when it was needed most as a recovery channel.
+
+**Garde-fou pose.** Un lanceur de récupération dédié (`10_Tech_OS/kernel/dc_recovery_daemon.py`) qui purge explicitement `HTTP_PROXY`, `HTTPS_PROXY` et `ALL_PROXY` avant de démarrer `supervisor.mjs`.
+
+**Vu se declencher.** Le script testé unitairement prouve que l'environnement est nettoyé avant l'exécution du processus enfant.
+
+**Lecon.** *Un canal de récupération ne doit jamais hériter de l'infrastructure réseau qu'il est censé contourner.*
+
+**Clos** — les quatre conditions §3 sont remplies.
