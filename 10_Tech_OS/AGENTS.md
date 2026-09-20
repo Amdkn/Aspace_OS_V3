@@ -25,6 +25,14 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 
 ## D4 append-only — audits de vivance
 
+- **2026-09-20 15:38 EDT — Stabilisation Antifragile, Idempotente et Durable de Desktop Commander :**
+  - **Diagnostic médico-légal :** Éradication de la boucle infernale de refresh token reuse (`Invalid Refresh Token: Already Used`) causée par 3 tâches planifiées concurrentes (`ASpace DC Health`, `ASpace DC Maintenance`, `ASpace DC Migration`) qui exécutaient des `taskkill /F` aveugles et relançaient des processus concurrents.
+  - **Idempotence stricte (Loi L0) :** Mutex Windows global unique (`Global\ASpace_DC_Bedrock_Mutex`) dans `dc_bedrock_sentinel.py`. Tout lancement additionnel détecte l'instance existante saine et quitte avec le code 0 sans doublement ni perturbation.
+  - **Antifragilité & Auto-Guérison :** Sauvegarde atomique continue de `device.json` vers `device.json.verified` et `device.json.stable_backup`. Restauration automatique au démarrage en cas de corruption.
+  - **Zéro Angle Mort d'Autorisation :** En cas d'invalidation de token nécessitant une validation de code, le superviseur extrait automatiquement le code par regex, ouvre le navigateur sur l'URL de vérification, copie le code dans le presse-papier, et déclenche une notification vocale immédiate via `edge-tts` (voix `fr-FR-DeniseNeural`) sans jamais masquer l'exigence dans l'ombre.
+  - **Persistance & Unicité :** Suppression définitive des 3 tâches planifiées parasites. Maintien d'une seule tâche canonique `ASpace Desktop Commander` pointant vers `direct-runner.ps1` et `dc_bedrock_sentinel.py`. Dépollution totale des proxies (`HTTP_PROXY`, `LLMTRIM_PROXY`, etc.).
+  - **Preuve opérationnelle :** Statut vivant `online`, PID actif, channel subscribed, tunnel Supabase cloud établi (`192.168.12.134:52306 -> 172.64.149.246:443 Established`), smoke test MCP stdio 3/3 pings OK (< 5s), tests unitaires `test_dc_recovery.py` 3/3 PASS, suite unitaire kernel 11/11 PASS.
+
 - **2026-09-18 — Meta-Harness Capability Fabric :** Orca est l'ADE hôte par défaut; Herdr fournit la persistance runtime, Multica le management du travail, Buzz le plan collaboration/event/identity. Ces surfaces peuvent décrire simultanément un même worker. `uc.py/uc.db` reste la source canonique de work_id, état, preuve, lease et gate; Rick/S1 sélectionne les capacités au lieu de figer les harnesses en L0/L1/L2.
 
 - **2026-08-30 — Preuve de vivance.** Un port qui écoute, un roster peuplé, une base avec des items ou un gardien WSL ne prouvent pas qu'A'Space agit. Toute affirmation « V3 est vivant » doit montrer un cycle continu et horodaté `ruban complet → claim → prédiction antérieure au started_at → construction réelle → revue indépendante → scoring → descendance`, après démarrage à froid et avec reprise d'un worker tué. Tant que ce certificat n'existe pas, qualifier séparément les primitives disponibles, l'infrastructure joignable et l'agence autonome.
