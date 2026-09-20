@@ -170,7 +170,43 @@ def get_harnesses(db_path, required_caps, min_evidence):
 
     return sorted(result)
 
+def compile_intent(db_path, work_id, ipbd_path, source_sha256, alignment):
+    try:
+        with open(ipbd_path, 'r', encoding='utf-8') as f:
+            ipbd_data = json.load(f)
+    except Exception as e:
+        print(f"Error reading IPBD file: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    intent_ir = {
+        "intention": ipbd_data.get("intention", ""),
+        "problematiques": ipbd_data.get("problematiques", []),
+        "besoins": ipbd_data.get("besoins", []),
+        "desirs": ipbd_data.get("desirs", []),
+        "alignment": alignment,
+        "provenance": {
+            "source_sha256": source_sha256
+        }
+    }
+
+    intent_json = json.dumps(intent_ir, sort_keys=True, indent=2, ensure_ascii=False)
+
+    if work_id is not None:
+        c = sqlite3.connect(db_path, isolation_level=None, timeout=10)
+        c.execute(
+            "INSERT INTO event(work_id, harness, kind, payload) VALUES(?, ?, ?, ?)",
+            (work_id, "uc_workgraph", "evidence", intent_json)
+        )
+
+    return intent_json
+
 def intent(a):
+    if getattr(a, 'ipbd', None):
+        db_path = os.environ.get("ASPACE_DB", DB)
+        res = compile_intent(db_path, a.work_id, a.ipbd, a.source_sha256, getattr(a, 'alignment', ''))
+        print(res)
+        return
+
     c = db()
     k = a.key or "intent-" + uuid.uuid4().hex[:16]
     ir = None
@@ -317,8 +353,10 @@ def build_parser():
     S = P.add_subparsers(dest="cmd", required=False)
 
     p = S.add_parser("intent")
-    p.add_argument("--title", required=True); p.add_argument("--key"); p.add_argument("--layer")
+    p.add_argument("--title"); p.add_argument("--key"); p.add_argument("--layer")
     p.add_argument("--status", default="draft"); p.add_argument("--source"); p.add_argument("--ir")
+    p.add_argument("--ipbd"); p.add_argument("--source-sha256"); p.add_argument("--alignment", default="")
+    p.add_argument("--work-id", type=int)
     p.set_defaults(f=intent)
 
     p = S.add_parser("link")

@@ -109,6 +109,52 @@ class TestWorkgraph(unittest.TestCase):
         self.assertEqual(payload["notes"], "Need more info")
         conn.close()
 
+    def test_intent_compilation(self):
+        # Create dummy IPBD JSON
+        ipbd_path = os.path.join(self.tmp_dir.name, "ipbd.json")
+        ipbd_content = {
+            "intention": "Préserver la souveraineté Amadeus",
+            "problematiques": ["P1"],
+            "besoins": ["B1"],
+            "desirs": ["D1"]
+        }
+        with open(ipbd_path, 'w', encoding='utf-8') as f:
+            json.dump(ipbd_content, f, ensure_ascii=False)
+
+        # First we need a work_id to attach evidence to
+        conn = sqlite3.connect(self.db_path)
+        conn.execute("INSERT INTO work(layer, title, status) VALUES('L0', 'test', 'pending')")
+        work_id = conn.execute("SELECT last_insert_rowid()").fetchone()[0]
+        conn.commit()
+        conn.close()
+
+        # Run intent compilation
+        cmd = [
+            sys.executable, WORKGRAPH_PATH, "intent",
+            "--ipbd", ipbd_path,
+            "--source-sha256", "abcd123",
+            "--alignment", "L0",
+            "--work-id", str(work_id)
+        ]
+        p = subprocess.run(cmd, env=self.env, capture_output=True, text=True)
+        self.assertEqual(p.returncode, 0)
+
+        # Output should be deterministic JSON
+        out_data = json.loads(p.stdout)
+        self.assertEqual(out_data["intention"], "Préserver la souveraineté Amadeus")
+        self.assertEqual(out_data["provenance"]["source_sha256"], "abcd123")
+        self.assertEqual(out_data["alignment"], "L0")
+
+        # Verify insertion into database
+        conn = sqlite3.connect(self.db_path)
+        conn.row_factory = sqlite3.Row
+        ev = conn.execute("SELECT * FROM event WHERE work_id=? AND kind='evidence'", (work_id,)).fetchone()
+        conn.close()
+
+        self.assertIsNotNone(ev)
+        ev_payload = json.loads(ev['payload'])
+        self.assertEqual(ev_payload["intention"], "Préserver la souveraineté Amadeus")
+
 if __name__ == "__main__":
     unittest.main()
 
