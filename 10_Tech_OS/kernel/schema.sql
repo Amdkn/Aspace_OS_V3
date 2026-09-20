@@ -24,7 +24,8 @@ CREATE TABLE IF NOT EXISTS work (
   layer       TEXT    NOT NULL CHECK (layer IN ('A0','L0','L1','L2')),
   title       TEXT    NOT NULL,
   status      TEXT    NOT NULL DEFAULT 'pending'
-              CHECK (status IN ('pending','claimed','review','done','failed','blocked')),
+              CHECK (status IN ('pending','claimed','review','done','failed','blocked','waiting')),
+  wake_at     TEXT,
   priority    INTEGER NOT NULL DEFAULT 0,
   parent_id   INTEGER REFERENCES work(id),   -- descendance : qui a engendre qui
   attempts    INTEGER NOT NULL DEFAULT 0,

@@ -147,6 +147,17 @@ def cmd_beat(a):
               (f"+{a.lease} seconds", a.work, a.harness))
     out({"ok": c.total_changes > 0, "work_id": a.work})
 
+def cmd_wait(a):
+    c = cx()
+    try:
+        c.execute("UPDATE work SET status='waiting', wake_at=datetime('now',?) WHERE id=?",
+                  (f"+{a.seconds} seconds", a.work))
+        c.execute("DELETE FROM claim WHERE work_id=?", (a.work,))
+        log(c, a.work, None, "waiting", {"wake_at_offset": a.seconds})
+        out({"ok": True, "work_id": a.work, "status": "waiting"})
+    except Exception as e:
+        out({"ok": False, "err": str(e)}); sys.exit(3)
+
 
 def _move(a, target):
     c = cx()
@@ -196,7 +207,15 @@ def cmd_reap(a):
         c.execute("UPDATE work SET status='pending' WHERE id=? AND status='claimed'", (wid,))
         c.execute("DELETE FROM claim WHERE work_id=?", (wid,))
         log(c, wid, None, "reap", None)
-    out({"ok": True, "reclames": dead})
+
+    # Reprise des taches en attente (wake_at expire)
+    woken = [r["id"] for r in c.execute(
+        "SELECT id FROM work WHERE status='waiting' AND wake_at < datetime('now')")]
+    for wid in woken:
+        c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
+        log(c, wid, None, "wake", None)
+
+    out({"ok": True, "reclames": dead, "woken": woken})
 
 
 def cmd_status(a):
@@ -225,6 +244,8 @@ p.set_defaults(f=cmd_predict)
 p = S.add_parser("beat"); p.add_argument("--work", type=int, required=True)
 p.add_argument("--harness", required=True); p.add_argument("--lease", type=int, default=900)
 p.set_defaults(f=cmd_beat)
+p = S.add_parser("wait"); p.add_argument("--work", type=int, required=True)
+p.add_argument("--seconds", type=int, default=60); p.set_defaults(f=cmd_wait)
 for name, fn in (("review", cmd_review), ("done", cmd_done)):
     p = S.add_parser(name); p.add_argument("--work", type=int, required=True); p.set_defaults(f=fn)
 p = S.add_parser("fail"); p.add_argument("--work", type=int, required=True)
