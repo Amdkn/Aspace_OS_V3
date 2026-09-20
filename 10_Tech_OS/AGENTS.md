@@ -21,9 +21,11 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 
 - Root: [`/AGENTS.md`](../../AGENTS.md)
 - Memory: [`/00_Amadeus/30_MEMORY_CORE/`](../../00_Amadeus/30_MEMORY_CORE/) — **archival candidate**.
-- OpenWiki: `~/.openwiki/wiki/`.
+- OpenWiki/OKF durable memory: `C:\Users\amado\ASpace_OS_V3\40_Memory_Wiki_OKF\`. Le clone `openwiki/` reste un outil, pas la mémoire canonique.
 
 ## D4 append-only — audits de vivance
+
+- **2026-09-18 — Meta-Harness Capability Fabric :** Orca est l'ADE hôte par défaut; Herdr fournit la persistance runtime, Multica le management du travail, Buzz le plan collaboration/event/identity. Ces surfaces peuvent décrire simultanément un même worker. `uc.py/uc.db` reste la source canonique de work_id, état, preuve, lease et gate; Rick/S1 sélectionne les capacités au lieu de figer les harnesses en L0/L1/L2.
 
 - **2026-08-30 — Preuve de vivance.** Un port qui écoute, un roster peuplé, une base avec des items ou un gardien WSL ne prouvent pas qu'A'Space agit. Toute affirmation « V3 est vivant » doit montrer un cycle continu et horodaté `ruban complet → claim → prédiction antérieure au started_at → construction réelle → revue indépendante → scoring → descendance`, après démarrage à froid et avec reprise d'un worker tué. Tant que ce certificat n'existe pas, qualifier séparément les primitives disponibles, l'infrastructure joignable et l'agence autonome.
 
@@ -54,6 +56,21 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
     - Transversal (Rick) : `companion_donna_dlq` (Dead Letter Queue & qualification des causes d'échecs).
 - Manifeste machine-readable : `10_Tech_OS/subagents/subagents_tech_os_roster.json`.
 - Concept certifié OKF v0.2 : `40_Memory_Wiki_OKF/architecture/roster_subagents_tech_os.md`.
+
+## D4 — 2026-09-19 23:55 EDT — Intégration PR #37 (KER-9 / work_id 165) & Sélecteur de Capacités de Harness
+
+- **Mandat Exécutif Hermes ↔ Antigravity (KER-15) :** Traitement de la PR #37 (`feat(kernel): implement minimal harness capability selector in uc_workgraph.py`) via la session Antigravity persistante unique (`V3 Analysis And Audit`).
+- **Revue Indépendante & Résolution de Conflit sur Branche PR :**
+  - Conflit identifié : PR #37 écrasait `uc_workgraph.py` sans connaître les sous-commandes WorkGraph v2 créées sur `main`.
+  - Résolution chirurgicale sur la branche `feat/harness-capability-selector-7681792783926570114` (commit `aac4d454`) : unification de `get_harnesses` et `--require-capability` / `--min-evidence-level` / sous-commande `select` avec la totalité des commandes WorkGraph v2 (`intent`, `link`, `depend`, `bind`, `artifact`, `gate`, `goal`, `round`, `round-link`, `goal-review`, `wait`, `capability`, `graph`).
+- **Vérification Déterministe :** Validation unitaire `test_uc_workgraph.py` (1 test OK en 17.3s), tests CLI de non-régression (`select --help`, `goal --help`).
+- **Merge & Push :** Merge sans avance rapide dans `main` (commit SHA `694367aabb4dee188c20fe451349feba5616eefe`), push validé sur `origin/main`.
+- **Ancrage Souverain `uc.db` & Projection Linear :**
+  - Transition de `work_id: 165` (KER-9) respectant la loi de prédiction et la loi de détachement : `prediction` enregistrée -> `review` -> `done`.
+  - Clôture du bail `session_binding` Jules (`7681792783926570114`).
+  - Enregistrement de `artifact_id: 2` (git-commit) et `gate_decision_id: 2` (PASS).
+  - Confirmation d'évidence postée sur Linear KER-9 et statut passé à **Done**.
+  - Action delta report journalisé en commentaire sur Linear issue KER-15.
 
 ## D4 — 2026-09-07 — Intégration Vague 2 Innovations (HoH, Co-Évolution, Dynamic Ontology, RSI)
 
@@ -218,3 +235,49 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Exécution complète de la suite de tests (`pytest 10_Tech_OS/kernel/` -> 14/14 tests OK).
 - **[13e DOCTEUR] Mise à jour de la Gouvernance MCP Linear :**
   - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des issues "Kernel Core" (KFR-1, KFR-2, KFR-3) dans la table `event` de `uc.db`.
+
+## D4 — 2026-09-11 — Interfaçage Toggle Folders Style Antigravity & Moteur d'Exécution CPython Unifié (Agent OS Port 5555)
+
+- **[ANTIGRAVITY & AMADOU KONE] Arborescence Pliable & Explorateur .py Unifié :**
+  - Refonte complète de `00_Amadeus/10_Observers/agent-os/desktop/src/apps/TechOSWorkflows/index.tsx`.
+  - Intégration de l'arborescence en dossiers accordéons rétractables (`expandedFolders: Record<string, boolean>`) répliquant l'ergonomie du sidebar gauche d'Antigravity (icônes chevrons, dossiers sombres ambre, typographie monospace épurée).
+  - Classification automatique des 297 scripts réels du workspace répertoriés dans `python_scripts_catalog.json` :
+    - ⚡ **Générateurs / Moteurs d'Action Réelle (`isGenerator: true`)** : Badge émeraude.
+    - 🛡️ **Vérificateurs Passifs (`isVerifier: true`)** : Badge ambre.
+    - ⚙️ **Scripts Opérationnels Système** : Badge cyan.
+- **[TECH OS BACKEND] API d'Exécution Asynchrone CPython & Protection Anti-Traversal :**
+  - Extension de `POST /api/tech-os/execute` dans `tools/tech-os-api.ts` pour supporter le streaming non-bloquant et l'exécution de tout script validé sous `ASpace_OS_V3/`.
+  - Résolution des timeouts et tests de validation réussis avec code retour `RC = 0` (`controleur.py`, `verify_beth.py`, `pre_tool_guard.py`).
+  - Validation TypeScript `tsc --noEmit` à 0 erreur.
+
+## D4 — 2026-09-11 — Heartbeat Daemon Autonome (Cycle 15 Min - Itération 4)
+
+- **[PULL REQUESTS JULES FUSIONNÉES] :**
+  - **PR #5 (`The-OMK-Office-V1-JaaS-Landing-Site-Web`) :** Optimisations A11y, packaging et Largest Contentful Paint (LCP) fusionnées sur `main`.
+  - **PR #3 (`Agent-OS-Desktop`) :** Audit d'accessibilité shell et durcissement TypeScript fusionnés sur `main`.
+- **[MAINTENANCE DU PLANCHER JULES >= 3] :**
+  - Lancement immédiat de 3 nouvelles sessions concurrentes autonomes (`AUTO_CREATE_PR`, `requirePlanApproval: false`) :
+    1. `sessions/12048127233329127156` sur `Amdkn/JaaS-V1-Mobile-OS` (PRD-010 : UI/UX, A11y & Performance).
+    2. `sessions/6561232945132601891` sur `Amdkn/The-OMK-Office-V1-JaaS-Landing-Site-Web` (PRD-011 : Lead Conversion & Interactive Demo).
+    3. `sessions/8763102326381256725` sur `Amdkn/Agent-OS-Desktop` (PRD-012 : Telemetry Widgets & Polish UI).
+- **[KERNEL & OBSERVABILITÉ UC.DB] :**
+  - Battement du contrôleur exécuté sans friction : `0 bail expiré, 0 relance nécessaire`.
+  - Système 100% stable et opérationnel sans aucune consommation de quota direct.
+
+## D4 — 2026-09-12 — Déploiement du Hook Anti-Dérive & Verrouillage Anti-Passivité F6
+
+- **[HOOKS & SÉCURITÉ 5D] hook_anti_drift.py :**
+  - Implémentation de `10_Tech_OS/kernel/hooks/hook_anti_drift.py` pour éliminer définitivement la faute F6 (bascule en anglais, refus génériques "As an AI...", fuite dans l'attente passive d'ordres).
+  - Intégration dans le banc de test unitaire `10_Tech_OS/kernel/hooks/test_hooks.py` (`test_hook_anti_drift`).
+  - Validation complète exécutée via pytest : 5/5 tests passés avec succès en 0.34s.
+
+## D4 — 2026-09-12 — Interconnexion Déterministe d'Engram O(1) au Hook PreInvocation Natif Antigravity
+
+- **[ENGRAM NVME & HOOK PRE-INVOCATION] :**
+  - Enrichissement de la lookup table `10_Tech_OS/kernel/engram/phrase_book_aspace.json` (1 390 entrées) avec les ancres fondamentales A0 (`A0_SOVEREIGN_POSTURE`, `ASTRA_EXECUTION_MANDATE`, `GOLDRATT_BOTTLENECK_LAW`, `LIFE_OS_AUTONOMOUS_HEXAD`, `ENGRAM_ZERO_TOKEN_NVME`).
+  - Intégration directe du résolveur `EngramPhraseBook` dans le hook natif `C:\Users\amado\.gemini\config\hooks\pre_invocation_sovereign_guard.py`.
+  - Résolution déterministe O(1) par memory mapping (`mmap`) sans consommation de token LLM.
+  - Injection automatique des ancres d'intention et des règles d'alignement à chaque tour modèle via message éphémère.
+  - Test unitaire d'exécution validé avec `returncode: 0`.
+
+
