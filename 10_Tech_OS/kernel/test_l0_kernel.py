@@ -24,6 +24,7 @@ class TestL0Kernel(unittest.TestCase):
         self.db_path = os.path.join(self.tmp_dir.name, "test_uc.db")
         self.env = os.environ.copy()
         self.env["ASPACE_DB"] = self.db_path
+        self.env["PYTHONPATH"] = HERE
 
     def tearDown(self):
         self.tmp_dir.cleanup()
