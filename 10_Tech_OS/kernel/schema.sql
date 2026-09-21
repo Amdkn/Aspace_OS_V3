@@ -142,3 +142,42 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability NOT IN ('Spec') THEN RAISE(ABORT, 'loi_life_core_capability: Amy is restricted to Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability NOT IN ('Build') THEN RAISE(ABORT, 'loi_life_core_capability: Rory is restricted to Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_capability: River is restricted to Spawn/Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_capability: Doctor11 is restricted to Review/detach')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0 layer')
+  FROM work
+  WHERE work.id = NEW.work_id AND work.layer = 'L0' AND NEW.harness IN ('Amy', 'Rory', 'River');
+END;
