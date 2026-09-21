@@ -142,3 +142,46 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== LIFE CORE CONTRACTS (KER-28)
+-- Contrats de capabilites stricts pour les compagnons de Life Core.
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  id         INTEGER PRIMARY KEY,
+  harness    TEXT NOT NULL,
+  capability TEXT NOT NULL,
+  UNIQUE(harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id         INTEGER PRIMARY KEY,
+  harness    TEXT NOT NULL,
+  layer      TEXT NOT NULL,
+  UNIQUE(harness, layer)
+);
+
+-- Loi des capabilites Life Core : role => responsabilites strictes
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability != 'Spec' THEN
+      RAISE(ABORT, 'loi_life_core_capability: Amy can only hold Spec capability')
+    WHEN NEW.harness = 'Rory' AND NEW.capability != 'Build' THEN
+      RAISE(ABORT, 'loi_life_core_capability: Rory can only hold Build capability')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN
+      RAISE(ABORT, 'loi_life_core_capability: River can only hold Spawn or Knowledge capability')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN
+      RAISE(ABORT, 'loi_life_core_capability: Doctor11 can only hold Review or detach capability')
+  END;
+END;
+
+-- Loi d'isolation Kernel : aucun compagnon Life Core ne se lie a L0
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11') AND NEW.layer = 'L0' THEN
+      RAISE(ABORT, 'loi_life_core_binding_capability: Life Core companions cannot bind to sovereign L0 layer')
+  END;
+END;
