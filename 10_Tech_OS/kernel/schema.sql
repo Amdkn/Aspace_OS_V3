@@ -142,3 +142,64 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== LIFE CORE CAPABILITIES (LPRD-001)
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness TEXT NOT NULL,
+  capability TEXT NOT NULL,
+  evidence_level TEXT,
+  status TEXT,
+  evidence_ref TEXT,
+  checked_at TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  harness TEXT NOT NULL,
+  layer TEXT NOT NULL,
+  bound_at TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, layer)
+);
+
+-- Life Core constraints:
+-- Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability != 'Spec' THEN RAISE(ABORT, 'loi_life_core_capability: Amy is restricted to Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability != 'Build' THEN RAISE(ABORT, 'loi_life_core_capability: Rory is restricted to Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_capability: River is restricted to Spawn/Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_capability: Doctor11 is restricted to Review/detach')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability_upd
+BEFORE UPDATE ON harness_capability
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability != 'Spec' THEN RAISE(ABORT, 'loi_life_core_capability: Amy is restricted to Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability != 'Build' THEN RAISE(ABORT, 'loi_life_core_capability: Rory is restricted to Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_capability: River is restricted to Spawn/Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_capability: Doctor11 is restricted to Review/detach')
+  END;
+END;
+
+-- Sovereign Kernel constraints:
+-- No companion owns sovereign Kernel state.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT CASE
+    WHEN NEW.layer = 'L0' AND NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability_upd
+BEFORE UPDATE ON session_binding
+BEGIN
+  SELECT CASE
+    WHEN NEW.layer = 'L0' AND NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0')
+  END;
+END;

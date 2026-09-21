@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """mandat_docteur.py — sélection de mandat pour la boucle permanente des Docteurs.
 
@@ -33,7 +34,7 @@ KERNEL = Path(__file__).resolve().parent
 
 def reap():
     try:
-        subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"],
+        subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"], env=os.environ.copy(),
                        cwd=str(KERNEL), capture_output=True, timeout=60)
     except Exception as e:  # reap best-effort, ne bloque jamais la sélection
         print(f"reap warning: {e}", file=sys.stderr)
