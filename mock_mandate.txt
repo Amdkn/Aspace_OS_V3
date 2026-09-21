@@ -1,0 +1,8 @@
+Scope: Implement the bounded PRD compiler.
+Owner: Jules
+Dependencies: None
+Acceptance:
+- Parses raw text.
+- Outputs Markdown.
+Evidence: test_prd_compiler.py passes.
+Exclusive Files: 10_Tech_OS/kernel/prd_compiler.py
