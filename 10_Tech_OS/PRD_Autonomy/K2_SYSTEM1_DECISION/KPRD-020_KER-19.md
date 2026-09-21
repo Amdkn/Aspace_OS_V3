@@ -1,0 +1,1 @@
+Linear mandate: Integrate installed Cactus Needle 3 into IntelligenceRouter as native local capability interfaces. Prefer EXTRACT/ACT/EMBED and only expose DECIDE if evidence justifies it. Preserve fail-closed authority boundary. Add tests and runtime discovery. Completion requires green regression suite and evidence in Linear.
