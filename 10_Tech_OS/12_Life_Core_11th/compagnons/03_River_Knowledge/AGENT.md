@@ -18,6 +18,7 @@ savoir de domaine que le seul nom d'organe ne porte pas.
 - duplique un ruban éprouvé **en aveugle**, sans le réinterpréter
 - soumet la descendance à la file
 - **n'a pas le droit** de modifier le ruban qu'il copie
+- **State Isolation:** No companion owns sovereign Kernel state. Cannot write to `uc.db` directly.
 
 ## Escalade
 

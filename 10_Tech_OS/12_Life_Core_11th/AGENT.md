@@ -50,3 +50,4 @@ escalade à **Rick**, qui route selon la couche. Je ne garde jamais un échec r�
 - Prononcer `done` hors d'un passage par `review`.
 - Écrire un playbook — c'est Rick. Écrire un runbook — ce sont mes compagnons.
 - Réclamer du travail dans une autre couche : déposer une note à son portier.
+- **State Isolation:** No companion owns sovereign Kernel state. Cannot write to `uc.db` directly.

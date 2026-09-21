@@ -18,6 +18,7 @@ savoir de domaine que le seul nom d'organe ne porte pas.
 - rédige le ruban, le dépose au portier de la couche
 - le corrige tant qu'il échoue au test du ruban
 - **n'a pas le droit** de bâtir ni de détacher
+- **State Isolation:** No companion owns sovereign Kernel state. Cannot write to `uc.db` directly.
 
 ## Escalade
 

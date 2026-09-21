@@ -17,6 +17,7 @@ savoir de domaine que le seul nom d'organe ne porte pas.
 
 - `claim` → `predict` → bâtit → `attest` chaque critère → `review`
 - **n'a pas le droit** de prononcer `done`
+- **State Isolation:** No companion owns sovereign Kernel state. Cannot write to `uc.db` directly.
 
 ## Escalade
 
