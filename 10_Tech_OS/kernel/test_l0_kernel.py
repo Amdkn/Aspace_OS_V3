@@ -123,8 +123,8 @@ class TestL0Kernel(unittest.TestCase):
         self.run_cmd(UC_PATH, "init")
 
         # 2. Test when no pending work exists
-        p = self.run_cmd(MANDAT_PATH, "--layer", "L0")
-        self.assertEqual(p.returncode, 0)
+        p = self.run_cmd(MANDAT_PATH, "--layer", "L0", "--db", self.db_path)
+        self.assertEqual(p.returncode, 0, f"Error no pending: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertIsNone(res.get("candidat"))
 
