@@ -142,3 +142,32 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== LIFE CORE CAPABILITY CONTRACTS (KER-28)
+-- Restore durable Life Core operating sessions and capability contracts:
+-- Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+-- No companion owns sovereign Kernel state.
+CREATE TABLE IF NOT EXISTS harness_capability (
+    harness TEXT NOT NULL,
+    capability TEXT NOT NULL,
+    evidence_level TEXT NOT NULL,
+    status TEXT NOT NULL,
+    evidence_ref TEXT NOT NULL,
+    checked_at TEXT DEFAULT (datetime('now')),
+    PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+    work_id INTEGER,
+    session_key TEXT,
+    harness TEXT,
+    capability TEXT,
+    external_ref TEXT,
+    status TEXT
+);
+
+-- Inserting standard Life Core capabilities
+INSERT OR IGNORE INTO harness_capability(harness, capability, evidence_level, status, evidence_ref) VALUES('amy_social', 'SPEC', 'CANON', 'pass', 'KER-28');
+INSERT OR IGNORE INTO harness_capability(harness, capability, evidence_level, status, evidence_ref) VALUES('rory_health', 'BUILD', 'CANON', 'pass', 'KER-28');
+INSERT OR IGNORE INTO harness_capability(harness, capability, evidence_level, status, evidence_ref) VALUES('river_knowledge', 'SPAWN', 'CANON', 'pass', 'KER-28');
+INSERT OR IGNORE INTO harness_capability(harness, capability, evidence_level, status, evidence_ref) VALUES('doctor_11_life', 'REVIEW', 'CANON', 'pass', 'KER-28');
