@@ -142,3 +142,56 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== SESSION & CAPABILITY (KER-28, LPRD-001)
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Loi de capacite Life Core
+-- Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+FOR EACH ROW
+WHEN NEW.harness IN ('amy', 'rory', 'river', 'doctor11')
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'amy' AND NEW.capability != 'Spec' THEN RAISE(ABORT, 'Contract violation: amy can only have Spec capability')
+    WHEN NEW.harness = 'rory' AND NEW.capability != 'Build' THEN RAISE(ABORT, 'Contract violation: rory can only have Build capability')
+    WHEN NEW.harness = 'river' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'Contract violation: river can only have Spawn/Knowledge capability')
+    WHEN NEW.harness = 'doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'Contract violation: doctor11 can only have Review/detach capability')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+FOR EACH ROW
+WHEN NEW.harness IN ('amy', 'rory', 'river', 'doctor11')
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'amy' AND NEW.capability != 'Spec' THEN RAISE(ABORT, 'Contract violation: amy can only bind Spec capability')
+    WHEN NEW.harness = 'rory' AND NEW.capability != 'Build' THEN RAISE(ABORT, 'Contract violation: rory can only bind Build capability')
+    WHEN NEW.harness = 'river' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'Contract violation: river can only bind Spawn/Knowledge capability')
+    WHEN NEW.harness = 'doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'Contract violation: doctor11 can only bind Review/detach capability')
+    -- No companion owns sovereign Kernel state
+    WHEN (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0' THEN RAISE(ABORT, 'Kernel state violation: no companion owns sovereign Kernel state (L0)')
+  END;
+END;
