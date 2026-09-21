@@ -11,6 +11,7 @@ sys.path.insert(0, str(HERE))
 
 from marin_dataset_extractor import extract_okf_concepts, extract_rdf_triplets, compile_marin_dataset
 from morty_engine import MortyLocalEngine
+import json
 
 
 class TestMortyLocalEngine(unittest.TestCase):
@@ -95,6 +96,35 @@ class TestMortyLocalEngine(unittest.TestCase):
             except OSError:
                 pass
 
+    def test_07_exact_first_lookup(self):
+        ctx = {"intent": "amadou kone actionnaire visionnaire", "energy": 0.8, "urgency": 0.5}
+        res = self.engine.evaluate_decision(ctx)
+        self.assertEqual(res["engine"], "Engram-Exact")
+        self.assertEqual(res["action_recommended"], "ENGRAM_EXACT_MATCH")
+        self.assertIn("A0_SOVEREIGN_POSTURE", res["validated_concepts"])
+
+    def test_08_decision_evidence_store(self):
+        log_file = HERE / "decision_evidence.jsonl"
+        # Ensure clean state
+        if log_file.exists():
+            log_file.unlink()
+
+        ctx = {"intent": "build task", "energy": 0.8, "urgency": 0.5}
+        res = self.engine.evaluate_decision(ctx)
+
+        self.assertTrue(log_file.exists())
+
+        with open(log_file, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            self.assertEqual(len(lines), 1)
+            record = json.loads(lines[0])
+            self.assertIn("timestamp", record)
+            self.assertEqual(record["context"]["intent"], "build task")
+            self.assertEqual(record["decision"]["engine"], "MiniMind-64M-CPU")
+
+        # Cleanup
+        if log_file.exists():
+            log_file.unlink()
 
 if __name__ == "__main__":
     unittest.main()

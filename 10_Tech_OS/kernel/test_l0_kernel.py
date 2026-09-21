@@ -42,39 +42,39 @@ class TestL0Kernel(unittest.TestCase):
 
         # 2. Submit work
         p = self.run_cmd(UC_PATH, "submit", "--layer", "L0", "--title", "Test Task L0")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
         work_id = res["work_id"]
 
         # 3. Claim work
         p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
         self.assertEqual(res["work"]["id"], work_id)
 
         # 4. Predict work (Loi de prédiction préalable)
         p = self.run_cmd(UC_PATH, "predict", "--work", str(work_id), "--claim", "Succès attendu du test L0", "--confidence", "0.9")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
 
         # 5. Attest criterion
         p = self.run_cmd(UC_PATH, "attest", "--work", str(work_id), "--criterion", "1", "--ok", "1", "--harness", "test_harness")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
 
         # 6. Move to review (Loi de détachement)
         p = self.run_cmd(UC_PATH, "review", "--work", str(work_id))
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
 
         # 7. Mark done
         p = self.run_cmd(UC_PATH, "done", "--work", str(work_id))
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
 
@@ -95,20 +95,20 @@ class TestL0Kernel(unittest.TestCase):
 
         # 3. Run Donna DLQ
         p = self.run_cmd(DLQ_PATH, "run", "--seuil", "3")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertEqual(len(res["escalades"]), 1)
         self.assertEqual(res["escalades"][0]["work_id"], work_id)
 
         # 4. Rapport
         p = self.run_cmd(DLQ_PATH, "rapport")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertEqual(len(res["bureau_de_rick"]), 1)
 
         # 5. Cloture terminale Rick
         p = self.run_cmd(DLQ_PATH, "cloturer", "--work", str(work_id), "--motif", "Doublon - Cloture Rick L0")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
 
@@ -124,13 +124,13 @@ class TestL0Kernel(unittest.TestCase):
 
         # 2. Test when no pending work exists
         p = self.run_cmd(MANDAT_PATH, "--layer", "L0")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         res = json.loads(p.stdout)
         self.assertIsNone(res.get("candidat"))
 
         # 3. Submit a pending work item
         p = self.run_cmd(UC_PATH, "submit", "--layer", "L0", "--title", "Mandat Selection Test Work")
-        self.assertEqual(p.returncode, 0)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
         work_id = json.loads(p.stdout)["work_id"]
 
         # 4. Pick candidate and generate mandate file

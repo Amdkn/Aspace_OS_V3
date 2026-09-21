@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 import sys
 import re
+import datetime
 
 # Adding the directory to sys.path is needed if we run it as a script, but standard relative import also works if it's a package.
 # The tests run by adding the directory to sys.path, so we can just import from the local module.
@@ -20,6 +21,33 @@ except ImportError:
     # If run from outside without sys.path tricks
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from marin_dataset_extractor import extract_okf_concepts
+
+try:
+    from engram_loader import EngramPhraseBook
+except ImportError:
+    engram_dir = Path(__file__).resolve().parent.parent / "engram"
+    if str(engram_dir) not in sys.path:
+        sys.path.insert(0, str(engram_dir))
+    from engram_loader import EngramPhraseBook
+
+
+class DecisionEvidenceStore:
+    """Stockage append-only des arbitrages pour préserver la provenance."""
+
+    def __init__(self, log_path: Optional[Path] = None):
+        if log_path is None:
+            self.log_path = Path(__file__).resolve().parent / "decision_evidence.jsonl"
+        else:
+            self.log_path = log_path
+
+    def record(self, context: Dict[str, Any], decision: Dict[str, Any]) -> None:
+        entry = {
+            "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+            "context": context,
+            "decision": decision
+        }
+        with open(self.log_path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
 class MortyLocalEngine:
@@ -124,6 +152,29 @@ class MortyLocalEngine:
         tout en vérifiant l'alignement canonique de l'intention avec les concepts OKF.
         """
         intent = context.get("intent", "")
+
+        if intent:
+            try:
+                phrase_book = EngramPhraseBook()
+                tokens = intent.split()
+                match = phrase_book.resolve(tokens)
+                if match:
+                    decision = {
+                        "allowed": True,
+                        "veto": False,
+                        "action_recommended": "ENGRAM_EXACT_MATCH",
+                        "reasons": ["Exact match found in Engram Phrase Book"],
+                        "engine": "Engram-Exact",
+                        "canonical_alignment_index": 1.0,
+                        "missing_concepts": [],
+                        "violated_concepts": [],
+                        "validated_concepts": [match["matched_key"]]
+                    }
+                    DecisionEvidenceStore().record(context, decision)
+                    return decision
+            except Exception:
+                pass
+
         energy = float(context.get("energy", 1.0))
         urgency = float(context.get("urgency", 0.5))
 
@@ -181,7 +232,7 @@ class MortyLocalEngine:
             # In case no concepts are available locally
             canonical_alignment_index = 0.5
 
-        return {
+        decision = {
             "allowed": not veto,
             "veto": veto,
             "action_recommended": "REST_CYCLE" if veto else "EXECUTE_IMMEDIATE",
@@ -192,6 +243,9 @@ class MortyLocalEngine:
             "violated_concepts": violated_concepts,
             "validated_concepts": validated_concepts
         }
+
+        DecisionEvidenceStore().record(context, decision)
+        return decision
 
 
 if __name__ == "__main__":
