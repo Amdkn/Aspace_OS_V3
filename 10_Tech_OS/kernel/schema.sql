@@ -142,3 +142,49 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT,
+  status         TEXT,
+  evidence_ref   TEXT,
+  checked_at     TEXT,
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT,
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability: invalid capability for Life Core companion')
+  WHERE (NEW.harness = 'Amy' AND NEW.capability != 'Spec')
+     OR (NEW.harness = 'Rory' AND NEW.capability != 'Build')
+     OR (NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge', 'Spawn/Knowledge'))
+     OR (NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach', 'Review/detach'));
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: companion cannot own sovereign Kernel state (L0)')
+  WHERE (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: invalid capability for Life Core companion')
+  WHERE (NEW.harness = 'Amy' AND NEW.capability != 'Spec')
+     OR (NEW.harness = 'Rory' AND NEW.capability != 'Build')
+     OR (NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge', 'Spawn/Knowledge'))
+     OR (NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach', 'Review/detach'));
+END;
