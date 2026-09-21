@@ -44,6 +44,27 @@ CREATE TABLE IF NOT EXISTS claim (
   expires_at  TEXT    NOT NULL
 );
 
+-- ----------------------------------------------------------- CAPABILITIES
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT,
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT NOT NULL
+);
+
 -- --------------------------------------------------------------- PREDICTION
 -- Ecrite AVANT l'execution, scoree apres. Une prediction posterieure a l'acte
 -- n'est pas une verification, c'est une justification.
@@ -87,6 +108,58 @@ BEFORE UPDATE OF status ON work
 WHEN NEW.status = 'done' AND OLD.status <> 'review'
 BEGIN
   SELECT RAISE(ABORT, 'loi_detachement: done exige un passage par review');
+END;
+
+-- Loi Life Core : Contrats stricts des compagnons
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Amy is Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Rory is Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: River is Spawn/Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Doctor11 is Review/detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability_update
+BEFORE UPDATE ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability_update: Amy is Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability_update: Rory is Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability_update: River is Spawn/Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability_update: Doctor11 is Review/detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+END;
+
+-- Loi Life Core : Interdiction de modifier l'etat L0
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+ AND (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0'
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Life Core companions cannot bind to L0');
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability_update
+BEFORE UPDATE ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+ AND (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0'
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability_update: Life Core companions cannot bind to L0');
 END;
 
 -- Horodatage automatique.
