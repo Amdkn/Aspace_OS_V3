@@ -142,3 +142,83 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- --------------------------------------------------------------- CAPABILITIES
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level INTEGER NOT NULL DEFAULT 0,
+  status         TEXT NOT NULL DEFAULT 'active',
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+-- --------------------------------------------------------------- BINDINGS
+CREATE TABLE IF NOT EXISTS session_binding (
+  id             INTEGER PRIMARY KEY,
+  work_id        INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key    TEXT NOT NULL,
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  external_ref   TEXT,
+  status         TEXT NOT NULL DEFAULT 'active',
+  created_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- ================================================== LIFE CORE CONTRACTS
+-- Life Core capability contracts (Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach).
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability NOT IN ('Spec') THEN RAISE(ABORT, 'loi_life_core_capability: Amy can only be Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability NOT IN ('Build') THEN RAISE(ABORT, 'loi_life_core_capability: Rory can only be Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_capability: River can only be Spawn or Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_capability: Doctor11 can only be Review or detach')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability_update
+BEFORE UPDATE ON harness_capability
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability NOT IN ('Spec') THEN RAISE(ABORT, 'loi_life_core_capability: Amy can only be Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability NOT IN ('Build') THEN RAISE(ABORT, 'loi_life_core_capability: Rory can only be Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_capability: River can only be Spawn or Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_capability: Doctor11 can only be Review or detach')
+  END;
+END;
+
+-- Sovereign Kernel state limitation: No companion owns sovereign Kernel state (L0 layer).
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Life Core companions cannot bind to L0 layer work items')
+  FROM work WHERE id = NEW.work_id AND layer = 'L0' AND NEW.harness != 'Doctor11';
+
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability NOT IN ('Spec') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Amy can only bind as Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability NOT IN ('Build') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Rory can only bind as Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_binding_capability: River can only bind as Spawn or Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 can only bind as Review or detach')
+  END;
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability_update
+BEFORE UPDATE ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Life Core companions cannot bind to L0 layer work items')
+  FROM work WHERE id = NEW.work_id AND layer = 'L0' AND NEW.harness != 'Doctor11';
+
+  SELECT CASE
+    WHEN NEW.harness = 'Amy' AND NEW.capability NOT IN ('Spec') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Amy can only bind as Spec')
+    WHEN NEW.harness = 'Rory' AND NEW.capability NOT IN ('Build') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Rory can only bind as Build')
+    WHEN NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge') THEN RAISE(ABORT, 'loi_life_core_binding_capability: River can only bind as Spawn or Knowledge')
+    WHEN NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach') THEN RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 can only bind as Review or detach')
+  END;
+END;
