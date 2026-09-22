@@ -123,6 +123,49 @@ CREATE TABLE IF NOT EXISTS prompt_blueprints (
   sha256            TEXT NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT NOT NULL
+);
+
+-- ================================================== LIFE CORE CONTRACTS
+-- Enforce Life Core operating session constraints: Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+-- Also restrict companions (Amy, Rory, River) from binding to the 'L0' layer.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy is restricted to Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory is restricted to Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River is restricted to Spawn or Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 is restricted to Review or detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0 layer')
+  WHERE NEW.harness IN ('Amy', 'Rory', 'River')
+    AND (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0';
+END;
+
 -- Regles de domaine B2.
 CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   id         TEXT PRIMARY KEY,               -- UUID
