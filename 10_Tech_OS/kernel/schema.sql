@@ -142,3 +142,51 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== CORE CAPABILITY CONTRACTS
+-- Tables and triggers for session bindings and harness capabilities
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT    NOT NULL,
+  capability     TEXT    NOT NULL,
+  evidence_level TEXT,
+  status         TEXT,
+  evidence_ref   TEXT,
+  checked_at     TEXT    NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT    NOT NULL,
+  harness      TEXT    NOT NULL,
+  capability   TEXT    NOT NULL,
+  external_ref TEXT,
+  status       TEXT,
+  created_at   TEXT    NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  -- Strict capability constraints for Core roles
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy is restricted to Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory is restricted to Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River is restricted to Spawn/Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 is restricted to Review/detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+
+  -- L0 Sovereign State constraint for companions
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0 sovereign state')
+  FROM work
+  WHERE id = NEW.work_id
+    AND layer = 'L0'
+    AND NEW.harness IN ('Amy', 'Rory', 'River');
+END;
