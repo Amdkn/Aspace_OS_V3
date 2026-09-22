@@ -216,7 +216,19 @@ def cmd_reap(a):
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
         log(c, wid, None, "wake", None)
 
-    out({"ok": True, "reclames": dead, "woken": woken})
+    # Reconciliate with Linear MCP updates for stale claims and ownership drift
+    try:
+        from linear_reconciler import LinearReconciler
+        from linear_reaper import LinearReaper
+        reconciler = LinearReconciler(c.connection)
+        reaper = LinearReaper(reconciler)
+        drift_reaped, report = reaper.reap()
+    except Exception as e:
+        import traceback
+        drift_reaped = {"error": str(e), "traceback": traceback.format_exc()}
+        report = {}
+
+    out({"ok": True, "reclames": dead, "woken": woken, "drift_reaped": drift_reaped, "report": report})
 
 
 def cmd_status(a):
