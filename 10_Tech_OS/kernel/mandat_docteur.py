@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """mandat_docteur.py — sélection de mandat pour la boucle permanente des Docteurs.
 
 Usage: python mandat_docteur.py --layer L0|L1|L2 [--db uc.db] [--out _INBOX/mandats]
@@ -33,7 +34,7 @@ KERNEL = Path(__file__).resolve().parent
 
 def reap():
     try:
-        subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"],
+        subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"], env=os.environ.copy(),
                        cwd=str(KERNEL), capture_output=True, timeout=60)
     except Exception as e:  # reap best-effort, ne bloque jamais la sélection
         print(f"reap warning: {e}", file=sys.stderr)
@@ -49,7 +50,10 @@ def pick(c, layer):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--layer", required=True, choices=["L0", "L1", "L2"])
-    ap.add_argument("--db", default=str(KERNEL / "uc.db"))
+
+    default_db = os.environ.get("ASPACE_DB", str(KERNEL / "uc.db"))
+    ap.add_argument("--db", default=default_db)
+
     ap.add_argument("--out", default=str(KERNEL.parent.parent / "_INBOX" / "mandats"))
     args = ap.parse_args()
 
