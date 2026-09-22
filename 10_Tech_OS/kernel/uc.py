@@ -202,6 +202,14 @@ def cmd_score(a):
 def cmd_reap(a):
     """Rend a la file tout bail expire. C'est ce qui rend la panne non bloquante."""
     c = cx()
+
+    linear_reaped = 0
+    try:
+        from linear_reaper import LinearReaper
+        linear_reaped = LinearReaper(c).reap()
+    except Exception as e:
+        log(c, None, None, "linear_reap_error", {"error": str(e)})
+
     dead = [r["work_id"] for r in c.execute(
         "SELECT work_id FROM claim WHERE expires_at < datetime('now')")]
     for wid in dead:
@@ -216,7 +224,7 @@ def cmd_reap(a):
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
         log(c, wid, None, "wake", None)
 
-    out({"ok": True, "reclames": dead, "woken": woken})
+    out({"ok": True, "reclames": dead, "woken": woken, "linear_reaped": linear_reaped})
 
 
 def cmd_status(a):
