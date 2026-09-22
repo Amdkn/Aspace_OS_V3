@@ -142,3 +142,49 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== SESSION BINDING & HARNESS CAPABILITY
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id             INTEGER PRIMARY KEY,
+  work_id        INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key    TEXT NOT NULL,
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  external_ref   TEXT,
+  status         TEXT
+);
+
+-- Trigger pour la Loi Life Core
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  -- Amy is restricted to Spec capability
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy is restricted to Spec capability')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  -- Rory is restricted to Build capability
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory is restricted to Build capability')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  -- River is restricted to Spawn/Knowledge capabilities
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River is restricted to Spawn/Knowledge capabilities')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  -- Doctor11 is restricted to Review/detach capabilities
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 is restricted to Review/detach capabilities')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+
+  -- Companions cannot bind to L0 sovereign state
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to L0 sovereign state')
+  WHERE NEW.harness IN ('Amy', 'Rory', 'River') AND (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0';
+END;

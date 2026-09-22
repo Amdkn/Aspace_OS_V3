@@ -12,6 +12,7 @@ Sortie: JSON {work_id, tape_id, tape_path, layer, compagnons, mandat_path}
 Aucun candidat: JSON {candidat: null}.
 """
 import argparse
+import os
 import json
 import sqlite3
 import subprocess
@@ -49,12 +50,14 @@ def pick(c, layer):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--layer", required=True, choices=["L0", "L1", "L2"])
-    ap.add_argument("--db", default=str(KERNEL / "uc.db"))
+    ap.add_argument("--db", default=None)
     ap.add_argument("--out", default=str(KERNEL.parent.parent / "_INBOX" / "mandats"))
     args = ap.parse_args()
 
+    db_path = args.db or os.environ.get("ASPACE_DB") or str(KERNEL / "uc.db")
+
     reap()
-    c = sqlite3.connect(args.db)
+    c = sqlite3.connect(db_path)
     c.row_factory = sqlite3.Row
     row = pick(c, args.layer)
     if row is None:
