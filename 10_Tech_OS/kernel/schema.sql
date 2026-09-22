@@ -142,3 +142,49 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== SESSION BINDING & HARNESS
+-- Session binding capabilities.
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+-- Loi Life Core Capability : strict responsibility assignments
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability: unauthorized capability for companion')
+  WHERE NOT (
+    (NEW.harness = 'Amy' AND NEW.capability = 'Spec') OR
+    (NEW.harness = 'Rory' AND NEW.capability = 'Build') OR
+    (NEW.harness = 'River' AND NEW.capability IN ('Spawn', 'Knowledge')) OR
+    (NEW.harness = 'Doctor11' AND NEW.capability IN ('Review', 'detach'))
+  );
+END;
+
+-- Loi Life Core Binding Capability : companions cannot bind to sovereign kernel L0
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+ AND EXISTS (SELECT 1 FROM work WHERE id = NEW.work_id AND layer = 'L0')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: companions cannot bind to L0 layer');
+END;
