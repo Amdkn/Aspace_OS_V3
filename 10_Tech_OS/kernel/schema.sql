@@ -142,3 +142,70 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== CAPABILITIES (KER-28)
+-- Contrats de session Life Core persistants et souveraineté Kernel L0.
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id             INTEGER PRIMARY KEY,
+  work_id        INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key    TEXT NOT NULL,
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  external_ref   TEXT,
+  status         TEXT NOT NULL DEFAULT 'active' CHECK(status IN ('active', 'idle', 'closed', 'failed')),
+  bound_at       TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Loi Life Core : Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+BEGIN
+  -- Validate constraints directly on capabilities, or restrict certain roles.
+  -- Here we reject insertion if it violates the strict core companions capabilities
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Amy is strictly Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Rory is strictly Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: River is strictly Spawn/Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_capability: Doctor11 is strictly Review/detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+
+  -- No companion owns sovereign Kernel state -> 'L0' bind forbidden in session_binding
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  -- Companions cannot bind to L0
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot own sovereign Kernel state (L0)')
+  WHERE NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+    AND EXISTS (SELECT 1 FROM work WHERE id = NEW.work_id AND layer = 'L0');
+
+  -- Enforce capability match on bindings
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy must bind as Spec')
+  WHERE NEW.harness = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory must bind as Build')
+  WHERE NEW.harness = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River must bind as Spawn/Knowledge')
+  WHERE NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 must bind as Review/detach')
+  WHERE NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+END;
