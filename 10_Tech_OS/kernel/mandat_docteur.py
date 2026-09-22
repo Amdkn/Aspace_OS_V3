@@ -16,6 +16,7 @@ import json
 import sqlite3
 import subprocess
 import sys
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -31,10 +32,13 @@ COMPAGNONS = {
 KERNEL = Path(__file__).resolve().parent
 
 
-def reap():
+def reap(db_path=None):
     try:
+        env = os.environ.copy()
+        if db_path:
+            env["ASPACE_DB"] = db_path
         subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"],
-                       cwd=str(KERNEL), capture_output=True, timeout=60)
+                       cwd=str(KERNEL), capture_output=True, timeout=60, env=env)
     except Exception as e:  # reap best-effort, ne bloque jamais la sélection
         print(f"reap warning: {e}", file=sys.stderr)
 
@@ -49,12 +53,16 @@ def pick(c, layer):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--layer", required=True, choices=["L0", "L1", "L2"])
-    ap.add_argument("--db", default=str(KERNEL / "uc.db"))
+    ap.add_argument("--db", default=None)
     ap.add_argument("--out", default=str(KERNEL.parent.parent / "_INBOX" / "mandats"))
     args = ap.parse_args()
 
-    reap()
-    c = sqlite3.connect(args.db)
+    db_path = args.db
+    if not db_path:
+        db_path = os.environ.get("ASPACE_DB", str(KERNEL / "uc.db"))
+
+    reap(db_path)
+    c = sqlite3.connect(db_path)
     c.row_factory = sqlite3.Row
     row = pick(c, args.layer)
     if row is None:
