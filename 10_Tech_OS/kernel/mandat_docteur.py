@@ -49,7 +49,9 @@ def pick(c, layer):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--layer", required=True, choices=["L0", "L1", "L2"])
-    ap.add_argument("--db", default=str(KERNEL / "uc.db"))
+    import os
+    default_db = os.environ.get("ASPACE_DB", str(KERNEL / "uc.db"))
+    ap.add_argument("--db", default=default_db)
     ap.add_argument("--out", default=str(KERNEL.parent.parent / "_INBOX" / "mandats"))
     args = ap.parse_args()
 
