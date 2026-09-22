@@ -142,3 +142,53 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ------------------------------------------------------------------- CAPABILITE
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+-- ------------------------------------------------------------------- SESSION BINDING
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- ================================================== LOI LIFE CORE BINDING
+-- L0 sovereign kernel state is denied to non-Doctor11 companions.
+-- Contracts: Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  -- Validate Layer 0 rule
+  SELECT RAISE(ABORT, 'loi_life_core_binding: companion cannot bind to L0 work')
+  FROM work
+  WHERE id = NEW.work_id
+    AND layer = 'L0'
+    AND lower(NEW.harness) IN ('amy', 'rory', 'river');
+
+  -- Validate specific companion capabilities
+  SELECT RAISE(ABORT, 'loi_life_core_binding: invalid capability for Amy (must be Spec)')
+  WHERE lower(NEW.harness) = 'amy' AND lower(NEW.capability) != 'spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding: invalid capability for Rory (must be Build)')
+  WHERE lower(NEW.harness) = 'rory' AND lower(NEW.capability) != 'build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding: invalid capability for River (must be Spawn or Knowledge)')
+  WHERE lower(NEW.harness) = 'river' AND lower(NEW.capability) NOT IN ('spawn', 'knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding: invalid capability for Doctor11 (must be Review or detach)')
+  WHERE lower(NEW.harness) = 'doctor11' AND lower(NEW.capability) NOT IN ('review', 'detach');
+END;
