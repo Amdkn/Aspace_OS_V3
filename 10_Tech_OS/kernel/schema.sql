@@ -68,8 +68,51 @@ CREATE TABLE IF NOT EXISTS event (
 );
 CREATE INDEX IF NOT EXISTS event_work ON event(work_id, id);
 
+-- ================================================== CAPABILITIES ET SESSIONS
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness         TEXT NOT NULL,
+  capability      TEXT NOT NULL,
+  evidence_level  TEXT NOT NULL DEFAULT 'LOW',
+  status          TEXT NOT NULL DEFAULT 'active',
+  evidence_ref    TEXT,
+  checked_at      TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  bound_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
 -- ================================================== BRIOCHES ANTIGRAVITY (ADR-0007)
 -- Ces regles sont tenues par la base, pas par la discipline de l'agent.
+
+-- Loi de capacite Life Core : Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability: contrat de capacite viole')
+  WHERE (NEW.harness = 'Amy' AND NEW.capability != 'Spec')
+     OR (NEW.harness = 'Rory' AND NEW.capability != 'Build')
+     OR (NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge'))
+     OR (NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach'));
+END;
+
+-- Loi de session Life Core : aucun compagnon Life Core (L1) ne peut se lier a la couche L0 (souveraine).
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+ AND EXISTS (SELECT 1 FROM work WHERE id = NEW.work_id AND layer = 'L0')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: les compagnons Life Core ne peuvent pas s attacher a l etat souverain L0');
+END;
 
 -- Loi de prediction : rien n'atteint 'review' ou 'done' sans prediction prealable.
 CREATE TRIGGER IF NOT EXISTS loi_prediction_prealable
