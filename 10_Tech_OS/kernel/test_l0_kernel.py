@@ -123,7 +123,7 @@ class TestL0Kernel(unittest.TestCase):
         self.run_cmd(UC_PATH, "init")
 
         # 2. Test when no pending work exists
-        p = self.run_cmd(MANDAT_PATH, "--layer", "L0")
+        p = self.run_cmd(MANDAT_PATH, "--layer", "L0", "--db", self.db_path)
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertIsNone(res.get("candidat"))
