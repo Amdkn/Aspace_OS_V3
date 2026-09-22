@@ -201,6 +201,15 @@ def cmd_score(a):
 
 def cmd_reap(a):
     """Rend a la file tout bail expire. C'est ce qui rend la panne non bloquante."""
+    # Attempt to reap via Linear integration if available (drift detection)
+    try:
+        from linear_reaper import LinearReaper
+        reaper = LinearReaper(DB)
+        reaper.reap()
+    except Exception as e:
+        # Gracefully fallback on standard lease expiration
+        pass
+
     c = cx()
     dead = [r["work_id"] for r in c.execute(
         "SELECT work_id FROM claim WHERE expires_at < datetime('now')")]
