@@ -142,3 +142,44 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== LIFE CORE CONTRACTS
+-- Les agents Life Core ont des contrats de capacite strictes.
+-- Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach.
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL,
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  harness      TEXT NOT NULL,
+  layer        TEXT NOT NULL CHECK (layer IN ('A0','L0','L1','L2')),
+  bound_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Loi Life Core Capability : Contrats strictes pour les agents Life Core.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_capability
+BEFORE INSERT ON harness_capability
+WHEN NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_capability: contrat de capacite viole')
+  WHERE
+    (NEW.harness = 'Amy' AND NEW.capability != 'Spec') OR
+    (NEW.harness = 'Rory' AND NEW.capability != 'Build') OR
+    (NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge')) OR
+    (NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach'));
+END;
+
+-- Loi Life Core Binding Capability : Les compagnons ne peuvent pas binder sur L0.
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+WHEN NEW.harness IN ('Amy', 'Rory', 'River') AND NEW.layer = 'L0'
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: les compagnons Life Core ne peuvent pas s''attacher au Kernel (L0)');
+END;
