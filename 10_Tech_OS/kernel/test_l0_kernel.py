@@ -123,8 +123,8 @@ class TestL0Kernel(unittest.TestCase):
         self.run_cmd(UC_PATH, "init")
 
         # 2. Test when no pending work exists
-        p = self.run_cmd(MANDAT_PATH, "--layer", "L0")
-        self.assertEqual(p.returncode, 0)
+        p = self.run_cmd(MANDAT_PATH, "--layer", "L0", "--db", self.db_path)
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr} {p.stdout}")
         res = json.loads(p.stdout)
         self.assertIsNone(res.get("candidat"))
 
@@ -136,7 +136,7 @@ class TestL0Kernel(unittest.TestCase):
         # 4. Pick candidate and generate mandate file
         out_mandats = os.path.join(self.tmp_dir.name, "mandats")
         p = self.run_cmd(MANDAT_PATH, "--layer", "L0", "--db", self.db_path, "--out", out_mandats)
-        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr}")
+        self.assertEqual(p.returncode, 0, f"Error mandat: {p.stderr} {p.stdout}")
         res = json.loads(p.stdout)
         self.assertIsNotNone(res.get("candidat"))
         self.assertEqual(res["candidat"]["work_id"], work_id)
