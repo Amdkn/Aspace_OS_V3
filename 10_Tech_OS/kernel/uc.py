@@ -202,6 +202,15 @@ def cmd_score(a):
 def cmd_reap(a):
     """Rend a la file tout bail expire. C'est ce qui rend la panne non bloquante."""
     c = cx()
+
+    # Integration LinearReaper (safe fallback)
+    try:
+        from linear_reaper import LinearReaper
+        LinearReaper(c).reap()
+    except Exception as e:
+        import sys
+        print(f"LinearReaper warning: {e}", file=sys.stderr)
+
     dead = [r["work_id"] for r in c.execute(
         "SELECT work_id FROM claim WHERE expires_at < datetime('now')")]
     for wid in dead:
