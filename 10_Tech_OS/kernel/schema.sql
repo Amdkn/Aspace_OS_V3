@@ -133,6 +133,38 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- ================================================== LIFE CORE CONTRACTS
+CREATE TABLE IF NOT EXISTS harness_capability (
+  capability  TEXT PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id          INTEGER PRIMARY KEY,
+  companion   TEXT NOT NULL,
+  capability  TEXT NOT NULL REFERENCES harness_capability(capability) ON DELETE CASCADE,
+  layer       TEXT NOT NULL CHECK (layer IN ('A0','L0','L1','L2')),
+  UNIQUE(companion, capability, layer)
+);
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: invalid capability for Amy')
+  WHERE NEW.companion = 'Amy' AND NEW.capability != 'Spec';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: invalid capability for Rory')
+  WHERE NEW.companion = 'Rory' AND NEW.capability != 'Build';
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: invalid capability for River')
+  WHERE NEW.companion = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: invalid capability for Doctor11')
+  WHERE NEW.companion = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: companion cannot bind to L0')
+  WHERE NEW.layer = 'L0' AND NEW.companion IN ('Amy', 'Rory', 'River');
+END;
+
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   id         TEXT PRIMARY KEY,               -- UUID
