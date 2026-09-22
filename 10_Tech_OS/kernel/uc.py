@@ -216,7 +216,18 @@ def cmd_reap(a):
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
         log(c, wid, None, "wake", None)
 
-    out({"ok": True, "reclames": dead, "woken": woken})
+    reaped_linear = 0
+    try:
+        from linear_reconciler import LinearReconciler
+        from linear_reaper import LinearReaper
+        reconciler = LinearReconciler(DB)
+        report = reconciler.reconcile()
+        reaper = LinearReaper(DB)
+        reaped_linear = reaper.reap(report)
+    except Exception as e:
+        print(f"Warning: linear reaper failed: {e}", file=sys.stderr)
+
+    out({"ok": True, "reclames": dead, "woken": woken, "reaped_linear": reaped_linear})
 
 
 def cmd_status(a):
