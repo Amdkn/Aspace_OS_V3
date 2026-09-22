@@ -142,3 +142,45 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT NOT NULL,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  bound_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL DEFAULT 'pass',
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+-- Loi de session : restrictions des rôles des compagnons Life Core
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+FOR EACH ROW
+BEGIN
+  -- Strict role isolation for Life Core companions
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Invalid capability for companion')
+  WHERE NEW.harness IN ('Amy', 'Rory', 'River', 'Doctor11')
+    AND (
+      (NEW.harness = 'Amy' AND NEW.capability != 'Spec') OR
+      (NEW.harness = 'Rory' AND NEW.capability != 'Build') OR
+      (NEW.harness = 'River' AND NEW.capability NOT IN ('Spawn', 'Knowledge')) OR
+      (NEW.harness = 'Doctor11' AND NEW.capability NOT IN ('Review', 'detach'))
+    );
+
+  -- No companion (except Doctor11) can own sovereign Kernel state (bind to L0 layer)
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Companions cannot bind to sovereign Kernel state (L0), except Doctor11')
+  WHERE NEW.harness IN ('Amy', 'Rory', 'River')
+    AND (SELECT layer FROM work WHERE id = NEW.work_id) = 'L0';
+END;
