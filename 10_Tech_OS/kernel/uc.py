@@ -18,6 +18,7 @@ un autre sans passer par l'operateur.
     python uc.py status
 """
 import argparse, hashlib, json, os, sqlite3, sys
+from linear_reaper import LinearReaper
 
 if os.environ.get("AGENTPULSE_ENABLED") == "1":
     try:
@@ -216,7 +217,14 @@ def cmd_reap(a):
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
         log(c, wid, None, "wake", None)
 
-    out({"ok": True, "reclames": dead, "woken": woken})
+    # Reconcile Linear state drift
+    try:
+        reaper = LinearReaper(c)
+        linear_reaped = reaper.reap_abandoned()
+    except Exception as e:
+        linear_reaped = []
+
+    out({"ok": True, "reclames": dead, "woken": woken, "linear_reaped": linear_reaped})
 
 
 def cmd_status(a):
