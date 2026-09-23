@@ -302,3 +302,18 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 
 
 
+
+## D4 — 2026-09-23 — Validation du Run Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
+
+- **[YAZ] Audit Runtime, uc.db & Scripts Kernel :**
+  - Correction de `mandat_docteur.py` (`ASPACE_DB` fallback et propagation `env=os.environ.copy()`).
+  - Schéma `uc.db` réinitialisé et validé, 28/28 tests Kernel validés avec succès.
+- **[GRAHAM] Synchronisation Engram Phrase Book & Ontologies :**
+  - Correctif de résolveur de chemin dans `scripts/valider_triplets_aspace.py`.
+  - Extension de `compile_engram_from_rdf.py` aux triplets `.ttl` (2 137 entrées compilées).
+  - Validation complète de `test_engram.py` (6/6 OK).
+- **[RYAN] Compilation Python & Definition of Done :**
+  - Compilation `py_compile` réussie pour les scripts modifiés.
+  - Definition of Done validée sur l'ensemble des bancs d'essai.
+- **[13e DOCTEUR] Gouvernance MCP Linear :**
+  - Consignation dans `uc.db` via `scripts/log_kernel_mcp_update.py` pour l'équipe Kernel Core.

@@ -27,8 +27,9 @@ import re
 import stat
 import sys
 from collections import Counter, defaultdict
+from pathlib import Path
 
-V3 = r"C:\Users\amado\ASpace_OS_V3"
+V3 = str(Path(__file__).resolve().parent.parent)
 D = os.path.join(V3, "70_Onthologies")
 DIST = os.path.join(V3, "50_Distillation")
 # Deux passes, deux jeux de couches, deux graphes de sortie. Les melanger

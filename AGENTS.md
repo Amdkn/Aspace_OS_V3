@@ -105,3 +105,18 @@ Toute modification structurelle ou apprentissage système est :
 - **Hermes** devient le visionnaire de terrain / executive operator : maintient la situation, orchestre l'exécution via Orca/Rick, exploite Jules et les autres workers selon capacité et quota, puis remonte Evidence, risques et arbitrages irréductibles.
 - **FreeLLMAPI** est le plan d'inférence par défaut de Hermes quand disponible; l'identité de Hermes ne dépend pas du modèle routé.
 - Canon opérationnel : `40_Memory_Wiki_OKF/architecture/hermes_field_visionary_orca_jules_2026-09-19.md`.
+
+## D4 — 2026-09-23 — Validation du Run Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
+
+- **[YAZ] Audit Runtime, uc.db & Scripts Kernel :**
+  - Correction de `10_Tech_OS/kernel/mandat_docteur.py` pour supporter `ASPACE_DB` et la propagation de l'environnement aux sous-processus.
+  - Schéma `uc.db` initialisé (`uc.py init`) et suite de tests unitaires Kernel exécutée sans erreur (28/28 tests OK).
+- **[GRAHAM] Synchronisation Engram Phrase Book, Ontologies & OKF :**
+  - Correctif de chemin dans `scripts/valider_triplets_aspace.py` et mise à jour du compilateur `10_Tech_OS/kernel/engram/compile_engram_from_rdf.py` pour traiter les fichiers Turtle (`.ttl`).
+  - Recompilation d'Engram avec 747 nouveaux invariants compilés depuis `70_Onthologies/triplets/` (2 137 entrées totales dans `phrase_book_aspace.json`).
+  - Tests Engram validés avec succès (`test_engram.py` -> 6/6 tests OK).
+- **[RYAN] Compilation Python & Definition of Done :**
+  - Compilation `py_compile` validée sans erreur sur l'ensemble des scripts modifiés.
+  - Definition of Done 100% satisfaite.
+- **[13e DOCTEUR] Gouvernance MCP Linear :**
+  - Exécution de `scripts/log_kernel_mcp_update.py` enregistrant le statut des tickets Kernel Core (KFR-1 à KFR-4) dans la table `event` de `uc.db`.
