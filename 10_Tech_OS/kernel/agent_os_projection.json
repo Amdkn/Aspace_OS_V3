@@ -1,0 +1,17 @@
+{
+  "version": "1",
+  "work_id": 180,
+  "endpoint": "/api/tech-os/workgraph/projection",
+  "method": "GET",
+  "query_params": [
+    "role",
+    "companion",
+    "work_id"
+  ],
+  "response_schema": "WorkGraphProjection.v1",
+  "implementation": "dao_jing.py",
+  "adapter": "agent-os/desktop/tools/workgraph-projection.ts",
+  "no_ui_business_logic": true,
+  "max_bytes": 8192,
+  "read_only": true
+}

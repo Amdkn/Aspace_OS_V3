@@ -1,0 +1,138 @@
+{
+  "work_id": 180,
+  "issue": "KER-44",
+  "acceptance": "PASS",
+  "created_at": "2026-09-23T22:08:41.734066+00:00",
+  "regression": {
+    "exit_code": 0,
+    "summary": "rge_mapping (test_kernel_fleet_tick.TickTests.test_forge_mapping) ... ok\ntest_kernel_mapping (test_kernel_fleet_tick.TickTests.test_kernel_mapping) ... ok\ntest_life_mapping (test_kernel_fleet_tick.TickTests.test_life_mapping) ... ok\ntest_terminal_session_is_not_reusable (test_kernel_fleet_tick.TickTests.test_terminal_session_is_not_reusable) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 4.670s\n\nOK\n"
+  },
+  "independent_review": "ker44_independent_review_final.json",
+  "reviewed_hashes": {
+    "dao_jing.py": "2a5ff9d441272e886c2409240f71f3897a92d0bf5792ad1119e5fab90c5c6321",
+    "topology_validator.py": "fbdf2c3ffed38e4cd15a4b99003c6b9403c79dd6392adf099339155a51934b7b",
+    "test_ker44_evidence.py": "be755e1656eb65361e0c41e73d7cc27d26bbcef8dfcb41d5227a153436cf1316",
+    "COMPANIONS_CONSTITUTION.json": "ca2793b744e9fb08b04c639d286681ce7f703e3d7c1b10967d746806ffb38857"
+  },
+  "roles": {
+    "Rick": {
+      "items": 8,
+      "bytes": 4085,
+      "hash_verified": true
+    },
+    "Doctor13": {
+      "items": 8,
+      "bytes": 4055,
+      "hash_verified": true
+    },
+    "Doctor11": {
+      "items": 8,
+      "bytes": 3568,
+      "hash_verified": true
+    },
+    "Doctor12": {
+      "items": 8,
+      "bytes": 3814,
+      "hash_verified": true
+    },
+    "Ryan": {
+      "items": 8,
+      "bytes": 4085,
+      "hash_verified": true
+    },
+    "Yaz": {
+      "items": 8,
+      "bytes": 4084,
+      "hash_verified": true
+    },
+    "Graham": {
+      "items": 8,
+      "bytes": 4087,
+      "hash_verified": true
+    },
+    "Bill": {
+      "items": 8,
+      "bytes": 4085,
+      "hash_verified": true
+    },
+    "Clara": {
+      "items": 8,
+      "bytes": 4086,
+      "hash_verified": true
+    },
+    "Nardole": {
+      "items": 8,
+      "bytes": 4088,
+      "hash_verified": true
+    },
+    "Amy": {
+      "items": 8,
+      "bytes": 4084,
+      "hash_verified": true
+    },
+    "Rory": {
+      "items": 8,
+      "bytes": 4085,
+      "hash_verified": true
+    },
+    "River": {
+      "items": 8,
+      "bytes": 4086,
+      "hash_verified": true
+    }
+  },
+  "http_validation": [
+    {
+      "method": "GET",
+      "query": "?role=Rick&work_id=180",
+      "status": 200,
+      "bytes": 1050
+    },
+    {
+      "method": "GET",
+      "query": "?role=Doctor11",
+      "status": 200,
+      "bytes": 3382
+    },
+    {
+      "method": "GET",
+      "query": "?role=invalid",
+      "status": 400
+    },
+    {
+      "method": "GET",
+      "query": "?work_id=1%3Bexit",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "query": "",
+      "status": 405
+    }
+  ],
+  "published_desktop": {
+    "repository": "https://github.com/Amdkn/Agent-OS-Desktop",
+    "commit": "6db8908d12a23b2043e4b2be8d8cabc2bce497e9",
+    "checks": {
+      "typecheck": {
+        "code": 0,
+        "out": "\n> agent-os-desktop@0.1.0 typecheck\n> tsc --noEmit\n\n",
+        "err": ""
+      },
+      "adapter": {
+        "code": 0,
+        "out": "PASS: 13 live role projections, 4 invalid inputs, 2 forbidden write methods\n",
+        "err": ""
+      },
+      "markers": {
+        "code": 0,
+        "out": "NO_PLACEHOLDER_MARKERS (0 fichiers changes scannes)\n",
+        "err": ""
+      }
+    }
+  },
+  "limitations": [
+    "Full Agent OS UI startup is not validated: existing Vite optimizer fails reading imports. Real tech-os-api route was validated in an isolated Vite API server."
+  ],
+  "scope": "Nine exhaustive contracts, strict topology/authority validation, bounded SQLite-derived read-only role projections, Agent OS GET adapter."
+}

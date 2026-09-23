@@ -1,0 +1,29 @@
+{
+  "version": "1",
+  "work_id": 180,
+  "source": "uc.db (read-only snapshot)",
+  "constitution": "COMPANIONS_CONSTITUTION.json",
+  "bounds": {
+    "max_items": 8,
+    "max_evidence_per_work": 3,
+    "max_bytes": 8192,
+    "title_chars": 120
+  },
+  "roles": [
+    "Rick",
+    "Doctor13",
+    "Doctor11",
+    "Doctor12",
+    "Ryan",
+    "Yaz",
+    "Graham",
+    "Bill",
+    "Clara",
+    "Nardole",
+    "Amy",
+    "Rory",
+    "River"
+  ],
+  "engine": "dao_jing.py",
+  "token_limit_claimed": false
+}

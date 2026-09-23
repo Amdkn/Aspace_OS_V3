@@ -1,0 +1,34 @@
+{
+  "work_id": 180,
+  "at": "2026-09-23T21:56:09.742386+00:00",
+  "state": "implemented_independent_review_pending",
+  "files_sha256": {
+    "10_Tech_OS/kernel/COMPANIONS_CONSTITUTION.json": "ca2793b744e9fb08b04c639d286681ce7f703e3d7c1b10967d746806ffb38857",
+    "10_Tech_OS/kernel/companion_constitution_v2.json": "ca2793b744e9fb08b04c639d286681ce7f703e3d7c1b10967d746806ffb38857",
+    "10_Tech_OS/kernel/topology_validator.py": "92a0bc138720ff9bc49767bc851b39d4dfebc29f7253d3575d45867e97593d43",
+    "10_Tech_OS/kernel/dao_jing.py": "ea852e3236758e5bf7f453d931cf831680c378bca6edb84746af7f6e3a7e651a",
+    "10_Tech_OS/kernel/dao_jing_projections.json": "99528a51a2672ef49feab7c6971aecea483b4356f49912ed04107c0ca6b59bc0",
+    "10_Tech_OS/kernel/agent_os_projection.json": "06e4daf8af679947d29631f079aa7749f0d25b57f6500035cc9fd212b5e44209",
+    "10_Tech_OS/kernel/test_ker44_evidence.py": "c5780bfbb3df7fa87384a2322fbcb1ecf9c3f6edb67a190b699c0ffa3b40ba44",
+    "00_Amadeus/10_Observers/agent-os/desktop/tools/workgraph-projection.ts": "5c0edc00608bf72901dea500e199993c0c77dd125b837cf75998c0af66de579b"
+  },
+  "tests": {
+    "exit_code": 0,
+    "summary": "kTests.test_life_mapping) ... ok\ntest_terminal_session_is_not_reusable (test_kernel_fleet_tick.TickTests.test_terminal_session_is_not_reusable) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 8.642s\n\nOK\n"
+  },
+  "http_adapter_test": {
+    "code": 0,
+    "out": "PASS: 13 live role projections, 4 invalid inputs, 2 forbidden write methods\n",
+    "err": ""
+  },
+  "typescript": {
+    "command": "npm run typecheck",
+    "exit_code": 0
+  },
+  "preserved_role_contracts": {
+    "ROLE_CONTRACTS.json": "c923196952fefd408f0d7913309fb4e665d1b8903c53dcfb03ae9399b9cb08ef",
+    "ROLE_CONTRACTS_V2.json": "33178a28b579a6b31025b9899a512eea6c6f7234f687accb9d28a53ac3c9698b"
+  },
+  "backup": "C:\\Users\\amado\\ASpace_OS_V3\\10_Tech_OS\\kernel\\backups\\ker44-20260923T214045Z",
+  "scope": "KER-44 constitution, read-only role projections, Agent OS API adapter; no full Kernel autonomy claim"
+}

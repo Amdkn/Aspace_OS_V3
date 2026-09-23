@@ -60,3 +60,5 @@
 - 2026-09-23: Work 181 ownership gates and zero-work supervisor recorded in concepts/truthful_dispatch_ownership.md; 20 machine tests PASS; independent review pending.
 
 - 2026-09-23: Work 181 independent Hermes PASS and 21/21 repeat verification; truthful projection reconciliation documented in concepts/truthful_dispatch_ownership.md and Tech OS reports.
+
+- 2026-09-23: Executable KER-44 constitution and read-only Dao/Jing projection semantics recorded in concepts/dao_jing_bounded_projections.md.

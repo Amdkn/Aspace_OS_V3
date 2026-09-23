@@ -1,0 +1,14 @@
+{
+  "work_id": 180,
+  "files": {
+    "10_Tech_OS/kernel/COMPANIONS_CONSTITUTION.json": "ca2793b744e9fb08b04c639d286681ce7f703e3d7c1b10967d746806ffb38857",
+    "10_Tech_OS/kernel/companion_constitution_v2.json": "ca2793b744e9fb08b04c639d286681ce7f703e3d7c1b10967d746806ffb38857",
+    "10_Tech_OS/kernel/topology_validator.py": "fbdf2c3ffed38e4cd15a4b99003c6b9403c79dd6392adf099339155a51934b7b",
+    "10_Tech_OS/kernel/dao_jing.py": "2a5ff9d441272e886c2409240f71f3897a92d0bf5792ad1119e5fab90c5c6321",
+    "10_Tech_OS/kernel/dao_jing_projections.json": "99528a51a2672ef49feab7c6971aecea483b4356f49912ed04107c0ca6b59bc0",
+    "10_Tech_OS/kernel/agent_os_projection.json": "06e4daf8af679947d29631f079aa7749f0d25b57f6500035cc9fd212b5e44209",
+    "10_Tech_OS/kernel/test_ker44_evidence.py": "be755e1656eb65361e0c41e73d7cc27d26bbcef8dfcb41d5227a153436cf1316",
+    "00_Amadeus/10_Observers/agent-os/desktop/tools/workgraph-projection.ts": "5c0edc00608bf72901dea500e199993c0c77dd125b837cf75998c0af66de579b"
+  },
+  "test_command": "python -X utf8 -m unittest discover -s C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel -p test_ker44_evidence.py -v"
+}

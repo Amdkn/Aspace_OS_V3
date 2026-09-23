@@ -314,3 +314,9 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 - Hermes independent review PASS; reviewed SHA256 match; 21 focused tests rerun PASS. reports/convergence_181_acceptance.json records closure evidence.
 - Orca ready. Ten unsupported In Progress projections corrected: six Backlog, four In Review. Work 180 stale binding closed; KER-44 reopened Backlog with explicit failed acceptance (four remaining gaps).
 - Four historical PR-merged assertions contradict GitHub OPEN states; no retrospective prediction or fabricated completion. reports/orca_workgraph_reconciliation_20260923.json records the discrepancy.
+
+
+## D4 - 2026-09-23 - KER-44 executable constitution and Dao/Jing
+- Nine complete companion contracts, closed WorldState loop, forbidden authority validation; legacy role contracts preserved.
+- dao_jing.py derives thirteen typed, byte-bounded projections from read-only SQLite snapshots and exposes ownership/evidence drift.
+- Agent OS GET adapter delegates to kernel without shell or UI business logic. Evidence and commands: reports/KER44_IMPLEMENTATION.md.
