@@ -1,0 +1,14 @@
+{
+  "work_id": 180,
+  "generated_at": "2026-09-23T11:15:00Z",
+  "tests": {
+    "topology_validator": "PASSED",
+    "test_ker44_evidence": "PASSED"
+  },
+  "gaps": [
+    "duplicate positions negative test",
+    "forbidden authority negative test",
+    "closed canonical loop",
+    "projection derivation"
+  ]
+}

@@ -57,3 +57,6 @@
 - `2026-09-12 11:33:00 EDT` : Orchestration Concurrente Astra & Extension 10+ : validation documentaire des 55 PRD des Catégories 0 à 9 achevée par Astra (Hermes / GPT-6). Mandat de dispatching Jules Pro (15 simultanés, 100/24h) transféré à Astra avec frontières bornées. Formalisation OKF v0.2 et ouverture du 2e pôle aux Catégories 10 (Série 100), 11 (Série 110) et 12 (Série 120). `Soul.md`, `Soul.db` et `GEMINI.md` synchronisés. (Antigravity).
 - `2026-09-12 13:08:00 EDT` : Analyse Stratégique du Modèle d'Orchestration Astra & Recyclage de Sessions Jules : formalisation OKF v0.2 de la découverte fondamentale du recyclage des sessions Jules (interactives + asynchrones, zéro re-facturation journalière). Architecture managériale E-Myth (Astra Visionnaire sobre, Workers GLM Flash managers et Gatekeeper). Échelle de montée en confiance temporelle (5m -> 15m -> 30m -> 1h). Consigné dans `analyse_strategique_prompt_astra_emyth_jules_recycling.md`. (Antigravity).
 
+- 2026-09-23: Work 181 ownership gates and zero-work supervisor recorded in concepts/truthful_dispatch_ownership.md; 20 machine tests PASS; independent review pending.
+
+- 2026-09-23: Work 181 independent Hermes PASS and 21/21 repeat verification; truthful projection reconciliation documented in concepts/truthful_dispatch_ownership.md and Tech OS reports.

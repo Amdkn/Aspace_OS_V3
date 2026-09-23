@@ -300,5 +300,17 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
   - Commit de fusion : `037587251785fe7754b2d86c8d76db781eb8989f` pushé sur `origin/main`.
   - Évidence enregistrée dans `uc.db` pour `work_id: 169` (prédiction, transition `review` -> `done`, artifact `git-commit` #3, gate `CODE_REVIEW` verdict `pass`, session binding Jules `2579532014043635508` closed).
 
+## D4 - 2026-09-23 - Work 181: truthful dispatch and zero-work supervisor
+- Added fleet_ownership.py: exact canonical work mapping, atomic uc.py claim before provider mutation, durable ambiguous-dispatch marker, session binding and fresh provider execution check before Linear In Progress.
+- kernel_fleet_tick.py refuses retasking an occupied companion lane. A queued session is not projected as executing.
+- hermes_cron.ps1 supervisor now checks WorkGraph deterministically before touching Orca/LLM; empty cycle observed skipped at 07:03:22 EDT.
+- Validation: 20 focused tests passed; independent review requested. Full Orca/Kernel convergence is not certified by this patch.
+- Evidence: 10_Tech_OS/reports/convergence_181_evidence.json. Original files: kernel/backups/convergence-20260923T110058Z.
+
+- Work 181 final delta: OS file lock serializes entire fleet tick; final focused suite 21/21 PASS. Evidence: reports/convergence_181_evidence_v2.json. Independent review remains required.
 
 
+## D4 - 2026-09-23 - Work 181 acceptance and truthful runtime reconciliation
+- Hermes independent review PASS; reviewed SHA256 match; 21 focused tests rerun PASS. reports/convergence_181_acceptance.json records closure evidence.
+- Orca ready. Ten unsupported In Progress projections corrected: six Backlog, four In Review. Work 180 stale binding closed; KER-44 reopened Backlog with explicit failed acceptance (four remaining gaps).
+- Four historical PR-merged assertions contradict GitHub OPEN states; no retrospective prediction or fabricated completion. reports/orca_workgraph_reconciliation_20260923.json records the discrepancy.

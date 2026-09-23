@@ -1,0 +1,150 @@
+{
+  "at": "2026-09-23T19:40:54.798092+00:00",
+  "orca_runtime": "ready",
+  "scope": "Three Tech OS Linear projects; canonical live ownership; existing Hermes terminal screens",
+  "provider_observation": {
+    "first_page_count": 100,
+    "next_page_present": true,
+    "active_on_observed_page": 0,
+    "limitation": "Not a global all-pages provider inventory; canonical ownership is authoritative for projection."
+  },
+  "changes": [
+    {
+      "issue": "KER-25",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-19",
+      "from": "In Progress",
+      "to": "In Review",
+      "work": [
+        {
+          "id": 178,
+          "title": "[KER-19] Integrate Cactus Needle 3 capability adapter (KPRD-020)",
+          "status": "done"
+        }
+      ],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-24",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-41",
+      "from": "In Progress",
+      "to": "In Review",
+      "work": [
+        {
+          "id": 177,
+          "title": "[KER-41] LM Studio local serving registry + TTL policy (KPRD-040)",
+          "status": "done"
+        }
+      ],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-42",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-26",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-28",
+      "from": "In Progress",
+      "to": "In Review",
+      "work": [
+        {
+          "id": 175,
+          "title": "[KER-28] Doctor11/Amy/Rory/River persistent session contracts (LPRD-001)",
+          "status": "done"
+        }
+      ],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-34",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "KER-27",
+      "from": "In Progress",
+      "to": "Backlog",
+      "work": [],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    },
+    {
+      "issue": "FOR-4",
+      "from": "In Progress",
+      "to": "In Review",
+      "work": [
+        {
+          "id": 176,
+          "title": "[FOR-4] Linear mandate to bounded PRD compiler (FPRD-001)",
+          "status": "done"
+        }
+      ],
+      "reason": "No unexpired canonical claim and executing bound worker; existing output retained for review."
+    }
+  ],
+  "work180": {
+    "state": "pending",
+    "linear": "Backlog",
+    "stale_binding": "closed",
+    "acceptance_gate": "FAIL",
+    "gaps": [
+      "duplicate positions negative test",
+      "forbidden authority negative test",
+      "closed canonical loop",
+      "projection derivation"
+    ],
+    "next_action": "Implement missing topology rejection tests, closed loop and derived bounded projections before a new acceptance review."
+  },
+  "legacy_done_discrepancies": [
+    {
+      "work_id": 175,
+      "issue": "KER-28",
+      "claimed_merged_pr": 109,
+      "github_state": "OPEN",
+      "disposition": "Linear In Review; historical work.status preserved; no retrospective prediction manufactured"
+    },
+    {
+      "work_id": 176,
+      "issue": "FOR-4",
+      "claimed_merged_pr": 112,
+      "github_state": "OPEN",
+      "disposition": "Linear In Review; historical work.status preserved; no retrospective prediction manufactured"
+    },
+    {
+      "work_id": 177,
+      "issue": "KER-41",
+      "claimed_merged_pr": 102,
+      "github_state": "OPEN",
+      "disposition": "Linear In Review; historical work.status preserved; no retrospective prediction manufactured"
+    },
+    {
+      "work_id": 178,
+      "issue": "KER-19",
+      "claimed_merged_pr": 103,
+      "github_state": "OPEN",
+      "disposition": "Linear In Review; historical work.status preserved; no retrospective prediction manufactured"
+    }
+  ]
+}

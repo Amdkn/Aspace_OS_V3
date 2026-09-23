@@ -1,0 +1,26 @@
+{
+  "work_id": 181,
+  "at": "2026-09-23T19:42:32.479152+00:00",
+  "verdict": "PASS",
+  "reviewer": "Hermes, term_7121c373-d20d-42a1-8c00-057eb2b0ad37",
+  "independent_review": "convergence_181_review_fcba_final.json",
+  "review_sha256": "1a6e4de861ae7238154e3f2ff88f6c7cf90e5197f1bee79c6df4bebfc4274f79",
+  "reviewed_files": {
+    "fleet_ownership.py": "95176043ec613f6c103591a78a998dff9ac92fe4ee09e0abc961a7148cfe367f",
+    "test_fleet_ownership.py": "341b3fc9f005952c54f861842a7d7324cee980d3f79c452efedb01094250fce1",
+    "kernel_fleet_tick.py": "59256a0afcb3a96b86ae0ab32ea13c1c29c92558501b3647f3e86c373ad5b9cb",
+    "hermes_cron.ps1": "888d3cb8825c442e8fd4824b535f0fcccac8ac45ec5cd53e8f745393713c8759"
+  },
+  "review_hashes_match_current": true,
+  "verification": {
+    "command": "python -m unittest test_fleet_ownership test_kernel_fleet_tick -v",
+    "passed": 21,
+    "failed": 0
+  },
+  "scope": "Truthful dispatch ownership, cross-process fleet lock, zero-work supervisor. Full Kernel autonomy and KER-44 acceptance excluded.",
+  "runtime_prerequisites": [
+    "Orca CLI",
+    "Local Jules bridge on 127.0.0.1:43118",
+    "Existing Windows Jules MCP installation; proxy pins its local npm cache paths."
+  ]
+}
