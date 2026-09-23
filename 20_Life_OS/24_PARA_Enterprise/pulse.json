@@ -1,0 +1,60 @@
+{
+  "version": "v1",
+  "date_init": "2026-09-04",
+  "framework": "PARA Enterprise",
+  "date_pulse": "2026-09-23",
+  "canon_4_domains": [
+    {
+      "domain": "projects",
+      "dossier": "01_Projects_Picard",
+      "persona": "Picard",
+      "state": "active",
+      "entries": [
+        "Rock_00_Business_Pulse_12WY"
+      ]
+    },
+    {
+      "domain": "areas",
+      "dossier": "02_Areas_Spock",
+      "persona": "Spock",
+      "state": "idle",
+      "entries": []
+    },
+    {
+      "domain": "resources",
+      "dossier": "03_Resources_Geordi",
+      "persona": "Geordi",
+      "state": "active",
+      "entries": [
+        "05_BuildIt_Prompt_Pack.pdf",
+        "Articles_Recherche",
+        "BLUEPRINT.md",
+        "CHECKLIST.md",
+        "COMMANDS.md",
+        "Enterprise_OS_On_One_Page.pdf",
+        "FAQ.md",
+        "FIRST_SESSION.md",
+        "GLOSSARY.md",
+        "QUICKSTART.md",
+        "README.md",
+        "TROUBLESHOOTING.md",
+        "Takeout",
+        "The_Enterprise_OS_Blueprint.pdf",
+        "examples",
+        "prompts",
+        "repos_innovations",
+        "semantica",
+        "specs"
+      ]
+    },
+    {
+      "domain": "archives",
+      "dossier": "04_Archives_Data",
+      "persona": "Data",
+      "state": "idle",
+      "entries": [
+        "Racine_V3_2026-09-23"
+      ]
+    }
+  ]
+}

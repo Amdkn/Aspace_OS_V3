@@ -94,7 +94,3 @@ Le corpus sur disque est vivant. Figer des inventaires manuels ou des nombres de
 2. **Loi de Détachement :** Le statut `done` n'est accessible que depuis `review`, après attestation des preuves par critères vérifiables.
 3. **Loi du Bail :** Tout travail réclamé porte une échéance. Un agent disparu rend son travail à la file via le battement automatique du contrôleur (`ASpace_V3_Battement`, toutes les 15 minutes).
 4. **Requeue Sélective & DLQ :** Les travaux qualifiés terminaux (arbitrage Rick/Donna) sont exclus de la relance pour éliminer définitivement la boucle de rejeu.
-
-## Archives de la racine
-
-Les anciens dossiers, diagnostics et exports ponctuels sont ranges dans [les archives PARA de Life OS](20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Racine_V3_2026-09-23/README.md). Le manifeste y conserve les anciens chemins et les empreintes des fichiers.

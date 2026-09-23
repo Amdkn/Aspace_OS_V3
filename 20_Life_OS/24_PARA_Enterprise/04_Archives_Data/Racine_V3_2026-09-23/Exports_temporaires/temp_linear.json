@@ -1,0 +1,1072 @@
+{
+  "id": "e215ea31-15bc-4ee6-93f7-aad96bbc5a3e",
+  "ok": true,
+  "result": {
+    "issues": [
+      {
+        "id": "ed879c75-1d34-4f11-b4e7-7e077e5a8cfc",
+        "identifier": "KER-46",
+        "title": "[RYAN][GIT] Branch & Worktree Stewardship — protect main, sandbox by Core/Layer/Domain",
+        "url": "https://linear.app/aspace-os/issue/KER-46/ryangit-branch-and-worktree-stewardship-protect-main-sandbox-by",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T15:35:37.243Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "746ce8b1-854e-4f46-b397-d65934690399",
+        "identifier": "KER-49",
+        "title": "[RYAN][GIT-3] Orca worktree lifecycle + dirty-project archive gate",
+        "url": "https://linear.app/aspace-os/issue/KER-49/ryangit-3-orca-worktree-lifecycle-dirty-project-archive-gate",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T15:34:19.790Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "c7304f3c-f573-4a20-8882-40415603a78b",
+        "identifier": "KER-48",
+        "title": "[RYAN][GIT-2] Main protection + branch taxonomy contract",
+        "url": "https://linear.app/aspace-os/issue/KER-48/ryangit-2-main-protection-branch-taxonomy-contract",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T15:34:11.570Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "87192087-5692-437b-9287-ee066a9a361d",
+        "identifier": "KER-47",
+        "title": "[RYAN][GIT-1] Inventory + classify local/origin branches",
+        "url": "https://linear.app/aspace-os/issue/KER-47/ryangit-1-inventory-classify-localorigin-branches",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T15:33:14.124Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "10394249-0b05-4062-b510-2b90ba8f9719",
+        "identifier": "KER-19",
+        "title": "[INTEL] Integrate Needle 3 capability adapter",
+        "url": "https://linear.app/aspace-os/issue/KER-19/intel-integrate-needle-3-capability-adapter",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T14:04:29.958Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3d278a19-2362-4dc5-b94c-76c3fc5ceb07",
+        "identifier": "KER-28",
+        "title": "[LPRD-001][L0] Doctor11/Amy/Rory/River persistent session contracts",
+        "url": "https://linear.app/aspace-os/issue/KER-28/lprd-001l0-doctor11amyroryriver-persistent-session-contracts",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T13:50:00.113Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "24d595c0-0b0f-4920-885a-a893fdc5522e",
+        "identifier": "KER-43",
+        "title": "[ALLOC] Enforce 20/30/50 capacity policy across Rick/Doctors/Agent OS",
+        "url": "https://linear.app/aspace-os/issue/KER-43/alloc-enforce-203050-capacity-policy-across-rickdoctorsagent-os",
+        "state": {
+          "name": "In Review",
+          "type": "started",
+          "color": "#0f783c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T13:03:21.935Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "65e8c05c-c4e6-4251-8bea-d7571e6e5cd0",
+        "identifier": "KER-34",
+        "title": "[LPRD-060][L6] A0 detachment acceptance gate",
+        "url": "https://linear.app/aspace-os/issue/KER-34/lprd-060l6-a0-detachment-acceptance-gate",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T11:51:36.940Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "887e1660-e05f-4ddd-980a-36ba16920f42",
+        "identifier": "KER-27",
+        "title": "[SOLARPUNK] Life Core autonomy readiness — Doctor 11 / Amy Rory River",
+        "url": "https://linear.app/aspace-os/issue/KER-27/solarpunk-life-core-autonomy-readiness-doctor-11-amy-rory-river",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T11:51:28.483Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "fcd4bf6e-901d-4e55-983d-4636bfc88c09",
+        "identifier": "KER-25",
+        "title": "[OBS] Agent OS live Control Plane — Linear + WorkGraph + A0 Relay",
+        "url": "https://linear.app/aspace-os/issue/KER-25/obs-agent-os-live-control-plane-linear-workgraph-a0-relay",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T11:51:20.194Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "25daa6c8-ff02-4196-ac48-ec2ba506ecfd",
+        "identifier": "KER-24",
+        "title": "[CONTROL] Productionize A0 Relay — remove human router",
+        "url": "https://linear.app/aspace-os/issue/KER-24/control-productionize-a0-relay-remove-human-router",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T11:51:11.918Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "d37138c9-8b2f-496d-b03a-e3f7ee6a6338",
+        "identifier": "KER-44",
+        "title": "[BEDROCK] Companion Constitution V2 + Dao→Jing role projections",
+        "url": "https://linear.app/aspace-os/issue/KER-44/bedrock-companion-constitution-v2-daojing-role-projections",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T11:51:03.597Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "b074d7c8-fd48-4bef-8b07-0b7327d0b382",
+        "identifier": "KER-41",
+        "title": "[KPRD-040][K4] LM Studio local serving lifecycle + TTL policy",
+        "url": "https://linear.app/aspace-os/issue/KER-41/kprd-040k4-lm-studio-local-serving-lifecycle-ttl-policy",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-22T02:52:07.451Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "37a66400-1fb5-4b2f-a544-7846aeb0b7ba",
+        "identifier": "KER-42",
+        "title": "[KPRD-050][K5] DecisionEvidence store + Engram exact-first bridge",
+        "url": "https://linear.app/aspace-os/issue/KER-42/kprd-050k5-decisionevidence-store-engram-exact-first-bridge",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:49:31.673Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "bd5a9826-4354-4105-b7be-0a7d1359662f",
+        "identifier": "KER-40",
+        "title": "[KPRD-031][K3] Harness capability/depth routing telemetry",
+        "url": "https://linear.app/aspace-os/issue/KER-40/kprd-031k3-harness-capabilitydepth-routing-telemetry",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:30:21.342Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "ce561502-206b-4bb2-ab17-0cf756bb707d",
+        "identifier": "KER-39",
+        "title": "[KPRD-030][K3] FreeLLMAPI budget governor for executive inference",
+        "url": "https://linear.app/aspace-os/issue/KER-39/kprd-030k3-freellmapi-budget-governor-for-executive-inference",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:30:13.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "acf7acb8-2c07-42a5-8af3-0cbc484597b6",
+        "identifier": "KER-38",
+        "title": "[KPRD-011][K1] Hermes executive wake/refill loop — no idle LLM heartbeat",
+        "url": "https://linear.app/aspace-os/issue/KER-38/kprd-011k1-hermes-executive-wakerefill-loop-no-idle-llm-heartbeat",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:30:03.033Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "b25f044f-077b-4d36-8f62-f9e3edfd7cb9",
+        "identifier": "KER-37",
+        "title": "[KPRD-002][K0] Lease/fencing/idempotency production invariant pack",
+        "url": "https://linear.app/aspace-os/issue/KER-37/kprd-002k0-leasefencingidempotency-production-invariant-pack",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:29:50.286Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "646c2294-a784-4e73-a372-f4f4afd7389b",
+        "identifier": "KER-35",
+        "title": "[SOLARPUNK] Kernel Core autonomy runway — Doctor 13 / Yaz Ryan Graham",
+        "url": "https://linear.app/aspace-os/issue/KER-35/solarpunk-kernel-core-autonomy-runway-doctor-13-yaz-ryan-graham",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:29:19.438Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "2979cfd1-7bcf-472f-8c62-49eb3eba91eb",
+        "identifier": "KER-26",
+        "title": "[FLEET] Hermes Visionary → 15-slot Jules Kernel PRD fleet",
+        "url": "https://linear.app/aspace-os/issue/KER-26/fleet-hermes-visionary-15-slot-jules-kernel-prd-fleet",
+        "state": {
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:27:24.714Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "d2442edd-ffbc-41aa-b615-90d19d3c1099",
+        "identifier": "KER-16",
+        "title": "[BEDROCK] Audit & rebuild Desktop Commander remote access — idempotent, antifragile, durable",
+        "url": "https://linear.app/aspace-os/issue/KER-16/bedrock-audit-and-rebuild-desktop-commander-remote-access-idempotent",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:23:30.998Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "5e470fd5-1fc0-4aea-bc12-d146758f8385",
+        "identifier": "KER-33",
+        "title": "[LPRD-050][L5] Agent OS Life Core observability",
+        "url": "https://linear.app/aspace-os/issue/KER-33/lprd-050l5-agent-os-life-core-observability",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:13:33.510Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3002f9f0-f9b8-4a2c-abfd-a3f46847c547",
+        "identifier": "KER-32",
+        "title": "[LPRD-040][L4] Life evidence → OKF/Engram promotion",
+        "url": "https://linear.app/aspace-os/issue/KER-32/lprd-040l4-life-evidence-okfengram-promotion",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 3,
+        "priorityLabel": "medium",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:13:24.521Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "586e2359-8442-47f2-8bf8-114bae6f4b2c",
+        "identifier": "KER-31",
+        "title": "[LPRD-030][L3] Amy→Rory→River autonomous delegation loop",
+        "url": "https://linear.app/aspace-os/issue/KER-31/lprd-030l3-amyroryriver-autonomous-delegation-loop",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:13:16.839Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6c10e538-708a-40b1-8304-be043e1a2d1f",
+        "identifier": "KER-30",
+        "title": "[LPRD-020][L2] Life signals → WorkGraph/Linear event bridge",
+        "url": "https://linear.app/aspace-os/issue/KER-30/lprd-020l2-life-signals-workgraphlinear-event-bridge",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:13:03.914Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "9d19af8d-83f2-4b32-9c85-7b6cca82e921",
+        "identifier": "KER-29",
+        "title": "[LPRD-010][L1] 12WY/PARA/Wheel single-source reconciliation",
+        "url": "https://linear.app/aspace-os/issue/KER-29/lprd-010l1-12wyparawheel-single-source-reconciliation",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T20:12:52.666Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6724fd5c-df94-4fb7-8ac5-e6c42b984aab",
+        "identifier": "KER-23",
+        "title": "[CONVERGENCE] Safe Git integration + final intelligence promotion",
+        "url": "https://linear.app/aspace-os/issue/KER-23/convergence-safe-git-integration-final-intelligence-promotion",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T19:42:35.448Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "f9fdcc05-0ad1-4dd7-9dfe-bdf2c054b666",
+        "identifier": "KER-22",
+        "title": "[FORGE] Wire Unsloth evidence-to-GGUF learning loop",
+        "url": "https://linear.app/aspace-os/issue/KER-22/forge-wire-unsloth-evidence-to-gguf-learning-loop",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 3,
+        "priorityLabel": "medium",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T18:44:44.812Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3e4ab2b7-d8f1-4e8b-a1c7-e8c117ca9e8c",
+        "identifier": "KER-21",
+        "title": "[INTEL] Close Decision Fabric runtime gaps + router policy",
+        "url": "https://linear.app/aspace-os/issue/KER-21/intel-close-decision-fabric-runtime-gaps-router-policy",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T18:44:44.812Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6930af8a-1a26-4938-85db-41ae86e12117",
+        "identifier": "KER-20",
+        "title": "[INTEL] Common DecisionBench / AgentBench across local engines",
+        "url": "https://linear.app/aspace-os/issue/KER-20/intel-common-decisionbench-agentbench-across-local-engines",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-21T18:44:11.457Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "14264c13-2a75-471d-aea5-2bac6bdc5a91",
+        "identifier": "KER-17",
+        "title": "[BEDROCK] LLMTrim — make proxy routing idempotent, antifragile, persistent & durable",
+        "url": "https://linear.app/aspace-os/issue/KER-17/bedrock-llmtrim-make-proxy-routing-idempotent-antifragile-persistent",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-20T06:00:32.044Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "4fca7262-43e7-4ab2-b444-c3e249998462",
+        "identifier": "KER-14",
+        "title": "CANARY — Hermes Linear → Orca → Jules → Evidence",
+        "url": "https://linear.app/aspace-os/issue/KER-14/canary-hermes-linear-orca-jules-evidence",
+        "state": {
+          "name": "In Review",
+          "type": "started",
+          "color": "#0f783c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-20T02:24:01.174Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "e04d29f6-b9d8-44d0-8b68-4cffb1bd4356",
+        "identifier": "KER-12",
+        "title": "[ADE] Bind Orca/Herdr/Multica/Buzz to sovereign work_id",
+        "url": "https://linear.app/aspace-os/issue/KER-12/ade-bind-orcaherdrmulticabuzz-to-sovereign-work-id",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-20T02:23:59.459Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "d6692f6f-dab3-45cd-8677-03c905425248",
+        "identifier": "KER-11",
+        "title": "[AO] Project canonical WorkGraph into Agent OS",
+        "url": "https://linear.app/aspace-os/issue/KER-11/ao-project-canonical-workgraph-into-agent-os",
+        "state": {
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-09-20T02:23:56.895Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "33663c20-0300-497c-9ffa-135c750000de",
+        "identifier": "KER-3",
+        "title": "Connect your tools",
+        "url": "https://linear.app/aspace-os/issue/KER-3/connect-your-tools",
+        "state": {
+          "name": "Todo",
+          "type": "unstarted",
+          "color": "#e2e2e2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 0,
+        "priorityLabel": "none",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-05-21T05:59:35.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "1fcef71f-ad61-4c53-bddd-b12743aec741",
+        "identifier": "KER-2",
+        "title": "Set up your teams",
+        "url": "https://linear.app/aspace-os/issue/KER-2/set-up-your-teams",
+        "state": {
+          "name": "Todo",
+          "type": "unstarted",
+          "color": "#e2e2e2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 0,
+        "priorityLabel": "none",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-05-21T05:59:35.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "09595a04-ce31-409e-a8b6-edee133cfa90",
+        "identifier": "KER-1",
+        "title": "Get familiar with Linear",
+        "url": "https://linear.app/aspace-os/issue/KER-1/get-familiar-with-linear",
+        "state": {
+          "name": "Todo",
+          "type": "unstarted",
+          "color": "#e2e2e2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 0,
+        "priorityLabel": "none",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-05-21T05:59:35.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "01fbc9b5-fcaf-4c60-9ee7-c987dbb18d2e",
+        "identifier": "KER-4",
+        "title": "Import your data",
+        "url": "https://linear.app/aspace-os/issue/KER-4/import-your-data",
+        "state": {
+          "name": "Todo",
+          "type": "unstarted",
+          "color": "#e2e2e2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER"
+        },
+        "project": null,
+        "assignee": null,
+        "priority": 0,
+        "priorityLabel": "none",
+        "estimate": null,
+        "dueDate": null,
+        "updatedAt": "2026-05-21T05:59:35.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      }
+    ],
+    "truncated": false,
+    "meta": {
+      "filter": "open",
+      "workspaceId": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+      "team": {
+        "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+        "name": "Kernel Core",
+        "key": "KER",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      "limit": 100,
+      "returned": 38,
+      "hasMore": false,
+      "partial": false,
+      "workspaceErrors": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "1d5b9925-dbec-461c-bf87-6858fd81dc12"
+  }
+}

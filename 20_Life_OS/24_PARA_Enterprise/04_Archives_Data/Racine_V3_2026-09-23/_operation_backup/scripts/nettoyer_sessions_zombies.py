@@ -9,7 +9,7 @@ Regle revisee : un .md dans sessions_md/ est zombie si :
 
 Les sessions "consommees" (citees ailleurs, ou dont le contenu a deja ete
 reinjecte dans un wiki/concept) sont preservees. Les autres sont deplacees
-vers PARA/04_Archives_Data/Racine_V3_2026-09-23/_ARCHIVE_sessions_zombies/YYYY-MM-DD/ (jamais supprimees).
+vers _ARCHIVE_sessions_zombies/YYYY-MM-DD/ (jamais supprimees).
 
 Usage :
     python scripts/nettoyer_sessions_zombies.py [--dry-run]
@@ -25,7 +25,7 @@ from datetime import datetime
 ROOT = r"C:\Users\amado\ASpace_OS_V3"
 SESSIONS = os.path.join(ROOT, "00_Amadeus", "30_MEMORY_CORE", "sessions_md")
 OKF = os.path.join(ROOT, "40_Memory_Wiki_OKF")
-ARCHIVE = os.path.join(ROOT, "20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Racine_V3_2026-09-23/_ARCHIVE_sessions_zombies")
+ARCHIVE = os.path.join(ROOT, "_ARCHIVE_sessions_zombies")
 
 # motifs qui signent une "session distillee" : lien wiki, mention explicite
 WIKI = re.compile(r"\[\[([^\]]+)\]\]")

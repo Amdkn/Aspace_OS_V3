@@ -1,0 +1,329 @@
+{
+  "id": "d24fd8a6-87d3-4685-a73d-d7e73422b9ed",
+  "ok": true,
+  "result": {
+    "issues": [
+      {
+        "id": "3d278a19-2362-4dc5-b94c-76c3fc5ceb07",
+        "identifier": "KER-28",
+        "title": "[LPRD-001][L0] Doctor11/Amy/Rory/River persistent session contracts",
+        "url": "https://linear.app/aspace-os/issue/KER-28/lprd-001l0-doctor11amyroryriver-persistent-session-contracts",
+        "description": "Restore durable Life Core operating sessions and capability contracts: Amy=Spec, Rory=Build, River=Spawn/Knowledge, Doctor11=Review/detach. No companion owns sovereign Kernel state.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-28-lprd-001l0-doctor11amyroryriver-persistent-session-contracts",
+        "createdAt": "2026-09-21T20:10:01.602Z",
+        "updatedAt": "2026-09-22T13:50:00.113Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "65e8c05c-c4e6-4251-8bea-d7571e6e5cd0",
+        "identifier": "KER-34",
+        "title": "[LPRD-060][L6] A0 detachment acceptance gate",
+        "url": "https://linear.app/aspace-os/issue/KER-34/lprd-060l6-a0-detachment-acceptance-gate",
+        "description": "Define and test autonomy gate: ordinary Life work completes without A0 routing; only consequential, irreversible or low-confidence decisions escalate.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-34-lprd-060l6-a0-detachment-acceptance-gate",
+        "createdAt": "2026-09-21T20:10:49.811Z",
+        "updatedAt": "2026-09-22T11:51:36.940Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "887e1660-e05f-4ddd-980a-36ba16920f42",
+        "identifier": "KER-27",
+        "title": "[SOLARPUNK] Life Core autonomy readiness — Doctor 11 / Amy Rory River",
+        "url": "https://linear.app/aspace-os/issue/KER-27/solarpunk-life-core-autonomy-readiness-doctor-11-amy-rory-river",
+        "description": "Under S1 Rick supervision. Doctor 11 with Amy (Spec), Rory (Build), River (Spawn/Knowledge) prepares progressive autonomous ownership of Life OS while keeping Kernel/WorkGraph authority boundaries. Canon: 40_Memory_Wiki_OKF/architecture/tech_os_solarpunk_autonomy_roadmap_2026-09-21.md.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-27-solarpunk-life-core-autonomy-readiness-doctor-11-amy-rory",
+        "createdAt": "2026-09-21T20:08:20.706Z",
+        "updatedAt": "2026-09-22T11:51:28.483Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "5e470fd5-1fc0-4aea-bc12-d146758f8385",
+        "identifier": "KER-33",
+        "title": "[LPRD-050][L5] Agent OS Life Core observability",
+        "url": "https://linear.app/aspace-os/issue/KER-33/lprd-050l5-agent-os-life-core-observability",
+        "description": "Expose Life Core rocks/sprints/health/blocks/session freshness in Agent OS. Read-only projection; stale states visibly marked.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-33-lprd-050l5-agent-os-life-core-observability",
+        "createdAt": "2026-09-21T20:10:41.675Z",
+        "updatedAt": "2026-09-21T20:13:33.510Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3002f9f0-f9b8-4a2c-abfd-a3f46847c547",
+        "identifier": "KER-32",
+        "title": "[LPRD-040][L4] Life evidence → OKF/Engram promotion",
+        "url": "https://linear.app/aspace-os/issue/KER-32/lprd-040l4-life-evidence-okfengram-promotion",
+        "description": "Promote validated Life evidence/knowledge into OKF/Engram with provenance, exact-first retrieval and no silent knowledge overwrite.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 3,
+        "priorityLabel": "medium",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-32-lprd-040l4-life-evidence-okfengram-promotion",
+        "createdAt": "2026-09-21T20:10:31.844Z",
+        "updatedAt": "2026-09-21T20:13:24.521Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "586e2359-8442-47f2-8bf8-114bae6f4b2c",
+        "identifier": "KER-31",
+        "title": "[LPRD-030][L3] Amy→Rory→River autonomous delegation loop",
+        "url": "https://linear.app/aspace-os/issue/KER-31/lprd-030l3-amyroryriver-autonomous-delegation-loop",
+        "description": "Automate Spec→Build→Spawn loop with claim/evidence/review, retry ceilings and Donna escalation. Doctor11 reviews/detaches instead of doing technician work.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-31-lprd-030l3-amyroryriver-autonomous-delegation-loop",
+        "createdAt": "2026-09-21T20:10:24.918Z",
+        "updatedAt": "2026-09-21T20:13:16.839Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6c10e538-708a-40b1-8304-be043e1a2d1f",
+        "identifier": "KER-30",
+        "title": "[LPRD-020][L2] Life signals → WorkGraph/Linear event bridge",
+        "url": "https://linear.app/aspace-os/issue/KER-30/lprd-020l2-life-signals-workgraphlinear-event-bridge",
+        "description": "Emit meaningful Life events into WorkGraph/Linear without periodic LLM chatter. Deterministic sensors first; escalate ambiguity only.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-30-lprd-020l2-life-signals-workgraphlinear-event-bridge",
+        "createdAt": "2026-09-21T20:10:17.541Z",
+        "updatedAt": "2026-09-21T20:13:03.914Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "9d19af8d-83f2-4b32-9c85-7b6cca82e921",
+        "identifier": "KER-29",
+        "title": "[LPRD-010][L1] 12WY/PARA/Wheel single-source reconciliation",
+        "url": "https://linear.app/aspace-os/issue/KER-29/lprd-010l1-12wyparawheel-single-source-reconciliation",
+        "description": "Reconcile Life OS 12WY, PARA and Wheel state into one explicit source map with provenance and drift detection. Remove duplicate/stale projections.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "name": "Tech OS — Life Core",
+          "color": "#f2c94c"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-29-lprd-010l1-12wyparawheel-single-source-reconciliation",
+        "createdAt": "2026-09-21T20:10:10.210Z",
+        "updatedAt": "2026-09-21T20:12:52.666Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      }
+    ],
+    "truncated": false,
+    "meta": {
+      "limit": null,
+      "returned": 8,
+      "hasMore": false,
+      "orderBy": "updatedAt",
+      "workspaceId": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+      "partial": false,
+      "workspaceErrors": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "1d5b9925-dbec-461c-bf87-6858fd81dc12"
+  }
+}

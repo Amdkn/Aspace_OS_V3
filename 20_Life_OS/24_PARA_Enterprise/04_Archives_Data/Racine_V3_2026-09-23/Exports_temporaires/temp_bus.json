@@ -1,0 +1,20 @@
+{
+  "id": "12c482e2-7fee-4050-8f9f-7180c087c99a",
+  "ok": true,
+  "result": {
+    "issues": [],
+    "truncated": false,
+    "meta": {
+      "limit": null,
+      "returned": 0,
+      "hasMore": false,
+      "orderBy": "updatedAt",
+      "workspaceId": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+      "partial": false,
+      "workspaceErrors": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "1d5b9925-dbec-461c-bf87-6858fd81dc12"
+  }
+}

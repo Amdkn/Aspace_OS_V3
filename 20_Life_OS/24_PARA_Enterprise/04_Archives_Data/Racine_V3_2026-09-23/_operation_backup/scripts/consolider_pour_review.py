@@ -28,7 +28,7 @@ import os
 import re
 
 V3 = r"C:\Users\amado\ASpace_OS_V3"
-SORTIE = os.path.join(V3, "20_Life_OS/24_PARA_Enterprise/04_Archives_Data/Racine_V3_2026-09-23/_REVIEW_NOTEBOOKLM")
+SORTIE = os.path.join(V3, "_REVIEW_NOTEBOOKLM")
 
 # (fichier de sortie, titre, dossier source, prefixe de chemin affiche)
 LOTS = []

@@ -1,0 +1,1389 @@
+{
+  "id": "fe8bdd3d-f3f3-4024-b436-821823c59ac2",
+  "ok": true,
+  "result": {
+    "issues": [
+      {
+        "id": "ed879c75-1d34-4f11-b4e7-7e077e5a8cfc",
+        "identifier": "KER-46",
+        "title": "[RYAN][GIT] Branch & Worktree Stewardship — protect main, sandbox by Core/Layer/Domain",
+        "url": "https://linear.app/aspace-os/issue/KER-46/ryangit-branch-and-worktree-stewardship-protect-main-sandbox-by",
+        "description": "Companion owner: Ryan. Doctor project manager: Doctor 13. Gatekeeper: Rick S1.\n\nPurpose: make Git the code-isolation layer, not the orchestration source of truth.\n\nFractal contract:\n\n* Linear Project = Core.\n* Companion parent issue = durable responsibility + Activity journal.\n* Sub-issues = Doctor-planned executable tasks.\n* Orca Project/Worktree = execution projection and sandbox, optionally grouped by Division/Process Control.\n* Git main = integration-only, never dirty development.\n* Feature branches/worktrees = bounded sandboxes by Core / Layer / Domain.\n* End of project = preserve evidence, merge/promote accepted property, archive obsolete branch/worktree; never destroy an unclassified dirty tree.\n\nBranch namespace:\nsandbox/<core>/<companion>/<purpose>\nfeature/<core>/<layer-or-domain>/<purpose>\nfix/<core>/<layer-or-domain>/<purpose>\narchive/<yyyy-mm>/<source>\n\nAcceptance:\n\n1. Current local+origin branches classified.\n2. A clean Ryan governance worktree exists from origin/main without touching the dirty main worktree.\n3. main-protection policy is documented and enforcement path identified.\n4. Legacy Jules/feature branches are mapped to keep/merge/archive/delete-candidate; no blind deletion.\n5. Orca worktrees are created from explicit canonical branches, not unknown origin/\\* refs.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-46-ryangit-branch-worktree-stewardship-protect-main-sandbox-by",
+        "createdAt": "2026-09-22T15:32:51.297Z",
+        "updatedAt": "2026-09-22T15:35:37.243Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "746ce8b1-854e-4f46-b397-d65934690399",
+        "identifier": "KER-49",
+        "title": "[RYAN][GIT-3] Orca worktree lifecycle + dirty-project archive gate",
+        "url": "https://linear.app/aspace-os/issue/KER-49/ryangit-3-orca-worktree-lifecycle-dirty-project-archive-gate",
+        "description": "Define and validate: Linear sub-issue -> explicit branch -> clean Orca worktree -> evidence/review -> merge/promotion -> archive worktree/branch. Preserve dirty main until property is classified.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-49-ryangit-3-orca-worktree-lifecycle-dirty-project-archive-gate",
+        "createdAt": "2026-09-22T15:34:19.790Z",
+        "updatedAt": "2026-09-22T15:34:19.790Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "c7304f3c-f573-4a20-8882-40415603a78b",
+        "identifier": "KER-48",
+        "title": "[RYAN][GIT-2] Main protection + branch taxonomy contract",
+        "url": "https://linear.app/aspace-os/issue/KER-48/ryangit-2-main-protection-branch-taxonomy-contract",
+        "description": "Materialize protection policy: no direct development on main; PR/review/check gate; bounded branch namespaces by Core/Layer/Domain; define enforcement mechanism separately from policy.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-48-ryangit-2-main-protection-branch-taxonomy-contract",
+        "createdAt": "2026-09-22T15:34:11.570Z",
+        "updatedAt": "2026-09-22T15:34:11.570Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "87192087-5692-437b-9287-ee066a9a361d",
+        "identifier": "KER-47",
+        "title": "[RYAN][GIT-1] Inventory + classify local/origin branches",
+        "url": "https://linear.app/aspace-os/issue/KER-47/ryangit-1-inventory-classify-localorigin-branches",
+        "description": "Capture branch/ref inventory and classify each as canonical, active sandbox, merged/absorbed, archive candidate, or unknown. No deletion.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-47-ryangit-1-inventory-classify-localorigin-branches",
+        "createdAt": "2026-09-22T15:33:14.124Z",
+        "updatedAt": "2026-09-22T15:33:14.124Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "10394249-0b05-4062-b510-2b90ba8f9719",
+        "identifier": "KER-19",
+        "title": "[INTEL] Integrate Needle 3 capability adapter",
+        "url": "https://linear.app/aspace-os/issue/KER-19/intel-integrate-needle-3-capability-adapter",
+        "description": "Integrate installed Cactus Needle 3 into IntelligenceRouter as native local capability interfaces. Prefer EXTRACT/ACT/EMBED and only expose DECIDE if evidence justifies it. Preserve fail-closed authority boundary. Add tests and runtime discovery. Completion requires green regression suite and evidence in Linear.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-19-intel-integrate-needle-3-capability-adapter",
+        "createdAt": "2026-09-21T18:43:32.029Z",
+        "updatedAt": "2026-09-22T14:04:29.958Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "24d595c0-0b0f-4920-885a-a893fdc5522e",
+        "identifier": "KER-43",
+        "title": "[ALLOC] Enforce 20/30/50 capacity policy across Rick/Doctors/Agent OS",
+        "url": "https://linear.app/aspace-os/issue/KER-43/alloc-enforce-203050-capacity-policy-across-rickdoctorsagent-os",
+        "description": "Enforce A0 strategic capacity allocation globally:\n\n* Kernel Core 20%\n* Life OS 30%\n* Business OS 50%\n\nFor Jules 15-lane ceiling: hard caps 3 Kernel / 4 Life / 8 Business. Unused Life/Business capacity MUST NOT be donated to Kernel without explicit A0/Rick policy change.\n\nExtend beyond Jules:\n\n* Rick and Doctors must reason over portfolio allocation before dispatch.\n* Companion/worker assignments must inherit the same core budget.\n* Agent OS must show target %, lane cap, active count, drift/over-allocation, source and freshness.\n* Hermes must treat Kernel as foundation maintenance, not dominant work sink.\n* No idle LLM heartbeat to rebalance; deterministic scheduler/control path.\n  Acceptance: automated dispatch cannot exceed core caps, dashboard exposes drift, tests/build green, and policy is documented in local canon.",
+        "state": {
+          "id": "5916ebd2-f649-4e51-8c4c-5b405b83c5be",
+          "name": "In Review",
+          "type": "started",
+          "color": "#0f783c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-43-alloc-enforce-203050-capacity-policy-across-rickdoctorsagent",
+        "createdAt": "2026-09-22T03:08:44.058Z",
+        "updatedAt": "2026-09-22T13:03:21.935Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "bd686b1a-846d-403c-884a-cd862e24a6be",
+        "identifier": "KER-45",
+        "title": "[CONVERGENCE] Audit & recycle today’s Jules sessions into Kernel OS + Life Core",
+        "url": "https://linear.app/aspace-os/issue/KER-45/convergence-audit-and-recycle-todays-jules-sessions-into-kernel-os",
+        "description": "Audit the Jules sessions created today (dashboard currently shows 84/100 daily sessions) and harvest them as evidence/capabilities, not as disposable chat history. Classify each useful session against A'Space V3 SoT: Kernel Core, Life Core, reusable harness/effectors, duplicate/superseded, unresolved debt. Reconcile against Filesystem + Agent OS + WorkGraph/uc.db + Linear. Identify what is actually concretized vs merely planned. Produce a reuse map for Kernel autonomy and Life Core handoff, with explicit evidence paths/session IDs. Do NOT spawn 84 replacements and do NOT consume Jules quota unnecessarily. Prefer existing session metadata/transcripts/bridge state. Preserve dirty worktree. Goal: finish the Kernel autonomy boundary and move the active bottleneck from S3 Ryan to S2 Doctor 11 / Life Core only when evidence supports that transition.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-45-convergence-audit-recycle-todays-jules-sessions-into-kernel",
+        "createdAt": "2026-09-22T10:08:00.318Z",
+        "updatedAt": "2026-09-22T13:03:06.222Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "dd5dcd74-c646-4798-8907-a14b313d91b7",
+        "identifier": "KER-36",
+        "title": "[KPRD-001][K0] Linear↔WorkGraph reconciliation + stale-state reaper",
+        "url": "https://linear.app/aspace-os/issue/KER-36/kprd-001k0-linearworkgraph-reconciliation-stale-state-reaper",
+        "description": "Build deterministic reconciliation between fresh Linear state, WorkGraph/uc.db, and active harness/Jules ownership. Detect abandoned In Progress, completed-but-unprojected work, and drift. Never infer success from UI cache.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-36-kprd-001k0-linearworkgraph-reconciliation-stale-state-reaper",
+        "createdAt": "2026-09-21T20:28:37.373Z",
+        "updatedAt": "2026-09-22T13:02:41.390Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "fcd4bf6e-901d-4e55-983d-4636bfc88c09",
+        "identifier": "KER-25",
+        "title": "[OBS] Agent OS live Control Plane — Linear + WorkGraph + A0 Relay",
+        "url": "https://linear.app/aspace-os/issue/KER-25/obs-agent-os-live-control-plane-linear-workgraph-a0-relay",
+        "description": "Modernize C:\\\\Users\\\\amado\\\\agent-os\\\\desktop as the observability interface for current A'Space V3 architecture.\n\nProblem: Orca's embedded Linear view can be stale; Agent OS currently has rich but partly hard-coded RoboNuggets-era cockpit data and tech-os-api reads uc.db but does not expose the full current control plane.\n\nDesign:\n\n* Do NOT make Hermes depend on the Orca Linear UI.\n* Hermes/A0 Relay should use Orca Linear CLI/API (or direct authenticated Linear connector if available) as machine path; UI is projection only.\n* Add live Control Plane observability: Linear issue status/updatedAt, WorkGraph uc.db state, A0 Relay disposition, Hermes session/heartbeat, FreeLLMAPI harness route, LM Studio local serving, Needle/Laya System-1 status, Model Forge/Unsloth promotion state.\n* Show freshness timestamps and source per card; stale projections must be visibly marked.\n* Add drift detector: Linear API/CLI state vs displayed cache/projection, and WorkGraph projection lag.\n* Replace hard-coded fake routines/email/agent state where a live source exists. Never fabricate health.\n* Preserve read-only observability by default; mutations require existing sovereign APIs/gates.\n* Computer Use/ChatGPT is report mirror, not critical path.\n* Keep Agent OS role defined by 80_Agent-OS: it observes state, does not become a second source of truth.\n\nAcceptance: a single Agent OS Control Plane screen shows live [KER-18](https://linear.app/aspace-os/issue/KER-18/intel-ornith-local-canary-resource-benchmark)..[KER-24](https://linear.app/aspace-os/issue/KER-24/control-productionize-a0-relay-remove-human-router) chain, WorkGraph counts, Hermes/A0 Relay state and inference/serving topology with freshness/drift indicators; build/tests green.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-25-obs-agent-os-live-control-plane-linear-workgraph-a0-relay",
+        "createdAt": "2026-09-21T19:19:47.218Z",
+        "updatedAt": "2026-09-22T11:51:20.194Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "25daa6c8-ff02-4196-ac48-ec2ba506ecfd",
+        "identifier": "KER-24",
+        "title": "[CONTROL] Productionize A0 Relay — remove human router",
+        "url": "https://linear.app/aspace-os/issue/KER-24/control-productionize-a0-relay-remove-human-router",
+        "description": "Productionize the deterministic A0 Relay now implemented locally in 10_Tech_OS/kernel/a0_relay\\*. Linear is the machine control/mandate bus; WorkGraph remains execution truth. Computer Use to ChatGPT is a report mirror, never the critical control path.\n\nRequired:\n\n* explicit Linear issue/event → RelayEvent mapper; do not scrape arbitrary prose\n* deterministic L0 continuation for normal unblocked work\n* Needle may perform schema-bound EXTRACT only after deterministic parsing misses\n* Laya may perform calibrated bounded triage (CONTINUE/ESCALATE_A0/RETRY/BLOCK) only after L0/L0.5 ambiguity; CalibrationGate retains authority\n* typed A0Directive validation and ingestion path\n* wake/resume HERMES_EXECUTIVE only for explicit unblocked mandates\n* mirror completion/blocker/A0 escalation to pinned ChatGPT session through Orca Computer Use without making browser availability a dependency\n* idempotency/deduplication and evidence/provenance\n* tests and safe startup/supervision; no destructive Git cleanup\n\nAcceptance: ordinary issue completion can advance to next unblocked Linear mandate with no human copy/paste; consequential/irreversible/low-confidence cases stop at A0; browser failure does not stop control plane.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-24-control-productionize-a0-relay-remove-human-router",
+        "createdAt": "2026-09-21T19:06:59.363Z",
+        "updatedAt": "2026-09-22T11:51:11.918Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "d37138c9-8b2f-496d-b03a-e3f7ee6a6338",
+        "identifier": "KER-44",
+        "title": "[BEDROCK] Companion Constitution V2 + Dao→Jing role projections",
+        "url": "https://linear.app/aspace-os/issue/KER-44/bedrock-companion-constitution-v2-daojing-role-projections",
+        "description": "Materialize the double topology Vertical Authority × Horizontal Transformation as Kernel contracts.\n\nA0 doctrine:\nVertical: A0 → Rick → Doctors → Companions.\nHorizontal: Ryan → Yaz → Graham → Bill → Clara → Nardole → Amy → Rory → River → WorldState.\nHome Doctor/Core = stewardship, never exclusive reach. Replace SPEC/BUILD/SPAWN with X-of-X invariants. Harnesses are effectors adopting stable companion identities. World state is persistent; agents receive typed bounded projections. Reconcile Filesystem ↔ Agent OS ↔ WorkGraph by evidence.\n\nDeliverables:\n\n1. Preserve existing ROLE_CONTRACTS.json before mutation.\n2. Create canonical COMPANIONS_CONSTITUTION.json with exhaustive nine companion records: identity/operator/home/position; primary invariant; cross-core reach; forbidden authority; ADR triggers; typed I/O; owned artifacts; persistent lane; effectors; watch signals; handoffs; observability.\n3. Implement Dao→Jing bounded role projections from WorkGraph/world state.\n4. Deterministic constitution/topology validator: exactly nine companions, positions 1..9 unique, canonical loop closed, harness != identity, home_core != exclusive scope.\n5. Project into Agent OS without business logic in UI.\n6. Tests + evidence. Preserve dirty worktree. No git reset/clean. No destructive schema.sql/uc.db mutation.\n7. System-1/System-2 are cognitive capabilities, not organizational S1/S2 authority tiers.\n\nAcceptance: regression green; deterministic constitution validation; reproducible bounded projection for Rick, Doctors and nine companions; drift observable; evidence posted here; reuse persistent Hermes lanes/effectors.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-44-bedrock-companion-constitution-v2-daojing-role-projections",
+        "createdAt": "2026-09-22T09:23:47.678Z",
+        "updatedAt": "2026-09-22T11:51:03.597Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "b074d7c8-fd48-4bef-8b07-0b7327d0b382",
+        "identifier": "KER-41",
+        "title": "[KPRD-040][K4] LM Studio local serving lifecycle + TTL policy",
+        "url": "https://linear.app/aspace-os/issue/KER-41/kprd-040k4-lm-studio-local-serving-lifecycle-ttl-policy",
+        "description": "Productionize local serving registry: discovery, estimate, load/unload, context/TTL/resource policy and health evidence for GGUF backends.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-41-kprd-040k4-lm-studio-local-serving-lifecycle-ttl-policy",
+        "createdAt": "2026-09-21T20:29:19.438Z",
+        "updatedAt": "2026-09-22T02:52:07.451Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "37a66400-1fb5-4b2f-a544-7846aeb0b7ba",
+        "identifier": "KER-42",
+        "title": "[KPRD-050][K5] DecisionEvidence store + Engram exact-first bridge",
+        "url": "https://linear.app/aspace-os/issue/KER-42/kprd-050k5-decisionevidence-store-engram-exact-first-bridge",
+        "description": "Implement evidence envelope/store and exact-first Engram lookup before learned/System-1 escalation; preserve provenance and no silent overwrite.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": {
+          "id": "e84876aa-9f52-4aa7-b181-d1a48025516a",
+          "displayName": "amdkn777",
+          "avatarUrl": "https://public.linear.app/e84876aa-9f52-4aa7-b181-d1a48025516a/11b567f6-6078-4445-a081-612bd03395d9"
+        },
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-42-kprd-050k5-decisionevidence-store-engram-exact-first-bridge",
+        "createdAt": "2026-09-21T20:29:28.241Z",
+        "updatedAt": "2026-09-21T20:49:31.673Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "bd5a9826-4354-4105-b7be-0a7d1359662f",
+        "identifier": "KER-40",
+        "title": "[KPRD-031][K3] Harness capability/depth routing telemetry",
+        "url": "https://linear.app/aspace-os/issue/KER-40/kprd-031k3-harness-capabilitydepth-routing-telemetry",
+        "description": "Expose which harness/model/depth served each escalation, with capability/evidence/cost/latency and fallback provenance.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-40-kprd-031k3-harness-capabilitydepth-routing-telemetry",
+        "createdAt": "2026-09-21T20:29:11.782Z",
+        "updatedAt": "2026-09-21T20:30:21.342Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "ce561502-206b-4bb2-ab17-0cf756bb707d",
+        "identifier": "KER-39",
+        "title": "[KPRD-030][K3] FreeLLMAPI budget governor for executive inference",
+        "url": "https://linear.app/aspace-os/issue/KER-39/kprd-030k3-freellmapi-budget-governor-for-executive-inference",
+        "description": "Enforce Hermes executive-only inference budgets, bounded max_tokens, failover telemetry and no technician loops. Prevent recurrence of credit/max-token failure storms.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-39-kprd-030k3-freellmapi-budget-governor-for-executive",
+        "createdAt": "2026-09-21T20:29:04.405Z",
+        "updatedAt": "2026-09-21T20:30:13.680Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "acf7acb8-2c07-42a5-8af3-0cbc484597b6",
+        "identifier": "KER-38",
+        "title": "[KPRD-011][K1] Hermes executive wake/refill loop — no idle LLM heartbeat",
+        "url": "https://linear.app/aspace-os/issue/KER-38/kprd-011k1-hermes-executive-wakerefill-loop-no-idle-llm-heartbeat",
+        "description": "Replace periodic LLM chatter with event-driven/deterministic wake/refill. Hermes wakes only for architecture/review/escalation; routine READY work flows directly to Jules.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-38-kprd-011k1-hermes-executive-wakerefill-loop-no-idle-llm",
+        "createdAt": "2026-09-21T20:28:55.227Z",
+        "updatedAt": "2026-09-21T20:30:03.033Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "b25f044f-077b-4d36-8f62-f9e3edfd7cb9",
+        "identifier": "KER-37",
+        "title": "[KPRD-002][K0] Lease/fencing/idempotency production invariant pack",
+        "url": "https://linear.app/aspace-os/issue/KER-37/kprd-002k0-leasefencingidempotency-production-invariant-pack",
+        "description": "Turn claim/lease/heartbeat/reap/fencing/wake_at invariants into continuous production checks and evidence without LLM polling.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-37-kprd-002k0-leasefencingidempotency-production-invariant-pack",
+        "createdAt": "2026-09-21T20:28:47.627Z",
+        "updatedAt": "2026-09-21T20:29:50.286Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "646c2294-a784-4e73-a372-f4f4afd7389b",
+        "identifier": "KER-35",
+        "title": "[SOLARPUNK] Kernel Core autonomy runway — Doctor 13 / Yaz Ryan Graham",
+        "url": "https://linear.app/aspace-os/issue/KER-35/solarpunk-kernel-core-autonomy-runway-doctor-13-yaz-ryan-graham",
+        "description": "Under S1 Rick supervision. Doctor 13 with Yaz (Spec/SecOps), Ryan (Build/SysAdmin), Graham (Spawn/Evidence/DB) completes the sovereign Bedrock/Kernel so A0 can detach from infrastructure. Canon: 40_Memory_Wiki_OKF/architecture/tech_os_solarpunk_autonomy_roadmap_2026-09-21.md.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-35-solarpunk-kernel-core-autonomy-runway-doctor-13-yaz-ryan",
+        "createdAt": "2026-09-21T20:28:17.158Z",
+        "updatedAt": "2026-09-21T20:29:19.438Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "2979cfd1-7bcf-472f-8c62-49eb3eba91eb",
+        "identifier": "KER-26",
+        "title": "[FLEET] Hermes Visionary → 15-slot Jules Kernel PRD fleet",
+        "url": "https://linear.app/aspace-os/issue/KER-26/fleet-hermes-visionary-15-slot-jules-kernel-prd-fleet",
+        "description": "Implement the Life-OS-style Jules delegation model for Kernel Core.\n\nDoctrine:\n\n* Hermes = field visionary/executive, NOT routine technician.\n* FreeLLMAPI tokens are for decomposition, architecture, arbitration, review and delegation.\n* Jules = implementation labor; proactively use up to 15 concurrent Kernel sessions when READY work exists.\n* Do not wait for A0 to explicitly say “delegate”.\n* One Jules session per bounded PRD/work package (or tightly coupled PRDs), exclusive scope, dependency gates, tests/build/audit, PR/evidence.\n* Never duplicate a live session for the same Linear issue/work_id.\n* WorkGraph remains execution truth; Linear mandate/control ledger.\n\nKernel poles:\nK0 Sovereign Kernel\nK1 Orchestration & A0 Relay\nK2 System-1 Decision\nK3 Inference & Routing\nK4 Serving/Compute & Forge\nK5 Memory/Engram/Evidence\nK6 Observability/Agent OS\nK7 Integration/Convergence\n\nLocal canon:\n40_Memory_Wiki_OKF/architecture/kernel_jules_fleet_prd_poles_2026-09-21.md\nSeed implementation:\n10_Tech_OS/kernel/jules_kernel_fleet.py + test_jules_kernel_fleet.py\n\nAcceptance:\n\n* inventory active Jules sessions\n* reserve/operate max 15 Kernel lanes\n* compile numbered PRD briefs from READY KER issues\n* auto-refill free lanes without A0 prompt\n* Hermes reviews outcomes instead of reimplementing\n* publish a stable 15-slot fleet telemetry contract/report for [KER-25](https://linear.app/aspace-os/issue/KER-25/obs-agent-os-live-control-plane-linear-workgraph-a0-relay) to consume; [KER-25](https://linear.app/aspace-os/issue/KER-25/obs-agent-os-live-control-plane-linear-workgraph-a0-relay) owns the Agent OS UI projection\n* idempotent, no duplicate sessions, tests green.",
+        "state": {
+          "id": "dded0b42-4a1f-4dcb-8fab-9dcc8a8cc0b0",
+          "name": "In Progress",
+          "type": "started",
+          "color": "#f2c94c"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-26-fleet-hermes-visionary-15-slot-jules-kernel-prd-fleet",
+        "createdAt": "2026-09-21T19:42:04.347Z",
+        "updatedAt": "2026-09-21T20:27:24.714Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "d2442edd-ffbc-41aa-b615-90d19d3c1099",
+        "identifier": "KER-16",
+        "title": "[BEDROCK] Audit & rebuild Desktop Commander remote access — idempotent, antifragile, durable",
+        "url": "https://linear.app/aspace-os/issue/KER-16/bedrock-audit-and-rebuild-desktop-commander-remote-access-idempotent",
+        "description": "## Executive mandate\n\nAudit **Desktop Commander / Remote MCP on Amd-PC from first principles**, identify every source of fragility, and rebuild the access path so it is **idempotent, antifragile, durable, observable, and boring**.\n\nThis is a bounded Tech OS / Kernel Core recovery mandate.\nDo **not** turn Desktop Commander into a new product or permanent side-project.\n\n## Why this exists\n\nThe current DC path has accumulated overlapping wrappers, aliases, supervisors, Scheduled Tasks, stale OAuth sessions, competing launch modes, and partial upgrade attempts. The result has alternated between:\n\n* `Device ready` in foreground manual mode\n* broker showing the device offline\n* `phase: connecting`\n* `phase: retry_wait`\n* `Remote exited (1)`\n* `Device startup failed: fetch failed`\n* `Invalid Refresh Token: Already Used`\n* stale/expired device codes\n* a PowerShell alias intercepting `desktop-commander`\n* multiple generations of wrappers around a tool that should be simple\n\nThe objective is not to patch one symptom.\nThe objective is to **remove accidental complexity and leave one canonical path**.\n\n---\n\n## Current known topology / artifacts to audit\n\nAt minimum inspect:\n\n### Installed package / launchers\n\n* `C:\\Users\\amado\\AppData\\Roaming\\npm\\desktop-commander.cmd`\n* global npm package `@wonderwhy-er/desktop-commander`\n* currently observed installed version: `0.2.48`\n* attempted upgrade/staging of `0.2.51` was interrupted / not proven complete\n* any npm shims / node path used by the command\n\n### PowerShell wrappers / aliases\n\n* `C:\\Users\\amado\\dc.ps1`\n* PowerShell profile:\n  `C:\\Users\\amado\\Documents\\PowerShell\\Microsoft.PowerShell_profile.ps1`\n* known alias/function:\n  `function global:desktop-commander { & 'C:\\Users\\amado\\dc.ps1' @args }`\n* any `dc` alias/function\n\n### Scheduled execution / persistence\n\n* Scheduled Task: **ASpace Desktop Commander**\n* legacy action observed:\n  `wscript.exe //B //NoLogo C:\\Users\\amado\\.desktop-commander\\managed\\silent.vbs Supervisor`\n* later replacement attempt with:\n  `direct-runner.ps1`\n* task restart policy / multiple-instance semantics / logon trigger\n\n### Legacy management layer\n\nUnder:\n`C:\\Users\\amado\\.desktop-commander\\managed\\`\n\nAudit at least:\n\n* `supervisor.mjs`\n* `silent.vbs`\n* `direct-runner.ps1`\n* state files\n* launcher logs\n* retry/backoff behavior\n* child PID management\n\n### Remote identity / logs\n\n* `C:\\Users\\amado\\.desktop-commander\\remote.log`\n* any Remote Device identity/session store used by the current version\n* any backup copies created during prior recovery attempts\n* device ID currently expected:\n  `c22e1bb6-79bd-4aae-8ee0-c5f06a856654`\n* device name: `Amd-PC`\n\n### Network / environment\n\n* Windows user context: `amd-pc\\amado`\n* `USERPROFILE=C:\\Users\\amado`\n* `APPDATA=C:\\Users\\amado\\AppData\\Roaming`\n* system/user proxy state\n* `HTTP_PROXY`, `HTTPS_PROXY`, `ALL_PROXY`\n* any residual router/proxy process affecting Remote MCP\n* TLS / DNS / fetch behavior to `https://mcp.desktopcommander.app`\n\n---\n\n## Required investigation\n\n### 1. Establish ground truth before mutation\n\nCapture:\n\n* installed package version\n* exact binary/shim path\n* exact command required for Remote mode for that installed version\n* active processes and parent/child tree\n* Scheduled Task definition\n* PowerShell aliases/functions\n* auth/session files actually read by Remote mode\n* current network/proxy environment\n* reproducible foreground behavior\n* reproducible background/Scheduled Task behavior\n\nDo not assume the current wrappers are correct.\n\n### 2. Root-cause every observed failure\n\nExplain with evidence:\n\n* why foreground Remote can reach `Device ready`\n* why persisted/background mode has failed\n* why `Invalid Refresh Token: Already Used` occurred\n* why `fetch failed` occurred\n* whether concurrency caused refresh-token rotation races\n* whether Scheduled Task environment differs materially\n* whether custom wrappers cause startup or retry defects\n* whether the installed DC version contains a known upstream defect\n* whether an upgrade is actually required\n\n### 3. Minimize architecture\n\nTarget the smallest reliable topology.\n\nPreferred end-state if technically valid:\n\n```\nWindows logon\n    ↓\nONE native Scheduled Task\n    ↓\nONE canonical DC Remote command\n    ↓\nRemote MCP\n```\n\nAny extra wrapper/supervisor must justify its existence with a capability Windows/DC does not already provide.\n\n### 4. Idempotence\n\nRepeated execution of the canonical repair/start operation must converge to the same healthy state.\n\nRequirements:\n\n* no duplicate processes\n* no duplicate Remote devices\n* no duplicate OAuth flows\n* no stale competing Scheduled Tasks\n* no refresh-token races\n* safe to run after crash/reboot\n* safe to run when already healthy\n* no destructive cleanup of unrelated processes\n\n### 5. Antifragility\n\nThe system must recover predictably from:\n\n* DC process crash\n* reboot/logoff/login\n* transient network failure\n* Remote MCP outage\n* stale token / expired authorization\n* package update\n* task restart\n* orphaned process\n* partial prior recovery\n\nRecovery must be bounded and observable.\nNo infinite opaque retry loops.\n\n### 6. Durable observability\n\nLeave one canonical health signal and one canonical log location.\n\nHealth must distinguish at least:\n\n* OFFLINE\n* STARTING\n* AUTH_REQUIRED\n* CONNECTING\n* SERVICE_READY\n* RETRY_WAIT\n* DEGRADED / ERROR\n\nA stale broker record must never be reported as healthy.\n\n### 7. Authentication\n\nUse one canonical persisted identity/session.\n\nRules:\n\n* never run multiple Remote agents against the same rotating refresh token unless upstream explicitly supports it\n* never loop device authorization\n* never auto-select credentials or bypass human auth\n* when interactive auth is required, surface exactly one bounded action to A0\n\n### 8. Upgrade policy\n\nDo not upgrade merely because a newer version exists.\n\nIf an upgrade is required:\n\n* prove why\n* stage/test safely first\n* preserve rollback\n* verify exact version after install\n* verify Remote mode end-to-end\n* remove obsolete version only after acceptance passes\n\nIf current version is repairable and stable, document why staying pinned is preferable.\n\n---\n\n## Forbidden patterns\n\nDo NOT:\n\n* create supervisor-on-supervisor stacks\n* create wrapper-on-wrapper aliases\n* leave both foreground and background Remote agents running\n* create another device identity as a workaround\n* silently delete auth state before understanding it\n* repeatedly reinstall npm packages as diagnosis\n* use destructive `Remove-Item` cleanup without evidence\n* treat `process exists` as `Remote healthy`\n* report success without a remote call from ChatGPT proving the complete path\n* turn DC into a blocking objective for unrelated Tech OS work\n\n---\n\n## Acceptance criteria\n\nThe issue can move to **Done** only when all are true:\n\n 1. **Single canonical architecture documented.**\n 2. **Single canonical launcher/start command documented.**\n 3. **Single canonical Scheduled Task** (if persistence is needed).\n 4. No obsolete DC wrapper/process participates in runtime.\n 5. No duplicate live Remote agents.\n 6. PowerShell aliases no longer shadow or distort the real DC CLI unexpectedly.\n 7. Device auth succeeds and persists across process restart.\n 8. Reboot/logon persistence is proven or a precise bounded limitation is documented.\n 9. Remote device reaches **SERVICE_READY**.\n10. A **real remote ping from ChatGPT** succeeds.\n11. A **real remote command from ChatGPT** succeeds.\n12. Re-running the start/repair action while healthy produces no duplicate or regression.\n13. Killing the DC process and letting recovery occur produces one healthy replacement.\n14. Logs clearly show lifecycle and error cause.\n15. Rollback path is documented and tested.\n16. Legacy files are either:\n    * removed after proof they are obsolete, or\n    * archived with clear non-runtime status.\n17. Final evidence is posted to this Linear issue.\n18. Any resulting durable architecture change is recorded in the Tech OS canon / AGENTS documentation only after validation.\n\n---\n\n## Deliverables\n\nProduce:\n\n* root-cause report\n* before/after architecture diagram\n* exact canonical launcher\n* exact Scheduled Task definition\n* exact health-check procedure\n* auth/session lifecycle description\n* failure/recovery matrix\n* rollback procedure\n* evidence of idempotence\n* evidence of remote ChatGPT end-to-end success\n* list of deleted/archived legacy artifacts\n* final recommendation: pinned version + upgrade policy\n\n---\n\n## Execution ownership\n\nThis issue may be handed to **Antigravity** for deep audit/reconciliation or to **Hermes** for orchestration.\n\nIf Hermes owns it:\n\n* use Orca as ADE\n* delegate bounded technical investigation/repair to the appropriate harness\n* keep Linear as the human-readable mandate/action ledger\n* keep `uc.db / WorkGraph` as sovereign runtime truth where applicable\n* record meaningful action deltas here\n* do not escalate terminal/PID/plumbing details to A0 unless an irreversible decision or external authentication is required\n\n## Definition of success\n\nDesktop Commander becomes a **boring infrastructure primitive**:\n\n> one launch path, one identity, one process lineage, one recovery path, one log, one health truth.\n\nNo heroics. No ritual. No babysitting.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-16-bedrock-audit-rebuild-desktop-commander-remote-access",
+        "createdAt": "2026-09-20T05:20:36.758Z",
+        "updatedAt": "2026-09-21T20:23:30.998Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6724fd5c-df94-4fb7-8ac5-e6c42b984aab",
+        "identifier": "KER-23",
+        "title": "[CONVERGENCE] Safe Git integration + final intelligence promotion",
+        "url": "https://linear.app/aspace-os/issue/KER-23/convergence-safe-git-integration-final-intelligence-promotion",
+        "description": "After predecessor intelligence work is complete, isolate only the new Intelligence/Decision/Forge changes from the dirty V3 worktree. Never use global git reset --hard or git clean. Run full regression/canary, classify artifacts, make targeted integration/commit only when safe, and update the architecture memory. Return completion evidence to Linear.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-23-convergence-safe-git-integration-final-intelligence",
+        "createdAt": "2026-09-21T18:43:56.668Z",
+        "updatedAt": "2026-09-21T19:42:35.448Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "0dc2bc87-15fc-43fa-85b4-5a0140d42d3d",
+        "identifier": "KER-18",
+        "title": "[INTEL] Ornith local canary + resource benchmark",
+        "url": "https://linear.app/aspace-os/issue/KER-18/intel-ornith-local-canary-resource-benchmark",
+        "description": "Execute the first promotion canary for Ornith 1.0 9B Q4_K_M through LM Studio on Amd-PC. Use controlled context, measure load/RAM/latency/quality, run agentic fixtures, unload cleanly, and record evidence. Ornith is Doctor/agentic execution only; it has no Kernel authority. Do not modify uc.db/schema.sql except through existing sovereign interfaces. Completion requires reproducible commands/results and a PASS/FAIL promotion recommendation in Linear.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-18-intel-ornith-local-canary-resource-benchmark",
+        "createdAt": "2026-09-21T18:43:25.870Z",
+        "updatedAt": "2026-09-21T19:19:47.218Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "f9fdcc05-0ad1-4dd7-9dfe-bdf2c054b666",
+        "identifier": "KER-22",
+        "title": "[FORGE] Wire Unsloth evidence-to-GGUF learning loop",
+        "url": "https://linear.app/aspace-os/issue/KER-22/forge-wire-unsloth-evidence-to-gguf-learning-loop",
+        "description": "Implement the Model Forge loop without granting model authority: validated DecisionEvidence/WorkGraph evidence → provenance-stamped dataset → Unsloth LoRA/QLoRA/fine-tune → quantization/GGUF → LM Studio → benchmark → promotion/rejection. TrainingProfile provenance is mandatory. A minimal dry-run pipeline is acceptable before expensive training.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 3,
+        "priorityLabel": "medium",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-22-forge-wire-unsloth-evidence-to-gguf-learning-loop",
+        "createdAt": "2026-09-21T18:43:49.115Z",
+        "updatedAt": "2026-09-21T18:44:44.812Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3e4ab2b7-d8f1-4e8b-a1c7-e8c117ca9e8c",
+        "identifier": "KER-21",
+        "title": "[INTEL] Close Decision Fabric runtime gaps + router policy",
+        "url": "https://linear.app/aspace-os/issue/KER-21/intel-close-decision-fabric-runtime-gaps-router-policy",
+        "description": "Complete the remaining Decision Fabric implementation: normalized max_cost enforcement; router use of latency/cost/context/horizon/capability; DecisionSchemaCompiler; DecisionEvidence envelope/store; ReasoningEscalation preserving initial evidence; production contracts for PREDICT/FORECAST. Maintain deterministic gates and independent review policy. Completion requires tests and documented invariants.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-21-intel-close-decision-fabric-runtime-gaps-router-policy",
+        "createdAt": "2026-09-21T18:43:43.321Z",
+        "updatedAt": "2026-09-21T18:44:44.812Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "6930af8a-1a26-4938-85db-41ae86e12117",
+        "identifier": "KER-20",
+        "title": "[INTEL] Common DecisionBench / AgentBench across local engines",
+        "url": "https://linear.app/aspace-os/issue/KER-20/intel-common-decisionbench-agentbench-across-local-engines",
+        "description": "Build one benchmark fixture pack and run comparable tests across Needle, Laya where runnable, MiniCPM5, VibeThinker, and Ornith. Measure schema validity, abstention/calibration where applicable, option-order stability, latency, memory/resource cost, and task success. Do not promote by parameter count or subjective preference. Persist benchmark evidence and rankings by capability only, not authority.",
+        "state": {
+          "id": "3835cd2f-1c4c-4453-aee6-6c9ff846a516",
+          "name": "Backlog",
+          "type": "backlog",
+          "color": "#bec2c8"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-20-intel-common-decisionbench-agentbench-across-local-engines",
+        "createdAt": "2026-09-21T18:43:37.599Z",
+        "updatedAt": "2026-09-21T18:44:11.457Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "edbaf6d7-3baf-451d-bc27-98db042e4626",
+        "identifier": "KER-15",
+        "title": "[MANDATE] Hermes ↔ Antigravity PR merge lane + Linear action ledger",
+        "url": "https://linear.app/aspace-os/issue/KER-15/mandate-hermes-antigravity-pr-merge-lane-linear-action-ledger",
+        "description": "## Objective\n\nMake Linear the traceable mandate/control layer for Hermes while preserving uc.db/WorkGraph as sovereign execution state.\n\n## Antigravity lane\n\n* Reuse the existing Antigravity conversation **V3 Analysis And Audit**.\n* **Do not create a new Antigravity conversation** for PR work.\n* `HERMES_ANTIGRAVITY` is the dedicated manager for PR review, conflict resolution, checks and merges through **Orca Computer Use**.\n* `HERMES_JULES` remains dedicated to Jules execution/supervision.\n* Hermes may read GitHub state with CLI/API for evidence, but must not bypass the Antigravity lane by performing the merge itself.\n\n## First target\n\nPR #37 linked to [KER-9](https://linear.app/aspace-os/issue/KER-9/hc-implement-harness-capability-contract-evidencelevel) / work_id 165, then triage other open Aspace_OS_V3 PRs against current Tech OS Linear/WorkGraph work.\n\n## Traceability protocol\n\nWhile Desktop Commander is available and Linear is active:\n\n1. A new user mandate is first materialized as a Linear issue in the appropriate Tech OS project.\n2. The mandate issue records objective, scope, constraints, target harness/session, acceptance criteria and source issue/work_id.\n3. Dispatch to Hermes is recorded in Linear with Hermes lane/session and Orca provenance.\n4. Hermes records meaningful action deltas as comments: delegation, harness/session reuse or creation, conflict resolution, test/check result, PR/commit/evidence, blocker/escalation.\n5. Technical execution remains bound to uc.db/WorkGraph; Linear is the human-readable backlog and audit projection.\n6. Status semantics: Backlog/Todo = not dispatched; In Progress = executing; In Review = acceptance/review pending; Done = durable evidence + acceptance satisfied.\n7. Do not create duplicate live sessions for the same work.\n8. Do not create new Linear projects for individual problems; issues live inside Tech OS — Kernel Core / Life Core / Buzz Core.\n\n## Acceptance\n\n* Existing Antigravity **V3 Analysis And Audit** session is selected and reused.\n* PR #37 mandate is delivered to that existing session through Computer Use.\n* No new Antigravity conversation is created.\n* Future actions are traceable through Linear comments plus linked uc.db/WorkGraph evidence.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "bd5886ba-4e76-4fa2-9a04-e2664bfe47d9",
+            "name": "Antigravity",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "c130a885-7122-44fa-bdf3-935cdda4ce9a",
+            "name": "Integration",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-15-mandate-hermes-antigravity-pr-merge-lane-linear-action",
+        "createdAt": "2026-09-20T03:23:54.768Z",
+        "updatedAt": "2026-09-20T20:33:25.048Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "658ed00e-229f-4bd0-9a4e-68446dcac7cb",
+        "identifier": "KER-5",
+        "title": "[BEDROCK] Harden Desktop Commander recovery path",
+        "url": "https://linear.app/aspace-os/issue/KER-5/bedrock-harden-desktop-commander-recovery-path",
+        "description": "## Sovereign binding\n\n* work_id: 163\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nMake Desktop Commander a recovery channel independent of LLMTrim/proxy failure.\n\n## Evidence\n\n2026-09-19 incident: Remote children failed on external fetch while inheriting dead proxy; proxy-free supervisor restored service.\n\n## Completion\n\nPersistent startup path is proxy-independent, idempotent and survives LLMTrim outage. Record evidence in WorkGraph.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "93ac18ef-9549-410c-b05e-6898e056be49",
+            "name": "Recovery",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-5-bedrock-harden-desktop-commander-recovery-path",
+        "createdAt": "2026-09-19T06:28:35.396Z",
+        "updatedAt": "2026-09-20T20:22:17.237Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "9091456d-3145-4497-a46b-a0e3e61bf001",
+        "identifier": "KER-13",
+        "title": "[INTENT] Compile IPBD into deterministic IntentIR with provenance",
+        "url": "https://linear.app/aspace-os/issue/KER-13/intent-compile-ipbd-into-deterministic-intentir-with-provenance",
+        "description": "## Sovereign binding\n\n* work_id: 172\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nPreserve Amadeus verbatim intent while compiling IPBD + alignment + provenance into deterministic IntentIR.\n\n## Orchestrator checkpoint — 2026-09-19\n\nIntentIR/provenance branch is active; source SHA support exists in uc_workgraph.py.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "6d924a9b-7802-403a-8b89-8bf3a8b9f649",
+            "name": "Architecture",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "04822545-f7dd-4fee-99e9-90bbec401bdd",
+            "name": "Memory",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-13-intent-compile-ipbd-into-deterministic-intentir-with",
+        "createdAt": "2026-09-19T06:29:13.533Z",
+        "updatedAt": "2026-09-20T20:22:03.858Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "3e3eae2b-4137-49ea-bbd5-d5863481afc8",
+        "identifier": "KER-10",
+        "title": "[CONT] Validate claim/lease/heartbeat/reap/fencing/wake_at invariants",
+        "url": "https://linear.app/aspace-os/issue/KER-10/cont-validate-claimleaseheartbeatreapfencingwake-at-invariants",
+        "description": "## Sovereign binding\n\n* work_id: 170\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nTest continuation invariants against restart, stale lease, orphan recovery, waiting and duplicate ownership scenarios.\n\n## Orchestrator checkpoint — 2026-09-19\n\nContinuation invariants are the next kernel validation branch.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "cb4f85ee-900d-4a84-9af9-0675e1ed1c7f",
+            "name": "Review",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-10-cont-validate-claimleaseheartbeatreapfencingwake_at",
+        "createdAt": "2026-09-19T06:28:55.370Z",
+        "updatedAt": "2026-09-20T20:21:56.571Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "73fda5fe-b38d-482b-ae0e-22f487e3074d",
+        "identifier": "KER-8",
+        "title": "[WG] Add Goal → Round → Work → Goal Review semantics",
+        "url": "https://linear.app/aspace-os/issue/KER-8/wg-add-goal-round-work-goal-review-semantics",
+        "description": "## Sovereign binding\n\n* work_id: 169\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nAbsorb Spynel's multi-round goal semantics without adopting its ledger.\n\n## Terminal outcomes\n\nDONE / WAIT / ABANDON / NEXT ROUND. Task completion is evidence and must not auto-complete a Goal.\n\n## Orchestrator checkpoint — 2026-09-19\n\nGoal/Round semantics are now present in WorkGraph v2; orchestration validation remains.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "6d924a9b-7802-403a-8b89-8bf3a8b9f649",
+            "name": "Architecture",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-8-wg-add-goal-round-work-goal-review-semantics",
+        "createdAt": "2026-09-19T06:28:48.538Z",
+        "updatedAt": "2026-09-20T08:01:41.450Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "7c807dd9-44b4-4ceb-a859-0ad193a49df7",
+        "identifier": "KER-9",
+        "title": "[HC] Implement Harness Capability Contract + EvidenceLevel",
+        "url": "https://linear.app/aspace-os/issue/KER-9/hc-implement-harness-capability-contract-evidencelevel",
+        "description": "## Sovereign binding\n\n* work_id: 165\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Capabilities\n\nSTART, AUTH, MODEL_DISCOVERY, STREAM, STEER, INTERRUPT, RESUME, SANDBOX, FAILURE_SIGNAL, RECOVER.\n\n## Evidence levels\n\nDECLARED, DOCUMENTED, SYNTHETIC, NATIVE, CANARY.\n\nRick selects proven capabilities, not vague harness availability.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "6d924a9b-7802-403a-8b89-8bf3a8b9f649",
+            "name": "Architecture",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-9-hc-implement-harness-capability-contract-evidencelevel",
+        "createdAt": "2026-09-19T06:28:52.216Z",
+        "updatedAt": "2026-09-20T03:57:34.642Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "27d86a11-1191-4d52-8b84-36db0cee6639",
+        "identifier": "KER-7",
+        "title": "[WG] Complete WorkGraph V1 CLI: artifact + gate + provenance",
+        "url": "https://linear.app/aspace-os/issue/KER-7/wg-complete-workgraph-v1-cli-artifact-gate-provenance",
+        "description": "## Sovereign binding\n\n* work_id: 164\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nFinish additive WorkGraph V1 CLI surface.\n\n## Required\n\nartifact, gate, richer IntentIR/provenance SHA, invariant tests. Preserve existing uc.db identities and FK integrity.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "faccc856-53ec-470c-8770-335037caf1d6",
+            "name": "Implementation",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 1,
+        "priorityLabel": "urgent",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-7-wg-complete-workgraph-v1-cli-artifact-gate-provenance",
+        "createdAt": "2026-09-19T06:28:44.029Z",
+        "updatedAt": "2026-09-20T02:51:19.178Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      },
+      {
+        "id": "85320e41-e17f-4458-9846-746c533bd1d7",
+        "identifier": "KER-6",
+        "title": "[BEDROCK] Add Antigravity AUTH canary for LLMTrim",
+        "url": "https://linear.app/aspace-os/issue/KER-6/bedrock-add-antigravity-auth-canary-for-llmtrim",
+        "description": "## Sovereign binding\n\n* work_id: 171\n* source_of_truth: uc.db / WorkGraph\n* control_tower: Linear\n\n## Objective\n\nRepresent Antigravity OAuth connectivity as an evidence-backed harness canary.\n\n## Completion\n\nAUTH state distinguishes CANARY_FAILED from healthy and records the 43117 failure/recovery evidence.\n\n## Orchestrator checkpoint — 2026-09-19\n\nAntigravity AUTH recovered through LLMTrim and recorded as CANARY evidence.",
+        "state": {
+          "id": "6f29f8e3-7a57-4f61-a706-0f51c6f4b7bc",
+          "name": "Done",
+          "type": "completed",
+          "color": "#5e6ad2"
+        },
+        "team": {
+          "id": "bce84818-c5a7-4410-9e36-ed855a8eb68b",
+          "name": "Kernel Core",
+          "key": "KER",
+          "color": "#008fff"
+        },
+        "project": {
+          "id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "name": "Tech OS — Kernel Core",
+          "color": "#f2994a"
+        },
+        "cycle": null,
+        "assignee": null,
+        "labels": [
+          {
+            "id": "bd5886ba-4e76-4fa2-9a04-e2664bfe47d9",
+            "name": "Antigravity",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "93ac18ef-9549-410c-b05e-6898e056be49",
+            "name": "Recovery",
+            "color": "#4EA7FC"
+          },
+          {
+            "id": "8e2a6ff4-2dec-4b8e-8024-50a07879f5af",
+            "name": "Tech OS",
+            "color": "#4EA7FC"
+          }
+        ],
+        "priority": 2,
+        "priorityLabel": "high",
+        "estimate": null,
+        "dueDate": null,
+        "branchName": "amdkn777/ker-6-bedrock-add-antigravity-auth-canary-for-llmtrim",
+        "createdAt": "2026-09-19T06:28:38.462Z",
+        "updatedAt": "2026-09-20T02:51:16.330Z",
+        "workspace": {
+          "id": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+          "name": "Kernel Core"
+        }
+      }
+    ],
+    "truncated": false,
+    "meta": {
+      "limit": null,
+      "returned": 33,
+      "hasMore": false,
+      "orderBy": "updatedAt",
+      "workspaceId": "3c705faf-25a3-43fc-958c-f00a8cc66edd",
+      "partial": false,
+      "workspaceErrors": []
+    }
+  },
+  "_meta": {
+    "runtimeId": "1d5b9925-dbec-461c-bf87-6858fd81dc12"
+  }
+}

@@ -67,7 +67,6 @@ BASELINE = os.path.join(os.path.dirname(os.path.abspath(__file__)),
 #   - _ARCHIVE_* : sorti du depot actif volontairement, le verifier reviendrait
 #     a garder vivant ce qu'on a decide d'archiver.
 EXCLUS = {
-    "Racine_V3_2026-09-23",  # Historical root archive, not active OKF.
     "node_modules", ".git", "dist", "build", ".venv", "__pycache__",
     "openwiki",
     # Sortie generee par consolider_pour_review.py : chaque concept y est
