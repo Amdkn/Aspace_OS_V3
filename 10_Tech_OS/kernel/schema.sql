@@ -68,6 +68,58 @@ CREATE TABLE IF NOT EXISTS event (
 );
 CREATE INDEX IF NOT EXISTS event_work ON event(work_id, id);
 
+-- ---------------------------------------------------------------- SESSION BINDINGS
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness  TEXT PRIMARY KEY,
+  cap_name TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  companion    TEXT NOT NULL,
+  layer        TEXT NOT NULL CHECK (layer IN ('A0','L0','L1','L2')),
+  harness      TEXT NOT NULL REFERENCES harness_capability(harness),
+  bound_at     TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability
+BEFORE INSERT ON session_binding
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy is restricted to Spec')
+  WHERE NEW.companion = 'Amy' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name = 'Spec');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory is restricted to Build')
+  WHERE NEW.companion = 'Rory' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name = 'Build');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River is restricted to Spawn/Knowledge')
+  WHERE NEW.companion = 'River' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name IN ('Spawn', 'Knowledge'));
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 is restricted to Review/detach')
+  WHERE NEW.companion = 'Doctor11' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name IN ('Review', 'detach'));
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Only Doctor11 can bind to L0')
+  WHERE NEW.layer = 'L0' AND NEW.companion != 'Doctor11';
+END;
+
+CREATE TRIGGER IF NOT EXISTS loi_life_core_binding_capability_update
+BEFORE UPDATE ON session_binding
+BEGIN
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Amy is restricted to Spec')
+  WHERE NEW.companion = 'Amy' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name = 'Spec');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Rory is restricted to Build')
+  WHERE NEW.companion = 'Rory' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name = 'Build');
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: River is restricted to Spawn/Knowledge')
+  WHERE NEW.companion = 'River' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name IN ('Spawn', 'Knowledge'));
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Doctor11 is restricted to Review/detach')
+  WHERE NEW.companion = 'Doctor11' AND NEW.harness NOT IN (SELECT harness FROM harness_capability WHERE cap_name IN ('Review', 'detach'));
+
+  SELECT RAISE(ABORT, 'loi_life_core_binding_capability: Only Doctor11 can bind to L0')
+  WHERE NEW.layer = 'L0' AND NEW.companion != 'Doctor11';
+END;
+
 -- ================================================== BRIOCHES ANTIGRAVITY (ADR-0007)
 -- Ces regles sont tenues par la base, pas par la discipline de l'agent.
 
