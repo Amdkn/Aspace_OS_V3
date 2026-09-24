@@ -15,8 +15,7 @@ class OwnershipTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.db = Path(self.tmp.name) / "uc.db"
         with closing(sqlite3.connect(self.db)) as c, c:
-            for name in ("schema.sql", "workgraph_v1.sql"):
-                c.executescript((g.HERE / name).read_text(encoding="utf-8"))
+            c.executescript((g.HERE / "schema.sql").read_text(encoding="utf-8"))
             c.execute("INSERT INTO work(id,layer,title) VALUES(1,'L0','[KER-900] test')")
 
     def sql(self, query, args=()):
