@@ -142,3 +142,25 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE VIEW IF NOT EXISTS v_workgraph_v1 AS
+  SELECT w.* FROM work w;
+
+CREATE TABLE IF NOT EXISTS work_dependency (
+  work_id       INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind          TEXT NOT NULL DEFAULT 'hard',
+  PRIMARY KEY (work_id, depends_on_id)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active',
+  ended_at     TEXT,
+  created_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
