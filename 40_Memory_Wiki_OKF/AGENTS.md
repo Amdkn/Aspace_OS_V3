@@ -64,3 +64,5 @@
 - 2026-09-23: Executable KER-44 constitution and read-only Dao/Jing projection semantics recorded in concepts/dao_jing_bounded_projections.md.
 
 - `2026-09-24` : Profils Hermes persistants et worktrees Orca distincts pour 3 Doctors et 9 Compagnons; configuration verifiee, sessions existantes preservees. Fiche: `concepts/hermes_bot_worktree_identity.md`.
+
+- `2026-09-24` : Mémoire de reprise consolidée dans `operations/reprise_hermes_orca_2026-09-24.md`; 180/181 relus done, 12 liaisons profil/worktree, distinction fermeture PR/fusion et configuration/exécution. Index mis à jour; aucune autonomie présumée.

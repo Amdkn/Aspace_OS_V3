@@ -67,3 +67,7 @@ Voir `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md` pour la basel
 - [operations](operations/) - Playbooks, runbooks, gestes de remise en route (inclut [Ingestion Takeout Gemini](operations/takeout_gemini_geordi_ingestion.md), [Distillat Conversations Gemini](C:/Users/amado/ASpace_OS_V3/50_Distillation/ressources/distillat_gemini_conversations_2026_09.md), [Distillat Sessions ChatGPT](C:/Users/amado/ASpace_OS_V3/50_Distillation/ressources/distillat_chatgpt_shares_2026_09.md), [Distillat Vague 2 Innovations](C:/Users/amado/ASpace_OS_V3/50_Distillation/ressources/distillat_wave2_harness_coevolution_2026_09.md)).
 - [learning](learning/) - Les echecs mesures, pour ne pas les rejouer (inclut [Skill Misevolution & Rempart Immunitaire](learning/skill_misevolution_and_immune_defense.md), [Audit Comparatif Astra vs Antigravity : Démission Opératrice, Illusion de Conformité et Mandat Réel](learning/audit_comparatif_astra_vs_antigravity.md)).
 - [security](security/) - Modèles de sécurité, vulnérabilités, cloisonnements.
+
+## Reprise opérationnelle — 2026-09-24
+
+- [Hermes Bot Mode, worktrees Orca et limites de validation](operations/reprise_hermes_orca_2026-09-24.md) : décisions, preuves, piège du home Hermes, fermeture des 96 PR sans fusion et prochaine exécution à vérifier.
