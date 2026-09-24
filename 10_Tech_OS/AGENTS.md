@@ -320,3 +320,5 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 - Nine complete companion contracts, closed WorldState loop, forbidden authority validation; legacy role contracts preserved.
 - dao_jing.py derives thirteen typed, byte-bounded projections from read-only SQLite snapshots and exposes ownership/evidence drift.
 - Agent OS GET adapter delegates to kernel without shell or UI business logic. Evidence and commands: reports/KER44_IMPLEMENTATION.md.
+
+- **2026-09-24 — Hermes Bot Mode / Orca :** 3 Doctors + 9 Compagnons rattaches chacun a un profil Hermes existant et un worktree distinct; terminal.cwd fixe, lanceurs Bot Chat avec --in, noms canoniques dans Orca et metadata Bot Mode. Sauvegardes locales; aucune preuve dexecution deduite du roster. Registre: reports/hermes_bot_worktree_bindings.json.

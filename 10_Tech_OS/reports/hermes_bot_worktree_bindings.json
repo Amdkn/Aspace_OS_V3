@@ -1,0 +1,114 @@
+{
+  "schema": "ASpaceHermesWorktreeBindings.v1",
+  "configured_at": "2026-09-24T11:27:29.615403+00:00",
+  "hermes_home": "C:\\Users\\amado\\AppData\\Local\\hermes",
+  "backup": "C:\\Users\\amado\\AppData\\Local\\hermes\\backups\\orca-bot-worktrees-20260924T112417Z",
+  "launchers_directory": "C:\\Users\\amado\\.aspace\\launchers\\hermes-bots",
+  "state": "configured_not_execution_proof",
+  "roles": [
+    {
+      "role": "Doctor11",
+      "profile": "doctor11_review_l1",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/opah",
+      "branch": "refs/heads/ker-28-life-core",
+      "orca_identity": "wt2:local:d93ad3f8-8f1c-4d3a-ada2-e0fa8c7e3112",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p doctor11_review_l1 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/opah --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Doctor12",
+      "profile": "doctor12_review_l2",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/snook",
+      "branch": "refs/heads/s2-doctor12-for4-delegation",
+      "orca_identity": "wt2:local:8e9da340-76fe-4f0d-a43a-ee8c0475ce22",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p doctor12_review_l2 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/snook --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Doctor13",
+      "profile": "doctor13_review_l0",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/scup",
+      "branch": "refs/heads/Amdkn/review-ker-44-work180",
+      "orca_identity": "wt2:local:3fa2ad10-6195-4182-8a0a-4e6c09faea5f",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p doctor13_review_l0 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/scup --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Ryan",
+      "profile": "ryan_build_l0",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan",
+      "branch": "refs/heads/Amdkn/Ryan",
+      "orca_identity": "wt2:local:b13934ea-5024-4b05-9c7a-4e5a5d589ad8",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p ryan_build_l0 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Yaz",
+      "profile": "yaz_spec_l0",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Yaz",
+      "branch": "refs/heads/Yaz",
+      "orca_identity": "wt2:local:5e108331-fc09-4b92-b523-3add5fcb9369",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p yaz_spec_l0 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Yaz --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Graham",
+      "profile": "graham_spawn_l0",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Graham",
+      "branch": "refs/heads/Amdkn/Graham",
+      "orca_identity": "wt2:local:da50d7b7-3b01-4181-a993-0fd7d675936d",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p graham_spawn_l0 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Graham --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Bill",
+      "profile": "bill_spawn_l2",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Bill",
+      "branch": "refs/heads/Amdkn/Bill",
+      "orca_identity": "wt2:local:aa5b7c35-9ff1-4cea-992b-fa4c23bf9290",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p bill_spawn_l2 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Bill --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Clara",
+      "profile": "clara_spec_l2",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Clara",
+      "branch": "refs/heads/Amdkn/Clara",
+      "orca_identity": "wt2:local:5fa738e9-4ef1-4d90-bbf8-2d345901b38f",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p clara_spec_l2 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Clara --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Nardole",
+      "profile": "nardole_build_l2",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Nardol",
+      "branch": "refs/heads/Amdkn/Nardol",
+      "orca_identity": "wt2:local:080cc9d5-c6ad-4545-9bd1-9ccbe50af5bc",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p nardole_build_l2 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Nardol --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Amy",
+      "profile": "amy_spec_l1",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Amy",
+      "branch": "refs/heads/Amdkn/Amy",
+      "orca_identity": "wt2:local:f3f5679e-fd76-4bb6-98dd-4997770ed5b6",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p amy_spec_l1 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Amy --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "Rory",
+      "profile": "rory_build_l1",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Rory",
+      "branch": "refs/heads/Amdkn/Rory",
+      "orca_identity": "wt2:local:c46e4487-3b4f-42eb-8db2-7575f04a7811",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p rory_build_l1 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/Rory --continue \"Bot Chat\" --create-if-missing"
+    },
+    {
+      "role": "River",
+      "profile": "river_spawn_l1",
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/River",
+      "branch": "refs/heads/Amdkn/River",
+      "orca_identity": "wt2:local:0dabdefd-2eb6-435b-8b7e-4bd4d1458e85",
+      "launch_command": "C:\\Users\\amado\\AppData\\Local\\hermes\\bin\\hermes.EXE -p river_spawn_l1 chat --in C:/Users/amado/orca/workspaces/ASpace_OS_V3/River --continue \"Bot Chat\" --create-if-missing"
+    }
+  ],
+  "notes": [
+    "Existing worktrees and profiles reused; branch histories preserved.",
+    "Profile identifiers retain legacy names for compatibility; display names use canonical identities.",
+    "terminal.cwd is the default; launcher --in explicitly overrides restored session directory.",
+    "Opening Bot Chat creates or resumes its canonical conversation; existing live terminals were not restarted.",
+    "Worktree home does not restrict cross-core capabilities. WorkGraph remains canonical.",
+    "Bot Mode desktop rendering and inference were not exercised by this configuration change."
+  ]
+}
