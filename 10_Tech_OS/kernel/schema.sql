@@ -133,6 +133,60 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- WorkGraph V2 & Session Bindings
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active','idle','closed','failed')),
+  started_at   TEXT NOT NULL DEFAULT (datetime('now')),
+  ended_at     TEXT
+);
+
+CREATE TABLE IF NOT EXISTS work_dependency (
+  work_id       INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind          TEXT NOT NULL DEFAULT 'blocks',
+  PRIMARY KEY (work_id, depends_on_id)
+);
+
+CREATE TABLE IF NOT EXISTS artifact (
+  id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id             INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind                TEXT NOT NULL,
+  uri                 TEXT NOT NULL,
+  sha256              TEXT,
+  producer_session_id INTEGER REFERENCES session_binding(id),
+  created_at          TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS gate_decision (
+  id                INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id           INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  gate              TEXT NOT NULL,
+  verdict           TEXT NOT NULL CHECK (verdict IN ('pass','fail','veto','waive')),
+  reason            TEXT,
+  evidence_event_id INTEGER REFERENCES event(id),
+  decided_by        TEXT,
+  decided_at        TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL,
+  evidence_level TEXT NOT NULL,
+  status         TEXT NOT NULL DEFAULT 'unknown',
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE VIEW IF NOT EXISTS v_workgraph_v1 AS
+  SELECT w.* FROM work w;
+
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   id         TEXT PRIMARY KEY,               -- UUID
