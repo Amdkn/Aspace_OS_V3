@@ -2,7 +2,7 @@
 """dc_recovery_daemon.py — Desktop Commander Recovery Path (Proxy-Free).
 
 Garantit le démarrage idempotent et antifragile de Desktop Commander
-via la Sentinelle Bedrock (dc_bedrock_sentinel.py) ou DC.bat,
+via la Sentinelle Bedrock (dc_bedrock_sentinel.py) et supprime les dépendances superflues
 en s'assurant qu'il n'hérite d'aucune variable d'environnement proxy
 (LLMTrim, 9router, omniroute ou autre) et en garantissant l'absence de régression.
 """
@@ -16,7 +16,6 @@ from pathlib import Path
 
 SENTINEL_PATH = Path.home() / ".desktop-commander" / "managed" / "dc_bedrock_sentinel.py"
 SUPERVISOR_PATH = Path.home() / ".desktop-commander" / "managed" / "supervisor.mjs"
-DC_BAT_PATH = Path.home() / "DC.bat"
 STATUS_PATH = Path.home() / ".desktop-commander" / "managed" / "status.json"
 
 def get_clean_env() -> dict:
@@ -69,6 +68,16 @@ def start_dc() -> dict:
 
     clean_env = get_clean_env()
 
+    # SOH-16 Cleanup: Remove accidental complexity and duplicate scheduled tasks
+    if sys.platform == "win32":
+        try:
+            # Clean legacy scheduled tasks (keep only 'ASpace Desktop Commander' if any, but SOH-16 says remove duplicates like Migration)
+            subprocess.run(["powershell.exe", "-NoProfile", "-Command",
+                "Get-ScheduledTask | Where-Object { $_.TaskName -match 'ASpace DC Migration|LegacyDC' } | Unregister-ScheduledTask -Confirm:$false"],
+                capture_output=True, timeout=15)
+        except Exception:
+            pass
+
     # Priorité 1 : Sentinelle Bedrock Python
     if SENTINEL_PATH.exists():
         try:
@@ -79,15 +88,7 @@ def start_dc() -> dict:
         except Exception as e:
             pass
 
-    # Priorité 2 : DC.bat
-    if DC_BAT_PATH.exists():
-        try:
-            res = subprocess.run(["cmd.exe", "/c", str(DC_BAT_PATH)], env=clean_env, capture_output=True, text=True, timeout=30)
-            return {"ok": res.returncode == 0, "status": "started_via_bedrock_bat", "stdout": res.stdout[:200]}
-        except Exception as e:
-            return {"ok": False, "status": "failed", "error": str(e)}
-
-    # Priorité 3 : Fallback supervisor.mjs
+    # Priorité 2 : Fallback supervisor.mjs
     if SUPERVISOR_PATH.exists():
         try:
             cmd = ["node", str(SUPERVISOR_PATH)]
@@ -99,7 +100,7 @@ def start_dc() -> dict:
         except Exception as e:
             return {"ok": False, "status": "failed", "error": str(e)}
 
-    return {"ok": False, "status": "not_found", "error": f"Ni {SENTINEL_PATH}, ni {DC_BAT_PATH} introuvables."}
+    return {"ok": False, "status": "not_found", "error": f"Le fichier {SENTINEL_PATH} est introuvable."}
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--status":
