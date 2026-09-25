@@ -15,7 +15,7 @@ class OwnershipTests(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.db = Path(self.tmp.name) / "uc.db"
         with closing(sqlite3.connect(self.db)) as c, c:
-            for name in ("schema.sql", "workgraph_v1.sql"):
+            for name in ("schema.sql",):
                 c.executescript((g.HERE / name).read_text(encoding="utf-8"))
             c.execute("INSERT INTO work(id,layer,title) VALUES(1,'L0','[KER-900] test')")
 
@@ -57,7 +57,7 @@ class OwnershipTests(unittest.TestCase):
 
     def test_dependency_blocks_launch(self):
         self.sql("INSERT INTO work(id,layer,title) VALUES(2,'L0','dependency')")
-        self.sql("INSERT INTO work_dependency(work_id,depends_on_id) VALUES(1,2)")
+        self.sql("INSERT INTO work_dependency(work_id,depends_on_id,kind) VALUES(1,2,'requires')")
         with self.assertRaises(ValueError):
             g.reserve("KER-900", self.db)
 
