@@ -26,9 +26,10 @@ import os
 import re
 import stat
 import sys
+from pathlib import Path
 from collections import Counter, defaultdict
 
-V3 = r"C:\Users\amado\ASpace_OS_V3"
+V3 = str(Path(__file__).resolve().parent.parent)
 D = os.path.join(V3, "70_Onthologies")
 DIST = os.path.join(V3, "50_Distillation")
 # Deux passes, deux jeux de couches, deux graphes de sortie. Les melanger
@@ -101,7 +102,8 @@ def _sans_jonctions(racine, elaguer):
                     if e.name in elaguer:
                         continue
                     try:
-                        if e.stat(follow_symlinks=False).st_file_attributes & RP:
+                        st = e.stat(follow_symlinks=False)
+                        if hasattr(st, "st_file_attributes") and (st.st_file_attributes & RP):
                             continue  # jonction : on ne la suit pas
                     except OSError:
                         continue

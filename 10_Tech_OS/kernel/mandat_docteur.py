@@ -31,10 +31,14 @@ COMPAGNONS = {
 KERNEL = Path(__file__).resolve().parent
 
 
-def reap():
+def reap(db_path=None):
     try:
+        import os
+        env = os.environ.copy()
+        if db_path:
+            env["ASPACE_DB"] = str(db_path)
         subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"],
-                       cwd=str(KERNEL), capture_output=True, timeout=60)
+                       cwd=str(KERNEL), capture_output=True, timeout=60, env=env)
     except Exception as e:  # reap best-effort, ne bloque jamais la sélection
         print(f"reap warning: {e}", file=sys.stderr)
 
@@ -53,7 +57,7 @@ def main():
     ap.add_argument("--out", default=str(KERNEL.parent.parent / "_INBOX" / "mandats"))
     args = ap.parse_args()
 
-    reap()
+    reap(args.db)
     c = sqlite3.connect(args.db)
     c.row_factory = sqlite3.Row
     row = pick(c, args.layer)
