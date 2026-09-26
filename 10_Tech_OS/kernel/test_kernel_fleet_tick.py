@@ -23,10 +23,31 @@ class TickTests(unittest.TestCase):
         self.assertIsNone(k.reusable_session("KER-19"))
 
     def test_companion_lane_caps(self):
-        self.assertEqual(k.MAX_ACTIVE,9)
-        self.assertEqual(k.CORE_LIMITS["KERNEL"],3)
-        self.assertEqual(k.CORE_LIMITS["LIFE"],3)
-        self.assertEqual(k.CORE_LIMITS["BUSINESS"],3)
+        from capacity_policy import CapacityPolicy
+        policy = CapacityPolicy.load(k.POLICY_FILE)
+        self.assertEqual(policy.max_active, 10)
+        self.assertEqual(policy.reservations["KERNEL"], 2)
+        self.assertEqual(policy.reservations["LIFE"], 3)
+        self.assertEqual(policy.reservations["BUSINESS"], 5)
+
+        # Test generic capacity theft prevention
+        # If we have 5 items running, all in BUSINESS (its max), and KERNEL and LIFE have unmet reservations
+        counts = {"BUSINESS": 5, "KERNEL": 0, "LIFE": 0}
+
+        # We can dispatch KERNEL or LIFE
+        self.assertTrue(policy.can_dispatch("KERNEL", counts, 5))
+
+        # But we cannot dispatch another BUSINESS, because that would eat into the 5 reserved for KERNEL+LIFE
+        self.assertFalse(policy.can_dispatch("BUSINESS", counts, 5))
+
+        # Now suppose we have 9 total active, and KERNEL needs 1 more for its reservation
+        counts2 = {"BUSINESS": 5, "LIFE": 3, "KERNEL": 1}
+
+        # We can dispatch the last KERNEL
+        self.assertTrue(policy.can_dispatch("KERNEL", counts2, 9))
+
+        # We cannot dispatch anything else
+        self.assertFalse(policy.can_dispatch("BUSINESS", counts2, 9))
 
     def test_core_classifier(self):
         self.assertEqual(k.core_for("KERNEL_K0"),"KERNEL")

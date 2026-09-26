@@ -6,16 +6,14 @@ from __future__ import annotations
 import json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
 from fleet_ownership import reserve, bind_session, require_running_owner, dispatch_lock
+from capacity_policy import CapacityPolicy
 
 ROOT=Path(r"C:\Users\amado\ASpace_OS_V3")
 PRD_ROOT=ROOT/"10_Tech_OS"/"PRD_Autonomy"
 JULES="http://127.0.0.1:43118"
 SOURCE="sources/github/Amdkn/Aspace_OS_V3"
-MAX_ACTIVE=9
-MAX_DISPATCH_PER_TICK=3
-# One persistent Jules lane per S3 companion. Capacity is hierarchical, not a 20/30/50 pool.
-CORE_LIMITS={"KERNEL":3,"LIFE":3,"BUSINESS":3}
 PROJECTS=("Tech OS — Kernel Core","Tech OS — Buzz Core","Tech OS — Life Core")
+POLICY_FILE=Path(__file__).parent / "capacity_policy.json"
 TERMINAL={"COMPLETED","FAILED","CANCELLED","CANCELED"}
 SKIP_MARKERS=("[SOLARPUNK]","[BEDROCK]","[FLEET]")
 KERNEL_MAP={
@@ -246,23 +244,23 @@ def tick():
 def _tick():
  if not ensure_proxy():
   raise RuntimeError("Jules proxy unavailable after bounded recovery")
+ policy=CapacityPolicy.load(POLICY_FILE)
  issues=list_issues()
  active=active_sessions()
- capacity=max(0,MAX_ACTIVE-len(active))
  ready=sorted((x for x in issues if is_ready(x)),
               key=lambda x:(x.get("priority",4),x.get("createdAt","")))
  launched=[]
  skipped=[]
  counts=active_core_counts(active)
  for issue in ready:
-  if len(launched)>=MAX_DISPATCH_PER_TICK: break
+  if len(launched)>=policy.max_dispatch_per_tick: break
   iid=issue["identifier"]
   if duplicate(active,iid): continue
   pole,prd=classify(issue)
   core=core_for(pole)
   companion=companion_for(issue,pole)
   existing_lane=active_companion_session(active,companion)
-  if not existing_lane and (not capacity or counts.get(core,0) >= CORE_LIMITS[core]):
+  if not existing_lane and not policy.can_dispatch(core, counts, len(active)):
    continue
   if existing_lane:
    skipped.append({"issue":iid,"reason":"Companion lane occupied"})
@@ -293,10 +291,9 @@ def _tick():
   if not continued:
    active.append({"title":f"ASPACE:{core} | {companion} | {role}","prompt":iid,"state":"ACTIVE","id":sid})
    counts[core]=counts.get(core,0)+1
-   capacity-=1
  report={"ok":True,"active":len(active),"launched":launched,"skipped":skipped,
-         "core_limits":CORE_LIMITS,"core_active":counts,
-         "ready":[x["identifier"] for x in ready],"capacity_after":capacity,
+         "capacity_policy": policy.reservations, "core_active":counts,
+         "ready":[x["identifier"] for x in ready],"capacity_after":policy.remaining_capacity(len(active)),
          "sessions":[{"id":s.get("id"),"title":s.get("title"),
                       "state":s.get("state"),"url":s.get("url"),
                       "updateTime":s.get("updateTime")} for s in active]}
