@@ -142,3 +142,20 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+CREATE TABLE IF NOT EXISTS session_binding(
+  id INTEGER PRIMARY KEY,
+  work_id INTEGER,
+  session_key TEXT,
+  harness TEXT,
+  capability TEXT,
+  external_ref TEXT,
+  status TEXT,
+  ended_at TEXT
+);
+
+CREATE TABLE IF NOT EXISTS work_dependency(
+  id INTEGER PRIMARY KEY,
+  work_id INTEGER,
+  depends_on_id INTEGER,
+  kind TEXT
+);

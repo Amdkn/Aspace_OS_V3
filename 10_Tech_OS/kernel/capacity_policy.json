@@ -1,0 +1,14 @@
+{
+  "max_active": 9,
+  "max_dispatch_per_tick": 3,
+  "core_limits": {
+    "KERNEL": 3,
+    "LIFE": 3,
+    "BUSINESS": 3
+  },
+  "core_reservations": {
+    "KERNEL": 1,
+    "LIFE": 1,
+    "BUSINESS": 1
+  }
+}

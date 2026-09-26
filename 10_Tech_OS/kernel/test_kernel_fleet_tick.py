@@ -23,10 +23,10 @@ class TickTests(unittest.TestCase):
         self.assertIsNone(k.reusable_session("KER-19"))
 
     def test_companion_lane_caps(self):
-        self.assertEqual(k.MAX_ACTIVE,9)
-        self.assertEqual(k.CORE_LIMITS["KERNEL"],3)
-        self.assertEqual(k.CORE_LIMITS["LIFE"],3)
-        self.assertEqual(k.CORE_LIMITS["BUSINESS"],3)
+        self.assertEqual(k.POLICY["max_active"], 9)
+        self.assertEqual(k.POLICY["core_limits"]["KERNEL"], 3)
+        self.assertEqual(k.POLICY["core_limits"]["LIFE"], 3)
+        self.assertEqual(k.POLICY["core_limits"]["BUSINESS"], 3)
 
     def test_core_classifier(self):
         self.assertEqual(k.core_for("KERNEL_K0"),"KERNEL")

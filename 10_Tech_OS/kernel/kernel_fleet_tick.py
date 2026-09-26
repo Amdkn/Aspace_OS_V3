@@ -6,15 +6,18 @@ from __future__ import annotations
 import json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
 from fleet_ownership import reserve, bind_session, require_running_owner, dispatch_lock
+import capacity_policy
 
 ROOT=Path(r"C:\Users\amado\ASpace_OS_V3")
 PRD_ROOT=ROOT/"10_Tech_OS"/"PRD_Autonomy"
 JULES="http://127.0.0.1:43118"
 SOURCE="sources/github/Amdkn/Aspace_OS_V3"
-MAX_ACTIVE=9
-MAX_DISPATCH_PER_TICK=3
-# One persistent Jules lane per S3 companion. Capacity is hierarchical, not a 20/30/50 pool.
-CORE_LIMITS={"KERNEL":3,"LIFE":3,"BUSINESS":3}
+
+POLICY = capacity_policy.load_policy(Path(__file__).parent / "capacity_policy.json")
+MAX_ACTIVE = POLICY.get("max_active", 9)
+MAX_DISPATCH_PER_TICK = POLICY.get("max_dispatch_per_tick", 3)
+CORE_LIMITS = POLICY.get("core_limits", {"KERNEL":3,"LIFE":3,"BUSINESS":3})
+
 PROJECTS=("Tech OS — Kernel Core","Tech OS — Buzz Core","Tech OS — Life Core")
 TERMINAL={"COMPLETED","FAILED","CANCELLED","CANCELED"}
 SKIP_MARKERS=("[SOLARPUNK]","[BEDROCK]","[FLEET]")
@@ -262,8 +265,10 @@ def _tick():
   core=core_for(pole)
   companion=companion_for(issue,pole)
   existing_lane=active_companion_session(active,companion)
-  if not existing_lane and (not capacity or counts.get(core,0) >= CORE_LIMITS[core]):
+
+  if not existing_lane and not capacity_policy.can_allocate(POLICY, counts, core):
    continue
+
   if existing_lane:
    skipped.append({"issue":iid,"reason":"Companion lane occupied"})
    continue
