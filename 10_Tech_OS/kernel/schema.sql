@@ -133,6 +133,25 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- Session Binding & Work Dependency tables (WorkGraph / Fleet Ownership)
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL,
+  harness      TEXT NOT NULL,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active','idle','closed')),
+  started_at   TEXT NOT NULL DEFAULT (datetime('now')),
+  ended_at     TEXT
+);
+
+CREATE TABLE IF NOT EXISTS work_dependency (
+  work_id       INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  PRIMARY KEY (work_id, depends_on_id)
+);
+
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   id         TEXT PRIMARY KEY,               -- UUID

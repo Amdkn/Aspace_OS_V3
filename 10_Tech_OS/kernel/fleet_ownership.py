@@ -78,7 +78,7 @@ def resolve_work(issue_id, db_path=DB):
                      (wid,)).fetchone():
             raise ValueError(f"{issue_id}: live owner already exists")
         if c.execute("""SELECT 1 FROM work_dependency d JOIN work w ON w.id=d.depends_on_id
-                        WHERE d.work_id=? AND d.kind IN ('blocks','requires') AND w.status!='done'""",
+                        WHERE d.work_id=? AND w.status!='done'""",
                      (wid,)).fetchone():
             raise ValueError(f"{issue_id}: WorkGraph dependency is not done")
         latest = c.execute("""SELECT kind FROM event WHERE work_id=?
