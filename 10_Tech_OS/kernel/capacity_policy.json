@@ -1,0 +1,10 @@
+{
+  "max_active": 10,
+  "max_dispatch_per_tick": 3,
+  "reservations": {
+    "KERNEL": 2,
+    "LIFE": 3,
+    "BUSINESS": 5
+  },
+  "cost_ceiling_usd": 100.0
+}
