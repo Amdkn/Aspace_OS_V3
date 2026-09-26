@@ -12,8 +12,8 @@ Verifie la structure du framework PARA Enterprise :
         projects/areas/resources/archives, chacun avec exactement les cles
         domain/dossier/persona/state/entries
   [2] coherence des entries : pour chaque domain, les entries de pulse.json
-      == le listing disque (hors exclusions) == la liste de registre_para.json
-      (trois sources, une seule verite)
+      == le listing disque (hors exclusions)
+      (deux sources, une seule verite)
   [3] les 4 dossiers 01_Projects_Picard, 02_Areas_Spock,
       03_Resources_Geordi, 04_Archives_Data existent
   [4] la racine porte A2_Computer_Enterprise_Spec.md non vide (spec A2
@@ -124,19 +124,7 @@ def main():
                 if isinstance(bloc, dict):
                     bloc["_entries_ok"] = ent
 
-    # 2. registre_para.json
-    registre_path = os.path.join(BASE, "registre_para.json")
-    registre = None
-    if not os.path.isfile(registre_path):
-        erreurs.append("registre_para.json manquant")
-    else:
-        try:
-            with open(registre_path, "r", encoding="utf-8") as f:
-                registre = json.load(f)
-        except (ValueError, OSError) as e:
-            erreurs.append("registre_para.json illisible: " + str(e))
-
-    # 3. dossiers + coherence pulse entries / registre / disque
+    # 3. dossiers + coherence pulse entries / disque
     for cat in CANON:
         d = os.path.join(BASE, CATEGORIES[cat])
         if not os.path.isdir(d):
@@ -148,18 +136,8 @@ def main():
         if pulse is not None and isinstance(pulse.get("canon_4_domains"), list) \
                 and len(pulse["canon_4_domains"]) == 4:
             pulse_ent = pulse["canon_4_domains"][CANON.index(cat)].get("_entries_ok")
-        # liste du registre
-        reg_liste = None
-        if registre is not None:
-            reg_liste = registre.get(cat)
-            if not isinstance(reg_liste, list):
-                erreurs.append("registre: " + cat + " n'est pas une liste")
-                reg_liste = None
-            elif any(not isinstance(x, str) for x in reg_liste):
-                erreurs.append("registre: " + cat + " contient des entrees non string")
-                reg_liste = None
-        # coherence tripartite
-        if reel is not None and pulse_ent is not None and reg_liste is not None:
+        # coherence bipartite
+        if reel is not None and pulse_ent is not None:
             if sorted(pulse_ent) != reel:
                 manq = sorted(set(reel) - set(pulse_ent))
                 surp = sorted(set(pulse_ent) - set(reel))
@@ -167,15 +145,6 @@ def main():
                     erreurs.append("pulse: " + cat + " manquants vs disque " + str(manq))
                 if surp:
                     erreurs.append("pulse: " + cat + " surplus vs disque " + str(surp))
-            if sorted(reg_liste) != reel:
-                manq = sorted(set(reel) - set(reg_liste))
-                surp = sorted(set(reg_liste) - set(reel))
-                if manq:
-                    erreurs.append("registre: " + cat + " manquants vs disque " + str(manq))
-                if surp:
-                    erreurs.append("registre: " + cat + " surplus vs disque " + str(surp))
-            if sorted(pulse_ent) != sorted(reg_liste):
-                erreurs.append("coherence: " + cat + " pulse != registre")
 
     # 4. spec A2 fait foi
     spec = os.path.join(BASE, SPEC_A2)

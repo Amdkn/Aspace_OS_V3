@@ -1,0 +1,15 @@
+{
+  "frameworks": {
+    "12WY": "20_Life_OS/23_12WY_SNW/04_Metrics_Chapel/recovery_metrics_audit.json",
+    "PARA": "20_Life_OS/24_PARA_Enterprise/pulse.json",
+    "Wheel": "20_Life_OS/22_Wheel_Discovery/state.json"
+  },
+  "provenance": {
+    "12WY": "20_Life_OS/23_12WY_SNW/A3_SNW_References_Index.md",
+    "PARA": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md",
+    "Wheel": "20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md"
+  },
+  "drift_detection": {
+    "script": "20_Life_OS/verify_source_map.py"
+  }
+}
