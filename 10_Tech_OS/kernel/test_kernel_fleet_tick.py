@@ -15,18 +15,19 @@ class TickTests(unittest.TestCase):
         self.assertEqual((pole,prd),("LIFE_L0","LPRD-001"))
 
     def test_duplicate_detects_issue(self):
-        active=[{"title":"ASPACE:X | KPRD-020 | KER-19","prompt":"","state":"IN_PROGRESS"}]
+        active=[{"title":"ASPACE:X | KPRD-020 | KER-19","prompt":"Work_id: 123","state":"IN_PROGRESS"}]
         self.assertTrue(k.duplicate(active,"KER-19"))
-        self.assertFalse(k.duplicate(active,"KER-20"))
+        self.assertTrue(k.duplicate(active,"KER-20","123"))
+        self.assertFalse(k.duplicate(active,"KER-20","124"))
 
     def test_terminal_session_is_not_reusable(self):
         self.assertIsNone(k.reusable_session("KER-19"))
 
     def test_companion_lane_caps(self):
-        self.assertEqual(k.MAX_ACTIVE,9)
-        self.assertEqual(k.CORE_LIMITS["KERNEL"],3)
-        self.assertEqual(k.CORE_LIMITS["LIFE"],3)
-        self.assertEqual(k.CORE_LIMITS["BUSINESS"],3)
+        self.assertEqual(k.MAX_ACTIVE,15)
+        self.assertEqual(k.CORE_LIMITS["KERNEL"],5)
+        self.assertEqual(k.CORE_LIMITS["LIFE"],5)
+        self.assertEqual(k.CORE_LIMITS["BUSINESS"],5)
 
     def test_core_classifier(self):
         self.assertEqual(k.core_for("KERNEL_K0"),"KERNEL")
