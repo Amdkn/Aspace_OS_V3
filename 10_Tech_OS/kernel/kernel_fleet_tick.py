@@ -5,16 +5,16 @@ No LLM is required to find READY work or launch Jules.
 from __future__ import annotations
 import json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
-from fleet_ownership import reserve, bind_session, require_running_owner, dispatch_lock
+from fleet_ownership import reserve, bind_session, require_running_owner, dispatch_lock, resolve_work
 
 ROOT=Path(r"C:\Users\amado\ASpace_OS_V3")
 PRD_ROOT=ROOT/"10_Tech_OS"/"PRD_Autonomy"
 JULES="http://127.0.0.1:43118"
 SOURCE="sources/github/Amdkn/Aspace_OS_V3"
-MAX_ACTIVE=9
+MAX_ACTIVE=15
 MAX_DISPATCH_PER_TICK=3
 # One persistent Jules lane per S3 companion. Capacity is hierarchical, not a 20/30/50 pool.
-CORE_LIMITS={"KERNEL":3,"LIFE":3,"BUSINESS":3}
+CORE_LIMITS={"KERNEL":5,"LIFE":5,"BUSINESS":5}
 PROJECTS=("Tech OS — Kernel Core","Tech OS — Buzz Core","Tech OS — Life Core")
 TERMINAL={"COMPLETED","FAILED","CANCELLED","CANCELED"}
 SKIP_MARKERS=("[SOLARPUNK]","[BEDROCK]","[FLEET]")
@@ -114,8 +114,12 @@ def _session_age_s(s):
  except Exception:
   return 10**12
 
-def duplicate(active,issue_id):
- return any(issue_id in (s.get("title","")+" "+s.get("prompt","")) for s in active)
+def duplicate(active, issue_id, work_id=None):
+ for s in active:
+  blob = s.get("title","") + " " + s.get("prompt","")
+  if issue_id in blob: return True
+  if work_id and f"Work_id: {work_id}" in blob: return True
+ return False
 
 def core_for(pole):
  if pole.startswith("KERNEL_") or pole.startswith("K"): return "KERNEL"
@@ -208,7 +212,7 @@ def _doctor_for_core(core):
 def _send_to_session(session_id,prompt):
  return http_json(f"/sessions/{session_id}/messages","POST",{"prompt":prompt},30)
 
-def create_or_continue_session(issue,pole,prd,active):
+def create_or_continue_session(issue,pole,prd,active,work_id=None):
  brief=write_prd(issue,pole,prd)
  core=core_for(pole)
  role=role_for(issue,pole)
@@ -220,6 +224,7 @@ Execute {prd} for {issue['identifier']}: {issue['title']}.
 Read the PRD brief at {brief.relative_to(ROOT).as_posix()}.
 Linear mandate:
 {issue.get('description') or ''}
+{f'Work_id: {work_id}' if work_id else ''}
 Rules:
 - Stay inside this Companion role and Core.
 - If requirements are materially ambiguous or need human interaction, STOP implementation and propose an ADR clarification for the Doctor/Rick review path.
@@ -257,7 +262,12 @@ def _tick():
  for issue in ready:
   if len(launched)>=MAX_DISPATCH_PER_TICK: break
   iid=issue["identifier"]
-  if duplicate(active,iid): continue
+  try:
+   work_id=resolve_work(iid)
+  except ValueError as exc:
+   skipped.append({"issue":iid,"reason":str(exc)})
+   continue
+  if duplicate(active,iid,work_id): continue
   pole,prd=classify(issue)
   core=core_for(pole)
   companion=companion_for(issue,pole)
@@ -274,7 +284,7 @@ def _tick():
    continue
   # The durable attempt and atomic claim precede any external mutation.
   # Network ambiguity deliberately keeps ownership for supervisor reconciliation.
-  session=create_or_continue_session(issue,pole,prd,active)
+  session=create_or_continue_session(issue,pole,prd,active,work_id)
   sid=str(session.get("id") or session.get("sessionId") or session.get("name") or "").removeprefix("sessions/")
   bind_session(work_id,sid)
   observation=http_json(f"/sessions/{sid}")
