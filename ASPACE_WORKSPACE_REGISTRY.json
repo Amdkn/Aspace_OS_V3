@@ -30,7 +30,12 @@
       "type": "omarchy_vm",
       "role": "living_desktop",
       "status": "planned",
-      "continuity": ["github", "linear", "supabase", "ssh_or_tailscale"]
+      "continuity": [
+        "github",
+        "linear",
+        "supabase",
+        "ssh_or_tailscale"
+      ]
     }
   },
   "fabrics": {
@@ -43,17 +48,17 @@
       "status": "active",
       "projects": {
         "kernel": {
-          "name": "S2 Kernel Core — Recursive Tech OS",
+          "name": "S2 Kernel Core â€” Recursive Tech OS",
           "project_id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
           "manager": "Doctor13"
         },
         "life": {
-          "name": "S2 Life Core — Interface / Life Projection",
+          "name": "S2 Life Core â€” Interface / Life Projection",
           "project_id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
           "manager": "Doctor11"
         },
         "buzz": {
-          "name": "S2 Buzz Core — Expansion / Business Projection",
+          "name": "S2 Buzz Core â€” Expansion / Business Projection",
           "project_id": "c06ecf2e-5e4b-49b8-a56c-f55a3052f6c2",
           "manager": "Doctor12"
         }
@@ -61,22 +66,41 @@
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "planned_unbound",
-      "rule": "shared machine state; local uc.db may become cache/projection, not sole cloud truth"
+      "status": "bound_active",
+      "rule": "shared machine state; local uc.db may become cache/projection, not sole cloud truth",
+      "organization": "Aspace OS",
+      "organization_id": "zttbgnlgwizveqryknkd",
+      "project_name": "Agent OS Backend",
+      "project_id": "biyecksylqonuovqmbtz",
+      "region": "us-west-2",
+      "schema": "aspace",
+      "migration": "aspace_machine_blackboard_v1"
     }
   },
   "cores": {
     "kernel": {
       "manager": "Doctor13",
-      "companions": ["Ryan", "Yaz", "Graham"]
+      "companions": [
+        "Ryan",
+        "Yaz",
+        "Graham"
+      ]
     },
     "life": {
       "manager": "Doctor11",
-      "companions": ["Amy", "Rory", "River"]
+      "companions": [
+        "Amy",
+        "Rory",
+        "River"
+      ]
     },
     "buzz": {
       "manager": "Doctor12",
-      "companions": ["Bill", "Clara", "Nardole"]
+      "companions": [
+        "Bill",
+        "Clara",
+        "Nardole"
+      ]
     }
   },
   "repositories": {
@@ -214,18 +238,43 @@
     }
   },
   "projections_and_tools": {
-    "vercel": {"role": "web_application_projection", "status": "active_external"},
-    "render": {"role": "runtime_service_projection", "status": "jules_mcp_connected"},
-    "stitch": {"role": "interface_design_forge", "status": "jules_mcp_connected"},
-    "tinybird": {"role": "observatory_telemetry", "status": "available_not_connected"},
-    "context7": {"role": "external_technical_knowledge", "status": "available_not_connected"},
-    "v0": {"role": "interface_and_app_forge", "status": "available_not_connected"},
-    "neon": {"role": "optional_postgres_branching", "status": "available_not_connected"},
-    "supabase": {"role": "preferred_machine_blackboard_candidate", "status": "available_not_connected"}
+    "vercel": {
+      "role": "web_application_projection",
+      "status": "active_external"
+    },
+    "render": {
+      "role": "runtime_service_projection",
+      "status": "jules_mcp_connected"
+    },
+    "stitch": {
+      "role": "interface_design_forge",
+      "status": "jules_mcp_connected"
+    },
+    "tinybird": {
+      "role": "observatory_telemetry",
+      "status": "available_not_connected"
+    },
+    "context7": {
+      "role": "external_technical_knowledge",
+      "status": "available_not_connected"
+    },
+    "v0": {
+      "role": "interface_and_app_forge",
+      "status": "available_not_connected"
+    },
+    "neon": {
+      "role": "optional_postgres_branching",
+      "status": "available_not_connected"
+    },
+    "supabase": {
+      "role": "machine_blackboard_workgraph",
+      "status": "bound_active",
+      "project": "Agent OS Backend"
+    }
   },
   "continuity": {
     "human_intent": "linear",
-    "machine_state": "supabase_planned",
+    "machine_state": "supabase_agent_os_backend",
     "versioned_worlds": "github",
     "federated_workspace": "github_codespaces",
     "living_desktop": "omarchy_vm",
