@@ -27,11 +27,12 @@
       "bootstrap": ".devcontainer/bootstrap-aspace.py",
       "status": "active",
       "current_instance": {
-        "name": "a-space-federated-workspace-7g5grwqpgrxfvr",
+        "name": "a-space-federated-workspace-qw4w96r4qvqc4qrj",
         "display_name": "A-Space Federated Workspace",
         "machine": "basicLinux32gb",
         "repo": "Amdkn/Aspace_OS_V3",
-        "branch": "feat/aspace-workspace-registry"
+        "branch": "feat/aspace-workspace-registry",
+        "state": "Available"
       }
     },
     "habitat": {
@@ -524,5 +525,12 @@
         "Observatoire": "C:/Users/amado/agent-os/observatoire"
       }
     }
+  },
+  "intent_ledger": {
+    "id": "ASPACE_ACTIVE_INTENTS",
+    "path": "ASPACE_ACTIVE_INTENTS.yaml",
+    "role": "durable_a0_intent_source",
+    "read_before_execution": true,
+    "rule": "Intent outranks incidental technical state; agents read this before reprioritizing work."
   }
 }
