@@ -143,7 +143,7 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
--- schemas manquants provenant de l'ancien workgraph_v1.sql
+-- schemas manquants
 CREATE TABLE IF NOT EXISTS session_binding (
     id INTEGER PRIMARY KEY,
     work_id INTEGER,
