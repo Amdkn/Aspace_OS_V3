@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "registry_id": "ASPACE_WORKSPACE_REGISTRY",
+  "updated_at": "2026-09-27",
+  "system": {
+    "name": "A'Space V3",
+    "model": "one_system_three_cores",
+    "supervision": "Rick's Verse",
+    "sovereign_node": "A0-Amadeus"
+  },
+  "identity_registry": {
+    "type": "ADE_REGISTRY",
+    "local_path": "C:/Users/amado/.aspace/orca/ADE_REGISTRY.yaml",
+    "rule": "ADE answers WHO; ASPACE_WORKSPACE_REGISTRY answers WHERE; WorkGraph answers NOW"
+  },
+  "sovereign_node": {
+    "id": "A0-Amadeus",
+    "platform": "Windows",
+    "root": "C:/Users/amado/ASpace_OS_V3",
+    "role": "sovereign_local_vault_and_convergence_node"
+  },
+  "workspace": {
+    "codespaces": {
+      "role": "federated_cloud_workspace",
+      "root": "/workspaces/aspace",
+      "core_link": "/workspaces/aspace/core/Aspace_OS_V3",
+      "bootstrap": ".devcontainer/bootstrap-aspace.py"
+    },
+    "habitat": {
+      "type": "omarchy_vm",
+      "role": "living_desktop",
+      "status": "planned",
+      "continuity": ["github", "linear", "supabase", "ssh_or_tailscale"]
+    }
+  },
+  "fabrics": {
+    "github": {
+      "role": "versioned_worlds_and_artifacts",
+      "status": "active"
+    },
+    "linear": {
+      "role": "human_blackboard_and_control_tower",
+      "status": "active",
+      "projects": {
+        "kernel": {
+          "name": "S2 Kernel Core — Recursive Tech OS",
+          "project_id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
+          "manager": "Doctor13"
+        },
+        "life": {
+          "name": "S2 Life Core — Interface / Life Projection",
+          "project_id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
+          "manager": "Doctor11"
+        },
+        "buzz": {
+          "name": "S2 Buzz Core — Expansion / Business Projection",
+          "project_id": "c06ecf2e-5e4b-49b8-a56c-f55a3052f6c2",
+          "manager": "Doctor12"
+        }
+      }
+    },
+    "supabase": {
+      "role": "machine_blackboard_workgraph",
+      "status": "planned_unbound",
+      "rule": "shared machine state; local uc.db may become cache/projection, not sole cloud truth"
+    }
+  },
+  "cores": {
+    "kernel": {
+      "manager": "Doctor13",
+      "companions": ["Ryan", "Yaz", "Graham"]
+    },
+    "life": {
+      "manager": "Doctor11",
+      "companions": ["Amy", "Rory", "River"]
+    },
+    "buzz": {
+      "manager": "Doctor12",
+      "companions": ["Bill", "Clara", "Nardole"]
+    }
+  },
+  "repositories": {
+    "core": {
+      "aspace_v3": {
+        "repo": "Amdkn/Aspace_OS_V3",
+        "clone_url": "https://github.com/Amdkn/Aspace_OS_V3.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/ASpace_OS_V3",
+        "codespace_path": "core/Aspace_OS_V3",
+        "bootstrap": "linked_current_repo",
+        "authority": "canonical"
+      }
+    },
+    "satellites": {
+      "agent_os": {
+        "repo": "Amdkn/Agent-OS",
+        "clone_url": "https://github.com/Amdkn/Agent-OS.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/agent-os",
+        "codespace_path": "satellites/Agent-OS",
+        "bootstrap": "auto",
+        "authority": "satellite",
+        "evidence": "local gitlink + GitHub verified"
+      },
+      "agent_os_desktop": {
+        "repo": "Amdkn/Agent-OS-Desktop",
+        "clone_url": "https://github.com/Amdkn/Agent-OS-Desktop.git",
+        "default_branch": "main",
+        "codespace_path": "satellites/Agent-OS-Desktop",
+        "bootstrap": "manual",
+        "authority": "satellite",
+        "evidence": "GitHub verified"
+      },
+      "life_os_2026": {
+        "repo": "Amdkn/Life-OS-2026",
+        "clone_url": "https://github.com/Amdkn/Life-OS-2026.git",
+        "default_branch": "main",
+        "codespace_path": "satellites/Life-OS-2026",
+        "bootstrap": "auto",
+        "authority": "life_projection",
+        "evidence": "GitHub verified"
+      }
+    },
+    "business": {
+      "business_os": {
+        "repo": "Amdkn/BusinessOS",
+        "clone_url": "https://github.com/Amdkn/BusinessOS.git",
+        "default_branch": "main",
+        "codespace_path": "business/BusinessOS",
+        "bootstrap": "auto",
+        "authority": "business_federation",
+        "evidence": "GitHub verified"
+      },
+      "business_office_3_os": {
+        "repo": "Amdkn/Business-Office-3-OS",
+        "clone_url": "https://github.com/Amdkn/Business-Office-3-OS.git",
+        "default_branch": "main",
+        "codespace_path": "business/Business-Office-3-OS",
+        "bootstrap": "auto",
+        "authority": "business_projection",
+        "evidence": "GitHub verified"
+      },
+      "omk_business_os": {
+        "repo": "Amdkn/01-OMK-Business-OS",
+        "clone_url": "https://github.com/Amdkn/01-OMK-Business-OS.git",
+        "default_branch": "main",
+        "codespace_path": "business/01-OMK-Business-OS",
+        "bootstrap": "manual",
+        "authority": "business_satellite",
+        "evidence": "GitHub verified"
+      },
+      "omk_mobile_back_office": {
+        "repo": "Amdkn/The-OMK-Mobile-Back-Office",
+        "clone_url": "https://github.com/Amdkn/The-OMK-Mobile-Back-Office.git",
+        "default_branch": "main",
+        "codespace_path": "business/The-OMK-Mobile-Back-Office",
+        "bootstrap": "manual",
+        "authority": "business_projection",
+        "evidence": "GitHub verified"
+      },
+      "omk_desktop_web_os": {
+        "repo": "omk-services/OMK-DESKTOP-WEB-OS",
+        "clone_url": "git@github.com:omk-services/OMK-DESKTOP-WEB-OS.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/10_Projects/coach-os-app",
+        "codespace_path": "business/OMK-DESKTOP-WEB-OS",
+        "bootstrap": "manual",
+        "authority": "business_projection",
+        "evidence": "local git remote verified"
+      },
+      "omk_saas_os": {
+        "repo": "Amdkn/00-omk-saas-os",
+        "clone_url": "https://github.com/Amdkn/00-omk-saas-os.git",
+        "default_branch": "main",
+        "codespace_path": "business/00-omk-saas-os",
+        "bootstrap": "manual",
+        "authority": "business_satellite",
+        "evidence": "GitHub verified"
+      }
+    },
+    "third_party_gitlinks": {
+      "super_simple_software_factory": {
+        "repo": "disler/super-simple-software-factory",
+        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/super-simple-software-factory"
+      },
+      "bmad_loop": {
+        "repo": "bmad-code-org/bmad-loop",
+        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/20_Harness/bmad-loop"
+      },
+      "deepseek_harness": {
+        "repo": "deepseek-ai/deepseek-harness",
+        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/20_Harness/deepseek-harness"
+      },
+      "pocketbase_vec": {
+        "repo": null,
+        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/pocketbase-vec",
+        "status": "gitlink_remote_unresolved"
+      }
+    }
+  },
+  "execution": {
+    "jules": {
+      "role": "fractal_sdlc_forge",
+      "shared_workspace": "linear_blackboard + github_refs + registry",
+      "filesystem_rule": "no assumption that another Jules session shares its checkout"
+    },
+    "hermes": {
+      "role": "persistent_agent_runtime",
+      "identity_source": "ADE_REGISTRY"
+    },
+    "orca": {
+      "role": "ADE_workspace_and_local_agent_sandboxes",
+      "identity_source": "ADE_REGISTRY"
+    }
+  },
+  "projections_and_tools": {
+    "vercel": {"role": "web_application_projection", "status": "active_external"},
+    "render": {"role": "runtime_service_projection", "status": "jules_mcp_connected"},
+    "stitch": {"role": "interface_design_forge", "status": "jules_mcp_connected"},
+    "tinybird": {"role": "observatory_telemetry", "status": "available_not_connected"},
+    "context7": {"role": "external_technical_knowledge", "status": "available_not_connected"},
+    "v0": {"role": "interface_and_app_forge", "status": "available_not_connected"},
+    "neon": {"role": "optional_postgres_branching", "status": "available_not_connected"},
+    "supabase": {"role": "preferred_machine_blackboard_candidate", "status": "available_not_connected"}
+  },
+  "continuity": {
+    "human_intent": "linear",
+    "machine_state": "supabase_planned",
+    "versioned_worlds": "github",
+    "federated_workspace": "github_codespaces",
+    "living_desktop": "omarchy_vm",
+    "local_sovereignty": "A0-Amadeus Windows node"
+  },
+  "invariants": [
+    "A'Space V3 is one system; Kernel, Life and Buzz are complementary cores, not separate A'Space systems.",
+    "ADE_REGISTRY answers WHO; ASPACE_WORKSPACE_REGISTRY answers WHERE; WorkGraph answers NOW.",
+    "No single tool is the source of all truth.",
+    "Repositories are versioned worlds, not the workspace itself.",
+    "Linear carries human-visible intent and coordination.",
+    "Supabase is the preferred future shared machine-state fabric; do not silently replace it with local-only state.",
+    "GitHub carries versioned artifacts and branch histories.",
+    "Codespaces federates repositories without pretending they share one mutable filesystem.",
+    "Omarchy is the Living Desktop habitat, not a new Core or a new OS layer.",
+    "Jules sessions communicate through references and evidence, not hidden shared-disk assumptions.",
+    "Evidence gates promotion into the shared canon; it does not erase alternative branches."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "A'Space Federated Workspace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "remoteEnv": {
+    "ASPACE_WORKSPACE_ROOT": "/workspaces/aspace"
+  },
+  "postCreateCommand": "python3 .devcontainer/bootstrap-aspace.py",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}
