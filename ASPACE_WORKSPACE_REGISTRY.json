@@ -76,10 +76,12 @@
       "project": {
         "name": "Agent OS Backend",
         "id": "biyecksylqonuovqmbtz",
-        "region": "us-west-2"
+        "region": "us-west-2",
+        "status": "ACTIVE_HEALTHY"
       },
       "schema": "aspace",
       "security": "private schema + FORCE RLS; service_role only",
+      "local_projection": "C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel/uc.db",
       "local_projection_rule": "local uc.db remains sovereign/local cache-projection; cloud WorkGraph is shared machine state",
       "jules_mcp": "connected"
     }
@@ -320,12 +322,14 @@
     "supabase": {
       "role": "machine_blackboard_workgraph",
       "status": "jules_mcp_connected_active",
-      "binding": "Aspace OS / Agent OS Backend / schema aspace"
+      "binding": "Aspace OS / Agent OS Backend / schema aspace",
+      "project_id": "biyecksylqonuovqmbtz",
+      "schema": "aspace"
     }
   },
   "continuity": {
     "human_intent": "linear",
-    "machine_state": "supabase_agent_os_backend",
+    "machine_state": "supabase://biyecksylqonuovqmbtz/aspace",
     "versioned_worlds": "github",
     "federated_workspace": "github_codespaces",
     "living_desktop": "omarchy_vm",
