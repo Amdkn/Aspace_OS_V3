@@ -2,12 +2,50 @@
   "frameworks": {
     "12WY": "20_Life_OS/23_12WY_SNW/04_Metrics_Chapel/recovery_metrics_audit.json",
     "PARA": "20_Life_OS/24_PARA_Enterprise/pulse.json",
-    "Wheel": "20_Life_OS/22_Wheel_Discovery/state.json"
+    "Wheel": "20_Life_OS/22_Wheel_Discovery/state.json",
+    "Ikigai": "20_Life_OS/21_Ikigai_Orville/pulse.json",
+    "GTD": "20_Life_OS/25_GTD_Cerritos/pulse.json",
+    "DEAL": "20_Life_OS/26_DEAL_Protostar/pulse.json"
+  },
+  "provenance_review_date": {
+    "12WY": "2026-09-16",
+    "PARA": "2026-09-23",
+    "Wheel": "2026-09-12",
+    "Ikigai": "2026-09-04",
+    "GTD": "2026-09-18",
+    "DEAL": "2026-09-18"
   },
   "provenance": {
     "12WY": "20_Life_OS/23_12WY_SNW/A3_SNW_References_Index.md",
     "PARA": "20_Life_OS/24_PARA_Enterprise/A3_Enterprise_References_Index.md",
-    "Wheel": "20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md"
+    "Wheel": "20_Life_OS/22_Wheel_Discovery/A3_Discovery_References_Index.md",
+    "Ikigai": "20_Life_OS/21_Ikigai_Orville/A3_Gemini_References_Index.md",
+    "GTD": "20_Life_OS/25_GTD_Cerritos/A3_Cerritos_References_Index.md",
+    "DEAL": "20_Life_OS/26_DEAL_Protostar/A3_Protostar_References_Index.md"
+  },
+  "workspace_projection_target": {
+    "12WY": "src/stores/fw-12wy.store.ts",
+    "PARA": "src/stores/fw-para.store.ts",
+    "Wheel": "src/stores/fw-wheel.store.ts",
+    "Ikigai": "src/stores/fw-ikigai.store.ts",
+    "GTD": "src/stores/fw-gtd.store.ts",
+    "DEAL": "src/stores/fw-deal.store.ts"
+  },
+  "workgraph_relation": {
+    "12WY": "work_137",
+    "PARA": "work_141",
+    "Wheel": "work_35",
+    "Ikigai": "work_50",
+    "GTD": "work_143",
+    "DEAL": "work_94"
+  },
+  "focused_verification": {
+    "12WY": "20_Life_OS/23_12WY_SNW/verify_12wy.py",
+    "PARA": "20_Life_OS/24_PARA_Enterprise/verify_para.py",
+    "Wheel": "20_Life_OS/22_Wheel_Discovery/verify_wheel.py",
+    "Ikigai": "20_Life_OS/21_Ikigai_Orville/verify_ikigai.py",
+    "GTD": "20_Life_OS/25_GTD_Cerritos/verify_gtd.py",
+    "DEAL": "20_Life_OS/26_DEAL_Protostar/verify_deal.py"
   },
   "drift_detection": {
     "script": "20_Life_OS/verify_source_map.py"
