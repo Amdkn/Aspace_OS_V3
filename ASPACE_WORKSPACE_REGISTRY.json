@@ -66,15 +66,20 @@
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "bound_active",
-      "rule": "shared machine state; local uc.db may become cache/projection, not sole cloud truth",
-      "organization": "Aspace OS",
-      "organization_id": "zttbgnlgwizveqryknkd",
-      "project_name": "Agent OS Backend",
-      "project_id": "biyecksylqonuovqmbtz",
-      "region": "us-west-2",
+      "status": "active_healthy",
+      "organization": {
+        "name": "Aspace OS",
+        "id": "zttbgnlgwizveqryknkd",
+        "plan": "free"
+      },
+      "project": {
+        "name": "Agent OS Backend",
+        "id": "biyecksylqonuovqmbtz",
+        "region": "us-west-2"
+      },
       "schema": "aspace",
-      "migration": "aspace_machine_blackboard_v1"
+      "security": "private schema + FORCE RLS; service_role only",
+      "local_projection_rule": "local uc.db remains sovereign/local cache-projection; cloud WorkGraph is shared machine state"
     }
   },
   "cores": {
@@ -124,7 +129,27 @@
         "codespace_path": "satellites/Agent-OS",
         "bootstrap": "auto",
         "authority": "satellite",
-        "evidence": "local gitlink + GitHub verified"
+        "evidence": "local gitlink + GitHub verified",
+        "machine_blackboard_sync": {
+          "project": "Agent OS Backend",
+          "schema": "aspace",
+          "last_run_id": "2ec3a3d3-d4ca-47c3-ae77-a2837eebc070",
+          "source_git_sha": "4b73326954b602134a51ed9bad147d187a9479b0",
+          "source_branch": "main",
+          "working_tree_dirty": true,
+          "assets": 178,
+          "entities": 262,
+          "entity_types": {
+            "agent": 136,
+            "skill": 98,
+            "business_domain": 8,
+            "harness": 7,
+            "framework": 6,
+            "memory_component": 4,
+            "connection_surface": 3
+          },
+          "provenance_rule": "historical collector timestamps are preserved inside source JSON; first snapshot does not coerce malformed timestamps"
+        }
       },
       "agent_os_desktop": {
         "repo": "Amdkn/Agent-OS-Desktop",
@@ -268,8 +293,8 @@
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "bound_active",
-      "project": "Agent OS Backend"
+      "status": "connected_active",
+      "binding": "Aspace OS / Agent OS Backend / schema aspace"
     }
   },
   "continuity": {
