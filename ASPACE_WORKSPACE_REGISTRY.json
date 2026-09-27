@@ -62,7 +62,8 @@
           "project_id": "c06ecf2e-5e4b-49b8-a56c-f55a3052f6c2",
           "manager": "Doctor12"
         }
-      }
+      },
+      "jules_mcp": "connected"
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
@@ -79,7 +80,8 @@
       },
       "schema": "aspace",
       "security": "private schema + FORCE RLS; service_role only",
-      "local_projection_rule": "local uc.db remains sovereign/local cache-projection; cloud WorkGraph is shared machine state"
+      "local_projection_rule": "local uc.db remains sovereign/local cache-projection; cloud WorkGraph is shared machine state",
+      "jules_mcp": "connected"
     }
   },
   "cores": {
@@ -251,7 +253,31 @@
     "jules": {
       "role": "fractal_sdlc_forge",
       "shared_workspace": "linear_blackboard + github_refs + registry",
-      "filesystem_rule": "no assumption that another Jules session shares its checkout"
+      "filesystem_rule": "no assumption that another Jules session shares its checkout",
+      "mcp_mesh": {
+        "status": "active",
+        "connected": [
+          "linear",
+          "neon",
+          "stitch",
+          "supabase",
+          "tinybird",
+          "context7",
+          "v0",
+          "render"
+        ],
+        "authority_map": {
+          "linear": "human_blackboard",
+          "supabase": "machine_blackboard_workgraph",
+          "neon": "optional_postgres_branching",
+          "stitch": "interface_design_forge",
+          "tinybird": "observatory_telemetry",
+          "context7": "external_technical_knowledge",
+          "v0": "interface_and_app_forge",
+          "render": "runtime_service_projection"
+        },
+        "rule": "MCPs extend capability; they do not replace Registry authority, Linear intent, Supabase machine state, or GitHub artifacts."
+      }
     },
     "hermes": {
       "role": "persistent_agent_runtime",
@@ -277,23 +303,23 @@
     },
     "tinybird": {
       "role": "observatory_telemetry",
-      "status": "available_not_connected"
+      "status": "jules_mcp_connected"
     },
     "context7": {
       "role": "external_technical_knowledge",
-      "status": "available_not_connected"
+      "status": "jules_mcp_connected"
     },
     "v0": {
       "role": "interface_and_app_forge",
-      "status": "available_not_connected"
+      "status": "jules_mcp_connected"
     },
     "neon": {
       "role": "optional_postgres_branching",
-      "status": "available_not_connected"
+      "status": "jules_mcp_connected"
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "connected_active",
+      "status": "jules_mcp_connected_active",
       "binding": "Aspace OS / Agent OS Backend / schema aspace"
     }
   },
@@ -316,6 +342,7 @@
     "Codespaces federates repositories without pretending they share one mutable filesystem.",
     "Omarchy is the Living Desktop habitat, not a new Core or a new OS layer.",
     "Jules sessions communicate through references and evidence, not hidden shared-disk assumptions.",
-    "Evidence gates promotion into the shared canon; it does not erase alternative branches."
+    "Evidence gates promotion into the shared canon; it does not erase alternative branches.",
+    "Jules MCPs are capability surfaces, not new sources of canonical authority."
   ]
 }
