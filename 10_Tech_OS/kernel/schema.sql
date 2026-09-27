@@ -142,3 +142,26 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- schemas manquants provenant de l'ancien workgraph_v1.sql
+CREATE TABLE IF NOT EXISTS session_binding (
+    id INTEGER PRIMARY KEY,
+    work_id INTEGER,
+    harness TEXT,
+    session_key TEXT,
+    capability TEXT,
+    external_ref TEXT,
+    status TEXT,
+    ended_at TEXT
+);
+CREATE TABLE IF NOT EXISTS work_dependency (
+    id INTEGER PRIMARY KEY,
+    work_id INTEGER,
+    depends_on_id INTEGER,
+    kind TEXT NOT NULL DEFAULT 'blocker'
+);
+CREATE TABLE IF NOT EXISTS harness_capability (
+    id INTEGER PRIMARY KEY,
+    harness TEXT,
+    capability TEXT
+);
