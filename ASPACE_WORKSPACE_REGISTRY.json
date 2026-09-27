@@ -24,7 +24,15 @@
       "role": "federated_cloud_workspace",
       "root": "/workspaces/aspace",
       "core_link": "/workspaces/aspace/core/Aspace_OS_V3",
-      "bootstrap": ".devcontainer/bootstrap-aspace.py"
+      "bootstrap": ".devcontainer/bootstrap-aspace.py",
+      "status": "active",
+      "current_instance": {
+        "name": "a-space-federated-workspace-4xvxg64w4p6hjxgg",
+        "display_name": "A-Space Federated Workspace",
+        "machine": "basicLinux32gb",
+        "repo": "Amdkn/Aspace_OS_V3",
+        "branch": "feat/aspace-workspace-registry"
+      }
     },
     "habitat": {
       "type": "omarchy_vm",
@@ -48,17 +56,17 @@
       "status": "active",
       "projects": {
         "kernel": {
-          "name": "S2 Kernel Core â€” Recursive Tech OS",
+          "name": "S2 Kernel Core — Recursive Tech OS",
           "project_id": "c24560d8-c855-45cc-ad0a-5a9fefa930b9",
           "manager": "Doctor13"
         },
         "life": {
-          "name": "S2 Life Core â€” Interface / Life Projection",
+          "name": "S2 Life Core — Interface / Life Projection",
           "project_id": "32e64db2-b274-4491-9e3f-ad1f652e55f8",
           "manager": "Doctor11"
         },
         "buzz": {
-          "name": "S2 Buzz Core â€” Expansion / Business Projection",
+          "name": "S2 Buzz Core — Expansion / Business Projection",
           "project_id": "c06ecf2e-5e4b-49b8-a56c-f55a3052f6c2",
           "manager": "Doctor12"
         }
@@ -67,23 +75,32 @@
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "active_healthy",
+      "status": "active",
       "organization": {
-        "name": "Aspace OS",
         "id": "zttbgnlgwizveqryknkd",
+        "name": "Aspace OS",
         "plan": "free"
       },
       "project": {
-        "name": "Agent OS Backend",
         "id": "biyecksylqonuovqmbtz",
+        "ref": "biyecksylqonuovqmbtz",
+        "name": "Agent OS Backend",
         "region": "us-west-2",
-        "status": "ACTIVE_HEALTHY"
+        "status": "ACTIVE_HEALTHY",
+        "schema": "aspace"
       },
       "schema": "aspace",
       "security": "private schema + FORCE RLS; service_role only",
       "local_projection": "C:/Users/amado/ASpace_OS_V3/10_Tech_OS/kernel/uc.db",
       "local_projection_rule": "local uc.db remains sovereign/local cache-projection; cloud WorkGraph is shared machine state",
-      "jules_mcp": "connected"
+      "jules_mcp": "connected",
+      "views": [
+        "aspace.v_work_board",
+        "aspace.v_session_mesh",
+        "aspace.v_world_catalog",
+        "aspace.v_active_sessions"
+      ],
+      "rule": "shared machine state; local uc.db is a sovereign cache/projection, not the sole shared truth"
     }
   },
   "cores": {
@@ -321,15 +338,15 @@
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
-      "status": "jules_mcp_connected_active",
-      "binding": "Aspace OS / Agent OS Backend / schema aspace",
-      "project_id": "biyecksylqonuovqmbtz",
+      "status": "active",
+      "organization": "Aspace OS",
+      "project": "Agent OS Backend",
       "schema": "aspace"
     }
   },
   "continuity": {
     "human_intent": "linear",
-    "machine_state": "supabase://biyecksylqonuovqmbtz/aspace",
+    "machine_state": "supabase:Aspace OS/Agent OS Backend/aspace",
     "versioned_worlds": "github",
     "federated_workspace": "github_codespaces",
     "living_desktop": "omarchy_vm",
@@ -341,7 +358,7 @@
     "No single tool is the source of all truth.",
     "Repositories are versioned worlds, not the workspace itself.",
     "Linear carries human-visible intent and coordination.",
-    "Supabase is the preferred future shared machine-state fabric; do not silently replace it with local-only state.",
+    "Supabase is the active shared machine-state fabric; local uc.db remains a sovereign cache/projection, not the sole shared truth.",
     "GitHub carries versioned artifacts and branch histories.",
     "Codespaces federates repositories without pretending they share one mutable filesystem.",
     "Omarchy is the Living Desktop habitat, not a new Core or a new OS layer.",

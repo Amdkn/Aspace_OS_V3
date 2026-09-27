@@ -1,6 +1,11 @@
 {
   "name": "A'Space Federated Workspace",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
   "remoteEnv": {
     "ASPACE_WORKSPACE_ROOT": "/workspaces/aspace"
   },
