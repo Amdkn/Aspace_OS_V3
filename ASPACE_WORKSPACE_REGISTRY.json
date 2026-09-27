@@ -27,7 +27,7 @@
       "bootstrap": ".devcontainer/bootstrap-aspace.py",
       "status": "active",
       "current_instance": {
-        "name": "a-space-federated-workspace-4xvxg64w4p6hjxgg",
+        "name": "a-space-federated-workspace-7g5grwqpgrxfvr",
         "display_name": "A-Space Federated Workspace",
         "machine": "basicLinux32gb",
         "repo": "Amdkn/Aspace_OS_V3",
@@ -271,7 +271,7 @@
   "execution": {
     "jules": {
       "role": "fractal_sdlc_forge",
-      "shared_workspace": "linear_blackboard + github_refs + registry",
+      "shared_workspace": "linear_blackboard + supabase_workgraph + github_refs + ASPACE_WORKSPACE_REGISTRY",
       "filesystem_rule": "no assumption that another Jules session shares its checkout",
       "mcp_mesh": {
         "status": "active",
