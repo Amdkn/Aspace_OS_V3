@@ -142,3 +142,21 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS work_dependency (
+  id             INTEGER PRIMARY KEY,
+  work_id        INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id  INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind           TEXT    NOT NULL CHECK(kind IN ('blocks', 'requires', 'relates'))
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id             INTEGER PRIMARY KEY,
+  work_id        INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key    TEXT    NOT NULL,
+  harness        TEXT    NOT NULL,
+  capability     TEXT    NOT NULL,
+  external_ref   TEXT,
+  status         TEXT    NOT NULL CHECK(status IN ('active', 'idle', 'closed')),
+  ended_at       TEXT
+);

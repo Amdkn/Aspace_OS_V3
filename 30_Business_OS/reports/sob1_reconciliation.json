@@ -1,0 +1,52 @@
+{
+  "issue": "SOB-1",
+  "uuid": "d1619d04-6e88-444a-94d6-9da235021723",
+  "work_id": 168,
+  "reconciliation": [
+    {
+      "session_id": "16744116376321476661",
+      "issue": "SOB-90",
+      "work_id": "UNKNOWN",
+      "state": "IN_PROGRESS",
+      "evidence": "PR #162",
+      "blocker": "None",
+      "next_action": "Renew claim and continue execution"
+    },
+    {
+      "session_id": "1382713769026073369",
+      "issue": "SOB-92",
+      "work_id": "UNKNOWN",
+      "state": "COMPLETED",
+      "evidence": "PR #159",
+      "blocker": "None",
+      "next_action": "Capture PR evidence and reconcile WorkGraph to review"
+    },
+    {
+      "session_id": "8083082086499229381",
+      "issue": "SOB-1",
+      "work_id": 168,
+      "state": "AWAITING_USER_FEEDBACK",
+      "evidence": "Current execution lane",
+      "blocker": "None",
+      "next_action": "Complete reconciliation task and close out"
+    }
+  ],
+  "evidence_set": [
+    "30_Business_OS/09_Blueprints/frontier-observatory/RESEARCH_EVIDENCE.md",
+    "30_Business_OS/09_Blueprints/frontier-observatory/TOPOLOGY.md",
+    "30_Business_OS/09_Blueprints/frontier-observatory/DESIGN_BRIEF.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ADR.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/PRD.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/INTERFACE.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ACCEPTANCE.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/CANARY.md",
+    "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ROLLBACK.md"
+  ],
+  "manager_review": {
+    "merge_order": [
+      "#162",
+      "#159"
+    ],
+    "notes": "PR #162 Bill Discover = PASS and must be accepted/merged before Clara. PR #159 Clara Design = PASS and follows PR #162."
+  }
+}
