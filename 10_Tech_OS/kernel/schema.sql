@@ -133,6 +133,55 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- WorkGraph V2 & Session Bindings
+CREATE TABLE IF NOT EXISTS harness_capability (
+  harness TEXT,
+  capability TEXT,
+  evidence_level TEXT,
+  status TEXT,
+  evidence_ref TEXT,
+  checked_at TEXT DEFAULT (datetime('now')),
+  PRIMARY KEY (harness, capability)
+);
+
+CREATE TABLE IF NOT EXISTS work_dependency (
+  work_id INTEGER REFERENCES work(id),
+  depends_on_id INTEGER REFERENCES work(id),
+  kind TEXT DEFAULT 'blocks'
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id INTEGER PRIMARY KEY,
+  work_id INTEGER REFERENCES work(id),
+  status TEXT,
+  ended_at TEXT,
+  harness TEXT,
+  session_key TEXT,
+  capability TEXT,
+  external_ref TEXT
+);
+
+CREATE TABLE IF NOT EXISTS artifact (
+  id INTEGER PRIMARY KEY,
+  work_id INTEGER REFERENCES work(id),
+  kind TEXT,
+  uri TEXT,
+  sha256 TEXT,
+  producer_session_id INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS gate_decision (
+  id INTEGER PRIMARY KEY,
+  work_id INTEGER REFERENCES work(id),
+  gate TEXT,
+  verdict TEXT,
+  reason TEXT,
+  evidence_event_id INTEGER,
+  decided_by TEXT
+);
+
+CREATE VIEW IF NOT EXISTS v_workgraph_v1 AS SELECT * FROM work;
+
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   id         TEXT PRIMARY KEY,               -- UUID
