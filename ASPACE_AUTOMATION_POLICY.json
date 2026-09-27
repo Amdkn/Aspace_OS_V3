@@ -1,0 +1,42 @@
+{
+  "policy_id": "ASPACE_CODESPACE_4H_DAILY",
+  "version": 1,
+  "daily_budget_seconds": 14400,
+  "budget_mode": "cumulative_active_runtime",
+  "activation": "codespace_start_or_resume",
+  "work_sources": {
+    "intent": "Linear",
+    "machine_state": "Supabase:Aspace OS/Agent OS Backend/aspace",
+    "worlds": "ASPACE_WORKSPACE_REGISTRY + GitHub"
+  },
+  "capacity": {
+    "life_business_min_share": 0.8,
+    "kernel_max_share": 0.2,
+    "kernel_exception": "only when Kernel work directly unlocks Life or Business"
+  },
+  "harnesses": {
+    "antigravity": {
+      "local_command": "agy",
+      "local_version": "1.2.6",
+      "adapter_env": "ASPACE_ANTIGRAVITY_CMD"
+    },
+    "codex": {
+      "local_command": "codex",
+      "local_version": "0.153.4",
+      "adapter_env": "ASPACE_CODEX_CMD"
+    },
+    "hermes": {
+      "local_command": "hermes",
+      "local_version": "0.21.0",
+      "adapter_env": "ASPACE_HERMES_CMD"
+    }
+  },
+  "rules": [
+    "No harness runs without an explicit Codespace adapter command.",
+    "One work claim per harness/session.",
+    "Managers supervise; Companion lanes execute within their domain contracts.",
+    "No hidden shared-filesystem assumptions.",
+    "Stop starting new work when the cumulative daily budget reaches four hours.",
+    "After the nine base Companion lanes, at least 80% of additional capacity targets Life or Business."
+  ]
+}

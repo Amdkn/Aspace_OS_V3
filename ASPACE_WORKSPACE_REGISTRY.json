@@ -146,11 +146,11 @@
         "repo": "Amdkn/Agent-OS",
         "clone_url": "https://github.com/Amdkn/Agent-OS.git",
         "default_branch": "main",
-        "local_path": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/agent-os",
-        "codespace_path": "satellites/Agent-OS",
-        "bootstrap": "auto",
+        "local_path": "C:/Users/amado/agent-os",
+        "codespace_path": "local-only/Agent-OS",
+        "bootstrap": "local_only",
         "authority": "satellite",
-        "evidence": "local gitlink + GitHub verified",
+        "evidence": "local living parent; GitHub repository exists but has no usable committed main history",
         "machine_blackboard_sync": {
           "project": "Agent OS Backend",
           "schema": "aspace",
@@ -170,16 +170,27 @@
             "connection_surface": 3
           },
           "provenance_rule": "historical collector timestamps are preserved inside source JSON; first snapshot does not coerce malformed timestamps"
-        }
+        },
+        "local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+        "legacy_v3_gitlink": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/agent-os",
+        "desktop_snapshot": {
+          "branch": "snapshot/tera-5555-2026-09-27",
+          "head": "9d5782868babb16e4477214dee0a40a8b6825e80",
+          "port": 5555,
+          "sync": "pushed_to_Amdkn/Agent-OS-Desktop"
+        },
+        "parent_sync_note": "local Agent-OS parent snapshot push blocked by GitHub secret scanning on historical commit; no bypass performed"
       },
       "agent_os_desktop": {
         "repo": "Amdkn/Agent-OS-Desktop",
         "clone_url": "https://github.com/Amdkn/Agent-OS-Desktop.git",
-        "default_branch": "main",
+        "default_branch": "snapshot/tera-5555-2026-09-27",
         "codespace_path": "satellites/Agent-OS-Desktop",
-        "bootstrap": "manual",
+        "bootstrap": "auto",
         "authority": "satellite",
-        "evidence": "GitHub verified"
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/agent-os/desktop",
+        "local_head": "9d5782868babb16e4477214dee0a40a8b6825e80"
       },
       "life_os_2026": {
         "repo": "Amdkn/Life-OS-2026",
@@ -188,7 +199,30 @@
         "codespace_path": "satellites/Life-OS-2026",
         "bootstrap": "auto",
         "authority": "life_projection",
-        "evidence": "GitHub verified"
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
+        "local_junction": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+        "local_head": "3718ee652838eee498195b5dded83701fdb56aec"
+      },
+      "hermes_workspace": {
+        "repo": "outsourc-e/hermes-workspace",
+        "clone_url": "https://github.com/outsourc-e/hermes-workspace.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/agent-os/hermes-workspace-repo",
+        "codespace_path": "satellites/Hermes-Workspace",
+        "bootstrap": "auto",
+        "authority": "tera_satellite",
+        "evidence": "local git remote verified",
+        "local_head": "c1e6ed979dcb8dddf79c5b163150c6c23c4dce0c"
+      },
+      "observatoire": {
+        "repo": null,
+        "local_path": "C:/Users/amado/agent-os/observatoire",
+        "codespace_path": "local-only/Observatoire",
+        "bootstrap": "local_only",
+        "authority": "tera_satellite",
+        "evidence": "local git repository has no origin remote",
+        "local_head": "232da306c301c1ef131b766b3e8450490dab7ac7"
       }
     },
     "business": {
@@ -215,7 +249,7 @@
         "clone_url": "https://github.com/Amdkn/01-OMK-Business-OS.git",
         "default_branch": "main",
         "codespace_path": "business/01-OMK-Business-OS",
-        "bootstrap": "manual",
+        "bootstrap": "auto",
         "authority": "business_satellite",
         "evidence": "GitHub verified"
       },
@@ -224,17 +258,17 @@
         "clone_url": "https://github.com/Amdkn/The-OMK-Mobile-Back-Office.git",
         "default_branch": "main",
         "codespace_path": "business/The-OMK-Mobile-Back-Office",
-        "bootstrap": "manual",
+        "bootstrap": "auto",
         "authority": "business_projection",
         "evidence": "GitHub verified"
       },
       "omk_desktop_web_os": {
         "repo": "omk-services/OMK-DESKTOP-WEB-OS",
-        "clone_url": "git@github.com:omk-services/OMK-DESKTOP-WEB-OS.git",
+        "clone_url": "https://github.com/omk-services/OMK-DESKTOP-WEB-OS.git",
         "default_branch": "main",
         "local_path": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/10_Projects/coach-os-app",
         "codespace_path": "business/OMK-DESKTOP-WEB-OS",
-        "bootstrap": "manual",
+        "bootstrap": "auto",
         "authority": "business_projection",
         "evidence": "local git remote verified"
       },
@@ -243,7 +277,7 @@
         "clone_url": "https://github.com/Amdkn/00-omk-saas-os.git",
         "default_branch": "main",
         "codespace_path": "business/00-omk-saas-os",
-        "bootstrap": "manual",
+        "bootstrap": "auto",
         "authority": "business_satellite",
         "evidence": "GitHub verified"
       }
@@ -305,6 +339,50 @@
     "orca": {
       "role": "ADE_workspace_and_local_agent_sandboxes",
       "identity_source": "ADE_REGISTRY"
+    },
+    "codespace_automation": {
+      "policy": "4h_daily_budget",
+      "daily_budget_seconds": 14400,
+      "budget_mode": "cumulative active automation time while Codespace is running",
+      "activation": "Codespace startup/resume; no fixed wall-clock start is invented",
+      "work_sources": {
+        "intent": "Linear",
+        "machine_state": "Supabase:Aspace OS/Agent OS Backend/aspace",
+        "worlds": "ASPACE_WORKSPACE_REGISTRY + GitHub"
+      },
+      "capacity": {
+        "life_business_min_share": 0.8,
+        "kernel_max_share": 0.2,
+        "kernel_exception": "critical Kernel work may exceed 20% only when it directly unlocks Life or Business"
+      },
+      "harnesses": {
+        "antigravity": {
+          "local_command": "agy",
+          "local_version": "1.2.6",
+          "codespace_adapter_env": "ASPACE_ANTIGRAVITY_CMD",
+          "status": "local_verified_linux_adapter_required"
+        },
+        "codex": {
+          "local_command": "codex",
+          "local_version": "0.153.4",
+          "codespace_adapter_env": "ASPACE_CODEX_CMD",
+          "status": "local_verified_linux_adapter_required"
+        },
+        "hermes": {
+          "local_command": "hermes",
+          "local_version": "0.21.0",
+          "local_install_method": "git",
+          "codespace_adapter_env": "ASPACE_HERMES_CMD",
+          "status": "local_verified_linux_adapter_required"
+        }
+      },
+      "safety": [
+        "one work claim per harness/session",
+        "no execution without durable work identity",
+        "no hidden shared-filesystem assumption",
+        "budget controller stops new automation after 4h cumulative daily runtime",
+        "manager roles supervise; Companion lanes implement/review/memorize within their contracts"
+      ]
     }
   },
   "projections_and_tools": {
@@ -365,5 +443,86 @@
     "Jules sessions communicate through references and evidence, not hidden shared-disk assumptions.",
     "Evidence gates promotion into the shared canon; it does not erase alternative branches.",
     "Jules MCPs are capability surfaces, not new sources of canonical authority."
-  ]
+  ],
+  "worlds": {
+    "Sol": {
+      "role": "sovereign_filesystem_ground",
+      "repo": "Amdkn/Aspace_OS_V3",
+      "local_path": "C:/Users/amado/ASpace_OS_V3",
+      "codespace_path": "/workspaces/aspace/worlds/Sol",
+      "authority": "A0-Amadeus / Rick's Verse"
+    },
+    "Tera": {
+      "role": "agent_os_world",
+      "repo": "Amdkn/Agent-OS",
+      "local_path": "C:/Users/amado/agent-os",
+      "local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+      "codespace_path": "/workspaces/aspace/worlds/Tera",
+      "manager_core": "Doctor13",
+      "desktop": {
+        "repo": "Amdkn/Agent-OS-Desktop",
+        "port": 5555,
+        "host": "127.0.0.1",
+        "snapshot_branch": "snapshot/tera-5555-2026-09-27",
+        "snapshot_head": "9d5782868babb16e4477214dee0a40a8b6825e80",
+        "snapshot_file": "_INBOX/handoffs/TERA_AGENT_OS_5555_SNAPSHOT.json"
+      },
+      "codespace_model": "federated_directory",
+      "components": [
+        "Agent-OS-Desktop",
+        "Hermes-Workspace"
+      ],
+      "local_only_components": [
+        "Agent-OS parent",
+        "Observatoire"
+      ]
+    },
+    "Luna": {
+      "role": "life_os_world",
+      "repo": "Amdkn/Life-OS-2026",
+      "local_path": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
+      "local_junction": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+      "codespace_path": "/workspaces/aspace/worlds/Luna",
+      "manager_core": "Doctor11"
+    }
+  },
+  "relationships": {
+    "local": {
+      "Sol_to_Tera": {
+        "type": "junction",
+        "path": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+        "target": "C:/Users/amado/agent-os",
+        "direction": "one_way"
+      },
+      "Sol_to_Luna": {
+        "type": "junction",
+        "path": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+        "target": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
+        "direction": "one_way"
+      }
+    },
+    "codespace": {
+      "world_aliases": {
+        "Sol": "core/Aspace_OS_V3",
+        "Luna": "satellites/Life-OS-2026"
+      },
+      "Luna_skyhooks": [
+        "business/BusinessOS",
+        "business/Business-Office-3-OS",
+        "business/01-OMK-Business-OS",
+        "business/The-OMK-Mobile-Back-Office",
+        "business/OMK-DESKTOP-WEB-OS",
+        "business/00-omk-saas-os"
+      ],
+      "rule": "Skyhooks are symlink/reference relations in the federated workspace; they do not make Business repos children of the Life repo Git history.",
+      "Tera_components": {
+        "Desktop": "satellites/Agent-OS-Desktop",
+        "HermesWorkspace": "satellites/Hermes-Workspace"
+      },
+      "Tera_local_only": {
+        "AgentOSParent": "C:/Users/amado/agent-os",
+        "Observatoire": "C:/Users/amado/agent-os/observatoire"
+      }
+    }
+  }
 }

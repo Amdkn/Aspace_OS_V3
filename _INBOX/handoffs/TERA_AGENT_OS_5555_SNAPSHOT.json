@@ -1,0 +1,76 @@
+{
+  "snapshot_id": "TERA_AGENT_OS_5555_2026-09-27",
+  "captured_at": "2026-09-27T20:43:45.362617+00:00",
+  "world": "Tera",
+  "agent_os_root": "C:/Users/amado/agent-os",
+  "agent_os_parent": {
+    "branch": "snapshot/tera-2026-09-27",
+    "head": "4b73326954b602134a51ed9bad147d187a9479b0",
+    "remote": "https://github.com/Amdkn/Agent-OS.git",
+    "push_status": "blocked_by_historical_secret_scanning; no bypass performed"
+  },
+  "desktop": {
+    "branch": "snapshot/tera-5555-2026-09-27",
+    "head": "9d5782868babb16e4477214dee0a40a8b6825e80",
+    "remote": "https://github.com/Amdkn/Agent-OS-Desktop.git",
+    "snapshot_branch": "snapshot/tera-5555-2026-09-27",
+    "snapshot_head": "9d5782868babb16e4477214dee0a40a8b6825e80"
+  },
+  "runtime": {
+    "service": "Agent OS Desktop",
+    "port": 5555,
+    "host": "127.0.0.1",
+    "strict_port": true,
+    "listener_at_capture": false,
+    "start_command": "npm run dev"
+  },
+  "package": {
+    "name": "agent-os-desktop",
+    "version": "0.1.0",
+    "dependencies": {
+      "lucide-react": "^1.42.0",
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0",
+      "zod": "^4.5.4",
+      "zustand": "^5.0.2"
+    },
+    "devDependencies": {
+      "@tailwindcss/vite": "^4.1.4",
+      "@types/node": "^26.5.0",
+      "@types/react": "^19.1.0",
+      "@types/react-dom": "^19.1.0",
+      "@vitejs/plugin-react": "^4.3.4",
+      "tailwindcss": "^4.1.4",
+      "typescript": "~5.7.2",
+      "vite": "^6.0.5"
+    }
+  },
+  "files": {
+    "package.json": {
+      "sha256": "8bc41b6721abca9e02abad3f5776ed000304f33666d01f88352b48bf23f2055c",
+      "bytes": 661
+    },
+    "package-lock.json": {
+      "sha256": "128b27692bcfb448c86e93f106c4661fd0e5c7ea02133b773da4ab5ea5f328d9",
+      "bytes": 83497
+    },
+    "vite.config.ts": {
+      "sha256": "edd6f980fca3220ac5ee4640cac39532722661c1841b43c26da9053d18d577b4",
+      "bytes": 3567
+    },
+    "tools/tech-os-api.ts": {
+      "sha256": "b33ae98e71b3de59da798c941a4a5a12a07c124cba32ba3cff6b7a92d550c040",
+      "bytes": 52852
+    },
+    "verifie_v3.mjs": {
+      "sha256": "56ab87d0ba741136d84674b5bcfe8d15150f0727f240a7a214e9b96576beee0f",
+      "bytes": 11515
+    },
+    "GATES.md": {
+      "sha256": "c2e08cdd7d29740d240f75c26f87503c1a1632f59638aae800070675589b83c1",
+      "bytes": 2212
+    }
+  },
+  "local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+  "codespace_target": "/workspaces/aspace/worlds/Tera"
+}

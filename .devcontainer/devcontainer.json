@@ -12,7 +12,7 @@
   "remoteEnv": {
     "ASPACE_WORKSPACE_ROOT": "/workspaces/aspace"
   },
-  "postCreateCommand": "python3 .devcontainer/bootstrap-aspace.py",
+  "postCreateCommand": "python3 .devcontainer/bootstrap-aspace.py && python3 .devcontainer/link-worlds.py",
   "customizations": {
     "vscode": {
       "settings": {
@@ -23,5 +23,6 @@
         "eamodio.gitlens"
       ]
     }
-  }
+  },
+  "postStartCommand": "bash -lc 'mkdir -p /workspaces/aspace/workspace/automation; nohup python3 .devcontainer/aspace-automation.py --mode daemon >> /workspaces/aspace/workspace/automation/daemon.log 2>&1 &'"
 }
