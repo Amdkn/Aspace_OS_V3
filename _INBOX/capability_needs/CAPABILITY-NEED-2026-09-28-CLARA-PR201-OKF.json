@@ -6,11 +6,12 @@
   "invariant": "Ryan M0 consumes the accepted Clara design without silently repairing or redefining DESIGN ownership.",
   "observation": "Clara explicitly opened the Ryan M0 build gate on #197, while PR #201's latest OKF workflow completed with failure.",
   "expected": "Clara design branch obtains a green/understood CI state without changing the accepted M0 execution invariant unless a real design defect is found.",
-  "actual": "M0 is independently self-PASS, but Clara PR #201 remains CI-failing at the current checkpoint.",
+  "actual": "M0 is independently self-PASS. PR #201 OKF fails because frontmatter_incomplet regressed 30 -> 33 (+3). The three new Clara Markdown files are DESIGN_CONTRACT.md, RYAN_BUILD_PACKET.md, and HANDOVER-2026-09-28-CLARA-MACHINE-FABRIC-TO-RYAN.md; each lacks the OKF frontmatter required by the ratchet.",
   "evidence": [
     "GitHub PR #201 head 24d83e0e",
     "GitHub #197 RYAN BUILD GATE OPEN comment",
-    "10_Tech_OS/reports/amf_m0_evidence_20260928.json"
+    "10_Tech_OS/reports/amf_m0_evidence_20260928.json",
+    "GitHub Actions OKF run #288 / PR #201: frontmatter_incomplet 30 -> 33 (+3)"
   ],
   "suggested_capability": "clara-design-forge",
   "authority": {
