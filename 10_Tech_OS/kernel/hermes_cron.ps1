@@ -86,14 +86,14 @@ Rules:
 - Never create duplicates for a live work_id.
 - Do not edit repo code yourself.
 - Linear semantic grouping is Project-first: Tech OS — Kernel Core, Tech OS — Life Core, Tech OS — Buzz Core. Teams are only routing constraints.
-- Do not start Life OS or Business OS feature work.
+- Advance READY Life OS and Business OS work whenever it is not truly blocked. Kernel work wins priority only when it directly blocks, protects or unlocks their execution; unrelated Kernel debt must never freeze them.
 Return a compressed executive delta only after actions are taken.
 '@
   } else {
     $prompt = @'
-SCHEDULED HERMES EXECUTIVE DISPATCH TICK — ADVANCE REAL TECH OS WORK.
+SCHEDULED HERMES EXECUTIVE DISPATCH TICK — ADVANCE REAL A'SPACE VALUE WORK.
 
-Scan open issues only in these Linear projects: Tech OS — Kernel Core, Tech OS — Life Core, Tech OS — Buzz Core. Teams are routing constraints, not the semantic primitive. Do not start Life OS or Business OS feature work.
+Scan open issues in these Linear projects: Tech OS — Kernel Core, Tech OS — Life Core, Tech OS — Buzz Core. Teams are routing constraints, not the semantic primitive. Prefer READY Life/Business value work; select Kernel work first only when its blocker/guard relation to that value work is explicit.
 
 Use orca linear list-issues --project for each exact project name (not an invented list command). Process Review first, then genuine In Progress, then Backlog. For each issue, reconcile its work_id against uc.db/WorkGraph and current session bindings. Pick the highest-priority READY issue that is not already covered by a live worker/session. Prefer existing Hermes/Jules sessions over duplicates. Use Orca for task/dispatch provenance. Delegate bounded repo-backed implementation to Jules; otherwise choose another harness only when its needed capability is proven. Before launch, acquire an atomic uc.py claim on the eligible work_id. Immediately bind the returned external session to that work_id. In Progress requires an unexpired claim, active binding and freshly observed executing worker; queued or historic sessions do not qualify. Post one concise Linear progress comment with provenance. Do not mark done because a provider answered: require durable evidence, tests/PR when applicable, and independent review. If no issue is safely dispatchable, do nothing except record the concrete blocker. Never ask A0 to manage terminals, PIDs, retries, or plumbing.
 '@

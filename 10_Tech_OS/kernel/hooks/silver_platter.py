@@ -27,7 +27,7 @@ def get_silver_platter(domain: str = "l0-tech") -> dict:
             "L0": "Un système qui ne sait pas se répliquer est un document, pas un système.",
             "D1": "Jumeau numérique autonome et résilient.",
             "D2": "Frontière certifiée vs supposée (verified: by: human:amdkn).",
-            "D3": "Le disque est l'unique source de vérité.",
+            "D3": "Vérité typée par plan: filesystem=artefacts locaux, GitHub=versions, Supabase=IPBD/WorkGraph partagé, Linear=gouvernance humaine; réconcilier par provenance et fraîcheur.",
             "D4": "Reproduire sans réexpliquer (Ownerbooks & SOPs vivantes)."
         },
         "system_status": {
