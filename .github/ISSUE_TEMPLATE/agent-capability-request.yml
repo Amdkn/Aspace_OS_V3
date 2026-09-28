@@ -1,0 +1,74 @@
+name: Agent capability request
+description: Request a bounded capability from another A'Space Companion
+title: "[NEED] "
+labels:
+  - handoff
+body:
+  - type: dropdown
+    id: specialist
+    attributes:
+      label: Requested specialist
+      options:
+        - Ryan — BUILD
+        - Yaz — OBSERVE
+        - Graham — STATE
+        - Amy — INTERFACE
+        - Rory — PERSISTENCE
+        - River — FLOW
+        - Bill — RESEARCH
+        - Clara — DESIGN / FORGE
+        - Nardole — DISPATCH / INTERCONNECTION
+        - Rick — CROSS-CORE ROUTING
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Originating IPBD / Issue / Linear / Work ID
+    validations:
+      required: true
+  - type: textarea
+    id: need
+    attributes:
+      label: Need / outcome
+      description: State the outcome, not a preselected implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this specialist?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs / durable evidence refs
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance / observable proof
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Reversible / authority boundary
+  - type: dropdown
+    id: blocking
+    attributes:
+      label: Is this blocking the requester?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: input
+    id: return_to
+    attributes:
+      label: Return / handoff target
+      description: Discussion, Issue, PR, IPBD or evidence ref where the response must land.
+    validations:
+      required: true

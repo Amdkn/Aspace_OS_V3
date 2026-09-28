@@ -1,5 +1,9 @@
 # HANDOVER — 2026-09-28 — Six Parallel ChatGPT Sessions
 
+**Status: SUPERSEDED** by `HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`.
+
+Reason: Wave-1 parallel execution proved the composite six-lane model hid Ryan, Bill and Nardole as independent specialists and overloaded River with both FLOW and Jev INTERFACE ownership. Preserve this file as historical provenance only.
+
 ## Purpose
 
 Resume A'Space execution through six bounded ChatGPT lanes without rebuilding the universe in one context window.

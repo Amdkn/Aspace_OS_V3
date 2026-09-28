@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "registry_id": "ASPACE_WORKSPACE_REGISTRY",
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "system": {
     "name": "A'Space V3",
     "model": "one_system_three_cores",
@@ -502,7 +502,7 @@
     },
     "jev": {
       "role": "typed_system_one_reflex_plane",
-      "steward": "River",
+      "steward": "Amy",
       "shared": true,
       "status": "research_and_adapter_integration",
       "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
@@ -515,7 +515,7 @@
         "verify",
         "branch"
       ],
-      "rule": "Jev proposes typed probabilistic reflexes; deterministic host policy owns thresholds, authority and side effects."
+      "rule": "Amy stewards typed System-One interface exposure; River and other agents consume it through flows. Deterministic host policy retains thresholds, authority and side effects."
     },
     "lidar": {
       "role": "agent_trajectory_observability_and_proprioception",
@@ -660,23 +660,87 @@
     "rule": "Intent outranks incidental technical state; agents read this before reprioritizing work."
   },
   "life_core_operating_surfaces": {
-    "Rory": {
-      "role": "Integrity of Integrity",
-      "primary_surface": "Linear",
-      "responsibility": "A1-A3 governance, intent/dependency/status integrity and reconciliation"
-    },
     "Amy": {
-      "role": "Interface of Interface",
-      "primary_surface": "Herdr",
-      "responsibility": "human/agent interface and persistent harness workspace projection"
+      "role": "Interface",
+      "primary_surfaces": [
+        "Herdr",
+        "Jev/System-One interface"
+      ],
+      "responsibility": "human/agent interfaces, persistent harness exposure, typed reflex interface for Life/Core consumers"
+    },
+    "Rory": {
+      "role": "Persistence",
+      "primary_surface": "Linear Life Space",
+      "responsibility": "Life OS 2026 continuity, A1-A3 governance projection, durable Life structures and reconciliation"
     },
     "River": {
-      "role": "Flow of Flow",
-      "primary_surfaces": [
-        "Google Workspace CLI",
-        "Jev"
-      ],
-      "responsibility": "Business OS workflow effects plus typed reflex routing"
+      "role": "Flow",
+      "primary_surface": "Google Workspace CLI",
+      "responsibility": "Drive/Calendar/Tasks/Sheets/Docs/triggers workflows and Business-flow execution from Life Core"
     }
+  },
+  "kernel_core_operating_surfaces": {
+    "Ryan": {
+      "role": "Build",
+      "primary_surface": "GitHub Forge/Actions",
+      "responsibility": "implementation, integration, adapters, executable construction for all Cores"
+    },
+    "Yaz": {
+      "role": "Observe",
+      "primary_surfaces": [
+        "Tinybird",
+        "LiDAR-style observability"
+      ],
+      "responsibility": "telemetry, behavioral evidence, verification, recovery, drift"
+    },
+    "Graham": {
+      "role": "State",
+      "primary_surface": "Supabase",
+      "responsibility": "IPBD, WorkGraph, evidence, replay and shared machine state"
+    }
+  },
+  "business_core_operating_surfaces": {
+    "Bill": {
+      "role": "Research",
+      "primary_surface": "GitHub Discussions/Discovery",
+      "responsibility": "research, discovery, external/user evidence and opportunity finding"
+    },
+    "Clara": {
+      "role": "Design/Forge",
+      "primary_surface": "GitHub Projects/Issues/PR contracts",
+      "responsibility": "compile research/needs into interfaces, acceptance, Forge and construction designs"
+    },
+    "Nardole": {
+      "role": "Dispatch/Interconnection",
+      "primary_surface": "GitHub routing bus",
+      "responsibility": "route needs to specialists, interconnect capabilities, delivery dispatch and return evidence"
+    }
+  },
+  "cross_core": {
+    "Rick": {
+      "role": "Gatekeeper/Router",
+      "responsibility": "cross-Core dependency arbitration, priority, constitutional constraints and convergence"
+    }
+  },
+  "github_agent_mesh": {
+    "discussions": "ambiguous needs, RFCs, discovery and cross-Core convergence",
+    "issues": "bounded executable capability requests",
+    "pull_requests": "implementation proposals tied to Issues",
+    "labels": [
+      "route:rick",
+      "needs:ryan",
+      "needs:yaz",
+      "needs:graham",
+      "needs:amy",
+      "needs:rory",
+      "needs:river",
+      "needs:bill",
+      "needs:clara",
+      "needs:nardole",
+      "handoff",
+      "evidence"
+    ],
+    "handover": "_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md",
+    "invariant": "Each Companion specialty is a shared capability service. Stewardship is accountability, never exclusivity."
   }
 }

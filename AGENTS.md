@@ -53,9 +53,9 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 | **`40_Memory_Wiki_OKF/`** | **MÉMOIRE LONGUE CERTIFIÉE** [Pantry / 6D]. Format OKF v0.2. | [`40_Memory_Wiki_OKF/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/40_Memory_Wiki_OKF/AGENTS.md) |
 | **`90-self-evolution/`** | **SYSTÈME IMMUNITAIRE ANTI-REJEU** [5D / 6D]. Patterns P1-P6. | [`90-self-evolution/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/90-self-evolution/AGENTS.md) |
 | **`60_Implementation_...`**| **CADRE & SOPS D'EXÉCUTION** [5D]. Standards de compilation. | [`60_Implementation_Méthodologiques/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/60_Implementation_M%C3%A9thodologiques/AGENTS.md) |
-| **`10_Tech_OS/`** | **PLOMBERIE, KERNEL & RUNTIME** [Substrat / 3D]. Ryan & Yaz. | [`10_Tech_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/10_Tech_OS/AGENTS.md) |
-| **`20_Life_OS/`** | **VIE, SANTÉ, RITUELS & IKIGAI** [L1 Action]. Amy, Rory. | [`20_Life_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/20_Life_OS/AGENTS.md) |
-| **`30_Business_OS/`** | **CASH-FLOW & OFFRES RÉELLES** [L2 Action]. Clara, Bill. | [`30_Business_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/30_Business_OS/AGENTS.md) |
+| **`10_Tech_OS/`** | **PLOMBERIE, KERNEL & RUNTIME** [Substrat / 3D]. Ryan, Yaz, Graham. | [`10_Tech_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/10_Tech_OS/AGENTS.md) |
+| **`20_Life_OS/`** | **VIE, SANTÉ, RITUELS & IKIGAI** [L1 Action]. Amy, Rory, River. | [`20_Life_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/20_Life_OS/AGENTS.md) |
+| **`30_Business_OS/`** | **CASH-FLOW & OFFRES RÉELLES** [L2 Action]. Bill, Clara, Nardole. | [`30_Business_OS/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/30_Business_OS/AGENTS.md) |
 | **`_INBOX/`** | **RÉCEPTION INTENTS BRUTS** [Contrôleur C]. Sas d'arbitrage. | [`_INBOX/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/_INBOX/AGENTS.md) |
 
 ---
@@ -101,9 +101,20 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 
 Canon détaillé :
 - `10_Tech_OS/00_Governance_Rick/ADR-RICK-CHATGPT-HARNESS-CONTEXT-GOVERNOR-2026-09-28.md`
-- `10_Tech_OS/00_Governance_Rick/ADR-RICK-SIX-PARALLEL-SESSIONS-2026-09-28.md`
+- `10_Tech_OS/00_Governance_Rick/ADR-RICK-NINE-COMPANION-FRACTAL-CAPABILITY-MESH-2026-09-28.md`
 - `10_Tech_OS/00_Governance_Rick/ADR-RICK-EMYTH-ANTI-TECHNICIAN-HARNESS-2026-09-28.md`
-- `_INBOX/handoffs/HANDOVER-2026-09-28-SIX-PARALLEL-SESSIONS.md`
+- `_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`
+
+
+### Fractal Companion capability mesh
+
+- **Doctor13 / Kernel:** Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
+- **Doctor11 / Life:** Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
+- **Doctor12 / Buzz:** Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+- **Rick/S1:** cross-Core routing, conflict and convergence.
+- Each specialty is a shared capability service for all eight peers; stewardship is never exclusivity.
+- GitHub Discussions carry ambiguous needs/RFCs; Issues with `needs:<agent>` carry executable requests; PRs carry implementations; Evidence returns to requester/state planes.
+- Persistent sessions write in their identity worktree, never all into the shared root.
 
 ## 5. Distillation après preuve — DOX & OKF
 
