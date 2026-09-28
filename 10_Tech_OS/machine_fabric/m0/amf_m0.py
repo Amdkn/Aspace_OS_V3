@@ -20,6 +20,7 @@ import sqlite3
 import sys
 import tempfile
 import threading
+from contextlib import contextmanager
 from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -137,8 +138,20 @@ class AMFEngine:
         con.execute("PRAGMA busy_timeout=5000")
         return con
 
+    @contextmanager
+    def _db(self):
+        con = self._connect()
+        try:
+            yield con
+            con.commit()
+        except Exception:
+            con.rollback()
+            raise
+        finally:
+            con.close()
+
     def _init_db(self) -> None:
-        with self._connect() as con:
+        with self._db() as con:
             con.executescript(
                 """
                 CREATE TABLE IF NOT EXISTS operations (
@@ -235,7 +248,7 @@ class AMFEngine:
             original = payload.get("original_operation_id")
             if not isinstance(original, str) or not original:
                 raise InvalidOperation("compensate requires original_operation_id")
-            with self._connect() as con:
+            with self._db() as con:
                 row = con.execute(
                     "SELECT plan_json FROM operations WHERE operation_id=?",
                     (original,),
@@ -332,7 +345,7 @@ class AMFEngine:
         self._event(con, op["operation_id"], "RECEIPT", receipt)
 
     def get_receipt(self, operation_id: str) -> dict[str, Any]:
-        with self._connect() as con:
+        with self._db() as con:
             row = con.execute(
                 "SELECT receipt_json FROM operations WHERE operation_id=?",
                 (operation_id,),
@@ -342,7 +355,7 @@ class AMFEngine:
         return json.loads(row["receipt_json"])
 
     def ledger_row(self, operation_id: str) -> dict[str, Any] | None:
-        with self._connect() as con:
+        with self._db() as con:
             row = con.execute(
                 "SELECT * FROM operations WHERE operation_id=?",
                 (operation_id,),
@@ -389,7 +402,7 @@ class AMFEngine:
 
         if action == "compensate":
             original_id = payload["original_operation_id"]
-            with self._connect() as con:
+            with self._db() as con:
                 original = con.execute(
                     "SELECT state, plan_json, receipt_json FROM operations WHERE operation_id=?",
                     (original_id,),
@@ -540,7 +553,7 @@ class AMFEngine:
         op_id = op["operation_id"]
 
         with self._lock:
-            with self._connect() as con:
+            with self._db() as con:
                 existing = con.execute(
                     "SELECT * FROM operations WHERE operation_id=?",
                     (op_id,),
@@ -557,6 +570,7 @@ class AMFEngine:
                                 "incoming": op["fingerprint"],
                             },
                         )
+                        con.commit()
                         raise OperationConflict(op_id)
 
                     if existing["state"] == "RUNNING":
@@ -679,7 +693,7 @@ class AMFEngine:
                 ],
                 compensation_ref=compensation_ref,
             )
-            with self._connect() as con:
+            with self._db() as con:
                 self._persist_terminal(
                     con,
                     op,

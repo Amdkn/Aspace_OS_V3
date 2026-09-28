@@ -127,11 +127,14 @@ class AMFM0Tests(unittest.TestCase):
             self.engine.execute(b)
         self.assertEqual((self.root / "a.txt").read_text(), "A")
 
-        with sqlite3.connect(self.db) as con:
+        con = sqlite3.connect(self.db)
+        try:
             count = con.execute(
                 "SELECT count(*) FROM events WHERE operation_id=? AND kind='FINGERPRINT_CONFLICT'",
                 ("conflict-0001",),
             ).fetchone()[0]
+        finally:
+            con.close()
         self.assertEqual(count, 1)
 
     def test_out_of_scope_path_and_shell_shape_are_denied_or_rejected(self):
@@ -303,6 +306,10 @@ class AMFM0Tests(unittest.TestCase):
             if proc.poll() is None:
                 proc.kill()
                 proc.wait(timeout=3)
+            if proc.stdout:
+                proc.stdout.close()
+            if proc.stderr:
+                proc.stderr.close()
 
         proc2 = subprocess.Popen(
             cmd,
@@ -359,6 +366,10 @@ class AMFM0Tests(unittest.TestCase):
             except subprocess.TimeoutExpired:
                 proc2.kill()
                 proc2.wait(timeout=3)
+            if proc2.stdout:
+                proc2.stdout.close()
+            if proc2.stderr:
+                proc2.stderr.close()
 
 
 if __name__ == "__main__":
