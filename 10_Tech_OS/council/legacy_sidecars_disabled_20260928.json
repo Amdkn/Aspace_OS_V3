@@ -1,4 +1,4 @@
-﻿{
+{
     "schema":  "aspace.antigravity.legacy-sidecars-disable.v1",
     "disabled_at":  "2026-09-28T10:54:35.6843901Z",
     "reason":  "Replace scheduled full-agent conversations with Rick -\u003e Doctors -\u003e Companions native subagent orchestration.",

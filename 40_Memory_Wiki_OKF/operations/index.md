@@ -27,3 +27,5 @@ qu'un `exit 0` trompeur passe pour une réussite.
 - [Anti-immobilism cleanup — truthful execution state](anti-immobilism-cleanup-2026-09-28.md) - Retire les gates globaux, restaure Capture→contrat minimal→exécution bornée→preuve, réconcilie Linear/WorkGraph, versionne le vrai hook IPBD, durcit Supabase, synchronise les 13 worktrees d'identité et transforme les branches uniques locales en tags d'archive avant nettoyage.
 - [ChatGPT Harness — six-session context governor](chatgpt-harness-six-session-governor-2026-09-28.md) - Reprise locale V3, budget de 24 tool-calls par vague, bascule de surface sans immobilisme, E-Myth anti-Technician et six lanes parallèles peer-to-peer.
 - [Nine Companion Fractal Capability Mesh](nine-companion-fractal-capability-mesh-2026-09-28.md) - 3×3 Companion mesh, Rick cross-Core router, GitHub Discussions/Issues as inter-agent bus, shared capability law and Jev stewardship moved to Amy/INTERFACE.
+
+- [Antigravity Council runtime — recursive execution proven](antigravity-council-runtime-wave2-2026-09-28.md) - Rick→Doctors→Companions runtime proof, recovery semantics, anti-polling rule, legacy sidecar shutdown and next Jules PDR gate.

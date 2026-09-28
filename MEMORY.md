@@ -59,3 +59,8 @@ Current execution truth after reconciliation:
 - WorkGraph = 3 governance-failed externally completed rows + 6 legitimate waiting rows.
 - Local Git branches = `main` + 13 persistent identity branches only.
 - 13 identity worktrees are expected clean and synchronized when idle.
+
+## Antigravity Council runtime checkpoint — 2026-09-28
+- Recursive runtime is proven: Rick → Doctors, and Doctor13 → Ryan/Yaz/Graham in isolated Antigravity worktrees.
+- Resume from `_INBOX/handoffs/HANDOVER-2026-09-28-ANTIGRAVITY-COUNCIL-WAVE2.md`.
+- Next gate is one real Foundation PDR through Jules → Ryan → Yaz → Graham before PR #187 leaves Draft.
