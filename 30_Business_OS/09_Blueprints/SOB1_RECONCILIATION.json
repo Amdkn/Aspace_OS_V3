@@ -1,0 +1,47 @@
+{
+  "PR162_REVIEW": "MERGED. Bill Discover PR #162 is integrated on main and SOB-90 is Done in Linear.",
+  "PR159_REVIEW": "MERGED. Clara Design PR #159 is integrated on main; its compiled ADR/PRD/interface/acceptance/canary/rollback artifacts are available for Nardole reconciliation.",
+  "MERGE_ORDER": [
+    "PR #162 merged",
+    "PR #159 merged"
+  ],
+  "NARDOLE_INPUTS": {
+    "evidence_set": [
+      {
+        "pr": 162,
+        "author": "Bill",
+        "branch": "AUTO_CREATE_PR-frontier-evidence-16744116376321476661",
+        "files": [
+          "30_Business_OS/09_Blueprints/frontier-observatory/RESEARCH_EVIDENCE.md",
+          "30_Business_OS/09_Blueprints/frontier-observatory/TOPOLOGY.md",
+          "30_Business_OS/09_Blueprints/frontier-observatory/DESIGN_BRIEF.md"
+        ]
+      },
+      {
+        "pr": 159,
+        "author": "Clara",
+        "branch": "clara-design-compile-bill-research-1382713769026073369",
+        "files": [
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ADR.md",
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/PRD.md",
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/INTERFACE.md",
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ACCEPTANCE.md",
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/CANARY.md",
+          "00_Amadeus/60_Tape_Specs/SOB-92_Clara_Design_Bill_Research/ROLLBACK.md"
+        ]
+      }
+    ],
+    "reconciliation_state": "READY_TO_CLOSE",
+    "linear": {
+      "SOB-90": "Done",
+      "SOB-92": "In Progress at reconciliation time; implementation artifact PR #159 already merged",
+      "SOB-1": "In Progress at reconciliation time; no remaining PR dependency"
+    }
+  },
+  "D12_MILESTONE_EFFECT": {
+    "D12-M1": "Discovery/Research Evidence complete (PR #162)",
+    "D12-M2": "Topology/Architecture complete (PR #162)",
+    "D12-M3": "Design Compilation complete (PR #159)",
+    "D12-M4": "Acceptance/Rollback Specs merged (#159); Nardole reconciliation can close SOB-1."
+  }
+}
