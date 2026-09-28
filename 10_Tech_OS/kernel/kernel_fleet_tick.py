@@ -11,13 +11,25 @@ ROOT=Path(r"C:\Users\amado\ASpace_OS_V3")
 PRD_ROOT=ROOT/"10_Tech_OS"/"PRD_Autonomy"
 JULES="http://127.0.0.1:43118"
 SOURCE="sources/github/Amdkn/Aspace_OS_V3"
-MAX_ACTIVE=9
-MAX_DISPATCH_PER_TICK=3
-# One persistent Jules lane per S3 companion. Capacity is hierarchical, not a 20/30/50 pool.
-CORE_LIMITS={"KERNEL":3,"LIFE":3,"BUSINESS":3}
+COMPANION_PARALLELISM=max(1,int(os.environ.get("ASPACE_COMPANION_PARALLELISM","1")))
+MAX_DISPATCH_PER_TICK=max(1,int(os.environ.get("ASPACE_MAX_DISPATCH_PER_TICK","3")))
+# Safe default remains one concurrent session per Companion, but scale is runtime-configurable.
+# Raising parallelism creates real bounded sessions; it is not a fake counter-only capacity increase.
+CORE_LIMITS={
+ "KERNEL":max(1,int(os.environ.get("ASPACE_KERNEL_ACTIVE_LIMIT",str(3*COMPANION_PARALLELISM)))),
+ "LIFE":max(1,int(os.environ.get("ASPACE_LIFE_ACTIVE_LIMIT",str(3*COMPANION_PARALLELISM)))),
+ "BUSINESS":max(1,int(os.environ.get("ASPACE_BUSINESS_ACTIVE_LIMIT",str(3*COMPANION_PARALLELISM)))),
+}
+MAX_ACTIVE=max(1,int(os.environ.get("ASPACE_MAX_ACTIVE",str(sum(CORE_LIMITS.values())))))
 PROJECTS=("Tech OS — Kernel Core","Tech OS — Buzz Core","Tech OS — Life Core")
+PROJECT_FALLBACK={
+ "Tech OS — Kernel Core":("KERNEL_GENERAL","AUTO"),
+ "Tech OS — Life Core":("LIFE_GENERAL","AUTO"),
+ "Tech OS — Buzz Core":("FORGE_GENERAL","AUTO"),
+}
 TERMINAL={"COMPLETED","FAILED","CANCELLED","CANCELED"}
-SKIP_MARKERS=("[SOLARPUNK]","[BEDROCK]","[FLEET]")
+# Opt-out must be explicit. Historical title categories must never silently suppress execution.
+SKIP_MARKERS=("[NO_AUTODISPATCH]",)
 KERNEL_MAP={
  "KER-19":("K2_SYSTEM1_DECISION","KPRD-020"),
  "KER-20":("K2_SYSTEM1_DECISION","KPRD-021"),
@@ -62,7 +74,10 @@ def list_issues():
  out=[]
  for project in PROJECTS:
   data=orca_json("linear","list-issues","--project",project)
-  out.extend(data["result"]["issues"])
+  for raw in data["result"]["issues"]:
+   x=dict(raw)
+   x["_project_name"]=project
+   out.append(x)
  seen={}
  for x in out: seen[x["identifier"]]=x
  return list(seen.values())
@@ -86,6 +101,10 @@ def classify(issue):
  if m: return ("FORGE_"+m.group(2),m.group(1))
  m=re.search(r"\[(LPRD-\d+)\]\[(L\d+)\]",title)
  if m: return ("LIFE_"+m.group(2),m.group(1))
+ fallback=PROJECT_FALLBACK.get(issue.get("_project_name"))
+ if fallback:
+  pole,prefix=fallback
+  return (pole,f"{prefix}-{iid}")
  return (None,None)
 
 def is_ready(issue):
@@ -95,7 +114,9 @@ def is_ready(issue):
  if not pole: return False
  ctx=context(issue["identifier"])
  for bid in blocker_ids(ctx):
-  if status_of(bid)!="completed": return False
+  # Only live unfinished blockers block dispatch. Completed or canceled/superseded
+  # predecessors must not freeze descendants forever through stale Linear relations.
+  if status_of(bid) in {"backlog","unstarted","started"}: return False
  return True
 
 def all_sessions():
@@ -155,12 +176,13 @@ def active_core_counts(active):
   elif "ASPACE:BUSINESS" in title or "ASPACE:FORGE" in title or "| FPRD-" in title: out["BUSINESS"]+=1
  return out
 
-def active_companion_session(active,companion):
+def active_companion_sessions(active,companion):
  needle=f"| {companion} |"
- for s in active:
-  if needle in (s.get("title") or ""):
-   return s
- return None
+ return [s for s in active if needle in (s.get("title") or "")]
+
+def active_companion_session(active,companion):
+ xs=active_companion_sessions(active,companion)
+ return xs[0] if xs else None
 
 def reusable_session(issue_id):
     # Jules API exposes no session-retask/update primitive. A finished session
@@ -222,16 +244,16 @@ Linear mandate:
 {issue.get('description') or ''}
 Rules:
 - Stay inside this Companion role and Core.
-- If requirements are materially ambiguous or need human interaction, STOP implementation and propose an ADR clarification for the Doctor/Rick review path.
+- If requirements are ambiguous, choose the smallest reversible assumption, record it, and continue. Stop/escalate only for an irreversible decision, unavailable external credential, safety boundary, or contradiction that could make the change destructive.
 - Preserve Kernel/WorkGraph authority boundaries.
 - Run focused tests/build/audit relevant to changed files.
 - Do not use destructive git cleanup/reset.
 - Create/continue a PR with durable evidence.
 """
- lane=active_companion_session(active,companion)
- if lane:
-  raise ValueError("Companion lane is occupied; never retask an unrelated live session")
- title=f"ASPACE:{core} | {companion} | {role}"
+ lanes=active_companion_sessions(active,companion)
+ if len(lanes) >= COMPANION_PARALLELISM:
+  raise ValueError(f"Companion lane occupied: concurrency full ({len(lanes)}/{COMPANION_PARALLELISM}); never retask an unrelated live session")
+ title=f"ASPACE:{core} | {companion} | {role} | {issue['identifier']}"
  body={"prompt":prompt,"source":SOURCE,"startingBranch":"main",
        "title":title,"automationMode":"AUTO_CREATE_PR","requirePlanApproval":False}
  created=http_json("/sessions","POST",body,30)
@@ -261,11 +283,11 @@ def _tick():
   pole,prd=classify(issue)
   core=core_for(pole)
   companion=companion_for(issue,pole)
-  existing_lane=active_companion_session(active,companion)
-  if not existing_lane and (not capacity or counts.get(core,0) >= CORE_LIMITS[core]):
+  companion_load=len(active_companion_sessions(active,companion))
+  if companion_load < COMPANION_PARALLELISM and (not capacity or counts.get(core,0) >= CORE_LIMITS[core]):
    continue
-  if existing_lane:
-   skipped.append({"issue":iid,"reason":"Companion lane occupied"})
+  if companion_load >= COMPANION_PARALLELISM:
+   skipped.append({"issue":iid,"reason":f"Companion concurrency full {companion_load}/{COMPANION_PARALLELISM}"})
    continue
   try:
    work_id=reserve(iid)

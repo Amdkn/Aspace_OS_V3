@@ -4,14 +4,23 @@ Updated: 2026-09-27
 
 This file is a **bootstrap pointer**, not a parallel SSOT.
 
+## Canonical local memory invariant
+- **Long-term certified memory lives only in `40_Memory_Wiki_OKF/`.**
+- `MEMORY.md` is only the root bootstrap pointer into that memory.
+- Operational handovers live only in `_INBOX/handoffs/`.
+- Never create a parallel memory/continuity directory outside `ASpace_OS_V3`.
+- If a checkout/branch cannot see these paths, fix the checkout/branch; do not invent a replacement location.
+
 ## Read order
-1. `ASPACE_ACTIVE_INTENTS.yaml` — active A0 intent.
-2. `ASPACE_WORKSPACE_REGISTRY.json` — WHERE/world/workspace topology.
-3. Supabase `Agent OS Backend / aspace` — NOW: IPBD, WorkGraph, evidence, sessions, world catalog.
-4. Linear — human governance/status/dependencies.
-5. GitHub — versioned artifacts/history.
-6. Gemini Takeout — historical primary corpus when original intent/chronology is material.
-7. Latest operational handover: `_INBOX/handoffs/HANDOVER-2026-09-27-JEV-LIDAR-MULTISESSION.md`.
+1. `40_Memory_Wiki_OKF/AGENTS.md` + `40_Memory_Wiki_OKF/index.md` — certified long-term memory.
+2. `MEMORY.md` — root bootstrap pointer only.
+3. `ASPACE_ACTIVE_INTENTS.yaml` — active A0 intent.
+4. `ASPACE_WORKSPACE_REGISTRY.json` — WHERE/world/workspace topology.
+5. Supabase `Agent OS Backend / aspace` — NOW: IPBD, WorkGraph, evidence, sessions, world catalog.
+6. Linear — human governance/status/dependencies.
+7. GitHub — versioned artifacts/history.
+8. Gemini Takeout — historical primary corpus when original intent/chronology is material.
+9. Latest operational handover under `_INBOX/handoffs/`.
 
 ## Current architecture correction
 Identity, surface, harness and capability are orthogonal.

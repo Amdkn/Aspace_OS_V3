@@ -66,3 +66,7 @@
 - `2026-09-24` : Profils Hermes persistants et worktrees Orca distincts pour 3 Doctors et 9 Compagnons; configuration verifiee, sessions existantes preservees. Fiche: `concepts/hermes_bot_worktree_identity.md`.
 
 - `2026-09-24` : Mémoire de reprise consolidée dans `operations/reprise_hermes_orca_2026-09-24.md`; 180/181 relus done, 12 liaisons profil/worktree, distinction fermeture PR/fusion et configuration/exécution. Index mis à jour; aucune autonomie présumée.
+
+- `2026-09-27` : Invariant de reprise renforcé : `40_Memory_Wiki_OKF/` est l'unique mémoire longue locale canonique; `MEMORY.md` est un pointeur bootstrap; `_INBOX/handoffs/` contient les handovers. Toute absence liée à une branche/worktree se corrige au niveau Git, sans créer de répertoire mémoire parallèle hors V3. (A0 / ChatGPT).
+
+- `2026-09-27` : Contrat anti-immobilisme : Capture immédiate, compilation minimale suffisante, exécution réversible par défaut, gates proportionnés au risque, Life/Business non bloqués par dette Kernel non dépendante, dispatcher ouvert aux issues non taggées PRD, blockers annulés non bloquants, parallélisme Compagnon configurable au runtime. Preuve : 28 tests Kernel ciblés PASS. (A0 / ChatGPT).

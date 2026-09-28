@@ -163,7 +163,15 @@ deferred_but_preserved:
       do not let VM setup become another Bedrock detour.
 
 session_start_contract:
+  canonical_local_memory:
+    root: 40_Memory_Wiki_OKF/
+    bootstrap_pointer: MEMORY.md
+    handovers: _INBOX/handoffs/
+    invariant: fix checkout/branch visibility before creating any alternate memory location
   required_reads:
+    - 40_Memory_Wiki_OKF/AGENTS.md
+    - 40_Memory_Wiki_OKF/index.md
+    - MEMORY.md
     - ASPACE_ACTIVE_INTENTS.yaml
     - ASPACE_WORKSPACE_REGISTRY.json
   then_read:

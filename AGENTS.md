@@ -8,6 +8,18 @@
 
 ---
 
+## 0. Bootstrap mémoire obligatoire — avant tout routage
+
+**Invariant local canonique :**
+- `40_Memory_Wiki_OKF/` = mémoire longue certifiée et canonique.
+- `MEMORY.md` = pointeur de bootstrap uniquement.
+- `_INBOX/handoffs/` = continuité opérationnelle entre sessions.
+- `ASPACE_ACTIVE_INTENTS.yaml` = projection locale des intentions A0 actives; les IPBD persistants vivent dans Supabase `aspace`.
+- **Interdit :** créer un répertoire mémoire/continuity parallèle hors de `ASpace_OS_V3` parce qu'une branche ou un checkout ne montre pas un fichier attendu.
+- Si un chemin canonique manque, **corriger d'abord la branche/le checkout/worktree**, puis relire le canon.
+
+Toute session ChatGPT, Hermes, Codex, Antigravity, Claude Code, Jules ou autre harness qui intervient sur V3 doit appliquer ce bootstrap avant de reconstruire l'architecture depuis un handover, un ticket ou un historique de chat.
+
 ## 1. La Pyramide à 7 Niveaux d'A'Space OS V3
 
 ```
@@ -32,11 +44,11 @@
 
 ## 2. Meta-Routeur DOX — Cartographie des Sub-AGENTS.md
 
-Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent charge **exclusivement** le `AGENTS.md` du sous-dossier concerné :
+Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent charge le `AGENTS.md` racine puis **préfère** le `AGENTS.md` du sous-dossier concerné. Une mission transversale peut lire les autres routeurs pertinents : le découpage économise le contexte, il ne cloisonne jamais la compréhension.
 
 | Organe / Dossier | Rôle dans V3 & Niveau Pyramide | Fichier d'Aiguillage Dédié |
 | :--- | :--- | :--- |
-| **`50_Distillation/`** | **LE GATE D'ENTRÉE INVIOLABLE** [5D]. Rien n'entre sans ce sas. | [`50_Distillation/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/50_Distillation/AGENTS.md) |
+| **`50_Distillation/`** | **GATE DE PROMOTION MÉMOIRE/CANON** [5D]. Il certifie la promotion vers mémoire/ontologie; il ne bloque ni Capture IPBD, ni diagnostic, ni exécution réversible. | [`50_Distillation/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/50_Distillation/AGENTS.md) |
 | **`70_Onthologies/`** | **VÉRITÉ FORMELLE RDF** [Pantry / 6D]. Gardien : Graham (1 681+ nœuds). | [`70_Onthologies/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/70_Onthologies/AGENTS.md) |
 | **`40_Memory_Wiki_OKF/`** | **MÉMOIRE LONGUE CERTIFIÉE** [Pantry / 6D]. Format OKF v0.2. | [`40_Memory_Wiki_OKF/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/40_Memory_Wiki_OKF/AGENTS.md) |
 | **`90-self-evolution/`** | **SYSTÈME IMMUNITAIRE ANTI-REJEU** [5D / 6D]. Patterns P1-P6. | [`90-self-evolution/AGENTS.md`](file:///c:/Users/amado/ASpace_OS_V3/90-self-evolution/AGENTS.md) |
@@ -50,14 +62,14 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 
 ## 3. Les Invariants Transversaux Inviolables
 
-1. **Règle d'or 1 : Le Gate Inviolable (`50_Distillation/`)**
-   - Aucun fichier brut, aucune note non triée n'entre en direct dans la mémoire ou le graphe.
-2. **Règle d'or 2 : Les 4 Organes Souverains au-dessus de tout**
-   - `70_Onthologies/`, `40_Memory_Wiki_OKF/`, `60_Implementation_Méthodologiques/` et `90-self-evolution/` gouvernent les 3 OS applicatifs (`10_Tech_OS`, `20_Life_OS`, `30_Business_OS`).
-   - Tech OS est un serviteur silencieux : interdiction formelle de cannibaliser le système.
-3. **Règle d'or 3 : Le Couplage Déterministe (Hooks & Webhooks)**
-   - Les agents ne s'exécutent jamais sans intercepteurs runtime (`10_Tech_OS/kernel/hooks/`).
-   - Le "Rot Rate" et les fuites de secrets (PII) sont bloqués net par veto déterministe.
+1. **Règle d'or 1 : Capture d'abord, certification ensuite**
+   - Les IPBD et événements opérationnels sont capturés immédiatement dans leurs plans persistants. `50_Distillation/` intervient seulement pour promouvoir un apprentissage vers la mémoire certifiée/ontologie; il ne retarde jamais une Capture, une lecture, un diagnostic ou une action réversible.
+2. **Règle d'or 2 : Les organes de gouvernance contraignent sans devenir des péages globaux**
+   - `70_Onthologies/`, `40_Memory_Wiki_OKF/`, `60_Implementation_Méthodologiques/` et `90-self-evolution/` fournissent canon, mémoire, méthodes et apprentissage aux 3 OS applicatifs. Une dette dans l'un d'eux ne bloque pas automatiquement Life/Business hors dépendance explicite.
+   - Tech OS sert Life/Business : un défaut Kernel ne devient P0 que s'il bloque, menace ou dégrade réellement leur exécution.
+3. **Règle d'or 3 : Couplage déterministe proportionné au risque**
+   - Les mutations irréversibles ou sensibles passent par les hooks/gates pertinents. Lecture, diagnostic, simulation, test isolé, travail en branche/worktree et autre action réversible peuvent avancer sans attendre un gate sans rapport.
+   - Les fuites de secrets/PII et autres veto de sûreté restent bloquants; les gates de qualité ne doivent pas devenir des verrous d'exécution globaux.
 
 ---
 
@@ -65,7 +77,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 
 - **La racine reste minimale :** Le présent fichier route les requêtes sans encombrer le contexte.
 - **Un agent est un item qui traverse des états :** Géré via `uc.db` et les validation gates SSSF.
-- **Loi d'observation dynamique (D3) :** Le disque physique est l'unique source de vérité (`python scripts/cartographier_v3.py`).
+- **Loi d'observation dynamique (D3) :** pas de SSOT universel unique. Le filesystem est autoritaire pour les artefacts locaux, GitHub pour leur histoire/version, Supabase `aspace` pour IPBD/WorkGraph/état machine partagé, Linear pour la gouvernance humaine. Les divergences se réconcilient par type + provenance + fraîcheur, jamais en déclarant un plan globalement supérieur.
 
 ---
 
@@ -74,16 +86,16 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 - **A0 :** Amadeus ↔ Kirby, même niveau visionnaire; Kirby n'est ni Rick, ni Doctor, ni Companion.
 - **ADE par défaut :** Orca. Il peut imbriquer Herdr et tout CLI de harness; il n'est pas source de vérité.
 - **Meta-Harness Fabric :** Herdr=runtime persistant; Multica=workforce management; Buzz=collaboration/event/identity; capacités composables, non étages exclusifs.
-- **Souveraineté :** `uc.py/uc.db` garde l'identité canonique du travail; Rick/S1 compose; Agent OS projette vers A0.
-- **Compilation :** `IPBD (Intention, Problématiques, Besoins, Désirs) → SDD → ADR → PRD → TDD → Work Graph → Evidence → Gates → DONE`.
+- **Souveraineté :** Supabase `aspace.intent/capture_event` garde l'IPBD partagé; Supabase WorkGraph porte l'état machine partagé; `uc.py/uc.db` reste cache/exécution locale souveraine et projection réconciliable; Rick/S1 compose; Agent OS projette vers A0.
+- **Compilation minimale suffisante :** `IPBD → Clarify/Route → plus petit contrat nécessaire → Work/Evidence → Outcome`. SDD/ADR/PRD/TDD sont des formes conditionnelles, pas une chaîne obligatoire. Une action réversible bien bornée peut aller directement d'IPBD à Work; un choix architectural durable peut exiger ADR/PRD/TDD.
 - Canon détaillé : `40_Memory_Wiki_OKF/architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md`.
 
-## 5. Mémoire de Fin de Réponse — DOX & OKF
+## 5. Distillation après preuve — DOX & OKF
 
-Toute modification structurelle ou apprentissage système est :
-- Inscrit dans le sous-registre `AGENTS.md` du composant concerné (Append-Only D4).
-- Formalisé en OKF v0.2 dans `40_Memory_Wiki_OKF/concepts/`.
-- Validé par synthèse vocale sans conflit mutex.
+La mémoire ne doit jamais être un péage avant l'exécution. Une modification opérationnelle avance avec preuve dans son système d'origine. **Après résultat**, seuls les apprentissages durables ou décisions structurelles sont distillés :
+- entrée Append-Only D4 dans le `AGENTS.md` concerné si elle change la règle de reprise;
+- OKF v0.2 dans `40_Memory_Wiki_OKF/` si la connaissance mérite une mémoire longue;
+- aucune TTS, indexation, distillation ou documentation secondaire ne bloque la livraison primaire.
 
 ## D4 — 2026-09-12 — Validation du Run Kernel Core (13e Docteur & Compagnons Yaz, Graham, Ryan)
 
