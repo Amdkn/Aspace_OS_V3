@@ -3,9 +3,10 @@
 ## Origin / continuity
 - Active IPBD: `16c4a90f-5934-4843-9e24-484f57d617e2`.
 - Existing R&D issue: GitHub `#125 [BRD-003][BILL] Evidence-Preserving Reducer with local SLM`, which already says to evaluate Needle/Laya.
-- River canary remote provenance: `Amdkn/River@3c21acda`.
+- River canary historical provenance: `Amdkn/River@3c21acda`.
 - Main fractal-mesh provenance: `origin/main@11880d10` / PR #186.
-- Local River worktree was rebased to `11880d10` and produced local commit `6d4a751e`, but Desktop Commander transport became unstable before that rewritten SHA could be pushed. Treat `3c21acda` as the durable remote canary provenance until branch reconciliation.
+- Reconciled River commit: `16253806918cbd1e30427d49dd033293b2205116`, built directly on `main@11880d10` with the six exact River blobs preserved.
+- Rollback branch: `backup/River-pre-reconcile-20260928` -> prior head `416f813683179a86b874cd56b24521caba5a2724`.
 - `HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md` supersedes the six-session handover and transfers Jev platform/interface stewardship from River to Amy.
 
 ## Verifiable result of this correction cell
@@ -15,7 +16,7 @@ Machine-readable evidence:
 The prior River benchmark proved the typed contract but under-scanned the ecosystem. Corrected taxonomy:
 
 ### MODEL / decision-engine peers
-Jev, Laya, Kev, CLM, GLiNER2.5-Decide, Tev1, Decider, NanoJev and Jev-Omni are the current candidate decision-engine/model family to classify. They are not equally mature and do not all cover the same primitives.
+Jev, Laya, Kev, CLM, GLiNER2.5-Decide, Tev1, Decider, NanoJev and Jev-Omni are current decision-engine/model candidates to classify. They are not equally mature and do not all cover the same primitives.
 
 ### RUNTIME / serving fabric
 Decis is not a model. It is a self-hosted multi-engine server that can expose engines such as Laya/Kev behind a Jev-compatible `/v1/systemone` contract.
@@ -70,6 +71,7 @@ Consume the resulting interface. River no longer owns Jev platform/interface des
 - No hosted Jev/Laya/Kev call was made in this correction cell.
 - External benchmark/latency figures remain source claims until replayed inside A'Space.
 - No irreversible side effect may ever be granted solely by model confidence.
+- River branch reconciliation is complete; no branch divergence blocker remains.
 
 ## Next action
-Amy/Bill/Clara resume from this handover + GitHub #125 + River canary provenance without asking A0 to rebuild the ecosystem.
+Amy/Bill/Clara resume from this handover + GitHub #125 + reconciled River branch without asking A0 to rebuild the ecosystem.
