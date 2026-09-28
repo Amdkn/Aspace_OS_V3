@@ -93,6 +93,14 @@ Verify:
 no false ONLINE claim outside M0 profile,
 no authority drift, no double effect, no receipt/effect divergence.
 
+### Amy / PRESENT
+Prepare presentation of capability-scoped health, policy denials and receipt state.
+Do not turn the M0 local ONLINE state into a global machine/browser readiness lamp.
+
+### Donna / RECOVER
+Review the unknown-effect -> DLQ path and causal recovery semantics.
+No blind retry is authorized when restart reconciliation cannot establish effect truth.
+
 ### Nardole / DISPATCH
 Do not route M1 until independent M0 review is green.
 M0 can close independently; M1/M2 are new cells.
