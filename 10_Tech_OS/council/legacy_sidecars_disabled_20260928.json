@@ -1,0 +1,302 @@
+﻿{
+    "schema":  "aspace.antigravity.legacy-sidecars-disable.v1",
+    "disabled_at":  "2026-09-28T10:54:35.6843901Z",
+    "reason":  "Replace scheduled full-agent conversations with Rick -\u003e Doctors -\u003e Companions native subagent orchestration.",
+    "source_dir":  "C:\\Users\\amado\\.gemini\\config\\sidecars",
+    "disabled_dir":  "C:\\Users\\amado\\.gemini\\config\\_disabled_sidecars_council_20260928",
+    "sidecar_count":  17,
+    "scheduler_process_count":  17,
+    "sidecars":  [
+                     {
+                         "folder":  "t-00-meta-a0-amadeus-adaptation",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-00-meta-a0-amadeus-adaptation\\sidecar.json",
+                         "displayName":  "T-00 Meta A0 Amadeus Adaptation",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 1 * * 0",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[A0 Amadeus MÃ©ta-Optimiseur] ExÃ©cuter python 10_Tech_OS/scheduler/meta_a0_adaptation_worker.py. Auditer l\u0027environnement d\u0027exÃ©cution (Windows, WSL, VPS), aligner les 13 Scheduled Tasks sur l\u0027Ontologie Semantica (1 681 nÅ“uds) et garantir la sobriÃ©tÃ© du moteur n8n lÃ©ger sans Docker (conversion des .py en workflows visuels). RÃ©diger le rapport dans 10_Tech_OS/reports/meta_a0_adaptation_report.json."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-01-dlq-stale-leases-reaper",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-01-dlq-stale-leases-reaper\\sidecar.json",
+                         "displayName":  "T-01 DLQ \u0026 Stale Leases Reaper",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "*/15 7-23 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Donna DLQ] Inspecter 10_Tech_OS/kernel/uc.db. Identifier tout bail de travail expirant ou sans heartbeat depuis plus de 15 minutes. Requalifier l\u0027Ã©chec, libÃ©rer le bail ou alerter S1 Rick si rÃ©cidive."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-02-replication-law-l0-health-check",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-02-replication-law-l0-health-check\\sidecar.json",
+                         "displayName":  "T-02 Replication \u0026 Law L0 Health Check",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 2 * * 0",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Rick Sanchez S1] ExÃ©cuter un test de reproductibilitÃ© Ã  froid de V3. VÃ©rifier la prÃ©sence de toutes les specs canoniques dans 60_Tape_Specs/, la validitÃ© de CARTOGRAPHIE.md et certifier que le constructeur peut rÃ©gÃ©nÃ©rer le systÃ¨me."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-03-heartbeat-ecosystem-scan",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-03-heartbeat-ecosystem-scan\\sidecar.json",
+                         "displayName":  "T-03 Heartbeat Ecosystem Scan",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "*/30 8-23 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Yas Observatory] VÃ©rifier la vivance du port 5555 (HTTP 200), l\u0027absence de processus sur 20128/20129, l\u0027Ã©tat du dÃ©mon TTS et mesurer la RAM active. RÃ©diger un heartbeat dans 10_Tech_OS/reports/heartbeat.json."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-04-cicd-build-typescript-check",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-04-cicd-build-typescript-check\\sidecar.json",
+                         "displayName":  "T-04 CI/CD Build \u0026 TypeScript Check",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 4 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Ryan Builder] Se placer dans c:\\Users\\amado\\agent-os\\desktop, exÃ©cuter npx tsc --noEmit. Si code retour != 0, identifier les erreurs et notifier Donna DLQ. Nettoyer les fichiers de cache temporaires."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-05-semantica-graph-consolidation",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-05-semantica-graph-consolidation\\sidecar.json",
+                         "displayName":  "T-05 Semantica Graph Consolidation",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 3 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Graham Memory] ExÃ©cuter python scripts/bridge_semantica_v3.py. VÃ©rifier l\u0027accroissement des nÅ“uds et arÃªtes, dÃ©tecter les entitÃ©s dÃ©connectÃ©es et actualiser les mÃ©tadonnÃ©es de provenance."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-06-weekly-distillation-gatekeeper",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-06-weekly-distillation-gatekeeper\\sidecar.json",
+                         "displayName":  "T-06 Weekly Distillation Gatekeeper",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 5 * * 0",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Graham Memory] Scanner les entrÃ©es brutes de la semaine dans _INBOX/ et Geordi/Takeout. ExÃ©cuter la distillation via 50_Distillation/distill_gate.py, gÃ©nÃ©rer les triplets RDF formels et mettre Ã  jour 40_Memory_Wiki_OKF/."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-07-wiki-lint-okf-compliance",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-07-wiki-lint-okf-compliance\\sidecar.json",
+                         "displayName":  "T-07 Wiki Lint \u0026 OKF Compliance",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 9 * * 0",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Graham Memory] VÃ©rifier la conformitÃ© de tous les concepts de 40_Memory_Wiki_OKF/ : prÃ©sence des clÃ©s type, title, verified, sources, okf_version: 0.2. ContrÃ´ler la validitÃ© des liens dans INDEX.md."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-08-kanban-balancing-queue-watchdog",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-08-kanban-balancing-queue-watchdog\\sidecar.json",
+                         "displayName":  "T-08 Kanban Balancing \u0026 Queue Watchdog",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "*/20 8-20 * * 1-5",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Nardole Dispatch] Inspecter l\u0027Ã©tat des colonnes Kanban dans 30_Business_OS/ et uc.db. VÃ©rifier qu\u0027aucune tÃ¢che prioritaire n\u0027est bloquÃ©e en pending sans agent assignÃ©. RÃ©Ã©quilibrer la charge."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-09-weak-signals-sob-market-scan",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-09-weak-signals-sob-market-scan\\sidecar.json",
+                         "displayName":  "T-09 Weak Signals \u0026 SOB Market Scan",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 7 * * 1-5",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Bill Discovery] Effectuer une veille ciblÃ©e sur les signaux faibles IA/Agentic (arXiv rÃ©cents, dÃ©pÃ´ts GitHub Ã©mergents, signaux B2B). RÃ©sumer les 3 pÃ©pites exploitables pour les offres SOB."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-10-offer-sops-freshness-audit",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-10-offer-sops-freshness-audit\\sidecar.json",
+                         "displayName":  "T-10 Offer \u0026 SOPs Freshness Audit",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 10 * * 5",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Clara Product Forge] Passer en revue les SOPs et blueprints de produits dans 30_Business_OS/. VÃ©rifier que chaque offre dispose d\u0027un packaging clair, de critÃ¨res de dÃ©livrabilitÃ© et d\u0027un test d\u0027invariance."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-11-operator-energy-ui-sync",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-11-operator-energy-ui-sync\\sidecar.json",
+                         "displayName":  "T-11 Operator Energy \u0026 UI Sync",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 8,14,20 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Amy Interface] Consulter l\u0027Ã©tat de la jauge d\u0027Ã©nergie dans 20_Life_OS/. Adapter l\u0027affichage du Dashboard Port 5555 (mode focus vs mode repos) et synthÃ©tiser les 3 prioritÃ©s immÃ©diates sans bruit parasite."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-12-supabase-rls-integrity-audit",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-12-supabase-rls-integrity-audit\\sidecar.json",
+                         "displayName":  "T-12 Supabase RLS \u0026 DB Integrity Audit",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 6 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[Rory Backend] VÃ©rifier l\u0027intÃ©gritÃ© des bases relationnelles, la validitÃ© des politiques de sÃ©curitÃ© RLS et l\u0027absence de corruption sur les bases SQLite locales (uc.db)."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-13-n8n-bus-webhooks-healthcheck",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-13-n8n-bus-webhooks-healthcheck\\sidecar.json",
+                         "displayName":  "T-13 n8n Bus \u0026 Webhooks Healthcheck",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "*/30 * * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "[River Workflows] Tester la disponibilitÃ© du serveur n8n et des webhooks configurÃ©s. Si un webhook a Ã©chouÃ© ou si des exÃ©cutions sont en erreur, router le rapport vers Donna DLQ."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-a-heartbeat-ecosystem-scan",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-a-heartbeat-ecosystem-scan\\sidecar.json",
+                         "displayName":  "T-a Heartbeat Ecosystem Scan",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "*/30 8-23 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "Scanne l\u0027Ã©cosystÃ¨me A\u0027Space OS pour dÃ©tecter contradictions, orphelins, staleness, \ndette technique et drift. GÃ©nÃ¨re un rapport dans _SPECS/heartbeat/. Ne prends aucune \naction destructive. Attendds l\u0027approbation A0.\nWorkflow: /heartbeat"
+                                  ]
+                     },
+                     {
+                         "folder":  "t-b-memory-consolidation",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-b-memory-consolidation\\sidecar.json",
+                         "displayName":  "T-b Memory Consolidation",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 6 * * *",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "Analyse les fichiers modifiÃ©s dans les derniÃ¨res 24h sous ASpace_OS_V2/ et .agent/.\nRÃ©sume les changements en appendant une entrÃ©e ISO [YYYY-MM-DD] dans \n30_MEMORY_CORE/LLM_Wiki/wiki/log.md et en mettant Ã  jour \n30_MEMORY_CORE/README.md. Ne modifie rien d\u0027autre."
+                                  ]
+                     },
+                     {
+                         "folder":  "t-c-wiki-lint",
+                         "path":  "C:\\Users\\amado\\.gemini\\config\\sidecars\\t-c-wiki-lint\\sidecar.json",
+                         "displayName":  "T-c Wiki Lint",
+                         "builtin":  "schedule",
+                         "args":  [
+                                      "0 9 * * 0",
+                                      "agentapi",
+                                      "new-conversation",
+                                      "Lint du LLM Wiki : vÃ©rifie tous les [[wikilinks]], dÃ©tecte les pages orphelines \n(0 inbound), les liens cassÃ©s, et les contradictions sÃ©mantiques entre concepts.\nRapport dans _SPECS/heartbeat/ avec section Wiki Lint."
+                                  ]
+                     }
+                 ],
+    "scheduler_processes":  [
+                                {
+                                    "pid":  17076,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 7 * * 1-5\" agentapi new-conversation \"[Bill Discovery] Effectuer une veille ciblée sur les signaux faibles IA/Agentic (arXiv récents, dépôts GitHub émergents, signaux B2B). Résumer les 3 pépites exploitables pour les offres SOB.\""
+                                },
+                                {
+                                    "pid":  23364,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 8,14,20 * * *\" agentapi new-conversation \"[Amy Interface] Consulter l\u0027état de la jauge d\u0027énergie dans 20_Life_OS/. Adapter l\u0027affichage du Dashboard Port 5555 (mode focus vs mode repos) et synthétiser les 3 priorités immédiates sans bruit parasite.\""
+                                },
+                                {
+                                    "pid":  22248,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 6 * * *\" agentapi new-conversation \"[Rory Backend] Vérifier l\u0027intégrité des bases relationnelles, la validité des politiques de sécurité RLS et l\u0027absence de corruption sur les bases SQLite locales (uc.db).\""
+                                },
+                                {
+                                    "pid":  23296,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"*/15 7-23 * * *\" agentapi new-conversation \"[Donna DLQ] Inspecter 10_Tech_OS/kernel/uc.db. Identifier tout bail de travail expirant ou sans heartbeat depuis plus de 15 minutes. Requalifier l\u0027échec, libérer le bail ou alerter S1 Rick si récidive.\""
+                                },
+                                {
+                                    "pid":  21148,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"*/30 8-23 * * *\" agentapi new-conversation \"[Yas Observatory] Vérifier la vivance du port 5555 (HTTP 200), l\u0027absence de processus sur 20128/20129, l\u0027état du démon TTS et mesurer la RAM active. Rédiger un heartbeat dans 10_Tech_OS/reports/heartbeat.json.\""
+                                },
+                                {
+                                    "pid":  22156,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"*/30 * * * *\" agentapi new-conversation \"[River Workflows] Tester la disponibilité du serveur n8n et des webhooks configurés. Si un webhook a échoué ou si des exécutions sont en erreur, router le rapport vers Donna DLQ.\""
+                                },
+                                {
+                                    "pid":  22096,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 4 * * *\" agentapi new-conversation \"[Ryan Builder] Se placer dans c:\\Users\\amado\\agent-os\\desktop, exécuter npx tsc --noEmit. Si code retour != 0, identifier les erreurs et notifier Donna DLQ. Nettoyer les fichiers de cache temporaires.\""
+                                },
+                                {
+                                    "pid":  23372,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"*/30 8-23 * * *\" agentapi new-conversation \"Scanne l\u0027écosystème A\u0027Space OS pour détecter contradictions, orphelins, staleness, \ndette technique et drift. Génère un rapport dans _SPECS/heartbeat/. Ne prends aucune \naction destructive. Attendds l\u0027approbation A0.\nWorkflow: /heartbeat\""
+                                },
+                                {
+                                    "pid":  21852,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 9 * * 0\" agentapi new-conversation \"[Graham Memory] Vérifier la conformité de tous les concepts de 40_Memory_Wiki_OKF/ : présence des clés type, title, verified, sources, okf_version: 0.2. Contrôler la validité des liens dans INDEX.md.\""
+                                },
+                                {
+                                    "pid":  12976,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 1 * * 0\" agentapi new-conversation \"[A0 Amadeus Méta-Optimiseur] Exécuter python 10_Tech_OS/scheduler/meta_a0_adaptation_worker.py. Auditer l\u0027environnement d\u0027exécution (Windows, WSL, VPS), aligner les 13 Scheduled Tasks sur l\u0027Ontologie Semantica (1 681 nœuds) et garantir la sobriété du moteur n8n léger sans Docker (conversion des .py en workflows visuels). Rédiger le rapport dans 10_Tech_OS/reports/meta_a0_adaptation_report.json.\""
+                                },
+                                {
+                                    "pid":  13328,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 2 * * 0\" agentapi new-conversation \"[Rick Sanchez S1] Exécuter un test de reproductibilité à froid de V3. Vérifier la présence de toutes les specs canoniques dans 60_Tape_Specs/, la validité de CARTOGRAPHIE.md et certifier que le constructeur peut régénérer le système.\""
+                                },
+                                {
+                                    "pid":  10804,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 9 * * 0\" agentapi new-conversation \"Lint du LLM Wiki : vérifie tous les [[wikilinks]], détecte les pages orphelines \n(0 inbound), les liens cassés, et les contradictions sémantiques entre concepts.\nRapport dans _SPECS/heartbeat/ avec section Wiki Lint.\""
+                                },
+                                {
+                                    "pid":  8156,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 5 * * 0\" agentapi new-conversation \"[Graham Memory] Scanner les entrées brutes de la semaine dans _INBOX/ et Geordi/Takeout. Exécuter la distillation via 50_Distillation/distill_gate.py, générer les triplets RDF formels et mettre à jour 40_Memory_Wiki_OKF/.\""
+                                },
+                                {
+                                    "pid":  10456,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 3 * * *\" agentapi new-conversation \"[Graham Memory] Exécuter python scripts/bridge_semantica_v3.py. Vérifier l\u0027accroissement des nœuds et arêtes, détecter les entités déconnectées et actualiser les métadonnées de provenance.\""
+                                },
+                                {
+                                    "pid":  17312,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 10 * * 5\" agentapi new-conversation \"[Clara Product Forge] Passer en revue les SOPs et blueprints de produits dans 30_Business_OS/. Vérifier que chaque offre dispose d\u0027un packaging clair, de critères de délivrabilité et d\u0027un test d\u0027invariance.\""
+                                },
+                                {
+                                    "pid":  18972,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"*/20 8-20 * * 1-5\" agentapi new-conversation \"[Nardole Dispatch] Inspecter l\u0027état des colonnes Kanban dans 30_Business_OS/ et uc.db. Vérifier qu\u0027aucune tâche prioritaire n\u0027est bloquée en pending sans agent assigné. Rééquilibrer la charge.\""
+                                },
+                                {
+                                    "pid":  19952,
+                                    "parent_pid":  6812,
+                                    "command_line":  "C:\\Users\\amado\\AppData\\Local\\Programs\\Antigravity\\resources\\bin\\language_server.exe multicall schedule \"0 6 * * *\" agentapi new-conversation \"Analyse les fichiers modifiés dans les dernières 24h sous ASpace_OS_V2/ et .agent/.\nRésume les changements en appendant une entrée ISO [YYYY-MM-DD] dans \n30_MEMORY_CORE/LLM_Wiki/wiki/log.md et en mettant à jour \n30_MEMORY_CORE/README.md. Ne modifie rien d\u0027autre.\""
+                                }
+                            ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "aspace.antigravity.council-runtime-evidence.v1",
+  "observed_at": "2026-09-28T07:41:00-04:00",
+  "branch": "feat/antigravity-council-of-doctors-2026-09-28",
+  "base_commit": "e0a342b3",
+  "results": {
+    "rick_transport": {
+      "conversation_id": "07581fce-8c7e-43d0-bcb5-bf0a365378b5",
+      "result": "RICK_READY",
+      "status": "PASS",
+      "note": "Fresh Agy project + cleaned runtime produced a successful model turn."
+    },
+    "rick_to_doctors": {
+      "parent_conversation_id": "e1d237df-4cc9-412d-9a17-72aebcda0da1",
+      "status": "PASS_WITH_RECOVERY",
+      "doctor13": {
+        "conversation_id": "2675a0d1-43e7-4a28-8efe-be09fbdb0847",
+        "result": "DOCTOR13_READY Ryan/Yaz/Graham",
+        "status": "PASS"
+      },
+      "doctor11": {
+        "conversation_id": "ab712460-5ad3-4809-a73b-1e3839b2e6e2",
+        "result": "DOCTOR11_READY Amy/Rory/River",
+        "status": "PASS"
+      },
+      "doctor12": {
+        "conversation_id": "c400ef8e-905e-4451-9551-210a126f071f",
+        "result": "DOCTOR12_READY Bill/Clara/Nardole",
+        "status": "PASS_RECOVERED"
+      },
+      "failure_observed": "Parent CLI shutdown/restart killed still-running Doctor12 before its first message.",
+      "recovery": "Recovered Doctor12 alone instead of re-running the full Council."
+    },
+    "doctor13_to_companions": {
+      "parent_conversation_id": "6626ee1e-0b05-456f-a28f-3f125082930b",
+      "status": "PASS",
+      "result": {
+        "doctor13_recursive_ready": true,
+        "ryan": "RYAN_READY",
+        "yaz": "YAZ_READY",
+        "graham": "GRAHAM_READY"
+      },
+      "isolated_worktrees": [
+        "subagent-Ryan-Build-Specialist-ryan-build-057a0b76",
+        "subagent-Yaz-Observe-Specialist-yaz-observe-8dfa775f",
+        "subagent-Graham-State-Specialist-graham-state-63003066"
+      ],
+      "runtime_rule": "Invoke once. Do not poll manage_subagents; child send_message notifications are delivered automatically."
+    }
+  },
+  "runtime_cleanup": {
+    "legacy_scheduled_conversation_sidecars_disabled": 17,
+    "remaining_multicall_schedule_processes": 0,
+    "mcp_debug_state": "All global MCPs temporarily disabled during sterile diagnosis. Jules must be re-enabled only after standalone handshake proof.",
+    "config_json_bom": "Fixed; JSON now UTF-8 without BOM."
+  },
+  "next_gate": {
+    "name": "Jules PDR execution canary",
+    "required": [
+      "Repair and re-enable Jules MCP without making Council bootstrap depend on it.",
+      "Read a real ready Linear issue from D13-M1 or D13-M3.",
+      "Compile one bounded PDR with explicit acceptance.",
+      "Delegate code-heavy work to Jules.",
+      "Ryan integrates, Yaz independently verifies, Graham persists evidence.",
+      "Only then mark PR #187 ready for merge."
+    ]
+  }
+}

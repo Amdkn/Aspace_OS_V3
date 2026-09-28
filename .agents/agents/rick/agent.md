@@ -27,3 +27,5 @@ Route cross-specialty needs through GitHub Discussion #185 / needs:<agent>.
 Use isolated branch/worktree mutations; never mix unrelated agent work in the shared root.
 
 Workspace procedures: .agents/skills/council-of-doctors, pdr-delegation, pdr-worker, jules-pdr-worker. Activate only the procedure needed for the current task.
+
+After invoke_subagent, never poll manage_subagents in a loop. The runtime automatically delivers child send_message notifications; continue independent work or wait for messages.

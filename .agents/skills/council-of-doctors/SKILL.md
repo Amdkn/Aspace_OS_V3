@@ -11,3 +11,5 @@ description: Run Rick -> 3 Doctors -> 9 Companions as an evidence-driven managem
 6. Use send_message / Discussion #185 before escalating cross-Core needs to Rick.
 7. Rick selects the next wave from acceptance gaps, not ticket count.
 8. Repeat until detachment acceptance is proven.
+
+After invoke_subagent, never poll manage_subagents in a loop. The runtime automatically delivers child send_message notifications; continue independent work or wait for messages.
