@@ -226,7 +226,14 @@
           "port": 5555,
           "sync": "pushed_to_Amdkn/Agent-OS-Desktop"
         },
-        "parent_sync_note": "local Agent-OS parent snapshot push blocked by GitHub secret scanning on historical commit; no bypass performed"
+        "parent_sync_note": "local Agent-OS parent snapshot push blocked by GitHub secret scanning on historical commit; no bypass performed",
+        "world_awareness": {
+          "canonical_world": "Sol",
+          "parent_world": "Astra",
+          "observability_steward": "Yaz",
+          "desktop_endpoint": "http://127.0.0.1:5555",
+          "rule": "Agent OS is the Sol awareness/runtime plane. Its local parent remains physically outside the Astra Git tree and is exposed through the Agent_OS junction."
+        }
       },
       "agent_os_desktop": {
         "repo": "Amdkn/Agent-OS-Desktop",
@@ -687,11 +694,38 @@
     },
     "Yaz": {
       "role": "Observe",
+      "archetype": "agentic proprioception / observability SRE",
       "primary_surfaces": [
+        "Agent OS / Sol",
         "Tinybird",
-        "LiDAR-style observability"
+        "LiDAR-style behavioral observability"
       ],
-      "responsibility": "telemetry, behavioral evidence, verification, recovery, drift"
+      "responsibility": "sense cross-harness trajectories, normalize semantic events, emit versioned Behavioral Digests, detect recovery/drift patterns and route evidence without owning execution or durable state",
+      "functions": [
+        "sense native harness and Agent OS runtime events",
+        "normalize native events into shared semantic roles",
+        "compute compact Behavioral Digest and trajectory evidence",
+        "maintain same-harness rolling baselines before cross-model attribution",
+        "project disposable analytics to Tinybird",
+        "return durable Evidence Packets to Graham/Supabase",
+        "route build defects to Ryan and interface/calibration needs to Amy",
+        "publish ambiguous observability needs to GitHub Routing Board #185 before executable Issue conversion"
+      ],
+      "boundaries": [
+        "does not own Jev thresholds or side effects",
+        "does not persist durable shared state outside Graham contract",
+        "does not fix product/build defects when Ryan is the specialist",
+        "does not infer model substitution from behavioral distance alone",
+        "does not expand to full 958-field LiDAR representation without experiment evidence"
+      ],
+      "routing": {
+        "build_defect": "Ryan",
+        "durable_state_or_replay": "Graham",
+        "interface_or_jev_calibration": "Amy",
+        "dispatch_or_dependency": "Nardole",
+        "contract_design": "Clara",
+        "ambiguous_need": "GitHub Discussion Routing Board #185"
+      }
     },
     "Graham": {
       "role": "State",
@@ -741,6 +775,57 @@
       "evidence"
     ],
     "handover": "_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md",
-    "invariant": "Each Companion specialty is a shared capability service. Stewardship is accountability, never exclusivity."
+    "invariant": "Each Companion specialty is a shared capability service. Stewardship is accountability, never exclusivity.",
+    "routing_board": {
+      "type": "GitHub Discussion",
+      "number": 185,
+      "purpose": "ambiguous needs, cross-lane discovery, dependency convergence and return-to routing",
+      "yaz_rule": "Yaz posts observations/anomalies here only while the required specialist or acceptance contract is still ambiguous; once bounded, convert to an Issue with needs:<specialist> and return evidence to the origin."
+    }
+  },
+  "world_semantics": {
+    "version": 2,
+    "status": "canonical_semantic_mapping_with_backward_compatible_legacy_worlds",
+    "canonical": {
+      "Astra": {
+        "role": "aspace_v3_canonical_world",
+        "repo": "Amdkn/Aspace_OS_V3",
+        "local_path": "C:/Users/amado/ASpace_OS_V3",
+        "authority": "A0-Amadeus / Rick's Verse",
+        "note": "Canonical versioned A'Space V3 world; legacy worlds.Sol points here until readers migrate."
+      },
+      "Sol": {
+        "role": "agent_os_awareness_and_runtime_world",
+        "repo": "Amdkn/Agent-OS",
+        "local_path": "C:/Users/amado/agent-os",
+        "junction_from_astra": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+        "desktop": {
+          "repo": "Amdkn/Agent-OS-Desktop",
+          "host": "127.0.0.1",
+          "port": 5555
+        },
+        "observability_steward": "Yaz",
+        "note": "Agent OS is physically separate from the Astra repo; the junction is navigation, not Git ownership."
+      },
+      "Terra": {
+        "role": "life_os_2026_world",
+        "repo": "Amdkn/Life-OS-2026",
+        "local_path": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
+        "junction_from_astra": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+        "manager_core": "Doctor11"
+      },
+      "Luna": {
+        "role": "business_os_federation_world",
+        "registry_ref": "repositories.business",
+        "manager_core": "Doctor12",
+        "note": "Business repositories remain federated; Luna is a semantic world, not a forced monorepo."
+      }
+    },
+    "legacy_aliases": {
+      "worlds.Sol": "Astra",
+      "worlds.Tera": "Sol",
+      "worlds.Luna": "Terra"
+    },
+    "migration_rule": "New readers MUST prefer world_semantics.canonical. Legacy worlds keys remain temporarily for backward compatibility and must not be interpreted as current semantic naming."
   }
 }
