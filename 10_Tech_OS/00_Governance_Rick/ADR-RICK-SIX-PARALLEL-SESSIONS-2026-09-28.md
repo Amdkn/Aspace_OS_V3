@@ -1,7 +1,7 @@
 # ADR-RICK — Six Parallel Session Resumption Fabric
 
 **Date:** 2026-09-28  
-**Status:** Accepted  
+**Status:** Superseded by `ADR-RICK-NINE-COMPANION-FRACTAL-CAPABILITY-MESH-2026-09-28.md`  
 **Scope:** Parallel ChatGPT execution for Life OS + Business OS development  
 **Gatekeeper:** Rick / S1
 
@@ -11,7 +11,9 @@ A'Space requires parallel progress across shared capability surfaces without ass
 
 ## Decision
 
-Use six peer ChatGPT sessions. Each session owns one bounded capability lane, not a siloed universe.
+Historical decision: use six peer ChatGPT sessions. This was superseded the same day after parallel execution proved that the composite lanes hid three specialists (Ryan, Bill, Nardole) and overloaded River with both FLOW and Jev interface ownership.
+
+Current canon: nine persistent Companion lanes, one per specialty, with Amy owning INTERFACE/Jev exposure, Rory=PERSISTENCE, River=FLOW.
 
 The six lanes are:
 
