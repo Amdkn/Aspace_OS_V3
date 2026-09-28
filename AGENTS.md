@@ -90,6 +90,21 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 - **Compilation minimale suffisante :** `IPBD → Clarify/Route → plus petit contrat nécessaire → Work/Evidence → Outcome`. SDD/ADR/PRD/TDD sont des formes conditionnelles, pas une chaîne obligatoire. Une action réversible bien bornée peut aller directement d'IPBD à Work; un choix architectural durable peut exiger ADR/PRD/TDD.
 - Canon détaillé : `40_Memory_Wiki_OKF/architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md`.
 
+## 4.1. ChatGPT Harness — reprise locale et gouverneur de contexte
+
+- Une reprise ChatGPT lit d'abord V3 : `MEMORY.md`, mémoire OKF, dernier handover, Active Intents, Workspace Registry, puis état live Git/Supabase/Linear/GitHub.
+- Une panne d'une surface d'outil n'immobilise pas la mission : basculer vers une surface canonique sûre, enregistrer la dégradation, réconcilier ensuite.
+- Budget de vague : **24 actions externes maximum**; checkpoint à 16, aucun nouveau scope après 22, persistance + handover à 24 avant toute vague suivante.
+- La limite de contexte bloque une vague, jamais l'objectif. Une nouvelle session reprend depuis preuves durables sans demander à A0 de reconstruire le système.
+- E-Myth : A0=Visionnaire; Rick=Gatekeeper; Managers=orchestration systémique; Companions/tools=techniciens bornés. Le harness évite le Technician Bias par batching, délégation, acceptance, rollback et evidence.
+- Un handover ne réduit jamais le standard de qualité : pas de redémarrage à zéro, pas de mutation partielle sans checkpoint, pas de faux `In Progress`.
+
+Canon détaillé :
+- `10_Tech_OS/00_Governance_Rick/ADR-RICK-CHATGPT-HARNESS-CONTEXT-GOVERNOR-2026-09-28.md`
+- `10_Tech_OS/00_Governance_Rick/ADR-RICK-SIX-PARALLEL-SESSIONS-2026-09-28.md`
+- `10_Tech_OS/00_Governance_Rick/ADR-RICK-EMYTH-ANTI-TECHNICIAN-HARNESS-2026-09-28.md`
+- `_INBOX/handoffs/HANDOVER-2026-09-28-SIX-PARALLEL-SESSIONS.md`
+
 ## 5. Distillation après preuve — DOX & OKF
 
 La mémoire ne doit jamais être un péage avant l'exécution. Une modification opérationnelle avance avec preuve dans son système d'origine. **Après résultat**, seuls les apprentissages durables ou décisions structurelles sont distillés :
