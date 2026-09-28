@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://machine-fabric/contracts/v1",
+  "title": "A'Space Machine Fabric Contracts",
+  "type": "object",
+  "$defs": {
+    "Authority": {
+      "type": "object",
+      "required": ["risk_class", "scopes"],
+      "properties": {
+        "risk_class": {"enum": ["read", "reversible_write", "consequential", "privileged"]},
+        "scopes": {"type": "array", "items": {"type": "string"}},
+        "approval_ref": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "Operation": {
+      "type": "object",
+      "required": ["schema", "operation_id", "capability", "action", "authority", "fingerprint", "precondition", "replay"],
+      "properties": {
+        "schema": {"const": "aspace.machine.operation.v1"},
+        "operation_id": {"type": "string", "minLength": 8},
+        "capability": {"type": "string", "minLength": 1},
+        "action": {"type": "string", "minLength": 1},
+        "authority": {"$ref": "#/$defs/Authority"},
+        "fingerprint": {"type": "string", "minLength": 16},
+        "precondition": {"type": "object"},
+        "replay": {"enum": ["never", "return_receipt", "retry_if_no_effect", "compensate_then_retry"]},
+        "payload": {"type": "object"}
+      },
+      "additionalProperties": false
+    },
+    "Receipt": {
+      "type": "object",
+      "required": ["schema", "operation_id", "fingerprint", "state", "capability", "adapter", "policy", "effect_digest"],
+      "properties": {
+        "schema": {"const": "aspace.machine.receipt.v1"},
+        "operation_id": {"type": "string"},
+        "fingerprint": {"type": "string"},
+        "state": {"enum": ["CLAIMED", "RUNNING", "SUCCEEDED", "FAILED", "COMPENSATED", "DENIED", "DLQ"]},
+        "capability": {"type": "string"},
+        "adapter": {"type": "string"},
+        "policy": {"type": "object", "required": ["decision", "policy_version"], "properties": {
+          "decision": {"enum": ["ALLOW", "DENY", "REQUIRE_APPROVAL"]},
+          "policy_version": {"type": "string"}
+        }},
+        "effect_digest": {"type": ["string", "null"]},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "compensation_ref": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "CapabilityManifest": {
+      "type": "object",
+      "required": ["schema", "capability_id", "version", "adapter", "requires_worker", "actions", "health"],
+      "properties": {
+        "schema": {"const": "aspace.machine.capability-manifest.v1"},
+        "capability_id": {"type": "string"},
+        "version": {"type": "string"},
+        "adapter": {"type": "string"},
+        "requires_worker": {"type": "boolean"},
+        "actions": {"type": "array", "items": {"type": "object", "required": ["name", "risk_class"]}},
+        "health": {"enum": ["AVAILABLE", "DEGRADED", "UNAVAILABLE"]}
+      }
+    },
+    "PolicyRequest": {
+      "type": "object",
+      "required": ["schema", "operation_id", "capability", "action", "authority", "context"],
+      "properties": {
+        "schema": {"const": "aspace.machine.policy-request.v1"},
+        "operation_id": {"type": "string"},
+        "capability": {"type": "string"},
+        "action": {"type": "string"},
+        "authority": {"$ref": "#/$defs/Authority"},
+        "context": {"type": "object"}
+      }
+    },
+    "Health": {
+      "type": "object",
+      "required": ["schema", "daemon", "worker", "transport", "capabilities", "aggregate"],
+      "properties": {
+        "schema": {"const": "aspace.machine.health.v1"},
+        "daemon": {"enum": ["UP", "DOWN"]},
+        "worker": {"enum": ["UP", "DOWN", "NOT_REQUIRED"]},
+        "transport": {"enum": ["LOCAL", "PRIVATE_REMOTE", "OFFLINE"]},
+        "capabilities": {"type": "object"},
+        "aggregate": {"enum": ["ONLINE", "DEGRADED", "OFFLINE"]}
+      }
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/Operation"},
+    {"$ref": "#/$defs/Receipt"},
+    {"$ref": "#/$defs/CapabilityManifest"},
+    {"$ref": "#/$defs/PolicyRequest"},
+    {"$ref": "#/$defs/Health"}
+  ]
+}
