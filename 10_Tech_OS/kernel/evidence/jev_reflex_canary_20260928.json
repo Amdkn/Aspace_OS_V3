@@ -1,0 +1,179 @@
+{
+  "evidence_version": "aspace.jev.canary_evidence.v1",
+  "reflex_version": "aspace.reflex.v1",
+  "question_version": "aspace.jev.questions.v1",
+  "policy_version": "aspace.host_reflex_policy.v1",
+  "canary": {
+    "adapter": "heuristic-baseline-v1",
+    "selected_action": "run_targeted_test",
+    "noul_verify": 0.77,
+    "risk_score": 1.445,
+    "choice": "run_targeted_test",
+    "choice_confidence": 0.864,
+    "authority": "deterministic_host",
+    "escalation_reasons": []
+  },
+  "benchmarks": [
+    {
+      "adapter": "heuristic-baseline-v1",
+      "fixture_count": 6,
+      "final_action_accuracy": 1.0,
+      "noul_brier": 0.020266666666666665,
+      "risk_mae": 0.04999999999999999,
+      "latency_ms_p50": 0.01930000144056976,
+      "latency_ms_p95": 0.047900000936351717,
+      "rows": [
+        {
+          "fixture": "clean",
+          "selected_action": "promote_to_review",
+          "expected_action": "promote_to_review",
+          "noul_verify": 0.12,
+          "risk_score": 0.25,
+          "choice_confidence": 0.93,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "needs_test",
+          "selected_action": "run_targeted_test",
+          "expected_action": "run_targeted_test",
+          "noul_verify": 0.76,
+          "risk_score": 1.3,
+          "choice_confidence": 0.93,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "failed",
+          "selected_action": "inspect_failure",
+          "expected_action": "inspect_failure",
+          "noul_verify": 0.92,
+          "risk_score": 3.0,
+          "choice_confidence": 0.93,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "deep",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.12,
+          "risk_score": 1.75,
+          "choice_confidence": 0.93,
+          "escalation_reasons": [
+            "deep_or_generative"
+          ]
+        },
+        {
+          "fixture": "irreversible",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.12,
+          "risk_score": 1.75,
+          "choice_confidence": 0.93,
+          "escalation_reasons": [
+            "irreversible_mutation"
+          ]
+        },
+        {
+          "fixture": "novel",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.12,
+          "risk_score": 0.6100000000000001,
+          "choice_confidence": 0.754,
+          "escalation_reasons": [
+            "novelty_threshold"
+          ]
+        }
+      ]
+    },
+    {
+      "adapter": "conservative-compatible-v1",
+      "fixture_count": 6,
+      "final_action_accuracy": 1.0,
+      "noul_brier": 0.03093333333333334,
+      "risk_mae": 0.19999999999999996,
+      "latency_ms_p50": 0.015700003132224083,
+      "latency_ms_p95": 0.01920000067912042,
+      "rows": [
+        {
+          "fixture": "clean",
+          "selected_action": "promote_to_review",
+          "expected_action": "promote_to_review",
+          "noul_verify": 0.2,
+          "risk_score": 0.43,
+          "choice_confidence": 0.88,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "needs_test",
+          "selected_action": "run_targeted_test",
+          "expected_action": "run_targeted_test",
+          "noul_verify": 0.84,
+          "risk_score": 1.48,
+          "choice_confidence": 0.88,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "failed",
+          "selected_action": "inspect_failure",
+          "expected_action": "inspect_failure",
+          "noul_verify": 1.0,
+          "risk_score": 3.0,
+          "choice_confidence": 0.88,
+          "escalation_reasons": []
+        },
+        {
+          "fixture": "deep",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.2,
+          "risk_score": 1.93,
+          "choice_confidence": 0.88,
+          "escalation_reasons": [
+            "deep_or_generative"
+          ]
+        },
+        {
+          "fixture": "irreversible",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.2,
+          "risk_score": 1.93,
+          "choice_confidence": 0.88,
+          "escalation_reasons": [
+            "irreversible_mutation"
+          ]
+        },
+        {
+          "fixture": "novel",
+          "selected_action": "escalate_system2",
+          "expected_action": "escalate_system2",
+          "noul_verify": 0.2,
+          "risk_score": 0.79,
+          "choice_confidence": 0.754,
+          "escalation_reasons": [
+            "novelty_threshold"
+          ]
+        }
+      ]
+    }
+  ],
+  "thresholds": {
+    "choice_confidence_min": 0.7,
+    "score_confidence_min": 0.65,
+    "noul_uncertainty_low": 0.4,
+    "noul_uncertainty_high": 0.6,
+    "novelty_system2": 0.6,
+    "drift_system2": 0.75
+  },
+  "interfaces": {
+    "yaz_input": "aspace.behavioral_digest.v1",
+    "graham_sink": "ReflexEvidenceSink.record_reflex_state(ReflexStateV1) -> evidence_ref",
+    "jev_transport": "POST /v1/systemone with verify/risk/route in one request"
+  },
+  "safety": {
+    "irreversible_requires_system2": true,
+    "deep_or_generative_requires_system2": true,
+    "host_owns_side_effects": true,
+    "high_model_confidence_never_grants_authority": true
+  }
+}

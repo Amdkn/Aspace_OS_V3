@@ -1,0 +1,50 @@
+{
+  "packet_version": "aspace.system_one_ecosystem_scan.v1",
+  "date": "2026-09-28",
+  "origin_ipbd": "16c4a90f-5934-4843-9e24-484f57d617e2",
+  "origin_github_issue": 125,
+  "river_canary_remote_provenance": "Amdkn/River@3c21acda",
+  "main_mesh_provenance": "origin/main@11880d10",
+  "stewardship": {
+    "platform_interface": "Amy/INTERFACE",
+    "research": "Bill/RESEARCH",
+    "design_contract": "Clara/DESIGN-FORGE",
+    "first_flow_consumer": "River/FLOW",
+    "implementation": "Ryan/BUILD"
+  },
+  "taxonomy": {
+    "models": ["Jev","Laya","Kev","CLM","GLiNER2.5-Decide","Tev1","Decider","NanoJev","Jev-Omni"],
+    "runtimes_servers": ["Decis"],
+    "connectors_sdks": ["System One Connector","zod-jev"],
+    "use_cases_benchmarks": ["laya-needle","Needle3 experiments"]
+  },
+  "classification_notes": {
+    "Laya": "true Jev-like model; Choice/Score/Noul; open weights; Jev-compatible /v1/systemone",
+    "Decis": "multi-engine serving layer, not a model",
+    "zod-jev": "schema/semantic-validation integration, not a model",
+    "laya-needle": "RAG passage-filtering consumer/use-case, not a model",
+    "Needle3": "experimental Jev-like reconstruction pattern; do not promote as a peer model without stronger provenance"
+  },
+  "benchmark_contract": [
+    "final_action_accuracy",
+    "noul_brier",
+    "score_mae",
+    "ece_or_calibration_error",
+    "latency_p50_p95",
+    "memory_or_runtime_cost",
+    "wire_compatibility",
+    "primitive_coverage",
+    "option_order_stability",
+    "offline_self_host_capability"
+  ],
+  "host_policy_invariant": "thresholds, authority and side effects remain deterministic and provider-independent",
+  "source_urls": [
+    "https://github.com/NandhaKishorM/laya",
+    "https://systemonemodels.org/",
+    "https://github.com/chaitin/Decis",
+    "https://github.com/Contrastive-LM/CLM",
+    "https://github.com/hellogumbo/awesome-jev",
+    "https://www.npmjs.com/package/zod-jev",
+    "https://systemonemodels.org/examples/projects/laya-needle/"
+  ]
+}
