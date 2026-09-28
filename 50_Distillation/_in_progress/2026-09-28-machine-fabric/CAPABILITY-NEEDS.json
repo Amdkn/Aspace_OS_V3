@@ -1,0 +1,70 @@
+{
+  "schema": "aspace.capability-needs.bundle.v1",
+  "mission_issue": 194,
+  "source_cell": 195,
+  "producer": "Bill",
+  "return_to": {
+    "capability": "Clara/DESIGN",
+    "issue": 196
+  },
+  "build_gate": {
+    "capability": "Ryan/BUILD",
+    "issue": 197,
+    "status": "blocked_until_clara_boundary"
+  },
+  "needs": [
+    {
+      "id": "CN-AMF-EXECUTION-CORE",
+      "need": "Compile daemon/user-worker boundary plus durable operation, idempotency, receipt, lease, retry, DLQ and replay contracts.",
+      "evidence": [
+        "DISCOVERY-PACKET-MACHINE-FABRIC.md#8-missing-primitives-classic-dc-does-not-make-durable"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-POLICY",
+      "need": "Define one pre-execution policy contract spanning filesystem/process/interactive-input/browser/UI/registry/service/network actions.",
+      "evidence": [
+        "wonderwhy-er/DesktopCommanderMCP#691",
+        "#552",
+        "#431"
+      ],
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-CAPABILITY-MANIFEST",
+      "need": "Define adapter manifest schema: capability ID, schema, side effects, risk, authority, idempotency, compensation, health and observability.",
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-CHROME-BRIDGE",
+      "need": "Design MV3 side-panel/service-worker + Native Messaging bridge + reconnect/backpressure contract; separate DOM authority from debugger/CDP authority.",
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-WINDOWS-WORKER",
+      "need": "Design signed-in user-session worker using UIA/accessibility first with scripting/coordinate fallback and explicit elevation/secure-desktop failure semantics.",
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-REMOTE",
+      "need": "Design localhost-first transport adapters. Tailscale Serve is v0 private canary; Headscale/WireGuard are sovereignty candidates requiring separate identity semantics tests.",
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-HEALTH",
+      "need": "Define truthful availability states across daemon, ledger, policy, worker, browser bridge, desktop session and individual capabilities.",
+      "blocking": true
+    },
+    {
+      "id": "CN-AMF-MCP-CONFORMANCE",
+      "need": "Select MCP SDK only after cold/warm stdio + Streamable HTTP conformance canaries; durable jobs must not rely on MCP session affinity.",
+      "blocking": false
+    },
+    {
+      "id": "CN-AMF-REPLAY-CANARY",
+      "need": "Make restart-after-mutation -> replay -> zero duplicate mutation the MVP acceptance invariant.",
+      "blocking": true
+    }
+  ]
+}
