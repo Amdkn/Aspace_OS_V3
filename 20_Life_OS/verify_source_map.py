@@ -34,9 +34,6 @@ def main():
 
         for name, value in source_map[category].items():
             if category in ["frameworks", "provenance", "focused_verification"]:
-                # skip 12wy focused verification as it is not present in the current snapshot
-                if category == "focused_verification" and name == "12WY" and not os.path.isfile(os.path.join(BASE, value)):
-                    continue
                 full_path = os.path.join(BASE, value)
                 if not os.path.isfile(full_path):
                     errors.append(f"Path not found for {category}.{name}: {value} ({full_path})")
