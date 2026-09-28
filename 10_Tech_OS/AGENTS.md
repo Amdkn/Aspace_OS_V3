@@ -17,6 +17,17 @@ This is a **DOX child AGENTS.md** under the A'Space OS V3 root `AGENTS.md`. It c
 3. **Rick does not govern the 3 OS.** Rick governs the mechanism that produces them (`replicator/`). Rick does not replace individual Core governance.
 4. **Watchdog has 3 thresholds.** vivant (A0 écrit < 10 min), bien portant (node < 45, cadences ≤ 2, disk > 5 Go), anti-fragile (cause + guard code + guard seen + lesson). Read `WATCHDOG.md` before touching `kernel/`.
 
+## Current surface fabric — canonical routing rule
+
+Machine contract: `10_Tech_OS/kernel/shared_surface_fabric.json`; executable router: `surface_fabric.py`.
+
+- **Stewardship is accountability, not exclusivity.** Agent identity, app/surface, harness and capability are orthogonal.
+- Default stewards: Rory → Linear; Ryan → GitHub; Yaz → Agent OS / Omarchy / Tinybird; Graham → Supabase; Amy → Herdr; River → Google Workspace CLI/workflows.
+- Every registered surface is shared cross-Core unless an explicit policy forbids a capability. Bill/Clara/Nardole using GitHub, or Kernel work projected in Linear, is normal composition rather than ownership drift.
+- Herdr is Amy's persistent harness interface and may mount Antigravity, Codex, Claude Code, Hermes Agent and DeepSeek harnesses without turning those harnesses into Amy's identity.
+- Life OS A1-A3 and Business OS B1-B3 compose through PARA Projects/Areas inside 12WY cycles; River's GWS workflow plane may drive Drive, Calendar, Tasks, Sheets, Docs, triggers and automations across that nested delivery.
+- Historical D4 notes below record what existed at a date; they MUST NOT be interpreted as exclusive Agent→App bindings.
+
 ## Cross-references
 
 - Root: [`/AGENTS.md`](../../AGENTS.md)

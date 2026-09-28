@@ -1,0 +1,163 @@
+{
+  "version": "2026-09-27.1",
+  "authority": "A0 Amadeus / Rick Verse",
+  "model": "shared_surface_capability_fabric",
+  "invariants": [
+    "identity != surface != harness != capability",
+    "surface stewardship defines default accountability, never exclusive reach",
+    "cross-core use of a surface is allowed unless an explicit policy forbids it",
+    "routing is capability-and-evidence based, not persona-to-app binding",
+    "Life A1-A3 and Business B1-B3 may compose through shared surfaces without changing agent identity",
+    "a projection may close while its parent intent remains open"
+  ],
+  "agents": [
+    "A0_Amadeus",
+    "S1_Rick",
+    "Doctor13",
+    "Doctor11",
+    "Doctor12",
+    "Ryan",
+    "Yaz",
+    "Graham",
+    "Amy",
+    "Rory",
+    "River",
+    "Bill",
+    "Clara",
+    "Nardole",
+    "Donna"
+  ],
+  "surfaces": {
+    "linear": {
+      "steward": "Rory",
+      "kind": "human_control_workspace",
+      "shared": true,
+      "capabilities": [
+        "intent_projection",
+        "issue_tracking",
+        "project_planning",
+        "cross_core_coordination"
+      ]
+    },
+    "github": {
+      "steward": "Ryan",
+      "kind": "software_factory_workspace",
+      "shared": true,
+      "capabilities": [
+        "code",
+        "issues",
+        "discussions",
+        "projects",
+        "actions",
+        "wiki",
+        "security",
+        "pull_requests",
+        "artifacts"
+      ]
+    },
+    "agent_os": {
+      "steward": "Yaz",
+      "kind": "observability_control_surface",
+      "shared": true,
+      "capabilities": [
+        "observability",
+        "runtime_projection",
+        "control_plane"
+      ]
+    },
+    "omarchy": {
+      "steward": "Yaz",
+      "kind": "living_habitat",
+      "shared": true,
+      "capabilities": [
+        "habitat",
+        "workspace_projection",
+        "runtime_observation"
+      ]
+    },
+    "tinybird": {
+      "steward": "Yaz",
+      "kind": "telemetry_analytics",
+      "shared": true,
+      "capabilities": [
+        "telemetry",
+        "analytics",
+        "event_observation"
+      ]
+    },
+    "supabase": {
+      "steward": "Graham",
+      "kind": "shared_state_memory_plane",
+      "shared": true,
+      "capabilities": [
+        "persistent_state",
+        "memory",
+        "sql",
+        "rls",
+        "events",
+        "blackboard"
+      ]
+    },
+    "herdr": {
+      "steward": "Amy",
+      "kind": "persistent_harness_interface",
+      "shared": true,
+      "capabilities": [
+        "tmux_persistence",
+        "session_habitat",
+        "harness_interface"
+      ],
+      "mounted_harnesses": [
+        "antigravity",
+        "codex",
+        "claude_code",
+        "hermes_agent",
+        "deepseek_harness"
+      ]
+    },
+    "gws": {
+      "steward": "River",
+      "kind": "google_workspace_cli_and_workflow_plane",
+      "shared": true,
+      "capabilities": [
+        "drive",
+        "calendar",
+        "tasks",
+        "sheets",
+        "docs",
+        "triggers",
+        "automation",
+        "workflow_execution"
+      ]
+    }
+  },
+  "composition": {
+    "life_business_nested_delivery": {
+      "statement": "Life OS A1-A3 develops and orchestrates Business OS B1-B3 through PARA Projects/Areas inside 12WY cycles.",
+      "life_layers": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "business_layers": [
+        "B1",
+        "B2",
+        "B3"
+      ],
+      "planning": [
+        "PARA",
+        "12WY"
+      ],
+      "workflow_surface": "gws",
+      "runtime_surfaces": [
+        "herdr",
+        "github",
+        "linear",
+        "supabase",
+        "agent_os",
+        "omarchy",
+        "tinybird"
+      ]
+    }
+  }
+}

@@ -7,6 +7,7 @@ Expose:
 """
 import argparse, hashlib, json, os, sqlite3, sys, uuid
 from enum import Enum
+from surface_fabric import SurfaceFabric
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))
@@ -343,6 +344,10 @@ def select_cmd(a):
     harnesses = get_harnesses(DB, a.require_capability or [], a.min_evidence_level)
     print(json.dumps(harnesses, indent=2))
 
+def surface_select_cmd(a):
+    fabric = SurfaceFabric()
+    emit(fabric.select(a.agent, a.capability, a.prefer))
+
 def build_parser():
     P = argparse.ArgumentParser(description="WorkGraph & Harness Capability Engine")
     P.add_argument("--require-capability", action="append", default=None,
@@ -428,6 +433,12 @@ def build_parser():
     p.add_argument("--require-capability", action="append", default=[])
     p.add_argument("--min-evidence-level", type=int, default=0)
     p.set_defaults(f=select_cmd)
+
+    p = S.add_parser("surface-select")
+    p.add_argument("--agent", required=True)
+    p.add_argument("--capability", required=True)
+    p.add_argument("--prefer")
+    p.set_defaults(f=surface_select_cmd)
 
     return P
 
