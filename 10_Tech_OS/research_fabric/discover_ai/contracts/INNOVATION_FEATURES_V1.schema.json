@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://research/discover-ai/innovation-features/v1",
+  "title": "InnovationFeaturesV1",
+  "type": "object",
+  "required": [
+    "feature_id", "source_refs", "problem", "mechanism",
+    "inputs", "outputs", "constraints", "claims",
+    "limitations", "artifact_refs"
+  ],
+  "properties": {
+    "feature_id": {"type": "string"},
+    "source_refs": {"type": "array", "items": {"type": "string"}},
+    "problem": {"type": "string"},
+    "mechanism": {"type": "string"},
+    "inputs": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "benchmark": {"type": ["string", "null"]},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "execution_mode": {"type": ["string", "null"]},
+    "latency": {"type": ["string", "null"]},
+    "cost": {"type": ["string", "null"]},
+    "side_effects": {"type": "array", "items": {"type": "string"}},
+    "architecture": {"type": ["string", "null"]},
+    "claims": {"type": "array", "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "artifact_refs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

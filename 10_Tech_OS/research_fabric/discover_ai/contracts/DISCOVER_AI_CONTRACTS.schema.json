@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://research/discover-ai/contracts/v1",
+  "title": "Discover AI Research Atlas Contracts",
+  "$defs": {
+    "CitationCandidate": {
+      "type": "object",
+      "required": [
+        "candidate_id", "video_id", "candidate_kind",
+        "raw_text", "extraction_mode", "confidence"
+      ],
+      "properties": {
+        "candidate_id": {"type": "string"},
+        "video_id": {"type": "string"},
+        "candidate_kind": {
+          "enum": ["doi_url", "arxiv_url", "provider_url", "plain_id", "bibliographic_block"]
+        },
+        "raw_text": {"type": "string"},
+        "normalized_title": {"type": ["string", "null"]},
+        "authors_raw": {"type": "array", "items": {"type": "string"}},
+        "url_or_id": {"type": ["string", "null"]},
+        "extraction_mode": {"type": "string"},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "InnovationFeaturesV1": {
+      "type": "object",
+      "required": [
+        "feature_id", "source_refs", "problem", "mechanism",
+        "inputs", "outputs", "constraints", "claims",
+        "limitations", "artifact_refs"
+      ],
+      "properties": {
+        "feature_id": {"type": "string"},
+        "source_refs": {"type": "array", "items": {"type": "string"}},
+        "problem": {"type": "string"},
+        "mechanism": {"type": "string"},
+        "inputs": {"type": "array", "items": {"type": "string"}},
+        "outputs": {"type": "array", "items": {"type": "string"}},
+        "constraints": {"type": "array", "items": {"type": "string"}},
+        "benchmark": {"type": ["string", "null"]},
+        "dependencies": {"type": "array", "items": {"type": "string"}},
+        "execution_mode": {"type": ["string", "null"]},
+        "latency": {"type": ["string", "null"]},
+        "cost": {"type": ["string", "null"]},
+        "side_effects": {"type": "array", "items": {"type": "string"}},
+        "architecture": {"type": ["string", "null"]},
+        "claims": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": "array", "items": {"type": "string"}},
+        "artifact_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "CapabilityMappingCandidate": {
+      "type": "object",
+      "required": [
+        "mapping_id", "feature_id", "capability_atom",
+        "relation_to_nearest", "nearest_capabilities",
+        "os_affinity", "decision_level", "choice", "score",
+        "noul", "host_gate"
+      ],
+      "properties": {
+        "mapping_id": {"type": "string"},
+        "feature_id": {"type": "string"},
+        "capability_atom": {"type": "string"},
+        "relation_to_nearest": {
+          "enum": [
+            "SAME", "EXTENDS", "REPLACES", "COMPOSES_WITH",
+            "ACCELERATES", "OBSERVES", "CONTROLS", "VALIDATES",
+            "ROUTES", "MEMORIZES", "SIMULATES", "RENDERS",
+            "INTERFACES", "NOVEL"
+          ]
+        },
+        "nearest_capabilities": {"type": "array", "items": {"type": "string"}},
+        "os_affinity": {
+          "type": "object",
+          "required": ["kernel", "life", "business"],
+          "properties": {
+            "kernel": {"type": "number", "minimum": 0, "maximum": 1},
+            "life": {"type": "number", "minimum": 0, "maximum": 1},
+            "business": {"type": "number", "minimum": 0, "maximum": 1}
+          }
+        },
+        "decision_level": {
+          "enum": ["L0", "L0.5", "L1", "L2", "L3"]
+        },
+        "choice": {"type": "string"},
+        "score": {"type": "number"},
+        "noul": {"type": "number"},
+        "host_gate": {
+          "enum": ["ACCEPT", "ABSTAIN", "SYSTEM2", "INVALID"]
+        },
+        "evidence_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "RunReceipt": {
+      "type": "object",
+      "required": [
+        "run_id", "operation_id", "stage", "status",
+        "input_hash", "output_ref"
+      ],
+      "properties": {
+        "run_id": {"type": "string"},
+        "operation_id": {"type": "string"},
+        "stage": {"type": "string"},
+        "status": {
+          "enum": ["PASS", "PASS_WITH_REVIEW", "FAILED", "DENIED"]
+        },
+        "input_hash": {"type": "string"},
+        "output_ref": {"type": "string"},
+        "error_code": {"type": ["string", "null"]},
+        "retry_of": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/CitationCandidate"},
+    {"$ref": "#/$defs/InnovationFeaturesV1"},
+    {"$ref": "#/$defs/CapabilityMappingCandidate"},
+    {"$ref": "#/$defs/RunReceipt"}
+  ]
+}

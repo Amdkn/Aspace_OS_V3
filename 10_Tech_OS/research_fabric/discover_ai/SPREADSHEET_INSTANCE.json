@@ -1,0 +1,21 @@
+{
+  "spreadsheet_id": "1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0",
+  "title": "A'Space Discover AI Research Atlas",
+  "created": true,
+  "url": "https://docs.google.com/spreadsheets/d/1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0/edit",
+  "tabs": [
+    "00_Control",
+    "01_Channels",
+    "02_Videos",
+    "03_CitationCandidates",
+    "04_Papers",
+    "05_VideoPaperEdges",
+    "06_PaperRelations",
+    "07_Artifacts",
+    "08_InnovationFeatures",
+    "09_CapabilityCandidates",
+    "10_ReviewQueue",
+    "11_Runs",
+    "12_Dashboard"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "schema": "aspace.factory-blueprint.v1",
+  "factory_id": "DISCOVER-AI-RESEARCH-ATLAS",
+  "version": "0.1.0",
+  "trigger_schema": {
+    "type": "object",
+    "required": ["channel_ref", "mode"],
+    "properties": {
+      "channel_ref": {"type": "string"},
+      "mode": {"enum": ["historical_inventory", "incremental_refresh", "deep_capture", "capability_mapping"]},
+      "since": {"type": ["string", "null"]}
+    }
+  },
+  "input_contract": {
+    "channel": "Discover AI certification corpus first",
+    "spreadsheet_schema": "contracts/SPREADSHEET_SCHEMA.json",
+    "source_policy": "official inventory first; yt-dlp fallback/verification",
+    "bill_layers": ["CHANNEL_HARVESTER", "S0_SCOUT", "S1_WATCH", "S1_PAPER"]
+  },
+  "output_contract": {
+    "spreadsheet_projection": "A'Space Discover AI Research Atlas",
+    "artifacts": [
+      "description snapshots", "transcripts", "keyframes", "paper metadata",
+      "paper PDFs when selected", "repo/commit refs", "InnovationFeaturesV1"
+    ],
+    "design_outputs": [
+      "CapabilityCandidate", "CapabilityNeed", "DiscoveryPacket", "ResearchLineage"
+    ]
+  },
+  "system1_rules": [
+    {"rule": "existing stable IDs are reused; rerun does not duplicate rows"},
+    {"rule": "raw descriptions/transcripts/PDFs are artifacts, not authoritative cell blobs"},
+    {"rule": "direct DOI/arXiv/provider IDs resolve deterministically before fuzzy matching"},
+    {"rule": "ambiguous bibliographic matching becomes NEEDS_REVIEW"},
+    {"rule": "metadata/abstract/citation graph precede full-paper capture"},
+    {"rule": "repetition across independent sources is signal, not authority"},
+    {"rule": "Antigravity output must validate before GWS write"},
+    {"rule": "classifier/model output never bypasses deterministic Host gate"}
+  ],
+  "escalation_policy": {
+    "system2": "Antigravity",
+    "invoke_when": [
+      "low extraction confidence",
+      "high Noul",
+      "novel capability composition",
+      "contradictory evidence",
+      "ambiguous multi-OS mapping"
+    ],
+    "returns": "CapabilityMappingCandidate",
+    "authority": "advisory_only"
+  },
+  "authority": {
+    "allowed": [
+      "public metadata inventory", "artifact capture", "bibliographic resolution",
+      "Spreadsheet projection writes through GWS CLI",
+      "bounded Antigravity indexing of selected evidence"
+    ],
+    "forbidden": [
+      "automatic architecture promotion", "automatic capability installation",
+      "raw credential/cookie export", "model-direct arbitrary Sheet mutation",
+      "eager full-text ingestion of entire citation graph"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": [
+      "new external write authority", "high-cost bulk deep capture", "canonical architecture mutation"
+    ]
+  },
+  "side_effects": {
+    "gws": "create/reuse workbook, batch row projection, append receipts",
+    "local": "immutable evidence artifacts and run receipts",
+    "github": "versioned design/build evidence only",
+    "memory": "Graham-controlled promotion only"
+  },
+  "evidence_contract": {
+    "minimum": [
+      "run_id", "operation_id", "input_hash", "source_ref",
+      "artifact_hash_or_provider_id", "output_ref", "validation_state"
+    ],
+    "receipt_tab": "11_Runs",
+    "artifact_tab": "07_Artifacts"
+  },
+  "rollback_retry_dlq": {
+    "idempotency": "stable row/entity IDs + operation_id",
+    "retry": "replay failed stage only",
+    "unknown_resolution": "10_ReviewQueue",
+    "causal_failure": "Donna RECOVER when effect state is unknown"
+  },
+  "observability_yaz": {
+    "metrics": [
+      "videos inventoried", "descriptions changed", "citations extracted",
+      "resolution precision/review rate", "deep capture yield",
+      "Antigravity validation failures", "duplicate suppression",
+      "capability gaps detected"
+    ]
+  },
+  "state_graham": {
+    "owns": [
+      "provenance", "paper deduplication", "memory promotion",
+      "canonical evidence refs", "cross-run identity reconciliation"
+    ]
+  },
+  "dispatch_nardole": {
+    "routes": [
+      "inventory queue", "resolver queue", "deep capture queue",
+      "System-Two queue", "review queue", "CapabilityNeed return-to"
+    ],
+    "backpressure": "deep capture bounded by shortlist/budget"
+  },
+  "build_ryan": {
+    "packet": "mvp/RYAN_BUILD_PACKET.md",
+    "first_cells": ["M0", "M1", "M2", "M3"],
+    "harness": "Antigravity for code/build; GWS CLI for Spreadsheet effects"
+  },
+  "interface_amy": {
+    "surface": "Google Spreadsheet dashboard/review queue",
+    "rule": "presentation only; not canonical authority"
+  },
+  "flow_river": {
+    "later_stage": "Needle + Jev-like reflex mapping behind deterministic HostPolicy",
+    "rule": "classification/routing stewardship, not capability ownership"
+  },
+  "coherence_rory": {
+    "invariants": [
+      "one canonical paper identity", "no duplicate video/entity rows",
+      "no false RESOLVED", "no model-owned authority",
+      "raw evidence remains addressable after Sheet edits"
+    ]
+  },
+  "compatibility": {
+    "last30days": "S0 recency scout after historical atlas baseline",
+    "WATCH": "S1 selected video deep capture",
+    "PAPER": "S1 selected paper deep capture",
+    "YouTube_Data_API": "preferred structured inventory",
+    "yt-dlp": "fallback/caption/metadata verification",
+    "GWS_CLI": "Spreadsheet mutation adapter",
+    "Antigravity": "deep indexer and System-Two resolver"
+  }
+}

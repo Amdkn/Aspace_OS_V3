@@ -1,0 +1,123 @@
+{
+  "schema": "aspace.discover-ai.design-evidence.v1",
+  "checked_at": "2026-09-28T20:26:15.494260+00:00",
+  "spreadsheet_id": "1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0",
+  "headers_all_pass": true,
+  "tab_checks": [
+    {
+      "tab": "00_Control",
+      "pass": true,
+      "expected": 5,
+      "got": 5
+    },
+    {
+      "tab": "01_Channels",
+      "pass": true,
+      "expected": 9,
+      "got": 9
+    },
+    {
+      "tab": "02_Videos",
+      "pass": true,
+      "expected": 16,
+      "got": 16
+    },
+    {
+      "tab": "03_CitationCandidates",
+      "pass": true,
+      "expected": 13,
+      "got": 13
+    },
+    {
+      "tab": "04_Papers",
+      "pass": true,
+      "expected": 18,
+      "got": 18
+    },
+    {
+      "tab": "05_VideoPaperEdges",
+      "pass": true,
+      "expected": 8,
+      "got": 8
+    },
+    {
+      "tab": "06_PaperRelations",
+      "pass": true,
+      "expected": 8,
+      "got": 8
+    },
+    {
+      "tab": "07_Artifacts",
+      "pass": true,
+      "expected": 11,
+      "got": 11
+    },
+    {
+      "tab": "08_InnovationFeatures",
+      "pass": true,
+      "expected": 20,
+      "got": 20
+    },
+    {
+      "tab": "09_CapabilityCandidates",
+      "pass": true,
+      "expected": 19,
+      "got": 19
+    },
+    {
+      "tab": "10_ReviewQueue",
+      "pass": true,
+      "expected": 12,
+      "got": 12
+    },
+    {
+      "tab": "11_Runs",
+      "pass": true,
+      "expected": 14,
+      "got": 14
+    },
+    {
+      "tab": "12_Dashboard",
+      "pass": true,
+      "expected": 5,
+      "got": 5
+    }
+  ],
+  "control_values": [
+    [
+      "key",
+      "value",
+      "updated_at",
+      "run_id",
+      "notes"
+    ],
+    [
+      "schema_version",
+      "aspace.discover-ai.spreadsheet.v1"
+    ],
+    [
+      "atlas_id",
+      "DISCOVER-AI-RESEARCH-ATLAS"
+    ],
+    [
+      "corpus",
+      "Discover AI"
+    ],
+    [
+      "authority",
+      "operational_projection_not_ssot"
+    ],
+    [
+      "mutation_adapter",
+      "gws CLI"
+    ],
+    [
+      "deep_indexer",
+      "Antigravity"
+    ],
+    [
+      "build_owner",
+      "Ryan"
+    ]
+  ]
+}

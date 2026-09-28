@@ -1,0 +1,165 @@
+{
+  "schema": "aspace.discover-ai.spreadsheet.v1",
+  "workbook_title": "A'Space Discover AI Research Atlas",
+  "role": "operational_projection_not_ssot",
+  "mutation_adapter": "gws CLI",
+  "tabs": [
+    {
+      "title": "00_Control",
+      "key": "key",
+      "columns": [
+        "key", "value", "updated_at", "run_id", "notes"
+      ]
+    },
+    {
+      "title": "01_Channels",
+      "key": "channel_id",
+      "columns": [
+        "channel_id", "handle", "title", "uploads_playlist_id",
+        "source_url", "inventory_state", "last_inventory_at",
+        "video_count_seen", "source_run_id"
+      ]
+    },
+    {
+      "title": "02_Videos",
+      "key": "video_id",
+      "columns": [
+        "video_id", "channel_id", "published_at", "title", "url",
+        "description_hash", "description_artifact_ref", "description_state",
+        "transcript_state", "keyframes_state", "citation_count",
+        "resolved_paper_count", "deep_capture_state", "first_seen_at",
+        "last_seen_at", "source_run_id"
+      ]
+    },
+    {
+      "title": "03_CitationCandidates",
+      "key": "candidate_id",
+      "columns": [
+        "candidate_id", "video_id", "candidate_kind", "raw_text",
+        "normalized_title", "authors_raw", "url_or_id", "source_span",
+        "extraction_mode", "extract_confidence", "resolver_state",
+        "review_reason", "source_run_id"
+      ]
+    },
+    {
+      "title": "04_Papers",
+      "key": "paper_id",
+      "columns": [
+        "paper_id", "canonical_id_type", "canonical_id", "doi",
+        "arxiv_id", "openreview_id", "title", "year", "authors",
+        "abstract_hash", "abstract_artifact_ref", "resolver_provider",
+        "resolver_confidence", "review_state", "deep_capture_state",
+        "first_seen_at", "last_seen_at", "source_run_id"
+      ]
+    },
+    {
+      "title": "05_VideoPaperEdges",
+      "key": "edge_id",
+      "columns": [
+        "edge_id", "video_id", "paper_id", "relation",
+        "candidate_id", "resolution_confidence", "provenance_ref",
+        "source_run_id"
+      ]
+    },
+    {
+      "title": "06_PaperRelations",
+      "key": "edge_id",
+      "columns": [
+        "edge_id", "source_paper_id", "relation", "target_paper_id",
+        "provider", "confidence", "provenance_ref", "source_run_id"
+      ]
+    },
+    {
+      "title": "07_Artifacts",
+      "key": "artifact_id",
+      "columns": [
+        "artifact_id", "owner_type", "owner_id", "artifact_type",
+        "uri", "sha256", "mime_type", "size_bytes", "capture_method",
+        "captured_at", "source_run_id"
+      ]
+    },
+    {
+      "title": "08_InnovationFeatures",
+      "key": "feature_id",
+      "columns": [
+        "feature_id", "source_type", "source_id", "problem",
+        "mechanism", "inputs", "outputs", "constraints", "benchmark",
+        "dependencies", "execution_mode", "latency", "cost",
+        "side_effects", "claims", "limitations", "artifact_refs",
+        "agy_run_id", "validation_state", "source_run_id"
+      ]
+    },
+    {
+      "title": "09_CapabilityCandidates",
+      "key": "mapping_id",
+      "columns": [
+        "mapping_id", "feature_id", "capability_atom",
+        "relation_to_nearest", "nearest_capabilities",
+        "os_affinity_kernel", "os_affinity_life", "os_affinity_business",
+        "companion_affinity", "decision_level", "choice", "score",
+        "noul", "host_gate", "mapping_state", "system2_ref",
+        "graham_state", "clara_state", "source_run_id"
+      ]
+    },
+    {
+      "title": "10_ReviewQueue",
+      "key": "review_id",
+      "columns": [
+        "review_id", "entity_type", "entity_id", "reason", "priority",
+        "evidence_refs", "proposed_action", "owner_capability",
+        "state", "reviewed_by", "reviewed_at", "source_run_id"
+      ]
+    },
+    {
+      "title": "11_Runs",
+      "key": "run_id",
+      "columns": [
+        "run_id", "operation_id", "stage", "tool", "harness",
+        "model", "started_at", "finished_at", "status", "input_hash",
+        "output_ref", "receipt_ref", "error_code", "retry_of"
+      ]
+    },
+    {
+      "title": "12_Dashboard",
+      "key": "metric",
+      "columns": [
+        "metric", "value", "window", "computed_at", "source_ref"
+      ]
+    }
+  ],
+  "enums": {
+    "resolver_state": [
+      "NEW", "RESOLVED", "NEEDS_REVIEW", "NOT_FOUND", "ERROR"
+    ],
+    "deep_capture_state": [
+      "NOT_SELECTED", "QUEUED", "CAPTURED", "INDEXED", "FAILED"
+    ],
+    "host_gate": [
+      "ACCEPT", "ABSTAIN", "SYSTEM2", "INVALID"
+    ],
+    "review_state": [
+      "UNREVIEWED", "NEEDS_REVIEW", "ACCEPTED", "REJECTED"
+    ]
+  },
+  "id_rules": {
+    "candidate_id": "sha256(video_id + normalized candidate payload)",
+    "paper_id": "canonical provider ID when stable, else sha256(normalized title+authors+year)",
+    "edge_id": "sha256(source ID + relation + target ID)",
+    "artifact_id": "sha256(content bytes) where possible",
+    "run_id": "ULID or timestamp+stable mission suffix",
+    "operation_id": "stable idempotency key per consequential GWS mutation"
+  },
+  "write_rules": {
+    "history_tabs": [
+      "05_VideoPaperEdges", "06_PaperRelations", "07_Artifacts", "11_Runs"
+    ],
+    "projection_tabs": [
+      "01_Channels", "02_Videos", "03_CitationCandidates",
+      "04_Papers", "08_InnovationFeatures", "09_CapabilityCandidates",
+      "10_ReviewQueue", "12_Dashboard"
+    ],
+    "raw_evidence_in_cells": false,
+    "batch_writes": true,
+    "receipt_required": true
+  }
+}
