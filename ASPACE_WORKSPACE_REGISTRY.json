@@ -6,7 +6,8 @@
     "name": "A'Space V3",
     "model": "one_system_three_cores",
     "supervision": "Rick's Verse",
-    "sovereign_node": "A0-Amadeus"
+    "sovereign_node": "A0-Amadeus",
+    "world_model": "Astra=unified A'Space V3; Sol=Agent OS; Terra=Life OS 2026; Luna=Business federation"
   },
   "identity_registry": {
     "type": "ADE_REGISTRY",
@@ -76,7 +77,8 @@
       "status": "active",
       "steward": "Ryan",
       "shared": true,
-      "forge_chain": "Ryan -> Bill -> Clara -> Nardole"
+      "forge_chain": "deprecated_fixed_chain",
+      "forge_model": "fractal mission composition: capabilities are reentrant; Clara compiles topology; Nardole routes throughout"
     },
     "linear": {
       "role": "human_blackboard_and_control_tower",
@@ -196,7 +198,7 @@
         "local_path": "C:/Users/amado/agent-os",
         "codespace_path": "local-only/Agent-OS",
         "bootstrap": "local_only",
-        "authority": "satellite",
+        "authority": "sol_world_parent",
         "evidence": "local living parent; GitHub repository exists but has no usable committed main history",
         "machine_blackboard_sync": {
           "project": "Agent OS Backend",
@@ -218,7 +220,7 @@
           },
           "provenance_rule": "historical collector timestamps are preserved inside source JSON; first snapshot does not coerce malformed timestamps"
         },
-        "local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+        "local_junction": "C:/Users/amado/ASpace_OS_V3/Worlds/Sol",
         "legacy_v3_gitlink": "C:/Users/amado/ASpace_OS_V3/00_Amadeus/10_Observers/agent-os",
         "desktop_snapshot": {
           "branch": "snapshot/tera-5555-2026-09-27",
@@ -226,7 +228,8 @@
           "port": 5555,
           "sync": "pushed_to_Amdkn/Agent-OS-Desktop"
         },
-        "parent_sync_note": "local Agent-OS parent snapshot push blocked by GitHub secret scanning on historical commit; no bypass performed"
+        "parent_sync_note": "local Agent-OS parent snapshot push blocked by GitHub secret scanning on historical commit; no bypass performed",
+        "legacy_local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS"
       },
       "agent_os_desktop": {
         "repo": "Amdkn/Agent-OS-Desktop",
@@ -234,10 +237,10 @@
         "default_branch": "snapshot/tera-5555-2026-09-27",
         "codespace_path": "satellites/Agent-OS-Desktop",
         "bootstrap": "auto",
-        "authority": "satellite",
+        "authority": "sol_world_desktop",
         "evidence": "GitHub verified",
         "local_path": "C:/Users/amado/agent-os/desktop",
-        "local_head": "9d5782868babb16e4477214dee0a40a8b6825e80"
+        "local_head": "7c6dc8b"
       },
       "life_os_2026": {
         "repo": "Amdkn/Life-OS-2026",
@@ -245,11 +248,12 @@
         "default_branch": "main",
         "codespace_path": "satellites/Life-OS-2026",
         "bootstrap": "auto",
-        "authority": "life_projection",
+        "authority": "terra_world",
         "evidence": "GitHub verified",
         "local_path": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
-        "local_junction": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
-        "local_head": "3718ee652838eee498195b5dded83701fdb56aec"
+        "local_junction": "C:/Users/amado/ASpace_OS_V3/Worlds/Terra",
+        "local_head": "3718ee652838eee498195b5dded83701fdb56aec",
+        "legacy_local_junction": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026"
       },
       "hermes_workspace": {
         "repo": "outsourc-e/hermes-workspace",
@@ -279,8 +283,9 @@
         "default_branch": "main",
         "codespace_path": "business/BusinessOS",
         "bootstrap": "auto",
-        "authority": "business_federation",
-        "evidence": "GitHub verified"
+        "authority": "luna_business_federation",
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/BusinessOS_analysis"
       },
       "business_office_3_os": {
         "repo": "Amdkn/Business-Office-3-OS",
@@ -288,8 +293,9 @@
         "default_branch": "main",
         "codespace_path": "business/Business-Office-3-OS",
         "bootstrap": "auto",
-        "authority": "business_projection",
-        "evidence": "GitHub verified"
+        "authority": "luna_business_federation",
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/Business-Office-3-OS"
       },
       "omk_business_os": {
         "repo": "Amdkn/01-OMK-Business-OS",
@@ -297,8 +303,9 @@
         "default_branch": "main",
         "codespace_path": "business/01-OMK-Business-OS",
         "bootstrap": "auto",
-        "authority": "business_satellite",
-        "evidence": "GitHub verified"
+        "authority": "luna_business_federation",
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/ASpace_Worlds/_repos/01-OMK-Business-OS"
       },
       "omk_mobile_back_office": {
         "repo": "Amdkn/The-OMK-Mobile-Back-Office",
@@ -306,8 +313,9 @@
         "default_branch": "main",
         "codespace_path": "business/The-OMK-Mobile-Back-Office",
         "bootstrap": "auto",
-        "authority": "business_projection",
-        "evidence": "GitHub verified"
+        "authority": "luna_business_federation",
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/The-OMK-Mobile-Back-Office"
       },
       "omk_desktop_web_os": {
         "repo": "omk-services/OMK-DESKTOP-WEB-OS",
@@ -316,16 +324,37 @@
         "local_path": "C:/Users/amado/ASpace_OS_V3/30_Business_OS/10_Projects/coach-os-app",
         "codespace_path": "business/OMK-DESKTOP-WEB-OS",
         "bootstrap": "auto",
-        "authority": "business_projection",
+        "authority": "luna_business_projection",
         "evidence": "local git remote verified"
       },
       "omk_saas_os": {
-        "repo": "Amdkn/00-omk-saas-os",
-        "clone_url": "https://github.com/Amdkn/00-omk-saas-os.git",
+        "repo": "omk-services/00-omk-saas-os",
+        "clone_url": "https://github.com/omk-services/00-omk-saas-os.git",
         "default_branch": "main",
         "codespace_path": "business/00-omk-saas-os",
         "bootstrap": "auto",
-        "authority": "business_satellite",
+        "authority": "luna_business_federation",
+        "evidence": "GitHub verified",
+        "local_path": "C:/Users/amado/00-omk-saas-os"
+      },
+      "omk_office_jaas": {
+        "repo": "Amdkn/The-OMK-Office1.0-JaaS",
+        "clone_url": "https://github.com/Amdkn/The-OMK-Office1.0-JaaS.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/ASpace_Worlds/_repos/The-OMK-Office1.0-JaaS",
+        "codespace_path": "business/The-OMK-Office1.0-JaaS",
+        "bootstrap": "auto",
+        "authority": "luna_business_product",
+        "evidence": "GitHub verified"
+      },
+      "omk_landing": {
+        "repo": "Amdkn/The-OMK-Office-V1-JaaS-Landing-Site-Web",
+        "clone_url": "https://github.com/Amdkn/The-OMK-Office-V1-JaaS-Landing-Site-Web.git",
+        "default_branch": "main",
+        "local_path": "C:/Users/amado/The-OMK-Office-V1-JaaS-Landing-Site-Web",
+        "codespace_path": "business/The-OMK-Office-V1-JaaS-Landing-Site-Web",
+        "bootstrap": "auto",
+        "authority": "luna_business_projection",
         "evidence": "GitHub verified"
       }
     },
@@ -572,84 +601,119 @@
     "Jev reflexes and LiDAR-style observations are capability planes; deterministic policy and evidence retain authority."
   ],
   "worlds": {
-    "Sol": {
-      "role": "sovereign_filesystem_ground",
+    "Astra": {
+      "role": "unified_aspace_v3_system_world",
       "repo": "Amdkn/Aspace_OS_V3",
       "local_path": "C:/Users/amado/ASpace_OS_V3",
-      "codespace_path": "/workspaces/aspace/worlds/Sol",
+      "external_alias": "C:/Users/amado/ASpace_Worlds/Astra",
+      "codespace_path": "/workspaces/aspace/worlds/Astra",
       "authority": "A0-Amadeus / Rick's Verse"
     },
-    "Tera": {
-      "role": "agent_os_world",
-      "repo": "Amdkn/Agent-OS",
+    "Sol": {
+      "role": "agent_os_interface_and_observability_world",
       "local_path": "C:/Users/amado/agent-os",
-      "local_junction": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
-      "codespace_path": "/workspaces/aspace/worlds/Tera",
+      "external_alias": "C:/Users/amado/ASpace_Worlds/Sol",
+      "local_junction": "C:/Users/amado/ASpace_OS_V3/Worlds/Sol",
+      "codespace_path": "/workspaces/aspace/worlds/Sol",
       "manager_core": "Doctor13",
       "desktop": {
         "repo": "Amdkn/Agent-OS-Desktop",
+        "local_path": "C:/Users/amado/agent-os/desktop",
         "port": 5555,
         "host": "127.0.0.1",
-        "snapshot_branch": "snapshot/tera-5555-2026-09-27",
-        "snapshot_head": "9d5782868babb16e4477214dee0a40a8b6825e80",
-        "snapshot_file": "_INBOX/handoffs/TERA_AGENT_OS_5555_SNAPSHOT.json"
-      },
-      "codespace_model": "federated_directory",
-      "components": [
-        "Agent-OS-Desktop",
-        "Hermes-Workspace"
-      ],
-      "local_only_components": [
-        "Agent-OS parent",
-        "Observatoire"
-      ]
+        "current_local_head": "7c6dc8b"
+      }
     },
-    "Luna": {
-      "role": "life_os_world",
+    "Terra": {
+      "role": "life_os_2026_world",
       "repo": "Amdkn/Life-OS-2026",
       "local_path": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
-      "local_junction": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
-      "codespace_path": "/workspaces/aspace/worlds/Luna",
+      "external_alias": "C:/Users/amado/ASpace_Worlds/Terra",
+      "local_junction": "C:/Users/amado/ASpace_OS_V3/Worlds/Terra",
+      "codespace_path": "/workspaces/aspace/worlds/Terra",
       "manager_core": "Doctor11"
+    },
+    "Luna": {
+      "role": "business_os_the_omk_office_federation",
+      "repo": null,
+      "local_path": "C:/Users/amado/ASpace_Worlds/Luna",
+      "local_junction": "C:/Users/amado/ASpace_OS_V3/Worlds/Luna",
+      "codespace_path": "/workspaces/aspace/worlds/Luna",
+      "manager_core": "Doctor12",
+      "composition": "junction/symlink federation; member repositories keep independent Git history",
+      "repositories": [
+        "Amdkn/BusinessOS",
+        "Amdkn/Business-Office-3-OS",
+        "Amdkn/01-OMK-Business-OS",
+        "Amdkn/The-OMK-Mobile-Back-Office",
+        "omk-services/OMK-DESKTOP-WEB-OS",
+        "omk-services/00-omk-saas-os",
+        "Amdkn/The-OMK-Office1.0-JaaS",
+        "Amdkn/The-OMK-Office-V1-JaaS-Landing-Site-Web"
+      ]
     }
   },
   "relationships": {
     "local": {
-      "Sol_to_Tera": {
+      "Astra_to_Sol": {
         "type": "junction",
-        "path": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+        "path": "C:/Users/amado/ASpace_OS_V3/Worlds/Sol",
         "target": "C:/Users/amado/agent-os",
-        "direction": "one_way"
+        "direction": "mount"
       },
-      "Sol_to_Luna": {
+      "Astra_to_Terra": {
         "type": "junction",
-        "path": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+        "path": "C:/Users/amado/ASpace_OS_V3/Worlds/Terra",
         "target": "C:/Users/amado/ASpace_Worlds/Life_OS_2026",
-        "direction": "one_way"
+        "direction": "mount"
+      },
+      "Astra_to_Luna": {
+        "type": "junction",
+        "path": "C:/Users/amado/ASpace_OS_V3/Worlds/Luna",
+        "target": "C:/Users/amado/ASpace_Worlds/Luna",
+        "direction": "mount"
+      },
+      "compatibility_aliases": {
+        "Agent_OS": {
+          "path": "C:/Users/amado/ASpace_OS_V3/Agent_OS",
+          "target": "C:/Users/amado/agent-os"
+        },
+        "Life_OS_2026": {
+          "path": "C:/Users/amado/ASpace_OS_V3/Life_OS_2026",
+          "target": "C:/Users/amado/ASpace_Worlds/Life_OS_2026"
+        }
       }
     },
     "codespace": {
       "world_aliases": {
-        "Sol": "core/Aspace_OS_V3",
-        "Luna": "satellites/Life-OS-2026"
+        "Astra": "core/Aspace_OS_V3",
+        "Terra": "satellites/Life-OS-2026"
       },
-      "Luna_skyhooks": [
-        "business/BusinessOS",
-        "business/Business-Office-3-OS",
-        "business/01-OMK-Business-OS",
-        "business/The-OMK-Mobile-Back-Office",
-        "business/OMK-DESKTOP-WEB-OS",
-        "business/00-omk-saas-os"
-      ],
-      "rule": "Skyhooks are symlink/reference relations in the federated workspace; they do not make Business repos children of the Life repo Git history.",
-      "Tera_components": {
-        "Desktop": "satellites/Agent-OS-Desktop",
-        "HermesWorkspace": "satellites/Hermes-Workspace"
+      "composed_worlds": {
+        "Sol": {
+          "components": {
+            "Desktop": "satellites/Agent-OS-Desktop",
+            "HermesWorkspace": "satellites/Hermes-Workspace"
+          },
+          "local_only": {
+            "AgentOSParent": "C:/Users/amado/agent-os",
+            "Observatoire": "C:/Users/amado/agent-os/observatoire"
+          }
+        },
+        "Luna": {
+          "components": {
+            "BusinessOS": "business/BusinessOS",
+            "BusinessOffice3OS": "business/Business-Office-3-OS",
+            "OMKBusinessOS": "business/01-OMK-Business-OS",
+            "OMKOfficeJaaS": "business/The-OMK-Office1.0-JaaS",
+            "OMKMobile": "business/The-OMK-Mobile-Back-Office",
+            "OMKDesktop": "business/OMK-DESKTOP-WEB-OS",
+            "OMKSaaS": "business/00-omk-saas-os",
+            "OMKLanding": "business/The-OMK-Office-V1-JaaS-Landing-Site-Web"
+          }
+        }
       },
-      "Tera_local_only": {
-        "AgentOSParent": "C:/Users/amado/agent-os",
-        "Observatoire": "C:/Users/amado/agent-os/observatoire"
-      }
+      "rule": "World links are filesystem projections over independent Git repositories; no link changes repository ownership or history."
     }
   },
   "intent_ledger": {

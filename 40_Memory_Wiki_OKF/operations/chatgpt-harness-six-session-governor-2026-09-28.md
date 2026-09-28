@@ -1,8 +1,10 @@
 ---
 type: Operations memory
 title: ChatGPT Harness — six-session context governor
+description: Operational memory for the 24-call ChatGPT governor, six parallel execution lanes, durable handoff, and E-Myth anti-technician separation.
 date: 2026-09-28
 tags: [chatgpt, harness, context, tool-calls, handover, emyth, multisession]
+generated: { by: chatgpt-github-forge, at: 2026-09-28T12:55:00-04:00 }
 okf_version: "0.2"
 confidence: A0-accepted-design
 ---

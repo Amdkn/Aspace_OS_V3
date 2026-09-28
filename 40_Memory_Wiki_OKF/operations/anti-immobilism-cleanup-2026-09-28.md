@@ -1,8 +1,10 @@
 ---
 type: Operations memory
 title: Anti-immobilism cleanup — truthful execution state
+description: Operational memory for the anti-immobilism cleanup, truthful execution reconciliation, worktree hygiene, and evidence-first delivery rules.
 date: 2026-09-28
 tags: [aspace, anti-immobilism, workgraph, linear, orca, supabase, ipbd, git]
+generated: { by: chatgpt-github-forge, at: 2026-09-28T12:55:00-04:00 }
 okf_version: "0.2"
 confidence: machine-verified
 ---

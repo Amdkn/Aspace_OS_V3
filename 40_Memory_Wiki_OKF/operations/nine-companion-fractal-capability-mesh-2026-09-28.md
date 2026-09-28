@@ -1,8 +1,10 @@
 ---
 type: Operations memory
 title: Nine Companion Fractal Capability Mesh
+description: Nine shared Companion capabilities form a recursive cross-Core mesh routed through GitHub Discussion #185; stewardship is non-exclusive and capabilities may compose each other.
 date: 2026-09-28
 tags: [agents, fractal, github, routing, companions, doctors, rick, handoff]
+generated: { by: chatgpt-clara, at: 2026-09-28T12:55:00-04:00 }
 okf_version: "0.2"
 confidence: A0-confirmed
 ---

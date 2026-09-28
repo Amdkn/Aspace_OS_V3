@@ -1,0 +1,105 @@
+﻿{
+    "schema":  "aspace.world-federation-evidence.v1",
+    "generated_at":  "2026-09-28T12:43:59.0273538Z",
+    "apply":  true,
+    "worlds":  {
+                   "Astra":  {
+                                 "path":  "C:\\Users\\amado\\ASpace_Worlds\\Astra",
+                                 "target":  "C:\\Users\\amado\\ASpace_OS_V3",
+                                 "state":  "linked"
+                             },
+                   "Sol":  {
+                               "path":  "C:\\Users\\amado\\ASpace_Worlds\\Sol",
+                               "target":  "C:\\Users\\amado\\agent-os",
+                               "state":  "linked"
+                           },
+                   "Terra":  {
+                                 "path":  "C:\\Users\\amado\\ASpace_Worlds\\Terra",
+                                 "target":  "C:\\Users\\amado\\ASpace_Worlds\\Life_OS_2026",
+                                 "state":  "linked"
+                             }
+               },
+    "astra_mounts":  {
+                         "Sol":  {
+                                     "state":  "linked",
+                                     "target":  "C:\\Users\\amado\\agent-os"
+                                 },
+                         "Terra":  {
+                                       "state":  "linked",
+                                       "target":  "C:\\Users\\amado\\ASpace_Worlds\\Life_OS_2026"
+                                   },
+                         "Luna":  {
+                                      "state":  "linked",
+                                      "target":  "C:\\Users\\amado\\ASpace_Worlds\\Luna"
+                                  }
+                     },
+    "luna_repositories":  {
+                              "01-OMK-Business-OS":  {
+                                                         "head":  "ef2cc36",
+                                                         "source":  "C:\\Users\\amado\\ASpace_Worlds\\_repos\\01-OMK-Business-OS",
+                                                         "remote":  "https://github.com/Amdkn/01-OMK-Business-OS.git",
+                                                         "state":  "linked"
+                                                     },
+                              "The-OMK-Office1.0-JaaS":  {
+                                                             "head":  "b1c5b03",
+                                                             "source":  "C:\\Users\\amado\\ASpace_Worlds\\_repos\\The-OMK-Office1.0-JaaS",
+                                                             "remote":  "https://github.com/Amdkn/The-OMK-Office1.0-JaaS.git",
+                                                             "state":  "linked"
+                                                         },
+                              "BusinessOS":  {
+                                                 "head":  "a374f6c",
+                                                 "source":  "C:\\Users\\amado\\BusinessOS_analysis",
+                                                 "remote":  "https://github.com/Amdkn/BusinessOS.git",
+                                                 "state":  "linked"
+                                             },
+                              "Business-Office-3-OS":  {
+                                                           "head":  "9688d1a",
+                                                           "source":  "C:\\Users\\amado\\Business-Office-3-OS",
+                                                           "remote":  "https://github.com/Amdkn/Business-Office-3-OS.git",
+                                                           "state":  "linked"
+                                                       },
+                              "The-OMK-Mobile-Back-Office":  {
+                                                                 "head":  "6999d02",
+                                                                 "source":  "C:\\Users\\amado\\The-OMK-Mobile-Back-Office",
+                                                                 "remote":  "https://github.com/Amdkn/The-OMK-Mobile-Back-Office.git",
+                                                                 "state":  "linked"
+                                                             },
+                              "The-OMK-Office-V1-JaaS-Landing-Site-Web":  {
+                                                                              "head":  "3156ea8",
+                                                                              "source":  "C:\\Users\\amado\\The-OMK-Office-V1-JaaS-Landing-Site-Web",
+                                                                              "remote":  "https://github.com/Amdkn/The-OMK-Office-V1-JaaS-Landing-Site-Web.git",
+                                                                              "state":  "linked"
+                                                                          },
+                              "OMK-DESKTOP-WEB-OS":  {
+                                                         "head":  "df8423b",
+                                                         "source":  "C:\\Users\\amado\\ASpace_OS_V3\\30_Business_OS\\10_Projects\\coach-os-app",
+                                                         "remote":  "git@github.com:omk-services/OMK-DESKTOP-WEB-OS.git",
+                                                         "state":  "linked"
+                                                     },
+                              "00-omk-saas-os":  {
+                                                     "head":  "3379f31",
+                                                     "source":  "C:\\Users\\amado\\00-omk-saas-os",
+                                                     "remote":  "https://github.com/omk-services/00-omk-saas-os.git",
+                                                     "state":  "linked"
+                                                 }
+                          },
+    "compatibility":  {
+                          "Agent_OS":  {
+                                           "path":  "C:\\Users\\amado\\ASpace_OS_V3\\Agent_OS",
+                                           "policy":  "legacy alias retained",
+                                           "target":  "C:\\Users\\amado\\agent-os"
+                                       },
+                          "Life_OS_2026":  {
+                                               "path":  "C:\\Users\\amado\\ASpace_OS_V3\\Life_OS_2026",
+                                               "policy":  "legacy alias retained",
+                                               "target":  "C:\\Users\\amado\\ASpace_Worlds\\Life_OS_2026"
+                                           }
+                      },
+    "sol_desktop":  {
+                        "listener_active":  false,
+                        "path":  "C:\\Users\\amado\\agent-os\\desktop",
+                        "configured_port":  5555,
+                        "head":  "7c6dc8b",
+                        "remote":  "https://github.com/Amdkn/Agent-OS-Desktop.git"
+                    }
+}
