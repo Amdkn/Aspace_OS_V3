@@ -26,13 +26,13 @@ This file is a **bootstrap pointer**, not a parallel SSOT.
 Identity, surface, harness and capability are orthogonal.
 Stewardship means default accountability, never exclusive access.
 
-- Rory → Linear / Life Space governance A1–A3.
-- Ryan → GitHub shared software-factory Top Bar.
-- Ryan→Clara → Forge / Forge-of-Construction path.
-- River → Google Workspace CLI Business workflow plane + Jev System-One reflex plane.
-- Graham → Supabase shared state/memory/evidence/IPBD.
-- Yaz → LiDAR-style behavioral observability/proprioception.
-- Amy → Herdr persistent harness interface.
+- Doctor13 / Kernel: Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
+- Doctor11 / Life: Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
+- Doctor12 / Buzz: Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+- Rick/S1 routes cross-Core dependencies and conflicts.
+- Specialties are shared services; no app/tool/framework is identity-exclusive.
+- Amy owns Jev/System-One interface exposure; River consumes it as a Flow capability rather than owning the platform.
+- GitHub is the durable inter-agent message bus through Discussions → Issues → PR/Evidence.
 
 ## New IPBD capture
 `35fa51bc-d249-4702-83ae-a1c119a98ef6`
@@ -47,12 +47,12 @@ Jev: typed probabilistic reflexes (Choice / Score / Noul), confidence-aware, com
 LiDAR: trajectory-level behavior representation; Verify / Recover / Resolve probes; cross-harness semantic normalization; instance + distribution evidence.
 
 A'Space adaptation:
-**Yaz senses → Graham remembers → River reflex-decides → harness acts → Yaz observes.**
+**Yaz senses → Graham remembers → Amy exposes the Jev reflex interface → consuming Flow/agent acts under deterministic host policy → Yaz observes.**
 Host policy keeps authority. Low-confidence or generative/deep work escalates to System Two.
 
 The first canary is post-edit verification/risk/routing across at least two harnesses.
 
-For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.\nFor current parallel ChatGPT execution, read `_INBOX/handoffs/HANDOVER-2026-09-28-SIX-PARALLEL-SESSIONS.md`.
+For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.\nFor current parallel ChatGPT execution, read `_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`.
 
 Current execution truth after reconciliation:
 - Linear SOH/SOB `In Progress` = 0 unless a live claim + binding + worker exists.
