@@ -1,0 +1,17 @@
+{
+  "receipt_version": "aspace.harness_execution_receipt.v1",
+  "mission": "Life OS MiroFish structural pre-Wargame canary",
+  "origin": {"linear":"SOH-142","github_issue":200,"handover":"HANDOVER-2026-09-28-RIVER-HARNESS-WORKFLOW-MIROFISH.md"},
+  "stage": "RuntimePreflight",
+  "status": "PASS",
+  "simulation_executed": false,
+  "linear_transition_authorized": false,
+  "upstream": {"repo":"SCTY-Inc/mirofish-cli","sha":"3e98e776cdfc9556c12ace82a60e9d3da5bd41e7"},
+  "runtime": {"wsl":"Ubuntu-24.04","python":"3.11.16","torch":"2.2.2+cpu","cuda":false,"mcp":"1.27.0","oasis_import":"PASS","entrypoint":"PASS","doctor":"PASS","venv_size":"1.7G"},
+  "provider": {"configured":"codex-cli","actual_binary":"/home/amdkn7/.local/bin/codex","version":"codex-cli 0.150.1","diagnostic_shim":".shim/codex-cli -> codex"},
+  "upstream_mismatches": ["Python 3.12 advertised but camel-oasis 0.2.5 requires <3.12","README claims --version but CLI requires a command","doctor checks codex-cli while llm_client executes codex","free pip resolution installed mcp 2.2.0 while upstream lock pins 1.27.0"],
+  "workflow_findings": ["PowerShell-to-WSL inline quoting caused wrapper failures","DC force_terminate killed parent but left child pip processes alive","overlapping child installs contaminated first venv with CUDA","contaminated venv discarded and rebuilt CPU-only"],
+  "side_effects": {"global_python_installed":false,"deadsnakes_used":false,"upstream_modified":false,"jules_invoked":false,"antigravity_invoked":false,"linear_mutated":false,"supabase_mutated":false},
+  "next_cell": {"stage":"MiroFishRun","rounds":1,"max_rounds":2,"process_group_kill_required":true,"required":["immutable run directory","report/verdict.json","stdout/stderr/exit code","runtime/provider fingerprint","HarnessExecutionReceipt"]},
+  "authority_after_run": "Rory alone reconciles UNTESTED to SIMULATED or STRUCTURAL_RISK from evidence"
+}
