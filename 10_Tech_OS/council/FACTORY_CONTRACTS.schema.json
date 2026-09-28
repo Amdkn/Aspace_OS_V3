@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://council/factory-contracts/v1",
+  "title": "A'Space Fractal Factory Contracts",
+  "type": "object",
+  "$defs": {
+    "EvidenceRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "AuthorityEnvelope": {
+      "type": "object",
+      "required": ["allowed", "forbidden", "reversible_only"],
+      "properties": {
+        "allowed": {"type": "array", "items": {"type": "string"}},
+        "forbidden": {"type": "array", "items": {"type": "string"}},
+        "reversible_only": {"type": "boolean"},
+        "requires_human_approval": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "CapabilityNeed": {
+      "type": "object",
+      "required": [
+        "schema", "need_id", "origin_intent", "work_id", "invariant",
+        "observation", "expected", "actual", "evidence",
+        "suggested_capability", "authority", "blocking",
+        "reversible", "reply_contract"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.capability-need.v1"},
+        "need_id": {"type": "string", "minLength": 1},
+        "origin_intent": {"type": "string", "minLength": 1},
+        "work_id": {"type": ["string", "null"]},
+        "invariant": {"type": "string", "minLength": 1},
+        "observation": {"type": "string", "minLength": 1},
+        "expected": {"type": "string"},
+        "actual": {"type": "string"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/EvidenceRef"}},
+        "suggested_capability": {"type": "string", "minLength": 1},
+        "authority": {"$ref": "#/$defs/AuthorityEnvelope"},
+        "blocking": {"type": "boolean"},
+        "reversible": {"type": "boolean"},
+        "reply_contract": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "EscalationPacket": {
+      "type": "object",
+      "required": [
+        "schema", "escalation_id", "origin", "reason",
+        "failed_rule_or_invariant", "evidence", "target_system2",
+        "authority_requested", "return_to"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.escalation-packet.v1"},
+        "escalation_id": {"type": "string", "minLength": 1},
+        "origin": {"type": "string", "minLength": 1},
+        "reason": {"type": "string", "minLength": 1},
+        "failed_rule_or_invariant": {"type": "string", "minLength": 1},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/EvidenceRef"}},
+        "target_system2": {
+          "enum": ["doctor13-kernel", "doctor11-life", "doctor12-buzz", "rick"]
+        },
+        "authority_requested": {"$ref": "#/$defs/AuthorityEnvelope"},
+        "return_to": {"type": "string", "minLength": 1},
+        "context_budget": {"type": ["integer", "null"], "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "FactoryBlueprint": {
+      "type": "object",
+      "required": [
+        "schema", "factory_id", "version", "trigger_schema",
+        "input_contract", "output_contract", "system1_rules",
+        "escalation_policy", "authority", "side_effects",
+        "evidence_contract", "rollback_retry_dlq",
+        "observability_yaz", "state_graham", "dispatch_nardole",
+        "build_ryan", "interface_amy", "flow_river",
+        "coherence_rory", "compatibility"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.factory-blueprint.v1"},
+        "factory_id": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "trigger_schema": {"type": "object"},
+        "input_contract": {"type": "object"},
+        "output_contract": {"type": "object"},
+        "system1_rules": {"type": "array", "items": {"type": "object"}},
+        "escalation_policy": {"type": "object"},
+        "authority": {"$ref": "#/$defs/AuthorityEnvelope"},
+        "side_effects": {"type": "object"},
+        "evidence_contract": {"type": "object"},
+        "rollback_retry_dlq": {"type": "object"},
+        "observability_yaz": {"type": "object"},
+        "state_graham": {"type": "object"},
+        "dispatch_nardole": {"type": "object"},
+        "build_ryan": {"type": "object"},
+        "interface_amy": {"type": "object"},
+        "flow_river": {"type": "object"},
+        "coherence_rory": {"type": "object"},
+        "compatibility": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/FactoryBlueprint"},
+    {"$ref": "#/$defs/CapabilityNeed"},
+    {"$ref": "#/$defs/EscalationPacket"}
+  ]
+}

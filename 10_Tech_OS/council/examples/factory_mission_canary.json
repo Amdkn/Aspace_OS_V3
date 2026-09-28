@@ -1,0 +1,110 @@
+﻿{
+  "schema": "aspace.mission-topology.v1",
+  "mission_id": "MISSION-20260928T131628Z-factory-loop-canary",
+  "parent_mission_id": null,
+  "origin": "factory-loop-canary",
+  "outcome": "Turn external R&D into a verified reusable factory change",
+  "created_at": "20260928T131628Z",
+  "cells": [
+    {
+      "cell_id": "C01",
+      "phase": "RECALL",
+      "pattern": "MESH",
+      "capability_pole": "graham-state",
+      "doctor": "doctor13-kernel",
+      "mode": "parallel",
+      "outcome": "Recall relevant intent decisions artifacts and failures",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C02",
+      "phase": "DISCOVER",
+      "pattern": "SWARM",
+      "capability_pole": "bill-research",
+      "doctor": "doctor12-buzz",
+      "mode": "parallel",
+      "outcome": "Capture transcripts papers repos claims and contradictions",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C03",
+      "phase": "DESIGN",
+      "pattern": "MESH",
+      "capability_pole": "clara-design-forge",
+      "doctor": "doctor12-buzz",
+      "mode": "reentrant",
+      "outcome": "Compile mission topology and factory blueprint",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C04",
+      "phase": "BUILD",
+      "pattern": "ORCHESTRATOR_WORKER",
+      "capability_pole": "ryan-build",
+      "doctor": "doctor13-kernel",
+      "mode": "parallel",
+      "outcome": "Build bounded reversible artifact cell",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C05",
+      "phase": "TEST",
+      "pattern": "MESH",
+      "capability_pole": "yaz-observe",
+      "doctor": "doctor13-kernel",
+      "mode": "parallel",
+      "outcome": "Verify behavior against acceptance",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C06",
+      "phase": "REVIEW",
+      "pattern": "MESH",
+      "capability_pole": "graham-state",
+      "doctor": "doctor13-kernel",
+      "mode": "parallel",
+      "outcome": "Verify provenance and state continuity",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C07",
+      "phase": "SHIP",
+      "pattern": "PIPELINE",
+      "capability_pole": "nardole-dispatch",
+      "doctor": "doctor12-buzz",
+      "mode": "reentrant",
+      "outcome": "Route release evidence and return contract",
+      "state": "READY"
+    },
+    {
+      "cell_id": "C08",
+      "phase": "MONITOR",
+      "pattern": "DETERMINISTIC_REFLEX",
+      "capability_pole": "rory-persistence",
+      "doctor": "doctor11-life",
+      "mode": "reentrant",
+      "outcome": "Reconcile invariants and reopen smallest affected cell",
+      "state": "READY"
+    }
+  ],
+  "memory_refs": [
+    "Graham:bounded-recall"
+  ],
+  "research_refs": [
+    "Bill:source-packet"
+  ],
+  "evidence_expected": [
+    "Yaz:behavioral-digest"
+  ],
+  "return_to": "Discussion#185",
+  "status": "READY",
+  "invariants": [
+    "cells may execute serially, in parallel, or reentrantly",
+    "a phase does not own one permanent orchestration pattern",
+    "bounded reversible BUILD may begin before global discovery closes",
+    "MONITOR or LEARN may reopen any earlier phase without restarting the mission",
+    "Nardole routes during the whole mission, not only at SHIP",
+    "Graham recall/provenance may be requested before any durable design mutation",
+    "evidence closes cells; role order never implies completion"
+  ]
+}
