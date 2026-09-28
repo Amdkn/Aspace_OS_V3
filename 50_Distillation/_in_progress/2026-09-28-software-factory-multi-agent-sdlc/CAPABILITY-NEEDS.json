@@ -1,0 +1,135 @@
+{
+  "schema": "aspace.capability-needs.bundle.v1",
+  "mission_id": "MISSION-20260928T131628Z-factory-loop-canary",
+  "cell_id": "C02",
+  "producer": "Bill",
+  "needs": [
+    {
+      "schema": "aspace.capability-need.v1",
+      "need_id": "CN-BILL-20260928-RYAN-WATCH-ACTIVATION",
+      "origin_intent": "factory-loop-canary",
+      "work_id": null,
+      "invariant": "Video research must be replayable transcript-first, with bounded visual escalation and preserved provenance.",
+      "observation": "WATCH exists in the quarantined PR156 upstream snapshot; Bill's canary failed before ingestion because C:/Users/amado/.config/watch/.env was unreadable.",
+      "expected": "WATCH runs from an active supported V3 capability surface without creating a competing implementation.",
+      "actual": "TranscriptAPI fallback captured both mission videos; WATCH itself is not presently replayable from the Bill lane.",
+      "evidence": [
+        "Aspace_Quarantine/pr156_cleanup_20260927/untracked/_INBOX/handoffs/HANDOVER-2026-09-24-WATCH-ALFRED-DISTILLATION.md",
+        "50_Distillation/_raw_inbox/2026-09-28-software-factory-multi-agent-sdlc/warp-factory-engineering/watch-report.md",
+        "50_Distillation/_raw_inbox/2026-09-28-software-factory-multi-agent-sdlc/multi-agent-orchestration/watch-report.md"
+      ],
+      "suggested_capability": "Ryan/BUILD",
+      "authority": {
+        "allowed": [
+          "repair packaging/config access",
+          "reuse upstream claude-video WATCH",
+          "add bounded canary/test"
+        ],
+        "forbidden": [
+          "invent second WATCH implementation",
+          "promote vendor topology as A'Space canon"
+        ],
+        "reversible_only": true,
+        "requires_human_approval": []
+      },
+      "blocking": false,
+      "reversible": true,
+      "reply_contract": "Return runnable command + tests + evidence path showing transcript-first and targeted keyframe escalation on one captured source."
+    },
+    {
+      "schema": "aspace.capability-need.v1",
+      "need_id": "CN-BILL-20260928-GRAHAM-PROVENANCE",
+      "origin_intent": "factory-loop-canary",
+      "work_id": null,
+      "invariant": "No durable memory promotion without source provenance, confidence and contradiction tracking.",
+      "observation": "Four source packets plus a cross-source digest exist; raw transcripts are captured locally but are not memory-certified.",
+      "expected": "Graham normalizes evidence/provenance and deduplicates against existing memory before promotion.",
+      "actual": "Research is staged under 50_Distillation/_in_progress only.",
+      "evidence": [
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-01-WARP-FACTORY-ENGINEERING.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-02-MULTI-AGENT-ORCHESTRATION.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-03-AI-NATIVE-SDLC.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-04-LAST30DAYS-SCOUT.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-DIGEST.md"
+      ],
+      "suggested_capability": "Graham/REMEMBER",
+      "authority": {
+        "allowed": [
+          "verify provenance",
+          "classify facts/vendor claims/hypotheses",
+          "promote validated concepts to memory"
+        ],
+        "forbidden": [
+          "erase contradictions",
+          "convert engagement/vendor claims into A'Space facts without evidence"
+        ],
+        "reversible_only": true,
+        "requires_human_approval": []
+      },
+      "blocking": true,
+      "reversible": true,
+      "reply_contract": "Return provenance verdict per claim class, duplicates found, promoted memory refs, and unresolved uncertainty."
+    },
+    {
+      "schema": "aspace.capability-need.v1",
+      "need_id": "CN-BILL-20260928-CLARA-FACTORY-CONTRACT",
+      "origin_intent": "factory-loop-canary",
+      "work_id": null,
+      "invariant": "A'Space remains a re-entrant capability graph, not a fixed software-factory conveyor belt.",
+      "observation": "External sources converge on artifact receipts, stage detection, routing separation, handoff verification, trace scoring, and recency scouting.",
+      "expected": "Clara converts only recurrent validated needs into a minimal composable contract layer.",
+      "actual": "No architecture mutation has been made by Bill.",
+      "evidence": [
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-DIGEST.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/BILL-SCOUT-DEEP-CAPTURE-CONTRACT.md"
+      ],
+      "suggested_capability": "Clara/DESIGN",
+      "authority": {
+        "allowed": [
+          "design StageDetect/ArtifactReceipt/HandoffReceipt/Scout contracts",
+          "preserve existing MissionTopology semantics"
+        ],
+        "forbidden": [
+          "replace V3 topology",
+          "force global Plan-to-Build serialization"
+        ],
+        "reversible_only": true,
+        "requires_human_approval": []
+      },
+      "blocking": true,
+      "reversible": true,
+      "reply_contract": "Return design candidate mapped to existing FactoryBlueprint/CapabilityNeed/EscalationPacket contracts, with no duplicate ontology."
+    },
+    {
+      "schema": "aspace.capability-need.v1",
+      "need_id": "CN-BILL-20260928-NARDOLE-DISPATCH-GUARDS",
+      "origin_intent": "factory-loop-canary",
+      "work_id": null,
+      "invariant": "Dispatch selects capability/pattern from current state and constraints, with bounded loops and backpressure.",
+      "observation": "Sources independently surface stage detection, handoff loops, cost explosion, circuit breakers and manager/worker routing.",
+      "expected": "Nardole maps these into existing dispatch/lease semantics rather than agent slots.",
+      "actual": "No dispatch mutation has been made.",
+      "evidence": [
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-02-MULTI-AGENT-ORCHESTRATION.md",
+        "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-01-WARP-FACTORY-ENGINEERING.md"
+      ],
+      "suggested_capability": "Nardole/DISPATCH",
+      "authority": {
+        "allowed": [
+          "map stage detection",
+          "define loop/backpressure guards",
+          "emit evidence-only proposal"
+        ],
+        "forbidden": [
+          "create permanent agent slots",
+          "bypass WorkGraph execution truth"
+        ],
+        "reversible_only": true,
+        "requires_human_approval": []
+      },
+      "blocking": false,
+      "reversible": true,
+      "reply_contract": "Return mapping from StageDetect/PatternSelect/HandoffReceipt to existing lease/dispatch primitives and identify any true missing capability."
+    }
+  ]
+}
