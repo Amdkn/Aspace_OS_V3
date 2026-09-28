@@ -13,6 +13,7 @@ Aucun candidat: JSON {candidat: null}.
 """
 import argparse
 import json
+import os
 import sqlite3
 import subprocess
 import sys
@@ -34,7 +35,7 @@ KERNEL = Path(__file__).resolve().parent
 def reap():
     try:
         subprocess.run([sys.executable, str(KERNEL / "uc.py"), "reap"],
-                       cwd=str(KERNEL), capture_output=True, timeout=60)
+                       cwd=str(KERNEL), capture_output=True, timeout=60, env=os.environ.copy())
     except Exception as e:  # reap best-effort, ne bloque jamais la sélection
         print(f"reap warning: {e}", file=sys.stderr)
 

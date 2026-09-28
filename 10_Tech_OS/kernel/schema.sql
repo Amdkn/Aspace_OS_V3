@@ -133,6 +133,56 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
+-- WorkGraph V2 & Harness Capabilities
+CREATE TABLE IF NOT EXISTS work_dependency (
+  work_id       INTEGER REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id INTEGER REFERENCES work(id) ON DELETE CASCADE,
+  kind          TEXT DEFAULT 'blocks',
+  PRIMARY KEY (work_id, depends_on_id)
+);
+
+CREATE TABLE IF NOT EXISTS session_binding (
+  id           INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id      INTEGER REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT,
+  harness      TEXT,
+  capability   TEXT,
+  external_ref TEXT,
+  status       TEXT DEFAULT 'active',
+  started_at   TEXT DEFAULT (datetime('now')),
+  ended_at     TEXT
+);
+
+CREATE TABLE IF NOT EXISTS harness_capability (
+  id                 INTEGER PRIMARY KEY AUTOINCREMENT,
+  harness            TEXT NOT NULL,
+  capability         TEXT NOT NULL,
+  min_evidence_level INTEGER DEFAULT 0,
+  active             INTEGER DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS artifact (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id    INTEGER REFERENCES work(id) ON DELETE CASCADE,
+  kind       TEXT,
+  sha256     TEXT,
+  uri        TEXT,
+  created_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS gate_decision (
+  id         INTEGER PRIMARY KEY AUTOINCREMENT,
+  work_id    INTEGER REFERENCES work(id) ON DELETE CASCADE,
+  gate       TEXT NOT NULL,
+  verdict    TEXT NOT NULL,
+  rationale  TEXT,
+  decided_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE VIEW IF NOT EXISTS v_workgraph_v1 AS
+  SELECT w.id AS work_id, w.layer, w.title, w.status, w.priority, w.parent_id, w.attempts, w.created_at, w.updated_at
+  FROM work w;
+
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   id         TEXT PRIMARY KEY,               -- UUID
