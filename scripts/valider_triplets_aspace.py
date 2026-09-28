@@ -26,9 +26,10 @@ import os
 import re
 import stat
 import sys
+from pathlib import Path
 from collections import Counter, defaultdict
 
-V3 = r"C:\Users\amado\ASpace_OS_V3"
+V3 = str(Path(__file__).resolve().parent.parent)
 D = os.path.join(V3, "70_Onthologies")
 DIST = os.path.join(V3, "50_Distillation")
 # Deux passes, deux jeux de couches, deux graphes de sortie. Les melanger
@@ -50,7 +51,7 @@ PASSES = {
 
 # La source reelle du contenu. La V3 n'est qu'un squelette : ses dossiers
 # portent la structure, pas les documents.
-DOMAINES_V2 = "C:/Users/amado/ASpace_OS_V2/20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/05_From_V2_Domains"
+DOMAINES_V2 = os.path.join(V3, "20_Life_OS", "24_PARA_Enterprise", "03_Resources_Geordi", "05_From_V2_Domains")
 
 # Chaque escouade de domaine couvre UNE couche. Un agent ecrit parfois son
 # chemin relatif a sa couche plutot qu'a la racine des domaines : la
@@ -101,7 +102,8 @@ def _sans_jonctions(racine, elaguer):
                     if e.name in elaguer:
                         continue
                     try:
-                        if e.stat(follow_symlinks=False).st_file_attributes & RP:
+                        st = e.stat(follow_symlinks=False)
+                        if getattr(st, "st_file_attributes", 0) & RP:
                             continue  # jonction : on ne la suit pas
                     except OSError:
                         continue
