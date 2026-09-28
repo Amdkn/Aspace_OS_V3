@@ -133,55 +133,140 @@ CREATE TABLE IF NOT EXISTS domain_rules_b2 (
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
--- WorkGraph V2 & Harness Capabilities
+-- WorkGraph / Intent / Goal state reconstructed from the live canonical uc.db.
+-- These definitions must stay compatible with uc_workgraph.py; a clean clone must
+-- not depend on untracked local migration files to initialize the Kernel.
+
+CREATE TABLE IF NOT EXISTS intent (
+  id              INTEGER PRIMARY KEY,
+  intent_key      TEXT NOT NULL UNIQUE,
+  title           TEXT NOT NULL,
+  layer           TEXT CHECK (layer IN ('A0','L0','L1','L2')),
+  status          TEXT NOT NULL DEFAULT 'draft'
+                  CHECK (status IN ('draft','frozen','active','done','cancelled')),
+  source_path     TEXT,
+  verbatim_sha256 TEXT,
+  intent_ir       TEXT,
+  created_at      TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at      TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS work_intent (
+  work_id   INTEGER PRIMARY KEY REFERENCES work(id) ON DELETE CASCADE,
+  intent_id INTEGER NOT NULL REFERENCES intent(id) ON DELETE RESTRICT,
+  relation  TEXT NOT NULL DEFAULT 'implements'
+);
+
 CREATE TABLE IF NOT EXISTS work_dependency (
-  work_id       INTEGER REFERENCES work(id) ON DELETE CASCADE,
-  depends_on_id INTEGER REFERENCES work(id) ON DELETE CASCADE,
-  kind          TEXT DEFAULT 'blocks',
-  PRIMARY KEY (work_id, depends_on_id)
+  work_id       INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  depends_on_id INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind          TEXT NOT NULL DEFAULT 'blocks'
+                CHECK (kind IN ('blocks','requires','informs')),
+  created_at    TEXT NOT NULL DEFAULT (datetime('now')),
+  PRIMARY KEY (work_id, depends_on_id),
+  CHECK (work_id <> depends_on_id)
 );
 
 CREATE TABLE IF NOT EXISTS session_binding (
-  id           INTEGER PRIMARY KEY AUTOINCREMENT,
-  work_id      INTEGER REFERENCES work(id) ON DELETE CASCADE,
-  session_key  TEXT,
-  harness      TEXT,
+  id           INTEGER PRIMARY KEY,
+  work_id      INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  session_key  TEXT NOT NULL UNIQUE,
+  harness      TEXT NOT NULL,
   capability   TEXT,
   external_ref TEXT,
-  status       TEXT DEFAULT 'active',
-  started_at   TEXT DEFAULT (datetime('now')),
+  status       TEXT NOT NULL DEFAULT 'active'
+               CHECK (status IN ('active','idle','closed','failed')),
+  started_at   TEXT NOT NULL DEFAULT (datetime('now')),
   ended_at     TEXT
 );
 
 CREATE TABLE IF NOT EXISTS harness_capability (
-  id                 INTEGER PRIMARY KEY AUTOINCREMENT,
-  harness            TEXT NOT NULL,
-  capability         TEXT NOT NULL,
-  min_evidence_level INTEGER DEFAULT 0,
-  active             INTEGER DEFAULT 1
+  id             INTEGER PRIMARY KEY,
+  harness        TEXT NOT NULL,
+  capability     TEXT NOT NULL CHECK (capability IN (
+    'START','AUTH','MODEL_DISCOVERY','STREAM','STEER','INTERRUPT',
+    'RESUME','SANDBOX','FAILURE_SIGNAL','RECOVER'
+  )),
+  evidence_level TEXT NOT NULL CHECK (evidence_level IN (
+    'DECLARED','DOCUMENTED','SYNTHETIC','NATIVE','CANARY'
+  )),
+  status         TEXT NOT NULL DEFAULT 'unknown'
+                 CHECK (status IN ('unknown','pass','fail','degraded')),
+  evidence_ref   TEXT,
+  checked_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  UNIQUE(harness, capability)
 );
 
 CREATE TABLE IF NOT EXISTS artifact (
-  id         INTEGER PRIMARY KEY AUTOINCREMENT,
-  work_id    INTEGER REFERENCES work(id) ON DELETE CASCADE,
-  kind       TEXT,
-  sha256     TEXT,
-  uri        TEXT,
-  created_at TEXT DEFAULT (datetime('now'))
+  id                  INTEGER PRIMARY KEY,
+  work_id             INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  kind                TEXT NOT NULL,
+  uri                 TEXT NOT NULL,
+  sha256              TEXT,
+  producer_session_id INTEGER REFERENCES session_binding(id) ON DELETE SET NULL,
+  created_at          TEXT NOT NULL DEFAULT (datetime('now')),
+  UNIQUE(work_id, kind, uri)
 );
 
 CREATE TABLE IF NOT EXISTS gate_decision (
-  id         INTEGER PRIMARY KEY AUTOINCREMENT,
-  work_id    INTEGER REFERENCES work(id) ON DELETE CASCADE,
-  gate       TEXT NOT NULL,
-  verdict    TEXT NOT NULL,
-  rationale  TEXT,
-  decided_at TEXT DEFAULT (datetime('now'))
+  id                INTEGER PRIMARY KEY,
+  work_id           INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  gate              TEXT NOT NULL,
+  verdict           TEXT NOT NULL CHECK (verdict IN ('pass','fail','veto','waive')),
+  reason            TEXT,
+  evidence_event_id INTEGER REFERENCES event(id) ON DELETE SET NULL,
+  decided_by        TEXT,
+  decided_at        TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS goal (
+  id               INTEGER PRIMARY KEY,
+  intent_id        INTEGER REFERENCES intent(id) ON DELETE SET NULL,
+  goal_key         TEXT NOT NULL UNIQUE,
+  title            TEXT NOT NULL,
+  success_criteria TEXT NOT NULL DEFAULT '[]',
+  status           TEXT NOT NULL DEFAULT 'active'
+                   CHECK (status IN ('active','waiting','done','abandoned')),
+  created_at       TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at       TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+CREATE TABLE IF NOT EXISTS goal_round (
+  id             INTEGER PRIMARY KEY,
+  goal_id        INTEGER NOT NULL REFERENCES goal(id) ON DELETE CASCADE,
+  round_no       INTEGER NOT NULL,
+  status         TEXT NOT NULL DEFAULT 'planned'
+                 CHECK (status IN ('planned','active','review','closed')),
+  review_verdict TEXT CHECK (review_verdict IN ('done','wait','abandon','next_round')),
+  review_reason  TEXT,
+  created_at     TEXT NOT NULL DEFAULT (datetime('now')),
+  reviewed_at    TEXT,
+  UNIQUE(goal_id, round_no)
+);
+
+CREATE TABLE IF NOT EXISTS round_work (
+  round_id INTEGER NOT NULL REFERENCES goal_round(id) ON DELETE CASCADE,
+  work_id  INTEGER NOT NULL REFERENCES work(id) ON DELETE CASCADE,
+  PRIMARY KEY(round_id, work_id)
+);
+
+CREATE TABLE IF NOT EXISTS work_wait (
+  work_id        INTEGER PRIMARY KEY REFERENCES work(id) ON DELETE CASCADE,
+  condition_text TEXT NOT NULL,
+  wake_at        TEXT,
+  reason         TEXT,
+  created_at     TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
 CREATE VIEW IF NOT EXISTS v_workgraph_v1 AS
-  SELECT w.id AS work_id, w.layer, w.title, w.status, w.priority, w.parent_id, w.attempts, w.created_at, w.updated_at
-  FROM work w;
+SELECT
+  w.id AS work_id, w.title, w.layer, w.status, w.parent_id, w.attempts,
+  wi.intent_id, i.intent_key, i.status AS intent_status,
+  c.harness AS claimed_by, c.expires_at AS lease_expires_at
+FROM work w
+LEFT JOIN work_intent wi ON wi.work_id = w.id
+LEFT JOIN intent i ON i.id = wi.intent_id
+LEFT JOIN claim c ON c.work_id = w.id;
 
 -- Personas B3.
 CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
