@@ -46,6 +46,28 @@
         "supabase",
         "ssh_or_tailscale"
       ]
+    },
+    "orca_identity_worktrees": {
+      "base": "C:/Users/amado/orca/workspaces/ASpace_OS_V3",
+      "sync_script": "scripts/sync_orca_identity_worktrees.py",
+      "identities": [
+        "Amy",
+        "Bill",
+        "Clara",
+        "Doctor11",
+        "Doctor12",
+        "Doctor13",
+        "Graham",
+        "Nardole",
+        "Rick",
+        "River",
+        "Rory",
+        "Ryan",
+        "Yaz"
+      ],
+      "branch_rule": "Amdkn/<Identity>",
+      "baseline": "origin/main",
+      "policy": "Persistent identity worktrees follow origin/main when idle. Dirty worktrees are never auto-reset; divergence must represent active bounded work, not stale context."
     }
   },
   "fabrics": {
