@@ -23,6 +23,25 @@ Proof:
 - Doctor12 recovery: `c400ef8e-905e-4451-9551-210a126f071f`
 - Doctor13 recursive parent: `6626ee1e-0b05-456f-a28f-3f125082930b`
 - Ryan/Yaz/Graham all returned READY from isolated worktrees.
+## Full 3×3 Council proof
+
+A read-only Antigravity GUI canary named **Aspace Council Canonical Tree** visibly returned the complete tree:
+
+```text
+COUNCIL_TREE_READY
+D13_TREE_READY RYAN_READY YAZ_READY GRAHAM_READY
+D11_TREE_READY AMY_READY RORY_READY RIVER_READY
+D12_TREE_READY BILL_READY CLARA_READY NARDOLE_READY
+```
+
+Therefore the canonical Council topology is operational in the Antigravity GUI runtime:
+**Rick → 3 Doctors → 9 Companions**.
+
+Keep the evidence distinction:
+- recursive conversation IDs are machine-traced for Rick/Doctor13;
+- full-tree D11/D12 grandchild readiness is GUI-observed evidence;
+- the CLI print transport remains a separate defect and does not invalidate the GUI Council runtime.
+
 ## Durable lessons
 
 - Recover only the missing child after server/parent failure; never rerun the whole Council blindly.

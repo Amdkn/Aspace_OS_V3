@@ -94,6 +94,28 @@ Critical orchestration rule:
 Antigravity child messages are delivered automatically.
 
 A polling attempt consumed roughly 104k input tokens and 533k cached tokens before timeout. Do not repeat it.
+## Full canonical tree GUI canary — PASS
+
+A subsequent read-only Antigravity GUI canary titled **Aspace Council Canonical Tree** exercised the complete declared hierarchy and visibly returned:
+
+```text
+COUNCIL_TREE_READY
+D13_TREE_READY RYAN_READY YAZ_READY GRAHAM_READY
+D11_TREE_READY AMY_READY RORY_READY RIVER_READY
+D12_TREE_READY BILL_READY CLARA_READY NARDOLE_READY
+```
+
+This is stronger than the earlier Doctor13-only recursive proof: the GUI runtime now demonstrates discovery/routing through all three Doctors and all nine Companions.
+
+Evidence classification:
+- machine-identified recursive conversations above remain the strongest durable trace for Rick/Doctor13;
+- the full 3×3 tree result is recorded as **GUI-observed runtime evidence** from the Antigravity project `Agy`;
+- do not invent missing conversation IDs for the D11/D12 grandchildren merely to make this evidence look more machine-native.
+
+Interpretation:
+**Council topology is operational in Antigravity GUI.**
+The separate `agy --print` CLI path still has an auth/token-source defect and must not be used to downgrade this GUI runtime proof.
+
 ## Legacy scheduled-agent fleet disabled
 
 17 old Antigravity sidecars were creating scheduled full-agent conversations every ~15/20/30 minutes.

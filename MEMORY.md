@@ -61,6 +61,6 @@ Current execution truth after reconciliation:
 - 13 identity worktrees are expected clean and synchronized when idle.
 
 ## Antigravity Council runtime checkpoint — 2026-09-28
-- Recursive runtime is proven: Rick → Doctors, and Doctor13 → Ryan/Yaz/Graham in isolated Antigravity worktrees.
+- Recursive runtime is proven: Rick → 3 Doctors → 9 Companions in the Antigravity GUI canonical-tree canary; Doctor13 → Ryan/Yaz/Graham also has machine-traced isolated-subagent evidence.
 - Resume from `_INBOX/handoffs/HANDOVER-2026-09-28-ANTIGRAVITY-COUNCIL-WAVE2.md`.
 - Next gate is one real Foundation PDR through Jules → Ryan → Yaz → Graham before PR #187 leaves Draft.
