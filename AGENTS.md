@@ -8,6 +8,18 @@
 
 ---
 
+## 0. Bootstrap mémoire obligatoire — avant tout routage
+
+**Invariant local canonique :**
+- `40_Memory_Wiki_OKF/` = mémoire longue certifiée et canonique.
+- `MEMORY.md` = pointeur de bootstrap uniquement.
+- `_INBOX/handoffs/` = continuité opérationnelle entre sessions.
+- `ASPACE_ACTIVE_INTENTS.yaml` = projection locale des intentions A0 actives; les IPBD persistants vivent dans Supabase `aspace`.
+- **Interdit :** créer un répertoire mémoire/continuity parallèle hors de `ASpace_OS_V3` parce qu'une branche ou un checkout ne montre pas un fichier attendu.
+- Si un chemin canonique manque, **corriger d'abord la branche/le checkout/worktree**, puis relire le canon.
+
+Toute session ChatGPT, Hermes, Codex, Antigravity, Claude Code, Jules ou autre harness qui intervient sur V3 doit appliquer ce bootstrap avant de reconstruire l'architecture depuis un handover, un ticket ou un historique de chat.
+
 ## 1. La Pyramide à 7 Niveaux d'A'Space OS V3
 
 ```
