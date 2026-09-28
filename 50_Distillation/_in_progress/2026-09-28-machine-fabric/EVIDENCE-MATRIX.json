@@ -1,0 +1,162 @@
+{
+  "schema": "aspace.discovery-evidence-matrix.v1",
+  "mission_issue": 194,
+  "cell_issue": 195,
+  "date": "2026-09-28",
+  "sources": [
+    {
+      "id": "dc-local",
+      "repo": "wonderwhy-er/DesktopCommanderMCP",
+      "license": "MIT",
+      "commit": "7bad545f4524d6b46ca84369b0015f4ebf151fec",
+      "patterns": [
+        "filesystem",
+        "process sessions",
+        "pagination",
+        "surgical edit",
+        "documents"
+      ],
+      "risks": [
+        "guardrails_not_sandbox",
+        "policy_hook_missing",
+        "interactive_validation_gap"
+      ]
+    },
+    {
+      "id": "dc-remote",
+      "repo": "desktop-commander/remote-desktop-commander",
+      "commit": "b480501dcca59f802ebaf97f2f57b45252d0b720",
+      "license": "proprietary-service/docs-reference",
+      "patterns": [
+        "device_agent_relay",
+        "oauth_remote_mcp"
+      ],
+      "risks": [
+        "vendor_control_plane",
+        "quota_dependency",
+        "implementation_not_open_source"
+      ]
+    },
+    {
+      "id": "windows-mcp",
+      "repo": "CursorTouch/Windows-MCP",
+      "license": "MIT",
+      "commit": "a74df211d8dcb4cdc49f58a5a18d816d79bd6c3b",
+      "patterns": [
+        "windows_uia",
+        "app_window_control",
+        "dom_mode",
+        "scheduled_task_persistence"
+      ]
+    },
+    {
+      "id": "computer-use",
+      "repo": "zavora-ai/computer-use-mcp",
+      "license": "MIT",
+      "commit": "35de1a26fa846d77bde6af89a43535c1e44980e7",
+      "patterns": [
+        "accessibility_first",
+        "native_fallback",
+        "host_policy",
+        "session_console"
+      ],
+      "risks": [
+        "loopback_endpoint_needs_remote_auth"
+      ]
+    },
+    {
+      "id": "playwright",
+      "repo": "microsoft/playwright-mcp",
+      "commit": "e87bb897e15a6f2af402afb0f10b45eced9e1f9b",
+      "patterns": [
+        "accessibility_tree",
+        "browser_context",
+        "cdp",
+        "extension_attach"
+      ],
+      "risks": [
+        "origin_filters_not_security_boundary"
+      ]
+    },
+    {
+      "id": "chrome-devtools",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "license": "Apache-2.0",
+      "commit": "47c5b3753d9bc6da32e261838a033e6427940cf0",
+      "patterns": [
+        "cdp",
+        "network",
+        "runtime",
+        "performance"
+      ],
+      "risks": [
+        "browser_sensitive_data",
+        "usage_stats_default_on"
+      ]
+    },
+    {
+      "id": "headscale",
+      "repo": "juanfont/headscale",
+      "license": "BSD-3-Clause",
+      "commit": "99cbba7aff2bd78c62486212f6968c0cca62870c",
+      "patterns": [
+        "self_hosted_overlay_control_plane"
+      ],
+      "open_questions": [
+        "serve_identity_semantics_equivalence"
+      ]
+    },
+    {
+      "id": "chrome-native-messaging",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging",
+      "patterns": [
+        "stdio_framed_json",
+        "allowed_origins",
+        "connectNative",
+        "windows_registry"
+      ],
+      "limits": [
+        "host_to_extension_1MB",
+        "extension_to_host_64MiB"
+      ]
+    },
+    {
+      "id": "chrome-debugger",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/debugger",
+      "patterns": [
+        "cdp_transport",
+        "tab_targeting"
+      ],
+      "risks": [
+        "high_privilege",
+        "enterprise_policy_attach_restrictions"
+      ]
+    },
+    {
+      "id": "tailscale-serve",
+      "url": "https://tailscale.com/docs/features/tailscale-serve",
+      "patterns": [
+        "private_tailnet_proxy",
+        "acl",
+        "identity_headers",
+        "localhost_backend"
+      ]
+    },
+    {
+      "id": "mcp-conformance-signal",
+      "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP/issues/653",
+      "classification": "reproduce_not_verdict"
+    }
+  ],
+  "bill_s0": {
+    "upstream": "mvanhorn/last30days-skill@084662b501fb0dba95bd55eff0c258d35e0dc499",
+    "machine_fabric_scout": {
+      "exit_code": 0,
+      "reddit": 2,
+      "youtube": 4,
+      "grounding": 0,
+      "quality": "planner_fallback_too_noisy_for_specialized_query"
+    },
+    "correction": "require_explicit_plan_for_specialized_technical_scouts"
+  }
+}
