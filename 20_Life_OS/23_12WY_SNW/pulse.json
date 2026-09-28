@@ -1,0 +1,38 @@
+{
+  "version": "v1",
+  "date_pulse": "2026-09-18",
+  "framework": "12WY Curie SNW",
+  "registre_version": "v0",
+  "horizons_statut": [
+    {
+      "horizon": "H1",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "source_ok": 1,
+      "trace_hebdo": ""
+    },
+    {
+      "horizon": "H3",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "source_ok": 1,
+      "trace_hebdo": ""
+    },
+    {
+      "horizon": "H10",
+      "source": "W1_Item2_13e_Semaine_Rock_Decomposition.md",
+      "source_ok": 1,
+      "trace_hebdo": ""
+    },
+    {
+      "horizon": "H30",
+      "source": "Cycle_Q3_2026_Calendar.md",
+      "source_ok": 1,
+      "trace_hebdo": "05_Execution_Ortegas"
+    },
+    {
+      "horizon": "H90",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "source_ok": 1,
+      "trace_hebdo": ""
+    }
+  ]
+}
