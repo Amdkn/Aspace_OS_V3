@@ -1,0 +1,34 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260928-AMF-M0-CAPABILITY-VERSION-PROVENANCE",
+  "origin_intent": "GitHub #194 A'Space Machine Fabric",
+  "work_id": "GitHub#197 / PR#202",
+  "invariant": "A durable mutation receipt must identify the exact capability contract version that authorized and interpreted the effect.",
+  "observation": "PR #202 persists operation_id, fingerprint, adapter and policy_version, while machine.fs.write manifest version 0.1.0 is only present in the live CAPABILITIES registry and is absent from the operation ledger and receipt.",
+  "expected": "Historical replay can determine the exact capability manifest version, and preferably a stable manifest digest, without consulting mutable current code.",
+  "actual": "Independent Graham run reproduced 9/9 PASS and durable replay behavior, but receipt provenance cannot distinguish a future machine.fs.write manifest revision from version 0.1.0.",
+  "evidence": [
+    "GitHub PR #202 head 6edbdded5c91a40899d4ea211be22d79169c9842",
+    "10_Tech_OS/machine_fabric/m0/amf_m0.py",
+    "10_Tech_OS/reports/amf_m0_evidence_20260928.json",
+    "Independent Graham local canary 2026-09-28: 9/9 tests PASS; receipt_has_capability_version=false",
+    "Clara MACHINE_FABRIC_CONTRACTS.schema.json Receipt requires policy_version but not capability_version"
+  ],
+  "suggested_capability": "clara-design-forge",
+  "authority": {
+    "allowed": [
+      "extend the AMF receipt/ledger provenance contract with capability version identity",
+      "request the smallest Ryan implementation patch after Clara fixes the contract"
+    ],
+    "forbidden": [
+      "invalidate Ryan's already-proven crash/replay canary",
+      "expand M0 into Chrome, process control or remote transport",
+      "fabricate historical capability versions"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": []
+  },
+  "blocking": true,
+  "reversible": true,
+  "reply_contract": "Clara returns the accepted provenance fields/schema delta; Ryan applies the bounded implementation/test patch; Graham reruns provenance/replay certification. This blocks M0 SHIPPED, not Ryan BUILD PASS."
+}
