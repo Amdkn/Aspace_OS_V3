@@ -27,11 +27,13 @@
       "bootstrap": ".devcontainer/bootstrap-aspace.py",
       "status": "active",
       "current_instance": {
-        "name": "a-space-federated-workspace-7g5grwqpgrxfvr",
+        "name": "a-space-federated-workspace-jx7x496qxrwhprjp",
         "display_name": "A-Space Federated Workspace",
         "machine": "basicLinux32gb",
         "repo": "Amdkn/Aspace_OS_V3",
-        "branch": "feat/aspace-workspace-registry"
+        "branch": "main",
+        "state": "Shutdown",
+        "git": "clean_ahead0_behind0"
       }
     },
     "habitat": {
@@ -428,7 +430,16 @@
     "versioned_worlds": "github",
     "federated_workspace": "github_codespaces",
     "living_desktop": "omarchy_vm",
-    "local_sovereignty": "A0-Amadeus Windows node"
+    "local_sovereignty": "A0-Amadeus Windows node",
+    "historical_primary_sources": {
+      "gemini_takeout_2026_09_26": {
+        "source_artifact": "takeout-20260926T061851Z-1-001.zip",
+        "local_extraction": "C:/Users/amado/Aspace_Ingestion/gemini_takeout_20260926",
+        "extracted_text_files": 20,
+        "role": "primary_historical_intent_and_kernel_history_corpus",
+        "authority_rule": "historical evidence only; reconcile against Linear, Supabase, GitHub and current files before promotion"
+      }
+    }
   },
   "invariants": [
     "A'Space V3 is one system; Kernel, Life and Buzz are complementary cores, not separate A'Space systems.",
@@ -524,5 +535,12 @@
         "Observatoire": "C:/Users/amado/agent-os/observatoire"
       }
     }
+  },
+  "intent_ledger": {
+    "id": "ASPACE_ACTIVE_INTENTS",
+    "path": "ASPACE_ACTIVE_INTENTS.yaml",
+    "role": "durable_a0_intent_source",
+    "read_before_execution": true,
+    "rule": "Intent outranks incidental technical state; agents read this before reprioritizing work."
   }
 }
