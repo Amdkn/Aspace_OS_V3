@@ -1,0 +1,26 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260928-HARNESS-RUNTIME-P1-P4",
+  "origin_intent": "GitHub#194 A'Space Machine Fabric",
+  "work_id": null,
+  "invariant": "Harness execution must obey typed capability -> policy -> operation_id -> precondition -> effect -> durable receipt -> replay/compensation.",
+  "observation": "M0 proves bounded filesystem mutation, but River's MiroFish run exposed missing environment identity, isolated prepare, process-tree lifecycle and harness execution receipt prerequisites.",
+  "expected": "River composes interchangeable harnesses through AMF-governed runtime capabilities with deterministic inspect/prepare/lifecycle/reconcile/receipt semantics.",
+  "actual": "River can preflight manually, while parent/child lifecycle, environment drift and harness recovery are not yet represented by the accepted Machine Fabric contract.",
+  "evidence": [
+    "PR#202 Ryan AMF M0",
+    "Graham CAPNEED-20260928-AMF-M0-CAPABILITY-VERSION-PROVENANCE",
+    "HANDOVER-2026-09-28-RIVER-HARNESS-WORKFLOW-MIROFISH.md",
+    "HANDOVER-2026-09-28-RIVER-MIROFISH-RUNTIME-PREFLIGHT.md"
+  ],
+  "suggested_capability": "clara-design-forge",
+  "authority": {
+    "allowed": ["compile P1-P4 contract deltas", "define typed I/O and acceptance", "route bounded build packet to Ryan"],
+    "forbidden": ["rewrite Ryan M0 implementation", "start Chrome M1", "grant River direct privileged shell authority"],
+    "reversible_only": true,
+    "requires_human_approval": []
+  },
+  "blocking": true,
+  "reversible": true,
+  "reply_contract": "Return accepted P1-P4 contract delta, exact Ryan build boundary, River consumer contract, evidence gates and rollback/recovery semantics."
+}
