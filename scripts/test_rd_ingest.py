@@ -45,6 +45,25 @@ Next line
             with patch.dict(os.environ, {"ASPACE_WATCH_SKILL": str(skill)}):
                 self.assertEqual(rd.resolve_watch_skill(), skill)
 
+    def test_extract_watch_report(self):
+        report = """# watch: video report
+
+## Transcript
+
+_Source: captions._
+
+```
+[00:01] first line
+[00:03] second line
+```
+
+---
+"""
+        self.assertEqual(
+            rd.extract_watch_report(report),
+            "[00:01] first line\n[00:03] second line\n",
+        )
+
     def test_packet_stops_at_capture_boundary(self):
         with tempfile.TemporaryDirectory() as td:
             transcript = Path(td) / "transcript.md"
