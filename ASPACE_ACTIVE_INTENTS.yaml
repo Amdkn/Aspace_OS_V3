@@ -1,0 +1,187 @@
+version: 2
+ledger_id: ASPACE_ACTIVE_INTENTS
+updated_at: 2026-09-27
+owner: A0-Amadeus
+
+purpose: >
+  Preserve A0 intent across ChatGPT/Jules/Hermes/Orca session death.
+  Agents read this before turning incidental infrastructure state into priority.
+
+historical_primary_sources:
+  gemini_takeout_2026_09_26:
+    source_artifact: takeout-20260926T061851Z-1-001.zip
+    ingested: true
+    extracted_text_files: 20
+    local_extraction: C:/Users/amado/Aspace_Ingestion/gemini_takeout_20260926
+    contents:
+      - Gemini activity history (MonActivité.html)
+      - historical Kernel source snapshots and implementation artifacts
+      - prior intent, Life OS, Business OS, Rick, Hermes, Jules and IPBD discussion history
+    authority_rule: >
+      Treat the Takeout as a primary historical corpus for recovering original intent,
+      chronology and implementation history. It is not the live operational SSOT.
+      Distill and compare it against Linear, Supabase, GitHub and current files before promotion.
+
+north_star:
+  statement: >
+    A'Space V3 is one system whose purpose is to make Life OS and Business OS
+    continuously executable, observable and evolvable without A0 becoming the human router.
+  hierarchy:
+    A0: Amadeus
+    S1: Rick's Verse
+    managers:
+      Doctor13: Kernel Core
+      Doctor11: Life Core
+      Doctor12: Buzz Core
+    companions:
+      Kernel: [Ryan, Yaz, Graham]
+      Life: [Amy, Rory, River]
+      Buzz: [Bill, Clara, Nardole]
+
+priority_law:
+  - Life OS and Business OS value delivery outrank technical maintenance.
+  - Kernel work is justified when it directly unlocks, protects or scales Life/Business execution.
+  - The current executable Jules topology is 9 Companion lanes: 3 Kernel + 3 Life + 3 Business.
+  - Do not raise capacity counters above 9 unless additional executable lanes are actually materialized.
+  - If capacity beyond the 9 base lanes is materialized, more than 80 percent of the new capacity goes to Life + Business unless a critical Kernel blocker directly unlocks them.
+  - Do not create new ontology/topology merely because a tool or session exposes another abstraction.
+  - Evidence authorizes promotion into shared canon; it does not erase alternative branches.
+  - No hidden shared-filesystem assumption between Jules sessions.
+
+active_intents:
+  - id: INTENT-01
+    title: Preserve one A'Space system under Rick's Verse
+    outcome: >
+      Rick supervises Doctor13/11/12; Doctors manage their Companions;
+      Companions execute bounded SDLC work without A0 routing routine work.
+    status: active
+
+  - id: INTENT-02
+    title: Make Life OS live rather than structurally complete but operationally dead
+    outcome: >
+      Use the now-canonical six-framework Life source map (12WY, PARA, Wheel, Ikigai, GTD, DEAL)
+      as the base for River SOH-30 and Amy SOH-33 real Workspace projections.
+    current_evidence:
+      pr_173: merged
+      source_map: SOURCE_MAP_OK
+      framework_checks: [12WY_OK, PARA_GITHUB_4_OF_4, WHEEL_OK, IKIGAI_OK, GTD_OK, DEAL_OK]
+      superseded_prs_closed: [156, 161, 165]
+    status: active
+
+  - id: INTENT-03
+    title: Make Business OS produce customer/value evidence
+    outcome: >
+      Preserve Bill=Discover, Clara=Design, Nardole=Dispatch and move from merged
+      research/design evidence into bounded Business execution and customer/value proof.
+    current_evidence:
+      pr_162_bill: merged
+      pr_159_clara: merged
+      pr_166_nardole_reconciliation: merged
+      linear_done: [SOB-90, SOB-92, SOB-1]
+      pr_167: closed_superseded
+    status: active
+
+  - id: INTENT-04
+    title: Keep Kernel advancing without swallowing the system
+    outcome: >
+      Keep Kernel work bounded to real unlocks and preserve Manager/Companion separation.
+      Do not manufacture capacity by changing counters without executable lanes.
+    current_evidence:
+      pr_160_evidence_pack: merged
+      pr_171_bootstrap_schema: merged
+      pr_172_shared_surface_fabric: merged
+      pr_174_portable_db_paths: merged
+      pr_164: closed_do_not_merge
+      soh_42: backlog_blocked_by_SOH-21
+    status: active
+
+  - id: INTENT-05
+    title: Use Jules as fractal SDLC reproduction, not as a second A0
+    outcome: >
+      One Jules session per bounded issue/lane; Managers supervise and reconcile;
+      Companions build/review/memory/dispatch within their domains; session death does not erase intent.
+    status: active
+
+  - id: INTENT-06
+    title: Make Linear the shared human Blackboard
+    outcome: >
+      Linear carries intent, ownership, dependencies, evidence refs and human-visible status.
+      False In Progress states are removed when blockers or missing execution prove no active work.
+    status: active
+
+  - id: INTENT-07
+    title: Make Supabase Agent OS Backend the shared Machine Blackboard
+    outcome: >
+      Agent OS Backend / schema aspace carries shared WorkGraph, sessions, evidence,
+      dependencies, events, world catalog and IPBD intent/capture state.
+      Local uc.db remains sovereign local cache/projection, not the only shared truth.
+    current_evidence:
+      project_status: ACTIVE_HEALTHY
+      schema: aspace
+      migrations_verified: 5
+      rls: enabled_on_all_aspace_tables
+    status: active
+
+  - id: INTENT-08
+    title: Federate A'Space worlds without flattening them into one repo
+    outcome: >
+      ASPACE_WORKSPACE_REGISTRY answers WHERE across Sol/Aspace V3, Tera/Agent OS,
+      Luna/Life OS and Business satellites; GitHub carries versioned worlds and references.
+    current_evidence:
+      registry_pr_168: merged
+    status: active
+
+  - id: INTENT-09
+    title: Materialize the cloud Workspace and Living Habitat
+    outcome: >
+      GitHub Codespaces provides /workspaces/aspace as the federated cloud workspace.
+      Omarchy VM remains the planned Living Desktop/Habitat, not another Core or OS layer.
+    current_evidence:
+      codespace_canonical: a-space-federated-workspace-jx7x496qxrwhprjp
+      codespace_branch: main
+      codespace_state: Shutdown
+      codespace_git: clean_ahead0_behind0
+      omarchy_vm: planned
+    status: active
+
+  - id: INTENT-10
+    title: Make session continuity independent from chat memory
+    outcome: >
+      A replacement ChatGPT/Jules/Hermes session reads durable active intent, Workspace Registry,
+      Linear, Supabase, GitHub evidence and the Gemini Takeout historical corpus when chronology
+      or original intent is needed, instead of reconstructing the system from one chat window.
+    status: active
+
+deferred_but_preserved:
+  - id: DEFERRED-V2
+    intent: >
+      Keep V2 and V3 accessible until provenance/useful canon/history are extracted;
+      archive V2 only after classification and evidence, never by premature deletion.
+  - id: DEFERRED-OMARCHY
+    intent: >
+      Build Omarchy as the A'Space Living Desktop once Codespaces/Supabase continuity is stable;
+      do not let VM setup become another Bedrock detour.
+
+session_start_contract:
+  required_reads:
+    - ASPACE_ACTIVE_INTENTS.yaml
+    - ASPACE_WORKSPACE_REGISTRY.json
+  then_read:
+    - Linear issue/project relevant to the requested lane
+    - Supabase aspace WorkGraph/IPBD state
+    - GitHub PR/branch evidence
+    - Gemini Takeout corpus when original intent, chronology or historical Kernel evolution is material
+  forbidden_default:
+    - reconstructing architecture from chat archaeology alone
+    - treating the Gemini Takeout as disposable archive
+    - treating the Gemini Takeout as live operational truth without reconciliation
+    - turning technical defects into top priority without checking priority_law
+    - creating duplicate Jules sessions or duplicate PR lines
+    - assuming missing files in one checkout mean the world/artifact does not exist
+
+definition_of_success:
+  - A0 can leave a session without losing active intent.
+  - Life and Business milestones move because work is reviewed/promoted, not because more infrastructure is invented.
+  - Rick and Doctors recover current execution from Linear + Supabase + GitHub + Registry.
+  - Historical intent can be recovered from Gemini/ChatGPT exports without letting historical state override current evidence.
+  - Omarchy/Codespaces become habitats/workspaces, not competing sources of truth.
