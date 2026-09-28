@@ -1,0 +1,66 @@
+{
+  "schema": "aspace.bill-scout-promotion.v1",
+  "date": "2026-09-28",
+  "upstream": {
+    "repo": "mvanhorn/last30days-skill",
+    "sha": "084662b501fb0dba95bd55eff0c258d35e0dc499",
+    "version": "3.25.0"
+  },
+  "quarantine": "C:/Users/amado/Aspace_Quarantine/bill_last30days_20260928/last30days-skill",
+  "preflight": {
+    "safe": true,
+    "browser_cookies": "off",
+    "local_writes": [],
+    "credentials_present": [
+      "github"
+    ],
+    "external_commands": [
+      "gh",
+      "yt-dlp"
+    ]
+  },
+  "canary": {
+    "topic": "AI-native software factory multi-agent orchestration",
+    "range_from": "2026-08-29",
+    "range_to": "2026-09-28",
+    "exit_code": 0,
+    "elapsed_seconds": 46.78,
+    "source_status": {
+      "reddit": {
+        "state": "ok",
+        "items": 5
+      },
+      "youtube": {
+        "state": "ok",
+        "items": 6,
+        "transcripts": 0,
+        "note": "quick profile"
+      },
+      "grounding": {
+        "state": "no-results",
+        "items": 0
+      }
+    },
+    "terminal_reported_zero": [
+      "hackernews",
+      "github",
+      "web"
+    ],
+    "warning": "Top evidence is highly concentrated in one source."
+  },
+  "decision": {
+    "status": "promote_bill_s0_profile",
+    "unrestricted_hermes_install": false,
+    "defaults": [
+      "pinned_sha",
+      "no_browser_cookies",
+      "no_store",
+      "no_publish",
+      "no_webhooks",
+      "source_allowlist",
+      "raw_json",
+      "max_5_candidates"
+    ],
+    "deep_capture": "WATCH|repo|paper|primary_docs"
+  }
+}
