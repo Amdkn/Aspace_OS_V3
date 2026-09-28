@@ -1,0 +1,32 @@
+﻿name: Forge Contract
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+  workflow_call:
+    inputs:
+      contract_body:
+        description: Forge contract body supplied by a satellite repository
+        required: true
+        type: string
+
+jobs:
+  contract:
+    name: signal-discovery-design-build-test-review-ship-evidence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Validate pull-request contract
+        if: github.event_name == 'pull_request'
+        run: python scripts/validate_forge_contract.py --event "$GITHUB_EVENT_PATH"
+      - name: Validate reusable satellite contract
+        if: github.event_name == 'workflow_call'
+        env:
+          FORGE_CONTRACT_BODY: ${{ inputs.contract_body }}
+        run: python scripts/validate_forge_contract.py --body-env FORGE_CONTRACT_BODY --strict
+      - name: Unit-test contract validator
+        run: python scripts/test_validate_forge_contract.py
+

@@ -1,0 +1,47 @@
+﻿name: Forge Signal
+description: Capture a bounded software-factory signal without duplicating existing work
+title: "[FORGE][SIGNAL] "
+labels:
+  - "forge:signal"
+body:
+  - type: textarea
+    id: signal
+    attributes:
+      label: Signal
+      description: What changed, broke, appeared, or needs to become true?
+      placeholder: Observable signal, not a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Smallest verifiable outcome that resolves this signal.
+      placeholder: A result that can be tested or evidenced.
+    validations:
+      required: true
+  - type: dropdown
+    id: lane
+    attributes:
+      label: First accountable lane
+      options:
+        - Bill - Discovery
+        - Clara - Design / Compile
+        - Ryan - Build
+        - Nardole - Dispatch / Ship
+    validations:
+      required: true
+  - type: textarea
+    id: existing
+    attributes:
+      label: Existing evidence / related work
+      description: Link existing issue, PR, discussion, project item, file, or external evidence. Write "none found" only after search.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints / acceptance
+      description: Risk, boundaries, tests, rollback, and acceptance criteria.
+    validations:
+      required: true
