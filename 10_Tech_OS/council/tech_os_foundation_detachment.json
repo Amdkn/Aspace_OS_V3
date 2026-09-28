@@ -1,0 +1,160 @@
+{
+  "campaign_id": "TECH-OS-FOUNDATION-DETACHMENT-2026-09-28",
+  "source": {
+    "linear_project": "P-SOH-7",
+    "name": "S2 Kernel Core — Recursive Tech OS",
+    "observed_at": "2026-09-28"
+  },
+  "goal": "Kernel reproduces, recovers, dispatches and evolves without continuous A0 focus.",
+  "supervisor": "rick",
+  "manager": "doctor13-kernel",
+  "consumer_reviewers": [
+    "doctor11-life",
+    "doctor12-buzz"
+  ],
+  "milestones": [
+    {
+      "id": "D13-M1",
+      "linear_id": "71d8ee1d-4d29-4a2a-9631-114476a39624",
+      "observed_progress": "0%",
+      "theme": "Sovereign Runtime, Git & Safety Gates",
+      "critical": [
+        "SOH-16",
+        "SOH-46",
+        "SOH-48",
+        "SOH-49",
+        "SOH-140",
+        "SOH-37",
+        "SOH-139",
+        "SOH-23"
+      ]
+    },
+    {
+      "id": "D13-M2",
+      "linear_id": "82f7b05e-6d9c-4aec-899a-b863ae303dd9",
+      "observed_progress": "3%",
+      "theme": "Standards, Shared Skills & Intelligence Fabric",
+      "critical": [
+        "SOH-111",
+        "SOH-21",
+        "SOH-20",
+        "SOH-42",
+        "SOH-137",
+        "SOH-39",
+        "SOH-40"
+      ],
+      "review_existing": [
+        "SOH-19",
+        "SOH-41"
+      ],
+      "nonblocking_if_acceptance_met": [
+        "SOH-22",
+        "SOH-136",
+        "SOH-138",
+        "SOH-105",
+        "SOH-106",
+        "SOH-107",
+        "SOH-108",
+        "SOH-109",
+        "SOH-110"
+      ]
+    },
+    {
+      "id": "D13-M3",
+      "linear_id": "9c4fb957-a834-455a-9c39-79c01cc62750",
+      "observed_progress": "2%",
+      "theme": "Typed Queue, WorkGraph & Agent OS Control Plane",
+      "critical": [
+        "SOH-51",
+        "SOH-124",
+        "SOH-43",
+        "SOH-38",
+        "SOH-26",
+        "SOH-50",
+        "SOH-25",
+        "SOH-24",
+        "SOH-12",
+        "SOH-11"
+      ],
+      "review_existing": [
+        "SOH-14"
+      ]
+    },
+    {
+      "id": "D13-M4",
+      "linear_id": "15561f54-e303-4287-ae9a-877553db0762",
+      "observed_progress": "25%",
+      "theme": "Recursive SOH Autonomy Gate",
+      "critical": [
+        "SOH-52",
+        "SOH-53",
+        "SOH-54"
+      ],
+      "already_done": [
+        "SOH-35"
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "wave": "A",
+      "purpose": "Safe substrate + delivery",
+      "milestones": [
+        "D13-M1"
+      ],
+      "agents": [
+        "ryan-build",
+        "yaz-observe",
+        "graham-state"
+      ]
+    },
+    {
+      "wave": "B",
+      "purpose": "Control plane + Jules worker autonomy",
+      "milestones": [
+        "D13-M3"
+      ],
+      "agents": [
+        "ryan-build",
+        "yaz-observe",
+        "graham-state",
+        "nardole-dispatch"
+      ]
+    },
+    {
+      "wave": "C",
+      "purpose": "Shared intelligence/verification contracts",
+      "milestones": [
+        "D13-M2"
+      ],
+      "agents": [
+        "ryan-build",
+        "yaz-observe",
+        "graham-state"
+      ]
+    },
+    {
+      "wave": "D",
+      "purpose": "Recursive detachment canary",
+      "milestones": [
+        "D13-M4"
+      ],
+      "agents": [
+        "doctor13-kernel",
+        "ryan-build",
+        "yaz-observe",
+        "graham-state"
+      ]
+    }
+  ],
+  "detachment_acceptance": [
+    "Fresh Rick recovers campaign without A0 retelling context.",
+    "Doctor13 compiles/dispatches next PDR wave without A0 routing.",
+    "At least one code-heavy PDR goes to Jules, is independently verified, integrated and evidenced without A0 technician work.",
+    "Worker/session failure can recover/re-route without losing originating intent.",
+    "Git/worktree/promotion/rollback path is reproducible without dirty shared root.",
+    "WorkGraph/status/evidence remain truthful across recovery.",
+    "Doctor11 and Doctor12 consume Foundation through bounded interfaces without bespoke Kernel babysitting.",
+    "M1-M3 acceptance gaps are closed or proven non-blocking; M4 autonomous canary passes."
+  ]
+}

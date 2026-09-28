@@ -1,0 +1,111 @@
+{
+  "schema": "aspace.pdr-poles.v1",
+  "capability_poles": {
+    "ryan-build": {
+      "doctor": "doctor13-kernel",
+      "capability": "BUILD",
+      "default_kinds": [
+        "BUILD",
+        "REPAIR",
+        "INTEGRATE",
+        "MIGRATE"
+      ]
+    },
+    "yaz-observe": {
+      "doctor": "doctor13-kernel",
+      "capability": "OBSERVE",
+      "default_kinds": [
+        "TEST",
+        "AUDIT",
+        "BENCHMARK"
+      ]
+    },
+    "graham-state": {
+      "doctor": "doctor13-kernel",
+      "capability": "STATE",
+      "default_kinds": [
+        "CONTRACT",
+        "MIGRATE",
+        "AUDIT"
+      ]
+    },
+    "amy-interface": {
+      "doctor": "doctor11-life",
+      "capability": "INTERFACE",
+      "default_kinds": [
+        "CONTRACT",
+        "INTEGRATE",
+        "TEST"
+      ]
+    },
+    "rory-persistence": {
+      "doctor": "doctor11-life",
+      "capability": "PERSISTENCE",
+      "default_kinds": [
+        "CONTRACT",
+        "MIGRATE",
+        "AUDIT"
+      ]
+    },
+    "river-flow": {
+      "doctor": "doctor11-life",
+      "capability": "FLOW",
+      "default_kinds": [
+        "INTEGRATE",
+        "TEST",
+        "REPAIR"
+      ]
+    },
+    "bill-research": {
+      "doctor": "doctor12-buzz",
+      "capability": "RESEARCH",
+      "default_kinds": [
+        "AUDIT",
+        "BENCHMARK",
+        "CONTRACT"
+      ]
+    },
+    "clara-design-forge": {
+      "doctor": "doctor12-buzz",
+      "capability": "DESIGN_FORGE",
+      "default_kinds": [
+        "CONTRACT",
+        "INTEGRATE"
+      ]
+    },
+    "nardole-dispatch": {
+      "doctor": "doctor12-buzz",
+      "capability": "DISPATCH_INTERCONNECTION",
+      "default_kinds": [
+        "INTEGRATE",
+        "TEST",
+        "REPAIR"
+      ]
+    }
+  },
+  "work_kinds": [
+    "BUILD",
+    "REPAIR",
+    "TEST",
+    "INTEGRATE",
+    "MIGRATE",
+    "AUDIT",
+    "BENCHMARK",
+    "CONTRACT"
+  ],
+  "jules_fit": {
+    "good": [
+      "BUILD",
+      "REPAIR",
+      "TEST",
+      "INTEGRATE",
+      "MIGRATE"
+    ],
+    "conditional": [
+      "AUDIT",
+      "BENCHMARK",
+      "CONTRACT"
+    ],
+    "rule": "Jules requires explicit repo/file boundary and observable acceptance. Output is never auto-promoted."
+  }
+}
