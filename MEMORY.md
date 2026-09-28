@@ -1,6 +1,6 @@
 # A'Space V3 — MEMORY bootstrap
 
-Updated: 2026-09-27
+Updated: 2026-09-28
 
 This file is a **bootstrap pointer**, not a parallel SSOT.
 
@@ -52,4 +52,10 @@ Host policy keeps authority. Low-confidence or generative/deep work escalates to
 
 The first canary is post-edit verification/risk/routing across at least two harnesses.
 
-For details, read the latest handover.
+For details, read the latest handover: `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.
+
+Current execution truth after reconciliation:
+- Linear SOH/SOB `In Progress` = 0 unless a live claim + binding + worker exists.
+- WorkGraph = 3 governance-failed externally completed rows + 6 legitimate waiting rows.
+- Local Git branches = `main` + 13 persistent identity branches only.
+- 13 identity worktrees are expected clean and synchronized when idle.
