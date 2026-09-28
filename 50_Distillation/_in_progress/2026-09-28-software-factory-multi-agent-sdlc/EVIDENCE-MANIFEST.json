@@ -1,0 +1,76 @@
+{
+  "schema": "aspace.discovery-evidence-manifest.v1",
+  "mission_id": "MISSION-20260928T131628Z-factory-loop-canary",
+  "cell_id": "C02",
+  "date": "2026-09-28",
+  "producer": "Bill",
+  "local_capture": {
+    "root": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Bill/50_Distillation/_raw_inbox/2026-09-28-software-factory-multi-agent-sdlc",
+    "transcript_api": {
+      "implementation_reused": "30_Business_OS/09_Blueprints/coach-os-refonte/fetch_transcripts.py",
+      "results": [
+        {
+          "video_id": "tUPPVhBBcoM",
+          "chars": 19709,
+          "status": "PASS",
+          "target": "warp-factory-engineering/transcript.md"
+        },
+        {
+          "video_id": "EtSO9vU84ws",
+          "chars": 11087,
+          "status": "PASS",
+          "target": "multi-agent-orchestration/transcript.md"
+        }
+      ],
+      "credential_handling": "Existing credential was used in place and was not copied into any newly authored artifact."
+    },
+    "watch": {
+      "implementation": "C:/Users/amado/Aspace_Quarantine/pr156_cleanup_20260927/untracked/tmp/upstream/claude-video/skills/watch/scripts/watch.py",
+      "status": "FAILED_PRE_INGEST",
+      "reason": "Cannot read C:/Users/amado/.config/watch/.env; check file permissions.",
+      "mutation": "none"
+    },
+    "ytdlp_ffmpeg": {
+      "tools": [
+        "yt-dlp",
+        "ffmpeg"
+      ],
+      "process_exit": 0,
+      "post_run_artifact_verification": "PENDING",
+      "reason": "Remote Desktop Commander transport dropped immediately after the run; the process completed but Bill will not assert keyframe presence without a physical re-read."
+    }
+  },
+  "recency_scout_candidate": {
+    "repo": "mvanhorn/last30days-skill",
+    "inspected_version": "3.25.0",
+    "inspected_main_sha": "084662b501fb0dba95bd55eff0c258d35e0dc499",
+    "license": "MIT",
+    "role": "SCOUT / RECENCY / SIGNAL CARTOGRAPHY",
+    "status": "QUARANTINE_FIRST",
+    "security_note": "Upstream Hermes guide says Hermes installer returns a dangerous verdict with 19 findings and recommends git clone + cp. A'Space will not bypass the security gate blindly."
+  },
+  "durable_artifacts": [
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-01-WARP-FACTORY-ENGINEERING.md",
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-02-MULTI-AGENT-ORCHESTRATION.md",
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-03-AI-NATIVE-SDLC.md",
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-PACKET-04-LAST30DAYS-SCOUT.md",
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/BILL-SCOUT-DEEP-CAPTURE-CONTRACT.md",
+    "50_Distillation/_in_progress/2026-09-28-software-factory-multi-agent-sdlc/DISCOVERY-DIGEST.md"
+  ],
+  "dedupe": {
+    "github_issue_searches": {
+      "repository": "Amdkn/Aspace_OS_V3",
+      "queries": [
+        "software factory",
+        "WATCH video",
+        "\"Discovery Packet\"",
+        "multi-agent orchestration",
+        "\"AI-Native\""
+      ],
+      "result_count": 0
+    },
+    "memory_and_v3": "Bootstrap files and Clara/Rory/Astra/Antigravity handovers were read before synthesis.",
+    "discussion_185": "Known return bus from existing handovers. Direct discussion read/write remains pending because the available GitHub connector exposes issues/PRs but not Discussions, and DC transport became unavailable before gh CLI handoff."
+  },
+  "branch": "Amdkn/Bill"
+}
