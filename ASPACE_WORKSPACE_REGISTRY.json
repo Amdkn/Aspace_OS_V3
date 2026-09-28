@@ -51,7 +51,10 @@
   "fabrics": {
     "github": {
       "role": "versioned_worlds_and_artifacts",
-      "status": "active"
+      "status": "active",
+      "steward": "Ryan",
+      "shared": true,
+      "forge_chain": "Ryan -> Bill -> Clara -> Nardole"
     },
     "linear": {
       "role": "human_blackboard_and_control_tower",
@@ -73,7 +76,11 @@
           "manager": "Doctor12"
         }
       },
-      "jules_mcp": "connected"
+      "jules_mcp": "connected",
+      "steward": "Rory",
+      "shared": true,
+      "life_core_integrity_owner": "Rory",
+      "scope_rule": "Linear is Rory's Life Space for A1-A3 governance development and remains a shared cross-Core human blackboard; stewardship is not exclusivity."
     },
     "supabase": {
       "role": "machine_blackboard_workgraph",
@@ -102,7 +109,23 @@
         "aspace.v_world_catalog",
         "aspace.v_active_sessions"
       ],
-      "rule": "shared machine state; local uc.db is a sovereign cache/projection, not the sole shared truth"
+      "rule": "shared machine state; local uc.db is a sovereign cache/projection, not the sole shared truth",
+      "steward": "Graham",
+      "shared": true,
+      "intent_ssot": {
+        "capture_log": "aspace.capture_event",
+        "intent_state": "aspace.intent",
+        "sources": "aspace.intent_source",
+        "links": "aspace.intent_link",
+        "transitions": "aspace.intent_transition",
+        "hook_cursors": "aspace.capture_cursor",
+        "views": [
+          "aspace.v_intent_inbox",
+          "aspace.v_intent_open",
+          "aspace.v_intent_unresolved_age"
+        ],
+        "invariant": "IPBD persists until explicit RESOLVED/CLOSED/CANCELED; terminal closure needs evidence/reason; session death cannot erase intent."
+      }
     }
   },
   "cores": {
@@ -402,7 +425,9 @@
     },
     "tinybird": {
       "role": "observatory_telemetry",
-      "status": "jules_mcp_connected"
+      "status": "jules_mcp_connected",
+      "steward": "Yaz",
+      "shared": true
     },
     "context7": {
       "role": "external_technical_knowledge",
@@ -421,7 +446,69 @@
       "status": "active",
       "organization": "Aspace OS",
       "project": "Agent OS Backend",
-      "schema": "aspace"
+      "schema": "aspace",
+      "steward": "Graham",
+      "shared": true
+    },
+    "herdr": {
+      "role": "persistent_harness_interface",
+      "steward": "Amy",
+      "shared": true,
+      "status": "active_local_surface",
+      "capabilities": [
+        "tmux_persistence",
+        "session_habitat",
+        "harness_interface"
+      ],
+      "rule": "Herdr persists and presents harness sessions; it is not an identity or state SSOT."
+    },
+    "google_workspace_cli": {
+      "role": "business_os_development_and_workflow_plane",
+      "steward": "River",
+      "shared": true,
+      "status": "active_capability_surface",
+      "capabilities": [
+        "drive",
+        "calendar",
+        "tasks",
+        "sheets",
+        "docs",
+        "triggers",
+        "automation"
+      ],
+      "rule": "GWS is the operational development/workflow plane for Business OS through PARA + 12WY; consequential effects emit evidence."
+    },
+    "jev": {
+      "role": "typed_system_one_reflex_plane",
+      "steward": "River",
+      "shared": true,
+      "status": "research_and_adapter_integration",
+      "source": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "capabilities": [
+        "choice",
+        "score",
+        "noul",
+        "fast_route",
+        "classify",
+        "verify",
+        "branch"
+      ],
+      "rule": "Jev proposes typed probabilistic reflexes; deterministic host policy owns thresholds, authority and side effects."
+    },
+    "lidar": {
+      "role": "agent_trajectory_observability_and_proprioception",
+      "steward": "Yaz",
+      "shared": true,
+      "status": "research_and_adapter_integration",
+      "source": "https://arxiv.org/html/2609.28559v1",
+      "capabilities": [
+        "verify_trajectory",
+        "recover_trajectory",
+        "resolve_trajectory",
+        "behavioral_digest",
+        "drift"
+      ],
+      "rule": "LiDAR-style normalized trajectory evidence feeds observability and reflex state; full fingerprints remain evidence, not authority."
     }
   },
   "continuity": {
@@ -439,7 +526,10 @@
         "role": "primary_historical_intent_and_kernel_history_corpus",
         "authority_rule": "historical evidence only; reconcile against Linear, Supabase, GitHub and current files before promotion"
       }
-    }
+    },
+    "intent_ssot": "supabase:Aspace OS/Agent OS Backend/aspace.intent",
+    "intent_capture": "supabase:Aspace OS/Agent OS Backend/aspace.capture_event",
+    "intent_hooks": "supabase:Aspace OS/Agent OS Backend/aspace.capture_cursor"
   },
   "invariants": [
     "A'Space V3 is one system; Kernel, Life and Buzz are complementary cores, not separate A'Space systems.",
@@ -453,7 +543,11 @@
     "Omarchy is the Living Desktop habitat, not a new Core or a new OS layer.",
     "Jules sessions communicate through references and evidence, not hidden shared-disk assumptions.",
     "Evidence gates promotion into the shared canon; it does not erase alternative branches.",
-    "Jules MCPs are capability surfaces, not new sources of canonical authority."
+    "Jules MCPs are capability surfaces, not new sources of canonical authority.",
+    "IPBD capture is append-first; no chat/session death may erase an unresolved intention.",
+    "Surface stewardship is accountability, never exclusive reach.",
+    "Life/Business execution is not blocked by unrelated Kernel or memory/ontology debt.",
+    "Jev reflexes and LiDAR-style observations are capability planes; deterministic policy and evidence retain authority."
   ],
   "worlds": {
     "Sol": {
@@ -542,5 +636,25 @@
     "role": "durable_a0_intent_source",
     "read_before_execution": true,
     "rule": "Intent outranks incidental technical state; agents read this before reprioritizing work."
+  },
+  "life_core_operating_surfaces": {
+    "Rory": {
+      "role": "Integrity of Integrity",
+      "primary_surface": "Linear",
+      "responsibility": "A1-A3 governance, intent/dependency/status integrity and reconciliation"
+    },
+    "Amy": {
+      "role": "Interface of Interface",
+      "primary_surface": "Herdr",
+      "responsibility": "human/agent interface and persistent harness workspace projection"
+    },
+    "River": {
+      "role": "Flow of Flow",
+      "primary_surfaces": [
+        "Google Workspace CLI",
+        "Jev"
+      ],
+      "responsibility": "Business OS workflow effects plus typed reflex routing"
+    }
   }
 }
