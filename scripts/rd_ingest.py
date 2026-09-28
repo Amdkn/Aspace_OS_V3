@@ -87,6 +87,7 @@ def resolve_watch_skill() -> Path | None:
     candidates = [
         ROOT / ".agents" / "skills" / "watch",
         Path.home() / ".agents" / "skills" / "watch",
+        Path.home() / ".claude" / "plugins" / "marketplaces" / "claude-video" / "skills" / "watch",
     ]
     cache = Path.home() / ".claude" / "plugins" / "cache" / "claude-video" / "watch"
     if cache.exists():
@@ -121,6 +122,39 @@ def normalize_transcript(text: str, suffix: str = "") -> str:
     if suffix.lower() == ".vtt" or text.lstrip().startswith("WEBVTT"):
         return parse_vtt(text)
     return text.strip() + "\n"
+
+
+def extract_watch_report(report: str) -> str:
+    marker = "## Transcript"
+    if marker not in report:
+        raise RuntimeError("WATCH report has no Transcript section")
+    section = report.split(marker, 1)[1]
+    blocks = section.split("```")
+    if len(blocks) < 3:
+        raise RuntimeError("WATCH report has no fenced transcript")
+    transcript = blocks[1].strip()
+    if not transcript:
+        raise RuntimeError("WATCH report transcript is empty")
+    return normalize_transcript(transcript)
+
+
+def transcript_from_watch(watch_skill: Path, source: str, run_dir: Path) -> tuple[str, str]:
+    script = watch_skill / "scripts" / "watch.py"
+    if not script.exists():
+        raise RuntimeError(f"WATCH script missing: {script}")
+    watch_dir = run_dir / "watch"
+    watch_dir.mkdir(parents=True, exist_ok=True)
+    cp = run([
+        os.environ.get("PYTHON", "python"),
+        str(script),
+        source,
+        "--detail", "transcript",
+        "--no-whisper",
+        "--out-dir", str(watch_dir),
+    ])
+    report_path = watch_dir / "watch_report.md"
+    report_path.write_text(cp.stdout, encoding="utf-8")
+    return extract_watch_report(cp.stdout), "watch:captions"
 
 
 def metadata_for(source: str) -> dict:
@@ -323,8 +357,17 @@ def main() -> int:
             transcript, provider = transcript_from_command(command, args.source)
             raw_ref = "stdout:ASPACE_TRANSCRIPT_CMD"
         else:
-            transcript, provider, raw_path = transcript_ytdlp(args.source, run_dir)
-            raw_ref = str(raw_path)
+            watch_skill = resolve_watch_skill()
+            if watch_skill:
+                try:
+                    transcript, provider = transcript_from_watch(watch_skill, args.source, run_dir)
+                    raw_ref = str(run_dir / "watch" / "watch_report.md")
+                except (OSError, RuntimeError, subprocess.CalledProcessError):
+                    transcript, provider, raw_path = transcript_ytdlp(args.source, run_dir)
+                    raw_ref = str(raw_path)
+            else:
+                transcript, provider, raw_path = transcript_ytdlp(args.source, run_dir)
+                raw_ref = str(raw_path)
 
     transcript_path = run_dir / "transcript.md"
     transcript_path.write_text(transcript, encoding="utf-8")
