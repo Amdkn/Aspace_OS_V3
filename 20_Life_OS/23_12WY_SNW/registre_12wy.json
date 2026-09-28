@@ -1,0 +1,42 @@
+{
+  "version": "v0",
+  "date_init": "2026-09-05",
+  "framework": "12WY Curie SNW",
+  "canon_5_horizons": [
+    {
+      "horizon": "H1",
+      "nom": "Vision hebdo",
+      "owner": "Book (LD01)",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "fait": "Book LD01 (H1) supervise Saru LD02 (H3) sur Musk pivot (Plan 18.3)"
+    },
+    {
+      "horizon": "H3",
+      "nom": "Anti-paperclip Musk pivot",
+      "owner": "Saru (LD02)",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "fait": "Q3 Book LD01 supervise Saru LD02 sur Musk pivot; SpaceX 85.7B Greenshoe = anti-pattern, pas modele"
+    },
+    {
+      "horizon": "H10",
+      "nom": "Vision et Planning Quarter Intent",
+      "owner": "Pike + Una",
+      "source": "W1_Item2_13e_Semaine_Rock_Decomposition.md",
+      "fait": "Q3 2026 = Activer le triptyque MORTY (12WY>PARA>DEAL); 13e semaine W13=09/14 et Semaine 0 Cycle 4 W0=09/21 definies par Item 2 verbatim A0"
+    },
+    {
+      "horizon": "H30",
+      "nom": "Cycle Q3 2026 mensuel",
+      "owner": "M'Benga + Chapel + Ortegas",
+      "source": "Cycle_Q3_2026_Calendar.md",
+      "fait": "W2 07/06-07/26 M'Benga items 3-4; W3 07/27-08/16 Chapel items 5-6; W4 08/17-09/07 Ortegas + Chapel items 7-12"
+    },
+    {
+      "horizon": "H90",
+      "nom": "Trimestre Q3 vers Cycle 4",
+      "owner": "Chapel (D11 bandwidth)",
+      "source": "W1_Quarter_Intent_Q3_2026.md",
+      "fait": "Q3 cible = Life-OS-2026 BETA V2.0 deploye + 36 A3 structures (Plan 21.5); kick-off Cycle 4 = lundi 09/28"
+    }
+  ]
+}
