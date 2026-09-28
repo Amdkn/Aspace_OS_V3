@@ -1,0 +1,32 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260928-CLARA-PR201-OKF",
+  "origin_intent": "GitHub #194 A'Space Machine Fabric",
+  "work_id": "GitHub#197",
+  "invariant": "Ryan M0 consumes the accepted Clara design without silently repairing or redefining DESIGN ownership.",
+  "observation": "Clara explicitly opened the Ryan M0 build gate on #197, while PR #201's latest OKF workflow completed with failure.",
+  "expected": "Clara design branch obtains a green/understood CI state without changing the accepted M0 execution invariant unless a real design defect is found.",
+  "actual": "M0 is independently self-PASS, but Clara PR #201 remains CI-failing at the current checkpoint.",
+  "evidence": [
+    "GitHub PR #201 head 24d83e0e",
+    "GitHub #197 RYAN BUILD GATE OPEN comment",
+    "10_Tech_OS/reports/amf_m0_evidence_20260928.json"
+  ],
+  "suggested_capability": "clara-design-forge",
+  "authority": {
+    "allowed": [
+      "diagnose and repair Clara PR #201 CI/design-branch metadata or design-owned files",
+      "emit a design correction only if CI exposes a substantive contract defect"
+    ],
+    "forbidden": [
+      "rewrite Ryan M0 implementation from Clara lane",
+      "expand M0 into Chrome/Tailscale",
+      "declare Ryan M0 failed solely because a design-branch projection check is red"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": []
+  },
+  "blocking": false,
+  "reversible": true,
+  "reply_contract": "Return the PR #201 CI cause, repair commit/check result, and whether any accepted M0 contract changed."
+}
