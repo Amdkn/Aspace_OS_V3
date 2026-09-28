@@ -1,0 +1,56 @@
+{
+  "schema": "aspace.rnd-ingest-build-evidence.v1",
+  "date": "2026-09-28",
+  "lane": "Ryan/BUILD",
+  "pr": 193,
+  "branch": "feat/ryan-rd-ingestion-adapter-2026-09-28",
+  "boundary": [
+    "scripts/rd_ingest.py",
+    "scripts/test_rd_ingest.py"
+  ],
+  "acceptance": {
+    "unit_tests": {
+      "command": "python scripts/test_rd_ingest.py",
+      "result": "PASS",
+      "tests": 5,
+      "runtime_seconds": 0.027
+    },
+    "live_canary": {
+      "source": "https://www.youtube.com/watch?v=KwhgfwOSToQ&t=513s",
+      "title": "Forward Deployed Engineering 101 — Kevin Bai, Anthropic, ex Palantir & Rippling Founding FDE",
+      "result": "PASS",
+      "adapter_exit": 0,
+      "transcript_provider": "watch:captions",
+      "watch_detected": true,
+      "transcript_chars": 37739,
+      "keyframes": 0,
+      "packet_state": "CAPTURED_NOT_ANALYZED",
+      "discovery_packet_sha256": "c78a6b910c6c0f4af9a57d404c546bf3edc64f763778ca97a652bafea002fe02",
+      "transcript_sha256": "3bde7e6aba1dec26c819cfb53fd4d59dd298286df5a92071e18a6595ff3f8a73"
+    }
+  },
+  "watch_runtime": {
+    "source_path": "C:/Users/amado/.claude/plugins/marketplaces/claude-video/skills/watch",
+    "setup_preflight": {
+      "missing_binaries": [],
+      "whisper_backend": null,
+      "has_api_key": false,
+      "setup_complete": false
+    },
+    "note": "Native captions canary passed with --no-whisper despite incomplete optional Whisper setup. .config/watch/.env remains ACL-sensitive and was not read for secrets."
+  },
+  "provider_order": [
+    "explicit transcript file / existing WATCH or corpus output",
+    "configured transcript-api bridge",
+    "existing WATCH skill",
+    "yt-dlp native captions fallback"
+  ],
+  "evidence_contract": {
+    "capture_is_analysis": false,
+    "next_owner": "Bill/DISCOVER",
+    "provenance_review": "Graham/REMEMBER",
+    "behavior_review": "Yaz/SENSE",
+    "design_return_to": "Clara/DESIGN"
+  },
+  "rollback": "Revert the bounded PR commits; generated run directories are disposable and canonical source state is untouched."
+}
