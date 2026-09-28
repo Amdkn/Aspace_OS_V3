@@ -52,7 +52,7 @@ Host policy keeps authority. Low-confidence or generative/deep work escalates to
 
 The first canary is post-edit verification/risk/routing across at least two harnesses.
 
-For details, read the latest handover: `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.
+For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.\nFor current parallel ChatGPT execution, read `_INBOX/handoffs/HANDOVER-2026-09-28-SIX-PARALLEL-SESSIONS.md`.
 
 Current execution truth after reconciliation:
 - Linear SOH/SOB `In Progress` = 0 unless a live claim + binding + worker exists.
