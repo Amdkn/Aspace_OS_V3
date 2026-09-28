@@ -1,8 +1,10 @@
 ---
 type: Operations memory
 title: Antigravity Council runtime — recursive execution proven
+description: Machine-verified proof of recursive Rick to Doctors to Companions execution, isolated worktrees, PDR delegation and Council recovery behavior in Antigravity.
 date: 2026-09-28
 tags: [antigravity, council, rick, doctors, companions, subagents, pdr, jules, recovery]
+generated: { by: antigravity-council-runtime, at: 2026-09-28T13:30:00Z }
 okf_version: "0.2"
 confidence: machine-verified
 ---
