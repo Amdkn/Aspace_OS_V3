@@ -1,12 +1,37 @@
 {
-  "schema": "aspace.dc.release-219-evidence.v1",
+  "schema": "aspace.dc.release-219-evidence.v2",
   "work_id": "#219",
   "epic": "#197",
   "objective": "#194",
   "release": "A'Space Sovereign Desktop Commander v1",
-  "date": "2026-09-29T15:18:00-04:00",
+  "date": "2026-09-29T16:28:00-04:00",
   "tested_on": "Amd-PC / Windows",
   "result": "PASS",
+  "topology_boundary": {
+    "local_self_hosted_sovereign_dc": {
+      "role": "Primary machine gateway (autonomous, local-first, zero cloud relay dependency)",
+      "runtime_root": "C:\\Users\\amado\\.aspace\\dc",
+      "components": [
+        "M0 Filesystem Daemon",
+        "Process Broker",
+        "M1 Session Daemon",
+        "User Session Worker",
+        "FastMCP Gateway",
+        "SQLite Usage Ledger"
+      ],
+      "loopback_ports": "Dynamic free loopback allocation (WinError 10013/10048 immune)",
+      "launcher": "DC.bat / dc.ps1",
+      "autostart": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -> ASpace Sovereign DC",
+      "status": "ONLINE / Primary Authority"
+    },
+    "hosted_dc_bootstrap": {
+      "role": "Optional bootstrap and remote fallback only",
+      "runtime_root": "C:\\Users\\amado\\.desktop-commander",
+      "relay": "Supabase cloud channel / external websocket tunnel",
+      "coupling": "Decoupled. If cloud relay or hosted Desktop Commander is offline, local Sovereign DC remains 100% operational with zero degradation.",
+      "status": "OPTIONAL_FALLBACK"
+    }
+  },
   "gates": {
     "gate_1_clean_install_start_status": {
       "result": "PASS",
@@ -69,7 +94,7 @@
     "gate_10_hosted_rdc_optional_only": {
       "result": "PASS",
       "issues": ["#194", "#197", "#219"],
-      "notes": "Sovereign Desktop Commander is fully autonomous on host machine; hosted Desktop Commander relay is optional fallback only."
+      "notes": "Sovereign Desktop Commander is fully autonomous on host machine; hosted Desktop Commander relay is optional fallback only. Complete separation of runtime roots and ports between C:\\Users\\amado\\.aspace\\dc (Sovereign Primary) and C:\\Users\\amado\\.desktop-commander (Hosted Fallback)."
     }
   },
   "verified_by": "machine:antigravity, status: certified-canary-pass"
