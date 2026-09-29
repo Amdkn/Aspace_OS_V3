@@ -100,3 +100,12 @@ _REVIEW_NOTEBOOKLM/
 80_Front-Office/reviews/*.html
 90_Back-Office/_exports/*.db
 70_Onthologies/_cold_archive/  
+
+# C# build artifacts
+bin/
+obj/
+native_publish/
+*.pdb
+*.dll
+*.exe
+native_host_manifest.json

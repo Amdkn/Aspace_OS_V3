@@ -1,16 +1,30 @@
 {
   "manifest_version": 3,
-  "name": "A'Space Machine Fabric M1 Canary",
-  "version": "0.1.0",
-  "description": "Bounded Native Messaging + DOM canary for AMF M1.",
-  "permissions": ["nativeMessaging", "tabs", "scripting", "storage"],
-  "host_permissions": ["http://127.0.0.1/*"],
-  "background": {"service_worker": "service_worker.js"},
+  "name": "A'Space Machine Fabric M1",
+  "version": "1.0.0",
+  "description": "Bounded Native Messaging + DOM agent for AMF M1.",
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
   "content_scripts": [
     {
-      "matches": ["http://127.0.0.1/*"],
-      "js": ["kick.js"],
+      "matches": [
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "kick.js"
+      ],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvU2TA4BoSIuczCOTRx5jr9chAPKq4gkc53mnzCfXb9ePQKTjqCe8AYIduUYN6PoyhDSRqajev16pcVuJZXaAaYWCVhUsa3D16HfLAejeMLJmKLbogsqFNhzf71NQi9QYHoRt9OAmKj31B7ZbCG6ccyzojvtwE5sbE3TsLAE7jJK2g3HHN/Up09LO3JWhETUvSXA+97OBhBdoto6VBABsyRe2BsceRkG1MhqC+EO/jMPEtNZe27CKV8KZ2EuE0Yi2ebq3ho7eZGugF61/6SanrjWaBhxcTjlLZXIKzf1dBjYcVoNU1BCsfbL+yD865QhjRjCvB9sTQJgWnaglTexZmQIDAQAB"
 }

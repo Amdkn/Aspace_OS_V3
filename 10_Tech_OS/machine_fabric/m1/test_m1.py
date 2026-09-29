@@ -64,3 +64,31 @@ class T(unittest.TestCase):
         a=post(base,claim); b=post(base,claim)
         self.assertTrue(a["execute"]); self.assertFalse(b["execute"]); self.assertEqual(b["state"],"RUNNING")
 if __name__=="__main__":unittest.main(verbosity=2)
+
+class TestBrowserSetup(unittest.TestCase):
+    def setUp(self):
+        self.script_path = str(HERE / "m1_browser_setup.py")
+        self.host_name = "com.aspace.machine_fabric.canary"
+
+    def test_install_uninstall(self):
+        import platform
+        if platform.system() == "Windows":
+            return
+
+        subprocess.run([sys.executable, self.script_path, "install"], check=True, capture_output=True)
+        import os
+        from pathlib import Path
+        sys_name = platform.system()
+        home = Path(os.environ.get("HOME", "~")).expanduser()
+        if sys_name == 'Linux':
+            manifest_path = home / ".config" / "google-chrome" / "NativeMessagingHosts" / f"{self.host_name}.json"
+        elif sys_name == 'Darwin':
+            manifest_path = home / "Library" / "Application Support" / "Google" / "Chrome" / "NativeMessagingHosts" / f"{self.host_name}.json"
+
+        self.assertTrue(manifest_path.exists())
+
+        subprocess.run([sys.executable, self.script_path, "update"], check=True, capture_output=True)
+        self.assertTrue(manifest_path.exists())
+
+        subprocess.run([sys.executable, self.script_path, "uninstall"], check=True, capture_output=True)
+        self.assertFalse(manifest_path.exists())
