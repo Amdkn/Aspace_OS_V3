@@ -76,26 +76,63 @@ Therefore:
 - ChatGPT session state is not a continuation input.
 - WorkGraph events are append-only; Linear remains projection, not execution truth.
 
-## MiroFish source already available
+## MiroFish real preflight status
+
+Disposable worktree created:
+C:\Users\amado\orca\workspaces\ASpace_OS_V3\MiroFishCanaryRyan
 
 Reusable branch:
 origin/feat/life-mirofish-canary-2026-09-28-2589052854815907771
 
-Existing upstream pin:
+Pinned upstream:
 SCTY-Inc/mirofish-cli@3e98e776cdfc9556c12ace82a60e9d3da5bd41e7
 
-Existing runtime files:
-- runtime/setup.sh
-- runtime/preflight.sh
-- runtime/run_canary.sh
-- runtime/verify.sh
+Current WSL environment:
+- Python 3.12.3
+- claude executable present
+- codex executable present
+- no global Python/Node/PATH/proxy mutation performed
 
-Prior Jules evidence stopped safely because its environment had no usable provider.
-That earlier result is not proof about the current DC environment.
+Observed real bootstrap defects:
+1. The canary shell scripts checkout with CRLF; WSL initially reports bash\\r.
+2. After local line-ending normalization, preflight correctly reports the isolated venv missing.
+3. Official setup creates the venv and installs hatchling/hatch-vcs/uv, then uv editable install fails in build isolation on an invalid Wheel-Version dependency.
+4. No-build-isolation exposes an undeclared build dependency: editables.
+5. After adding editables only inside the disposable venv, the no-deps MiroFish entrypoint builds.
+6. mirofish doctor then fails at import with ModuleNotFoundError: dotenv.
+7. Upstream provider values are claude-cli/codex-cli, while this machine exposes claude/codex; any alias must remain runtime-local.
+8. Upstream uv.lock resolves sentence-transformers -> torch 2.11.0 plus Linux CUDA/CUDNN/NCCL/CUSPARSE/TRITON packages, so a naive full install is not accepted as the minimal certification path.
+
+Interpretation:
+- P1-P4 substrate self-certification remains PASS.
+- MiroFish full certification remains OPEN.
+- The current blocker is an adapter/bootstrap defect, not a Harness Runtime failure.
+- No final CapabilityReleaseReceipt has been published.
+- No synthetic HarnessExecutionReceipt may be emitted.
 
 ## Exact next action
 
-1. Create a disposable worktree from the existing MiroFish canary branch.
-2. Run preflight under the current DC environment.
-3. If preflight passes, execute the bounded MiroFish run through LocalCLIAdapter.
-4. Observe root plus child/background process set.
+1. Keep the disposable MiroFish worktree as the certification source.
+2. Add a lean isolated dependency/provider profile in Ryan's adapter boundary.
+3. Preserve the upstream pin and runtime-local provider aliasing.
+4. Obtain a real bounded MiroFish launch without global environment mutation.
+5. Observe root plus child/background process set.
+6. Reconcile report/verdict.json as YES / NO / UNKNOWN.
+7. Emit the real HarnessExecutionReceipt.
+8. Route the receipt to Rory; UNKNOWN routes Donna and never blind retry.
+9. Only after Rory/Nardole closure publish the final CapabilityReleaseReceipt.
+
+## Return-to
+
+Yaz: lifecycle/orphan/latency/health.
+Graham: fingerprint/provenance/version binding.
+Rory: reconciliation from machine state + receipt.
+Nardole: dispatch/return routing without handover dependency.
+River: consume only the typed runtime receipt/event chain.
+Donna: UNKNOWN recovery.
+Clara: DESIGN gap only; ordinary bootstrap defects stay in Ryan BUILD.
+
+## Rollback
+
+Delete the disposable MiroFish worktree/runtime cache and revert Ryan adapter changes.
+No machine-global installation or configuration change is required for rollback.

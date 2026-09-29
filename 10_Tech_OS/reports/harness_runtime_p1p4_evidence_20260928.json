@@ -46,6 +46,24 @@
   "real_mirofish_certification": "OPEN",
   "mirofish_source_branch": "origin/feat/life-mirofish-canary-2026-09-28-2589052854815907771",
   "mirofish_upstream_pin": "3e98e776cdfc9556c12ace82a60e9d3da5bd41e7",
-  "promotion_rule": "Do not publish final CapabilityReleaseReceipt until the real MiroFish execution/interruption/reconciliation receipt is proven.",
-  "rollback": "Revert Ryan P1-P4 commits; delete owned runtime root and runtime SQLite. No global runtime mutation."
+  "mirofish_real_preflight": {
+    "worktree": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\MiroFishCanaryRyan",
+    "wsl_python": "3.12.3",
+    "status": "BOOTSTRAP_HOLD",
+    "global_mutation": false,
+    "observations": [
+      "CRLF shell scripts initially fail under WSL with bash\\r",
+      "preflight correctly reports missing isolated venv after local line-ending normalization",
+      "official setup creates venv and build tools, then uv editable install fails in build isolation on invalid Wheel-Version dependency",
+      "no-build-isolation exposes undeclared editables build dependency",
+      "after runtime-local editables install, no-deps MiroFish entrypoint builds",
+      "mirofish doctor then fails at import with ModuleNotFoundError: dotenv",
+      "provider values claude-cli/codex-cli do not match observed claude/codex executable names",
+      "uv.lock resolves sentence-transformers to torch 2.11.0 plus Linux CUDA/CUDNN/NCCL/CUSPARSE/TRITON"
+    ],
+    "synthetic_receipt_allowed": false,
+    "capability_release_published": false
+  },
+  "promotion_rule": "Do not publish final CapabilityReleaseReceipt until a real bounded MiroFish execution emits a real HarnessExecutionReceipt and Rory/Nardole close the continuation.",
+  "rollback": "Revert Ryan P1-P4 commits; delete owned runtime root, local runtime SQLite, and disposable MiroFish worktree/cache. No global runtime mutation."
 }
