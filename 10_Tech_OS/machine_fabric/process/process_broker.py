@@ -224,7 +224,15 @@ class Engine:
         if pid_alive(pid):kill_tree(pid)
         end=time.time()+5
         while pid_alive(pid) and time.time()<end:time.sleep(.1)
+        if pid_alive(pid):
+            try:
+                import signal
+                os.kill(pid, signal.SIGKILL)
+                time.sleep(0.5)
+            except Exception:
+                pass
         if pid_alive(pid):raise ProcessError("process tree still alive")
+
         if proc:
             try:proc.wait(timeout=2)
             except Exception:pass
