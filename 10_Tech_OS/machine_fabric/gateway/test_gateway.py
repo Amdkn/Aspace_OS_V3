@@ -6,7 +6,9 @@ import time
 import tempfile
 import urllib.request
 import urllib.error
+import asyncio
 from pathlib import Path
+from fastmcp import Client
 
 def run_test():
     root = Path(__file__).resolve().parent.parent
@@ -63,7 +65,9 @@ def run_test():
             gateway_proc_stdio.stdin.write(json.dumps(init_req) + "\n")
             gateway_proc_stdio.stdin.flush()
             resp = gateway_proc_stdio.stdout.readline()
-            print("STDIO Init:", "OK" if "protocolVersion" in resp else "FAIL")
+            if "protocolVersion" not in resp:
+                raise AssertionError(f"STDIO initialize failed: {resp}")
+            print("STDIO Init: OK")
 
             # Tools List
             list_req = {
@@ -75,7 +79,9 @@ def run_test():
             gateway_proc_stdio.stdin.write(json.dumps(list_req) + "\n")
             gateway_proc_stdio.stdin.flush()
             resp = gateway_proc_stdio.stdout.readline()
-            print("STDIO Tools List:", "OK" if "amf_execute" in resp else "FAIL")
+            if "amf_execute" not in resp:
+                raise AssertionError(f"STDIO tools/list failed: {resp}")
+            print("STDIO Tools List: OK")
 
             # Tools Call (Read)
             call_req = {
@@ -98,10 +104,9 @@ def run_test():
             gateway_proc_stdio.stdin.flush()
             resp = gateway_proc_stdio.stdout.readline()
 
-            if "hello world" in resp:
-                print("STDIO FS Read: OK")
-            else:
-                print("STDIO FS Read: FAIL", resp)
+            if "hello world" not in resp:
+                raise AssertionError(f"STDIO FS Read failed: {resp}")
+            print("STDIO FS Read: OK")
 
             # Tools Call (Write - reversible)
             call_req_write = {
@@ -124,20 +129,17 @@ def run_test():
             gateway_proc_stdio.stdin.flush()
             resp = gateway_proc_stdio.stdout.readline()
 
-            if "SUCCEEDED" in resp:
-                print("STDIO FS Write: OK")
+            if "SUCCEEDED" not in resp:
+                raise AssertionError(f"STDIO FS Write failed: {resp}")
+            print("STDIO FS Write: OK")
 
-                # Test replay
-                gateway_proc_stdio.stdin.write(json.dumps(call_req_write) + "\n")
-                gateway_proc_stdio.stdin.flush()
-                resp = gateway_proc_stdio.stdout.readline()
-                if "SUCCEEDED" in resp:
-                    print("STDIO FS Write Replay: OK")
-                else:
-                    print("STDIO FS Write Replay: FAIL", resp)
-
-            else:
-                print("STDIO FS Write: FAIL", resp)
+            # Test replay
+            gateway_proc_stdio.stdin.write(json.dumps(call_req_write) + "\n")
+            gateway_proc_stdio.stdin.flush()
+            resp = gateway_proc_stdio.stdout.readline()
+            if "SUCCEEDED" not in resp:
+                raise AssertionError(f"STDIO FS Write replay failed: {resp}")
+            print("STDIO FS Write Replay: OK")
 
             # Restart gateway preserving durable receipts test
             gateway_proc_stdio.terminate()
@@ -157,43 +159,45 @@ def run_test():
             gateway_proc_stdio.stdin.write(json.dumps(call_req_write) + "\n")
             gateway_proc_stdio.stdin.flush()
             resp = gateway_proc_stdio.stdout.readline()
-            if "SUCCEEDED" in resp:
-                print("STDIO FS Replay Across Restart: OK")
-            else:
-                print("STDIO FS Replay Across Restart: FAIL", resp)
+            if "SUCCEEDED" not in resp:
+                raise AssertionError(f"STDIO FS replay across restart failed: {resp}")
+            print("STDIO FS Replay Across Restart: OK")
 
         finally:
             gateway_proc_stdio.terminate()
             gateway_proc_stdio.wait()
 
-        # Test SSE transport
-        gateway_proc_sse = subprocess.Popen(
-            [sys.executable, str(gateway), "--amf-url", amf_url, "--transport", "sse", "--port", "8055"],
+        # Test real MCP Streamable HTTP transport with the FastMCP client.
+        gateway_proc_http = subprocess.Popen(
+            [sys.executable, str(gateway), "--amf-url", amf_url, "--transport", "streamable-http", "--host", "127.0.0.1", "--port", "8055"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True
         )
 
-        # Give it a second to start
-        time.sleep(2)
+        async def probe_http():
+            last_error = None
+            for _ in range(30):
+                try:
+                    async with Client("http://127.0.0.1:8055/mcp", timeout=3) as c:
+                        tools = await c.list_tools()
+                        names = {t.name for t in tools}
+                        if "amf_execute" not in names or "amf_health" not in names:
+                            raise AssertionError(f"HTTP tool surface mismatch: {sorted(names)}")
+                        result = await c.call_tool("amf_health", {})
+                        return names, result
+                except Exception as exc:
+                    last_error = exc
+                    await asyncio.sleep(0.2)
+            raise AssertionError(f"Streamable HTTP MCP probe failed: {last_error}")
 
         try:
-            req = urllib.request.Request("http://127.0.0.1:8055/sse")
-            resp = urllib.request.urlopen(req, timeout=1)
-            print("SSE transport: OK (HTTP 200)")
-
-        except urllib.error.HTTPError as e:
-            print(f"SSE transport: HTTPError {e.code}")
-        except Exception as e:
-            if "timeout" in str(e).lower() or type(e).__name__ == "TimeoutError":
-                 print("SSE transport: OK (Streaming endpoint blocked as expected)")
-            else:
-                 print(f"SSE endpoint test error: {type(e).__name__} - {e}")
-
+            names, _ = asyncio.run(probe_http())
+            print("Streamable HTTP Init/Tools/Health: OK", sorted(names))
         finally:
             m0_proc.terminate()
             m0_proc.wait()
-            gateway_proc_sse.terminate()
-            gateway_proc_sse.wait()
+            gateway_proc_http.terminate()
+            gateway_proc_http.wait()
 
 run_test()
