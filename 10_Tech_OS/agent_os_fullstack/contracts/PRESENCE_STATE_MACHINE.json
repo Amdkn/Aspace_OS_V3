@@ -1,0 +1,31 @@
+{
+  "schema":"aspace.runtime-presence-state-machine.v1",
+  "states":["UNKNOWN","OFFLINE","STARTING","LIVE","WAITING","STALE","FAILED"],
+  "ownership_states":["NONE","CLAIMED","LEASED","BOUND","CONFLICT","UNKNOWN"],
+  "rules":[
+    {"when":"no fresh runtime observation","runtime_state":"UNKNOWN","note":"registry or static config never implies LIVE"},
+    {"when":"explicit process/provider absence observed","runtime_state":"OFFLINE"},
+    {"when":"startup evidence fresh but readiness not proven","runtime_state":"STARTING"},
+    {"when":"process/listener/provider evidence fresh and healthy","runtime_state":"LIVE"},
+    {"when":"fresh waiting binding exists without active claim","runtime_state":"WAITING"},
+    {"when":"previously-live evidence exceeded TTL","runtime_state":"STALE"},
+    {"when":"fresh failure evidence exists","runtime_state":"FAILED"}
+  ],
+  "ownership_rules":[
+    {"when":"no claim/lease/binding","ownership_state":"NONE"},
+    {"when":"fresh claim exists","ownership_state":"CLAIMED"},
+    {"when":"fresh lease exists","ownership_state":"LEASED"},
+    {"when":"fresh session binding + lease/claim are coherent","ownership_state":"BOUND"},
+    {"when":"multiple live owners or contradictory lease/binding","ownership_state":"CONFLICT"},
+    {"when":"WorkGraph unavailable or ownership evidence incomplete","ownership_state":"UNKNOWN"}
+  ],
+  "invariants":[
+    "runtime_state LIVE never follows from registry/config/UI text alone",
+    "ownership is independent from liveness",
+    "expired evidence cannot sustain LIVE",
+    "cloud active rows cannot override fresh local OFFLINE/FAILED evidence",
+    "local LIVE with stale cloud projection yields sync DEGRADED, not runtime failure",
+    "provider auth failure is FAILED(provider), not OFFLINE(machine)",
+    "Amy renders the projection and cannot set runtime_state directly"
+  ]
+}

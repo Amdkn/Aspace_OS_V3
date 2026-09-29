@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://agent-os/fullstack/projections/v1",
+  "title": "Agent OS Unified Projection Contracts",
+  "type": "object",
+  "$defs": {
+    "Provenance": {
+      "type": "object",
+      "required": ["source_plane","observed_at","evidence_refs"],
+      "properties": {
+        "source_plane": {"enum":["ux","runtime","workgraph","supabase","git","evidence"]},
+        "observed_at": {"type":"string"},
+        "expires_at": {"type":["string","null"]},
+        "ttl_seconds": {"type":["integer","null"],"minimum":0},
+        "evidence_refs": {"type":"array","items":{"type":"string"}},
+        "reason": {"type":["string","null"]}
+      },
+      "additionalProperties": false
+    },
+    "RuntimeObservation": {
+      "type":"object",
+      "required":["schema","observation_id","identity","entity_kind","runtime_state","observed_at","ttl_seconds","evidence_refs"],
+      "properties":{
+        "schema":{"const":"aspace.runtime-observation.v1"},
+        "observation_id":{"type":"string"},
+        "identity":{"type":"string"},
+        "entity_kind":{"type":"string"},
+        "runtime_state":{"enum":["UNKNOWN","OFFLINE","STARTING","LIVE","WAITING","STALE","FAILED"]},
+        "provider":{"type":["string","null"]},
+        "harness":{"type":["string","null"]},
+        "process_ref":{"type":["string","integer","null"]},
+        "listener":{"type":["string","null"]},
+        "session_ref":{"type":["string","null"]},
+        "heartbeat_at":{"type":["string","null"]},
+        "observed_at":{"type":"string"},
+        "ttl_seconds":{"type":"integer","minimum":1},
+        "evidence_refs":{"type":"array","items":{"type":"string"}},
+        "failure_reason":{"type":["string","null"]}
+      },
+      "additionalProperties": false
+    },
+    "RuntimePresenceProjection": {
+      "type":"object",
+      "required":["schema","identity","entity_kind","runtime_state","ownership_state","sync_state","provenance"],
+      "properties":{
+        "schema":{"const":"aspace.runtime-presence-projection.v1"},
+        "identity":{"type":"string"},
+        "entity_kind":{"type":"string"},
+        "declared_capabilities":{"type":"array","items":{"type":"string"}},
+        "runtime_state":{"enum":["UNKNOWN","OFFLINE","STARTING","LIVE","WAITING","STALE","FAILED"]},
+        "runtime_reason":{"type":["string","null"]},
+        "ownership_state":{"enum":["NONE","CLAIMED","LEASED","BOUND","CONFLICT","UNKNOWN"]},
+        "work_id":{"type":["integer","string","null"]},
+        "claim_id":{"type":["string","null"]},
+        "lease_id":{"type":["string","null"]},
+        "session_binding_id":{"type":["string","null"]},
+        "provider":{"type":["string","null"]},
+        "harness":{"type":["string","null"]},
+        "execution_id":{"type":["string","null"]},
+        "sync_state":{"enum":["SYNCED","LOCAL_AHEAD","CLOUD_AHEAD","DEGRADED","CONFLICT","UNKNOWN"]},
+        "source_state":{"enum":["CURRENT","SOURCE_STALE","DIRTY","UNKNOWN"]},
+        "provenance":{"type":"array","items":{"$ref":"#/$defs/Provenance"}}
+      },
+      "additionalProperties": false
+    },
+    "SourceFingerprint": {
+      "type":"object",
+      "required":["schema","world_id","parent_repo","parent_head","nested","observed_at"],
+      "properties":{
+        "schema":{"const":"aspace.source-fingerprint.v1"},
+        "world_id":{"type":"string"},
+        "parent_repo":{"type":"string"},
+        "parent_branch":{"type":["string","null"]},
+        "parent_head":{"type":"string"},
+        "parent_dirty":{"type":"boolean"},
+        "nested":{"type":"array","items":{
+          "type":"object",
+          "required":["path","committed_gitlink","observed_head","dirty"],
+          "properties":{
+            "path":{"type":"string"},
+            "repo":{"type":["string","null"]},
+            "branch":{"type":["string","null"]},
+            "committed_gitlink":{"type":["string","null"]},
+            "observed_head":{"type":"string"},
+            "dirty":{"type":"boolean"},
+            "worktree":{"type":["string","null"]},
+            "active_pr":{"type":["string","null"]}
+          },
+          "additionalProperties": false
+        }},
+        "observed_at":{"type":"string"}
+      },
+      "additionalProperties": false
+    },
+    "ReconciliationReceipt": {
+      "type":"object",
+      "required":["schema","receipt_id","entity_type","entity_id","classification","decision","evidence_refs","created_at"],
+      "properties":{
+        "schema":{"const":"aspace.reconciliation-receipt.v1"},
+        "receipt_id":{"type":"string"},
+        "entity_type":{"type":"string"},
+        "entity_id":{"type":"string"},
+        "classification":{"enum":["LOCAL_NEWER","CLOUD_NEWER_BUT_NONAUTHORITATIVE","OWNERSHIP_CONFLICT","STALE_BINDING","SOURCE_DRIFT","MISSING_RUNTIME_EVIDENCE","DUPLICATE_EVENT","UNKNOWN","CONSISTENT"]},
+        "decision":{"enum":["ACCEPT_LOCAL","ACCEPT_CLOUD_PROJECTION","REFRESH_PROJECTION","RETRY_SYNC","HOLD","ROUTE_DONNA","REOPEN_BUILD","REOPEN_DESIGN","NOOP"]},
+        "work_id":{"type":["integer","string","null"]},
+        "correlation_id":{"type":["string","null"]},
+        "evidence_refs":{"type":"array","items":{"type":"string"}},
+        "created_at":{"type":"string"}
+      },
+      "additionalProperties": false
+    },
+    "SyncHealthProjection": {
+      "type":"object",
+      "required":["schema","local_runtime","workgraph","supabase","git","projection_gateway","overall","observed_at"],
+      "properties":{
+        "schema":{"const":"aspace.sync-health-projection.v1"},
+        "local_runtime":{"enum":["OK","DEGRADED","OFFLINE","UNKNOWN"]},
+        "workgraph":{"enum":["OK","DEGRADED","OFFLINE","UNKNOWN"]},
+        "supabase":{"enum":["OK","DEGRADED","OFFLINE","UNKNOWN"]},
+        "git":{"enum":["OK","STALE","DIRTY","UNKNOWN"]},
+        "projection_gateway":{"enum":["OK","DEGRADED","OFFLINE"]},
+        "overall":{"enum":["HEALTHY","DEGRADED","OFFLINE","UNKNOWN"]},
+        "reasons":{"type":"array","items":{"type":"string"}},
+        "observed_at":{"type":"string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf":[
+    {"$ref":"#/$defs/RuntimeObservation"},
+    {"$ref":"#/$defs/RuntimePresenceProjection"},
+    {"$ref":"#/$defs/SourceFingerprint"},
+    {"$ref":"#/$defs/ReconciliationReceipt"},
+    {"$ref":"#/$defs/SyncHealthProjection"}
+  ]
+}

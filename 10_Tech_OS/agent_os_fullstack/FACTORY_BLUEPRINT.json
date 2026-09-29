@@ -1,0 +1,72 @@
+{
+  "schema":"aspace.factory-blueprint.v1",
+  "factory_id":"AGENT-OS-UNIFIED-FULLSTACK",
+  "version":"1.0.0",
+  "origin":"GitHub #211 / Amy + Rory + Clara",
+  "trigger_schema":{
+    "kind":"projection_or_sync_event",
+    "required":["source_plane","entity_id","event_id"]
+  },
+  "input_contract":{
+    "runtime":"aspace.runtime-observation.v1",
+    "workgraph":"uc.db claim/lease/binding/event",
+    "cloud":"Supabase aspace durable projection",
+    "source":"aspace.source-fingerprint.v1",
+    "evidence":"receipt/artifact refs"
+  },
+  "output_contract":{
+    "presence":"aspace.runtime-presence-projection.v1",
+    "sync_health":"aspace.sync-health-projection.v1",
+    "reconciliation":"aspace.reconciliation-receipt.v1",
+    "api":"Agent OS Projection Gateway /v1"
+  },
+  "system1_rules":[
+    {"rule":"static registry/config/UI text never implies LIVE"},
+    {"rule":"ownership requires claim/lease/binding evidence independent from liveness"},
+    {"rule":"expired runtime evidence cannot sustain LIVE"},
+    {"rule":"Supabase durable rows cannot override fresh local execution truth"},
+    {"rule":"no generic last-write-wins between uc.db and Supabase"},
+    {"rule":"browser never receives Supabase service-role credentials"},
+    {"rule":"missed realtime events heal from snapshot refresh"},
+    {"rule":"parent Git HEAD does not prove nested repo freshness"},
+    {"rule":"UNKNOWN divergence never auto-retries"}
+  ],
+  "authority":{
+    "runtime_liveness":"fresh local RuntimeObservation",
+    "execution_ownership":"WorkGraph/uc.db",
+    "durable_shared_projection":"Supabase aspace",
+    "source_version":"Git/GitHub",
+    "evidence_provenance":"Graham receipts/artifacts",
+    "human_presentation":"Amy projection only"
+  },
+  "build_ryan":{
+    "packet":"implementation/RYAN_BUILD_PACKET.md",
+    "continuous_gates":["G0","G1","G2","G3","G4","G5","G6","G7","G8"],
+    "release":"CapabilityReleaseReceipt after end-to-end canary"
+  },
+  "flow_river":{
+    "packet":"implementation/RIVER_FLOW_PACKET.md",
+    "starts_when":["runtime observation capability published","sync capability published"],
+    "owns":["retry","backpressure","event choreography","projection invalidation","safe reconciliation actions"],
+    "does_not_own":["runtime installation","adapter configuration","service secrets","toolchain plumbing"]
+  },
+  "observability_yaz":{
+    "produces":"RuntimeObservation"
+  },
+  "state_graham":{
+    "owns":["receipt provenance","event identity","replay history"]
+  },
+  "coherence_rory":{
+    "produces":"ReconciliationReceipt"
+  },
+  "dispatch_nardole":{
+    "owns":["claims","leases","bindings","work routing"]
+  },
+  "interface_amy":{
+    "reads":"Projection Gateway only",
+    "never_sets":["runtime_state","ownership_state","sync truth"]
+  },
+  "recover_donna":{
+    "receives":["UNKNOWN effect","irreconcilable divergence"]
+  }
+}
