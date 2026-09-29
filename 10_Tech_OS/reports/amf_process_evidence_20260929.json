@@ -3,7 +3,7 @@
   "suite": {
     "returncode": 0,
     "stdout": "",
-    "stderr": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 5.820s\n\nOK\n"
+    "stderr": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 5.194s\n\nOK\n"
   },
   "result": "PASS",
   "checks": {
@@ -21,7 +21,7 @@
   "start_receipt": {
     "schema": "aspace.machine.receipt.v1",
     "operation_id": "proc-evidence-start",
-    "fingerprint": "f26c8a1e06a81c83df16bf6091b48fabad2a0a16d8e7820b528c7f3426118bbc",
+    "fingerprint": "7dce2e606e6d4f0d254fb7752e9d40940743773498e412fb6756f0a3711d96a0",
     "state": "SUCCEEDED",
     "capability": "machine.process.start",
     "adapter": "amf.process.broker.v1",
@@ -29,37 +29,37 @@
       "decision": "ALLOW",
       "policy_version": "amf-m0-policy-v1"
     },
-    "effect_digest": "sha256:e3aa5fff3128babf35d4f0d54f5b4edabbb44287ded5dd285b2b6021ff36e41a",
+    "effect_digest": "sha256:82ce91b546859ada53987f7d526352943205d464b6ca20d06a9032bf64289e33",
     "evidence": [
-      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-co5c4for\\\\root\",\"pid\":23580,\"session_id\":\"proc-f26c8a1e06a81c83df\"}"
+      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-j4dw0tz9\\\\root\",\"pid\":19164,\"session_id\":\"proc-7dce2e606e6d4f0d25\"}"
     ],
-    "finished_at": "2026-09-29T05:08:04.237678+00:00",
+    "finished_at": "2026-09-29T05:17:08.851629+00:00",
     "result": {
-      "session_id": "proc-f26c8a1e06a81c83df",
-      "pid": 23580,
-      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stdout.log",
-      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stderr.log"
+      "session_id": "proc-7dce2e606e6d4f0d25",
+      "pid": 19164,
+      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-j4dw0tz9\\root\\.amf-process\\proc-7dce2e606e6d4f0d25\\stdout.log",
+      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-j4dw0tz9\\root\\.amf-process\\proc-7dce2e606e6d4f0d25\\stderr.log"
     }
   },
   "replay_receipt": {
     "adapter": "amf.process.broker.v1",
     "capability": "machine.process.start",
-    "effect_digest": "sha256:e3aa5fff3128babf35d4f0d54f5b4edabbb44287ded5dd285b2b6021ff36e41a",
+    "effect_digest": "sha256:82ce91b546859ada53987f7d526352943205d464b6ca20d06a9032bf64289e33",
     "evidence": [
-      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-co5c4for\\\\root\",\"pid\":23580,\"session_id\":\"proc-f26c8a1e06a81c83df\"}"
+      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-j4dw0tz9\\\\root\",\"pid\":19164,\"session_id\":\"proc-7dce2e606e6d4f0d25\"}"
     ],
-    "fingerprint": "f26c8a1e06a81c83df16bf6091b48fabad2a0a16d8e7820b528c7f3426118bbc",
-    "finished_at": "2026-09-29T05:08:04.237678+00:00",
+    "fingerprint": "7dce2e606e6d4f0d254fb7752e9d40940743773498e412fb6756f0a3711d96a0",
+    "finished_at": "2026-09-29T05:17:08.851629+00:00",
     "operation_id": "proc-evidence-start",
     "policy": {
       "decision": "ALLOW",
       "policy_version": "amf-m0-policy-v1"
     },
     "result": {
-      "pid": 23580,
-      "session_id": "proc-f26c8a1e06a81c83df",
-      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stderr.log",
-      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stdout.log"
+      "pid": 19164,
+      "session_id": "proc-7dce2e606e6d4f0d25",
+      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-j4dw0tz9\\root\\.amf-process\\proc-7dce2e606e6d4f0d25\\stderr.log",
+      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-j4dw0tz9\\root\\.amf-process\\proc-7dce2e606e6d4f0d25\\stdout.log"
     },
     "schema": "aspace.machine.receipt.v1",
     "state": "SUCCEEDED",
@@ -68,7 +68,7 @@
   "interact_receipt": {
     "schema": "aspace.machine.receipt.v1",
     "operation_id": "proc-evidence-interact",
-    "fingerprint": "69f5f0bd71e56bb582c208bc90ea0ad0d4a8ca151dd079dbe1ab8b4493a17019",
+    "fingerprint": "cd3f1d5039bfc6cbd6d3ae312171f243b205563f40a9a1b54c3ea9d45de1f2e8",
     "state": "SUCCEEDED",
     "capability": "machine.process.interact",
     "adapter": "amf.process.broker.v1",
@@ -76,20 +76,20 @@
       "decision": "ALLOW",
       "policy_version": "amf-m0-policy-v1"
     },
-    "effect_digest": "sha256:0f18ea1f515cba5835cc55a82bb67d0e063671dd8763791ac2a872e5f33b2e93",
+    "effect_digest": "sha256:17e4ead536819d7e9f825d976e1e48519f783ad3c5e6eeefb10dca60bddf8280",
     "evidence": [
-      "{\"session_id\":\"proc-f26c8a1e06a81c83df\",\"stdin_bytes_written\":6}"
+      "{\"session_id\":\"proc-7dce2e606e6d4f0d25\",\"stdin_bytes_written\":6}"
     ],
-    "finished_at": "2026-09-29T05:08:04.430769+00:00",
+    "finished_at": "2026-09-29T05:17:09.136415+00:00",
     "result": {
-      "session_id": "proc-f26c8a1e06a81c83df",
+      "session_id": "proc-7dce2e606e6d4f0d25",
       "stdin_bytes_written": 6
     }
   },
   "read_receipt": {
     "schema": "aspace.machine.receipt.v1",
-    "operation_id": "e-read-1790658484438744700",
-    "fingerprint": "8107b466677adb0d3f0bde345203553bc860b83b95575730d0b158b9acb50529",
+    "operation_id": "e-read-1790659029144879200",
+    "fingerprint": "9d67a5b85b31745605e3abee4ae88068e3b95262a933fcb23a965f56c961b589",
     "state": "SUCCEEDED",
     "capability": "machine.process.read",
     "adapter": "amf.process.broker.v1",
@@ -97,23 +97,23 @@
       "decision": "ALLOW",
       "policy_version": "amf-m0-policy-v1"
     },
-    "effect_digest": "sha256:c494132263a77fef90769af1fb07789f48082627ce7777bc78311f4bdca57b3d",
+    "effect_digest": "sha256:ab01d1bc108606ba7f6cc74668ce5e9af09c54b2def4b5d6e4eacc6d0b2c019c",
     "evidence": [
-      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stdout.log"
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-j4dw0tz9\\root\\.amf-process\\proc-7dce2e606e6d4f0d25\\stdout.log"
     ],
-    "finished_at": "2026-09-29T05:08:04.454317+00:00",
+    "finished_at": "2026-09-29T05:17:09.170992+00:00",
     "result": {
-      "session_id": "proc-f26c8a1e06a81c83df",
+      "session_id": "proc-7dce2e606e6d4f0d25",
       "stream": "stdout",
       "text": "READY\r\nECHO:hello\r\n",
       "running": true,
-      "pid": 23580
+      "pid": 19164
     }
   },
   "stop_receipt": {
     "schema": "aspace.machine.receipt.v1",
     "operation_id": "proc-evidence-stop",
-    "fingerprint": "dddf737adbb754770a86c7d9e16b3fa83c8676f407717a70ccf22144f3423d80",
+    "fingerprint": "d1f5c4946e7c7b104d9c9d5e8401b7cbb64002dee16c1c0edf838ded67ccf4df",
     "state": "SUCCEEDED",
     "capability": "machine.process.stop",
     "adapter": "amf.process.broker.v1",
@@ -121,18 +121,18 @@
       "decision": "ALLOW",
       "policy_version": "amf-m0-policy-v1"
     },
-    "effect_digest": "sha256:c8d681cf66f5654abd49cfffd4c9f0fb281a70072ecbd2e559d0981b8a809c30",
+    "effect_digest": "sha256:0b862ca5599b23d06ce7830db6590f826083dcd48a5df33a7ba0e6688713d032",
     "evidence": [
-      "{\"pid\":23580,\"session_id\":\"proc-f26c8a1e06a81c83df\",\"tree_alive\":false}"
+      "{\"pid\":19164,\"session_id\":\"proc-7dce2e606e6d4f0d25\",\"tree_alive\":false}"
     ],
-    "finished_at": "2026-09-29T05:08:04.783357+00:00",
+    "finished_at": "2026-09-29T05:17:09.631706+00:00",
     "result": {
-      "session_id": "proc-f26c8a1e06a81c83df",
-      "pid": 23580,
+      "session_id": "proc-7dce2e606e6d4f0d25",
+      "pid": 19164,
       "tree_alive": false
     }
   },
-  "child_pid": 16888,
+  "child_pid": 26688,
   "health_after_stop": {
     "schema": "aspace.machine.health.v1",
     "daemon": "UP",

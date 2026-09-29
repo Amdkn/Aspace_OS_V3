@@ -75,6 +75,7 @@ def row_snapshot(db: Path, operation_id: str):
         "operation_id": data["operation_id"],
         "fingerprint": data["fingerprint"],
         "capability": data["capability"],
+        "capability_version": data["capability_version"],
         "action": data["action"],
         "state": data["state"],
         "policy_decision": data["policy_decision"],
@@ -236,6 +237,21 @@ def run_evidence(out_path: Path) -> dict:
             )
             checks["effect_count_after_reconcile"] = target.read_text().count("only-once")
             ledger_after_restart = row_snapshot(db, crash_id)
+            checks["ledger_capability_version_before_restart"] = (
+                ledger_before_restart or {}
+            ).get("capability_version")
+            checks["ledger_capability_version_after_restart"] = (
+                ledger_after_restart or {}
+            ).get("capability_version")
+            checks["reconciled_receipt_capability_version"] = reconciled.get(
+                "capability_version"
+            )
+            checks["fingerprint_binds_capability_version"] = (
+                crash_op["fingerprint"]
+                != amf.semantic_fingerprint(
+                    {**crash_op, "capability_version": "9.9.9"}
+                )
+            )
 
             t0 = time.perf_counter()
             status, replay = http_json("POST", base_url + "/operations", crash_op)
@@ -365,6 +381,10 @@ def run_evidence(out_path: Path) -> dict:
             "compensation_receipt_operation_id": "amf-compensate-0001",
             "compensation_ref_on_original": "amf-compensate-0001",
             "compensated_file_exists": False,
+            "ledger_capability_version_before_restart": "0.1.0",
+            "ledger_capability_version_after_restart": "0.1.0",
+            "reconciled_receipt_capability_version": "0.1.0",
+            "fingerprint_binds_capability_version": True,
         }
         assertions = {
             key: {"actual": checks.get(key), "expected": value, "pass": checks.get(key) == value}

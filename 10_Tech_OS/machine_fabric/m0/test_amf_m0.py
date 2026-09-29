@@ -82,6 +82,32 @@ class AMFM0Tests(unittest.TestCase):
             {"machine.fs.read", "machine.fs.write"},
         )
 
+    def test_capability_version_is_bound_to_fingerprint_ledger_and_receipt(self):
+        target = self.root / "versioned.txt"
+        op = self.op(
+            "version-bind-0001",
+            "machine.fs.write",
+            "write_text",
+            {"path": str(target), "text": "versioned"},
+        )
+        self.assertEqual(op["capability_version"], "0.1.0")
+        expected_fingerprint = amf.semantic_fingerprint(op)
+
+        receipt = self.engine.execute(op)
+        row = self.engine.ledger_row("version-bind-0001")
+
+        self.assertEqual(receipt["capability_version"], "0.1.0")
+        self.assertEqual(receipt["fingerprint"], expected_fingerprint)
+        self.assertEqual(row["capability_version"], "0.1.0")
+        self.assertEqual(row["fingerprint"], expected_fingerprint)
+
+        mismatched = dict(op)
+        mismatched["operation_id"] = "version-bind-0002"
+        mismatched["capability_version"] = "9.9.9"
+        mismatched["fingerprint"] = amf.semantic_fingerprint(mismatched)
+        with self.assertRaises(amf.InvalidOperation):
+            self.engine.execute(mismatched)
+
     def test_write_replay_has_one_effect_and_read_is_grounded(self):
         target = self.root / "record.txt"
         op = self.op(

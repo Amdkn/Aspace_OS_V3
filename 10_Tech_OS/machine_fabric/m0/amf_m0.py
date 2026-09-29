@@ -97,6 +97,7 @@ def semantic_fingerprint(operation: dict[str, Any]) -> str:
     material = {
         "schema": operation.get("schema"),
         "capability": operation.get("capability"),
+        "capability_version": operation.get("capability_version"),
         "action": operation.get("action"),
         "authority": operation.get("authority"),
         "precondition": operation.get("precondition"),
@@ -158,6 +159,7 @@ class AMFEngine:
                     operation_id TEXT PRIMARY KEY,
                     fingerprint TEXT NOT NULL,
                     capability TEXT NOT NULL,
+                    capability_version TEXT NOT NULL,
                     action TEXT NOT NULL,
                     state TEXT NOT NULL,
                     policy_decision TEXT NOT NULL,
@@ -184,6 +186,17 @@ class AMFEngine:
                 ON events(operation_id, id);
                 """
             )
+            columns = {
+                row["name"] for row in con.execute("PRAGMA table_info(operations)").fetchall()
+            }
+            if "capability_version" not in columns:
+                con.execute(
+                    "ALTER TABLE operations ADD COLUMN capability_version TEXT"
+                )
+                con.execute(
+                    "UPDATE operations SET capability_version='legacy-unbound' "
+                    "WHERE capability_version IS NULL"
+                )
 
     def _event(self, con: sqlite3.Connection, operation_id: str, kind: str, payload: dict[str, Any]) -> None:
         con.execute(
@@ -193,7 +206,7 @@ class AMFEngine:
 
     def _validate_operation(self, op: dict[str, Any]) -> None:
         required = {
-            "schema", "operation_id", "capability", "action",
+            "schema", "operation_id", "capability", "capability_version", "action",
             "authority", "fingerprint", "precondition", "replay",
         }
         missing = required - set(op)
@@ -213,6 +226,11 @@ class AMFEngine:
             raise InvalidOperation("fingerprint does not match canonical operation intent")
         if op["capability"] not in CAPABILITIES:
             raise InvalidOperation("unknown capability")
+        expected_capability_version = CAPABILITIES[op["capability"]]["version"]
+        if op["capability_version"] != expected_capability_version:
+            raise InvalidOperation(
+                "capability_version does not match capability manifest"
+            )
         actions = {x["name"] for x in CAPABILITIES[op["capability"]]["actions"]}
         if op["action"] not in actions:
             raise InvalidOperation("action not in capability manifest")
@@ -302,6 +320,7 @@ class AMFEngine:
             "fingerprint": op["fingerprint"],
             "state": state,
             "capability": op["capability"],
+            "capability_version": op["capability_version"],
             "adapter": ADAPTER_ID,
             "policy": {
                 "decision": policy_decision,
@@ -588,14 +607,16 @@ class AMFEngine:
                     con.execute(
                         """
                         INSERT INTO operations(
-                            operation_id, fingerprint, capability, action, state,
-                            policy_decision, policy_version, request_json, claimed_at
-                        ) VALUES(?,?,?,?,?,?,?,?,?)
+                            operation_id, fingerprint, capability, capability_version,
+                            action, state, policy_decision, policy_version,
+                            request_json, claimed_at
+                        ) VALUES(?,?,?,?,?,?,?,?,?,?)
                         """,
                         (
                             op_id,
                             op["fingerprint"],
                             op["capability"],
+                            op["capability_version"],
                             op["action"],
                             "CLAIMED",
                             decision,
@@ -811,6 +832,7 @@ def make_operation(
         "schema": OP_SCHEMA,
         "operation_id": operation_id,
         "capability": capability,
+        "capability_version": CAPABILITIES[capability]["version"],
         "action": action,
         "authority": {
             "risk_class": risk_class,

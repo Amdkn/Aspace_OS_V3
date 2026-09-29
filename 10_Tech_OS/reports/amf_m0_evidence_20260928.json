@@ -3,8 +3,8 @@
   "mission": "#194",
   "design": "#196 / PR #201",
   "build": "#197",
-  "started_at": "2026-09-28T19:11:05.208624+00:00",
-  "finished_at": "2026-09-28T19:11:08.183981+00:00",
+  "started_at": "2026-09-29T05:15:44.486989+00:00",
+  "finished_at": "2026-09-29T05:15:47.073542+00:00",
   "result": "PASS",
   "invariant": "typed capability -> policy -> operation_id -> precondition -> effect -> durable receipt -> replay/compensation",
   "fundamental_canary": "mutation -> crash/restart -> replay same operation_id -> zero duplicate mutation",
@@ -16,11 +16,11 @@
     "adapter": "amf.m0.python-stdlib.fs"
   },
   "startup_before_crash": {
-    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
-    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\amf.sqlite3",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\amf.sqlite3",
     "health": {
       "aggregate": "ONLINE",
-      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
+      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
       "capabilities": {
         "machine.fs.read": "AVAILABLE",
         "machine.fs.write": "AVAILABLE"
@@ -33,12 +33,12 @@
       "worker": "NOT_REQUIRED"
     },
     "host": "127.0.0.1",
-    "port": 63273,
+    "port": 64710,
     "schema": "aspace.machine.daemon-start.v1"
   },
   "health_before_crash": {
     "aggregate": "ONLINE",
-    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
     "capabilities": {
       "machine.fs.read": "AVAILABLE",
       "machine.fs.write": "AVAILABLE"
@@ -52,16 +52,17 @@
   },
   "ledger_before_restart": {
     "operation_id": "amf-m0-crash-replay-0001",
-    "fingerprint": "6efbf1e5cc97f7f3c8ee90eb5ee3333143b36b9ab63b13b4e14a19bd7a12eef4",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
     "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
     "action": "append_text",
     "state": "RUNNING",
     "policy_decision": "ALLOW",
     "policy_version": "amf-m0-policy-v1",
     "effect_digest": null,
     "has_receipt": false,
-    "claimed_at": "2026-09-28T19:11:07.273969+00:00",
-    "started_at": "2026-09-28T19:11:07.274594+00:00",
+    "claimed_at": "2026-09-29T05:15:46.474272+00:00",
+    "started_at": "2026-09-29T05:15:46.474599+00:00",
     "finished_at": null,
     "plan": {
       "mode": "append_text",
@@ -71,11 +72,11 @@
     }
   },
   "startup_after_restart": {
-    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
-    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\amf.sqlite3",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\amf.sqlite3",
     "health": {
       "aggregate": "ONLINE",
-      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
+      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
       "capabilities": {
         "machine.fs.read": "AVAILABLE",
         "machine.fs.write": "AVAILABLE"
@@ -88,12 +89,12 @@
       "worker": "NOT_REQUIRED"
     },
     "host": "127.0.0.1",
-    "port": 63273,
+    "port": 64710,
     "schema": "aspace.machine.daemon-start.v1"
   },
   "health_after_restart": {
     "aggregate": "ONLINE",
-    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
     "capabilities": {
       "machine.fs.read": "AVAILABLE",
       "machine.fs.write": "AVAILABLE"
@@ -107,17 +108,18 @@
   },
   "ledger_after_restart": {
     "operation_id": "amf-m0-crash-replay-0001",
-    "fingerprint": "6efbf1e5cc97f7f3c8ee90eb5ee3333143b36b9ab63b13b4e14a19bd7a12eef4",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
     "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
     "action": "append_text",
     "state": "SUCCEEDED",
     "policy_decision": "ALLOW",
     "policy_version": "amf-m0-policy-v1",
     "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
     "has_receipt": true,
-    "claimed_at": "2026-09-28T19:11:07.273969+00:00",
-    "started_at": "2026-09-28T19:11:07.274594+00:00",
-    "finished_at": "2026-09-28T19:11:07.785902+00:00",
+    "claimed_at": "2026-09-29T05:15:46.474272+00:00",
+    "started_at": "2026-09-29T05:15:46.474599+00:00",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
     "plan": {
       "mode": "append_text",
       "target_name": "crash-record.txt",
@@ -128,14 +130,15 @@
   "reconciled_receipt": {
     "adapter": "amf.m0.python-stdlib.fs",
     "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
     "compensation_ref": null,
     "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
     "evidence": [
       "postcondition reconciled after restart",
-      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed\\crash-record.txt"
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed\\crash-record.txt"
     ],
-    "fingerprint": "6efbf1e5cc97f7f3c8ee90eb5ee3333143b36b9ab63b13b4e14a19bd7a12eef4",
-    "finished_at": "2026-09-28T19:11:07.785902+00:00",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
     "operation_id": "amf-m0-crash-replay-0001",
     "policy": {
       "decision": "ALLOW",
@@ -148,14 +151,15 @@
   "terminal_replay_receipt": {
     "adapter": "amf.m0.python-stdlib.fs",
     "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
     "compensation_ref": null,
     "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
     "evidence": [
       "postcondition reconciled after restart",
-      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-3rcgl8hf\\allowed\\crash-record.txt"
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed\\crash-record.txt"
     ],
-    "fingerprint": "6efbf1e5cc97f7f3c8ee90eb5ee3333143b36b9ab63b13b4e14a19bd7a12eef4",
-    "finished_at": "2026-09-28T19:11:07.785902+00:00",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
     "operation_id": "amf-m0-crash-replay-0001",
     "policy": {
       "decision": "ALLOW",
@@ -173,6 +177,10 @@
     "restart_status": 200,
     "reconciled_after_restart": true,
     "effect_count_after_reconcile": 1,
+    "ledger_capability_version_before_restart": "0.1.0",
+    "ledger_capability_version_after_restart": "0.1.0",
+    "reconciled_receipt_capability_version": "0.1.0",
+    "fingerprint_binds_capability_version": true,
     "terminal_replay_status": 200,
     "terminal_replay_flag": true,
     "effect_count_after_terminal_replay": 1,
@@ -301,16 +309,36 @@
       "actual": false,
       "expected": false,
       "pass": true
+    },
+    "ledger_capability_version_before_restart": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "ledger_capability_version_after_restart": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "reconciled_receipt_capability_version": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "fingerprint_binds_capability_version": {
+      "actual": true,
+      "expected": true,
+      "pass": true
     }
   },
   "metrics_ms": {
-    "health_ms": 1521.186,
-    "crash_request_ms": 48.723,
-    "restart_reconcile_ms": 43.192,
-    "terminal_replay_ms": 34.763,
-    "fingerprint_conflict_ms": 27.925,
-    "policy_denial_ms": 33.372,
-    "compensation_ms": 103.383
+    "health_ms": 1559.991,
+    "crash_request_ms": 59.725,
+    "restart_reconcile_ms": 16.182,
+    "terminal_replay_ms": 7.87,
+    "fingerprint_conflict_ms": 14.283,
+    "policy_denial_ms": 16.234,
+    "compensation_ms": 59.418
   },
   "limitations": [
     "M0 only: filesystem read/write, receipt ledger, policy, recovery, health.",
