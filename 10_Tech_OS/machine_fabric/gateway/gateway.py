@@ -27,6 +27,8 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 from fastmcp import FastMCP
+from plugin_sdk import PluginContext, PluginError
+from plugin_discovery import discover_plugins
 
 logger = logging.getLogger(__name__)
 
@@ -246,12 +248,15 @@ def log_usage(
         conn.commit()
 
 
-def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="gateway_usage.db"):
+def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="gateway_usage.db", plugins_dir="plugins"):
     init_ledger(usage_db)
     fs = JsonHttpClient(fs_url)
     process = JsonHttpClient(process_url)
     browser = JsonHttpClient(browser_url)
     mcp = FastMCP(name)
+    
+    plugins_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), plugins_dir)
+    loaded_plugins = discover_plugins(plugins_path)
 
     def surface():
         fs_health = _safe_health(fs, "filesystem")
@@ -262,13 +267,25 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
             + _normalize_process_capabilities(process_health)
             + _normalize_browser_capabilities(browser_health)
         )
+        
+        backends = {
+            "filesystem": fs_health,
+            "process": process_health,
+            "browser": browser_health,
+        }
+        
+        # Merge plugin capabilities and health
+        for cap_id, plugin in loaded_plugins.items():
+            try:
+                backends[cap_id] = plugin.health()
+                capabilities.append(plugin.manifest())
+            except Exception as exc:
+                logger.error(f"Failed to load health/manifest for plugin {cap_id}: {exc}")
+                backends[cap_id] = {"aggregate": "UNKNOWN", "detail": str(exc)}
+                
         return {
             "schema": SURFACE_SCHEMA,
-            "backends": {
-                "filesystem": fs_health,
-                "process": process_health,
-                "browser": browser_health,
-            },
+            "backends": backends,
             "capabilities": capabilities,
         }
 
@@ -326,28 +343,14 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
         """
         start_time = time.monotonic()
         try:
+            plugin = loaded_plugins.get(capability)
             s = surface()
             cap = next((c for c in s["capabilities"] if c["capability_id"] == capability), None)
+            
             if not cap:
                 resp = {"state": "DENIED", "error": "UNKNOWN_CAPABILITY", "capability": capability}
                 log_usage(usage_db, "amf_execute", "DENIED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "UNKNOWN_CAPABILITY")
                 return json.dumps(resp)
-
-            if capability.startswith("browser."):
-                resp = {
-                    "state": "UNAVAILABLE",
-                    "error": "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE",
-                    "capability": capability,
-                    "availability": cap.get("availability"),
-                }
-                log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE")
-                return json.dumps(resp, indent=2)
-
-            backend = fs if capability.startswith("machine.fs.") else process
-            if not backend.configured:
-                resp = {"state": "UNAVAILABLE", "error": "BACKEND_NOT_CONFIGURED", "capability": capability}
-                log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BACKEND_NOT_CONFIGURED")
-                return json.dumps(resp, indent=2)
 
             op = {
                 "schema": "aspace.machine.operation.v1",
@@ -364,22 +367,83 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
                 "replay": "return_receipt",
                 "payload": payload,
             }
-            op["fingerprint"] = _semantic_fingerprint(op)
+            if plugin:
+                op["plugin_version"] = plugin.manifest().get("version", "0.1.0")
 
-            try:
-                receipt = backend.execute(op)
-                is_replay = bool(receipt.get("replayed")) or bool(receipt.get("reconciled_after_restart"))
-                state = receipt.get("state", "UNKNOWN")
-                error_detail = None
-                if state in ("FAILED", "DENIED", "DLQ", "UNKNOWN"):
-                    evidence = receipt.get("evidence")
-                    error_detail = str(evidence) if evidence else None
-                log_usage(usage_db, "amf_execute", state, int((time.monotonic() - start_time)*1000), operation_id, capability, action, is_replay, error_detail, receipt.get("operation_id"))
-                return json.dumps(receipt, indent=2)
-            except Exception as exc:
-                resp = {"state": "FAILED", "error": type(exc).__name__, "detail": str(exc)}
-                log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(exc))
-                return json.dumps(resp, indent=2)
+            op["fingerprint"] = _semantic_fingerprint(op)
+            
+            if plugin:
+                # Route execution to Plugin SDK
+                ctx = PluginContext(operation_id, action, payload)
+                receipt = None
+                try:
+                    if not plugin.inspect(payload):
+                        resp = {"state": "DENIED", "error": "INVALID_PAYLOAD", "capability": capability}
+                        log_usage(usage_db, "amf_execute", "DENIED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "INVALID_PAYLOAD")
+                        return json.dumps(resp, indent=2)
+                    
+                    plugin.prepare(ctx)
+                    receipt = plugin.execute(ctx)
+                    
+                    if not isinstance(receipt, dict):
+                        receipt = {}
+                        
+                    plugin.observe(ctx, receipt)
+                    receipt = plugin.reconcile(ctx, receipt)
+                    
+                    if not isinstance(receipt, dict):
+                        receipt = {}
+                    
+                    # Ensure minimal receipt contract
+                    receipt.setdefault("operation_id", operation_id)
+                    receipt.setdefault("state", "SUCCEEDED")
+                    
+                    state = receipt.get("state", "UNKNOWN")
+                    error_detail = None
+                    if state in ("FAILED", "DENIED", "DLQ", "UNKNOWN"):
+                        evidence = receipt.get("evidence")
+                        error_detail = str(evidence) if evidence else None
+                    log_usage(usage_db, "amf_execute", state, int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, error_detail, receipt.get("operation_id"))
+                    return json.dumps(receipt, indent=2)
+                    
+                except Exception as exc:
+                    resp = {"state": "FAILED", "error": type(exc).__name__, "detail": str(exc)}
+                    log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(exc))
+                    return json.dumps(resp, indent=2)
+                finally:
+                    plugin.cleanup(ctx)
+            else:
+                # Route to legacy core backends
+                if capability.startswith("browser."):
+                    resp = {
+                        "state": "UNAVAILABLE",
+                        "error": "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE",
+                        "capability": capability,
+                        "availability": cap.get("availability"),
+                    }
+                    log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE")
+                    return json.dumps(resp, indent=2)
+    
+                backend = fs if capability.startswith("machine.fs.") else process
+                if not backend.configured:
+                    resp = {"state": "UNAVAILABLE", "error": "BACKEND_NOT_CONFIGURED", "capability": capability}
+                    log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BACKEND_NOT_CONFIGURED")
+                    return json.dumps(resp, indent=2)
+    
+                try:
+                    receipt = backend.execute(op)
+                    is_replay = bool(receipt.get("replayed")) or bool(receipt.get("reconciled_after_restart"))
+                    state = receipt.get("state", "UNKNOWN")
+                    error_detail = None
+                    if state in ("FAILED", "DENIED", "DLQ", "UNKNOWN"):
+                        evidence = receipt.get("evidence")
+                        error_detail = str(evidence) if evidence else None
+                    log_usage(usage_db, "amf_execute", state, int((time.monotonic() - start_time)*1000), operation_id, capability, action, is_replay, error_detail, receipt.get("operation_id"))
+                    return json.dumps(receipt, indent=2)
+                except Exception as exc:
+                    resp = {"state": "FAILED", "error": type(exc).__name__, "detail": str(exc)}
+                    log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(exc))
+                    return json.dumps(resp, indent=2)
         except Exception as outer_exc:
             log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(outer_exc))
             return json.dumps({"state": "FAILED", "error": type(outer_exc).__name__, "detail": str(outer_exc)}, indent=2)

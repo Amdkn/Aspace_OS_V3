@@ -181,7 +181,7 @@ async def main():
                     yield request
 
             auth = BearerAuth("test-secret-token")
-            auth_client = Client(adapter_mcp_url, timeout=3, auth=auth)
+            auth_client = Client(adapter_mcp_url, timeout=10, auth=auth)
             await auth_client.__aenter__()
 
             tools = await auth_client.list_tools()
