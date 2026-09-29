@@ -1,6 +1,8 @@
 ---
 type: Architecture Concept
 title: Executable Dao to Jing bounded projections
+description: Bounded read-only projections from persistent WorkGraph truth into role-specific Dao to Jing views without granting authority.
+generated: 2026-09-23
 okf_version: "0.2"
 sources:
   - resource: "10_Tech_OS/reports/KER44_IMPLEMENTATION.md"
