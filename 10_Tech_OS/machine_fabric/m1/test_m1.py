@@ -42,7 +42,10 @@ class T(unittest.TestCase):
         self.t.cleanup()
     def test_health_degrades_when_worker_dies_and_fence_increments(self):
         h=wait_health(f"http://127.0.0.1:{self.dp}/health",lambda x:x["worker"]=="UP"); f1=h["fencing_token"]
-        self.worker.terminate(); self.worker.wait(2)
+        old_worker=self.worker
+        old_worker.terminate(); old_worker.wait(2)
+        if old_worker.stdout: old_worker.stdout.close()
+        if old_worker.stderr: old_worker.stderr.close()
         h2=wait_health(f"http://127.0.0.1:{self.dp}/health",lambda x:x["worker"]=="DOWN",timeout=5)
         self.assertEqual(h2["aggregate"],"DEGRADED")
         self.worker=self.start_worker("session-A-reconnect")

@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
 HERE=Path(__file__).resolve().parent
-CHROME=Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe")
+CHROME=Path(r"C:\Users\amado\Aspace_Quarantine\chrome-for-testing\153.0.8010.52\chrome-win64\chrome.exe")
 HOST_NAME="com.aspace.machine_fabric.canary"
 
 def free_port():
@@ -129,7 +129,7 @@ def main():
             profile=tmp/"chrome-profile"
             env=os.environ.copy(); env["ASPACE_WORKER_URL"]=f"http://127.0.0.1:{worker_port2}/native"; env["ASPACE_NATIVE_LOG"]=str(native_log)
             env["COMSPEC"]=env.get("COMSPEC") or str(Path(os.environ.get("SystemRoot",r"C:\Windows"))/"System32"/"cmd.exe")
-            cmd=[str(chrome_path),f"--user-data-dir={profile}","--no-first-run","--disable-default-apps","--disable-sync","--disable-background-networking","--disable-component-update",f"--disable-extensions-except={ext}",f"--load-extension={ext}",f"http://127.0.0.1:{web_port}/canary.html"]
+            cmd=[str(chrome_path),f"--user-data-dir={profile}","--headless=new","--disable-gpu","--no-first-run","--disable-default-apps","--disable-sync","--disable-background-networking","--disable-component-update",f"--disable-extensions-except={ext}",f"--load-extension={ext}",f"http://127.0.0.1:{web_port}/canary.html"]
             chrome_log=(tmp/"chrome_stderr.log").open("wb")
             cmd.insert(1,"--enable-logging=stderr")
             cmd.insert(2,"--v=1")
