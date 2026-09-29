@@ -655,6 +655,7 @@ class LocalCLIAdapter:
         self.inspector = RuntimeInspector()
         self.preparer = RuntimePreparer(store, self.owned_root / "prepared", self.inspector, event_sink)
         self.event_sink = event_sink
+        self._live: dict[str, subprocess.Popen] = {}
 
     def inspect(self, request: dict[str, Any], execution_id: str | None = None) -> dict[str, Any]:
         process_group_ref = None
@@ -729,6 +730,7 @@ class LocalCLIAdapter:
             stdout_fh.close()
             stderr_fh.close()
 
+        self._live[execution_id] = proc
         process_group_ref = f"pg:{proc.pid}"
         row = {
             "execution_id": execution_id,
@@ -775,6 +777,9 @@ class LocalCLIAdapter:
         }
 
     def observe(self, execution_id: str) -> dict[str, Any]:
+        proc = self._live.get(execution_id)
+        if proc is not None:
+            proc.poll()
         row = self.store.get_execution(execution_id)
         snapshot = process_snapshot()
         known = {int(x) for x in row["known_pids"]}

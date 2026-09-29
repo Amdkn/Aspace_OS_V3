@@ -1,0 +1,21 @@
+{
+  "schema": "aspace.harness-runtime-build-evidence.v1",
+  "date": "2026-09-28",
+  "lane": "Ryan/BUILD",
+  "mission": "#194",
+  "design_pr": 208,
+  "design_sha": "7c580f287763c8e534965ef34360cee2ede43f57",
+  "build_issue": 197,
+  "flow_issue": 200,
+  "result": "SELF_TEST_PASS",
+  "tests": {"count": 7, "passed": 7, "command": "python test_harness_runtime.py"},
+  "p1": {"fingerprint_deterministic": true, "dependency_drift_detected": true, "capability_version_bound": true, "policy_version_bound": true},
+  "p2": {"idempotent_prepare": true, "failure_receipt": true, "bounded_cleanup": true, "global_path_mutation": false},
+  "p3": {"child_inventory": true, "whole_tree_cancel": true, "parent_interruption_unknown": true, "unknown_retry_safe": false, "success_artifact_effect_state": "YES"},
+  "p4": {"local_cli_adapter": true, "workgraph_append_only_event_chain": true, "capability_release_constructor": true, "chatgpt_session_state_required": false},
+  "real_mirofish_certification": "OPEN",
+  "mirofish_source_branch": "origin/feat/life-mirofish-canary-2026-09-28-2589052854815907771",
+  "mirofish_upstream_pin": "3e98e776cdfc9556c12ace82a60e9d3da5bd41e7",
+  "promotion_rule": "Do not publish final CapabilityReleaseReceipt until the real MiroFish execution/interruption/reconciliation receipt is proven.",
+  "rollback": "Revert Ryan P1-P4 commits; delete owned runtime root and runtime SQLite. No global runtime mutation."
+}
