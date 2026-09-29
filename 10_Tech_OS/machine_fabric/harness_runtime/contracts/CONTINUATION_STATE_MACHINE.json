@@ -1,0 +1,48 @@
+{
+  "schema": "aspace.harness-runtime-state-machine.v1",
+  "initial": "CAPABILITY_PUBLISHED",
+  "terminal": ["COMPLETED", "ABANDONED"],
+  "states": [
+    "CAPABILITY_PUBLISHED",
+    "DISPATCHED",
+    "CLAIMED",
+    "PREPARED",
+    "RUNNING",
+    "WAITING_ARTIFACT",
+    "RECEIPT_READY",
+    "RECONCILED",
+    "ROUTED",
+    "WAITING",
+    "RECOVERY_REQUIRED",
+    "REOPEN_BUILD",
+    "REOPEN_DESIGN",
+    "COMPLETED",
+    "ABANDONED"
+  ],
+  "transitions": [
+    {"from":"CAPABILITY_PUBLISHED","event":"dispatch_envelope","to":"DISPATCHED","owner":"nardole-dispatch"},
+    {"from":"DISPATCHED","event":"lease_claimed","to":"CLAIMED","owner":"river-flow"},
+    {"from":"CLAIMED","event":"runtime_prepared","to":"PREPARED","owner":"river-flow"},
+    {"from":"PREPARED","event":"harness_execution_started","to":"RUNNING","owner":"river-flow"},
+    {"from":"RUNNING","event":"artifact_wait","to":"WAITING_ARTIFACT","owner":"river-flow"},
+    {"from":"RUNNING","event":"harness_execution_receipt","to":"RECEIPT_READY","owner":"runtime"},
+    {"from":"WAITING_ARTIFACT","event":"harness_execution_receipt","to":"RECEIPT_READY","owner":"runtime"},
+    {"from":"RECEIPT_READY","event":"rory_reconcile_decision","to":"RECONCILED","owner":"rory-cohere"},
+    {"from":"RECONCILED","event":"continuation_routed","to":"ROUTED","owner":"nardole-dispatch"},
+    {"from":"ROUTED","event":"complete","to":"COMPLETED","owner":"nardole-dispatch"},
+    {"from":"ROUTED","event":"retry","to":"DISPATCHED","owner":"nardole-dispatch"},
+    {"from":"ROUTED","event":"wait","to":"WAITING","owner":"nardole-dispatch"},
+    {"from":"WAITING","event":"wake_condition_met","to":"DISPATCHED","owner":"nardole-dispatch"},
+    {"from":"ROUTED","event":"recover_unknown","to":"RECOVERY_REQUIRED","owner":"donna-recover"},
+    {"from":"ROUTED","event":"reopen_build","to":"REOPEN_BUILD","owner":"ryan-build"},
+    {"from":"ROUTED","event":"reopen_design","to":"REOPEN_DESIGN","owner":"clara-design-forge"}
+  ],
+  "invariants": [
+    "correlation_id is stable across all non-terminal transitions",
+    "a new dispatch requires no conflicting live lease",
+    "RECEIPT_READY is required before RECONCILED",
+    "UNKNOWN effect cannot transition directly to retry",
+    "Ryan is not an owner between CAPABILITY_PUBLISHED and REOPEN_BUILD",
+    "ChatGPT session state is not an input to any transition"
+  ]
+}
