@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import subprocess
+import hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 import re
@@ -37,6 +38,17 @@ def extract_code_refs(description):
         if url:
             cleaned.append(url)
     return list(set(cleaned))
+
+def compute_sha256(filepath):
+    """Compute the SHA256 hash of a file."""
+    sha256_hash = hashlib.sha256()
+    try:
+        with open(filepath, "rb") as f:
+            for byte_block in iter(lambda: f.read(4096), b""):
+                sha256_hash.update(byte_block)
+        return sha256_hash.hexdigest()
+    except Exception:
+        return None
 
 def capture_video(url, out_dir):
     print(f"-> Starting Bill WATCH S1 capture for: {url}")
@@ -117,6 +129,11 @@ def capture_video(url, out_dir):
     # 4. Generate Evidence Packet
     print("-> Assembling Evidence Packet...")
 
+    # Compute hashes
+    metadata_hash = compute_sha256(metadata_file)
+    transcripts_with_hashes = {str(p): compute_sha256(p) for p in transcript_files}
+    keyframes_with_hashes = {str(p): compute_sha256(p) for p in frames_dir.glob("*.png")}
+
     evidence = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "source_url": url,
@@ -125,13 +142,18 @@ def capture_video(url, out_dir):
         "provenance": {
             "agent": "Bill",
             "capability": "WATCH S1",
-            "scope": "Microscope (Selected Source)"
+            "scope": "Microscope (Selected Source)",
+            "routed_to": "Graham/REMEMBER"
         },
         "artifacts": {
-            "metadata_file": str(metadata_file),
-            "transcript_files": [str(p) for p in transcript_files],
+            "metadata_file": {
+                "path": str(metadata_file),
+                "sha256": metadata_hash
+            },
+            "transcript_files": transcripts_with_hashes,
             "keyframe_directory": str(frames_dir),
-            "keyframe_count": len(list(frames_dir.glob("*.png")))
+            "keyframes": keyframes_with_hashes,
+            "keyframe_count": len(keyframes_with_hashes)
         },
         "extracted_context": {
             "code_references": code_refs

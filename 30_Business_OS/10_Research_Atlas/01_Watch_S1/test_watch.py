@@ -55,7 +55,7 @@ class TestWatchS1(unittest.TestCase):
                 frames_dir = self.test_dir / "frames"
                 frames_dir.mkdir(exist_ok=True)
                 with open(frames_dir / "0001.png", "w") as f:
-                    f.write("dummy")
+                    f.write("dummy_keyframe")
                 return MagicMock()
             return MagicMock()
 
@@ -64,7 +64,7 @@ class TestWatchS1(unittest.TestCase):
         # Also need to touch a fake transcript file for the glob
         self.test_dir.mkdir(exist_ok=True)
         with open(self.test_dir / "mock_vid.en.vtt", "w") as f:
-            f.write("transcript")
+            f.write("transcript_content")
 
         evidence = watch.capture_video("https://youtube.com/watch?v=mock_vid", str(self.test_dir))
 
@@ -75,6 +75,21 @@ class TestWatchS1(unittest.TestCase):
         self.assertEqual(evidence["artifacts"]["keyframe_count"], 1)
         self.assertEqual(evidence["provenance"]["agent"], "Bill")
 
+        # 1. Assert Graham provenance
+        self.assertEqual(evidence["provenance"]["routed_to"], "Graham/REMEMBER")
+
+        # 2. Assert SHA-256 hashes are generated correctly
+        self.assertIn("sha256", evidence["artifacts"]["metadata_file"])
+        self.assertIsNotNone(evidence["artifacts"]["metadata_file"]["sha256"])
+
+        transcript_path = str(self.test_dir / "mock_vid.en.vtt")
+        self.assertIn(transcript_path, evidence["artifacts"]["transcript_files"])
+        self.assertIsNotNone(evidence["artifacts"]["transcript_files"][transcript_path])
+
+        keyframe_path = str(self.test_dir / "frames" / "0001.png")
+        self.assertIn(keyframe_path, evidence["artifacts"]["keyframes"])
+        self.assertIsNotNone(evidence["artifacts"]["keyframes"][keyframe_path])
+
         packet_path = self.test_dir / "evidence_packet.json"
         self.assertTrue(packet_path.exists())
 
@@ -82,6 +97,7 @@ class TestWatchS1(unittest.TestCase):
             saved_evidence = json.load(f)
 
         self.assertEqual(saved_evidence["video_id"], "mock_vid")
+        self.assertEqual(saved_evidence["provenance"]["routed_to"], "Graham/REMEMBER")
 
 if __name__ == '__main__':
     unittest.main()
