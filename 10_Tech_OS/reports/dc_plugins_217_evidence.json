@@ -1,0 +1,25 @@
+{
+  "schema": "aspace.dc.p5-evidence.v1",
+  "work_id": "217",
+  "result": "PASS",
+  "tested_on": "Amd-PC / Windows",
+  "checks": {
+    "typed_plugin_contract": true,
+    "capability_manifest_and_health": true,
+    "lifecycle_hooks": true,
+    "approved_directory_discovery": true,
+    "failed_plugin_isolation": true,
+    "disabled_plugin_support": true,
+    "plugin_version_in_provenance": true,
+    "demo_plugin_execution": true,
+    "gateway_unified_acceptance": true,
+    "usage_ledger_persistence": true,
+    "remote_adapter_acceptance": true
+  },
+  "test_results": {
+    "test_plugin_sdk": "Ran 6 tests in 0.132s - OK",
+    "test_gateway_unified": "UNIFIED_GATEWAY_ACCEPTANCE=PASS",
+    "test_gateway_usage": "Initial ledger OK, Replay OK, Restart persistence OK",
+    "test_adapter": "REMOTE_ADAPTER_ACCEPTANCE=PASS"
+  }
+}
