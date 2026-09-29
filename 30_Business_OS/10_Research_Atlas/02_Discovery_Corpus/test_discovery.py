@@ -6,6 +6,8 @@ import shutil
 from pathlib import Path
 
 import discovery
+from inventory import resolve_inventory
+from gws_adapter import GWSAdapter
 
 class TestDiscoveryCorpus(unittest.TestCase):
     def setUp(self):
@@ -57,6 +59,44 @@ Title: Attention Is All You Need
         title_res = next(r for r in resolved if r["original_citation"]["type"] == "title_block")
         self.assertEqual(title_res["canonical_id"], "NEEDS_REVIEW")
         self.assertEqual(title_res["status"], "NEEDS_REVIEW")
+
+    @patch('inventory.subprocess.run')
+    def test_ytdlp_inventory(self, mock_run):
+        mock_result = MagicMock()
+        mock_result.stdout = json.dumps({"id": "test1", "webpage_url": "https://youtube.com/watch?v=test1"}) + "\n" + json.dumps({"id": "test2"})
+        mock_run.return_value = mock_result
+
+        manifest = {"type": "ytdlp_playlist", "url": "https://youtube.com/playlist?list=mock"}
+        urls = resolve_inventory(manifest)
+        self.assertEqual(len(urls), 2)
+        self.assertIn("https://youtube.com/watch?v=test1", urls)
+        self.assertIn("https://www.youtube.com/watch?v=test2", urls)
+
+    def test_gws_adapter(self):
+        gws = GWSAdapter(receipt_dir=str(self.test_dir / "receipts"))
+        payloads = [
+            {"tab": "02_Videos", "keys": ["vid1"], "data": {"video_id": "vid1"}},
+            {"tab": "02_Videos", "keys": ["vid2"], "data": {"video_id": "vid2"}},
+            {"tab": "04_Papers", "keys": ["pap1"], "data": {"paper_id": "pap1"}},
+        ]
+
+        success, err = gws.write_batch(payloads)
+        self.assertTrue(success)
+        self.assertIsNone(err)
+
+        # Test dedup
+        success, err = gws.write_batch([payloads[0]])
+        self.assertTrue(success)
+
+        # Test postconditions
+        ok, err = gws.validate_postconditions({"02_Videos": 2, "04_Papers": 1})
+        self.assertTrue(ok)
+
+        ok, err = gws.validate_postconditions({"02_Videos": 3})
+        self.assertFalse(ok)
+
+        # Test receipts created
+        self.assertTrue(len(list((self.test_dir / "receipts").glob("*.json"))) > 0)
 
     def test_analyze_transcript(self):
         mock_vtt = """WEBVTT
@@ -128,6 +168,10 @@ Our method improves results significantly.
             self.assertEqual(edges[1]["source_id"], "test2")
 
         self.assertEqual(report["duplicate_paper_merges"], 0)
+
+        # Verify GWS metrics
+        self.assertEqual(report["gws_sync"]["status"], "SUCCESS")
+        self.assertEqual(report["stage_status"], "PASS")
 
 if __name__ == '__main__':
     unittest.main()

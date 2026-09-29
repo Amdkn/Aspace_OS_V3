@@ -6,6 +6,7 @@ import urllib.request
 import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone
+import uuid
 
 # Add Watch S1 to path
 watch_dir = Path(__file__).resolve().parent.parent / "01_Watch_S1"
@@ -13,6 +14,8 @@ if str(watch_dir) not in sys.path:
     sys.path.insert(0, str(watch_dir))
 
 import watch
+from inventory import resolve_inventory
+from gws_adapter import GWSAdapter
 
 def extract_citations(description):
     """
@@ -258,7 +261,10 @@ def process_corpus(manifest_path, out_dir):
     with open(manifest_path, 'r', encoding='utf-8') as f:
         manifest = json.load(f)
 
-    urls = manifest.get("urls", [])
+    urls = resolve_inventory(manifest)
+
+    gws = GWSAdapter(receipt_dir=str(Path(out_dir) / "gws_receipts"))
+    gws_payloads = []
 
     report = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -335,9 +341,73 @@ def process_corpus(manifest_path, out_dir):
             seen_edges.add(key)
             unique_edges.append(edge)
 
+    # Add Run to GWS payloads
+    run_id = f"run_{datetime.now(timezone.utc).strftime('%Y%md%H%M%S')}"
+    gws_payloads.append({
+        "tab": "11_Runs",
+        "keys": [run_id],
+        "data": {
+            "run_id": run_id,
+            "timestamp": report["timestamp"],
+            "videos_processed": report["videos_processed"]
+        }
+    })
+
+    # Prepare GWS Payloads for Videos, Papers, Edges
+    for res in report["results"]:
+        if res["status"] == "SUCCESS" and res.get("video_id"):
+            vid = res["video_id"]
+            gws_payloads.append({
+                "tab": "02_Videos",
+                "keys": [vid],
+                "data": {"video_id": vid, "url": res["url"]}
+            })
+
+    for edge in unique_edges:
+        # Canonical papers
+        gws_payloads.append({
+            "tab": "04_Papers",
+            "keys": [edge["target_id"]],
+            "data": {"paper_id": edge["target_id"]}
+        })
+        # Edges
+        gws_payloads.append({
+            "tab": "05_VideoPaperEdges",
+            "keys": [edge["source_id"], edge["target_id"]],
+            "data": {"video_id": edge["source_id"], "paper_id": edge["target_id"], "relation": edge["relation"]}
+        })
+
     # Calculate deduplications
     duplicate_merges = len(global_paper_graph) - len(unique_edges)
     report["duplicate_paper_merges"] = duplicate_merges
+
+    # Write to GWS
+    print("[Discovery] Writing to GWS...")
+    gws_success, gws_error = gws.write_batch(gws_payloads)
+
+    report["gws_sync"] = {
+        "status": "SUCCESS" if gws_success else "FAILED",
+        "error": gws_error,
+        "payload_count": len(gws_payloads)
+    }
+
+    if not gws_success:
+        print(f"[Discovery] GWS Sync Failed: {gws_error}. Local artifacts preserved.")
+        # Ensure stage does not pass fully
+        report["stage_status"] = "PARTIAL_SUCCESS (GWS FAILED)"
+    else:
+        # Validate postconditions
+        expected_counts = {
+            "02_Videos": report["videos_processed"],
+            "04_Papers": len({e["target_id"] for e in unique_edges}),
+            "05_VideoPaperEdges": len(unique_edges),
+            "11_Runs": 1
+        }
+        post_success, post_err = gws.validate_postconditions(expected_counts)
+        if post_success:
+            report["stage_status"] = "PASS"
+        else:
+            report["stage_status"] = f"PARTIAL_SUCCESS (Postcondition failed: {post_err})"
 
     # Write aggregate report
     report_path = Path(out_dir) / "corpus_report.json"
