@@ -46,18 +46,23 @@ Pre-convergence compact Windows implementation:
 - Included parent interruption -> UNKNOWN.
 - Included whole-tree cancel -> no known owned child.
 
-Post-convergence rich implementation:
+Current HEAD recertification:
 - py_compile PASS.
-- P1/P2: 2/2 PASS.
-- P3 success + P4 event chain + no-session continuation: 3/3 PASS.
-- Total non-destructive recertification: 5/5 PASS.
-- Destructive P3 recertification on the rich implementation was blocked before execution by the tool guard.
-- This guard result is not classified as a runtime failure.
+- Full Windows suite: **7/7 PASS in 13.822s**.
+- P1 fingerprint determinism/drift PASS.
+- P2 idempotent prepare/failure receipt/cleanup PASS.
+- P3 parent interruption -> UNKNOWN -> retry_safe=false PASS.
+- P3 whole-tree cancel PASS.
+- P3 success/artifact/effect=YES PASS.
+- P4 CapabilityRelease constructor + append-only WorkGraph event chain PASS.
+- No ChatGPT session state required PASS.
+- Post-test targeted sweep: **0 owned fixture/harness_runner processes lingering**.
+- Python 3.14 emitted ResourceWarning for detached Popen handles; this is recorded as implementation hygiene, not an orphan-process failure.
 
 Therefore:
-- destructive algorithm proof exists from the compact Windows implementation;
-- rich destructive recertification remains OPEN;
-- final MiroFish certification remains OPEN.
+- P1-P4 substrate self-certification is PASS;
+- final real MiroFish certification remains OPEN;
+- no final CapabilityReleaseReceipt is published until that real canary closes.
 
 ## Runtime invariants retained
 

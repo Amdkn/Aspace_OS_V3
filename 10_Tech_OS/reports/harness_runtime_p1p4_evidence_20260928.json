@@ -7,13 +7,13 @@
   "design_sha": "7c580f287763c8e534965ef34360cee2ede43f57",
   "build_issue": 197,
   "flow_issue": 200,
-  "result": "PARTIAL_RECERTIFICATION_PASS",
+  "result": "P1_P4_SUBSTRATE_PASS_MIROFISH_OPEN",
   "tests": {
     "rich_non_destructive_passed": 5,
     "rich_non_destructive_total": 5,
     "compact_windows_preconvergence_passed": 7,
     "compact_windows_preconvergence_total": 7,
-    "rich_destructive_recertification": "TOOL_GUARD_BLOCKED"
+    "rich_destructive_recertification": "PASS_7_OF_7_CURRENT_HEAD"
   },
   "p1": {
     "fingerprint_deterministic": true,
@@ -34,7 +34,8 @@
     "unknown_retry_safe": false,
     "success_artifact_effect_state": "YES",
     "destructive_windows_proof_preconvergence": true,
-    "destructive_recertified_post_convergence": false
+    "destructive_recertified_post_convergence": true,
+    "post_test_lingering_owned_fixture_processes": 0
   },
   "p4": {
     "local_cli_adapter": true,
