@@ -1,0 +1,10 @@
+{
+  "schema": "aspace.machine.remote-transport-evidence.v1",
+  "result": "DEPENDENCY_MISSING",
+  "dependency": "tailscale",
+  "installed": false,
+  "live_canary": "OPEN",
+  "reason": "No Tailscale CLI/service installed on this Windows host.",
+  "public_bind": false,
+  "at": 1790657637.1705084
+}
