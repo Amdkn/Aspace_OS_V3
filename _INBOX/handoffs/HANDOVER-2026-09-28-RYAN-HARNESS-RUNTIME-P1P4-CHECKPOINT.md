@@ -1,4 +1,4 @@
----
+﻿---
 type: handover
 title: Ryan Harness Runtime P1-P4 self-certification checkpoint
 description: Durable checkpoint after local P1-P4 substrate tests, before real MiroFish certification.
@@ -6,7 +6,7 @@ generated: 2026-09-28
 okf_version: 1.0
 ---
 
-# HANDOVER — RYAN HARNESS RUNTIME P1-P4
+# HANDOVER â€” RYAN HARNESS RUNTIME P1-P4
 
 Mission: #194
 Design source: PR #208 @ 7c580f287763c8e534965ef34360cee2ede43f57
@@ -24,3 +24,4 @@ The BUILD consumes the Project sources:
 Clara #208 is their compiled DESIGN contract, not a replacement for those sources.
 
 ## Built
+
