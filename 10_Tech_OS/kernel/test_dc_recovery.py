@@ -8,12 +8,7 @@ from pathlib import Path
 
 # Fix import path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import shutil
-import tempfile
-import json
-import time
-
-from dc_recovery_daemon import get_clean_env, is_dc_running, get_dc_status, install_dc, uninstall_dc, stop_dc, SENTINEL_PATH, STATUS_PATH
+from dc_recovery_daemon import get_clean_env, is_dc_running, get_dc_status
 
 class TestDCRecovery(unittest.TestCase):
     def setUp(self):
@@ -53,30 +48,6 @@ class TestDCRecovery(unittest.TestCase):
         self.assertIn("sentinel_status", status)
         self.assertIn("details", status)
         self.assertIsInstance(status["running"], bool)
-
-    def test_install_uninstall_dc(self):
-        """Vérifie l'installation et la desinstallation."""
-        res_install = install_dc()
-        self.assertEqual(res_install["status"], "installed")
-        self.assertTrue(SENTINEL_PATH.exists())
-
-        res_uninstall = uninstall_dc()
-        self.assertEqual(res_uninstall["status"], "uninstalled")
-        self.assertFalse(SENTINEL_PATH.exists())
-        self.assertFalse(STATUS_PATH.exists())
-
-    def test_stop_dc(self):
-        """Vérifie que l'arrêt supprime le statut."""
-        # Create dummy status path
-        STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
-        STATUS_PATH.touch()
-
-        import unittest.mock
-        with unittest.mock.patch('subprocess.run') as mock_run:
-            res = stop_dc()
-            self.assertEqual(res["status"], "stopped")
-            self.assertFalse(STATUS_PATH.exists())
-            self.assertTrue(mock_run.called)
 
 if __name__ == '__main__':
     unittest.main()

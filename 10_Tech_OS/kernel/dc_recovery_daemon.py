@@ -72,9 +72,6 @@ def start_dc() -> dict:
     # Priorité 1 : Sentinelle Bedrock Python
     if SENTINEL_PATH.exists():
         try:
-            # Set repo root so the sentinel can find gateway.py when installed elsewhere
-            clean_env["AMF_REPO_ROOT"] = str(Path(__file__).resolve().parent.parent.parent)
-
             python_exe = "C:\\Python314\\pythonw.exe" if Path("C:\\Python314\\pythonw.exe").exists() else sys.executable
             creation_flags = subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0
             subprocess.Popen([python_exe, str(SENTINEL_PATH)], env=clean_env, creationflags=creation_flags)
@@ -104,85 +101,12 @@ def start_dc() -> dict:
 
     return {"ok": False, "status": "not_found", "error": f"Ni {SENTINEL_PATH}, ni {DC_BAT_PATH} introuvables."}
 
-def stop_dc():
-    if sys.platform == "win32":
-        cmd = ["powershell.exe", "-NoProfile", "-Command",
-               "Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' -and ($_.CommandLine -like '*desktop-commander*' -or $_.CommandLine -like '*supervisor.mjs*') } | Stop-Process -Force -ErrorAction SilentlyContinue"]
-        subprocess.run(cmd, capture_output=True)
-        cmd_python = ["powershell.exe", "-NoProfile", "-Command",
-                      "Get-CimInstance Win32_Process | Where-Object { ($_.Name -eq 'python.exe' -or $_.Name -eq 'pythonw.exe') -and ($_.CommandLine -like '*dc_bedrock_sentinel.py*' -or $_.CommandLine -like '*gateway.py*') } | Stop-Process -Force -ErrorAction SilentlyContinue"]
-        subprocess.run(cmd_python, capture_output=True)
-    else:
-        subprocess.run(["pkill", "-f", "desktop-commander"], capture_output=True)
-        subprocess.run(["pkill", "-f", "dc_bedrock_sentinel.py"], capture_output=True)
-        subprocess.run(["pkill", "-f", "gateway.py"], capture_output=True)
-
-    if STATUS_PATH.exists():
-        try:
-            STATUS_PATH.unlink()
-        except:
-            pass
-    return {"ok": True, "status": "stopped"}
-
-def install_dc():
-    SENTINEL_PATH.parent.mkdir(parents=True, exist_ok=True)
-    import shutil
-    src_sentinel = Path(__file__).parent / "dc_bedrock_sentinel.py"
-    if src_sentinel.exists():
-        shutil.copy2(src_sentinel, SENTINEL_PATH)
-    return {"ok": True, "status": "installed"}
-
-def uninstall_dc():
-    stop_dc()
-    try:
-        if SENTINEL_PATH.exists():
-            SENTINEL_PATH.unlink()
-        if STATUS_PATH.exists():
-            STATUS_PATH.unlink()
-    except:
-        pass
-    return {"ok": True, "status": "uninstalled"}
-
-def update_dc():
-    install_dc()
-    stop_dc()
-    time.sleep(1)
-    res = start_dc()
-    return {"ok": res["ok"], "status": "updated"}
-
 if __name__ == "__main__":
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("action", nargs="?", default="start", choices=["start", "stop", "restart", "status", "install", "uninstall", "update"])
-    args = parser.parse_args()
-
-    if args.action == "status":
+    if len(sys.argv) > 1 and sys.argv[1] == "--status":
         status = get_dc_status()
         print(json.dumps(status))
         sys.exit(0 if status["running"] else 1)
-    elif args.action == "start":
-        res = start_dc()
-        print(json.dumps(res))
-        sys.exit(0 if res["ok"] else 1)
-    elif args.action == "stop":
-        res = stop_dc()
-        print(json.dumps(res))
-        sys.exit(0)
-    elif args.action == "restart":
-        stop_dc()
-        time.sleep(1)
-        res = start_dc()
-        print(json.dumps(res))
-        sys.exit(0 if res["ok"] else 1)
-    elif args.action == "install":
-        res = install_dc()
-        print(json.dumps(res))
-        sys.exit(0)
-    elif args.action == "uninstall":
-        res = uninstall_dc()
-        print(json.dumps(res))
-        sys.exit(0)
-    elif args.action == "update":
-        res = update_dc()
-        print(json.dumps(res))
-        sys.exit(0 if res["ok"] else 1)
+
+    res = start_dc()
+    print(json.dumps(res))
+    sys.exit(0 if res["ok"] else 1)
