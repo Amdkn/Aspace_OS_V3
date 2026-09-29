@@ -1,0 +1,26 @@
+{
+  "run_id": "run_e822ad0b523e",
+  "status": "failed",
+  "project_name": "life_os_world_seed +1",
+  "requirement": "Stress-test the A'Space Life OS coordination structure using the supplied structural seed and perturbation scenarios. Treat simulated social posts and replies as typed handoffs and coordination messages, not public social media. Run exactly one simulation round. For S1-S6, surface structural blockers, likely failure modes, responsible primitives, System-1 versus System-2 routing, residual risk, and the highest-leverage architecture changes. Do not mutate any real external system.",
+  "source_files": [
+    "/mnt/c/Users/amado/ASpace_OS_V3/20_Life_OS/28_Blueprints/fractal_simulation/life_os_world_seed.md",
+    "/mnt/c/Users/amado/ASpace_OS_V3/20_Life_OS/28_Blueprints/fractal_simulation/life_os_scenarios.md"
+  ],
+  "project_id": null,
+  "graph_id": null,
+  "simulation_id": null,
+  "report_id": null,
+  "graph_build_task_id": null,
+  "prepare_task_id": null,
+  "report_task_id": null,
+  "task_progress": 0,
+  "task_message": "Codex CLI failed: Reading prompt from stdin...\nOpenAI Codex v0.150.1\n--------\nworkdir: /tmp\nmodel: gpt-5.6-sol\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsessio",
+  "artifacts": {
+    "requirement": "input/requirement.txt",
+    "source_files_dir": "input/source_files"
+  },
+  "created_at": "2026-09-28T20:04:44.743613",
+  "updated_at": "2026-09-28T20:05:52.580831",
+  "error": "Codex CLI failed: Reading prompt from stdin...\nOpenAI Codex v0.150.1\n--------\nworkdir: /tmp\nmodel: gpt-5.6-sol\nprovider: openai\napproval: never\nsandbox: read-only\nreasoning effort: none\nreasoning summaries: none\nsessio"
+}

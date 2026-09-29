@@ -1,0 +1,22 @@
+receipt_version=aspace.harness_execution_receipt.v1
+stage=MiroFishRun
+started_utc=2026-09-29T00:04:43Z
+upstream_sha=3e98e776cdfc9556c12ace82a60e9d3da5bd41e7
+python=Python 3.11.16
+codex=codex-cli 0.150.1
+seed_world_sha256=0239c2d4dce2ff4a708f4c04faa66c2a2c7e073117ab0a32425ce9726b1137ed
+seed_scenarios_sha256=60d40c61225689f1f10697ef41e2134bd08fb415eb8b43294d3f161cb053333e
+output_store=/mnt/c/Users/amado/orca/workspaces/ASpace_OS_V3/River/20_Life_OS/28_Blueprints/fractal_simulation/runs/river_canary_20260929T000442Z/store
+max_rounds=1
+platform=parallel
+pid=66935
+pgid=66935
+heartbeat_utc=2026-09-29T00:04:44Z children=
+heartbeat_utc=2026-09-29T00:04:54Z children=66943,
+heartbeat_utc=2026-09-29T00:05:06Z children=66943,
+heartbeat_utc=2026-09-29T00:05:16Z children=67359,
+heartbeat_utc=2026-09-29T00:05:26Z children=67359,
+heartbeat_utc=2026-09-29T00:05:38Z children=67797,
+heartbeat_utc=2026-09-29T00:05:48Z children=67797,
+exit_code=1
+finished_utc=2026-09-29T00:05:58Z

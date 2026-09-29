@@ -1,0 +1,90 @@
+{
+  "receipt_version": "aspace.harness_execution_receipt.v1",
+  "mission": "Life OS MiroFish structural pre-Wargame canary",
+  "origin": {
+    "linear": "SOH-142",
+    "github_issue": 200,
+    "incoming_handover": "_INBOX/handoffs/HANDOVER-2026-09-28-RIVER-HARNESS-WORKFLOW-MIROFISH.md",
+    "preflight_commit": "8750271d2be959bdc9cb6cf53943522292f15fe2"
+  },
+  "stage": "MiroFishRun",
+  "status": "FAILED_PROVIDER_UNAVAILABLE",
+  "run": {
+    "run_id": "run_e822ad0b523e",
+    "started_utc": "2026-09-29T00:04:43Z",
+    "finished_utc": "2026-09-29T00:05:58Z",
+    "exit_code": 1,
+    "failed_step": "ontology",
+    "max_rounds": 1,
+    "rounds_executed": 0,
+    "verdict_json_present": false,
+    "immutable_path": "20_Life_OS/28_Blueprints/fractal_simulation/runs/river_canary_20260929T000442Z"
+  },
+  "runtime": {
+    "mirofish_upstream": "SCTY-Inc/mirofish-cli",
+    "mirofish_sha": "3e98e776cdfc9556c12ace82a60e9d3da5bd41e7",
+    "wsl": "Ubuntu-24.04",
+    "python": "3.11.16",
+    "torch": "2.2.2+cpu",
+    "cuda": false,
+    "mcp": "1.27.0"
+  },
+  "inputs": {
+    "world_seed_sha256": "0239c2d4dce2ff4a708f4c04faa66c2a2c7e073117ab0a32425ce9726b1137ed",
+    "scenarios_sha256": "60d40c61225689f1f10697ef41e2134bd08fb415eb8b43294d3f161cb053333e"
+  },
+  "provider_evidence": [
+    {
+      "provider": "codex-cli",
+      "surface": "WSL",
+      "version": "0.150.1",
+      "result": "FAIL",
+      "evidence": "HTTP 401 Unauthorized; missing bearer/basic authentication"
+    },
+    {
+      "provider": "codex-cli",
+      "surface": "Windows bridge",
+      "version": "0.153.4",
+      "result": "FAIL",
+      "evidence": "execution reports invalidated refresh token; existing config also reports missing FREELLMAPI_API_KEY"
+    },
+    {
+      "provider": "claude-cli",
+      "surface": "WSL default model",
+      "version": "2.1.222",
+      "result": "FAIL",
+      "evidence": "configured model z-ai/glm-5.3-flash[1m] returned 404 inaccessible model"
+    },
+    {
+      "provider": "claude-cli",
+      "surface": "WSL explicit haiku",
+      "version": "2.1.222",
+      "result": "FAIL",
+      "evidence": "aborted_streaming after ~27s with zero input/output tokens"
+    }
+  ],
+  "process_supervision": {
+    "setsid_process_group": true,
+    "heartbeat_logged": true,
+    "watchdog_seconds": 1800,
+    "stray_provider_processes_after_run": false
+  },
+  "authority": {
+    "linear_transition_authorized": false,
+    "supabase_transition_authorized": false,
+    "current_projection": "UNTESTED",
+    "simulation_resolves_ipbd": false
+  },
+  "capability_need": {
+    "type": "authenticated_supported_llm_provider",
+    "owner": "human_auth_boundary",
+    "preferred_resolution": "reauthenticate one supported provider only; Windows Codex is preferred because the binary is installed and already selected by the harness",
+    "do_not": [
+      "do not patch MiroFish to fake success",
+      "do not reuse or expose historical API keys",
+      "do not invoke Jules for an authentication failure",
+      "do not change Linear/Supabase state"
+    ],
+    "reentry": "rerun the exact one-round canary with the same two seed hashes after provider canary returns exit 0"
+  }
+}
