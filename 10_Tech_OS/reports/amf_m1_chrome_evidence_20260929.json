@@ -1,6 +1,6 @@
 {
   "schema": "aspace.machine.m1-evidence.v1",
-  "started_at": 1790657676.231237,
+  "started_at": 1790657766.078574,
   "result": "PASS",
   "browser_binary": "C:\\Users\\amado\\Aspace_Quarantine\\chrome-for-testing\\153.0.8010.52\\chrome-win64\\chrome.exe",
   "checks": {
@@ -28,7 +28,7 @@
       "schema": "aspace.machine.health.v1",
       "transport": "LOCAL",
       "worker": "UP",
-      "worker_ref": "worker-752b89acc9c4"
+      "worker_ref": "worker-d0befe822faf"
     },
     "worker_dead": {
       "aggregate": "DEGRADED",
@@ -56,27 +56,27 @@
       "schema": "aspace.machine.health.v1",
       "transport": "LOCAL",
       "worker": "UP",
-      "worker_ref": "worker-d6e8850c395e"
+      "worker_ref": "worker-dc8fb355ebec"
     }
   },
   "fencing": {
     "first": 1,
     "second": 2
   },
-  "extension_id": "omcpkoflnlhjmmlanbnldkfoopehfnmp",
+  "extension_id": "gfpimfkgglngoimbajilkbacjjggiglk",
   "native_host_start_count": 2,
   "claim_count": 2,
   "receipt": {
     "adapter": "amf.m1.chrome-native-messaging",
     "capability": "browser.dom.action",
-    "effect_digest": "sha256:27df30ab2ad49306b0fc6bc08129bded493a8f63850e7633da6b9df031061b6b",
+    "effect_digest": "sha256:6102abb3b4a07fdf23c98796bb1e5b71d4d47707f37ccb29a69eebe5b9a1db4c",
     "evidence": [
-      "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:50619/canary.html\"}",
-      "worker=worker-d6e8850c395e",
-      "lease=lease-bc2ac348874742b1"
+      "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:56247/canary.html\"}",
+      "worker=worker-dc8fb355ebec",
+      "lease=lease-f0bded8285b64d74"
     ],
     "fingerprint": "48579f2e88cc309aa785b1b805dc3b10c26c42c75acc2bbd286de7a67c355716",
-    "finished_at": "2026-09-29T04:54:48.458389+00:00",
+    "finished_at": "2026-09-29T04:56:17.725881+00:00",
     "operation_id": "m1-browser-op-0001",
     "policy": {
       "decision": "ALLOW",
@@ -88,12 +88,12 @@
   "dom_server_evidence": [
     {
       "text": "AFTER",
-      "ts": 1790657688368
+      "ts": 1790657777709
     }
   ],
   "worker_log_events": 12,
   "native_log_events": 16,
-  "dotnet_build_tail": "  Determining projects to restore...\n  Restored C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-76wj9y3f\\native_src\\ASpaceNativeHost.csproj (in 124 ms).\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-76wj9y3f\\native_src\\bin\\Release\\net9.0\\win-x64\\ASpaceNativeHost.dll\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-76wj9y3f\\native_publish\\\n",
+  "dotnet_build_tail": "  Determining projects to restore...\n  Restored C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-k4jhsvav\\native_src\\ASpaceNativeHost.csproj (in 118 ms).\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-k4jhsvav\\native_src\\bin\\Release\\net9.0\\win-x64\\ASpaceNativeHost.dll\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-k4jhsvav\\native_publish\\\n",
   "security": {
     "chrome_profile": "disposable",
     "native_host_registry": "temporary HKCU",
@@ -105,5 +105,5 @@
     "public_bind": false
   },
   "rollback": "Chrome test tree killed; worker/daemon stopped; temporary NativeMessagingHosts key removed; temp profile/build deleted.",
-  "finished_at": 1790657690.184215
+  "finished_at": 1790657779.7424786
 }
