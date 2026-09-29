@@ -1,0 +1,39 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260929-M2-PRIVATE-REMOTE-CANARY",
+  "origin_intent": "GitHub #194 / #197 Machine Fabric v0 continuous factory",
+  "work_id": "GitHub#197",
+  "invariant": "M2 must prove one private remote transport canary over the same loopback daemon without public exposure or transport identity bypassing capability policy.",
+  "observation": "Tailscale 1.102.4 is installed, service RUNNING, authenticated and connected on Amd-PC. The node has MagicDNS and a registered Android peer (Tab S6 Lite de Amadou), but Tailscale Serve is not enabled for this tailnet and the Android peer is currently offline.",
+  "expected": "Enable Tailscale Serve for the existing tailnet and bring one already-authorized second client online. Then execute the existing M2 private canary against the loopback backend and capture the remote-origin receipt/effect evidence.",
+  "actual": "10_Tech_OS/reports/amf_m2_remote_evidence_20260929.json => SERVE_ENABLEMENT_REQUIRED; adapter tests PASS; backend loopback test PASS; no Funnel/public bind created; Android peer registered but offline.",
+  "evidence": [
+    "10_Tech_OS/reports/amf_v0_continuous_evidence_20260929.json",
+    "10_Tech_OS/reports/amf_m2_remote_evidence_20260929.json",
+    "10_Tech_OS/machine_fabric/m2/tailscale_serve_adapter.py",
+    "10_Tech_OS/machine_fabric/m2/run_m2_serve_canary.py",
+    "Tailscale status: BackendState=Running; Self=online; Android peer registered/offline"
+  ],
+  "suggested_capability": "nardole-dispatch + rick-infrastructure",
+  "authority": {
+    "allowed": [
+      "enable Tailscale Serve through the authorized tailnet account",
+      "bring an already-authorized peer online",
+      "execute the existing M2 adapter canary",
+      "snapshot and restore Serve configuration"
+    ],
+    "forbidden": [
+      "Tailscale Funnel or any public bind",
+      "treat transport identity as capability authority",
+      "change AMF operation identity on reconnect",
+      "block the Local v0 release on this external authorization gate"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": [
+      "tailnet Serve enablement"
+    ]
+  },
+  "blocking": false,
+  "reversible": true,
+  "reply_contract": "Return Serve enabled state, second-client online state, canary receipt/effect evidence, reconnect result, policy denial proof and restored Serve config."
+}

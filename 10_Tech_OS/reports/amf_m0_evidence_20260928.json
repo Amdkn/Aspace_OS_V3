@@ -1,0 +1,357 @@
+{
+  "schema": "aspace.machine.m0-evidence.v1",
+  "mission": "#194",
+  "design": "#196 / PR #201",
+  "build": "#197",
+  "started_at": "2026-09-29T05:15:44.486989+00:00",
+  "finished_at": "2026-09-29T05:15:47.073542+00:00",
+  "result": "PASS",
+  "invariant": "typed capability -> policy -> operation_id -> precondition -> effect -> durable receipt -> replay/compensation",
+  "fundamental_canary": "mutation -> crash/restart -> replay same operation_id -> zero duplicate mutation",
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.2",
+    "transport": "127.0.0.1 loopback",
+    "policy_version": "amf-m0-policy-v1",
+    "adapter": "amf.m0.python-stdlib.fs"
+  },
+  "startup_before_crash": {
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\amf.sqlite3",
+    "health": {
+      "aggregate": "ONLINE",
+      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+      "capabilities": {
+        "machine.fs.read": "AVAILABLE",
+        "machine.fs.write": "AVAILABLE"
+      },
+      "daemon": "UP",
+      "policy_version": "amf-m0-policy-v1",
+      "profile": "M0_LOCAL_FS",
+      "schema": "aspace.machine.health.v1",
+      "transport": "LOCAL",
+      "worker": "NOT_REQUIRED"
+    },
+    "host": "127.0.0.1",
+    "port": 64710,
+    "schema": "aspace.machine.daemon-start.v1"
+  },
+  "health_before_crash": {
+    "aggregate": "ONLINE",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "capabilities": {
+      "machine.fs.read": "AVAILABLE",
+      "machine.fs.write": "AVAILABLE"
+    },
+    "daemon": "UP",
+    "policy_version": "amf-m0-policy-v1",
+    "profile": "M0_LOCAL_FS",
+    "schema": "aspace.machine.health.v1",
+    "transport": "LOCAL",
+    "worker": "NOT_REQUIRED"
+  },
+  "ledger_before_restart": {
+    "operation_id": "amf-m0-crash-replay-0001",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
+    "action": "append_text",
+    "state": "RUNNING",
+    "policy_decision": "ALLOW",
+    "policy_version": "amf-m0-policy-v1",
+    "effect_digest": null,
+    "has_receipt": false,
+    "claimed_at": "2026-09-29T05:15:46.474272+00:00",
+    "started_at": "2026-09-29T05:15:46.474599+00:00",
+    "finished_at": null,
+    "plan": {
+      "mode": "append_text",
+      "target_name": "crash-record.txt",
+      "expected_after_sha256": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
+      "expected_after_size": 10
+    }
+  },
+  "startup_after_restart": {
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "db": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\amf.sqlite3",
+    "health": {
+      "aggregate": "ONLINE",
+      "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+      "capabilities": {
+        "machine.fs.read": "AVAILABLE",
+        "machine.fs.write": "AVAILABLE"
+      },
+      "daemon": "UP",
+      "policy_version": "amf-m0-policy-v1",
+      "profile": "M0_LOCAL_FS",
+      "schema": "aspace.machine.health.v1",
+      "transport": "LOCAL",
+      "worker": "NOT_REQUIRED"
+    },
+    "host": "127.0.0.1",
+    "port": 64710,
+    "schema": "aspace.machine.daemon-start.v1"
+  },
+  "health_after_restart": {
+    "aggregate": "ONLINE",
+    "allowed_root": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed",
+    "capabilities": {
+      "machine.fs.read": "AVAILABLE",
+      "machine.fs.write": "AVAILABLE"
+    },
+    "daemon": "UP",
+    "policy_version": "amf-m0-policy-v1",
+    "profile": "M0_LOCAL_FS",
+    "schema": "aspace.machine.health.v1",
+    "transport": "LOCAL",
+    "worker": "NOT_REQUIRED"
+  },
+  "ledger_after_restart": {
+    "operation_id": "amf-m0-crash-replay-0001",
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
+    "action": "append_text",
+    "state": "SUCCEEDED",
+    "policy_decision": "ALLOW",
+    "policy_version": "amf-m0-policy-v1",
+    "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
+    "has_receipt": true,
+    "claimed_at": "2026-09-29T05:15:46.474272+00:00",
+    "started_at": "2026-09-29T05:15:46.474599+00:00",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
+    "plan": {
+      "mode": "append_text",
+      "target_name": "crash-record.txt",
+      "expected_after_sha256": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
+      "expected_after_size": 10
+    }
+  },
+  "reconciled_receipt": {
+    "adapter": "amf.m0.python-stdlib.fs",
+    "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
+    "compensation_ref": null,
+    "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
+    "evidence": [
+      "postcondition reconciled after restart",
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed\\crash-record.txt"
+    ],
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
+    "operation_id": "amf-m0-crash-replay-0001",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "reconciled_after_restart": true,
+    "schema": "aspace.machine.receipt.v1",
+    "state": "SUCCEEDED"
+  },
+  "terminal_replay_receipt": {
+    "adapter": "amf.m0.python-stdlib.fs",
+    "capability": "machine.fs.write",
+    "capability_version": "0.1.0",
+    "compensation_ref": null,
+    "effect_digest": "2ec1d720aec1938f79427cb1f2fc7d5b76a5849f06be1c30a61895d0e3173b4d",
+    "evidence": [
+      "postcondition reconciled after restart",
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-m0-evidence-4mmr__dl\\allowed\\crash-record.txt"
+    ],
+    "fingerprint": "6f09e7eaedcbeb66345debda104105ffa9120b575c20af074adbc4ede89e48cb",
+    "finished_at": "2026-09-29T05:15:46.893200+00:00",
+    "operation_id": "amf-m0-crash-replay-0001",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "reconciled_after_restart": true,
+    "replayed": true,
+    "schema": "aspace.machine.receipt.v1",
+    "state": "SUCCEEDED"
+  },
+  "checks": {
+    "forced_crash_exit_code": 86,
+    "crash_transport_error": "ConnectionResetError",
+    "effect_count_after_crash": 1,
+    "restart_status": 200,
+    "reconciled_after_restart": true,
+    "effect_count_after_reconcile": 1,
+    "ledger_capability_version_before_restart": "0.1.0",
+    "ledger_capability_version_after_restart": "0.1.0",
+    "reconciled_receipt_capability_version": "0.1.0",
+    "fingerprint_binds_capability_version": true,
+    "terminal_replay_status": 200,
+    "terminal_replay_flag": true,
+    "effect_count_after_terminal_replay": 1,
+    "fingerprint_conflict_status": 409,
+    "fingerprint_conflict_error": "OPERATION_ID_FINGERPRINT_CONFLICT",
+    "fingerprint_conflict_events": 1,
+    "out_of_scope_status": 403,
+    "out_of_scope_receipt_state": "DENIED",
+    "out_of_scope_policy": "DENY",
+    "outside_file_exists": false,
+    "shell_shape_status": 400,
+    "shell_shape_error": "INVALID_OPERATION",
+    "compensation_status": 200,
+    "compensation_state": "COMPENSATED",
+    "compensation_receipt_operation_id": "amf-compensate-0001",
+    "compensation_ref_on_original": "amf-compensate-0001",
+    "compensated_file_exists": false
+  },
+  "assertions": {
+    "forced_crash_exit_code": {
+      "actual": 86,
+      "expected": 86,
+      "pass": true
+    },
+    "effect_count_after_crash": {
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    "restart_status": {
+      "actual": 200,
+      "expected": 200,
+      "pass": true
+    },
+    "reconciled_after_restart": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "effect_count_after_reconcile": {
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    "terminal_replay_status": {
+      "actual": 200,
+      "expected": 200,
+      "pass": true
+    },
+    "terminal_replay_flag": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    "effect_count_after_terminal_replay": {
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    "fingerprint_conflict_status": {
+      "actual": 409,
+      "expected": 409,
+      "pass": true
+    },
+    "fingerprint_conflict_error": {
+      "actual": "OPERATION_ID_FINGERPRINT_CONFLICT",
+      "expected": "OPERATION_ID_FINGERPRINT_CONFLICT",
+      "pass": true
+    },
+    "fingerprint_conflict_events": {
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    "out_of_scope_status": {
+      "actual": 403,
+      "expected": 403,
+      "pass": true
+    },
+    "out_of_scope_receipt_state": {
+      "actual": "DENIED",
+      "expected": "DENIED",
+      "pass": true
+    },
+    "out_of_scope_policy": {
+      "actual": "DENY",
+      "expected": "DENY",
+      "pass": true
+    },
+    "outside_file_exists": {
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    "shell_shape_status": {
+      "actual": 400,
+      "expected": 400,
+      "pass": true
+    },
+    "shell_shape_error": {
+      "actual": "INVALID_OPERATION",
+      "expected": "INVALID_OPERATION",
+      "pass": true
+    },
+    "compensation_status": {
+      "actual": 200,
+      "expected": 200,
+      "pass": true
+    },
+    "compensation_state": {
+      "actual": "COMPENSATED",
+      "expected": "COMPENSATED",
+      "pass": true
+    },
+    "compensation_receipt_operation_id": {
+      "actual": "amf-compensate-0001",
+      "expected": "amf-compensate-0001",
+      "pass": true
+    },
+    "compensation_ref_on_original": {
+      "actual": "amf-compensate-0001",
+      "expected": "amf-compensate-0001",
+      "pass": true
+    },
+    "compensated_file_exists": {
+      "actual": false,
+      "expected": false,
+      "pass": true
+    },
+    "ledger_capability_version_before_restart": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "ledger_capability_version_after_restart": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "reconciled_receipt_capability_version": {
+      "actual": "0.1.0",
+      "expected": "0.1.0",
+      "pass": true
+    },
+    "fingerprint_binds_capability_version": {
+      "actual": true,
+      "expected": true,
+      "pass": true
+    }
+  },
+  "metrics_ms": {
+    "health_ms": 1559.991,
+    "crash_request_ms": 59.725,
+    "restart_reconcile_ms": 16.182,
+    "terminal_replay_ms": 7.87,
+    "fingerprint_conflict_ms": 14.283,
+    "policy_denial_ms": 16.234,
+    "compensation_ms": 59.418
+  },
+  "limitations": [
+    "M0 only: filesystem read/write, receipt ledger, policy, recovery, health.",
+    "No Windows service installation yet; daemon is process-hosted for the M0 proof.",
+    "No user-session worker, Chrome Native Messaging, UIA, process control, or remote transport.",
+    "SQLite plan stores reversible before-state for bounded test-root writes; production retention/encryption policy remains a later design concern."
+  ],
+  "rollback": "Stop the loopback process, delete the M0 SQLite ledger/test root, and revert the Ryan M0 commits. No public listener or machine-wide service registration is installed by M0.",
+  "return_to": [
+    "Yaz/SENSE: duplicate prevention, latency, denial and health review",
+    "Graham/REMEMBER: receipt/provenance and policy/manifest version review",
+    "Rory/COHERE: no false online, no authority drift, no double effect",
+    "Nardole/DISPATCH: route next cell only after independent review",
+    "Clara/DESIGN: CapabilityNeed only if M0 evidence reveals a contract gap"
+  ]
+}

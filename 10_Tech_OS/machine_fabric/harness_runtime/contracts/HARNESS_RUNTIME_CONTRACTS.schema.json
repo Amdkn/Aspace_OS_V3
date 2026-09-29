@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://machine-fabric/harness-runtime/v1",
+  "title": "A'Space Harness Runtime Contracts",
+  "type": "object",
+  "$defs": {
+    "ReturnRoute": {
+      "type": "object",
+      "required": [
+        "origin_intent", "mission_id", "work_id", "cell_id",
+        "correlation_id", "origin_capability", "terminal_consumer",
+        "on_success", "on_retry", "on_unknown",
+        "on_build_defect", "on_design_gap"
+      ],
+      "properties": {
+        "origin_intent": {"type": "string"},
+        "mission_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "cell_id": {"type": "string"},
+        "correlation_id": {"type": "string"},
+        "origin_capability": {"type": "string"},
+        "terminal_consumer": {"type": "string"},
+        "evidence_sink": {"type": ["string","null"]},
+        "on_success": {"type": "string"},
+        "on_retry": {"type": "string"},
+        "on_unknown": {"type": "string"},
+        "on_build_defect": {"type": "string"},
+        "on_design_gap": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "RuntimeFingerprint": {
+      "type": "object",
+      "required": [
+        "fingerprint", "harness", "harness_version",
+        "adapter", "adapter_version", "workspace", "cwd",
+        "runtime", "dependency_hash", "authority_scopes",
+        "capability_version", "policy_version"
+      ],
+      "properties": {
+        "fingerprint": {"type": "string"},
+        "harness": {"type": "string"},
+        "harness_version": {"type": "string"},
+        "adapter": {"type": "string"},
+        "adapter_version": {"type": "string"},
+        "provider": {"type": ["string","null"]},
+        "model": {"type": ["string","null"]},
+        "workspace": {"type": "string"},
+        "worktree": {"type": ["string","null"]},
+        "cwd": {"type": "string"},
+        "runtime": {"type": "string"},
+        "runtime_version": {"type": ["string","null"]},
+        "runtime_root": {"type": ["string","null"]},
+        "dependency_hash": {"type": "string"},
+        "path_profile_hash": {"type": ["string","null"]},
+        "proxy_profile_hash": {"type": ["string","null"]},
+        "credential_profile_ref": {"type": ["string","null"]},
+        "session_ref": {"type": ["string","null"]},
+        "process_group_ref": {"type": ["string","null"]},
+        "timeout_seconds": {"type": ["integer","null"], "minimum": 0},
+        "quota_profile": {"type": ["string","null"]},
+        "authority_scopes": {"type": "array", "items": {"type": "string"}},
+        "capability_version": {"type": "string"},
+        "policy_version": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "CapabilityReleaseReceipt": {
+      "type": "object",
+      "required": [
+        "schema", "release_id", "capability_id", "capability_version",
+        "contract_ref", "artifact_refs", "acceptance_evidence",
+        "policy_compatibility", "rollback_ref", "published_at"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.capability-release.v1"},
+        "release_id": {"type": "string"},
+        "capability_id": {"type": "string"},
+        "capability_version": {"type": "string"},
+        "contract_ref": {"type": "string"},
+        "artifact_refs": {"type": "array", "items": {"type": "string"}},
+        "acceptance_evidence": {"type": "array", "items": {"type": "string"}},
+        "policy_compatibility": {"type": "array", "items": {"type": "string"}},
+        "adapter_refs": {"type": "array", "items": {"type": "string"}},
+        "rollback_ref": {"type": "string"},
+        "published_at": {"type": "string"},
+        "producer": {"const": "ryan-build"}
+      },
+      "additionalProperties": false
+    },
+    "DispatchEnvelope": {
+      "type": "object",
+      "required": [
+        "schema", "dispatch_id", "work_id", "correlation_id",
+        "capability_id", "capability_version", "consumer_capability",
+        "lease_id", "fencing_token", "return_route"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.dispatch-envelope.v1"},
+        "dispatch_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "correlation_id": {"type": "string"},
+        "capability_id": {"type": "string"},
+        "capability_version": {"type": "string"},
+        "consumer_capability": {"type": "string"},
+        "lease_id": {"type": "string"},
+        "fencing_token": {"type": "string"},
+        "priority": {"type": ["integer","null"]},
+        "expires_at": {"type": ["string","null"]},
+        "return_route": {"$ref": "#/$defs/ReturnRoute"}
+      },
+      "additionalProperties": false
+    },
+    "HarnessExecutionRequest": {
+      "type": "object",
+      "required": [
+        "schema", "request_id", "dispatch_id", "work_id",
+        "correlation_id", "capability_id", "required_harness_capabilities",
+        "inputs", "desired_artifacts", "authority_scopes",
+        "timeout_seconds", "replay_policy", "return_route"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.harness-execution-request.v1"},
+        "request_id": {"type": "string"},
+        "dispatch_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "correlation_id": {"type": "string"},
+        "capability_id": {"type": "string"},
+        "required_harness_capabilities": {"type": "array", "items": {"type": "string"}},
+        "provider_preferences": {"type": "array", "items": {"type": "string"}},
+        "inputs": {"type": "array", "items": {"type": "string"}},
+        "desired_artifacts": {"type": "array", "items": {"type": "string"}},
+        "authority_scopes": {"type": "array", "items": {"type": "string"}},
+        "timeout_seconds": {"type": "integer", "minimum": 1},
+        "replay_policy": {
+          "enum": ["never", "same-operation", "retry-if-no-effect", "resume-if-supported"]
+        },
+        "return_route": {"$ref": "#/$defs/ReturnRoute"}
+      },
+      "additionalProperties": false
+    },
+    "ProcessObservation": {
+      "type": "object",
+      "required": [
+        "process_group_ref", "root_process", "children",
+        "heartbeat_at", "lifecycle_state"
+      ],
+      "properties": {
+        "process_group_ref": {"type": "string"},
+        "root_process": {"type": ["string","integer","null"]},
+        "children": {"type": "array", "items": {"type": ["string","integer"]}},
+        "heartbeat_at": {"type": ["string","null"]},
+        "lifecycle_state": {
+          "enum": [
+            "PREPARED", "STARTING", "RUNNING", "WAITING",
+            "SUCCEEDED", "FAILED", "CANCELLED", "STALE", "UNKNOWN"
+          ]
+        },
+        "stdout_ref": {"type": ["string","null"]},
+        "stderr_ref": {"type": ["string","null"]},
+        "artifact_refs": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "HarnessExecutionReceipt": {
+      "type": "object",
+      "required": [
+        "schema", "receipt_id", "request_id", "work_id",
+        "correlation_id", "operation_id", "runtime_fingerprint",
+        "observation", "effect_state", "resumable", "retry_safe",
+        "artifact_refs", "recovery_hint", "finished_at"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.harness-execution-receipt.v1"},
+        "receipt_id": {"type": "string"},
+        "request_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "correlation_id": {"type": "string"},
+        "operation_id": {"type": "string"},
+        "runtime_fingerprint": {"$ref": "#/$defs/RuntimeFingerprint"},
+        "observation": {"$ref": "#/$defs/ProcessObservation"},
+        "effect_state": {"enum": ["YES", "NO", "UNKNOWN"]},
+        "task_accepted": {"type": ["boolean","null"]},
+        "resumable": {"type": "boolean"},
+        "retry_safe": {"type": "boolean"},
+        "artifact_refs": {"type": "array", "items": {"type": "string"}},
+        "policy_decision_ref": {"type": ["string","null"]},
+        "recovery_hint": {"type": "string"},
+        "finished_at": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "ReconcileDecision": {
+      "type": "object",
+      "required": [
+        "schema", "decision_id", "work_id", "correlation_id",
+        "receipt_id", "verdict", "reason", "evidence_refs"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.rory-reconcile-decision.v1"},
+        "decision_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "correlation_id": {"type": "string"},
+        "receipt_id": {"type": "string"},
+        "verdict": {
+          "enum": [
+            "ACCEPT_CONTINUE", "COMPLETE", "RETRY_SAFE",
+            "RECOVER_UNKNOWN", "REOPEN_BUILD", "REOPEN_DESIGN", "HOLD"
+          ]
+        },
+        "reason": {"type": "string"},
+        "evidence_refs": {"type": "array", "items": {"type": "string"}},
+        "canonical_state": {"type": ["string","null"]},
+        "reopen_cell": {"type": ["string","null"]}
+      },
+      "additionalProperties": false
+    },
+    "ContinuationEnvelope": {
+      "type": "object",
+      "required": [
+        "schema", "continuation_id", "work_id", "correlation_id",
+        "decision_id", "route_class", "target_capability",
+        "return_route"
+      ],
+      "properties": {
+        "schema": {"const": "aspace.continuation-envelope.v1"},
+        "continuation_id": {"type": "string"},
+        "work_id": {"type": ["integer","string"]},
+        "correlation_id": {"type": "string"},
+        "decision_id": {"type": "string"},
+        "route_class": {
+          "enum": [
+            "DONE", "NEXT_FLOW", "RETRY", "DONNA",
+            "RYAN", "CLARA", "WAIT"
+          ]
+        },
+        "target_capability": {"type": "string"},
+        "lease_required": {"type": "boolean"},
+        "not_before": {"type": ["string","null"]},
+        "return_route": {"$ref": "#/$defs/ReturnRoute"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {"$ref": "#/$defs/CapabilityReleaseReceipt"},
+    {"$ref": "#/$defs/DispatchEnvelope"},
+    {"$ref": "#/$defs/HarnessExecutionRequest"},
+    {"$ref": "#/$defs/HarnessExecutionReceipt"},
+    {"$ref": "#/$defs/ReconcileDecision"},
+    {"$ref": "#/$defs/ContinuationEnvelope"}
+  ]
+}

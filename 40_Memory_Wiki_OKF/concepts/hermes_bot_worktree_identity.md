@@ -1,6 +1,9 @@
 ---
 okf_version: "0.2"
+type: Architecture Concept
 title: Hermes Bot Mode et worktrees Orca
+description: Persistent Hermes identity binding Doctors and Companions to isolated Orca worktrees while preserving WorkGraph as execution truth.
+generated: 2026-09-24
 date: 2026-09-24
 status: configuration-verified
 ---

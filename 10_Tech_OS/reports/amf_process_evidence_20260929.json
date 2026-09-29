@@ -1,0 +1,157 @@
+{
+  "schema": "aspace.machine.process-evidence.v1",
+  "suite": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 4.230s\n\nOK\n"
+  },
+  "result": "PASS",
+  "checks": {
+    "suite_4_of_4": true,
+    "start_receipt_succeeded": true,
+    "start_replay_same_pid": true,
+    "interactive_echo_observed": true,
+    "interact_receipt_succeeded": true,
+    "child_created": true,
+    "whole_tree_stop_parent_gone": true,
+    "whole_tree_stop_child_gone": true,
+    "stop_receipt_succeeded": true,
+    "health_after_stop_online": true
+  },
+  "start_receipt": {
+    "schema": "aspace.machine.receipt.v1",
+    "operation_id": "proc-evidence-start",
+    "fingerprint": "de5f512029b3a03019927e427413ae673b220be340494b99446989a5dee2ec4a",
+    "state": "SUCCEEDED",
+    "capability": "machine.process.start",
+    "adapter": "amf.process.broker.v1",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "effect_digest": "sha256:61e315e03dadc9b5b1a2cafc89e531925792adc09de79dceb16a017855df8f19",
+    "evidence": [
+      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-syc_2ny9\\\\root\",\"pid\":25628,\"session_id\":\"proc-de5f512029b3a03019\"}"
+    ],
+    "finished_at": "2026-09-29T05:38:56.344390+00:00",
+    "result": {
+      "session_id": "proc-de5f512029b3a03019",
+      "pid": 25628,
+      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stdout.log",
+      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stderr.log"
+    }
+  },
+  "replay_receipt": {
+    "adapter": "amf.process.broker.v1",
+    "capability": "machine.process.start",
+    "effect_digest": "sha256:61e315e03dadc9b5b1a2cafc89e531925792adc09de79dceb16a017855df8f19",
+    "evidence": [
+      "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-syc_2ny9\\\\root\",\"pid\":25628,\"session_id\":\"proc-de5f512029b3a03019\"}"
+    ],
+    "fingerprint": "de5f512029b3a03019927e427413ae673b220be340494b99446989a5dee2ec4a",
+    "finished_at": "2026-09-29T05:38:56.344390+00:00",
+    "operation_id": "proc-evidence-start",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "result": {
+      "pid": 25628,
+      "session_id": "proc-de5f512029b3a03019",
+      "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stderr.log",
+      "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stdout.log"
+    },
+    "schema": "aspace.machine.receipt.v1",
+    "state": "SUCCEEDED",
+    "replayed": true
+  },
+  "interact_receipt": {
+    "schema": "aspace.machine.receipt.v1",
+    "operation_id": "proc-evidence-interact",
+    "fingerprint": "3759d131fab9bfbbfafab9b1f347a374a68bd37c240b6d397699310276530f16",
+    "state": "SUCCEEDED",
+    "capability": "machine.process.interact",
+    "adapter": "amf.process.broker.v1",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "effect_digest": "sha256:aedd462a00ca7ffa0f0132c63e6ad21d5b1b814a669170f5ee5872ad63993749",
+    "evidence": [
+      "{\"session_id\":\"proc-de5f512029b3a03019\",\"stdin_bytes_written\":6}"
+    ],
+    "finished_at": "2026-09-29T05:38:56.539336+00:00",
+    "result": {
+      "session_id": "proc-de5f512029b3a03019",
+      "stdin_bytes_written": 6
+    }
+  },
+  "read_receipt": {
+    "schema": "aspace.machine.receipt.v1",
+    "operation_id": "e-read-1790660336547499000",
+    "fingerprint": "b84c9e50d3058b8b1e8e3844bd7922311fc364edc58279d4b6753649faed85a7",
+    "state": "SUCCEEDED",
+    "capability": "machine.process.read",
+    "adapter": "amf.process.broker.v1",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "effect_digest": "sha256:2367682ca8d119f3282fd3bea530567715e01a13cdd0a39c9e64d38b8c549cf9",
+    "evidence": [
+      "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stdout.log"
+    ],
+    "finished_at": "2026-09-29T05:38:56.564629+00:00",
+    "result": {
+      "session_id": "proc-de5f512029b3a03019",
+      "stream": "stdout",
+      "text": "READY\r\nECHO:hello\r\n",
+      "running": true,
+      "pid": 25628
+    }
+  },
+  "stop_receipt": {
+    "schema": "aspace.machine.receipt.v1",
+    "operation_id": "proc-evidence-stop",
+    "fingerprint": "d28a69ff25719333f3437d247c30ea5f6532830915b6eb7783fac9f48e34f4f2",
+    "state": "SUCCEEDED",
+    "capability": "machine.process.stop",
+    "adapter": "amf.process.broker.v1",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-m0-policy-v1"
+    },
+    "effect_digest": "sha256:afee2fccb8760c2312e58a35dea6ae3842ebb6ccab38dfe896ebf39703a33c99",
+    "evidence": [
+      "{\"pid\":25628,\"session_id\":\"proc-de5f512029b3a03019\",\"tree_alive\":false}"
+    ],
+    "finished_at": "2026-09-29T05:38:56.979997+00:00",
+    "result": {
+      "session_id": "proc-de5f512029b3a03019",
+      "pid": 25628,
+      "tree_alive": false
+    }
+  },
+  "child_pid": 25076,
+  "health_after_stop": {
+    "schema": "aspace.machine.health.v1",
+    "daemon": "UP",
+    "worker": "NOT_REQUIRED",
+    "transport": "LOCAL",
+    "capabilities": {
+      "machine.process.start": "AVAILABLE",
+      "machine.process.read": "AVAILABLE",
+      "machine.process.stop": "AVAILABLE",
+      "machine.process.interact": "AVAILABLE"
+    },
+    "aggregate": "ONLINE",
+    "detached_sessions": []
+  },
+  "policy_version": "amf-m0-policy-v1",
+  "adapter": "amf.process.broker.v1",
+  "limitations": [
+    "stdin interaction is available only while the broker retains the live handle; after broker restart it is truthfully DEGRADED while read/stop remain recoverable by PID/logs.",
+    "No shell=True path is exposed; executable and cwd are bounded by policy."
+  ],
+  "rollback": "Stop owned process trees and delete the bounded process ledger/root."
+}

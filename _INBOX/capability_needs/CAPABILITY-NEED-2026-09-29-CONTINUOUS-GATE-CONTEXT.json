@@ -1,0 +1,36 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260929-CONTINUOUS-GATE-CONTEXT",
+  "origin_intent": "Unified continuous factory / Gate != future project",
+  "work_id": "GitHub#197",
+  "invariant": "A gate is an append-only proof point inside one durable mission. Passing a gate continues the same goal/work lineage; failing reopens only the smallest defective cell. No new scheduler, project, chat, or markdown handover is required.",
+  "observation": "Live WorkGraph already has goal, goal_round, round_work, gate_decision, event and harness_capability. However gate_decision stores only work_id/gate/verdict/reason/evidence_event_id/decided_by, and the current uc_workgraph.py gate command has no explicit correlation_id, cell_id, capability_version or continuation route fields.",
+  "expected": "Reuse the existing gate_decision + append-only event model so every continuous gate can carry correlation_id, cell_id, capability_id/version, evidence refs and route outcome (CONTINUE|WAIT|REOPEN|DONE) while preserving the same goal/work lineage. Prefer an enriched linked event over a second scheduler or database.",
+  "actual": "Human/GitHub projections can express continuous gates, but a fresh runtime cannot reconstruct the full continuous-factory transition from gate_decision alone without consulting surrounding context.",
+  "evidence": [
+    "10_Tech_OS/kernel/uc.db: gate_decision schema",
+    "10_Tech_OS/kernel/uc_workgraph.py: gate command",
+    "GitHub #197 continuous Machine Fabric mission",
+    "GitHub #210 Harness Runtime P1-P4 gate",
+    "GitHub #206/#207 Discover AI continuous factory"
+  ],
+  "suggested_capability": "rick-kernel + nardole-dispatch",
+  "authority": {
+    "allowed": [
+      "extend existing WorkGraph gate event semantics additively",
+      "reuse gate_decision, event, goal/round and existing leases",
+      "add backward-compatible CLI metadata/options and tests"
+    ],
+    "forbidden": [
+      "create a second scheduler or second execution database",
+      "make Linear status execution truth",
+      "require ChatGPT session state or markdown handovers",
+      "turn each gate into a new GitHub project/issue by default"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": []
+  },
+  "blocking": false,
+  "reversible": true,
+  "reply_contract": "Return the exact append-only gate envelope/CLI contract, tests proving backward compatibility, one replayable gate chain on a shadow DB, and whether any additive migration was actually required."
+}

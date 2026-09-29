@@ -1,0 +1,50 @@
+{
+  "schema": "aspace.mirofish-adapter-preflight-evidence.v1",
+  "date": "2026-09-28",
+  "status": "READY_FOR_DEPENDENCY_PROFILE",
+  "composite_preflight_execution": "TOOL_GUARD_BLOCKED",
+  "preflight_script_compile": "PASS",
+  "individual_checks": {
+    "wsl_python": "3.12.3",
+    "python_range_pass": true,
+    "upstream_commit": "3e98e776cdfc9556c12ace82a60e9d3da5bd41e7",
+    "source_pin_pass": true,
+    "provider_requested": "claude-cli",
+    "provider_alias_scope": "runtime-local",
+    "provider_alias_resolution_pass": true,
+    "claude_cli_alias": "/tmp/aspace-mirofish-shadow/bin/claude-cli",
+    "codex_cli_alias": "/tmp/aspace-mirofish-shadow/bin/codex-cli",
+    "pyproject_present": true,
+    "uv_lock_present": true
+  },
+  "dependency_weight": {
+    "sentence_transformers_present": true,
+    "torch_version": "2.11.0",
+    "linux_cuda_stack_present": true,
+    "markers": [
+      "nvidia-cudnn-cu13",
+      "nvidia-nccl-cu13",
+      "nvidia-cublas",
+      "nvidia-cusparselt-cu13",
+      "triton"
+    ]
+  },
+  "bootstrap_findings": [
+    "CRLF shell scripts under WSL",
+    "uv build-isolation invalid Wheel-Version dependency",
+    "undeclared editables build dependency",
+    "mirofish doctor import fails on missing dotenv after no-deps editable build"
+  ],
+  "workgraph": {
+    "work_id": 165,
+    "event_id": 2508,
+    "correlation_id": "corr-harness-mirofish-bootstrap-20260928"
+  },
+  "claims": {
+    "full_simulation_ready": false,
+    "harness_execution_receipt_exists": false,
+    "capability_release_published": false,
+    "global_environment_mutated": false
+  },
+  "next_gate": "Select a reproducible lean/full dependency profile, then obtain a real bounded MiroFish HarnessExecutionReceipt."
+}

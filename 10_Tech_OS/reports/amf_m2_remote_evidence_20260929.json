@@ -1,0 +1,26 @@
+{
+  "schema": "aspace.machine.remote-transport-evidence.v1",
+  "result": "SERVE_ENABLEMENT_REQUIRED",
+  "public_bind": false,
+  "started_at": 1790660338.9768,
+  "tailscale_version": "1.102.4-t3caf7d9e7-g084ee3b64",
+  "self_dns": "amd-pc.tail58ad16.ts.net",
+  "self_ip": "100.124.56.118",
+  "peer_name": "Tab S6 Lite de Amadou",
+  "peer_ip": "100.125.35.5",
+  "checks": {
+    "tailscale_backend_running": true,
+    "loopback_backend_ok": true,
+    "serve_enabled": false,
+    "peer_registered": true,
+    "peer_online": false,
+    "public_bind": false
+  },
+  "live_canary": "OPEN_ACCOUNT_ENABLEMENT",
+  "second_client_canary": "OPEN_PEER_OFFLINE",
+  "reason": "SERVE_ENABLEMENT_REQUIRED: Serve is not enabled on your tailnet.\nTo enable, visit:\n\n         https://login.tailscale.com/f/serve?node=nq56iMyiNA21CNTRL",
+  "note": "Tailscale is installed, authenticated and connected. Serve requires one explicit tailnet account enablement; no public Funnel or firewall change was attempted.",
+  "at": 1790660348.487132,
+  "restore_via_snapshot": true,
+  "finished_at": 1790660348.4871397
+}

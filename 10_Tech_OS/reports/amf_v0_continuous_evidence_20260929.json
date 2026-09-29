@@ -1,0 +1,198 @@
+{
+  "schema": "aspace.machine.v0-continuous-evidence.v1",
+  "result": "LOCAL_V0_RELEASE_READY",
+  "local_v0_pass": true,
+  "remote_gate": "EXTERNAL_AUTH_REQUIRED",
+  "chrome_for_testing": "C:\\Users\\amado\\Aspace_Quarantine\\chrome-for-testing\\153.0.8010.52\\chrome-win64\\chrome.exe",
+  "steps": [
+    {
+      "name": "M0",
+      "returncode": 0,
+      "seconds": 3.106,
+      "stdout_tail": "",
+      "stderr_tail": "test_capability_version_is_bound_to_fingerprint_ledger_and_receipt (__main__.AMFM0Tests.test_capability_version_is_bound_to_fingerprint_ledger_and_receipt) ... ok\ntest_compensation_deletes_file_created_by_original_operation (__main__.AMFM0Tests.test_compensation_deletes_file_created_by_original_operation) ... ok\ntest_compensation_has_separate_linked_receipt_and_restores_prior_state (__main__.AMFM0Tests.test_compensation_has_separate_linked_receipt_and_restores_prior_state) ... ok\ntest_crash_after_effect_restart_reconciles_without_duplicate_mutation (__main__.AMFM0Tests.test_crash_after_effect_restart_reconciles_without_duplicate_mutation) ... ok\ntest_health_and_capability_registry_are_truthful_for_m0 (__main__.AMFM0Tests.test_health_and_capability_registry_are_truthful_for_m0) ... ok\ntest_loopback_server_rejects_non_loopback_bind (__main__.AMFM0Tests.test_loopback_server_rejects_non_loopback_bind) ... ok\ntest_missing_scope_and_wrong_risk_are_denied (__main__.AMFM0Tests.test_missing_scope_and_wrong_risk_are_denied) ... ok\ntest_out_of_scope_path_and_shell_shape_are_denied_or_rejected (__main__.AMFM0Tests.test_out_of_scope_path_and_shell_shape_are_denied_or_rejected) ... ok\ntest_same_operation_id_different_fingerprint_is_conflict (__main__.AMFM0Tests.test_same_operation_id_different_fingerprint_is_conflict) ... ok\ntest_write_replay_has_one_effect_and_read_is_grounded (__main__.AMFM0Tests.test_write_replay_has_one_effect_and_read_is_grounded) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 2.649s\n\nOK\n"
+    },
+    {
+      "name": "P1-P4",
+      "returncode": 0,
+      "seconds": 25.69,
+      "stdout_tail": "",
+      "stderr_tail": "test_no_chatgpt_session_state_required (__main__.T.test_no_chatgpt_session_state_required) ... ok\ntest_p1_fingerprint_determinism_and_drift (__main__.T.test_p1_fingerprint_determinism_and_drift) ... ok\ntest_p2_prepare_idempotent_compensable_and_failed_receipt (__main__.T.test_p2_prepare_idempotent_compensable_and_failed_receipt) ... ok\ntest_p3_parent_interruption_unknown_never_blind_retry (__main__.T.test_p3_parent_interruption_unknown_never_blind_retry) ... ok\ntest_p3_success_collect_receipt_yes (__main__.T.test_p3_success_collect_receipt_yes) ... ok\ntest_p3_whole_tree_cancel_no_owned_orphan (__main__.T.test_p3_whole_tree_cancel_no_owned_orphan) ... ok\ntest_p4_release_and_event_chain (__main__.T.test_p4_release_and_event_chain) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 25.355s\n\nOK\n"
+    },
+    {
+      "name": "M1-unit",
+      "returncode": 0,
+      "seconds": 13.776,
+      "stdout_tail": "",
+      "stderr_tail": "test_duplicate_claim_before_completion_never_double_claims (__main__.T.test_duplicate_claim_before_completion_never_double_claims) ... ok\ntest_health_degrades_when_worker_dies_and_fence_increments (__main__.T.test_health_degrades_when_worker_dies_and_fence_increments) ... ok\ntest_same_operation_reconnect_returns_receipt_without_reexecute (__main__.T.test_same_operation_reconnect_returns_receipt_without_reexecute) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 13.419s\n\nOK\n"
+    },
+    {
+      "name": "M1-chrome",
+      "returncode": 0,
+      "seconds": 21.937,
+      "stdout_tail": "{\"phase\": \"native_ready\", \"tmp\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-elb7eo98\", \"extension_id\": \"poogeghfgkaeiojfhhajialhhpkiflgj\", \"host_manifest\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-elb7eo98\\\\native_host_manifest.json\", \"host_exe\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-elb7eo98\\\\native_publish\\\\ASpaceNativeHost.exe\"}\n{\"phase\": \"chrome_started\", \"pid\": 3600, \"url\": \"http://127.0.0.1:65430/canary.html\"}\n{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"daemon_online_with_worker\": true,\n    \"daemon_degraded_worker_dead\": true,\n    \"fencing_increased\": true,\n    \"browser_debugger_unavailable\": true,\n    \"tabs_observed\": true,\n    \"dom_postcondition_after\": true,\n    \"durable_receipt\": true,\n    \"same_operation_claimed_twice\": true,\n    \"replay_returned_without_execute\": true,\n    \"native_host_reconnected\": true\n  },\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\reports\\\\amf_m1_chrome_evidence_20260929.json\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "Process-unit",
+      "returncode": 0,
+      "seconds": 4.987,
+      "stdout_tail": "",
+      "stderr_tail": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 4.509s\n\nOK\n"
+    },
+    {
+      "name": "Process-evidence",
+      "returncode": 0,
+      "seconds": 5.893,
+      "stdout_tail": "{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"suite_4_of_4\": true,\n    \"start_receipt_succeeded\": true,\n    \"start_replay_same_pid\": true,\n    \"interactive_echo_observed\": true,\n    \"interact_receipt_succeeded\": true,\n    \"child_created\": true,\n    \"whole_tree_stop_parent_gone\": true,\n    \"whole_tree_stop_child_gone\": true,\n    \"stop_receipt_succeeded\": true,\n    \"health_after_stop_online\": true\n  },\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\reports\\\\amf_process_evidence_20260929.json\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "M2-adapter",
+      "returncode": 0,
+      "seconds": 1.073,
+      "stdout_tail": "",
+      "stderr_tail": "test_private_start_is_loopback_and_never_funnel (__main__.T.test_private_start_is_loopback_and_never_funnel) ... ok\ntest_status_snapshot_restore (__main__.T.test_status_snapshot_restore) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.682s\n\nOK\n"
+    },
+    {
+      "name": "M2-private-serve",
+      "returncode": 0,
+      "seconds": 10.252,
+      "stdout_tail": "{\n  \"result\": \"SERVE_ENABLEMENT_REQUIRED\",\n  \"checks\": {\n    \"tailscale_backend_running\": true,\n    \"loopback_backend_ok\": true,\n    \"serve_enabled\": false,\n    \"peer_registered\": true,\n    \"peer_online\": false,\n    \"public_bind\": false\n  },\n  \"second_client_canary\": \"OPEN_PEER_OFFLINE\",\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\reports\\\\amf_m2_remote_evidence_20260929.json\"\n}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "m1_summary": {
+    "result": "PASS",
+    "checks": {
+      "daemon_online_with_worker": true,
+      "daemon_degraded_worker_dead": true,
+      "fencing_increased": true,
+      "browser_debugger_unavailable": true,
+      "tabs_observed": true,
+      "dom_postcondition_after": true,
+      "durable_receipt": true,
+      "same_operation_claimed_twice": true,
+      "replay_returned_without_execute": true,
+      "native_host_reconnected": true
+    },
+    "receipt": {
+      "adapter": "amf.m1.chrome-native-messaging",
+      "capability": "browser.dom.action",
+      "effect_digest": "sha256:5f6b9fc941d1e99ff03fb025978176c3045382c414b434fbf9af83810f6b7b00",
+      "evidence": [
+        "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:65430/canary.html\"}",
+        "worker=worker-915a53f3dc53",
+        "lease=lease-21d332c447974329"
+      ],
+      "fingerprint": "48579f2e88cc309aa785b1b805dc3b10c26c42c75acc2bbd286de7a67c355716",
+      "finished_at": "2026-09-29T05:38:43.672265+00:00",
+      "operation_id": "m1-browser-op-0001",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-policy-v1"
+      },
+      "schema": "aspace.machine.receipt.v1",
+      "state": "SUCCEEDED"
+    }
+  },
+  "process_summary": {
+    "result": "PASS",
+    "checks": {
+      "suite_4_of_4": true,
+      "start_receipt_succeeded": true,
+      "start_replay_same_pid": true,
+      "interactive_echo_observed": true,
+      "interact_receipt_succeeded": true,
+      "child_created": true,
+      "whole_tree_stop_parent_gone": true,
+      "whole_tree_stop_child_gone": true,
+      "stop_receipt_succeeded": true,
+      "health_after_stop_online": true
+    },
+    "start_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-start",
+      "fingerprint": "de5f512029b3a03019927e427413ae673b220be340494b99446989a5dee2ec4a",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.start",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:61e315e03dadc9b5b1a2cafc89e531925792adc09de79dceb16a017855df8f19",
+      "evidence": [
+        "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-syc_2ny9\\\\root\",\"pid\":25628,\"session_id\":\"proc-de5f512029b3a03019\"}"
+      ],
+      "finished_at": "2026-09-29T05:38:56.344390+00:00",
+      "result": {
+        "session_id": "proc-de5f512029b3a03019",
+        "pid": 25628,
+        "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stdout.log",
+        "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-syc_2ny9\\root\\.amf-process\\proc-de5f512029b3a03019\\stderr.log"
+      }
+    },
+    "stop_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-stop",
+      "fingerprint": "d28a69ff25719333f3437d247c30ea5f6532830915b6eb7783fac9f48e34f4f2",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.stop",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:afee2fccb8760c2312e58a35dea6ae3842ebb6ccab38dfe896ebf39703a33c99",
+      "evidence": [
+        "{\"pid\":25628,\"session_id\":\"proc-de5f512029b3a03019\",\"tree_alive\":false}"
+      ],
+      "finished_at": "2026-09-29T05:38:56.979997+00:00",
+      "result": {
+        "session_id": "proc-de5f512029b3a03019",
+        "pid": 25628,
+        "tree_alive": false
+      }
+    }
+  },
+  "m2_summary": {
+    "schema": "aspace.machine.remote-transport-evidence.v1",
+    "result": "SERVE_ENABLEMENT_REQUIRED",
+    "public_bind": false,
+    "started_at": 1790660338.9768,
+    "tailscale_version": "1.102.4-t3caf7d9e7-g084ee3b64",
+    "self_dns": "amd-pc.tail58ad16.ts.net",
+    "self_ip": "100.124.56.118",
+    "peer_name": "Tab S6 Lite de Amadou",
+    "peer_ip": "100.125.35.5",
+    "checks": {
+      "tailscale_backend_running": true,
+      "loopback_backend_ok": true,
+      "serve_enabled": false,
+      "peer_registered": true,
+      "peer_online": false,
+      "public_bind": false
+    },
+    "live_canary": "OPEN_ACCOUNT_ENABLEMENT",
+    "second_client_canary": "OPEN_PEER_OFFLINE",
+    "reason": "SERVE_ENABLEMENT_REQUIRED: Serve is not enabled on your tailnet.\nTo enable, visit:\n\n         https://login.tailscale.com/f/serve?node=nq56iMyiNA21CNTRL",
+    "note": "Tailscale is installed, authenticated and connected. Serve requires one explicit tailnet account enablement; no public Funnel or firewall change was attempted.",
+    "at": 1790660348.487132,
+    "restore_via_snapshot": true,
+    "finished_at": 1790660348.4871397
+  },
+  "cleanup": {
+    "temporary_native_host_registry_absent": true,
+    "lingering_owned_processes": 0
+  },
+  "gate_sequence": [
+    "M0 durable mutation",
+    "P1-P4 Harness Runtime",
+    "M1 worker+Chrome",
+    "Local process start/interact/read/stop",
+    "M2 private remote live canary"
+  ],
+  "promotion": "LOCAL_V0_RELEASE_READY_REMOTE_SOVEREIGNITY_SEPARATE",
+  "finished_at": 1790660350.5516741
+}
