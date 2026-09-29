@@ -1,0 +1,40 @@
+{
+  "schema": "aspace.dc.gateway-evidence.v1",
+  "issue": 213,
+  "pr": 242,
+  "result": "PASS",
+  "verified_on": "Amd-PC / Windows",
+  "checks": {
+    "stdio_initialize": true,
+    "stdio_tools_list": true,
+    "filesystem_read": true,
+    "filesystem_write": true,
+    "filesystem_replay": true,
+    "filesystem_replay_across_gateway_restart": true,
+    "streamable_http_initialize": true,
+    "streamable_http_tools_list": true,
+    "streamable_http_health": true,
+    "unified_filesystem_capabilities": true,
+    "unified_process_capabilities": true,
+    "process_start_via_mcp": true,
+    "process_read_via_mcp": true,
+    "process_stop_via_mcp": true,
+    "browser_presence_unavailable_to_available": true,
+    "browser_debugger_unavailable": true,
+    "browser_execution_refused_until_p3": true,
+    "normalized_multibackend_health": true
+  },
+  "tool_surface": [
+    "amf_health",
+    "amf_capabilities",
+    "amf_execute",
+    "amf_get_receipt"
+  ],
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "bind_policy": "streamable-http loopback only until sovereign remote adapter",
+  "note": "PR #242 originally used SSE and only M0 filesystem. Local integration corrected it to FastMCP streamable-http and aggregated filesystem/process/browser runtime truth.",
+  "at": "2026-09-29"
+}
