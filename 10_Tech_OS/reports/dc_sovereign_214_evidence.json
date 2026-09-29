@@ -1,0 +1,26 @@
+{
+  "work_id": "214",
+  "timestamp": "2026-09-29T07:47:19.218484+00:00",
+  "files": {
+    "10_Tech_OS/machine_fabric/dc_sovereign/dc_sovereign_daemon.py": {
+      "sha256": "9bcb1142c4915868fb5763c4333bdfa753473dff638c7b70a810e71138179db1"
+    },
+    "10_Tech_OS/machine_fabric/dc_sovereign/dc_sovereign.ps1": {
+      "sha256": "2f8171394c2d821a607baa0f506a8be1c929a0a63d58c9d8e93a7cafcc2680eb"
+    },
+    "10_Tech_OS/machine_fabric/dc_sovereign/test_dc_sovereign.py": {
+      "sha256": "1e33c9876be5444f62d0a62c266df91d1843515912331e2d90184c9ba5f625e9"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/machine_fabric/dc_sovereign/dc_sovereign_daemon.py": "",
+    "10_Tech_OS/machine_fabric/dc_sovereign/dc_sovereign.ps1": "",
+    "10_Tech_OS/machine_fabric/dc_sovereign/test_dc_sovereign.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=/app python3 -m unittest discover -s 10_Tech_OS/machine_fabric/dc_sovereign -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+  }
+}
