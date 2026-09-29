@@ -1,0 +1,6 @@
+1. Implement `UsageLedger` in `gateway.py` to track each MCP tool call with SQLite db backing to survive restart. Track count, latency, error, timeout, replay, denial, and receipt refs.
+2. Integrate `UsageLedger` into `amf_execute` and other MCP tools, distinguishing replay from new effect.
+3. Enhance `amf_capabilities` and `amf_health` to aggregate health based on live observations (ledger stats) instead of stale records. Add tool inventory, retention/rotation, and projection hooks for Amy/Graham/Yaz.
+4. Add deterministic tests (`test_gateway_ledger.py`) to verify the ledger behavior and ensure zero vendor quota dependency.
+5. Create a pre-commit step for running `pre_commit_instructions`.
+6. Submit via GitHub PR referencing #216.
