@@ -1,0 +1,36 @@
+{
+  "schema": "aspace.capability-need.v1",
+  "need_id": "CAPNEED-20260929-M2-PRIVATE-REMOTE-CANARY",
+  "origin_intent": "GitHub #194 / #197 Machine Fabric v0 continuous factory",
+  "work_id": "GitHub#197",
+  "invariant": "M2 must prove one private remote transport canary over the same loopback daemon without public exposure or transport identity bypassing capability policy.",
+  "observation": "M0, Harness Runtime P1-P4 and M1 Chrome are locally green. M2 adapter code/tests are green, but this Windows host has no Tailscale package, service or CLI, and there is no second tailnet client available to execute a genuine remote request.",
+  "expected": "Provide a private tailnet execution surface: Tailscale installed/authenticated on this node plus one second authorized tailnet client, or an equivalent already-authorized private transport that preserves the same loopback/policy/receipt contract.",
+  "actual": "10_Tech_OS/reports/amf_m2_remote_evidence_20260929.json => DEPENDENCY_MISSING; 10_Tech_OS/reports/amf_v0_continuous_evidence_20260929.json => LOCAL_V0_PASS_REMOTE_OPEN.",
+  "evidence": [
+    "commit 9b90d149",
+    "10_Tech_OS/reports/amf_v0_continuous_evidence_20260929.json",
+    "10_Tech_OS/reports/amf_m2_remote_evidence_20260929.json",
+    "10_Tech_OS/machine_fabric/m2/tailscale_serve_adapter.py"
+  ],
+  "suggested_capability": "nardole-dispatch + rick-infrastructure",
+  "authority": {
+    "allowed": [
+      "install or bind an approved private transport",
+      "supply an already-authorized second private client",
+      "execute the existing M2 adapter canary",
+      "snapshot and restore Serve configuration"
+    ],
+    "forbidden": [
+      "Tailscale Funnel or any public bind",
+      "treat transport identity as capability authority",
+      "change AMF operation identity on reconnect",
+      "block Ryan from unrelated bounded BUILD cells"
+    ],
+    "reversible_only": true,
+    "requires_human_approval": ["external tailnet/account authorization if not already present"]
+  },
+  "blocking": false,
+  "reversible": true,
+  "reply_contract": "Return transport/client readiness, exact private endpoint identity, canary receipt/effect evidence, reconnect result, policy denial proof and restored Serve config."
+}
