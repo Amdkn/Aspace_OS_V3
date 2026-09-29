@@ -50,6 +50,8 @@
     "worktree": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\MiroFishCanaryRyan",
     "wsl_python": "3.12.3",
     "status": "BOOTSTRAP_HOLD",
+    "workgraph_event_id": 2508,
+    "workgraph_work_id": 165,
     "global_mutation": false,
     "observations": [
       "CRLF shell scripts initially fail under WSL with bash\\r",

@@ -103,6 +103,13 @@ Observed real bootstrap defects:
 7. Upstream provider values are claude-cli/codex-cli, while this machine exposes claude/codex; any alias must remain runtime-local.
 8. Upstream uv.lock resolves sentence-transformers -> torch 2.11.0 plus Linux CUDA/CUDNN/NCCL/CUSPARSE/TRITON packages, so a naive full install is not accepted as the minimal certification path.
 
+WorkGraph projection:
+- work_id 165 remains status=done;
+- append-only event #2508 records correlation_id corr-harness-mirofish-bootstrap-20260928;
+- event kind = harness_observed;
+- event state = BOOTSTRAP_HOLD;
+- no HarnessExecutionReceipt was fabricated.
+
 Interpretation:
 - P1-P4 substrate self-certification remains PASS.
 - MiroFish full certification remains OPEN.
