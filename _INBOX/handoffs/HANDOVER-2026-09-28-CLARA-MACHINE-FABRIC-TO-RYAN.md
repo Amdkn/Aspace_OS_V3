@@ -1,3 +1,11 @@
+---
+type: handover
+title: Clara Machine Fabric to Ryan Build
+description: Durable Clara-to-Ryan handover for Machine Fabric mission 194 and build cell 197.
+generated: 2026-09-28
+okf_version: 1.0
+---
+
 # HANDOVER — 2026-09-28 — CLARA MACHINE FABRIC → RYAN BUILD
 
 Mission: #194

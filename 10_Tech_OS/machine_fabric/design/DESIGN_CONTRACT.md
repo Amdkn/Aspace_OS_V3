@@ -1,3 +1,11 @@
+---
+type: design_contract
+title: A'Space Machine Fabric Clara Design Contract v0.1
+description: Canonical Clara design contract for the A'Space Machine Fabric v0 execution model.
+generated: 2026-09-28
+okf_version: 1.0
+---
+
 # A'Space Machine Fabric — Clara Design Contract v0.1
 
 Mission: #194 · DESIGN cell: #196 · upstream evidence: Bill PR #199

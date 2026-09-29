@@ -1,3 +1,11 @@
+---
+type: build_packet
+title: Ryan Build Packet AMF MVP v0.1
+description: Accepted bounded build packet for Ryan to implement the Machine Fabric MVP.
+generated: 2026-09-28
+okf_version: 1.0
+---
+
 # Ryan Build Packet — AMF MVP v0.1
 
 Parent: #194 · Design: #196 · Build: #197
