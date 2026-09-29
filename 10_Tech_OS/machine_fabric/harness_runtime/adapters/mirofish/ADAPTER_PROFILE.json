@@ -1,0 +1,64 @@
+{
+  "schema": "aspace.harness-adapter-profile.v1",
+  "adapter_id": "mirofish-cli",
+  "adapter_version": "0.1.0",
+  "capability_id": "machine.harness.runtime",
+  "capability_version": "0.1.0",
+  "status": "BOOTSTRAP_HOLD",
+  "source": {
+    "repo": "SCTY-Inc/mirofish-cli",
+    "commit": "3e98e776cdfc9556c12ace82a60e9d3da5bd41e7",
+    "canary_branch": "origin/feat/life-mirofish-canary-2026-09-28-2589052854815907771"
+  },
+  "runtime": {
+    "kind": "wsl",
+    "python": "3.12.3",
+    "owned_root_required": true,
+    "global_install_allowed": false,
+    "global_path_mutation_allowed": false,
+    "global_proxy_mutation_allowed": false
+  },
+  "provider_aliases": {
+    "claude-cli": {
+      "observed_target": "claude",
+      "scope": "owned-runtime-only"
+    },
+    "codex-cli": {
+      "observed_target": "codex",
+      "scope": "owned-runtime-only"
+    }
+  },
+  "dependency_profiles": {
+    "bootstrap_probe": {
+      "purpose": "source, Python, provider and isolation validation",
+      "full_simulation": false,
+      "publishable": false
+    },
+    "full_canary": {
+      "purpose": "bounded MiroFish simulation with process-tree receipt",
+      "full_simulation": true,
+      "status": "OPEN",
+      "avoid_naive_gpu_bootstrap": true
+    }
+  },
+  "observed_blockers": [
+    "CRLF shell scripts under WSL",
+    "uv build-isolation invalid Wheel-Version dependency",
+    "undeclared editables build dependency",
+    "mirofish doctor import graph requires dotenv after no-deps editable build",
+    "provider names differ from installed executable names",
+    "uv.lock resolves sentence-transformers to torch 2.11.0 plus Linux CUDA stack"
+  ],
+  "workgraph": {
+    "work_id": 165,
+    "latest_event_id": 2508,
+    "correlation_id": "corr-harness-mirofish-bootstrap-20260928"
+  },
+  "promotion": {
+    "capability_release_allowed": false,
+    "requires_real_harness_execution_receipt": true,
+    "requires_rory_reconcile_decision": true,
+    "requires_nardole_continuation": true
+  },
+  "rollback": "Delete owned runtime root and disposable worktree/cache; revert adapter profile commit. No global mutation."
+}
