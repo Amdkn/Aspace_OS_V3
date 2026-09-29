@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
 HERE=Path(__file__).resolve().parent
-CHROME=Path(r"C:\Users\amado\Aspace_Quarantine\chrome-for-testing\153.0.8010.52\chrome-win64\chrome.exe")
+CHROME=Path(r"google-chrome")
 HOST_NAME="com.aspace.machine_fabric.canary"
 
 def free_port():
