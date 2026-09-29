@@ -28,8 +28,14 @@ class TailscaleServeAdapter:
         if not cli:raise RemoteTransportError("tailscale CLI unavailable")
         self.cli=[str(x) for x in cli]
     def run(self,args,timeout=20):
-        cp=subprocess.run(self.cli+list(args),text=True,capture_output=True,timeout=timeout)
-        return {"returncode":cp.returncode,"stdout":cp.stdout,"stderr":cp.stderr,"argv":self.cli+list(args)}
+        argv=self.cli+list(args)
+        try:
+            cp=subprocess.run(argv,text=True,capture_output=True,timeout=timeout)
+            return {"returncode":cp.returncode,"stdout":cp.stdout,"stderr":cp.stderr,"argv":argv,"timed_out":False}
+        except subprocess.TimeoutExpired as exc:
+            out=exc.stdout.decode() if isinstance(exc.stdout,(bytes,bytearray)) else (exc.stdout or "")
+            err=exc.stderr.decode() if isinstance(exc.stderr,(bytes,bytearray)) else (exc.stderr or "")
+            return {"returncode":124,"stdout":out,"stderr":err,"argv":argv,"timed_out":True}
     def status(self):
         r=self.run(["serve","status","--json"])
         if r["returncode"]!=0:return {"state":"UNAVAILABLE","command":r}
@@ -38,22 +44,32 @@ class TailscaleServeAdapter:
         return {"state":"AVAILABLE","config":data,"command":r}
     def snapshot(self,path):
         p=Path(path).resolve()
-        r=self.run(["serve","get-config",str(p),"--all"])
+        r=self.run(["serve","get-config","--all"])
         if r["returncode"]!=0:raise RemoteTransportError("get-config failed: "+r["stderr"][-500:])
+        p.parent.mkdir(parents=True,exist_ok=True)
+        p.write_text(r["stdout"] or '{"version":"0.0.1"}\n',encoding="utf-8")
         return p
     def restore(self,path):
         p=Path(path).resolve()
-        r=self.run(["serve","set-config",str(p),"--all"])
-        if r["returncode"]!=0:raise RemoteTransportError("set-config failed: "+r["stderr"][-500:])
+        r=self.run(["serve","set-config","--all",str(p)])
+        if r["returncode"]!=0:raise RemoteTransportError("set-config failed: "+(r["stderr"] or r["stdout"])[-500:])
         return r
     def start_private(self,backend_port,https_port=443):
         if not (1<=int(backend_port)<=65535 and 1<=int(https_port)<=65535):raise ValueError("invalid port")
         target=f"http://127.0.0.1:{int(backend_port)}"
-        args=["serve","--bg",f"--https={int(https_port)}",target]
+        args=["serve","--bg","--yes",f"--https={int(https_port)}",target]
         if any("funnel" in x.lower() for x in args):raise RemoteTransportError("public Funnel forbidden")
-        r=self.run(args,timeout=30)
-        if r["returncode"]!=0:raise RemoteTransportError("serve start failed: "+(r["stderr"] or r["stdout"])[-800:])
-        return r
+        r=self.run(args,timeout=8)
+        if r["returncode"]==0:return r
+        text=(r.get("stdout") or "")+"\n"+(r.get("stderr") or "")
+        if "Serve is not enabled on your tailnet" in text:
+            raise RemoteTransportError("SERVE_ENABLEMENT_REQUIRED: "+text.strip()[-1200:])
+        s=self.status()
+        blob=json.dumps(s.get("config") or {},sort_keys=True)
+        if target in blob:
+            r["activated_via_status"]=True
+            return r
+        raise RemoteTransportError("serve start failed: "+text[-800:])
     def stop_private(self,https_port=443):
         r=self.run(["serve",f"--https={int(https_port)}","off"])
         if r["returncode"]!=0:raise RemoteTransportError("serve stop failed: "+r["stderr"][-500:])

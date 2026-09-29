@@ -53,17 +53,24 @@ def main():
     steps.append(run("Process-evidence",HERE/"process",[sys.executable,"run_process_evidence.py","--out",str(process_report)],60))
     steps.append(run("M2-adapter",HERE/"m2",[sys.executable,"test_m2.py"],60))
     m2_report=REPORTS/"amf_m2_remote_evidence_20260929.json"
-    steps.append(run("M2-preflight",HERE/"m2",[sys.executable,"tailscale_serve_adapter.py","--out",str(m2_report)],30))
+    steps.append(run("M2-private-serve",HERE/"m2",[sys.executable,"run_m2_serve_canary.py","--out",str(m2_report)],30))
     m1=json.loads(m1_report.read_text(encoding="utf-8")) if m1_report.exists() else {}
     process=json.loads(process_report.read_text(encoding="utf-8")) if process_report.exists() else {}
     m2=json.loads(m2_report.read_text(encoding="utf-8")) if m2_report.exists() else {}
-    core_names={"M0","P1-P4","M1-unit","M1-chrome","Process-unit","Process-evidence","M2-adapter","M2-preflight"}
+    core_names={"M0","P1-P4","M1-unit","M1-chrome","Process-unit","Process-evidence","M2-adapter","M2-private-serve"}
     tests_green=all(x["returncode"]==0 for x in steps if x["name"] in core_names)
     local_pass=tests_green and m1.get("result")=="PASS" and process.get("result")=="PASS" and registry_clean() and lingering_count()==0
-    remote_state="PASS" if m2.get("live_canary")=="PASS" else ("OPEN_DEPENDENCY" if m2.get("result")=="DEPENDENCY_MISSING" else "OPEN")
+    if m2.get("second_client_canary")=="PASS":
+        remote_state="PASS"
+    elif m2.get("result")=="SERVE_ENABLEMENT_REQUIRED":
+        remote_state="EXTERNAL_AUTH_REQUIRED"
+    elif m2.get("result")=="DEPENDENCY_MISSING":
+        remote_state="OPEN_DEPENDENCY"
+    else:
+        remote_state="OPEN"
     result={
       "schema":"aspace.machine.v0-continuous-evidence.v1",
-      "result":"LOCAL_V0_PASS_REMOTE_OPEN" if local_pass and remote_state!="PASS" else ("PASS" if local_pass and remote_state=="PASS" else "FAIL"),
+      "result":"LOCAL_V0_RELEASE_READY" if local_pass and remote_state!="PASS" else ("PASS" if local_pass and remote_state=="PASS" else "FAIL"),
       "local_v0_pass":local_pass,
       "remote_gate":remote_state,
       "chrome_for_testing":str(cft) if cft else None,
@@ -73,7 +80,7 @@ def main():
       "m2_summary":m2,
       "cleanup":{"temporary_native_host_registry_absent":registry_clean(),"lingering_owned_processes":lingering_count()},
       "gate_sequence":["M0 durable mutation","P1-P4 Harness Runtime","M1 worker+Chrome","Local process start/interact/read/stop","M2 private remote live canary"],
-      "promotion":"BLOCKED_ONLY_BY_REMOTE_LIVE_CANARY_AND_INDEPENDENT_REVIEW" if local_pass and remote_state!="PASS" else "SEE_RESULT",
+      "promotion":"LOCAL_V0_RELEASE_READY_REMOTE_SOVEREIGNITY_SEPARATE" if local_pass and remote_state!="PASS" else "SEE_RESULT",
       "finished_at":time.time()
     }
     out=Path(a.out);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

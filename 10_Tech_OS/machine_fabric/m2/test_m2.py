@@ -9,9 +9,10 @@ log=Path(__file__).with_name("calls.jsonl")
 with log.open("a",encoding="utf-8") as f:f.write(json.dumps(args)+"\n")
 if args[:3]==["serve","status","--json"]:
     print(json.dumps({"Web":{"svc:test":{"Handlers":{"/":{"Proxy":"http://127.0.0.1:9000"}}}}}));raise SystemExit(0)
-if len(args)>=3 and args[:2]==["serve","get-config"]:
-    Path(args[2]).write_text('{"snapshot":true}\n');raise SystemExit(0)
-if len(args)>=3 and args[:2]==["serve","set-config"]:
+if args[:3]==["serve","get-config","--all"]:
+    print('{"version":"0.0.1","snapshot":true}');raise SystemExit(0)
+if len(args)>=4 and args[:3]==["serve","set-config","--all"]:
+    if not Path(args[3]).exists():raise SystemExit(8)
     raise SystemExit(0)
 if args and args[0]=="serve":
     if any("funnel" in x.lower() for x in args):raise SystemExit(9)
