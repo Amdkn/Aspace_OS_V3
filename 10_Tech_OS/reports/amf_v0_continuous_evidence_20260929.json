@@ -8,43 +8,57 @@
     {
       "name": "M0",
       "returncode": 0,
-      "seconds": 3.465,
+      "seconds": 3.395,
       "stdout_tail": "",
-      "stderr_tail": "test_compensation_deletes_file_created_by_original_operation (__main__.AMFM0Tests.test_compensation_deletes_file_created_by_original_operation) ... ok\ntest_compensation_has_separate_linked_receipt_and_restores_prior_state (__main__.AMFM0Tests.test_compensation_has_separate_linked_receipt_and_restores_prior_state) ... ok\ntest_crash_after_effect_restart_reconciles_without_duplicate_mutation (__main__.AMFM0Tests.test_crash_after_effect_restart_reconciles_without_duplicate_mutation) ... ok\ntest_health_and_capability_registry_are_truthful_for_m0 (__main__.AMFM0Tests.test_health_and_capability_registry_are_truthful_for_m0) ... ok\ntest_loopback_server_rejects_non_loopback_bind (__main__.AMFM0Tests.test_loopback_server_rejects_non_loopback_bind) ... ok\ntest_missing_scope_and_wrong_risk_are_denied (__main__.AMFM0Tests.test_missing_scope_and_wrong_risk_are_denied) ... ok\ntest_out_of_scope_path_and_shell_shape_are_denied_or_rejected (__main__.AMFM0Tests.test_out_of_scope_path_and_shell_shape_are_denied_or_rejected) ... ok\ntest_same_operation_id_different_fingerprint_is_conflict (__main__.AMFM0Tests.test_same_operation_id_different_fingerprint_is_conflict) ... ok\ntest_write_replay_has_one_effect_and_read_is_grounded (__main__.AMFM0Tests.test_write_replay_has_one_effect_and_read_is_grounded) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 3.162s\n\nOK\n"
+      "stderr_tail": "test_compensation_deletes_file_created_by_original_operation (__main__.AMFM0Tests.test_compensation_deletes_file_created_by_original_operation) ... ok\ntest_compensation_has_separate_linked_receipt_and_restores_prior_state (__main__.AMFM0Tests.test_compensation_has_separate_linked_receipt_and_restores_prior_state) ... ok\ntest_crash_after_effect_restart_reconciles_without_duplicate_mutation (__main__.AMFM0Tests.test_crash_after_effect_restart_reconciles_without_duplicate_mutation) ... ok\ntest_health_and_capability_registry_are_truthful_for_m0 (__main__.AMFM0Tests.test_health_and_capability_registry_are_truthful_for_m0) ... ok\ntest_loopback_server_rejects_non_loopback_bind (__main__.AMFM0Tests.test_loopback_server_rejects_non_loopback_bind) ... ok\ntest_missing_scope_and_wrong_risk_are_denied (__main__.AMFM0Tests.test_missing_scope_and_wrong_risk_are_denied) ... ok\ntest_out_of_scope_path_and_shell_shape_are_denied_or_rejected (__main__.AMFM0Tests.test_out_of_scope_path_and_shell_shape_are_denied_or_rejected) ... ok\ntest_same_operation_id_different_fingerprint_is_conflict (__main__.AMFM0Tests.test_same_operation_id_different_fingerprint_is_conflict) ... ok\ntest_write_replay_has_one_effect_and_read_is_grounded (__main__.AMFM0Tests.test_write_replay_has_one_effect_and_read_is_grounded) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 2.964s\n\nOK\n"
     },
     {
       "name": "P1-P4",
       "returncode": 0,
-      "seconds": 24.771,
+      "seconds": 21.447,
       "stdout_tail": "",
-      "stderr_tail": "test_no_chatgpt_session_state_required (__main__.T.test_no_chatgpt_session_state_required) ... ok\ntest_p1_fingerprint_determinism_and_drift (__main__.T.test_p1_fingerprint_determinism_and_drift) ... ok\ntest_p2_prepare_idempotent_compensable_and_failed_receipt (__main__.T.test_p2_prepare_idempotent_compensable_and_failed_receipt) ... ok\ntest_p3_parent_interruption_unknown_never_blind_retry (__main__.T.test_p3_parent_interruption_unknown_never_blind_retry) ... ok\ntest_p3_success_collect_receipt_yes (__main__.T.test_p3_success_collect_receipt_yes) ... ok\ntest_p3_whole_tree_cancel_no_owned_orphan (__main__.T.test_p3_whole_tree_cancel_no_owned_orphan) ... ok\ntest_p4_release_and_event_chain (__main__.T.test_p4_release_and_event_chain) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 24.505s\n\nOK\n"
+      "stderr_tail": "test_no_chatgpt_session_state_required (__main__.T.test_no_chatgpt_session_state_required) ... ok\ntest_p1_fingerprint_determinism_and_drift (__main__.T.test_p1_fingerprint_determinism_and_drift) ... ok\ntest_p2_prepare_idempotent_compensable_and_failed_receipt (__main__.T.test_p2_prepare_idempotent_compensable_and_failed_receipt) ... ok\ntest_p3_parent_interruption_unknown_never_blind_retry (__main__.T.test_p3_parent_interruption_unknown_never_blind_retry) ... ok\ntest_p3_success_collect_receipt_yes (__main__.T.test_p3_success_collect_receipt_yes) ... ok\ntest_p3_whole_tree_cancel_no_owned_orphan (__main__.T.test_p3_whole_tree_cancel_no_owned_orphan) ... ok\ntest_p4_release_and_event_chain (__main__.T.test_p4_release_and_event_chain) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 21.086s\n\nOK\n"
     },
     {
       "name": "M1-unit",
       "returncode": 0,
-      "seconds": 9.215,
+      "seconds": 10.859,
       "stdout_tail": "",
-      "stderr_tail": "test_duplicate_claim_before_completion_never_double_claims (__main__.T.test_duplicate_claim_before_completion_never_double_claims) ... ok\ntest_health_degrades_when_worker_dies_and_fence_increments (__main__.T.test_health_degrades_when_worker_dies_and_fence_increments) ... ok\ntest_same_operation_reconnect_returns_receipt_without_reexecute (__main__.T.test_same_operation_reconnect_returns_receipt_without_reexecute) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 8.900s\n\nOK\n"
+      "stderr_tail": "test_duplicate_claim_before_completion_never_double_claims (__main__.T.test_duplicate_claim_before_completion_never_double_claims) ... ok\ntest_health_degrades_when_worker_dies_and_fence_increments (__main__.T.test_health_degrades_when_worker_dies_and_fence_increments) ... ok\ntest_same_operation_reconnect_returns_receipt_without_reexecute (__main__.T.test_same_operation_reconnect_returns_receipt_without_reexecute) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 10.498s\n\nOK\n"
     },
     {
       "name": "M1-chrome",
       "returncode": 0,
-      "seconds": 13.93,
-      "stdout_tail": "{\"phase\": \"native_ready\", \"tmp\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-k4jhsvav\", \"extension_id\": \"gfpimfkgglngoimbajilkbacjjggiglk\", \"host_manifest\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-k4jhsvav\\\\native_host_manifest.json\", \"host_exe\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-k4jhsvav\\\\native_publish\\\\ASpaceNativeHost.exe\"}\n{\"phase\": \"chrome_started\", \"pid\": 17392, \"url\": \"http://127.0.0.1:56247/canary.html\"}\n{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"daemon_online_with_worker\": true,\n    \"daemon_degraded_worker_dead\": true,\n    \"fencing_increased\": true,\n    \"browser_debugger_unavailable\": true,\n    \"tabs_observed\": true,\n    \"dom_postcondition_after\": true,\n    \"durable_receipt\": true,\n    \"same_operation_claimed_twice\": true,\n    \"replay_returned_without_execute\": true,\n    \"native_host_reconnected\": true\n  },\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan\\\\10_Tech_OS\\\\reports\\\\amf_m1_chrome_evidence_20260929.json\"\n}\n",
+      "seconds": 25.562,
+      "stdout_tail": "{\"phase\": \"native_ready\", \"tmp\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-r7mjx9i5\", \"extension_id\": \"akmmcehfdhddfepafojjcfjhbdbdmfha\", \"host_manifest\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-r7mjx9i5\\\\native_host_manifest.json\", \"host_exe\": \"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\aspace-m1-canary-r7mjx9i5\\\\native_publish\\\\ASpaceNativeHost.exe\"}\n{\"phase\": \"chrome_started\", \"pid\": 26284, \"url\": \"http://127.0.0.1:60427/canary.html\"}\n{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"daemon_online_with_worker\": true,\n    \"daemon_degraded_worker_dead\": true,\n    \"fencing_increased\": true,\n    \"browser_debugger_unavailable\": true,\n    \"tabs_observed\": true,\n    \"dom_postcondition_after\": true,\n    \"durable_receipt\": true,\n    \"same_operation_claimed_twice\": true,\n    \"replay_returned_without_execute\": true,\n    \"native_host_reconnected\": true\n  },\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\reports\\\\amf_m1_chrome_evidence_20260929.json\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "Process-unit",
+      "returncode": 0,
+      "seconds": 5.695,
+      "stdout_tail": "",
+      "stderr_tail": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 5.106s\n\nOK\n"
+    },
+    {
+      "name": "Process-evidence",
+      "returncode": 0,
+      "seconds": 7.529,
+      "stdout_tail": "{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"suite_4_of_4\": true,\n    \"start_receipt_succeeded\": true,\n    \"start_replay_same_pid\": true,\n    \"interactive_echo_observed\": true,\n    \"interact_receipt_succeeded\": true,\n    \"child_created\": true,\n    \"whole_tree_stop_parent_gone\": true,\n    \"whole_tree_stop_child_gone\": true,\n    \"stop_receipt_succeeded\": true,\n    \"health_after_stop_online\": true\n  },\n  \"out\": \"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\reports\\\\amf_process_evidence_20260929.json\"\n}\n",
       "stderr_tail": ""
     },
     {
       "name": "M2-adapter",
       "returncode": 0,
-      "seconds": 0.877,
+      "seconds": 1.052,
       "stdout_tail": "",
-      "stderr_tail": "test_private_start_is_loopback_and_never_funnel (__main__.T.test_private_start_is_loopback_and_never_funnel) ... ok\ntest_status_snapshot_restore (__main__.T.test_status_snapshot_restore) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.554s\n\nOK\n"
+      "stderr_tail": "test_private_start_is_loopback_and_never_funnel (__main__.T.test_private_start_is_loopback_and_never_funnel) ... ok\ntest_status_snapshot_restore (__main__.T.test_status_snapshot_restore) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.676s\n\nOK\n"
     },
     {
       "name": "M2-preflight",
       "returncode": 0,
-      "seconds": 0.222,
-      "stdout_tail": "{\n  \"schema\": \"aspace.machine.remote-transport-evidence.v1\",\n  \"result\": \"DEPENDENCY_MISSING\",\n  \"dependency\": \"tailscale\",\n  \"installed\": false,\n  \"live_canary\": \"OPEN\",\n  \"reason\": \"No Tailscale CLI/service installed on this Windows host.\",\n  \"public_bind\": false,\n  \"at\": 1790657780.8963263\n}\n",
+      "seconds": 0.175,
+      "stdout_tail": "{\n  \"schema\": \"aspace.machine.remote-transport-evidence.v1\",\n  \"result\": \"DEPENDENCY_MISSING\",\n  \"dependency\": \"tailscale\",\n  \"installed\": false,\n  \"live_canary\": \"OPEN\",\n  \"reason\": \"No Tailscale CLI/service installed on this Windows host.\",\n  \"public_bind\": false,\n  \"at\": 1790658486.3042552\n}\n",
       "stderr_tail": ""
     }
   ],
@@ -65,14 +79,14 @@
     "receipt": {
       "adapter": "amf.m1.chrome-native-messaging",
       "capability": "browser.dom.action",
-      "effect_digest": "sha256:6102abb3b4a07fdf23c98796bb1e5b71d4d47707f37ccb29a69eebe5b9a1db4c",
+      "effect_digest": "sha256:9c7d391def5df26603853be3b3dd2031bafcef752d0ab74a8cac788b00d3390b",
       "evidence": [
-        "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:56247/canary.html\"}",
-        "worker=worker-dc8fb355ebec",
-        "lease=lease-f0bded8285b64d74"
+        "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:60427/canary.html\"}",
+        "worker=worker-97413d22e8e6",
+        "lease=lease-956914fc69b44e0c"
       ],
       "fingerprint": "48579f2e88cc309aa785b1b805dc3b10c26c42c75acc2bbd286de7a67c355716",
-      "finished_at": "2026-09-29T04:56:17.725881+00:00",
+      "finished_at": "2026-09-29T05:07:47.818643+00:00",
       "operation_id": "m1-browser-op-0001",
       "policy": {
         "decision": "ALLOW",
@@ -80,6 +94,66 @@
       },
       "schema": "aspace.machine.receipt.v1",
       "state": "SUCCEEDED"
+    }
+  },
+  "process_summary": {
+    "result": "PASS",
+    "checks": {
+      "suite_4_of_4": true,
+      "start_receipt_succeeded": true,
+      "start_replay_same_pid": true,
+      "interactive_echo_observed": true,
+      "interact_receipt_succeeded": true,
+      "child_created": true,
+      "whole_tree_stop_parent_gone": true,
+      "whole_tree_stop_child_gone": true,
+      "stop_receipt_succeeded": true,
+      "health_after_stop_online": true
+    },
+    "start_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-start",
+      "fingerprint": "f26c8a1e06a81c83df16bf6091b48fabad2a0a16d8e7820b528c7f3426118bbc",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.start",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:e3aa5fff3128babf35d4f0d54f5b4edabbb44287ded5dd285b2b6021ff36e41a",
+      "evidence": [
+        "{\"argv\":[\"C:\\\\Python314\\\\python.exe\",\"C:\\\\Users\\\\amado\\\\orca\\\\workspaces\\\\ASpace_OS_V3\\\\Ryan-MachineFabric\\\\10_Tech_OS\\\\machine_fabric\\\\process\\\\interactive_fixture.py\"],\"cwd\":\"C:\\\\Users\\\\amado\\\\AppData\\\\Local\\\\Temp\\\\amf-process-evidence-co5c4for\\\\root\",\"pid\":23580,\"session_id\":\"proc-f26c8a1e06a81c83df\"}"
+      ],
+      "finished_at": "2026-09-29T05:08:04.237678+00:00",
+      "result": {
+        "session_id": "proc-f26c8a1e06a81c83df",
+        "pid": 23580,
+        "stdout_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stdout.log",
+        "stderr_ref": "C:\\Users\\amado\\AppData\\Local\\Temp\\amf-process-evidence-co5c4for\\root\\.amf-process\\proc-f26c8a1e06a81c83df\\stderr.log"
+      }
+    },
+    "stop_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-stop",
+      "fingerprint": "dddf737adbb754770a86c7d9e16b3fa83c8676f407717a70ccf22144f3423d80",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.stop",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:c8d681cf66f5654abd49cfffd4c9f0fb281a70072ecbd2e559d0981b8a809c30",
+      "evidence": [
+        "{\"pid\":23580,\"session_id\":\"proc-f26c8a1e06a81c83df\",\"tree_alive\":false}"
+      ],
+      "finished_at": "2026-09-29T05:08:04.783357+00:00",
+      "result": {
+        "session_id": "proc-f26c8a1e06a81c83df",
+        "pid": 23580,
+        "tree_alive": false
+      }
     }
   },
   "m2_summary": {
@@ -90,7 +164,7 @@
     "live_canary": "OPEN",
     "reason": "No Tailscale CLI/service installed on this Windows host.",
     "public_bind": false,
-    "at": 1790657780.8963263
+    "at": 1790658486.3042552
   },
   "cleanup": {
     "temporary_native_host_registry_absent": true,
@@ -100,8 +174,9 @@
     "M0 durable mutation",
     "P1-P4 Harness Runtime",
     "M1 worker+Chrome",
+    "Local process start/interact/read/stop",
     "M2 private remote live canary"
   ],
   "promotion": "BLOCKED_ONLY_BY_REMOTE_LIVE_CANARY_AND_INDEPENDENT_REVIEW",
-  "finished_at": 1790657782.7879841
+  "finished_at": 1790658488.3675187
 }

@@ -48,14 +48,18 @@ def main():
         steps.append(run("M1-chrome",HERE/"m1",[sys.executable,"run_m1_canary.py","--out",str(m1_report),"--chrome",str(cft)],90))
     else:
         steps.append({"name":"M1-chrome","returncode":2,"seconds":0,"stdout_tail":"","stderr_tail":"Chrome for Testing missing"})
+    process_report=REPORTS/"amf_process_evidence_20260929.json"
+    steps.append(run("Process-unit",HERE/"process",[sys.executable,"-W","error::ResourceWarning","test_process_broker.py"],60))
+    steps.append(run("Process-evidence",HERE/"process",[sys.executable,"run_process_evidence.py","--out",str(process_report)],60))
     steps.append(run("M2-adapter",HERE/"m2",[sys.executable,"test_m2.py"],60))
     m2_report=REPORTS/"amf_m2_remote_evidence_20260929.json"
     steps.append(run("M2-preflight",HERE/"m2",[sys.executable,"tailscale_serve_adapter.py","--out",str(m2_report)],30))
     m1=json.loads(m1_report.read_text(encoding="utf-8")) if m1_report.exists() else {}
+    process=json.loads(process_report.read_text(encoding="utf-8")) if process_report.exists() else {}
     m2=json.loads(m2_report.read_text(encoding="utf-8")) if m2_report.exists() else {}
-    core_names={"M0","P1-P4","M1-unit","M1-chrome","M2-adapter","M2-preflight"}
+    core_names={"M0","P1-P4","M1-unit","M1-chrome","Process-unit","Process-evidence","M2-adapter","M2-preflight"}
     tests_green=all(x["returncode"]==0 for x in steps if x["name"] in core_names)
-    local_pass=tests_green and m1.get("result")=="PASS" and registry_clean() and lingering_count()==0
+    local_pass=tests_green and m1.get("result")=="PASS" and process.get("result")=="PASS" and registry_clean() and lingering_count()==0
     remote_state="PASS" if m2.get("live_canary")=="PASS" else ("OPEN_DEPENDENCY" if m2.get("result")=="DEPENDENCY_MISSING" else "OPEN")
     result={
       "schema":"aspace.machine.v0-continuous-evidence.v1",
@@ -65,9 +69,10 @@ def main():
       "chrome_for_testing":str(cft) if cft else None,
       "steps":steps,
       "m1_summary":{"result":m1.get("result"),"checks":m1.get("checks"),"receipt":m1.get("receipt")},
+      "process_summary":{"result":process.get("result"),"checks":process.get("checks"),"start_receipt":process.get("start_receipt"),"stop_receipt":process.get("stop_receipt")},
       "m2_summary":m2,
       "cleanup":{"temporary_native_host_registry_absent":registry_clean(),"lingering_owned_processes":lingering_count()},
-      "gate_sequence":["M0 durable mutation","P1-P4 Harness Runtime","M1 worker+Chrome","M2 private remote live canary"],
+      "gate_sequence":["M0 durable mutation","P1-P4 Harness Runtime","M1 worker+Chrome","Local process start/interact/read/stop","M2 private remote live canary"],
       "promotion":"BLOCKED_ONLY_BY_REMOTE_LIVE_CANARY_AND_INDEPENDENT_REVIEW" if local_pass and remote_state!="PASS" else "SEE_RESULT",
       "finished_at":time.time()
     }
