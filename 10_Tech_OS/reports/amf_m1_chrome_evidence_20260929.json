@@ -1,0 +1,109 @@
+{
+  "schema": "aspace.machine.m1-evidence.v1",
+  "started_at": 1790657376.383897,
+  "result": "PASS",
+  "browser_binary": "C:\\Users\\amado\\Aspace_Quarantine\\chrome-for-testing\\153.0.8010.52\\chrome-win64\\chrome.exe",
+  "checks": {
+    "daemon_online_with_worker": true,
+    "daemon_degraded_worker_dead": true,
+    "fencing_increased": true,
+    "browser_debugger_unavailable": true,
+    "tabs_observed": true,
+    "dom_postcondition_after": true,
+    "durable_receipt": true,
+    "same_operation_claimed_twice": true,
+    "replay_returned_without_execute": true,
+    "native_host_reconnected": true
+  },
+  "daemon": {
+    "initial": {
+      "aggregate": "ONLINE",
+      "capabilities": {
+        "browser.debugger.attach": "UNAVAILABLE",
+        "browser.dom.action": "AVAILABLE",
+        "browser.tabs.read": "AVAILABLE"
+      },
+      "daemon": "UP",
+      "fencing_token": 1,
+      "schema": "aspace.machine.health.v1",
+      "transport": "LOCAL",
+      "worker": "UP",
+      "worker_ref": "worker-f6e77554301a"
+    },
+    "worker_dead": {
+      "aggregate": "DEGRADED",
+      "capabilities": {
+        "browser.debugger.attach": "UNAVAILABLE",
+        "browser.dom.action": "UNAVAILABLE",
+        "browser.tabs.read": "UNAVAILABLE"
+      },
+      "daemon": "UP",
+      "fencing_token": null,
+      "schema": "aspace.machine.health.v1",
+      "transport": "LOCAL",
+      "worker": "DOWN",
+      "worker_ref": null
+    },
+    "reconnected": {
+      "aggregate": "ONLINE",
+      "capabilities": {
+        "browser.debugger.attach": "UNAVAILABLE",
+        "browser.dom.action": "AVAILABLE",
+        "browser.tabs.read": "AVAILABLE"
+      },
+      "daemon": "UP",
+      "fencing_token": 2,
+      "schema": "aspace.machine.health.v1",
+      "transport": "LOCAL",
+      "worker": "UP",
+      "worker_ref": "worker-619f10760ff1"
+    }
+  },
+  "fencing": {
+    "first": 1,
+    "second": 2
+  },
+  "extension_id": "bbbgmahlpnmnkghhnbjgodbmcjdhdmkb",
+  "native_host_start_count": 2,
+  "claim_count": 2,
+  "receipt": {
+    "adapter": "amf.m1.chrome-native-messaging",
+    "capability": "browser.dom.action",
+    "effect_digest": "sha256:d4e9135d7343b23cee5d2dfa2332859f4d40a97d9661654f7b7f8d9ead6e89f1",
+    "evidence": [
+      "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:54765/canary.html\"}",
+      "worker=worker-619f10760ff1",
+      "lease=lease-c15c62a0ae534749"
+    ],
+    "fingerprint": "48579f2e88cc309aa785b1b805dc3b10c26c42c75acc2bbd286de7a67c355716",
+    "finished_at": "2026-09-29T04:49:46.435555+00:00",
+    "operation_id": "m1-browser-op-0001",
+    "policy": {
+      "decision": "ALLOW",
+      "policy_version": "amf-policy-v1"
+    },
+    "schema": "aspace.machine.receipt.v1",
+    "state": "SUCCEEDED"
+  },
+  "dom_server_evidence": [
+    {
+      "text": "AFTER",
+      "ts": 1790657386424
+    }
+  ],
+  "worker_log_events": 12,
+  "native_log_events": 16,
+  "dotnet_build_tail": "  Determining projects to restore...\n  Restored C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-1mbm_gix\\native_src\\ASpaceNativeHost.csproj (in 105 ms).\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-1mbm_gix\\native_src\\bin\\Release\\net9.0\\win-x64\\ASpaceNativeHost.dll\n  ASpaceNativeHost -> C:\\Users\\amado\\AppData\\Local\\Temp\\aspace-m1-canary-1mbm_gix\\native_publish\\\n",
+  "security": {
+    "chrome_profile": "disposable",
+    "native_host_registry": "temporary HKCU",
+    "debugger_permission": false,
+    "cookies_permission": false,
+    "binds": [
+      "127.0.0.1"
+    ],
+    "public_bind": false
+  },
+  "rollback": "Chrome test tree killed; worker/daemon stopped; temporary NativeMessagingHosts key removed; temp profile/build deleted.",
+  "finished_at": 1790657388.4174187
+}
