@@ -12,11 +12,11 @@ static void Log(object payload) {
     } catch {}
 }
 
-var worker = Environment.GetEnvironmentVariable("ASPACE_WORKER_URL") ?? "http://127.0.0.1:47931/native";
+
 var input = Console.OpenStandardInput();
 var output = Console.OpenStandardOutput();
 using var http = new HttpClient { Timeout = TimeSpan.FromSeconds(5) };
-Log(new { evt = "start", pid = Environment.ProcessId, worker });
+Log(new { evt = "start", pid = Environment.ProcessId });
 
 while (true) {
     var header = new byte[4];
@@ -41,16 +41,36 @@ while (true) {
     }
     var json = Encoding.UTF8.GetString(body);
     Log(new { evt = "in", pid = Environment.ProcessId, json });
-    string responseText;
-    try {
-        using var content = new StringContent(json, Encoding.UTF8, "application/json");
-        using var response = await http.PostAsync(worker, content);
-        responseText = await response.Content.ReadAsStringAsync();
-        if (!response.IsSuccessStatusCode) {
-            responseText = JsonSerializer.Serialize(new { ok = false, error = "WORKER_HTTP_" + (int)response.StatusCode, detail = responseText });
+
+    string worker = Environment.GetEnvironmentVariable("ASPACE_WORKER_URL");
+    if (string.IsNullOrWhiteSpace(worker)) {
+        string runtimeJsonPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".aspace", "dc", "run", "runtime.json");
+        if (File.Exists(runtimeJsonPath)) {
+            try {
+                using var doc = JsonDocument.Parse(File.ReadAllText(runtimeJsonPath));
+                if (doc.RootElement.TryGetProperty("worker_url", out var urlProp) && urlProp.ValueKind == JsonValueKind.String) {
+                    worker = urlProp.GetString();
+                } else if (doc.RootElement.TryGetProperty("worker_port", out var portProp) && portProp.ValueKind == JsonValueKind.Number) {
+                    worker = $"http://127.0.0.1:{portProp.GetInt32()}/native";
+                }
+            } catch { }
         }
-    } catch (Exception ex) {
-        responseText = JsonSerializer.Serialize(new { ok = false, error = "WORKER_UNAVAILABLE", detail = ex.GetType().Name + ": " + ex.Message });
+    }
+
+    string responseText;
+    if (string.IsNullOrWhiteSpace(worker)) {
+        responseText = JsonSerializer.Serialize(new { ok = false, error = "RUNTIME_UNAVAILABLE", detail = "No ASPACE_WORKER_URL and ~/.aspace/dc/run/runtime.json is missing or invalid" });
+    } else {
+        try {
+            using var content = new StringContent(json, Encoding.UTF8, "application/json");
+            using var response = await http.PostAsync(worker, content);
+            responseText = await response.Content.ReadAsStringAsync();
+            if (!response.IsSuccessStatusCode) {
+                responseText = JsonSerializer.Serialize(new { ok = false, error = "WORKER_HTTP_" + (int)response.StatusCode, detail = responseText });
+            }
+        } catch (Exception ex) {
+            responseText = JsonSerializer.Serialize(new { ok = false, error = "WORKER_UNAVAILABLE", detail = ex.GetType().Name + ": " + ex.Message });
+        }
     }
     var responseBytes = Encoding.UTF8.GetBytes(responseText);
     if (responseBytes.Length > 900_000) {

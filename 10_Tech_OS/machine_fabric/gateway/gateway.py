@@ -19,10 +19,6 @@ import argparse
 import hashlib
 import json
 import logging
-import sqlite3
-import time
-import datetime
-import os
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -189,65 +185,7 @@ def _normalize_browser_capabilities(browser_health):
     return out
 
 
-def init_ledger(db_path: str):
-    """Initializes the usage ledger SQLite database."""
-    with sqlite3.connect(db_path) as conn:
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS usage_ledger (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp TEXT NOT NULL,
-                operation_id TEXT,
-                tool TEXT NOT NULL,
-                capability TEXT,
-                action TEXT,
-                is_replay INTEGER NOT NULL DEFAULT 0,
-                state TEXT NOT NULL,
-                latency_ms INTEGER NOT NULL,
-                error_detail TEXT,
-                receipt_ref TEXT
-            )
-        """)
-        conn.commit()
-
-
-def log_usage(
-    db_path: str,
-    tool: str,
-    state: str,
-    latency_ms: int,
-    operation_id: str | None = None,
-    capability: str | None = None,
-    action: str | None = None,
-    is_replay: bool = False,
-    error_detail: str | None = None,
-    receipt_ref: str | None = None,
-):
-    with sqlite3.connect(db_path) as conn:
-        conn.execute(
-            """
-            INSERT INTO usage_ledger (
-                timestamp, operation_id, tool, capability, action,
-                is_replay, state, latency_ms, error_detail, receipt_ref
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-            """,
-            (
-                datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                operation_id,
-                tool,
-                capability,
-                action,
-                1 if is_replay else 0,
-                state,
-                latency_ms,
-                error_detail,
-                receipt_ref,
-            ),
-        )
-        conn.commit()
-
-
-def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="gateway_usage.db"):
-    init_ledger(usage_db)
+def build_gateway(name, fs_url, process_url=None, browser_url=None):
     fs = JsonHttpClient(fs_url)
     process = JsonHttpClient(process_url)
     browser = JsonHttpClient(browser_url)
@@ -275,39 +213,28 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
     @mcp.tool()
     def amf_health() -> str:
         """Returns normalized gateway/backend health without inventing liveness."""
-        start_time = time.monotonic()
-        try:
-            s = surface()
-            states = [
-                (s["backends"][key].get("aggregate") or "UNKNOWN")
-                for key in ("filesystem", "process", "browser")
-            ]
-            if states[0] in {"ONLINE", "UP"} and states[1] in {"ONLINE", "UP"}:
-                aggregate = "ONLINE" if states[2] in {"ONLINE", "UP"} else "DEGRADED"
-            else:
-                aggregate = "DEGRADED"
-            resp = {
+        s = surface()
+        states = [
+            (s["backends"][key].get("aggregate") or "UNKNOWN")
+            for key in ("filesystem", "process", "browser")
+        ]
+        if states[0] in {"ONLINE", "UP"} and states[1] in {"ONLINE", "UP"}:
+            aggregate = "ONLINE" if states[2] in {"ONLINE", "UP"} else "DEGRADED"
+        else:
+            aggregate = "DEGRADED"
+        return json.dumps(
+            {
                 "schema": "aspace.dc.health.v1",
                 "aggregate": aggregate,
                 "backends": s["backends"],
-            }
-            log_usage(usage_db, "amf_health", "SUCCEEDED", int((time.monotonic() - start_time)*1000))
-            return json.dumps(resp, indent=2)
-        except Exception as exc:
-            log_usage(usage_db, "amf_health", "FAILED", int((time.monotonic() - start_time)*1000), error_detail=str(exc))
-            raise
+            },
+            indent=2,
+        )
 
     @mcp.tool()
     def amf_capabilities() -> str:
         """Lists the unified filesystem/process/browser capability surface."""
-        start_time = time.monotonic()
-        try:
-            resp = surface()
-            log_usage(usage_db, "amf_capabilities", "SUCCEEDED", int((time.monotonic() - start_time)*1000))
-            return json.dumps(resp, indent=2)
-        except Exception as exc:
-            log_usage(usage_db, "amf_capabilities", "FAILED", int((time.monotonic() - start_time)*1000), error_detail=str(exc))
-            raise
+        return json.dumps(surface(), indent=2)
 
     @mcp.tool()
     def amf_execute(
@@ -324,65 +251,52 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
         Browser invocation is intentionally refused until P3 exposes the production
         Native Messaging command path; browser availability is still reported truthfully.
         """
-        start_time = time.monotonic()
-        try:
-            s = surface()
-            cap = next((c for c in s["capabilities"] if c["capability_id"] == capability), None)
-            if not cap:
-                resp = {"state": "DENIED", "error": "UNKNOWN_CAPABILITY", "capability": capability}
-                log_usage(usage_db, "amf_execute", "DENIED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "UNKNOWN_CAPABILITY")
-                return json.dumps(resp)
+        s = surface()
+        cap = next((c for c in s["capabilities"] if c["capability_id"] == capability), None)
+        if not cap:
+            return json.dumps({"state": "DENIED", "error": "UNKNOWN_CAPABILITY", "capability": capability})
 
-            if capability.startswith("browser."):
-                resp = {
+        if capability.startswith("browser."):
+            return json.dumps(
+                {
                     "state": "UNAVAILABLE",
                     "error": "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE",
                     "capability": capability,
                     "availability": cap.get("availability"),
-                }
-                log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE")
-                return json.dumps(resp, indent=2)
-
-            backend = fs if capability.startswith("machine.fs.") else process
-            if not backend.configured:
-                resp = {"state": "UNAVAILABLE", "error": "BACKEND_NOT_CONFIGURED", "capability": capability}
-                log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BACKEND_NOT_CONFIGURED")
-                return json.dumps(resp, indent=2)
-
-            op = {
-                "schema": "aspace.machine.operation.v1",
-                "operation_id": operation_id,
-                "capability": capability,
-                "capability_version": cap.get("version") or "0.1.0",
-                "action": action,
-                "authority": {
-                    "risk_class": risk_class,
-                    "scopes": [scope],
-                    "approval_ref": None,
                 },
-                "precondition": precondition or {},
-                "replay": "return_receipt",
-                "payload": payload,
-            }
-            op["fingerprint"] = _semantic_fingerprint(op)
+                indent=2,
+            )
 
-            try:
-                receipt = backend.execute(op)
-                is_replay = bool(receipt.get("replayed")) or bool(receipt.get("reconciled_after_restart"))
-                state = receipt.get("state", "UNKNOWN")
-                error_detail = None
-                if state in ("FAILED", "DENIED", "DLQ", "UNKNOWN"):
-                    evidence = receipt.get("evidence")
-                    error_detail = str(evidence) if evidence else None
-                log_usage(usage_db, "amf_execute", state, int((time.monotonic() - start_time)*1000), operation_id, capability, action, is_replay, error_detail, receipt.get("operation_id"))
-                return json.dumps(receipt, indent=2)
-            except Exception as exc:
-                resp = {"state": "FAILED", "error": type(exc).__name__, "detail": str(exc)}
-                log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(exc))
-                return json.dumps(resp, indent=2)
-        except Exception as outer_exc:
-            log_usage(usage_db, "amf_execute", "FAILED", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, str(outer_exc))
-            return json.dumps({"state": "FAILED", "error": type(outer_exc).__name__, "detail": str(outer_exc)}, indent=2)
+        backend = fs if capability.startswith("machine.fs.") else process
+        if not backend.configured:
+            return json.dumps(
+                {"state": "UNAVAILABLE", "error": "BACKEND_NOT_CONFIGURED", "capability": capability},
+                indent=2,
+            )
+
+        op = {
+            "schema": "aspace.machine.operation.v1",
+            "operation_id": operation_id,
+            "capability": capability,
+            "capability_version": cap.get("version") or "0.1.0",
+            "action": action,
+            "authority": {
+                "risk_class": risk_class,
+                "scopes": [scope],
+                "approval_ref": None,
+            },
+            "precondition": precondition or {},
+            "replay": "return_receipt",
+            "payload": payload,
+        }
+        op["fingerprint"] = _semantic_fingerprint(op)
+        try:
+            return json.dumps(backend.execute(op), indent=2)
+        except Exception as exc:
+            return json.dumps(
+                {"state": "FAILED", "error": type(exc).__name__, "detail": str(exc)},
+                indent=2,
+            )
 
     @mcp.tool()
     def amf_get_receipt(operation_id: str) -> str:
@@ -391,32 +305,10 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
         Process receipts are returned by process operations/replay; a process receipt
         lookup endpoint is intentionally not fabricated here.
         """
-        start_time = time.monotonic()
         try:
-            resp = fs.get_receipt(operation_id)
-            log_usage(usage_db, "amf_get_receipt", "SUCCEEDED", int((time.monotonic() - start_time)*1000), operation_id=operation_id)
-            return json.dumps(resp, indent=2)
+            return json.dumps(fs.get_receipt(operation_id), indent=2)
         except Exception as exc:
-            log_usage(usage_db, "amf_get_receipt", "FAILED", int((time.monotonic() - start_time)*1000), operation_id=operation_id, error_detail=str(exc))
             return json.dumps({"status": "error", "error": str(exc)}, indent=2)
-
-    @mcp.tool()
-    def amf_usage(limit: int = 100) -> str:
-        """Retrieves the vendor-independent local usage ledger for projection hooks."""
-        start_time = time.monotonic()
-        try:
-            with sqlite3.connect(usage_db) as conn:
-                conn.row_factory = sqlite3.Row
-                rows = conn.execute(
-                    "SELECT * FROM usage_ledger ORDER BY timestamp DESC LIMIT ?",
-                    (limit,)
-                ).fetchall()
-            resp = {"schema": "aspace.dc.usage-ledger.v1", "records": [dict(r) for r in rows]}
-            log_usage(usage_db, "amf_usage", "SUCCEEDED", int((time.monotonic() - start_time)*1000))
-            return json.dumps(resp, indent=2)
-        except Exception as exc:
-            log_usage(usage_db, "amf_usage", "FAILED", int((time.monotonic() - start_time)*1000), error_detail=str(exc))
-            raise
 
     return mcp
 
@@ -427,7 +319,6 @@ def main():
     parser.add_argument("--process-url", help="Process broker URL")
     parser.add_argument("--browser-url", help="M1 browser/session daemon URL")
     parser.add_argument("--name", default="aspace-dc", help="MCP server name")
-    parser.add_argument("--usage-db", default="gateway_usage.db", help="Path to SQLite usage ledger")
     parser.add_argument(
         "--transport",
         default="stdio",
@@ -438,7 +329,7 @@ def main():
     parser.add_argument("--port", type=int, default=8001, help="HTTP port")
     args = parser.parse_args()
 
-    mcp = build_gateway(args.name, args.amf_url, args.process_url, args.browser_url, usage_db=args.usage_db)
+    mcp = build_gateway(args.name, args.amf_url, args.process_url, args.browser_url)
     if args.transport == "streamable-http":
         if args.host not in {"127.0.0.1", "localhost", "::1"}:
             raise SystemExit(
