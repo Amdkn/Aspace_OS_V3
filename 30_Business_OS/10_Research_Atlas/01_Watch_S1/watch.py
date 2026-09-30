@@ -98,7 +98,7 @@ def capture_video(url, out_dir):
     print("-> Downloading low-res video for keyframe extraction...")
     cmd_vid = [
         "yt-dlp",
-        "-f", "worstvideo[ext=mp4]+worstaudio[ext=m4a]/worst[ext=mp4]/worst",
+        "-f", "worstvideo/worst",
         "-o", str(video_file),
         url
     ]
