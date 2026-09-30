@@ -58,7 +58,7 @@ def release_mutex(h):
 def free_port():
     s=socket.socket(); s.bind(("127.0.0.1",0)); p=s.getsockname()[1]; s.close(); return p
 
-def wait_http(url,timeout=12):
+def wait_http(url,timeout=20):
     end=time.time()+timeout; last=None
     while time.time()<end:
         try:
@@ -66,13 +66,14 @@ def wait_http(url,timeout=12):
         except Exception as e:last=e; time.sleep(.15)
     raise RuntimeError(f"timeout waiting for {url}: {last}")
 
-def wait_tcp(port,timeout=12):
+def wait_tcp(port,timeout=25):
     end=time.time()+timeout; last=None
     while time.time()<end:
         try:
             with socket.create_connection(("127.0.0.1",port),timeout=.8):return
         except OSError as e:last=e; time.sleep(.15)
     raise RuntimeError(f"timeout waiting for 127.0.0.1:{port}: {last}")
+
 
 def allow_executables():
     candidates=[
@@ -110,7 +111,7 @@ class Stack:
         self.spawn("process",args); wait_http(f"http://127.0.0.1:{p['process']}/health")
         self.spawn("session",[paths["session"],"--db",DATA/"session.sqlite3","--port",p["session"]]); wait_http(f"http://127.0.0.1:{p['session']}/health")
         self.spawn("worker",[paths["worker"],"--daemon",f"http://127.0.0.1:{p['session']}","--port",p["worker"],"--session-id","aspace-dc-sovereign","--log",LOGS/"worker.jsonl"])
-        deadline=time.time()+12
+        deadline=time.time()+20
         while time.time()<deadline:
             h=wait_http(f"http://127.0.0.1:{p['session']}/health",timeout=2)
             if h.get("worker")=="UP":break

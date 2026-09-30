@@ -23,11 +23,29 @@ function Get-RepoRoot {
   if(Test-Path $Config){
     try {
       $cfg=Get-Content $Config -Raw | ConvertFrom-Json
-      if($cfg.repo_root){ return [IO.Path]::GetFullPath([string]$cfg.repo_root) }
+      if($cfg.repo_root -and (Test-Path (Join-Path $cfg.repo_root "10_Tech_OS\machine_fabric\gateway\gateway.py"))){
+        return [IO.Path]::GetFullPath([string]$cfg.repo_root)
+      }
     } catch {}
   }
-  $candidate=(Resolve-Path (Join-Path $PSScriptRoot "..\..\..\..") -ErrorAction SilentlyContinue)
-  if($candidate -and (Test-Path (Join-Path $candidate.Path "10_Tech_OS\machine_fabric\gateway\gateway.py"))){ return $candidate.Path }
+  $dir=$PSScriptRoot
+  while($dir){
+    if(Test-Path (Join-Path $dir "10_Tech_OS\machine_fabric\gateway\gateway.py")){
+      return (Resolve-Path $dir).Path
+    }
+    $parent=Split-Path $dir -Parent
+    if(-not $parent -or $parent -eq $dir){ break }
+    $dir=$parent
+  }
+  $dir=(Get-Location).Path
+  while($dir){
+    if(Test-Path (Join-Path $dir "10_Tech_OS\machine_fabric\gateway\gateway.py")){
+      return (Resolve-Path $dir).Path
+    }
+    $parent=Split-Path $dir -Parent
+    if(-not $parent -or $parent -eq $dir){ break }
+    $dir=$parent
+  }
   throw "repo_root unavailable; pass -RepoRoot or run from the repository"
 }
 function Read-Manifest {
@@ -56,10 +74,9 @@ function Install-DC {
   Copy-Item $srcControl $InstalledControl -Force
   $autostart=-not $NoAutostart
   Write-Config $repo $autostart
-  $python=(Get-Command python).Source
-  $pythonw=Join-Path (Split-Path $python) "pythonw.exe"
-  if(-not (Test-Path $pythonw)){ $pythonw=$python }
-  $cmd='@echo off'+[Environment]::NewLine+('"{0}" "{1}" start -Root "{2}" >nul 2>&1' -f $pythonw,$InstalledControl,$Root)+[Environment]::NewLine
+  $psExe=(Get-Command powershell.exe -ErrorAction SilentlyContinue).Source
+  if(-not $psExe){ $psExe="powershell.exe" }
+  $cmd='@echo off'+[Environment]::NewLine+('"{0}" -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "{1}" -Command start -Root "{2}" >nul 2>&1' -f $psExe,$InstalledControl,$Root)+[Environment]::NewLine
   [IO.File]::WriteAllText($Launcher,$cmd,(New-Object Text.UTF8Encoding($false)))
   if($autostart){
     New-Item -Path $RunKey -Force | Out-Null
@@ -97,7 +114,7 @@ function Start-DC {
     foreach($k in $old.Keys){ [Environment]::SetEnvironmentVariable($k,$old[$k],"Process") }
     Remove-Item Env:\ASPACE_DC_ROOT,Env:\ASPACE_DC_REPO_ROOT,Env:\ASPACE_DC_ALLOWED_ROOT -ErrorAction SilentlyContinue
   }
-  $deadline=(Get-Date).AddSeconds(20)
+  $deadline=(Get-Date).AddSeconds(45)
   do {
     Start-Sleep -Milliseconds 250
     $new=Read-Manifest

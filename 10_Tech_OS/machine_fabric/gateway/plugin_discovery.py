@@ -5,7 +5,10 @@ import os
 import sys
 from typing import Dict, List, Type
 
-from machine_fabric.gateway.plugin_sdk import GatewayPlugin
+try:
+    from machine_fabric.gateway.plugin_sdk import GatewayPlugin
+except ImportError:
+    from plugin_sdk import GatewayPlugin
 
 
 logger = logging.getLogger(__name__)

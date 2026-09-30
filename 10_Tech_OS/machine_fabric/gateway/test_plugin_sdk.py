@@ -4,8 +4,15 @@ import tempfile
 import unittest
 from unittest.mock import MagicMock, patch
 
+from pathlib import Path
+import sys
+_TECH_OS = str(Path(__file__).resolve().parents[2])
+if _TECH_OS not in sys.path:
+    sys.path.insert(0, _TECH_OS)
+
 from machine_fabric.gateway.plugin_sdk import GatewayPlugin, MockPluginContext, PluginContext
 from machine_fabric.gateway.plugin_discovery import discover_plugins
+
 
 
 class DummyPlugin(GatewayPlugin):
