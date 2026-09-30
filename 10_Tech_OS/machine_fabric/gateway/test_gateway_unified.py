@@ -75,7 +75,7 @@ async def wait_client(url):
     last = None
     for _ in range(40):
         try:
-            c = Client(url, timeout=30)
+            c = Client(url, timeout=4)
             await c.__aenter__()
             return c
         except Exception as exc:
@@ -216,9 +216,7 @@ async def main():
                 },
             )
             stop_payload = json.loads(result_text(stop_result))
-            assert stop_payload["state"] in ("SUCCEEDED", "FAILED"), stop_payload
-            if stop_payload["state"] == "FAILED":
-                assert "process tree still alive" in str(stop_payload.get("evidence", [])), stop_payload
+            assert stop_payload["state"] == "SUCCEEDED", stop_payload
             print("Process stop through unified MCP: OK")
 
             reg = post(

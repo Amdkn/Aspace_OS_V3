@@ -1,0 +1,24 @@
+{
+  "work_id": "214",
+  "timestamp": "2026-09-30T22:40:34.713543+00:00",
+  "files": {
+    "dc.ps1": {
+      "sha256": "94dbb726fd68e68a9ee88b6d450fe4eae49f58f3e42ecd0a6a8f496c21d53c91"
+    },
+    "10_Tech_OS/kernel/dc_recovery_daemon.py": {
+      "sha256": "20fd3d725d62ef63f32b3cc3b82813d700c85bf5674579080b0f771435db6dc7"
+    },
+    "10_Tech_OS/kernel/dc_bedrock_sentinel.py": {
+      "sha256": "5c73bc6bb326c49fe0ed756f0c2b1f383a06c6d4141cb98e44e9571ef96f0928"
+    },
+    "10_Tech_OS/kernel/test_dc_recovery.py": {
+      "sha256": "7e2d427663503122b736e18b655689bacd8288d862ce1fc22d773a15dbb7067d"
+    }
+  },
+  "test_results": {
+    "command": "PYTHONPATH=$(pwd)/10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_dc_recovery.py",
+    "exit_code": 0,
+    "stdout": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.451s\n\nOK\n",
+    "stderr": ""
+  }
+}
