@@ -1,0 +1,51 @@
+{
+  "schema": "aspace.discover-ai.gws-receipt.v1",
+  "batch_id": "20260930074537",
+  "timestamp": "2026-09-30T07:45:38.966349+00:00",
+  "workbook": "1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0",
+  "mock_mode": false,
+  "payload": [
+    {
+      "tab": "11_Runs",
+      "keys": [
+        "run-canary-20260930074522"
+      ],
+      "data": {
+        "run_id": "run-canary-20260930074522",
+        "operation_id": "op-run-canary-20260930074522",
+        "stage": "M0_GWS_CANARY",
+        "tool": "gws_adapter.py",
+        "harness": "local-gws-cli",
+        "model": "deterministic",
+        "started_at": "2026-09-30T07:45:37.862767+00:00",
+        "finished_at": "2026-09-30T07:45:37.862778+00:00",
+        "status": "PASS",
+        "input_hash": "sha256:dba7496762858a92",
+        "output_ref": "canary_receipts\\run-canary-20260930074522.json",
+        "receipt_ref": "canary_receipts\\run-canary-20260930074522.json",
+        "error_code": "",
+        "retry_of": ""
+      }
+    }
+  ],
+  "result": {
+    "status": "SUCCESS",
+    "written": 1,
+    "live_details": {
+      "11_Runs": {
+        "appended": 1,
+        "response": {
+          "spreadsheetId": "1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0",
+          "tableRange": "'11_Runs'!A1:N6",
+          "updates": {
+            "spreadsheetId": "1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0",
+            "updatedCells": 14,
+            "updatedColumns": 14,
+            "updatedRange": "'11_Runs'!A7:N7",
+            "updatedRows": 1
+          }
+        }
+      }
+    }
+  }
+}
