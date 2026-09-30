@@ -44,7 +44,11 @@ while (true) {
 
     string worker = Environment.GetEnvironmentVariable("ASPACE_WORKER_URL");
     if (string.IsNullOrWhiteSpace(worker)) {
-        string runtimeJsonPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".aspace", "dc", "run", "runtime.json");
+        string userProfile = Environment.GetEnvironmentVariable("USERPROFILE") ?? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        if (!System.Runtime.InteropServices.RuntimeInformation.IsOSPlatform(System.Runtime.InteropServices.OSPlatform.Windows)) {
+            userProfile = Environment.GetEnvironmentVariable("HOME") ?? Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+        }
+        string runtimeJsonPath = Path.Combine(userProfile, ".aspace", "dc", "run", "runtime.json");
         if (File.Exists(runtimeJsonPath)) {
             try {
                 using var doc = JsonDocument.Parse(File.ReadAllText(runtimeJsonPath));
@@ -52,6 +56,10 @@ while (true) {
                     worker = urlProp.GetString();
                 } else if (doc.RootElement.TryGetProperty("worker_port", out var portProp) && portProp.ValueKind == JsonValueKind.Number) {
                     worker = $"http://127.0.0.1:{portProp.GetInt32()}/native";
+                } else if (doc.RootElement.TryGetProperty("ports", out var portsProp) && portsProp.ValueKind == JsonValueKind.Object) {
+                    if (portsProp.TryGetProperty("worker", out var wPort) && wPort.ValueKind == JsonValueKind.Number) {
+                        worker = $"http://127.0.0.1:{wPort.GetInt32()}/native";
+                    }
                 }
             } catch { }
         }

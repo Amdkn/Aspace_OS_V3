@@ -94,6 +94,13 @@ class TestNativeHostDiscovery(unittest.TestCase):
         self.assertEqual(resp["error"], "WORKER_UNAVAILABLE")
         self.assertIn("9999", resp["detail"] or "")
 
+    def test_discovery_via_ports_worker(self):
+        self.runtime_json.write_text(json.dumps({"ports": {"worker": 11111}}))
+        resp = self.run_host_with_message({"type": "hello"})
+        self.assertFalse(resp["ok"])
+        self.assertEqual(resp["error"], "WORKER_UNAVAILABLE")
+        self.assertIn("11111", resp["detail"] or "")
+
     def test_dynamic_reconnect_during_lifetime(self):
         # Start the process without a worker URL
         p = subprocess.Popen([str(self.exe_path)], env=self.env, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
