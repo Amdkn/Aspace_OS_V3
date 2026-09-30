@@ -5,7 +5,12 @@ import os
 import sys
 from typing import Dict, List, Type
 
-from machine_fabric.gateway.plugin_sdk import GatewayPlugin
+try:
+    from machine_fabric.gateway.plugin_sdk import GatewayPlugin
+except ModuleNotFoundError:
+    # Production runtime launches gateway.py directly from this directory.
+    # Keep plugin discovery valid in both package and script execution modes.
+    from plugin_sdk import GatewayPlugin
 
 
 logger = logging.getLogger(__name__)
