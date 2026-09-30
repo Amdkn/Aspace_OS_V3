@@ -290,6 +290,40 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
         }
 
     @mcp.tool()
+    def amf_presence() -> str:
+        """Retrieves the unified runtime presence state across all AMF backends."""
+        start_time = time.monotonic()
+        try:
+            s = surface()
+            backends = s.get("backends", {})
+            
+            presence = {}
+            for backend, data in backends.items():
+                if "presence" in data:
+                    presence[backend] = data["presence"]
+                    
+                if "degraded_reason" in data and data["degraded_reason"]:
+                    if backend not in presence:
+                        presence[backend] = {}
+                    presence[backend]["degraded_reason"] = data["degraded_reason"]
+                
+                # If there's no presence at all (like when offline), let's ensure we at least report its offline reason
+                if backend not in presence and "reason" in data:
+                    presence[backend] = {"active": False, "degraded_reason": data.get("detail") or data.get("reason")}
+                elif backend not in presence and data.get("aggregate") == "DEGRADED":
+                    presence[backend] = {"active": False, "degraded_reason": data.get("degraded_reason")}
+            
+            resp = {
+                "schema": "aspace.dc.presence.v1",
+                "backends": presence
+            }
+            log_usage(usage_db, "amf_presence", "SUCCEEDED", int((time.monotonic() - start_time)*1000))
+            return json.dumps(resp, indent=2)
+        except Exception as exc:
+            log_usage(usage_db, "amf_presence", "FAILED", int((time.monotonic() - start_time)*1000), error_detail=str(exc))
+            raise
+
+    @mcp.tool()
     def amf_health() -> str:
         """Returns normalized gateway/backend health without inventing liveness."""
         start_time = time.monotonic()

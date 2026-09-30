@@ -743,6 +743,10 @@ class AMFEngine:
             "profile": "M0_LOCAL_FS",
             "allowed_root": str(self.allowed_root),
             "policy_version": POLICY_VERSION,
+            "presence": {
+                "active": True
+            },
+            "degraded_reason": None
         }
 
 
