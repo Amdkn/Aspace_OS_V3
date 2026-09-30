@@ -66,6 +66,12 @@ class Store:
             r=c.execute("select * from worker where lease_expires>? order by fence desc limit 1",(now(),)).fetchone()
             return dict(r) if r else None
         finally:c.close()
+    def latest_worker(self):
+        c=self.con()
+        try:
+            r=c.execute("select * from worker order by fence desc limit 1").fetchone()
+            return dict(r) if r else None
+        finally:c.close()
     def claim(self,msg):
         op=msg["operation_id"]; fp=msg["fingerprint"]; wid=msg["worker_id"]; fence=int(msg["fencing_token"])
         current=self.current_worker()
@@ -115,23 +121,66 @@ class Handler(BaseHTTPRequestHandler):
     server:App
     def log_message(self,*a): pass
     def sendj(self,status,p):
-        b=canon(p).encode(); self.send_response(status); self.send_header("Content-Type","application/json"); self.send_header("Content-Length",str(len(b))); self.end_headers(); self.wfile.write(b)
+        try:
+            b=canon(p).encode("utf-8")
+            self.send_response(status)
+            self.send_header("Content-Type","application/json")
+            self.send_header("Content-Length",str(len(b)))
+            self.send_header("Connection", "close")
+            self.end_headers()
+            self.wfile.write(b)
+            self.wfile.flush()
+            self.close_connection = True
+        except Exception as e:
+            import sys
+            print("SENDJ EXCEPTION:", e, file=sys.stderr)
     def body(self):
         n=int(self.headers.get("Content-Length","0")); return json.loads(self.rfile.read(n).decode()) if n else {}
     def do_GET(self):
-        if urlparse(self.path).path=="/health":
-            w=self.server.store.current_worker()
-            self.sendj(200,{"schema":SCHEMA_HEALTH,"daemon":"UP","worker":"UP" if w else "DOWN","transport":"LOCAL","capabilities":{"browser.tabs.read":"AVAILABLE" if w else "UNAVAILABLE","browser.dom.action":"AVAILABLE" if w else "UNAVAILABLE","browser.debugger.attach":"UNAVAILABLE"},"aggregate":"ONLINE" if w else "DEGRADED","worker_ref":w["worker_id"] if w else None,"fencing_token":int(w["fence"]) if w else None}); return
-        self.sendj(404,{"error":"NOT_FOUND"})
+        try:
+            if urlparse(self.path).path=="/health":
+                w=self.server.store.current_worker()
+                latest=self.server.store.latest_worker()
+                
+                presence = {
+                    "active": bool(w),
+                    "ttl_expired": bool(latest and not w),
+                    "last_seen": latest["heartbeat_at"] if latest else None,
+                    "session_id": latest["session_id"] if latest else None,
+                    "fencing_token": int(latest["fence"]) if latest else None,
+                    "worker_id": latest["worker_id"] if latest else None
+                }
+                
+                degraded_reason = None
+                if presence["ttl_expired"]: degraded_reason = "WORKER_TTL_EXPIRED_STALE"
+                elif not latest: degraded_reason = "NO_WORKER_EVER_REGISTERED"
+
+                resp = {"schema":SCHEMA_HEALTH,"daemon":"UP","worker":"UP" if w else "DOWN","transport":"LOCAL","capabilities":{"browser.tabs.read":"AVAILABLE" if w else "UNAVAILABLE","browser.dom.action":"AVAILABLE" if w else "UNAVAILABLE","browser.debugger.attach":"UNAVAILABLE"},"aggregate":"ONLINE" if w else "DEGRADED","worker_ref":w["worker_id"] if w else None,"fencing_token":int(w["fence"]) if w else None, "presence": presence, "degraded_reason": degraded_reason}
+                self.sendj(200, resp)
+                return
+            self.sendj(404,{"error":"NOT_FOUND"})
+        except Exception as e:
+            import sys, traceback
+            traceback.print_exc(file=sys.stderr)
+            self.sendj(500, {"error": "INTERNAL_ERROR", "detail": str(e)})
     def do_POST(self):
-        p=urlparse(self.path).path; b=self.body()
-        if p=="/worker/register": self.sendj(200,self.server.store.register(b["worker_id"],b["session_id"],b.get("capabilities") or [])); return
-        if p=="/worker/heartbeat": self.sendj(200,{"ok":self.server.store.heartbeat(b["worker_id"],b["fencing_token"])}); return
-        if p=="/browser/claim": s,o=self.server.store.claim(b); self.sendj(s,o); return
-        if p=="/browser/complete": s,o=self.server.store.complete(b); self.sendj(s,o); return
-        self.sendj(404,{"error":"NOT_FOUND"})
+        try:
+            p=urlparse(self.path).path
+            b=self.body()
+            if p=="/worker/register": self.sendj(200,self.server.store.register(b["worker_id"],b["session_id"],b.get("capabilities") or [])); return
+            if p=="/worker/heartbeat": self.sendj(200,{"ok":self.server.store.heartbeat(b["worker_id"],b["fencing_token"])}); return
+            if p=="/browser/claim": s,o=self.server.store.claim(b); self.sendj(s,o); return
+            if p=="/browser/complete": s,o=self.server.store.complete(b); self.sendj(s,o); return
+            self.sendj(404,{"error":"NOT_FOUND"})
+        except (ValueError, KeyError, TypeError) as e:
+            self.sendj(400, {"error": "BAD_REQUEST", "detail": str(e)})
+        except Exception as e:
+            import sys, traceback
+            traceback.print_exc(file=sys.stderr)
+            self.sendj(500, {"error": "INTERNAL_ERROR", "detail": str(e)})
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("--db",required=True); p.add_argument("--port",type=int,required=True); a=p.parse_args()
-    app=App(("127.0.0.1",a.port),Store(a.db)); print(canon({"state":"UP","port":a.port,"db":str(Path(a.db).resolve())}),flush=True); app.serve_forever()
+    app=App(("127.0.0.1",a.port),Store(a.db)); port = app.server_address[1]
+    print(canon({"state":"UP","port":port,"db":str(Path(a.db).resolve())}),flush=True); app.serve_forever()
 if __name__=="__main__": main()

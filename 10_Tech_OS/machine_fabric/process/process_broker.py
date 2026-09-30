@@ -247,7 +247,16 @@ class Engine:
         try:rows=c.execute("select session_id,pid,state from process_session where state='RUNNING'").fetchall()
         finally:c.close()
         detached=[r["session_id"] for r in rows if pid_alive(int(r["pid"])) and r["session_id"] not in self.handles]
-        return {"schema":m0.HEALTH_SCHEMA,"daemon":"UP","worker":"NOT_REQUIRED","transport":"LOCAL","capabilities":{"machine.process.start":"AVAILABLE","machine.process.read":"AVAILABLE","machine.process.stop":"AVAILABLE","machine.process.interact":"DEGRADED" if detached else "AVAILABLE"},"aggregate":"DEGRADED" if detached else "ONLINE","detached_sessions":detached}
+        
+        presence = {
+            "active": True,
+            "orphaned_sessions": len(detached),
+            "tracking": len(self.handles)
+        }
+        
+        degraded_reason = "ORPHANED_SESSIONS_DETECTED" if detached else None
+
+        return {"schema":m0.HEALTH_SCHEMA,"daemon":"UP","worker":"NOT_REQUIRED","transport":"LOCAL","capabilities":{"machine.process.start":"AVAILABLE","machine.process.read":"AVAILABLE","machine.process.stop":"AVAILABLE","machine.process.interact":"DEGRADED" if detached else "AVAILABLE"},"aggregate":"DEGRADED" if detached else "ONLINE","detached_sessions":detached, "presence": presence, "degraded_reason": degraded_reason}
 
 class Server(ThreadingHTTPServer):
     daemon_threads=True
@@ -273,5 +282,6 @@ class Handler(BaseHTTPRequestHandler):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("--db",required=True);p.add_argument("--allowed-root",required=True);p.add_argument("--allow-exe",action="append",required=True);p.add_argument("--port",type=int,required=True);a=p.parse_args()
-    e=Engine(a.db,a.allowed_root,a.allow_exe);s=Server(("127.0.0.1",a.port),e);print(canon({"state":"UP","port":a.port,"health":e.health()}),flush=True);s.serve_forever()
+    e=Engine(a.db,a.allowed_root,a.allow_exe);s=Server(("127.0.0.1",a.port),e);port = s.server_address[1]
+    print(canon({"state":"UP","port":port,"health":e.health()}),flush=True);s.serve_forever()
 if __name__=="__main__":main()
