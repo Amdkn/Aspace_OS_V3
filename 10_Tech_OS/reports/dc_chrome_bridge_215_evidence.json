@@ -1,0 +1,30 @@
+{
+  "schema": "aspace.dc.p3-evidence.v1",
+  "work_id": "215",
+  "result": "PASS",
+  "tested_on": "Amd-PC / Windows",
+  "checks": {
+    "stable_installed_extension_directory": true,
+    "deterministic_extension_identity": true,
+    "chrome_external_extension_registry": true,
+    "native_messaging_host_registration": true,
+    "clean_install_update_uninstall": true,
+    "zero_registry_policy_manifest_residue": true,
+    "worker_reconnect_and_fencing": true,
+    "replay_and_idempotence": true,
+    "no_raw_cookies_exported": true,
+    "cdp_debugger_isolated": true,
+    "user_chrome_profile_isolation": true
+  },
+  "test_results": {
+    "test_installer": "Ran 2 tests in 10.443s - OK",
+    "test_m1_prod": "Ran 2 tests in 14.617s - OK"
+  },
+  "notes": [
+    "Extension packaged and copied outside repo to %LOCALAPPDATA%\\Aspace\\Extension.",
+    "Deterministic extension ID occamkcdejbkfmobilobgcloapndicjk mapped via manifest key.",
+    "Chrome External Extensions registry key HKCU\\Software\\Google\\Chrome\\Extensions\\<id> managed with zero residue on uninstall.",
+    "Native Messaging host registered at HKCU\\Software\\Google\\Chrome\\NativeMessagingHosts\\com.aspace.machine_fabric.m1.",
+    "No raw cookies or CDP debugger privileges exposed by default."
+  ]
+}
