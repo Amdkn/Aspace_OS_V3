@@ -2,7 +2,13 @@ import unittest
 import tempfile
 import sqlite3
 import os
-from agent_os_fullstack.rory_reconciler import RoryReconciler
+
+from pathlib import Path
+import sys
+_DIR = str(Path(__file__).resolve().parent)
+if _DIR not in sys.path:
+    sys.path.insert(0, _DIR)
+from rory_reconciler import RoryReconciler
 
 class TestRoryReconciler(unittest.TestCase):
     def setUp(self):
@@ -10,13 +16,16 @@ class TestRoryReconciler(unittest.TestCase):
         self.db_path = os.path.join(self.tmp_dir.name, "uc.db")
 
         # Setup mock schema
-        with sqlite3.connect(self.db_path) as conn:
+        conn = sqlite3.connect(self.db_path)
+        try:
             conn.execute("CREATE TABLE work (id INTEGER PRIMARY KEY, status TEXT)")
             # Insert some mock work items
             conn.execute("INSERT INTO work (id, status) VALUES (1, 'done')")
             conn.execute("INSERT INTO work (id, status) VALUES (2, 'done')")
             conn.execute("INSERT INTO work (id, status) VALUES (3, 'done')")
             conn.commit()
+        finally:
+            conn.close()
 
         self.reconciler = RoryReconciler(self.db_path)
 
@@ -70,6 +79,16 @@ class TestRoryReconciler(unittest.TestCase):
         self.assertEqual(receipt['state'], 'AMBIGUOUS')
         self.assertEqual(receipt['evidence']['planes']['runtime'], 'UNKNOWN')
         self.assertEqual(receipt['evidence']['planes']['uc.db'], 'UNKNOWN')
+
+    def test_nested_repo_drift(self):
+        receipt = self.reconciler.reconcile(
+            work_id=1,
+            local_runtime_state={'status': 'done', 'session_id': 'sess-123'},
+            git_fingerprint='sha-abc agentOsDesktopIsDirty=true',
+            supabase_projection={'status': 'done'}
+        )
+        self.assertEqual(receipt['state'], 'NESTED_REPO_DRIFT')
+        self.assertEqual(receipt['blocker'], 'Git drift')
 
 if __name__ == "__main__":
     unittest.main()

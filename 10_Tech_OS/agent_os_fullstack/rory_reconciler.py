@@ -22,20 +22,38 @@ class RoryReconciler:
         db_status = 'UNKNOWN'
 
         # Connect to uc.db to get the local WorkGraph truth
+        conn = None
         try:
-            with sqlite3.connect(self.db_path) as conn:
-                row = conn.execute("SELECT status FROM work WHERE id = ?", (work_id,)).fetchone()
-                if row:
-                    db_status = row[0]
+            conn = sqlite3.connect(self.db_path)
+            row = conn.execute("SELECT status FROM work WHERE id = ?", (work_id,)).fetchone()
+            if row:
+                db_status = row[0]
         except sqlite3.OperationalError:
             # If the DB doesn't exist or doesn't have the table, we handle it gracefully
             pass
+        finally:
+            if conn:
+                conn.close()
 
         runtime_status = local_runtime_state.get('status', 'UNKNOWN')
         supa_status = supabase_projection.get('status', 'UNKNOWN')
 
+        # Check for nested repo drift from git_fingerprint.
+        # Suppose git_fingerprint format could contain something like "DIRTY_AGENT_OS_DESKTOP"
+        # or we accept it as part of the state object. For simplicity, we just parse the string.
+        nested_repo_drift = False
+        if "agentOsDesktopIsDirty=true" in git_fingerprint or "NESTED_REPO_DRIFT" in git_fingerprint:
+            nested_repo_drift = True
+        elif isinstance(local_runtime_state.get('git'), dict) and local_runtime_state['git'].get('agentOsDesktopIsDirty'):
+            nested_repo_drift = True
+
         # Determine coherence state
-        if runtime_status == db_status == supa_status and runtime_status != 'UNKNOWN':
+        if nested_repo_drift:
+            state = 'NESTED_REPO_DRIFT'
+            reason = 'Agent OS Desktop nested repo is dirty or diverged.'
+            blocker = 'Git drift'
+            next_action = 'Commit or reset nested repo changes before reconciliation.'
+        elif runtime_status == db_status == supa_status and runtime_status != 'UNKNOWN':
             state = 'COHERENT'
             reason = 'All truth planes match.'
             blocker = None
