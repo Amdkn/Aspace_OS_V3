@@ -56,10 +56,9 @@ function Install-DC {
   Copy-Item $srcControl $InstalledControl -Force
   $autostart=-not $NoAutostart
   Write-Config $repo $autostart
-  $python=(Get-Command python).Source
-  $pythonw=Join-Path (Split-Path $python) "pythonw.exe"
-  if(-not (Test-Path $pythonw)){ $pythonw=$python }
-  $cmd='@echo off'+[Environment]::NewLine+('"{0}" "{1}" start -Root "{2}" >nul 2>&1' -f $pythonw,$InstalledControl,$Root)+[Environment]::NewLine
+  $pwsh=(Get-Command powershell.exe).Source
+  if(-not $pwsh){ $pwsh="powershell.exe" }
+  $cmd='@echo off'+[Environment]::NewLine+('"{0}" -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "{1}" start -Root "{2}" >nul 2>&1' -f $pwsh,$InstalledControl,$Root)+[Environment]::NewLine
   [IO.File]::WriteAllText($Launcher,$cmd,(New-Object Text.UTF8Encoding($false)))
   if($autostart){
     New-Item -Path $RunKey -Force | Out-Null
@@ -122,13 +121,21 @@ function Stop-DC {
 function Show-Status {
   $m=Read-Manifest
   if(-not $m){ return [pscustomobject]@{schema="aspace.dc.control.v1";state="STOPPED";reason="NO_MANIFEST"} }
+  if(-not (Test-Pid ([int]$m.supervisor_pid))){ return [pscustomobject]@{schema="aspace.dc.control.v1";state="STOPPED";reason="SUPERVISOR_DEAD"} }
   $services=[ordered]@{}
   foreach($p in $m.pids.PSObject.Properties){ $services[$p.Name]=[ordered]@{pid=[int]$p.Value;alive=(Test-Pid ([int]$p.Value))} }
   $health=[ordered]@{}
+  $healthOk=$true
   foreach($h in $m.health_urls.PSObject.Properties){
-    try { $health[$h.Name]=Invoke-RestMethod $h.Value -TimeoutSec 2 } catch { $health[$h.Name]=@{aggregate="UNAVAILABLE";reason=$_.Exception.Message} }
+    try {
+      $health[$h.Name]=Invoke-RestMethod $h.Value -TimeoutSec 2
+      if($health[$h.Name].aggregate -eq "UNAVAILABLE"){ $healthOk=$false }
+    } catch {
+      $health[$h.Name]=@{aggregate="UNAVAILABLE";reason=$_.Exception.Message}
+      $healthOk=$false
+    }
   }
-  $core=(Test-Pid ([int]$m.supervisor_pid)) -and $services.m0.alive -and $services.process.alive -and $services.session.alive -and $services.gateway.alive
+  $core=($healthOk) -and $services.m0.alive -and $services.process.alive -and $services.session.alive -and $services.gateway.alive
   [pscustomobject]@{schema="aspace.dc.control.v1";state=$(if($core){"ONLINE"}else{"DEGRADED"});gateway_url=$m.gateway_url;generation=$m.generation;supervisor_pid=$m.supervisor_pid;services=$services;health=$health;started_at=$m.started_at}
 }
 function Uninstall-DC {
