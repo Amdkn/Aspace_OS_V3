@@ -237,24 +237,52 @@ async def main():
             assert by_id2["browser.debugger.attach"]["availability"] == "UNAVAILABLE"
             print("Browser presence UNAVAILABLE->AVAILABLE through unified MCP: OK")
 
-            browser_exec = json.loads(
-                result_text(
-                    await client.call_tool(
-                        "amf_execute",
-                        {
-                            "capability": "browser.dom.action",
-                            "action": "set_text",
-                            "operation_id": "browser-p3-boundary",
-                            "payload": {"selector": "#x", "value": "y"},
-                            "risk_class": "consequential",
-                            "scope": "browser:tab:selected",
-                        },
-                    )
+            async def simulated_native_host():
+                import urllib.request
+                def get(url):
+                    req=urllib.request.Request(url,method="GET")
+                    with urllib.request.urlopen(req,timeout=3) as r: return json.loads(r.read().decode())
+                
+                # We need to give gateway time to send the request before we loop
+                for _ in range(50):
+                    try:
+                        tasks_resp = get(f"http://127.0.0.1:{browser_port}/browser/pending")
+                        if tasks_resp and tasks_resp.get("tasks"):
+                            task = tasks_resp["tasks"][0]
+                            op = task["operation_id"]
+                            fp = task["fingerprint"]
+                            claim = post(f"http://127.0.0.1:{browser_port}/browser/claim", {
+                                "operation_id": op, "fingerprint": fp, "worker_id": "gateway-test-worker", "fencing_token": reg["fencing_token"]
+                            })
+                            if claim.get("execute"):
+                                post(f"http://127.0.0.1:{browser_port}/browser/complete", {
+                                    "operation_id": op, "fingerprint": fp, "worker_id": "gateway-test-worker", "fencing_token": reg["fencing_token"],
+                                    "evidence": {"ok": True, "selector": "#x", "before": "", "after": "y"}
+                                })
+                                return
+                    except Exception as e:
+                        pass
+                    await asyncio.sleep(0.1)
+
+            sim_task = asyncio.create_task(simulated_native_host())
+
+            browser_exec_text = result_text(
+                await client.call_tool(
+                    "amf_execute",
+                    {
+                        "capability": "browser.dom.action",
+                        "action": "set_text",
+                        "operation_id": "browser-p3-execute",
+                        "payload": {"selector": "#x", "value": "y"},
+                        "risk_class": "consequential",
+                        "scope": "browser:tab:selected",
+                    },
                 )
             )
-            assert browser_exec["state"] == "UNAVAILABLE"
-            assert browser_exec["error"] == "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE"
-            print("Browser P3 authority boundary: OK")
+            browser_exec = json.loads(browser_exec_text)
+            await sim_task
+            assert browser_exec.get("state") == "SUCCEEDED", browser_exec
+            print("Browser execution through unified MCP: OK")
 
             health = json.loads(result_text(await client.call_tool("amf_health", {})))
             assert health["backends"]["filesystem"]["aggregate"] == "ONLINE"

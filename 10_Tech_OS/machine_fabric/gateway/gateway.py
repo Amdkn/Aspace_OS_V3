@@ -86,6 +86,9 @@ class JsonHttpClient:
     def execute(self, op):
         return self.request("POST", "/operations", data=op)
 
+    def browser_execute(self, op):
+        return self.request("POST", "/execute", data=op)
+
     def get_receipt(self, operation_id):
         return self.request("GET", f"/receipts/{operation_id}")
 
@@ -448,24 +451,24 @@ def build_gateway(name, fs_url, process_url=None, browser_url=None, usage_db="ga
                     plugin.cleanup(ctx)
             else:
                 # Route to legacy core backends
-                if capability.startswith("browser."):
-                    resp = {
-                        "state": "UNAVAILABLE",
-                        "error": "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE",
-                        "capability": capability,
-                        "availability": cap.get("availability"),
-                    }
-                    log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BROWSER_EXECUTION_REQUIRES_P3_PRODUCTION_BRIDGE")
-                    return json.dumps(resp, indent=2)
-    
-                backend = fs if capability.startswith("machine.fs.") else process
-                if not backend.configured:
+                backend = None
+                if capability.startswith("machine.fs."):
+                    backend = fs
+                elif capability.startswith("machine.process."):
+                    backend = process
+                elif capability.startswith("browser."):
+                    backend = browser
+
+                if not backend or not backend.configured:
                     resp = {"state": "UNAVAILABLE", "error": "BACKEND_NOT_CONFIGURED", "capability": capability}
                     log_usage(usage_db, "amf_execute", "UNAVAILABLE", int((time.monotonic() - start_time)*1000), operation_id, capability, action, False, "BACKEND_NOT_CONFIGURED")
                     return json.dumps(resp, indent=2)
     
                 try:
-                    receipt = backend.execute(op)
+                    if capability.startswith("browser."):
+                        receipt = backend.browser_execute(op)
+                    else:
+                        receipt = backend.execute(op)
                     is_replay = bool(receipt.get("replayed")) or bool(receipt.get("reconciled_after_restart"))
                     state = receipt.get("state", "UNKNOWN")
                     error_detail = None

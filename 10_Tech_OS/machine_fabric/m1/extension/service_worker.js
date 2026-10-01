@@ -25,30 +25,49 @@ function nativeRequest(msg) {
 async function runTask(taskMsg) {
   try {
     const fingerprint = await sha256(JSON.stringify(taskMsg));
+    
+    let selector = taskMsg.selector;
+    let value = taskMsg.value;
+    
+    // Support nested gateway payload format
+    if (taskMsg.payload) {
+      if (taskMsg.payload.selector) selector = taskMsg.payload.selector;
+      if (taskMsg.payload.value) value = taskMsg.payload.value;
+    }
+
     const claim = await nativeRequest({
        type: "claim",
        operation_id: taskMsg.operation_id,
        fingerprint,
        action: "browser.dom.action",
-       selector: taskMsg.selector,
-       value: taskMsg.value
+       selector: selector,
+       value: value
     });
 
     if (claim && claim.execute) {
       let evidence = {ok: false, error: "no_result"};
-      if (taskMsg.tab_id) {
+      let tabId = taskMsg.tab_id;
+      if (!tabId) {
+        // Try to find the active tab as a fallback
+        const tabs = await chrome.tabs.query({active: true, currentWindow: true});
+        if (tabs && tabs.length > 0) tabId = tabs[0].id;
+      }
+
+      if (tabId) {
         const results = await chrome.scripting.executeScript({
-          target: {tabId: taskMsg.tab_id},
-          func: (selector, value) => {
-            const el = document.querySelector(selector);
-            if(!el) return {ok: false, error: "selector_not_found", selector};
+          target: {tabId: tabId},
+          func: (sel, val) => {
+            const el = document.querySelector(sel);
+            if(!el) return {ok: false, error: "selector_not_found", selector: sel};
             const before = el.textContent;
-            el.textContent = value;
-            return {ok: true, selector, before, after: el.textContent, url: location.href};
+            if (val !== undefined) el.textContent = val;
+            return {ok: true, selector: sel, before, after: el.textContent, url: location.href};
           },
-          args: [taskMsg.selector, taskMsg.value]
+          args: [selector, value]
         });
         if (results && results[0]) evidence = results[0].result;
+      } else {
+         evidence = {ok: false, error: "no_active_tab"};
       }
       await nativeRequest({type: "complete", operation_id: taskMsg.operation_id, fingerprint, evidence});
     }
@@ -74,7 +93,12 @@ function connect() {
 async function pingLoop() {
   if (port) {
     try {
-      await nativeRequest({type: "hello"});
+      const helloResp = await nativeRequest({type: "hello"});
+      if (helloResp && helloResp.tasks && helloResp.tasks.length > 0) {
+        for (const task of helloResp.tasks) {
+           runTask(task);
+        }
+      }
       const tabs = await chrome.tabs.query({});
       await nativeRequest({type: "tabs", tabs: tabs.map(t=>({id:t.id,url:t.url,title:t.title,active:t.active}))});
     } catch(e) { }
