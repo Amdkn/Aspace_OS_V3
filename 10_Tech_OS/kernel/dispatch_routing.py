@@ -355,6 +355,7 @@ def route_reconcile_decision(db_path: str | Path, work_id: int) -> dict[str, Any
     with closing(_connect(db_path)) as con:
         reconcile_row = _latest_event(con, work_id, "rory_reconcile_decision")
         receipt_row = _latest_event(con, work_id, "harness_execution_receipt")
+        dispatch_row = _latest_event(con, work_id, "dispatch_envelope")
         routed_row = _latest_event(con, work_id, "continuation_routed")
 
     if not reconcile_row:
@@ -378,6 +379,18 @@ def route_reconcile_decision(db_path: str | Path, work_id: int) -> dict[str, Any
         raise DispatchRoutingError("reconcile decision has no stable correlation_id")
     if not return_route:
         raise DispatchRoutingError("reconcile decision has no return_route")
+
+    if verdict == "COMPLETE":
+        if not receipt_row:
+            raise DispatchRoutingError("COMPLETE requires a current execution receipt")
+        effect_state = str(receipt.get("effect_state") or "").upper()
+        receipt_correlation = str(receipt.get("correlation_id") or "")
+        if effect_state != "SUCCEEDED":
+            raise DispatchRoutingError("COMPLETE requires a SUCCEEDED execution receipt")
+        if receipt_correlation != str(correlation_id):
+            raise DispatchRoutingError("COMPLETE receipt correlation_id mismatch")
+        if dispatch_row and int(receipt_row["id"]) <= int(dispatch_row["id"]):
+            raise DispatchRoutingError("COMPLETE requires a receipt newer than the latest dispatch")
 
     if verdict == "RETRY_SAFE":
         effect_state = str(receipt.get("effect_state") or "").upper()

@@ -266,6 +266,61 @@ class DispatchRoutingTests(unittest.TestCase):
         self.assertEqual(routed["route_class"], "DONE")
         self.assertEqual(routed["correlation_id"], "corr-done")
 
+    def test_complete_rejects_unknown_receipt(self):
+        self.insert_event(
+            "harness_execution_receipt",
+            {
+                "correlation_id": "corr-done",
+                "return_route": self.return_route(),
+                "effect_state": "UNKNOWN",
+                "retry_safe": False,
+            },
+            "runtime",
+        )
+        self.insert_event(
+            "rory_reconcile_decision",
+            {
+                "correlation_id": "corr-done",
+                "return_route": self.return_route(),
+                "verdict": "COMPLETE",
+            },
+            "rory-cohere",
+        )
+        with self.assertRaisesRegex(DispatchRoutingError, "SUCCEEDED execution receipt"):
+            route_reconcile_decision(self.db, self.work_id)
+
+    def test_complete_rejects_receipt_older_than_latest_dispatch(self):
+        self.insert_event(
+            "harness_execution_receipt",
+            {
+                "correlation_id": "corr-done",
+                "return_route": self.return_route(),
+                "effect_state": "SUCCEEDED",
+                "retry_safe": False,
+            },
+            "runtime",
+        )
+        self.insert_event(
+            "dispatch_envelope",
+            {
+                "correlation_id": "corr-done",
+                "return_route": self.return_route(),
+                "required_capability": "rory-cohere",
+            },
+            "nardole-dispatch",
+        )
+        self.insert_event(
+            "rory_reconcile_decision",
+            {
+                "correlation_id": "corr-done",
+                "return_route": self.return_route(),
+                "verdict": "COMPLETE",
+            },
+            "rory-cohere",
+        )
+        with self.assertRaisesRegex(DispatchRoutingError, "newer than the latest dispatch"):
+            route_reconcile_decision(self.db, self.work_id)
+
     def test_reopen_build_routes_to_ryan(self):
         self.insert_event(
             "rory_reconcile_decision",
