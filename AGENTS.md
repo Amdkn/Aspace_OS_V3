@@ -76,7 +76,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 ## 4. Chaîne d'Outils & Résolution de Conway
 
 - **La racine reste minimale :** Le présent fichier route les requêtes sans encombrer le contexte.
-- **Un agent est un item qui traverse des états :** Géré via `uc.db` et les validation gates SSSF.
+- **Une mission/claim traverse des états; l'identité institutionnelle du holon ne se réduit jamais à l'item.** `uc.db`/WorkGraph gèrent le travail, les leases, bindings et receipts; Ryan, Yaz, Graham, Amy, Rory, River, Bill, Clara, Nardole, les Docteurs et Rick persistent au-delà d'un runtime ou d'une mission.
 - **Loi d'observation dynamique (D3) :** pas de SSOT universel unique. Le filesystem est autoritaire pour les artefacts locaux, GitHub pour leur histoire/version, Supabase `aspace` pour IPBD/WorkGraph/état machine partagé, Linear pour la gouvernance humaine. Les divergences se réconcilient par type + provenance + fraîcheur, jamais en déclarant un plan globalement supérieur.
 
 ---
@@ -96,7 +96,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 - Une panne d'une surface d'outil n'immobilise pas la mission : basculer vers une surface canonique sûre, enregistrer la dégradation, réconcilier ensuite.
 - Budget de vague : **24 actions externes maximum**; checkpoint à 16, aucun nouveau scope après 22, persistance + handover à 24 avant toute vague suivante.
 - La limite de contexte bloque une vague, jamais l'objectif. Une nouvelle session reprend depuis preuves durables sans demander à A0 de reconstruire le système.
-- E-Myth : A0=Visionnaire; Rick=Gatekeeper; Managers=orchestration systémique; Companions/tools=techniciens bornés. Le harness évite le Technician Bias par batching, délégation, acceptance, rollback et evidence.
+- E-Myth : A0=Visionnaire; Rick=Gatekeeper; Managers=orchestration systémique; **Companions=S3 holons cognitivement complets à juridiction bornée**. Les scripts/workflows/Jules/Hermes/Codex/Claude/MCP sont leurs instruments, jamais leurs identités. Le harness évite le Technician Bias par délégation d'autorité locale, batching, acceptance, rollback et evidence.
 - Un handover ne réduit jamais le standard de qualité : pas de redémarrage à zéro, pas de mutation partielle sans checkpoint, pas de faux `In Progress`.
 
 Canon détaillé :
@@ -108,13 +108,36 @@ Canon détaillé :
 
 ### Fractal Companion capability mesh
 
-- **Doctor13 / Kernel:** Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
-- **Doctor11 / Life:** Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
-- **Doctor12 / Buzz:** Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+The labels below are **first hats / stewardship anchors**, not cognitive limits.
+
+- **Doctor13 / Kernel:** Ryan→BUILD/industrialisation, Yaz→OBSERVE, Graham→STATE.
+- **Doctor11 / Life:** Amy→INTERFACE, Rory→PERSISTENCE, River→FLOW/operations.
+- **Doctor12 / Buzz:** Bill→RESEARCH, Clara→DESIGN/FORGE, Nardole→DISPATCH/INTERCONNECTION.
 - **Rick/S1:** cross-Core routing, conflict and convergence.
+- Each Companion remains a cognitively complete S3 holon inside bounded jurisdiction: perceive, investigate, reason, plan, act, verify, learn, coordinate, delegate, choose tools/runtimes and escalate.
 - Each specialty is a shared capability service for all eight peers; stewardship is never exclusivity.
+- Runtime/model/tool is orthogonal to identity: Jules, Hermes, Claude Code, Codex, scripts, workflows, MCPs and CI may embody or serve a holon without replacing it.
 - GitHub Discussions carry ambiguous needs/RFCs; Issues with `needs:<agent>` carry executable requests; PRs carry implementations; Evidence returns to requester/state planes.
 - Persistent sessions write in their identity worktree, never all into the shared root.
+
+### Loi anti-compression fractale — 2026-10-01
+
+**Invariant : un niveau inférieur possède moins de juridiction, jamais moins d'intelligence.**
+
+Cette loi s'applique aux trois grammaires:
+- S1/S2/S3 (Tech OS);
+- A1/A2/A3 (Life OS);
+- B1/B2/B3 (Business OS).
+
+Le motif canonique est `holon → holon → holon → instruments`, jamais `planner → manager → dumb worker → script`.
+
+Factory/Flow:
+- Clara forge le design, les contrats et l'acceptance;
+- Ryan industrialise les capacités/factories réutilisables;
+- River consomme/compose ces factories dans les FLOW et effets opérationnels;
+- aucun de ces stewardship anchors ne retire aux trois holons leurs facultés générales.
+
+Canon de correction et projections cross-repo: GitHub #311. Corpus Software Factory/Wargame: #312.
 
 ## 5. Distillation après preuve — DOX & OKF
 
