@@ -39,6 +39,15 @@ QUIET_PROVIDER_STATES = {
     "STARTING",
 }
 FAILED_PROVIDER_STATES = {"FAILED", "CANCELLED", "CANCELED"}
+MANAGER_OUTCOMES = {
+    "ACCEPT_CONTINUE",
+    "COMPLETE",
+    "RETRY_SAFE",
+    "RECOVER_UNKNOWN",
+    "REOPEN_BUILD",
+    "REOPEN_DESIGN",
+    "HOLD",
+}
 
 
 class MissionWatcherError(RuntimeError):
@@ -330,6 +339,115 @@ def resolve_manager_wake(
     return {"idempotent": False, "event_id": event_id, **payload}
 
 
+def apply_manager_resolution(
+    db_path: str | Path,
+    work_id: int,
+) -> dict[str, Any]:
+    """Promote a durable manager wake resolution into Rory/Nardole continuation.
+
+    This closes an orphaned terminal binding only when there is no live claim.
+    The same work_id/correlation_id/return route are preserved.
+    """
+    cell = project_mission_cell(db_path, work_id)
+    resolution = (cell.get("continuity") or {}).get("manager_wake_resolution")
+    if not resolution:
+        raise MissionWatcherError("no manager wake resolution to apply")
+
+    resolution_payload = resolution.get("payload") or {}
+    outcome = str(resolution_payload.get("outcome") or "").upper()
+    if outcome not in MANAGER_OUTCOMES:
+        raise MissionWatcherError(f"unsupported manager outcome: {outcome or '<empty>'}")
+
+    correlation_id = cell.get("correlation_id")
+    return_route = cell.get("return_to")
+    if not correlation_id or not return_route:
+        raise MissionWatcherError("manager resolution lacks durable correlation/return route")
+
+    source_resolution_event_id = int(resolution["id"])
+    source_transition_event_id = resolution_payload.get("source_transition_event_id")
+    binding = (cell.get("ownership") or {}).get("binding")
+    claim_live = bool((cell.get("ownership") or {}).get("claim_live"))
+
+    binding_event_id = None
+    reconcile_event_id = None
+    idempotent = False
+
+    with closing(_connect(db_path)) as con, con:
+        latest = _latest_event(con, work_id, "rory_reconcile_decision")
+        if latest:
+            latest_payload = _json(latest["payload"])
+            if int(latest_payload.get("source_manager_wake_event_id") or -1) == source_resolution_event_id:
+                reconcile_event_id = int(latest["id"])
+                idempotent = True
+
+        if not idempotent:
+            if binding and claim_live:
+                raise MissionWatcherError(
+                    "cannot apply manager resolution while binding still has a live claim"
+                )
+
+            if binding and not claim_live:
+                binding_id = int(binding["id"])
+                cur = con.execute(
+                    """UPDATE session_binding
+                       SET status='closed', ended_at=COALESCE(ended_at, datetime('now'))
+                       WHERE id=? AND status IN ('active','idle') AND ended_at IS NULL""",
+                    (binding_id,),
+                )
+                if cur.rowcount:
+                    binding_event_id = _append_event(
+                        con,
+                        work_id,
+                        "rory-cohere",
+                        "binding_reconciled",
+                        {
+                            "schema": "aspace.binding-reconciled.v1",
+                            "binding_id": binding_id,
+                            "session_key": binding.get("session_key"),
+                            "harness": binding.get("harness"),
+                            "reason": "terminal_binding_without_live_claim",
+                            "source_manager_wake_event_id": source_resolution_event_id,
+                        },
+                    )
+
+            reconcile_payload = {
+                "schema": "aspace.reconcile-decision.v2",
+                "correlation_id": str(correlation_id),
+                "return_route": return_route,
+                "verdict": outcome,
+                "source_manager_wake_event_id": source_resolution_event_id,
+                "source_transition_event_id": source_transition_event_id,
+                "manager_target": resolution_payload.get("manager_target"),
+            }
+            if outcome in {"REOPEN_BUILD", "REOPEN_DESIGN"}:
+                reconcile_payload["reopen_cell"] = (
+                    return_route.get("cell_id") if isinstance(return_route, dict) else None
+                )
+
+            reconcile_event_id = _append_event(
+                con,
+                work_id,
+                "rory-cohere",
+                "rory_reconcile_decision",
+                reconcile_payload,
+            )
+
+    from dispatch_routing import route_reconcile_decision
+
+    routed = route_reconcile_decision(db_path, work_id)
+    return {
+        "schema": "aspace.manager-resolution-application.v1",
+        "work_id": work_id,
+        "correlation_id": str(correlation_id),
+        "manager_outcome": outcome,
+        "source_manager_wake_event_id": source_resolution_event_id,
+        "binding_reconciled_event_id": binding_event_id,
+        "reconcile_event_id": reconcile_event_id,
+        "idempotent": idempotent,
+        "route": routed,
+    }
+
+
 def active_bindings(db_path: str | Path) -> list[dict[str, Any]]:
     with closing(_connect(db_path)) as con:
         rows = con.execute(
@@ -417,6 +535,9 @@ def main() -> int:
     p.add_argument("--outcome", required=True)
     p.add_argument("--manager-target", default="ANTIGRAVITY")
 
+    p = sub.add_parser("apply-manager-resolution")
+    p.add_argument("--work", type=int, required=True)
+
     args = parser.parse_args()
     if args.cmd == "observe":
         print(json.dumps(
@@ -449,6 +570,12 @@ def main() -> int:
                 outcome=args.outcome,
                 manager_target=args.manager_target,
             ),
+            indent=2,
+        ))
+        return 0
+    if args.cmd == "apply-manager-resolution":
+        print(json.dumps(
+            apply_manager_resolution(args.db, args.work),
             indent=2,
         ))
         return 0
