@@ -6,6 +6,7 @@ import sys
 import tempfile
 import time
 import urllib.request
+import os
 from pathlib import Path
 
 from fastmcp import Client
@@ -37,7 +38,8 @@ def post(url, payload):
         return r.status, json.loads(r.read().decode("utf-8"))
 
 def start_json_line(cmd):
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    env = {**os.environ, "PYTHONPATH": str(Path(__file__).resolve().parents[2])}
+    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=env)
     try:
         line = p.stdout.readline()
         if not line:
@@ -103,6 +105,7 @@ async def main():
         time.sleep(1)
 
         p_gw = free_port()
+        env = {**os.environ, "PYTHONPATH": str(Path(__file__).resolve().parents[2])}
         pgw = subprocess.Popen(
             [
                 sys.executable, str(GATEWAY),
@@ -117,6 +120,7 @@ async def main():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            env=env
         )
 
         gw_url = f"http://127.0.0.1:{p_gw}/mcp"
