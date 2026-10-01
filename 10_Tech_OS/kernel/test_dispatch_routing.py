@@ -11,6 +11,7 @@ from dispatch_routing import (
     route_reconcile_decision,
     select_runtime,
 )
+from mission_continuity import project_mission_cell
 
 
 HERE = Path(__file__).resolve().parent
@@ -71,6 +72,22 @@ class DispatchRoutingTests(unittest.TestCase):
         )
         self.assertEqual(result["decision"], "BACKPRESSURE")
         self.assertEqual(result["reason"], "no_safe_runtime")
+
+    def test_backpressure_is_durable_and_visible_in_mission_cell(self):
+        result = reserve_dispatch(
+            self.db,
+            self.work_id,
+            required_capability="repo-implementation",
+            candidates=[],
+            return_route=self.return_route(),
+            correlation_id="corr-pressure",
+            lock_path=self.lock,
+        )
+        self.assertEqual(result["decision"], "BACKPRESSURE")
+        cell = project_mission_cell(self.db, self.work_id)
+        self.assertEqual(cell["next_action"]["action"], "BACKPRESSURE")
+        self.assertEqual(cell["next_action"]["required_capability"], "repo-implementation")
+        self.assertEqual(cell["correlation_id"], "corr-pressure")
 
     def test_reserve_claims_once_and_duplicate_dispatch_fails_closed(self):
         first = reserve_dispatch(
