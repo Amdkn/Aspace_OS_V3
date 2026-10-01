@@ -16,6 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            .github
+            scripts
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
