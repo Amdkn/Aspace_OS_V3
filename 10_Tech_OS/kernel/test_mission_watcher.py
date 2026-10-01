@@ -2,6 +2,7 @@ import json
 import sqlite3
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 from mission_continuity import project_mission_cell
@@ -187,8 +188,9 @@ class MissionWatcherTests(unittest.TestCase):
             },
         )
 
-        first = project_mission_cell(self.db, self.work_id)
-        second = project_mission_cell(self.db, self.work_id)
+        now = datetime(2026, 10, 1, 6, 17, tzinfo=timezone.utc)
+        first = project_mission_cell(self.db, self.work_id, now=now)
+        second = project_mission_cell(self.db, self.work_id, now=now)
 
         self.assertEqual(
             first["continuity"]["worker_transition"]["id"],
