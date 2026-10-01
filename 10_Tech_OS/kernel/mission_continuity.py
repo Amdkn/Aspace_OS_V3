@@ -24,6 +24,9 @@ CONTINUITY_KINDS = (
     "fleet_dispatch_attempt",
     "fleet_dispatch_resolved",
     "dispatch_backpressure",
+    "worker_transition_observed",
+    "manager_wake_requested",
+    "manager_wake_resolved",
 )
 
 ROUTE_TERMINAL = {"DONE"}
@@ -253,6 +256,9 @@ def project_mission_cell(
     continuation = _latest(rows, "continuation_routed")
     resolved = _latest(rows, "continuation_resolved")
     backpressure = _latest(rows, "dispatch_backpressure")
+    worker_transition = _latest(rows, "worker_transition_observed")
+    manager_wake_request = _latest(rows, "manager_wake_requested")
+    manager_wake_resolution = _latest(rows, "manager_wake_resolved")
 
     correlation_id, return_route = _latest_continuity_identity(
         [backpressure, continuation, reconcile, receipt, request, dispatch]
@@ -290,6 +296,9 @@ def project_mission_cell(
             "continuation": continuation,
             "continuation_resolved": resolved,
             "backpressure": backpressure,
+            "worker_transition": worker_transition,
+            "manager_wake_request": manager_wake_request,
+            "manager_wake_resolution": manager_wake_resolution,
         },
         "next_action": next_action,
     }
