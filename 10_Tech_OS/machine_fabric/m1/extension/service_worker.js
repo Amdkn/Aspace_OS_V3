@@ -13,9 +13,11 @@ function nativeRequest(msg) {
     const requestId = crypto.randomUUID();
     const timer = setTimeout(()=>reject(new Error("native timeout")), 5000);
     const listener = response => {
-      clearTimeout(timer);
-      port.onMessage.removeListener(listener);
-      resolve(response);
+      if (response && response.request_id === requestId) {
+        clearTimeout(timer);
+        port.onMessage.removeListener(listener);
+        resolve(response);
+      }
     };
     port.onMessage.addListener(listener);
     port.postMessage({...msg, request_id:requestId});
@@ -96,7 +98,7 @@ async function pingLoop() {
       const helloResp = await nativeRequest({type: "hello"});
       if (helloResp && helloResp.tasks && helloResp.tasks.length > 0) {
         for (const task of helloResp.tasks) {
-           runTask(task);
+           await runTask(task);
         }
       }
       const tabs = await chrome.tabs.query({});
