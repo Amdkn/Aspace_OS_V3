@@ -29,6 +29,7 @@ VERDICT_ROUTES = {
     "COMPLETE": ("DONE", None),
     "RECOVER_UNKNOWN": ("RECOVER", "DONNA"),
     "REOPEN_BUILD": ("REOPEN", "RYAN"),
+    "NO_DURABLE_EFFECT": ("REOPEN", "RYAN"),
     "REOPEN_DESIGN": ("REOPEN", "CLARA"),
     "HOLD": ("WAIT", None),
 }
