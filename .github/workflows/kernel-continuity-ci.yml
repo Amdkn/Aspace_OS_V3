@@ -29,8 +29,10 @@ jobs:
         run: |
           python -m py_compile \
             10_Tech_OS/kernel/mission_continuity.py \
+            10_Tech_OS/kernel/runtime_presence.py \
             10_Tech_OS/kernel/uc_workgraph.py \
-            10_Tech_OS/kernel/test_mission_continuity.py
-      - name: Mission continuity regression suite
+            10_Tech_OS/kernel/test_mission_continuity.py \
+            10_Tech_OS/kernel/test_runtime_presence.py
+      - name: Mission continuity + runtime presence regression suite
         working-directory: 10_Tech_OS/kernel
-        run: python -m unittest test_mission_continuity.py
+        run: python -m unittest test_mission_continuity.py test_runtime_presence.py
