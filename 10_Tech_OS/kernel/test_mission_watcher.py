@@ -9,6 +9,7 @@ from mission_continuity import project_mission_cell
 from mission_watcher import (
     apply_manager_resolution,
     observe_bound_worker,
+    reconcile_binding,
     resolve_manager_wake,
 )
 
@@ -202,6 +203,57 @@ class MissionWatcherTests(unittest.TestCase):
             observed["wake_event_id"],
         )
         self.assertEqual(first, second)
+
+    def test_binding_reconciliation_requires_explicit_claim_release(self):
+        with self.assertRaises(Exception):
+            reconcile_binding(
+                self.db,
+                self.work_id,
+                session_key="jules-123",
+                reason="runtime target does not exist",
+            )
+
+        result = reconcile_binding(
+            self.db,
+            self.work_id,
+            session_key="jules-123",
+            reason="runtime target does not exist",
+            release_claim=True,
+        )
+        again = reconcile_binding(
+            self.db,
+            self.work_id,
+            session_key="jules-123",
+            reason="runtime target does not exist",
+            release_claim=True,
+        )
+
+        self.assertFalse(result["idempotent"])
+        self.assertTrue(result["released_claim"])
+        self.assertTrue(again["idempotent"])
+        self.assertEqual(self.event_count("binding_reconciled"), 1)
+
+        con = sqlite3.connect(self.db)
+        claim_count = con.execute(
+            "SELECT count(*) FROM claim WHERE work_id=?", (self.work_id,)
+        ).fetchone()[0]
+        work_status = con.execute(
+            "SELECT status FROM work WHERE id=?", (self.work_id,)
+        ).fetchone()[0]
+        binding = con.execute(
+            "SELECT status,ended_at FROM session_binding WHERE work_id=?",
+            (self.work_id,),
+        ).fetchone()
+        con.close()
+
+        self.assertEqual(claim_count, 0)
+        self.assertEqual(work_status, "pending")
+        self.assertEqual(binding[0], "failed")
+        self.assertIsNotNone(binding[1])
+        self.assertEqual(
+            project_mission_cell(self.db, self.work_id)["next_action"]["action"],
+            "DISPATCH_READY",
+        )
 
     def test_manager_resolution_reconciles_orphan_binding_and_routes_reopen(self):
         observed = observe_bound_worker(
