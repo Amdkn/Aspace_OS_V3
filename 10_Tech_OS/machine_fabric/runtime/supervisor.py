@@ -66,9 +66,11 @@ def wait_http(url,timeout=12):
         except Exception as e:last=e; time.sleep(.15)
     raise RuntimeError(f"timeout waiting for {url}: {last}")
 
-def wait_tcp(port,timeout=12):
+def wait_tcp(port,timeout=30,proc=None):
     end=time.time()+timeout; last=None
     while time.time()<end:
+        if proc is not None and proc.poll() is not None:
+            raise RuntimeError(f"process exited before bind on 127.0.0.1:{port}: exit={proc.returncode}")
         try:
             with socket.create_connection(("127.0.0.1",port),timeout=.8):return
         except OSError as e:last=e; time.sleep(.15)
@@ -115,8 +117,8 @@ class Stack:
             h=wait_http(f"http://127.0.0.1:{p['session']}/health",timeout=2)
             if h.get("worker")=="UP":break
             time.sleep(.2)
-        self.spawn("gateway",[paths["gateway"],"--amf-url",f"http://127.0.0.1:{p['filesystem']}","--process-url",f"http://127.0.0.1:{p['process']}","--browser-url",f"http://127.0.0.1:{p['session']}","--usage-db",DATA/"gateway_usage.sqlite3","--transport","streamable-http","--host","127.0.0.1","--port",p["gateway"],"--name","aspace-dc-sovereign"])
-        wait_tcp(p["gateway"])
+        gateway_proc=self.spawn("gateway",[paths["gateway"],"--amf-url",f"http://127.0.0.1:{p['filesystem']}","--process-url",f"http://127.0.0.1:{p['process']}","--browser-url",f"http://127.0.0.1:{p['session']}","--usage-db",DATA/"gateway_usage.sqlite3","--transport","streamable-http","--host","127.0.0.1","--port",p["gateway"],"--name","aspace-dc-sovereign"])
+        wait_tcp(p["gateway"],timeout=30,proc=gateway_proc)
         m={"schema":"aspace.dc.runtime.v1","state":"ONLINE","started_at":time.time(),"generation":self.generation,"supervisor_pid":os.getpid(),"repo_root":str(WT),"root":str(ROOT),"allowed_root":str(ALLOWED_ROOT),"ports":p,"pids":{k:v.pid for k,v in self.children.items()},"allow_exe":self.allow,"gateway_url":f"http://127.0.0.1:{p['gateway']}/mcp","health_urls":{"filesystem":f"http://127.0.0.1:{p['filesystem']}/health","process":f"http://127.0.0.1:{p['process']}/health","browser":f"http://127.0.0.1:{p['session']}/health"}}
         atomic_json(RUN/"runtime.json",m); print(json.dumps({"ok":True,"state":"ONLINE","generation":self.generation,"gateway_url":m["gateway_url"]}),flush=True)
     def dead(self):return [k for k,p in self.children.items() if p.poll() is not None]
