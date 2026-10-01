@@ -448,6 +448,99 @@ def apply_manager_resolution(
     }
 
 
+def reconcile_binding(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    session_key: str,
+    reason: str,
+    terminal_status: str = "failed",
+    release_claim: bool = False,
+) -> dict[str, Any]:
+    """Reconcile one expected active binding without ambiguous ownership.
+
+    A live claim is never released implicitly. Callers must opt in and the
+    claim harness must match the bound harness.
+    """
+    if terminal_status not in {"closed", "failed"}:
+        raise MissionWatcherError("terminal_status must be closed or failed")
+
+    expected_session = _normalize_session(session_key)
+    cell = project_mission_cell(db_path, work_id)
+    binding = (cell.get("ownership") or {}).get("binding")
+    claim = (cell.get("ownership") or {}).get("claim")
+    claim_live = bool((cell.get("ownership") or {}).get("claim_live"))
+
+    with closing(_connect(db_path)) as con, con:
+        latest = _latest_event(con, work_id, "binding_reconciled")
+        if not binding:
+            if latest:
+                payload = _json(latest["payload"])
+                if _normalize_session(payload.get("session_key")) == expected_session:
+                    return {
+                        "idempotent": True,
+                        "event_id": int(latest["id"]),
+                        **payload,
+                    }
+            raise MissionWatcherError("no active binding to reconcile")
+
+        actual_session = _normalize_session(binding.get("session_key"))
+        if actual_session != expected_session:
+            raise MissionWatcherError(
+                f"binding session mismatch: expected {expected_session}, got {actual_session}"
+            )
+
+        if claim_live and not release_claim:
+            raise MissionWatcherError(
+                "live claim exists; explicit release_claim is required"
+            )
+        if claim_live and claim and claim.get("harness") != binding.get("harness"):
+            raise MissionWatcherError("live claim harness does not match binding harness")
+
+        released_claim = False
+        if claim_live and release_claim:
+            cur = con.execute(
+                "DELETE FROM claim WHERE work_id=? AND harness=?",
+                (work_id, binding.get("harness")),
+            )
+            released_claim = bool(cur.rowcount)
+            if released_claim:
+                con.execute(
+                    """UPDATE work
+                       SET status='pending', updated_at=datetime('now')
+                       WHERE id=? AND status='claimed'""",
+                    (work_id,),
+                )
+
+        cur = con.execute(
+            """UPDATE session_binding
+               SET status=?, ended_at=COALESCE(ended_at, datetime('now'))
+               WHERE id=? AND status IN ('active','idle') AND ended_at IS NULL""",
+            (terminal_status, int(binding["id"])),
+        )
+        if not cur.rowcount:
+            raise MissionWatcherError("binding changed before reconciliation")
+
+        payload = {
+            "schema": "aspace.binding-reconciled.v1",
+            "binding_id": int(binding["id"]),
+            "session_key": actual_session,
+            "harness": binding.get("harness"),
+            "terminal_status": terminal_status,
+            "released_claim": released_claim,
+            "reason": reason,
+        }
+        event_id = _append_event(
+            con,
+            work_id,
+            "mission-watcher",
+            "binding_reconciled",
+            payload,
+        )
+
+    return {"idempotent": False, "event_id": event_id, **payload}
+
+
 def active_bindings(db_path: str | Path) -> list[dict[str, Any]]:
     with closing(_connect(db_path)) as con:
         rows = con.execute(
@@ -538,6 +631,13 @@ def main() -> int:
     p = sub.add_parser("apply-manager-resolution")
     p.add_argument("--work", type=int, required=True)
 
+    p = sub.add_parser("reconcile-binding")
+    p.add_argument("--work", type=int, required=True)
+    p.add_argument("--session", required=True)
+    p.add_argument("--reason", required=True)
+    p.add_argument("--status", choices=["closed", "failed"], default="failed")
+    p.add_argument("--release-claim", action="store_true")
+
     args = parser.parse_args()
     if args.cmd == "observe":
         print(json.dumps(
@@ -576,6 +676,19 @@ def main() -> int:
     if args.cmd == "apply-manager-resolution":
         print(json.dumps(
             apply_manager_resolution(args.db, args.work),
+            indent=2,
+        ))
+        return 0
+    if args.cmd == "reconcile-binding":
+        print(json.dumps(
+            reconcile_binding(
+                args.db,
+                args.work,
+                session_key=args.session,
+                reason=args.reason,
+                terminal_status=args.status,
+                release_claim=args.release_claim,
+            ),
             indent=2,
         ))
         return 0
