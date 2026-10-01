@@ -22,6 +22,7 @@ CONTINUITY_KINDS = (
     "continuation_resolved",
     "fleet_dispatch_attempt",
     "fleet_dispatch_resolved",
+    "dispatch_backpressure",
 )
 
 ROUTE_TERMINAL = {"DONE"}
@@ -102,9 +103,11 @@ def _derive_next_action(
     work_status: str,
     claim_live: bool,
     binding: dict[str, Any] | None,
+    dispatch: dict[str, Any] | None,
     receipt: dict[str, Any] | None,
     reconcile: dict[str, Any] | None,
     continuation: dict[str, Any] | None,
+    backpressure: dict[str, Any] | None,
 ) -> dict[str, Any]:
     if work_status == "done":
         return {"action": "TERMINAL", "reason": "work_done"}
@@ -112,6 +115,8 @@ def _derive_next_action(
     continuation_id = continuation["id"] if continuation else -1
     reconcile_id = reconcile["id"] if reconcile else -1
     receipt_id = receipt["id"] if receipt else -1
+    dispatch_id = dispatch["id"] if dispatch else -1
+    backpressure_id = backpressure["id"] if backpressure else -1
 
     if continuation and continuation_id >= reconcile_id and continuation_id >= receipt_id:
         payload = continuation["payload"]
@@ -140,6 +145,22 @@ def _derive_next_action(
             "retry_safe": receipt["payload"].get("retry_safe"),
         }
 
+    if (
+        backpressure
+        and backpressure_id > dispatch_id
+        and backpressure_id > continuation_id
+        and backpressure_id > reconcile_id
+        and backpressure_id > receipt_id
+        and not claim_live
+    ):
+        payload = backpressure["payload"]
+        return {
+            "action": "BACKPRESSURE",
+            "reason": payload.get("reason"),
+            "required_capability": payload.get("required_capability"),
+            "not_before": payload.get("not_before"),
+        }
+
     if claim_live and binding:
         return {
             "action": "OBSERVE_BOUND_WORKER",
@@ -153,6 +174,18 @@ def _derive_next_action(
             "session_key": binding.get("session_key"),
             "harness": binding.get("harness"),
             "reason": "binding_without_live_claim",
+        }
+
+    if claim_live and not binding:
+        return {
+            "action": "WAIT_BINDING",
+            "reason": "live_claim_without_session_binding",
+        }
+
+    if work_status == "claimed" and not claim_live:
+        return {
+            "action": "RECONCILE_CLAIM",
+            "reason": "claimed_work_without_live_claim",
         }
 
     if work_status in {"waiting", "blocked"}:
@@ -217,6 +250,7 @@ def project_mission_cell(
     reconcile = _latest(rows, "rory_reconcile_decision")
     continuation = _latest(rows, "continuation_routed")
     resolved = _latest(rows, "continuation_resolved")
+    backpressure = _latest(rows, "dispatch_backpressure")
 
     correlation_id, return_route = _latest_continuity_identity(
         [continuation, reconcile, receipt, request, dispatch]
@@ -226,9 +260,11 @@ def project_mission_cell(
         work["status"],
         claim_live,
         binding,
+        dispatch,
         receipt,
         reconcile,
         continuation,
+        backpressure,
     )
 
     return {
@@ -251,6 +287,7 @@ def project_mission_cell(
             "reconcile_decision": reconcile,
             "continuation": continuation,
             "continuation_resolved": resolved,
+            "backpressure": backpressure,
         },
         "next_action": next_action,
     }
