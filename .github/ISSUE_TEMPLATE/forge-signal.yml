@@ -1,0 +1,72 @@
+name: A'Space Continuous Mission Signal
+description: Capture a bounded signal and route it into an existing canonical mission without duplicating work
+title: "[FORGE][SIGNAL] "
+body:
+  - type: textarea
+    id: signal
+    attributes:
+      label: Observable signal
+      description: What changed, broke, appeared, or needs to become true? Describe evidence, not a solution.
+    validations:
+      required: true
+
+  - type: input
+    id: mission
+    attributes:
+      label: Existing canonical mission / return-to
+      description: Link the Objective/Epic/Issue this signal belongs to. Use "none found" only after search.
+      placeholder: "#283 / #194 / external repo issue URL"
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Smallest verifiable outcome
+      description: What evidence would resolve this signal without creating a new project?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: capability
+    attributes:
+      label: First routing capability
+      description: First accountable capability, not permanent ownership.
+      options:
+        - RESEARCH / Bill
+        - DESIGN / Clara
+        - BUILD / Ryan
+        - OBSERVE / Yaz
+        - STATE / Graham
+        - INTERFACE / Amy
+        - COHERE / Rory
+        - FLOW / River
+        - DISPATCH / Nardole
+        - RECOVER / Donna
+        - GATEKEEP / Rick
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Existing evidence / reusable work
+      description: Existing issues, PRs, receipts, runtime evidence, branches, files, or prior implementations.
+    validations:
+      required: true
+
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority / state ownership / constraints
+      description: Who may mutate what? Which source owns truth? What must remain reversible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: continuation
+    attributes:
+      label: Continuation / return contract
+      description: What happens on PASS, FAILED, UNKNOWN, or blocker? Name the return-to mission/cell.
+    validations:
+      required: true
