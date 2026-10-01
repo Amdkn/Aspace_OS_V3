@@ -63,4 +63,57 @@ class T(unittest.TestCase):
         claim={"type":"claim","operation_id":"browser-op-running","fingerprint":"fingerprint-running","action":"browser.dom.action"}
         a=post(base,claim); b=post(base,claim)
         self.assertTrue(a["execute"]); self.assertFalse(b["execute"]); self.assertEqual(b["state"],"RUNNING")
+    def test_concurrent_hello_task_claim_tabs_ordering(self):
+        import concurrent.futures
+        # Simulate concurrent requests from extension
+        base=f"http://127.0.0.1:{self.wp}/native"
+        
+        # 1. Queue a pending task
+        daemon_exec=f"http://127.0.0.1:{self.dp}/execute"
+        task_req = {"operation_id":"op-concurrent","fingerprint":"fp-concurrent","action":"browser.dom.action"}
+        def execute_task():
+            # This will block until completed or timeout, we don't care about the result here
+            try: post(daemon_exec, task_req)
+            except Exception: pass
+        
+        import threading
+        t = threading.Thread(target=execute_task, daemon=True)
+        t.start()
+        
+        time.sleep(0.5) # Wait for task to be pending
+        
+        # 2. Issue concurrent hello and tabs, simulating extension pingLoop overlapping
+        hello_req = {"type":"hello", "request_id": "req-hello"}
+        tabs_req = {"type":"tabs", "request_id": "req-tabs"}
+        
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            fut_hello = executor.submit(post, base, hello_req)
+            fut_tabs = executor.submit(post, base, tabs_req)
+            hello_resp = fut_hello.result()
+            tabs_resp = fut_tabs.result()
+            
+        self.assertEqual(hello_resp.get("request_id"), "req-hello")
+        self.assertEqual(tabs_resp.get("request_id"), "req-tabs")
+        
+        self.assertTrue("tasks" in hello_resp and len(hello_resp["tasks"]) > 0)
+        
+        # 3. Extension receives tasks and processes them sequentially with await
+        # Claim
+        claim_req = {"type":"claim", "operation_id":"op-concurrent", "fingerprint":"fp-concurrent", "action":"browser.dom.action", "request_id": "req-claim"}
+        claim_resp = post(base, claim_req)
+        self.assertEqual(claim_resp.get("request_id"), "req-claim")
+        self.assertTrue(claim_resp["execute"])
+        
+        # Second claim should fail execute (simulate duplicate claim)
+        claim_req2 = {"type":"claim", "operation_id":"op-concurrent", "fingerprint":"fp-concurrent", "action":"browser.dom.action", "request_id": "req-claim2"}
+        claim_resp2 = post(base, claim_req2)
+        self.assertEqual(claim_resp2.get("request_id"), "req-claim2")
+        self.assertFalse(claim_resp2["execute"])
+        self.assertEqual(claim_resp2["state"], "RUNNING")
+        
+        # Complete
+        comp_req = {"type":"complete", "operation_id":"op-concurrent", "fingerprint":"fp-concurrent", "evidence":{}, "request_id": "req-comp"}
+        comp_resp = post(base, comp_req)
+        self.assertEqual(comp_resp.get("request_id"), "req-comp")
+        self.assertEqual(comp_resp["state"], "SUCCEEDED")
 if __name__=="__main__":unittest.main(verbosity=2)

@@ -40,6 +40,7 @@ class State:
         elif typ=="complete":
             payload=dict(msg); payload.update({"worker_id":self.worker_id,"fencing_token":self.fence}); _,out=post(self.daemon+"/browser/complete",payload)
         else: out={"ok":False,"error":"UNKNOWN_MESSAGE"}
+        if "request_id" in msg: out["request_id"] = msg["request_id"]
         self.write({"dir":"out","msg":out,"worker_id":self.worker_id,"fence":self.fence}); return out
 
 class App(ThreadingHTTPServer):
