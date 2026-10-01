@@ -382,5 +382,52 @@ class DispatchRoutingTests(unittest.TestCase):
             )
 
 
+    def test_reserve_dispatch_fences_duplicate_attempt_on_route_continuation(self):
+        self.insert_event(
+            "continuation_routed",
+            {
+                "correlation_id": "corr-cont-dup",
+                "return_route": self.return_route(),
+                "route_class": "REOPEN",
+                "target_capability": "RYAN",
+                "verdict": "REOPEN_BUILD",
+            },
+            "nardole-dispatch",
+        )
+
+        candidates = [{
+            "runtime_id": "ryan-runtime",
+            "harness": "ryan",
+            "presence_state": "AVAILABLE",
+            "capabilities": {"RYAN": "AVAILABLE"},
+            "healthy": True,
+            "quota_ok": True,
+            "priority": 10,
+        }]
+
+        # First dispatch should succeed and acquire the canonical claim
+        first = reserve_dispatch(
+            self.db,
+            self.work_id,
+            required_capability="RYAN",
+            candidates=candidates,
+            return_route=self.return_route(),
+            correlation_id="corr-cont-dup",
+            lock_path=self.lock,
+        )
+        self.assertEqual(first["decision"], "DISPATCH")
+
+        # Second dispatch must fail because the work item is already claimed
+        with self.assertRaisesRegex(DispatchRoutingError, "live owner already exists|existing session binding must be reconciled"):
+            reserve_dispatch(
+                self.db,
+                self.work_id,
+                required_capability="RYAN",
+                candidates=candidates,
+                return_route=self.return_route(),
+                correlation_id="corr-cont-dup",
+                lock_path=self.lock,
+            )
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
