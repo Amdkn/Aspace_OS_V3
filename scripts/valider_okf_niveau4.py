@@ -24,8 +24,9 @@ import json
 import os
 import re
 import sys
+from pathlib import Path
 
-ROOT = r"C:\Users\amado\ASpace_OS_V3"
+ROOT = str(Path(__file__).resolve().parent.parent)
 
 
 def parse_frontmatter(path):
