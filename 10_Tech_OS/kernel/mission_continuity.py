@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from contextlib import closing
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -89,14 +90,15 @@ def _latest(rows: list[sqlite3.Row], kind: str) -> dict[str, Any] | None:
 
 
 def _latest_continuity_identity(events: list[dict[str, Any] | None]) -> tuple[str | None, dict[str, Any] | None]:
-    for event in events:
-        if not event:
-            continue
-        payload = event["payload"]
-        correlation_id = payload.get("correlation_id")
-        if correlation_id:
-            return str(correlation_id), payload.get("return_route")
-    return None, None
+    candidates = [
+        event for event in events
+        if event and event["payload"].get("correlation_id")
+    ]
+    if not candidates:
+        return None, None
+    event = max(candidates, key=lambda item: int(item["id"]))
+    payload = event["payload"]
+    return str(payload["correlation_id"]), payload.get("return_route")
 
 
 def _derive_next_action(
@@ -206,7 +208,7 @@ def project_mission_cell(
     """Reconstruct the current continuation state for one canonical work cell."""
     current_time = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
 
-    with _connect(db_path) as con:
+    with closing(_connect(db_path)) as con:
         work = con.execute(
             "SELECT id,title,layer,status,parent_id,attempts,created_at,updated_at FROM work WHERE id=?",
             (work_id,),
@@ -253,7 +255,7 @@ def project_mission_cell(
     backpressure = _latest(rows, "dispatch_backpressure")
 
     correlation_id, return_route = _latest_continuity_identity(
-        [continuation, reconcile, receipt, request, dispatch]
+        [backpressure, continuation, reconcile, receipt, request, dispatch]
     )
 
     next_action = _derive_next_action(
