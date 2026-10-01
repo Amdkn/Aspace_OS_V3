@@ -1,0 +1,36 @@
+name: Kernel Continuity CI
+
+on:
+  pull_request:
+    paths:
+      - "10_Tech_OS/kernel/**"
+      - ".github/workflows/kernel-continuity-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "10_Tech_OS/kernel/**"
+      - ".github/workflows/kernel-continuity-ci.yml"
+
+jobs:
+  verify-kernel-continuity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            10_Tech_OS/kernel
+            .github/workflows/kernel-continuity-ci.yml
+          sparse-checkout-cone-mode: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Compile continuity modules
+        run: |
+          python -m py_compile \
+            10_Tech_OS/kernel/mission_continuity.py \
+            10_Tech_OS/kernel/uc_workgraph.py \
+            10_Tech_OS/kernel/test_mission_continuity.py
+      - name: Mission continuity regression suite
+        working-directory: 10_Tech_OS/kernel
+        run: python -m unittest test_mission_continuity.py
