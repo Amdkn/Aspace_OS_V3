@@ -173,6 +173,69 @@ class MissionContinuityTests(unittest.TestCase):
         self.assertEqual(first["next_action"]["target_capability"], "river-flow")
         self.assertEqual(first, second)
 
+    def test_newer_dispatch_supersedes_older_continuation_projection(self):
+        route = {
+            "mission_id": "kernel-291",
+            "cell_id": "p4",
+            "on_unknown": "donna-recover",
+        }
+        self.emit(
+            "harness_execution_receipt",
+            {
+                "correlation_id": "corr-recover",
+                "effect_state": "UNKNOWN",
+                "retry_safe": False,
+                "return_route": route,
+            },
+            "jules",
+        )
+        self.emit(
+            "rory_reconcile_decision",
+            {
+                "correlation_id": "corr-recover",
+                "verdict": "RECOVER_UNKNOWN",
+                "return_route": route,
+            },
+            "rory-cohere",
+        )
+        self.emit(
+            "continuation_routed",
+            {
+                "correlation_id": "corr-recover",
+                "route_class": "RECOVER",
+                "target_capability": "donna-recover",
+                "return_route": route,
+            },
+            "nardole-dispatch",
+        )
+
+        expiry = (self.now + timedelta(minutes=30)).isoformat()
+        self.con.execute(
+            "INSERT INTO claim(work_id,harness,claimed_at,expires_at) VALUES(1,'donna-recover',?,?)",
+            (self.now.isoformat(), expiry),
+        )
+        self.con.execute(
+            """INSERT INTO session_binding(
+               work_id,session_key,harness,capability,external_ref,status,started_at,ended_at
+               ) VALUES(1,'donna-1','donna-recover','recovery','subagent:donna-recover','active',?,NULL)""",
+            (self.now.isoformat(),),
+        )
+        self.con.commit()
+        self.emit(
+            "dispatch_envelope",
+            {
+                "correlation_id": "corr-recover",
+                "required_capability": "recovery",
+                "return_route": route,
+            },
+            "nardole-dispatch",
+        )
+
+        p = project_mission_cell(self.db, 1, now=self.now)
+        self.assertEqual(p["next_action"]["action"], "OBSERVE_BOUND_WORKER")
+        self.assertEqual(p["next_action"]["session_key"], "donna-1")
+        self.assertEqual(p["ownership"]["claim"]["harness"], "donna-recover")
+
     def test_unknown_work_fails_closed(self):
         with self.assertRaises(MissionContinuityError):
             project_mission_cell(self.db, 999, now=self.now)

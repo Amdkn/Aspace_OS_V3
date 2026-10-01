@@ -123,7 +123,12 @@ def _derive_next_action(
     dispatch_id = dispatch["id"] if dispatch else -1
     backpressure_id = backpressure["id"] if backpressure else -1
 
-    if continuation and continuation_id >= reconcile_id and continuation_id >= receipt_id:
+    if (
+        continuation
+        and continuation_id >= reconcile_id
+        and continuation_id >= receipt_id
+        and continuation_id >= dispatch_id
+    ):
         payload = continuation["payload"]
         route_class = payload.get("route_class")
         target = payload.get("target_capability")
@@ -136,14 +141,19 @@ def _derive_next_action(
             return {"action": "DISPATCH_RETRY", "route_class": route_class, "target_capability": target}
         return {"action": "ROUTE_CONTINUATION", "route_class": route_class, "target_capability": target}
 
-    if reconcile and reconcile_id > continuation_id and reconcile_id >= receipt_id:
+    if (
+        reconcile
+        and reconcile_id > continuation_id
+        and reconcile_id >= receipt_id
+        and reconcile_id > dispatch_id
+    ):
         return {
             "action": "ROUTE_RECONCILE_DECISION",
             "verdict": reconcile["payload"].get("verdict"),
             "reopen_cell": reconcile["payload"].get("reopen_cell"),
         }
 
-    if receipt and receipt_id > reconcile_id:
+    if receipt and receipt_id > reconcile_id and receipt_id > dispatch_id:
         return {
             "action": "RECONCILE_RECEIPT",
             "effect_state": receipt["payload"].get("effect_state"),
