@@ -49,24 +49,24 @@ class TestDiscoveryCorpus(unittest.TestCase):
         mock_result = MagicMock()
         mock_result.stdout = json.dumps({"id": "vid1", "description": "test"})
         mock_sub_run.return_value = mock_result
-        
+
         url = "https://youtube.com/watch?v=vid1"
         out_dir = self.test_dir / "vid1"
         out_dir.mkdir()
-        
+
         discovery.process_video(url, str(out_dir))
-        
+
         self.assertTrue((out_dir / "state.json").exists())
         with open(out_dir / "state.json", "r") as f:
             state = json.load(f)
             self.assertIn("M1", state["completed_stages"])
             self.assertIn("M7", state["completed_stages"])
-            
+
         call_count_before = mock_sub_run.call_count
-        
+
         # Second run: should skip subprocess entirely because stages are complete
         discovery.process_video(url, str(out_dir))
-        
+
         call_count_after = mock_sub_run.call_count
         self.assertEqual(call_count_before, call_count_after)
 
@@ -76,15 +76,15 @@ class TestDiscoveryCorpus(unittest.TestCase):
         mock_result = MagicMock()
         mock_result.stdout = json.dumps({"id": "vid2", "description": "some text"})
         mock_sub_run.return_value = mock_result
-        
+
         out_dir = self.test_dir / "vid2"
         out_dir.mkdir()
-        
+
         meta = discovery.run_m1_metadata("https://youtube.com/watch?v=vid2", str(out_dir))
         self.assertIsNotNone(meta)
-        
+
         discovery.run_m2_citations(meta, str(out_dir))
-        
+
         # Ensure yt-dlp was called with dump-json, NOT ffmpeg
         args = mock_sub_run.call_args[0][0]
         self.assertIn("--dump-json", args)
@@ -103,7 +103,7 @@ class TestDiscoveryCorpus(unittest.TestCase):
             {"type": "doi", "value": "https://doi.org/10.1234/test"},
             {"type": "title_block", "value": "Attention Is All You Need"}
         ]
-        
+
         resolved = discovery.run_m3_canonicalize(raw_citations, str(self.test_dir))
         self.assertEqual(len(resolved), 3)
 
@@ -118,6 +118,96 @@ class TestDiscoveryCorpus(unittest.TestCase):
         title_res = next(r for r in resolved if r["original_citation"]["type"] == "title_block")
         self.assertEqual(title_res["canonical_id"], "NEEDS_REVIEW")
         self.assertEqual(title_res["status"], "NEEDS_REVIEW")
+
+    @patch('discovery.run_m2_citations')
+    @patch('discovery.run_m1_metadata')
+    def test_through_m1(self, mock_m1, mock_m2):
+        mock_m1.return_value = {"id": "vid1", "description": "test"}
+        url = "https://youtube.com/watch?v=vid1"
+        out_dir = self.test_dir / "vid1"
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        result = discovery.process_video(url, str(out_dir), through_stage="M1")
+
+        self.assertEqual(result.get("status"), "PARTIAL")
+        mock_m1.assert_called_once()
+        mock_m2.assert_not_called()
+
+    @patch('discovery.run_m4_transcripts')
+    @patch('discovery.run_m3_canonicalize')
+    @patch('discovery.run_m2_citations')
+    @patch('discovery.run_m1_metadata')
+    def test_through_m3(self, mock_m1, mock_m2, mock_m3, mock_m4):
+        mock_m1.return_value = {"id": "vid1", "description": "test"}
+        mock_m2.return_value = []
+        mock_m3.return_value = []
+
+        url = "https://youtube.com/watch?v=vid1"
+        out_dir = self.test_dir / "vid1"
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        result = discovery.process_video(url, str(out_dir), through_stage="M3")
+
+        self.assertEqual(result.get("status"), "PARTIAL")
+        mock_m1.assert_called_once()
+        mock_m2.assert_called_once()
+        mock_m3.assert_called_once()
+        mock_m4.assert_not_called()
+
+    @patch('discovery.run_m4_transcripts')
+    @patch('discovery.run_m3_canonicalize')
+    @patch('discovery.run_m2_citations')
+    @patch('discovery.run_m1_metadata')
+    def test_resume_ceiling(self, mock_m1, mock_m2, mock_m3, mock_m4):
+        mock_m1.return_value = {"id": "vid1", "description": "test"}
+        mock_m2.return_value = []
+        mock_m3.return_value = []
+
+        url = "https://youtube.com/watch?v=vid1"
+        out_dir = self.test_dir / "vid1"
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        # Run through M3
+        discovery.process_video(url, str(out_dir), through_stage="M3")
+        self.assertEqual(mock_m1.call_count, 1)
+        self.assertEqual(mock_m3.call_count, 1)
+        mock_m4.assert_not_called()
+
+        # Now run through M4
+        # Since state has M1-M3, they should not be called again
+        mock_m4.return_value = {}
+        discovery.process_video(url, str(out_dir), through_stage="M4")
+
+        self.assertEqual(mock_m1.call_count, 1) # No new calls
+        self.assertEqual(mock_m3.call_count, 1) # No new calls
+        mock_m4.assert_called_once()
+
+    def test_invalid_stage(self):
+        url = "https://youtube.com/watch?v=vid1"
+        out_dir = self.test_dir / "vid1"
+        with self.assertRaises(ValueError):
+            discovery.process_video(url, str(out_dir), through_stage="M8")
+
+    @patch('discovery.process_video')
+    def test_zero_partial_corpus(self, mock_process_video):
+        manifest_path = self.test_dir / "manifest.json"
+        with open(manifest_path, 'w') as f:
+            json.dump({"urls": ["url1"], "through_stage": "M3"}, f)
+
+        mock_process_video.return_value = {"status": "PARTIAL", "video_id": "vid1", "completed_stages": ["M1", "M2", "M3"]}
+
+        report = discovery.process_corpus(str(manifest_path), str(self.test_dir))
+
+        # A partial run shouldn't pass
+        self.assertEqual(report["stage_status"], "PARTIAL_SUCCESS")
+
+        # Test zero videos
+        with open(manifest_path, 'w') as f:
+            json.dump({"urls": []}, f)
+
+        report_zero = discovery.process_corpus(str(manifest_path), str(self.test_dir))
+        self.assertEqual(report_zero["stage_status"], "FAILED")
+
 
     @patch('discovery.process_video')
     def test_paper_graph_deduplication(self, mock_process_video):
@@ -146,11 +236,11 @@ class TestDiscoveryCorpus(unittest.TestCase):
         ]
 
         report = discovery.process_corpus(str(manifest_path), str(self.test_dir))
-        
+
         # Deduplication based on source, target, relation means there should be only 1 edge in unique_edges
         with open(self.test_dir / "paper_graph.json", 'r') as f:
             unique_edges = json.load(f)
-        
+
         self.assertEqual(len(unique_edges), 1)
         self.assertEqual(report["duplicate_paper_merges"], 1)
 

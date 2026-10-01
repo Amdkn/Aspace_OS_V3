@@ -20,7 +20,7 @@ from inventory import resolve_inventory
 
 def extract_citations(description):
     """
-    Extrait les références de recherche (DOI, arXiv, OpenReview, etc.)
+    Extrait les rÃ©fÃ©rences de recherche (DOI, arXiv, OpenReview, etc.)
     depuis le texte de la description.
     """
     if not description:
@@ -215,7 +215,7 @@ def run_m1_metadata(url, out_dir):
     out_path = Path(out_dir)
     metadata_file = out_path / "metadata.json"
     print(f"[Discovery] M1: Fetching metadata for {url}")
-    
+
     cmd = [
         "yt-dlp",
         "--dump-json",
@@ -245,12 +245,12 @@ def run_m3_canonicalize(raw_citations, out_dir):
     for citation in raw_citations:
         resolved = {"original_citation": citation, "status": "NEEDS_REVIEW", "canonical_id": "NEEDS_REVIEW"}
         val = citation["value"]
-        
+
         try:
             if citation["type"] == "arxiv":
                 arxiv_id = val.split("/")[-1].replace(".pdf", "")
                 resolved["canonical_id"] = f"arxiv:{arxiv_id}"
-                
+
                 # Fetch metadata via API
                 api_url = f"http://export.arxiv.org/api/query?id_list={arxiv_id}"
                 req = urllib.request.Request(api_url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
@@ -260,7 +260,7 @@ def run_m3_canonicalize(raw_citations, out_dir):
             elif citation["type"] == "doi":
                 doi = val.split("doi.org/")[-1]
                 resolved["canonical_id"] = f"doi:{doi}"
-                
+
                 api_url = f"https://api.crossref.org/works/{doi}"
                 req = urllib.request.Request(api_url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
                 with urllib.request.urlopen(req, timeout=10) as response:
@@ -272,7 +272,7 @@ def run_m3_canonicalize(raw_citations, out_dir):
                 resolved["status"] = "RESOLVED"
         except Exception as e:
             print(f"[Discovery] M3 Provider API Error: {e}")
-            
+
         resolved_papers.append(resolved)
     return resolved_papers
 
@@ -341,7 +341,7 @@ def run_m6_keyframes(url, video_id, out_dir):
             subprocess.run(cmd_ffmpeg, check=True)
         except Exception as e:
             print(f"FAILED M6 frame extraction: {e}")
-    
+
     keyframes = list(frames_dir.glob("*.png"))
     return {str(p): compute_sha256(p) for p in keyframes}
 
@@ -349,7 +349,7 @@ def run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analy
     print(f"[Discovery] M7: Assembling Evidence Packet for {video_id}")
     out_path = Path(out_dir)
     metadata_file = out_path / "metadata.json"
-    
+
     # Generate canonical PaperGraph edges
     paper_graph_edges = []
     for paper in resolved_papers:
@@ -398,17 +398,23 @@ def run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analy
     return evidence
 
 
-def process_video(url, out_dir):
+def process_video(url, out_dir, through_stage="M7"):
     """
-    Process a single video through the M1-M7 pipeline.
+    Process a single video through the M1-M7 pipeline, up to through_stage.
     """
-    print(f"\n[Discovery] Processing video: {url}")
+    valid_stages = ["M1", "M2", "M3", "M4", "M5", "M6", "M7"]
+    if through_stage not in valid_stages:
+        raise ValueError(f"Invalid through_stage: {through_stage}. Must be one of {valid_stages}")
+
+    stage_idx = valid_stages.index(through_stage)
+
+    print(f"\n[Discovery] Processing video: {url} (through {through_stage})")
     out_path = Path(out_dir)
     out_path.mkdir(parents=True, exist_ok=True)
-    
+
     state = load_state(out_dir)
     stages = state.get("completed_stages", [])
-    
+
     # Check if we should actually resume
     # Let's load intermediate artifacts if we resume
     metadata_file = out_path / "metadata.json"
@@ -419,10 +425,17 @@ def process_video(url, out_dir):
                 metadata = json.load(f)
         except Exception:
             pass
-            
+
     video_id = metadata.get("id") or url.split("v=")[-1] if "v=" in url else url.split("/")[-1]
 
+    # Check ceiling
+    def should_run(stage_name):
+        return valid_stages.index(stage_name) <= stage_idx
+
     # M1
+    if not should_run("M1"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     if "M1" not in stages:
         metadata = run_m1_metadata(url, out_dir)
         if not metadata:
@@ -433,6 +446,9 @@ def process_video(url, out_dir):
         save_state(out_dir, state)
 
     # M2
+    if not should_run("M2"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     citations_file = out_path / "m2_citations.json"
     if "M2" not in stages:
         raw_citations = run_m2_citations(metadata, out_dir)
@@ -449,6 +465,9 @@ def process_video(url, out_dir):
             raw_citations = []
 
     # M3
+    if not should_run("M3"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     resolved_file = out_path / "m3_resolved.json"
     if "M3" not in stages:
         resolved_papers = run_m3_canonicalize(raw_citations, out_dir)
@@ -465,6 +484,9 @@ def process_video(url, out_dir):
             resolved_papers = []
 
     # M4
+    if not should_run("M4"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     transcripts_file = out_path / "m4_transcripts.json"
     if "M4" not in stages:
         transcripts = run_m4_transcripts(url, out_dir)
@@ -481,6 +503,9 @@ def process_video(url, out_dir):
             transcripts = {}
 
     # M5
+    if not should_run("M5"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     analysis_file = out_path / "m5_analysis.json"
     if "M5" not in stages:
         analysis = run_m5_analysis(list(transcripts.keys()))
@@ -497,6 +522,9 @@ def process_video(url, out_dir):
             analysis = {}
 
     # M6
+    if not should_run("M6"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     keyframes_file = out_path / "m6_keyframes.json"
     if "M6" not in stages:
         keyframes = run_m6_keyframes(url, video_id, out_dir)
@@ -513,6 +541,9 @@ def process_video(url, out_dir):
             keyframes = {}
 
     # M7
+    if not should_run("M7"):
+        return {"status": "PARTIAL", "video_id": video_id, "completed_stages": stages}
+
     if "M7" not in stages:
         evidence = run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analysis, keyframes, out_dir)
         stages.append("M7")
@@ -527,7 +558,7 @@ def process_video(url, out_dir):
                 return json.load(f)
         return None
 
-def process_corpus(manifest_path, out_dir):
+def process_corpus(manifest_path, out_dir, through_stage=None):
     """
     Iterate over a manifest of videos, process each, and output an aggregate report.
     """
@@ -541,6 +572,10 @@ def process_corpus(manifest_path, out_dir):
         manifest = json.load(f)
 
     urls = resolve_inventory(manifest)
+
+    # Precedence: CLI > Manifest > M7
+    effective_ceiling = through_stage or manifest.get("through_stage", "M7")
+    print(f"[Discovery] Effective execution ceiling: {effective_ceiling}")
 
     gws_payloads = []
 
@@ -569,9 +604,19 @@ def process_corpus(manifest_path, out_dir):
         video_out_dir = Path(out_dir) / safe_name
 
         try:
-            evidence = process_video(url, str(video_out_dir))
+            evidence = process_video(url, str(video_out_dir), through_stage=effective_ceiling)
             if evidence:
                 report["videos_processed"] += 1
+
+                # Handle partial results
+                if evidence.get("status") == "PARTIAL":
+                    report["results"].append({
+                        "url": url,
+                        "video_id": evidence.get("video_id"),
+                        "status": "PARTIAL_SUCCESS",
+                        "completed_stages": evidence.get("completed_stages", [])
+                    })
+                    continue
 
                 # Check for description in metadata (if it successfully extracted refs, it had description)
                 report["descriptions_captured"] += 1
@@ -663,13 +708,13 @@ def process_corpus(manifest_path, out_dir):
     gws_payloads_path = Path(out_dir) / "gws_payloads.json"
     with open(gws_payloads_path, 'w', encoding='utf-8') as f:
         json.dump(gws_payloads, f, indent=2, ensure_ascii=False)
-    
+
     print(f"[Discovery] GWS Payloads dumped to {gws_payloads_path}")
 
-# Fix stage status logic
+    # Fix stage status logic
     if report["videos_processed"] == 0:
         report["stage_status"] = "FAILED"
-    elif report["videos_processed"] < report["total_videos_discovered"]:
+    elif report["videos_processed"] < report["total_videos_discovered"] or effective_ceiling != "M7":
         report["stage_status"] = "PARTIAL_SUCCESS"
     else:
         report["stage_status"] = "PASS"
@@ -688,8 +733,11 @@ def process_corpus(manifest_path, out_dir):
     return report
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python discovery.py <manifest.json> <out_dir>")
-        sys.exit(1)
+    import argparse
+    parser = argparse.ArgumentParser(description="Discovery AI Corpus Processor")
+    parser.add_argument("manifest", help="Path to manifest.json")
+    parser.add_argument("out_dir", help="Output directory")
+    parser.add_argument("--through", help="Execution ceiling (e.g. M1, M3)", default=None)
+    args = parser.parse_args()
 
-    process_corpus(sys.argv[1], sys.argv[2])
+    process_corpus(args.manifest, args.out_dir, through_stage=args.through)
