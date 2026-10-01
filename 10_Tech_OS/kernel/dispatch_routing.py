@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+from contextlib import closing
 import uuid
 from pathlib import Path
 from typing import Any
@@ -184,7 +185,7 @@ def record_backpressure(
         "rejected": rejected or [],
         "not_before": not_before,
     }
-    with _connect(db_path) as con, con:
+    with closing(_connect(db_path)) as con, con:
         event_id = _append_event(con, work_id, "nardole-dispatch", "dispatch_backpressure", payload)
     return {"event_id": event_id, **payload}
 
@@ -211,7 +212,7 @@ def reserve_dispatch(
         if cell["ownership"]["binding"]:
             raise DispatchRoutingError("existing session binding must be reconciled")
 
-        with _connect(db_path) as con:
+        with closing(_connect(db_path)) as con:
             blockers = _dependency_blockers(con, work_id)
             unresolved = _unresolved_dispatch_attempt(con, work_id)
 
@@ -293,7 +294,7 @@ def reserve_dispatch(
             ),
         }
 
-        with _connect(db_path) as con, con:
+        with closing(_connect(db_path)) as con, con:
             envelope_id = _append_event(
                 con, work_id, "nardole-dispatch", "dispatch_envelope", payload
             )
@@ -324,7 +325,7 @@ def resolve_dispatch_attempt(
         "outcome": outcome,
         "session_key": session_key,
     }
-    with _connect(db_path) as con, con:
+    with closing(_connect(db_path)) as con, con:
         event_id = _append_event(
             con, work_id, "nardole-dispatch", "fleet_dispatch_resolved", payload
         )
@@ -342,7 +343,7 @@ def route_reconcile_decision(db_path: str | Path, work_id: int) -> dict[str, Any
     """Materialize exactly one continuation_routed event for the latest Rory decision."""
     cell = project_mission_cell(db_path, work_id)
 
-    with _connect(db_path) as con:
+    with closing(_connect(db_path)) as con:
         reconcile_row = _latest_event(con, work_id, "rory_reconcile_decision")
         receipt_row = _latest_event(con, work_id, "harness_execution_receipt")
         routed_row = _latest_event(con, work_id, "continuation_routed")
@@ -405,7 +406,7 @@ def route_reconcile_decision(db_path: str | Path, work_id: int) -> dict[str, Any
         "reopen_cell": reconcile.get("reopen_cell"),
     }
 
-    with _connect(db_path) as con, con:
+    with closing(_connect(db_path)) as con, con:
         event_id = _append_event(
             con, work_id, "nardole-dispatch", "continuation_routed", payload
         )
