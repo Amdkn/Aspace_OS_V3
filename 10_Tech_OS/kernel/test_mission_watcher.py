@@ -7,6 +7,7 @@ from pathlib import Path
 
 from mission_continuity import project_mission_cell
 from mission_watcher import (
+    apply_manager_resolution,
     observe_bound_worker,
     resolve_manager_wake,
 )
@@ -201,6 +202,56 @@ class MissionWatcherTests(unittest.TestCase):
             observed["wake_event_id"],
         )
         self.assertEqual(first, second)
+
+    def test_manager_resolution_reconciles_orphan_binding_and_routes_reopen(self):
+        observed = observe_bound_worker(
+            self.db,
+            self.work_id,
+            {
+                "id": "jules-123",
+                "state": "COMPLETED",
+                "updateTime": "2026-10-01T06:19:00Z",
+                "outputs": [{"changeSet": {"description": "partial build evidence"}}],
+            },
+        )
+        con = sqlite3.connect(self.db)
+        con.execute("DELETE FROM claim WHERE work_id=?", (self.work_id,))
+        con.commit()
+        con.close()
+
+        resolved = resolve_manager_wake(
+            self.db,
+            self.work_id,
+            source_transition_event_id=observed["transition_event_id"],
+            outcome="REOPEN_BUILD",
+        )
+        first = apply_manager_resolution(self.db, self.work_id)
+        second = apply_manager_resolution(self.db, self.work_id)
+
+        self.assertEqual(first["source_manager_wake_event_id"], resolved["event_id"])
+        self.assertEqual(first["manager_outcome"], "REOPEN_BUILD")
+        self.assertEqual(first["route"]["route_class"], "REOPEN")
+        self.assertEqual(first["route"]["target_capability"], "RYAN")
+        self.assertFalse(first["idempotent"])
+        self.assertTrue(second["idempotent"])
+        self.assertEqual(self.event_count("binding_reconciled"), 1)
+        self.assertEqual(self.event_count("rory_reconcile_decision"), 1)
+        self.assertEqual(self.event_count("continuation_routed"), 1)
+
+        con = sqlite3.connect(self.db)
+        row = con.execute(
+            "SELECT status,ended_at FROM session_binding WHERE work_id=?",
+            (self.work_id,),
+        ).fetchone()
+        con.close()
+        self.assertEqual(row[0], "closed")
+        self.assertIsNotNone(row[1])
+
+        cell = project_mission_cell(self.db, self.work_id)
+        self.assertIsNone(cell["ownership"]["binding"])
+        self.assertEqual(cell["next_action"]["action"], "ROUTE_CONTINUATION")
+        self.assertEqual(cell["next_action"]["route_class"], "REOPEN")
+        self.assertEqual(cell["next_action"]["target_capability"], "RYAN")
 
     def test_manager_wake_resolution_is_idempotent(self):
         observed = observe_bound_worker(
