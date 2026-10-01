@@ -2,12 +2,9 @@ import unittest
 from unittest.mock import patch, MagicMock, mock_open
 import json
 import os
-import sys
 import shutil
 from pathlib import Path
-os.environ["GWS_MOCK"] = "1"
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 import discovery
 from inventory import resolve_inventory
 from gws_adapter import GWSAdapter

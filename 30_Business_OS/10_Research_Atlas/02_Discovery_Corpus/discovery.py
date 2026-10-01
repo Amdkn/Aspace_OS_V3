@@ -51,23 +51,6 @@ def extract_citations(description):
             if title:
                 candidates.append({"type": "title_block", "value": title})
 
-    # Heuristic for "All rights w/ authors:" pattern from Discover AI channel
-    clean_lines = [x.strip() for x in lines if x.strip()]
-    for idx, cl in enumerate(clean_lines):
-        if "all rights w/ authors" in cl.lower() or "all rights with authors" in cl.lower():
-            if idx + 1 < len(clean_lines):
-                t1 = clean_lines[idx + 1]
-                if idx + 2 < len(clean_lines):
-                    t2 = clean_lines[idx + 2]
-                    if any(c in t2 for c in ["*", ","]) and len(t2.split(",")) >= 2:
-                        candidates.append({"type": "title_block", "value": t1})
-                    elif idx + 3 < len(clean_lines) and any(c in clean_lines[idx + 3] for c in ["*", ","]):
-                        candidates.append({"type": "title_block", "value": f"{t1} {t2}"})
-                    else:
-                        candidates.append({"type": "title_block", "value": t1})
-                else:
-                    candidates.append({"type": "title_block", "value": t1})
-
     # Deduplicate based on value while keeping the type
     seen = set()
     unique_candidates = []

@@ -1,4 +1,2 @@
-live_output/
-test_discovery_output/
-*.mp4
-*.vtt
+corpus_live_out/
+__pycache__/
