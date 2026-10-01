@@ -8,6 +8,7 @@ Expose:
 import argparse, hashlib, json, os, sqlite3, sys, uuid
 from enum import Enum
 from surface_fabric import SurfaceFabric
+from mission_continuity import project_mission_cell
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DB = os.environ.get("ASPACE_DB", os.path.join(HERE, "uc.db"))
@@ -340,6 +341,10 @@ def graph(a):
         "gates": [dict(x) for x in c.execute("SELECT * FROM gate_decision WHERE work_id=?", (a.work,))],
     })
 
+def continuity(a):
+    target_db = os.environ.get("ASPACE_DB", DB)
+    emit(project_mission_cell(target_db, a.work))
+
 def select_cmd(a):
     harnesses = get_harnesses(DB, a.require_capability or [], a.min_evidence_level)
     print(json.dumps(harnesses, indent=2))
@@ -428,6 +433,10 @@ def build_parser():
     p = S.add_parser("graph")
     p.add_argument("--work", type=int, required=True)
     p.set_defaults(f=graph)
+
+    p = S.add_parser("continuity")
+    p.add_argument("--work", type=int, required=True)
+    p.set_defaults(f=continuity)
 
     p = S.add_parser("select")
     p.add_argument("--require-capability", action="append", default=[])
