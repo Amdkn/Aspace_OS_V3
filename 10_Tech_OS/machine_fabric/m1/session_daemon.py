@@ -72,6 +72,40 @@ class Store:
             r=c.execute("select * from worker order by fence desc limit 1").fetchone()
             return dict(r) if r else None
         finally:c.close()
+    def execute_op(self,msg):
+        op=msg["operation_id"]; fp=msg["fingerprint"]; action=msg.get("action","browser.dom.action")
+        current=self.current_worker()
+        if not current: return 503,{"error":"NO_WORKER","state":"UNAVAILABLE"}
+        fence=int(current["fence"])
+        c=self.con()
+        try:
+            r=c.execute("select * from browser_operation where operation_id=?",(op,)).fetchone()
+            if r:
+                if r["fingerprint"]!=fp: return 409,{"error":"OPERATION_ID_FINGERPRINT_CONFLICT"}
+                if r["receipt_json"]: return 200,json.loads(r["receipt_json"])
+            else:
+                c.execute("insert into browser_operation(operation_id,fingerprint,state,fence,action,request_json,claimed_at) values(?,?,?,?,?,?,?)",(op,fp,"PENDING",fence,action,canon(msg),iso())); c.commit()
+        finally:c.close()
+
+        start = time.time()
+        while time.time() - start < 9.0:
+            c=self.con()
+            try:
+                r=c.execute("select receipt_json, state from browser_operation where operation_id=?",(op,)).fetchone()
+                if r and r["receipt_json"]:
+                    return 200,json.loads(r["receipt_json"])
+            finally:c.close()
+            time.sleep(0.1)
+
+        return 504,{"error":"TIMEOUT","state":"PENDING"}
+
+    def pending(self):
+        c=self.con()
+        try:
+            rows=c.execute("select request_json from browser_operation where state='PENDING'").fetchall()
+            return 200,{"tasks":[json.loads(r["request_json"]) for r in rows]}
+        finally:c.close()
+
     def claim(self,msg):
         op=msg["operation_id"]; fp=msg["fingerprint"]; wid=msg["worker_id"]; fence=int(msg["fencing_token"])
         current=self.current_worker()
@@ -84,6 +118,9 @@ class Store:
                 if r["fingerprint"]!=fp: return 409,{"error":"OPERATION_ID_FINGERPRINT_CONFLICT","execute":False}
                 if r["receipt_json"]:
                     return 200,{"execute":False,"replayed":True,"receipt":json.loads(r["receipt_json"])}
+                if r["state"] == "PENDING":
+                    c.execute("update browser_operation set state='RUNNING', claimed_at=? where operation_id=?", (iso(), op)); c.commit()
+                    return 200,{"execute":True,"replayed":False,"state":"RUNNING","fencing_token":fence}
                 return 200,{"execute":False,"replayed":True,"state":r["state"],"fencing_token":int(r["fence"])}
             c.execute("insert into browser_operation(operation_id,fingerprint,state,fence,action,request_json,claimed_at) values(?,?,?,?,?,?,?)",(op,fp,"RUNNING",fence,msg.get("action","browser.dom.action"),canon(msg),iso())); c.commit()
             return 200,{"execute":True,"replayed":False,"state":"RUNNING","fencing_token":fence}
@@ -138,7 +175,9 @@ class Handler(BaseHTTPRequestHandler):
         n=int(self.headers.get("Content-Length","0")); return json.loads(self.rfile.read(n).decode()) if n else {}
     def do_GET(self):
         try:
-            if urlparse(self.path).path=="/health":
+            p=urlparse(self.path).path
+            if p=="/browser/pending": s,o=self.server.store.pending(); self.sendj(s,o); return
+            if p=="/health":
                 w=self.server.store.current_worker()
                 latest=self.server.store.latest_worker()
                 
@@ -167,6 +206,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             p=urlparse(self.path).path
             b=self.body()
+            if p=="/execute": s,o=self.server.store.execute_op(b); self.sendj(s,o); return
             if p=="/worker/register": self.sendj(200,self.server.store.register(b["worker_id"],b["session_id"],b.get("capabilities") or [])); return
             if p=="/worker/heartbeat": self.sendj(200,{"ok":self.server.store.heartbeat(b["worker_id"],b["fencing_token"])}); return
             if p=="/browser/claim": s,o=self.server.store.claim(b); self.sendj(s,o); return
