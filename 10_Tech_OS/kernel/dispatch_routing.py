@@ -201,21 +201,6 @@ def reserve_dispatch(
     lock_path: str | Path | None = None,
 ) -> dict[str, Any]:
     """Select a safe runtime, acquire canonical claim, and durably record dispatch."""
-    decision = select_runtime(required_capability, candidates)
-    if decision["decision"] == "BACKPRESSURE":
-        return {
-            "decision": "BACKPRESSURE",
-            "backpressure": record_backpressure(
-                db_path,
-                work_id,
-                required_capability=required_capability,
-                reason=decision["reason"],
-                rejected=decision["rejected"],
-                correlation_id=correlation_id,
-                return_route=return_route,
-            ),
-        }
-
     with dispatch_lock(lock_path):
         cell = project_mission_cell(db_path, work_id)
 
@@ -230,6 +215,11 @@ def reserve_dispatch(
             blockers = _dependency_blockers(con, work_id)
             unresolved = _unresolved_dispatch_attempt(con, work_id)
 
+        stable_correlation = cell.get("correlation_id") or correlation_id or str(uuid.uuid4())
+        stable_return = cell.get("return_to") or return_route
+        if not stable_return:
+            raise DispatchRoutingError("initial dispatch requires explicit return_route")
+
         if blockers:
             return {
                 "decision": "BACKPRESSURE",
@@ -239,8 +229,8 @@ def reserve_dispatch(
                     required_capability=required_capability,
                     reason="dependency_blocked",
                     rejected=[{"work_id": value} for value in blockers],
-                    correlation_id=correlation_id,
-                    return_route=return_route,
+                    correlation_id=stable_correlation,
+                    return_route=stable_return,
                 ),
             }
 
@@ -249,16 +239,26 @@ def reserve_dispatch(
                 f"unresolved prior dispatch attempt requires reconciliation: event {unresolved['id']}"
             )
 
-        allowed = {"DISPATCH_READY", "DISPATCH_RETRY"}
+        allowed = {"DISPATCH_READY", "DISPATCH_RETRY", "BACKPRESSURE"}
         if cell["next_action"].get("action") not in allowed:
             raise DispatchRoutingError(
                 f"mission cell is not dispatchable: {cell['next_action'].get('action')}"
             )
 
-        stable_correlation = cell.get("correlation_id") or correlation_id or str(uuid.uuid4())
-        stable_return = cell.get("return_to") or return_route
-        if not stable_return:
-            raise DispatchRoutingError("initial dispatch requires explicit return_route")
+        decision = select_runtime(required_capability, candidates)
+        if decision["decision"] == "BACKPRESSURE":
+            return {
+                "decision": "BACKPRESSURE",
+                "backpressure": record_backpressure(
+                    db_path,
+                    work_id,
+                    required_capability=required_capability,
+                    reason=decision["reason"],
+                    rejected=decision["rejected"],
+                    correlation_id=stable_correlation,
+                    return_route=stable_return,
+                ),
+            }
 
         harness = decision["harness"]
         claim = canonical(
@@ -309,7 +309,6 @@ def reserve_dispatch(
             "attempt_event_id": attempt_id,
             "envelope": payload,
         }
-
 
 def resolve_dispatch_attempt(
     db_path: str | Path,
