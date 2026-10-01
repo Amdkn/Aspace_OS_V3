@@ -1,0 +1,37 @@
+name: DC Foundation CI
+
+on:
+  pull_request:
+    paths:
+      - "10_Tech_OS/machine_fabric/**"
+      - ".github/workflows/dc-foundation-ci.yml"
+  push:
+    branches: [main]
+    paths:
+      - "10_Tech_OS/machine_fabric/**"
+      - ".github/workflows/dc-foundation-ci.yml"
+
+jobs:
+  verify-dc:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Compile runtime modules
+        run: >
+          python -m py_compile
+          10_Tech_OS/machine_fabric/m1/session_daemon.py
+          10_Tech_OS/machine_fabric/m1/user_session_worker.py
+          10_Tech_OS/machine_fabric/runtime/supervisor.py
+      - name: Native/session regression suite
+        run: python -m unittest 10_Tech_OS/machine_fabric/m1/test_m1.py
+      - name: Native host discovery suite
+        run: python -m unittest 10_Tech_OS/machine_fabric/m1/test_program.py
+      - name: Chrome extension syntax
+        run: node --check 10_Tech_OS/machine_fabric/m1/extension/service_worker.js
