@@ -42,6 +42,37 @@ class TailscaleServeAdapter:
         try:data=json.loads(r["stdout"] or "{}")
         except json.JSONDecodeError:return {"state":"DEGRADED","command":r,"error":"invalid status json"}
         return {"state":"AVAILABLE","config":data,"command":r}
+    def health(self):
+        ts_r=self.run(["status","--json"])
+        if ts_r["returncode"]!=0:
+            return {"state":"DISABLED","command":ts_r}
+        try:
+            ts_data=json.loads(ts_r["stdout"] or "{}")
+        except json.JSONDecodeError:
+            return {"state":"DISABLED","command":ts_r,"error":"invalid status json"}
+        if ts_data.get("BackendState")!="Running":
+            state = ts_data.get("BackendState")
+            if state == "NeedsLogin": return {"state":"AUTH_DENY"}
+            return {"state":"DISABLED"}
+
+        serve_s=self.status()
+        if serve_s["state"]!="AVAILABLE":
+            cmd_r = serve_s.get("command", {})
+            err_text = str(cmd_r.get("stderr") or "") + "\n" + str(cmd_r.get("stdout") or "")
+            if "Serve is not enabled on your tailnet" in err_text:
+                return {"state":"SERVE_ENABLEMENT_REQUIRED"}
+            # Let's also check if it's in the stdout or stderr directly from a generic serve run
+            srv_test = self.run(["serve","status"])
+            srv_err_text = str(srv_test.get("stderr") or "") + "\n" + str(srv_test.get("stdout") or "")
+            if "Serve is not enabled on your tailnet" in srv_err_text:
+                return {"state":"SERVE_ENABLEMENT_REQUIRED"}
+            return {"state":"DISABLED"}
+
+        peers=list((ts_data.get("Peer") or {}).values())
+        if peers and not any(p.get("Online") for p in peers):
+            return {"state":"PEER_OFFLINE"}
+
+        return {"state":"READY"}
     def snapshot(self,path):
         p=Path(path).resolve()
         r=self.run(["serve","get-config","--all"])
@@ -70,7 +101,9 @@ class TailscaleServeAdapter:
             r["activated_via_status"]=True
             return r
         raise RemoteTransportError("serve start failed: "+text[-800:])
-    def stop_private(self,https_port=443):
+    def stop_private(self,https_port=443,restore_snapshot=None):
+        if restore_snapshot:
+            return self.restore(restore_snapshot)
         r=self.run(["serve",f"--https={int(https_port)}","off"])
         if r["returncode"]!=0:raise RemoteTransportError("serve stop failed: "+r["stderr"][-500:])
         return r
