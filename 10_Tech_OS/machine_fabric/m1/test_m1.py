@@ -63,4 +63,49 @@ class T(unittest.TestCase):
         claim={"type":"claim","operation_id":"browser-op-running","fingerprint":"fingerprint-running","action":"browser.dom.action"}
         a=post(base,claim); b=post(base,claim)
         self.assertTrue(a["execute"]); self.assertFalse(b["execute"]); self.assertEqual(b["state"],"RUNNING")
+
+    def test_concurrent_hello_task_claim_tabs_ordering(self):
+        import concurrent.futures
+        import threading
+
+        base=f"http://127.0.0.1:{self.wp}/native"
+        daemon_exec=f"http://127.0.0.1:{self.dp}/execute"
+        task_req={"operation_id":"op-concurrent","fingerprint":"fp-concurrent","action":"browser.dom.action"}
+
+        def execute_task():
+            try:
+                post(daemon_exec,task_req)
+            except Exception:
+                pass
+
+        t=threading.Thread(target=execute_task,daemon=True)
+        t.start()
+        time.sleep(.5)
+
+        hello_req={"type":"hello","request_id":"req-hello"}
+        tabs_req={"type":"tabs","request_id":"req-tabs"}
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            hello_resp=executor.submit(post,base,hello_req).result()
+            tabs_resp=executor.submit(post,base,tabs_req).result()
+
+        self.assertEqual(hello_resp.get("request_id"),"req-hello")
+        self.assertEqual(tabs_resp.get("request_id"),"req-tabs")
+        self.assertTrue("tasks" in hello_resp and len(hello_resp["tasks"])>0)
+
+        claim_req={"type":"claim","operation_id":"op-concurrent","fingerprint":"fp-concurrent","action":"browser.dom.action","request_id":"req-claim"}
+        claim_resp=post(base,claim_req)
+        self.assertEqual(claim_resp.get("request_id"),"req-claim")
+        self.assertTrue(claim_resp["execute"])
+
+        claim_req2={"type":"claim","operation_id":"op-concurrent","fingerprint":"fp-concurrent","action":"browser.dom.action","request_id":"req-claim2"}
+        claim_resp2=post(base,claim_req2)
+        self.assertEqual(claim_resp2.get("request_id"),"req-claim2")
+        self.assertFalse(claim_resp2["execute"])
+        self.assertEqual(claim_resp2["state"],"RUNNING")
+
+        comp_req={"type":"complete","operation_id":"op-concurrent","fingerprint":"fp-concurrent","evidence":{},"request_id":"req-comp"}
+        comp_resp=post(base,comp_req)
+        self.assertEqual(comp_resp.get("request_id"),"req-comp")
+        self.assertEqual(comp_resp["state"],"SUCCEEDED")
+
 if __name__=="__main__":unittest.main(verbosity=2)
