@@ -241,11 +241,19 @@ def reserve_dispatch(
                 f"unresolved prior dispatch attempt requires reconciliation: event {unresolved['id']}"
             )
 
-        allowed = {"DISPATCH_READY", "DISPATCH_RETRY", "BACKPRESSURE"}
-        if cell["next_action"].get("action") not in allowed:
+        allowed = {"DISPATCH_READY", "DISPATCH_RETRY", "BACKPRESSURE", "ROUTE_CONTINUATION"}
+        action = cell["next_action"].get("action")
+        if action not in allowed:
             raise DispatchRoutingError(
-                f"mission cell is not dispatchable: {cell['next_action'].get('action')}"
+                f"mission cell is not dispatchable: {action}"
             )
+
+        if action == "ROUTE_CONTINUATION":
+            target = cell["next_action"].get("target_capability")
+            if target and required_capability != target:
+                raise DispatchRoutingError(
+                    f"dispatch capability {required_capability} does not match durable route {target}"
+                )
 
         decision = select_runtime(required_capability, candidates)
         if decision["decision"] == "BACKPRESSURE":
@@ -391,7 +399,12 @@ def route_reconcile_decision(db_path: str | Path, work_id: int) -> dict[str, Any
         target = reconcile.get("target_capability") or default_target
         if verdict == "ACCEPT_CONTINUE" and not target:
             if isinstance(return_route, dict):
-                target = return_route.get("capability") or return_route.get("target_capability")
+                target = (
+                    return_route.get("target_capability")
+                    or return_route.get("capability")
+                    or return_route.get("on_success")
+                    or return_route.get("terminal_consumer")
+                )
 
     payload = {
         "schema": "aspace.continuation-route.v2",
