@@ -7,6 +7,9 @@ from urllib.parse import urlparse
 def post(url,payload):
     b=json.dumps(payload).encode(); req=urllib.request.Request(url,data=b,method="POST",headers={"Content-Type":"application/json"})
     with urllib.request.urlopen(req,timeout=3) as r: return r.status,json.loads(r.read().decode())
+def get(url):
+    req=urllib.request.Request(url,method="GET")
+    with urllib.request.urlopen(req,timeout=3) as r: return r.status,json.loads(r.read().decode())
 class State:
     def __init__(self,daemon,session_id,log):
         self.daemon=daemon.rstrip("/"); self.session_id=session_id; self.log=log; self.worker_id="worker-"+uuid.uuid4().hex[:12]; self.stop=False
@@ -23,7 +26,14 @@ class State:
     def native(self,msg):
         self.write({"dir":"in","msg":msg,"worker_id":self.worker_id,"fence":self.fence})
         typ=msg.get("type")
-        if typ=="hello": out={"ok":True,"worker_id":self.worker_id,"fencing_token":self.fence,"capabilities":["browser.tabs.read","browser.dom.action"]}
+        if typ=="hello":
+            out={"ok":True,"worker_id":self.worker_id,"fencing_token":self.fence,"capabilities":["browser.tabs.read","browser.dom.action"]}
+            try:
+                s, p = get(self.daemon+"/browser/pending")
+                if s == 200 and p.get("tasks"):
+                    out["tasks"] = p["tasks"]
+            except Exception as e:
+                pass
         elif typ=="tabs": out={"ok":True,"tab_count":len(msg.get("tabs") or [])}
         elif typ=="claim":
             payload=dict(msg); payload.update({"worker_id":self.worker_id,"fencing_token":self.fence}); _,out=post(self.daemon+"/browser/claim",payload)
