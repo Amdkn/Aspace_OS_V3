@@ -47,6 +47,7 @@ MANAGER_OUTCOMES = {
     "REOPEN_BUILD",
     "REOPEN_DESIGN",
     "HOLD",
+    "NO_DURABLE_EFFECT",
 }
 
 

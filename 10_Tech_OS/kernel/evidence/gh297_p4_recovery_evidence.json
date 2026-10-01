@@ -1,0 +1,51 @@
+{
+    "schema":  "aspace.canary-recovery-evidence.v1",
+    "mission_id":  "github-297",
+    "work_id":  193,
+    "correlation_id":  "gh297-kernel-p4-20261001",
+    "cell_id":  "kernel-continuity-p4-canary",
+    "recovery_session":  "10891318257573716940",
+    "binding_id":  84,
+    "authorization":  "UNKNOWN -\u003e NO_DURABLE_EFFECT authorized by Antigravity manager (event 2540)",
+    "relevant_event_ids":  {
+                               "prior_worker_transition":  2518,
+                               "prior_wake_requested":  2519,
+                               "prior_wake_resolved":  2521,
+                               "receipt_unknown":  2523,
+                               "rory_reconcile":  2524,
+                               "continuation_routed":  2525,
+                               "recovery_dispatch":  2531,
+                               "recovery_resolved":  2533,
+                               "recovery_transition_no_durable_effect":  2538,
+                               "recovery_wake_requested":  2539,
+                               "recovery_wake_resolved":  2540,
+                               "clarification_transition":  2543,
+                               "clarification_wake":  2544
+                           },
+    "test_execution":  {
+                           "command":  "PYTHONPATH=C:\\Users\\amado\\ASpace_OS_V3/10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_p4_canary.py",
+                           "result":  "PASS_WINDOWS_ACCEPTANCE",
+                           "windows_acceptance_command":  "PowerShell: $env:PYTHONPATH=\u003cworktree\u003e\\10_Tech_OS\\kernel; python -m unittest 10_Tech_OS/kernel/test_p4_canary.py",
+                           "windows_acceptance":  "P4 1/1 PASS; mission_watcher 10/10 PASS; dispatch_routing 9/9 PASS"
+                       },
+    "vcs":  {
+                "branch":  "fix/kernel-297-recovery",
+                "pull_request_url":  "",
+                "source_worker_commit":  "e0ca2e38ccb127b1d7a1ad4ff15bf6a9c00fc06f",
+                "publication_state":  "PUBLISH_PR_REQUIRED"
+            },
+    "canary_steps_1_to_12_status":  {
+                                        "step_1":  "PROVEN",
+                                        "step_2":  "PROVEN",
+                                        "step_3":  "PROVEN",
+                                        "step_4":  "PROVEN",
+                                        "step_5":  "PROVEN",
+                                        "step_6":  "PROVEN",
+                                        "step_7":  "IN_PROGRESS",
+                                        "step_8":  "PROVEN_IN_TEST",
+                                        "step_9":  "PROVEN_IN_TEST",
+                                        "step_10":  "PROVEN",
+                                        "step_11":  "PROVEN_IN_TEST",
+                                        "step_12":  "PROVEN_IN_TEST"
+                                    }
+}
