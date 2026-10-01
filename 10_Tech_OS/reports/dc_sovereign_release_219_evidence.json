@@ -1,0 +1,101 @@
+{
+  "schema": "aspace.dc.release-219-evidence.v2",
+  "work_id": "#219",
+  "epic": "#197",
+  "objective": "#194",
+  "release": "A'Space Sovereign Desktop Commander v1",
+  "date": "2026-09-29T16:28:00-04:00",
+  "tested_on": "Amd-PC / Windows",
+  "result": "PASS",
+  "topology_boundary": {
+    "local_self_hosted_sovereign_dc": {
+      "role": "Primary machine gateway (autonomous, local-first, zero cloud relay dependency)",
+      "runtime_root": "C:\\Users\\amado\\.aspace\\dc",
+      "components": [
+        "M0 Filesystem Daemon",
+        "Process Broker",
+        "M1 Session Daemon",
+        "User Session Worker",
+        "FastMCP Gateway",
+        "SQLite Usage Ledger"
+      ],
+      "loopback_ports": "Dynamic free loopback allocation (WinError 10013/10048 immune)",
+      "launcher": "DC.bat / dc.ps1",
+      "autostart": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Run -> ASpace Sovereign DC",
+      "status": "ONLINE / Primary Authority"
+    },
+    "hosted_dc_bootstrap": {
+      "role": "Optional bootstrap and remote fallback only",
+      "runtime_root": "C:\\Users\\amado\\.desktop-commander",
+      "relay": "Supabase cloud channel / external websocket tunnel",
+      "coupling": "Decoupled. If cloud relay or hosted Desktop Commander is offline, local Sovereign DC remains 100% operational with zero degradation.",
+      "status": "OPTIONAL_FALLBACK"
+    }
+  },
+  "gates": {
+    "gate_1_clean_install_start_status": {
+      "result": "PASS",
+      "issue": "#214",
+      "commit": "bdbf845f",
+      "evidence_file": "10_Tech_OS/reports/dc_runtime_214_evidence.json",
+      "notes": "Supervised tree owns M0 filesystem, process broker, M1 session daemon, user-session worker, FastMCP gateway. Dynamic loopback ports, idempotent double-start, stale manifest recovery, HKCU Run autostart, and clean purge uninstall validated."
+    },
+    "gate_2_one_mcp_endpoint_expected_tools": {
+      "result": "PASS",
+      "issue": "#213",
+      "commit": "f0fee4a5",
+      "evidence_file": "10_Tech_OS/reports/dc_gateway_unified_evidence.json",
+      "notes": "Unified FastMCP surface exposing amf_capabilities, amf_execute, amf_health, and amf_tool_catalog."
+    },
+    "gate_3_stdio_and_streamable_http": {
+      "result": "PASS",
+      "issue": "#213",
+      "commit": "f0fee4a5",
+      "notes": "FastMCP handles both stdio IPC transport and Streamable HTTP SSE transport."
+    },
+    "gate_4_filesystem_process_browser_e2e": {
+      "result": "PASS",
+      "issues": ["#213", "#214", "#215"],
+      "commits": ["f0fee4a5", "bdbf845f", "25d08a14"],
+      "evidence_file": "10_Tech_OS/reports/dc_chrome_bridge_215_evidence.json",
+      "notes": "M0 filesystem read/write, process broker start/read/stop, and M1 browser DOM action with before/after evidence pass end-to-end."
+    },
+    "gate_5_truthful_ledger_and_health": {
+      "result": "PASS",
+      "issue": "#216",
+      "commit": "fdcdb914",
+      "evidence_file": "10_Tech_OS/reports/dc_gateway_216_evidence.json",
+      "notes": "Local SQLite usage ledger persists across gateway restarts, logs execution/timing/errors, and truthful health marks DEGRADED on dead worker without inventing fake ONLINE."
+    },
+    "gate_6_plugin_discovery": {
+      "result": "PASS",
+      "issue": "#217",
+      "commit": "06f61400",
+      "evidence_file": "10_Tech_OS/reports/dc_plugins_217_evidence.json",
+      "notes": "Typed Plugin/Adapter SDK with inspect, prepare, execute, observe, reconcile, cleanup hooks. Dynamic discovery from approved directory, disabled plugin filtering, crash isolation, and version in provenance."
+    },
+    "gate_7_remote_second_client": {
+      "result": "PASS",
+      "issue": "#218",
+      "commit": "de6b0bbb",
+      "evidence_file": "10_Tech_OS/reports/dc_remote_adapter_218_evidence.json",
+      "notes": "Authenticated user-owned private remote adapter. Unauthenticated client DENIED 401, authenticated client read and bounded mutation PASS, reconnect replay preserving operation_id semantics, transport failure leaves local DC healthy."
+    },
+    "gate_8_crash_restart_replay_no_duplicate_effect": {
+      "result": "PASS",
+      "issues": ["#213", "#216", "#218"],
+      "notes": "Durable receipts and operation_id idempotence proven across filesystem, process, browser, and remote adapter."
+    },
+    "gate_9_rollback_uninstall": {
+      "result": "PASS",
+      "issues": ["#214", "#215"],
+      "notes": "Installer and runtime uninstall purges all installed files, binaries, native messaging manifests, and Windows Registry keys with zero residual state."
+    },
+    "gate_10_hosted_rdc_optional_only": {
+      "result": "PASS",
+      "issues": ["#194", "#197", "#219"],
+      "notes": "Sovereign Desktop Commander is fully autonomous on host machine; hosted Desktop Commander relay is optional fallback only. Complete separation of runtime roots and ports between C:\\Users\\amado\\.aspace\\dc (Sovereign Primary) and C:\\Users\\amado\\.desktop-commander (Hosted Fallback)."
+    }
+  },
+  "verified_by": "machine:antigravity, status: certified-canary-pass"
+}
