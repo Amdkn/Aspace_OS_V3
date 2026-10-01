@@ -1,6 +1,6 @@
 # A'Space V3 — MEMORY bootstrap
 
-Updated: 2026-09-28
+Updated: 2026-10-01
 
 This file is a **bootstrap pointer**, not a parallel SSOT.
 
@@ -23,15 +23,18 @@ This file is a **bootstrap pointer**, not a parallel SSOT.
 9. Latest operational handover under `_INBOX/handoffs/`.
 
 ## Current architecture correction
-Identity, surface, harness and capability are orthogonal.
-Stewardship means default accountability, never exclusive access.
+Identity, hierarchy, stewardship, surface, harness/runtime and capability are orthogonal.
+Stewardship means default accountability / first hat, never exclusive access or reduced cognition.
 
-- Doctor13 / Kernel: Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
-- Doctor11 / Life: Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
-- Doctor12 / Buzz: Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+**Fractal Holon invariant:** a lower level has narrower jurisdiction, never less intelligence. S3/A3/B3 remain complete local agents able to investigate, reason, plan, choose tools, delegate, act, verify, learn and escalate.
+
+- Doctor13 / Kernel first hats: Ryan→BUILD/industrialisation, Yaz→OBSERVE, Graham→STATE.
+- Doctor11 / Life first hats: Amy→INTERFACE, Rory→PERSISTENCE, River→FLOW/operations.
+- Doctor12 / Buzz first hats: Bill→RESEARCH, Clara→DESIGN/FORGE, Nardole→DISPATCH/INTERCONNECTION.
 - Rick/S1 routes cross-Core dependencies and conflicts.
-- Specialties are shared services; no app/tool/framework is identity-exclusive.
+- Specialties are shared services; no app/tool/framework is identity-exclusive. Scripts, workflows, Jules, Hermes, Claude Code, Codex, MCPs and CI are instruments/runtimes, never the holon itself.
 - Amy owns Jev/System-One interface exposure; River consumes it as a Flow capability rather than owning the platform.
+- Factory/Flow boundary: Clara designs/forges reusable contracts; Ryan builds/industrializes reusable factories/capabilities; River composes/operates them in live flows and owns effect sequencing inside bounded authority.
 - GitHub is the durable inter-agent message bus through Discussions → Issues → PR/Evidence.
 
 ## New IPBD capture
@@ -59,3 +62,9 @@ Current execution truth after reconciliation:
 - WorkGraph = 3 governance-failed externally completed rows + 6 legitimate waiting rows.
 - Local Git branches = `main` + 13 persistent identity branches only.
 - 13 identity worktrees are expected clean and synchronized when idle.
+
+
+## Fractal Holon correction — 2026-10-01
+Cross-repo parent: GitHub Aspace_OS_V3#311. Evidence corpus: #312.
+
+Do not compress `Ryan→worker→Jules`, `Yaz→monitoring`, `Graham→database`, `River→automation` or any A3/B3/S3 into a stateless tool. Agent OS must project hierarchy, identity, stewardship, runtime/tools and mission state as separate dimensions.
