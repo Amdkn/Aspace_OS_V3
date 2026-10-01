@@ -1,0 +1,111 @@
+name: "A-SPEC Architecture Contract"
+description: "Cross-repository semantic/executable architecture contract (PSS/UDM/CCS/WER/TPE/RID/FCS)"
+title: "[A-SPEC][TYPE-ID] "
+labels:
+  - aspec
+  - design:architecture
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A-SPEC complements SDD/PRD/ADR/DDD/TDD. It defines the semantic contract that must survive repositories, transports, runtimes and product surfaces.
+        A document alone does not make a spec VERIFIED; consuming implementations must prove it.
+  - type: dropdown
+    id: spec_type
+    attributes:
+      label: A-SPEC type
+      options:
+        - PSS — Product Semantics Specification
+        - UDM — Unified Domain Model Specification
+        - CCS — Capability Contract Specification
+        - WER — Workflow / Event / Receipt Specification
+        - TPE — Tenant / Policy / Entitlement Specification
+        - RID — Runtime / Integration / Deployment Specification
+        - FCS — Franchise Configuration Specification
+    validations:
+      required: true
+  - type: input
+    id: spec_id
+    attributes:
+      label: Spec ID + version
+      placeholder: "CCS-001 v1"
+    validations:
+      required: true
+  - type: input
+    id: origin
+    attributes:
+      label: Origin objective / mission
+      placeholder: "#272"
+    validations:
+      required: true
+  - type: textarea
+    id: canonical_terms
+    attributes:
+      label: Canonical terminology
+      description: Terms this contract freezes, including prohibited/superseded aliases.
+    validations:
+      required: true
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Invariants
+      description: Conditions that must remain true across all consuming implementations.
+    validations:
+      required: true
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority and state ownership
+      description: Who may mutate, who owns canonical state, and which surfaces are projections.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Inputs / outputs / commands / queries / events
+      description: Typed contract, capability interface or state-machine surface.
+    validations:
+      required: true
+  - type: textarea
+    id: effects
+    attributes:
+      label: Effects / receipts / UNKNOWN behavior
+      description: Evidence required to prove completion, idempotency, retry safety and compensation.
+    validations:
+      required: true
+  - type: textarea
+    id: consumers
+    attributes:
+      label: Consumers / repositories / product surfaces
+      description: Which repos and surfaces must consume this contract.
+    validations:
+      required: true
+  - type: textarea
+    id: migration
+    attributes:
+      label: Migration / versioning / supersession
+      description: Prior semantics, compatibility, data migration and superseded contracts.
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Contract tests and release evidence
+      description: What evidence moves DRAFT → ACCEPTED → IMPLEMENTING → VERIFIED.
+    validations:
+      required: true
+  - type: checkboxes
+    id: gates
+    attributes:
+      label: Contract quality gates
+      options:
+        - label: "The spec is organized by semantic contract, not by screen or repository."
+          required: true
+        - label: "Authority and state ownership are explicit."
+          required: true
+        - label: "Failure / UNKNOWN / retry semantics are explicit."
+          required: true
+        - label: "Migration from old terminology/contracts is addressed."
+          required: true
+        - label: "Verification requires implementation evidence, not document completion."
+          required: true
