@@ -1,6 +1,8 @@
+import subprocess
 import os
 import sys
 import json
+import hashlib
 import re
 import urllib.request
 import urllib.error
@@ -183,49 +185,173 @@ def analyze_transcript(transcript_path):
 
     return analysis
 
-def process_video(url, out_dir):
-    """
-    Process a single video using Watch S1 to get base evidence,
-    then enhance it with citations, canonical papers, and transcript analysis.
-    """
-    print(f"\n[Discovery] Processing video: {url}")
 
-    # Delegate to Watch S1 for base capture (metadata, transcript, keyframes, code refs)
-    base_evidence = watch.capture_video(url, out_dir)
-
-    if not base_evidence:
-        print(f"[Discovery] Failed to capture base evidence for {url}")
+def compute_sha256(filepath):
+    sha256_hash = hashlib.sha256()
+    try:
+        with open(filepath, "rb") as f:
+            for byte_block in iter(lambda: f.read(4096), b""):
+                sha256_hash.update(byte_block)
+        return sha256_hash.hexdigest()
+    except Exception:
         return None
 
-    # Read description from metadata
-    metadata_path = base_evidence["artifacts"]["metadata_file"]["path"]
-    description = ""
+def load_state(out_dir):
+    state_file = Path(out_dir) / "state.json"
+    if state_file.exists():
+        try:
+            with open(state_file, 'r') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {"completed_stages": []}
+
+def save_state(out_dir, state):
+    state_file = Path(out_dir) / "state.json"
+    with open(state_file, 'w') as f:
+        json.dump(state, f, indent=2)
+
+def run_m1_metadata(url, out_dir):
+    out_path = Path(out_dir)
+    metadata_file = out_path / "metadata.json"
+    print(f"[Discovery] M1: Fetching metadata for {url}")
+    
+    cmd = [
+        "yt-dlp",
+        "--dump-json",
+        "-o", str(out_path / "%(id)s.%(ext)s"),
+        url
+    ]
     try:
-        with open(metadata_path, 'r', encoding='utf-8') as f:
-            metadata = json.load(f)
-            description = metadata.get("description", "")
+        import subprocess
+        result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+        lines = result.stdout.strip().split('\n')
+        metadata = json.loads(lines[-1])
+        with open(metadata_file, "w", encoding="utf-8") as f:
+            json.dump(metadata, f, indent=2, ensure_ascii=False)
+        return metadata
     except Exception as e:
-        print(f"[Discovery] Could not read metadata for description: {e}")
+        print(f"FAILED M1: {e}")
+        return None
 
-    # Citation extraction and resolution
-    print("[Discovery] Extracting and resolving citations...")
-    raw_citations = extract_citations(description)
-    resolved_papers = resolve_paper(raw_citations, out_dir=out_dir)
+def run_m2_citations(metadata, out_dir):
+    print("[Discovery] M2: Extracting citations")
+    description = metadata.get("description", "")
+    return extract_citations(description)
 
-    # Transcript analysis
-    print("[Discovery] Analyzing transcripts...")
+def run_m3_canonicalize(raw_citations, out_dir):
+    print("[Discovery] M3: Canonicalizing citations")
+    resolved_papers = []
+    for citation in raw_citations:
+        resolved = {"original_citation": citation, "status": "NEEDS_REVIEW", "canonical_id": "NEEDS_REVIEW"}
+        val = citation["value"]
+        
+        try:
+            if citation["type"] == "arxiv":
+                arxiv_id = val.split("/")[-1].replace(".pdf", "")
+                resolved["canonical_id"] = f"arxiv:{arxiv_id}"
+                
+                # Fetch metadata via API
+                api_url = f"http://export.arxiv.org/api/query?id_list={arxiv_id}"
+                req = urllib.request.Request(api_url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    if response.status == 200:
+                        resolved["status"] = "RESOLVED"
+            elif citation["type"] == "doi":
+                doi = val.split("doi.org/")[-1]
+                resolved["canonical_id"] = f"doi:{doi}"
+                
+                api_url = f"https://api.crossref.org/works/{doi}"
+                req = urllib.request.Request(api_url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    if response.status == 200:
+                        resolved["status"] = "RESOLVED"
+            elif citation["type"] == "openreview":
+                forum_id = val.split("id=")[-1]
+                resolved["canonical_id"] = f"openreview:{forum_id}"
+                resolved["status"] = "RESOLVED"
+        except Exception as e:
+            print(f"[Discovery] M3 Provider API Error: {e}")
+            
+        resolved_papers.append(resolved)
+    return resolved_papers
+
+
+
+def run_m4_transcripts(url, out_dir):
+    print(f"[Discovery] M4: Fetching transcripts for {url}")
+    out_path = Path(out_dir)
+    cmd = [
+        "yt-dlp",
+        "--write-auto-subs",
+        "--sub-lang", "en,fr",
+        "--write-subs",
+        "--skip-download",
+        "-o", str(out_path / "%(id)s.%(ext)s"),
+        url
+    ]
+    try:
+        import subprocess
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
+    except Exception as e:
+        print(f"FAILED M4: {e}")
+        return {}
+
+    # Identify transcript files (e.g., .vtt)
+    transcript_files = list(out_path.glob("*.vtt"))
+    return {str(p): compute_sha256(p) for p in transcript_files}
+
+def run_m5_analysis(transcript_files):
+    print("[Discovery] M5: Analyzing transcripts")
     transcript_analysis = {}
-    for transcript_path in base_evidence["artifacts"]["transcript_files"].keys():
+    for transcript_path in transcript_files:
         transcript_analysis[transcript_path] = analyze_transcript(transcript_path)
+    return transcript_analysis
 
-    # Update Evidence Packet
-    base_evidence["provenance"]["capability"] = "Discovery AI Corpus 01"
-    base_evidence["extracted_context"]["citations"] = resolved_papers
-    base_evidence["extracted_context"]["transcript_analysis"] = transcript_analysis
+def run_m6_keyframes(url, video_id, out_dir):
+    print(f"[Discovery] M6: Fetching bounded keyframes for {url}")
+    out_path = Path(out_dir)
+    video_file = out_path / f"{video_id}.mp4"
+    cmd_vid = [
+        "yt-dlp",
+        "-f", "worstvideo/worst",
+        "-o", str(video_file),
+        url
+    ]
+    try:
+        import subprocess
+        subprocess.run(cmd_vid, check=True, capture_output=True)
+    except Exception as e:
+        print(f"FAILED M6 video download: {e}")
+        return {}
 
+    frames_dir = out_path / "frames"
+    frames_dir.mkdir(exist_ok=True)
+
+    if video_file.exists():
+        cmd_ffmpeg = [
+            "ffmpeg",
+            "-hide_banner", "-loglevel", "error",
+            "-i", str(video_file),
+            "-vf", "fps=1/10,scale=854:-1",
+            "-vframes", "50",
+            str(frames_dir / "%04d.png")
+        ]
+        try:
+            subprocess.run(cmd_ffmpeg, check=True)
+        except Exception as e:
+            print(f"FAILED M6 frame extraction: {e}")
+    
+    keyframes = list(frames_dir.glob("*.png"))
+    return {str(p): compute_sha256(p) for p in keyframes}
+
+def run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analysis, keyframes, out_dir):
+    print(f"[Discovery] M7: Assembling Evidence Packet for {video_id}")
+    out_path = Path(out_dir)
+    metadata_file = out_path / "metadata.json"
+    
     # Generate canonical PaperGraph edges
     paper_graph_edges = []
-    video_id = base_evidence["video_id"]
     for paper in resolved_papers:
         if paper["status"] == "RESOLVED":
             edge = {
@@ -237,15 +363,169 @@ def process_video(url, out_dir):
             }
             paper_graph_edges.append(edge)
 
-    base_evidence["paper_graph_edges"] = paper_graph_edges
+    evidence = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "source_url": url,
+        "video_id": video_id,
+        "title": metadata.get("title", "unknown_title"),
+        "provenance": {
+            "agent": "Bill",
+            "capability": "Discovery AI Corpus 01",
+            "scope": "Microscope (Selected Source)",
+            "routed_to": "Graham/REMEMBER"
+        },
+        "artifacts": {
+            "metadata_file": {
+                "path": str(metadata_file),
+                "sha256": compute_sha256(metadata_file)
+            },
+            "transcript_files": transcripts,
+            "keyframe_directory": str(out_path / "frames"),
+            "keyframes": keyframes,
+            "keyframe_count": len(keyframes)
+        },
+        "extracted_context": {
+            "citations": resolved_papers,
+            "transcript_analysis": analysis
+        },
+        "paper_graph_edges": paper_graph_edges
+    }
 
-    # Save enhanced packet
-    packet_file = Path(out_dir) / "evidence_packet.json"
+    packet_file = out_path / "evidence_packet.json"
     with open(packet_file, "w", encoding="utf-8") as f:
-        json.dump(base_evidence, f, indent=2, ensure_ascii=False)
+        json.dump(evidence, f, indent=2, ensure_ascii=False)
 
-    print(f"[Discovery] Enhanced evidence packet saved for {video_id}")
-    return base_evidence
+    return evidence
+
+
+def process_video(url, out_dir):
+    """
+    Process a single video through the M1-M7 pipeline.
+    """
+    print(f"\n[Discovery] Processing video: {url}")
+    out_path = Path(out_dir)
+    out_path.mkdir(parents=True, exist_ok=True)
+    
+    state = load_state(out_dir)
+    stages = state.get("completed_stages", [])
+    
+    # Check if we should actually resume
+    # Let's load intermediate artifacts if we resume
+    metadata_file = out_path / "metadata.json"
+    metadata = {}
+    if metadata_file.exists():
+        try:
+            with open(metadata_file, 'r', encoding='utf-8') as f:
+                metadata = json.load(f)
+        except Exception:
+            pass
+            
+    video_id = metadata.get("id") or url.split("v=")[-1] if "v=" in url else url.split("/")[-1]
+
+    # M1
+    if "M1" not in stages:
+        metadata = run_m1_metadata(url, out_dir)
+        if not metadata:
+            return None
+        video_id = metadata.get("id", video_id)
+        stages.append("M1")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+
+    # M2
+    citations_file = out_path / "m2_citations.json"
+    if "M2" not in stages:
+        raw_citations = run_m2_citations(metadata, out_dir)
+        with open(citations_file, 'w') as f:
+            json.dump(raw_citations, f)
+        stages.append("M2")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+    else:
+        if citations_file.exists():
+            with open(citations_file, 'r') as f:
+                raw_citations = json.load(f)
+        else:
+            raw_citations = []
+
+    # M3
+    resolved_file = out_path / "m3_resolved.json"
+    if "M3" not in stages:
+        resolved_papers = run_m3_canonicalize(raw_citations, out_dir)
+        with open(resolved_file, 'w') as f:
+            json.dump(resolved_papers, f)
+        stages.append("M3")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+    else:
+        if resolved_file.exists():
+            with open(resolved_file, 'r') as f:
+                resolved_papers = json.load(f)
+        else:
+            resolved_papers = []
+
+    # M4
+    transcripts_file = out_path / "m4_transcripts.json"
+    if "M4" not in stages:
+        transcripts = run_m4_transcripts(url, out_dir)
+        with open(transcripts_file, 'w') as f:
+            json.dump(transcripts, f)
+        stages.append("M4")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+    else:
+        if transcripts_file.exists():
+            with open(transcripts_file, 'r') as f:
+                transcripts = json.load(f)
+        else:
+            transcripts = {}
+
+    # M5
+    analysis_file = out_path / "m5_analysis.json"
+    if "M5" not in stages:
+        analysis = run_m5_analysis(list(transcripts.keys()))
+        with open(analysis_file, 'w') as f:
+            json.dump(analysis, f)
+        stages.append("M5")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+    else:
+        if analysis_file.exists():
+            with open(analysis_file, 'r') as f:
+                analysis = json.load(f)
+        else:
+            analysis = {}
+
+    # M6
+    keyframes_file = out_path / "m6_keyframes.json"
+    if "M6" not in stages:
+        keyframes = run_m6_keyframes(url, video_id, out_dir)
+        with open(keyframes_file, 'w') as f:
+            json.dump(keyframes, f)
+        stages.append("M6")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+    else:
+        if keyframes_file.exists():
+            with open(keyframes_file, 'r') as f:
+                keyframes = json.load(f)
+        else:
+            keyframes = {}
+
+    # M7
+    if "M7" not in stages:
+        evidence = run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analysis, keyframes, out_dir)
+        stages.append("M7")
+        state["completed_stages"] = stages
+        save_state(out_dir, state)
+        return evidence
+    else:
+        # Load existing packet
+        packet_file = out_path / "evidence_packet.json"
+        if packet_file.exists():
+            with open(packet_file, 'r') as f:
+                return json.load(f)
+        return None
 
 def process_corpus(manifest_path, out_dir):
     """
@@ -386,7 +666,7 @@ def process_corpus(manifest_path, out_dir):
     
     print(f"[Discovery] GWS Payloads dumped to {gws_payloads_path}")
 
-    # Fix stage status logic
+# Fix stage status logic
     if report["videos_processed"] == 0:
         report["stage_status"] = "FAILED"
     elif report["videos_processed"] < report["total_videos_discovered"]:
