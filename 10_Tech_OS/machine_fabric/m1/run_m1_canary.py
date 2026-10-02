@@ -9,12 +9,17 @@ from cryptography.hazmat.primitives import serialization
 
 HERE=Path(__file__).resolve().parent
 CHROME=Path(r"google-chrome")
-HOST_NAME="com.aspace.machine_fabric.canary"
+HOST_NAME="com.aspace.machine_fabric.m1"
+_previous_host_registration=None
 
 def free_port():
     s=socket.socket(); s.bind(("127.0.0.1",0)); p=s.getsockname()[1]; s.close(); return p
 def get(url):
     with urllib.request.urlopen(url,timeout=2) as r:return json.loads(r.read().decode())
+def post(url,payload,timeout=12):
+    body=json.dumps(payload,separators=(",",":"),sort_keys=True).encode()
+    req=urllib.request.Request(url,data=body,method="POST",headers={"Content-Type":"application/json"})
+    with urllib.request.urlopen(req,timeout=timeout) as r:return json.loads(r.read().decode())
 def wait(pred,timeout=12,step=.15):
     end=time.time()+timeout
     last=None
@@ -70,28 +75,52 @@ def build_host(tmp):
     return exe,cp.stdout[-1000:]
 def make_extension(tmp):
     ext=tmp/"extension"; shutil.copytree(HERE/"extension",ext)
-    key=rsa.generate_private_key(public_exponent=65537,key_size=2048)
-    pub=key.public_key().public_bytes(serialization.Encoding.DER,serialization.PublicFormat.SubjectPublicKeyInfo)
     manifest=json.loads((ext/"manifest.json").read_text(encoding="utf-8"))
-    manifest["key"]=base64.b64encode(pub).decode()
-    (ext/"manifest.json").write_text(json.dumps(manifest,indent=2)+"\n",encoding="utf-8")
+    key_b64=manifest.get("key")
+    if not key_b64:
+        raise RuntimeError("production extension manifest is missing deterministic key")
+    pub=base64.b64decode(key_b64)
     return ext,extension_id(pub)
 def register_host(manifest_path):
+    global _previous_host_registration
     if sys.platform == 'win32':
-        key=winreg.CreateKey(winreg.HKEY_CURRENT_USER,"Software\\Google\\Chrome\\NativeMessagingHosts\\"+HOST_NAME)
-        try:winreg.SetValueEx(key,"",0,winreg.REG_SZ,str(manifest_path))
-        finally:winreg.CloseKey(key)
+        key_path="Software\\Google\\Chrome\\NativeMessagingHosts\\"+HOST_NAME
+        previous=None
+        try:
+            key=winreg.OpenKey(winreg.HKEY_CURRENT_USER,key_path,0,winreg.KEY_READ)
+            try: previous=winreg.QueryValueEx(key,"")[0]
+            finally: winreg.CloseKey(key)
+        except FileNotFoundError:
+            pass
+        _previous_host_registration={"kind":"winreg","value":previous}
+        key=winreg.CreateKey(winreg.HKEY_CURRENT_USER,key_path)
+        try: winreg.SetValueEx(key,"",0,winreg.REG_SZ,str(manifest_path))
+        finally: winreg.CloseKey(key)
     else:
         dest = Path.home() / ".config" / "google-chrome" / "NativeMessagingHosts" / f"{HOST_NAME}.json"
+        previous=dest.read_bytes() if dest.exists() else None
+        _previous_host_registration={"kind":"file","path":str(dest),"value":previous}
         dest.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(manifest_path, dest)
 def unregister_host():
+    global _previous_host_registration
+    previous=_previous_host_registration
+    _previous_host_registration=None
     if sys.platform == 'win32':
-        try:winreg.DeleteKey(winreg.HKEY_CURRENT_USER,"Software\\Google\\Chrome\\NativeMessagingHosts\\"+HOST_NAME)
-        except FileNotFoundError:pass
+        key_path="Software\\Google\\Chrome\\NativeMessagingHosts\\"+HOST_NAME
+        if previous and previous.get("value") is not None:
+            key=winreg.CreateKey(winreg.HKEY_CURRENT_USER,key_path)
+            try: winreg.SetValueEx(key,"",0,winreg.REG_SZ,previous["value"])
+            finally: winreg.CloseKey(key)
+        else:
+            try: winreg.DeleteKey(winreg.HKEY_CURRENT_USER,key_path)
+            except FileNotFoundError: pass
     else:
         dest = Path.home() / ".config" / "google-chrome" / "NativeMessagingHosts" / f"{HOST_NAME}.json"
-        if dest.exists():
+        if previous and previous.get("value") is not None:
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            dest.write_bytes(previous["value"])
+        elif dest.exists():
             dest.unlink()
 def read_jsonl(path):
     if not path.exists():return []
@@ -150,6 +179,22 @@ def main():
             profile=tmp/"chrome-profile"
             env=os.environ.copy(); env["ASPACE_WORKER_URL"]=f"http://127.0.0.1:{worker_port2}/native"; env["ASPACE_NATIVE_LOG"]=str(native_log)
             env["COMSPEC"]=env.get("COMSPEC") or str(Path(os.environ.get("SystemRoot",r"C:\Windows"))/"System32"/"cmd.exe")
+
+            operation_id="m1-browser-op-0001"
+            operation_payload={"action":"browser.dom.action","selector":"#target","value":"AFTER"}
+            fingerprint="sha256:"+hashlib.sha256(json.dumps(operation_payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
+            task={"operation_id":operation_id,"fingerprint":fingerprint,**operation_payload}
+            execute_result={}
+            def submit_operation():
+                try: execute_result["response"]=post(f"http://127.0.0.1:{daemon_port}/execute",task,timeout=12)
+                except Exception as exc: execute_result["error"]=repr(exc)
+            threading.Thread(target=submit_operation,daemon=True).start()
+            def operation_seeded():
+                c=sqlite3.connect(db)
+                try:return c.execute("select state from browser_operation where operation_id=?",(operation_id,)).fetchone()
+                finally:c.close()
+            wait(operation_seeded,timeout=2)
+
             cmd=[str(chrome_path),f"--user-data-dir={profile}","--headless=new","--disable-gpu","--no-first-run","--disable-default-apps","--disable-sync","--disable-background-networking","--disable-component-update",f"--disable-extensions-except={ext}",f"--load-extension={ext}",f"http://127.0.0.1:{web_port}/canary.html"]
             chrome_log=(tmp/"chrome_stderr.log").open("wb")
             cmd.insert(1,"--enable-logging=stderr")
@@ -163,10 +208,35 @@ def main():
                 return dict(r) if r else None
             row=wait(receipt_ready,timeout=15)
             wait(lambda: next((e for e in CanaryHandler.events if e.get("text")=="AFTER"),None),timeout=10)
-            def replay_seen():
-                logs=read_jsonl(worker_log)
-                return any(x.get("dir")=="out" and (x.get("msg") or {}).get("replayed") is True for x in logs)
-            wait(replay_seen,timeout=10)
+
+            replay_reply=post(
+                f"http://127.0.0.1:{worker_port2}/native",
+                {"type":"claim","operation_id":operation_id,"fingerprint":fingerprint,
+                 "action":"browser.dom.action","selector":"#target","value":"AFTER",
+                 "request_id":"canary-replay"},
+                timeout=5,
+            )
+            if replay_reply.get("execute") is not False or replay_reply.get("replayed") is not True:
+                raise RuntimeError("same operation_id did not replay without execute")
+
+            first_starts=[x for x in read_jsonl(native_log) if x.get("evt")=="start"]
+            if not first_starts:
+                raise RuntimeError("native host never started")
+            first_host_pid=int(first_starts[-1]["pid"])
+            if sys.platform == 'win32':
+                subprocess.run(["taskkill","/PID",str(first_host_pid),"/F"],capture_output=True,text=True,timeout=10)
+            else:
+                os.kill(first_host_pid,9)
+            def native_reconnected():
+                logs=read_jsonl(native_log)
+                starts=[x for x in logs if x.get("evt")=="start"]
+                if len(starts)<2:return None
+                second_pid=starts[-1].get("pid")
+                if any(x.get("evt")=="in" and x.get("pid")==second_pid and '"type":"hello"' in str(x.get("json","")) for x in logs):
+                    return second_pid
+                return None
+            wait(native_reconnected,timeout=10)
+
             wlogs=read_jsonl(worker_log); nlogs=read_jsonl(native_log)
             claims=[x for x in wlogs if x.get("dir")=="in" and (x.get("msg") or {}).get("type")=="claim"]
             tab_events=[x for x in wlogs if x.get("dir")=="in" and (x.get("msg") or {}).get("type")=="tabs"]
