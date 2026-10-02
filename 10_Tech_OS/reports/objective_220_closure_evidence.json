@@ -1,0 +1,34 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective_id": "#220",
+  "status": "SATISFIED",
+  "resolution": "Objective already achieved by Release #230 (Research Atlas v1 — multi-source convergence & promotion proof).",
+  "acceptance_criteria_proof": [
+    {
+      "criteria": "ingest multiple source families",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py",
+      "notes": "Verified in test_multi_source_ingestion_and_deduplication. System ingests Discover AI and independent user sources."
+    },
+    {
+      "criteria": "preserve canonical identity/provenance",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py",
+      "notes": "resolve_identities() deduplicates citations into shared canonical IDs while appending multi-source evidence to canonical_map."
+    },
+    {
+      "criteria": "reconstruct innovation lineages",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py",
+      "notes": "build_lineages() groups multi-source entries into ResearchLineage dataclass instances."
+    },
+    {
+      "criteria": "detect cross-source convergence",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py",
+      "notes": "map_capabilities() requires multi-source validation (e.g. Discover AI + independent)."
+    },
+    {
+      "criteria": "map against A'Space capabilities and emit evidence-backed CapabilityGaps / promoted design candidates",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py",
+      "notes": "map_capabilities() emits a PromotedCandidate if lineage has multi-source validation and high acceleration score, otherwise CapabilityGap."
+    }
+  ],
+  "canonical_evidence_file": "10_Tech_OS/reports/research_atlas_230_evidence.json"
+}
