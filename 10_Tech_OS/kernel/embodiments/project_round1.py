@@ -20,7 +20,7 @@ HERMES_HOME = USER / "AppData" / "Local" / "hermes"
 HERMES_PROFILES = HERMES_HOME / "profiles"
 LOCAL_EMBODIMENTS = USER / ".aspace" / "embodiments"
 NAMES = ("Ryan", "Yaz", "Graham")
-RUNTIME_PROFILE = {"Ryan": "ryan_build_l0", "Yaz": "yaz_spec_l0", "Graham": "graham_spawn_l0"}
+RUNTIME_PROFILE = {"Ryan": "ryan", "Yaz": "yaz", "Graham": "graham"}
 
 
 def sha256(path: Path) -> str | None:
@@ -113,9 +113,9 @@ def repair_hermes_routing() -> Path:
 
     yaml_text = ADE_YAML.read_text(encoding="utf-8-sig")
     replacements = {
-        "ryan": "ryan_build_l0",
-        "yaz": "yaz_spec_l0",
-        "graham": "graham_spawn_l0",
+        "ryan_build_l0": "ryan",
+        "yaz_spec_l0": "yaz",
+        "graham_spawn_l0": "graham",
     }
     for old, new in replacements.items():
         yaml_text = yaml_text.replace(f"profile: {old}", f"profile: {new}")
