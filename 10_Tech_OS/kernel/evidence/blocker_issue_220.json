@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "portfolio-issue-220",
+  "issue_number": 220,
+  "blocked_action": "completion of issue 220 ([OBJECTIVE][BILL-RD] Research Atlas / Innovation Graph)",
+  "reason": "Issue 220 is a portfolio-level truth surface (supervision gate) for the Bill Research Atlas / Innovation Graph. It closes only when all child constituent issues (#206, #207, #222, #223, #225, #226, #227, #228, #229, and #230) have passed their release gates. Since this involves multiple implementations over time, an agent cannot unilaterally mark this issue as 'completed' in a single PR.",
+  "required_resolution": "The constituent child issues must be resolved first. Ultimately, #230 is the terminal convergence proof which on PASS will close #221 and then #220.",
+  "timestamp": "2024-10-02T13:14:00Z"
+}
