@@ -60,5 +60,6 @@
     "nested repo/submodule HEADs participate in source fingerprint",
     "no surface silently closes another surface's intent"
   ],
-  "verified_by": "machine:jules, status: certified-canary-pass"
+  "verified_by": "machine:jules, status: certified-canary-pass",
+  "durable_closure": true
 }
