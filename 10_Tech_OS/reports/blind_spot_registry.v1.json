@@ -1,0 +1,423 @@
+{
+  "schema": "aspace.wargame.blind_spot_registry.v1",
+  "issue": 323,
+  "generated_from": "GitHub issue #323 durable Wargame contract",
+  "state": "RECON_V1",
+  "scoring": {
+    "formula": "recurrence * blast_radius * current_manual_A0_tax",
+    "scale": "1..5 qualitative initial recon",
+    "caveat": "Scores are initial triage hypotheses, not measured telemetry. Yaz must replace them with observed ecology/behavior data before promotion."
+  },
+  "blind_spots": [
+    {
+      "id": "BS01",
+      "title": "False semantic alignment",
+      "dimension": "TRANSLATION",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS02",
+      "title": "Continuity illusion",
+      "dimension": "BEHAVIOR",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS03",
+      "title": "Jurisdiction illusion",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS04",
+      "title": "Cosmology overhead",
+      "dimension": "ECOLOGY",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS05",
+      "title": "Cognitive-budget blindness",
+      "dimension": "ECOLOGY",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS06",
+      "title": "Late arbitration",
+      "dimension": "BEHAVIOR",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS07",
+      "title": "Tacit canon",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS08",
+      "title": "No counter-Wargame",
+      "dimension": "TRUTH",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS09",
+      "title": "Surface myopia",
+      "dimension": "TRANSLATION",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS10",
+      "title": "Classifier mistaken for authority",
+      "dimension": "TRUTH",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS11",
+      "title": "Human replay weakness",
+      "dimension": "TRUTH",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS12",
+      "title": "Post-injection black hole",
+      "dimension": "BEHAVIOR",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS13",
+      "title": "Embodiment drift",
+      "dimension": "BEHAVIOR",
+      "evidence_maturity": "TEST",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS14",
+      "title": "Cross-surface truth divergence",
+      "dimension": "TRUTH",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS15",
+      "title": "Freshness blindness",
+      "dimension": "TRUTH",
+      "evidence_maturity": "LIVE_CANARY",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS16",
+      "title": "Resource-allocation blindness",
+      "dimension": "ECOLOGY",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS17",
+      "title": "Gate gaming",
+      "dimension": "TRUTH",
+      "evidence_maturity": "TEST",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS18",
+      "title": "Tech gravity / plumbing recursion",
+      "dimension": "ECOLOGY",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS19",
+      "title": "Unknown normalization",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS20",
+      "title": "Ontology capture",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "DOC",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS21",
+      "title": "Role rigidity / caste interpretation",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS22",
+      "title": "Single-harness identity cage",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS23",
+      "title": "Bootstrap abstention",
+      "dimension": "ECOLOGY",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    },
+    {
+      "id": "BS24",
+      "title": "Founder / A0 conflation",
+      "dimension": "FORMULATION",
+      "evidence_maturity": "CONTRACT",
+      "status": "OPEN"
+    }
+  ],
+  "translation_breakpoints": [
+    {
+      "id": "TB01",
+      "name": "Research evidence → CapabilityAtom",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB02",
+      "name": "CapabilityAtom → Clara contract / FactoryBlueprint",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB03",
+      "name": "Design contract → Ryan executable build packet",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB04",
+      "name": "Build release → Nardole dispatchable capability",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB05",
+      "name": "DispatchEnvelope → River runtime execution",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB06",
+      "name": "Runtime effect → Graham durable receipt",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB07",
+      "name": "Receipt/evidence → Rory ReconcileDecision",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB08",
+      "name": "ReconcileDecision → Nardole continuation/return_to",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB09",
+      "name": "Machine truth → Amy/Agent OS/Linear/GWS human projection",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    },
+    {
+      "id": "TB10",
+      "name": "Yaz observation → memory/reclassification/next CapabilityNeed",
+      "status": "UNMAPPED",
+      "producer_schema": null,
+      "consumer_schema": null,
+      "lossy_fields": [],
+      "adapter_owner": null,
+      "negative_test": null
+    }
+  ],
+  "weak_proof_zones": [
+    {
+      "id": "WP01",
+      "claim": "`ONLINE` derived only from ping/process",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP02",
+      "claim": "`In Progress` without fresh claim/binding/worker",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP03",
+      "claim": "PR merged treated as capability shipped",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP04",
+      "claim": "Tests PASS treated as real-world effect",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP05",
+      "claim": "API 200 treated as external mutation success",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP06",
+      "claim": "GWS/SaaS command sent without effect receipt",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP07",
+      "claim": "Agent identity inferred from active harness session",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP08",
+      "claim": "Linear status treated as runtime truth",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP09",
+      "claim": "Supabase row treated as freshest truth without observed_at/freshness",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    },
+    {
+      "id": "WP10",
+      "claim": "Design/ADR/spec completion treated as operational maturity",
+      "status": "OPEN",
+      "stronger_proof_required": null
+    }
+  ],
+  "capability_gaps_ranked": [
+    {
+      "id": "CG1",
+      "name": "Truth Projection / Provenance Envelope",
+      "recurrence": 5,
+      "blast_radius": 5,
+      "a0_tax": 5,
+      "score": 125,
+      "evidence": [
+        "#323",
+        "#324",
+        "#325"
+      ]
+    },
+    {
+      "id": "CG2",
+      "name": "Translation Contract Registry",
+      "recurrence": 5,
+      "blast_radius": 4,
+      "a0_tax": 5,
+      "score": 100,
+      "evidence": [
+        "#323",
+        "#321",
+        "#322"
+      ]
+    },
+    {
+      "id": "CG3",
+      "name": "Behavioral Drift & Ecology Budget",
+      "recurrence": 4,
+      "blast_radius": 4,
+      "a0_tax": 5,
+      "score": 80,
+      "evidence": [
+        "#323",
+        "#328"
+      ]
+    },
+    {
+      "id": "CG4",
+      "name": "Unknown/Anomaly Preservation",
+      "recurrence": 4,
+      "blast_radius": 5,
+      "a0_tax": 4,
+      "score": 80,
+      "evidence": [
+        "#323",
+        "#324"
+      ]
+    },
+    {
+      "id": "CG5",
+      "name": "Post-Promotion Feedback Loop",
+      "recurrence": 4,
+      "blast_radius": 4,
+      "a0_tax": 4,
+      "score": 64,
+      "evidence": [
+        "#323",
+        "#318",
+        "#322"
+      ]
+    }
+  ],
+  "current_live_refs": {
+    "role_rigidity_constitution": "#326 merged",
+    "wait_wake_false_green": "#325 merged",
+    "profile_home_false_green": "#324 open; #327 merged durable-source repair",
+    "dc_hosted_fallback_regression": "#328 open; #329 PR",
+    "continuation_protocol": "#321",
+    "embodied_holons": "#318"
+  },
+  "next_gate": {
+    "instruction": "Do not launch five build projects. Populate the 10 translation contracts and 10 stronger-proof requirements from current durable evidence; then choose at most 1–2 smallest gaps for implementation.",
+    "preferred_vertical_slice": "CG1 + CG2 intersection: Truth/Provenance envelope at one translation breakpoint that currently requires A0/manual interpretation.",
+    "return_to": "#323"
+  }
+}
