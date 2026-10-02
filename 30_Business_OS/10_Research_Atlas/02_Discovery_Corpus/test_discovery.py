@@ -5,6 +5,8 @@ import os
 import shutil
 from pathlib import Path
 
+os.environ["CI"] = "true"
+
 import discovery
 from inventory import resolve_inventory
 
