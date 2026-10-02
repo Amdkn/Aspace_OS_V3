@@ -1,0 +1,64 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective_id": "#194",
+  "status": "SATISFIED",
+  "resolution": "Objective achieved by Release #219 (A'Space Sovereign Desktop Commander v1).",
+  "acceptance_criteria_proof": [
+    {
+      "criteria": "start the A'Space DC idempotently without a foreground terminal",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_1_clean_install_start_status)",
+      "notes": "Idempotent double-start and HKCU Run autostart validated."
+    },
+    {
+      "criteria": "discover one MCP endpoint and its tools/capabilities",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_2_one_mcp_endpoint_expected_tools)",
+      "notes": "Unified FastMCP surface exposing capabilities."
+    },
+    {
+      "criteria": "use local stdio and Streamable HTTP",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_3_stdio_and_streamable_http)",
+      "notes": "FastMCP handles both transports."
+    },
+    {
+      "criteria": "execute bounded filesystem/process/browser actions through HostPolicy",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_4_filesystem_process_browser_e2e)",
+      "notes": "E2E validated across M0, process broker, and M1 browser DOM."
+    },
+    {
+      "criteria": "produce durable receipts and reconcile restart/replay",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_8_crash_restart_replay_no_duplicate_effect)",
+      "notes": "Durable receipts and operation_id idempotence proven."
+    },
+    {
+      "criteria": "expose truthful health, tool inventory and local usage/cost/latency/error ledger",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_5_truthful_ledger_and_health)",
+      "notes": "Local SQLite usage ledger and truthful DEGRADED health states validated."
+    },
+    {
+      "criteria": "install/update/uninstall Chrome extension + Native Messaging reproducibly",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_9_rollback_uninstall)",
+      "notes": "Installer purges all files, binaries, manifests, and keys with zero residual state."
+    },
+    {
+      "criteria": "survive logout/restart according to explicit daemon/worker semantics",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_1_clean_install_start_status)",
+      "notes": "Dynamic loopback, stale manifest recovery, supervised tree validated."
+    },
+    {
+      "criteria": "add adapters/tools without modifying the core gateway",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_6_plugin_discovery)",
+      "notes": "Typed Plugin/Adapter SDK with dynamic discovery validated."
+    },
+    {
+      "criteria": "use a user-owned remote transport without hosted Desktop Commander quota dependency",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_7_remote_second_client)",
+      "notes": "Authenticated user-owned private remote adapter validated."
+    },
+    {
+      "criteria": "pass a cutover canary proving real clients can use A'Space DC directly",
+      "proof_ref": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (verified_by)",
+      "notes": "Verified by machine:antigravity, status: certified-canary-pass."
+    }
+  ],
+  "canonical_evidence_file": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json"
+}
