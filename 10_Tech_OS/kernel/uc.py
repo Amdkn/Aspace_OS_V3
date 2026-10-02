@@ -178,6 +178,8 @@ def _move(a, target):
         out({"ok": False, "err": str(e)}); sys.exit(3)
     if target in ("done", "failed"):
         c.execute("DELETE FROM claim WHERE work_id=?", (a.work,))
+        c.execute("DELETE FROM work_wait WHERE work_id=?", (a.work,))
+        c.execute("UPDATE work SET wake_at=NULL WHERE id=?", (a.work,))
     log(c, a.work, None, target, {"reason": getattr(a, "reason", None)})
     out({"ok": True, "work_id": a.work, "status": target})
 
@@ -222,8 +224,10 @@ def cmd_reap(a):
     # Reprise des taches en attente. Legacy databases cannot store status='waiting',
     # so work_wait is the durable wait authority and work remains status='pending'.
     woken = [r["work_id"] for r in c.execute(
-        "SELECT work_id FROM work_wait "
-        "WHERE wake_at IS NOT NULL AND wake_at < datetime('now')")]
+        "SELECT ww.work_id FROM work_wait ww "
+        "JOIN work w ON w.id=ww.work_id "
+        "WHERE w.status='pending' "
+        "AND ww.wake_at IS NOT NULL AND ww.wake_at < datetime('now')")]
     for wid in woken:
         c.execute("DELETE FROM work_wait WHERE work_id=?", (wid,))
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
