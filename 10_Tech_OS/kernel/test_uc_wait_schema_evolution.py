@@ -137,5 +137,30 @@ class TestUCWaitSchemaEvolution(unittest.TestCase):
         self.assertEqual(reclaimed["work"]["id"], 1)
 
 
+    def test_migration_is_idempotent(self):
+        first = migration.apply_migration(self.db, dry_run=False)
+        second = migration.apply_migration(self.db, dry_run=False)
+        self.assertTrue(first["ok"])
+        self.assertTrue(second["ok"])
+        self.assertEqual(second["applied"], [])
+        self.assertEqual(second["errors"], [])
+        self.assertEqual(second["missing_tables"], [])
+
+    def test_terminal_work_is_not_resurrected_by_reap(self):
+        result = migration.apply_migration(self.db, dry_run=False)
+        self.assertTrue(result["ok"])
+        self.run_uc("wait", "--work", "1", "--seconds", "1")
+        self.run_uc("done", "--work", "1")
+        time.sleep(2)
+        reaped = self.run_uc("reap")
+        self.assertNotIn(1, reaped["woken"])
+        c = sqlite3.connect(self.db)
+        self.assertEqual(c.execute("SELECT status FROM work WHERE id=1").fetchone()[0], "done")
+        self.assertIsNone(c.execute("SELECT * FROM work_wait WHERE work_id=1").fetchone())
+        self.assertIsNone(c.execute("SELECT wake_at FROM work WHERE id=1").fetchone()[0])
+        c.close()
+
+
+
 if __name__ == "__main__":
     unittest.main()
