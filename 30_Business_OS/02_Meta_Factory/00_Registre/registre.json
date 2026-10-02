@@ -3,6 +3,7 @@
   "units": [
     {"id": "autolab", "name": "AutoLab", "role": "labo automatise builds/experiences", "status": "initialized"},
     {"id": "primeagent", "name": "PrimeAgent", "role": "prototype d'agents franchises", "status": "initialized"},
-    {"id": "jcode", "name": "Jcode", "role": "pipeline code-gen borne", "status": "initialized"}
+    {"id": "jcode", "name": "Jcode", "role": "pipeline code-gen borne", "status": "initialized"},
+    {"id": "compiler", "name": "Franchise Compiler", "role": "Compile business profiles into instances", "status": "initialized"}
   ]
 }
