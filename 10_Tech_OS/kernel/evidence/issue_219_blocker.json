@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "portfolio-issue-219",
+  "issue_number": 219,
+  "blocked_action": "completion of issue 219 (v1 Cutover \u2014 A'Space DC becomes primary machine gateway)",
+  "reason": "Issue 219 requires publishing a release artifact/version, connecting a real client, running the golden canary suite, persisting receipts/evidence, and closing #197 and #194. This requires human validation of the actual product state, cutover, and external real-world actions (e.g. connecting real clients) which cannot be automated by the AI agent.",
+  "required_resolution": "The human supervisor or domain owners must manually verify and execute the cutover process, including connecting a real client, running the golden canary suite in normal Chrome, and verifying the release acceptance criteria.",
+  "timestamp": "2024-05-18T12:00:00Z"
+}
