@@ -1,0 +1,38 @@
+{
+  "work_id": "323",
+  "timestamp": "2026-10-02T12:35:53.646782+00:00",
+  "files": {
+    "10_Tech_OS/reports/blind_spot_registry.v1.json": {
+      "sha256": "bde00d47a23435e2e49c25d73190d22ce3a889ef15392f44eb6746cd3b50f0ec"
+    },
+    "30_Business_OS/00_Architecture/contracts/CCS-333.md": {
+      "sha256": "52ada3f72f1b56d601a84f4c7a73082fa000d8c77912dcb44877edada170909a"
+    },
+    "80_Agent-OS/capability_fabric/registry.py": {
+      "sha256": "e88e83d5c932055928dedc0706444b31099c2fdee91eead676b2a8a472d1f8fc"
+    },
+    "80_Agent-OS/capability_fabric/capability.py": {
+      "sha256": "8c959029e9500452f39c995c70852645ffa9efcb2953756beb51526c5b6823fc"
+    },
+    "80_Agent-OS/capability_fabric/adapters.py": {
+      "sha256": "c18b4f0a3fa9be79b553de778a2fc1a58d2427a08571a4975d0e01ea8c3e7df1"
+    },
+    "80_Agent-OS/capability_fabric/harness_list.py": {
+      "sha256": "0bc68173085bea50201f4386e0bebbfc9efe8572d9407b012a40a7f79b0516ad"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/reports/blind_spot_registry.v1.json": "",
+    "30_Business_OS/00_Architecture/contracts/CCS-333.md": "",
+    "80_Agent-OS/capability_fabric/registry.py": "",
+    "80_Agent-OS/capability_fabric/capability.py": "",
+    "80_Agent-OS/capability_fabric/adapters.py": "",
+    "80_Agent-OS/capability_fabric/harness_list.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=$(pwd) python3 -m unittest 80_Agent-OS/capability_fabric/test_capability_fabric.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n"
+  }
+}
