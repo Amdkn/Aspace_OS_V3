@@ -71,14 +71,14 @@ class ProjectionTests(unittest.TestCase):
         with closing(sqlite3.connect(self.db)) as c, c:
             c.executescript("""
             CREATE TABLE work(id INTEGER PRIMARY KEY, layer TEXT,title TEXT,status TEXT,updated_at TEXT);
-            CREATE TABLE claim(work_id INTEGER,harness TEXT,expires_at TEXT);
+            CREATE TABLE claim(work_id INTEGER,harness TEXT,expires_at TEXT,institutional_owner TEXT,runtime_id TEXT);
             CREATE TABLE session_binding(id INTEGER PRIMARY KEY,work_id INTEGER,harness TEXT,status TEXT,ended_at TEXT);
             CREATE TABLE artifact(id INTEGER PRIMARY KEY,work_id INTEGER,kind TEXT,sha256 TEXT);
             CREATE TABLE gate_decision(id INTEGER PRIMARY KEY,work_id INTEGER,gate TEXT,verdict TEXT);
             INSERT INTO work VALUES(1,'L0','Kernel','claimed','2026-09-23 10:00:00');
             INSERT INTO work VALUES(2,'L1','Life','pending','2026-09-23 10:00:00');
             INSERT INTO work VALUES(3,'L2','Business','done','2026-09-23 10:00:00');
-            INSERT INTO claim VALUES(1,'hermes','2026-09-23 09:00:00');
+            INSERT INTO claim(work_id, harness, expires_at) VALUES(1,'hermes','2026-09-23 09:00:00');
             INSERT INTO session_binding VALUES(1,1,'hermes','active',NULL);
             """)
         self.now = "2026-09-23T11:00:00+00:00"

@@ -42,14 +42,14 @@ class TestUCContinuation(unittest.TestCase):
         work_id = res["work_id"]
 
         # 2. Claim work
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id), "--lease", "1")
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id), "--lease", "1")
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
         self.assertEqual(res["work"]["id"], work_id)
 
         # 3. Duplicate ownership attempt
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "other_harness", "--work", str(work_id), "--lease", "1")
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "other_harness", "--institutional-owner", "Ryan", "--runtime-id", "other_runtime", "--work", str(work_id), "--lease", "1")
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
@@ -65,7 +65,7 @@ class TestUCContinuation(unittest.TestCase):
         self.assertIn(work_id, res["reclames"])
 
         # 5. Re-claim by another harness
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "other_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "other_harness", "--institutional-owner", "Ryan", "--runtime-id", "other_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
@@ -95,7 +95,7 @@ class TestUCContinuation(unittest.TestCase):
         conn.close()
 
         # 8. Try claim fenced work
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
@@ -111,7 +111,7 @@ class TestUCContinuation(unittest.TestCase):
         work_id = res["work_id"]
 
         # 2. Claim work
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
 
         # 3. Put to wait
@@ -121,7 +121,7 @@ class TestUCContinuation(unittest.TestCase):
         self.assertTrue(res.get("ok"))
 
         # 4. Try claim (should fail because it's waiting)
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))
@@ -137,7 +137,7 @@ class TestUCContinuation(unittest.TestCase):
         self.assertIn(work_id, res.get("woken", []))
 
         # 6. Re-claim should succeed
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))

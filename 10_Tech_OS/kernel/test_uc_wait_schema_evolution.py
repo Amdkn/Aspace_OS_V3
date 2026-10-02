@@ -36,7 +36,9 @@ CREATE TABLE claim (
   work_id INTEGER PRIMARY KEY REFERENCES work(id) ON DELETE CASCADE,
   harness TEXT NOT NULL,
   claimed_at TEXT NOT NULL DEFAULT (datetime('now')),
-  expires_at TEXT NOT NULL
+  expires_at TEXT NOT NULL,
+  institutional_owner TEXT,
+  runtime_id TEXT
 );
 CREATE TABLE session_binding (
   id INTEGER PRIMARY KEY,
@@ -121,7 +123,7 @@ class TestUCWaitSchemaEvolution(unittest.TestCase):
         self.assertIsNotNone(c.execute("SELECT * FROM work_wait WHERE work_id=1").fetchone())
         c.close()
 
-        blocked = self.run_uc("claim", "--harness", "other", "--work", "1")
+        blocked = self.run_uc("claim", "--harness", "other", "--institutional-owner", "Ryan", "--runtime-id", "other_runtime", "--work", "1")
         self.assertIsNone(blocked["work"])
 
         time.sleep(2)
@@ -133,7 +135,7 @@ class TestUCWaitSchemaEvolution(unittest.TestCase):
         self.assertIsNone(c.execute("SELECT wake_at FROM work WHERE id=1").fetchone()[0])
         c.close()
 
-        reclaimed = self.run_uc("claim", "--harness", "other", "--work", "1")
+        reclaimed = self.run_uc("claim", "--harness", "other", "--institutional-owner", "Ryan", "--runtime-id", "other_runtime", "--work", "1")
         self.assertEqual(reclaimed["work"]["id"], 1)
 
 

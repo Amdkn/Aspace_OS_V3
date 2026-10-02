@@ -26,7 +26,9 @@ def init_db(path: Path):
           work_id INTEGER PRIMARY KEY,
           harness TEXT NOT NULL,
           claimed_at TEXT NOT NULL,
-          expires_at TEXT NOT NULL
+          expires_at TEXT NOT NULL,
+  institutional_owner TEXT,
+  runtime_id TEXT
         );
         CREATE TABLE session_binding(
           id INTEGER PRIMARY KEY,
