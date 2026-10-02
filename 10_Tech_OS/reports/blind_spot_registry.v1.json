@@ -188,122 +188,132 @@
   "translation_breakpoints": [
     {
       "id": "TB01",
-      "name": "Research evidence → CapabilityAtom",
-      "status": "RECON_PARTIAL",
+      "name": "Research evidence \u2192 CapabilityAtom",
+      "status": "RECON_DEFINED",
       "producer_schema": "ResearchEvidence / DiscoveryPacket",
       "consumer_schema": "CapabilityAtom",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "source_confidence",
+        "raw_context_pointers"
       ],
-      "adapter_owner": "Bill→Clara",
+      "adapter_owner": "Bill\u2192Clara",
       "negative_test": "drop source/provenance field and ensure consumer rejects or marks UNKNOWN"
     },
     {
       "id": "TB02",
-      "name": "CapabilityAtom → Clara contract / FactoryBlueprint",
-      "status": "RECON_PARTIAL",
+      "name": "CapabilityAtom \u2192 Clara contract / FactoryBlueprint",
+      "status": "RECON_DEFINED",
       "producer_schema": "CapabilityAtom",
       "consumer_schema": "DesignContract / FactoryBlueprint",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "design_rationale",
+        "alternative_considerations"
       ],
       "adapter_owner": "Clara",
       "negative_test": "remove acceptance/version field and ensure build packet cannot be treated as executable"
     },
     {
       "id": "TB03",
-      "name": "Design contract → Ryan executable build packet",
-      "status": "RECON_PARTIAL",
+      "name": "Design contract \u2192 Ryan executable build packet",
+      "status": "RECON_DEFINED",
       "producer_schema": "DesignContract / FactoryBlueprint",
       "consumer_schema": "ExecutableBuildPacket",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "contract_intent",
+        "business_context"
       ],
       "adapter_owner": "Ryan",
       "negative_test": "omit authority/return contract and ensure Ryan cannot promote"
     },
     {
       "id": "TB04",
-      "name": "Build release → Nardole dispatchable capability",
-      "status": "RECON_PARTIAL",
+      "name": "Build release \u2192 Nardole dispatchable capability",
+      "status": "RECON_DEFINED",
       "producer_schema": "BuildRelease / CapabilityRelease",
       "consumer_schema": "DispatchableCapability",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "build_environment_metadata",
+        "transient_warnings"
       ],
       "adapter_owner": "Nardole",
       "negative_test": "ship release without compatibility/evidence ref and ensure dispatch refuses"
     },
     {
       "id": "TB05",
-      "name": "DispatchEnvelope → River runtime execution",
-      "status": "RECON_PARTIAL",
+      "name": "DispatchEnvelope \u2192 River runtime execution",
+      "status": "RECON_DEFINED",
       "producer_schema": "DispatchEnvelope",
       "consumer_schema": "RuntimeExecution",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "dispatch_timing_constraints",
+        "routing_history"
       ],
       "adapter_owner": "River",
       "negative_test": "mutate runtime without operation/correlation and ensure effect is fenced"
     },
     {
       "id": "TB06",
-      "name": "Runtime effect → Graham durable receipt",
-      "status": "RECON_PARTIAL",
+      "name": "Runtime effect \u2192 Graham durable receipt",
+      "status": "RECON_DEFINED",
       "producer_schema": "RuntimeEffect / EffectReceipt input",
       "consumer_schema": "DurableReceipt",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "runtime_memory_state",
+        "process_id"
       ],
       "adapter_owner": "Graham",
       "negative_test": "return command success without readback/receipt and ensure Graham refuses durable truth"
     },
     {
       "id": "TB07",
-      "name": "Receipt/evidence → Rory ReconcileDecision",
-      "status": "RECON_PARTIAL",
+      "name": "Receipt/evidence \u2192 Rory ReconcileDecision",
+      "status": "RECON_DEFINED",
       "producer_schema": "Receipt / Evidence",
       "consumer_schema": "ReconcileDecision",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "raw_evidence_payload",
+        "transport_headers"
       ],
       "adapter_owner": "Rory",
       "negative_test": "provide stale receipt and ensure Rory preserves UNKNOWN rather than projecting DONE"
     },
     {
       "id": "TB08",
-      "name": "ReconcileDecision → Nardole continuation/return_to",
-      "status": "RECON_PARTIAL",
+      "name": "ReconcileDecision \u2192 Nardole continuation/return_to",
+      "status": "RECON_DEFINED",
       "producer_schema": "ReconcileDecision",
       "consumer_schema": "Continuation / return_to",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "decision_confidence",
+        "reconciliation_trace"
       ],
       "adapter_owner": "Nardole",
       "negative_test": "remove return_to and ensure continuation remains incomplete"
     },
     {
       "id": "TB09",
-      "name": "Machine truth → Amy/Agent OS/Linear/GWS human projection",
-      "status": "RECON_PARTIAL",
+      "name": "Machine truth \u2192 Amy/Agent OS/Linear/GWS human projection",
+      "status": "RECON_DEFINED",
       "producer_schema": "MachineTruth / TruthProjection",
       "consumer_schema": "HumanProjection",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "machine_precision_timestamps",
+        "full_correlation_chain"
       ],
       "adapter_owner": "Amy",
       "negative_test": "inject stale/conflicting source and ensure human projection shows provenance/freshness conflict"
     },
     {
       "id": "TB10",
-      "name": "Yaz observation → memory/reclassification/next CapabilityNeed",
-      "status": "RECON_PARTIAL",
+      "name": "Yaz observation \u2192 memory/reclassification/next CapabilityNeed",
+      "status": "RECON_DEFINED",
       "producer_schema": "YazObservation",
       "consumer_schema": "Memory / Reclassification / CapabilityNeed",
       "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
+        "unstructured_anomaly_context",
+        "raw_sensor_data"
       ],
-      "adapter_owner": "Yaz→Graham/Rory",
+      "adapter_owner": "Yaz\u2192Graham/Rory",
       "negative_test": "emit anomaly outside current schema and ensure raw observation survives classification"
     }
   ],
@@ -457,8 +467,9 @@
     "ai_native_capability_fabric": "#333"
   },
   "next_gate": {
-    "instruction": "Do not launch five build projects. Populate the 10 translation contracts and 10 stronger-proof requirements from current durable evidence; then choose at most 1–2 smallest gaps for implementation.",
-    "preferred_vertical_slice": "CG1 + CG2 + CG6 intersection: one existing Business capability projected through shared registry → MCP + API + CLI + one harness with the same authority/evidence semantics.",
-    "return_to": "#323"
+    "instruction": "Do not launch five build projects. Populate the 10 translation contracts and 10 stronger-proof requirements from current durable evidence; then choose at most 1\u20132 smallest gaps for implementation.",
+    "preferred_vertical_slice": "CG1 + CG2 + CG6 intersection: one existing Business capability projected through shared registry \u2192 MCP + API + CLI + one harness with the same authority/evidence semantics.",
+    "return_to": "#323",
+    "status": "IMPLEMENTING"
   }
 }
