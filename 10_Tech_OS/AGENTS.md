@@ -36,6 +36,13 @@ Machine contract: `10_Tech_OS/kernel/shared_surface_fabric.json`; executable rou
 
 ## D4 append-only — audits de vivance
 
+- **2026-10-02 — Correction DC souverain / auth UI :**
+  - Le runtime souverain `10_Tech_OS/machine_fabric/runtime/dc.ps1` / `C:\\Users\\amado\\.aspace\\dc` est l'autorité primaire de machine-gateway.
+  - Le Desktop Commander hébergé sous `C:\\Users\\amado\\.desktop-commander` est un fallback explicite seulement; sa présence installée ne lui donne aucune priorité de recovery.
+  - La doctrine 2026-09-20 qui ouvrait automatiquement le navigateur sur chaque challenge d'auth est **supersédée** : `AUTH_REQUIRED` doit être enregistré/notifié, jamais convertir une boucle de retry en boucle d'UI.
+  - `dc_recovery_daemon.py` sélectionne le fallback hébergé uniquement si `ASPACE_ALLOW_HOSTED_DC_FALLBACK=1` est explicitement présent.
+  - Un scheduler/daemon peut détecter et persister le besoin d'auth; l'ouverture de navigateur relève d'un adaptateur UI / action humaine distincte.
+  - Canon de suivi : GitHub #328.
 - **2026-09-20 15:38 EDT — Stabilisation Antifragile, Idempotente et Durable de Desktop Commander :**
   - **Diagnostic médico-légal :** Éradication de la boucle infernale de refresh token reuse (`Invalid Refresh Token: Already Used`) causée par 3 tâches planifiées concurrentes (`ASpace DC Health`, `ASpace DC Maintenance`, `ASpace DC Migration`) qui exécutaient des `taskkill /F` aveugles et relançaient des processus concurrents.
   - **Idempotence stricte (Loi L0) :** Mutex Windows global unique (`Global\ASpace_DC_Bedrock_Mutex`) dans `dc_bedrock_sentinel.py`. Tout lancement additionnel détecte l'instance existante saine et quitte avec le code 0 sans doublement ni perturbation.
