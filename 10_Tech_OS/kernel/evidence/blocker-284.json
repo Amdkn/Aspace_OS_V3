@@ -1,0 +1,6 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue": 284,
+  "reason": "Missing write permissions to canonical omk-services/OMK-DESKTOP-WEB-OS repository to create PR",
+  "handoff_file": "_INBOX/handoffs/issue-284-blocker.md"
+}
