@@ -37,7 +37,7 @@
         "schema": {"const": "aspace.machine.receipt.v1"},
         "operation_id": {"type": "string"},
         "fingerprint": {"type": "string"},
-        "state": {"enum": ["CLAIMED", "RUNNING", "SUCCEEDED", "FAILED", "COMPENSATED", "DENIED", "DLQ"]},
+        "state": {"enum": ["CLAIMED", "RUNNING", "SUCCEEDED", "FAILED", "COMPENSATED", "DENIED", "DLQ", "UNKNOWN", "REQUIRES_HUMAN"]},
         "capability": {"type": "string"},
         "adapter": {"type": "string"},
         "policy": {"type": "object", "required": ["decision", "policy_version"], "properties": {
