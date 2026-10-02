@@ -1,0 +1,12 @@
+{
+  "work_id": "232",
+  "timestamp": "2026-10-02T20:11:53.135925+00:00",
+  "files": {
+    "10_Tech_OS/reports/agent_os_release_232_evidence.json": {
+      "sha256": "ec0808eddf8e47350b917d2b77c2047791a6b31c78040a0a78957bf8bd79ee38"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/reports/agent_os_release_232_evidence.json": ""
+  }
+}
