@@ -161,7 +161,7 @@ def validate(spec: dict) -> dict:
 
         checks = {
             "worktree_exists": worktree.exists(),
-            "canonical_profile_exists": (HERMES_PROFILES / profile / "IDENTITY.md").exists()
+            "runtime_profile_exists": (HERMES_PROFILES / profile / "IDENTITY.md").exists()
             and (HERMES_PROFILES / profile / "SOUL.md").exists(),
             "ade_registry_profile_matches": registry["roles"].get(name, {}).get("profile") == profile,
             "launcher_profile_matches": bool(re.search(rf"\s-p\s+{re.escape(profile)}(?:\s|$)", launcher_text)),
@@ -204,6 +204,8 @@ def validate(spec: dict) -> dict:
         "hermes_orca": "READY_FOR_NON_DESTRUCTIVE_START_CANARY"
         if result["round1_status"] == "PASS"
         else "DEGRADED",
+        "profile_home": str(HERMES_PROFILES).replace("\\", "/"),
+        "identity_runtime_separation": "institutional identity is not the Hermes runtime profile slug",
     }
 
     return result
