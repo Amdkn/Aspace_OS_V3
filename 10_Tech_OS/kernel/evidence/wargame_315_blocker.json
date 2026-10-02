@@ -1,0 +1,7 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "type": "blocker",
+  "reason": "IRREVERSIBLE_ACTION_REQUIRED",
+  "details": "The task requires running a Wargame simulation involving three S2 Doctors (11, 12, 13) and Rick/S1 to generate authentic simulation artifacts. As an agent, I cannot run multi-agent simulations locally without the required LLM API keys and environment. Faking the wargame output would violate the strict constraint to not fake success. Therefore, this issue is blocked on human execution.",
+  "issue": "315"
+}
