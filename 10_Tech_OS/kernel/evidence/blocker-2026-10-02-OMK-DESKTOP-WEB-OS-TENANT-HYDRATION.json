@@ -1,0 +1,7 @@
+{
+  "schema": "aspace.typed-blocker.v1",
+  "blocker_type": "MissingWriteAccess",
+  "resource": "omk-services/OMK-DESKTOP-WEB-OS",
+  "reason": "Agent lacks write permission to push branches or create PRs directly on omk-services/OMK-DESKTOP-WEB-OS",
+  "mitigation": "Generated patch file 0001-BUSINESS-OS-OPERATIONS-P0-Hydrate-active-tenant-from.patch in the workspace root and provided handoff documentation."
+}
