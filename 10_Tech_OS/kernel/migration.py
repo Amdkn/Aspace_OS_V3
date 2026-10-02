@@ -35,6 +35,37 @@ SCHEMA_EVOLUTION = [
     ("session_binding", "institutional_owner", "ALTER TABLE session_binding ADD COLUMN institutional_owner TEXT"),
     ("session_binding", "runtime_id", "ALTER TABLE session_binding ADD COLUMN runtime_id TEXT"),
     ("work_wait", "institutional_owner", "ALTER TABLE work_wait ADD COLUMN institutional_owner TEXT"),
+    ("wargame", None, '''CREATE TABLE IF NOT EXISTS wargame (
+  github_issue INTEGER PRIMARY KEY,
+  work_id INTEGER REFERENCES work(id) ON DELETE SET NULL,
+  state TEXT NOT NULL DEFAULT 'OPEN' CHECK (state IN ('OPEN', 'CLOSED')),
+  current_round INTEGER NOT NULL DEFAULT 1,
+  hypothesis TEXT,
+  falsification_conditions TEXT,
+  last_verified_effect TEXT,
+  next_gate TEXT,
+  owner_level TEXT,
+  return_to TEXT,
+  stale_after TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+)'''),
+    ("wargame_child", None, '''CREATE TABLE IF NOT EXISTS wargame_child (
+  id INTEGER PRIMARY KEY,
+  parent_issue INTEGER NOT NULL REFERENCES wargame(github_issue) ON DELETE CASCADE,
+  work_id INTEGER REFERENCES work(id) ON DELETE SET NULL,
+  claim_prediction TEXT,
+  institutional_owner TEXT,
+  capability TEXT,
+  runtime_binding TEXT,
+  evidence_sink TEXT,
+  deterministic_gates TEXT,
+  receipt TEXT,
+  return_to TEXT,
+  status TEXT NOT NULL DEFAULT 'ACTIVE' CHECK (status IN ('ACTIVE', 'CLOSED')),
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+)'''),
 ]
 
 
@@ -56,7 +87,7 @@ def apply_migration(db_path: str = DB, dry_run: bool = False) -> dict:
     errors: list[dict] = []
     tables = {r[0] for r in c.execute(
         "SELECT name FROM sqlite_master WHERE type='table'")}
-    required_tables = {table for table, _, _ in SCHEMA_EVOLUTION} | {"event"}
+    required_tables = {table for table, col, _ in SCHEMA_EVOLUTION if col is not None} | {"event"}
     missing_tables = sorted(required_tables - tables)
 
     if missing_tables:
@@ -72,11 +103,15 @@ def apply_migration(db_path: str = DB, dry_run: bool = False) -> dict:
         c.close()
         return result
 
-    pending = [
-        {"table": table, "column": column, "ddl": ddl}
-        for table, column, ddl in SCHEMA_EVOLUTION
-        if not _column_exists(c, table, column)
-    ]
+    pending = []
+    for table, column, ddl in SCHEMA_EVOLUTION:
+        if column is None:
+            if table not in tables:
+                pending.append({"table": table, "column": column, "ddl": ddl})
+        else:
+            if not _column_exists(c, table, column):
+                pending.append({"table": table, "column": column, "ddl": ddl})
+
     if dry_run:
         result = {
             "ok": True,
