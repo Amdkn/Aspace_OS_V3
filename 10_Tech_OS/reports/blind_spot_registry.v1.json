@@ -278,14 +278,18 @@
     {
       "id": "TB09",
       "name": "Machine truth → Amy/Agent OS/Linear/GWS human projection",
-      "status": "RECON_PARTIAL",
-      "producer_schema": "MachineTruth / TruthProjection",
-      "consumer_schema": "HumanProjection",
-      "lossy_fields": [
-        "TBD_BY_CONTRACT_DIFF"
-      ],
-      "adapter_owner": "Amy",
-      "negative_test": "inject stale/conflicting source and ensure human projection shows provenance/freshness conflict"
+      "status": "IMPLEMENTED_TESTED_VERTICAL_SLICE",
+      "producer_schema": "aspace.agent-presence.v1",
+      "consumer_schema": "aspace.truth-projection.v1",
+      "lossy_fields": [],
+      "adapter_owner": "Amy / shared kernel projection",
+      "negative_test": "inject stale/conflicting source and ensure human projection shows provenance/freshness conflict",
+      "implementation_refs": [
+        "10_Tech_OS/kernel/truth_projection.py",
+        "10_Tech_OS/kernel/runtime_presence.py#project_agent_presence_for_human",
+        "10_Tech_OS/kernel/test_truth_projection.py",
+        "10_Tech_OS/kernel/test_runtime_presence.py"
+      ]
     },
     {
       "id": "TB10",
@@ -374,7 +378,8 @@
         "#323",
         "#324",
         "#325"
-      ]
+      ],
+      "status": "PARTIAL_VERTICAL_SLICE_TB09"
     },
     {
       "id": "CG2",
@@ -387,7 +392,8 @@
         "#323",
         "#321",
         "#322"
-      ]
+      ],
+      "status": "PARTIAL_VERTICAL_SLICE_TB09"
     },
     {
       "id": "CG3",
@@ -433,11 +439,12 @@
     "profile_home_false_green": "#324 open; #327 merged durable-source repair",
     "dc_hosted_fallback_regression": "#328 open; #329 PR",
     "continuation_protocol": "#321",
-    "embodied_holons": "#318"
+    "embodied_holons": "#318",
+    "truth_projection_tb09": "branch feat/truth-projection-tb09-cg1-cg2; pending merge/CI"
   },
   "next_gate": {
-    "instruction": "Do not launch five build projects. Populate the 10 translation contracts and 10 stronger-proof requirements from current durable evidence; then choose at most 1–2 smallest gaps for implementation.",
-    "preferred_vertical_slice": "CG1 + CG2 intersection: Truth/Provenance envelope at one translation breakpoint that currently requires A0/manual interpretation.",
+    "instruction": "Observe TB09 on a real Agent OS/human projection consumer before generalizing the envelope to the other translation breakpoints.",
+    "preferred_vertical_slice": "Use aspace.truth-projection.v1 in one live Agent OS status projection; verify stale and no-evidence values render STALE/UNKNOWN rather than green.",
     "return_to": "#323"
   }
 }
