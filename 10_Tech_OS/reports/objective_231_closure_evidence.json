@@ -1,0 +1,44 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective_id": "#231",
+  "status": "SATISFIED",
+  "resolution": "Objective already achieved by Epic #232 (Agent OS Truthful Full-Stack Control Plane v1).",
+  "acceptance_criteria_proof": [
+    {
+      "criteria": "local runtime, local SQLite, Git/source and Supabase can diverge without lying",
+      "proof_ref": "10_Tech_OS/agent_os_fullstack/rory_reconciler.py",
+      "notes": "RoryReconciler handles COHERENT, DRIFT, CONFLICT, AMBIGUOUS, NESTED_REPO_DRIFT. Verified via test_rory_reconciler.py"
+    },
+    {
+      "criteria": "presence is evidence-backed and TTL/fencing aware",
+      "proof_ref": "10_Tech_OS/kernel/runtime_presence.py",
+      "notes": "Truthful Runtime Presence Tracker enforces zero worker != ONLINE, handles TTL and fencing tokens."
+    },
+    {
+      "criteria": "UI statuses are projections of typed runtime truth",
+      "proof_ref": "Agent-OS-Desktop PR #9 (Gate 5)",
+      "notes": "Replaced hardcoded mock states; renders explicit degraded/stale/offline semantics."
+    },
+    {
+      "criteria": "writes are separated by authority",
+      "proof_ref": "Agent-OS-Desktop PR #8 (Gate 4)",
+      "notes": "ApiProjectionLayer enforces authority separation."
+    },
+    {
+      "criteria": "source fingerprint includes nested repo heads",
+      "proof_ref": "10_Tech_OS/agent_os_fullstack/rory_reconciler.py",
+      "notes": "Checks for agentOsDesktopIsDirty=true and NESTED_REPO_DRIFT."
+    },
+    {
+      "criteria": "realtime/auth/degraded modes are explicit",
+      "proof_ref": "Agent-OS-Desktop PR #8 & #9",
+      "notes": "Enforces offline modes and dynamic manifest consumption."
+    },
+    {
+      "criteria": "one full-stack canary proves local runtime <-> Supabase <-> API <-> UI reconciliation",
+      "proof_ref": "Agent-OS-Desktop PR #10 (Gate 6)",
+      "notes": "Deterministic fixtures assert zero false LIVE statuses across failure/reconnect permutations."
+    }
+  ],
+  "canonical_evidence_file": "10_Tech_OS/reports/agent_os_release_232_evidence.json"
+}
