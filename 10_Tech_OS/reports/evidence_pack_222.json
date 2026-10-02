@@ -1,0 +1,18 @@
+{
+  "work_id": "222",
+  "timestamp": "2026-10-02T22:26:39.343007+00:00",
+  "files": {
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py 30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": {
+      "sha256": null
+    }
+  },
+  "git_diff_summaries": {
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py 30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": "Error or untracked file"
+  },
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/05_Channel_Harvester python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/05_Channel_Harvester -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 2 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n"
+  }
+}
