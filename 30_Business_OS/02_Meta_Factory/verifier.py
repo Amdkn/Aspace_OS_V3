@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parent
-VALID_IDS = {"autolab", "primeagent", "jcode"}
+VALID_IDS = {"autolab", "primeagent", "jcode", "compiler"}
 
 
 def fail(msg):
@@ -23,8 +23,8 @@ def main():
         fail(f"JSON invalide: {e}")
 
     units = data.get("units")
-    if not isinstance(units, list) or len(units) != 3:
-        fail(f"attendu 3 units, trouve {len(units) if isinstance(units, list) else 'autre'}")
+    if not isinstance(units, list) or len(units) != 4:
+        fail(f"attendu 4 units, trouve {len(units) if isinstance(units, list) else 'autre'}")
 
     ids = []
     for u in units:
