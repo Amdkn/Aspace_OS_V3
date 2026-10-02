@@ -38,8 +38,8 @@ SCHEMA_EVOLUTION = [
 ]
 
 
-def _connect() -> sqlite3.Connection:
-    c = sqlite3.connect(DB, isolation_level=None, timeout=10)
+def _connect(db_path: str) -> sqlite3.Connection:
+    c = sqlite3.connect(db_path, isolation_level=None, timeout=10)
     c.row_factory = sqlite3.Row
     c.execute("PRAGMA foreign_keys=ON")
     c.execute("PRAGMA busy_timeout=5000")
@@ -51,41 +51,79 @@ def _column_exists(c: sqlite3.Connection, table: str, column: str) -> bool:
 
 
 def apply_migration(db_path: str = DB, dry_run: bool = False) -> dict:
-    global DB
-    DB = db_path
-    c = _connect()
+    c = _connect(db_path)
     applied: list[dict] = []
-    missing_tables: list[str] = []
-    for table, column, ddl in SCHEMA_EVOLUTION:
-        try:
-            tables = {r[0] for r in c.execute(
-                "SELECT name FROM sqlite_master WHERE type='table'")}
-            if table not in tables:
-                missing_tables.append(table)
-                continue
-            if _column_exists(c, table, column):
-                continue
-            applied.append({"table": table, "column": column, "ddl": ddl})
-            if not dry_run:
-                c.execute(ddl)
-        except sqlite3.OperationalError as exc:
-            applied.append({"table": table, "column": column, "error": str(exc)})
-    result = {
-        "ok": True,
-        "db": DB,
-        "applied": applied,
-        "missing_tables": missing_tables,
-        "dry_run": dry_run,
-        "observed_at": datetime.now(timezone.utc).isoformat(),
-    }
-    if not dry_run:
+    errors: list[dict] = []
+    tables = {r[0] for r in c.execute(
+        "SELECT name FROM sqlite_master WHERE type='table'")}
+    required_tables = {table for table, _, _ in SCHEMA_EVOLUTION} | {"event"}
+    missing_tables = sorted(required_tables - tables)
+
+    if missing_tables:
+        result = {
+            "ok": False,
+            "db": db_path,
+            "applied": applied,
+            "errors": errors,
+            "missing_tables": missing_tables,
+            "dry_run": dry_run,
+            "observed_at": datetime.now(timezone.utc).isoformat(),
+        }
+        c.close()
+        return result
+
+    pending = [
+        {"table": table, "column": column, "ddl": ddl}
+        for table, column, ddl in SCHEMA_EVOLUTION
+        if not _column_exists(c, table, column)
+    ]
+    if dry_run:
+        result = {
+            "ok": True,
+            "db": db_path,
+            "applied": pending,
+            "errors": errors,
+            "missing_tables": [],
+            "dry_run": True,
+            "observed_at": datetime.now(timezone.utc).isoformat(),
+        }
+        c.close()
+        return result
+
+    try:
+        c.execute("BEGIN IMMEDIATE")
+        for item in pending:
+            c.execute(item["ddl"])
+            applied.append(item)
+        result = {
+            "ok": True,
+            "db": db_path,
+            "applied": applied,
+            "errors": errors,
+            "missing_tables": [],
+            "dry_run": False,
+            "observed_at": datetime.now(timezone.utc).isoformat(),
+        }
         c.execute(
             "INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
             (None, "uc.py", "migrate", json.dumps(result, ensure_ascii=False)),
         )
-    c.close()
+        c.execute("COMMIT")
+    except sqlite3.Error as exc:
+        c.execute("ROLLBACK")
+        errors.append({"error": str(exc)})
+        result = {
+            "ok": False,
+            "db": db_path,
+            "applied": [],
+            "errors": errors,
+            "missing_tables": [],
+            "dry_run": False,
+            "observed_at": datetime.now(timezone.utc).isoformat(),
+        }
+    finally:
+        c.close()
     return result
-
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Additive schema-evolution migration for uc.db")
