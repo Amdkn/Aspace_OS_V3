@@ -54,7 +54,7 @@
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Ryan/manifest.json",
         "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Ryan.cmd",
-        "hermes_runtime_profile": "ryan_build_l0"
+        "hermes_runtime_profile": "ryan"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
@@ -80,9 +80,10 @@
         "gemini_md_distinct": true,
         "memory_md_distinct_from_yaz_graham": true,
         "previous_round1_short_profile_assumption": "ryan",
-        "runtime_profile_binding": "ryan_build_l0",
+        "runtime_profile_binding": "ryan",
         "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
-        "short_profile_tree_is_identity_equivalent": false
+        "short_profile_tree_is_identity_equivalent": false,
+        "live_replay_20261002": "PASS"
       }
     },
     "Yaz": {
@@ -98,7 +99,7 @@
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Yaz",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Yaz/manifest.json",
         "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Yaz.cmd",
-        "hermes_runtime_profile": "yaz_spec_l0"
+        "hermes_runtime_profile": "yaz"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
@@ -124,9 +125,10 @@
         "gemini_md_shared_with_graham": true,
         "memory_md_shared_with_graham": true,
         "previous_round1_short_profile_assumption": "yaz",
-        "runtime_profile_binding": "yaz_spec_l0",
+        "runtime_profile_binding": "yaz",
         "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
-        "short_profile_tree_is_identity_equivalent": false
+        "short_profile_tree_is_identity_equivalent": false,
+        "live_replay_20261002": "PASS"
       }
     },
     "Graham": {
@@ -142,7 +144,7 @@
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Graham",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Graham/manifest.json",
         "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Graham.cmd",
-        "hermes_runtime_profile": "graham_spawn_l0"
+        "hermes_runtime_profile": "graham"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
@@ -167,16 +169,17 @@
         "gemini_md_shared_with_yaz": true,
         "memory_md_shared_with_yaz": true,
         "previous_round1_short_profile_assumption": "graham",
-        "runtime_profile_binding": "graham_spawn_l0",
+        "runtime_profile_binding": "graham",
         "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
-        "short_profile_tree_is_identity_equivalent": false
+        "short_profile_tree_is_identity_equivalent": false,
+        "live_replay_20261002": "PASS"
       }
     }
   },
   "harness_compatibility_at_recon": {
     "hermes_orca": {
-      "state": "ENVIRONMENT_DIVERGENCE_RECON",
-      "reason": "Prior certified Bot Mode bindings use AppData/Local/hermes legacy runtime profile slugs. Round1 incorrectly rewrote them to short ryan/yaz/graham profiles under .hermes, contradicting the 2026-09-24 handover. Issue #324 replays the projection without cloning identity."
+      "state": "LIVE_PROFILE_RESOLUTION_PASS",
+      "reason": "Live replay on 2026-10-02 from Ryan Orca worktree resolved C:/Users/amado/AppData/Local/hermes/bin/hermes.exe with HERMES_HOME unset; `hermes profile show ryan` resolved C:/Users/amado/AppData/Local/hermes/profiles/ryan and `hermes -p ryan --version` exited 0. Historical compatibility profile ryan_build_l0 also exists but is not the current ADE/launcher binding."
     },
     "claude_code": {
       "state": "BLOCKED_SHARED_IDENTITY_PROJECTION",
@@ -198,12 +201,12 @@
   "round1_exit_gate": {
     "required": [
       "canonical local embodiment manifests materialized for Ryan/Yaz/Graham",
-      "ADE registry and Hermes launchers resolve the existing active runtime profiles from the actual Hermes profile home without redefining institutional identity",
+      "ADE registry and Hermes launchers resolve the live short runtime profiles from C:/Users/amado/AppData/Local/hermes/profiles without redefining institutional identity",
       "runtime profile directories exist in the profile home used by the installed Hermes binary",
       "home worktrees exist",
       "no failover executed yet",
       "Claude/Antigravity/Codex incompatibilities remain explicit rather than hidden"
     ],
-    "next_round": "Replay Round1 after #324 profile-home repair, then Context Compiler + harness adapters; controlled failover only after environment receipt."
+    "next_round": "Context Compiler + harness adapters; then controlled Ryan failover."
   }
 }
