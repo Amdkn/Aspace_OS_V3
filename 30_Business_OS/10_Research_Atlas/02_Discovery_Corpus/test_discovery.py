@@ -96,16 +96,19 @@ class TestDiscoveryCorpus(unittest.TestCase):
         # Setup mock response
         mock_response = MagicMock()
         mock_response.status = 200
+        # return empty JSON dict to avoid json.loads error in fetch_ss_edges
+        mock_response.read.return_value = b'{}'
         mock_urlopen.return_value.__enter__.return_value = mock_response
 
         raw_citations = [
             {"type": "arxiv", "value": "https://arxiv.org/abs/2304.12345"},
             {"type": "doi", "value": "https://doi.org/10.1234/test"},
-            {"type": "title_block", "value": "Attention Is All You Need"}
+            {"type": "title_block", "value": "Attention Is All You Need"},
+            {"type": "semanticscholar", "value": "https://www.semanticscholar.org/paper/Some-Title/a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2"}
         ]
 
         resolved = discovery.run_m3_canonicalize(raw_citations, str(self.test_dir))
-        self.assertEqual(len(resolved), 3)
+        self.assertEqual(len(resolved), 4)
 
         arxiv_res = next(r for r in resolved if r["original_citation"]["type"] == "arxiv")
         self.assertEqual(arxiv_res["canonical_id"], "arxiv:2304.12345")
@@ -115,9 +118,98 @@ class TestDiscoveryCorpus(unittest.TestCase):
         self.assertEqual(doi_res["canonical_id"], "doi:10.1234/test")
         self.assertEqual(doi_res["status"], "RESOLVED")
 
+        ss_res = next(r for r in resolved if r["original_citation"]["type"] == "semanticscholar")
+        self.assertEqual(ss_res["canonical_id"], "semanticscholar:a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2")
+        self.assertEqual(ss_res["status"], "RESOLVED")
+
         title_res = next(r for r in resolved if r["original_citation"]["type"] == "title_block")
         self.assertEqual(title_res["canonical_id"], "NEEDS_REVIEW")
         self.assertEqual(title_res["status"], "NEEDS_REVIEW")
+
+    @patch('discovery.urllib.request.urlopen')
+    def test_bounded_expansion_references(self, mock_urlopen):
+        # Mock responses for canonicalization and then for SS API references/citations
+        # We simulate the first call to export.arxiv.org returning 200 OK
+        # The next calls to semanticscholar references/citations should return specific JSON
+        def side_effect(req, *args, **kwargs):
+            mock_resp = MagicMock()
+            mock_resp.status = 200
+
+            url = req.full_url
+            if "export.arxiv.org" in url:
+                mock_resp.read.return_value = b''
+            elif "references" in url:
+                mock_resp.read.return_value = json.dumps({
+                    "data": [
+                        {"citedPaper": {"paperId": "ref1", "externalIds": {"ArXiv": "2305.00000"}}},
+                        {"citedPaper": {"paperId": "ref2", "externalIds": {"DOI": "10.000/123"}}}
+                    ]
+                }).encode('utf-8')
+            elif "citations" in url:
+                mock_resp.read.return_value = json.dumps({
+                    "data": [
+                        {"citingPaper": {"paperId": "cit1", "externalIds": {}}}
+                    ]
+                }).encode('utf-8')
+            else:
+                mock_resp.read.return_value = b'{}'
+            return mock_resp
+
+        # We need mock_urlopen to act as a context manager and return the mock_resp
+        mock_context = MagicMock()
+        mock_context.__enter__ = lambda self: side_effect(mock_urlopen.call_args[0][0])
+        mock_context.__exit__ = lambda self, *args: None
+
+        mock_urlopen.side_effect = lambda req, **kwargs: mock_context
+
+        raw_citations = [{"type": "arxiv", "value": "https://arxiv.org/abs/2304.12345"}]
+        resolved = discovery.run_m3_canonicalize(raw_citations, str(self.test_dir))
+
+        self.assertEqual(len(resolved), 1)
+        arxiv_res = resolved[0]
+        self.assertEqual(arxiv_res["status"], "RESOLVED")
+        self.assertEqual(arxiv_res["references"], ["arxiv:2305.00000", "doi:10.000/123"])
+        self.assertEqual(arxiv_res["cited_by"], ["semanticscholar:cit1"])
+
+    def test_m7_evidence_paper_edges(self):
+        # Verify run_m7_evidence generates the correct edges for references and cited_by
+        resolved_papers = [
+            {
+                "original_citation": {"type": "arxiv", "value": "https://arxiv.org/abs/2304.12345"},
+                "canonical_id": "arxiv:2304.12345",
+                "status": "RESOLVED",
+                "references": ["arxiv:2305.00000"],
+                "cited_by": ["semanticscholar:cit1"]
+            }
+        ]
+        evidence = discovery.run_m7_evidence(
+            url="https://youtube.com/watch?v=vid1",
+            video_id="vid1",
+            metadata={"title": "Test Video"},
+            resolved_papers=resolved_papers,
+            transcripts={},
+            analysis={},
+            keyframes={},
+            out_dir=str(self.test_dir)
+        )
+
+        edges = evidence["paper_graph_edges"]
+        # 1. vid cites arxiv:2304.12345
+        # 2. arxiv:2304.12345 references arxiv:2305.00000
+        # 3. arxiv:2304.12345 cited_by semanticscholar:cit1
+        self.assertEqual(len(edges), 3)
+
+        cites_edge = next(e for e in edges if e["relation"] == "cites_in_description")
+        self.assertEqual(cites_edge["source_id"], "vid1")
+        self.assertEqual(cites_edge["target_id"], "arxiv:2304.12345")
+
+        ref_edge = next(e for e in edges if e["relation"] == "references")
+        self.assertEqual(ref_edge["source_id"], "arxiv:2304.12345")
+        self.assertEqual(ref_edge["target_id"], "arxiv:2305.00000")
+
+        cit_edge = next(e for e in edges if e["relation"] == "cited_by")
+        self.assertEqual(cit_edge["source_id"], "arxiv:2304.12345")
+        self.assertEqual(cit_edge["target_id"], "semanticscholar:cit1")
 
     @patch('discovery.run_m2_citations')
     @patch('discovery.run_m1_metadata')

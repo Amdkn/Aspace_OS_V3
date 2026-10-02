@@ -239,6 +239,58 @@ def run_m2_citations(metadata, out_dir):
     description = metadata.get("description", "")
     return extract_citations(description)
 
+def fetch_ss_edges(canonical_id):
+    """
+    Fetch bounded references and citations for a paper using Semantic Scholar.
+    Returns (references, citations) lists of canonical_ids.
+    """
+    if canonical_id.startswith("arxiv:"):
+        ss_id = "ARXIV:" + canonical_id.split(":", 1)[1]
+    elif canonical_id.startswith("doi:"):
+        ss_id = "DOI:" + canonical_id.split(":", 1)[1]
+    elif canonical_id.startswith("semanticscholar:"):
+        ss_id = canonical_id.split(":", 1)[1]
+    else:
+        return [], []
+
+    references = []
+    citations = []
+
+    def get_canonical(paper):
+        if not paper: return None
+        ext = paper.get("externalIds", {})
+        if "ArXiv" in ext: return f"arxiv:{ext['ArXiv']}"
+        if "DOI" in ext: return f"doi:{ext['DOI']}"
+        if paper.get("paperId"): return f"semanticscholar:{paper['paperId']}"
+        return None
+
+    # Fetch references
+    try:
+        url = f"https://api.semanticscholar.org/graph/v1/paper/{ss_id}/references?limit=5&fields=paperId,externalIds"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            for item in data.get("data", []):
+                c = get_canonical(item.get("citedPaper"))
+                if c: references.append(c)
+    except Exception as e:
+        print(f"[Discovery] SS References fetch error for {ss_id}: {e}")
+
+    # Fetch citations
+    try:
+        url = f"https://api.semanticscholar.org/graph/v1/paper/{ss_id}/citations?limit=5&fields=paperId,externalIds"
+        req = urllib.request.Request(url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            for item in data.get("data", []):
+                c = get_canonical(item.get("citingPaper"))
+                if c: citations.append(c)
+    except Exception as e:
+        print(f"[Discovery] SS Citations fetch error for {ss_id}: {e}")
+
+    return references, citations
+
+
 def run_m3_canonicalize(raw_citations, out_dir):
     print("[Discovery] M3: Canonicalizing citations")
     resolved_papers = []
@@ -270,8 +322,23 @@ def run_m3_canonicalize(raw_citations, out_dir):
                 forum_id = val.split("id=")[-1]
                 resolved["canonical_id"] = f"openreview:{forum_id}"
                 resolved["status"] = "RESOLVED"
+            elif citation["type"] == "semanticscholar":
+                match = re.search(r'([a-f0-9]{40})', val)
+                if match:
+                    ss_id = match.group(1)
+                    resolved["canonical_id"] = f"semanticscholar:{ss_id}"
+                    api_url = f"https://api.semanticscholar.org/graph/v1/paper/{ss_id}?fields=paperId"
+                    req = urllib.request.Request(api_url, headers={'User-Agent': 'Amdkn-Aspace/1.0'})
+                    with urllib.request.urlopen(req, timeout=10) as response:
+                        if response.status == 200:
+                            resolved["status"] = "RESOLVED"
         except Exception as e:
             print(f"[Discovery] M3 Provider API Error: {e}")
+
+        if resolved["status"] == "RESOLVED":
+            refs, cites = fetch_ss_edges(resolved["canonical_id"])
+            resolved["references"] = refs
+            resolved["cited_by"] = cites
 
         resolved_papers.append(resolved)
     return resolved_papers
@@ -362,6 +429,23 @@ def run_m7_evidence(url, video_id, metadata, resolved_papers, transcripts, analy
                 "relation": "cites_in_description"
             }
             paper_graph_edges.append(edge)
+
+            for ref_id in paper.get("references", []):
+                paper_graph_edges.append({
+                    "source_type": "Paper",
+                    "source_id": paper["canonical_id"],
+                    "target_type": "Paper",
+                    "target_id": ref_id,
+                    "relation": "references"
+                })
+            for cit_id in paper.get("cited_by", []):
+                paper_graph_edges.append({
+                    "source_type": "Paper",
+                    "source_id": paper["canonical_id"],
+                    "target_type": "Paper",
+                    "target_id": cit_id,
+                    "relation": "cited_by"
+                })
 
     evidence = {
         "timestamp": datetime.now(timezone.utc).isoformat(),
