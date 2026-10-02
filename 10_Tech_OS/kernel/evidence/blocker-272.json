@@ -1,0 +1,6 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue": 272,
+  "reason": "Missing write permissions to canonical external implementation repositories (e.g., omk-services/OMK-DESKTOP-WEB-OS) required to execute the end-to-end economic journey and generate operational facts",
+  "handoff_file": "_INBOX/handoffs/issue-272-blocker.md"
+}
