@@ -5,7 +5,7 @@ import unittest
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from runtime_presence import project_agent_presence
+from runtime_presence import project_agent_presence, project_agent_presence_for_human
 
 
 def init_db(path: Path):
@@ -179,6 +179,29 @@ class RuntimePresenceTests(unittest.TestCase):
         self.assertEqual(p["state"], "AVAILABLE")
         self.assertEqual(p["identity"], "worker-9")
         self.assertIn("agent-os:presence", p["evidence_refs"])
+
+
+    def test_human_projection_preserves_provenance_and_freshness(self):
+        p = project_agent_presence_for_human(
+            self.db,
+            1,
+            self.observe(),
+            now=self.now,
+        )
+        self.assertEqual(p["truth_state"], "CURRENT")
+        self.assertEqual(p["value"]["presence_state"], "AVAILABLE")
+        self.assertEqual(p["authority"], "workgraph+runtime_presence")
+        self.assertIn("runtime:test", p["evidence_refs"])
+
+    def test_human_projection_without_runtime_freshness_is_unknown(self):
+        p = project_agent_presence_for_human(
+            self.db,
+            1,
+            None,
+            now=self.now,
+        )
+        self.assertEqual(p["truth_state"], "UNKNOWN")
+        self.assertIn("observed_at", p["reason"])
 
 
 if __name__ == "__main__":
