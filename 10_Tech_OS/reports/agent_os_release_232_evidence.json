@@ -1,0 +1,64 @@
+{
+  "schema": "aspace.agent_os.release-232-evidence.v1",
+  "work_id": "#239",
+  "epic": "#232",
+  "objective": "#231",
+  "release": "Agent OS Truthful Full-Stack Control Plane v1",
+  "date": "2026-10-02T11:00:00Z",
+  "result": "PASS",
+  "topology_boundary": {
+    "agent_os_control_plane": {
+      "role": "Full-stack truth projection layer, replacing legacy Vite-local observability",
+      "components": [
+        "RoryReconciler (backend state reconciliation)",
+        "Truthful Runtime Presence Tracker",
+        "ApiProjectionLayer",
+        "AgentCard Frontend Truth Projection",
+        "Agent-OS-Desktop UI integration"
+      ],
+      "status": "ONLINE / Certified"
+    }
+  },
+  "gates": {
+    "gate_1_executable_architecture": {
+      "result": "PASS",
+      "issue": "#233",
+      "notes": "Executable contract frozen and landed in Agent-OS-Desktop PR #7."
+    },
+    "gate_2_state_reconciliation": {
+      "result": "PASS",
+      "issue": "#234",
+      "evidence_file": "10_Tech_OS/agent_os_fullstack/rory_reconciler.py",
+      "notes": "Landed via PR #255. RoryReconciler handles typed states (COHERENT, DRIFT, CONFLICT, AMBIGUOUS, NESTED_REPO_DRIFT)."
+    },
+    "gate_3_runtime_presence": {
+      "result": "PASS",
+      "issue": "#235",
+      "notes": "Landed via PR #259 & #265. Enforces zero worker != ONLINE, handles TTL expiration and fencing tokens."
+    },
+    "gate_4_api_projection_layer": {
+      "result": "PASS",
+      "issue": "#236",
+      "notes": "Landed via Agent-OS-Desktop PR #8. Enforces authority separation, offline modes, and dynamic manifest consumption."
+    },
+    "gate_5_frontend_truth_projection": {
+      "result": "PASS",
+      "issue": "#237",
+      "notes": "Landed via Agent-OS-Desktop PR #9. Replaced hardcoded mock states; renders explicit degraded/stale/offline semantics."
+    },
+    "gate_6_e2e_reconciliation_canary": {
+      "result": "PASS",
+      "issue": "#238",
+      "notes": "Landed via Agent-OS-Desktop PR #10. Deterministic fixtures assert zero false LIVE statuses across failure/reconnect permutations."
+    }
+  },
+  "invariants_certified": [
+    "local runtime truth, local SQLite truth, Git/source truth and Supabase truth remain distinct but reconcilable",
+    "static registry/capability existence never equals LIVE",
+    "browser never receives service-role authority",
+    "Vite dev middleware is not the permanent backend contract",
+    "nested repo/submodule HEADs participate in source fingerprint",
+    "no surface silently closes another surface's intent"
+  ],
+  "verified_by": "machine:jules, status: certified-canary-pass"
+}
