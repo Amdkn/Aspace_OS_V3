@@ -1,0 +1,12 @@
+{
+    "schema": "aspace.typed-blocker.v1",
+    "mission_id": "github-317",
+    "work_id": 317,
+    "blocker_type": "HUMAN_AUTH_REQUIRED",
+    "description": "Wargame execution spans Linear (A/B hierarchy) and Google Workspace, which requires human-only external systems auth and involves irreversible external actions.",
+    "context": {
+        "required_systems": ["Linear", "GWS (Google Workspace)"],
+        "reason": "Agent lacks access to these systems and cannot perform irreversible external actions.",
+        "issue_ref": "317"
+    }
+}
