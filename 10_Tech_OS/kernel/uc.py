@@ -97,8 +97,11 @@ def cmd_claim(a):
     c.execute("BEGIN IMMEDIATE")
     try:
         if a.work:                      # reclamation ciblee : un pont sait quel item il traite
-            row = c.execute("SELECT id FROM work WHERE id=? AND status IN ('pending','failed')",
-                            (a.work,)).fetchone()
+            row = c.execute(
+                "SELECT w.id FROM work w "
+                "WHERE w.id=? AND w.status IN ('pending','failed') "
+                "AND NOT EXISTS (SELECT 1 FROM work_wait ww WHERE ww.work_id=w.id)",
+                (a.work,)).fetchone()
             # cloture terminale Rick : un work arbitre terminal n'est plus claimable
             if row:
                 ev = c.execute("SELECT payload FROM event WHERE work_id=? AND kind='arbitrage' "
@@ -114,8 +117,10 @@ def cmd_claim(a):
                         pass
         else:
             row = c.execute(
-                "SELECT id FROM work WHERE status='pending' AND (? IS NULL OR layer=?) "
-                "ORDER BY priority DESC, id LIMIT 1", (a.layer, a.layer)).fetchone()
+                "SELECT w.id FROM work w "
+                "WHERE w.status='pending' AND (? IS NULL OR w.layer=?) "
+                "AND NOT EXISTS (SELECT 1 FROM work_wait ww WHERE ww.work_id=w.id) "
+                "ORDER BY w.priority DESC, w.id LIMIT 1", (a.layer, a.layer)).fetchone()
         if not row:
             c.execute("COMMIT"); out({"ok": True, "work": None}); return
         wid = row["id"]
@@ -151,11 +156,16 @@ def cmd_beat(a):
 def cmd_wait(a):
     c = cx()
     try:
-        c.execute("UPDATE work SET status='waiting', wake_at=datetime('now',?) WHERE id=?",
+        c.execute("UPDATE work SET status='pending', wake_at=datetime('now',?) WHERE id=?",
                   (f"+{a.seconds} seconds", a.work))
         c.execute("DELETE FROM claim WHERE work_id=?", (a.work,))
-        log(c, a.work, None, "waiting", {"wake_at_offset": a.seconds})
-        out({"ok": True, "work_id": a.work, "status": "waiting"})
+        c.execute("INSERT INTO work_wait(work_id,condition_text,wake_at,reason) "
+                  "VALUES(?,?,datetime('now',?),?) "
+                  "ON CONFLICT(work_id) DO UPDATE SET wake_at=excluded.wake_at, "
+                  "reason=excluded.reason, condition_text=excluded.condition_text",
+                  (a.work, "wake_at_reached", f"+{a.seconds} seconds", f"wait {a.seconds}s"))
+        log(c, a.work, None, "waiting", {"wake_at_offset": a.seconds, "status": "pending"})
+        out({"ok": True, "work_id": a.work, "status": "pending", "wake_at_offset": a.seconds})
     except Exception as e:
         out({"ok": False, "err": str(e)}); sys.exit(3)
 
@@ -168,6 +178,8 @@ def _move(a, target):
         out({"ok": False, "err": str(e)}); sys.exit(3)
     if target in ("done", "failed"):
         c.execute("DELETE FROM claim WHERE work_id=?", (a.work,))
+        c.execute("DELETE FROM work_wait WHERE work_id=?", (a.work,))
+        c.execute("UPDATE work SET wake_at=NULL WHERE id=?", (a.work,))
     log(c, a.work, None, target, {"reason": getattr(a, "reason", None)})
     out({"ok": True, "work_id": a.work, "status": target})
 
@@ -209,12 +221,17 @@ def cmd_reap(a):
         c.execute("DELETE FROM claim WHERE work_id=?", (wid,))
         log(c, wid, None, "reap", None)
 
-    # Reprise des taches en attente (wake_at expire)
-    woken = [r["id"] for r in c.execute(
-        "SELECT id FROM work WHERE status='waiting' AND wake_at < datetime('now')")]
+    # Reprise des taches en attente. Legacy databases cannot store status='waiting',
+    # so work_wait is the durable wait authority and work remains status='pending'.
+    woken = [r["work_id"] for r in c.execute(
+        "SELECT ww.work_id FROM work_wait ww "
+        "JOIN work w ON w.id=ww.work_id "
+        "WHERE w.status='pending' "
+        "AND ww.wake_at IS NOT NULL AND ww.wake_at < datetime('now')")]
     for wid in woken:
+        c.execute("DELETE FROM work_wait WHERE work_id=?", (wid,))
         c.execute("UPDATE work SET status='pending', wake_at=NULL WHERE id=?", (wid,))
-        log(c, wid, None, "wake", None)
+        log(c, wid, None, "wake", {"source": "work_wait"})
 
     out({"ok": True, "reclames": dead, "woken": woken})
 
