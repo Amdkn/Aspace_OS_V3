@@ -1,0 +1,18 @@
+{
+  "work_id": "207",
+  "timestamp": "2026-10-02T20:11:57.743691+00:00",
+  "files": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/gws_adapter.py 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": {
+      "sha256": null
+    }
+  },
+  "git_diff_summaries": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/gws_adapter.py 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": "Error or untracked file"
+  },
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/02_Discovery_Corpus python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "[Discovery] M3: Canonicalizing citations\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid2\n[Discovery] M2: Extracting citations\n[Discovery] M7: Assembling Evidence Packet for vid1\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[Discovery] GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n[Discovery] M3: Canonicalizing citations\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M4)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid1\n[Discovery] M2: Extracting citations\n[Discovery] M3: Canonicalizing citations\n[Discovery] M4: Fetching transcripts for https://youtube.com/watch?v=vid1\n[Discovery] M5: Analyzing transcripts\n[Discovery] M6: Fetching bounded keyframes for https://youtube.com/watch?v=vid1\n[Discovery] M7: Assembling Evidence Packet for vid1\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M1)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n[Inventory] Enumerating playlist via yt-dlp: https://youtube.com/playlist?list=mock\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M3\n[Discovery] GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[Discovery] GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n",
+    "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.036s\n\nOK\n"
+  }
+}

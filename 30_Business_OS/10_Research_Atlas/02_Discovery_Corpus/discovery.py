@@ -17,6 +17,7 @@ if str(watch_dir) not in sys.path:
 
 import watch
 from inventory import resolve_inventory
+from gws_adapter import GWSAdapter
 
 def extract_citations(description):
     """
@@ -788,12 +789,8 @@ def process_corpus(manifest_path, out_dir, through_stage=None):
     duplicate_merges = len(global_paper_graph) - len(unique_edges)
     report["duplicate_paper_merges"] = duplicate_merges
 
-    # Dump GWS Payloads to local file (defer projection)
-    gws_payloads_path = Path(out_dir) / "gws_payloads.json"
-    with open(gws_payloads_path, 'w', encoding='utf-8') as f:
-        json.dump(gws_payloads, f, indent=2, ensure_ascii=False)
-
-    print(f"[Discovery] GWS Payloads dumped to {gws_payloads_path}")
+    # Dump GWS Payloads (using adapter to fix architecture regression)
+    GWSAdapter(mock_mode=True).write_batch(gws_payloads, out_dir)
 
     # Fix stage status logic
     if report["videos_processed"] == 0:
