@@ -67,6 +67,27 @@ class TestCapabilityFabric(unittest.TestCase):
             self.assertEqual(result["receipt"]["observed_effect"], "Listed 1 harnesses with filter capability 'shell'")
             self.assertEqual(len(result["data"]["harnesses"]), 1)
 
+    @patch('os.path.exists')
+    def test_mcp_adapter_invocation(self, mock_exists):
+        def side_effect(path):
+            if "ASPACE_WORKSPACE_REGISTRY.json" in path:
+                return True
+            if "runtime.json" in path:
+                return False
+            return os.path.exists(path)
+        mock_exists.side_effect = side_effect
+
+        def open_side_effect(path, *args, **kwargs):
+            return unittest.mock.mock_open(read_data='{"execution": {"jules": {"harnesses": {"test_harness": {"status": "local_verified_linux_adapter_required"}}}}}')()
+
+        with patch('builtins.open', side_effect=open_side_effect):
+            mcp = MCPAdapter(self.registry)
+            result = mcp.invoke("harness_list", {}, "corr-mcp-123")
+            self.assertEqual(result["status"], "SUCCESS")
+            self.assertEqual(result["receipt"]["correlation_id"], "corr-mcp-123")
+            self.assertEqual(result["receipt"]["observed_effect"], "Listed 1 harnesses")
+            self.assertEqual(len(result["data"]["harnesses"]), 1)
+
     def test_unsupported_surface(self):
         from .adapters import AdapterBase
         unsupported_adapter = AdapterBase(self.registry, "web")
