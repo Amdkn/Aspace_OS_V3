@@ -1,18 +1,18 @@
 {
-  "work_id": "314",
-  "timestamp": "2026-10-02T12:19:59.622316+00:00",
+  "work_id": "335",
+  "timestamp": "2026-10-02T18:30:22.455290+00:00",
   "files": {
-    "10_Tech_OS/kernel/dispatch_routing.py 10_Tech_OS/kernel/mission_watcher.py 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py": {
+    "80_Agent-OS/capability_fabric/adapters.py 80_Agent-OS/capability_fabric/capability.py 80_Agent-OS/capability_fabric/harness_list.py 80_Agent-OS/capability_fabric/test_capability_fabric.py": {
       "sha256": null
     }
   },
   "git_diff_summaries": {
-    "10_Tech_OS/kernel/dispatch_routing.py 10_Tech_OS/kernel/mission_watcher.py 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py": "Error or untracked file"
+    "80_Agent-OS/capability_fabric/adapters.py 80_Agent-OS/capability_fabric/capability.py 80_Agent-OS/capability_fabric/harness_list.py 80_Agent-OS/capability_fabric/test_capability_fabric.py": "Error or untracked file"
   },
   "test_results": {
-    "command": "PYTHONPATH=/app/10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py",
+    "command": "PYTHONPATH=$(pwd) python3 -m unittest 80_Agent-OS/capability_fabric/test_*.py",
     "exit_code": 0,
     "stdout": "",
-    "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.414s\n\nOK\n"
+    "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.016s\n\nOK\n"
   }
 }
