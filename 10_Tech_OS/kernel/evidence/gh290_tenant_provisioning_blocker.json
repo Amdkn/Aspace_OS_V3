@@ -1,0 +1,16 @@
+{
+    "schema": "aspace.typed-blocker.v1",
+    "mission_id": "github-290",
+    "correlation_id": "gh290-omk-desktop-web-os-write-block",
+    "cell_id": "tenant-provisioning-canary",
+    "status": "BLOCKED_BY_PERMISSION",
+    "blocker_details": {
+        "repository": "omk-services/OMK-DESKTOP-WEB-OS",
+        "reason": "The executing agent does not have write access to the required implementation repository. Access is restricted to pull: true, push: false.",
+        "human_action_required": "Grant write access to omk-services/OMK-DESKTOP-WEB-OS or perform the tenant provisioning implementation directly in that repository."
+    },
+    "vcs": {
+        "branch": "fix/issue-290",
+        "pull_request_url": ""
+    }
+}
