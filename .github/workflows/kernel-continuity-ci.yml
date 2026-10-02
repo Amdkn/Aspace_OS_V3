@@ -30,13 +30,15 @@ jobs:
           python -m py_compile \
             10_Tech_OS/kernel/mission_continuity.py \
             10_Tech_OS/kernel/runtime_presence.py \
+            10_Tech_OS/kernel/truth_projection.py \
             10_Tech_OS/kernel/dispatch_routing.py \
             10_Tech_OS/kernel/mission_watcher.py \
             10_Tech_OS/kernel/uc_workgraph.py \
             10_Tech_OS/kernel/test_mission_continuity.py \
             10_Tech_OS/kernel/test_runtime_presence.py \
+            10_Tech_OS/kernel/test_truth_projection.py \
             10_Tech_OS/kernel/test_dispatch_routing.py \
             10_Tech_OS/kernel/test_mission_watcher.py
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
-        run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py
+        run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_truth_projection.py test_dispatch_routing.py test_mission_watcher.py
