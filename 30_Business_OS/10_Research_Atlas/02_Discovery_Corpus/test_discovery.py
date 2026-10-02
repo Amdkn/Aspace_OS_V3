@@ -25,6 +25,24 @@ class TestDiscoveryCorpus(unittest.TestCase):
         self.assertEqual(len(citations2), 1)
         self.assertEqual(citations2[0]["type"], "title_block")
 
+    def test_takeout_watch_history_inventory(self):
+        dummy_html = """
+        <div class="content-cell mdl-cell mdl-cell--6-col mdl-typography--body-1">
+          <a href="https://www.youtube.com/watch?v=kY3O-tXk4wM">Video 1</a>
+          <a href="https://www.youtube.com/watch?v=kY3O-tXk4wM">Video 1 Again</a>
+          <a href="https://www.youtube.com/watch?v=abcdef12345&amp;t=5s">Video 2</a>
+        </div>
+        """
+        html_path = self.test_dir / "dummy_watch_history.html"
+        with open(html_path, "w") as f:
+            f.write(dummy_html)
+
+        manifest = {"type": "takeout_watch_history", "path": str(html_path)}
+        urls = resolve_inventory(manifest)
+        self.assertEqual(len(urls), 2)
+        self.assertIn("https://www.youtube.com/watch?v=kY3O-tXk4wM", urls)
+        self.assertIn("https://www.youtube.com/watch?v=abcdef12345", urls)
+
     @patch('inventory.subprocess.run')
     def test_ytdlp_inventory(self, mock_run):
         mock_result = MagicMock()

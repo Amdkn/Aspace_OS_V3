@@ -12,6 +12,34 @@ class StaticListInventory(CorpusInventory):
     def get_urls(self, source_config):
         return source_config.get("urls", [])
 
+class TakeoutWatchHistoryInventory(CorpusInventory):
+    """Google Takeout watch history adapter."""
+    def get_urls(self, source_config):
+        path = source_config.get("path")
+        urls = []
+        if not path or not os.path.exists(path):
+            print(f"[Inventory] Invalid or missing path for takeout_watch_history: {path}")
+            return urls
+
+        print(f"[Inventory] Extracting history from Takeout: {path}")
+        import re
+        pattern = re.compile(r'href="(https://www\.youtube\.com/watch\?v=[^"&]+)[^"]*"')
+
+        seen = set()
+        try:
+            with open(path, 'r', encoding='utf-8', errors='ignore') as f:
+                for line in f:
+                    for match in pattern.finditer(line):
+                        url = match.group(1)
+                        if url not in seen:
+                            seen.add(url)
+                            urls.append(url)
+        except Exception as e:
+            print(f"[Inventory] Error reading Takeout file {path}: {e}")
+
+        print(f"[Inventory] Found {len(urls)} unique videos in Takeout.")
+        return urls
+
 class YTDLPPlaylistInventory(CorpusInventory):
     """yt-dlp adapter for dynamic channel/playlist enumeration."""
     def get_urls(self, source_config):
@@ -59,6 +87,8 @@ def resolve_inventory(manifest):
 
     if inventory_type == "ytdlp_playlist":
         adapter = YTDLPPlaylistInventory()
+    elif inventory_type == "takeout_watch_history":
+        adapter = TakeoutWatchHistoryInventory()
     else:
         adapter = StaticListInventory()
 
