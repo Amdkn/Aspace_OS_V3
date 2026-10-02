@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "wargame_issue": 318,
+  "round": "ROUND_1_PHYSICAL_RECONNAISSANCE",
+  "observed_at_local": "2026-10-01",
+  "doctrine": {
+    "identity_not_runtime": true,
+    "identity_requires_durable_embodiment": true,
+    "shared_global_prompt_is_not_identity": true
+  },
+  "environment": {
+    "orca_root": "C:/Users/amado/orca/workspaces/ASpace_OS_V3",
+    "ade_registry_json": "C:/Users/amado/.aspace/orca/ADE_REGISTRY.json",
+    "ade_registry_yaml": "C:/Users/amado/.aspace/orca/ADE_REGISTRY.yaml",
+    "hermes_profiles_root": "C:/Users/amado/.hermes/profiles",
+    "local_embodiment_root": "C:/Users/amado/.aspace/embodiments",
+    "multica": {
+      "installed": true,
+      "config_present": true,
+      "daemon_pidfile_present": true,
+      "daemon_running_at_recon": false,
+      "role": "candidate embodiment manager / compatibility laboratory",
+      "authority": "none until V4 compatibility gate passes"
+    }
+  },
+  "shared_findings": {
+    "orca_identity_worktrees_exist": true,
+    "agents_md_hash_collision": {
+      "Ryan": "4A2D44BBAD84960D10E92E1163DE4AC45902F8FE549C381C1EBDB601308491A5",
+      "Yaz": "4A2D44BBAD84960D10E92E1163DE4AC45902F8FE549C381C1EBDB601308491A5",
+      "Graham": "4A2D44BBAD84960D10E92E1163DE4AC45902F8FE549C381C1EBDB601308491A5"
+    },
+    "claude_md_hash_collision": {
+      "Ryan": "4C85B45DE88AE45950130EBA7C41C319A7AA2278711CC4EB0E638C052548BA6D",
+      "Yaz": "4C85B45DE88AE45950130EBA7C41C319A7AA2278711CC4EB0E638C052548BA6D",
+      "Graham": "4C85B45DE88AE45950130EBA7C41C319A7AA2278711CC4EB0E638C052548BA6D"
+    },
+    "yaz_graham_gemini_collision": true,
+    "yaz_graham_memory_collision": true,
+    "interpretation": "Physical worktrees exist, but harness-specific identity projection is still partially shared and therefore cannot yet certify V4 embodiment."
+  },
+  "holons": {
+    "Ryan": {
+      "identity": {
+        "id": "companion_ryan_builder",
+        "tier": "S3",
+        "doctor": "Doctor13",
+        "jurisdiction": "Kernel capability engineering / industrialisation",
+        "stewardship_anchor": "BUILD",
+        "institutional_state": "ACTIVE"
+      },
+      "home": {
+        "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan",
+        "local_manifest": "C:/Users/amado/.aspace/embodiments/Ryan/manifest.json",
+        "hermes_profile": "ryan",
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Ryan.cmd"
+      },
+      "runtime_affinity": {
+        "round1_primary": "hermes_orca",
+        "candidate_fallbacks": ["codex", "claude_code", "antigravity", "jules"],
+        "fallbacks_certified": false
+      },
+      "presence": {
+        "embodiment_state": "DEGRADED",
+        "runtime_state": "UNKNOWN",
+        "workload_state": "IDLE_OR_UNKNOWN"
+      },
+      "recon": {
+        "git_branch": "feat/ryan-discover-ai-m0-m7-2026-09-29",
+        "git_relation": "ahead 1 of tracked remote",
+        "legacy_launcher_profile_before_round1": "ryan_build_l0",
+        "legacy_profile_exists": false,
+        "canonical_profile_exists": true,
+        "gemini_md_distinct": true,
+        "memory_md_distinct_from_yaz_graham": true
+      }
+    },
+    "Yaz": {
+      "identity": {
+        "id": "companion_yas_observatory",
+        "tier": "S3",
+        "doctor": "Doctor13",
+        "jurisdiction": "Observability / LiDAR / cost and behavior sensing",
+        "stewardship_anchor": "OBSERVE",
+        "institutional_state": "ACTIVE"
+      },
+      "home": {
+        "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Yaz",
+        "local_manifest": "C:/Users/amado/.aspace/embodiments/Yaz/manifest.json",
+        "hermes_profile": "yaz",
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Yaz.cmd"
+      },
+      "runtime_affinity": {
+        "round1_primary": "hermes_orca",
+        "candidate_fallbacks": ["codex", "claude_code", "antigravity"],
+        "fallbacks_certified": false
+      },
+      "presence": {
+        "embodiment_state": "DEGRADED",
+        "runtime_state": "UNKNOWN",
+        "workload_state": "IDLE_OR_UNKNOWN"
+      },
+      "recon": {
+        "git_branch": "Amdkn/Yaz",
+        "git_relation": "behind origin/main by 86 commits at recon",
+        "legacy_launcher_profile_before_round1": "yaz_spec_l0",
+        "legacy_profile_exists": true,
+        "legacy_profile_declares_itself_compatibility_only": true,
+        "canonical_profile_exists": true,
+        "gemini_md_shared_with_graham": true,
+        "memory_md_shared_with_graham": true
+      }
+    },
+    "Graham": {
+      "identity": {
+        "id": "companion_graham_memory",
+        "tier": "S3",
+        "doctor": "Doctor13",
+        "jurisdiction": "Memory / state / provenance / replay",
+        "stewardship_anchor": "STATE",
+        "institutional_state": "ACTIVE"
+      },
+      "home": {
+        "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Graham",
+        "local_manifest": "C:/Users/amado/.aspace/embodiments/Graham/manifest.json",
+        "hermes_profile": "graham",
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Graham.cmd"
+      },
+      "runtime_affinity": {
+        "round1_primary": "hermes_orca",
+        "candidate_fallbacks": ["codex", "claude_code", "antigravity"],
+        "fallbacks_certified": false
+      },
+      "presence": {
+        "embodiment_state": "DEGRADED",
+        "runtime_state": "UNKNOWN",
+        "workload_state": "IDLE_OR_UNKNOWN"
+      },
+      "recon": {
+        "git_branch": "Amdkn/Graham",
+        "git_relation": "ahead 1 and behind origin/main by 86 commits at recon",
+        "legacy_launcher_profile_before_round1": "graham_spawn_l0",
+        "legacy_profile_exists": false,
+        "canonical_profile_exists": true,
+        "gemini_md_shared_with_yaz": true,
+        "memory_md_shared_with_yaz": true
+      }
+    }
+  },
+  "harness_compatibility_at_recon": {
+    "hermes_orca": {
+      "state": "REPAIRABLE_ROUND1",
+      "reason": "Distinct canonical profiles and persistent worktrees exist; ADE/launchers referenced reductive or missing legacy profile aliases."
+    },
+    "claude_code": {
+      "state": "BLOCKED_SHARED_IDENTITY_PROJECTION",
+      "reason": "Ryan/Yaz/Graham worktrees contain the same CLAUDE.md and no institutional Ryan/Yaz/Graham Claude subagent profiles."
+    },
+    "antigravity": {
+      "state": "PARTIAL",
+      "reason": "Separate temporary subagent worktrees have existed, but Yaz/Graham durable GEMINI.md projections are identical and session lifecycle previously leaked into identity."
+    },
+    "codex": {
+      "state": "PARTIAL_UNBOUND",
+      "reason": "Codex has many native generic agents/subagents, but no durable institutional Ryan/Yaz/Graham binding is certified."
+    },
+    "multica": {
+      "state": "OFFLINE_CANDIDATE",
+      "reason": "Installed/configured but daemon is not running; V4 Home Embodiment and failover invariants remain untested."
+    }
+  },
+  "round1_exit_gate": {
+    "required": [
+      "canonical local embodiment manifests materialized for Ryan/Yaz/Graham",
+      "ADE registry and Hermes launchers point to canonical ryan/yaz/graham profiles",
+      "profile directories exist",
+      "home worktrees exist",
+      "no failover executed yet",
+      "Claude/Antigravity/Codex incompatibilities remain explicit rather than hidden"
+    ],
+    "next_round": "Context Compiler + harness adapters; then controlled Ryan failover"
+  }
+}

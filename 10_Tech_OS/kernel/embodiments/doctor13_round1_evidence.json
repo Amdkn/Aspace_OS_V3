@@ -1,0 +1,64 @@
+{
+  "wargame_issue": 318,
+  "round": "ROUND_1_PHYSICAL_RECONNAISSANCE",
+  "checked_at": "2026-10-01T21:28:54.009500-04:00",
+  "holons": {
+    "Ryan": {
+      "profile": "ryan",
+      "checks": {
+        "worktree_exists": true,
+        "canonical_profile_exists": true,
+        "ade_registry_profile_matches": true,
+        "launcher_profile_matches": true,
+        "local_manifest_exists": true,
+        "git_status_readable": true
+      },
+      "git_status": "## feat/ryan-discover-ai-m0-m7-2026-09-29...origin/feat/ryan-discover-ai-m0-m7-2026-09-29 [ahead 1]",
+      "institutional_state": "ACTIVE",
+      "embodiment_state": "READY_ROUND1",
+      "runtime_state": "NOT_STARTED_BY_ROUND1"
+    },
+    "Yaz": {
+      "profile": "yaz",
+      "checks": {
+        "worktree_exists": true,
+        "canonical_profile_exists": true,
+        "ade_registry_profile_matches": true,
+        "launcher_profile_matches": true,
+        "local_manifest_exists": true,
+        "git_status_readable": true
+      },
+      "git_status": "## Amdkn/Yaz...origin/main [behind 87]",
+      "institutional_state": "ACTIVE",
+      "embodiment_state": "READY_ROUND1",
+      "runtime_state": "NOT_STARTED_BY_ROUND1"
+    },
+    "Graham": {
+      "profile": "graham",
+      "checks": {
+        "worktree_exists": true,
+        "canonical_profile_exists": true,
+        "ade_registry_profile_matches": true,
+        "launcher_profile_matches": true,
+        "local_manifest_exists": true,
+        "git_status_readable": true
+      },
+      "git_status": "## Amdkn/Graham...origin/main [ahead 1, behind 87]",
+      "institutional_state": "ACTIVE",
+      "embodiment_state": "READY_ROUND1",
+      "runtime_state": "NOT_STARTED_BY_ROUND1"
+    }
+  },
+  "shared_prompt_findings": {
+    "AGENTS.md_identical_all_three": true,
+    "CLAUDE.md_identical_all_three": true,
+    "GEMINI.md_identical_all_three": false,
+    "MEMORY.md_identical_all_three": false,
+    "claude_code_adapter": "BLOCKED_SHARED_IDENTITY_PROJECTION",
+    "antigravity_adapter": "PARTIAL_NEEDS_IDENTITY_PROJECTION",
+    "codex_adapter": "PARTIAL_UNBOUND_NATIVE_AGENTS",
+    "hermes_orca": "READY_FOR_NON_DESTRUCTIVE_START_CANARY"
+  },
+  "round1_status": "PASS",
+  "next_gate": "CONTEXT_COMPILER_AND_HARNESS_ADAPTERS"
+}
