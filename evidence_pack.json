@@ -1,0 +1,18 @@
+{
+  "work_id": "314",
+  "timestamp": "2026-10-02T12:19:59.622316+00:00",
+  "files": {
+    "10_Tech_OS/kernel/dispatch_routing.py 10_Tech_OS/kernel/mission_watcher.py 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py": {
+      "sha256": null
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/dispatch_routing.py 10_Tech_OS/kernel/mission_watcher.py 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py": "Error or untracked file"
+  },
+  "test_results": {
+    "command": "PYTHONPATH=/app/10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_wargame_314_s3_mesh.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.414s\n\nOK\n"
+  }
+}
