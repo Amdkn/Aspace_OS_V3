@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "issue-207-gws-auth",
+  "issue_number": 207,
+  "blocked_action": "M8 - local authenticated GWS full-corpus replay + counts/dedup/provenance proof",
+  "reason": "The full corpus harvest requires replay on the A'Space local execution surface with authenticated GWS CLI (M8). As an AI agent, I lack human-only authentication credentials necessary to authenticate with Google Workspaces via the GWS CLI and therefore cannot execute the real end-to-end replay that validates the postconditions against the live spreadsheet (1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0). The mock implementation is complete.",
+  "required_resolution": "A human with appropriate GWS CLI authentication must run the discovery pipeline locally to process the full corpus, which will complete stage M8 and successfully write to the spreadsheet. This will certify the first complete corpus factory and allow issue closure.",
+  "timestamp": "2026-10-02T22:30:00Z"
+}

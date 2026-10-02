@@ -794,13 +794,16 @@ def process_corpus(manifest_path, out_dir, through_stage=None):
     # to bypass real API calls and save to gws_payloads.json.
     is_ci = os.environ.get("CI") == "true"
     adapter = GWSAdapter(mock_mode=is_ci)
-    adapter.write_batch(gws_payloads, out_dir)
+    gws_success = adapter.write_batch(gws_payloads, out_dir)
 
     # Fix stage status logic
     if report["videos_processed"] == 0:
         report["stage_status"] = "FAILED"
     elif report["videos_processed"] < report["total_videos_discovered"] or effective_ceiling != "M7":
         report["stage_status"] = "PARTIAL_SUCCESS"
+    elif not gws_success:
+        print("[Discovery] Marking stage as FAILED due to GWS write failure.")
+        report["stage_status"] = "FAILED"
     else:
         report["stage_status"] = "PASS"
 

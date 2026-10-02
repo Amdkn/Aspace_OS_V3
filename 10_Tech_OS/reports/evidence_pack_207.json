@@ -1,0 +1,26 @@
+{
+  "work_id": "207",
+  "timestamp": "2026-10-02T22:26:58.877710+00:00",
+  "files": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/gws_adapter.py": {
+      "sha256": "5447cc7f60111d60432b5ba69e883806708a307f9007622f92ccf19e26b76422"
+    },
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": {
+      "sha256": "d1955be83e10f0e8c28c8676627616842c0998cee4a63ce61152575f490a7fa0"
+    },
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/test_discovery.py": {
+      "sha256": "505a7169ca989d8d8df66014042eb031dc3fdcec585c1ac7bb96bd7833e4b377"
+    }
+  },
+  "git_diff_summaries": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/gws_adapter.py": "",
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": "",
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/test_discovery.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/02_Discovery_Corpus python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "[Discovery] M3: Canonicalizing citations\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid2\n[Discovery] M2: Extracting citations\n[Discovery] M7: Assembling Evidence Packet for vid1\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[GWSAdapter] Mock mode: GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n[Discovery] M3: Canonicalizing citations\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M4)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid1\n[Discovery] M2: Extracting citations\n[Discovery] M3: Canonicalizing citations\n[Discovery] M4: Fetching transcripts for https://youtube.com/watch?v=vid1\n[Discovery] M5: Analyzing transcripts\n[Discovery] M6: Fetching bounded keyframes for https://youtube.com/watch?v=vid1\n[Discovery] M7: Assembling Evidence Packet for vid1\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n[Inventory] Extracting history from Takeout: test_discovery_output/dummy_watch_history.html\n[Inventory] Found 2 unique videos in Takeout.\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M1)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n[Inventory] Enumerating playlist via yt-dlp: https://youtube.com/playlist?list=mock\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M3\n[GWSAdapter] Mock mode: GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[GWSAdapter] Mock mode: GWS Payloads dumped to test_discovery_output/gws_payloads.json\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n",
+    "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.035s\n\nOK\n"
+  }
+}
