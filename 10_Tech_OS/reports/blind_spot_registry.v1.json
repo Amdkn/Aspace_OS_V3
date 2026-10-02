@@ -176,6 +176,13 @@
       "dimension": "FORMULATION",
       "evidence_maturity": "CONTRACT",
       "status": "OPEN"
+    },
+    {
+      "id": "BS25",
+      "title": "AI-native capability substrate stranded inside a domain product",
+      "dimension": "TRANSLATION",
+      "evidence_maturity": "LIVE_RECON",
+      "status": "OPEN"
     }
   ],
   "translation_breakpoints": [
@@ -377,6 +384,19 @@
       ]
     },
     {
+      "id": "CG6",
+      "name": "Shared AI-Native Capability Fabric",
+      "recurrence": 5,
+      "blast_radius": 5,
+      "a0_tax": 5,
+      "score": 125,
+      "evidence": [
+        "#333",
+        "80_Agent-OS/index.md",
+        "30_Business_OS/10_Projects/coach-os-app/src/lib/tooling"
+      ]
+    },
+    {
       "id": "CG2",
       "name": "Translation Contract Registry",
       "recurrence": 5,
@@ -433,11 +453,12 @@
     "profile_home_false_green": "#324 open; #327 merged durable-source repair",
     "dc_hosted_fallback_regression": "#328 open; #329 PR",
     "continuation_protocol": "#321",
-    "embodied_holons": "#318"
+    "embodied_holons": "#318",
+    "ai_native_capability_fabric": "#333"
   },
   "next_gate": {
     "instruction": "Do not launch five build projects. Populate the 10 translation contracts and 10 stronger-proof requirements from current durable evidence; then choose at most 1–2 smallest gaps for implementation.",
-    "preferred_vertical_slice": "CG1 + CG2 intersection: Truth/Provenance envelope at one translation breakpoint that currently requires A0/manual interpretation.",
+    "preferred_vertical_slice": "CG1 + CG2 + CG6 intersection: one existing Business capability projected through shared registry → MCP + API + CLI + one harness with the same authority/evidence semantics.",
     "return_to": "#323"
   }
 }
