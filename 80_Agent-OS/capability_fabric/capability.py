@@ -11,6 +11,7 @@ class EffectReceipt:
     status: str
     observed_at: str = field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc).isoformat())
     evidence_refs: List[str] = field(default_factory=list)
+    data: Dict[str, Any] = field(default_factory=dict)
 
 @dataclass
 class CapabilityContract:

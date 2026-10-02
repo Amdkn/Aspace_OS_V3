@@ -20,7 +20,7 @@ class AdapterBase:
 
         try:
             receipt = capability.executor(payload, corr_id)
-            return {
+            res = {
                 "status": receipt.status,
                 "receipt": {
                     "capability_id": receipt.capability_id,
@@ -31,6 +31,9 @@ class AdapterBase:
                     "evidence_refs": receipt.evidence_refs
                 }
             }
+            if receipt.data:
+                res["data"] = receipt.data
+            return res
         except Exception as e:
             return {"status": "UNKNOWN", "error": str(e)}
 
