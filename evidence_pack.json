@@ -1,0 +1,50 @@
+{
+  "work_id": "333",
+  "timestamp": "2026-10-02T10:55:37.370198+00:00",
+  "files": {
+    "80_Agent-OS/capability_fabric/contract.py": {
+      "sha256": "8cd12928d04ac901f27910204274e3c902363b0d07d3de6473111a72b376f6b9"
+    },
+    "80_Agent-OS/capability_fabric/registry.py": {
+      "sha256": "351891f471493394f409e4105b5837b4cc48ff3960498165cca1d55f130ce7d1"
+    },
+    "80_Agent-OS/capability_fabric/mcp_adapter.py": {
+      "sha256": "56b785bcf055ccc4ca86394279425721f75c6049e788fe75bfe9b3b6f6089118"
+    },
+    "80_Agent-OS/capability_fabric/api_adapter.py": {
+      "sha256": "e9734a2610e8b76dc992220c9e51f2ea8fbc371ed1da69a90db6646db453c07f"
+    },
+    "80_Agent-OS/capability_fabric/cli_adapter.py": {
+      "sha256": "0ab84c312573fd93d861b6e7c2f8e35309d7d4eb29cbb613476346458c11971b"
+    },
+    "80_Agent-OS/capability_fabric/harness_adapter.py": {
+      "sha256": "41f251425cc812686de5a52bf1d7f8c9298e8f021af93eefbe715d3e421ecdd2"
+    },
+    "80_Agent-OS/capability_fabric/__init__.py": {
+      "sha256": "929d77fbc549a3b2133941ea504467161af8468f59f7b60aa58fb3b9eca4a665"
+    },
+    "80_Agent-OS/capability_fabric/test_migration_slice.py": {
+      "sha256": "6d0784533706cc96f59632916b6844a79eb123b5a9f73e41bd8ee98548e3aba3"
+    },
+    "80_Agent-OS/AI_NATIVE_CAPABILITY_FABRIC_V1.md": {
+      "sha256": "6bd27078a6d66b634d047dee72104f2e301aa7135bea20800c375781cd5884d1"
+    }
+  },
+  "git_diff_summaries": {
+    "80_Agent-OS/capability_fabric/contract.py": "",
+    "80_Agent-OS/capability_fabric/registry.py": "",
+    "80_Agent-OS/capability_fabric/mcp_adapter.py": "",
+    "80_Agent-OS/capability_fabric/api_adapter.py": "",
+    "80_Agent-OS/capability_fabric/cli_adapter.py": "",
+    "80_Agent-OS/capability_fabric/harness_adapter.py": "",
+    "80_Agent-OS/capability_fabric/__init__.py": "",
+    "80_Agent-OS/capability_fabric/test_migration_slice.py": "",
+    "80_Agent-OS/AI_NATIVE_CAPABILITY_FABRIC_V1.md": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=/app python3 -m unittest 80_Agent-OS/capability_fabric/test_migration_slice.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.005s\n\nOK\n"
+  }
+}

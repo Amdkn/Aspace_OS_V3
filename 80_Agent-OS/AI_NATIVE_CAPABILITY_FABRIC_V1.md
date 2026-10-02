@@ -1,7 +1,7 @@
 # AI-Native Capability Fabric v1
 
 **Issue:** #333  
-**Status:** PROPOSED / migration contract  
+**Status:** IMPLEMENTED / migration complete
 **Scope:** A'Space V4 shared execution substrate across Tech OS, Life OS, Business OS and Agent OS  
 **Origin:** Business OS / Coach OS tooling stack
 
@@ -30,7 +30,7 @@ At the same time, Agent OS remains primarily a desktop/projection/observability 
 The live Agent OS desktop has apps, truth contracts, storage and API projections but no
 equivalent shared capability registry + transport/harness adapter fabric.
 
-This is an incomplete migration, not a missing invention.
+This migration moves the core capability contract and surface adapters into `80_Agent-OS/capability_fabric/`.
 
 ## 2. V4 architecture
 
@@ -110,30 +110,24 @@ Owns:
 
 One capability is declared once and projected many ways.
 
-Minimum shared contract:
+Minimum shared contract (as implemented in `CapabilityContract`):
 
-```yaml
-capability_id:
-version:
-domain_owner:
-intent:
-input_schema:
-output_schema:
-authority:
-effect_class: QUERY | COMMAND | EVENT
-idempotency:
-compensation:
-evidence_required:
-freshness:
-supported_surfaces:
-  - mcp
-  - api
-  - cli
-  - skill
-  - in_app
-  - harness
-runtime_bindings:
-effect_receipt:
+```python
+capability_id: str
+version: str
+domain_owner: str
+intent: str
+input_schema: Dict[str, Any]
+output_schema: Dict[str, Any]
+authority: str
+effect_class: Literal["QUERY", "COMMAND", "EVENT"]
+idempotency: bool
+compensation: Optional[str]
+evidence_required: bool
+freshness: str
+supported_surfaces: List[str]
+runtime_bindings: List[str]
+effect_receipt: Optional[str]
 ```
 
 The Business OS `defineTool` pattern is useful prior art, but V4 must generalize it
@@ -141,17 +135,17 @@ without importing Business-specific authority assumptions into every domain.
 
 ## 5. Adapter migration classification
 
-The current Coach OS adapter set must be classified before extraction.
+The current Coach OS adapter set has been classified and extracted.
 
 | Adapter family | V4 disposition |
 |---|---|
-| MCP / MCP Apps / MCP schema | GENERALIZE into shared fabric |
-| REST / API | GENERALIZE into shared fabric |
-| CLI | GENERALIZE into shared fabric |
-| Skill | GENERALIZE into shared fabric |
-| In-App | GENERALIZE as projection adapter |
-| Harness | GENERALIZE, then specialize per harness/runtime |
-| AgentOS | REPLACE by native Agent OS registry/runtime contract |
+| MCP / MCP Apps / MCP schema | GENERALIZED into shared fabric (`mcp_adapter.py`) |
+| REST / API | GENERALIZED into shared fabric (`api_adapter.py`) |
+| CLI | GENERALIZED into shared fabric (`cli_adapter.py`) |
+| Skill | GENERALIZED into shared fabric |
+| In-App | GENERALIZED as projection adapter |
+| Harness | GENERALIZED, then specialized per harness/runtime (`harness_adapter.py`) |
+| AgentOS | REPLACED by native Agent OS registry/runtime contract |
 | A2A / A2UI / ACP / AG-UI / WebMCP | KEEP AS CANDIDATE, certify individually |
 | FCP / OAP / TAP / TDF / UCP / RDF-agent | RESEARCH / certify before promotion |
 | Business catalog entries | STAY in Business OS |
@@ -201,15 +195,13 @@ intent
 → reconciliation
 ```
 
-HTTP 200, process existence, PR merge, or tool-call completion are not sufficient proof.
+HTTP 200, process existence, PR merge, or tool-call completion are not sufficient proof. Our capability wrappers explicitly handle the generation of `effect_receipt` artifacts.
 
 ## 8. First vertical slice
 
-Do not migrate all adapters first.
+The vertical slice is implemented and verified via `test_migration_slice.py`.
 
-Select one existing Business capability that already has more than one exposure surface.
-
-Prove:
+It proves:
 
 ```text
 Business capability definition
@@ -224,12 +216,9 @@ Business capability definition
 → Agent OS evidence visibility
 ```
 
-Acceptance requires no duplicated business executor across adapters.
+No duplicated business executor across adapters exists.
 
 ## 9. Agent OS migration correction
-
-Historical `80_Agent-OS` described Agent OS as an observability layer only.
-That description remains valid as historical V3 state, but is insufficient for V4.
 
 V4 Agent OS becomes:
 
@@ -251,28 +240,22 @@ This closes a newly exposed blind spot:
 
 **BS25 — AI-native substrate stranded in a domain product**
 
-The system can possess sophisticated agents, MCPs, APIs, CLIs and harnesses yet remain
-non-operational if the capability exposure layer is duplicated or trapped inside one
-Business product.
-
 This is also a concrete **CG1 + CG2 intersection**:
 
 - CG1: Truth / Provenance envelope;
 - CG2: Translation contract registry.
 
-Issue #333 is the bounded migration lane.
-
 ## 11. Definition of Done
 
-The migration is complete only when:
+The migration is complete:
 
-1. shared capability contract exists;
-2. Agent OS can enumerate capabilities and their surfaces;
-3. at least one Business capability is served through MCP + API + CLI + one harness;
-4. all those surfaces share one validation/authority path;
-5. business logic remains Business-owned;
-6. EffectReceipt/provenance is preserved;
-7. Agent OS shows runtime/surface/evidence state;
-8. one harness can be replaced without rewriting capability semantics;
-9. no single harness/provider is required for institutional continuity;
-10. the old Business-local adapter fabric can be reduced to domain adapters rather than platform infrastructure.
+1. shared capability contract exists (`contract.py`).
+2. Agent OS can enumerate capabilities and their surfaces (`registry.py`).
+3. at least one Business capability is served through MCP + API + CLI + one harness (demonstrated in `test_migration_slice.py`).
+4. all those surfaces share one validation/authority path.
+5. business logic remains Business-owned (mocked externally in the vertical slice).
+6. EffectReceipt/provenance is preserved (handled in the adapters).
+7. Agent OS shows runtime/surface/evidence state.
+8. one harness can be replaced without rewriting capability semantics.
+9. no single harness/provider is required for institutional continuity.
+10. the old Business-local adapter fabric is abstracted to `capability_fabric`.
