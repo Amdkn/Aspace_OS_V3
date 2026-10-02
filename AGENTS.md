@@ -76,7 +76,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 ## 4. Chaîne d'Outils & Résolution de Conway
 
 - **La racine reste minimale :** Le présent fichier route les requêtes sans encombrer le contexte.
-- **Un agent est un item qui traverse des états :** Géré via `uc.db` et les validation gates SSSF.
+- **Une mission/claim traverse des états; l'identité institutionnelle du holon ne se réduit jamais à l'item.** `uc.db`/WorkGraph gèrent travail, leases, bindings et receipts; l'identité survit aux missions, sessions et runtimes.
 - **Loi d'observation dynamique (D3) :** pas de SSOT universel unique. Le filesystem est autoritaire pour les artefacts locaux, GitHub pour leur histoire/version, Supabase `aspace` pour IPBD/WorkGraph/état machine partagé, Linear pour la gouvernance humaine. Les divergences se réconcilient par type + provenance + fraîcheur, jamais en déclarant un plan globalement supérieur.
 
 ---
@@ -96,7 +96,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 - Une panne d'une surface d'outil n'immobilise pas la mission : basculer vers une surface canonique sûre, enregistrer la dégradation, réconcilier ensuite.
 - Budget de vague : **24 actions externes maximum**; checkpoint à 16, aucun nouveau scope après 22, persistance + handover à 24 avant toute vague suivante.
 - La limite de contexte bloque une vague, jamais l'objectif. Une nouvelle session reprend depuis preuves durables sans demander à A0 de reconstruire le système.
-- E-Myth : A0=Visionnaire; Rick=Gatekeeper; Managers=orchestration systémique; Companions/tools=techniciens bornés. Le harness évite le Technician Bias par batching, délégation, acceptance, rollback et evidence.
+- E-Myth : A0=Visionnaire institutionnel; Rick=Gatekeeper; Managers=orchestration systémique; **Companions=S3 holons cognitivement complets à juridiction bornée**. Technicien décrit un horizon de responsabilité, jamais une amputation cognitive. Scripts/workflows/Jules/Hermes/Codex/Claude/Antigravity/MCP sont des instruments, pas les identités.
 - Un handover ne réduit jamais le standard de qualité : pas de redémarrage à zéro, pas de mutation partielle sans checkpoint, pas de faux `In Progress`.
 
 Canon détaillé :
@@ -108,13 +108,21 @@ Canon détaillé :
 
 ### Fractal Companion capability mesh
 
-- **Doctor13 / Kernel:** Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
-- **Doctor11 / Life:** Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
-- **Doctor12 / Buzz:** Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+The labels below are **first hats / stewardship anchors**, not cognitive limits.
+
+- **Doctor13 / Kernel:** Ryan→BUILD/industrialisation, Yaz→OBSERVE, Graham→STATE.
+- **Doctor11 / Life:** Amy→INTERFACE, Rory→PERSISTENCE, River→FLOW/operations.
+- **Doctor12 / Buzz:** Bill→RESEARCH, Clara→DESIGN/FORGE, Nardole→DISPATCH/INTERCONNECTION.
 - **Rick/S1:** cross-Core routing, conflict and convergence.
-- Each specialty is a shared capability service for all eight peers; stewardship is never exclusivity.
+- Every S1/S2/S3, A1/A2/A3 and B1/B2/B3 node remains a cognitively complete holon inside bounded authority: perceive, investigate, reason, plan locally, choose tools/runtimes, delegate, act, verify, learn and escalate.
+- Stewardship is default accountability, never exclusivity. If an intended lower layer is absent, immature or blocked, a competent peer/upper holon may temporarily absorb load-bearing work with provenance + explicit handback/delegation debt.
+- Runtime/model/tool is orthogonal to identity. An institutional holon may be **poly-embodied** across Hermes, Codex, Claude Code, Antigravity, Jules or other harnesses at the same time.
+- Exactly-once/fencing is scoped to conflicting **effect / operation_id / correlation_id / resource**, not to a global “one process per holon” rule.
 - GitHub Discussions carry ambiguous needs/RFCs; Issues with `needs:<agent>` carry executable requests; PRs carry implementations; Evidence returns to requester/state planes.
-- Persistent sessions write in their identity worktree, never all into the shared root.
+- Persistent sessions normally write in isolated identity/work worktrees; parallel embodiments are allowed when their effects do not conflict.
+- **Amadou/A (human Founder) ≠ A0 Amadeus (digital-twin/shareholder projection).** A0 detachment is an autonomy outcome, not a prohibition on Founder intervention during bootstrap.
+
+Canonical correction: `10_Tech_OS/00_Governance_Rick/ADR-RICK-FRACTAL-HOLON-V4-ANTI-RIGIDITY-2026-10-02.md`.
 
 ## 5. Distillation après preuve — DOX & OKF
 

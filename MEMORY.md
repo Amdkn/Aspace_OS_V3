@@ -1,6 +1,6 @@
 # A'Space V3 — MEMORY bootstrap
 
-Updated: 2026-09-28
+Updated: 2026-10-02
 
 This file is a **bootstrap pointer**, not a parallel SSOT.
 
@@ -23,16 +23,22 @@ This file is a **bootstrap pointer**, not a parallel SSOT.
 9. Latest operational handover under `_INBOX/handoffs/`.
 
 ## Current architecture correction
-Identity, surface, harness and capability are orthogonal.
-Stewardship means default accountability, never exclusive access.
+Identity, hierarchy, stewardship, surface, runtime/harness and capability are orthogonal.
+Stewardship means default accountability / first hat, never exclusive access or reduced cognition.
 
-- Doctor13 / Kernel: Ryan=BUILD, Yaz=OBSERVE, Graham=STATE.
-- Doctor11 / Life: Amy=INTERFACE, Rory=PERSISTENCE, River=FLOW.
-- Doctor12 / Buzz: Bill=RESEARCH, Clara=DESIGN/FORGE, Nardole=DISPATCH/INTERCONNECTION.
+**Fractal Holon invariant:** a lower level has narrower jurisdiction, never less intelligence. S3/A3/B3 remain complete local agents able to investigate, reason, plan, choose tools, delegate, act, verify, learn and escalate.
+
+- Doctor13 / Kernel first hats: Ryan→BUILD/industrialisation, Yaz→OBSERVE, Graham→STATE.
+- Doctor11 / Life first hats: Amy→INTERFACE, Rory→PERSISTENCE, River→FLOW/operations.
+- Doctor12 / Buzz first hats: Bill→RESEARCH, Clara→DESIGN/FORGE, Nardole→DISPATCH/INTERCONNECTION.
 - Rick/S1 routes cross-Core dependencies and conflicts.
 - Specialties are shared services; no app/tool/framework is identity-exclusive.
+- **Elastic subsidiarity:** when an intended lower layer is absent, immature or blocked, a competent peer/upper holon may temporarily absorb load-bearing execution with provenance and explicit handback/delegation debt.
+- **Poly-embodiment:** one institutional holon may have multiple simultaneous runtime projections. Fencing/exactly-once is scoped to conflicting effect/operation/correlation, not actor existence.
+- **Amadou/A = human Founder; A0 Amadeus = digital-twin/shareholder-level projection.** Detachment is an autonomy outcome, not a prohibition on Founder intervention during bootstrap.
 - Amy owns Jev/System-One interface exposure; River consumes it as a Flow capability rather than owning the platform.
 - GitHub is the durable inter-agent message bus through Discussions → Issues → PR/Evidence.
+- Canon: `10_Tech_OS/00_Governance_Rick/ADR-RICK-FRACTAL-HOLON-V4-ANTI-RIGIDITY-2026-10-02.md`.
 
 ## New IPBD capture
 `35fa51bc-d249-4702-83ae-a1c119a98ef6`
