@@ -1,0 +1,65 @@
+{
+  "schema": "aspace.embodiment-environment-receipt.v1",
+  "issue": 324,
+  "observed_at": "2026-10-02",
+  "actor_id": "companion_ryan_builder",
+  "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan",
+  "institutional_identity": "Ryan / S3 / Doctor13 / BUILD stewardship",
+  "environment": {
+    "USERPROFILE": "C:/Users/amado",
+    "HOME": "UNSET_IN_CMD_ENV",
+    "HERMES_HOME": "UNSET",
+    "executable": "C:/Users/amado/AppData/Local/hermes/bin/hermes.exe",
+    "active_profile_home": "C:/Users/amado/AppData/Local/hermes/profiles"
+  },
+  "live_checks": [
+    {
+      "check": "where hermes from Ryan worktree",
+      "result": "PASS",
+      "observed": "C:/Users/amado/AppData/Local/hermes/bin/hermes.exe"
+    },
+    {
+      "check": "hermes profile show ryan",
+      "result": "PASS",
+      "observed": "Path C:/Users/amado/AppData/Local/hermes/profiles/ryan; Gateway running; SOUL.md exists"
+    },
+    {
+      "check": "hermes -p ryan --version from Ryan worktree",
+      "result": "PASS",
+      "observed": "Hermes Agent v0.21.0 (2026.8.31), exit 0"
+    },
+    {
+      "check": "ADE registry Ryan binding",
+      "result": "PASS",
+      "observed": "profile=ryan; worktree=Ryan; launcher=Ryan.cmd"
+    },
+    {
+      "check": "Ryan launcher",
+      "result": "PASS",
+      "observed": "uses AppData/Local/hermes/bin/hermes.EXE -p ryan with --in Ryan worktree"
+    },
+    {
+      "check": "historical compatibility profile",
+      "result": "OBSERVED",
+      "observed": "ryan_build_l0 also exists in same active profile home; it was pre-existing and was not created during #324 repair"
+    }
+  ],
+  "divergence_classification": {
+    "initial_symptom": "Orca terminal previously reported Profile 'ryan' does not exist while a separate .hermes/profiles/ryan tree existed.",
+    "root_cause": "profile-home/environment state had diverged historically; .hermes/profiles is not authoritative for the installed runtime. Live active home is AppData/Local/hermes/profiles.",
+    "current_state": "RESOLVED",
+    "important_correction": "The active runtime currently resolves short profile `ryan`. Historical `ryan_build_l0` remains a compatibility profile, not the current ADE/launcher binding."
+  },
+  "mutation": {
+    "duplicate_profile_created": false,
+    "identity_version_changed": false,
+    "launcher_current_profile": "ryan",
+    "ade_registry_current_profile": "ryan"
+  },
+  "return_to": [
+    "#318",
+    "#322"
+  ],
+  "next_gate": "Context Compiler + harness adapters, then controlled Ryan failover",
+  "evidence_source": "live Amd-PC inspection through connected Remote Desktop Commander; no inference call required"
+}
