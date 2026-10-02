@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "portfolio-issue-283",
+  "issue_number": 283,
+  "blocked_action": "completion of issue 283 (Portfolio Foundation Completion)",
+  "reason": "Issue 283 is a portfolio-level truth surface (supervision gate), not a single technical implementation backlog. It closes only when all child canonical foundation objectives (#219 for Tech, #239 for Agent OS, #230 for Bill, #93/T7 for Terra, and A-SPEC implementations for Business) have passed their real release gates or been superseded. Since this involves multiple domains, repos, and manual human-only validations over time, an agent cannot unilaterally mark this issue as 'completed' in a single PR. Therefore, it is blocked as an irreversible external action and portfolio-level gate.",
+  "required_resolution": "The human supervisor or domain owners must verify and close the individual foundation gates (TECH, AGENT OS, BILL, TERRA, BUSINESS) over time. Once all conditions in the active foundation graph are met, issue 283 can be closed.",
+  "timestamp": "2024-05-18T12:00:00Z"
+}
