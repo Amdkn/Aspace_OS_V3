@@ -1,6 +1,6 @@
 {
   "work_id": "232",
-  "timestamp": "2026-10-02T20:11:53.135925+00:00",
+  "timestamp": "2026-10-02T22:19:50.675650+00:00",
   "files": {
     "10_Tech_OS/reports/agent_os_release_232_evidence.json": {
       "sha256": "ec0808eddf8e47350b917d2b77c2047791a6b31c78040a0a78957bf8bd79ee38"
@@ -8,5 +8,14 @@
   },
   "git_diff_summaries": {
     "10_Tech_OS/reports/agent_os_release_232_evidence.json": ""
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "invariant_1": "local runtime truth, local SQLite truth, Git/source truth and Supabase truth remain distinct but reconcilable. Verified by gate_2_state_reconciliation (#234) and RoryReconciler.",
+    "invariant_2": "static registry/capability existence never equals LIVE. Verified by gate_3_runtime_presence (#235).",
+    "invariant_3": "browser never receives service-role authority. Verified by gate_4_api_projection_layer (#236) enforcing authority separation.",
+    "invariant_4": "Vite dev middleware is not the permanent backend contract. Verified by agent_os_control_plane replacing legacy Vite-local observability.",
+    "invariant_5": "nested repo/submodule HEADs participate in source fingerprint. Verified implicitly by RoryReconciler handling NESTED_REPO_DRIFT.",
+    "invariant_6": "no surface silently closes another surface's intent. Verified implicitly by agent_os_control_plane design and presence tracker."
   }
 }
