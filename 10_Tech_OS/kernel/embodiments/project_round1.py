@@ -16,10 +16,11 @@ USER = Path(os.environ.get("USERPROFILE", r"C:\Users\amado"))
 ADE_JSON = USER / ".aspace" / "orca" / "ADE_REGISTRY.json"
 ADE_YAML = USER / ".aspace" / "orca" / "ADE_REGISTRY.yaml"
 LAUNCHER_ROOT = USER / ".aspace" / "launchers" / "hermes-bots"
-HERMES_PROFILES = USER / ".hermes" / "profiles"
+HERMES_HOME = USER / "AppData" / "Local" / "hermes"
+HERMES_PROFILES = HERMES_HOME / "profiles"
 LOCAL_EMBODIMENTS = USER / ".aspace" / "embodiments"
 NAMES = ("Ryan", "Yaz", "Graham")
-PROFILE = {"Ryan": "ryan", "Yaz": "yaz", "Graham": "graham"}
+RUNTIME_PROFILE = {"Ryan": "ryan_build_l0", "Yaz": "yaz_spec_l0", "Graham": "graham_spawn_l0"}
 
 
 def sha256(path: Path) -> str | None:
@@ -104,7 +105,7 @@ def repair_hermes_routing() -> Path:
     for name in NAMES:
         if name not in registry["roles"]:
             raise RuntimeError(f"Missing ADE role {name}")
-        registry["roles"][name]["profile"] = PROFILE[name]
+        registry["roles"][name]["profile"] = RUNTIME_PROFILE[name]
     ADE_JSON.write_text(
         json.dumps(registry, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
@@ -112,9 +113,9 @@ def repair_hermes_routing() -> Path:
 
     yaml_text = ADE_YAML.read_text(encoding="utf-8-sig")
     replacements = {
-        "ryan_build_l0": "ryan",
-        "yaz_spec_l0": "yaz",
-        "graham_spawn_l0": "graham",
+        "ryan": "ryan_build_l0",
+        "yaz": "yaz_spec_l0",
+        "graham": "graham_spawn_l0",
     }
     for old, new in replacements.items():
         yaml_text = yaml_text.replace(f"profile: {old}", f"profile: {new}")
@@ -123,7 +124,7 @@ def repair_hermes_routing() -> Path:
     for name in NAMES:
         launcher = LAUNCHER_ROOT / f"{name}.cmd"
         text = launcher.read_text(encoding="utf-8-sig")
-        text2, count = re.subn(r"(?<=\s-p\s)[^\s]+", PROFILE[name], text, count=1)
+        text2, count = re.subn(r"(?<=\s-p\s)[^\s]+", RUNTIME_PROFILE[name], text, count=1)
         if count != 1:
             raise RuntimeError(f"Could not rewrite profile in {launcher}")
         launcher.write_text(text2, encoding="utf-8")
@@ -151,7 +152,7 @@ def validate(spec: dict) -> dict:
     for name in NAMES:
         h = spec["holons"][name]
         worktree = Path(h["home"]["workspace"])
-        profile = PROFILE[name]
+        profile = RUNTIME_PROFILE[name]
         launcher = LAUNCHER_ROOT / f"{name}.cmd"
         manifest = LOCAL_EMBODIMENTS / name / "manifest.json"
 
