@@ -444,6 +444,48 @@ def _load_json(path: str) -> Any:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+
+
+def route_capability_need(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    source_harness: str,
+    target_capability: str,
+    evidence: dict[str, Any]
+) -> dict[str, Any]:
+    with closing(_connect(db_path)) as con:
+        payload = {
+            "schema": "aspace.capability-need.v1",
+            "target_capability": target_capability,
+            "evidence": evidence
+        }
+        _append_event(con, work_id, source_harness, "CapabilityNeed", payload)
+        con.execute("UPDATE work SET status='pending' WHERE id=?", (work_id,))
+        con.execute("DELETE FROM claim WHERE work_id=?", (work_id,))
+        con.commit()
+    return {"status": "rerouted", "target_capability": target_capability}
+
+def resolve_ownership_conflict(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    resolver_actor: str,
+    chosen_owner: str,
+    reason: str
+) -> dict[str, Any]:
+    with closing(_connect(db_path)) as con:
+        payload = {
+            "schema": "aspace.ownership-resolution.v1",
+            "resolver_actor": resolver_actor,
+            "chosen_owner": chosen_owner,
+            "reason": reason
+        }
+        _append_event(con, work_id, resolver_actor, "dispatch_routing_resolution", payload)
+        con.commit()
+    return payload
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="A'Space capability dispatch + return router")
     parser.add_argument("--db", default=str(DB))

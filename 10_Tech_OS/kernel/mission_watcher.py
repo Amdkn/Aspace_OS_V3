@@ -608,6 +608,45 @@ def _load_json(path: str) -> dict[str, Any]:
     return value
 
 
+
+
+def record_contradiction(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    source_actor: str,
+    contradictory_evidence: dict[str, Any]
+) -> dict[str, Any]:
+    with closing(_connect(db_path)) as con:
+        payload = {
+            "schema": "aspace.contradiction-record.v1",
+            "source_actor": source_actor,
+            "evidence": contradictory_evidence
+        }
+        _append_event(con, work_id, source_actor, "contradiction_recorded", payload)
+        con.commit()
+    return payload
+
+def reconcile_contradiction(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    reconciler_actor: str,
+    resolution_rule: str,
+    survivor_state: dict[str, Any]
+) -> dict[str, Any]:
+    with closing(_connect(db_path)) as con:
+        payload = {
+            "schema": "aspace.contradiction-reconciliation.v1",
+            "reconciler_actor": reconciler_actor,
+            "resolution_rule": resolution_rule,
+            "survivor_state": survivor_state
+        }
+        _append_event(con, work_id, reconciler_actor, "reconciliation_rule", payload)
+        con.commit()
+    return payload
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="A'Space deterministic mission watcher")
     parser.add_argument("--db", default=str(DB))
