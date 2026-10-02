@@ -3,15 +3,33 @@
   "name": "A'Space Machine Fabric M1",
   "version": "1.0.0",
   "description": "Production Bounded Native Messaging + DOM capability for AMF M1.",
-  "permissions": ["nativeMessaging", "tabs", "scripting", "storage"],
-  "host_permissions": ["http://*/*", "https://*/*"],
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmWFUog356wzO+TYmLshSNiGumSj4Wute5FAXPLXX16Eoa42qdJHA0g3MNcrdozypcJ0v/GByoCBAb3Ua+kQKeS/nj6PbbdrWFmlzuAjDunYPo48lFw1+ar/0rTyaTlft6xOfyfQpOxsy0pQi9ZbvjLyyRpnkXNgd4coTJcUK5P8KjySwfWLowpk7rQ/KNtrkig42Svst/xQ4ZctqGPnN2BsMI562bZuYBxLXk3sDFuJLMK/58KGdx1dJ6jXkcjx7F3V/w+9j28joJ4puLjJaU7neAP0XU+ZfRZzjaw5LDibjOwiwF76Il635V59K7MhaTlhOhcPQh7yVwUCjqxG2jwIDAQAB",
-  "background": {"service_worker": "service_worker.js"},
+  "background": {
+    "service_worker": "service_worker.js"
+  },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["kick.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "kick.js"
+      ],
       "run_at": "document_idle"
     }
+  ],
+  "optional_permissions": [
+    "debugger",
+    "cookies"
   ]
 }

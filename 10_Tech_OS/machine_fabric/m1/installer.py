@@ -16,9 +16,11 @@ EXTENSION_SRC = HERE / "extension"
 
 if sys.platform == "win32":
     import winreg
+else:
+    winreg = None
 
 def get_manifest_path():
-    if sys.platform == "win32":
+    if sys.platform == "win32" and winreg:
         return Path(os.environ.get("LOCALAPPDATA", "")) / "Aspace" / "NativeMessaging" / f"{HOST_NAME}.json"
     elif sys.platform == "darwin":
         return Path.home() / "Library" / "Application Support" / "Google" / "Chrome" / "NativeMessagingHosts" / f"{HOST_NAME}.json"
@@ -29,7 +31,7 @@ def get_extension_install_dir():
     override = os.environ.get("ASPACE_EXTENSION_DIR")
     if override:
         return Path(override)
-    if sys.platform == "win32":
+    if sys.platform == "win32" and winreg:
         return Path(os.environ.get("LOCALAPPDATA", "")) / "Aspace" / "Extension"
     elif sys.platform == "darwin":
         return Path.home() / "Library" / "Application Support" / "Aspace" / "Extension"
@@ -70,7 +72,7 @@ def install_manifest(exe_path, extension_id):
 
     manifest_path.write_text(json.dumps(manifest_data, indent=2) + "\n", encoding="utf-8")
 
-    if sys.platform == "win32":
+    if sys.platform == "win32" and winreg:
         key_path = f"Software\\Google\\Chrome\\NativeMessagingHosts\\{HOST_NAME}"
         try:
             key = winreg.CreateKey(winreg.HKEY_CURRENT_USER, key_path)
@@ -103,7 +105,7 @@ def install_extension(extension_id):
             pass
 
     # Register external extension in Chrome
-    if sys.platform == "win32":
+    if sys.platform == "win32" and winreg:
         ext_key_path = f"Software\\Google\\Chrome\\Extensions\\{extension_id}"
         try:
             key = winreg.CreateKey(winreg.HKEY_CURRENT_USER, ext_key_path)
@@ -143,7 +145,7 @@ def uninstall(args):
 
     ext_id = getattr(args, "extension_id", DEFAULT_EXTENSION_ID)
 
-    if sys.platform == "win32":
+    if sys.platform == "win32" and winreg:
         key_path = f"Software\\Google\\Chrome\\NativeMessagingHosts\\{HOST_NAME}"
         try:
             winreg.DeleteKey(winreg.HKEY_CURRENT_USER, key_path)
