@@ -1,0 +1,25 @@
+{
+  "work_id": "219",
+  "timestamp": "2026-10-02T23:04:55.529900+00:00",
+  "files": {
+    "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json": {
+      "sha256": "54555b54751880742df50269b60462f54fa3c2c5df70fa7ae576c3a073fa9c13"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json": ""
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "clean install/start/status": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_1_clean_install_start_status)",
+    "one MCP endpoint exposes expected tools": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_2_one_mcp_endpoint_expected_tools)",
+    "stdio + Streamable HTTP PASS": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_3_stdio_and_streamable_http)",
+    "filesystem/process/browser end-to-end PASS": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_4_filesystem_process_browser_e2e)",
+    "ledger/health truthful": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_5_truthful_ledger_and_health)",
+    "plugin discovery PASS": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_6_plugin_discovery)",
+    "remote second-client PASS": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_7_remote_second_client)",
+    "crash/restart/replay => no duplicate consequential effect": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_8_crash_restart_replay_no_duplicate_effect)",
+    "rollback/uninstall PASS": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_9_rollback_uninstall)",
+    "hosted Remote Desktop Commander is optional fallback only": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_10_hosted_rdc_optional_only)"
+  }
+}
