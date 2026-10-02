@@ -1,0 +1,8 @@
+{
+  "schema": "aspace.typed-blocker.v1",
+  "issue": "#231",
+  "title": "[OBJECTIVE][AGENT-OS] Unified Agent OS — truthful runtime, reconciled state, full-stack control plane",
+  "blocker_type": "HUMAN_AUTH_EXTERNAL_ACTION",
+  "reason": "Issue 231 is a portfolio-level objective (supervision gate) that tracks the overall unification of Agent OS. It closes only when all child technical implementations (such as state reconciliation, runtime presence, API projection layer, frontend truth projection, and full-stack E2E canaries) have passed their real release gates. As evidenced by the blocker for its child cutover issue (#239), validating these completion criteria requires credentials and access to external live systems (e.g., Supabase, Git repositories, fully running Frontend) that are unavailable to the AI agent in this sandbox environment. Therefore, it is blocked as an irreversible external action and portfolio-level gate.",
+  "next_action": "Human review, execution, and verification of the child release gates and final objective cutover."
+}
