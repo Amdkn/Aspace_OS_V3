@@ -1,7 +1,7 @@
 ---
 type: Bundle index
-title: 80_Agent-OS — la couche d'observabilité et de supervision
-description: Ce qui vient APRÈS le triptyque de migration V3 et après la mémoire OKF/OpenWiki : regarder l'état réel du système. Fusion de 80_Front-Office (pages de revue) et 90_Back-Office (schéma de cadence), plus le bureau qui les rend.
+title: 80_Agent-OS — projection, observabilité et Capability Fabric en migration V4
+description: État historique V3 d'observabilité/supervision, désormais en migration V4 vers une couche Agent OS AI-native qui projette aussi les capacités partagées, leurs adapters, harness bindings et preuves sans absorber la sémantique métier.
 tags: [agent-os, observabilite, supervision, revue, cadence, sql, dashboards, bureau]
 generated: { by: claude-opus-5, at: 2026-08-29T22:45:00Z }
 verified:
@@ -21,6 +21,30 @@ sources:
     last_modified: 2026-08-29
 okf_version: "0.2"
 ---
+
+# Correction de trajectoire V4
+
+Le texte ci-dessous décrit fidèlement l'état historique V3 : Agent OS a d'abord été conçu comme couche d'observabilité et de supervision.
+
+Ce rôle est désormais **insuffisant** pour A'Space V4.
+
+Le code Business OS / Coach OS contient déjà une couche AI-native plus avancée que l'Agent OS actuel : `defineTool`, registre de capacités, MCP, REST/API, CLI, Skill, In-App, Harness, AgentOS, A2A/A2UI/ACP/AG-UI/WebMCP et autres projections. Cette infrastructure ne doit pas rester enfermée dans un produit métier.
+
+La cible V4 ajoute donc à Agent OS une fonction de **Capability Fabric** :
+
+```text
+domain capability
+→ typed capability contract
+→ shared registry
+→ MCP / API / CLI / Skill / In-App
+→ harness/runtime adapters
+→ EffectReceipt / evidence
+→ Agent OS projection
+```
+
+Agent OS expose et projette les capacités ; Business OS et Life OS conservent la propriété de leur sémantique.
+
+Canon de migration : [AI_NATIVE_CAPABILITY_FABRIC_V1.md](AI_NATIVE_CAPABILITY_FABRIC_V1.md), GitHub #333.
 
 # Sa place dans la chaîne
 
