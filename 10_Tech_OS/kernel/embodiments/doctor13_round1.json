@@ -12,7 +12,7 @@
     "orca_root": "C:/Users/amado/orca/workspaces/ASpace_OS_V3",
     "ade_registry_json": "C:/Users/amado/.aspace/orca/ADE_REGISTRY.json",
     "ade_registry_yaml": "C:/Users/amado/.aspace/orca/ADE_REGISTRY.yaml",
-    "hermes_profiles_root": "C:/Users/amado/.hermes/profiles",
+    "hermes_profiles_root": "C:/Users/amado/AppData/Local/hermes/profiles",
     "local_embodiment_root": "C:/Users/amado/.aspace/embodiments",
     "multica": {
       "installed": true,
@@ -21,7 +21,8 @@
       "daemon_running_at_recon": false,
       "role": "candidate embodiment manager / compatibility laboratory",
       "authority": "none until V4 compatibility gate passes"
-    }
+    },
+    "hermes_profile_resolution_note": "Runtime profiles live under AppData/Local/hermes for the installed binary. C:/Users/amado/.hermes/profiles is a distinct identity/config tree and must not be assumed to drive Orca/Hermes Bot Mode."
   },
   "shared_findings": {
     "orca_identity_worktrees_exist": true,
@@ -52,12 +53,17 @@
       "home": {
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Ryan",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Ryan/manifest.json",
-        "hermes_profile": "ryan",
-        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Ryan.cmd"
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Ryan.cmd",
+        "hermes_runtime_profile": "ryan_build_l0"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
-        "candidate_fallbacks": ["codex", "claude_code", "antigravity", "jules"],
+        "candidate_fallbacks": [
+          "codex",
+          "claude_code",
+          "antigravity",
+          "jules"
+        ],
         "fallbacks_certified": false
       },
       "presence": {
@@ -72,7 +78,11 @@
         "legacy_profile_exists": false,
         "canonical_profile_exists": true,
         "gemini_md_distinct": true,
-        "memory_md_distinct_from_yaz_graham": true
+        "memory_md_distinct_from_yaz_graham": true,
+        "previous_round1_short_profile_assumption": "ryan",
+        "runtime_profile_binding": "ryan_build_l0",
+        "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
+        "short_profile_tree_is_identity_equivalent": false
       }
     },
     "Yaz": {
@@ -87,12 +97,16 @@
       "home": {
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Yaz",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Yaz/manifest.json",
-        "hermes_profile": "yaz",
-        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Yaz.cmd"
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Yaz.cmd",
+        "hermes_runtime_profile": "yaz_spec_l0"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
-        "candidate_fallbacks": ["codex", "claude_code", "antigravity"],
+        "candidate_fallbacks": [
+          "codex",
+          "claude_code",
+          "antigravity"
+        ],
         "fallbacks_certified": false
       },
       "presence": {
@@ -108,7 +122,11 @@
         "legacy_profile_declares_itself_compatibility_only": true,
         "canonical_profile_exists": true,
         "gemini_md_shared_with_graham": true,
-        "memory_md_shared_with_graham": true
+        "memory_md_shared_with_graham": true,
+        "previous_round1_short_profile_assumption": "yaz",
+        "runtime_profile_binding": "yaz_spec_l0",
+        "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
+        "short_profile_tree_is_identity_equivalent": false
       }
     },
     "Graham": {
@@ -123,12 +141,16 @@
       "home": {
         "workspace": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Graham",
         "local_manifest": "C:/Users/amado/.aspace/embodiments/Graham/manifest.json",
-        "hermes_profile": "graham",
-        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Graham.cmd"
+        "launcher": "C:/Users/amado/.aspace/launchers/hermes-bots/Graham.cmd",
+        "hermes_runtime_profile": "graham_spawn_l0"
       },
       "runtime_affinity": {
         "round1_primary": "hermes_orca",
-        "candidate_fallbacks": ["codex", "claude_code", "antigravity"],
+        "candidate_fallbacks": [
+          "codex",
+          "claude_code",
+          "antigravity"
+        ],
         "fallbacks_certified": false
       },
       "presence": {
@@ -143,14 +165,18 @@
         "legacy_profile_exists": false,
         "canonical_profile_exists": true,
         "gemini_md_shared_with_yaz": true,
-        "memory_md_shared_with_yaz": true
+        "memory_md_shared_with_yaz": true,
+        "previous_round1_short_profile_assumption": "graham",
+        "runtime_profile_binding": "graham_spawn_l0",
+        "profile_home": "C:/Users/amado/AppData/Local/hermes/profiles",
+        "short_profile_tree_is_identity_equivalent": false
       }
     }
   },
   "harness_compatibility_at_recon": {
     "hermes_orca": {
-      "state": "REPAIRABLE_ROUND1",
-      "reason": "Distinct canonical profiles and persistent worktrees exist; ADE/launchers referenced reductive or missing legacy profile aliases."
+      "state": "ENVIRONMENT_DIVERGENCE_RECON",
+      "reason": "Prior certified Bot Mode bindings use AppData/Local/hermes legacy runtime profile slugs. Round1 incorrectly rewrote them to short ryan/yaz/graham profiles under .hermes, contradicting the 2026-09-24 handover. Issue #324 replays the projection without cloning identity."
     },
     "claude_code": {
       "state": "BLOCKED_SHARED_IDENTITY_PROJECTION",
@@ -172,12 +198,12 @@
   "round1_exit_gate": {
     "required": [
       "canonical local embodiment manifests materialized for Ryan/Yaz/Graham",
-      "ADE registry and Hermes launchers point to canonical ryan/yaz/graham profiles",
-      "profile directories exist",
+      "ADE registry and Hermes launchers resolve the existing active runtime profiles from the actual Hermes profile home without redefining institutional identity",
+      "runtime profile directories exist in the profile home used by the installed Hermes binary",
       "home worktrees exist",
       "no failover executed yet",
       "Claude/Antigravity/Codex incompatibilities remain explicit rather than hidden"
     ],
-    "next_round": "Context Compiler + harness adapters; then controlled Ryan failover"
+    "next_round": "Replay Round1 after #324 profile-home repair, then Context Compiler + harness adapters; controlled failover only after environment receipt."
   }
 }
