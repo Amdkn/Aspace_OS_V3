@@ -1,0 +1,26 @@
+{
+  "work_id": "215",
+  "timestamp": "2026-10-02T20:08:27.631013+00:00",
+  "files": {
+    "10_Tech_OS/machine_fabric/m1/installer.py": {
+      "sha256": "2c3255be75fa6fec276782f1046f8ebf0d57de2e792d9cf2f2d2e31357115824"
+    },
+    "10_Tech_OS/machine_fabric/m1/test_installer.py": {
+      "sha256": "9d6e7c810cda060a1113c29643aa47ca472cbee3199361fbb2fbaa21b5498636"
+    },
+    "10_Tech_OS/machine_fabric/m1/extension/manifest.json": {
+      "sha256": "b1cb2ca692968363c8c5094c9d3552e44f70e4ed4c97566f60bce751c765b662"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/machine_fabric/m1/installer.py": "",
+    "10_Tech_OS/machine_fabric/m1/test_installer.py": "",
+    "10_Tech_OS/machine_fabric/m1/extension/manifest.json": ""
+  },
+  "test_results": {
+    "command": "python3 -m unittest 10_Tech_OS/machine_fabric/m1/test_installer.py 10_Tech_OS/machine_fabric/m1/test_m1_prod.py 10_Tech_OS/machine_fabric/m1/test_m1.py",
+    "exit_code": 0,
+    "stdout": "Installing...\nCompiling Native Messaging Host...\nManifest installed at: /tmp/tmpaoe_chy_/NativeMessagingHosts/com.aspace.machine_fabric.m1.json\nExtension installed at: /tmp/tmpaoe_chy_/Extension (id: test_ext_id)\nInstall complete.\nUninstalling...\nRemoved manifest: /tmp/tmpaoe_chy_/NativeMessagingHosts/com.aspace.machine_fabric.m1.json\nRemoved external extension json: /home/jules/.config/google-chrome/External Extensions/test_ext_id.json\nRemoved installed extension directory: /tmp/tmpaoe_chy_/Extension\nRemoved compiled binaries.\nUninstall complete.\n",
+    "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 8.901s\n\nOK\n"
+  }
+}
