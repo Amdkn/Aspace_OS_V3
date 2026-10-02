@@ -1,0 +1,13 @@
+{
+  "work_id": "#328",
+  "timestamp": "2026-10-02T23:03:06.294664+00:00",
+  "files": {},
+  "git_diff_summaries": {},
+  "outcome": "PASS",
+  "golden_proof": {
+    "recovery_daemon_priority": "Sovereign DC path is prioritized over hosted fallback. See `recovery_order` and `start_dc` in `10_Tech_OS/kernel/dc_recovery_daemon.py`.",
+    "hosted_fallback_opt_in": "Hosted fallback requires explicit opt-in via `ASPACE_ALLOW_HOSTED_DC_FALLBACK=1`. See `hosted_fallback_allowed` in `10_Tech_OS/kernel/dc_recovery_daemon.py`.",
+    "unit_tests_exist": "Unit tests cover default deny and explicit opt-in. See `10_Tech_OS/kernel/test_dc_recovery.py`.",
+    "no_browser_auto_open": "No auto-open browser calls exist. Scanned for `webbrowser` and `device/verify` without any relevant findings."
+  }
+}
