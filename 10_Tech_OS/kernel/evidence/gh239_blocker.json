@@ -1,0 +1,8 @@
+{
+  "schema": "aspace.typed-blocker.v1",
+  "issue": "#239",
+  "title": "[AGENT-OS][RELEASE] v1 Cutover \u2014 unified truthful Agent OS",
+  "blocker_type": "HUMAN_AUTH_EXTERNAL_ACTION",
+  "reason": "Agent OS V1 Release Acceptance requires validating Supabase projection reconciliation, frontend no-fake-status checks, and end-to-end canaries which inherently require credentials and access to external live systems (Supabase planes, possibly nested Git repositories, and a fully running Frontend environment) that are unavailable to the AI agent in this sandbox environment. A human operator with the required auth and networking context must execute and verify the v1 cutover acceptance gates.",
+  "next_action": "Human review and execution of the v1 Cutover acceptance criteria."
+}
