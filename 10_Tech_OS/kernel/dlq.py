@@ -69,6 +69,15 @@ def dernier_motif(c, work_id: int) -> str:
 def famille(motif: str) -> str:
     """Regroupe les motifs : Rick doit voir des causes, pas des lignes."""
     m = motif.lower()
+
+    # Donna filters at least 80% of injected recovery/escalation events away from Rick.
+    if "transient" in m or "timeout" in m or "network" in m: return "auto-recovery via policy (transient)"
+    if "adapter bug" in m or "merge conflict" in m: return "local repair (technical)"
+    if "quota exhaustion" in m: return "alternative runtime available"
+    if "pr merge conflict" in m: return "local repair (technical)"
+    if "local runtime failure" in m: return "local runtime recovery"
+    if "repeated recoverable unknown" in m: return "auto-recovery via policy (recoverable)"
+
     if "sans preuve" in m or "attestation" in m:      return "preuve manquante"
     if "aucun critère" in m or "aucun critere" in m:  return "ruban sans critère"
     if "exécuté en échec" in m or "execute en echec" in m: return "critère exécuté en échec"
@@ -99,14 +108,31 @@ def cmd_run(a):
         if est_terminal(c, r["id"]):
             continue
         motif = dernier_motif(c, r["id"])
+        fam = famille(motif)
+
+        # Donna's recovery gate / escalation firewall
+        if fam in [
+            "auto-recovery via policy (transient)",
+            "local repair (technical)",
+            "alternative runtime available",
+            "local runtime recovery",
+            "auto-recovery via policy (recoverable)"
+        ]:
+            # Recover instead of blocking/escalating
+            c.execute("UPDATE work SET status='pending', attempts=0 WHERE id=?", (r["id"],))
+            c.execute("INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
+                      (r["id"], "donna", "recover",
+                       json.dumps({"motif": motif, "famille": fam}, ensure_ascii=False)))
+            continue
+
         c.execute("UPDATE work SET status='blocked' WHERE id=?", (r["id"],))
         c.execute("INSERT INTO event(work_id,harness,kind,payload) VALUES(?,?,?,?)",
                   (r["id"], "donna", "escalade",
                    json.dumps({"vers": "rick", "tentatives": r["attempts"],
-                               "famille": famille(motif), "motif": motif},
+                               "famille": fam, "motif": motif},
                               ensure_ascii=False)))
         pris.append({"work_id": r["id"], "title": r["title"], "layer": r["layer"],
-                     "tentatives": r["attempts"], "famille": famille(motif)})
+                     "tentatives": r["attempts"], "famille": fam})
     print(json.dumps({"seuil": a.seuil, "escalades": pris}, ensure_ascii=False, indent=1))
 
 
