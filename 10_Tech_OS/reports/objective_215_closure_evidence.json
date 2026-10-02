@@ -1,0 +1,18 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective_id": "215",
+  "status": "SATISFIED",
+  "acceptance_mapping": {
+    "install into normal Chrome": "test_installer.py validates installation of manifest and extension in appropriate directories.",
+    "reconnect survives Chrome restart": "test_m1_prod.py (test_worker_and_daemon_reconnect) validates worker reconnection after termination.",
+    "tab listing PASS": "service_worker.js pingLoop retrieves tabs, verified natively in canary.",
+    "deterministic DOM action PASS with receipt": "test_m1_prod.py (test_claim_complete_and_replay) executes action and verifies SUCCEEDED receipt.",
+    "same operation_id never double-applies": "test_m1_prod.py tests that a second attempt with same claim operation_id returns execute: False and replayed: True.",
+    "upgrade idempotent": "installer.py update explicitly acts identically to install, overwriting existing manifestations.",
+    "uninstall leaves no residue": "test_installer.py verifies complete removal of manifest, registry entries, and directory."
+  },
+  "proofs": [
+    "10_Tech_OS/reports/dc_chrome_bridge_215_evidence.json",
+    "10_Tech_OS/reports/evidence_pack_215.json"
+  ]
+}
