@@ -1,0 +1,26 @@
+{
+  "work_id": "194",
+  "timestamp": "2026-10-02T22:23:12.033977+00:00",
+  "files": {
+    "10_Tech_OS/reports/objective_194_closure_evidence.json": {
+      "sha256": "3c37bb1405716999757ec7149fef4953a73554878e3d3fa9089f34b54794cea3"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/reports/objective_194_closure_evidence.json": ""
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "start the ASpace DC idempotently without a foreground terminal": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_1_clean_install_start_status)",
+    "discover one MCP endpoint and its tools/capabilities": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_2_one_mcp_endpoint_expected_tools)",
+    "use local stdio and Streamable HTTP": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_3_stdio_and_streamable_http)",
+    "execute bounded filesystem/process/browser actions through HostPolicy": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_4_filesystem_process_browser_e2e)",
+    "produce durable receipts and reconcile restart/replay": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_8_crash_restart_replay_no_duplicate_effect)",
+    "expose truthful health, tool inventory and local usage/cost/latency/error ledger": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_5_truthful_ledger_and_health)",
+    "install/update/uninstall Chrome extension + Native Messaging reproducibly": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_9_rollback_uninstall)",
+    "survive logout/restart according to explicit daemon/worker semantics": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_1_clean_install_start_status)",
+    "add adapters/tools without modifying the core gateway": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_6_plugin_discovery)",
+    "use a user-owned remote transport without hosted Desktop Commander quota dependency": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (gate_7_remote_second_client)",
+    "pass a cutover canary proving real clients can use ASpace DC directly": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json (verified_by)"
+  }
+}
