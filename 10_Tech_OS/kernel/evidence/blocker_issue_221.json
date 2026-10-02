@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "portfolio-issue-221",
+  "issue_number": 221,
+  "blocked_action": "completion of epic issue 221 ([EPIC][BILL-RD] Build the multi-source Research Atlas / PaperGraph factory)",
+  "reason": "Issue 221 is an Epic that tracks the execution of multiple child issues for the Bill Research Atlas / Innovation Graph. Many constituent child issues (#206, #207, #222, and #230) are still open. As a portfolio-level truth surface, an agent cannot unilaterally mark this epic as completed in a single PR before its required implementations pass their respective release gates.",
+  "required_resolution": "The constituent child issues must be resolved first. Specifically, #230 is the terminal convergence proof which on PASS will close #221.",
+  "timestamp": "2026-10-02T20:09:37Z"
+}
