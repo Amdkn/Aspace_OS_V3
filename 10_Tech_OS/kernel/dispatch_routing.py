@@ -280,6 +280,10 @@ def reserve_dispatch(
             harness,
             "--lease",
             lease_seconds,
+            "--institutional-owner",
+            decision.get("candidate", {}).get("institutional_owner", "ryan"),
+            "--runtime-id",
+            decision["runtime_id"],
             db_path=db_path,
         )
         work = claim.get("work")

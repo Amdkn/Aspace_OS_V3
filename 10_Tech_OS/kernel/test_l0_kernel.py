@@ -48,7 +48,7 @@ class TestL0Kernel(unittest.TestCase):
         work_id = res["work_id"]
 
         # 3. Claim work
-        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--work", str(work_id))
+        p = self.run_cmd(UC_PATH, "claim", "--harness", "test_harness", "--institutional-owner", "Ryan", "--runtime-id", "test_runtime", "--work", str(work_id))
         self.assertEqual(p.returncode, 0)
         res = json.loads(p.stdout)
         self.assertTrue(res.get("ok"))

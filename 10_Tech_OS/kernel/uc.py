@@ -125,12 +125,13 @@ def cmd_claim(a):
             c.execute("COMMIT"); out({"ok": True, "work": None}); return
         wid = row["id"]
         c.execute("UPDATE work SET status='claimed', attempts=attempts+1 WHERE id=?", (wid,))
-        c.execute("INSERT INTO claim(work_id,harness,expires_at) "
-                  "VALUES(?,?,datetime('now',?)) "
+        c.execute("INSERT INTO claim(work_id,harness,expires_at,institutional_owner,runtime_id) "
+                  "VALUES(?,?,datetime('now',?),?,?) "
                   "ON CONFLICT(work_id) DO UPDATE SET harness=excluded.harness, "
-                  "claimed_at=datetime('now'), expires_at=excluded.expires_at",
-                  (wid, a.harness, f"+{a.lease} seconds"))
-        log(c, wid, a.harness, "claim", {"lease_s": a.lease})
+                  "claimed_at=datetime('now'), expires_at=excluded.expires_at, "
+                  "institutional_owner=excluded.institutional_owner, runtime_id=excluded.runtime_id",
+                  (wid, a.harness, f"+{a.lease} seconds", a.institutional_owner, a.runtime_id))
+        log(c, wid, a.harness, "claim", {"lease_s": a.lease, "institutional_owner": a.institutional_owner, "runtime_id": a.runtime_id})
         c.execute("COMMIT")
     except Exception:
         c.execute("ROLLBACK"); raise
@@ -252,7 +253,7 @@ S.add_parser("migrate").set_defaults(f=cmd_migrate)
 p = S.add_parser("submit"); p.add_argument("--layer", required=True, choices=["A0", "L0", "L1", "L2"])
 p.add_argument("--title", required=True); p.add_argument("--tape"); p.add_argument("--parent", type=int)
 p.add_argument("--priority", type=int, default=0); p.set_defaults(f=cmd_submit)
-p = S.add_parser("claim"); p.add_argument("--harness", required=True)
+p = S.add_parser("claim"); p.add_argument("--harness", required=True); p.add_argument("--institutional-owner"); p.add_argument("--runtime-id")
 p.add_argument("--work", type=int, help="reclamer un item precis (ponts, watchdogs)")
 p.add_argument("--layer", choices=["A0", "L0", "L1", "L2"]); p.add_argument("--lease", type=int, default=900)
 p.set_defaults(f=cmd_claim)
@@ -260,7 +261,7 @@ p = S.add_parser("predict"); p.add_argument("--work", type=int, required=True)
 p.add_argument("--claim", required=True); p.add_argument("--confidence", type=float, required=True)
 p.set_defaults(f=cmd_predict)
 p = S.add_parser("beat"); p.add_argument("--work", type=int, required=True)
-p.add_argument("--harness", required=True); p.add_argument("--lease", type=int, default=900)
+p.add_argument("--harness", required=True); p.add_argument("--institutional-owner"); p.add_argument("--runtime-id"); p.add_argument("--lease", type=int, default=900)
 p.set_defaults(f=cmd_beat)
 p = S.add_parser("wait"); p.add_argument("--work", type=int, required=True)
 p.add_argument("--seconds", type=int, default=60); p.set_defaults(f=cmd_wait)

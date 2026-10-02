@@ -41,7 +41,9 @@ CREATE TABLE IF NOT EXISTS claim (
   work_id     INTEGER PRIMARY KEY REFERENCES work(id) ON DELETE CASCADE,
   harness     TEXT    NOT NULL,
   claimed_at  TEXT    NOT NULL DEFAULT (datetime('now')),
-  expires_at  TEXT    NOT NULL
+  expires_at  TEXT    NOT NULL,
+  institutional_owner TEXT,
+  runtime_id TEXT
 );
 
 -- --------------------------------------------------------------- PREDICTION
