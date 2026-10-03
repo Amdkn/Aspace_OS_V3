@@ -1,0 +1,35 @@
+{
+  "work_id": "458",
+  "timestamp": "2026-10-03T11:53:22.293566+00:00",
+  "files": {
+    "10_Tech_OS/kernel/temporal_truth/packets.py": {
+      "sha256": "e5852e2fcff5bf767e88b5a92ff8e1ea0bd3cde886cb1f688994c4fc239934ed"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_packets.py": {
+      "sha256": "12c8735b6f0c6bfb69cd2f233f3ad7153131e6f06d3c5be102238f87dd7b0f30"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_canary.py": {
+      "sha256": "69e4d94348f8c62d26822a63cbfda23df9f0b4c51f53f21e32ba80e151febc69"
+    },
+    "10_Tech_OS/kernel/temporal_truth/temporal_truth.py": {
+      "sha256": "dce39e59cea9158daac2bf80c14ae571b3357b1b9c64f4eece38f41d3e841384"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/temporal_truth/packets.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_packets.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_canary.py": "",
+    "10_Tech_OS/kernel/temporal_truth/temporal_truth.py": ""
+  },
+  "test_results": {
+    "command": "cd 10_Tech_OS/kernel/temporal_truth/ && python3 -m unittest test_packets.py test_canary.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.952s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "test_packets_present": true,
+    "canary_present": true
+  }
+}
