@@ -1,0 +1,39 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective_id": "#206",
+  "status": "SATISFIED",
+  "resolution": "Objective already achieved by continuous build epic #207 in 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus.",
+  "acceptance_criteria_proof": [
+    {
+      "criteria": "one canonical Paper identity, many provenance edges",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py:run_m3_canonicalize",
+      "notes": "Verified by test_paper_graph_deduplication which confirms multiple identical source/target relations are deduplicated into single edges pointing to one canonical Paper."
+    },
+    {
+      "criteria": "raw descriptions/transcripts/PDFs remain immutable/addressable",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py:process_video",
+      "notes": "Each M-stage (M1 metadata, M4 transcripts, M6 keyframes) persists separate immutable JSON files (e.g. m1_metadata.json) before aggregated packet generation."
+    },
+    {
+      "criteria": "no eager full-text ingestion of the whole citation graph",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py:fetch_ss_edges",
+      "notes": "Citation graph expansion is strictly bounded to 1-degree citedPaper and citingPaper references for resolved items via SemanticScholar API."
+    },
+    {
+      "criteria": "ambiguous bibliographic matches => NEEDS_REVIEW",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/test_discovery.py:test_m3_canonicalize",
+      "notes": "test_m3_canonicalize verifies that citation candidates falling back to title_block type correctly resolve as 'NEEDS_REVIEW'."
+    },
+    {
+      "criteria": "GWS is a human review projection, not canonical evidence",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py:process_corpus",
+      "notes": "GWSAdapter batch writes to sheets at the very end of processing, while actual canonical artifacts remain explicitly saved to the `out_dir` folder."
+    },
+    {
+      "criteria": "repeated citation is signal, not truth",
+      "proof_ref": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar/radar.py:resolve_identities",
+      "notes": "Delegated and tested in broader Atlas (radar.py), handled correctly downstream where repeated references across videos increase convergence signals, avoiding duplicate instantiation."
+    }
+  ],
+  "canonical_evidence_file": "10_Tech_OS/reports/corpus_01_certification_evidence.json"
+}

@@ -1,0 +1,22 @@
+{
+  "work_id": "206",
+  "timestamp": "2026-10-02T22:25:35.474942+00:00",
+  "files": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": {
+      "sha256": "f12337ac7dae99f2cb56b4945529891c6c9b3ee6c39b92f7674635ad2dc8b555"
+    },
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/test_discovery.py": {
+      "sha256": "cbbfd604e8b1d0bef733c0ce69258df262d61cc5664f908f48112a62d619642d"
+    }
+  },
+  "git_diff_summaries": {
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/discovery.py": "",
+    "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/test_discovery.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/02_Discovery_Corpus python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/02_Discovery_Corpus -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "[Discovery] M3: Canonicalizing citations\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid2\n[Discovery] M2: Extracting citations\n[Discovery] M7: Assembling Evidence Packet for vid1\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[GWSAdapter] Invoking GWS CLI to write 5 payloads to workbook 1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n[Discovery] M3: Canonicalizing citations\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M4)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n[Discovery] M1: Fetching metadata for https://youtube.com/watch?v=vid1\n[Discovery] M2: Extracting citations\n[Discovery] M3: Canonicalizing citations\n[Discovery] M4: Fetching transcripts for https://youtube.com/watch?v=vid1\n[Discovery] M5: Analyzing transcripts\n[Discovery] M6: Fetching bounded keyframes for https://youtube.com/watch?v=vid1\n[Discovery] M7: Assembling Evidence Packet for vid1\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M7)\n[Inventory] Extracting history from Takeout: test_discovery_output/dummy_watch_history.html\n[Inventory] Found 2 unique videos in Takeout.\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M1)\n\n[Discovery] Processing video: https://youtube.com/watch?v=vid1 (through M3)\n[Inventory] Enumerating playlist via yt-dlp: https://youtube.com/playlist?list=mock\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M3\n[GWSAdapter] Invoking GWS CLI to write 1 payloads to workbook 1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n-> Starting Discovery AI Corpus processing for manifest: test_discovery_output/manifest.json\n[Discovery] Effective execution ceiling: M7\n[GWSAdapter] Invoking GWS CLI to write 1 payloads to workbook 1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0\n\n[Discovery] Corpus processing complete. Report saved to test_discovery_output/corpus_report.json\n",
+    "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.038s\n\nOK\n"
+  }
+}
