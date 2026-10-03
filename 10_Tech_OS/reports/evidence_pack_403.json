@@ -1,6 +1,6 @@
 {
   "work_id": "403",
-  "timestamp": "2026-10-03T11:28:56.892794+00:00",
+  "timestamp": "2026-10-03T13:18:28.439761+00:00",
   "files": {
     "10_Tech_OS/kernel/cubefarm_office.py": {
       "sha256": "eedcc9f50d5127669efc0cac49c78573d496a8aa7571d6d5b816d118dcc7734f"
@@ -14,26 +14,15 @@
     "10_Tech_OS/kernel/test_cubefarm_office.py": ""
   },
   "test_results": {
-    "command": "PYTHONPATH=/app python3 -m unittest 10_Tech_OS/kernel/test_cubefarm_office.py",
+    "command": "PYTHONPATH=10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_cubefarm_office.py",
     "exit_code": 0,
     "stdout": "",
-    "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.006s\n\nOK\n"
+    "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.004s\n\nOK\n"
   },
   "outcome": "PASS",
   "golden_proof": {
-    "acceptance_criteria": [
-      "one live Ryan desk renders identity, embodiment, runtime and workload separately",
-      "switching runtime body does not recreate/rename Ryan",
-      "one non-GitHub floor type is rendered from Anthology references",
-      "Office can deep-link to GitHub/Linear/GWS/WorkGraph refs without collapsing them",
-      "no UI field silently becomes authority or SSOT",
-      "restart preserves desk/mission lineage"
-    ],
-    "implemented_in": [
-      "10_Tech_OS/kernel/cubefarm_office.py"
-    ],
-    "verified_by": [
-      "10_Tech_OS/kernel/test_cubefarm_office.py"
-    ]
+    "implemented_by": "10_Tech_OS/kernel/cubefarm_office.py",
+    "verified_by": "10_Tech_OS/kernel/test_cubefarm_office.py",
+    "details": "Implementation for projecting A'Space Embodied Holons and multi-layer topology into the Living Office exists and functions correctly."
   }
 }
