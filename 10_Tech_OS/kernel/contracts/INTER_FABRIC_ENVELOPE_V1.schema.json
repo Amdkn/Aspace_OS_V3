@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://inter-fabric-envelope/v1",
+  "title": "A'Space InterFabric Envelope v1",
+  "description": "Minimal cross-cutting envelope for multi-fabric payloads (Holon, Capability, Resource, Effect, Truth, Coordination).",
+  "type": "object",
+  "required": [
+    "identity",
+    "mission",
+    "capability",
+    "authority",
+    "resource",
+    "effect",
+    "truth",
+    "routing",
+    "compatibility",
+    "payload"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "required": ["holon_id", "institutional_rank"],
+      "properties": {
+        "holon_id": { "type": "string" },
+        "institutional_rank": { "type": "string" },
+        "embodiment_ref": { "type": "string" },
+        "session_ref": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "mission": {
+      "type": "object",
+      "required": ["mission_id", "work_id", "cell_id", "correlation_id"],
+      "properties": {
+        "mission_id": { "type": "string" },
+        "work_id": { "type": ["string", "integer"] },
+        "cell_id": { "type": "string" },
+        "correlation_id": { "type": "string" },
+        "parent_correlation_id": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "capability": {
+      "type": "object",
+      "required": ["capability_id", "capability_version"],
+      "properties": {
+        "capability_id": { "type": "string" },
+        "capability_version": { "type": "string" },
+        "contract_ref": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["authority_scope", "policy_ref"],
+      "properties": {
+        "authority_scope": { "type": "string" },
+        "policy_ref": { "type": "string" },
+        "policy_version": { "type": "string" },
+        "mutation_lease": { "type": "string" },
+        "fencing_key": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "resource": {
+      "type": "object",
+      "properties": {
+        "resource_lease_ref": { "type": "string" },
+        "budget_lease_ref": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "effect": {
+      "type": "object",
+      "required": ["operation_id", "effect_class", "idempotency_key"],
+      "properties": {
+        "operation_id": { "type": "string" },
+        "effect_id": { "type": "string" },
+        "effect_class": { "type": "string" },
+        "idempotency_key": { "type": "string" },
+        "replay_semantics": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "truth": {
+      "type": "object",
+      "required": ["evidence_refs", "observed_at", "source_authority", "epistemic_state"],
+      "properties": {
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "observed_at": { "type": "string", "format": "date-time" },
+        "source_authority": { "type": "string" },
+        "freshness": { "type": "number" },
+        "epistemic_state": {
+          "type": "string",
+          "enum": ["CURRENT", "STALE", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "routing": {
+      "type": "object",
+      "required": ["origin_layer", "return_to"],
+      "properties": {
+        "origin_layer": { "type": "string" },
+        "return_to": { "type": "string" },
+        "blocked_outcome": { "type": "string" },
+        "recovery_hint": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "compatibility": {
+      "type": "object",
+      "required": ["envelope_version", "payload_schema"],
+      "properties": {
+        "envelope_version": { "type": "string", "const": "v1" },
+        "payload_schema": { "type": "string" },
+        "payload_version": { "type": "string" },
+        "lossy_fields": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "payload": {
+      "type": "object",
+      "description": "Fabric-specific meaning remains in a typed payload",
+      "additionalProperties": true
+    }
+  }
+}
