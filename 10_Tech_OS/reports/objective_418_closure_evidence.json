@@ -1,0 +1,21 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "status": "CLOSED",
+  "outcome": "PASS",
+  "work_id": "418",
+  "timestamp": "2026-10-03T11:16:09.048557+00:00",
+  "acceptance_criteria_proof": {
+    "multi_profile": "Implemented in JulesFleetSupervisor which accepts Iterable[JulesProfileConfig]",
+    "provider_limits": "Enforced via concurrency_cap and inventory checks before creation",
+    "official_api": "Uses X-Goog-Api-Key and REST endpoints (sessions, sources, approvePlan, sendMessage)",
+    "no_duplicate_claims": "issue_claimed regex check in all active sessions globally before launching",
+    "one_mutation_lease": "enforce_mutation_lease and fleet_ownership bindings used",
+    "waiting_states": "handle_waiting_state supports AWAITING_PLAN_APPROVAL and AWAITING_USER_FEEDBACK autonomously",
+    "refill": "refill() processes queue until available capacity is full",
+    "consume_completed": "consume_completed() extracts PR and closes work if accepted"
+  },
+  "golden_proof": {
+    "tests_pass": true,
+    "already_implemented": true
+  }
+}
