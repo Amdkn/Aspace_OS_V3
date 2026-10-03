@@ -490,6 +490,69 @@ def resolve_ownership_conflict(
     return payload
 
 
+def migrate_mission_runtime(
+    db_path: str | Path,
+    work_id: int,
+    *,
+    target_runtime_id: str,
+    target_harness: str,
+    reason: str,
+    actor_id: str = "ryan",
+    authority_envelope: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Move an active mission to another heterogeneous runtime while preserving actor/work/correlation/authority.
+
+    Returns structured result including an EvidenceReceipt.
+    """
+    cell = project_mission_cell(db_path, work_id)
+    correlation_id = cell.get("correlation_id") or str(uuid.uuid4())
+    return_route = cell.get("return_to")
+
+    payload = {
+        "schema": "aspace.mission-runtime-migration.v1",
+        "work_id": work_id,
+        "actor_id": actor_id,
+        "correlation_id": correlation_id,
+        "authority_envelope": authority_envelope or {},
+        "return_route": return_route,
+        "target_runtime_id": target_runtime_id,
+        "target_harness": target_harness,
+        "reason": reason,
+    }
+
+    with closing(_connect(db_path)) as con, con:
+        # Release existing claim or update claim for new runtime/harness
+        con.execute("DELETE FROM claim WHERE work_id=?", (work_id,))
+        con.execute(
+            """INSERT INTO claim(work_id, harness, institutional_owner, runtime_id, expires_at)
+               VALUES(?, ?, ?, ?, datetime('now', '+900 seconds'))""",
+            (work_id, target_harness, actor_id, target_runtime_id)
+        )
+        event_id = _append_event(con, work_id, target_harness, "mission_runtime_migrated", payload)
+
+    receipt = {
+        "receipt_id": f"rec-mig-{uuid.uuid4().hex[:8]}",
+        "work_id": work_id,
+        "correlation_id": correlation_id,
+        "actor_id": actor_id,
+        "target_runtime_id": target_runtime_id,
+        "target_harness": target_harness,
+        "status": "MIGRATED",
+        "observed_effect": f"Mission {work_id} migrated to runtime '{target_runtime_id}' under harness '{target_harness}' while preserving actor '{actor_id}' and correlation_id '{correlation_id}'.",
+        "event_id": event_id,
+    }
+
+    return {
+        "status": "SUCCESS",
+        "work_id": work_id,
+        "actor_id": actor_id,
+        "correlation_id": correlation_id,
+        "target_runtime_id": target_runtime_id,
+        "target_harness": target_harness,
+        "evidence_receipt": receipt,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="A'Space capability dispatch + return router")
     parser.add_argument("--db", default=str(DB))

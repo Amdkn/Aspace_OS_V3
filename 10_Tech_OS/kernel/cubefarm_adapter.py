@@ -32,6 +32,7 @@ class FactoryExecution:
     evidence_head: str
     return_to: str
     fencing_token: str
+    remaining_budget: Optional[int] = None
 
     def to_json(self) -> str:
         return json.dumps(dataclasses.asdict(self))
