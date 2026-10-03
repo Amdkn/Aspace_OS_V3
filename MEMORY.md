@@ -40,6 +40,25 @@ Stewardship means default accountability / first hat, never exclusive access or 
 - GitHub is the durable inter-agent message bus through Discussions → Issues → PR/Evidence.
 - Canon: `10_Tech_OS/00_Governance_Rick/ADR-RICK-FRACTAL-HOLON-V4-ANTI-RIGIDITY-2026-10-02.md`.
 
+## Derived operating plane — Physiology (Wargame #436)
+
+**Physiology** is accepted by Wargame as a **derived living-state projection at time t**, not as a new SSOT, database, scheduler, hierarchy or institutional actor.
+
+- Cosmology = why / horizons / values.
+- Ontology = what / valid semantics.
+- Topology = where/how authority, embodiments and surfaces connect.
+- Anthology = what happened through time with provenance.
+- Physiology = current living condition derived from existing observations: institutional/embodiment/runtime/workload/resource/continuity state, freshness, contradictions and UNKNOWN.
+
+Operational law:
+`runtime ONLINE != holon ACTIVE`; `PR/CI green != external outcome proven`; resource abundance does not imply attention/context capacity.
+
+Ownership:
+Yaz senses; Graham normalizes time/provenance/replay and compiles; Rory reconciles semantic divergence; Agent OS/CubeFarm render; the owning holon decides. Physiology never emits authoritative `next_action` or becomes a central scheduler.
+
+Canon candidate:
+`10_Tech_OS/00_Governance_Rick/ADR-RICK-ASPACE-PHYSIOLOGY-DERIVED-OPERATING-PLANE-2026-10-03.md`.
+
 ## New IPBD capture
 `35fa51bc-d249-4702-83ae-a1c119a98ef6`
 Dedupe: `chatgpt:2026-09-27:vision-life-business-jev-lidar:v1`.
