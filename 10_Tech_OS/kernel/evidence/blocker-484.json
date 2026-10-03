@@ -1,0 +1,8 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue_id": 484,
+  "title": "[P0][V4][SYSTEM-ONE][NARDOLE] Reflex Fabric \u2014 Jev/Laya/Needle3 across OS + CubeFarm",
+  "blocker_type": "MISSING_INPUT",
+  "blocker_reason": "Missing explicitly required user-provided input data (issue requirements and body). GitHub API rate limits prevent fetching the issue description.",
+  "status": "BLOCKED"
+}
