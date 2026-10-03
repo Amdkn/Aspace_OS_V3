@@ -1,0 +1,34 @@
+{
+  "work_id": "415",
+  "timestamp": "2026-10-03T11:15:33.058469+00:00",
+  "files": {
+    "20_Life_OS/life_capabilities.py": {
+      "sha256": "df4ef9ca308b78f8921119a3650309305038f8a20d2d7716c9fb36203130028c"
+    },
+    "20_Life_OS/test_life_capabilities.py": {
+      "sha256": "5ddc305cf4c7937792bacc43f1631536d87ef97bc605a02d1856466011a439d2"
+    },
+    "20_Life_OS/ui_personalization.py": {
+      "sha256": "334425f74d15625313f5848ad905fe8784243957814a217ff0fb5e538b451767"
+    },
+    "20_Life_OS/gws_life_adapter.py": {
+      "sha256": "1c55ff729c158ee5d08b27c2d6a66fbbefadeff9d97b2970d2e7aae08d7b0ba0"
+    }
+  },
+  "git_diff_summaries": {
+    "20_Life_OS/life_capabilities.py": "",
+    "20_Life_OS/test_life_capabilities.py": "",
+    "20_Life_OS/ui_personalization.py": "",
+    "20_Life_OS/gws_life_adapter.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=. python3 -m unittest 20_Life_OS/test_life_capabilities.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.003s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "reason": "Agent correctly handled external repo blocker via typed blocker evidence in compliance with architectural guidelines."
+  }
+}

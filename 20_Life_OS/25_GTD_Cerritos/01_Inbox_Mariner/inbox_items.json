@@ -46,5 +46,77 @@
     "context": "General",
     "captured_at": "2026-10-03T08:29:02.937212+00:00",
     "correlation_id": "corr-mcp-gtd"
+  },
+  {
+    "item_id": "78f6cf9a-9143-4dc2-a554-734484608427",
+    "title": "CLI captured task",
+    "category": "CLI",
+    "context": "General",
+    "captured_at": "2026-10-03T11:11:32.079569+00:00",
+    "correlation_id": "corr-cli-gtd"
+  },
+  {
+    "item_id": "4ccf317c-da04-4236-b363-c477567e4d57",
+    "title": "API captured task",
+    "category": "API",
+    "context": "General",
+    "captured_at": "2026-10-03T11:11:32.080307+00:00",
+    "correlation_id": "corr-api-gtd"
+  },
+  {
+    "item_id": "40ca35e4-d3b1-4be9-9af3-8cd3a66b019a",
+    "title": "MCP captured task",
+    "category": "MCP",
+    "context": "General",
+    "captured_at": "2026-10-03T11:11:32.080737+00:00",
+    "correlation_id": "corr-mcp-gtd"
+  },
+  {
+    "item_id": "e448b974-d586-4fc8-b3a5-6d9aea4edf8e",
+    "title": "CLI captured task",
+    "category": "CLI",
+    "context": "General",
+    "captured_at": "2026-10-03T11:14:18.274218+00:00",
+    "correlation_id": "corr-cli-gtd"
+  },
+  {
+    "item_id": "7c8ab311-d365-4aa7-9cdb-caf8dafde9bf",
+    "title": "API captured task",
+    "category": "API",
+    "context": "General",
+    "captured_at": "2026-10-03T11:14:18.275010+00:00",
+    "correlation_id": "corr-api-gtd"
+  },
+  {
+    "item_id": "5d215040-ae77-496f-b08d-370a561d348c",
+    "title": "MCP captured task",
+    "category": "MCP",
+    "context": "General",
+    "captured_at": "2026-10-03T11:14:18.275678+00:00",
+    "correlation_id": "corr-mcp-gtd"
+  },
+  {
+    "item_id": "93516bf7-f746-460a-a0b8-944d3e6b904a",
+    "title": "CLI captured task",
+    "category": "CLI",
+    "context": "General",
+    "captured_at": "2026-10-03T11:15:33.184187+00:00",
+    "correlation_id": "corr-cli-gtd"
+  },
+  {
+    "item_id": "72ef3a82-01a1-41b8-b8e3-235f188b2602",
+    "title": "API captured task",
+    "category": "API",
+    "context": "General",
+    "captured_at": "2026-10-03T11:15:33.184751+00:00",
+    "correlation_id": "corr-api-gtd"
+  },
+  {
+    "item_id": "95fd5a96-9239-41fe-a948-e080f92e8154",
+    "title": "MCP captured task",
+    "category": "MCP",
+    "context": "General",
+    "captured_at": "2026-10-03T11:15:33.185266+00:00",
+    "correlation_id": "corr-mcp-gtd"
   }
 ]
