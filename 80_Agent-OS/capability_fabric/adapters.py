@@ -92,3 +92,79 @@ class AGUIAdapter(AdapterBase):
 class WebMCPAdapter(AdapterBase):
     def __init__(self, registry: CapabilityRegistry, quarantine_registry: Optional[QuarantineRegistry] = None):
         super().__init__(registry, "webmcp", quarantine_registry)
+
+
+# --- Harness Mesh / Browser certification surfaces (#412) ---
+class BrowserBridgeAdapter(AdapterBase):
+    def __init__(self, registry: CapabilityRegistry, quarantine_registry: Optional[QuarantineRegistry] = None):
+        super().__init__(registry, "browser_bridge", quarantine_registry)
+
+
+class HarnessMeshAdapter(AdapterBase):
+    """Certified harness adapter preserving actor identity, authority and evidence."""
+
+    def __init__(self, registry: CapabilityRegistry, harness_id: str, quarantine_registry: Optional[QuarantineRegistry] = None):
+        super().__init__(registry, "harness", quarantine_registry)
+        self.harness_id = harness_id
+
+    def invoke_certified(
+        self,
+        capability_id: str,
+        payload: Dict[str, Any],
+        *,
+        actor_id: str,
+        authority_envelope: str,
+        correlation_id: Optional[str] = None,
+        runtime_id: str = "rt-sovereign-node-1",
+        quota_budget: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        from .harness_certification import HarnessCertificationEngine, CertificationError, get_harness_mesh_view
+
+        capability = self.registry.get_capability(capability_id)
+        if not capability:
+            return {"status": "FAILED", "error": f"Capability {capability_id} not found."}
+        corr_id = correlation_id or str(uuid.uuid4())
+        budget = quota_budget or {"quota": "unknown", "latency_ms": 0, "reliability_score": 1.0, "cost_cents": 0}
+
+        try:
+            receipt = capability.executor(payload, corr_id)
+            cert = HarnessCertificationEngine().check_contract(
+                harness_id=self.harness_id,
+                actor_id=actor_id,
+                capability_contract=capability,
+                input_payload=payload,
+                correlation_id=corr_id,
+                authority_envelope=authority_envelope,
+                receipt=receipt,
+                quota_budget=budget,
+                executor_func=capability.executor,
+            )
+            return {
+                "status": receipt.status,
+                "certification": cert,
+                "mesh_view": get_harness_mesh_view(
+                    actor_id=actor_id,
+                    runtime_id=runtime_id,
+                    adapter_type="HarnessMeshAdapter",
+                    harness_id=self.harness_id,
+                    capability_id=capability_id,
+                    budget=budget,
+                    evidence={
+                        "observed_effect": receipt.observed_effect,
+                        "evidence_refs": receipt.evidence_refs,
+                        "provenance": receipt.provenance,
+                    },
+                    correlation_id=corr_id,
+                ),
+                "receipt": {
+                    "capability_id": receipt.capability_id,
+                    "correlation_id": receipt.correlation_id,
+                    "observed_effect": receipt.observed_effect,
+                    "provenance": receipt.provenance,
+                    "observed_at": receipt.observed_at,
+                    "evidence_refs": receipt.evidence_refs,
+                },
+                "data": receipt.data,
+            }
+        except CertificationError as exc:
+            return {"status": "CERTIFICATION_FAILED", "harness_id": self.harness_id, "error": str(exc)}
