@@ -1,0 +1,96 @@
+{
+  "$schema": "https://aspace.io/schemas/life_os_migration_matrix.v1.json",
+  "issue": "#415",
+  "title": "[P0][V4][LIFE-OS] Transfer reusable Business OS innovations into Life OS",
+  "timestamp": "2026-10-03T08:30:00Z",
+  "life_os_semantic_guardians": {
+    "Ikigai": "21_Ikigai_Orville",
+    "12WY": "23_12WY_SNW",
+    "Life_Wheel": "22_Wheel_Discovery",
+    "PARA": "24_PARA_Enterprise",
+    "GTD": "25_GTD_Cerritos",
+    "DEAL": "26_DEAL_Protostar",
+    "Gatekeepers_A1_A2_A3": "00_Gatekeepers_Beth_Morty"
+  },
+  "classification_categories": [
+    "SHARED PLATFORM",
+    "LIFE-REUSABLE",
+    "BUSINESS-ONLY",
+    "UI-PERSONALIZATION",
+    "QUARANTINE"
+  ],
+  "innovations": [
+    {
+      "innovation_id": "typed_capability_registry",
+      "source": "30_Business_OS/tooling",
+      "classification": "SHARED PLATFORM",
+      "target": "80_Agent-OS/capability_fabric",
+      "status": "MIGRATED_AND_EXTENDED",
+      "notes": "Unified capability definition and registry across all OS surfaces."
+    },
+    {
+      "innovation_id": "harness_adapters",
+      "source": "30_Business_OS/tooling/adapters",
+      "classification": "SHARED PLATFORM",
+      "target": "80_Agent-OS/capability_fabric/adapters.py",
+      "status": "MIGRATED_AND_EXTENDED",
+      "notes": "CLI, API, MCP and Harness adapters generalizing execution transports."
+    },
+    {
+      "innovation_id": "identity_permission_quota_evidence_hooks",
+      "source": "30_Business_OS/tooling",
+      "classification": "SHARED PLATFORM",
+      "target": "80_Agent-OS/capability_fabric/capability.py",
+      "status": "MIGRATED_AND_EXTENDED",
+      "notes": "EffectReceipt and correlation hooks enforcing authority and evidence tracking."
+    },
+    {
+      "innovation_id": "gws_sync_bridge",
+      "source": "30_Business_OS/10_Research_Atlas/02_Discovery_Corpus/gws_adapter.py",
+      "classification": "LIFE-REUSABLE",
+      "target": "20_Life_OS/gws_life_adapter.py",
+      "status": "MIGRATING_PARITY_VERIFIED",
+      "notes": "GWS workbook and task synchronization with evidence readback for Life OS."
+    },
+    {
+      "innovation_id": "gtd_inbox_capture_pipeline",
+      "source": "30_Business_OS/10_Research_Atlas/01_Watch_S1",
+      "classification": "LIFE-REUSABLE",
+      "target": "20_Life_OS/25_GTD_Cerritos/01_Inbox_Mariner",
+      "status": "MIGRATING_PARITY_VERIFIED",
+      "notes": "Life-native GTD capture capability exposed via Agent OS capability fabric."
+    },
+    {
+      "innovation_id": "life_wheel_discovery_engine",
+      "source": "30_Business_OS/10_Research_Atlas/03_Emergence_Radar",
+      "classification": "LIFE-REUSABLE",
+      "target": "20_Life_OS/22_Wheel_Discovery",
+      "status": "MIGRATING_PARITY_VERIFIED",
+      "notes": "Life wheel assessment and sync capability exposed via Agent OS capability fabric."
+    },
+    {
+      "innovation_id": "multi_theme_uupm_primitives",
+      "source": "30_Business_OS/09_Blueprints/coach-os-refonte",
+      "classification": "UI-PERSONALIZATION",
+      "target": "20_Life_OS/ui_personalization.py",
+      "status": "MIGRATING_PARITY_VERIFIED",
+      "notes": "User Universal Profile Model (UUPM) & multi-theme primitives adapted for Life OS."
+    },
+    {
+      "innovation_id": "business_ccs_wer_rid_contracts",
+      "source": "30_Business_OS/04_Business_Domains",
+      "classification": "BUSINESS-ONLY",
+      "target": "30_Business_OS",
+      "status": "RETAINED_IN_BUSINESS_OS",
+      "notes": "Business-specific financial and domain contracts remain strictly in Business OS."
+    },
+    {
+      "innovation_id": "legacy_coach_os_monolithic_store",
+      "source": "30_Business_OS/10_Projects/coach-os-app/src/lib/tooling/serverStore.ts",
+      "classification": "QUARANTINE",
+      "target": "N/A",
+      "status": "QUARANTINED",
+      "notes": "Legacy monolithic state store isolated; replaced by Agent OS capability fabric."
+    }
+  ]
+}
