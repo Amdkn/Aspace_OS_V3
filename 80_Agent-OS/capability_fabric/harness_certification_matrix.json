@@ -1,0 +1,39 @@
+{
+  "version": "2026-10-03.2",
+  "issue": "#412",
+  "harnesses": {
+    "hermes": {
+      "status": "PASS"
+    },
+    "codex": {
+      "status": "PASS"
+    },
+    "claude_code": {
+      "status": "PASS"
+    },
+    "antigravity": {
+      "status": "PASS"
+    },
+    "jules": {
+      "status": "PASS"
+    },
+    "browser_bridge_chatgpt_web": {
+      "status": "PASS"
+    },
+    "qwen": {
+      "status": "RECON_BOUNDED_GAP"
+    },
+    "gemini": {
+      "status": "RECON_BOUNDED_GAP"
+    },
+    "deepseek": {
+      "status": "RECON_BOUNDED_GAP"
+    },
+    "kimi": {
+      "status": "RECON_BOUNDED_GAP"
+    },
+    "minimax": {
+      "status": "RECON_BOUNDED_GAP"
+    }
+  }
+}
