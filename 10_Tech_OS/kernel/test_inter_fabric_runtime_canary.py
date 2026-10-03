@@ -14,6 +14,7 @@ from inter_fabric import InterFabricEnvelope
 from temporal_truth.core import TemporalTruth
 
 harness_list = importlib.import_module("80_Agent-OS.capability_fabric.harness_list")
+workflow_engine = importlib.import_module("30_Business_OS.20_Workflow_Engine.engine")
 
 
 class TestInterFabricRuntimeCanary(unittest.TestCase):
@@ -180,6 +181,40 @@ class TestInterFabricRuntimeCanary(unittest.TestCase):
             out["payload"]["physiology"]["dimensions"][1]["epistemic_state"],
             "UNKNOWN",
         )
+
+        # Effect Fabric: prove that the transported idempotency identity prevents
+        # a duplicate consequential transition from executing twice.
+        engine = workflow_engine.WorkflowEngine()
+        engine.start_journey(correlation_id, "READY")
+        calls = {"count": 0}
+
+        def execute_once():
+            calls["count"] += 1
+            return {"effect": "canary"}
+
+        first = engine.process_transition(
+            correlation_id=correlation_id,
+            trigger="inter-fabric-canary",
+            source_states=["READY"],
+            target_state="DONE",
+            capability_id="effect.canary",
+            idempotency_key=out["effect"]["idempotency_key"],
+            execution_fn=execute_once,
+            retry_safe=True,
+        )
+        second = engine.process_transition(
+            correlation_id=correlation_id,
+            trigger="duplicate-inter-fabric-canary",
+            source_states=["READY"],
+            target_state="DONE",
+            capability_id="effect.canary",
+            idempotency_key=out["effect"]["idempotency_key"],
+            execution_fn=execute_once,
+            retry_safe=True,
+        )
+        self.assertEqual(calls["count"], 1)
+        self.assertEqual(first.operation_id, second.operation_id)
+        self.assertEqual(first.correlation_id, correlation_id)
 
 
 if __name__ == "__main__":

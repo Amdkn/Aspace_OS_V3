@@ -21,6 +21,7 @@ jobs:
           sparse-checkout: |
             10_Tech_OS/kernel
             80_Agent-OS/capability_fabric
+            30_Business_OS/20_Workflow_Engine
             ASPACE_WORKSPACE_REGISTRY.json
             .github/workflows/kernel-continuity-ci.yml
           sparse-checkout-cone-mode: true
