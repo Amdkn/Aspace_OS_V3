@@ -1,12 +1,12 @@
 {
   "work_id": "388",
-  "timestamp": "2026-10-03T00:10:08.785215+00:00",
+  "timestamp": "2026-10-03T09:27:49.253471+00:00",
   "files": {
     "10_Tech_OS/kernel/cubefarm_adapter.py": {
-      "sha256": "2ef12108cef18a3a004af67230d42cad803090ed922499b28e0e6459cc57674a"
+      "sha256": "03dec447f2c92ae4d34e313bc572622f7c406c70473550b095f8d2b60c80d8ad"
     },
     "10_Tech_OS/kernel/test_cubefarm_adapter.py": {
-      "sha256": "8e8cb24f67b562209a6b24b7ea000337844335aa8a44cfbd1e617b4f34d3c846"
+      "sha256": "6fc63cafd1a7defafd4a3be3abc6dd12ed54b0cecccf391acfd29ecfe0d371e7"
     }
   },
   "git_diff_summaries": {
@@ -14,16 +14,16 @@
     "10_Tech_OS/kernel/test_cubefarm_adapter.py": ""
   },
   "test_results": {
-    "command": "PYTHONPATH=10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_cubefarm_adapter.py",
+    "command": "PYTHONPATH=10_Tech_OS/kernel pytest 10_Tech_OS/kernel/test_cubefarm_adapter.py",
     "exit_code": 0,
-    "stdout": "",
-    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+    "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0\nrootdir: /app\nconfigfile: pytest.ini\ncollected 4 items\n\n10_Tech_OS/kernel/test_cubefarm_adapter.py ....                          [100%]\n\n============================== 4 passed in 0.04s ===============================\n",
+    "stderr": ""
   },
   "outcome": "PASS",
   "golden_proof": {
-    "1. Upstream CubeFarm is pinned and audited.": "Adapter contract maps bounded execution fields to runtime parameters.",
-    "2. Ryan owns the factory capability; CubeFarm remains an instrument.": "FactoryExecution dataclass strictly assigns actor_id and doctor bounds.",
-    "3. Doctor13 authority is represented as a typed envelope": "authority_envelope field enforces explicit permission schemas.",
-    "Adapter Test Pass": "TestCubeFarmAdapter proves serialization and bounds validation."
+    "1. Upstream CubeFarm is pinned and audited.": "ForkReceipt (#402) validates upstream_url (leonvanzyl/cubefarm) and origin_url (Amdkn/cubefarm) with exact 40-char commit SHA.",
+    "2. Ryan owns the factory capability; CubeFarm remains an instrument.": "FactoryExecution dataclass strictly assigns actor_id as Ryan and Doctor13 as governor bounds.",
+    "3. Doctor13 authority is represented as a typed envelope": "authority_envelope field enforces explicit permission schemas rather than prompt conventions.",
+    "4. Adapter test pass": "TestCubeFarmAdapter proves serialization, bounds validation, and ForkReceipt verification."
   }
 }
