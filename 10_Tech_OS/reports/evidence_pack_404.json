@@ -1,0 +1,23 @@
+{
+  "work_id": "404",
+  "timestamp": "2026-10-03T11:33:10.435272+00:00",
+  "files": {
+    "80_Agent-OS/capability_fabric/cognitive_treasury.py 80_Agent-OS/capability_fabric/browser_bridge.py 80_Agent-OS/capability_fabric/test_cognitive_treasury.py 80_Agent-OS/capability_fabric/test_capability_fabric.py 80_Agent-OS/capability_fabric/harness_certification.py": {
+      "sha256": null
+    }
+  },
+  "git_diff_summaries": {
+    "80_Agent-OS/capability_fabric/cognitive_treasury.py 80_Agent-OS/capability_fabric/browser_bridge.py 80_Agent-OS/capability_fabric/test_cognitive_treasury.py 80_Agent-OS/capability_fabric/test_capability_fabric.py 80_Agent-OS/capability_fabric/harness_certification.py": "Error or untracked file"
+  },
+  "test_results": {
+    "command": "python3 -m unittest 80_Agent-OS/capability_fabric/test_cognitive_treasury.py 80_Agent-OS/capability_fabric/test_capability_fabric.py 80_Agent-OS/capability_fabric/test_harness_certification.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.010s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "status": "already_satisfied",
+    "reason": "All issue requirements are already satisfied in the main branch. The browser bridge is shared without duplication, the cognitive treasury supports multiple runtimes and tracks evidence receipts separately from identity."
+  }
+}
