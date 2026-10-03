@@ -161,9 +161,11 @@ class TestInterFabricRuntimeCanary(unittest.TestCase):
             ("coordination", {"return_to": "github:#471"}),
         ]
         current = envelope
+        accumulated_payload = dict(envelope.to_dict()["payload"])
         for stage, payload in stages:
+            accumulated_payload.update(payload)
             next_env = current.clone_with_payload(
-                {"stage": stage, **payload}
+                {"stage": stage, **accumulated_payload}
             )
             current = self._serialized_crossing(current, next_env)
 
