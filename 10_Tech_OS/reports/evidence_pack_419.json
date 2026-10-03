@@ -1,0 +1,17 @@
+{
+  "work_id": "419",
+  "timestamp": "2026-10-03T11:29:52.571596+00:00",
+  "files": {},
+  "git_diff_summaries": {},
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/cognitive_treasury pytest 30_Business_OS/cognitive_treasury/test_provider_connections.py && PYTHONPATH=10_Tech_OS/cognitive_treasury pytest 10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py",
+    "exit_code": 0,
+    "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0\nrootdir: /app\nconfigfile: pytest.ini\ncollected 3 items\n\n30_Business_OS/cognitive_treasury/test_provider_connections.py ...       [100%]\n\n============================== 3 passed in 0.03s ===============================\n============================= test session starts ==============================\nplatform linux -- Python 3.12.13, pytest-9.1.1, pluggy-1.6.0\nrootdir: /app\nconfigfile: pytest.ini\ncollected 6 items\n\n10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py ......          [100%]\n\n============================== 6 passed in 0.18s ===============================\n",
+    "stderr": ""
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "canary_test": "test_canary_multi_provider_shared_capability_and_isolated_revocation",
+    "entitlement_test": "test_business_plan_entitlement_boundary"
+  }
+}
