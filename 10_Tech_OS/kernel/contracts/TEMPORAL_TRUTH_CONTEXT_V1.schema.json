@@ -24,39 +24,104 @@
         "schema",
         "claim_id",
         "source_ref",
+        "source_authority",
+        "recorded_at",
         "observed_at",
         "scope",
+        "subject",
+        "predicate",
         "assertion",
         "evidence_refs",
         "temporal_state"
       ],
       "properties": {
-        "schema": {"const": "aspace.temporal-claim.v1"},
-        "claim_id": {"type": "string", "minLength": 1},
-        "source_ref": {"type": "string", "minLength": 1},
-        "correlation_id": {"type": ["string", "null"]},
-        "observed_at": {"type": "string"},
-        "valid_from": {"type": ["string", "null"]},
-        "valid_to": {"type": ["string", "null"]},
-        "scope": {"type": "string", "minLength": 1},
-        "subject": {"type": ["string", "null"]},
+        "schema": {
+          "const": "aspace.temporal-claim.v1"
+        },
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "valid_from": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "valid_to": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
         "assertion": {},
         "evidence_refs": {
           "type": "array",
-          "items": {"$ref": "#/$defs/EvidenceRef"}
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
         },
-        "temporal_state": {"$ref": "#/$defs/TemporalState"},
+        "temporal_state": {
+          "$ref": "#/$defs/TemporalState",
+          "description": "Immutable classification recorded with the claim. Effective current/historical/superseded status is derived through CanonTransition and query time; never mutate the original claim to rewrite history."
+        },
         "supersedes": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {
+            "type": "string"
+          }
         },
         "superseded_by": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {
+            "type": "string"
+          }
         },
         "contradicts": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_authority": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Authority/jurisdiction of the source for this predicate and scope; provenance alone does not imply semantic authority."
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When A'Space ingested/recorded this claim. Distinct from observed_at so late-arriving historical evidence cannot masquerade as NOW."
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Typed fact dimension. CURRENT is evaluated per subject + predicate + scope + source authority, never globally by subject alone."
         }
       },
       "additionalProperties": false
@@ -67,31 +132,92 @@
         "schema",
         "transition_id",
         "subject",
+        "predicate",
         "scope",
         "from_claims",
         "to_claims",
+        "recorded_at",
         "effective_at",
         "reason",
         "evidence_refs",
-        "resolution_authority"
+        "resolution_authority",
+        "resolution_scope",
+        "resulting_canon_heads"
       ],
       "properties": {
-        "schema": {"const": "aspace.canon-transition.v1"},
-        "transition_id": {"type": "string", "minLength": 1},
-        "subject": {"type": "string", "minLength": 1},
-        "scope": {"type": "string", "minLength": 1},
-        "from_claims": {"type": "array", "items": {"type": "string"}},
-        "to_claims": {"type": "array", "items": {"type": "string"}},
-        "effective_at": {"type": "string"},
-        "reason": {"type": "string", "minLength": 1},
+        "schema": {
+          "const": "aspace.canon-transition.v1"
+        },
+        "transition_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from_claims": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "to_claims": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effective_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
         "evidence_refs": {
           "type": "array",
-          "items": {"$ref": "#/$defs/EvidenceRef"}
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
         },
-        "resolution_authority": {"type": "string", "minLength": 1},
+        "resolution_authority": {
+          "type": "string",
+          "minLength": 1
+        },
         "contradiction_refs": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {
+            "type": "string"
+          }
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "resolution_scope": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The bounded jurisdiction within which resolution_authority may reconcile this predicate."
+        },
+        "resulting_canon_heads": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "Refs identifying the accepted interpretation head(s) after this transition. Multiple heads are allowed when scopes remain legitimately parallel."
         }
       },
       "additionalProperties": false
@@ -102,11 +228,13 @@
         "schema",
         "capsule_id",
         "compiled_at",
+        "source_cutoff_at",
         "holon_id",
         "mission_id",
         "correlation_id",
         "canon_slice",
         "anthology_window",
+        "physiology_ref",
         "authority_envelope",
         "workgraph_neighborhood",
         "evidence_head",
@@ -115,22 +243,82 @@
         "return_to"
       ],
       "properties": {
-        "schema": {"const": "aspace.context-capsule.v1"},
-        "capsule_id": {"type": "string", "minLength": 1},
-        "compiled_at": {"type": "string"},
-        "holon_id": {"type": "string", "minLength": 1},
-        "mission_id": {"type": "string", "minLength": 1},
-        "correlation_id": {"type": "string", "minLength": 1},
-        "canon_slice": {"type": "array", "items": {"type": "string"}},
-        "anthology_window": {"type": "array", "items": {"type": "string"}},
-        "physiology_ref": {"type": ["string", "null"]},
-        "authority_envelope": {"type": "object"},
-        "workgraph_neighborhood": {"type": "object"},
-        "source_slice": {"type": "object"},
-        "evidence_head": {"type": "array", "items": {"type": "string"}},
-        "contradictions": {"type": "array", "items": {"type": "string"}},
-        "unknowns": {"type": "array", "items": {"type": "string"}},
-        "return_to": {"type": "object"}
+        "schema": {
+          "const": "aspace.context-capsule.v1"
+        },
+        "capsule_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "compiled_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "holon_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mission_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canon_slice": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anthology_window": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "physiology_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authority_envelope": {
+          "type": "object"
+        },
+        "workgraph_neighborhood": {
+          "type": "object"
+        },
+        "source_slice": {
+          "type": "object"
+        },
+        "evidence_head": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contradictions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "return_to": {
+          "type": "object"
+        },
+        "source_cutoff_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Latest observation time admitted into this capsule; later evidence is outside this replayable world slice."
+        }
       },
       "additionalProperties": false
     },
@@ -140,44 +328,129 @@
         "name",
         "value",
         "source_ref",
+        "source_authority",
         "source_observed_at",
+        "freshness",
         "epistemic_state",
         "evidence_refs"
       ],
       "properties": {
-        "name": {"type": "string", "minLength": 1},
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
         "value": {},
-        "source_ref": {"type": "string", "minLength": 1},
-        "source_observed_at": {"type": "string"},
-        "freshness": {"type": ["string", "number", "null"]},
-        "epistemic_state": {"enum": ["KNOWN", "UNKNOWN", "CONTRADICTED", "STALE"]},
-        "unknown_reason": {"type": ["string", "null"]},
+        "source_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "freshness": {
+          "enum": [
+            "FRESH",
+            "STALE",
+            "UNKNOWN"
+          ],
+          "description": "Freshness is separate from epistemic truth; stale evidence can still be authentic."
+        },
+        "epistemic_state": {
+          "enum": [
+            "KNOWN",
+            "UNKNOWN",
+            "CONTRADICTED"
+          ]
+        },
+        "unknown_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "evidence_refs": {
           "type": "array",
-          "items": {"$ref": "#/$defs/EvidenceRef"}
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
+        },
+        "source_authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "age_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
         }
       },
       "additionalProperties": false
     },
     "PhysiologySnapshot": {
       "type": "object",
-      "required": ["schema", "snapshot_id", "observed_at", "dimensions"],
+      "required": [
+        "schema",
+        "snapshot_id",
+        "observed_at",
+        "scope",
+        "valid_until",
+        "dimensions"
+      ],
       "properties": {
-        "schema": {"const": "aspace.physiology-snapshot.v1"},
-        "snapshot_id": {"type": "string", "minLength": 1},
-        "observed_at": {"type": "string"},
+        "schema": {
+          "const": "aspace.physiology-snapshot.v1"
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
         "dimensions": {
           "type": "array",
-          "items": {"$ref": "#/$defs/PhysiologyDimension"}
+          "items": {
+            "$ref": "#/$defs/PhysiologyDimension"
+          }
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "valid_until": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "description": "Expiry of this derived NOW view when determinable; null means consumers must rely on per-dimension freshness and must not assume indefinite currency."
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "additionalProperties": false
     }
   },
   "oneOf": [
-    {"$ref": "#/$defs/TemporalClaim"},
-    {"$ref": "#/$defs/CanonTransition"},
-    {"$ref": "#/$defs/ContextCapsule"},
-    {"$ref": "#/$defs/PhysiologySnapshot"}
+    {
+      "$ref": "#/$defs/TemporalClaim"
+    },
+    {
+      "$ref": "#/$defs/CanonTransition"
+    },
+    {
+      "$ref": "#/$defs/ContextCapsule"
+    },
+    {
+      "$ref": "#/$defs/PhysiologySnapshot"
+    }
   ]
 }
