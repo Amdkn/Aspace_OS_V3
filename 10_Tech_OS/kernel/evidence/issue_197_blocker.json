@@ -1,9 +1,0 @@
-{
-  "$schema": "aspace.typed-blocker.v1",
-  "blocker_id": "portfolio-issue-197",
-  "issue_number": 197,
-  "blocked_action": "completion of issue 197 (Concretize the A'Space Desktop Commander product)",
-  "reason": "Issue 197 is a portfolio-level EPIC acting as a supervision gate. It requires multiple child issues (like #213, #214, #215, #216, #217, #218, and #219) to be fully verified and passed (real release gates, cutover evidence). The issue comments state 'No parent DONE while its required release gate is OPEN.' As an AI agent, I cannot complete an entire portfolio epic spanning multiple unverified release gates in a single PR. This requires human validation of the actual product state and cutover.",
-  "required_resolution": "The human supervisor or domain owners must verify and close the individual foundation gates (#213 through #219) over time, including proving the actual product state in normal Chrome. Once all child release gates are closed, issue 197 can be closed.",
-  "timestamp": "2024-05-18T12:00:00Z"
-}
