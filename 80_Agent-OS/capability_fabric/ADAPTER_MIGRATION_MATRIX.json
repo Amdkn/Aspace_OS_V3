@@ -1,0 +1,225 @@
+{
+  "version": "1.0",
+  "issue": "#411",
+  "parent": "#333",
+  "migration_law": "KEEP DOMAIN-SPECIFIC -> Business OS; GENERALIZE PLATFORM -> Agent OS Capability Fabric; RUNTIME/MACHINE PRIMITIVE -> Tech OS; UI/PROJECTION -> Agent OS projection layer; EXPERIMENTAL/UNCERTIFIED -> quarantine",
+  "batches": {
+    "M0": [
+      {
+        "id": "M0-01",
+        "current_path": "coach-os-app/src/lib/tooling/defineTool.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "Declarative JS/TS & Python DSL",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/capability.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M0-02",
+        "current_path": "coach-os-app/src/lib/tooling/registry.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "In-Memory Registry",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/registry.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M0-03",
+        "current_path": "coach-os-app/src/lib/tooling/types.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "Type Contracts",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/capability.py",
+        "status": "COMPLETED"
+      }
+    ],
+    "M1": [
+      {
+        "id": "M1-01",
+        "current_path": "coach-os-app/src/lib/tooling/mcpAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "MCP",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M1-02",
+        "current_path": "coach-os-app/src/lib/tooling/apiAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "REST / HTTP API",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M1-03",
+        "current_path": "coach-os-app/src/lib/tooling/cliAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "CLI",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M1-04",
+        "current_path": "coach-os-app/src/lib/tooling/skillAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "Skill Protocol",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M1-05",
+        "current_path": "coach-os-app/src/lib/tooling/inAppAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "In-App / IPC",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      }
+    ],
+    "M2": [
+      {
+        "id": "M2-00",
+        "current_path": "10_Tech_OS/kernel/harness.py",
+        "semantic_owner": "Agent OS / Tech OS",
+        "transport": "Generic Harness",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-01",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Claude Code",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-02",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Codex",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-03",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Hermes",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-04",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Antigravity",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-05",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Jules",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M2-06",
+        "current_path": "10_Tech_OS/machine_fabric/harness_runtime/",
+        "semantic_owner": "Agent OS",
+        "transport": "Qwen",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/harness_adapters.py",
+        "status": "COMPLETED"
+      }
+    ],
+    "M3": [
+      {
+        "id": "M3-01",
+        "current_path": "coach-os-app/src/lib/tooling/agentOsProjection.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "Agent OS Native",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-02",
+        "current_path": "coach-os-app/src/lib/tooling/a2aAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "A2A",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-03",
+        "current_path": "coach-os-app/src/lib/tooling/a2uiAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "A2UI",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-04",
+        "current_path": "coach-os-app/src/lib/tooling/acpAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "ACP",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-05",
+        "current_path": "coach-os-app/src/lib/tooling/aguiAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "AG-UI",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-06",
+        "current_path": "coach-os-app/src/lib/tooling/webmcpAdapter.ts",
+        "semantic_owner": "Agent OS",
+        "transport": "WebMCP",
+        "target_layer": "Agent OS",
+        "target_module": "80_Agent-OS/capability_fabric/adapters.py",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "M3-07",
+        "current_path": "coach-os-app/src/lib/tooling/experimental/",
+        "semantic_owner": "Quarantine",
+        "transport": "FCP/OAP/TAP/TDF/UCP/RDF",
+        "target_layer": "quarantine",
+        "target_module": "80_Agent-OS/capability_fabric/quarantine.py",
+        "status": "QUARANTINED"
+      }
+    ],
+    "M4": [
+      {
+        "id": "M4-01",
+        "current_path": "30_Business_OS/capabilities/research_corpus.py",
+        "semantic_owner": "Business OS",
+        "transport": "Capability Fabric (Shared)",
+        "target_layer": "Business OS",
+        "target_module": "30_Business_OS/capabilities/research_corpus.py",
+        "status": "COMPLETED"
+      }
+    ]
+  }
+}

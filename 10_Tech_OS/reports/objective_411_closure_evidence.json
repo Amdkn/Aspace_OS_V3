@@ -1,0 +1,55 @@
+{
+  "issue": "#411",
+  "parent": "#333",
+  "title": "Transfer Business OS AI-native adapters into shared Capability Fabric",
+  "status": "COMPLETED",
+  "acceptance_criteria_verification": {
+    "1_matrix_committed": {
+      "verified": true,
+      "files": [
+        "80_Agent-OS/capability_fabric/ADAPTER_MIGRATION_MATRIX.md",
+        "80_Agent-OS/capability_fabric/ADAPTER_MIGRATION_MATRIX.json"
+      ]
+    },
+    "2_harness_list_capability": {
+      "verified": true,
+      "capability": "harness_list",
+      "surfaces_proven": ["cli", "api", "mcp", "harness"]
+    },
+    "3_business_capability_consumption": {
+      "verified": true,
+      "capability": "business_research_corpus",
+      "domain_owner": "Business OS",
+      "substrate": "80_Agent-OS/capability_fabric/capability.py"
+    },
+    "4_harness_multi_consumption": {
+      "verified": true,
+      "harnesses_tested": ["claude_code", "hermes", "jules", "codex", "antigravity", "qwen_coder"],
+      "no_executor_duplication": true
+    },
+    "5_agent_os_separate_enumeration": {
+      "verified": true,
+      "function": "CapabilityRegistry.enumerate_capability_bindings",
+      "fields_separated": ["capability_id", "surface", "adapter", "runtime_binding", "observed_at", "evidence_source"]
+    },
+    "6_platform_code_reduction": {
+      "verified": true,
+      "business_os_capability_path": "30_Business_OS/capabilities/research_corpus.py"
+    },
+    "7_quarantine_isolation": {
+      "verified": true,
+      "quarantine_class": "QuarantineRegistry",
+      "tested_isolation": true
+    },
+    "8_return_to_333": {
+      "verified": true,
+      "parent_issue": "#333",
+      "migration_status": "M0-M4 completed, debt documented"
+    }
+  },
+  "test_execution": {
+    "command": "PYTHONPATH=$(pwd) python3 -m unittest 80_Agent-OS/capability_fabric/test_capability_fabric.py",
+    "passed_tests": 8,
+    "failed_tests": 0
+  }
+}
