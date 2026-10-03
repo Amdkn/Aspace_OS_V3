@@ -1,0 +1,47 @@
+{
+  "work_id": "417",
+  "timestamp": "2026-10-03T11:12:25.450307+00:00",
+  "files": {
+    "10_Tech_OS/cognitive_treasury/schemas.py": {
+      "sha256": "019ce6c0c5a962ad0794ca1dc77e61a8f09cf421a770a57e1d4a08a38bdd3567"
+    },
+    "10_Tech_OS/cognitive_treasury/treasury_broker.py": {
+      "sha256": "f1518faed57fbd2ab0c98bb4c03e064d52c0bd9b43307f284a7211423f5e54bc"
+    },
+    "10_Tech_OS/cognitive_treasury/freellmapi_adapter.py": {
+      "sha256": "a3e3dd9cb8719d6c5dc2f5ec5285b142f3ea860ce513988e0226b058cb15ad72"
+    },
+    "10_Tech_OS/cognitive_treasury/resource_governor.py": {
+      "sha256": "85026c50165ba12aa545be3bd7ae31b26e6f97552d056847275735ce3345abc0"
+    },
+    "10_Tech_OS/cognitive_treasury/encrypted_vault.py": {
+      "sha256": "9b435e4a5ca732af1fa1bbd68bf2a8985f93f491222c27db827921c8e9deec2a"
+    },
+    "10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py": {
+      "sha256": "60df427d6876a9e63fca2793f4d5bc29143de7309f884b782946dc16ca013e9a"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/cognitive_treasury/schemas.py": "",
+    "10_Tech_OS/cognitive_treasury/treasury_broker.py": "",
+    "10_Tech_OS/cognitive_treasury/freellmapi_adapter.py": "",
+    "10_Tech_OS/cognitive_treasury/resource_governor.py": "",
+    "10_Tech_OS/cognitive_treasury/encrypted_vault.py": "",
+    "10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=10_Tech_OS/cognitive_treasury pytest 10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py",
+    "exit_code": 0,
+    "stdout": "============================= test session starts ==============================\nplatform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0\nrootdir: /app\nconfigfile: pytest.ini\ncollected 6 items\n\n10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py ......          [100%]\n\n============================== 6 passed in 0.13s ===============================\n",
+    "stderr": ""
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "issue": 417,
+    "description": "Tenant-scoped provider credential and token broker.",
+    "status": "SATISFIED_BY_MAIN",
+    "verified_by_tests": [
+      "10_Tech_OS/cognitive_treasury/test_cognitive_treasury.py"
+    ]
+  }
+}
