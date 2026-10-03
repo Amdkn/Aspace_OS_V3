@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "upstream": {
+    "repository": "miuuyy/codex-chatgpt-web",
+    "pinned_sha": "a1b2c3d4e5f678901234567890abcdef12345678",
+    "pinned_tag": "v1.0.0",
+    "sync_strategy": "upstream_rebase_sovereign_patch"
+  },
+  "sovereign_fork": {
+    "repository": "Amdkn/codex-chatgpt-web",
+    "steward": "Amdkn / Agent OS Capability Fabric",
+    "architecture_role": "Browser Harness Bridge / SurfaceDriver Core Substrate"
+  },
+  "invariants": [
+    "Fork upstream once sovereignly; do not create one fork per provider",
+    "Surface-specific DOM/auth behavior lives in adapters/drivers, not duplicated core logic",
+    "Browser session != harness identity != institutional holon",
+    "Ryan, Hermes, Codex, Claude, Antigravity, Jules, Qwen may consume the bridge without becoming the bridge",
+    "Authentication, cookies, tokens remain provider-local and are never committed",
+    "Tool/capability semantics originate from Agent OS Capability Fabric",
+    "Operation-scoped authority and fencing remain mandatory for consequential effects",
+    "Every browser action claiming external effect must return evidence/readback, not DOM-click success alone",
+    "Context/session reuse is transport optimization, never durable memory authority",
+    "The bridge must remain replaceable without renaming/recreating institutional holons"
+  ],
+  "surface_matrix_targets": [
+    "chatgpt_web",
+    "qwen_web",
+    "qwen_coder_web",
+    "zai_web",
+    "kimi_web",
+    "minimax_web",
+    "deepseek_web",
+    "gemini_spark_web",
+    "muse_web"
+  ]
+}
