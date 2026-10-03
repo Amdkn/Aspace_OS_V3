@@ -1,0 +1,72 @@
+{
+  "work_id": "448",
+  "timestamp": "2026-10-03T11:58:46.481731+00:00",
+  "files": {
+    "10_Tech_OS/kernel/temporal_truth/core.py": {
+      "sha256": "876722285322cdfa09b0a07c71eb14aed38def84265043b4a73bdc89dbf86e27"
+    },
+    "10_Tech_OS/kernel/temporal_truth/compiler.py": {
+      "sha256": "2f84bc85f33d21c0f7be08c2615d91c5c35693a537c602262b489a3ee54eab4a"
+    },
+    "10_Tech_OS/kernel/temporal_truth/packets.py": {
+      "sha256": "e5852e2fcff5bf767e88b5a92ff8e1ea0bd3cde886cb1f688994c4fc239934ed"
+    },
+    "10_Tech_OS/kernel/temporal_truth/temporal_truth.py": {
+      "sha256": "dce39e59cea9158daac2bf80c14ae571b3357b1b9c64f4eece38f41d3e841384"
+    },
+    "80_Agent-OS/capability_fabric/temporal_adapters.py": {
+      "sha256": "e6627f252297b996c706374fcd5e29c99fa8c8be9d008df484748122818eeeaf"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/temporal_truth/core.py": "",
+    "10_Tech_OS/kernel/temporal_truth/compiler.py": "",
+    "10_Tech_OS/kernel/temporal_truth/packets.py": "",
+    "10_Tech_OS/kernel/temporal_truth/temporal_truth.py": "",
+    "80_Agent-OS/capability_fabric/temporal_adapters.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=/app/10_Tech_OS/kernel/temporal_truth python3 -m unittest discover -s 10_Tech_OS/kernel/temporal_truth -p 'test_*.py' && PYTHONPATH=. python3 -m unittest 80_Agent-OS/capability_fabric/test_temporal_adapters.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 1.045s\n\nOK\n.\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "description": "The Temporal Truth kernel and ContextCompiler capabilities required by issue #448 are fully implemented. G0-G7 are verified by existing tests and execution.",
+    "acceptance_criteria_proof": [
+      {
+        "criterion": "G0 - Temporal contracts",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py"
+      },
+      {
+        "criterion": "G1 - Temporal Truth Canary",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_canary.py"
+      },
+      {
+        "criterion": "G2 - Temporal Split-Brain",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_canary.py"
+      },
+      {
+        "criterion": "G3 - Graham <-> Rory reconciliation",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py"
+      },
+      {
+        "criterion": "G4 - Context Compiler",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py"
+      },
+      {
+        "criterion": "G5 - #318 Embodied Holon canary",
+        "proof_ref": "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py"
+      },
+      {
+        "criterion": "G6 - Agent OS exposure",
+        "proof_ref": "80_Agent-OS/capability_fabric/test_temporal_adapters.py"
+      },
+      {
+        "criterion": "G7 - #405 Anti-Amnesia integration",
+        "proof_ref": "10_Tech_OS/kernel/anti_amnesia.py"
+      }
+    ]
+  }
+}
