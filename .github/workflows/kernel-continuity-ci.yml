@@ -44,7 +44,12 @@ jobs:
             10_Tech_OS/kernel/test_mission_watcher.py \
             10_Tech_OS/kernel/inter_fabric.py \
             10_Tech_OS/kernel/test_inter_fabric.py \
-            10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py
+            10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py \
+            10_Tech_OS/kernel/temporal_truth/packets.py \
+            10_Tech_OS/kernel/temporal_truth/test_packets.py
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
+      - name: Temporal handoff packet suite
+        working-directory: 10_Tech_OS/kernel/temporal_truth
+        run: python -m unittest test_packets.py
