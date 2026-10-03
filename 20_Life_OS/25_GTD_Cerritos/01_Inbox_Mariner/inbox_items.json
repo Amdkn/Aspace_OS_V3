@@ -1,0 +1,50 @@
+[
+  {
+    "item_id": "190443e8-d0a7-4524-8505-0bc7489af48d",
+    "title": "CLI captured task",
+    "category": "CLI",
+    "context": "General",
+    "captured_at": "2026-10-03T08:27:54.489301+00:00",
+    "correlation_id": "corr-cli-gtd"
+  },
+  {
+    "item_id": "841e4b05-ee84-4209-8551-fa5c62949735",
+    "title": "API captured task",
+    "category": "API",
+    "context": "General",
+    "captured_at": "2026-10-03T08:27:54.489855+00:00",
+    "correlation_id": "corr-api-gtd"
+  },
+  {
+    "item_id": "df3add15-10ac-45df-bf9d-275a36993da7",
+    "title": "MCP captured task",
+    "category": "MCP",
+    "context": "General",
+    "captured_at": "2026-10-03T08:27:54.490251+00:00",
+    "correlation_id": "corr-mcp-gtd"
+  },
+  {
+    "item_id": "96c649b5-e5e3-40a6-9d06-dc32a02d73c3",
+    "title": "CLI captured task",
+    "category": "CLI",
+    "context": "General",
+    "captured_at": "2026-10-03T08:29:02.935469+00:00",
+    "correlation_id": "corr-cli-gtd"
+  },
+  {
+    "item_id": "5038ad49-7270-4711-b161-dca740c27b74",
+    "title": "API captured task",
+    "category": "API",
+    "context": "General",
+    "captured_at": "2026-10-03T08:29:02.936016+00:00",
+    "correlation_id": "corr-api-gtd"
+  },
+  {
+    "item_id": "a79de5a1-cdc4-4174-8d94-e88dbc897bac",
+    "title": "MCP captured task",
+    "category": "MCP",
+    "context": "General",
+    "captured_at": "2026-10-03T08:29:02.937212+00:00",
+    "correlation_id": "corr-mcp-gtd"
+  }
+]
