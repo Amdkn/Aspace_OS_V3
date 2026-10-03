@@ -1,0 +1,24 @@
+{
+  "work_id": 402,
+  "upstream_url": "https://github.com/leonvanzyl/cubefarm.git",
+  "origin_url": "https://github.com/Amdkn/cubefarm.git",
+  "baseline_sha": "31e7ce01a1dcc1da2b576d1da36718c16b05b8ca",
+  "local_clone_path": "C:/Users/amado/cubefarm",
+  "integration_branch": "aspace/integration-baseline",
+  "local_state_classification": {
+    "package-lock.json": "REBUILD",
+    "start-demo.bat": "KEEP",
+    "start-dev.bat": "KEEP",
+    "start.bat": "KEEP"
+  },
+  "upstream_sync_proof": {
+    "fetch_cmd": "git fetch upstream",
+    "rebase_cmd": "git rebase upstream/main",
+    "sync_feasible": true,
+    "proof": "Exact upstream ancestry pinned to baseline SHA 31e7ce01a1dcc1da2b576d1da36718c16b05b8ca with clean rebase path onto aspace/integration-baseline."
+  },
+  "return_to": [
+    "#388",
+    "#400"
+  ]
+}
