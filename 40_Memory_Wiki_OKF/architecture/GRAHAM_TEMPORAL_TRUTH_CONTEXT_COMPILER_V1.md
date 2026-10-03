@@ -13,7 +13,7 @@ Routing: Nardole
 
 A'Space will not treat Project Sources, GitHub state, WorkGraph rows, runtime observations, Linear, GWS or Agent OS as a universal truth source.
 
-Graham maintains temporal meaning.
+Graham maintains temporal meaning and records accepted interpretations; CanonGraph never becomes an authority that decides meaning by itself.
 
 The canonical transformation is:
 
@@ -52,13 +52,16 @@ Required semantics:
 
 - immutable claim identity;
 - source reference;
+- source authority/jurisdiction for the claimed predicate;
 - correlation identity where available;
-- observed time;
+- `recorded_at` (ingestion time) distinct from `observed_at` (source observation time);
 - scope;
+- subject + predicate as the typed fact dimension;
 - assertion payload;
 - evidence references;
-- epistemic/temporal state;
+- epistemic/temporal state recorded immutably with the claim;
 - optional validity interval;
+- effective state is derived from CanonTransitions/query time; the original claim is never edited merely to become SUPERSEDED;
 - supersedes/superseded_by relations;
 - contradicts relations;
 - never silently deleted when superseded.
@@ -73,15 +76,17 @@ Represents a justified change in accepted interpretation.
 
 A CanonTransition never rewrites the old TemporalClaim. It links the old and new interpretation and records:
 
-- subject/scope;
+- subject + predicate + scope;
 - before;
 - after;
 - effective_at;
-- resolution authority;
+- resolution authority + bounded resolution scope;
 - evidence;
 - reason;
 - contradiction refs;
-- resulting canon head.
+- resulting canon head(s).
+
+A transition records an authorized interpretation change. It does **not** make Graham a universal semantic authority.
 
 ### ContextCapsule
 
@@ -115,12 +120,15 @@ A ContextCapsule is NOT:
 
 A Physiology snapshot is derived at time t from source observations.
 
+Every snapshot carries an explicit scope and expiry/validity boundary when determinable.
+
 Every dimension carries:
 - value;
 - source_ref;
+- source authority/jurisdiction;
 - source_observed_at;
-- freshness/TTL when relevant;
-- epistemic state;
+- freshness as `FRESH | STALE | UNKNOWN` (kept separate from truth);
+- epistemic state as `KNOWN | UNKNOWN | CONTRADICTED`;
 - unknown reason;
 - evidence refs.
 
@@ -138,12 +146,18 @@ If the evidence cannot establish a global state, the state remains UNKNOWN.
 8. A merged PR proves source mutation, not downstream effect.
 9. An issue closed state is not equivalent to accepted outcome.
 10. Physiology derives; it does not mutate truth sources.
+11. `CURRENT` is never globally unique by subject alone. Independent predicates/scopes/source authorities may all be CURRENT simultaneously.
+12. Provenance proves where a claim came from, not that its interpretation is true, fresh or authoritative for another scope.
+13. Freshness, provenance and epistemic state remain separate dimensions.
+14. A late-arriving old observation uses its original `observed_at` plus new `recorded_at`; ingestion time alone can never resurrect it as CURRENT.
 
 ## state_at and state_now
 
-`state_at(subject, t, scope)` resolves the best supported interpretation whose evidence and validity cover t.
+`state_at(subject, predicate, t, scope)` returns the accepted interpretation whose evidence/validity and scoped resolution authority cover t.
 
-`state_now(subject, scope)` resolves against the latest admissible evidence per authority/freshness rules.
+`state_now(subject, predicate, scope)` returns the currently accepted interpretation under source-jurisdiction, freshness and CanonTransition rules.
+
+Neither API silently chooses a winner across different predicates/scopes/authorities; legitimate parallel CURRENT claims remain parallel.
 
 Both return:
 - resolved value if support is sufficient;
@@ -192,7 +206,7 @@ Rory may choose:
 
 ## Context compilation
 
-The compiler gathers only the mission neighborhood:
+The compiler gathers only the mission neighborhood and records a replayable `source_cutoff_at` so the exact world slice can be reconstructed later:
 
 ```
 Institutional identity
@@ -285,9 +299,9 @@ Gate = evidence inside one continuous mission.
 The capability is releasable only if all are demonstrated:
 
 1. old true statements remain queryable historically;
-2. superseded claims cannot resurrect silently;
+2. superseded claims cannot resurrect silently, including when old evidence is recorded again later;
 3. `state_at(T)` reproduces known historical states;
-4. split-brain keeps uncertainty local and explicit;
+4. split-brain keeps uncertainty local and explicit while allowing multiple scope-distinct CURRENT facts;
 5. Rory resolution creates a transition instead of rewriting history;
 6. ContextCapsule is bounded and source-linked;
 7. Ryan can migrate runtime with same institutional identity/mission/authority/evidence/return_to;
