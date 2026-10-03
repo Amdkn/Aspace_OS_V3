@@ -1,0 +1,38 @@
+{
+  "work_id": "412",
+  "timestamp": "2026-10-03T11:13:36.749978+00:00",
+  "files": {
+    "80_Agent-OS/capability_fabric/harness_certification_matrix.json": {
+      "sha256": "d8f1c4ed1c632bc263e02c2d5a58fc0216526d619f681d155885b6dcabc7a1b1"
+    },
+    "80_Agent-OS/capability_fabric/harness_certification.py": {
+      "sha256": "e18c608b9adb53aacb847ca61d5d8bb3c74a1035911dfc48016b95f47e140482"
+    },
+    "80_Agent-OS/capability_fabric/test_harness_certification.py": {
+      "sha256": "863ba7982fcc529c99636805e5612fd7d1423fbe8ec1767fb50d41556cb60f39"
+    },
+    "80_Agent-OS/capability_fabric/adapters.py": {
+      "sha256": "097e3813d47f68eea05ff4e302dfd5f9e723fe9de4c1b071d4952dfc140b01fd"
+    }
+  },
+  "git_diff_summaries": {
+    "80_Agent-OS/capability_fabric/harness_certification_matrix.json": "",
+    "80_Agent-OS/capability_fabric/harness_certification.py": "",
+    "80_Agent-OS/capability_fabric/test_harness_certification.py": "",
+    "80_Agent-OS/capability_fabric/adapters.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=. python3 -m unittest 80_Agent-OS/capability_fabric/test_harness_certification.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "matrix_committed_and_machine_readable": true,
+    "at_least_3_harnesses_PASS_same_contract": true,
+    "one_failover_preserves_actor_work_correlation_authority": true,
+    "agent_os_displays_identity_runtime_adapter_capability_budget_evidence_separately": true,
+    "unresolved_gaps_become_bounded_child_issues": true
+  }
+}
