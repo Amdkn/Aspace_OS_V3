@@ -4,11 +4,19 @@
 import os
 import sys
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 # Fix import path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from dc_recovery_daemon import get_clean_env, is_dc_running, get_dc_status, hosted_fallback_allowed, recovery_order
+from dc_recovery_daemon import (
+    get_clean_env,
+    is_dc_running,
+    get_dc_status,
+    hosted_fallback_allowed,
+    recovery_order,
+    start_dc,
+)
 
 class TestDCRecovery(unittest.TestCase):
     def setUp(self):
@@ -71,6 +79,39 @@ class TestDCRecovery(unittest.TestCase):
         self.assertIn("sentinel_status", status)
         self.assertIn("details", status)
         self.assertIsInstance(status["running"], bool)
+
+    @patch("dc_recovery_daemon.start_sovereign_dc")
+    @patch("dc_recovery_daemon.DC_BAT_PATH")
+    def test_start_dc_default_deny_when_sovereign_unavailable(self, mock_dc_bat_path, mock_start_sovereign_dc):
+        """Si le chemin souverain échoue et que le fallback hébergé n'est pas autorisé, start_dc refuse le fallback hébergé."""
+        mock_start_sovereign_dc.return_value = {"ok": False, "status": "sovereign_failed"}
+        mock_dc_bat_path.exists.return_value = False
+
+        res = start_dc()
+
+        self.assertFalse(res["ok"])
+        self.assertEqual(res["status"], "sovereign_unavailable_hosted_fallback_disabled")
+        self.assertIn("recovery_order", res)
+        self.assertNotIn("hosted_bedrock_sentinel", res["recovery_order"])
+
+    @patch("dc_recovery_daemon.subprocess.Popen")
+    @patch("dc_recovery_daemon.SENTINEL_PATH")
+    @patch("dc_recovery_daemon.DC_BAT_PATH")
+    @patch("dc_recovery_daemon.start_sovereign_dc")
+    def test_start_dc_opt_in_when_hosted_fallback_allowed(
+        self, mock_start_sovereign_dc, mock_dc_bat_path, mock_sentinel_path, mock_popen
+    ):
+        """Si le chemin souverain échoue et que ASPACE_ALLOW_HOSTED_DC_FALLBACK=1 est configuré, le fallback hébergé est autorisé."""
+        mock_start_sovereign_dc.return_value = {"ok": False, "status": "sovereign_failed"}
+        mock_dc_bat_path.exists.return_value = False
+        mock_sentinel_path.exists.return_value = True
+        os.environ["ASPACE_ALLOW_HOSTED_DC_FALLBACK"] = "1"
+
+        res = start_dc()
+
+        self.assertTrue(res["ok"])
+        self.assertEqual(res["status"], "started_via_explicit_hosted_bedrock_sentinel")
+        mock_popen.assert_called_once()
 
 if __name__ == '__main__':
     unittest.main()
