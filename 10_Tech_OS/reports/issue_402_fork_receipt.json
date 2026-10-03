@@ -1,24 +1,43 @@
 {
   "work_id": 402,
+  "observed_at": "2026-10-03",
   "upstream_url": "https://github.com/leonvanzyl/cubefarm.git",
   "origin_url": "https://github.com/Amdkn/cubefarm.git",
   "baseline_sha": "31e7ce01a1dcc1da2b576d1da36718c16b05b8ca",
   "local_clone_path": "C:/Users/amado/cubefarm",
-  "integration_branch": "aspace/integration-baseline",
+  "integration_branch": "aspace/integration-v4",
+  "repo_existence_verified": true,
+  "local_remote_topology_verified": true,
   "local_state_classification": {
     "package-lock.json": "REBUILD",
     "start-demo.bat": "KEEP",
     "start-dev.bat": "KEEP",
     "start.bat": "KEEP"
   },
-  "upstream_sync_proof": {
-    "fetch_cmd": "git fetch upstream",
-    "rebase_cmd": "git rebase upstream/main",
-    "sync_feasible": true,
-    "proof": "Exact upstream ancestry pinned to baseline SHA 31e7ce01a1dcc1da2b576d1da36718c16b05b8ca with clean rebase path onto aspace/integration-baseline."
+  "live_proof": {
+    "local_head": "31e7ce01a1dcc1da2b576d1da36718c16b05b8ca",
+    "origin_main": "31e7ce01a1dcc1da2b576d1da36718c16b05b8ca",
+    "upstream_main": "31e7ce01a1dcc1da2b576d1da36718c16b05b8ca",
+    "upstream_is_ancestor_of_origin": true,
+    "origin_fetch": "PASS",
+    "upstream_fetch": "PASS",
+    "dirty_state_preserved": [
+      "M package-lock.json",
+      "?? start-demo.bat",
+      "?? start-dev.bat",
+      "?? start.bat"
+    ]
+  },
+  "invariants": {
+    "upstream_main_customized_directly": false,
+    "dirty_state_reset_or_cleaned": false,
+    "sovereign_origin": true,
+    "upstream_syncable": true
   },
   "return_to": [
     "#388",
-    "#400"
+    "#400",
+    "#421",
+    "#416"
   ]
 }
