@@ -1,0 +1,33 @@
+{
+  "work_id": "405",
+  "timestamp": "2026-10-03T11:13:42.904611+00:00",
+  "files": {
+    "10_Tech_OS/kernel/anti_amnesia.py": {
+      "sha256": "00a9a95e05877e9209a2d6c32d9ee8cc81e190506cb8b4526aa9abb92ca0e350"
+    },
+    "10_Tech_OS/kernel/test_anti_amnesia.py": {
+      "sha256": "3d872a16cdfcb70cb282a9666f03f2c628043c86340cce2633bd8b61197cda13"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/anti_amnesia.py": "",
+    "10_Tech_OS/kernel/test_anti_amnesia.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_anti_amnesia.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.003s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "1_capture_verbatim_intent": "Implemented by ConversationIntentCompiler.compile saving raw verbatim alongside summary",
+    "2_preserve_source_ref": "Implemented using the source_ref field passed down to CompiledIntentRecord",
+    "3_detect_commitments": "Implemented by ConversationIntentCompiler.detect_commitment looking for commitment keywords",
+    "4_create_durable_object": "Implemented via the Supabase IPBD capture projection",
+    "5_correlation_id": "Implemented by generating a single correlation_id that binds all projections",
+    "6_reconstruct_frontier": "Implemented by reconstruct_cubefarm_frontier returning the exact actionable state for replay without A0 context",
+    "7_issue_truth_authoritative": "Projections emit actions (CREATE_ISSUE) leaving the remote surface as authoritative truth",
+    "8_unknown_intent": "Implemented by preserving UNKNOWN classification without discarding the payload"
+  }
+}
