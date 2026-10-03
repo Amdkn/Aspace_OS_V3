@@ -20,11 +20,16 @@ jobs:
         with:
           sparse-checkout: |
             10_Tech_OS/kernel
+            80_Agent-OS/capability_fabric
+            30_Business_OS/20_Workflow_Engine
+            ASPACE_WORKSPACE_REGISTRY.json
             .github/workflows/kernel-continuity-ci.yml
           sparse-checkout-cone-mode: true
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
+      - name: Install inter-fabric test dependency
+        run: python -m pip install --disable-pip-version-check jsonschema
       - name: Compile continuity modules
         run: |
           python -m py_compile \
@@ -36,7 +41,10 @@ jobs:
             10_Tech_OS/kernel/test_mission_continuity.py \
             10_Tech_OS/kernel/test_runtime_presence.py \
             10_Tech_OS/kernel/test_dispatch_routing.py \
-            10_Tech_OS/kernel/test_mission_watcher.py
+            10_Tech_OS/kernel/test_mission_watcher.py \
+            10_Tech_OS/kernel/inter_fabric.py \
+            10_Tech_OS/kernel/test_inter_fabric.py \
+            10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
-        run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py
+        run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
