@@ -1,0 +1,87 @@
+{
+  "work_id": "448",
+  "timestamp": "2026-10-03T23:23:30.553106+00:00",
+  "files": {
+    "10_Tech_OS/kernel/temporal_truth/core.py": {
+      "sha256": "876722285322cdfa09b0a07c71eb14aed38def84265043b4a73bdc89dbf86e27"
+    },
+    "10_Tech_OS/kernel/temporal_truth/compiler.py": {
+      "sha256": "2f84bc85f33d21c0f7be08c2615d91c5c35693a537c602262b489a3ee54eab4a"
+    },
+    "10_Tech_OS/kernel/temporal_truth/reconciliation.py": {
+      "sha256": "cec657a8fecd65c9592452a03b924a27b516c23f47638689d7ce04091bffd17a"
+    },
+    "10_Tech_OS/kernel/temporal_truth/packets.py": {
+      "sha256": "e5852e2fcff5bf767e88b5a92ff8e1ea0bd3cde886cb1f688994c4fc239934ed"
+    },
+    "80_Agent-OS/capability_fabric/temporal_adapters.py": {
+      "sha256": "e6627f252297b996c706374fcd5e29c99fa8c8be9d008df484748122818eeeaf"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_canary.py": {
+      "sha256": "69e4d94348f8c62d26822a63cbfda23df9f0b4c51f53f21e32ba80e151febc69"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py": {
+      "sha256": "0333b2ad7c804e424bc88386983f7947e04c58bfe52d61a7936a0dfa0a7f3eb9"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_reconciliation.py": {
+      "sha256": "4d1456bc715e1982908335894e336b4008afc8b792a451ddf7033a1870b997f9"
+    },
+    "10_Tech_OS/kernel/temporal_truth/test_packets.py": {
+      "sha256": "432493494c79de7e6b609b00d747b7a9ca5f1a2c92389714da116ad1f40768e8"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/temporal_truth/core.py": "",
+    "10_Tech_OS/kernel/temporal_truth/compiler.py": "",
+    "10_Tech_OS/kernel/temporal_truth/reconciliation.py": "",
+    "10_Tech_OS/kernel/temporal_truth/packets.py": "",
+    "80_Agent-OS/capability_fabric/temporal_adapters.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_canary.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_reconciliation.py": "",
+    "10_Tech_OS/kernel/temporal_truth/test_packets.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=10_Tech_OS/kernel/temporal_truth python3 -m unittest discover -s 10_Tech_OS/kernel/temporal_truth -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 1.235s\n\nOK\n"
+  },
+  "schema": "aspace.epic.closure.v1",
+  "status": "CLOSED",
+  "outcome": "PASS",
+  "acceptance_criteria_proof": [
+    {
+      "gate": "G0",
+      "evidence": "Tests pass validating schemas"
+    },
+    {
+      "gate": "G1",
+      "evidence": "test_g1_canary passes"
+    },
+    {
+      "gate": "G2",
+      "evidence": "test_g2_split_brain passes"
+    },
+    {
+      "gate": "G3",
+      "evidence": "test_reconciliation.py passes"
+    },
+    {
+      "gate": "G4",
+      "evidence": "test_g4_context_compiler passes"
+    },
+    {
+      "gate": "G5",
+      "evidence": "Dependent on #318 which is out of scope for this epic closure itself but G4 proves capsule compilation without giant role prompts"
+    },
+    {
+      "gate": "G6",
+      "evidence": "Agent OS ports implemented in 80_Agent-OS/capability_fabric/temporal_adapters.py"
+    },
+    {
+      "gate": "G7",
+      "evidence": "Dependent on #405 and handled independently after temporal core is stable"
+    }
+  ]
+}
