@@ -19,10 +19,10 @@ This is ONE mission. G0-G7 are gates, not future projects.
 Build the smallest local deterministic library/API that can:
 
 1. validate the four v1 schemas;
-2. ingest TemporalClaims append-only;
-3. query `state_at(subject, t, scope)`;
-4. query `state_now(subject, scope)`;
-5. mark supersession/contradiction without deletion;
+2. ingest TemporalClaims append-only with immutable `observed_at` + distinct `recorded_at`, `subject`, `predicate`, `scope` and `source_authority`;
+3. query `state_at(subject, predicate, t, scope)`;
+4. query `state_now(subject, predicate, scope)`;
+5. record supersession/contradiction through relations/transitions without mutating or deleting the original claim;
 6. create CanonTransition after an explicit reconciliation decision;
 7. compile one bounded ContextCapsule;
 8. derive/read a PhysiologySnapshot without mutating source truth.
@@ -39,7 +39,7 @@ Assertions:
 
 - every claim remains addressable;
 - the correct value is returned at each historical timestamp;
-- reinjecting the old `0 active` claim later does not make it CURRENT;
+- reinjecting the old `0 active` observation later records a later `recorded_at` but preserves its original `observed_at`, and does not make it CURRENT;
 - provenance remains intact.
 
 ## G2 Split-Brain fixture
@@ -51,6 +51,7 @@ Inputs:
 - no fresh runtime observation establishing ONLINE/OFFLINE.
 
 Expected:
+- scope-distinct CURRENT facts may coexist without being forced into a contradiction;
 - GitHub mutation state = KNOWN;
 - WorkGraph claim count = KNOWN 0;
 - WorkGraph binding count = KNOWN 0;
@@ -70,6 +71,7 @@ Inputs are explicit references/queries. Output is `aspace.context-capsule.v1`.
 
 Compiler requirements:
 - deterministic mandatory sections;
+- replayable `source_cutoff_at`;
 - bounded optional sections;
 - evidence refs;
 - unresolved contradiction/UNKNOWN preservation;
@@ -111,6 +113,8 @@ Every PR must provide:
 - negative tests;
 - replay fixture;
 - proof UNKNOWN is preserved;
+- proof provenance, freshness and epistemic state remain distinct;
+- proof subject-only latest-write-wins is impossible;
 - proof superseded history remains queryable;
 - proof no new scheduler is introduced;
 - rollback notes.
