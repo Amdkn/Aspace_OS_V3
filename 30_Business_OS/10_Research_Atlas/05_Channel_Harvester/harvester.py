@@ -1,3 +1,4 @@
+import csv
 import json
 import os
 import re
@@ -102,18 +103,11 @@ class ChannelHarvester:
             json.dump(self.snapshots, f, indent=2)
 
     def _parse_watch_history_html(self, file_path: str, snapshot_id: str, file_hash: str):
-        # We need a robust regex or parsing for the Takeout HTML format.
-        # Example:
-        # <a href="https://www.youtube.com/watch?v=123">Title</a><br><a href="https://www.youtube.com/channel/ABC">Channel</a><br>Jun 25, 2026, 11:34:00 AM EDT
-
-        # This regex matches:
-        # 1: video_id
-        # 2: title
-        # 3: channel_id (can be channel/ABC or c/Name)
-        # 4: channel_name
-        # 5: timestamp
+        # Matches video link, optional channel link (channel/, c/, or @handle), and timestamp
         pattern = re.compile(
-            r'<a href="https://www\.youtube\.com/watch\?v=([^"&]+)[^"]*">([^<]+)</a><br><a href="https://www\.youtube\.com/(?:channel/|c/)([^"&]+)[^"]*">([^<]+)</a><br>([^<]+)</div>'
+            r'<a href="https://www\.youtube\.com/watch\?v=([^"&]+)[^"]*">([^<]+)</a><br>'
+            r'(?:<a href="https://www\.youtube\.com/(?:channel/|c/|@)([^"&]+)[^"]*">([^<]+)</a><br>)?'
+            r'([^<]+)</div>'
         )
 
         with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
@@ -121,27 +115,40 @@ class ChannelHarvester:
             for match in pattern.finditer(content):
                 v_id, title, c_id, c_name, ts = match.groups()
 
-                # Check for duplicate canonical identity
+                # If channel is missing in HTML, default to unknown
+                c_id_clean = c_id.strip() if c_id else "unknown_channel"
+                c_name_clean = c_name.strip() if c_name else "Unknown Channel"
+
+                # If channel was specified as @handle, prefix or retain cleanly
+                if c_id and not c_id_clean.startswith("@") and not c_id_clean.startswith("UC"):
+                    # keep as is or format handle
+                    pass
+
+                # Check for duplicate canonical identity across snapshots
                 if v_id not in self.canonical_graph:
                     self.canonical_graph[v_id] = WatchedVideo(
                         video_id=v_id,
                         url=f"https://www.youtube.com/watch?v={v_id}",
                         title=title.strip(),
-                        channel_name=c_name.strip(),
-                        channel_id=c_id.strip(),
+                        channel_name=c_name_clean,
+                        channel_id=c_id_clean,
                         watched_timestamp=ts.strip(),
                         source_archive=snapshot_id,
                         source_hash=file_hash
                     )
 
     def _parse_subscriptions_csv(self, file_path: str):
-        # Very basic CSV parsing for subscriptions
+        # Parse Takeout subscriptions CSV properly using csv.reader
         with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-            for line in f:
-                parts = line.strip().split(',')
-                if len(parts) >= 2:
-                    # Usually Channel Id, Channel Url, Channel Title
-                    c_id = parts[0].strip()
+            reader = csv.reader(f)
+            for row in reader:
+                if not row:
+                    continue
+                # Skip header rows
+                if "Channel" in row[0] or "Identifiant" in row[0] or "Channel Id" in row[0]:
+                    continue
+                c_id = row[0].strip()
+                if c_id:
                     self.subscriptions.add(c_id)
 
     def h1_canonical_graph(self):
@@ -260,15 +267,49 @@ class ChannelHarvester:
                 else:
                     unseen.append(item)
 
-            # Route to WATCH S1/PAPER
-            # Create a routing manifest
+            # Route to WATCH S1/PAPER with provenance
+            # Build structured WATCH S1 candidates preserving provenance from watched videos where applicable
+            watch_s1_candidates = []
+            for u in unseen[:5]:
+                watch_s1_candidates.append({
+                    "video_id": u["id"],
+                    "url": f"https://www.youtube.com/watch?v={u['id']}",
+                    "title": u.get("title", ""),
+                    "channel_id": c_id,
+                    "channel_name": cr.channel_name,
+                    "status": "unseen",
+                    "provenance": {
+                        "harvester_channel_id": c_id,
+                        "promoted_channel": True,
+                        "discovered_at": datetime.now(timezone.utc).isoformat()
+                    }
+                })
+
+            # Also create routing payload for watched items if deep transcript/paper microscope is needed
+            paper_candidates = []
+            for w_vid in cr.videos[:5]:
+                paper_candidates.append({
+                    "video_id": w_vid.video_id,
+                    "url": w_vid.url,
+                    "title": w_vid.title,
+                    "channel_id": w_vid.channel_id,
+                    "channel_name": w_vid.channel_name,
+                    "watched_timestamp": w_vid.watched_timestamp,
+                    "status": "watched",
+                    "provenance": {
+                        "source_archive": w_vid.source_archive,
+                        "source_hash": w_vid.source_hash
+                    }
+                })
+
             routing_manifest = {
                 "channel_id": c_id,
                 "channel_name": cr.channel_name,
                 "total_inventory": len(inventory_urls),
                 "unseen_count": len(unseen),
                 "watched_count": len(watched_in_inventory),
-                "routed_to_watch_s1": [f"https://www.youtube.com/watch?v={u['id']}" for u in unseen[:5]] # route top 5 unseen
+                "routed_to_watch_s1": watch_s1_candidates,
+                "routed_to_paper_s1": paper_candidates
             }
             expansion_results.append(routing_manifest)
 
@@ -296,3 +337,25 @@ class ChannelHarvester:
             json.dump(report, f, indent=2)
 
         return report
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Multi-source Channel Harvester")
+    parser.add_argument("sources", nargs="+", help="Paths to Takeout archives or extracted directories")
+    parser.add_argument("--out-dir", default="harvester_output", help="Output directory")
+    parser.add_argument("--promote-channels", nargs="*", default=[], help="Channel IDs to promote for expansion")
+    args = parser.parse_args()
+
+    harvester = ChannelHarvester(out_dir=args.out_dir)
+    harvester.h0_immutable_inventory(args.sources)
+    harvester.h1_canonical_graph()
+    harvester.h2_channel_recurrence()
+    if args.promote_channels:
+        harvester.promoted_channels = args.promote_channels
+        harvester.h3_research_expansion(args.promote_channels)
+    report = harvester.generate_report()
+    print("Harvester run completed successfully.")
+    print(json.dumps(report, indent=2))
+
+if __name__ == "__main__":
+    main()

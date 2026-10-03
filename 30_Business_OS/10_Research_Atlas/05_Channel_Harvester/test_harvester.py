@@ -86,5 +86,59 @@ class TestChannelHarvester(unittest.TestCase):
         self.assertEqual(report["h1_canonical_videos"], 3)
         self.assertEqual(report["h4_future_monitoring_design"]["strategy"], "cron_monitor")
 
+    def test_multi_snapshot_deduplication(self):
+        harvester = ChannelHarvester(out_dir=str(self.test_dir / "out_dedup"))
+        harvester.h0_immutable_inventory([str(self.mock_takeout_1), str(self.mock_takeout_2)])
+        harvester.h1_canonical_graph()
+
+        # Both archives contain vid1 with identical video_id. Verify single entry retained in canonical_graph.
+        self.assertEqual(len([v for v in harvester.canonical_graph.values() if v.video_id == "vid1"]), 1)
+        # Verify source archive provenance is preserved
+        self.assertIn("snap_", harvester.canonical_graph["vid1"].source_archive)
+        self.assertTrue(len(harvester.canonical_graph["vid1"].source_hash) > 0)
+
+    def test_channel_handle_parsing(self):
+        handle_takeout = self.test_dir / "TakeoutHandle"
+        handle_takeout.mkdir(exist_ok=True)
+        with open(handle_takeout / "watch-history.html", "w") as f:
+            f.write('<div class="content-cell"><a href="https://www.youtube.com/watch?v=vid_handle">Handle Video</a><br><a href="https://www.youtube.com/@SomeCreator">Some Creator</a><br>Jun 28, 2026, 10:00:00 AM EDT</div>\n')
+
+        harvester = ChannelHarvester(out_dir=str(self.test_dir / "out_handle"))
+        harvester.h0_immutable_inventory([str(handle_takeout)])
+        harvester.h1_canonical_graph()
+
+        self.assertIn("vid_handle", harvester.canonical_graph)
+        vid = harvester.canonical_graph["vid_handle"]
+        self.assertEqual(vid.channel_id, "SomeCreator")
+        self.assertEqual(vid.channel_name, "Some Creator")
+
+    def test_routing_payload_provenance(self):
+        harvester = ChannelHarvester(out_dir=str(self.test_dir / "out_routing"))
+        harvester.h0_immutable_inventory([str(self.mock_takeout_1)])
+        harvester.h1_canonical_graph()
+        harvester.h2_channel_recurrence()
+        harvester.h3_research_expansion(["chanA"])
+
+        import json
+        with open(self.test_dir / "out_routing" / "h3_expansion.json", "r") as f:
+            expansion = json.load(f)
+
+        self.assertEqual(len(expansion), 1)
+        item = expansion[0]
+        # WATCH S1 routing test
+        self.assertIn("routed_to_watch_s1", item)
+        watch_candidate = item["routed_to_watch_s1"][0]
+        self.assertEqual(watch_candidate["status"], "unseen")
+        self.assertIn("provenance", watch_candidate)
+        self.assertEqual(watch_candidate["provenance"]["harvester_channel_id"], "chanA")
+
+        # PAPER S1 routing test
+        self.assertIn("routed_to_paper_s1", item)
+        paper_candidate = item["routed_to_paper_s1"][0]
+        self.assertEqual(paper_candidate["status"], "watched")
+        self.assertIn("provenance", paper_candidate)
+        self.assertIn("source_archive", paper_candidate["provenance"])
+        self.assertIn("source_hash", paper_candidate["provenance"])
+
 if __name__ == '__main__':
     unittest.main()
