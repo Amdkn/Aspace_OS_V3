@@ -1,0 +1,65 @@
+{
+  "envelope_version": "aspace.inter-fabric-envelope.v1",
+  "envelope_id": "ife-471-harness-list-canary-001",
+  "created_at": "2026-10-03T11:45:00-04:00",
+  "identity": {
+    "holon_id": "Nardole",
+    "institutional_rank": "S3",
+    "home_ref": "Amdkn/Aspace_OS_V3",
+    "embodiment_ref": "orca/Nardole",
+    "session_ref": null
+  },
+  "mission": {
+    "mission_id": "GH-471",
+    "work_id": null,
+    "cell_id": "canary-harness-list",
+    "correlation_id": "gh471-inter-fabric-canary-001",
+    "parent_correlation_id": null
+  },
+  "capability": {
+    "capability_id": "harness.list",
+    "capability_version": "candidate",
+    "contract_ref": "#333/#335"
+  },
+  "authority": {
+    "authority_scope": ["read:harness-registry", "read:evidence"],
+    "policy_ref": "HostPolicy",
+    "policy_version": null,
+    "mutation_lease_ref": null,
+    "fencing_key": null
+  },  "resource": {
+    "resource_lease_ref": "UNKNOWN",
+    "budget_lease_ref": null,
+    "resource_class": "harness"
+  },
+  "effect": {
+    "operation_id": null,
+    "effect_id": null,
+    "effect_class": "READ_ONLY",
+    "idempotency_key": null,
+    "replay_semantics": "SAFE"
+  },
+  "truth": {
+    "source_authority": "runtime-registry",
+    "observed_at": null,
+    "freshness": "UNKNOWN",
+    "epistemic_state": "UNKNOWN",
+    "unknown_reason": "Live runtime freshness not asserted by contract-only canary",
+    "evidence_refs": ["github:#471", "github:#333", "github:#335"]
+  },
+  "routing": {
+    "origin_layer": "L0",
+    "blocked_outcome": "Cross-fabric contract certification",
+    "return_to": "github:#471",
+    "recovery_hint": "Do not infer LIVE from registry presence; obtain runtime observation."
+  },
+  "compatibility": {
+    "payload_type": "HarnessListRequest",
+    "payload_version": "candidate",
+    "lossy_fields": []
+  },
+  "payload": {
+    "ref": "github:#335",
+    "digest": "Read-only candidate for first cross-fabric canary"
+  }
+}

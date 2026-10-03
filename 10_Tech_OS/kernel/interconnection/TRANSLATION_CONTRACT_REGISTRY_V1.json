@@ -1,0 +1,95 @@
+{
+  "schema": "aspace.translation-contract-registry.v1",
+  "issue": 471,
+  "parent_gap": "#323-CG2",
+  "entries": [
+    {
+      "id": "temporal-handoff",
+      "producer": "Yaz/Graham/Rory",
+      "consumer": "Holon/Nardole",
+      "issue_ref": "#458",
+      "payload_types": [
+        "ObservationPacket",
+        "TemporalClaim",
+        "ContradictionPacket",
+        "CanonTransition",
+        "ContextCapsule",
+        "CapabilityNeed"
+      ],
+      "required_envelope_fields": [
+        "identity.holon_id",
+        "mission.correlation_id",
+        "authority.authority_scope",
+        "truth.evidence_refs",
+        "truth.epistemic_state",
+        "routing.return_to"
+      ],
+      "lossy_fields": [],
+      "authority_change": "FORBIDDEN"
+    },    {
+      "id": "capability-to-runtime",
+      "producer": "Agent OS Capability Fabric",
+      "consumer": "Resource/Harness Fabric",
+      "issue_ref": "#333",
+      "payload_types": ["CapabilityRequest", "HarnessExecutionRequest"],
+      "required_envelope_fields": [
+        "mission.correlation_id",
+        "capability.capability_id",
+        "capability.capability_version",
+        "authority.authority_scope",
+        "resource.resource_lease_ref",
+        "routing.return_to"
+      ],
+      "lossy_fields": [],
+      "authority_change": "FORBIDDEN"
+    },
+    {
+      "id": "runtime-to-truth",
+      "producer": "Effect/Runtime Fabric",
+      "consumer": "Truth Fabric",
+      "issue_ref": "#448",
+      "payload_types": ["EffectReceipt", "ObservationPacket", "TemporalClaim"],
+      "required_envelope_fields": [
+        "mission.correlation_id",
+        "effect.operation_id",
+        "truth.source_authority",
+        "truth.observed_at",
+        "truth.epistemic_state",
+        "truth.evidence_refs"
+      ],
+      "lossy_fields": [],
+      "authority_change": "FORBIDDEN"
+    },    {
+      "id": "reconciliation-to-routing",
+      "producer": "Rory/Truth-Coherence",
+      "consumer": "Nardole/Coordination",
+      "issue_ref": "#458",
+      "payload_types": ["ReconcileDecision", "CapabilityNeed", "ContinuationEnvelope"],
+      "required_envelope_fields": [
+        "mission.correlation_id",
+        "truth.epistemic_state",
+        "authority.authority_scope",
+        "routing.return_to"
+      ],
+      "lossy_fields": [],
+      "authority_change": "FORBIDDEN"
+    },
+    {
+      "id": "machine-truth-to-presentation",
+      "producer": "Truth/Coordination Fabrics",
+      "consumer": "Amy/Presentation Fabric",
+      "issue_ref": "#317",
+      "payload_types": ["TruthProjection", "RuntimePresenceProjection"],
+      "required_envelope_fields": [
+        "mission.correlation_id",
+        "truth.source_authority",
+        "truth.observed_at",
+        "truth.freshness",
+        "truth.epistemic_state",
+        "truth.evidence_refs"
+      ],
+      "lossy_fields": ["internal_recovery_hint"],
+      "authority_change": "FORBIDDEN"
+    }
+  ]
+}

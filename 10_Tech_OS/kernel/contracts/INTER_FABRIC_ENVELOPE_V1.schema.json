@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://contracts/inter-fabric-envelope/v1",
+  "title": "A'Space InterFabricEnvelope.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "envelope_version",
+    "envelope_id",
+    "created_at",
+    "identity",
+    "mission",
+    "authority",
+    "truth",
+    "routing",
+    "compatibility",
+    "payload"
+  ],
+  "properties": {
+    "envelope_version": { "const": "aspace.inter-fabric-envelope.v1" },
+    "envelope_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["holon_id", "institutional_rank"],      "properties": {
+        "holon_id": { "type": "string", "minLength": 1 },
+        "institutional_rank": { "type": "string", "minLength": 1 },
+        "home_ref": { "type": ["string", "null"] },
+        "embodiment_ref": { "type": ["string", "null"] },
+        "session_ref": { "type": ["string", "null"] }
+      }
+    },
+    "mission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mission_id", "correlation_id"],
+      "properties": {
+        "mission_id": { "type": "string", "minLength": 1 },
+        "work_id": { "type": ["string", "integer", "null"] },
+        "cell_id": { "type": ["string", "null"] },
+        "correlation_id": { "type": "string", "minLength": 1 },
+        "parent_correlation_id": { "type": ["string", "null"] }
+      }
+    },
+    "capability": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["capability_id", "capability_version"],      "properties": {
+        "capability_id": { "type": "string", "minLength": 1 },
+        "capability_version": { "type": "string", "minLength": 1 },
+        "contract_ref": { "type": ["string", "null"] }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority_scope"],
+      "properties": {
+        "authority_scope": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "policy_ref": { "type": ["string", "null"] },
+        "policy_version": { "type": ["string", "null"] },
+        "mutation_lease_ref": { "type": ["string", "null"] },
+        "fencing_key": { "type": ["string", "null"] }
+      }
+    },
+    "resource": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "resource_lease_ref": { "type": ["string", "null"] },
+        "budget_lease_ref": { "type": ["string", "null"] },
+        "resource_class": { "type": ["string", "null"] }
+      }
+    },    "effect": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "operation_id": { "type": ["string", "null"] },
+        "effect_id": { "type": ["string", "null"] },
+        "effect_class": { "type": ["string", "null"] },
+        "idempotency_key": { "type": ["string", "null"] },
+        "replay_semantics": {
+          "type": ["string", "null"],
+          "enum": ["SAFE", "UNSAFE", "UNKNOWN", "NOT_APPLICABLE", null]
+        }
+      }
+    },
+    "truth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_authority", "epistemic_state", "evidence_refs"],
+      "properties": {
+        "source_authority": { "type": "string", "minLength": 1 },
+        "observed_at": { "type": ["string", "null"], "format": "date-time" },
+        "freshness": {
+          "type": "string",
+          "enum": ["FRESH", "STALE", "UNKNOWN"]
+        },
+        "epistemic_state": {
+          "type": "string",
+          "enum": ["KNOWN", "UNKNOWN", "CONTRADICTED"]
+        },        "unknown_reason": { "type": ["string", "null"] },
+        "evidence_refs": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["return_to"],
+      "properties": {
+        "origin_layer": { "type": ["string", "null"] },
+        "blocked_outcome": { "type": ["string", "null"] },
+        "return_to": { "type": "string", "minLength": 1 },
+        "recovery_hint": { "type": ["string", "null"] }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["payload_type", "payload_version", "lossy_fields"],
+      "properties": {
+        "payload_type": { "type": "string", "minLength": 1 },
+        "payload_version": { "type": "string", "minLength": 1 },
+        "lossy_fields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        }
+      }
+    },    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ref"],
+      "properties": {
+        "ref": { "type": "string", "minLength": 1 },
+        "digest": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
