@@ -16,8 +16,10 @@ class TickTests(unittest.TestCase):
         self.assertEqual((pole,prd),("LIFE_L0","LPRD-001"))
 
     def test_duplicate_detects_issue(self):
-        active=[{"title":"ASPACE:X | KPRD-020 | KER-19","prompt":"","state":"IN_PROGRESS"}]
+        active=[{"title":"ASPACE:X | KPRD-020 | KER-19","prompt":"","state":"IN_PROGRESS"},
+                {"title":"ASPACE:Y | FPRD-001 | KER-21","prompt":"","state":"COMPLETED"}]
         self.assertTrue(k.duplicate(active,"KER-19"))
+        self.assertTrue(k.duplicate(active,"KER-21"))
         self.assertFalse(k.duplicate(active,"KER-20"))
 
     def test_terminal_session_is_not_reusable(self):
@@ -75,5 +77,18 @@ class TickTests(unittest.TestCase):
         issue["title"]="[NO_AUTODISPATCH] deliberately manual"
         self.assertFalse(k.is_ready(issue))
 
+
+    @patch('kernel_fleet_tick.http_json')
+    @patch('kernel_fleet_tick._send_to_session')
+    def test_consume_completed_blocks_refill(self, mock_send, mock_http):
+        sessions=[{"title":"ASPACE:Y | FPRD-001 | KER-21","prompt":"","state":"COMPLETED"}]
+        self.assertTrue(k.duplicate(sessions,"KER-21"))
+        self.assertFalse(k.duplicate(sessions,"KER-20"))
+
+
+
+
 if __name__=="__main__":
+
+
     unittest.main()

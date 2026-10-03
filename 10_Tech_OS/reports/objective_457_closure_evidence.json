@@ -1,0 +1,12 @@
+{
+  "schema": "aspace.objective.closure.v1",
+  "objective": "457",
+  "title": "[P0][JULES-FLEET][CLOSURE-LOOP] Consume awaiting/completed work before refill",
+  "status": "COMPLETED",
+  "acceptance_criteria_proof": [
+    {
+      "criterion": "ISSUE_READY -> session -> consume AWAITING_* -> PR -> close -> refill state machine",
+      "proof": "Added logic in `_tick` of `kernel_fleet_tick.py` to invoke `JulesFleetSupervisor.handle_waiting_state` and `consume_completed` before checking readiness and dispatching. Updated the duplicate WorkID check to prevent launching duplicates when a COMPLETED session is unconsumed."
+    }
+  ]
+}

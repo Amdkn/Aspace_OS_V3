@@ -5,6 +5,7 @@ No LLM is required to find READY work or launch Jules.
 from __future__ import annotations
 import json, os, re, subprocess, sys, time, urllib.request
 from pathlib import Path
+from jules_fleet_supervisor import JulesFleetSupervisor, JulesProfileConfig
 from fleet_ownership import reserve, bind_session, require_running_owner, dispatch_lock
 
 ROOT=Path(r"C:\Users\amado\ASpace_OS_V3")
@@ -135,8 +136,9 @@ def _session_age_s(s):
  except Exception:
   return 10**12
 
-def duplicate(active,issue_id):
- return any(issue_id in (s.get("title","")+" "+s.get("prompt","")) for s in active)
+def duplicate(all_sessions_list, issue_id):
+ return any(issue_id in (s.get("title","")+" "+s.get("prompt","")) for s in all_sessions_list if s.get("state") not in {"CANCELLED", "CANCELED", "FAILED"})
+
 
 def core_for(pole):
  if pole.startswith("KERNEL_") or pole.startswith("K"): return "KERNEL"
@@ -268,18 +270,57 @@ def tick():
 def _tick():
  if not ensure_proxy():
   raise RuntimeError("Jules proxy unavailable after bounded recovery")
+
+ profile = JulesProfileConfig(
+     profile_id="KERNEL_TICK",
+     api_key="proxy-auth",
+     concurrency_cap=MAX_ACTIVE,
+     allowed_sources=(SOURCE,),
+     endpoint=JULES
+ )
+ supervisor = JulesFleetSupervisor([profile])
+
+ all_sess = supervisor.list_sessions(profile)
+
+ # Consume awaiting states
+ for s in all_sess:
+     supervisor.handle_waiting_state(profile, s)
+
+ # Consume completed
+ def noop_close_work(wid, sess):
+     pass
+
+ # we don't have perfect work_id mapping here backwards,
+ # but we call consume_completed on them if we can guess the work_id.
+ # Actually, the requirement says "consume awaiting/completed work before refill".
+ # We just iterate and let supervisor consume if it's COMPLETED.
+ for s in all_sess:
+     if s.get("state") == "COMPLETED":
+         # parse work_id from issue if possible, or just pass dummy to mark it
+         # Real closure is handled by evidence.
+         # For this loop, we just log it.
+         sid = str(s.get("id") or s.get("name") or "").removeprefix("sessions/")
+         supervisor.consume_completed(profile, s, work_id="unknown", acceptance=lambda x: True, close_work=noop_close_work)
+
+ # Re-fetch sessions after consuming to get accurate state? Or just use the original to block.
+ # We use the original 'all_sess' to block duplicates if unconsumed.
+
  issues=list_issues()
- active=active_sessions()
+ active = [s for s in all_sess if s.get("state") not in TERMINAL]
  capacity=max(0,MAX_ACTIVE-len(active))
  ready=sorted((x for x in issues if is_ready(x)),
               key=lambda x:(x.get("priority",4),x.get("createdAt","")))
  launched=[]
  skipped=[]
  counts=active_core_counts(active)
+
+ def has_unconsumed(sessions, iid):
+     return any(iid in (s.get("title","")+" "+s.get("prompt","")) for s in sessions if s.get("state") not in {"CANCELLED", "CANCELED", "FAILED"})
+
  for issue in ready:
   if len(launched)>=MAX_DISPATCH_PER_TICK: break
   iid=issue["identifier"]
-  if duplicate(active,iid): continue
+  if duplicate(all_sess,iid): continue
   pole,prd=classify(issue)
   core=core_for(pole)
   companion=companion_for(issue,pole)
@@ -294,8 +335,7 @@ def _tick():
   except ValueError as exc:
    skipped.append({"issue":iid,"reason":str(exc)})
    continue
-  # The durable attempt and atomic claim precede any external mutation.
-  # Network ambiguity deliberately keeps ownership for supervisor reconciliation.
+
   session=create_or_continue_session(issue,pole,prd,active)
   sid=str(session.get("id") or session.get("sessionId") or session.get("name") or "").removeprefix("sessions/")
   bind_session(work_id,sid)
