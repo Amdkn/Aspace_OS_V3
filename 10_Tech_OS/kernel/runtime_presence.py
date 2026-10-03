@@ -17,6 +17,7 @@ from pathlib import Path
 from typing import Any
 
 from mission_continuity import project_mission_cell
+from truth_projection import project_truth
 
 PRESENCE_STATES = {
     "OFFLINE",
@@ -239,3 +240,45 @@ def project_agent_presence(
     if state not in PRESENCE_STATES:
         raise RuntimeError(f"invalid derived presence state: {state}")
     return result
+
+
+def project_agent_presence_for_human(
+    db_path: str | Path,
+    work_id: int,
+    runtime_observation: dict[str, Any] | None,
+    *,
+    now: datetime | None = None,
+) -> dict[str, Any]:
+    """TB09 adapter: machine presence truth -> provenance-safe human projection.
+
+    Agent OS, Linear and GWS may render the same envelope differently,
+    but none may erase source/authority/freshness/evidence.
+    """
+    current_time = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    presence = project_agent_presence(
+        db_path,
+        work_id,
+        runtime_observation,
+        now=current_time,
+    )
+
+    evidence = list(presence.get("evidence_refs") or [])
+    return project_truth(
+        value={
+            "identity": presence.get("identity"),
+            "presence_state": presence.get("state"),
+            "reason": presence.get("reason"),
+            "capabilities": presence.get("capabilities") or {},
+            "next_action": presence.get("next_action"),
+            "return_to": presence.get("return_to"),
+        },
+        source=presence.get("provenance"),
+        authority="workgraph+runtime_presence",
+        observed_at=presence.get("observed_at"),
+        expires_at=presence.get("expires_at"),
+        evidence_refs=evidence,
+        confidence=None,
+        now=current_time,
+        correlation_id=presence.get("correlation_id"),
+        work_id=work_id,
+    )
