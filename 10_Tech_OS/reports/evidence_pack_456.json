@@ -1,0 +1,24 @@
+{
+  "work_id": "456",
+  "timestamp": "2026-10-03T11:20:33.354993+00:00",
+  "files": {
+    "10_Tech_OS/kernel/temporal_truth/core.py 10_Tech_OS/kernel/temporal_truth/test_canary.py": {
+      "sha256": null
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/temporal_truth/core.py 10_Tech_OS/kernel/temporal_truth/test_canary.py": "Error or untracked file"
+  },
+  "test_results": {
+    "command": "PYTHONPATH=/app/10_Tech_OS python3 -m unittest discover -s 10_Tech_OS/kernel -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "Evidence pack generated at out.json\n",
+    "stderr": "................................................................................................................................................................................\n----------------------------------------------------------------------\nRan 176 tests in 15.351s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "g1_canon_resurrection": "PASS",
+    "g2_split_brain": "PASS",
+    "g3_reconciliation_supported": "PASS"
+  }
+}
