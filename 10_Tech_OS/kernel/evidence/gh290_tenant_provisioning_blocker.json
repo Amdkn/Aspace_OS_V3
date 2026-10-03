@@ -1,16 +1,12 @@
 {
-    "schema": "aspace.typed-blocker.v1",
-    "mission_id": "github-290",
-    "correlation_id": "gh290-omk-desktop-web-os-write-block",
-    "cell_id": "tenant-provisioning-canary",
-    "status": "BLOCKED_BY_PERMISSION",
-    "blocker_details": {
-        "repository": "omk-services/OMK-DESKTOP-WEB-OS",
-        "reason": "The executing agent does not have write access to the required implementation repository. Access is restricted to pull: true, push: false.",
-        "human_action_required": "Grant write access to omk-services/OMK-DESKTOP-WEB-OS or perform the tenant provisioning implementation directly in that repository."
-    },
-    "vcs": {
-        "branch": "fix/issue-290",
-        "pull_request_url": ""
-    }
+  "schema": "aspace.typed-blocker.v1",
+  "issue": 290,
+  "blocker_type": "MissingWriteAccess",
+  "resource": "omk-services/OMK-DESKTOP-WEB-OS",
+  "reason": "The executing AI agent does not have write access (push: false) to omk-services/OMK-DESKTOP-WEB-OS to perform tenant provisioning and isolation canary mutations directly in the implementation repository.",
+  "mitigation": "Durable handoff recorded in _INBOX/handoffs/BLOCKER-290-TENANT-PROVISIONING.md for human operator intervention or permission update.",
+  "handoff_file": "_INBOX/handoffs/BLOCKER-290-TENANT-PROVISIONING.md",
+  "correlation_id": "gh290-omk-desktop-web-os-write-block",
+  "cell_id": "tenant-provisioning-canary",
+  "status": "BLOCKED_BY_PERMISSION"
 }
