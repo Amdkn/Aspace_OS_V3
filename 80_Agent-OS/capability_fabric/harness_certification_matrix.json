@@ -1,0 +1,140 @@
+{
+  "version": "2026-10-02.1",
+  "issue": "#412",
+  "parent_issues": ["#411", "#410", "#404"],
+  "certification_contract_rules": [
+    "1. institutional actor_id is supplied externally and not inferred from provider/session",
+    "2. capability discovery comes from Agent OS shared registry",
+    "3. input/output schemas are preserved or explicitly translated",
+    "4. authority envelope is not widened by the adapter",
+    "5. operation_id/correlation_id survive the round trip",
+    "6. query vs command/effect is explicit",
+    "7. external effect claims include readback/evidence",
+    "8. quota/budget/latency/reliability are observable separately from identity",
+    "9. failure can reroute to another harness without rewriting mission ownership",
+    "10. no harness-specific business executor is created"
+  ],
+  "harnesses": {
+    "hermes": {
+      "name": "Hermes",
+      "native_cli_api": "yes",
+      "browser_surface": "n/a",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "codex": {
+      "name": "Codex",
+      "native_cli_api": "yes",
+      "browser_surface": "via #410 where useful",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "browser_bridge_chatgpt_web": {
+      "name": "Browser Harness Bridge (ChatGPT Web #410)",
+      "native_cli_api": "optional",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "claude_code": {
+      "name": "Claude Code",
+      "native_cli_api": "yes",
+      "browser_surface": "optional",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "antigravity": {
+      "name": "Antigravity",
+      "native_cli_api": "yes",
+      "browser_surface": "Gemini-backed surfaces",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "jules": {
+      "name": "Jules",
+      "native_cli_api": "service/web",
+      "browser_surface": "web",
+      "shared_capability_contract": "required",
+      "tool_parity": "verified",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "PASS",
+      "certification_wave": "First Wave (#412)"
+    },
+    "qwen": {
+      "name": "Qwen / Qwen Coder",
+      "native_cli_api": "CLI/web/API depending surface",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "TBD",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "RECON_BOUNDED_GAP",
+      "gap_issue": "#410 child wave"
+    },
+    "gemini": {
+      "name": "Gemini / Spark",
+      "native_cli_api": "native/web",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "TBD",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "RECON_BOUNDED_GAP",
+      "gap_issue": "#410 child wave"
+    },
+    "deepseek": {
+      "name": "DeepSeek",
+      "native_cli_api": "API/web",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "TBD",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "RECON_BOUNDED_GAP",
+      "gap_issue": "#410 child wave"
+    },
+    "kimi": {
+      "name": "Kimi",
+      "native_cli_api": "API/web",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "TBD",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "RECON_BOUNDED_GAP",
+      "gap_issue": "#410 child wave"
+    },
+    "minimax": {
+      "name": "MiniMax",
+      "native_cli_api": "API/web",
+      "browser_surface": "yes",
+      "shared_capability_contract": "required",
+      "tool_parity": "TBD",
+      "evidence_readback": "required",
+      "identity_separation": "required",
+      "status": "RECON_BOUNDED_GAP",
+      "gap_issue": "#410 child wave"
+    }
+  }
+}
