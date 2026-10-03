@@ -218,6 +218,18 @@
             "minLength": 1
           },
           "description": "Refs identifying the accepted interpretation head(s) after this transition. Multiple heads are allowed when scopes remain legitimately parallel."
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "return_to": {
+          "type": [
+            "object",
+            "null"
+          ]
         }
       },
       "additionalProperties": false
@@ -312,7 +324,10 @@
           }
         },
         "return_to": {
-          "type": "object"
+          "type": [
+            "object",
+            "null"
+          ]
         },
         "source_cutoff_at": {
           "type": "string",
@@ -437,6 +452,177 @@
         }
       },
       "additionalProperties": false
+    },
+    "ObservationPacket": {
+      "type": "object",
+      "required": [
+        "schema",
+        "packet_id",
+        "observed_at",
+        "source_ref",
+        "source_authority",
+        "dimension",
+        "value",
+        "evidence_refs"
+      ],
+      "properties": {
+        "schema": {
+          "const": "aspace.observation-packet.v1"
+        },
+        "packet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dimension": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {},
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "return_to": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContradictionPacket": {
+      "type": "object",
+      "required": [
+        "schema",
+        "packet_id",
+        "detected_at",
+        "subject",
+        "predicate",
+        "scope",
+        "claims",
+        "detector_authority"
+      ],
+      "properties": {
+        "schema": {
+          "const": "aspace.contradiction-packet.v1"
+        },
+        "packet_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "detected_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claims": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string"
+          }
+        },
+        "detector_authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "return_to": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "CapabilityNeed": {
+      "type": "object",
+      "required": [
+        "schema",
+        "need_id",
+        "issued_at",
+        "target_capability",
+        "evidence",
+        "issuer_authority"
+      ],
+      "properties": {
+        "schema": {
+          "const": "aspace.capability-need.v1"
+        },
+        "need_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "target_capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/EvidenceRef"
+          }
+        },
+        "issuer_authority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "correlation_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "return_to": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
     }
   },
   "oneOf": [
@@ -451,6 +637,15 @@
     },
     {
       "$ref": "#/$defs/PhysiologySnapshot"
+    },
+    {
+      "$ref": "#/$defs/ObservationPacket"
+    },
+    {
+      "$ref": "#/$defs/ContradictionPacket"
+    },
+    {
+      "$ref": "#/$defs/CapabilityNeed"
     }
   ]
 }
