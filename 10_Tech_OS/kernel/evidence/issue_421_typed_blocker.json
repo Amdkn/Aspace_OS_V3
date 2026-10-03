@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue": 421,
+  "type": "HUMAN_ONLY_AUTH",
+  "blocker": "Target repository for migration (C:/Users/amado/cubefarm) is inaccessible in the current environment.",
+  "reason": "The issue requires transferring reusable Business OS innovations into the S3 CubeFarm fork, which is located on a local host filesystem path (C:/Users/amado/cubefarm) not accessible by the agent.",
+  "required_human_action": "Execute the migration manually or provide the agent with access to the target repository.",
+  "return_to": ["#402", "#388", "Doctor13", "Ryan"]
+}
