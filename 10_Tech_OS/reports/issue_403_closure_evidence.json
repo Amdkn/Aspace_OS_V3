@@ -1,0 +1,21 @@
+{
+  "issue": 403,
+  "title": "[V4][CUBEFARM-OFFICE] Project A'Space Embodied Holons and multi-layer topology into the Living Office",
+  "status": "COMPLETED",
+  "evidence": {
+    "files_created": [
+      "10_Tech_OS/kernel/cubefarm_office.py",
+      "10_Tech_OS/kernel/test_cubefarm_office.py"
+    ],
+    "acceptance_criteria_verified": [
+      "one live Ryan desk renders identity, embodiment, runtime and workload separately",
+      "switching runtime body does not recreate/rename Ryan",
+      "one non-GitHub floor type is rendered from Anthology references",
+      "Office can deep-link to GitHub/Linear/GWS/WorkGraph refs without collapsing them",
+      "no UI field silently becomes authority or SSOT",
+      "restart preserves desk/mission lineage"
+    ],
+    "test_command": "PYTHONPATH=. pytest 10_Tech_OS/kernel/test_cubefarm_office.py 10_Tech_OS/kernel/test_cubefarm_adapter.py 10_Tech_OS/kernel/test_cubefarm_triwall.py",
+    "test_results": "15 passed (158 passed across all kernel tests)"
+  }
+}
