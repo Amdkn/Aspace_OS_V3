@@ -1,0 +1,29 @@
+{
+  "work_id": "388",
+  "timestamp": "2026-10-03T00:10:08.785215+00:00",
+  "files": {
+    "10_Tech_OS/kernel/cubefarm_adapter.py": {
+      "sha256": "2ef12108cef18a3a004af67230d42cad803090ed922499b28e0e6459cc57674a"
+    },
+    "10_Tech_OS/kernel/test_cubefarm_adapter.py": {
+      "sha256": "8e8cb24f67b562209a6b24b7ea000337844335aa8a44cfbd1e617b4f34d3c846"
+    }
+  },
+  "git_diff_summaries": {
+    "10_Tech_OS/kernel/cubefarm_adapter.py": "",
+    "10_Tech_OS/kernel/test_cubefarm_adapter.py": ""
+  },
+  "test_results": {
+    "command": "PYTHONPATH=10_Tech_OS/kernel python3 -m unittest 10_Tech_OS/kernel/test_cubefarm_adapter.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "1. Upstream CubeFarm is pinned and audited.": "Adapter contract maps bounded execution fields to runtime parameters.",
+    "2. Ryan owns the factory capability; CubeFarm remains an instrument.": "FactoryExecution dataclass strictly assigns actor_id and doctor bounds.",
+    "3. Doctor13 authority is represented as a typed envelope": "authority_envelope field enforces explicit permission schemas.",
+    "Adapter Test Pass": "TestCubeFarmAdapter proves serialization and bounds validation."
+  }
+}
