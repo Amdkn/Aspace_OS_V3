@@ -1,0 +1,27 @@
+{
+  "work_id": "312",
+  "timestamp": "2026-10-03T00:00:00Z",
+  "outcome": "PASS",
+  "evidence": {
+    "sources_count": 9,
+    "fable_wargame_kit": "20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/02_Templates/Wargames/Fable_Wargame_Kit/fable_wargame_kit_source.zip",
+    "convergences_count": 5,
+    "contradictions_count": 3,
+    "factory_flow_boundary": {
+      "clara": "DESIGN / Forge",
+      "ryan": "BUILD / Industrialization",
+      "river": "FLOW / Operations"
+    },
+    "anti_simplification_verification": {
+      "ryan_not_worker": true,
+      "yaz_not_monitor": true,
+      "graham_not_database": true,
+      "river_not_automation": true
+    },
+    "lineage_map": "SourcePattern -> RuntimePrimitive -> HolonImpact -> CandidateCapability -> ValidationNeed"
+  },
+  "test_results": {
+    "test_corpus_02": "PASS",
+    "kernel_suite": "PASS"
+  }
+}
