@@ -1,0 +1,103 @@
+{
+  "issue": "Amdkn/Aspace_OS_V3#421",
+  "timestamp": "2026-10-03T08:28:07.554712+00:00",
+  "migration_matrix": {
+    "matrix_version": "2026-10-02",
+    "candidates": [
+      {
+        "candidate_id": "uupm_multi_theme",
+        "title": "UUPM/Multi-Theme and reusable design/configuration primitives",
+        "source_issue": "#400",
+        "classification": "UI/RUNTIME REUSABLE",
+        "target_surface": "cubefarm_wall_ui",
+        "rationale": "Visual styling tokens and design system primitives are presentation-only and can be safely re-themed for CubeFarm walls.",
+        "portability_notes": "Port UUPM design tokens and theme switching primitives without duplicating underlying business domain logic."
+      },
+      {
+        "candidate_id": "living_office_dashboard_patterns",
+        "title": "Reusable dashboard/projection patterns suitable for the Living Office",
+        "source_issue": "#403",
+        "classification": "UI/RUNTIME REUSABLE",
+        "target_surface": "living_office_wall",
+        "rationale": "Dashboard grid, card layouts, and projection panels provide spatial layout structures without owning core domain state.",
+        "portability_notes": "Reusable UI layout structures projected in Living Office."
+      },
+      {
+        "candidate_id": "shared_capability_surfaces",
+        "title": "Capability/tool surfaces only as consumers of #333",
+        "source_issue": "#333",
+        "classification": "SHARED CAPABILITY CONSUMER",
+        "target_surface": "agent_os_capability_fabric",
+        "rationale": "Surfaces consume registered capabilities via Agent OS capability fabric (#333); never duplicate Business executors.",
+        "portability_notes": "Consumes capabilities via SurfaceFabric routing."
+      },
+      {
+        "candidate_id": "typed_state_evidence_widgets",
+        "title": "Evidence/runtime-status widgets rendering Agent/Life/Business state",
+        "source_issue": "#416",
+        "classification": "SHARED CAPABILITY CONSUMER",
+        "target_surface": "cubefarm_tri_wall",
+        "rationale": "Widgets consume typed adapters from Agent, Life, and Business OS to project status on CubeFarm walls.",
+        "portability_notes": "Renders state from typed adapters; strictly read-only or capability-driven."
+      },
+      {
+        "candidate_id": "auth_session_ux",
+        "title": "Reusable auth/session UX primitives",
+        "source_issue": "#417",
+        "classification": "QUARANTINE",
+        "target_surface": "credential_authority_boundary",
+        "rationale": "Must not duplicate #417 credential authority or token treasury. Quarantined from independent execution in CubeFarm.",
+        "portability_notes": "Keep auth/session UX strictly quarantined to enforce #417 single source of truth."
+      }
+    ]
+  },
+  "proven_port_1_uupm_theme": {
+    "active_theme": "dark_mode_oled",
+    "tokens": {
+      "name": "Dark Mode OLED",
+      "bg_color": "#000000",
+      "surface_color": "#111111",
+      "text_color": "#f8f9fa",
+      "accent_color": "#3b82f6",
+      "border_radius": "8px",
+      "glassmorphism": false
+    },
+    "rendered_style": {
+      "backgroundColor": "#000000",
+      "color": "#f8f9fa",
+      "borderRadius": "8px",
+      "border": "1px solid #3b82f6"
+    }
+  },
+  "proven_port_2_capability_projection": {
+    "wall_id": "cubefarm_tri_wall_01",
+    "actor_id": "Ryan",
+    "surface_binding": "agent_os",
+    "layers": {
+      "agent_os": {
+        "status": "ACTIVE",
+        "active_harness": "antigravity"
+      },
+      "life_os": {
+        "ikigai_focus": "sovereign_fork",
+        "cycle": "12WY"
+      },
+      "business_os": {
+        "franchise": "Aspace_CubeFarm",
+        "mode": "bounded_factory"
+      }
+    },
+    "receipt": {
+      "status": "PRODUCED",
+      "consumer_role": "SHARED_CAPABILITY_CONSUMER",
+      "return_to": "#388/#403",
+      "fencing": "CUBEFARM_BOUNDED_PROJECTION"
+    }
+  },
+  "acceptance_status": {
+    "migration_matrix_classified": true,
+    "proven_ports_count": 2,
+    "return_to": "#388/#403",
+    "thin_patchset": true
+  }
+}
