@@ -1,0 +1,44 @@
+{
+  "issue_id": 419,
+  "parent_issue_id": 417,
+  "title": "[V4][BUSINESS-OS][ENTITLEMENT] Client-owned AI provider connections for the $300/year plan",
+  "status": "VERIFIED_COMPLETED",
+  "timestamp": "2026-10-03T08:35:00Z",
+  "acceptance_criteria_verified": [
+    {
+      "criterion": "Business OS owns commercial subscription entitlement ($300/year plan) separate from provider quota ownership",
+      "verified": true,
+      "proof": "EntitlementManager blocks provider connections on PLAN_FREE and grants access on BUSINESS_300_ANNUAL."
+    },
+    {
+      "criterion": "Client explicitly authorizes provider connections; shared broker handles authorization and routing without duplicating provider secrets",
+      "verified": true,
+      "proof": "CognitiveTreasuryBroker stores secret_handle and redacted_fingerprint only; raw secrets are never persisted or exposed."
+    },
+    {
+      "criterion": "Business OS shows connection health, consent/scopes, usage receipts and revoke/disconnect state",
+      "verified": true,
+      "proof": "get_connection_status returns structured view model and get_receipts exposes EffectReceipt audit history."
+    },
+    {
+      "criterion": "Canary: one tenant connects multiple providers, runs one shared capability, receives a usage/evidence receipt, then revokes one provider without changing tenant identity or breaking others",
+      "verified": true,
+      "proof": "TestProviderConnectionsAndEntitlement.test_canary_multi_provider_shared_capability_and_isolated_revocation passed successfully."
+    },
+    {
+      "criterion": "Variable provider quotas are measured rather than promised as fixed capacity",
+      "verified": true,
+      "proof": "ProviderConnection tracks VARIABLE_MEASURED tokens_consumed and tokens_remaining_estimate upon execution."
+    }
+  ],
+  "test_execution": {
+    "test_file": "30_Business_OS/cognitive_treasury/test_provider_connections.py",
+    "test_framework": "pytest",
+    "tests_ran": 3,
+    "tests_passed": 3,
+    "suite_regression_tests_passed": [
+      "30_Business_OS/00_Architecture/contracts/test_business_contracts.py",
+      "30_Business_OS/20_Workflow_Engine/test_wer_engine.py"
+    ]
+  }
+}
