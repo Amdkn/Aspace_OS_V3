@@ -1,0 +1,41 @@
+{
+  "work_id": "400",
+  "timestamp": "2026-10-03T08:35:00.000000+00:00",
+  "issue_title": "[CANARY][CUBEFARM-FORK][MULTI-THEME] Recover UUPM/Business OS Multi-Theme into the A'Space CubeFarm fork",
+  "fork_topology": {
+    "upstream_repo": "leonvanzyl/cubefarm",
+    "fork_repo": "Amdkn/cubefarm",
+    "upstream_syncable": true,
+    "direct_upstream_main_customization": false,
+    "theme_capability_bounded": true
+  },
+  "files": {
+    "10_Tech_OS/kernel/cubefarm_adapter.py": {
+      "recovered_uupm_themes": [
+        "dark-oled",
+        "warm-paper",
+        "cyberpunk",
+        "aurora",
+        "editorial",
+        "liquid-glass"
+      ]
+    },
+    "10_Tech_OS/kernel/test_cubefarm_adapter.py": {
+      "tests_passed": 4
+    }
+  },
+  "test_results": {
+    "command": "pytest 10_Tech_OS/kernel/test_cubefarm_adapter.py",
+    "exit_code": 0,
+    "status": "PASSED"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "1. Recover prior UUPM source": "Replaced hardcoded theme guessing with exact UUPM 6-theme catalogue tokens in cubefarm_adapter.py.",
+    "2. CubeFarm fork topology": "Confirmed leonvanzyl/cubefarm upstream and Amdkn/cubefarm sovereign fork bounds.",
+    "3. Bounded capability": "CubeFarmThemeConfig validates CSS token keys without modifying authority envelopes or agent cosmology.",
+    "4. Multi-theme proof": "Proved dark-oled, warm-paper, cyberpunk, aurora, editorial, liquid-glass profiles on same runtime.",
+    "5. Return contract": "Returned evidence head to parent #388."
+  },
+  "return_to": "#388"
+}
