@@ -1,7 +1,0 @@
-{
-  "$schema": "aspace.typed-blocker.v1",
-  "type": "blocker",
-  "reason": "MISSING_USER_DATA",
-  "details": "The task requires processing the local Fable Wargame Kit as an executable-pattern source. However, the specified local kit '20_Life_OS/24_PARA_Enterprise/03_Resources_Geordi/02_Templates/Wargames/Fable_Wargame_Kit/fable_wargame_kit_source.zip' does not exist in the repository. As faking success or generating missing files is prohibited, this issue is blocked on human action to provide the required source kit.",
-  "issue": "312"
-}
