@@ -1,18 +1,32 @@
 {
   "work_id": "222",
-  "timestamp": "2026-10-02T22:26:39.343007+00:00",
+  "timestamp": "2026-10-02T23:01:58.299110+00:00",
   "files": {
-    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py 30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": {
-      "sha256": null
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py": {
+      "sha256": "79500f292bee10f3826a23ed31e0d2c36f4a449e246799a43351830cd171d692"
+    },
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": {
+      "sha256": "6e5deb90647492e23bd2acca175fa645bea5c38f8cb48f7cc7f7138830896c6e"
     }
   },
   "git_diff_summaries": {
-    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py 30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": "Error or untracked file"
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py": "",
+    "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": ""
   },
   "test_results": {
     "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/05_Channel_Harvester python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/05_Channel_Harvester -p 'test_*.py'",
     "exit_code": 0,
     "stdout": "-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 2 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n",
-    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.010s\n\nOK\n"
+    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.006s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "1": "At least two independent Takeout snapshots feed the same canonical graph without duplicate Video identity: Satisfied in h0_immutable_inventory and h1_canonical_graph. Overlapping snapshots are loaded and deduplicated via dict keys in test_harvester_pipeline.",
+    "2": "Watch history + subscriptions/playlists are represented: Satisfied in _parse_watch_history_html and _parse_subscriptions_csv.",
+    "3": "At least one recurring-channel ranking is produced from historical evidence: Satisfied in h2_channel_recurrence.",
+    "4": "Watched vs unseen inventory distinction is represented for at least one promoted channel: Satisfied in h3_research_expansion.",
+    "5": "Selected items can route into WATCH/PAPER while preserving provenance: Satisfied in h3_research_expansion by route_to_watch_s1 in routing manifest.",
+    "6": "Future monitoring design is expressed only after historical replay works: Satisfied in generate_report via h4_future_monitoring_design.",
+    "7": "No A0 manual copy/paste is required for normal replay: Handled fully automatically by the ChannelHarvester class."
   }
 }
