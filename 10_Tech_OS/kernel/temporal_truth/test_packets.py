@@ -1,5 +1,7 @@
 import unittest
 import json
+import os
+import jsonschema
 from packets import (
     ObservationPacket,
     TemporalClaim,
@@ -122,6 +124,42 @@ class TestPacketsRoundTrip(unittest.TestCase):
         self.assertEqual(packet, deserialized)
         self.assertEqual(deserialized.unknowns, ["jules_runtime"])
         self.assertEqual(deserialized.return_to, {"owner": "nardole"})
+
+
+    def test_resolution_authority_requires_explicit_scope(self):
+        packet = CanonTransition(
+            transition_id="trans_auth",
+            subject="jules",
+            predicate="runtime_state",
+            scope="global",
+            from_claims=["claim_1"],
+            to_claims=["claim_2"],
+            recorded_at="2026-10-03T10:10:00Z",
+            effective_at="2026-10-03T10:10:00Z",
+            reason="explicit_reconciliation",
+            evidence_refs=["contradiction_1"],
+            resolution_authority="rory",
+            resolution_scope="runtime_state/global",
+            resulting_canon_heads=["claim_2"],
+            return_to={"owner": "nardole"}
+        )
+        data = json.loads(serialize_packet(packet))
+        schema_path = os.path.join(
+            os.path.dirname(__file__),
+            "..",
+            "contracts",
+            "TEMPORAL_TRUTH_CONTEXT_V1.schema.json",
+        )
+        with open(schema_path, "r", encoding="utf-8") as handle:
+            root = json.load(handle)
+        bounded_schema = dict(root)
+        bounded_schema["$ref"] = "#/$defs/CanonTransition"
+        jsonschema.validate(data, bounded_schema)
+
+        without_scope = dict(data)
+        without_scope.pop("resolution_scope")
+        with self.assertRaises(jsonschema.ValidationError):
+            jsonschema.validate(without_scope, bounded_schema)
 
 
 class TestCanaryScenario(unittest.TestCase):
