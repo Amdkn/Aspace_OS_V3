@@ -247,5 +247,85 @@ class TestTemporalTruthG4G5(unittest.TestCase):
         self.assertIn("c_ctx", capsule["canon_slice"])
         self.assertNotIn("giant_role_prompt", str(capsule))
 
+    def test_g4_deterministic_ids(self):
+        t = datetime(2026, 1, 1, 12, 0, 0, tzinfo=timezone.utc).isoformat()
+        self.graph.ingest_claim({
+            "schema": "aspace.temporal-claim.v1",
+            "claim_id": "c_ctx2",
+            "subject": "ryan",
+            "predicate": "role",
+            "scope": "mission_2",
+            "source_authority": "system",
+            "observed_at": t,
+            "assertion": "builder",
+            "evidence_refs": ["ev_2"]
+        })
+
+        kwargs = {
+            "holon_id": "ryan",
+            "mission_id": "m2",
+            "correlation_id": "corr2",
+            "scope": "mission_2",
+            "authority_envelope": {"type": "standard"},
+            "workgraph_neighborhood": {"nodes": []},
+            "evidence_head": ["ev_2"],
+            "return_to": {"topic": "done"},
+            "t": t,
+            "anthology_window": ["event_1"],
+            "source_slice": {"repo": "cubefarm"}
+        }
+
+        # Compile twice with exact same inputs
+        capsule1 = self.compiler.compile_context_capsule(**kwargs)
+        capsule2 = self.compiler.compile_context_capsule(**kwargs)
+
+        self.assertEqual(capsule1["capsule_id"], capsule2["capsule_id"])
+        self.assertEqual(capsule1["physiology_ref"], capsule2["physiology_ref"])
+
+        # Change source_cutoff_at / t
+        kwargs["t"] = datetime(2026, 1, 1, 12, 5, 0, tzinfo=timezone.utc).isoformat()
+        capsule3 = self.compiler.compile_context_capsule(**kwargs)
+        self.assertNotEqual(capsule1["capsule_id"], capsule3["capsule_id"])
+        self.assertNotEqual(capsule1["physiology_ref"], capsule3["physiology_ref"])
+
+    def test_g4_v1_limits(self):
+        t = datetime.now(timezone.utc).isoformat()
+
+        # Oversized anthology
+        with self.assertRaises(ValueError):
+            self.compiler.compile_context_capsule(
+                holon_id="ryan", mission_id="m", correlation_id="c", scope="s",
+                authority_envelope={}, workgraph_neighborhood={},
+                evidence_head=["ev"], return_to={}, t=t,
+                anthology_window=["item"] * 101
+            )
+
+        # Non-list anthology
+        with self.assertRaises(ValueError):
+            self.compiler.compile_context_capsule(
+                holon_id="ryan", mission_id="m", correlation_id="c", scope="s",
+                authority_envelope={}, workgraph_neighborhood={},
+                evidence_head=["ev"], return_to={}, t=t,
+                anthology_window="not a list"
+            )
+
+        # Oversized evidence_head
+        with self.assertRaises(ValueError):
+            self.compiler.compile_context_capsule(
+                holon_id="ryan", mission_id="m", correlation_id="c", scope="s",
+                authority_envelope={}, workgraph_neighborhood={},
+                evidence_head=["ev"] * 101, return_to={}, t=t
+            )
+
+        # Oversized source_slice
+        with self.assertRaises(ValueError):
+            self.compiler.compile_context_capsule(
+                holon_id="ryan", mission_id="m", correlation_id="c", scope="s",
+                authority_envelope={}, workgraph_neighborhood={},
+                evidence_head=["ev"], return_to={}, t=t,
+                source_slice={f"k{i}": "v" for i in range(101)}
+            )
+
+
 if __name__ == '__main__':
     unittest.main()

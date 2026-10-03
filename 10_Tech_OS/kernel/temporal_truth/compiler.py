@@ -1,4 +1,6 @@
 import uuid
+import hashlib
+import json
 from typing import Dict, Any, List, Optional
 from datetime import datetime, timezone
 from .temporal_truth import TemporalCanonGraph
@@ -85,9 +87,18 @@ class ContextCompiler:
                 }
                 dimensions.append(dim)
 
+        # Generate deterministic snapshot ID based on inputs
+        hash_input = json.dumps({
+            "subject": subject,
+            "scope": scope,
+            "observed_at": observed_t,
+            "dimensions": sorted(dimensions, key=lambda x: x["name"])
+        }, sort_keys=True)
+        snapshot_hash = hashlib.sha256(hash_input.encode('utf-8')).hexdigest()[:16]
+
         snapshot = {
             "schema": "aspace.physiology-snapshot.v1",
-            "snapshot_id": f"phys_{uuid.uuid4().hex[:8]}",
+            "snapshot_id": f"phys_{snapshot_hash}",
             "observed_at": observed_t,
             "scope": scope,
             "valid_until": None,
@@ -106,7 +117,9 @@ class ContextCompiler:
         workgraph_neighborhood: Dict[str, Any],
         evidence_head: List[str],
         return_to: Dict[str, Any],
-        t: Optional[str] = None
+        t: Optional[str] = None,
+        anthology_window: Optional[List[str]] = None,
+        source_slice: Optional[Dict[str, Any]] = None
     ) -> Dict[str, Any]:
         """
         Deterministically compile a ContextCapsule.
@@ -128,16 +141,56 @@ class ContextCompiler:
             if dim["epistemic_state"] == "UNKNOWN":
                 unknowns.append(dim["name"])
 
+        anthology_window = anthology_window or []
+
+        # Validate bounds and types (G4 limits)
+        MAX_ITEMS = 100
+        if not isinstance(anthology_window, list):
+            raise ValueError("anthology_window must be a list")
+        if not isinstance(evidence_head, list):
+            raise ValueError("evidence_head must be a list")
+        if not isinstance(canon_slice, list):
+            raise ValueError("canon_slice must be a list")
+
+        if len(anthology_window) > MAX_ITEMS:
+            raise ValueError(f"anthology_window exceeds limit of {MAX_ITEMS}")
+        if len(evidence_head) > MAX_ITEMS:
+            raise ValueError(f"evidence_head exceeds limit of {MAX_ITEMS}")
+        if len(canon_slice) > MAX_ITEMS:
+            raise ValueError(f"canon_slice exceeds limit of {MAX_ITEMS}")
+        if source_slice is not None:
+            if not isinstance(source_slice, dict):
+                raise ValueError("source_slice must be a dict")
+            if len(source_slice) > MAX_ITEMS:
+                raise ValueError(f"source_slice exceeds limit of {MAX_ITEMS}")
+
+        # Generate deterministic capsule ID based on all canonical inputs
+        hash_input = json.dumps({
+            "holon_id": holon_id,
+            "mission_id": mission_id,
+            "correlation_id": correlation_id,
+            "scope": scope,
+            "source_cutoff_at": compiled_t,
+            "canon_slice": canon_slice,
+            "anthology_window": anthology_window,
+            "evidence_head": evidence_head,
+            "authority_envelope": authority_envelope,
+            "workgraph_neighborhood": workgraph_neighborhood,
+            "return_to": return_to,
+            "source_slice": source_slice
+        }, sort_keys=True)
+        capsule_hash = hashlib.sha256(hash_input.encode('utf-8')).hexdigest()[:16]
+
         capsule = {
             "schema": "aspace.context-capsule.v1",
-            "capsule_id": f"cap_{uuid.uuid4().hex[:8]}",
+            "capsule_id": f"cap_{capsule_hash}",
             "compiled_at": compiled_t,
             "source_cutoff_at": compiled_t,
             "holon_id": holon_id,
             "mission_id": mission_id,
             "correlation_id": correlation_id,
             "canon_slice": canon_slice,
-            "anthology_window": [], # Placeholder for anthology
+            "anthology_window": anthology_window,
             "physiology_ref": phys_snap["snapshot_id"],
             "authority_envelope": authority_envelope,
             "workgraph_neighborhood": workgraph_neighborhood,
@@ -146,5 +199,8 @@ class ContextCompiler:
             "unknowns": unknowns,
             "return_to": return_to
         }
+        if source_slice is not None:
+            capsule["source_slice"] = source_slice
+
         self.graph.validate_schema(capsule, "ContextCapsule")
         return capsule

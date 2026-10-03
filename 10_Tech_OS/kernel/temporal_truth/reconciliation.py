@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Iterable
 
 from packets import CanonTransition, ContradictionPacket
-from temporal_truth import TemporalCanonGraph
+from temporal_truth.temporal_truth import TemporalCanonGraph
 
 
 class ReconciliationBoundaryError(ValueError):

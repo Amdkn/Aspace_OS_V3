@@ -7,7 +7,7 @@ from reconciliation import (
     ReconciliationBoundaryError,
     transition_from_explicit_decision,
 )
-from temporal_truth import TemporalCanonGraph
+from temporal_truth.temporal_truth import TemporalCanonGraph
 
 
 class TestRoryTemporalReconciliation(unittest.TestCase):
