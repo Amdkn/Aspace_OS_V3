@@ -1,0 +1,36 @@
+{
+  "$schema": "https://aspace.io/schemas/cubefarm_migration_matrix.v1.json",
+  "issue": "#421",
+  "title": "[P0][V4][CUBEFARM][INNOVATION-MIGRATION] Transfer reusable Business OS innovations into the sovereign fork",
+  "timestamp": "2026-10-03T12:00:00Z",
+  "cubefarm_semantic_guardians": {
+    "Living_Office": "Ryan",
+    "Factory_Projection": "Doctor13",
+    "CubeFarm_Core": "Amadeus"
+  },
+  "classification_categories": [
+    "UI/RUNTIME REUSABLE",
+    "SHARED CAPABILITY CONSUMER",
+    "BUSINESS-ONLY",
+    "TECH PRIMITIVE",
+    "QUARANTINE"
+  ],
+  "innovations": [
+    {
+      "innovation_id": "uupm_multi_theme",
+      "source": "20_Life_OS/ui_personalization.py",
+      "classification": "UI/RUNTIME REUSABLE",
+      "target": "10_Tech_OS/kernel/cubefarm_ui_primitives.py",
+      "status": "MIGRATED_AND_EXTENDED",
+      "notes": "UUPM/Multi-Theme and reusable design/configuration primitives for the Living Office."
+    },
+    {
+      "innovation_id": "browser_evidence_widget",
+      "source": "80_Agent-OS/capability_fabric/browser_bridge.py",
+      "classification": "SHARED CAPABILITY CONSUMER",
+      "target": "10_Tech_OS/kernel/cubefarm_widgets.py",
+      "status": "MIGRATED_AND_EXTENDED",
+      "notes": "Evidence/runtime-status widgets that can render Agent/Life/Business state from typed adapters."
+    }
+  ]
+}
