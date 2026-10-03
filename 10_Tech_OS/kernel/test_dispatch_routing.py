@@ -7,6 +7,7 @@ from pathlib import Path
 
 from dispatch_routing import (
     DispatchRoutingError,
+    migrate_mission_runtime,
     reserve_dispatch,
     route_reconcile_decision,
     select_runtime,
@@ -320,6 +321,24 @@ class DispatchRoutingTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(DispatchRoutingError, "newer than the latest dispatch"):
             route_reconcile_decision(self.db, self.work_id)
+
+    def test_migrate_mission_runtime_preserves_actor_and_returns_evidence_receipt(self):
+        res = migrate_mission_runtime(
+            self.db,
+            self.work_id,
+            target_runtime_id="claude-code-v2",
+            target_harness="claude_code",
+            reason="Load balancing to Claude",
+            actor_id="Ryan",
+            authority_envelope={"permissions": "full"},
+        )
+
+        self.assertEqual(res["status"], "SUCCESS")
+        self.assertEqual(res["actor_id"], "Ryan")
+        self.assertEqual(res["target_runtime_id"], "claude-code-v2")
+        self.assertIn("evidence_receipt", res)
+        self.assertEqual(res["evidence_receipt"]["actor_id"], "Ryan")
+        self.assertEqual(res["evidence_receipt"]["status"], "MIGRATED")
 
     def test_reopen_build_routes_to_ryan(self):
         self.insert_event(

@@ -128,3 +128,35 @@ def project_truth(
     if state not in TRUTH_STATES:
         raise RuntimeError(f"invalid truth state: {state}")
     return result
+
+
+def project_agent_os_display(
+    *,
+    actor_id: str,
+    institutional_role: str,
+    runtime_choice: str,
+    provider_name: str,
+    model_name: str,
+    total_token_budget: int,
+    consumed_tokens: int,
+) -> dict[str, Any]:
+    """Display runtime choice and remaining resource budget separately from identity."""
+    remaining_budget = max(0, total_token_budget - consumed_tokens)
+    return {
+        "schema": "aspace.agent-os-display.v1",
+        "identity": {
+            "actor_id": actor_id,
+            "institutional_role": institutional_role,
+        },
+        "runtime_choice": {
+            "runtime_id": runtime_choice,
+            "provider": provider_name,
+            "model": model_name,
+        },
+        "resource_budget": {
+            "total_token_budget": total_token_budget,
+            "consumed_tokens": consumed_tokens,
+            "remaining_budget": remaining_budget,
+            "quota_status": "EXHAUSTED" if remaining_budget == 0 else "OK",
+        },
+    }
