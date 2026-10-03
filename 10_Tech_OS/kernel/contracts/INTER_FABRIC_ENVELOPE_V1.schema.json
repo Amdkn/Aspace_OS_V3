@@ -99,11 +99,16 @@
         },
         "observed_at": { "type": "string", "format": "date-time" },
         "source_authority": { "type": "string", "minLength": 1 },
-        "freshness": { "type": ["number", "null"], "minimum": 0 },
+        "freshness": {
+          "type": "string",
+          "enum": ["FRESH", "STALE", "UNKNOWN"],
+          "description": "Freshness is orthogonal to epistemic truth; UNKNOWN freshness must not be coerced into a truth claim."
+        },
         "epistemic_state": {
           "type": "string",
-          "enum": ["CURRENT", "STALE", "UNKNOWN"]
-        }
+          "enum": ["KNOWN", "UNKNOWN", "CONTRADICTED"]
+        },
+        "age_seconds": { "type": ["number", "null"], "minimum": 0 }
       },
       "additionalProperties": false
     },

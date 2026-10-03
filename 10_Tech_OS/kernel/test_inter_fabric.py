@@ -51,8 +51,9 @@ class TestInterFabricEnvelope(unittest.TestCase):
                 "evidence_refs": ["runtime:receipt:1", "prov:22"],
                 "observed_at": self.now,
                 "source_authority": "runtime_presence",
-                "epistemic_state": "CURRENT",
-                "freshness": 30,
+                "epistemic_state": "KNOWN",
+                "freshness": "FRESH",
+                "age_seconds": 30,
             },
             "routing": {
                 "origin_layer": "Nardole",
@@ -159,7 +160,7 @@ class TestInterFabricEnvelope(unittest.TestCase):
         for field, value in (
             ("source_authority", "different-source"),
             ("observed_at", "2026-10-03T00:00:00+00:00"),
-            ("freshness", 999),
+            ("freshness", "STALE"),
         ):
             with self.subTest(field=field):
                 target = copy.deepcopy(self.base_envelope)
@@ -183,7 +184,7 @@ class TestInterFabricEnvelope(unittest.TestCase):
         source = copy.deepcopy(self.base_envelope)
         source["truth"]["epistemic_state"] = "UNKNOWN"
         target = copy.deepcopy(source)
-        target["truth"]["epistemic_state"] = "CURRENT"
+        target["truth"]["epistemic_state"] = "KNOWN"
 
         with self.assertRaises(InterFabricInvariantError):
             InterFabricEnvelope.validate_translation(source, target)
