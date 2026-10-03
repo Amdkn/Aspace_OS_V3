@@ -1,0 +1,30 @@
+{
+  "issue_id": "333",
+  "title": "Migrate the AI-native Capability Fabric out of Business OS",
+  "timestamp": "2026-10-03T00:00:00Z",
+  "status": "COMPLETED",
+  "contracts": {
+    "ccs_contract": "30_Business_OS/00_Architecture/contracts/CCS-333.md",
+    "architecture_doc": "80_Agent-OS/AI_NATIVE_CAPABILITY_FABRIC_V1.md",
+    "adapter_migration_matrix_md": "80_Agent-OS/capability_fabric/ADAPTER_MIGRATION_MATRIX.md",
+    "adapter_migration_matrix_json": "80_Agent-OS/capability_fabric/ADAPTER_MIGRATION_MATRIX.json"
+  },
+  "acceptance_verification": {
+    "durable_contract": "CCS-333.md and AI_NATIVE_CAPABILITY_FABRIC_V1.md present in repository",
+    "adapter_inventory_matrix": "ADAPTER_MIGRATION_MATRIX.md and ADAPTER_MIGRATION_MATRIX.json classify 24 adapters across Batch M0-M4",
+    "vertical_slice": "business_research_corpus executed through MCP, API, CLI, Skill, In-App, and Harness adapters sharing CapabilityContract and EffectReceipt",
+    "capability_enumeration": "AgentOS CapabilityRegistry enumerates capability_id, surface, adapter, runtime_binding, and evidence source",
+    "domain_ownership": "Business OS owns domain semantics in 30_Business_OS/capabilities/research_corpus.py while consuming shared 80_Agent-OS/capability_fabric/",
+    "harness_adapters": "Claude, Hermes, Jules, Antigravity, Codex, Qwen adapters share single capability executor without duplication",
+    "parent_evidence_links": {
+      "parent_323": "10_Tech_OS/reports/wargame_323_evidence_pack.json",
+      "parent_322": "10_Tech_OS/reports/ryan_recon_322_20261002.md",
+      "parent_318": "10_Tech_OS/reports/objective_318_closure_evidence.json"
+    }
+  },
+  "test_results": {
+    "capability_fabric_tests": "PASSED (20/20 tests)",
+    "browser_bridge_tests": "PASSED (5/5 tests)",
+    "tech_os_kernel_tests": "PASSED (152/152 tests)"
+  }
+}
