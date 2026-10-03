@@ -1,0 +1,6 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue": 410,
+  "reason": "Missing human auth/permissions to fork repository miuuyy/codex-chatgpt-web to Amdkn/codex-chatgpt-web on GitHub (Action requires external API keys or GitHub user session). The core code structure (SurfaceDriver contract) already exists in 80_Agent-OS/capability_fabric/browser_bridge.py as requested.",
+  "handoff_file": "_INBOX/handoffs/issue-410-blocker.md"
+}
