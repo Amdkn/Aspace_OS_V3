@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RecoveryPortContract.v1",
+  "description": "Local S3 recovery port capability schema",
+  "type": "object",
+  "required": [
+    "correlation_id",
+    "envelope",
+    "local_evidence",
+    "replay_semantics",
+    "retry_budget",
+    "capability_version",
+    "policy_version",
+    "return_to"
+  ],
+  "properties": {
+    "correlation_id": {
+      "type": "string"
+    },
+    "envelope": {
+      "type": "object"
+    },
+    "local_evidence": {
+      "type": "object",
+      "properties": {
+        "error_type": {
+          "type": "string"
+        },
+        "effect_state": {
+          "type": "string",
+          "enum": ["UNKNOWN", "FAILED"]
+        }
+      },
+      "required": ["error_type", "effect_state"]
+    },
+    "replay_semantics": {
+      "type": "string",
+      "enum": ["idempotent", "unsafe", "requires_revert"]
+    },
+    "retry_budget": {
+      "type": "object",
+      "properties": {
+        "max_attempts": {
+          "type": "integer"
+        },
+        "current_attempt": {
+          "type": "integer"
+        }
+      },
+      "required": ["max_attempts", "current_attempt"]
+    },
+    "capability_version": {
+      "type": "string"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "return_to": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}
