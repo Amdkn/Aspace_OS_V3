@@ -1,0 +1,9 @@
+{
+  "schema": "aspace.epic.closure.v1",
+  "epic_id": "#197",
+  "status": "CLOSED",
+  "reason": "All child issues (#213, #214, #215, #216, #217, #218) and cutover (#219) are genuinely accepted and proven.",
+  "evidence": "10_Tech_OS/reports/dc_sovereign_release_219_evidence.json",
+  "closed_by": "jules",
+  "date": "2026-10-02"
+}
