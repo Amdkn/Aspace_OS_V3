@@ -1,0 +1,80 @@
+{
+  "schema": "aspace.antigravity.global-agent-projection.v1",
+  "projected_at": "2026-09-28T11:17:22.075751+00:00",
+  "source_root": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents",
+  "destination_root": "C:\\Users\\amado\\.gemini\\config\\agents",
+  "agents": [
+    {
+      "name": "doctor13-kernel",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\doctor13-kernel\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\doctor13-kernel\\agent.md",
+      "sha256": "04e3a0346d55d81e683b3f478b6e49cdb8e6333e481ad2b0e982d1065b7e860c"
+    },
+    {
+      "name": "doctor11-life",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\doctor11-life\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\doctor11-life\\agent.md",
+      "sha256": "20954039106111618a287018adbd1de8f7c75804d8970829a05ea13935b0e271"
+    },
+    {
+      "name": "doctor12-buzz",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\doctor12-buzz\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\doctor12-buzz\\agent.md",
+      "sha256": "f394649f53629a71e3312359611e2fc9482a750217467fd61f183df54f9dee1d"
+    },
+    {
+      "name": "ryan-build",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\ryan-build\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\ryan-build\\agent.md",
+      "sha256": "98953e5c58e038e8ea7917b5ea3e878d199fb74b743a231d5c1fb6b4984e5cb9"
+    },
+    {
+      "name": "yaz-observe",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\yaz-observe\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\yaz-observe\\agent.md",
+      "sha256": "acfe1179ad0e95b73556574605f92527d2031dc385c34795d2273cbc9c42271b"
+    },
+    {
+      "name": "graham-state",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\graham-state\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\graham-state\\agent.md",
+      "sha256": "08a550d7d61af00ef7a9026c36075273c8beb63d00261455b804a37809b25b5f"
+    },
+    {
+      "name": "amy-interface",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\amy-interface\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\amy-interface\\agent.md",
+      "sha256": "9867aaf5a2fb5c285da10f5216e7e97eeb993ea4fa2e783234f45ff813308193"
+    },
+    {
+      "name": "rory-persistence",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\rory-persistence\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\rory-persistence\\agent.md",
+      "sha256": "3ffcbb6b22642bd4176a55d0da60c2d93df4cd501826c26d6b5cc05a2de757cc"
+    },
+    {
+      "name": "river-flow",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\river-flow\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\river-flow\\agent.md",
+      "sha256": "233219085a504ba423fbc8918ce7b14aa74bf3e73405d306a9a9182cee5fb060"
+    },
+    {
+      "name": "bill-research",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\bill-research\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\bill-research\\agent.md",
+      "sha256": "4be6fe48059909c26a2ff2fdea09b8de591ce2e7cfe727f9b7a72882f88850c5"
+    },
+    {
+      "name": "clara-design-forge",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\clara-design-forge\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\clara-design-forge\\agent.md",
+      "sha256": "96d1723a50e8b01096cac6cc72d74d562bde82d5f3fe327b7e9a693bd67e07c4"
+    },
+    {
+      "name": "nardole-dispatch",
+      "source": "C:\\Users\\amado\\orca\\workspaces\\ASpace_OS_V3\\Agy\\.agents\\agents\\nardole-dispatch\\agent.md",
+      "destination": "C:\\Users\\amado\\.gemini\\config\\agents\\nardole-dispatch\\agent.md",
+      "sha256": "4ee4e0f77fdd59906a4ca622eb0f2e965d9a84c227f72df49e109e1bb5fcdb52"
+    }
+  ]
+}
