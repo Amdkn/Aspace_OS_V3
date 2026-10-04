@@ -239,6 +239,12 @@ class AntiAmnesiaEngine:
         source_authority: str = "human-intent",
     ):
         self.compiler = compiler or ConversationIntentCompiler()
+        if temporal_graph is None:
+            try:
+                from temporal_truth.temporal_truth import TemporalCanonGraph
+            except ImportError:
+                from .temporal_truth.temporal_truth import TemporalCanonGraph
+            temporal_graph = TemporalCanonGraph()
         self.temporal_graph = temporal_graph
         self.temporal_scope = temporal_scope
         self.source_authority = source_authority
@@ -293,7 +299,7 @@ class AntiAmnesiaEngine:
             or record.metadata.get("observed_at")
             or datetime.now(timezone.utc).isoformat()
         )
-        scope = temporal_scope or record.metadata.get("scope") or core or self.temporal_scope
+        scope = temporal_scope or record.metadata.get("scope") or self.temporal_scope
         authority = (
             source_authority
             or record.metadata.get("source_authority")
@@ -318,6 +324,7 @@ class AntiAmnesiaEngine:
                 "is_commitment": record.is_commitment,
                 "summary": record.summary,
                 "verbatim": record.verbatim,
+                "projection_surfaces": [p.surface for p in record.projections],
             },
             "evidence_refs": [evidence_ref],
             "temporal_state": "UNKNOWN" if record.ipbd_kind == "UNKNOWN" else "CURRENT",
