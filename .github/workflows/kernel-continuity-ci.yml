@@ -48,6 +48,9 @@ jobs:
             10_Tech_OS/kernel/test_inter_fabric.py \
             10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py \
             10_Tech_OS/kernel/test_embodied_holon_migration.py \
+            10_Tech_OS/kernel/anti_amnesia.py \
+            10_Tech_OS/kernel/test_anti_amnesia.py \
+            10_Tech_OS/kernel/test_anti_amnesia_temporal.py \
             10_Tech_OS/kernel/temporal_truth/packets.py \
             10_Tech_OS/kernel/temporal_truth/test_packets.py \
             10_Tech_OS/kernel/temporal_truth/temporal_truth.py \
@@ -79,3 +82,6 @@ jobs:
         run: python -m unittest test_embodied_holon_migration.py
       - name: Temporal Truth G6 Agent OS capability exposure
         run: python 80_Agent-OS/capability_fabric/test_temporal_adapters.py
+      - name: Temporal Truth G7 Anti-Amnesia integration
+        working-directory: 10_Tech_OS/kernel
+        run: python -m unittest test_anti_amnesia.py test_anti_amnesia_temporal.py

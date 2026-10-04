@@ -7,6 +7,7 @@ import dataclasses
 import json
 import uuid
 import re
+from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
 
 
@@ -38,6 +39,7 @@ class CompiledIntentRecord:
     summary: str
     projections: List[DurableProjection]
     metadata: Dict[str, Any]
+    temporal_claim_id: Optional[str] = None
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -50,6 +52,7 @@ class CompiledIntentRecord:
             "summary": self.summary,
             "projections": [dataclasses.asdict(p) for p in self.projections],
             "metadata": self.metadata,
+            "temporal_claim_id": self.temporal_claim_id,
         }
 
 
@@ -221,10 +224,30 @@ class ConversationIntentCompiler:
 
 
 class AntiAmnesiaEngine:
-    """Anti-Amnesia engine ensuring conversation intent is durable and reconstructible."""
+    """Anti-Amnesia engine ensuring conversation intent is durable and reconstructible.
 
-    def __init__(self, compiler: Optional[ConversationIntentCompiler] = None):
+    When a TemporalCanonGraph-compatible object is supplied, the raw intent is
+    recorded as source truth before any projection is consumed.  GitHub,
+    Linear, GWS, WorkGraph and Supabase remain projections of that intent.
+    """
+
+    def __init__(
+        self,
+        compiler: Optional[ConversationIntentCompiler] = None,
+        temporal_graph: Optional[Any] = None,
+        temporal_scope: str = "conversation-intent",
+        source_authority: str = "human-intent",
+    ):
         self.compiler = compiler or ConversationIntentCompiler()
+        if temporal_graph is None:
+            try:
+                from temporal_truth.temporal_truth import TemporalCanonGraph
+            except ImportError:
+                from .temporal_truth.temporal_truth import TemporalCanonGraph
+            temporal_graph = TemporalCanonGraph()
+        self.temporal_graph = temporal_graph
+        self.temporal_scope = temporal_scope
+        self.source_authority = source_authority
         self.store: List[CompiledIntentRecord] = []
 
     def record_intent(
@@ -235,6 +258,9 @@ class AntiAmnesiaEngine:
         override_kind: Optional[str] = None,
         core: Optional[str] = None,
         metadata: Optional[Dict[str, Any]] = None,
+        observed_at: Optional[str] = None,
+        temporal_scope: Optional[str] = None,
+        source_authority: Optional[str] = None,
     ) -> CompiledIntentRecord:
         record = self.compiler.compile(
             verbatim=verbatim,
@@ -244,8 +270,133 @@ class AntiAmnesiaEngine:
             core=core,
             metadata=metadata,
         )
+
+        if self.temporal_graph is not None:
+            self._record_temporal_claim(
+                record,
+                observed_at=observed_at,
+                temporal_scope=temporal_scope,
+                source_authority=source_authority,
+                core=core,
+            )
+
+        # The in-memory record and its projection intents are exposed only after
+        # the source claim has been accepted by Temporal Truth.
         self.store.append(record)
         return record
+
+    def _record_temporal_claim(
+        self,
+        record: CompiledIntentRecord,
+        *,
+        observed_at: Optional[str],
+        temporal_scope: Optional[str],
+        source_authority: Optional[str],
+        core: Optional[str],
+    ) -> None:
+        source_time = (
+            observed_at
+            or record.metadata.get("observed_at")
+            or datetime.now(timezone.utc).isoformat()
+        )
+        scope = temporal_scope or record.metadata.get("scope") or self.temporal_scope
+        authority = (
+            source_authority
+            or record.metadata.get("source_authority")
+            or self.source_authority
+        )
+        evidence_ref = record.source_ref or f"ipbd:{record.intent_id}"
+        claim_id = f"intent:{record.intent_id}"
+
+        claim = {
+            "schema": "aspace.temporal-claim.v1",
+            "claim_id": claim_id,
+            "source_ref": evidence_ref,
+            "source_authority": authority,
+            "recorded_at": datetime.now(timezone.utc).isoformat(),
+            "observed_at": source_time,
+            "scope": str(scope),
+            "subject": f"intent:{record.intent_id}",
+            "predicate": "ipbd.intent",
+            "assertion": {
+                "intent_id": record.intent_id,
+                "ipbd_kind": record.ipbd_kind,
+                "is_commitment": record.is_commitment,
+                "summary": record.summary,
+                "verbatim": record.verbatim,
+                "projection_surfaces": [p.surface for p in record.projections],
+            },
+            "evidence_refs": [evidence_ref],
+            "temporal_state": "UNKNOWN" if record.ipbd_kind == "UNKNOWN" else "CURRENT",
+            "correlation_id": record.correlation_id,
+        }
+        self.temporal_graph.ingest_claim(claim)
+        record.temporal_claim_id = claim_id
+
+    def temporal_claims_by_correlation(
+        self, correlation_id: str
+    ) -> List[Dict[str, Any]]:
+        if self.temporal_graph is None:
+            return []
+        claims = [
+            claim.copy()
+            for claim in self.temporal_graph.claims.values()
+            if claim.get("correlation_id") == correlation_id
+        ]
+        return sorted(
+            claims,
+            key=lambda claim: (
+                str(claim.get("observed_at") or ""),
+                str(claim.get("recorded_at") or ""),
+                str(claim.get("claim_id") or ""),
+            ),
+        )
+
+    def compile_context_capsule_for_intent(
+        self,
+        *,
+        correlation_id: str,
+        holon_id: str,
+        mission_id: str,
+        authority_envelope: Dict[str, Any],
+        return_to: Dict[str, Any],
+        t: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        if self.temporal_graph is None:
+            raise ValueError("Temporal graph is required for intent context compilation")
+        claims = self.temporal_claims_by_correlation(correlation_id)
+        if not claims:
+            raise ValueError(f"No temporal intent for correlation_id={correlation_id}")
+        try:
+            from temporal_truth.compiler import ContextCompiler
+        except ImportError:
+            from .temporal_truth.compiler import ContextCompiler
+
+        claim_ids = [claim["claim_id"] for claim in claims]
+        evidence_refs = list(
+            dict.fromkeys(
+                ref
+                for claim in claims
+                for ref in claim.get("evidence_refs", [])
+            )
+        )
+        compiler = ContextCompiler(self.temporal_graph)
+        return compiler.compile_context_capsule(
+            holon_id=holon_id,
+            mission_id=mission_id,
+            correlation_id=correlation_id,
+            scope="conversation-intent",
+            authority_envelope=authority_envelope,
+            workgraph_neighborhood={"intent_claim_refs": claim_ids},
+            evidence_head=evidence_refs,
+            return_to=return_to,
+            t=t,
+            anthology_window=claim_ids,
+            source_slice={
+                "correlation_id": correlation_id,
+                "intent_claim_refs": claim_ids,
+            },
+        )
 
     def get_by_correlation_id(self, correlation_id: str) -> List[CompiledIntentRecord]:
         return [r for r in self.store if r.correlation_id == correlation_id]
