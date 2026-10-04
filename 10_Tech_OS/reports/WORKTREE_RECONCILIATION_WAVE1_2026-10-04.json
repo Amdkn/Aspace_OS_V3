@@ -1,0 +1,116 @@
+{
+  "schema": "aspace.worktree-reconciliation-receipt.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "wave": 1,
+  "policy_ref": "docs/governance/GIT_BRANCH_WORKTREE_LIFECYCLE_V4.md",
+  "start_state": {
+    "worktrees": 49,
+    "local_branches": 59,
+    "remote_tracking_refs": 117
+  },
+  "end_state": {
+    "worktrees": 27,
+    "local_branches": 41,
+    "remote_tracking_refs": 114
+  },
+  "clean_retire": [
+    "fix/jules-continuation-coverage",
+    "fix/dc-startup-readiness-219",
+    "fix/dc-p2-convergence-20260929",
+    "fix/dc-gateway-script-import-2026-09-30",
+    "subagent-Graham-State-Specialist-graham-state-63003066",
+    "subagent-Ryan-Build-Specialist-ryan-build-057a0b76",
+    "subagent-Yaz-Observe-Specialist-yaz-observe-8dfa775f",
+    "subagent-Business-Manager-doctor12-buzz-49aaebc7",
+    "subagent-Kernel-Manager-doctor13-kernel-41a4f5bd",
+    "subagent-Life-Manager-doctor11-life-3e7cfb2a",
+    "recover/jules-232-424540",
+    "recover/jules-289-417360",
+    "recover/jules-311-389428",
+    "recover/jules-316-970788",
+    "feat/502-g5-embodied-holon-migration",
+    "review/agy-dc-213-2026-09-29"
+  ],
+  "archived_then_retired": [
+    {
+      "source": "recover/jules-314-425672",
+      "tag": "archive/recover-jules-314-dirty-2026-10-04",
+      "sha": "9e44e7ca77eb1471f08ea8c4b95173deffe65372",
+      "reason": "post-merge dirty state was historical/superseded by current main; preserved before retirement"
+    },
+    {
+      "source": "fix/desktop-commander-resilience-10401282759276955977",
+      "tag": "archive/dc-sovereign-case-collision-2026-10-04",
+      "sha": "8b2b54853cebce6c6ca475344f6f6c6582e30912",
+      "reason": "branch-only Windows case collision DC.bat/dc.bat; main contains only canonical DC.bat"
+    },
+    {
+      "source": "detached PR #332 rebase",
+      "tag": "archive/pr332-truth-projection-rebase-2026-10-04",
+      "sha": "8d04227afba8ea385b9036705091bad837deee6b",
+      "reason": "closed-unmerged PR head with unique history"
+    },
+    {
+      "source": "MiroFishCanaryRyan / PR #204",
+      "tag": "archive/mirofish-pr204-canary-2026-10-04",
+      "sha": "255c7b3f01e8cf3c0b5f701aa6f2e58ca268c0c6",
+      "reason": "closed-unmerged structural canary; dirty state was EOL-only"
+    },
+    {
+      "source": "Ryan-DC-P6",
+      "tag": "archive/dc-p6-local-salvage-2026-10-04",
+      "sha": "ff920e62a37eab1c81338818d482c035262742bf",
+      "reason": "local-only DC commit plus post-commit modifications preserved in archive commit"
+    }
+  ],
+  "special_reconciliation": [
+    {
+      "source": "Ryan-DC-P3",
+      "result": "retired",
+      "details": [
+        "Git worktree metadata was removed while filesystem deletion initially failed",
+        "local branch was removed after proof of zero unique commits",
+        "remaining directory was empty",
+        "three stale Orca bash shells from 2026-10-02 held the directory as cwd",
+        "only that bash subtree was terminated; Orca daemon remained alive",
+        "orphan directory was then removed"
+      ]
+    }
+  ],
+  "protected_not_touched": [
+    {
+      "worktree": "C:/Users/amado/ASpace_OS_V3",
+      "reason": "dirty root main; no reset/pull/clean permitted until useful state is routed out"
+    },
+    {
+      "worktree": "C:/Users/amado/ASpace_OS_V3/.worktree_review_233",
+      "reason": "8965 dirty entries; requires separate forensic/sparse-worktree analysis"
+    },
+    {
+      "branch": "review/agy-bill-224-2026-09-29",
+      "reason": "8979 dirty entries; protected for separate analysis"
+    },
+    {
+      "branch": "feat/agent-os-235-runtime-presence",
+      "reason": "worktree locked initializing; not evaluated for retirement in Wave 1"
+    },
+    {
+      "class": "Amdkn/*",
+      "reason": "persistent institutional home refs excluded from cleanup"
+    }
+  ],
+  "safety_invariants": [
+    "No reset --hard, bulk stash, pull, or clean was performed on root main.",
+    "No dirty worktree was discarded without either proving the dirt was non-semantic or creating a durable archive tag.",
+    "Merged-PR evidence, patch/reachability evidence, local dirty state, and process liveness were checked before retirement.",
+    "Orca daemon was not terminated during stale shell cleanup."
+  ],
+  "next_wave": [
+    "forensically classify .worktree_review_233 and Agy-Bill dirty review worktrees",
+    "inspect locked feat/agent-os-235-runtime-presence",
+    "classify remaining old recovery and audit worktrees",
+    "separate persistent Amdkn/* homes from temporary mission worktrees",
+    "only after useful state is routed out, converge root main to a clean mirror of origin/main"
+  ]
+}
