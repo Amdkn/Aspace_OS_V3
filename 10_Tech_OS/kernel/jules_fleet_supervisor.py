@@ -16,7 +16,7 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Any, Callable, Iterable
+from typing import Any, Callable, Iterable, Mapping
 
 from fleet_ownership import bind_session, reserve
 
@@ -29,6 +29,56 @@ ACTIVE_STATES = {
     "IN_PROGRESS",
 }
 TERMINAL_STATES = {"COMPLETED", "FAILED", "CANCELLED", "CANCELED"}
+DEFAULT_WORKSPACE_REGISTRY = Path(__file__).resolve().parents[2] / "ASPACE_WORKSPACE_REGISTRY.json"
+
+
+def _flatten_repo_configs(node: Any) -> list[dict[str, Any]]:
+    configs: list[dict[str, Any]] = []
+    if isinstance(node, dict):
+        if isinstance(node.get("repo"), str):
+            configs.append(node)
+        for value in node.values():
+            configs.extend(_flatten_repo_configs(value))
+    elif isinstance(node, list):
+        for value in node:
+            configs.extend(_flatten_repo_configs(value))
+    return configs
+
+
+def load_workspace_source_routes(
+    registry_path: Path = DEFAULT_WORKSPACE_REGISTRY,
+) -> dict[str, tuple[str, str | None]]:
+    """Build provider source redirects from the durable workspace registry.
+
+    Only explicit local_only repos are redirected, and only when their registry
+    evidence names a durable GitHub backing via desktop_snapshot.sync.
+    """
+    if not registry_path.exists():
+        return {}
+    data = json.loads(registry_path.read_text(encoding="utf-8-sig"))
+    configs = _flatten_repo_configs(data.get("repositories", {}))
+    by_repo = {
+        str(config["repo"]): config
+        for config in configs
+        if isinstance(config.get("repo"), str)
+    }
+    routes: dict[str, tuple[str, str | None]] = {}
+    for repo, config in by_repo.items():
+        source = f"sources/github/{repo}"
+        if config.get("bootstrap") != "local_only":
+            continue
+        sync = str(config.get("desktop_snapshot", {}).get("sync") or "")
+        match = re.fullmatch(r"pushed_to_(.+/.+)", sync)
+        if not match:
+            continue
+        target_repo = match.group(1)
+        if target_repo not in by_repo:
+            continue
+        # Preserve the caller's requested branch when possible. The target
+        # repository is the code backing; branch existence is a separate
+        # preflight concern.
+        routes[source] = (f"sources/github/{target_repo}", None)
+    return routes
 
 
 @dataclasses.dataclass(frozen=True)
@@ -83,6 +133,8 @@ class JulesFleetSupervisor:
         *,
         reports_dir: Path | None = None,
         max_retries_per_work_id: int = 3,
+        source_routes: Mapping[str, tuple[str, str | None]] | None = None,
+        source_preflight: Callable[[str, str], bool] | None = None,
     ) -> None:
         self.profiles = {p.profile_id: p for p in profiles if p.enabled}
         if not self.profiles:
@@ -91,6 +143,20 @@ class JulesFleetSupervisor:
         self.max_retries = max_retries_per_work_id
         self.retry_tracker: dict[str, int] = {}
         self.active_leases: dict[str, str] = {}
+        self.source_routes = dict(
+            load_workspace_source_routes()
+            if source_routes is None
+            else source_routes
+        )
+        self.source_preflight = source_preflight
+
+    def resolve_source(
+        self, source: str, starting_branch: str
+    ) -> tuple[str, str]:
+        target_source, target_branch = self.source_routes.get(
+            source, (source, None)
+        )
+        return target_source, target_branch or starting_branch
 
     def _request(
         self,
@@ -218,8 +284,23 @@ class JulesFleetSupervisor:
         source: str,
         starting_branch: str = "main",
     ) -> dict[str, Any]:
-        if source not in profile.allowed_sources:
-            raise ValueError(f"source not authorized for profile {profile.profile_id}: {source}")
+        requested_source = source
+        source, starting_branch = self.resolve_source(source, starting_branch)
+        if (
+            requested_source not in profile.allowed_sources
+            and source not in profile.allowed_sources
+        ):
+            raise ValueError(
+                f"source not authorized for profile {profile.profile_id}: "
+                f"{requested_source} -> {source}"
+            )
+        if self.source_preflight is not None and not self.source_preflight(
+            source, starting_branch
+        ):
+            raise ValueError(
+                f"source preflight failed before Jules session creation: "
+                f"{source}@{starting_branch}"
+            )
         return self._request(
             profile,
             "sessions",
@@ -270,12 +351,13 @@ class JulesFleetSupervisor:
                 if self.issue_claimed(issue_number, all_active):
                     queue.remove(item)
                     continue
+                item_source = str(item.get("source") or source)
                 session = self.create_session(
                     profile,
                     issue_number=issue_number,
                     issue_title=str(item["title"]),
                     prompt=prompt_builder(item),
-                    source=source,
+                    source=item_source,
                     starting_branch=str(item.get("starting_branch", "main")),
                 )
                 launched.append(

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+import json
 import pathlib
+import tempfile
 import unittest
 from unittest.mock import patch
 
@@ -116,6 +118,144 @@ class TestJulesFleetSupervisor(unittest.TestCase):
         )
         self.assertTrue(result["accepted"])
         self.assertEqual(closed, ["418"])
+
+
+    def test_registry_redirects_local_only_repo_to_durable_backing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            registry = pathlib.Path(tmp) / "registry.json"
+            registry.write_text(
+                json.dumps(
+                    {
+                        "repositories": {
+                            "satellites": {
+                                "agent_os": {
+                                    "repo": "Amdkn/Agent-OS",
+                                    "bootstrap": "local_only",
+                                    "desktop_snapshot": {
+                                        "sync": "pushed_to_Amdkn/Agent-OS-Desktop"
+                                    },
+                                },
+                                "agent_os_desktop": {
+                                    "repo": "Amdkn/Agent-OS-Desktop",
+                                    "bootstrap": "auto",
+                                },
+                            }
+                        }
+                    }
+                ),
+                encoding="utf-8",
+            )
+            routes = jfs.load_workspace_source_routes(registry)
+
+        self.assertEqual(
+            routes["sources/github/Amdkn/Agent-OS"],
+            ("sources/github/Amdkn/Agent-OS-Desktop", None),
+        )
+
+        profile = jfs.JulesProfileConfig(
+            profile_id="OMK",
+            api_key="k",
+            concurrency_cap=3,
+            allowed_sources=("sources/github/Amdkn/Agent-OS",),
+        )
+        supervisor = jfs.JulesFleetSupervisor(
+            [profile],
+            source_routes=routes,
+        )
+        with patch.object(
+            supervisor,
+            "_request",
+            return_value={"id": "s1", "state": "QUEUED"},
+        ) as req:
+            supervisor.create_session(
+                profile,
+                issue_number=1,
+                issue_title="Agent OS",
+                prompt="execute",
+                source="sources/github/Amdkn/Agent-OS",
+                starting_branch="main",
+            )
+
+        body = req.call_args.kwargs["body"]
+        self.assertEqual(
+            body["sourceContext"]["source"],
+            "sources/github/Amdkn/Agent-OS-Desktop",
+        )
+        self.assertEqual(
+            body["sourceContext"]["githubRepoContext"]["startingBranch"],
+            "main",
+        )
+
+    def test_source_preflight_blocks_session_creation(self):
+        profile = jfs.JulesProfileConfig(
+            profile_id="OMK",
+            api_key="k",
+            concurrency_cap=3,
+            allowed_sources=("sources/github/Amdkn/empty",),
+        )
+        supervisor = jfs.JulesFleetSupervisor(
+            [profile],
+            source_routes={},
+            source_preflight=lambda source, branch: False,
+        )
+        with patch.object(supervisor, "_request") as req:
+            with self.assertRaisesRegex(ValueError, "preflight failed"):
+                supervisor.create_session(
+                    profile,
+                    issue_number=1,
+                    issue_title="empty repo",
+                    prompt="execute",
+                    source="sources/github/Amdkn/empty",
+                    starting_branch="main",
+                )
+        req.assert_not_called()
+
+    def test_refill_uses_per_work_item_source(self):
+        profile = jfs.JulesProfileConfig(
+            profile_id="OMK",
+            api_key="k",
+            concurrency_cap=1,
+            allowed_sources=(
+                "sources/github/Amdkn/Aspace_OS_V3",
+                "sources/github/Amdkn/cubefarm",
+            ),
+        )
+        supervisor = jfs.JulesFleetSupervisor(
+            [profile],
+            source_routes={},
+        )
+        with patch.object(
+            supervisor,
+            "inventory",
+            return_value=jfs.FleetInventory(
+                {"OMK": jfs.JulesProfileState("OMK", True, 0, 1, 1, 2)}
+            ),
+        ), patch.object(
+            supervisor,
+            "list_sessions",
+            return_value=[],
+        ), patch.object(
+            supervisor,
+            "create_session",
+            return_value={"id": "new", "state": "QUEUED"},
+        ) as create:
+            launched = supervisor.refill(
+                [
+                    {
+                        "issue_number": 421,
+                        "title": "CubeFarm",
+                        "source": "sources/github/Amdkn/cubefarm",
+                    }
+                ],
+                source="sources/github/Amdkn/Aspace_OS_V3",
+                prompt_builder=lambda item: item["title"],
+            )
+
+        self.assertEqual(len(launched), 1)
+        self.assertEqual(
+            create.call_args.kwargs["source"],
+            "sources/github/Amdkn/cubefarm",
+        )
 
 
 if __name__ == "__main__":

@@ -48,6 +48,8 @@ jobs:
             10_Tech_OS/kernel/test_inter_fabric.py \
             10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py \
             10_Tech_OS/kernel/test_embodied_holon_migration.py \
+            10_Tech_OS/kernel/jules_fleet_supervisor.py \
+            10_Tech_OS/kernel/test_jules_fleet_supervisor.py \
             10_Tech_OS/kernel/anti_amnesia.py \
             10_Tech_OS/kernel/test_anti_amnesia.py \
             10_Tech_OS/kernel/test_anti_amnesia_temporal.py \
@@ -65,6 +67,9 @@ jobs:
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
+      - name: Jules fleet source routing
+        working-directory: 10_Tech_OS/kernel
+        run: python -m unittest test_jules_fleet_supervisor.py
       - name: Temporal handoff packet suite
         working-directory: 10_Tech_OS/kernel/temporal_truth
         run: python -m unittest test_packets.py
