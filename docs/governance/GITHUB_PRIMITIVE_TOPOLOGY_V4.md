@@ -132,7 +132,10 @@ If not, prefer Discussion / Wiki / Project instead.
 
 ## Transport rule
 
-Use ChatGPT native GitHub integration for repository-native coordination whenever available.
-Do not consume DC/AMF quota to tunnel ordinary GitHub operations.
+Use ChatGPT native GitHub integration for repository-native coordination whenever it exposes the required primitive.
 
-DC/AMF is reserved for machine-local effects and evidence.
+Use DC/AMF deliberately when the native integration does not expose a required GitHub primitive or when local automation materially reduces operator effort. Valid examples include GitHub Projects V2, Wiki/Discussion automation, or repository operations that require the authenticated local GitHub CLI.
+
+Do not waste DC/AMF quota duplicating an operation already available natively; do use its quota to bridge genuine capability gaps.
+
+DC/AMF also remains the authority path for machine-local effects and evidence.
