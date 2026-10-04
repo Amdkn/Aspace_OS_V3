@@ -1,0 +1,52 @@
+{
+  "schema": "EmbodiedHolonRound2Evidence.v1",
+  "issue": 318,
+  "observed_at_local": "2026-10-01T21:36:34-04:00",
+  "result": "PASS_CONTEXT_ADAPTERS",
+  "native_adapters": {
+    "backup": "C:/Users/amado/.aspace/backups/native-holon-adapters-20261001-213634-0400",
+    "claude": {
+      "Ryan": "BA789D6D7205D15AF4C114E8E61EC9D667AB6C9B022A3BB6AB0C417675BCCF06",
+      "Yaz": "508F0FB609693BDBACD56BD6EE90FF063A250D2B26C365660D5FA3332FBFF2CC",
+      "Graham": "22F0026121EAE5C599616BAE6F4B906DC20C66D9A1F2F54C2EB0CF64B666AE0F"
+    },
+    "codex": {
+      "Ryan": "084EB6B9E4CEF17A733A68C99620C34F1DF9137D9C7D9739400638736B9C9499",
+      "Yaz": "4E116A525EB45C4FA95A0F277160677C9C94D1536B403384626F7B54C224E089",
+      "Graham": "5DA050704B322B4D082D4DA8392F0CFB4BFD780EE87AE192E49BAB1C3F28884C"
+    },
+    "antigravity": "distinct adapter pointers written under each local embodiment"
+  },
+  "mission_context_envelopes": {
+    "mode": "READ_ONLY_SIMULATION",
+    "correlation_id": "gh318-round2-sim-20261001",
+    "Ryan": {
+      "harness": "hermes_orca",
+      "identity_hash": "b79ffba2252511c15351060196b1172e872563c0ea3ae942d1c83c39b44459e5",
+      "context_hash": "8acf9b5952490cedf260dee831bb8c33fad0ccd414b64deb6cf5bc494556c04f"
+    },
+    "Yaz": {
+      "harness": "antigravity",
+      "identity_hash": "797eeb3777e00328ca962de67802a5abbd29cba6baa8e030012d37df7e5f4929",
+      "context_hash": "4fc240fcb0def1b26427dcf397fbb0f16b5eaa27738ad539221655a9565f1367"
+    },
+    "Graham": {
+      "harness": "codex",
+      "identity_hash": "f9cdc91c96c947e6614002c940f9a584c20dca4d00bce6ebf46869f67232e6a2",
+      "context_hash": "1cec8228ee35ac9045379c2842fdfd8a4e145b1b880c4e0006b14bb3c0bbf7e5"
+    },
+    "authority_hash": "8aa34b70015b5242d7dc0b4785929a7f94bd1ee92d2d40e653fc548c8734f016"
+  },
+  "safety": {
+    "consequential_compile_without_correlation_work_return_to": "REJECTED",
+    "exit_code": 1,
+    "fail_closed": true
+  },
+  "findings": [
+    "Native Claude and Codex agent projections are now distinct instead of model-wrapper-only or generic agents.",
+    "The adapters point back to durable Home Embodiment manifests and CURRENT MissionContextEnvelope rather than embedding a full identity in one prompt.",
+    "The Doctor13 companions currently share the same generic constitutional authority list; role-specific authority refinement is a future gate, not hidden as solved.",
+    "No real WorkGraph claim or runtime failover occurred in Round 2."
+  ],
+  "next_gate": "NON_DESTRUCTIVE_CANARY"
+}

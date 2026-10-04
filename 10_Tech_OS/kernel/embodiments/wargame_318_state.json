@@ -1,0 +1,74 @@
+{
+  "issue": 318,
+  "state_machine": [
+    "SPECIFIED",
+    "RECONNAISSANCE",
+    "MATERIALIZED",
+    "CONTEXT_ADAPTERS",
+    "NON_DESTRUCTIVE_CANARY",
+    "CONTROLLED_FAILOVER",
+    "ADVERSARIAL",
+    "CERTIFIED",
+    "PROJECTED"
+  ],
+  "completed": [
+    "SPECIFIED",
+    "RECONNAISSANCE",
+    "MATERIALIZED",
+    "CONTEXT_ADAPTERS"
+  ],
+  "current": "NON_DESTRUCTIVE_CANARY",
+  "continuation_policy": {
+    "default": "continue automatically through bounded reversible steps",
+    "stop_only_for": [
+      "irreversible external effect",
+      "authority boundary change",
+      "credential or consent gate",
+      "unresolved UNKNOWN effect",
+      "constitutional choice requiring S2/S1/A0"
+    ],
+    "never_stop_because": [
+      "the user did not provide a perfect continuation prompt",
+      "a session ended",
+      "a runtime changed",
+      "the next step is not explicitly enumerated in chat"
+    ]
+  },
+  "round2": {
+    "native_adapter_backup": "C:/Users/amado/.aspace/backups/native-holon-adapters-20261001-213634-0400",
+    "claude_agents": [
+      "C:/Users/amado/.claude/agents/aspace-ryan.md",
+      "C:/Users/amado/.claude/agents/aspace-yaz.md",
+      "C:/Users/amado/.claude/agents/aspace-graham.md"
+    ],
+    "codex_agents": [
+      "C:/Users/amado/.codex/agents/aspace-ryan.toml",
+      "C:/Users/amado/.codex/agents/aspace-yaz.toml",
+      "C:/Users/amado/.codex/agents/aspace-graham.toml"
+    ],
+    "simulation_envelopes": {
+      "Ryan": "8acf9b5952490cedf260dee831bb8c33fad0ccd414b64deb6cf5bc494556c04f",
+      "Yaz": "4fc240fcb0def1b26427dcf397fbb0f16b5eaa27738ad539221655a9565f1367",
+      "Graham": "1cec8228ee35ac9045379c2842fdfd8a4e145b1b880c4e0006b14bb3c0bbf7e5"
+    },
+    "identity_hashes": {
+      "Ryan": "b79ffba2252511c15351060196b1172e872563c0ea3ae942d1c83c39b44459e5",
+      "Yaz": "797eeb3777e00328ca962de67802a5abbd29cba6baa8e030012d37df7e5f4929",
+      "Graham": "f9cdc91c96c947e6614002c940f9a584c20dca4d00bce6ebf46869f67232e6a2"
+    },
+    "authority_hash_shared": "8aa34b70015b5242d7dc0b4785929a7f94bd1ee92d2d40e653fc548c8734f016",
+    "fail_closed_without_work_identity": true,
+    "observation": "The three identities compile distinctly, while the current Companion Constitution still gives the Doctor13 trio the same generic authority list. This is acceptable for the read-only canary but remains a later authority-envelope refinement."
+  },
+  "next_actions": [
+    "start Ryan/Yaz/Graham Hermes/Orca sessions non-destructively using canonical profiles",
+    "verify each runtime reads its own home manifest and CURRENT simulation envelope",
+    "record session lineage without claiming consequential WorkGraph execution",
+    "then create a real predicted WorkGraph canary before controlled Ryan failover"
+  ],
+  "last_evidence": {
+    "round1_pr": 320,
+    "round1_merge": "b5dd12a6fa77b0ace590f46afe6e77117fc42b6f",
+    "round1_local_backup": "C:/Users/amado/.aspace/backups/embodiment-round1-20261001-212853-0400"
+  }
+}
