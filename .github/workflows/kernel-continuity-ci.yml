@@ -52,7 +52,8 @@ jobs:
             10_Tech_OS/kernel/temporal_truth/test_temporal_truth.py \
             10_Tech_OS/kernel/temporal_truth/test_canary.py \
             10_Tech_OS/kernel/temporal_truth/reconciliation.py \
-            10_Tech_OS/kernel/temporal_truth/test_reconciliation.py
+            10_Tech_OS/kernel/temporal_truth/test_reconciliation.py \
+            10_Tech_OS/kernel/temporal_truth/test_context_compiler.py
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
@@ -65,3 +66,6 @@ jobs:
       - name: Temporal Truth G3 Rory reconciliation
         working-directory: 10_Tech_OS/kernel/temporal_truth
         run: python -m unittest test_reconciliation.py
+      - name: Temporal Truth G4 Context Compiler
+        working-directory: 10_Tech_OS/kernel/temporal_truth
+        run: python -m unittest test_context_compiler.py
