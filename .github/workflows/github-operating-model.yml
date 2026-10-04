@@ -1,0 +1,27 @@
+name: GitHub Operating Model Advisor
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  teach-operating-model:
+    name: advisory-git-ci-cd-model
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: |
+            scripts/github_operating_model_advisor.py
+          sparse-checkout-cone-mode: false
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - name: Explain and inspect the current PR lifecycle
+        run: python scripts/github_operating_model_advisor.py
