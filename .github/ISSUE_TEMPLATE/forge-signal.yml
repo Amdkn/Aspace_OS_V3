@@ -1,7 +1,25 @@
-name: A'Space Continuous Mission Signal
-description: Capture a bounded signal and route it into an existing canonical mission without duplicating work
+name: A'Space Executable Mission Signal
+description: Open only a bounded executable or concretely blocked signal; use Discussions/Projects for exploration and portfolio
 title: "[FORGE][SIGNAL] "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        **Issue = executable or concretely blocked cell.**
+        Architecture exploration, research hypotheses, serendipity and open-ended alternatives belong in GitHub Discussions.
+        Portfolio/dormant possibilities belong in GitHub Projects.
+        Stable doctrine belongs in canonical docs/Wiki.
+
+  - type: dropdown
+    id: issue_gate
+    attributes:
+      label: Why must this be an Issue?
+      options:
+        - Executable now — a bounded effect can be attempted
+        - Blocked concretely — a named dependency or external event prevents execution
+    validations:
+      required: true
+
   - type: textarea
     id: signal
     attributes:
