@@ -1,0 +1,120 @@
+{
+  "schema": "aspace.git-branch-retirement-receipt.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "policy_ref": "docs/governance/GIT_BRANCH_WORKTREE_LIFECYCLE_V4.md",
+  "waves": [
+    {
+      "wave": "2",
+      "scope": "legacy closed/unmerged worker branches",
+      "selection": "closed PR archived exact head OR explicit KER-19 supersession; no local branch; no active worktree",
+      "retired_remote": 20,
+      "failed": 0,
+      "notes": [
+        "4 historical KER-19 / Needle3 worker refs retired after routing the active intent to #484 Reflex Fabric.",
+        "16 additional closed/unmerged worker refs retired only after their remote HEAD exactly matched the archived PR head SHA.",
+        "PR history remains the durable archive for the unmerged patches."
+      ]
+    },
+    {
+      "wave": "3",
+      "scope": "closed/unmerged worker refs with exact archived PR heads",
+      "selection": "remote HEAD == closed PR head SHA; no local branch; no active worktree; revalidated immediately before deletion",
+      "retired_remote": 15,
+      "already_missing_remote": 5,
+      "failed": 0,
+      "post_remote_tracking_refs": 222
+    },
+    {
+      "wave": "4",
+      "scope": "remaining exact-head closed worker refs",
+      "selection": "same exact-head/no-local/no-worktree gate",
+      "retired_remote": 1,
+      "already_missing_remote": 8,
+      "failed": 0,
+      "post_remote_tracking_refs": 190
+    },
+    {
+      "wave": "local-ancestor",
+      "scope": "non-active local branches already represented by origin/main",
+      "selection": "direct ancestor of origin/main; no active worktree",
+      "retired_local": 16,
+      "failed": 0,
+      "archive_tag": {
+        "tag": "archive/ryan-machine-fabric-v0-local-2026-09-29",
+        "source_branch": "checkpoint/ryan-machine-fabric-v0-local-2026-09-29",
+        "source_sha": "d8218750fc3749101eb1607c3bc65c9b9fee97d9"
+      },
+      "notes": [
+        "One branch required force deletion only after explicit ancestor(origin/main) proof because root HEAD is behind origin/main."
+      ]
+    },
+    {
+      "wave": "p5-convergence",
+      "branch": "feat/dc-p5-plugins-20260929",
+      "proof": {
+        "remote_head_contained_in_origin_main": true,
+        "local_unique_commit_patch_equivalent_to_origin_main": true,
+        "active_worktree": false,
+        "local_commit": "aa6afd721f90f07ca7e4991f2686935c31a833bc"
+      },
+      "retired_remote": 1,
+      "retired_local": 1
+    },
+    {
+      "wave": "local-worker",
+      "scope": "remaining local autopublish/Jules worker branches",
+      "selection": "no active worktree and all local patches represented in origin/main",
+      "audited": 29,
+      "retired_local": 29,
+      "salvage_required": 0,
+      "failed": 0
+    }
+  ],
+  "initial_snapshot": {
+    "remote_branches_api": 281,
+    "local_branches": 116
+  },
+  "final_snapshot": {
+    "local_branches": 66,
+    "remote_tracking_refs": 160,
+    "active_worktree_branches": 44,
+    "remote_classes": {
+      "MAIN": 1,
+      "HOME": 9,
+      "MISSION": 87,
+      "OTHER": 62,
+      "RECOVERY": 1,
+      "WORKER": 0
+    },
+    "local_classes": {
+      "MAIN": 1,
+      "HOME": 14,
+      "MISSION": 31,
+      "OTHER": 12,
+      "RECOVERY": 8,
+      "WORKER": 0
+    },
+    "root_checkout": {
+      "path": "C:/Users/amado/ASpace_OS_V3",
+      "branch": "main",
+      "behind_origin_main": 170,
+      "dirty": true,
+      "mutated_by_retirement": false
+    }
+  },
+  "safety_invariants": [
+    "No active worktree branch was retired.",
+    "No local branch with unique unpreserved patches was deleted.",
+    "Closed PRs are used as durable archives before retiring their worker branch refs.",
+    "The dirty root checkout was never reset, pulled, stashed, or cleaned.",
+    "Remote deletion and local retirement were performed in bounded waves with revalidation before effect."
+  ],
+  "next_scope": [
+    "Classify 87 remote mission branches by PR/evidence/worktree state.",
+    "Classify 62 remote OTHER refs before inventing deletion rules for them.",
+    "Reconcile 44 active worktrees before any further local branch retirement.",
+    "Handle 8 recovery branches through incident/recovery closure rather than age-based deletion.",
+    "Keep Amdkn/* home refs protected until explicit home-ref policy convergence."
+  ]
+}
