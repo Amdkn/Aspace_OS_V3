@@ -1,0 +1,6 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "issue": 219,
+  "reason": "Release cutover (running on native Windows host, interacting with C:\\Users\\amado, and observing native UI) requires human-only local host environment access and irreversible external actions.",
+  "handoff_file": "_INBOX/handoffs/issue-219-blocker.md"
+}
