@@ -1,0 +1,77 @@
+{
+  "schema": "aspace.git-branch-retirement-receipt.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "wave": 1,
+  "policy_ref": "docs/governance/GIT_BRANCH_WORKTREE_LIFECYCLE_V4.md",
+  "preconditions": {
+    "root_checkout_mutated": false,
+    "root_reset_or_pull_performed": false,
+    "selection_rule": "remote HEAD is ancestor of origin/main; no active worktree; local ref, if present, is also contained in origin/main"
+  },
+  "retired": [
+    {
+      "branch": "feat/machine-fabric-design-2026-09-28",
+      "remote_deleted": true,
+      "local_deleted": true,
+      "proof": "remote and local heads contained in origin/main; no active worktree"
+    },
+    {
+      "branch": "feat/mcp-gateway-213-8489321153109895658",
+      "remote_deleted": true,
+      "local_deleted": false,
+      "proof": "remote head contained in origin/main; no local branch; no active worktree"
+    },
+    {
+      "branch": "feat/remote-adapter-218-15659352082736544260",
+      "remote_deleted": true,
+      "local_deleted": false,
+      "proof": "remote head contained in origin/main; no local branch; no active worktree"
+    },
+    {
+      "branch": "feat/ryan-amf-m0-2026-09-28",
+      "remote_deleted": true,
+      "local_deleted": true,
+      "proof": "remote and local heads contained in origin/main; no active worktree"
+    },
+    {
+      "branch": "jules-dc-gateway-usage-ledger-11942448346705785167",
+      "remote_deleted": true,
+      "local_deleted": false,
+      "proof": "remote head contained in origin/main; no local branch; no active worktree"
+    }
+  ],
+  "vetoed": [
+    {
+      "branch": "feat/dc-p5-plugins-20260929",
+      "verdict": "SALVAGE_LOCAL",
+      "reason": "remote head is contained in origin/main, but local branch head differs and is not contained in origin/main",
+      "local_sha": "aa6afd721f90f07ca7e4991f2686935c31a833bc",
+      "remote_sha": "07492148d56e8897728c72f487bc7698a52d4e4a"
+    },
+    {
+      "branch": "feat/ryan-harness-runtime-p1p4-2026-09-28",
+      "verdict": "KEEP_ACTIVE",
+      "reason": "branch is still mounted by an active local worktree"
+    }
+  ],
+  "post_state": {
+    "local_branch_count": 114,
+    "remote_tracking_ref_count": 277,
+    "delete_branch_on_merge_before": false,
+    "delete_branch_on_merge_after": true
+  },
+  "notes": [
+    "No bulk delete was performed.",
+    "The dirty root checkout was not reset, pulled, stashed, or cleaned.",
+    "Merged-PR head equality produced zero safe candidates because legacy branches were reused/advanced.",
+    "Merged-PR plus patch-equivalence also produced zero candidates in this wave.",
+    "Filesystem veto was honored before local branch retirement."
+  ],
+  "next": [
+    "salvage or classify the unique local delta on feat/dc-p5-plugins-20260929",
+    "keep active harness-owned worktrees until their owning mission closes",
+    "classify closed-unmerged and orphan worker branches in batches of <=20",
+    "add a cloud RETIRE_CANDIDATE report plus local AMF/DC RETIRE_CONFIRMED reconciliation"
+  ]
+}
