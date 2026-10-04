@@ -277,3 +277,39 @@ CREATE TABLE IF NOT EXISTS marvel_personas_b3 (
   active     INTEGER NOT NULL DEFAULT 1,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- ================================================== WARGAME CONTINUATION PROTOCOL (#321)
+-- Stores parent Wargame state for prompt-independent continuation.
+CREATE TABLE IF NOT EXISTS wargame (
+  github_issue INTEGER PRIMARY KEY,
+  work_id INTEGER REFERENCES work(id) ON DELETE SET NULL,
+  state TEXT NOT NULL DEFAULT 'OPEN' CHECK (state IN ('OPEN', 'CLOSED')),
+  current_round INTEGER NOT NULL DEFAULT 1,
+  hypothesis TEXT,
+  falsification_conditions TEXT,
+  last_verified_effect TEXT,
+  next_gate TEXT,
+  owner_level TEXT,
+  return_to TEXT,
+  stale_after TEXT,
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+
+-- Stores bounded executable children for Wargames.
+CREATE TABLE IF NOT EXISTS wargame_child (
+  id INTEGER PRIMARY KEY,
+  parent_issue INTEGER NOT NULL REFERENCES wargame(github_issue) ON DELETE CASCADE,
+  work_id INTEGER REFERENCES work(id) ON DELETE SET NULL,
+  claim_prediction TEXT,
+  institutional_owner TEXT,
+  capability TEXT,
+  runtime_binding TEXT,
+  evidence_sink TEXT,
+  deterministic_gates TEXT,
+  receipt TEXT,
+  return_to TEXT,
+  status TEXT NOT NULL DEFAULT 'ACTIVE' CHECK (status IN ('ACTIVE', 'CLOSED')),
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
