@@ -638,6 +638,7 @@ def migrate_mission_runtime(
             "workspace_fingerprint": workspace_state,
             "evidence_head": list(evidence_head),
             "return_to": return_route,
+            "status": "MIGRATED",
             "continuity_result": (
                 "PRESERVED" if context_capsule is not None else "DEGRADED"
             ),
