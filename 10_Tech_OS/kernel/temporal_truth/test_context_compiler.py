@@ -1,12 +1,18 @@
 import unittest
 from copy import deepcopy
+import importlib
+import os
+import sys
 
-from compiler import (
-    ContextCompiler,
-    ContextCompilerBoundaryError,
-    MAX_CONTEXT_REFS_V1,
-)
-from temporal_truth import TemporalCanonGraph
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../../..")))
+
+compiler_module = importlib.import_module("10_Tech_OS.kernel.temporal_truth.compiler")
+temporal_truth_module = importlib.import_module("10_Tech_OS.kernel.temporal_truth.temporal_truth")
+
+ContextCompiler = compiler_module.ContextCompiler
+ContextCompilerBoundaryError = compiler_module.ContextCompilerBoundaryError
+MAX_CONTEXT_REFS_V1 = compiler_module.MAX_CONTEXT_REFS_V1
+TemporalCanonGraph = temporal_truth_module.TemporalCanonGraph
 
 
 class TestDeterministicBoundedContextCompiler(unittest.TestCase):
