@@ -1,12 +1,12 @@
 {
   "work_id": "222",
-  "timestamp": "2026-10-02T23:01:58.299110+00:00",
+  "timestamp": "2026-10-04T00:54:28.094574+00:00",
   "files": {
     "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py": {
-      "sha256": "79500f292bee10f3826a23ed31e0d2c36f4a449e246799a43351830cd171d692"
+      "sha256": "9c3cd0e664ddcc0257e4d2ed8e7502cee1ba70c9b05402f6cf7fe650450e7a9c"
     },
     "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/test_harvester.py": {
-      "sha256": "6e5deb90647492e23bd2acca175fa645bea5c38f8cb48f7cc7f7138830896c6e"
+      "sha256": "20ad224eb57f67eccc37debd33a865821405d7ed6855aeb8070722e2498963a8"
     }
   },
   "git_diff_summaries": {
@@ -16,8 +16,8 @@
   "test_results": {
     "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/05_Channel_Harvester python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/05_Channel_Harvester -p 'test_*.py'",
     "exit_code": 0,
-    "stdout": "-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 2 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n",
-    "stderr": ".\n----------------------------------------------------------------------\nRan 1 test in 0.006s\n\nOK\n"
+    "stdout": "-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 1 unique videos.\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 2 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 2 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 1 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n",
+    "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.013s\n\nOK\n"
   },
   "outcome": "PASS",
   "golden_proof": {
