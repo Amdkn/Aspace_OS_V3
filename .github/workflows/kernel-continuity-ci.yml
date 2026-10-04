@@ -4,11 +4,13 @@ on:
   pull_request:
     paths:
       - "10_Tech_OS/kernel/**"
+      - "80_Agent-OS/capability_fabric/**"
       - ".github/workflows/kernel-continuity-ci.yml"
   push:
     branches: [main]
     paths:
       - "10_Tech_OS/kernel/**"
+      - "80_Agent-OS/capability_fabric/**"
       - ".github/workflows/kernel-continuity-ci.yml"
 
 jobs:
@@ -54,7 +56,9 @@ jobs:
             10_Tech_OS/kernel/temporal_truth/test_canary.py \
             10_Tech_OS/kernel/temporal_truth/reconciliation.py \
             10_Tech_OS/kernel/temporal_truth/test_reconciliation.py \
-            10_Tech_OS/kernel/temporal_truth/test_context_compiler.py
+            10_Tech_OS/kernel/temporal_truth/test_context_compiler.py \
+            80_Agent-OS/capability_fabric/temporal_adapters.py \
+            80_Agent-OS/capability_fabric/test_temporal_adapters.py
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
@@ -73,3 +77,5 @@ jobs:
       - name: Temporal Truth G5 Embodied Holon migration
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_embodied_holon_migration.py
+      - name: Temporal Truth G6 Agent OS capability exposure
+        run: python 80_Agent-OS/capability_fabric/test_temporal_adapters.py
