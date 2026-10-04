@@ -320,11 +320,76 @@ class AntiAmnesiaEngine:
                 "verbatim": record.verbatim,
             },
             "evidence_refs": [evidence_ref],
-            "temporal_state": "CURRENT",
+            "temporal_state": "UNKNOWN" if record.ipbd_kind == "UNKNOWN" else "CURRENT",
             "correlation_id": record.correlation_id,
         }
         self.temporal_graph.ingest_claim(claim)
         record.temporal_claim_id = claim_id
+
+    def temporal_claims_by_correlation(
+        self, correlation_id: str
+    ) -> List[Dict[str, Any]]:
+        if self.temporal_graph is None:
+            return []
+        claims = [
+            claim.copy()
+            for claim in self.temporal_graph.claims.values()
+            if claim.get("correlation_id") == correlation_id
+        ]
+        return sorted(
+            claims,
+            key=lambda claim: (
+                str(claim.get("observed_at") or ""),
+                str(claim.get("recorded_at") or ""),
+                str(claim.get("claim_id") or ""),
+            ),
+        )
+
+    def compile_context_capsule_for_intent(
+        self,
+        *,
+        correlation_id: str,
+        holon_id: str,
+        mission_id: str,
+        authority_envelope: Dict[str, Any],
+        return_to: Dict[str, Any],
+        t: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        if self.temporal_graph is None:
+            raise ValueError("Temporal graph is required for intent context compilation")
+        claims = self.temporal_claims_by_correlation(correlation_id)
+        if not claims:
+            raise ValueError(f"No temporal intent for correlation_id={correlation_id}")
+        try:
+            from temporal_truth.compiler import ContextCompiler
+        except ImportError:
+            from .temporal_truth.compiler import ContextCompiler
+
+        claim_ids = [claim["claim_id"] for claim in claims]
+        evidence_refs = list(
+            dict.fromkeys(
+                ref
+                for claim in claims
+                for ref in claim.get("evidence_refs", [])
+            )
+        )
+        compiler = ContextCompiler(self.temporal_graph)
+        return compiler.compile_context_capsule(
+            holon_id=holon_id,
+            mission_id=mission_id,
+            correlation_id=correlation_id,
+            scope="conversation-intent",
+            authority_envelope=authority_envelope,
+            workgraph_neighborhood={"intent_claim_refs": claim_ids},
+            evidence_head=evidence_refs,
+            return_to=return_to,
+            t=t,
+            anthology_window=claim_ids,
+            source_slice={
+                "correlation_id": correlation_id,
+                "intent_claim_refs": claim_ids,
+            },
+        )
 
     def get_by_correlation_id(self, correlation_id: str) -> List[CompiledIntentRecord]:
         return [r for r in self.store if r.correlation_id == correlation_id]
