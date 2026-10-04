@@ -126,3 +126,64 @@ class TemporalCanonGraph:
     def state_now(self, subject: str, predicate: str, scope: str) -> List[Dict[str, Any]]:
         t_now = datetime.now(timezone.utc).isoformat()
         return self.state_at(subject, predicate, t_now, scope)
+
+    def replay_history(
+        self,
+        *,
+        subject: str | None = None,
+        scope: str | None = None,
+        t: str | None = None,
+        limit: int = 64,
+    ) -> Dict[str, Any]:
+        """Return a bounded longitudinal replay without rewriting source truth."""
+        if limit < 1 or limit > 128:
+            raise ValueError("anthology replay limit must be between 1 and 128")
+
+        cutoff = t or datetime.now(timezone.utc).isoformat()
+        claims = [
+            c.copy()
+            for c in self.claims.values()
+            if c.get("observed_at", "") <= cutoff
+            and (subject is None or c.get("subject") == subject)
+            and (scope is None or c.get("scope") == scope)
+        ]
+        claims.sort(
+            key=lambda item: (
+                str(item.get("observed_at") or ""),
+                str(item.get("recorded_at") or ""),
+                str(item.get("claim_id") or ""),
+            )
+        )
+        total_claims = len(claims)
+        bounded_claims = claims[-limit:]
+        claim_ids = {str(item.get("claim_id")) for item in bounded_claims}
+
+        transitions = []
+        for transition in self.transitions.values():
+            effective = transition.get("effective_at") or transition.get("recorded_at") or ""
+            if effective > cutoff:
+                continue
+            linked = set(transition.get("from_claims", [])) | set(
+                transition.get("to_claims", [])
+            )
+            if claim_ids and linked and not (claim_ids & linked):
+                continue
+            transitions.append(transition.copy())
+        transitions.sort(
+            key=lambda item: (
+                str(item.get("effective_at") or item.get("recorded_at") or ""),
+                str(item.get("transition_id") or ""),
+            )
+        )
+        transitions = transitions[-limit:]
+
+        return {
+            "schema": "aspace.anthology-replay.v1",
+            "cutoff_at": cutoff,
+            "subject": subject,
+            "scope": scope,
+            "claims": bounded_claims,
+            "transitions": transitions,
+            "truncated": total_claims > len(bounded_claims),
+            "limit": limit,
+        }
