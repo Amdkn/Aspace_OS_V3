@@ -45,6 +45,7 @@ jobs:
             10_Tech_OS/kernel/inter_fabric.py \
             10_Tech_OS/kernel/test_inter_fabric.py \
             10_Tech_OS/kernel/test_inter_fabric_runtime_canary.py \
+            10_Tech_OS/kernel/test_embodied_holon_migration.py \
             10_Tech_OS/kernel/temporal_truth/packets.py \
             10_Tech_OS/kernel/temporal_truth/test_packets.py \
             10_Tech_OS/kernel/temporal_truth/temporal_truth.py \
@@ -69,3 +70,6 @@ jobs:
       - name: Temporal Truth G4 Context Compiler
         working-directory: 10_Tech_OS/kernel/temporal_truth
         run: python -m unittest test_context_compiler.py
+      - name: Temporal Truth G5 Embodied Holon migration
+        working-directory: 10_Tech_OS/kernel
+        run: python -m unittest test_embodied_holon_migration.py
