@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://contracts/agent-task-envelope/v1",
+  "title": "A'Space AgentTaskEnvelope.v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "delivery_id", "source", "mission", "capability", "authority", "routing"],
+  "properties": {
+    "schema": { "const": "aspace.agent-task-envelope.v1" },
+    "delivery_id": { "type": "string", "minLength": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "event", "action", "return_to"],
+      "properties": {
+        "repository": { "type": "string", "minLength": 3 },
+        "event": { "type": "string", "minLength": 1 },
+        "action": { "type": ["string", "null"] },
+        "issue_number": { "type": ["integer", "null"], "minimum": 1 },
+        "pull_request_number": { "type": ["integer", "null"], "minimum": 1 },
+        "ref": { "type": ["string", "null"] },
+        "return_to": { "type": "string", "minLength": 1 }
+      }
+    },
+    "mission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mission_id", "correlation_id"],
+      "properties": {
+        "mission_id": { "type": "string", "minLength": 1 },
+        "work_id": { "type": ["string", "integer", "null"] },
+        "cell_id": { "type": ["string", "null"] },
+        "correlation_id": { "type": "string", "minLength": 1 },
+        "parent_correlation_id": { "type": ["string", "null"] }
+      }
+    },
+    "capability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["need"],
+      "properties": {
+        "need": { "type": "string", "minLength": 1 },
+        "holon_hint": { "type": ["string", "null"] },
+        "contract_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "acceptance_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "effect_class"],
+      "properties": {
+        "scope": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "effect_class": { "type": "string", "enum": ["READ_ONLY", "REVERSIBLE", "CONSEQUENTIAL", "IRREVERSIBLE"] },
+        "policy_ref": { "type": ["string", "null"] },
+        "lease_ref": { "type": ["string", "null"] },
+        "fencing_key": { "type": ["string", "null"] }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider_mode", "allowed_harnesses"],
+      "properties": {
+        "provider_mode": { "type": "string", "enum": ["AUTO", "PREFERRED", "PINNED"] },
+        "preferred_harness": { "type": ["string", "null"] },
+        "allowed_harnesses": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "budget_ref": { "type": ["string", "null"] },
+        "quota_hint": { "type": ["string", "null"] }
+      }
+    },
+    "evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  }
+}
