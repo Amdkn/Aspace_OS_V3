@@ -2,7 +2,7 @@
   "schema": "aspace.machine.remote-transport-evidence.v1",
   "result": "PRIVATE_SERVE_PASS_SECOND_CLIENT_OFFLINE",
   "public_bind": false,
-  "started_at": 1790969477.4126391,
+  "started_at": 1790969343.1247623,
   "tailscale_version": "1.102.4-t3caf7d9e7-g084ee3b64",
   "self_dns": "amd-pc.tail58ad16.ts.net",
   "self_ip": "100.124.56.118",
@@ -28,7 +28,7 @@
       "amd-pc.tail58ad16.ts.net:443": {
         "Handlers": {
           "/": {
-            "Proxy": "http://127.0.0.1:59593"
+            "Proxy": "http://127.0.0.1:59464"
           }
         }
       }
@@ -36,14 +36,14 @@
   },
   "funnel_status": {
     "returncode": 0,
-    "stdout": "{\n  \"TCP\": {\n    \"443\": {\n      \"HTTPS\": true\n    }\n  },\n  \"Web\": {\n    \"amd-pc.tail58ad16.ts.net:443\": {\n      \"Handlers\": {\n        \"/\": {\n          \"Proxy\": \"http://127.0.0.1:59593\"\n        }\n      }\n    }\n  }\n}\n",
+    "stdout": "{\n  \"TCP\": {\n    \"443\": {\n      \"HTTPS\": true\n    }\n  },\n  \"Web\": {\n    \"amd-pc.tail58ad16.ts.net:443\": {\n      \"Handlers\": {\n        \"/\": {\n          \"Proxy\": \"http://127.0.0.1:59464\"\n        }\n      }\n    }\n  }\n}\n",
     "stderr": ""
   },
   "live_canary": "PRIVATE_HTTPS_SELF_PASS",
   "second_client_canary": "OPEN_PEER_OFFLINE",
   "remote_error": null,
   "note": "Tailscale Serve is proven over MagicDNS HTTPS to a loopback-only backend. The registered Android peer is currently offline, so only the second-client-origin hop remains unproven.",
-  "at": 1790969479.1763723,
+  "at": 1790969345.1228297,
   "restored_serve_config": {
     "TCP": {
       "443": {
@@ -54,11 +54,11 @@
       "amd-pc.tail58ad16.ts.net:443": {
         "Handlers": {
           "/": {
-            "Proxy": "http://127.0.0.1:59593"
+            "Proxy": "http://127.0.0.1:59464"
           }
         }
       }
     }
   },
-  "finished_at": 1790969479.6316726
+  "finished_at": 1790969345.545954
 }

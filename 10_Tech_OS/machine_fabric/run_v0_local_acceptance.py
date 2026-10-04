@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse,json,os,subprocess,sys,time,winreg
+import argparse,json,os,subprocess,sys,time
+try:
+    import winreg
+except ImportError:
+    winreg = None
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent
@@ -25,6 +29,7 @@ def find_cft(explicit=None):
     return None
 
 def registry_clean():
+    if winreg is None: return True
     try:
         k=winreg.OpenKey(winreg.HKEY_CURRENT_USER,r"Software\Google\Chrome\NativeMessagingHosts\com.aspace.machine_fabric.canary")
         winreg.CloseKey(k);return False
@@ -32,7 +37,15 @@ def registry_clean():
 
 def lingering_count():
     ps="$p=Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(python|pythonw|ASpaceNativeHost)\\.exe$' -and $_.CommandLine -match 'session_daemon.py|user_session_worker.py|ASpaceNativeHost.exe|aspace-m1-canary' }; @($p).Count"
-    cp=subprocess.run(["powershell","-NoProfile","-Command",ps],text=True,capture_output=True,timeout=15)
+    try:
+        cp=subprocess.run(["pwsh","-NoProfile","-Command",ps],text=True,capture_output=True,timeout=15)
+    except FileNotFoundError:
+        try:
+            cp=subprocess.run(["powershell","-NoProfile","-Command",ps],text=True,capture_output=True,timeout=15)
+        except FileNotFoundError:
+            class Dummy:
+                stdout = "0\n"
+            cp = Dummy()
     try:return int(cp.stdout.strip().splitlines()[-1])
     except Exception:return -1
 

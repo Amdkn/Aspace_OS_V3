@@ -1,0 +1,198 @@
+{
+  "schema": "aspace.machine.v0-continuous-evidence.v1",
+  "result": "FAIL",
+  "local_v0_pass": false,
+  "remote_gate": "EXTERNAL_AUTH_REQUIRED",
+  "chrome_for_testing": null,
+  "steps": [
+    {
+      "name": "M0",
+      "returncode": 0,
+      "seconds": 0.618,
+      "stdout_tail": "",
+      "stderr_tail": "test_capability_version_is_bound_to_fingerprint_ledger_and_receipt (__main__.AMFM0Tests.test_capability_version_is_bound_to_fingerprint_ledger_and_receipt) ... ok\ntest_compensation_deletes_file_created_by_original_operation (__main__.AMFM0Tests.test_compensation_deletes_file_created_by_original_operation) ... ok\ntest_compensation_has_separate_linked_receipt_and_restores_prior_state (__main__.AMFM0Tests.test_compensation_has_separate_linked_receipt_and_restores_prior_state) ... ok\ntest_crash_after_effect_restart_reconciles_without_duplicate_mutation (__main__.AMFM0Tests.test_crash_after_effect_restart_reconciles_without_duplicate_mutation) ... ok\ntest_health_and_capability_registry_are_truthful_for_m0 (__main__.AMFM0Tests.test_health_and_capability_registry_are_truthful_for_m0) ... ok\ntest_loopback_server_rejects_non_loopback_bind (__main__.AMFM0Tests.test_loopback_server_rejects_non_loopback_bind) ... ok\ntest_missing_scope_and_wrong_risk_are_denied (__main__.AMFM0Tests.test_missing_scope_and_wrong_risk_are_denied) ... ok\ntest_out_of_scope_path_and_shell_shape_are_denied_or_rejected (__main__.AMFM0Tests.test_out_of_scope_path_and_shell_shape_are_denied_or_rejected) ... ok\ntest_same_operation_id_different_fingerprint_is_conflict (__main__.AMFM0Tests.test_same_operation_id_different_fingerprint_is_conflict) ... ok\ntest_write_replay_has_one_effect_and_read_is_grounded (__main__.AMFM0Tests.test_write_replay_has_one_effect_and_read_is_grounded) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.457s\n\nOK\n"
+    },
+    {
+      "name": "P1-P4",
+      "returncode": 0,
+      "seconds": 3.807,
+      "stdout_tail": "",
+      "stderr_tail": "test_no_chatgpt_session_state_required (__main__.T.test_no_chatgpt_session_state_required) ... ok\ntest_p1_fingerprint_determinism_and_drift (__main__.T.test_p1_fingerprint_determinism_and_drift) ... ok\ntest_p2_prepare_idempotent_compensable_and_failed_receipt (__main__.T.test_p2_prepare_idempotent_compensable_and_failed_receipt) ... ok\ntest_p3_parent_interruption_unknown_never_blind_retry (__main__.T.test_p3_parent_interruption_unknown_never_blind_retry) ... ok\ntest_p3_success_collect_receipt_yes (__main__.T.test_p3_success_collect_receipt_yes) ... ok\ntest_p3_whole_tree_cancel_no_owned_orphan (__main__.T.test_p3_whole_tree_cancel_no_owned_orphan) ... ok\ntest_p4_release_and_event_chain (__main__.T.test_p4_release_and_event_chain) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 3.695s\n\nOK\n"
+    },
+    {
+      "name": "M1-unit",
+      "returncode": 0,
+      "seconds": 4.061,
+      "stdout_tail": "",
+      "stderr_tail": "test_concurrent_hello_task_claim_tabs_ordering (__main__.T.test_concurrent_hello_task_claim_tabs_ordering) ... ok\ntest_duplicate_claim_before_completion_never_double_claims (__main__.T.test_duplicate_claim_before_completion_never_double_claims) ... ok\ntest_health_degrades_when_worker_dies_and_fence_increments (__main__.T.test_health_degrades_when_worker_dies_and_fence_increments) ... ok\ntest_same_operation_reconnect_returns_receipt_without_reexecute (__main__.T.test_same_operation_reconnect_returns_receipt_without_reexecute) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 3.925s\n\nOK\n"
+    },
+    {
+      "name": "M1-chrome",
+      "returncode": 2,
+      "seconds": 0,
+      "stdout_tail": "",
+      "stderr_tail": "Chrome for Testing missing"
+    },
+    {
+      "name": "Process-unit",
+      "returncode": 0,
+      "seconds": 1.34,
+      "stdout_tail": "",
+      "stderr_tail": "test_broker_restart_truthfully_degrades_interact_but_read_stop_survive (__main__.T.test_broker_restart_truthfully_degrades_interact_but_read_stop_survive) ... ok\ntest_policy_denies_shell_and_nonallowlisted_executable (__main__.T.test_policy_denies_shell_and_nonallowlisted_executable) ... ok\ntest_start_replay_interact_read_stop (__main__.T.test_start_replay_interact_read_stop) ... ok\ntest_whole_tree_stop (__main__.T.test_whole_tree_stop) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 1.185s\n\nOK\n"
+    },
+    {
+      "name": "Process-evidence",
+      "returncode": 0,
+      "seconds": 1.9,
+      "stdout_tail": "{\n  \"result\": \"PASS\",\n  \"checks\": {\n    \"suite_4_of_4\": true,\n    \"start_receipt_succeeded\": true,\n    \"start_replay_same_pid\": true,\n    \"interactive_echo_observed\": true,\n    \"interact_receipt_succeeded\": true,\n    \"child_created\": true,\n    \"whole_tree_stop_parent_gone\": true,\n    \"whole_tree_stop_child_gone\": true,\n    \"stop_receipt_succeeded\": true,\n    \"health_after_stop_online\": true\n  },\n  \"out\": \"/app/10_Tech_OS/reports/amf_process_evidence_20260929.json\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "M2-adapter",
+      "returncode": 0,
+      "seconds": 0.765,
+      "stdout_tail": "",
+      "stderr_tail": "test_disable_rollback (__main__.T.test_disable_rollback) ... ok\ntest_health_states (__main__.T.test_health_states) ... ok\ntest_private_start_is_loopback_and_never_funnel (__main__.T.test_private_start_is_loopback_and_never_funnel) ... ok\ntest_status_snapshot_restore (__main__.T.test_status_snapshot_restore) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.661s\n\nOK\n"
+    },
+    {
+      "name": "M2-private-serve",
+      "returncode": 1,
+      "seconds": 0.117,
+      "stdout_tail": "",
+      "stderr_tail": "tailscale unavailable\n"
+    }
+  ],
+  "m1_summary": {
+    "result": "PASS",
+    "checks": {
+      "daemon_online_with_worker": true,
+      "daemon_degraded_worker_dead": true,
+      "fencing_increased": true,
+      "browser_debugger_unavailable": true,
+      "tabs_observed": true,
+      "dom_postcondition_after": true,
+      "durable_receipt": true,
+      "same_operation_claimed_twice": true,
+      "replay_returned_without_execute": true,
+      "native_host_reconnected": true
+    },
+    "receipt": {
+      "adapter": "amf.m1.chrome-native-messaging",
+      "capability": "browser.dom.action",
+      "effect_digest": "sha256:5f6b9fc941d1e99ff03fb025978176c3045382c414b434fbf9af83810f6b7b00",
+      "evidence": [
+        "{\"after\":\"AFTER\",\"before\":\"BEFORE\",\"ok\":true,\"selector\":\"#target\",\"url\":\"http://127.0.0.1:65430/canary.html\"}",
+        "worker=worker-915a53f3dc53",
+        "lease=lease-21d332c447974329"
+      ],
+      "fingerprint": "48579f2e88cc309aa785b1b805dc3b10c26c42c75acc2bbd286de7a67c355716",
+      "finished_at": "2026-09-29T05:38:43.672265+00:00",
+      "operation_id": "m1-browser-op-0001",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-policy-v1"
+      },
+      "schema": "aspace.machine.receipt.v1",
+      "state": "SUCCEEDED"
+    }
+  },
+  "process_summary": {
+    "result": "PASS",
+    "checks": {
+      "suite_4_of_4": true,
+      "start_receipt_succeeded": true,
+      "start_replay_same_pid": true,
+      "interactive_echo_observed": true,
+      "interact_receipt_succeeded": true,
+      "child_created": true,
+      "whole_tree_stop_parent_gone": true,
+      "whole_tree_stop_child_gone": true,
+      "stop_receipt_succeeded": true,
+      "health_after_stop_online": true
+    },
+    "start_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-start",
+      "fingerprint": "4f56ceaee379d54614b7a725fcb56c95eb02b723688b77e9cb4fde20f831c3d2",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.start",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:8482046ec61322ffb6e5f25387d754923c24b045045a09e40ffe7bfc87ebe3cb",
+      "evidence": [
+        "{\"argv\":[\"/home/jules/.pyenv/versions/3.12.13/bin/python3\",\"/app/10_Tech_OS/machine_fabric/process/interactive_fixture.py\"],\"cwd\":\"/tmp/amf-process-evidence-u4x7fv_b/root\",\"pid\":151538,\"session_id\":\"proc-4f56ceaee379d54614\"}"
+      ],
+      "finished_at": "2026-10-02T18:35:08.712005+00:00",
+      "result": {
+        "session_id": "proc-4f56ceaee379d54614",
+        "pid": 151538,
+        "stdout_ref": "/tmp/amf-process-evidence-u4x7fv_b/root/.amf-process/proc-4f56ceaee379d54614/stdout.log",
+        "stderr_ref": "/tmp/amf-process-evidence-u4x7fv_b/root/.amf-process/proc-4f56ceaee379d54614/stderr.log"
+      }
+    },
+    "stop_receipt": {
+      "schema": "aspace.machine.receipt.v1",
+      "operation_id": "proc-evidence-stop",
+      "fingerprint": "a9d2c1b71ee5c2dcc02551c09b85618a0a7fae3b3400da073559476c8df019c3",
+      "state": "SUCCEEDED",
+      "capability": "machine.process.stop",
+      "adapter": "amf.process.broker.v1",
+      "policy": {
+        "decision": "ALLOW",
+        "policy_version": "amf-m0-policy-v1"
+      },
+      "effect_digest": "sha256:646108b260406c7630875acbd69aa381eee804cf92a1fa60d12dc3330d05a588",
+      "evidence": [
+        "{\"pid\":151538,\"session_id\":\"proc-4f56ceaee379d54614\",\"tree_alive\":false}"
+      ],
+      "finished_at": "2026-10-02T18:35:08.855578+00:00",
+      "result": {
+        "session_id": "proc-4f56ceaee379d54614",
+        "pid": 151538,
+        "tree_alive": false
+      }
+    }
+  },
+  "m2_summary": {
+    "schema": "aspace.machine.remote-transport-evidence.v1",
+    "result": "SERVE_ENABLEMENT_REQUIRED",
+    "public_bind": false,
+    "started_at": 1790660338.9768,
+    "tailscale_version": "1.102.4-t3caf7d9e7-g084ee3b64",
+    "self_dns": "amd-pc.tail58ad16.ts.net",
+    "self_ip": "100.124.56.118",
+    "peer_name": "Tab S6 Lite de Amadou",
+    "peer_ip": "100.125.35.5",
+    "checks": {
+      "tailscale_backend_running": true,
+      "loopback_backend_ok": true,
+      "serve_enabled": false,
+      "peer_registered": true,
+      "peer_online": false,
+      "public_bind": false
+    },
+    "live_canary": "OPEN_ACCOUNT_ENABLEMENT",
+    "second_client_canary": "OPEN_PEER_OFFLINE",
+    "reason": "SERVE_ENABLEMENT_REQUIRED: Serve is not enabled on your tailnet.\nTo enable, visit:\n\n         https://login.tailscale.com/f/serve?node=nq56iMyiNA21CNTRL",
+    "note": "Tailscale is installed, authenticated and connected. Serve requires one explicit tailnet account enablement; no public Funnel or firewall change was attempted.",
+    "at": 1790660348.487132,
+    "restore_via_snapshot": true,
+    "finished_at": 1790660348.4871397
+  },
+  "cleanup": {
+    "temporary_native_host_registry_absent": true,
+    "lingering_owned_processes": 0
+  },
+  "gate_sequence": [
+    "M0 durable mutation",
+    "P1-P4 Harness Runtime",
+    "M1 worker+Chrome",
+    "Local process start/interact/read/stop",
+    "M2 private remote live canary"
+  ],
+  "promotion": "SEE_RESULT",
+  "finished_at": 1790966110.0093596
+}

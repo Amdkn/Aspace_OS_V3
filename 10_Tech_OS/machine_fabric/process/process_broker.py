@@ -74,7 +74,8 @@ def kill_tree(pid:int):
             p.kill()
         except Exception:pass
     else:
-        try:os.killpg(pid,9)
+        try:
+            if os.name!="nt": os.killpg(os.getpgid(pid),9)
         except Exception:pass
 
 class Engine:
@@ -185,7 +186,7 @@ class Engine:
         of=stdout.open("ab",buffering=0); ef=stderr.open("ab",buffering=0)
         try:
             kw={"cwd":str(cwd),"stdin":subprocess.PIPE,"stdout":of,"stderr":ef,"shell":False,"env":os.environ.copy()}
-            if os.name=="nt":kw["creationflags"]=subprocess.CREATE_NEW_PROCESS_GROUP
+            if os.name=="nt":kw["creationflags"]=getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 512)
             else:kw["start_new_session"]=True
             proc=subprocess.Popen([str(x) for x in argv],**kw)
         finally:of.close();ef.close()
@@ -222,6 +223,7 @@ class Engine:
             try:proc.stdin.close()
             except Exception:pass
         if pid_alive(pid):kill_tree(pid)
+
         end=time.time()+5
         while pid_alive(pid) and time.time()<end:time.sleep(.1)
         if pid_alive(pid):

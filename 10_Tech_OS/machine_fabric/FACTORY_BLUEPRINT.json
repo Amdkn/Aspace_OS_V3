@@ -1,11 +1,16 @@
 {
   "schema": "aspace.factory-blueprint.v1",
   "factory_id": "AMF-MACHINE-FABRIC",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "origin": "GitHub #194/#195/#196",
   "trigger_schema": {
     "kind": "typed_machine_operation",
-    "required": ["capability", "operation_id", "authority", "precondition"]
+    "required": [
+      "capability",
+      "operation_id",
+      "authority",
+      "precondition"
+    ]
   },
   "input_contract": {
     "operation": "aspace.machine.operation.v1",
@@ -23,20 +28,45 @@
     "continuation_envelope": "aspace.continuation-envelope.v1"
   },
   "system1_rules": [
-    {"rule": "same operation_id + same fingerprint returns prior terminal receipt without re-executing effect"},
-    {"rule": "same operation_id + different fingerprint is rejected as conflict"},
-    {"rule": "policy evaluates before every consequential adapter effect, including interactive process follow-ups"},
-    {"rule": "daemon alive + required worker unavailable => DEGRADED, never ONLINE"},
-    {"rule": "debugger/CDP authority is separate from DOM/accessibility authority"},
-    {"rule": "transport reconnect never creates a new operation identity"},
-    {"rule": "retry is allowed only for operations whose replay policy declares it safe"},
-    {"rule": "capability publication releases BUILD from future workflow executions"},
-    {"rule": "parent process liveness never substitutes for owned process-tree truth"},
-    {"rule": "ChatGPT sessions and markdown handovers are never runtime continuation dependencies"},
-    {"rule": "Rory reconciles execution truth; Nardole routes the resulting continuation"}
+    {
+      "rule": "same operation_id + same fingerprint returns prior terminal receipt without re-executing effect"
+    },
+    {
+      "rule": "same operation_id + different fingerprint is rejected as conflict"
+    },
+    {
+      "rule": "policy evaluates before every consequential adapter effect, including interactive process follow-ups"
+    },
+    {
+      "rule": "daemon alive + required worker unavailable => DEGRADED, never ONLINE"
+    },
+    {
+      "rule": "debugger/CDP authority is separate from DOM/accessibility authority"
+    },
+    {
+      "rule": "transport reconnect never creates a new operation identity"
+    },
+    {
+      "rule": "retry is allowed only for operations whose replay policy declares it safe"
+    },
+    {
+      "rule": "capability publication releases BUILD from future workflow executions"
+    },
+    {
+      "rule": "parent process liveness never substitutes for owned process-tree truth"
+    },
+    {
+      "rule": "ChatGPT sessions and markdown handovers are never runtime continuation dependencies"
+    },
+    {
+      "rule": "Rory reconciles execution truth; Nardole routes the resulting continuation"
+    }
   ],
   "escalation_policy": {
-    "system2_targets": ["doctor13-kernel", "rick"],
+    "system2_targets": [
+      "doctor13-kernel",
+      "rick"
+    ],
     "escalate_on": [
       "semantic policy ambiguity",
       "irreversible effect without explicit approval",
@@ -71,12 +101,29 @@
     ]
   },
   "side_effects": {
-    "sequence": ["capability", "policy", "operation_id", "precondition", "effect", "receipt", "replay_or_compensation"],
+    "sequence": [
+      "capability",
+      "policy",
+      "operation_id",
+      "precondition",
+      "effect",
+      "receipt",
+      "replay_or_compensation"
+    ],
     "ledger_first": true,
     "effect_requires_claim": true
   },
   "evidence_contract": {
-    "required": ["operation_id", "capability", "adapter", "policy_decision", "started_at", "finished_at", "effect_digest", "receipt_state"],
+    "required": [
+      "operation_id",
+      "capability",
+      "adapter",
+      "policy_decision",
+      "started_at",
+      "finished_at",
+      "effect_digest",
+      "receipt_state"
+    ],
     "addressable": true,
     "provenance_owner": "Graham",
     "behavior_observer": "Yaz"
@@ -85,20 +132,55 @@
     "retry_owner": "Nardole",
     "dlq_owner": "Donna",
     "coherence_owner": "Rory",
-    "retry_requires": ["same_operation_id", "known_replay_class", "no_terminal_success_receipt"],
-    "compensation_requires": ["explicit compensation contract", "evidence link"]
+    "retry_requires": [
+      "same_operation_id",
+      "known_replay_class",
+      "no_terminal_success_receipt"
+    ],
+    "compensation_requires": [
+      "explicit compensation contract",
+      "evidence link"
+    ]
   },
   "observability_yaz": {
-    "metrics": ["latency", "failure_rate", "duplicate_prevention", "worker_reconnects", "policy_denials", "adapter_health"]
+    "metrics": [
+      "latency",
+      "failure_rate",
+      "duplicate_prevention",
+      "worker_reconnects",
+      "policy_denials",
+      "adapter_health"
+    ]
   },
   "state_graham": {
-    "stores": ["operation ledger", "receipt provenance", "capability manifest version", "policy version"]
+    "stores": [
+      "operation ledger",
+      "receipt provenance",
+      "capability manifest version",
+      "policy version"
+    ]
   },
   "dispatch_nardole": {
-    "routes_by": ["capability", "authority", "worker availability", "adapter health", "risk class", "reconcile verdict"],
-    "never_routes_by": ["Companion identity alone", "UI session alone", "ChatGPT handover prose"],
+    "routes_by": [
+      "capability",
+      "authority",
+      "worker availability",
+      "adapter health",
+      "risk class",
+      "reconcile verdict"
+    ],
+    "never_routes_by": [
+      "Companion identity alone",
+      "UI session alone",
+      "ChatGPT handover prose"
+    ],
     "continuation_contract": "10_Tech_OS/machine_fabric/harness_runtime/NARDOLE_RETURN_ROUTING.md",
-    "preserves": ["work_id", "correlation_id", "return_route", "receipt chain"]
+    "preserves": [
+      "work_id",
+      "correlation_id",
+      "return_route",
+      "receipt chain"
+    ]
   },
   "build_ryan": {
     "mvp": "10_Tech_OS/machine_fabric/mvp/RYAN_BUILD_PACKET.md",
@@ -108,7 +190,13 @@
     "liberation_gate": "PUBLISHED CapabilityReleaseReceipt releases Ryan from future workflow executions"
   },
   "interface_amy": {
-    "presents": ["health", "worker presence", "approval request", "receipt", "degraded reason"]
+    "presents": [
+      "health",
+      "worker presence",
+      "approval request",
+      "receipt",
+      "degraded reason"
+    ]
   },
   "flow_river": {
     "automation_rule": "webhook first, cron second, agent last",
@@ -117,7 +205,13 @@
     "output": "aspace.harness-execution-receipt.v1"
   },
   "coherence_rory": {
-    "invariants": ["no false online", "no double claim", "no authority drift", "receipt/effect consistency", "parent liveness != process-tree truth"],
+    "invariants": [
+      "no false online",
+      "no double claim",
+      "no authority drift",
+      "receipt/effect consistency",
+      "parent liveness != process-tree truth"
+    ],
     "input": "aspace.harness-execution-receipt.v1",
     "output": "aspace.rory-reconcile-decision.v1"
   },
