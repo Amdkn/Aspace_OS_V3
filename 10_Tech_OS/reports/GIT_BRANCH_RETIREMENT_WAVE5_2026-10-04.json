@@ -1,0 +1,85 @@
+{
+  "schema": "aspace.git-branch-retirement-receipt.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "wave": 5,
+  "policy_ref": "docs/governance/GIT_BRANCH_WORKTREE_LIFECYCLE_V4.md",
+  "operations": [
+    {
+      "class": "REMOTE_MISSION_CLOSED_PR_ARCHIVE",
+      "gate": "closed unmerged PR; remote HEAD exactly equals archived PR head SHA; no local branch; no active worktree; revalidated before deletion",
+      "retired": 22,
+      "veto": 0,
+      "failed": 0
+    },
+    {
+      "class": "REMOTE_MISSION_PATCH_EQUIVALENT",
+      "gate": "all branch patches represented in origin/main; no local branch; no active worktree; revalidated before deletion",
+      "retired": 18,
+      "veto": 0,
+      "failed": 0
+    },
+    {
+      "class": "LOCAL_WORKER_PATCH_EQUIVALENT",
+      "gate": "no active worktree; all local worker patches represented in origin/main",
+      "retired": 29,
+      "veto": 0,
+      "failed": 0
+    },
+    {
+      "class": "DC_P5_CONVERGENCE",
+      "branch": "feat/dc-p5-plugins-20260929",
+      "gate": "remote head contained in origin/main; local aa6afd72 patch-equivalent to origin/main; no active worktree",
+      "retired_remote": 1,
+      "retired_local": 1
+    },
+    {
+      "class": "LOCAL_MISSION",
+      "gate": "no active worktree and either ancestor(origin/main), patch-equivalent(origin/main), or exact head preserved by closed PR",
+      "retired": 8,
+      "veto": 0,
+      "salvage_required": [
+        "feat/bill-discovery-integration-2026-09-29",
+        "feat/discovery-ai-corpus-8735125072238788905",
+        "fix/bill-207-full-corpus-recovery"
+      ]
+    }
+  ],
+  "final_snapshot": {
+    "local_branches": 58,
+    "remote_tracking_refs": 120,
+    "active_worktree_branches": 44,
+    "remote_classes": {
+      "MAIN": 1,
+      "HOME": 9,
+      "MISSION": 47,
+      "OTHER": 62,
+      "RECOVERY": 1,
+      "WORKER": 0
+    },
+    "local_classes": {
+      "MAIN": 1,
+      "HOME": 14,
+      "MISSION": 23,
+      "OTHER": 12,
+      "RECOVERY": 8,
+      "WORKER": 0
+    }
+  },
+  "progress_from_initial_audit": {
+    "initial_remote_branches": 281,
+    "initial_local_branches": 116,
+    "current_remote_tracking_refs": 120,
+    "current_local_branches": 58,
+    "worker_refs_remaining_remote": 0,
+    "worker_refs_remaining_local": 0
+  },
+  "protected_next_scope": [
+    "44 active worktrees require owner/liveness/dirty-state reconciliation before retirement.",
+    "3 Bill discovery local mission branches contain unique patches and require salvage/reconciliation.",
+    "8 local recovery branches require incident/recovery closure semantics.",
+    "62 remote OTHER refs require semantic classification before any deletion rule.",
+    "Amdkn/* home refs remain protected pending explicit home-ref convergence.",
+    "The dirty root main checkout remains untouched and must not be reset/pulled/cleaned before its own reconciliation."
+  ]
+}
