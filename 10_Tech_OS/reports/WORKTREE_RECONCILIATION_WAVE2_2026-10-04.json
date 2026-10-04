@@ -1,0 +1,131 @@
+{
+  "schema": "aspace.worktree-reconciliation-receipt.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "wave": 2,
+  "start_state": {
+    "worktrees": 27,
+    "local_branches": 41,
+    "remote_tracking_refs": 114
+  },
+  "observed_external_convergence": [
+    {
+      "worktree": "C:/Users/amado/ASpace_OS_V3/.worktree_review_233",
+      "previous_state": "8965 status entries, mostly staged deletions",
+      "later_state": "path absent and no longer registered as Git worktree",
+      "attribution": "unknown/external; not claimed as an A'Space cleanup action in this wave"
+    },
+    {
+      "worktree": "C:/Users/amado/orca/workspaces/ASpace_OS_V3/Agy-Bill",
+      "branch": "review/agy-bill-224-2026-09-29",
+      "previous_state": "8979 status entries, mostly staged deletions",
+      "later_state": "path absent; local and remote-tracking branch absent",
+      "attribution": "unknown/external; not claimed as an A'Space cleanup action in this wave"
+    }
+  ],
+  "clean_retire": [
+    {
+      "worktree": "Ryan-MachineFabric",
+      "branch": "feat/ryan-harness-runtime-p1p4-2026-09-28",
+      "proof": "PR #210 merged; clean; git cherry against origin/main empty; no owner process"
+    }
+  ],
+  "archived_then_retired": [
+    {
+      "source": "Agy / feat/antigravity-council-of-doctors-2026-09-28",
+      "pr": 187,
+      "tag": "archive/antigravity-council-pr187-2026-10-04",
+      "sha": "4de5a4ba993c11479a3022b103ae1ca15d22c5ba",
+      "reason": "closed-unmerged PR with 7 unique commits and one final safe projection artifact"
+    }
+  ],
+  "home_convergence": [
+    {
+      "homes": ["Amdkn/Doctor11","Amdkn/Doctor12","Amdkn/Doctor13","Amdkn/Rick"],
+      "result": "fast-forwarded local homes to origin/main and synchronized remote home refs",
+      "precondition": "clean; no unique commits; no owner process"
+    },
+    {
+      "home": "Amdkn/River",
+      "tag": "archive/river-pr198-system-one-2026-10-04",
+      "archived_sha": "21353598542857583938b75a221c5d12a9f93444",
+      "result": "remote and local home converged to origin/main with force-with-lease",
+      "reason": "PR #198 closed-unmerged; 4 unique commits preserved before convergence"
+    },
+    {
+      "home": "Amdkn/Bill",
+      "tag": "archive/bill-research-home-preconvergence-2026-10-04",
+      "archived_sha": "964263dfd7a83f3ad105906d0f5af8af7d6b645a",
+      "result": "remote home converged to origin/main with force-with-lease; local raw inbox preserved",
+      "preserved_local_state": "50_Distillation/_raw_inbox: 14 files, ~12 MB, no path collision with origin/main"
+    }
+  ],
+  "active_recovery_projection": {
+    "issue": 219,
+    "branch": "recover/219-functional-928661",
+    "commit": "2a4d0f2ef4d51deb752ca52c8b248c0fd31890bb",
+    "draft_pr": 534,
+    "result": "formerly dirty local state is now committed, pushed, reviewable, and worktree-clean",
+    "checks_before_push": [
+      "strict credential-pattern scan: 0 hits across 11 files",
+      "py_compile PASS",
+      "9 JSON artifacts valid",
+      "process_broker tests 4/4 PASS"
+    ],
+    "github_checks": [
+      "GitHub Operating Model Advisor SUCCESS",
+      "Forge Continuity Contract SUCCESS",
+      "DC Foundation CI SUCCESS"
+    ],
+    "closure_claim": false
+  },
+  "protected_active": [
+    {
+      "home": "Amdkn/Graham",
+      "state": "clean; 1 unique commit; owner cmd.exe alive"
+    },
+    {
+      "home": "Amdkn/Yaz",
+      "state": "clean; no unique commits but owner cmd.exe alive; still behind origin/main"
+    },
+    {
+      "worktree": "Ryan",
+      "branch": "feat/ryan-discover-ai-m0-m7-2026-09-29",
+      "state": "7 dirty entries; 9 unique commits; live cmd/bash processes"
+    },
+    {
+      "worktree": "root main",
+      "state": "86 dirty entries; still protected from reset/pull/clean"
+    }
+  ],
+  "end_state": {
+    "worktrees": 15,
+    "local_branches": 26,
+    "remote_tracking_refs": 109,
+    "aligned_clean_homes": [
+      "Amdkn/Amy",
+      "Amdkn/Clara",
+      "Amdkn/Doctor11",
+      "Amdkn/Doctor12",
+      "Amdkn/Doctor13",
+      "Amdkn/Nardole",
+      "Amdkn/Rick",
+      "Amdkn/River",
+      "Amdkn/Rory"
+    ],
+    "aligned_home_with_local_untracked_inbox": "Amdkn/Bill"
+  },
+  "safety_invariants": [
+    "No root-main reset/pull/clean was performed.",
+    "No live-owner worktree was force-retired.",
+    "No unique closed-unmerged history was discarded; archive tags were created first.",
+    "Force-with-lease was used for persistent-home convergence with unique archived history.",
+    "Issue #219 remains open; Draft PR #534 is evidence/review state, not a cutover claim."
+  ],
+  "next_wave": [
+    "reconcile active Graham/Yaz/Ryan only after their owner processes release or hand off",
+    "review Draft PR #534 against current main and #219 acceptance criteria",
+    "decide local policy for Bill raw inbox",
+    "forensically route the 86 dirty root-main entries before any root convergence"
+  ]
+}
