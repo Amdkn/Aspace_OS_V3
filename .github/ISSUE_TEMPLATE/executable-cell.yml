@@ -1,0 +1,101 @@
+name: A'Space Executable Cell
+description: Create only a bounded executable or concretely blocked cell
+title: "[EXEC] "
+labels:
+  - state:execute
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## GitHub concept
+        **Issue = executable or concretely blocked work cell.**
+        Exploration belongs in Discussions, stable doctrine in docs/Wiki, dormant possibilities in Projects.
+
+        Before submitting, you should be able to answer:
+        Why does this exist? Who owns the outcome? What advances it? What closes it? Where is the evidence? How do we recover?
+
+  - type: dropdown
+    id: gate
+    attributes:
+      label: Why is this an Issue?
+      options:
+        - Executable now
+        - Blocked by a concrete named dependency/event
+    validations:
+      required: true
+
+  - type: input
+    id: mission
+    attributes:
+      label: Mission / return_to
+      description: Canonical Issue, Project, Milestone, PR, Discussion, or external contract this cell returns to.
+      placeholder: "#123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Smallest verifiable outcome
+      description: Describe evidence that would let this cell close.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: capability
+    attributes:
+      label: Accountable capability
+      options:
+        - RESEARCH / Bill
+        - DESIGN / Clara
+        - BUILD / Ryan
+        - OBSERVE / Yaz
+        - STATE / Graham
+        - INTERFACE / Amy
+        - COHERE / Rory
+        - FLOW / River
+        - DISPATCH / Nardole
+        - RECOVER / Donna
+        - GATEKEEP / Rick
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Existing state / evidence
+      description: Reuse prior PRs, commits, runtime evidence, branches, contracts, or receipts.
+    validations:
+      required: true
+
+  - type: textarea
+    id: authority
+    attributes:
+      label: Authority / mutation boundary
+      description: What may change? Which source owns truth? What must remain reversible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: closure
+    attributes:
+      label: Closure rule
+      description: Exact condition that closes this Issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: recovery
+    attributes:
+      label: Failure / UNKNOWN / rollback
+      description: What happens if the effect fails, remains UNKNOWN, or must be reverted?
+    validations:
+      required: true
+
+  - type: textarea
+    id: continuation
+    attributes:
+      label: PASS / FAILED / UNKNOWN continuation
+      description: Name the exact return path for each meaningful outcome.
+    validations:
+      required: true
