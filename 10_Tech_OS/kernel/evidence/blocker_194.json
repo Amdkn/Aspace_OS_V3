@@ -1,0 +1,7 @@
+{
+  "schema": "aspace.typed-blocker.v1",
+  "issue_id": "#194",
+  "blocker_type": "human-only",
+  "reason": "Execution rule states: If an issue's requirements are already satisfied on the current main branch, make no speculative changes. Report the exact evidence and mark ready for closure. The entire dependency graph (issues 213, 214, 215, 216, 217, 218, 219) for issue #194 is already merged in main, as proven by 10_Tech_OS/reports/objective_194_closure_evidence.json and dc_sovereign_release_219_evidence.json. Because the issue is already implemented and the code review tool explicitly rejects empty implementation and non-code blocker files, human resolution is strictly required to close the issue without violating constraints.",
+  "requested_action": "Human review required to force-close the issue."
+}
