@@ -11,6 +11,7 @@ No second scheduler and no new database:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sqlite3
 from contextlib import closing
@@ -54,6 +55,17 @@ def _json(raw: str | None) -> dict[str, Any]:
     except json.JSONDecodeError as exc:
         raise DispatchRoutingError("invalid durable event payload") from exc
     return value if isinstance(value, dict) else {"value": value}
+
+
+def _stable_json_hash(value: Any) -> str:
+    encoded = json.dumps(
+        value,
+        sort_keys=True,
+        separators=(",", ":"),
+        ensure_ascii=False,
+        default=str,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
 
 
 def select_runtime(
@@ -499,48 +511,144 @@ def migrate_mission_runtime(
     reason: str,
     actor_id: str = "ryan",
     authority_envelope: dict[str, Any] | None = None,
+    context_capsule: dict[str, Any] | None = None,
+    identity_version: str = "v1",
+    workspace_fingerprint: str | None = None,
 ) -> dict[str, Any]:
-    """Move an active mission to another heterogeneous runtime while preserving actor/work/correlation/authority.
+    """Migrate one bounded mission writer while preserving holon continuity.
 
-    Returns structured result including an EvidenceReceipt.
+    G5 does not choose the holon's next action.  It only verifies continuity,
+    fences the prior writer claim, installs the successor claim, and records a
+    replayable migration receipt.
     """
     cell = project_mission_cell(db_path, work_id)
-    correlation_id = cell.get("correlation_id") or str(uuid.uuid4())
-    return_route = cell.get("return_to")
+
+    with closing(_connect(db_path)) as con:
+        prior_claim = con.execute(
+            "SELECT harness,institutional_owner,runtime_id FROM claim WHERE work_id=?",
+            (work_id,),
+        ).fetchone()
+
+    from_harness = prior_claim["harness"] if prior_claim else None
+    from_runtime_id = prior_claim["runtime_id"] if prior_claim else None
+    prior_owner = prior_claim["institutional_owner"] if prior_claim else None
+
+    if prior_owner and str(prior_owner).casefold() != str(actor_id).casefold():
+        raise DispatchRoutingError("runtime migration cannot change institutional owner")
+
+    capsule = context_capsule or {}
+    capsule_actor = capsule.get("holon_id")
+    if capsule_actor and str(capsule_actor).casefold() != str(actor_id).casefold():
+        raise DispatchRoutingError("ContextCapsule holon identity mismatch")
+    if "next_action" in capsule:
+        raise DispatchRoutingError("ContextCapsule must not prescribe next_action")
+
+    cell_correlation = cell.get("correlation_id")
+    capsule_correlation = capsule.get("correlation_id")
+    if cell_correlation and capsule_correlation and str(cell_correlation) != str(capsule_correlation):
+        raise DispatchRoutingError("ContextCapsule correlation_id mismatch")
+    correlation_id = cell_correlation or capsule_correlation or str(uuid.uuid4())
+
+    cell_return = cell.get("return_to")
+    capsule_return = capsule.get("return_to")
+    if context_capsule is not None and not capsule_return:
+        raise DispatchRoutingError("G5 ContextCapsule requires return_to")
+    if cell_return and capsule_return and cell_return != capsule_return:
+        raise DispatchRoutingError("ContextCapsule return_to mismatch")
+    return_route = cell_return or capsule_return
+    if context_capsule is not None and not return_route:
+        raise DispatchRoutingError("runtime migration requires durable return_to")
+
+    capsule_authority = capsule.get("authority_envelope")
+    if authority_envelope is not None and capsule_authority is not None:
+        if authority_envelope != capsule_authority:
+            raise DispatchRoutingError("ContextCapsule authority envelope mismatch")
+    authority = (
+        authority_envelope
+        if authority_envelope is not None
+        else (capsule_authority or {})
+    )
+
+    evidence_head = capsule.get("evidence_head", [])
+    if not isinstance(evidence_head, list):
+        raise DispatchRoutingError("ContextCapsule evidence_head must be a list")
+
+    context_hash = _stable_json_hash(capsule) if context_capsule is not None else None
+    authority_hash = _stable_json_hash(authority)
+    workspace_state = workspace_fingerprint or "UNKNOWN"
 
     payload = {
-        "schema": "aspace.mission-runtime-migration.v1",
+        "schema": "aspace.mission-runtime-migration.v2",
         "work_id": work_id,
         "actor_id": actor_id,
         "correlation_id": correlation_id,
-        "authority_envelope": authority_envelope or {},
+        "mission_id": capsule.get("mission_id"),
+        "identity_version": identity_version,
+        "authority_envelope": authority,
         "return_route": return_route,
+        "from_runtime_id": from_runtime_id,
+        "from_harness": from_harness,
         "target_runtime_id": target_runtime_id,
         "target_harness": target_harness,
+        "context_hash": context_hash,
+        "authority_hash": authority_hash,
+        "workspace_fingerprint": workspace_state,
+        "evidence_head": list(evidence_head),
         "reason": reason,
     }
 
     with closing(_connect(db_path)) as con, con:
-        # Release existing claim or update claim for new runtime/harness
+        # One work_id has one claim row. Replacing it transactionally fences
+        # the prior writer instead of allowing dual mutation.
         con.execute("DELETE FROM claim WHERE work_id=?", (work_id,))
         con.execute(
             """INSERT INTO claim(work_id, harness, institutional_owner, runtime_id, expires_at)
                VALUES(?, ?, ?, ?, datetime('now', '+900 seconds'))""",
-            (work_id, target_harness, actor_id, target_runtime_id)
+            (work_id, target_harness, actor_id, target_runtime_id),
         )
-        event_id = _append_event(con, work_id, target_harness, "mission_runtime_migrated", payload)
+        claim_count = int(
+            con.execute(
+                "SELECT count(*) FROM claim WHERE work_id=?", (work_id,)
+            ).fetchone()[0]
+        )
+        if claim_count != 1:
+            raise DispatchRoutingError("runtime migration did not fence to one writer")
 
-    receipt = {
-        "receipt_id": f"rec-mig-{uuid.uuid4().hex[:8]}",
-        "work_id": work_id,
-        "correlation_id": correlation_id,
-        "actor_id": actor_id,
-        "target_runtime_id": target_runtime_id,
-        "target_harness": target_harness,
-        "status": "MIGRATED",
-        "observed_effect": f"Mission {work_id} migrated to runtime '{target_runtime_id}' under harness '{target_harness}' while preserving actor '{actor_id}' and correlation_id '{correlation_id}'.",
-        "event_id": event_id,
-    }
+        migration_event_id = _append_event(
+            con,
+            work_id,
+            target_harness,
+            "mission_runtime_migrated",
+            payload,
+        )
+        receipt = {
+            "schema": "aspace.embodiment-migration-receipt.v1",
+            "receipt_id": f"embmig-{migration_event_id}",
+            "actor_id": actor_id,
+            "work_id": work_id,
+            "mission_id": capsule.get("mission_id"),
+            "correlation_id": correlation_id,
+            "identity_version": identity_version,
+            "from_harness": from_harness,
+            "from_runtime": from_runtime_id,
+            "to_harness": target_harness,
+            "to_runtime": target_runtime_id,
+            "context_hash": context_hash,
+            "authority_hash": authority_hash,
+            "workspace_fingerprint": workspace_state,
+            "evidence_head": list(evidence_head),
+            "return_to": return_route,
+            "continuity_result": (
+                "PRESERVED" if context_capsule is not None else "DEGRADED"
+            ),
+        }
+        receipt_event_id = _append_event(
+            con,
+            work_id,
+            target_harness,
+            "embodiment_migration_receipt",
+            receipt,
+        )
 
     return {
         "status": "SUCCESS",
@@ -549,6 +657,8 @@ def migrate_mission_runtime(
         "correlation_id": correlation_id,
         "target_runtime_id": target_runtime_id,
         "target_harness": target_harness,
+        "migration_event_id": migration_event_id,
+        "receipt_event_id": receipt_event_id,
         "evidence_receipt": receipt,
     }
 
