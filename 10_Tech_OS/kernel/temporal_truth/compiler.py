@@ -263,7 +263,6 @@ class ContextCompiler:
             "holon_id": holon_id,
             "mission_id": mission_id,
             "correlation_id": correlation_id,
-            "scope": scope,
             "canon_slice": canon_slice,
             "anthology_window": anthology_refs,
             "physiology_ref": phys_snap["snapshot_id"],
@@ -275,10 +274,14 @@ class ContextCompiler:
             "unknowns": unknowns,
             "return_to": return_to,
         }
+        identity_material = {
+            "scope": scope,
+            **material,
+        }
 
         capsule = {
             "schema": "aspace.context-capsule.v1",
-            "capsule_id": _stable_id("cap", material),
+            "capsule_id": _stable_id("cap", identity_material),
             **material,
         }
         self.graph.validate_schema(capsule, "ContextCapsule")
