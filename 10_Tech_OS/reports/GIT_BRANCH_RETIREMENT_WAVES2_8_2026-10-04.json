@@ -1,0 +1,117 @@
+{
+  "schema": "aspace.git-branch-retirement-checkpoint.v1",
+  "date": "2026-10-04",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "policy_ref": "docs/governance/GIT_BRANCH_WORKTREE_LIFECYCLE_V4.md",
+  "checkpoint": "waves-2-through-8",
+  "starting_point_after_wave1": {
+    "remote_tracking_refs": 277,
+    "local_branches": 114
+  },
+  "waves": [
+    {
+      "wave": 2,
+      "class": "legacy AUTO_CREATE_PR workers",
+      "archive_tag": "archive/legacy-workers-wave2-2026-10-04",
+      "archive_commit": "32efc61821012ab82c9a462d0bd2e048347bed2c",
+      "historical_heads_preserved": 20,
+      "deletion_note": "The 20 refs were observed absent by the explicit deletion stage after synchronization. The archive anchor preserves all captured heads; no claim is made that all content was merged."
+    },
+    {
+      "wave": 3,
+      "class": "legacy AUTO_CREATE_PR workers",
+      "archive_tag": "archive/legacy-workers-wave3-2026-10-04",
+      "archive_commit": "796d37a88791264d85309ebfcb4b1b67fd1c6d2b",
+      "explicitly_retired": 20
+    },
+    {
+      "wave": 4,
+      "class": "remaining AUTO_CREATE_PR workers",
+      "archive_tag": "archive/legacy-workers-wave4-2026-10-04",
+      "archive_commit": "d07cd18b681813df09b7d7b5e73650a882da79f5",
+      "explicitly_retired": 11,
+      "remaining_family_refs": 0
+    },
+    {
+      "wave": 5,
+      "class": "legacy Jules workers",
+      "archive_tag": "archive/legacy-workers-wave5-jules-2026-10-04",
+      "archive_commit": "b8e1dc705ec997930ea0589acbb1de3a04af3259",
+      "explicitly_retired": 20
+    },
+    {
+      "wave": 6,
+      "class": "autopublish workers",
+      "archive_tag": "archive/legacy-workers-wave6-autopublish-2026-10-04",
+      "archive_commit": "48fadca12243da120c8e1fe0d302c8f40361c53f",
+      "explicitly_retired": 2
+    },
+    {
+      "wave": 7,
+      "class": "merged recovery branches",
+      "archive_tag": "archive/recovery-wave7-2026-10-04",
+      "archive_commit": "906454e619da5a64643a3cddfde9f7cf336ae616",
+      "explicitly_retired": 5
+    },
+    {
+      "wave": "backup",
+      "class": "River pre-reconcile backup",
+      "archive_tag": "archive/backup-River-pre-reconcile-20260928",
+      "archived_head": "416f813683179a86b874cd56b24521caba5a2724",
+      "unique_commits_preserved": 3,
+      "explicitly_retired": 1
+    },
+    {
+      "wave": 8,
+      "class": "stale mission branches before 2026-09-28",
+      "archive_tag": "archive/legacy-missions-wave8-2026-10-04",
+      "archive_commit": "54117415507adc61af610cfcd3b54baca9cb3a5d",
+      "explicitly_retired": 20
+    }
+  ],
+  "checkpoint_state": {
+    "remote_tracking_refs": 161,
+    "local_branches": 95,
+    "worktrees": 49,
+    "remaining_remote_prefix_counts": {
+      "feat": 45,
+      "fix": 28,
+      "feature": 4,
+      "docs": 5,
+      "design": 2,
+      "test": 3,
+      "recover": 1,
+      "Amdkn_home": 9
+    }
+  },
+  "vetoes": [
+    {
+      "branch": "feat/dc-p5-plugins-20260929",
+      "verdict": "SALVAGE_LOCAL",
+      "reason": "local head diverges and is not contained in origin/main"
+    },
+    {
+      "branch": "feat/ryan-harness-runtime-p1p4-2026-09-28",
+      "verdict": "KEEP_ACTIVE",
+      "reason": "active worktree"
+    },
+    {
+      "branch": "recover/215-functional-476961",
+      "verdict": "KEEP_ACTIVE",
+      "reason": "active worktree despite merged PR"
+    }
+  ],
+  "safety": [
+    "No reset --hard, pull, stash-all, or clean was performed on the dirty root checkout.",
+    "Persistent Amdkn/* home branches were excluded from retirement selection.",
+    "Every explicit retirement after Wave 2 was preceded by an archive tag or equivalent archival anchor.",
+    "Open PR branches, active worktrees, and local-only divergent branches were excluded."
+  ],
+  "next": [
+    "classify old feat/fix/feature/docs/design/test branches in <=20 branch waves",
+    "preserve each selected wave behind an archive tag before deleting refs",
+    "reconcile active local recovery/subagent worktrees separately",
+    "salvage the local-only delta on feat/dc-p5-plugins-20260929",
+    "eventually make the root main checkout a clean mirror of origin/main after all useful local state is routed out"
+  ]
+}
