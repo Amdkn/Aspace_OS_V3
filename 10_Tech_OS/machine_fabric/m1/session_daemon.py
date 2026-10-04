@@ -115,7 +115,10 @@ class Handler(BaseHTTPRequestHandler):
     server:App
     def log_message(self,*a): pass
     def sendj(self,status,p):
-        b=canon(p).encode(); self.send_response(status); self.send_header("Content-Type","application/json"); self.send_header("Content-Length",str(len(b))); self.end_headers(); self.wfile.write(b)
+        try:
+            b=canon(p).encode(); self.send_response(status); self.send_header("Content-Type","application/json"); self.send_header("Content-Length",str(len(b))); self.end_headers(); self.wfile.write(b)
+        except (ConnectionError, OSError):
+            pass
     def body(self):
         n=int(self.headers.get("Content-Length","0")); return json.loads(self.rfile.read(n).decode()) if n else {}
     def do_GET(self):

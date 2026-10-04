@@ -19,7 +19,7 @@ class State:
         while not self.stop:
             try: post(self.daemon+"/worker/heartbeat",{"worker_id":self.worker_id,"fencing_token":self.fence})
             except Exception: pass
-            time.sleep(.5)
+            time.sleep(.8)
     def native(self,msg):
         self.write({"dir":"in","msg":msg,"worker_id":self.worker_id,"fence":self.fence})
         typ=msg.get("type")

@@ -125,8 +125,12 @@ class Stack:
         ps=list(self.children.values())
         for p in ps:
             if p.poll() is None:
-                try:p.terminate()
-                except Exception:pass
+                if sys.platform=="win32":
+                    try:subprocess.run(["taskkill","/PID",str(p.pid),"/T","/F"],capture_output=True,check=False)
+                    except Exception:pass
+                else:
+                    try:p.terminate()
+                    except Exception:pass
         end=time.time()+4
         while time.time()<end and any(p.poll() is None for p in ps):time.sleep(.1)
         for p in ps:
@@ -157,6 +161,9 @@ def main():
                         atomic_json(RUN/"last_failure.json",{"dead":dead,"at":time.time(),"generation":generation})
                         break
                     time.sleep(1)
+            except Exception as e:
+                atomic_json(RUN/"last_failure.json",{"error":str(e),"at":time.time(),"generation":generation})
+                time.sleep(2)
             finally:
                 stack.stop()
             if not stop:time.sleep(1)
