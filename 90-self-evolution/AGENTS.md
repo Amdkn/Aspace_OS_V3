@@ -17,7 +17,7 @@
 - **P1 (Perte de mandat / Rejeu passif) :** Mandat d'action permanent, interdiction de demander des permissions évidentes.
 - **P2 (Oubli du graphe / Famine de contexte) :** Recours obligatoire au Silver Platter et aux concepts OKF.
 - **P3 (Dette structurelle hardcodée) :** Mesure vivante dynamique via `cartographier_v3.py`.
-- **P4 (Hallucination de complétude) :** Seule la présence physique sur disque fait foi.
+- **P4 (Hallucination de complétude) :** La présence sur disque prouve un artefact, pas son fonctionnement. Distinguer présence, validation, exécution et effet externe avec provenance/fraîcheur ; absence dans un checkout ne prouve pas absence globale.
 - **P5 (Surdité opérateur) :** Restitution vocale TTS systématique.
 - **P6 (Dérive des LLM / Dépendances fragiles) :** Remplacement systématique des CLI fragiles par des runners Antigravity typés et vérifiés.
 
@@ -45,3 +45,8 @@
 - `2026-09-12` : Immunité P11 (Élévation Récursive par WikiSkills & Sanctuarisation 7D) : Les signaux de friction ou d'insultes récurrents (ex: flux Power Automate) déclenchent l'élévation récursive immédiate et l'alignement sur l'ordre dimensionnel strict. Sanctuarisation totale d'Amadou Kone en 7D (Solarpunk Kardashev Type 2, 3, 4 et héritage H90). Décharge intégrale de la plomberie 3D par A0. Structuration déterministe des Catégories 0 à 9 : Cat 0 en 4D (Temps/12WY) ; Cat 1, 2, 3 en 5D (Portal/Bridge/Distillation Sas) ; Cat 4, 5, 6 en 6D (6 Frameworks/Blackboard/Swarm Factory) ; Cat 7, 8, 9 en 7D (Summer-Verse CEO/Conseil 8 VP/B3 Polymorphic Matrix). Inscription synchronisée dans Soul.md, Soul.db et OKF v0.2.
 
 
+
+
+## D4 — 2026-10-05 — Anti-réduction et anti-rejeu Multica
+
+La correction `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md` gouverne les reprises : mandat durable, objectif entier, cognition complète, subsidiarité, poly-incarnation, portée exacte des preuves et retour à l'action. Les entrées anciennes de ce journal décrivent leur époque ; elles n'autorisent ni contournement de permissions, ni quotas artificiels, ni remplacement systématique d'un harness compétent. Les règles P5/P6 historiques ne forcent pas TTS ou Antigravity lorsqu'ils sont indisponibles ou inadaptés. Une session conserve sa capacité d'agir par une surface autorisée accessible.

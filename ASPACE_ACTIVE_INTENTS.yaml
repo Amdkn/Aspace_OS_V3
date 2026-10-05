@@ -1,6 +1,6 @@
 version: 2
 ledger_id: ASPACE_ACTIVE_INTENTS
-updated_at: 2026-09-28
+updated_at: 2026-10-05
 owner: A0-Amadeus
 
 purpose: >
@@ -172,6 +172,7 @@ session_start_contract:
     handovers: _INBOX/handoffs/
     invariant: fix checkout/branch visibility before creating any alternate memory location
   required_reads:
+    - 40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md
     - 40_Memory_Wiki_OKF/AGENTS.md
     - 40_Memory_Wiki_OKF/index.md
     - MEMORY.md
@@ -253,3 +254,18 @@ fractal_companion_mesh_2026_09_28:
     issues: bounded executable capability requests via needs:<agent>
     pull_requests: implementations tied to Issues
     evidence: return proof to requester and shared state planes
+
+
+continuity_correction_2026_10_05:
+  source: 40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md
+  mandate: Preserve the whole authorized objective and continue from durable evidence without asking the Founder to restate fundamentals.
+  scope: Memory and resume correction; no runtime activation or live Supabase synchronization claimed.
+  invariants:
+    - A canary or partial delivery never silently removes remaining capabilities or relations.
+    - M0/M1/M2 are relative composition scales, not three sequential project milestones.
+    - Stewardship is non-exclusive; every holon keeps complete cognition within scoped authority.
+    - Preserve elastic subsidiarity, poly-embodiment and effect-scoped fencing.
+    - The 10D Life/Business nesting is not replaced by the technical seven-level pyramid.
+    - Historical current_evidence fields and capacity counts above are dated snapshots, not live state or permanent ceilings.
+    - Distinguish user intent, adopted decisions, machine proposals and observed execution.
+  next_resume: Read this correction and the relevant handover, recover the next executable action, then act within the existing mandate and available permissions.

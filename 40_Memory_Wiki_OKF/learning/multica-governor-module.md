@@ -23,6 +23,12 @@ sources:
 okf_version: "0.2"
 ---
 
+## Actualisation — 2026-10-05
+
+Le diagnostic ci-dessous est conservé comme mesure historique, non comme état courant. Le correctif de reprise et ses limites sont maintenant indexés dans [Continuité 10D et anti-réduction](continuite-10d-anti-reduction-2026-10-05.md) et reliés depuis MEMORY.md/AGENTS.md. Cela matérialise le mandat dans les fichiers de reprise ; cela ne prouve pas encore que chaque runtime les charge.
+
+L'ordre de lecture proposé en août ne supplante pas le bootstrap V3 corrigé de septembre/octobre. Les 688 concepts et 323 sessions sont des mesures historiques non recomptées ici. Correction arithmétique : 254/323 ≈ 78,6 %, pas « sept sur huit » ; les effectifs source ci-dessous restent conservés.
+
 # Le diagnostic d'origine
 
 `A0-Amadeus.md`, écrit le 2026-07-05, nomme le mal avant même de décrire le

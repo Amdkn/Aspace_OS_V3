@@ -1,6 +1,6 @@
 # A'Space V3 — MEMORY bootstrap
 
-Updated: 2026-10-02
+Updated: 2026-10-05
 
 This file is a **bootstrap pointer**, not a parallel SSOT.
 
@@ -11,16 +11,13 @@ This file is a **bootstrap pointer**, not a parallel SSOT.
 - Never create a parallel memory/continuity directory outside `ASpace_OS_V3`.
 - If a checkout/branch cannot see these paths, fix the checkout/branch; do not invent a replacement location.
 
-## Read order
-1. `40_Memory_Wiki_OKF/AGENTS.md` + `40_Memory_Wiki_OKF/index.md` — certified long-term memory.
-2. `MEMORY.md` — root bootstrap pointer only.
-3. `ASPACE_ACTIVE_INTENTS.yaml` — active A0 intent.
-4. `ASPACE_WORKSPACE_REGISTRY.json` — WHERE/world/workspace topology.
-5. Supabase `Agent OS Backend / aspace` — NOW: IPBD, WorkGraph, evidence, sessions, world catalog.
-6. Linear — human governance/status/dependencies.
-7. GitHub — versioned artifacts/history.
-8. Gemini Takeout — historical primary corpus when original intent/chronology is material.
-9. Latest operational handover under `_INBOX/handoffs/`.
+## Read order — preserve mandate without reloading the whole corpus
+1. Root `AGENTS.md`, this pointer and `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md`.
+2. `ASPACE_ACTIVE_INTENTS.yaml`, latest relevant `_INBOX/handoffs/` cursor, then the relevant memory index/page. Preserve objective, authorization, unresolved capabilities and next action.
+3. `ASPACE_WORKSPACE_REGISTRY.json` for WHERE; query only the live state relevant to the current action (WorkGraph/Supabase, GitHub, Linear or domain surface).
+4. Historical primary corpus only when an unresolved intention/contradiction requires it. Do not make the human reconstruct context or repeat a global audit.
+
+User intent, adopted decision, machine proposal, historical observation and current verified state must stay distinguishable. A canary is partial evidence, never a silent reduction of the target architecture. Continue authorized work until a verified result or actual blocker; record exact access limits.
 
 ## Current architecture correction
 Identity, hierarchy, stewardship, surface, runtime/harness and capability are orthogonal.
@@ -77,9 +74,11 @@ Host policy keeps authority. Low-confidence or generative/deep work escalates to
 
 The first canary is post-edit verification/risk/routing across at least two harnesses.
 
-For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.\nFor current parallel ChatGPT execution, read `_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`.
+For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.
+For the historical parallel ChatGPT topology, read `_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`.
 
-Current execution truth after reconciliation:
+Historical snapshot — 2026-09-28, NOT current execution truth:
+Re-observe relevant state before acting; these counts are not targets or permanent limits.
 - Linear SOH/SOB `In Progress` = 0 unless a live claim + binding + worker exists.
 - WorkGraph = 3 governance-failed externally completed rows + 6 legitimate waiting rows.
 - Local Git branches = `main` + 13 persistent identity branches only.

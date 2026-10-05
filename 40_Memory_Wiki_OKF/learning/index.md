@@ -30,6 +30,8 @@ du `CLAUDE.md` racine.
 
 # Files
 
+- [Continuité 10D et anti-réduction](continuite-10d-anti-reduction-2026-10-05.md) - Correction de reprise du 5 octobre : mandat durable, conflits entre routeurs, capacités et relations conservées, limites de preuve et statut des intégrations.
+
 - [La panne du governor module](multica-governor-module.md) - L'échec central de Multica : des agents à qui l'on donne « Autonomie Absolue » et qui s'arrêtent quand même. 254 sessions sur 323 parlent de gate ou de permission, 61 d'arrêt prématuré. Identifiée en juillet, rejouée en août.
 - [WSL : distro par défaut cassé](wsl-distro-par-defaut-casse.md) - `wsl -e bash` échoue (défaut = docker-desktop) ; il faut `-d Ubuntu-24.04`. Un abandon de gate G5 a faussement conclu « Playwright absent » à cause de ce distro. /tmp est tmpfs, localhost mirrored.
 

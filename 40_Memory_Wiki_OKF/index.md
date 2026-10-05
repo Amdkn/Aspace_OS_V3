@@ -45,6 +45,10 @@ suivie par `Amdkn/ASpace_OS_V3` et part avec chaque push.
 Le clone `openwiki/` reste en place : c'est l'outil qui **génère** des wikis,
 pas l'endroit où l'on **range** les siens.
 
+# Reprise prioritaire — 2026-10-05
+
+[Continuité 10D et anti-réduction](learning/continuite-10d-anti-reduction-2026-10-05.md) : mandat, architecture de mémoire, corrections Multica/V4, capacités à conserver des intégrations et limites de preuve. Lecture courte avant un nouvel audit ; les détails restent accessibles à la demande.
+
 # Files
 
 - [Démarrage rapide](quickstart.md) - Comment chercher dans ce bundle, et comment y écrire un concept sans casser l'index.
@@ -53,7 +57,7 @@ pas l'endroit où l'on **range** les siens.
 
 # Baseline 2026-09-18
 
-Voir `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md` pour la baseline Kirby A0, Orca ADE, Meta-Harness et compilation IPBD.
+La fiche historique `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md` est absente de main au 2026-10-05. La baseline résumée reste dans AGENTS.md racine. Pour la reprise actuelle, lire [Continuité 10D et anti-réduction](learning/continuite-10d-anti-reduction-2026-10-05.md), puis les sources pertinentes ; ne pas reconstruire le fichier manquant par supposition.
 
 # Directories
 

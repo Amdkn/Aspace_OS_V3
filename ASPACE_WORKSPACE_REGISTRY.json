@@ -76,7 +76,7 @@
       "status": "active",
       "steward": "Ryan",
       "shared": true,
-      "forge_chain": "Ryan -> Bill -> Clara -> Nardole"
+      "forge_chain": "Reentrant capability mesh: Ryan / Bill / Clara / Nardole; no mandatory waterfall"
     },
     "linear": {
       "role": "human_blackboard_and_control_tower",

@@ -20,6 +20,10 @@
 
 Toute session ChatGPT, Hermes, Codex, Antigravity, Claude Code, Jules ou autre harness qui intervient sur V3 doit appliquer ce bootstrap avant de reconstruire l'architecture depuis un handover, un ticket ou un historique de chat.
 
+### D4 — 2026-10-05 — Reprise sans réduction sémantique
+
+Lire `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md` avant un audit/intégration ou une reprise d'architecture. Conserver mandat, objectif entier, capacités restantes, preuves et prochaine action ; ne pas reconstruire depuis un résumé. La pyramide technique ci-dessous ne remplace pas l'architecture 10D L0/L1/L2 imbriquée. Les gates locaux ne deviennent pas des péages globaux ; un canary ne vaut pas réduction de portée. Les journaux datés sont historiques, pas une preuve d'état courant. La consigne ne dispense d'aucune permission applicable.
+
 ## 1. La Pyramide à 7 Niveaux d'A'Space OS V3
 
 ```
@@ -88,7 +92,7 @@ Pour éviter d'ingérer des dizaines de documents à chaque prompt, l'agent char
 - **Meta-Harness Fabric :** Herdr=runtime persistant; Multica=workforce management; Buzz=collaboration/event/identity; capacités composables, non étages exclusifs.
 - **Souveraineté :** Supabase `aspace.intent/capture_event` garde l'IPBD partagé; Supabase WorkGraph porte l'état machine partagé; `uc.py/uc.db` reste cache/exécution locale souveraine et projection réconciliable; Rick/S1 compose; Agent OS projette vers A0.
 - **Compilation minimale suffisante :** `IPBD → Clarify/Route → plus petit contrat nécessaire → Work/Evidence → Outcome`. SDD/ADR/PRD/TDD sont des formes conditionnelles, pas une chaîne obligatoire. Une action réversible bien bornée peut aller directement d'IPBD à Work; un choix architectural durable peut exiger ADR/PRD/TDD.
-- Canon détaillé : `40_Memory_Wiki_OKF/architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md`.
+- La fiche historique `architecture/kirby_a0_orca_ade_meta_harness_ipbd_factory.md` est absente de main au snapshot du 2026-10-05 ; ne pas supposer son contenu. Reprise vérifiable : `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md` et baseline ci-dessus.
 
 ## 4.1. ChatGPT Harness — reprise locale et gouverneur de contexte
 
