@@ -1,6 +1,8 @@
 # A'Space GitHub App Authority Adapter v0
 
 Status: DESIGN / REGISTRATION CANARY
+
+Répartition cible et promotions proposées le 2026-10-05 : [Capacités permanentes et promotions organisées v1](ASPACE_GITHUB_APP_CAPACITY_AND_PROMOTION_V1.md). Le profil initial ci-dessous est historique ; il ne définit pas un plafond institutionnel définitif. La v1 n'est pas encore appliquée aux Apps.
 Parent: #555
 Gateway parent: #544 / #542
 
