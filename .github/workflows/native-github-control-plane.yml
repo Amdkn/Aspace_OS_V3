@@ -32,4 +32,5 @@ jobs:
       - name: Bootstrap Milestone, Discussion, Projects and Wiki
         env:
           GITHUB_TOKEN: ${{ github.token }}
+          ASPACE_PROJECTS_TOKEN: ${{ secrets.ASPACE_PROJECTS_TOKEN }}
         run: python scripts/github_native_bootstrap.py
