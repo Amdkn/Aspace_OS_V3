@@ -1,0 +1,83 @@
+{
+  "schema": "aspace.git-minimal-convergence-receipt.v1",
+  "date": "2026-10-05",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "result": "MINIMAL_BRANCH_SET_REACHED",
+  "verified_state": {
+    "worktrees": 14,
+    "local_branches": 14,
+    "remote_tracking_refs": 15,
+    "actual_remote_branches": 14
+  },
+  "local_branches": [
+    "main",
+    "Amdkn/Amy",
+    "Amdkn/Bill",
+    "Amdkn/Clara",
+    "Amdkn/Doctor11",
+    "Amdkn/Doctor12",
+    "Amdkn/Doctor13",
+    "Amdkn/Graham",
+    "Amdkn/Nardole",
+    "Amdkn/Rick",
+    "Amdkn/River",
+    "Amdkn/Rory",
+    "Amdkn/Yaz",
+    "feat/ryan-discover-ai-m0-m7-2026-09-29"
+  ],
+  "remote_branches": [
+    "main",
+    "Amdkn/Amy",
+    "Amdkn/Bill",
+    "Amdkn/Clara",
+    "Amdkn/Doctor11",
+    "Amdkn/Doctor12",
+    "Amdkn/Doctor13",
+    "Amdkn/Graham",
+    "Amdkn/Nardole",
+    "Amdkn/Rick",
+    "Amdkn/River",
+    "Amdkn/Rory",
+    "Amdkn/Yaz",
+    "feat/ryan-discover-ai-m0-m7-2026-09-29"
+  ],
+  "preservation": {
+    "orphan_local_archive": "archive/orphan-local-branches-2026-10-05",
+    "remote_wave_archives": [
+      "archive/remote-stale-wave1-2026-10-05",
+      "archive/remote-stale-wave2-2026-10-05",
+      "archive/remote-stale-wave3-2026-10-05",
+      "archive/remote-stale-wave4-2026-10-05",
+      "archive/remote-stale-final-2026-10-05"
+    ],
+    "recover_219_archive": "archive/recover-219-functional-2026-10-05",
+    "river_home_archive": "archive/river-home-preconverge-2026-10-05",
+    "bill_raw_inbox_quarantine": "C:/Users/amado/Aspace_Quarantine/bill_raw_inbox_20261005"
+  },
+  "home_sync": {
+    "synced_to_origin_main": [
+      "Amdkn/Amy",
+      "Amdkn/Bill",
+      "Amdkn/Clara",
+      "Amdkn/Doctor11",
+      "Amdkn/Doctor12",
+      "Amdkn/Doctor13",
+      "Amdkn/Nardole",
+      "Amdkn/Rick",
+      "Amdkn/River",
+      "Amdkn/Rory"
+    ],
+    "protected_active_or_unique": [
+      "Amdkn/Graham",
+      "Amdkn/Yaz",
+      "feat/ryan-discover-ai-m0-m7-2026-09-29"
+    ]
+  },
+  "remaining_non_branch_debt": [
+    "root main worktree still contains local dirty state and is not yet an exact mirror of origin/main",
+    "Graham remains active with unique/local state",
+    "Yaz remains active with a live shell and may be stale relative to main",
+    "Ryan remains the only active mission branch/worktree and contains dirty/unique work"
+  ],
+  "invariant": "Do not reduce below this set while the persistent Amdkn/* home-worktree architecture remains desired. Further branch reduction should happen only when Ryan mission closes or a home is explicitly decommissioned."
+}
