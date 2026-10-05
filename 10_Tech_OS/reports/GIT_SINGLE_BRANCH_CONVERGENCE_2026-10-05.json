@@ -1,0 +1,61 @@
+{
+  "schema": "aspace.git-single-branch-convergence.v1",
+  "date": "2026-10-05",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "result": "PASS",
+  "verified_state": {
+    "worktrees": 14,
+    "local_branches": 1,
+    "remote_tracking_refs": 2,
+    "actual_remote_branches": 1,
+    "sole_branch": "main"
+  },
+  "topology": {
+    "root": "main",
+    "idle_homes": "detached at origin/main",
+    "mission_branches": "created only for bounded active mutation"
+  },
+  "retired_identity_branches": [
+    "Amdkn/Amy",
+    "Amdkn/Bill",
+    "Amdkn/Clara",
+    "Amdkn/Doctor11",
+    "Amdkn/Doctor12",
+    "Amdkn/Doctor13",
+    "Amdkn/Graham",
+    "Amdkn/Nardole",
+    "Amdkn/Rick",
+    "Amdkn/River",
+    "Amdkn/Rory",
+    "Amdkn/Yaz"
+  ],
+  "preserved_unique_state": [
+    {
+      "source": "Amdkn/Graham",
+      "tag": "archive/graham-home-pre-detach-2026-10-05",
+      "sha": "50e082571e4c91799630a0cd14fd1c27062e90aa"
+    },
+    {
+      "source": "feat/ryan-discover-ai-m0-m7-2026-09-29",
+      "tag": "archive/ryan-discover-ai-m0-m7-2026-10-05",
+      "sha": "67da1e137440de8383d8c591b47e25cc819fd323"
+    }
+  ],
+  "ryan_retirement": {
+    "prior_unique_commits": 9,
+    "prior_dirty_entries": 7,
+    "stale_index_lock_removed": true,
+    "stale_lock_date": "2026-10-02",
+    "archive_commit_created": true,
+    "archive_tag_pushed": true,
+    "home_worktree_retained": true,
+    "mission_branch_deleted_local_and_remote": true
+  },
+  "operating_rule": "A holon home is a worktree/registry identity, not a permanent branch. Branches exist only while a bounded mutation is active.",
+  "next": [
+    "update automation/embodiment generation so idle homes do not require git_branch",
+    "when a mission starts, create an ephemeral branch from current origin/main inside that home worktree",
+    "after merge/archive, detach the home back to origin/main and delete the mission branch",
+    "keep delete_branch_on_merge enabled"
+  ]
+}
