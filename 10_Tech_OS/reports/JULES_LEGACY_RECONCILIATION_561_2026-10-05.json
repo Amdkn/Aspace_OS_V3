@@ -1,0 +1,217 @@
+{
+  "schema_version": "jules.legacy-reconciliation.v1",
+  "observed_at": "2026-10-05",
+  "issue": 561,
+  "source_audit": "10_Tech_OS/reports/JULES_SWARM_INCIDENT_AUDIT_2026-10-05.md",
+  "rules": {
+    "no_auto_merge": true,
+    "no_bulk_close_without_evidence": true,
+    "no_provider_retry": true,
+    "failed_precondition_circuit_breaker": true,
+    "current_main_comparison": "All 13 draft PR heads compare as ahead-by-1 / behind-by-0 against current main at reconciliation time; none is already absorbed in main."
+  },
+  "draft_prs": [
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 111,
+      "issue": 105,
+      "disposition": "PARTIAL_PATCH_EXTRACT",
+      "reason": "Unique wargame/canary scaffolding exists, but the branch creates a parallel Clara/Ryan/River service hierarchy instead of integrating the existing runtime boundaries. Do not merge whole."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 112,
+      "issue": 93,
+      "disposition": "SUPERSEDED",
+      "superseded_by": 115,
+      "reason": "Overlaps the same #93 flow/capability scope; #115 is the more focused River/T7 candidate. #112 also removes a prior evidence artifact."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 113,
+      "issue": 109,
+      "disposition": "STILL_VALID_REVIEW",
+      "evidence": [
+        "Terra State CI success on head 5688179d538f3f5034e31e4c193131bb6dfc4f9d"
+      ],
+      "reason": "Direct CLI+MCP+River adapter work is aligned with #109. Still lacks the required real GWS effect/readback, so this is reviewable incremental substrate, not issue completion."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 114,
+      "issue": 109,
+      "disposition": "PARTIAL_PATCH_EXTRACT",
+      "reason": "Contains useful B3 drift, harness registry and capability-adapter changes, but it stops at a Supabase configuration wall and does not prove #109's real GWS effect/readback."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 115,
+      "issue": 93,
+      "disposition": "STILL_VALID_REVIEW",
+      "reason": "Focused removal of simulated Agent Portal progress plus River capability adapter and T7 canary. No GitHub workflow run was attached to the head during reconciliation; S2 must rerun checks before any merge."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 116,
+      "issue": 93,
+      "disposition": "SUPERSEDED",
+      "superseded_by": 115,
+      "reason": "Parallel #93 implementation with a much larger agents.store rewrite and no stronger durable evidence than #115."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 117,
+      "issue": 105,
+      "disposition": "STILL_VALID_REVIEW",
+      "reason": "Integrates the existing WorkGraph/Blackboard path and typed receipts rather than creating a separate service tree. Still does not by itself prove the full end-to-end #105 canary."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 118,
+      "issue": 90,
+      "disposition": "STILL_VALID_REVIEW",
+      "reason": "Narrow offline-recovery test correction is aligned with #90. #90 still requires real readback and therefore cannot close from this patch alone."
+    },
+    {
+      "repo": "Amdkn/Life-OS-2026",
+      "pr": 119,
+      "issue": 109,
+      "disposition": "OBSOLETE",
+      "superseded_by": 113,
+      "reason": "Toast + minimal capability types do not satisfy the #109 migration contract and are overtaken by #113/#114."
+    },
+    {
+      "repo": "Amdkn/The-OMK-Mobile-Back-Office",
+      "pr": 30,
+      "issue": 29,
+      "disposition": "PARTIAL_PATCH_EXTRACT",
+      "reason": "Useful inventory/contracts and lineage-freeze documentation, but the contracts remain in the Mobile repo rather than being proven extracted into the canonical Business OS engine."
+    },
+    {
+      "repo": "Amdkn/The-OMK-Mobile-Back-Office",
+      "pr": 31,
+      "issue": 29,
+      "disposition": "DUPLICATE",
+      "duplicate_of": 30,
+      "reason": "Same capability/doc set as #30 plus an unrelated 3339-line pnpm-lock addition; keep #30 as the cleaner extraction source."
+    },
+    {
+      "repo": "Amdkn/Business-Office-3-OS",
+      "pr": 3,
+      "issue": 2,
+      "disposition": "PARTIAL_PATCH_EXTRACT",
+      "reason": "Broad generated-tree rewrite contains useful generator/path ideas, but mutates AGENT/SOUL/SCRUMS/ORG/README widely and does not prove the required reusable-factory canary."
+    },
+    {
+      "repo": "Amdkn/Business-Office-3-OS",
+      "pr": 4,
+      "issue": 2,
+      "disposition": "STILL_VALID_REVIEW",
+      "reason": "More focused metaprogramming/ontology change preserving B3 cognition. Still incremental only; issue #2's factory-consumption and improvement-request canary remain open."
+    }
+  ],
+  "completed_sessions": [
+    {
+      "session_id": "16747692619086489624",
+      "target": "Aspace_OS_V3#222",
+      "disposition": "UNKNOWN_NEEDS_OWNER",
+      "reason": "No attached PR or durable session-specific artifact found beyond the incident audit; #222 remains open."
+    },
+    {
+      "session_id": "13435022830012982524",
+      "target": "Aspace_OS_V3#207",
+      "disposition": "SUPERSEDED",
+      "reason": "Later recovery chain produced merged PR #266 and #271 and advanced the real corpus runner; #207 remains open for corpus outcome, not for this legacy session."
+    },
+    {
+      "session_id": "123363717900059492",
+      "target": "historical 13e Docteur / Yaz-Ryan-Graham",
+      "disposition": "UNKNOWN_NEEDS_OWNER",
+      "reason": "No durable GitHub mapping found beyond the incident audit."
+    },
+    {
+      "session_id": "5362069408040447720",
+      "target": "Business-Office-3-OS#2",
+      "mapped_pr": 4,
+      "disposition": "STILL_VALID_REVIEW"
+    },
+    {
+      "session_id": "14048242369761474536",
+      "target": "Aspace_OS_V3#219",
+      "disposition": "SUPERSEDED",
+      "reason": "#219 underwent later truth-reconciliation/release evidence and is now closed completed; no session-specific PR is attached."
+    },
+    {
+      "session_id": "10808731965819602480",
+      "target": "Life-OS-2026#109",
+      "mapped_pr": 119,
+      "disposition": "OBSOLETE"
+    },
+    {
+      "session_id": "1449804890686472815",
+      "target": "Life-OS-2026#105",
+      "mapped_pr": 117,
+      "disposition": "STILL_VALID_REVIEW"
+    },
+    {
+      "session_id": "16595203227135328502",
+      "target": "Life-OS-2026#90",
+      "mapped_pr": 118,
+      "disposition": "STILL_VALID_REVIEW"
+    },
+    {
+      "session_id": "3437763578590245109",
+      "target": "The-OMK-Mobile-Back-Office#29",
+      "mapped_pr": 31,
+      "disposition": "DUPLICATE"
+    },
+    {
+      "session_id": "15138110105046895363",
+      "target": "Life-OS-2026#93",
+      "mapped_pr": 116,
+      "disposition": "SUPERSEDED"
+    },
+    {
+      "session_id": "12445478783326656512",
+      "target": "Aspace_OS_V3#318",
+      "disposition": "SUPERSEDED",
+      "reason": "#318 later advanced through #319/#320/#325 and Context Compiler integration; the legacy session is not the current acceptance surface."
+    },
+    {
+      "session_id": "17234858273267160781",
+      "target": "Life-OS-2026#88/#93",
+      "mapped_pr": 115,
+      "disposition": "STILL_VALID_REVIEW"
+    },
+    {
+      "session_id": "7782632579374977414",
+      "target": "Aspace_OS_V3#485",
+      "disposition": "UNKNOWN_NEEDS_OWNER",
+      "reason": "#485 remains open and physical evidence says the shared S3 RecoveryPort gap remains valid; no attached session PR exists."
+    },
+    {
+      "session_id": "2164587241585309927",
+      "target": "Aspace_OS_V3#484",
+      "disposition": "UNKNOWN_NEEDS_OWNER",
+      "reason": "#484 remains open; physical recon found River's Jev seed but no durable link from this legacy Jules session to an accepted PR."
+    }
+  ],
+  "waiting_session": {
+    "session_id": "10438573096344858338",
+    "target": "Life-OS-2026#109",
+    "disposition": "DUPLICATE",
+    "reason": "Duplicate coverage of the already completed #109 family; do not nudge or create a replacement session."
+  },
+  "failed_family": {
+    "count": 85,
+    "target": "Amdkn/Agent-OS#1",
+    "disposition": "DUPLICATE",
+    "recovery": "FAILED_PRECONDITION circuit breaker; one incident family, zero provider retries."
+  },
+  "next_actions": [
+    "Close only PRs classified SUPERSEDED/DUPLICATE/OBSOLETE with durable redirect comments.",
+    "Move STILL_VALID_REVIEW candidates to normal S2 review; no merge authority implied.",
+    "Keep PARTIAL_PATCH_EXTRACT drafts quarantined until the useful delta is extracted or explicitly discarded.",
+    "Do not execute Jules canary #562 until #560 provider contract passes."
+  ]
+}
