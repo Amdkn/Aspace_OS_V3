@@ -22,6 +22,7 @@ GRAPHQL = "https://api.github.com/graphql"
 REPO = os.environ["GITHUB_REPOSITORY"]
 OWNER = os.environ["GITHUB_REPOSITORY_OWNER"]
 TOKEN = os.environ["GITHUB_TOKEN"]
+PROJECTS_TOKEN = os.environ.get("ASPACE_PROJECTS_TOKEN") or None
 REPO_NAME = REPO.split("/", 1)[1]
 
 GATEWAY_ISSUES = [542, 543, 544, 545, 546, 547]
@@ -57,8 +58,27 @@ def api(method: str, path: str, payload: dict | None = None):
         raise ApiError(f"{method} {url} -> {exc.code}: {body}") from exc
 
 
-def graphql(query: str, variables: dict):
-    result = api("POST", GRAPHQL, {"query": query, "variables": variables})
+def graphql(query: str, variables: dict, token: str | None = None):
+    data = json.dumps({"query": query, "variables": variables}).encode()
+    req = urllib.request.Request(
+        GRAPHQL,
+        data=data,
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {token or TOKEN}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            "User-Agent": "aspace-native-github-control-plane",
+            "Content-Type": "application/json",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            result = json.loads(response.read())
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode(errors="replace")
+        raise ApiError(f"POST {GRAPHQL} -> {exc.code}: {body}") from exc
+
     errors = (result or {}).get("errors")
     if errors:
         raise ApiError(f"GraphQL errors: {json.dumps(errors, ensure_ascii=False)}")
@@ -186,7 +206,11 @@ def project_snapshot(project_number: int):
       }
     }
     """
-    data = graphql(q, {"login": OWNER, "number": project_number})
+    data = graphql(
+        q,
+        {"login": OWNER, "number": project_number},
+        token=PROJECTS_TOKEN,
+    )
     project = data["user"]["projectV2"]
     if not project:
         raise ApiError(f"Project V2 #{project_number} not found or inaccessible")
@@ -208,7 +232,11 @@ def issue_node_id(number: int) -> str:
       }
     }
     """
-    return graphql(q, {"owner": OWNER, "name": REPO_NAME, "number": number})["repository"]["issue"]["id"]
+    return graphql(
+        q,
+        {"owner": OWNER, "name": REPO_NAME, "number": number},
+        token=PROJECTS_TOKEN,
+    )["repository"]["issue"]["id"]
 
 
 def add_project_item(project_id: str, issue_id: str):
@@ -219,7 +247,11 @@ def add_project_item(project_id: str, issue_id: str):
       }
     }
     """
-    graphql(m, {"projectId": project_id, "contentId": issue_id})
+    graphql(
+        m,
+        {"projectId": project_id, "contentId": issue_id},
+        token=PROJECTS_TOKEN,
+    )
 
 
 def ensure_projects() -> str:
@@ -228,6 +260,14 @@ def ensure_projects() -> str:
     Project numbers changed during earlier Project-V2 restructuring, so this
     routine treats historical numbers as candidates instead of canon.
     """
+    if not PROJECTS_TOKEN:
+        return (
+            "external-user-scope: Projects #12 and #9 are already projected "
+            "via authenticated gh/DC. Repository GITHUB_TOKEN cannot access "
+            "user-level Projects V2. Configure ASPACE_PROJECTS_TOKEN or a "
+            "GitHub App installation token for fully native Actions updates."
+        )
+
     results = []
     errors = []
 
