@@ -172,7 +172,20 @@ It is forensic evidence for:
 - publisher branch/PR history;
 - future migration tests.
 
-The legacy launchers are now fail-closed by the companion PR to this report.
+The legacy launchers are local/ignored runtime files (`.git/info/exclude: 00_Operations/`) and therefore are not mutated by GitHub content APIs.
+
+Amd-PC containment:
+- original `install_task.ps1` and `run_tick.ps1` copied to
+  `C:/Users/amado/Aspace_Quarantine/jules_swarm_legacy_launchers_20261005`;
+- SHA-256 manifest written beside them;
+- local `install_task.ps1` replaced by a fail-closed task-disabler;
+- local `run_tick.ps1` replaced by a fail-closed no-op that logs and exits 64.
+
+Original hashes:
+- `install_task.ps1`: `987082BF9DF55854F36968630801E6C0CDB75C047D2B42C8304E34FBF671AB63`
+- `run_tick.ps1`: `2200FD19A52FC8AB0B55B13FFD71FF841FB4FD58A828075FDDFE560BFF598BEA`
+
+GitHub persists the governance/audit contract; Amd-PC persists the local kill-switch.
 
 ## Re-enable rule
 
@@ -180,3 +193,24 @@ The legacy Closure Swarm must never be re-enabled as-is.
 
 Jules may return only through the provider-neutral contract in:
 `docs/governance/JULES_PROVIDER_OPERATING_MODEL_V2.md`.
+
+
+## Current workload eligibility conclusion
+
+At audit time the legacy target set contained 20 open Issues. **Zero of those 20 are approved for blind whole-Issue Jules dispatch.**
+
+Reason: the set mixes parent missions, architectural fabrics, migration objectives, state/release canaries, authority/security work, and broad research/build objectives.
+
+A future Jules session may target one of those programs only after S2/Nardole decomposes it into a bounded `ExecutionCell` satisfying the provider v2 eligibility gate.
+
+## Current source registry conclusion
+
+The Jules proxy exposes 45 GitHub sources. This is discovery visibility only.
+
+It must never be interpreted as:
+- dispatch allowlist;
+- current project list;
+- authority scope;
+- backlog scope.
+
+A future `JulesExecutionPacket` authorizes exactly one repository and one bounded cell.
