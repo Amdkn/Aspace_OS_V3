@@ -4,12 +4,16 @@ on:
   pull_request:
     paths:
       - "10_Tech_OS/kernel/**"
+      - "10_Tech_OS/github_app_system1/**"
+      - "scripts/github_app_system1.py"
       - "80_Agent-OS/capability_fabric/**"
       - ".github/workflows/kernel-continuity-ci.yml"
   push:
     branches: [main]
     paths:
       - "10_Tech_OS/kernel/**"
+      - "10_Tech_OS/github_app_system1/**"
+      - "scripts/github_app_system1.py"
       - "80_Agent-OS/capability_fabric/**"
       - ".github/workflows/kernel-continuity-ci.yml"
 
@@ -22,6 +26,8 @@ jobs:
         with:
           sparse-checkout: |
             10_Tech_OS/kernel
+            10_Tech_OS/github_app_system1
+            scripts/github_app_system1.py
             80_Agent-OS/capability_fabric
             30_Business_OS/20_Workflow_Engine
             ASPACE_WORKSPACE_REGISTRY.json
@@ -35,11 +41,15 @@ jobs:
       - name: Compile continuity modules
         run: |
           python -m py_compile \
+            scripts/github_app_system1.py \
             10_Tech_OS/kernel/mission_continuity.py \
             10_Tech_OS/kernel/runtime_presence.py \
             10_Tech_OS/kernel/dispatch_routing.py \
             10_Tech_OS/kernel/mission_watcher.py \
             10_Tech_OS/kernel/uc_workgraph.py \
+            10_Tech_OS/kernel/provider_execution.py \
+            10_Tech_OS/kernel/test_provider_execution.py \
+            10_Tech_OS/kernel/test_github_app_system1.py \
             10_Tech_OS/kernel/test_mission_continuity.py \
             10_Tech_OS/kernel/test_runtime_presence.py \
             10_Tech_OS/kernel/test_dispatch_routing.py \
@@ -67,6 +77,9 @@ jobs:
       - name: Mission continuity + presence + dispatch + watcher regression suite
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_mission_continuity.py test_runtime_presence.py test_dispatch_routing.py test_mission_watcher.py test_inter_fabric.py test_inter_fabric_runtime_canary.py
+      - name: Provider execution + GitHub App authority System-One
+        working-directory: 10_Tech_OS/kernel
+        run: python -m unittest test_provider_execution.py test_github_app_system1.py
       - name: Jules fleet source routing
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_jules_fleet_supervisor.py
