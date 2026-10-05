@@ -1,0 +1,9 @@
+{
+  "$schema": "aspace.typed-blocker.v1",
+  "blocker_id": "issue-207-gws-auth",
+  "issue_number": 207,
+  "blocked_action": "M8 - local authenticated GWS full-corpus replay",
+  "reason": "Executing the full corpus harvest and writing to the operational Google Spreadsheet (1lqI1uJhqK9K45kibmZzpKTrnI5VHiAxSLu20RU3zTA0) requires authenticated GWS CLI access. This is a human-only authorization and an irreversible external action that cannot be performed in the sandboxed agent environment.",
+  "required_resolution": "A human operator must run the pipeline locally with an authenticated GWS CLI to execute M8 and write the operational projection.",
+  "timestamp": "2024-10-05T01:00:00Z"
+}
