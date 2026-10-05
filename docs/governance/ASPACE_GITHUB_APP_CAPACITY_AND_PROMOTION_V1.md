@@ -111,3 +111,22 @@ La présente livraison finalise une proposition de répartition ; elle n'install
 - https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app
 - https://docs.github.com/en/apps/maintaining-github-apps/modifying-a-github-app-registration
 - https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-a-user-access-token-for-a-github-app
+
+
+## Activation GitHub vérifiée — 2026-10-05
+
+Cette mise à jour remplace le statut « proposition, aucune modification live » ci-dessus pour les permissions de base uniquement. Le Capitaine a approuvé le diff exact dans la session, puis les cinq registrations ET leurs installations ont été mises à jour via GitHub. Chaque écran final confirme les nouveaux droits, sans demande d'acceptation restante.
+
+Portée commune conservée : Only select repositories, Amdkn/Aspace_OS_V3 et Amdkn/Aspace_OS-V4 (2 dépôts).
+
+| App / installation | Lecture effective | Écriture effective | Autre droit conservé |
+|---|---|---|---|
+| Gateway / 168081230 | actions, contents, statuses, deployments, metadata, pull_requests | checks, discussions, issues | — |
+| A0 / 168092015 | checks, statuses, metadata | actions, administration, agent secrets, contents, codespaces, discussions, issues, pull_requests | repository projects : Admin |
+| S1 / 168092164 | environments, metadata | actions, checks, contents, statuses, deployments, discussions, issues, pull_requests, workflows | — |
+| S2 / 168092789 | checks, statuses, metadata | actions, variables, contents, deployments, discussions, issues, pull_requests, workflows | — |
+| S3 / 168093066 | metadata | actions, variables, checks, contents, statuses, deployments, discussions, issues, pull_requests, workflows | — |
+
+Les noms courts correspondent aux libellés GitHub ; « agent secrets » est distinct de Secrets (Actions). Projects classique ne certifie pas l'accès Projects V2. Les droits préexistants supplémentaires ont été préservés, notamment ceux d'A0 et du Gateway.
+
+Limite de la preuve : configuration et acceptation GitHub vérifiées ; aucun test d'appel avec jeton d'installation ni exécution de harness n'a été réalisé ici. Les promotions temporaires, l'émetteur de jetons et la synchronisation du compilateur/profils restent à implémenter. Ne pas exécuter une réconciliation depuis les anciens profils qui annulerait cette répartition approuvée. Aucune clé privée créée ou diffusée, aucune protection de branche modifiée.
