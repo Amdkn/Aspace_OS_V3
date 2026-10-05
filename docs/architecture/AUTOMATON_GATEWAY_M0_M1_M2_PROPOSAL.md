@@ -8,7 +8,21 @@ Contexte : [synthèse de session](../governance/SESSION_2026_10_05_AUDIT_TO_AUTO
 
 [Conway-Research/automaton](https://github.com/Conway-Research/automaton/tree/d8f816881fd24b6f5e3d616e59edec387a447667), snapshot `d8f816881fd24b6f5e3d616e59edec387a447667`. Le README annonce MIT et une poursuite du développement dans un environnement RL interne ; le dépôt public ne prouve pas l'état du produit privé.
 
-Intégrer d'abord des organes M1 et des actions M2 derrière un adapter. Conserver l'option d'un runtime complet M0 borné. Le constructeur A'Space demeure responsable de la composition, certification, promotion et réutilisation ; Automaton fournit une implémentation candidate de certaines capacités.
+La première tranche vérifiable PEUT utiliser un organe M1 ou une action M2 derrière un adapter, mais elle ne définit ni l'ordre ontologique ni la portée finale de l'intégration. Le runtime complet Automaton M0, sa mémoire, sa boucle, sa filiation, ses capacités de reproduction/évolution et leurs compositions M1/M2 restent dans l'objectif entier tant qu'ils ne sont pas explicitement abandonnés par décision humaine. Le constructeur A'Space demeure responsable de la composition, certification, promotion et réutilisation ; Automaton fournit une implémentation candidate de certaines capacités.
+
+## Garde-fou 10D — objectif entier, pas canary-amputation
+
+Cette proposition est subordonnée au canon de continuité `9e59a54a` / `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md`.
+
+Règles de non-réduction :
+
+- **un canary n'est jamais la définition du produit** ; il apporte une preuve locale et laisse visibles les capacités restantes ;
+- **M0/M1/M2 sont des échelles relatives de composition**, pas trois jalons séquentiels qui autorisent à abandonner M0 après une preuve M1/M2 ;
+- l'intégration Automaton conserve l'ambition d'**organisme complet**, d'organes réutilisables, de primitives, de filiation, de reproduction et d'évolution sous autorité explicite ;
+- l'Universal Constructor doit pouvoir composer Automaton avec Paperclip, Prime Agent, DeepSeek Harness, Gateway, Capability/Effect/Truth/Resource Fabrics et les factories existantes sans qu'un adapter local absorbe cette possibilité ;
+- la première tranche exécutable doit donc publier **livré / restant / bloqué / explicitement abandonné**, jamais réduire silencieusement l'objectif entier.
+
+Le Gateway est la membrane de présence/session/transport ; il ne remplace pas le War Room, le Capability Graph, la mémoire temporelle, les décisions des holons ou la Factory.
 
 ## Correspondance des échelles
 
