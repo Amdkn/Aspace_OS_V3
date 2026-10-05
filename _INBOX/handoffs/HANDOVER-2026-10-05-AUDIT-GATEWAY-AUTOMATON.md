@@ -21,6 +21,20 @@ L'entrée Gateway existante reçoit un lien vers ce dossier de continuité.
 - Snapshot Automaton inspecté ; frontières Gateway/HostPolicy/Nardole/fabrics préservées.
 - Contrats #542–#546 et #560–#562 réutilisés ; aucun méga-epic créé.
 
+## Garde-fou de reprise — ne pas retomber en 3D
+
+Le commit `9e59a54a` est un contrat de continuité prioritaire : l'architecture 10D, les holons complets, la subsidiarité élastique, la poly-incarnation et les échelles relatives M0/M1/M2 doivent survivre aux résumés.
+
+Cette PR et ses cellules Gateway **ne remplacent pas** le War Room inter-dépôts ni l'ambition Universal Constructor. Elles constituent une tranche documentaire/exécutable locale.
+
+À toute reprise Automaton :
+
+1. conserver l'organisme M0 et ses possibilités de composition, filiation, reproduction et évolution dans l'objectif entier ;
+2. distinguer preuve locale d'un adapter M1/M2 et complétude de l'intégration ;
+3. charger la carte portefeuille/capacités pertinente avant arbitrage architectural ;
+4. comparer Automaton avec les autres organes/factories déjà possédés (Paperclip, Prime Agent, DeepSeek Harness, Gateway, Ryan/CubeFarm, etc.) par **composition**, pas par élimination réflexe ;
+5. enregistrer `livré / restant / bloqué / abandonné explicitement` après chaque expérience.
+
 ## Reprise utile
 
 | Cellule existante | Prochaine action bornée | Preuve de sortie |
@@ -28,7 +42,7 @@ L'entrée Gateway existante reçoit un lien vers ce dossier de continuité.
 | #561 | Comparer les 13 drafts Life/Mobile/Business-Office et attribuer une disposition | Receipt par PR, sans bulk close |
 | #560 | Finaliser/valider ExecutionPacket et adapter provider-neutral | Tests des préconditions, lease, déduplication, circuit breaker |
 | #562 | Après conditions #560, une seule session Jules à faible risque | Draft PR S3, CI S2, revue/merge ou clôture S1 et receipt |
-| #545 | Choisir une capacité Automaton M1/M2 et réaliser l'adapter borné | Exact commit, effets contrôlés, résultat indépendant |
+| #545 | Choisir une première tranche Automaton bornée M1/M2 **sans réduire l'objectif M0/reproduction/évolution** ; publier livré/restant/bloqué | Exact commit, effets contrôlés, résultat indépendant + dette de capacités restante |
 | #546 | Reconnexion/migration après première tranche | Identité/filiation stables et zéro double effet |
 
 Ne pas lancer ces exécutions sur la seule disponibilité de quatre comptes Jules. Leur capacité demeure USER_REPORTED. Ne pas traiter le quota Chat comme illimité.
