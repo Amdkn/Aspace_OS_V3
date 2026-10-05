@@ -2,12 +2,14 @@ name: A'Space Native GitHub Control Plane
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - "docs/governance/ASPACE_GATEWAY_NATIVE_GITHUB_V0.md"
       - "docs/wiki/**"
+      - "scripts/github_native_bootstrap.py"
       - ".github/workflows/native-github-control-plane.yml"
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -18,192 +20,16 @@ jobs:
   bootstrap-native-surfaces:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      GH_TOKEN: ${{ github.token }}
-      REPO: ${{ github.repository }}
-      OWNER: ${{ github.repository_owner }}
-      GATEWAY_ISSUES: "542 543 544 545 546 547"
-      MILESTONE_TITLE: "V4 — A'Space Gateway / Native Control Plane v0"
-      DISCUSSION_TITLE: "[RFC][GATEWAY] A'Space Gateway — Native GitHub Control Plane & Federation"
-
     steps:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 1
 
-      - name: Create or reuse Gateway milestone
-        shell: bash
-        run: |
-          set -euo pipefail
-          milestone_number="$(
-            gh api "repos/$REPO/milestones?state=all&per_page=100"               --jq ".[] | select(.title == env.MILESTONE_TITLE) | .number" | head -n1
-          )"
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
 
-          if [ -z "$milestone_number" ]; then
-            milestone_number="$(
-              gh api --method POST "repos/$REPO/milestones"                 -f title="$MILESTONE_TITLE"                 -f description="Bounded convergence for A'Space Gateway v0: protocol, identity/presence/session, GitHub control-plane bridge, runtime/surface federation and sovereign canary."                 --jq '.number'
-            )"
-          fi
-
-          for issue in $GATEWAY_ISSUES; do
-            gh api --method PATCH "repos/$REPO/issues/$issue" -F milestone="$milestone_number" >/dev/null
-          done
-
-          echo "MILESTONE_NUMBER=$milestone_number" >> "$GITHUB_ENV"
-          echo "MILESTONE_STATUS=ready" >> "$GITHUB_ENV"
-
-      - name: Create or reuse Gateway RFC Discussion
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          repo_id="$(
-            gh api graphql               -f query='query($owner:String!,$name:String!){repository(owner:$owner,name:$name){id}}'               -f owner="$OWNER"               -f name="${REPO#*/}"               --jq '.data.repository.id'
-          )"
-
-          category_id="$(
-            gh api graphql               -f query='query($owner:String!,$name:String!){repository(owner:$owner,name:$name){discussionCategories(first:50){nodes{id name}}}}'               -f owner="$OWNER"               -f name="${REPO#*/}"               --jq '.data.repository.discussionCategories.nodes[] | select(.name=="Ideas" or .name=="General") | .id'               | head -n1
-          )"
-
-          if [ -z "$category_id" ]; then
-            echo "No Ideas/General discussion category is available." >&2
-            exit 1
-          fi
-
-          existing_url="$(
-            gh api graphql               -f query='query($owner:String!,$name:String!){repository(owner:$owner,name:$name){discussions(first:100,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{title url}}}}'               -f owner="$OWNER"               -f name="${REPO#*/}"               --jq ".data.repository.discussions.nodes[] | select(.title == env.DISCUSSION_TITLE) | .url"               | head -n1
-          )"
-
-          if [ -z "$existing_url" ]; then
-            body="$(cat <<'EOF'
-# A'Space Gateway RFC
-
-Mission: #542
-
-Use this Discussion for alternatives, protocol questions, external patterns, serendipity and architectural debate that are **not yet executable cells**.
-
-## Fixed boundary
-
-Gateway = connectivity + protocol + presence + session + delivery + federation.
-
-Gateway is not:
-- the institutional brain;
-- the Capability Fabric;
-- HostPolicy;
-- WorkGraph;
-- Temporal Truth;
-- AMF;
-- the Reflex Fabric.
-
-Promote an idea from this Discussion to an Issue only when it has a concrete effect, owner, acceptance criterion and return_to.
-
-Executable mission: #542  
-Protocol/identity: #543  
-GitHub control plane: #544  
-Runtime/surfaces: #545  
-Sovereign canary: #546
-EOF
-)"
-
-            existing_url="$(
-              gh api graphql                 -f query='mutation($repositoryId:ID!,$categoryId:ID!,$title:String!,$body:String!){createDiscussion(input:{repositoryId:$repositoryId,categoryId:$categoryId,title:$title,body:$body}){discussion{url}}}'                 -f repositoryId="$repo_id"                 -f categoryId="$category_id"                 -f title="$DISCUSSION_TITLE"                 -f body="$body"                 --jq '.data.createDiscussion.discussion.url'
-            )"
-          fi
-
-          echo "DISCUSSION_URL=$existing_url" >> "$GITHUB_ENV"
-          echo "DISCUSSION_STATUS=ready" >> "$GITHUB_ENV"
-
-      - name: Project V2 projection
-        shell: bash
-        run: |
-          set +e
-          failures=0
-
-          # Gateway parent participates in both Universal Constructor (#8)
-          # and Foundation convergence (#9).
-          gh project item-add 8 --owner "$OWNER" --url "https://github.com/$REPO/issues/542" >/dev/null 2>&1
-          [ $? -eq 0 ] || failures=$((failures+1))
-
-          for issue in $GATEWAY_ISSUES; do
-            gh project item-add 9 --owner "$OWNER" --url "https://github.com/$REPO/issues/$issue" >/dev/null 2>&1
-            [ $? -eq 0 ] || failures=$((failures+1))
-          done
-
-          if [ "$failures" -eq 0 ]; then
-            echo "PROJECT_STATUS=ready" >> "$GITHUB_ENV"
-          else
-            echo "PROJECT_STATUS=permission-gap:$failures" >> "$GITHUB_ENV"
-          fi
-
-          exit 0
-
-      - name: Sync versioned Wiki mirror
-        shell: bash
-        run: |
-          set +e
-          wiki_dir="$(mktemp -d)"
-          wiki_url="https://x-access-token:${GH_TOKEN}@github.com/${REPO}.wiki.git"
-
-          git clone "$wiki_url" "$wiki_dir" >/dev/null 2>&1
-          clone_rc=$?
-
-          if [ $clone_rc -ne 0 ]; then
-            rm -rf "$wiki_dir"
-            wiki_dir="$(mktemp -d)"
-            git -C "$wiki_dir" init >/dev/null
-            git -C "$wiki_dir" branch -M master
-            git -C "$wiki_dir" remote add origin "$wiki_url"
-          fi
-
-          cp docs/wiki/*.md "$wiki_dir"/
-          git -C "$wiki_dir" config user.name "A'Space GitHub Native Control Plane"
-          git -C "$wiki_dir" config user.email "actions@users.noreply.github.com"
-          git -C "$wiki_dir" add '*.md'
-
-          if git -C "$wiki_dir" diff --cached --quiet; then
-            echo "WIKI_STATUS=ready-no-change" >> "$GITHUB_ENV"
-            exit 0
-          fi
-
-          git -C "$wiki_dir" commit -m "docs: sync A'Space Gateway native Wiki" >/dev/null
-          git -C "$wiki_dir" push origin HEAD:master >/dev/null 2>&1
-
-          if [ $? -eq 0 ]; then
-            echo "WIKI_STATUS=ready" >> "$GITHUB_ENV"
-          else
-            echo "WIKI_STATUS=permission-gap" >> "$GITHUB_ENV"
-          fi
-
-          exit 0
-
-      - name: Publish native-surface evidence receipt
-        shell: bash
-        run: |
-          set -euo pipefail
-          body="$(cat <<EOF
-## Native GitHub bootstrap receipt
-
-- Milestone: #${MILESTONE_NUMBER} — ${MILESTONE_STATUS}
-- Discussion: ${DISCUSSION_URL:-unavailable} — ${DISCUSSION_STATUS:-unknown}
-- Project V2 projection: ${PROJECT_STATUS:-unknown}
-- Wiki sync: ${WIKI_STATUS:-unknown}
-- Mission: #542
-- Cells: #543 #544 #545 #546
-- Bootstrap: #547
-
-The workflow reports permission gaps explicitly; it does not convert them into fake PASS.
-EOF
-)"
-          gh issue comment 547 --body "$body"
-
-      - name: Job summary
-        shell: bash
-        run: |
-          {
-            echo "## A'Space Native GitHub Control Plane"
-            echo
-            echo "- milestone: #${MILESTONE_NUMBER:-unknown} / ${MILESTONE_STATUS:-unknown}"
-            echo "- discussion: ${DISCUSSION_URL:-unknown}"
-            echo "- project: ${PROJECT_STATUS:-unknown}"
-            echo "- wiki: ${WIKI_STATUS:-unknown}"
-          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Bootstrap Milestone, Discussion, Projects and Wiki
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/github_native_bootstrap.py
