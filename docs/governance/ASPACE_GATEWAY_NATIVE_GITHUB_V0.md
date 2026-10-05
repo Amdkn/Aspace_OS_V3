@@ -196,3 +196,9 @@ Invariant through the whole run:
 - same return_to.
 
 No duplicate effect and no silent coercion of UNKNOWN are allowed.
+
+## 11. Audit-to-Automaton continuity (2026-10-05)
+
+See [session synthesis and decisions](SESSION_2026_10_05_AUDIT_TO_AUTOMATON.md) for the dated portfolio audit, Work/Chat/harness roles, Solarpunk source coverage and [proposed Automaton M0/M1/M2 integration](../architecture/AUTOMATON_GATEWAY_M0_M1_M2_PROPOSAL.md).
+
+This is a documentation and design proposal attached to #545/#546. It does not certify an installed adapter, dispatch a provider, or replace the #560–#562 execution gates.
