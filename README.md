@@ -60,12 +60,55 @@ L'architecture transversale d'A'Space OS V3 est régie par une hiérarchie stric
 | **`10_Tech_OS/`** | **Infrastructure & Runtime.** Noyau universel (`kernel/uc.db`, `controleur.py`, `dlq.py`), cascade E-Myth et ordonnanceurs d'arrière-plan. |
 | **`20_Life_OS/`** | **Énergie & Vie d'Amadou.** Les 8 jauges Discovery, l'Ikigai Orville, le cycle 12 Week Year (SNW), le PARA Enterprise et la boucle GTD Cerritos. |
 | **`30_Business_OS/`** | **Entreprises & Valeur.** The OMK Office, Coach OS, franchises Summer Verse, acquisition client, délivrance de valeur et cash-flow ($10k/mois). |
-| **`80_Agent-OS/`** | **Observabilité.** Tableaux de bord de revue et schéma de cadences. |
+| **`80_Agent-OS/`** | **Capability + Interface Fabric.** Projection Agent OS, AI-Native Capability Fabric, présence, surfaces et A'Space Gateway. |
 | **`_INBOX/`** | **Sas de capture GTD.** Réception des nouveaux mandats et requêtes brutes avant traitement. |
 
 ---
 
-## 3. Loi d'Observation Dynamique (Anti-Dette Structurelle)
+## 3. GitHub Native Control Plane & A'Space Gateway
+
+GitHub est le **control plane d'ingénierie**, pas le runtime ni le cerveau institutionnel.
+
+| Primitive GitHub | Usage A'Space |
+|---|---|
+| **Discussions** | exploration, RFC, recherche, alternatives |
+| **Wiki / docs** | doctrine stable, vocabulaire, playbooks |
+| **Projects** | portefeuille, possibility-space, sequencing |
+| **Milestones** | convergence bornée / release / certification |
+| **Issues** | cellules exécutables ou bloquées concrètement |
+| **Pull Requests** | mutation exacte + review + preuve |
+| **Actions / Checks** | vérification déterministe + evidence |
+| **Releases** | promotion immuable + rollback |
+| **Agents** | embodiments GitHub versionnés, jamais identité institutionnelle |
+| **Webhooks / GitHub App** | bridge vers Hermes, Codex, Claude, Antigravity, Jules et autres runtimes |
+
+### A'Space Gateway
+
+Mission canonique : **#542**.
+
+`A'Space Gateway` fédère connectivité, protocole, présence, sessions, livraison et surfaces. Il réutilise les contrats existants — Capability Fabric, InterFabricEnvelope, Temporal Truth, Embodied Holons, Reflex Fabric et RecoveryPort — sans créer une nouvelle autorité.
+
+Documentation : [A'Space Gateway Native GitHub v0](docs/governance/ASPACE_GATEWAY_NATIVE_GITHUB_V0.md)  
+Topologie GitHub : [GitHub Primitive Topology V4](docs/governance/GITHUB_PRIMITIVE_TOPOLOGY_V4.md)  
+Wiki : [A'Space Wiki](../../wiki)  
+Discussions : [Exploration / RFC](../../discussions)  
+Projects : [Universal Constructor](https://github.com/users/Amdkn/projects/8) · [Foundation convergence](https://github.com/users/Amdkn/projects/9)  
+Milestones : [Convergence](../../milestones)  
+Actions : [Deterministic gates](../../actions)  
+Agents : [.github/agents](.github/agents)
+
+### Branch law
+
+Une **branche ChatGPT** porte l'exploration conversationnelle.  
+Une **branche Git** porte seulement une mutation courte :
+
+`branch → PR → CI/review → merge → delete`
+
+La mémoire durable doit vivre dans Discussion / Wiki/docs / Project / Issue / PR evidence / Release — pas dans une forêt de branches Git.
+
+---
+
+## 4. Loi d'Observation Dynamique (Anti-Dette Structurelle)
 
 Le corpus sur disque est vivant. Figer des inventaires manuels ou des nombres de fichiers dans la documentation crée de la dette d'obscurité et invisibilise les ajouts futurs d'Amadou Kone.
 
@@ -78,7 +121,7 @@ Le corpus sur disque est vivant. Figer des inventaires manuels ou des nombres de
 
 ---
 
-## 4. Topologie Réseau & Points d'Accès
+## 5. Topologie Réseau & Points d'Accès
 
 * **Port 5555 — Agent OS Desktop :** Dashboard unifié Vite 6 + React 19 (`agent-os/desktop`).
   * Watcher restreint aux dossiers vivants (< 190 Mo RAM, latence HTTP < 15 ms).
@@ -88,7 +131,7 @@ Le corpus sur disque est vivant. Figer des inventaires manuels ou des nombres de
 
 ---
 
-## 5. Lois Tenues par la Machine (`10_Tech_OS/kernel/uc.db`)
+## 6. Lois Tenues par la Machine (`10_Tech_OS/kernel/uc.db`)
 
 1. **Loi de Prédiction :** Aucun travail n'atteint `review` ou `done` sans prédiction enregistrée *avant* l'exécution.
 2. **Loi de Détachement :** Le statut `done` n'est accessible que depuis `review`, après attestation des preuves par critères vérifiables.
