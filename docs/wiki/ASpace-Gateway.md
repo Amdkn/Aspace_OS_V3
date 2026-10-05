@@ -35,3 +35,17 @@ It does **not** own institutional cognition, business authority, WorkGraph truth
 ## Golden invariant
 
 A runtime may die and a surface may disconnect; the institutional holon, work/correlation identity, authority, evidence lineage and return_to must survive.
+
+
+## GitHub App authority adapter
+
+GitHub is split into explicit authority planes:
+
+- **App installation token** → repository-native machine authority;
+- **App user access token** → user-scoped authority where GitHub exposes it;
+- **signed webhooks** → event ingress.
+
+The App is an adapter, not an agent identity. A GitHub event still resolves capability → holon → authority → runtime.
+
+Canonical contract: `docs/governance/ASPACE_GITHUB_APP_AUTHORITY_ADAPTER_V0.md`  
+Implementation cell: #555.
