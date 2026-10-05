@@ -1,0 +1,33 @@
+{
+  "schema": "aspace.gateway.runtime-adapter.v1",
+  "runtime_id": "automaton-public-pinned",
+  "adapter_id": "gateway.automaton.coding",
+  "adapter_version": "0.1.0",
+  "upstream": {
+    "repo": "Conway-Research/automaton",
+    "sha": "d8f816881fd24b6f5e3d616e59edec387a447667",
+    "license": "MIT",
+    "harness": "coding"
+  },
+  "scale": {
+    "intrinsic_scale": "M0",
+    "projected_into": "A'Space Gateway / Universal Constructor",
+    "projected_scale": ["M1", "M2"],
+    "relation_type": "COMPOSES_WITH"
+  },
+  "capabilities": ["code.patch"],
+  "target_modes": ["LOCAL_ONLY", "REMOTE_ONLY"],
+  "fallback_policy": "DENY",
+  "forbidden_organs": [
+    "wallet",
+    "survival",
+    "heartbeat",
+    "replication",
+    "self_modification",
+    "provisioning",
+    "domain_management",
+    "on_chain_identity"
+  ],
+  "status": "EXPERIMENTAL_CONTRACT_ONLY",
+  "live_runtime_certified": false
+}
