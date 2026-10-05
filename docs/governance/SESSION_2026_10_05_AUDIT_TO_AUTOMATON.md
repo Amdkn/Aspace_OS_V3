@@ -13,6 +13,39 @@ Return-to : [Gateway #542](https://github.com/Amdkn/Aspace_OS_V3/issues/542), pa
 
 Ces documents prolongent [Gateway v0](ASPACE_GATEWAY_NATIVE_GITHUB_V0.md) et [Jules provider model v2](JULES_PROVIDER_OPERATING_MODEL_V2.md). Ils ne créent pas un second registre, WorkGraph ou espace de mémoire certifiée.
 
+## War Room 10D — atelier inter-dépôts
+
+La continuité ne doit pas se réduire à `#545 → adapter → #546 → canary`. Cette séquence est une voie de preuve dans un **atelier de conception inter-dépôts** qui conserve l'objectif entier.
+
+Avant un brainstorming majeur, charger une carte du portefeuille plutôt que relire intégralement chaque dépôt. Pour chaque dépôt/capacité, la carte doit porter au minimum :
+
+- finalité Tech/Life/Business et bénéficiaires ;
+- capacités présentes, proposées et réellement vérifiées ;
+- relations `CONSUMES / COMPOSES_WITH / EMBODIES / EXTENDS / VALIDATES / OBSERVES / CONTROLS` et projections M0/M1/M2 ;
+- interfaces, dépendances, travaux ouverts et possibilités de réutilisation ;
+- provenance, fraîcheur et niveau de preuve.
+
+Le Workspace Registry fournit les coordonnées ; Graham compile le contexte pertinent et la vérité temporelle ; Yaz renseigne observations/fraîcheur ; GitHub conserve sources, mutations et preuves ; Agent OS/CubeFarm peut rendre cette carte navigable sans devenir SSOT.
+
+Les instruments de brainstorming sont composables, non exclusifs :
+
+| Instrument | Contribution privilégiée |
+|---|---|
+| BMAD | développer l'intention, explorer plusieurs architectures, préserver les exigences complètes |
+| Gstack | challenger valeur, hypothèses produit, bénéficiaires et leviers d'expansion |
+| Superpowers | approfondir les choix techniques avec le contexte des dépôts concernés |
+| GSD | transformer les décisions mûres en travail exécutable et faire remonter les résultats |
+| CEO Bench | tester des stratégies dans la durée, comme banc d'essai et non doctrine de management |
+| Wargame / MiroFish | explorer réactions, blocages, effets secondaires, reprise ; simulation ≠ preuve réelle |
+
+Une séance doit produire : **carte des possibilités → architectures comparables → scénarios difficiles → décision exploitable**, en conservant explicitement les branches d'exploration non retenues.
+
+Question d'amorçage canonique :
+
+> **Comment composer les dépôts existants pour que le Constructeur Universel fabrique et fasse évoluer des organismes Life/Business, avec mémoire, observation et continuité — jusqu'à construire son successeur ?**
+
+Automaton, Paperclip, Gateway, Prime Agent, DeepSeek Harness et Ryan Factory sont donc des objets à **composer et comparer**, pas une file séquentielle de tickets. Cette capacité War Room reste partiellement câblée : sources, inventaire et mécanismes existent ; leur consultation coordonnée et leur actualisation effective restent à construire.
+
 ## Qualification des informations
 
 | Marqueur | Sens |
