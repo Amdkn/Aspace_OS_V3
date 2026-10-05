@@ -5,6 +5,7 @@ on:
     paths:
       - "10_Tech_OS/kernel/**"
       - "10_Tech_OS/github_app_system1/**"
+      - "10_Tech_OS/gateway/**"
       - "scripts/github_app_system1.py"
       - "80_Agent-OS/capability_fabric/**"
       - ".github/workflows/kernel-continuity-ci.yml"
@@ -27,6 +28,7 @@ jobs:
           sparse-checkout: |
             10_Tech_OS/kernel
             10_Tech_OS/github_app_system1
+            10_Tech_OS/gateway
             scripts/github_app_system1.py
             80_Agent-OS/capability_fabric
             30_Business_OS/20_Workflow_Engine
@@ -48,6 +50,9 @@ jobs:
             10_Tech_OS/kernel/mission_watcher.py \
             10_Tech_OS/kernel/uc_workgraph.py \
             10_Tech_OS/kernel/provider_execution.py \
+            10_Tech_OS/gateway/runtime_registry.py \
+            10_Tech_OS/gateway/automaton_adapter.py \
+            10_Tech_OS/gateway/test_automaton_adapter.py \
             10_Tech_OS/kernel/test_provider_execution.py \
             10_Tech_OS/kernel/test_github_app_system1.py \
             10_Tech_OS/kernel/test_mission_continuity.py \
@@ -80,6 +85,9 @@ jobs:
       - name: Provider execution + GitHub App authority System-One
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_provider_execution.py test_github_app_system1.py
+      - name: Gateway G2 Automaton bounded adapter
+        working-directory: 10_Tech_OS/gateway
+        run: python -m unittest test_automaton_adapter.py
       - name: Jules fleet source routing
         working-directory: 10_Tech_OS/kernel
         run: python -m unittest test_jules_fleet_supervisor.py
