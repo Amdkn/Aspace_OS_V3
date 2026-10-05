@@ -40,6 +40,61 @@ class GitHubAppSystem1Tests(unittest.TestCase):
         self.assertTrue(m["request_oauth_on_install"])
         self.assertIn("callback_urls", m)
 
+    def test_reconcile_computes_current_to_desired_and_marks_widening(self):
+        current = {
+            "permissions": {
+                "metadata": "read",
+                "contents": "read",
+                "issues": "read",
+                "workflows": "write",
+            },
+            "events": [],
+            "request_oauth_on_install": False,
+            "webhook_active": False,
+        }
+        plan = MODULE.reconciliation_plan("s3", current)
+        changes = {
+            (item.get("kind"), item.get("permission") or item.get("setting")): item
+            for item in plan["changes"]
+        }
+        self.assertEqual(changes[("permission", "contents")]["desired"], "write")
+        self.assertEqual(changes[("permission", "contents")]["direction"], "widen")
+        self.assertEqual(changes[("permission", "workflows")]["desired"], "none")
+        self.assertEqual(changes[("permission", "workflows")]["direction"], "narrow")
+        self.assertTrue(plan["contains_permission_widening"])
+        self.assertFalse(plan["execution_authorized"])
+
+    def test_reconcile_cannot_authorize_without_explicit_approval(self):
+        current = {
+            "permissions": {"metadata": "read", "contents": "read"},
+            "events": [],
+        }
+        plan = MODULE.reconciliation_plan("s3", current)
+        with self.assertRaises(MODULE.ApprovalRequired):
+            MODULE.approve_reconciliation(plan, approved=False)
+
+        approved = MODULE.approve_reconciliation(plan, approved=True)
+        self.assertTrue(approved["approved"])
+        self.assertTrue(approved["execution_authorized"])
+
+    def test_noop_reconcile_never_authorizes_external_execution(self):
+        current = MODULE.desired_state("gateway")
+        plan = MODULE.reconciliation_plan("gateway", current)
+        self.assertEqual(plan["changes"], [])
+        approved = MODULE.approve_reconciliation(plan, approved=False)
+        self.assertTrue(approved["approved"])
+        self.assertFalse(approved["execution_authorized"])
+
+    def test_unknown_current_permission_fails_closed(self):
+        current = {
+            "permissions": {
+                "metadata": "read",
+                "mystery_admin_surface": "admin",
+            }
+        }
+        with self.assertRaises(ValueError):
+            MODULE.reconciliation_plan("s3", current)
+
 
 if __name__ == "__main__":
     unittest.main()
