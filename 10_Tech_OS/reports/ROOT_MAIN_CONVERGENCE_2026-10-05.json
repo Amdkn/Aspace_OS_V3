@@ -1,0 +1,89 @@
+{
+  "schema": "aspace.root-main-convergence-receipt.v1",
+  "date": "2026-10-05",
+  "repository": "Amdkn/Aspace_OS_V3",
+  "result": "PASS",
+  "verified_state": {
+    "root_head": "53cdf4fb40fe8a981d5976ba594a3a4477000604",
+    "origin_main": "53cdf4fb40fe8a981d5976ba594a3a4477000604",
+    "root_vs_origin": "0 0",
+    "root_status_entries": 0,
+    "worktrees": 14,
+    "local_branches": 14,
+    "remote_tracking_refs": 15,
+    "actual_remote_branches": 14
+  },
+  "pre_reset_evidence": {
+    "root_head": "d6ac7f0881016a11543a0c47e53502e6b2ebba3e",
+    "origin_main": "53cdf4fb40fe8a981d5976ba594a3a4477000604",
+    "root_vs_origin_before": "0 181",
+    "tracked_modified_entries": 26,
+    "untracked_top_entries": 60,
+    "tracked_diff": {
+      "files": 26,
+      "insertions": 1280,
+      "deletions": 612
+    }
+  },
+  "snapshot": {
+    "path": "C:/Users/amado/Aspace_Quarantine/root_main_dirty_20261005",
+    "tracked_patch": "tracked.patch",
+    "tracked_patch_bytes": 239152,
+    "snapshot_files_before_agent_os_bundle": 859,
+    "snapshot_bytes_before_agent_os_bundle": 22621935,
+    "manifest": "MANIFEST_SHA256.txt",
+    "untracked_copy_verification": {
+      "files_checked": 856,
+      "missing_copies": 0,
+      "hash_mismatches": 2,
+      "mismatch_reason": "two Jules Swarm runtime log files changed after snapshot because the runtime was still active"
+    },
+    "agent_os_bundle": {
+      "file": "agent-os-world-federation.bundle",
+      "bytes": 994368,
+      "sha256": "81352E8D8D71A6C7193D2CF7FB78D38D2BB8A6631F20CBCFD3EA3BDCA0D342D8",
+      "reason": "local Agent-OS branch was not pushed because GitHub push protection detected a historical secret in its ancestry"
+    }
+  },
+  "runtime_exception": {
+    "path": "00_Operations/jules_swarm",
+    "tracked_in_origin_main": false,
+    "action": "preserved in place and excluded locally through .git/info/exclude",
+    "reason": "active run_tick.ps1 / jules_keeper.py runtime continued writing logs during convergence"
+  },
+  "nested_gitlinks": {
+    "agent_os": {
+      "expected": "4b73326954b602134a51ed9bad147d187a9479b0",
+      "final": "4b73326954b602134a51ed9bad147d187a9479b0",
+      "status": "clean"
+    },
+    "agent_os_desktop": {
+      "expected": "7c6dc8bb1907a583a02d2f80b6df3c410dcf56bd",
+      "final": "7c6dc8bb1907a583a02d2f80b6df3c410dcf56bd",
+      "status": "clean",
+      "previous_head": "2a05c928f4d6a78207f37be5a8b56e27a88862fd",
+      "previous_head_preservation": "already reachable from origin/main and other refs in Amdkn/Agent-OS-Desktop"
+    }
+  },
+  "operations": [
+    "snapshotted tracked changes as a binary patch",
+    "copied untracked state to quarantine with SHA-256 manifest",
+    "preserved the local Agent-OS branch as a git bundle after push protection rejected a tag push",
+    "removed 59 non-runtime untracked top-level entries only after snapshot verification",
+    "kept active Jules Swarm runtime outside Git and excluded it locally",
+    "reset root main to origin/main after confirming root had zero unique commits",
+    "realigned nested Agent-OS and Agent-OS-Desktop gitlinks to their canonical SHAs"
+  ],
+  "safety": [
+    "No root mutation occurred before snapshot and verification.",
+    "No GitHub push-protection bypass was attempted.",
+    "Active Jules Swarm runtime was not terminated.",
+    "The root reset happened only after proving HEAD had zero commits unique versus origin/main."
+  ],
+  "next": [
+    "keep root main as an integration mirror and do not develop directly in it",
+    "monitor active Graham/Yaz/Ryan worktrees separately",
+    "retire Ryan mission branch when its mission closes",
+    "decide whether 00_Operations runtime should later move to a dedicated runtime directory outside the Git worktree"
+  ]
+}
