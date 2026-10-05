@@ -223,13 +223,30 @@ def add_project_item(project_id: str, issue_id: str):
 
 
 def ensure_projects() -> str:
+    """Project Gateway issues into every currently accessible A'Space portfolio.
+
+    Project numbers changed during earlier Project-V2 restructuring, so this
+    routine treats historical numbers as candidates instead of canon.
+    """
     results = []
+    errors = []
+
+    # #12 = latest known Universal Constructor/Fractal Project from the
+    # durable Project bootstrap. #9/#8 are older Foundation/UC references
+    # retained only as compatibility candidates.
     plan = {
-        8: [542],
+        12: GATEWAY_ISSUES,
         9: GATEWAY_ISSUES,
+        8: [542],
     }
+
     for project_number, issues in plan.items():
-        project_id, title, existing = project_snapshot(project_number)
+        try:
+            project_id, title, existing = project_snapshot(project_number)
+        except Exception as exc:
+            errors.append(f"#{project_number}: {exc}")
+            continue
+
         added = 0
         for issue in issues:
             if issue in existing:
@@ -237,7 +254,12 @@ def ensure_projects() -> str:
             add_project_item(project_id, issue_node_id(issue))
             added += 1
         results.append(f"#{project_number} {title}: +{added}")
-    return "ready (" + "; ".join(results) + ")"
+
+    if results:
+        suffix = "" if not errors else " | unavailable: " + " ; ".join(errors)
+        return "ready (" + "; ".join(results) + ")" + suffix
+
+    raise ApiError("No candidate A'Space Project V2 was accessible: " + " ; ".join(errors))
 
 
 def run_git(args: list[str], cwd: str | None = None):
