@@ -1,5 +1,6 @@
 import json
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 from truth_projection import project_truth
@@ -33,7 +34,7 @@ class GH290EvidenceTests(unittest.TestCase):
             value=data,
             source="evidence:gh290_tenant_provisioning_blocker.json",
             authority="kernel:blocker_registry",
-            observed_at="2026-10-03T10:00:00Z",
+            observed_at=datetime.now(timezone.utc).isoformat(),
             evidence_refs=[str(self.evidence_path.relative_to(self.repo_root))],
             freshness_seconds=86400,
             confidence=1.0,
