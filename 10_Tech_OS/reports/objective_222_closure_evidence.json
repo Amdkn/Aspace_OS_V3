@@ -1,0 +1,24 @@
+{
+  "work_id": "222",
+  "timestamp": "2026-10-05T01:51:52.532275+00:00",
+  "files": {},
+  "git_diff_summaries": {},
+  "test_results": {
+    "command": "PYTHONPATH=30_Business_OS/10_Research_Atlas/05_Channel_Harvester python3 -m unittest discover -s 30_Business_OS/10_Research_Atlas/05_Channel_Harvester -p 'test_*.py'",
+    "exit_code": 0,
+    "stdout": "-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 1 unique videos.\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 2 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\nIngested snapshot: snap_1 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 3 unique videos.\n-> Stage H0: Building immutable inventory\nIngested snapshot: snap_0 (YouTube)\n-> Stage H1: Building canonical graph\nBuilt canonical graph with 2 unique videos.\n-> Stage H2: Building channel recurrence\nRanked 1 channels.\n-> Stage H3: Research expansion for 1 promoted channels\nExpanding channel: Channel A (chanA)\n",
+    "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.012s\n\nOK\n"
+  },
+  "outcome": "PASS",
+  "golden_proof": {
+    "implemented_in": "30_Business_OS/10_Research_Atlas/05_Channel_Harvester/harvester.py",
+    "verified_by_tests": true,
+    "stages_covered": [
+      "H0",
+      "H1",
+      "H2",
+      "H3",
+      "H4"
+    ]
+  }
+}
