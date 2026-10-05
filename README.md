@@ -90,11 +90,11 @@ Mission canonique : **#542**.
 
 Documentation : [A'Space Gateway Native GitHub v0](docs/governance/ASPACE_GATEWAY_NATIVE_GITHUB_V0.md)  
 Topologie GitHub : [GitHub Primitive Topology V4](docs/governance/GITHUB_PRIMITIVE_TOPOLOGY_V4.md)  
-Wiki : [A'Space Wiki](../../wiki)  
-Discussions : [Exploration / RFC](../../discussions)  
+Wiki : [A'Space Wiki](https://github.com/Amdkn/Aspace_OS_V3/wiki)  
+Discussions : [Exploration / RFC](https://github.com/Amdkn/Aspace_OS_V3/discussions)  
 Projects : [Universal Constructor](https://github.com/users/Amdkn/projects/8) · [Foundation convergence](https://github.com/users/Amdkn/projects/9)  
-Milestones : [Convergence](../../milestones)  
-Actions : [Deterministic gates](../../actions)  
+Milestones : [Convergence](https://github.com/Amdkn/Aspace_OS_V3/milestones)  
+Actions : [Deterministic gates](https://github.com/Amdkn/Aspace_OS_V3/actions)  
 Agents : [.github/agents](.github/agents)
 
 ### Branch law
