@@ -1,0 +1,106 @@
+{
+  "schema": "aspace.github-app-authority-profiles.v0",
+  "defaults": {
+    "public": false,
+    "webhook_active": false,
+    "unspecified_permission": "none",
+    "forbidden_without_explicit_exception": [
+      "administration",
+      "workflows",
+      "secrets",
+      "variables",
+      "webhooks",
+      "repository_projects"
+    ]
+  },
+  "profiles": {
+    "gateway": {
+      "name": "A'Space Gateway",
+      "description": "Event ingress and federated GitHub transport adapter.",
+      "request_oauth_on_install": false,
+      "permissions": {
+        "contents": "read",
+        "issues": "read",
+        "pull_requests": "read",
+        "checks": "read",
+        "actions": "read",
+        "discussions": "read"
+      },
+      "events": [
+        "issues",
+        "issue_comment",
+        "pull_request",
+        "pull_request_review",
+        "check_run",
+        "check_suite",
+        "workflow_run",
+        "discussion",
+        "discussion_comment",
+        "installation",
+        "installation_repositories"
+      ]
+    },
+    "a0": {
+      "name": "A'Space A0 Orchestrator",
+      "description": "Human/user authority and orchestration boundary.",
+      "request_oauth_on_install": true,
+      "callback_urls": [
+        "http://127.0.0.1:5555/auth/github/a0/callback"
+      ],
+      "permissions": {
+        "contents": "read",
+        "issues": "write",
+        "pull_requests": "read",
+        "checks": "read",
+        "actions": "read",
+        "discussions": "write"
+      },
+      "events": []
+    },
+    "s1": {
+      "name": "A'Space S1 Gatekeeper",
+      "description": "Policy, review and deterministic release gate.",
+      "request_oauth_on_install": false,
+      "permissions": {
+        "contents": "write",
+        "issues": "write",
+        "pull_requests": "write",
+        "checks": "write",
+        "statuses": "write",
+        "actions": "read",
+        "discussions": "read"
+      },
+      "events": []
+    },
+    "s2": {
+      "name": "A'Space S2 Managers",
+      "description": "Doctor manager authority for planning, delegation and review.",
+      "request_oauth_on_install": false,
+      "permissions": {
+        "contents": "read",
+        "issues": "write",
+        "pull_requests": "write",
+        "checks": "read",
+        "statuses": "read",
+        "actions": "read",
+        "discussions": "write"
+      },
+      "events": []
+    },
+    "s3": {
+      "name": "A'Space S3 Workers",
+      "description": "Companion execution authority for bounded code and evidence mutations.",
+      "request_oauth_on_install": false,
+      "permissions": {
+        "contents": "write",
+        "issues": "write",
+        "pull_requests": "write",
+        "checks": "read",
+        "statuses": "read",
+        "actions": "read",
+        "discussions": "read"
+      },
+      "events": []
+    }
+  }
+}
