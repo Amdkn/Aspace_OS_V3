@@ -5,10 +5,12 @@ Deterministic responsibilities:
 - compile authority profiles into GitHub App manifests;
 - explain effective permissions with deny-by-default semantics;
 - generate a minimal registration form for GitHub's manifest flow;
-- never auto-widen permissions.
+- compute current -> desired reconciliation plans for existing Apps;
+- never auto-widen or auto-apply permissions.
 
-UI automation is deliberately outside this compiler. A future reconciler may
-consume the emitted desired-state matrix and apply only an approved diff.
+Actual GitHub UI/API mutation remains an external effect. This compiler only
+authorizes a plan after explicit human approval; an executor must consume that
+approved plan separately and verify the resulting live App state.
 """
 
 from __future__ import annotations
@@ -23,6 +25,7 @@ PROFILES = ROOT / "10_Tech_OS" / "github_app_system1" / "authority_profiles.json
 HOMEPAGE = "https://github.com/Amdkn/Aspace_OS_V3"
 MANIFEST_CALLBACK = "http://127.0.0.1:5555/github-app-manifest/callback"
 VALID_LEVELS = {"read", "write", "admin"}
+LEVEL_RANK = {"none": 0, "read": 1, "write": 2, "admin": 3}
 
 # Human-facing permission catalog used for explanations.
 # Every row omitted by a profile resolves to No access.
@@ -42,6 +45,10 @@ CATALOG = [
     "webhooks",
     "workflows",
 ]
+
+
+class ApprovalRequired(RuntimeError):
+    """Raised when an existing-App reconciliation lacks explicit approval."""
 
 
 def load_profiles() -> dict:
@@ -76,6 +83,13 @@ def effective_level(permission: str, profile: dict) -> str:
     return profile.get("permissions", {}).get(permission, "none")
 
 
+def canonical_level(permission: str, profile: dict) -> str:
+    """Machine-comparable permission level."""
+    if permission == "metadata":
+        return "read"
+    return profile.get("permissions", {}).get(permission, "none")
+
+
 def manifest(profile_name: str) -> dict:
     defaults, profile = get_profile(profile_name)
     validate(profile_name, defaults, profile)
@@ -99,6 +113,112 @@ def manifest(profile_name: str) -> dict:
         "url": "https://gateway.invalid/github/events",
         "active": bool(defaults.get("webhook_active", False)),
     }
+    return out
+
+
+def desired_state(profile_name: str) -> dict:
+    defaults, profile = get_profile(profile_name)
+    validate(profile_name, defaults, profile)
+    return {
+        "permissions": {perm: canonical_level(perm, profile) for perm in CATALOG},
+        "events": sorted(profile.get("events", [])),
+        "request_oauth_on_install": bool(profile.get("request_oauth_on_install", False)),
+        "webhook_active": bool(defaults.get("webhook_active", False)),
+    }
+
+
+def _normalize_current(current: dict) -> dict:
+    permissions = current.get("permissions", {})
+    unknown_permissions = sorted(set(permissions) - set(CATALOG))
+    if unknown_permissions:
+        raise ValueError(f"unknown current permissions: {unknown_permissions}")
+
+    normalized_permissions = {}
+    for permission in CATALOG:
+        level = permissions.get(permission, "none")
+        if level not in LEVEL_RANK:
+            raise ValueError(f"invalid current level {permission}={level}")
+        normalized_permissions[permission] = level
+
+    # GitHub metadata is mandatory read. A snapshot that says none is stale or invalid.
+    if normalized_permissions["metadata"] == "none":
+        normalized_permissions["metadata"] = "read"
+
+    return {
+        "permissions": normalized_permissions,
+        "events": sorted(set(current.get("events", []))),
+        "request_oauth_on_install": bool(current.get("request_oauth_on_install", False)),
+        "webhook_active": bool(current.get("webhook_active", False)),
+    }
+
+
+def reconciliation_plan(profile_name: str, current: dict) -> dict:
+    """Compute deterministic current -> desired delta without applying anything."""
+    current_norm = _normalize_current(current)
+    desired = desired_state(profile_name)
+    changes = []
+
+    for permission in CATALOG:
+        before = current_norm["permissions"][permission]
+        after = desired["permissions"][permission]
+        if before == after:
+            continue
+        changes.append(
+            {
+                "kind": "permission",
+                "permission": permission,
+                "current": before,
+                "desired": after,
+                "direction": (
+                    "widen"
+                    if LEVEL_RANK[after] > LEVEL_RANK[before]
+                    else "narrow"
+                ),
+            }
+        )
+
+    for field in ("events", "request_oauth_on_install", "webhook_active"):
+        before = current_norm[field]
+        after = desired[field]
+        if before != after:
+            changes.append(
+                {
+                    "kind": "setting",
+                    "setting": field,
+                    "current": before,
+                    "desired": after,
+                    "direction": "change",
+                }
+            )
+
+    return {
+        "schema": "aspace.github-app-reconciliation-plan.v1",
+        "profile": profile_name,
+        "current": current_norm,
+        "desired": desired,
+        "changes": changes,
+        "requires_explicit_approval": bool(changes),
+        "contains_permission_widening": any(
+            change.get("direction") == "widen" for change in changes
+        ),
+        "approved": False,
+        "execution_authorized": False,
+    }
+
+
+def approve_reconciliation(plan: dict, *, approved: bool) -> dict:
+    """Return an executor-consumable plan only after explicit approval."""
+    out = json.loads(json.dumps(plan))
+    if not out.get("changes"):
+        out["approved"] = True
+        out["execution_authorized"] = False
+        out["reason"] = "no changes required"
+        return out
+    if not approved:
+        raise ApprovalRequired("explicit human approval required before reconciliation")
+    out["approved"] = True
+    out["execution_authorized"] = True
+    out["reason"] = "explicit approval recorded; external executor may apply exact delta"
     return out
 
 
@@ -145,6 +265,15 @@ def main() -> int:
     p_form.add_argument("profile", choices=["gateway", "a0", "s1", "s2", "s3"])
     p_form.add_argument("--out", type=Path)
 
+    p_reconcile = sub.add_parser("reconcile")
+    p_reconcile.add_argument("profile", choices=["gateway", "a0", "s1", "s2", "s3"])
+    p_reconcile.add_argument("--current", required=True, type=Path)
+    p_reconcile.add_argument(
+        "--approve",
+        action="store_true",
+        help="Explicitly authorize the exact emitted delta for an external executor.",
+    )
+
     args = parser.parse_args()
 
     if args.cmd == "manifest":
@@ -169,6 +298,14 @@ def main() -> int:
             print(args.out)
         else:
             print(page)
+        return 0
+
+    if args.cmd == "reconcile":
+        current = json.loads(args.current.read_text(encoding="utf-8"))
+        plan = reconciliation_plan(args.profile, current)
+        if args.approve:
+            plan = approve_reconciliation(plan, approved=True)
+        print(json.dumps(plan, indent=2))
         return 0
 
     raise AssertionError("unreachable")
