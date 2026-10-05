@@ -139,3 +139,85 @@ Use DC/AMF deliberately when the native integration does not expose a required G
 Do not waste DC/AMF quota duplicating an operation already available natively; do use its quota to bridge genuine capability gaps.
 
 DC/AMF also remains the authority path for machine-local effects and evidence.
+
+
+## Native Gateway projection
+
+A'Space Gateway mission: **#542**.
+
+GitHub remains the engineering control plane; Gateway is the federation membrane between GitHub and external A'Space surfaces/runtimes.
+
+### Native event path
+
+```text
+Discussion / Issue / PR / Action / Release
+                  │
+                  ▼
+         GitHub native event
+                  │
+                  ▼
+         A'Space Gateway ingress
+                  │
+          InterFabricEnvelope
+                  │
+                  ▼
+              Nardole
+                  │
+          HostPolicy / Reflex
+                  │
+      ┌───────────┼───────────┐
+      ▼           ▼           ▼
+   GitHub       Hermes      Codex/Claude/
+   Agent        /Jules      Antigravity/...
+      │           │           │
+      └───────────┼───────────┘
+                  ▼
+          Gateway result/evidence
+                  │
+                  ▼
+      PR / Check / Issue / Release
+```
+
+Provider choice happens **after** capability, authority, health/quota and policy resolution.
+
+## ChatGPT branch vs Git branch
+
+These are deliberately different primitives.
+
+### ChatGPT branch
+Use for:
+- alternative reasoning paths;
+- brainstorming;
+- architectural exploration;
+- conversational continuity.
+
+It is not repository state.
+
+### Git branch
+Use only for:
+- bounded mutation;
+- PR review;
+- CI evidence;
+- merge.
+
+Lifecycle:
+
+`mission branch → PR → CI/review → merge → delete`
+
+Do not keep feature/recovery/worker branches alive as institutional memory.
+
+## Native-enforcement surfaces
+
+The repository should prefer native GitHub mechanisms before inventing custom orchestration:
+
+- Issue Forms for executable-cell contracts;
+- Discussions for non-executable exploration;
+- Projects V2 for portfolio views;
+- Milestones for convergence;
+- Actions/Checks for deterministic gates;
+- custom GitHub Agents as bounded embodiments;
+- Webhooks/GitHub App for external runtime federation;
+- Wiki/docs mirror for durable human-readable canon;
+- Releases for promoted immutable versions.
+
+The bootstrap workflow `.github/workflows/native-github-control-plane.yml` keeps the Gateway mission projected into Milestone / Discussion / Project / Wiki and reports any permission gap as evidence instead of fake PASS.
