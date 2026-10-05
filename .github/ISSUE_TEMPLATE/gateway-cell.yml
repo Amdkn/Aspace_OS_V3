@@ -1,0 +1,72 @@
+name: A'Space Gateway Cell
+description: Create a bounded executable Gateway / federation cell
+title: "[GATEWAY] "
+labels:
+  - project:universal-constructor
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gateway is transport/session/presence federation, not institutional cognition or business authority.
+        Use Discussions for exploration. Create an Issue only when a concrete effect or blocker exists.
+
+  - type: input
+    id: parent
+    attributes:
+      label: Parent mission / return_to
+      placeholder: "#542"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Gateway layer
+      options:
+        - Protocol / Envelope
+        - Identity / Presence
+        - Session / Lineage
+        - GitHub Control Plane
+        - Runtime Adapter
+        - Surface Federation
+        - Canary / Certification
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Smallest verifiable outcome
+    validations:
+      required: true
+
+  - type: textarea
+    id: invariants
+    attributes:
+      label: Identity / authority / evidence invariants
+      description: State what must remain unchanged across routing, reconnect or migration.
+    validations:
+      required: true
+
+  - type: textarea
+    id: existing
+    attributes:
+      label: Existing contracts / evidence to reuse
+      description: Prefer #333, #471, #448, #318, #484, #485 or other durable sources over reimplementation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: failure
+    attributes:
+      label: UNKNOWN / recovery behavior
+      description: Explain how duplicate delivery, stale presence, runtime death or indeterminate effects fail closed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance evidence
+    validations:
+      required: true

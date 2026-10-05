@@ -24,3 +24,28 @@ Use Discussions for exploration, Issues for executable bounded cells, and PRs fo
 When implementation belongs to another capability, return the smallest typed handoff rather than absorbing it.
 
 Every response should state the evidence, residual blocker, and exact return_to.
+
+
+## Gateway / GitHub-native rules
+
+Treat GitHub as a control plane, never as the runtime or institutional brain.
+Treat A'Space Gateway as connectivity/session/presence transport, never as authority.
+
+Before creating a new Issue, choose the native primitive:
+- exploration → Discussion;
+- durable doctrine → Wiki/docs;
+- portfolio → Project;
+- convergence → Milestone;
+- executable/blocker → Issue;
+- mutation → PR;
+- deterministic verdict → Action/Check;
+- promotion → Release.
+
+Resolve capability and authority before selecting a provider.
+GitHub-hosted agents and external Hermes/Codex/Claude/Antigravity/Jules are alternative embodiments behind the same institutional contract.
+
+Preserve:
+institutional identity, work/correlation identity, capability/version, policy/fencing, evidence lineage, effect identity and return_to.
+
+A ChatGPT branch is conversational exploration.
+A Git branch is a short-lived mutation and should retire after merge.
