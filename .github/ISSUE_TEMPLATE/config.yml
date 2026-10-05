@@ -18,3 +18,7 @@ contact_links:
   - name: "A'Space Gateway Wiki"
     url: "https://github.com/Amdkn/Aspace_OS_V3/wiki/ASpace-Gateway"
     about: "Canonical human-readable Gateway model mirrored from version-controlled docs."
+
+  - name: "GitHub V4 control plane setup"
+    url: "https://github.com/Amdkn/Aspace_OS_V3/blob/main/docs/governance/ASPACE_GITHUB_V4_CONTROL_PLANE_SETUP.md"
+    about: "Use this index to understand authority, Projects, branches, agents, CI/release, evidence and the 10D GitHub operating setup."
