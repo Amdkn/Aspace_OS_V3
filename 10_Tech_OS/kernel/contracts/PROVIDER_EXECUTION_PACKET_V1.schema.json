@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aspace://provider-execution-packet/v1",
+  "title": "A'Space Provider Execution Packet v1",
+  "description": "Provider-neutral bounded execution packet. Provider choice is runtime metadata; mission identity and authority remain invariant.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "mission_id",
+    "work_id",
+    "execution_cell_id",
+    "return_to",
+    "repo",
+    "issue_or_subissue",
+    "base_sha",
+    "capability_need",
+    "allowed_paths",
+    "acceptance",
+    "effect_class",
+    "reversibility",
+    "authority_profile",
+    "provider",
+    "provider_mode",
+    "dedup_key",
+    "retry_budget",
+    "deadline_or_lease",
+    "human_blockers"
+  ],
+  "properties": {
+    "schema_version": { "const": "aspace.provider-execution-packet.v1" },
+    "mission_id": { "type": "string", "minLength": 1 },
+    "work_id": { "type": ["string", "integer"] },
+    "execution_cell_id": { "type": "string", "minLength": 1 },
+    "return_to": { "type": "string", "minLength": 1 },
+    "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+    "issue_or_subissue": {
+      "type": "object",
+      "required": ["number", "kind"],
+      "properties": {
+        "number": { "type": "integer", "minimum": 1 },
+        "kind": {
+          "type": "string",
+          "enum": ["EXECUTION_CELL", "MISSION", "OBJECTIVE", "EPIC", "CANARY"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "base_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+    "capability_need": {
+      "type": "object",
+      "required": ["capability_id", "capability_version"],
+      "properties": {
+        "capability_id": { "type": "string", "minLength": 1 },
+        "capability_version": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "allowed_paths": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "acceptance": {
+      "type": "object",
+      "required": ["tests", "evidence"],
+      "properties": {
+        "tests": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "effect_class": {
+      "type": "string",
+      "enum": ["READ_ONLY", "REVERSIBLE_MUTATION", "GOVERNED_MUTATION"]
+    },
+    "reversibility": {
+      "type": "string",
+      "enum": ["READ_ONLY", "REVERSIBLE", "EXPLICITLY_GOVERNED"]
+    },
+    "authority_profile": { "const": "S3" },
+    "provider": { "type": "string", "minLength": 1 },
+    "provider_mode": { "const": "CHANGESET_ONLY" },
+    "dedup_key": { "type": "string", "minLength": 1 },
+    "retry_budget": { "const": 0 },
+    "deadline_or_lease": {
+      "type": "object",
+      "required": ["lease_id", "expires_at"],
+      "properties": {
+        "lease_id": { "type": "string", "minLength": 1 },
+        "expires_at": { "type": "string", "format": "date-time" }
+      },
+      "additionalProperties": false
+    },
+    "human_blockers": {
+      "type": "array",
+      "maxItems": 0,
+      "items": { "type": "string" }
+    },
+    "previous_failure": {
+      "type": ["object", "null"],
+      "required": ["code", "recovery_decision"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "recovery_decision": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
