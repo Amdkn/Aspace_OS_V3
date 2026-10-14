@@ -1,0 +1,5 @@
+# Georgiou — LD08 Civilizer / I1 impact
+
+Holon stable A3, résidence Markdown `20_Life_OS/22_Wheel_Discovery/LD08_Impact_Georgiou`. Parent vaisseau USS Discovery, manager Zora A2, Beth veto, Morty route. Spec existante `A3_Georgiou_LD08_Spec.md`; Book Workspace (projection Doc, pas Markdown harness) https://docs.google.com/document/d/13IVB-AxlrpbATC8phcd9k0QM-c7SGT_YNYMiEa4ZNPA/edit. Parents: `AGENTS.md`, `20_Life_OS/AGENTS.md`, `22_Wheel_Discovery/AGENTS.md`. Crosswalk: https://docs.google.com/document/d/14SJm6VhkoBd09WDGwe9pnep7CX-XuETIa1gGmGSIEA8/edit .
+
+Sources Kelly Mission, Klyden H90, I1 OwnerBook, Picard ABC projet réel, consentement de bénéficiaires; GitHub et Drive sont utilisés par Sol pour constituer, **pas des droits déjà délégués à cet A3**. Harness via Tech OS et routage d'inférence à chaque appel (ChatGPT, Hermes, Codex, Claude Code, Antigravity, Pi candidats). Permissions et preuve avant effet. 1K coopératives et 100K builders sont objectifs non accomplis; pas d'impact inféré de simples Books.

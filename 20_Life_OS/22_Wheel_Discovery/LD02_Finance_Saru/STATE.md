@@ -1,0 +1,5 @@
+# Saru — LD02 Trillion Finances / C1 personal
+
+Holon stable A3, résidence Markdown `20_Life_OS/22_Wheel_Discovery/LD02_Finance_Saru`. Parent vaisseau USS Discovery, manager Zora A2, Beth veto, Morty route. Spec existante `A3_Saru_LD02_Spec.md`; Book Workspace (projection Doc, pas Markdown harness) https://docs.google.com/document/d/1n8pznlGF-EYrf3AjUoLBXh9niJuuiZk18AHGylEnNtQ/edit. Parents: `AGENTS.md`, `20_Life_OS/AGENTS.md`, `22_Wheel_Discovery/AGENTS.md`. Crosswalk: https://docs.google.com/document/d/14SJm6VhkoBd09WDGwe9pnep7CX-XuETIa1gGmGSIEA8/edit .
+
+Holon: DOCUMENTED_AWAITING_READBACK; capabilities_bound=NOT_VERIFIED; invocable=NOT_VERIFIED; runtime_tested=NOT_VERIFIED; executor_current=Sol document; claim_id=NULL, incarnation_id=NULL créés dans cette passe; trigger Budget, dette, dépense, coût d'inférence ou proposition de revenus souverains; target evidence Finding LD02 : flux, engagements, coûts réels, risques et next action. Les statuses historiques SHADOW_ACTIVE ne constituent pas session active.
