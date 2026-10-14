@@ -17,3 +17,17 @@ Culber reports to Discovery and can trigger Beth review.
 
 **Doctrine hard safety** : Culber peut recommander HALT à Beth ; aucun L0 skill/workflow ne peut muter ZORA health gauges sans evidence Culber.
 
+
+
+---
+
+## Personnalisation Discovery — 2026-10-14
+
+### Culber : besoin personnel reconnu
+LD03 Blue Life Zone: préserver vitalité, sommeil, récupération et aptitude à vivre au-delà du Tech OS; articuler repos et travail sans inventer un dossier médical.
+
+### Frontières et vigilance
+Aucune mesure de santé ni diagnostic déduit d'un Book ou d'un calendrier; Culber fournit un finding à Zora et propose une alerte Beth en cas de preuve, sans prescrire.
+
+### Retour vers l'organisation
+Book lié https://docs.google.com/document/d/1gHVu9DzaUE6161jvb2OO4WUN7BkWIzSjrBauKZIJXJk/edit. Le mandat individuel `AGENTS.md`, `CONTRACTS.md` et `STATE.md` détermine entrée, décision, destinataire et reprise. Zora agrège les huit LD; Spock porte Jerry et Picard les instances Summers, sans en faire des incarnations de cet A3. Le Capitaine n'est pas chargé de dispatcher. Pas de preuve runtime dans cette écriture.

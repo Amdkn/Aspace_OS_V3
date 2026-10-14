@@ -17,3 +17,17 @@ Book reports to Discovery, not directly to Morty.
 
 **Variant AaaS** : **Solaris** (Civilisation Kardashev Type 3) ancré sur Book LD01. Objectif H90 Legacy 1000T par valeur Solarpunk/biomimétisme (Benyus + Aberkane). Book supervise Saru H3 contre paperclip maximizer.
 
+
+
+---
+
+## Personnalisation Discovery — 2026-10-14
+
+### Book : besoin personnel reconnu
+LD01 SOB Business Pulse: préserver le rapport entre économie et qualité de vie; résultat client réel et charge de travail effectivement retirée au Capitaine, sans régenter LD02–LD08.
+
+### Frontières et vigilance
+L'existence de Child Care OS ou un objectif 95% prêt n'est pas un déploiement testé chez la tante; distinguer B1 organisation, Saru finances personnelles et Summers projet.
+
+### Retour vers l'organisation
+Book lié https://docs.google.com/document/d/1T6ewYe_eZZFr2MedEg32IFBD9w2XciY-SwfTn_gN3yM/edit. Le mandat individuel `AGENTS.md`, `CONTRACTS.md` et `STATE.md` détermine entrée, décision, destinataire et reprise. Zora agrège les huit LD; Spock porte Jerry et Picard les instances Summers, sans en faire des incarnations de cet A3. Le Capitaine n'est pas chargé de dispatcher. Pas de preuve runtime dans cette écriture.

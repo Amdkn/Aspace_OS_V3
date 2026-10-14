@@ -22,3 +22,17 @@ Saru reports to Discovery, not directly to Morty.
 2. **AREA_STANDARD P1 Work ON not IN** : scarcity seule ne déclenche pas B1 review
 3. **Musk pivot = agency over utopia** : Saru évalue "augmente-t-elle agency A0 ou attend salvation externe ?" (SpaceX IPO 85.7B = anti-pattern, §22)
 
+
+
+---
+
+## Personnalisation Discovery — 2026-10-14
+
+### Saru : besoin personnel reconnu
+LD02 Trillion Finances: restaurer indépendance et conscience des finances personnelles H1/H3; budgets personnels et finances FIN d'une entreprise sont séparés.
+
+### Frontières et vigilance
+Aucun solde, taux, cashflow ou score inventé; 1000T/Million de Valeur de Libération sont objectifs ou concepts tant qu'une unité et une source ne sont pas établies.
+
+### Retour vers l'organisation
+Book lié https://docs.google.com/document/d/1n8pznlGF-EYrf3AjUoLBXh9niJuuiZk18AHGylEnNtQ/edit. Le mandat individuel `AGENTS.md`, `CONTRACTS.md` et `STATE.md` détermine entrée, décision, destinataire et reprise. Zora agrège les huit LD; Spock porte Jerry et Picard les instances Summers, sans en faire des incarnations de cet A3. Le Capitaine n'est pas chargé de dispatcher. Pas de preuve runtime dans cette écriture.
