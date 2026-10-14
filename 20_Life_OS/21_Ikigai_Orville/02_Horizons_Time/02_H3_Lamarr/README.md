@@ -25,3 +25,17 @@ Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a lon
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum Horizon personnel — 2026-10-14
+
+### John Lamarr : trajectoire datée
+H3 : entreprises autonomes, flotte, revenus souverains et MC Sandbox libéré de la maintenance; optionnalité des harness et de l'infrastructure.
+
+### Protection et tension
+Une session ou un modèle disponible n'est pas une flotte; tester supervision effective, dépendance fournisseurs, restauration après panne.
+
+### Liens de constitution et d'action
+Book existant https://docs.google.com/document/d/1CLB2ujOeaPCWIJFpMxyBmO_QGLzIQH-Ne3E823buOME/edit. `AGENTS.md` porte le mandat opératoire, `CONTRACTS.md` les entrées/sorties, `MEMORY.md` les pointeurs et `STATE.md` la reprise. Les findings vont à Orville, qui propose à Beth; Curie fixe les cadences opérationnelles séparément. Aucune nouvelle invocation ni décision ratifiée par cette écriture.

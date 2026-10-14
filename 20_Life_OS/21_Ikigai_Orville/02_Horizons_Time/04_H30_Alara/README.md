@@ -25,3 +25,17 @@ Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a lon
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum Horizon personnel — 2026-10-14
+
+### Alara Kitan : trajectoire datée
+H30 : infrastructure régénératrice africaine, autonomie de la diaspora et distribution du pouvoir entre organisations et territoires.
+
+### Protection et tension
+Pas de mandat externe implicite ni d'effacement de santé, famille et écologie dans une projection civilisationnelle.
+
+### Liens de constitution et d'action
+Book existant https://docs.google.com/document/d/1pNGGX37wMeGS7cBF1N7BvkIQVuJEsDrnNqYSwHpHJ8o/edit. `AGENTS.md` porte le mandat opératoire, `CONTRACTS.md` les entrées/sorties, `MEMORY.md` les pointeurs et `STATE.md` la reprise. Les findings vont à Orville, qui propose à Beth; Curie fixe les cadences opérationnelles séparément. Aucune nouvelle invocation ni décision ratifiée par cette écriture.

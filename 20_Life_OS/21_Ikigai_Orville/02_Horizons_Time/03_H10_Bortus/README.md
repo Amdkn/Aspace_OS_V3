@@ -25,3 +25,17 @@ Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a lon
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum Horizon personnel — 2026-10-14
+
+### Bortus : trajectoire datée
+H10 : Knowhere, infrastructure et standard reproductible avec adaptations locales, objectif 1K coopératives et 100K builders.
+
+### Protection et tension
+Les cibles ne sont pas des nombres atteints; vérifier licence, gestion locale, pérennité et absence de domination B1.
+
+### Liens de constitution et d'action
+Book existant https://docs.google.com/document/d/1kh5RHH-wsoHujAuZWTRyHJUQ0XZLTWNSHPFcDbKb6Pc/edit. `AGENTS.md` porte le mandat opératoire, `CONTRACTS.md` les entrées/sorties, `MEMORY.md` les pointeurs et `STATE.md` la reprise. Les findings vont à Orville, qui propose à Beth; Curie fixe les cadences opérationnelles séparément. Aucune nouvelle invocation ni décision ratifiée par cette écriture.

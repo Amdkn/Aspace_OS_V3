@@ -25,3 +25,17 @@ Narrow finding only; Orville compile. If a short-horizon GREEN contradicts a lon
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai horizon handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum Horizon personnel — 2026-10-14
+
+### Klyden : trajectoire datée
+H90 : transmission institutionnelle, gouvernance hors créateur, survie aux pertes d'harness/machine et retrait complet du fondateur.
+
+### Protection et tension
+La mémoire Markdown ne prouve pas restaurabilité; le H90 n'est pas une culpabilité hebdomadaire ni un droit de veto fictif.
+
+### Liens de constitution et d'action
+Book existant https://docs.google.com/document/d/1dcOPE5xGSH4Q8uCpUCH6_7LuWSD_Be4C1VIR9QbfYK8/edit. `AGENTS.md` porte le mandat opératoire, `CONTRACTS.md` les entrées/sorties, `MEMORY.md` les pointeurs et `STATE.md` la reprise. Les findings vont à Orville, qui propose à Beth; Curie fixe les cadences opérationnelles séparément. Aucune nouvelle invocation ni décision ratifiée par cette écriture.
