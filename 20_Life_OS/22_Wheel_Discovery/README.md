@@ -135,3 +135,12 @@ Jerry Nexus J03 (FIP = Finance Independence + Presence stability) → escalade B
 - `20_Life_OS/00_Shadow_Tools_Guide_L1.md` — Shadow Tools Guide L1
 - `20_Life_OS/00_Shadow_Tools_Audit_L1.md` — Shadow Tools Audit L1
 - `20_Life_OS/00_Phase1_Synthesis_L1.md` — Phase 1 Synthesis L1
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Le vaisseau Discovery contient Zora A2 et huit A3: Book LD01 Business Pulse, Saru LD02 Finances, Culber LD03 Blue Life Zone, Tilly LD04 Meta Cognition, Stamets LD05 Relations sociales, Burnham LD06 Famille historique, Reno LD07 MC Sandbox, Georgiou LD08 Civilizer. Dans V4 Spock, G1 porte Habitat, sans supprimer l'accompagnement historique Burnham de Famille. Pour reprendre chaque mission, ouvrir son README.md/AGENTS.md/SOUL.md, CONTRACTS.md et STATE.md puis son Book Drive. Zora agrège les effets interdomaines et transmet un finding à Beth/Morty, sans score inventé.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/14SJm6VhkoBd09WDGwe9pnep7CX-XuETIa1gGmGSIEA8/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.

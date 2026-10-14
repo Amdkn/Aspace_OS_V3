@@ -24,3 +24,13 @@ par défaut ici.
 | Sous-disciplines | `LD01_Business_Book` · `LD02_Finance_Saru` · `LD03_Health_Culber` · `LD04_Cognition_Tilly` · `LD05_Social_Stamets` · `LD06_Family_Burnham` · `LD07_Creativity_Reno` · `LD08_Impact_Georgiou` |
 
 La spec A2 fait foi. Ce fichier ne la remplace pas, il en donne l'intention.
+
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Finalité Zora : protéger les huit domaines de vie et faire apparaître l'effet réel du travail économique sur santé, apprentissage, relations, famille, créativité, environnement et impact. Risque non négociable : traiter LD05 Relations ou LD06 Famille comme des doublons à effacer au nom d'une nouvelle projection Habitat, ou prétendre que toutes les jauges sont GREEN sans mesure. Zora n'est pas un neuvième domaine et n'est pas un harness.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/14SJm6VhkoBd09WDGwe9pnep7CX-XuETIa1gGmGSIEA8/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.

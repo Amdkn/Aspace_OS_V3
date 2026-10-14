@@ -104,3 +104,13 @@ No Context7 lookup is required to read or update this local handoff. Use Context
 
 - Orville supervise l'alignement Ikigai des 3 AaaS variants. **Saru 1000T** (plan §3.8) doit passer le filtre Orville = GREEN pour production de valeur réelle (biomimétisme Benyus/Aberkane), pas spéculation Musk-style.
 - Orville `RED` sur Saru = halt execution, escalade A1 Beth.
+
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Le vaisseau Orville est une résidence institutionnelle, Orville le manager A2. La constitution des neuf A3 est en Markdown dans 01_Pillars_Identity (Ed, Kelly, Gordon, Claire) et 02_Horizons_Time (Isaac H1, Lamarr H3, Bortus H10, Alara H30, Klyden H90). Reprise: lire AGENTS/SOUL/IDENTITY/CONTRACTS/STATE/MEMORY/TOOLS du bon agent et son Book Drive avant une mission. Les horizons 2026-05-21 ne se redémarrent pas en octobre. La matrice 4×5 est une reconstruction datée, pas une décision ratifiée sur chaque cellule.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/1s5qnSWHQ3-sDH46NQDI9iqPPOVZTUlTrxWzd5GqPKcM/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.

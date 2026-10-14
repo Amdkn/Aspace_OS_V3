@@ -44,3 +44,13 @@ réutilisable chez Geordi, un état révolu chez Data.
 ## Source
 
 `A2_Orville_Spec.md` fait foi. `SOUL.md` en donne l'intention.
+
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Le contrat A2 actuel Orville/AGENTS.md se lit avec A2_Orville_Spec.md et CONTRACTS.md; il compile les avis spécialisés des neuf A3 puis transmet à Beth pour le sens et à Morty pour le routing après clearance. Ne pas forcer chaque A3 sur toute mission; coopérations re-entrantes avec Zora et Jerry. Une proposition d'apprentissage ne modifie pas les intentions ratifiées sans autorité. Aucune session/agent active déduite des dossiers.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/1s5qnSWHQ3-sDH46NQDI9iqPPOVZTUlTrxWzd5GqPKcM/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.

@@ -65,3 +65,13 @@ Voir `00_index.md` §5 (canonique) — registres minimaux :
 - `99_meta/rot-rates.md` ← péremption déclarée par module
 
 > Last DOX pass : 2026-07-04T12:00:00-04:00 (création). Prochain pass : fin de phase P2 organigrammes-doctrine-registry.
+
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Book garde l'Area LD01 et sa charge économique, non la direction C1–I1 ni un accès automatique aux finances personnelles de Saru. Sources prioritaires A3_Book_LD01_Spec.md, Book Drive, B1 Jerry et preuve d'une instance Picard réellement active. Réception: proposition de service, éventuellement garderie; sortie: finding valeur client/temps A0 réellement supprimé, relié à Zora et au bon Jerry. Aucun autre AGENTS.md parallèle dans ce même dossier; ce fichier existant est enrichi.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/1T6ewYe_eZZFr2MedEg32IFBD9w2XciY-SwfTn_gN3yM/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.

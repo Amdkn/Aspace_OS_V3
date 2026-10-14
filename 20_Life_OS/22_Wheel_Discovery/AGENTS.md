@@ -44,3 +44,13 @@ réutilisable chez Geordi, un état révolu chez Data.
 ## Source
 
 `A2_Discovery_ZORA_Spec.md` fait foi. `SOUL.md` en donne l'intention.
+
+
+---
+
+## Constitution opérationnelle enrichie — 2026-10-14
+
+Le standard opérationnel Discovery actuel est la lecture conjointe des AGENTS.md parents, A2_Discovery_ZORA_Spec.md, CONTRACTS.md, les huit A3 et les Books et journaux d'origine. Les dossiers A3 contiennent de vrais README/SOUL/AGENTS/IDENTITY/TOOLS/CAPABILITIES/CONTRACTS/MEMORY/STATE/RUNBOOK/HEARTBEAT/LEARNING. L'AGENT.md historique reste patrimoine. Zora produit une synthèse des findings A3, tandis que les responsabilités Jerry restent chez Spock, les projets Summers chez Picard, exécution Marvel subordonnée à grant propre.
+
+Source de référence et Book déjà existant : https://docs.google.com/document/d/14SJm6VhkoBd09WDGwe9pnep7CX-XuETIa1gGmGSIEA8/edit
+Le rôle institutionnel est constitué par fichiers; capacités propres connectées, invocation et tests restent à vérifier séparément.
