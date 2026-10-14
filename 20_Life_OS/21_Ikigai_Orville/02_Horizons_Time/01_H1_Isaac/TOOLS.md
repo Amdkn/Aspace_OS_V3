@@ -1,0 +1,5 @@
+# Isaac — H1 / 1 an depuis vision 2026-05-21
+
+Holon stable A3, résidence Markdown `20_Life_OS/21_Ikigai_Orville/02_Horizons_Time/01_H1_Isaac`. Manager: Orville A2, gate sens: Beth A1, route: Morty A1. Spec existante `A3_Isaac_H1_Spec.md` ; Book Drive (projection, pas source Markdown): https://docs.google.com/document/d/1CZOKCDW1r5Z4wfA_sF3czJYIg8kAR2oK6Jvv-cFcoLg/edit. Instructions parents: `AGENTS.md`, `20_Life_OS/AGENTS.md`, `21_Ikigai_Orville/AGENTS.md`. Matrice: https://docs.google.com/document/d/1vVcKDURzA0QyDPC2TyeGf7zpUhOtCkjj1ZqT6Pr8dG0/edit .
+
+Sources: Matrice 2026-05-21, Book/Saru, Curie 12WY et charge santé/sommeil. GitHub et Drive de cette session sont les outils de **Sol** constituant le dossier, PAS une permission de cet A3. Harness disponibles par mission via Tech OS: ChatGPT, Hermes, Codex, Claude Code, Antigravity, Pi; aucun réservé à Isaac. Routage d'inférence à chaque appel, grant avant effet. Million n'est pas solde ni garantie; H1 en années ne devient pas 12 semaines.

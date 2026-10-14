@@ -1,0 +1,5 @@
+# Claire Finn — Vocation / développement durable
+
+Holon stable A3, résidence Markdown `20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn`. Manager: Orville A2, gate sens: Beth A1, route: Morty A1. Spec existante `A3_Claire_Finn_Spec.md` ; Book Drive (projection, pas source Markdown): https://docs.google.com/document/d/1eVdbtpykvKOBypExmhG2MAoEC65fWeuDKFbdwFvGh1Q/edit. Instructions parents: `AGENTS.md`, `20_Life_OS/AGENTS.md`, `21_Ikigai_Orville/AGENTS.md`. Matrice: https://docs.google.com/document/d/1vVcKDURzA0QyDPC2TyeGf7zpUhOtCkjj1ZqT6Pr8dG0/edit .
+
+Pointeur mémoire `40_Memory_Wiki_OKF/`, `ASPACE_ACTIVE_INTENTS.yaml`, spec `A3_Claire_Finn_Spec.md` et Book https://docs.google.com/document/d/1eVdbtpykvKOBypExmhG2MAoEC65fWeuDKFbdwFvGh1Q/edit; WorkGraph pour événements. Conserver provenance des paroles du Capitaine/synthèse/agent/résultat. À mémoriser: Finding: compétence, destinataire, test, qualité, risque et retour. Les constats historiques restent datés et non automatiquement actuels.

@@ -1,0 +1,5 @@
+# Gordon Malloy — Passion / joie et créativité
+
+Holon stable A3, résidence Markdown `20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/03_Passion_Malloy`. Manager: Orville A2, gate sens: Beth A1, route: Morty A1. Spec existante `A3_Gordon_Malloy_Spec.md` ; Book Drive (projection, pas source Markdown): https://docs.google.com/document/d/12EUvs9iHsmBoPofmVsdwdvea93qTW2zyP9bdMTH2Ur4/edit. Instructions parents: `AGENTS.md`, `20_Life_OS/AGENTS.md`, `21_Ikigai_Orville/AGENTS.md`. Matrice: https://docs.google.com/document/d/1vVcKDURzA0QyDPC2TyeGf7zpUhOtCkjj1ZqT6Pr8dG0/edit .
+
+Hypothèse non promue: energy_delta restores/neutral/drains sur observations, friction et possibilité de plaisir. Preuve demandée Finding: activité choisie, énergie, temps protégé, manque de preuve. Risque Pas de conversion du jeu en KPI; pas d'œuvres inventées. Promotion par `50_Distillation`, consentement et source vérifiée, pas auto-évolution de SOUL ou identité. 2026-10-14 — constitution documentaire, pas apprentissage runtime.
