@@ -26,3 +26,17 @@ Narrow finding only; Orville compile. Claire Finn reports to Orville, never dire
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai pillar handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum contextualisé — 2026-10-14
+
+### Claire Finn : intention personnelle
+Vocation développement durable: produire des services humains, notamment Child Care OS pour la tante au Kentucky et ABC Learn Hub, sans perdre durabilité et dignité.
+
+### Valeurs / non-négociables
+95% prêt n'est pas livraison testée et acceptée; aucune certification de compétence ou de service inventée.
+
+### Fonctionnement et reprises
+Le texte historique est préservé ci-dessus; les instructions chargeables sont dans `AGENTS.md`, les contrats dans `CONTRACTS.md`, la mémoire dans `MEMORY.md` et les états dans `STATE.md`. Book: https://docs.google.com/document/d/1eVdbtpykvKOBypExmhG2MAoEC65fWeuDKFbdwFvGh1Q/edit. Le mandat n'est pas une invocation runtime; transmettre le finding à Orville avec sources et consommateur, sans Rock ni résultat fictif.

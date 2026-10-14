@@ -22,3 +22,17 @@ Si la réponse est non, l'item ne lui appartient pas : il le route, il ne le gar
 
 `A3_Claire_Finn_Spec.md` fait foi — copie du canon V2 (`05_From_V2_Domains/20_Life_OS/21_Ikigai_Orville/01_Pillars_Identity/04_Vocation_Finn/A3_Claire_Finn_Spec.md`).
 Ce fichier ne la remplace pas, il en donne l'intention.
+
+
+---
+
+## Addendum contextualisé — 2026-10-14
+
+### Claire Finn : intention personnelle
+Vocation développement durable: produire des services humains, notamment Child Care OS pour la tante au Kentucky et ABC Learn Hub, sans perdre durabilité et dignité.
+
+### Valeurs / non-négociables
+95% prêt n'est pas livraison testée et acceptée; aucune certification de compétence ou de service inventée.
+
+### Fonctionnement et reprises
+Le texte historique est préservé ci-dessus; les instructions chargeables sont dans `AGENTS.md`, les contrats dans `CONTRACTS.md`, la mémoire dans `MEMORY.md` et les états dans `STATE.md`. Book: https://docs.google.com/document/d/1eVdbtpykvKOBypExmhG2MAoEC65fWeuDKFbdwFvGh1Q/edit. Le mandat n'est pas une invocation runtime; transmettre le finding à Orville avec sources et consommateur, sans Rock ni résultat fictif.

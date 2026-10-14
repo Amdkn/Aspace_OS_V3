@@ -26,3 +26,17 @@ Narrow finding only; Orville compile. Ed Mercer reports to Orville, never direct
 ## Context7 Boundary
 
 No Context7 lookup is required for local Ikigai pillar handoff writing. Use Context7 before any provider, plugin, API, MCP, or CLI mutation.
+
+
+---
+
+## Addendum contextualisé — 2026-10-14
+
+### Ed Mercer : intention personnelle
+Profession historique développement personnel; la valeur financière est un moyen de libération, non une invitation à replacer le Capitaine comme technicien. Donner un vrai résultat au client garderie avant généralisation.
+
+### Valeurs / non-négociables
+Ne pas comptabiliser le Million de Valeur de Libération comme revenu; respecter risque E-Myth et impact sur santé/relations.
+
+### Fonctionnement et reprises
+Le texte historique est préservé ci-dessus; les instructions chargeables sont dans `AGENTS.md`, les contrats dans `CONTRACTS.md`, la mémoire dans `MEMORY.md` et les états dans `STATE.md`. Book: https://docs.google.com/document/d/1xxmbYBT_VOBZvsnuSMoaEScs3Tlx1JwH0kmMS1BdirQ/edit. Le mandat n'est pas une invocation runtime; transmettre le finding à Orville avec sources et consommateur, sans Rock ni résultat fictif.
