@@ -22,3 +22,17 @@ Si la réponse est non, l'item ne lui appartient pas : il le route, il ne le gar
 
 `A3_Reno_LD07_Spec.md` fait foi — copie du canon V2 (`05_From_V2_Domains/20_Life_OS/22_Wheel_Discovery/LD07_Creativity_Reno/A3_Reno_LD07_Spec.md`).
 Ce fichier ne la remplace pas, il en donne l'intention.
+
+
+---
+
+## Personnalisation Discovery — 2026-10-14
+
+### Reno : intention et domaine
+LD07 MC Sandbox: vie créative et ludique, flow, œuvre éventuelle et droit au jeu sans obligation de monétisation; coopération avec Gordon Passion.
+
+### Protection / divergence historique
+Les pratiques et créations personnelles encore absentes du corpus ne doivent pas être attribuées au Capitaine; les sorties artistiques restent facultatives.
+
+### Contrat de reprise
+Book source https://docs.google.com/document/d/1sm65lvXuHoEH__WBPXFtifvUlyCIKSzEOve_1CvsmDo/edit. Lire `AGENTS.md`, `CONTRACTS.md`, `MEMORY.md` et `STATE.md` pour retrouver mandat, besoins et point de retour. Zora traite les effets sur huit LD et Beth les conflits de sens; Jerry chez Spock ne remplace pas cet A3. Aucun runtime n'est activé par cette modification.
