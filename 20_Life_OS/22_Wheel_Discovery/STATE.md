@@ -1,0 +1,5 @@
+# Zora — holon A2
+
+Résidence `20_Life_OS/22_Wheel_Discovery`, identité stable `LIFE/A2/ZORA`; spec A2_Discovery_ZORA_Spec.md dans ce framework; source https://github.com/Amdkn/Aspace_OS_V3/blob/main/20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Constitution documentaire en attente de readback; capabilities_connected=NOT_VERIFIED; invocable=NOT_VERIFIED; tested=NOT_VERIFIED; current_executor=Sol; aucun claim ni incarnation runtime créés par cette mutation. Reprise: Changement jauge, conflit entre domaines, difficulté de reprise ou alerte A3 et Jerry. Evidence: Packet 8 LD, risques, dépendances, missing observations et prochain owner.

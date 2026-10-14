@@ -1,0 +1,5 @@
+# Beth — holon A1
+
+Résidence `20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth`, identité stable `LIFE/A1/BETH`; spec A1_Beth_Spec.md dans dossier parent; source https://github.com/Amdkn/Aspace_OS_V3/blob/main/20_Life_OS/00_Gatekeepers_Beth_Morty/A1_Beth_Spec.md. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Lire `40_Memory_Wiki_OKF/`, `ASPACE_ACTIVE_INTENTS.yaml`, WorkGraph et A1_Beth_Spec.md, Beth_Alignment_Log, Orville, Zora, Culber et Tilly, WorkGraph. Ne pas copier des secrets ou des données intimes dans ce fichier. Mémoire certifiée par `50_Distillation` après revue; distinguer paroles du Capitaine, synthèses, adaptations, ratifications et preuves. Log décision et options avec evidence, contexte et return_to.

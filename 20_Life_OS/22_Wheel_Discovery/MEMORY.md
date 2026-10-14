@@ -1,0 +1,5 @@
+# Zora — holon A2
+
+Résidence `20_Life_OS/22_Wheel_Discovery`, identité stable `LIFE/A2/ZORA`; spec A2_Discovery_ZORA_Spec.md dans ce framework; source https://github.com/Amdkn/Aspace_OS_V3/blob/main/20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Lire `40_Memory_Wiki_OKF/`, `ASPACE_ACTIVE_INTENTS.yaml`, WorkGraph et A2_Discovery_ZORA_Spec.md, A3 Book/Saru/Culber/Tilly/Stamets/Burnham/Reno/Georgiou, Areas, Zora et WorkGraph. Ne pas copier des secrets ou des données intimes dans ce fichier. Mémoire certifiée par `50_Distillation` après revue; distinguer paroles du Capitaine, synthèses, adaptations, ratifications et preuves. Packet 8 LD, risques, dépendances, missing observations et prochain owner.

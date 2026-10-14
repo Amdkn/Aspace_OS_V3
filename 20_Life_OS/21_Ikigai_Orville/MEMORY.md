@@ -1,0 +1,5 @@
+# Orville — holon A2
+
+Résidence `20_Life_OS/21_Ikigai_Orville`, identité stable `LIFE/A2/ORVILLE`; spec A2_Orville_Spec.md dans ce framework; source https://docs.google.com/document/d/1s5qnSWHQ3-sDH46NQDI9iqPPOVZTUlTrxWzd5GqPKcM/edit. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Lire `40_Memory_Wiki_OKF/`, `ASPACE_ACTIVE_INTENTS.yaml`, WorkGraph et A2_Orville_Spec.md, Ikigai_Pillars_Horizons_Kardashev.md, neuf A3, matrice 4×5 et provenance Gemini. Ne pas copier des secrets ou des données intimes dans ce fichier. Mémoire certifiée par `50_Distillation` après revue; distinguer paroles du Capitaine, synthèses, adaptations, ratifications et preuves. Packet sources, arguments opposés, état proposé, gate Beth et route Morty.

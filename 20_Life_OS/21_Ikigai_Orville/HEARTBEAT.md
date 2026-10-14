@@ -1,0 +1,5 @@
+# Orville — holon A2
+
+Résidence `20_Life_OS/21_Ikigai_Orville`, identité stable `LIFE/A2/ORVILLE`; spec A2_Orville_Spec.md dans ce framework; source https://docs.google.com/document/d/1s5qnSWHQ3-sDH46NQDI9iqPPOVZTUlTrxWzd5GqPKcM/edit. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Condition de revue: Nouvelle intention, ambition H1/H3 en conflit avec H30/H90, question sur passion, profession, mission ou vocation. AUCUN cron activé. Sans nouvelle preuve: NO-OP. Si anomalie: Conserver mots du Capitaine marketing digital/passion, développement personnel/profession, plateformes/mission, durabilité/vocation; Sept 2026 machine non ratifiée distincte; retourner Packet sources, arguments opposés, état proposé, gate Beth et route Morty.

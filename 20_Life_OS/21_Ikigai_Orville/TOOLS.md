@@ -1,0 +1,5 @@
+# Orville — holon A2
+
+Résidence `20_Life_OS/21_Ikigai_Orville`, identité stable `LIFE/A2/ORVILLE`; spec A2_Orville_Spec.md dans ce framework; source https://docs.google.com/document/d/1s5qnSWHQ3-sDH46NQDI9iqPPOVZTUlTrxWzd5GqPKcM/edit. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Sources: A2_Orville_Spec.md, Ikigai_Pillars_Horizons_Kardashev.md, neuf A3, matrice 4×5 et provenance Gemini. GitHub/Google Workspace dans cette session constituent les fichiers, mais les permissions de Orville ne sont pas attestées. Harness candidats ChatGPT/Hermes/Codex/Claude Code/Antigravity/Pi sous Tech OS, routage à chaque appel, jamais exclusif. Permissions avant effet: Conserver mots du Capitaine marketing digital/passion, développement personnel/profession, plateformes/mission, durabilité/vocation; Sept 2026 machine non ratifiée distincte.

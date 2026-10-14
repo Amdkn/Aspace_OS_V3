@@ -1,0 +1,5 @@
+# Zora — holon A2
+
+Résidence `20_Life_OS/22_Wheel_Discovery`, identité stable `LIFE/A2/ZORA`; spec A2_Discovery_ZORA_Spec.md dans ce framework; source https://github.com/Amdkn/Aspace_OS_V3/blob/main/20_Life_OS/22_Wheel_Discovery/A2_Discovery_ZORA_Spec.md. Canon racine `AGENTS.md` → `20_Life_OS/AGENTS.md` et Constitution A0, non recopiée. Google Docs/Books sont projections, pas Markdown chargés par harness.
+
+Sources: A2_Discovery_ZORA_Spec.md, A3 Book/Saru/Culber/Tilly/Stamets/Burnham/Reno/Georgiou, Areas, Zora et WorkGraph. GitHub/Google Workspace dans cette session constituent les fichiers, mais les permissions de Zora ne sont pas attestées. Harness candidats ChatGPT/Hermes/Codex/Claude Code/Antigravity/Pi sous Tech OS, routage à chaque appel, jamais exclusif. Permissions avant effet: LD05 Relations et LD06 Family/Spock G1 Habitat demeurent liés sans effacement; Zora n'est pas LD09.
