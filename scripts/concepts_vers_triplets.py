@@ -37,7 +37,7 @@ import sys
 from collections import Counter
 from datetime import datetime, timezone
 
-V3 = r"C:\Users\amado\ASpace_OS_V3"
+V3 = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 BUNDLES = [
     ("50_Distillation", ["areas", "projets", "archives", "ressources", "ontologie"]),
     ("60_Implementation_Méthodologiques", ["prompt-systeme", "autonomie-agents"]),
