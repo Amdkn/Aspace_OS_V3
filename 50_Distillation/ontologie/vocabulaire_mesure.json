@@ -1,9 +1,13 @@
 {
- "genere": "2026-08-26T00:48:52.066340+00:00",
- "concepts": 414,
- "relations_resolues": 2026,
- "liens_non_resolus": 129,
+ "genere": "2026-10-22T01:02:00.715729+00:00",
+ "concepts": 456,
+ "relations_resolues": 2032,
+ "liens_non_resolus": 135,
  "exemples_liens_non_resolus": [
+  {
+   "depuis": "archive-v3-structure-snapshot-2026-08-02",
+   "vers": "archive-published-secrets-warning"
+  },
   {
    "depuis": "compounding-knowledge-wiki",
    "vers": "sources/source_llm-wiki-pattern"
@@ -99,24 +103,24 @@
   {
    "depuis": "batman-protocole-validation-empirique-cycle-5-phases",
    "vers": "b2-veto-empirical-validation-protocol"
-  },
-  {
-   "depuis": "batman-protocole-validation-empirique-cycle-5-phases",
-   "vers": "john-jones-cycle-de-vie-reformulation-5-phases"
   }
  ],
  "niveaux_confiance": {
-  "confirmeMachine": 372,
-  "revuHumain": 39,
-  "nonVerifie": 3
+  "confirmeMachine": 364,
+  "revuHumain": 78,
+  "nonVerifie": 14
  },
  "types_utilises": [
   [
    "Concept",
-   365
+   379
   ],
   [
    "Backend",
+   12
+  ],
+  [
+   "Playbook",
    12
   ],
   [
@@ -124,19 +128,19 @@
    8
   ],
   [
-   "Playbook",
-   7
+   "Integration",
+   6
+  ],
+  [
+   "Decision",
+   5
   ],
   [
    "Archive",
    4
   ],
   [
-   "Decision",
-   3
-  ],
-  [
-   "Integration",
+   "Operations memory",
    3
   ],
   [
@@ -144,11 +148,15 @@
    2
   ],
   [
+   "Architecture",
+   2
+  ],
+  [
    "Security Model",
    2
   ],
   [
-   "Vulnerability",
+   "Distillat de session agentique",
    1
   ],
   [
@@ -164,14 +172,38 @@
    1
   ],
   [
+   "concept",
+   1
+  ],
+  [
+   "Architecture audit",
+   1
+  ],
+  [
+   "Architecture Transmutation",
+   1
+  ],
+  [
    "Reference",
+   1
+  ],
+  [
+   "Operations runbook",
+   1
+  ],
+  [
+   "Operational memory",
+   1
+  ],
+  [
+   "Language audit",
    1
   ]
  ],
  "tags_utilises": [
   [
    "b2",
-   157
+   159
   ],
   [
    "doctrine",
@@ -218,6 +250,10 @@
    38
   ],
   [
+   "wonder-woman",
+   38
+  ],
+  [
    "flash",
    38
   ],
@@ -226,20 +262,16 @@
    37
   ],
   [
-   "wonder-woman",
-   37
-  ],
-  [
    "sales",
    35
   ],
   [
-   "johnjones",
+   "b3",
    32
   ],
   [
-   "b3",
-   31
+   "johnjones",
+   32
   ],
   [
    "packet",
@@ -259,7 +291,7 @@
   ],
   [
    "council",
-   21
+   22
   ],
   [
    "jtbd",
@@ -275,11 +307,19 @@
   ],
   [
    "handoff",
+   15
+  ],
+  [
+   "para",
    14
   ],
   [
    "amplification",
    14
+  ],
+  [
+   "12wy",
+   13
   ],
   [
    "couplage",
@@ -294,11 +334,15 @@
    12
   ],
   [
-   "para",
-   11
+   "canon",
+   12
   ],
   [
-   "12wy",
+   "okf",
+   12
+  ],
+  [
+   "life-os",
    11
   ],
   [
@@ -310,42 +354,30 @@
    11
   ],
   [
-   "canon",
-   11
-  ],
-  [
    "dormant",
    11
   ],
   [
-   "coach-os",
+   "ontologie",
    11
-  ],
-  [
-   "avengers",
-   10
-  ],
-  [
-   "cycle",
-   10
   ]
  ],
  "par_bundle": {
-  "areas": 21,
-  "projets": 20,
+  "areas": 23,
+  "projets": 21,
   "archives": 16,
-  "ressources": 26,
+  "ressources": 27,
   "ontologie": 7,
   "prompt-systeme": 7,
   "autonomie-agents": 5,
   "pulse/b1": 15,
-  "pulse/b2": 11,
+  "pulse/b2": 12,
   "pulse/b3": 11,
   "pulse/domaines": 259,
-  "architecture": 4,
-  "integrations": 4,
-  "operations": 4,
+  "architecture": 26,
+  "integrations": 7,
+  "operations": 14,
   "security": 2,
-  "canon": 2
+  "canon": 4
  }
 }
