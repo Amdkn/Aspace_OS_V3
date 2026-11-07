@@ -57,6 +57,31 @@
     },
     "return_to": {
       "type": "object"
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["RECOVER_LOCAL", "WAIT", "REQUEST_EVIDENCE", "REOPEN_LOCAL", "ESCALATE_DONNA"]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "escalation_target": {
+      "type": "string"
+    },
+    "wait_reason": {
+      "type": "string"
+    },
+    "next_action": {
+      "type": "string"
+    },
+    "reopen_type": {
+      "type": "string"
+    },
+    "classification": {
+      "type": "string"
+    },
+    "evidence_requested": {
+      "type": "string"
     }
   },
   "additionalProperties": false

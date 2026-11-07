@@ -41,7 +41,9 @@ class TestRecoveryPortCanary(unittest.TestCase):
     def test_bill_exhausted(self):
         req = self._make_req("transient", "FAILED", attempt=3)
         res = RecoveryPort.evaluate(req)
-        self.assertEqual(res["decision"], "ESCALATE_DONNA")
+        # Budget exhausted -> WAIT (backpressure) before re-evaluate, not immediate escalation
+        self.assertEqual(res["decision"], "WAIT")
+        self.assertEqual(res["reason"], "transient error budget exhausted, backpressure before retry")
 
 if __name__ == '__main__':
     unittest.main()
