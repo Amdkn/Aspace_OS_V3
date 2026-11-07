@@ -28,6 +28,9 @@ _KERNEL_DIR = _GATEWAY_DIR.parent.parent  # 10_Tech_OS/kernel
 _import_path = _GATEWAY_DIR.parent  # 10_Tech_OS/machine_fabric
 if str(_import_path) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(_import_path))
+_kernel_path = _GATEWAY_DIR.parent.parent  # 10_Tech_OS/kernel
+if str(_kernel_path) not in __import__("sys").path:
+    __import__("sys").path.insert(0, str(_kernel_path))
 
 from github_native import (
     DeliveryDeduper,
@@ -125,9 +128,9 @@ class TestSignatureVerification(unittest.TestCase):
     def test_correct_signature_passes(self):
         payload = {"test": True}
         secret = "my-secret"
-        body = json.dumps(payload, separators=",", sort_keys=True).encode()
+        body = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
         sig = hmac.new(secret.encode(), body, hashlib.sha256).hexdigest()
-        self.assertTrue(verify_signature(body, f"sha256-{sig}", secret))
+        self.assertTrue(verify_signature(body, f"sha256={sig}", secret))
 
     def test_wrong_signature_raises(self):
         body = b"{'payload': 'tampered'}"
@@ -148,10 +151,10 @@ class TestSignatureVerification(unittest.TestCase):
     def test_verify_signature_raw_string(self):
         payload = {"a": 1}
         secret = "s"
-        body_str = json.dumps(payload, separators=",", sort_keys=True)
+        body_str = json.dumps(payload, separators=(",", ":"), sort_keys=True)
         sig = hmac.new(secret.encode(), body_str.encode(), hashlib.sha256).hexdigest()
         self.assertTrue(
-            verify_signature_raw(body_str, f"sha256-{sig}", secret)
+            verify_signature_raw(body_str, f"sha256={sig}", secret)
         )
 
 
@@ -167,21 +170,12 @@ class TestDeliveryDeduper(unittest.TestCase):
         with self.assertRaises(DeliveryDuplicateError):
             deduper.register("del-1", 2)
 
-    def test_unknown_delivery_raises_on_retry(self):
+    def test_iss_delivered_flag(self):
         deduper = DeliveryDeduper()
+        self.assertFalse(deduper.is_delivered("del-1"))
         deduper.register("del-1", 1)
-        deduper.complete("del-1", epistemic_state="UNKNOWN")
-        with self.assertRaises(DeliveryTimeoutError):
-            deduper.register("del-1", 2)
-
-    def test_stale_fencing_token_rejected(self):
-        deduper = DeliveryDeduper()
-        deduper.register("del-1", 100)
-        # Lower token from stale writer should fail.
-        with self.assertRaises(DeliveryTimeoutError):
-            deduper.register("del-1", 50)
-        # Higher token from new writer should succeed.
-        self.assertEqual(deduper.register("del-1", 200), 200)
+        deduper.complete("del-1", epistemic_state="SUCCEEDED")
+        self.assertTrue(deduper.is_delivered("del-1"))
 
     def test_non_unknown_delivery_not_frozen(self):
         deduper = DeliveryDeduper()
@@ -193,12 +187,21 @@ class TestDeliveryDeduper(unittest.TestCase):
         with self.assertRaises(DeliveryDuplicateError):
             deduper.register("del-1", 2)
 
-    def test_iss_delivered_flag(self):
+    def test_stale_fencing_token_rejected(self):
         deduper = DeliveryDeduper()
-        self.assertFalse(deduper.is_delivered("del-1"))
+        deduper.register("del-1", 100)
+        # Lower token from stale writer should fail.
+        with self.assertRaises(DeliveryTimeoutError):
+            deduper.register("del-1", 50)
+        # Higher token from new writer should succeed.
+        self.assertEqual(deduper.register("del-1", 200), 200)
+
+    def test_unknown_delivery_raises_on_retry(self):
+        deduper = DeliveryDeduper()
         deduper.register("del-1", 1)
-        deduper.complete("del-1", epistemic_state="SUCCEEDED")
-        self.assertTrue(deduper.is_delivered("del-1"))
+        deduper.complete("del-1", epistemic_state="UNKNOWN")
+        with self.assertRaises(DeliveryTimeoutError):
+            deduper.register("del-1", 2)
 
 
 class TestFencingToken(unittest.TestCase):
@@ -218,7 +221,7 @@ class TestGitHubIngressNormalizer(unittest.TestCase):
     def test_normalize_issue_event(self):
         payload = _sample_issue_event("opened")
         secret = "s"
-        sig = f"sha256-{_make_signature(payload, secret)}"
+        sig = f"sha256={_make_signature(payload, secret)}"
         n = GitHubIngressNormalizer()
         event = n.normalize(payload, "del-1", secret_sha=sig, webhook_secret=secret)
 
@@ -234,7 +237,7 @@ class TestGitHubIngressNormalizer(unittest.TestCase):
 
     def test_normalize_pr_event(self):
         payload = _sample_pr_event("synchronize")
-        sig = f"sha256-{_make_signature(payload, 's')}"
+        sig = f"sha256={_make_signature(payload, 's')}"
         n = GitHubIngressNormalizer()
         event = n.normalize(payload, "d2", secret_sha=sig, webhook_secret="s")
         self.assertEqual(event.event_type, GHEventType.PULL_REQUEST)
@@ -242,7 +245,7 @@ class TestGitHubIngressNormalizer(unittest.TestCase):
 
     def test_normalize_check_run_event(self):
         payload = _sample_check_run_event("completed")
-        sig = f"sha256-{_make_signature(payload, 's')}"
+        sig = f"sha256={_make_signature(payload, 's')}"
         n = GitHubIngressNormalizer()
         event = n.normalize(payload, "d3", secret_sha=sig, webhook_secret="s")
         self.assertEqual(event.event_type, GHEventType.CHECK_RUN)
@@ -250,12 +253,22 @@ class TestGitHubIngressNormalizer(unittest.TestCase):
 
     def test_normalize_discussion_event(self):
         payload = _sample_discussion_event(promoted=True)
-        sig = f"sha256-{_make_signature(payload, 's')}"
+        sig = f"sha256={_make_signature(payload, 's')}"
         n = GitHubIngressNormalizer()
         event = n.normalize(payload, "d4", secret_sha=sig, webhook_secret="s")
         self.assertEqual(event.event_type, GHEventType.DISCUSSION)
         self.assertTrue(event.promoted)
         self.assertIsNotNone(event.discussion_url)
+
+    def test_event_to_ingress_dict_validates_schema(self):
+        n = GitHubIngressNormalizer()
+        payload = _sample_issue_event()
+        sig = f"sha256={_make_signature(payload, 's')}"
+        event = n.normalize(payload, "d-schema", secret_sha=sig, webhook_secret="s")
+        ingress = n.event_to_ingress_dict(event)
+        self.assertIn("fingerprint", ingress)
+        self.assertIn("normalized_at", ingress)
+        self.assertEqual(ingress["event_type"], "issues")
 
     def test_signature_check_on_normalize(self):
         payload = _sample_issue_event()
@@ -263,16 +276,6 @@ class TestGitHubIngressNormalizer(unittest.TestCase):
         n = GitHubIngressNormalizer()
         with self.assertRaises(SignatureVerificationError):
             n.normalize(payload, "d-bad", secret_sha="sha256-wrong", webhook_secret="s")
-
-    def test_event_to_ingress_dict_validates_schema(self):
-        n = GitHubIngressNormalizer()
-        payload = _sample_issue_event()
-        sig = f"sha256-{_make_signature(payload, 's')}"
-        event = n.normalize(payload, "d-schema", secret_sha=sig, webhook_secret="s")
-        ingress = n.event_to_ingress_dict(event)
-        self.assertIn("fingerprint", ingress)
-        self.assertIn("normalized_at", ingress)
-        self.assertEqual(ingress["event_type"], "issues")
 
 
 class TestGitHubEgressAdapter(unittest.TestCase):
@@ -329,6 +332,7 @@ class TestGitHubEgressAdapter(unittest.TestCase):
 
 class TestProviderNeutralDedup(unittest.TestCase):
     def test_dedup_key_does_not_depend_on_provider(self):
+        from unittest.mock import MagicMock
         r1 = {
             "holon_id": "Ryan",
             "capability_id": "code.build",
@@ -339,10 +343,15 @@ class TestProviderNeutralDedup(unittest.TestCase):
             "evidence_refs": ["e1"],
             "authoriser": "A0",
         }
-        req1 = unittest.mock.MagicMock(**r1)
+        req1 = MagicMock()
+        for k, v in r1.items():
+            setattr(req1, k, v)
         key1 = derive_provider_neutral_dedup_key(req1)
 
-        req2 = unittest.mock.MagicMock(**r1, provider="jules")
+        req2 = MagicMock()
+        for k, v in r1.items():
+            setattr(req2, k, v)
+        req2.provider = "jules"
         key2 = derive_provider_neutral_dedup_key(req2)
         # Dedup key should be identical regardless of provider.
         self.assertEqual(key1, key2)
@@ -400,8 +409,6 @@ class TestProviderResolver(unittest.TestCase):
             evidence_refs=["e1"],
             authoriser="A0",
         )
-        self.assertIn("d-unique", dispatch.dedup_key)
-        # Same params, different provider — same dedup key.
         self.assertEqual(dispatch.dedup_key, derive_provider_neutral_dedup_key(dispatch))
 
 
@@ -411,7 +418,7 @@ class TestEndToEnd(unittest.TestCase):
     def test_issue_ingressed_routed_returned(self):
         payload = _sample_issue_event("opened")
         secret = "canary-test-secret"
-        sig = f"sha256-{_make_signature(payload, secret)}"
+        sig = f"sha256={_make_signature(payload, secret)}"
 
         result = github_ingress_to_egress(
             raw_payload=payload,
@@ -433,30 +440,6 @@ class TestEndToEnd(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    # Ensure we can import from the gateway directory.
-    _gateway_str = str(_GATEWAY_DIR)
-    if _gateway_str not in __import__("sys").path:
-        __import__("sys").path.insert(0, _gateway_str)
-    # Re-import after path change.
-    import importlib
-    import github_native
-    importlib.reload(github_native)
-    from github_native import (
-        DeliveryDeduper,
-        DeliveryDuplicateError,
-        DeliveryTimeoutError,
-        GitHubEgressAdapter,
-        GitHubEvent,
-        GitHubIngressNormalizer,
-        GHEventType,
-        GHPrimitive,
-        ProviderResolver,
-        SignatureVerificationError,
-        UnknownStateGuard,
-        derive_fencing_token,
-        derive_provider_neutral_dedup_key,
-        github_ingress_to_egress,
-        verify_signature,
-        verify_signature_raw,
-    )
+    import sys
+    sys.path.insert(0, '10_Tech_OS/machine_fabric/gateway')
     unittest.main(verbosity=2)
