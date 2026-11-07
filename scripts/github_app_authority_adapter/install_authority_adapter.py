@@ -26,6 +26,9 @@ import subprocess
 import sys
 import tempfile
 import urllib.request
+
+import hmac
+import hashlib
 import urllib.error
 from pathlib import Path
 from datetime import datetime, timezone, timedelta

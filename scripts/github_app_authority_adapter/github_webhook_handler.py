@@ -26,10 +26,13 @@ sys.path.insert(0, os.path.dirname(__file__))
 from github_authority_resolver import (
     AuthorityResolver,
     GitHubAppContext,
-    normalize_event_type,
-    verify_hmac_signature,
     create_resolver_from_webhook
 )
+
+# Import helper functions from install_authority_adapter
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from install_authority_adapter import normalize_event_type, verify_hmac_signature
 
 
 class GitHubWebhookHandler:
