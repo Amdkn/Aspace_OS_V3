@@ -21,7 +21,7 @@ from gws_adapter import GWSAdapter
 
 def extract_citations(description):
     """
-    Extrait les rÃ©fÃ©rences de recherche (DOI, arXiv, OpenReview, etc.)
+    Extrait les références de recherche (DOI, arXiv, OpenReview, etc.)
     depuis le texte de la description.
     """
     if not description:
@@ -33,9 +33,19 @@ def extract_citations(description):
     arxiv_urls = re.findall(r'(https?://(?:www\.)?arxiv\.org/(?:abs|pdf)/\d+\.\d+(?:v\d+)?)', description)
     candidates.extend([{"type": "arxiv", "value": url} for url in arxiv_urls])
 
+    # Matches bare arXiv IDs like "arXiv:2611.06500" or "arxiv:2611.06500"
+    arxiv_bare = re.findall(r'(?:arxiv|arXiv):(\d+\.\d+(?:v\d+)?)', description)
+    for arxiv_id in arxiv_bare:
+        candidates.append({"type": "arxiv", "value": f"https://arxiv.org/abs/{arxiv_id}"})
+
     # Matches DOI links like https://doi.org/10.xxxx/xxxx
     doi_urls = re.findall(r'(https?://(?:www\.)?doi\.org/10\.\d{4,9}/[-._;()/:a-zA-Z0-9]+)', description)
     candidates.extend([{"type": "doi", "value": url} for url in doi_urls])
+
+    # Matches bare DOIs like "DOI: 10.xxxx/xxxx" or "doi: 10.xxxx/xxxx"
+    doi_bare = re.findall(r'(?:doi|DOI):\s*(10\.\d{4,9}/[-._;()/:a-zA-Z0-9]+)', description)
+    for doi in doi_bare:
+        candidates.append({"type": "doi", "value": f"https://doi.org/{doi}"})
 
     # Matches OpenReview links
     openreview_urls = re.findall(r'(https?://(?:www\.)?openreview\.net/forum\?id=[a-zA-Z0-9_-]+)', description)
@@ -218,7 +228,7 @@ def run_m1_metadata(url, out_dir):
     print(f"[Discovery] M1: Fetching metadata for {url}")
 
     cmd = [
-        "yt-dlp",
+        sys.executable, "-m", "yt_dlp",
         "--dump-json",
         "-o", str(out_path / "%(id)s.%(ext)s"),
         url
@@ -350,7 +360,7 @@ def run_m4_transcripts(url, out_dir):
     print(f"[Discovery] M4: Fetching transcripts for {url}")
     out_path = Path(out_dir)
     cmd = [
-        "yt-dlp",
+        sys.executable, "-m", "yt_dlp",
         "--write-auto-subs",
         "--sub-lang", "en,fr",
         "--write-subs",
@@ -381,7 +391,7 @@ def run_m6_keyframes(url, video_id, out_dir):
     out_path = Path(out_dir)
     video_file = out_path / f"{video_id}.mp4"
     cmd_vid = [
-        "yt-dlp",
+        sys.executable, "-m", "yt_dlp",
         "-f", "worstvideo/worst",
         "-o", str(video_file),
         url
@@ -397,8 +407,25 @@ def run_m6_keyframes(url, video_id, out_dir):
     frames_dir.mkdir(exist_ok=True)
 
     if video_file.exists():
+        # Find ffmpeg executable
+        ffmpeg_cmd = "ffmpeg"
+        # Check if ffmpeg is in PATH or use common Windows locations
+        import shutil
+        if shutil.which("ffmpeg"):
+            ffmpeg_cmd = "ffmpeg"
+        else:
+            # Try common Windows locations
+            possible_paths = [
+                r"C:\Users\amado\AppData\Local\Microsoft\WinGet\Links\ffmpeg.exe",
+                r"C:\ffmpeg\bin\ffmpeg.exe",
+            ]
+            for p in possible_paths:
+                if os.path.exists(p):
+                    ffmpeg_cmd = p
+                    break
+
         cmd_ffmpeg = [
-            "ffmpeg",
+            ffmpeg_cmd,
             "-hide_banner", "-loglevel", "error",
             "-i", str(video_file),
             "-vf", "fps=1/10,scale=854:-1",
@@ -693,44 +720,69 @@ def process_corpus(manifest_path, out_dir, through_stage=None):
             if evidence:
                 report["videos_processed"] += 1
 
-                # Handle partial results
-                if evidence.get("status") == "PARTIAL":
+                # Handle partial results - still collect metrics for completed stages
+                is_partial = evidence.get("status") == "PARTIAL"
+                completed_stages = evidence.get("completed_stages", [])
+
+                # Always collect paper_graph_edges if present (for tests and full runs)
+                global_paper_graph.extend(evidence.get("paper_graph_edges", []))
+
+                # Load metadata if we completed M1
+                if "M1" in completed_stages or "extracted_context" in evidence:
+                    # Try to get metadata from evidence or load it
+                    if "extracted_context" in evidence:
+                        # Full evidence packet
+                        report["descriptions_captured"] += 1
+
+                        citations = evidence["extracted_context"].get("citations", [])
+                        report["citation_candidates_extracted"] += len(citations)
+
+                        resolved = [c for c in citations if c["status"] == "RESOLVED"]
+                        report["canonical_papers_resolved"] += len(resolved)
+                        report["unresolved_citations"] += (len(citations) - len(resolved))
+
+                        transcripts = evidence["artifacts"].get("transcript_files", {})
+                        if transcripts:
+                            report["transcripts_captured"] += len(transcripts)
+                            report["transcripts_analyzed"] += len(transcripts)
+
+                        keyframes = evidence["artifacts"].get("keyframes", {})
+                        if keyframes:
+                            report["videos_with_keyframes"] += 1
+                            report["total_keyframes"] += len(keyframes)
+
+                    else:
+                        # Partial - load from intermediate files
+                        metadata_file = video_out_dir / "metadata.json"
+                        if metadata_file.exists():
+                            report["descriptions_captured"] += 1
+                        citations_file = video_out_dir / "m2_citations.json"
+                        if citations_file.exists():
+                            with open(citations_file, 'r') as f:
+                                raw_citations = json.load(f)
+                            report["citation_candidates_extracted"] += len(raw_citations)
+                        resolved_file = video_out_dir / "m3_resolved.json"
+                        if resolved_file.exists():
+                            with open(resolved_file, 'r') as f:
+                                resolved_papers = json.load(f)
+                            resolved = [c for c in resolved_papers if c.get("status") == "RESOLVED"]
+                            report["canonical_papers_resolved"] += len(resolved)
+                            report["unresolved_citations"] += (len(resolved_papers) - len(resolved))
+
+                if is_partial:
                     report["results"].append({
                         "url": url,
                         "video_id": evidence.get("video_id"),
                         "status": "PARTIAL_SUCCESS",
-                        "completed_stages": evidence.get("completed_stages", [])
+                        "completed_stages": completed_stages
                     })
-                    continue
-
-                # Check for description in metadata (if it successfully extracted refs, it had description)
-                report["descriptions_captured"] += 1
-
-                citations = evidence["extracted_context"].get("citations", [])
-                report["citation_candidates_extracted"] += len(citations)
-
-                resolved = [c for c in citations if c["status"] == "RESOLVED"]
-                report["canonical_papers_resolved"] += len(resolved)
-                report["unresolved_citations"] += (len(citations) - len(resolved))
-
-                transcripts = evidence["artifacts"].get("transcript_files", {})
-                if transcripts:
-                    report["transcripts_captured"] += len(transcripts)
-                    report["transcripts_analyzed"] += len(transcripts) # we analyze all captured
-
-                keyframes = evidence["artifacts"].get("keyframes", {})
-                if keyframes:
-                    report["videos_with_keyframes"] += 1
-                    report["total_keyframes"] += len(keyframes)
-
-                global_paper_graph.extend(evidence.get("paper_graph_edges", []))
-
-                report["results"].append({
-                    "url": url,
-                    "video_id": evidence.get("video_id"),
-                    "status": "SUCCESS",
-                    "packet": str(Path(video_out_dir) / "evidence_packet.json")
-                })
+                else:
+                    report["results"].append({
+                        "url": url,
+                        "video_id": evidence.get("video_id"),
+                        "status": "SUCCESS",
+                        "packet": str(Path(video_out_dir) / "evidence_packet.json")
+                    })
             else:
                 report["errors"] += 1
                 report["results"].append({"url": url, "status": "FAILED"})
