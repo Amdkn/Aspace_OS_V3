@@ -1,6 +1,7 @@
 import subprocess
 import json
 import os
+import sys
 
 class CorpusInventory:
     """Base interface for Corpus inventory adapters."""
@@ -49,8 +50,9 @@ class YTDLPPlaylistInventory(CorpusInventory):
             return []
 
         print(f"[Inventory] Enumerating playlist via yt-dlp: {url}")
+        # Use python -m yt_dlp for cross-platform compatibility
         cmd = [
-            "yt-dlp",
+            sys.executable, "-m", "yt_dlp",
             "--flat-playlist",
             "--dump-json",
             url
