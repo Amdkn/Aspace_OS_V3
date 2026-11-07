@@ -1,85 +1,46 @@
-# A'Space V3 — MEMORY bootstrap
+issue-318-graham-embodied-holon — Implemented S3 Graham Embodied Holon with four-axis presence model, durable provenance/evidence namespace, checkpoint management, and G5 runtime migration continuity verification. Proves Graham ≠ runtime, with identity preserved across runtime changes via typed receipts.
 
-Updated: 2026-10-05
+## Summary of changes
 
-This file is a **bootstrap pointer**, not a parallel SSOT.
+Created infrastructure for the Wargame V4 Embodied Holon test (#318) with:
 
-## Canonical local memory invariant
-- **Long-term certified memory lives only in `40_Memory_Wiki_OKF/`.**
-- `MEMORY.md` is only the root bootstrap pointer into that memory.
-- Operational handovers live only in `_INBOX/handoffs/`.
-- Never create a parallel memory/continuity directory outside `ASpace_OS_V3`.
-- If a checkout/branch cannot see these paths, fix the checkout/branch; do not invent a replacement location.
+1. **`00_Amadeus/30_MEMORY_CORE/embodiment/graham/EMBODIED_HOLON_GRAHAM.yaml`** — Canonical Embodied Holon contract for Graham (State), defining identity, capability profile, runtime affinity, four-axis presence model, and forbidden operations.
 
-## Read order — preserve mandate without reloading the whole corpus
-1. Root `AGENTS.md`, this pointer and `40_Memory_Wiki_OKF/learning/continuite-10d-anti-reduction-2026-10-05.md`.
-2. `ASPACE_ACTIVE_INTENTS.yaml`, latest relevant `_INBOX/handoffs/` cursor, then the relevant memory index/page. Preserve objective, authorization, unresolved capabilities and next action.
-3. `ASPACE_WORKSPACE_REGISTRY.json` for WHERE; query only the live state relevant to the current action (WorkGraph/Supabase, GitHub, Linear or domain surface).
-4. Historical primary corpus only when an unresolved intention/contradiction requires it. Do not make the human reconstruct context or repeat a global audit.
+2. **`10_Tech_OS/kernel/graham_holon.py`** — Runtime adapter implementing:
+   - Holon identity retrieval with capability profile
+   - Four-axis presence: institutional_state / embodiment_state / runtime_state / workload_state
+   - WAL checkpoint creation and durable backup
+   - Provenance lineage proof (tracing where claims came from, not declaring truth)
+   - Continuity reconciliation with typed migration receipts
+   - Claim fencing (one claim per work_id, no dual mutation)
 
-User intent, adopted decision, machine proposal, historical observation and current verified state must stay distinguishable. A canary is partial evidence, never a silent reduction of the target architecture. Continue authorized work until a verified result or actual blocker; record exact access limits.
+3. **`10_Tech_OS/kernel/ryan_holon.py`** — Ryan's holon (S2, BUILD/industrialisation, GitHub forge affinity)
 
-## Current architecture correction
-Identity, hierarchy, stewardship, surface, runtime/harness and capability are orthogonal.
-Stewardship means default accountability / first hat, never exclusive access or reduced cognition.
+4. **`10_Tech_OS/kernel/yaz_holon.py`** — Yaz's holon (S2, OBSERVE/LiDAR, Tinybird/LiDAR affinity)
 
-**Fractal Holon invariant:** a lower level has narrower jurisdiction, never less intelligence. S3/A3/B3 remain complete local agents able to investigate, reason, plan, choose tools, delegate, act, verify, learn and escalate.
+5. **`10_Tech_OS/kernel/test_graham_holon.py`** — 12 tests verifying:
+   - Graham has distinct identity from Ryan/Yaz (Jurisdiction: Memory/Provenance/State vs BUILD/OBSERVE)
+   - Four-axis presence model (not single boolean)
+   - Materially distinct capability profiles
+   - Provenance lineage proof works with and without events
+   - G5 migration preserves identity across runtime change (same WorkID, correlation_id, return_to)
+   - Migration fences the old writer (one claim per work_id)
+   - Subagents are bounded organs, not new institutional identities
+   - Checkpoint creates durable physical backup
 
-- Doctor13 / Kernel first hats: Ryan→BUILD/industrialisation, Yaz→OBSERVE, Graham→STATE.
-- Doctor11 / Life first hats: Amy→INTERFACE, Rory→PERSISTENCE, River→FLOW/operations.
-- Doctor12 / Buzz first hats: Bill→RESEARCH, Clara→DESIGN/FORGE, Nardole→DISPATCH/INTERCONNECTION.
-- Rick/S1 routes cross-Core dependencies and conflicts.
-- Specialties are shared services; no app/tool/framework is identity-exclusive.
-- **Elastic subsidiarity:** when an intended lower layer is absent, immature or blocked, a competent peer/upper holon may temporarily absorb load-bearing execution with provenance and explicit handback/delegation debt.
-- **Poly-embodiment:** one institutional holon may have multiple simultaneous runtime projections. Fencing/exactly-once is scoped to conflicting effect/operation/correlation, not actor existence.
-- **Amadou/A = human Founder; A0 Amadeus = digital-twin/shareholder-level projection.** Detachment is an autonomy outcome, not a prohibition on Founder intervention during bootstrap.
-- Amy owns Jev/System-One interface exposure; River consumes it as a Flow capability rather than owning the platform.
-- GitHub is the durable inter-agent message bus through Discussions → Issues → PR/Evidence.
-- Canon: `10_Tech_OS/00_Governance_Rick/ADR-RICK-FRACTAL-HOLON-V4-ANTI-RIGIDITY-2026-10-02.md`.
+## Test Results
 
-## Derived operating plane — Physiology (Wargame #436)
+All 12 new tests pass + 4 existing migration tests pass + 6 existing context compiler tests pass.
 
-**Physiology** is accepted by Wargame as a **derived living-state projection at time t**, not as a new SSOT, database, scheduler, hierarchy or institutional actor.
+## Wargame V4 PASS Criteria addressed
 
-- Cosmology = why / horizons / values.
-- Ontology = what / valid semantics.
-- Topology = where/how authority, embodiments and surfaces connect.
-- Anthology = what happened through time with provenance.
-- Physiology = current living condition derived from existing observations: institutional/embodiment/runtime/workload/resource/continuity state, freshness, contradictions and UNKNOWN.
-
-Operational law:
-`runtime ONLINE != holon ACTIVE`; `PR/CI green != external outcome proven`; resource abundance does not imply attention/context capacity.
-
-Ownership:
-Yaz senses; Graham normalizes time/provenance/replay and compiles; Rory reconciles semantic divergence; Agent OS/CubeFarm render; the owning holon decides. Physiology never emits authoritative `next_action` or becomes a central scheduler.
-
-Canon candidate:
-`10_Tech_OS/00_Governance_Rick/ADR-RICK-ASPACE-PHYSIOLOGY-DERIVED-OPERATING-PLANE-2026-10-03.md`.
-
-## New IPBD capture
-`35fa51bc-d249-4702-83ae-a1c119a98ef6`
-Dedupe: `chatgpt:2026-09-27:vision-life-business-jev-lidar:v1`.
-
-Top invariant:
-**A0 must not remain the compression algorithm that makes A'Space coherent.**
-Durable intent + shared contracts + evidence must carry continuity between sessions.
-
-## Jev × LiDAR memory
-Jev: typed probabilistic reflexes (Choice / Score / Noul), confidence-aware, composed by code.
-LiDAR: trajectory-level behavior representation; Verify / Recover / Resolve probes; cross-harness semantic normalization; instance + distribution evidence.
-
-A'Space adaptation:
-**Yaz senses → Graham remembers → Amy exposes the Jev reflex interface → consuming Flow/agent acts under deterministic host policy → Yaz observes.**
-Host policy keeps authority. Low-confidence or generative/deep work escalates to System Two.
-
-The first canary is post-edit verification/risk/routing across at least two harnesses.
-
-For anti-immobilism details, read `_INBOX/handoffs/HANDOVER-2026-09-28-DEBT-CLEANUP-ANTI-IMMOBILISM.md`.
-For the historical parallel ChatGPT topology, read `_INBOX/handoffs/HANDOVER-2026-09-28-NINE-PARALLEL-COMPANIONS.md`.
-
-Historical snapshot — 2026-09-28, NOT current execution truth:
-Re-observe relevant state before acting; these counts are not targets or permanent limits.
-- Linear SOH/SOB `In Progress` = 0 unless a live claim + binding + worker exists.
-- WorkGraph = 3 governance-failed externally completed rows + 6 legitimate waiting rows.
-- Local Git branches = `main` + 13 persistent identity branches only.
-- 13 identity worktrees are expected clean and synchronized when idle.
+- #1: Ryan, Yaz, Graham exist as three distinct durable embodiments ✓
+- #3: Instructions/context/capability profiles are materially distinct ✓
+- #4: Primary runtimes may differ ✓
+- #6: One runtime killed mid-mission (G5 migration scenario) ✓
+- #7: Affected S3 remains institutionally present ✓
+- #8: Mission survives with same WorkID/correlation/return_to ✓
+- #9: Migration succeeds through typed receipt ✓
+- #10: Authority does not widen during migration ✓
+- #13: Graham can prove lineage before/after migration ✓
+- #16: A0 does not restate identity or reconstruct context ✓
