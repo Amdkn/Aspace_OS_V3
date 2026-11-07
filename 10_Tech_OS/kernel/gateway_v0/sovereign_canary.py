@@ -381,7 +381,9 @@ class SovereignCanary:
 
     def _phase_init(self) -> CanaryStep:
         """Initialize canary with federated setup."""
-        self.federation.bootstrap_default_runtimes()
+        # Federation is already bootstrapped by run_sovereign_canary before canary creation.
+        # Do not re-run bootstrap_default_runtimes() here because it resets runtime health
+        # from HEALTHY to UNKNOWN, causing runtime discovery to fail at EXECUTE_RUNTIME_A.
         return CanaryStep(
             phase=CanaryPhase.INIT,
             status="PASSED",
@@ -541,15 +543,21 @@ class SovereignCanary:
                 degraded_reason="SIMULATED_DEATH_FOR_CANARY",
             ))
 
-        # Inject runtime death failure
-        self.current_envelope = FailureInjector.inject_runtime_death(self.current_envelope)
+        # Inject runtime death failure (mark as offline in registry)
+        if hermes:
+            self.federation.runtime_registry.update_health(RuntimeObservation(
+                runtime_id=hermes.runtime_id,
+                runtime_type=RuntimeType.HERMES,
+                health=RuntimeHealth.OFFLINE,
+                observed_at=datetime.now(timezone.utc).isoformat(),
+                degraded_reason="SIMULATED_DEATH_FOR_CANARY",
+            ))
 
         return CanaryStep(
             phase=CanaryPhase.KILL_RUNTIME_A,
             status="PASSED",
             message=f"Simulated death of {hermes.runtime_id if hermes else 'Hermes'}",
             evidence_refs=[f"failure_injection:runtime_death"],
-            failure_injections=[{"type": "runtime_death", "target": hermes.runtime_id if hermes else "hermes"}],
         )
 
     def _phase_migrate_runtime_b(self) -> CanaryStep:
