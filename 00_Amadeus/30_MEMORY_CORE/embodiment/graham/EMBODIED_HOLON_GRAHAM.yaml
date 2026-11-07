@@ -33,9 +33,11 @@ capability_profile:
     - "provenance_checker"
     - "replay_verifier"
     - "state_compactor"
+    - "checkpoint_manager"
   tools:
     - "graham_checkpoint.py"
     - "temporal_truth.compiler.ContextCompiler"
+    - "graham_holon.graham_holon"
   mcp:
     - "supabase"
     - "temporal_graph"
