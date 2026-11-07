@@ -95,6 +95,28 @@ class TestMortyLocalEngine(unittest.TestCase):
             except OSError:
                 pass
 
+    def test_07_onnx_detection_clean(self):
+        # Test ONNX availability detection doesn't pollute global state
+        engine1 = MortyLocalEngine()
+        self.assertIsInstance(engine1._is_onnx_available, bool)
+        self.assertIsInstance(engine1._is_torch_available, bool)
+
+        # Test that model loading doesn't affect deterministic fallback
+        fake_path = Path("nonexistent.onnx")
+        engine2 = MortyLocalEngine(model_path=fake_path)
+        res = engine2.predict_horizon([1.0, 2.0, 3.0], horizon=2)
+        self.assertEqual(res["backend"], "cpu_deterministic_fallback")
+
+    def test_08_predict_horizon_compile_check(self):
+        # Test that the engine compiles without errors
+        import subprocess
+        import sys
+        result = subprocess.run(
+            [sys.executable, "-m", "py_compile", str(HERE / "morty_engine.py")],
+            capture_output=True
+        )
+        self.assertEqual(result.returncode, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

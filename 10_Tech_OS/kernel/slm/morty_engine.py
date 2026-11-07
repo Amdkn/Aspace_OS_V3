@@ -36,20 +36,16 @@ class MortyLocalEngine:
                     if found:
                         self.model_path = found[0]
                         break
-        
-        self._is_torch_available = False
-        try:
-            import torch  # type: ignore
-            self._is_torch_available = True
-        except ImportError:
-            self._is_torch_available = False
-            
-        self._is_onnx_available = False
-        try:
-            import onnxruntime  # type: ignore
-            self._is_onnx_available = True
-        except ImportError:
-            self._is_onnx_available = False
+
+        # Clean availability detection for ONNX and PyTorch
+        self._is_torch_available = self._check_torch_availability()
+        self._is_onnx_available = self._check_onnx_availability()
+
+        # Model state tracking for proper fallback behavior
+        self._model_loaded = False
+        self._model_load_error = None
+        if self.model_path and self.model_path.exists():
+            self._attempt_model_load()
 
     def predict_horizon(self, series: List[float], horizon: int = 14) -> Dict[str, Any]:
         """
@@ -67,23 +63,11 @@ class MortyLocalEngine:
             
         used_backend = "cpu_deterministic_fallback"
 
-        # Attempt to load model if specified
+        # Enhanced model loading with clean error handling and state tracking
         if self.model_path and self.model_path.exists():
-            try:
-                if self.model_path.suffix == ".onnx" and self._is_onnx_available:
-                    import onnxruntime as ort # type: ignore
-                    session = ort.InferenceSession(str(self.model_path))
-                    # Basic mock fallback as we don't know the exact TimesFM inputs without proper library
-                    # Just to mark that inference passed without crashing
-                    used_backend = "onnx_timesfm"
-                elif self.model_path.suffix in [".pt", ".pth"] and self._is_torch_available:
-                    import torch # type: ignore
-                    # Same logic, just try to load to avoid crash
-                    torch.load(self.model_path, map_location="cpu", weights_only=True)
-                    used_backend = "torch_timesfm"
-            except Exception:
-                # Fallback to deterministic if anything goes wrong during load or inference
-                pass
+            used_backend = self._load_and_validate_model()
+        else:
+            used_backend = "cpu_deterministic_fallback"
 
         n = len(series)
         alpha = 0.3
@@ -117,6 +101,135 @@ class MortyLocalEngine:
             "backend": used_backend
         }
 
+    def _check_torch_availability(self) -> bool:
+        """Clean availability detection for PyTorch."""
+        try:
+            import torch  # type: ignore
+            return True
+        except ImportError:
+            return False
+
+    def _check_onnx_availability(self) -> bool:
+        """Clean availability detection for ONNX Runtime."""
+        try:
+            import onnxruntime  # type: ignore
+            return True
+        except ImportError:
+            return False
+
+    def _attempt_model_load(self) -> None:
+        """Attempt to load and validate the model file."""
+        if not self.model_path or not self.model_path.exists():
+            self._model_load_error = "Model path not specified or file does not exist"
+            return
+
+        try:
+            if self.model_path.suffix == ".onnx" and self._is_onnx_available:
+                import onnxruntime as ort  # type: ignore
+                ort.InferenceSession(str(self.model_path))
+                self._model_loaded = True
+            elif self.model_path.suffix in [".pt", ".pth"] and self._is_torch_available:
+                import torch  # type: ignore
+                torch.load(self.model_path, map_location="cpu", weights_only=True)
+                self._model_loaded = True
+            else:
+                self._model_load_error = f"Unsupported model format: {self.model_path.suffix}"
+        except Exception as e:
+            self._model_load_error = str(e)
+
+    def _load_and_validate_model(self) -> str:
+        """Attempt to load and validate the model with clean error handling."""
+        if not self.model_path or not self.model_path.exists():
+            return "cpu_deterministic_fallback"
+
+        # Try to validate if we have the required libraries
+        if self.model_path.suffix == ".onnx" and self._is_onnx_available:
+            try:
+                import onnxruntime as ort  # type: ignore
+                ort.InferenceSession(str(self.model_path))
+                return "onnx_timesfm"
+            except Exception:
+                pass
+        elif self.model_path.suffix in [".pt", ".pth"] and self._is_torch_available:
+            try:
+                import torch  # type: ignore
+                torch.load(self.model_path, map_location="cpu", weights_only=True)
+                return "torch_timesfm"
+            except Exception:
+                pass
+
+        # Fallback to deterministic if anything goes wrong during validation
+        return "cpu_deterministic_fallback"
+
+    def _compute_canonical_alignment(self, intent: str, okf_concepts: List[Dict[str, str]]) -> float:
+        """Compute canonical alignment index between intent and OKF concepts."""
+        if not intent or not okf_concepts:
+            return 0.0 if not okf_concepts else 0.5
+
+        intent_words = set(re.findall(r'\w+', intent.lower()))
+        if not intent_words:
+            return 0.0
+
+        matched_concepts = []
+        for concept in okf_concepts:
+            title = ""
+            if " : " in concept["instruction"]:
+                title = concept["instruction"].split(" : ", 1)[1]
+            else:
+                title = concept["instruction"]
+
+            concept_words = set(re.findall(r'\w+', title.lower()))
+            concept_words.update(re.findall(r'\w+', concept.get("input", "").lower()))
+            concept_words = {w for w in concept_words if len(w) > 3}
+
+            if any(word in concept_words for word in intent_words):
+                matched_concepts.append(title)
+
+        if not matched_concepts:
+            return 0.0
+
+        return min(1.0, len(matched_concepts) / float(max(1, len(okf_concepts) // 2)))
+
+    def _analyze_okf_alignment(self, intent: str, okf_concepts: List[Dict[str, str]]) -> tuple[float, list, list, list]:
+        """Analyze OKF alignment and return all components."""
+        intent_words = set(re.findall(r'\w+', intent.lower())) if intent else set()
+        matched_concepts = []
+        missing_concepts = []
+        validated_concepts = []
+        violated_concepts = []  # Initialize to avoid UnboundLocalError
+
+        for concept in okf_concepts:
+            title = ""
+            if " : " in concept["instruction"]:
+                title = concept["instruction"].split(" : ", 1)[1]
+            else:
+                title = concept["instruction"]
+
+            concept_words = set(re.findall(r'\w+', title.lower()))
+            concept_words.update(re.findall(r'\w+', concept.get("input", "").lower()))
+            concept_words = {w for w in concept_words if len(w) > 3}
+
+            if any(word in concept_words for word in intent_words):
+                matched_concepts.append(title)
+            else:
+                missing_concepts.append(title)
+
+        # Calculate canonical alignment index
+        canonical_alignment_index = 0.0
+        if matched_concepts:
+            canonical_alignment_index = min(1.0, len(matched_concepts) / float(max(1, len(okf_concepts) // 2)))
+            validated_concepts = list(matched_concepts)
+        elif intent_words:
+            # Intent seems completely decoupled from canon, mark missing
+            canonical_alignment_index = 0.0
+            missing_concepts = missing_concepts[:3]
+            violated_concepts = ["OUT_OF_CANON_INTENT"]
+        elif not okf_concepts:
+            # No concepts available locally
+            canonical_alignment_index = 0.5
+
+        return canonical_alignment_index, missing_concepts, violated_concepts, validated_concepts
+
     def evaluate_decision(self, context: Dict[str, Any]) -> Dict[str, Any]:
         """
         Arbitrage symbolique déterministe MiniMind avec validation canonique OKF.
@@ -133,53 +246,12 @@ class MortyLocalEngine:
         if energy < 0.2 and urgency > 0.8:
             veto = True
             reasons.append("Surcharge cognitive détectée : arbitrage Morty A1 impose une dissipation.")
-            
-        # Évaluation canonique OKF
+
+        # Évaluation canonique OKF - extract_okf_concepts vérifie toujours l'existence du fichier
         okf_concepts = extract_okf_concepts()
-        canonical_alignment_index = 0.0
-        missing_concepts = []
-        violated_concepts = []
-        validated_concepts = []
-        
-        if intent and okf_concepts:
-            # Clean and split intent into words
-            intent_words = set(re.findall(r'\w+', intent.lower()))
-            if intent_words:
-                matched_concepts = []
-                unmatched_concepts = []
-                
-                for concept in okf_concepts:
-                    # Extract title from instruction "Explique le concept canonique d'A'Space OS V3 : {title}"
-                    title = ""
-                    if " : " in concept["instruction"]:
-                        title = concept["instruction"].split(" : ", 1)[1]
-                    else:
-                        title = concept["instruction"]
-                        
-                    # Also collect words from title and input (description)
-                    concept_words = set(re.findall(r'\w+', title.lower()))
-                    concept_words.update(re.findall(r'\w+', concept.get("input", "").lower()))
-                    
-                    # Meaningful words length > 3
-                    concept_words = {w for w in concept_words if len(w) > 3}
-                    
-                    if any(word in concept_words for word in intent_words):
-                        matched_concepts.append(title)
-                    else:
-                        unmatched_concepts.append(title)
-                
-                # Calculate simple alignment index based on whether we hit any core OKF concepts
-                if matched_concepts:
-                    canonical_alignment_index = min(1.0, len(matched_concepts) / float(max(1, len(okf_concepts) // 2)))
-                    validated_concepts = list(matched_concepts)
-                else:
-                    # Intention seems completely decoupled from canon, mark missing
-                    canonical_alignment_index = 0.0
-                    missing_concepts = unmatched_concepts[:3] # Returns top 3 missing to limit size
-                    violated_concepts = ["OUT_OF_CANON_INTENT"]
-        elif intent and not okf_concepts:
-            # In case no concepts are available locally
-            canonical_alignment_index = 0.5
+        canonical_alignment_index, missing_concepts, violated_concepts, validated_concepts = self._analyze_okf_alignment(
+            intent, okf_concepts
+        )
 
         return {
             "allowed": not veto,
